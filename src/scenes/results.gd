@@ -5,6 +5,7 @@ var age := 0.0
 
 func _ready() -> void:
 	font = ThemeDB.fallback_font
+	Sfx.set_music(-9.0)
 	r = Session.last_result
 
 func _stars() -> int:

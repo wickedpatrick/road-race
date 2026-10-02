@@ -9,6 +9,8 @@ var t := 0.0
 
 func _ready() -> void:
 	font = ThemeDB.fallback_font
+	Sfx.silence_all_loops()
+	Sfx.set_music(-9.0)
 	sel[0] = maxi(0, CarStats.ALL_IDS.find(Session.car_id))
 	sel[1] = maxi(0, SeasonPalette.SEASONS.find(Session.season))
 	sel[2] = Session.stage
@@ -23,6 +25,8 @@ func _process(dt: float) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if not (event is InputEventKey and event.pressed and not event.echo):
 		return
+	if event.is_action_pressed("left") or event.is_action_pressed("right") or event.keycode == KEY_ENTER or event.keycode == KEY_KP_ENTER or event.keycode == KEY_SPACE or (event.keycode == KEY_ESCAPE and step > 0):
+		Sfx.play("blip", -8.0)
 	if event.is_action_pressed("left"):
 		sel[step] = (sel[step] + _count() - 1) % _count()
 	elif event.is_action_pressed("right"):
@@ -68,6 +72,7 @@ func _draw() -> void:
 	var hint := "Strzałki: wybierz      Enter: dalej" if step < 2 else "Strzałki: wybierz      Enter: START!"
 	if step > 0:
 		hint += "      Esc: wstecz"
+	hint += "      X: dźwięk"
 	_t(Vector2(0, 518), hint, 20, Color.WHITE, HORIZONTAL_ALIGNMENT_RIGHT, 936)
 
 func _card(rect: Rect2, selected: bool) -> void:
