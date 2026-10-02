@@ -1,7 +1,8 @@
 extends RefCounted
 func run(t) -> void:
-	for i in StageData.COUNT:
-		var s := StageData.at(i)
+	var routes := [["krakow", "rzeszow"], ["gdansk", "gdynia"], ["olsztyn", "bialystok"]]
+	for i in routes.size():
+		var s := Route.build(routes[i][0], routes[i][1])
 		var tf: Traffic = Traffic.build(s, 5)
 		t.check(tf.cars.size() > 5, "stage %d has traffic" % i)
 		var ok_speed := true
@@ -20,7 +21,7 @@ func run(t) -> void:
 		for c in tf.cars:
 			if c.active and c.z > Track.build(s, 5).total_length: inside = false
 		t.check(inside, "stage %d traffic never leaves the track" % i)
-	var tf2: Traffic = Traffic.build(StageData.at(0), 9)
+	var tf2: Traffic = Traffic.build(Route.build("krakow", "rzeszow"), 9)
 	tf2.cars = [{"z": 100.0, "lane_x": 0.5, "speed": 10.0, "kind": "car", "color_idx": 0, "active": true},
 		{"z": 160.0, "lane_x": -0.5, "speed": 10.0, "kind": "truck", "color_idx": 1, "active": true}]
 	t.check(tf2.check_collision(100.0, 0.5, 0.18) == 0, "hit same lane same z")

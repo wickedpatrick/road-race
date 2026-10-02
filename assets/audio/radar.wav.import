@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://bpplj4ouqvd1m"
-path="res://.godot/imported/music.wav-2937b162566447d772a8d6d8478cb5b0.sample"
+uid="uid://cbdavmaxqvmkp"
+path="res://.godot/imported/radar.wav-cb66558dcb54136653f82d405187085e.sample"
 
 [deps]
 
-source_file="res://assets/audio/music.wav"
-dest_files=["res://.godot/imported/music.wav-2937b162566447d772a8d6d8478cb5b0.sample"]
+source_file="res://assets/audio/radar.wav"
+dest_files=["res://.godot/imported/radar.wav-cb66558dcb54136653f82d405187085e.sample"]
 
 [params]
 

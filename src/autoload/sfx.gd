@@ -1,8 +1,8 @@
 extends Node
-## All game audio. Lives across scenes so the music never restarts. X toggles mute.
+## All game audio: engine/gravel/pump loops and one-shot effects (no music). X toggles mute.
 const DIR := "res://assets/audio/"
-const LOOPS := ["engine", "gravel", "pump", "music"]
-const ONESHOTS := ["hit", "beep", "go", "blip", "lowfuel", "refuel_done", "win", "lose"]
+const LOOPS := ["engine", "gravel", "pump", "siren"] ## looped whole-file by their import settings
+const ONESHOTS := ["hit", "beep", "go", "blip", "lowfuel", "refuel_done", "win", "lose", "radar"]
 const SILENT := -80.0
 var muted := false
 var _players := {}
@@ -12,11 +12,10 @@ func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	for n in LOOPS:
 		var p := AudioStreamPlayer.new()
-		var s: AudioStreamWAV = load(DIR + n + ".wav")
-		s.loop_mode = AudioStreamWAV.LOOP_FORWARD
-		s.loop_begin = 0
-		s.loop_end = s.data.size() / 2
-		p.stream = s
+		p.stream = load(DIR + n + ".wav")
+		# mixed by the engine on every platform: the browser's native sample playback clicked on these
+		# continuously re-pitched loops
+		p.playback_type = AudioServer.PLAYBACK_TYPE_STREAM
 		p.volume_db = SILENT
 		add_child(p)
 		_players[n] = p
@@ -26,16 +25,11 @@ func _ready() -> void:
 		var p := AudioStreamPlayer.new()
 		add_child(p)
 		_oneshot_pool.append(p)
-	set_music(-9.0)
-	_players.music.play()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_X:
 		muted = not muted
 		AudioServer.set_bus_mute(0, muted)
-
-func set_music(db: float) -> void:
-	_players.music.volume_db = db
 
 func play(name: String, db := -6.0, pitch := 1.0) -> void:
 	for p in _oneshot_pool:
@@ -57,5 +51,5 @@ func set_loop(name: String, db: float, pitch := 1.0) -> void:
 	if not p.playing: p.play()
 
 func silence_all_loops() -> void:
-	for n in ["engine", "gravel", "pump"]:
+	for n in LOOPS:
 		set_loop(n, SILENT)

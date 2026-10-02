@@ -3,6 +3,7 @@ extends RefCounted
 ## Simple autopilot used by balance tests: keeps a lane, avoids slower traffic, stops at stations when fuel is low.
 var cruise := 0.9
 var refuel_below := 0.55
+var obey_limits := true
 var _stopping := false
 
 func decide(r: Race) -> Dictionary:
@@ -11,7 +12,7 @@ func decide(r: Race) -> Dictionary:
 	var brake := false
 	var accel := true
 	var idx := r.traffic.nearest_ahead(r.z)
-	var lanes: Array = [-0.5, 0.5] if r.stage.lanes == 2 else [-0.66, 0.0, 0.66]
+	var lanes: Array = Traffic.LANES[Route.lanes_at(r.stage, r.z + 30.0)]
 	var best := 0.0
 	var best_gap := -1.0
 	for lx in lanes:
@@ -47,16 +48,23 @@ func decide(r: Race) -> Dictionary:
 		brake = r.speed > 0.5
 	if sr > cruise:
 		accel = false
+	if obey_limits:
+		# slow down in time for a lower limit ahead (towns), stay just under the limit
+		var look: float = 40.0 + r.speed * r.speed / (2.0 * r.stats.brake * 0.5)
+		var lim: float = minf(r.speed_limit(), Route.speed_limit_at(r.stage, r.z + look)) / 3.6 - 1.0
+		if r.speed > lim:
+			accel = false
+			brake = brake or r.speed > lim + 1.5
 	var curve: float = r.track.segment_at(r.z + 20.0).curve
 	var steer := clampf((target_x - r.x) * 2.5 + curve * 0.35 * sr * sr / (r.stats.handling * 2.2), -1.0, 1.0)
 	return {"accel": accel, "brake": brake, "steer": steer}
 
-static func run_race(car: String, stage: int, seed_value: int, cruise_ratio := 0.9) -> Race:
+static func run_race(car: String, stage: Dictionary, seed_value: int, cruise_ratio := 0.9) -> Race:
 	var r := Race.new(car, stage, seed_value)
 	var b := Bot.new()
 	b.cruise = cruise_ratio
 	var guard := 0
-	while r.state == "running" and guard < 60 * 400:
+	while r.state == "running" and guard < 60 * 900:
 		r.step(1.0 / 60.0, b.decide(r))
 		guard += 1
 	return r

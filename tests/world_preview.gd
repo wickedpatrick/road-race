@@ -5,12 +5,12 @@ var view: WorldView
 var t := 0.0
 func _ready() -> void:
 	var args := OS.get_cmdline_user_args()
-	var stage := int(args[0]) if args.size() > 0 else 0
-	var season: String = args[1] if args.size() > 1 else "summer"
-	var car: String = args[2] if args.size() > 2 else "xc60"
+	var stage := Route.build(args[0] if args.size() > 0 else "krakow", args[1] if args.size() > 1 else "rzeszow")
+	var season: String = args[2] if args.size() > 2 else "summer"
+	var car: String = args[3] if args.size() > 3 else "xc60"
 	race = Race.new(car, stage, 1)
-	if args.size() > 3:
-		race.z = float(args[3])
+	if args.size() > 4:
+		race.z = float(args[4])
 		race.speed = 30.0
 	view = WorldView.new()
 	add_child(view)

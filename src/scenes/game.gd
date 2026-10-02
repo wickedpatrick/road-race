@@ -14,15 +14,16 @@ var _last_count := 99
 var _was_refueling := false
 var _low_fuel_timer := 0.0
 var _end_sound_played := false
+var _radar_timer := 0.0
 
 func _ready() -> void:
 	font = ThemeDB.fallback_font
-	race = Race.new(Session.car_id, Session.stage, randi())
+	race = Race.new(Session.car_id, Session.stage(), randi())
 	view = WorldView.new()
 	add_child(view)
 	view.bind(race, Session.season)
 	race.collided.connect(func(_i): Sfx.play("hit", -2.0))
-	Sfx.set_music(-17.0)
+	race.fined.connect(func(): Sfx.play("lowfuel", -4.0))
 	var layer := CanvasLayer.new()
 	add_child(layer)
 	hud = Hud.new()
@@ -86,24 +87,33 @@ func _update_audio(dt: float, inp: Dictionary) -> void:
 		if _was_refueling and race.fuel.ratio() >= 0.99:
 			Sfx.play("refuel_done", -6.0)
 	_was_refueling = race.refueling
+	# radar detector beeps while speeding; the siren wails while the police chase and stop the car
+	_radar_timer -= dt
+	if race.speeding > 0.0 and _radar_timer <= 0.0:
+		Sfx.play("radar", -8.0)
+		_radar_timer = 0.5
+	var phase: String = race.police.get("phase", "")
+	Sfx.set_loop("siren", -12.0 if phase in ["chase", "pull_over"] else Sfx.SILENT)
 	_low_fuel_timer -= dt
 	if race.fuel.ratio() < 0.15 and _low_fuel_timer <= 0.0:
 		Sfx.play("lowfuel", -8.0)
 		_low_fuel_timer = 2.5
 
 func _end_audio() -> void:
+	Sfx.set_loop("siren", Sfx.SILENT)
 	Sfx.set_loop("gravel", Sfx.SILENT)
 	Sfx.set_loop("pump", Sfx.SILENT)
 	Sfx.set_loop("engine", -24.0 + 10.0 * race.speed_ratio(), EngineAudio.pitch(race.speed, race.stats.max_speed, false))
 	if not _end_sound_played:
 		_end_sound_played = true
-		Sfx.play("win" if race.state == "won" else "lose", -3.0)
+		Sfx.play("win" if race.state == "won" else "lose", 0.0 if race.state == "won" else -3.0) # fanfare on arrival
 
 func _finish() -> void:
 	Sfx.silence_all_loops()
 	Session.last_result = {
 		"state": race.state, "time_left": race.time_left, "elapsed": race.elapsed,
-		"duration": race.stage.duration, "fuel": race.fuel.ratio(),
+		"duration": race.stage.duration, "fuel": race.fuel.ratio(), "name": race.stage.name, "km": race.stage.km,
+		"fines": race.fines,
 	}
 	get_tree().change_scene_to_file("res://src/scenes/results.tscn")
 
@@ -127,7 +137,7 @@ func _draw_overlay() -> void:
 		var n := int(ceil(countdown))
 		o.draw_string(font, Vector2(0, 300), str(n), HORIZONTAL_ALIGNMENT_CENTER, 960, 140, Color(0, 0, 0, 0.5))
 		o.draw_string(font, Vector2(0, 296), str(n), HORIZONTAL_ALIGNMENT_CENTER, 960, 140, Color("ffd24a"))
-		o.draw_string(font, Vector2(0, 340), "%s - meta: %s" % [race.stage.name, race.stage.finish_label], HORIZONTAL_ALIGNMENT_CENTER, 960, 24, Color.WHITE)
+		o.draw_string(font, Vector2(0, 340), "%s  ·  %d km" % [race.stage.name, race.stage.km], HORIZONTAL_ALIGNMENT_CENTER, 960, 24, Color.WHITE)
 	elif race.state != "running":
 		var msg := {"won": "META!", "out_of_time": "KONIEC CZASU", "out_of_fuel": "KONIEC PALIWA"}[race.state] as String
 		var col := Color("49d36b") if race.state == "won" else Color("ff6a5a")

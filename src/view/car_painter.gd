@@ -9,7 +9,7 @@ const BUMPER := Color("26272b")
 static func _p(c: Vector2, s: float, x: float, y: float) -> Vector2:
 	return c + Vector2(x, -y) * s
 
-static func _poly(cv: CanvasItem, c: Vector2, s: float, pts: Array, col: Color) -> void:
+static func _poly(cv, c: Vector2, s: float, pts: Array, col: Color) -> void:
 	var out := PackedVector2Array()
 	for q in pts:
 		out.append(_p(c, s, q[0], q[1]))
@@ -18,15 +18,15 @@ static func _poly(cv: CanvasItem, c: Vector2, s: float, pts: Array, col: Color) 
 	else:
 		cv.draw_colored_polygon(out, col)
 
-static func _rect(cv: CanvasItem, c: Vector2, s: float, x0: float, y0: float, x1: float, y1: float, col: Color) -> void:
+static func _rect(cv, c: Vector2, s: float, x0: float, y0: float, x1: float, y1: float, col: Color) -> void:
 	cv.draw_rect(Rect2(_p(c, s, x0, y1), Vector2(x1 - x0, y1 - y0) * s), col)
 
 ## Rect with chamfered corners (cut size k).
-static func _chamfer(cv: CanvasItem, c: Vector2, s: float, x0: float, y0: float, x1: float, y1: float, k: float, col: Color) -> void:
+static func _chamfer(cv, c: Vector2, s: float, x0: float, y0: float, x1: float, y1: float, k: float, col: Color) -> void:
 	_rect(cv, c, s, x0 + k, y0, x1 - k, y1, col)
 	_rect(cv, c, s, x0, y0 + k, x1, y1 - k, col)
 
-static func draw(cv: CanvasItem, car_id: String, c: Vector2, s: float, steer: float, braking: bool) -> void:
+static func draw(cv, car_id: String, c: Vector2, s: float, steer: float, braking: bool) -> void:
 	var body: Color = CarStats.by_id(car_id).body_color
 	var dark := body.darkened(0.35)
 	var light := body.lightened(0.18)
@@ -40,7 +40,7 @@ static func draw(cv: CanvasItem, car_id: String, c: Vector2, s: float, steer: fl
 		"rav4": _rav4(cv, c, s, body, dark, light, lean, braking)
 		_: _yaris(cv, c, s, body, dark, light, lean, braking)
 
-static func _plate(cv: CanvasItem, c: Vector2, s: float, y: float) -> void:
+static func _plate(cv, c: Vector2, s: float, y: float) -> void:
 	_rect(cv, c, s, -26, y, 26, y + 15, Color("f4f4ee"))
 	_rect(cv, c, s, -26, y, -21, y + 15, Color("1f4fa8"))
 	_rect(cv, c, s, -14, y + 4, 22, y + 11, Color("55555a"))
@@ -48,7 +48,7 @@ static func _plate(cv: CanvasItem, c: Vector2, s: float, y: float) -> void:
 static func _light(braking: bool) -> Color:
 	return Color("ff3b30") if braking else Color("a3151a")
 
-static func _wheels(cv: CanvasItem, c: Vector2, s: float, half: float) -> void:
+static func _wheels(cv, c: Vector2, s: float, half: float) -> void:
 	_chamfer(cv, c, s, -half, 0, -half + 30, 30, 6, TIRE)
 	_chamfer(cv, c, s, half - 30, 0, half, 30, 6, TIRE)
 
@@ -99,7 +99,7 @@ static func _yaris(cv, c, s, body, dark, light, lean, braking) -> void:
 	_rect(cv, c, s, -10, 52, 10, 60, light)
 	_plate(cv, c, s, 30)
 
-static func draw_traffic(cv: CanvasItem, kind: String, c: Vector2, s: float, color: Color) -> void:
+static func draw_traffic(cv, kind: String, c: Vector2, s: float, color: Color) -> void:
 	cv.draw_set_transform(c + Vector2(0, 2 * s), 0.0, Vector2(1.0, 0.16))
 	cv.draw_circle(Vector2.ZERO, 105.0 * s, Color(0, 0, 0, 0.3))
 	cv.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
@@ -121,6 +121,21 @@ static func draw_traffic(cv: CanvasItem, kind: String, c: Vector2, s: float, col
 			_rect(cv, c, s, -98, 40, -84, 80, lc)
 			_rect(cv, c, s, 84, 40, 98, 80, lc)
 			_plate(cv, c, s, 42)
+		"police":
+			# Polish police patrol car: white body, blue band, blue lights flashing on the roof bar
+			_wheels(cv, c, s, 90)
+			_chamfer(cv, c, s, -96, 14, 96, 68, 12, Color("f2f4f7"))
+			_rect(cv, c, s, -96, 40, 96, 54, Color("1f4aa8"))
+			_chamfer(cv, c, s, -94, 10, 94, 30, 6, BUMPER)
+			_poly(cv, c, s, [[-76, 68], [-64, 108], [64, 108], [76, 68]], Color("f2f4f7"))
+			_poly(cv, c, s, [[-62, 72], [-54, 102], [54, 102], [62, 72]], GLASS)
+			var on := int(Time.get_ticks_msec() / 160) % 2 == 0
+			_rect(cv, c, s, -50, 108, 50, 118, Color("2b2b2f"))
+			_rect(cv, c, s, -48, 109, -4, 117, Color("3d8bff") if on else Color("15306b"))
+			_rect(cv, c, s, 4, 109, 48, 117, Color("15306b") if on else Color("3d8bff"))
+			_rect(cv, c, s, -94, 54, -64, 66, lc)
+			_rect(cv, c, s, 64, 54, 94, 66, lc)
+			_plate(cv, c, s, 26)
 		_:
 			_wheels(cv, c, s, 88)
 			_chamfer(cv, c, s, -94, 14, 94, 66, 12, color)

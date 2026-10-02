@@ -27,7 +27,7 @@ static func build(stage: Dictionary, seed_value: int) -> Track:
 		var enter := rng.randi_range(15, 40)
 		var hold := rng.randi_range(20, 90)
 		var leave := rng.randi_range(15, 40)
-		var amount: float = rng.randf_range(1.0, 3.5) * stage.curve_amount * (1.0 if rng.randf() < 0.5 else -1.0)
+		var amount: float = rng.randf_range(1.0, 3.5) * _curve_amount(stage, i * SEG_LEN) * (1.0 if rng.randf() < 0.5 else -1.0)
 		if rng.randf() < 0.25: amount = 0.0
 		for k in enter + hold + leave:
 			if i + k >= end_i: break
@@ -39,13 +39,47 @@ static func build(stage: Dictionary, seed_value: int) -> Track:
 	# hills: sum of two sine-like waves with random phase, scaled by hill_amount, faded at both ends
 	var p1 := rng.randf() * TAU
 	var p2 := rng.randf() * TAU
+	var amp := _hill_profile(stage, n)
 	for k in n:
 		var z := k * SEG_LEN
 		var fade: float = clampf((z - START_FLAT) / 150.0, 0.0, 1.0) * clampf((length - FINISH_FLAT * 0.6 - z) / 150.0, 0.0, 1.0)
-		hills[k] = (sin(z / 170.0 + p1) * 5.0 + sin(z / 61.0 + p2) * 1.6) * stage.hill_amount * fade
+		hills[k] = (sin(z / 170.0 + p1) * 5.0 + sin(z / 61.0 + p2) * 1.6) * amp[k] * fade
 	for k in n:
 		tr.segments.append({"curve": curves[k], "y": hills[k]})
 	return tr
+
+## Curviness at z: from the region (biome zones) when the stage has them, else one value for the whole stage.
+static func _curve_amount(stage: Dictionary, z: float) -> float:
+	if not stage.has("zones"):
+		return stage.curve_amount
+	var k: float = 0.7 if Route.lanes_at(stage, z) == 3 else 1.0 # motorways and expressways bend gently
+	if not Route.town_at(stage, z).is_empty():
+		k *= 0.5
+	return Biome.get_data(Route.zone_at(stage, z).biome).curve * k
+
+## Hill height per segment, smoothed over ~300 m so region changes do not make cliffs.
+static func _hill_profile(stage: Dictionary, n: int) -> PackedFloat32Array:
+	var raw := PackedFloat32Array()
+	raw.resize(n)
+	for k in n:
+		raw[k] = Biome.get_data(Route.zone_at(stage, k * SEG_LEN).biome).hill if stage.has("zones") else stage.hill_amount
+	if not stage.has("zones"):
+		return raw
+	var out := PackedFloat32Array()
+	out.resize(n)
+	var half := 30
+	var acc := 0.0
+	var cnt := 0
+	for k in range(-half, n):
+		if k + half < n:
+			acc += raw[k + half]
+			cnt += 1
+		if k - half - 1 >= 0:
+			acc -= raw[k - half - 1]
+			cnt -= 1
+		if k >= 0:
+			out[k] = acc / cnt
+	return out
 
 static func _ease(t: float) -> float:
 	return t * t * (3.0 - 2.0 * t)

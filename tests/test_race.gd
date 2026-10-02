@@ -4,14 +4,14 @@ const GAS := {"accel": true, "brake": false, "steer": 0.0}
 const BRAKE := {"accel": false, "brake": true, "steer": 0.0}
 const BOTH := {"accel": true, "brake": true, "steer": 0.0}
 
-func fresh(car := "yaris", stage := 0) -> Race:
-	var r := Race.new(car, stage, 1)
+func fresh(car := "yaris") -> Race:
+	var r := Race.new(car, Route.build("krakow", "rzeszow"), 1)
 	r.traffic.cars = []
 	return r
 
 func run(t) -> void:
 	var r := fresh()
-	t.check(r.state == "running" and r.speed == 0.0 and is_equal_approx(r.time_left, 180.0), "initial state")
+	t.check(r.state == "running" and r.speed == 0.0 and is_equal_approx(r.time_left, r.stage.duration), "initial state")
 	# coasting never goes negative, never reverses
 	r.speed = 30.0
 	r.step(1.0, NONE)
@@ -43,13 +43,10 @@ func run(t) -> void:
 	r.step(0.1, GAS)
 	t.check(r.state == "out_of_time", "out of time")
 	r = fresh()
-	r.fuel.level = 0.0
+	r.fuel.level = 0.01
 	r.speed = 10.0
-	r.step(0.1, GAS)
-	t.check(r.state == "running", "empty tank but still rolling keeps running")
-	t.check(r.speed < 10.0, "no acceleration without fuel")
-	for i in 40: r.step(0.5, GAS)
-	t.check(r.state == "out_of_fuel", "stopped with empty tank ends the race")
+	r.step(0.5, GAS)
+	t.check(r.state == "out_of_fuel", "running out of fuel ends the game at once")
 	# fuel station
 	r = fresh()
 	r.z = r.stage.stations[0]
@@ -57,7 +54,11 @@ func run(t) -> void:
 	t.check(r.station_in_range(), "in station zone")
 	r.step(1.0, NONE)
 	t.check(r.refueling and r.fuel.level > 5.0, "stopped in zone refuels")
-	t.check(is_equal_approx(r.time_left, 179.0), "refuelling costs time")
+	t.check(is_equal_approx(r.time_left, r.stage.duration - 1.0), "refuelling costs time")
+	r = fresh()
+	t.check(is_equal_approx(r.km_left(), 165.0), "km left at the start")
+	r.z = r.stage.length * 0.5
+	t.check(absf(r.km_left() - 82.5) < 0.01, "km left halfway")
 	for i in 100: r.step(0.5, NONE)
 	t.check(r.fuel.level <= r.fuel.capacity + 0.0001, "refuel capped at capacity")
 	r = fresh()

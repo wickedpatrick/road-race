@@ -1,7 +1,8 @@
 extends RefCounted
 func run(t) -> void:
-	for i in StageData.COUNT:
-		var s := StageData.at(i)
+	var routes := [["krakow", "rzeszow"], ["gdansk", "gdynia"], ["krakow", "bielsko"], ["szczecin", "lublin"]]
+	for i in routes.size():
+		var s := Route.build(routes[i][0], routes[i][1])
 		var a: Track = Track.build(s, 7)
 		var b: Track = Track.build(s, 7)
 		var same := a.segments.size() == b.segments.size()
@@ -20,7 +21,15 @@ func run(t) -> void:
 			if absf(sg.curve) > 0.1: has_curve = true
 		t.check(has_curve, "track %d has curves" % i)
 		t.check(a.total_length >= s.length, "track %d total length" % i)
-	t.check(Track.build(StageData.at(2), 1).segments[300].curve != Track.build(StageData.at(2), 2).segments[300].curve or Track.build(StageData.at(2), 1).segments[500].curve != Track.build(StageData.at(2), 2).segments[500].curve, "different seeds differ")
+	var kb := Route.build("krakow", "bielsko")
+	t.check(Track.build(kb, 1).segments[300].curve != Track.build(kb, 2).segments[300].curve or Track.build(kb, 1).segments[500].curve != Track.build(kb, 2).segments[500].curve, "different seeds differ")
+	# mountains are hillier than the flat Żuławy
+	var hill := func(st: Dictionary) -> float:
+		var tr: Track = Track.build(st, 4)
+		var m := 0.0
+		for sg in tr.segments: m = maxf(m, absf(sg.y))
+		return m
+	t.check(hill.call(Route.build("katowice", "bielsko")) > hill.call(Route.build("gdansk", "elblag")) * 2.0, "mountain road hillier than Żuławy")
 	var near: Dictionary = Track.project(0, 3, 0, 0, 0, 20, 960, 540)
 	var far: Dictionary = Track.project(0, 3, 0, 0, 0, 200, 960, 540)
 	t.check(far.scale < near.scale and far.scale > 0.0, "far point is smaller")
@@ -29,5 +38,5 @@ func run(t) -> void:
 	var right: Dictionary = Track.project(0, 3, 0, 5, 0, 20, 960, 540)
 	t.check(right.x > 480.0, "right of camera is right of centre")
 	# out of range lookup must not crash
-	var tr: Track = Track.build(StageData.at(0), 3)
+	var tr: Track = Track.build(Route.build("krakow", "rzeszow"), 3)
 	t.check(tr.segment_at(-50.0).curve == 0.0 and tr.segment_at(1.0e6).curve == 0.0, "segment_at clamps")

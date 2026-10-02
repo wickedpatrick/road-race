@@ -1,48 +1,106 @@
 extends Node2D
-## Three-step selection: car -> season -> stage. Arrow keys / A D move, Enter or Space confirms, Esc goes back.
-const STEP_TITLES := ["Wybierz auto", "Wybierz porę roku", "Wybierz odcinek"]
-const STAGE_BLURBS := ["Ulice miasta, gęsty ruch", "Szeroka autostrada, wysokie prędkości", "Leśne zakręty i wzgórza, meta w Zamościu"]
+## Selection: car -> season -> start city -> destination on the map of Poland.
+## Arrow keys / WASD move, Enter or Space confirms, Esc goes back; on the map cities can also be clicked.
+const STEP_TITLES := ["Wybierz auto", "Wybierz porę roku", "Skąd jedziesz?", "Dokąd jedziesz?"]
+const MAP_STEP := 2
 var font: Font
 var step := 0
-var sel := [0, 1, 0]
+var sel := [0, 1]
+var start_city := "krakow"
+var dest_city := "rzeszow"
+var hover := ""
+var legs: Array = []
+var map := PolandMap.new(Rect2(24, 104, 440, 378))
 var t := 0.0
 
 func _ready() -> void:
 	font = ThemeDB.fallback_font
 	Sfx.silence_all_loops()
-	Sfx.set_music(-9.0)
 	sel[0] = maxi(0, CarStats.ALL_IDS.find(Session.car_id))
 	sel[1] = maxi(0, SeasonPalette.SEASONS.find(Session.season))
-	sel[2] = Session.stage
+	start_city = Session.from_city
+	dest_city = Session.to_city
+	step = Session.menu_step
+	Session.menu_step = 0
+	if step == MAP_STEP + 1:
+		_pick_dest(dest_city if dest_city != start_city else map.step(start_city, Vector2.RIGHT))
+	hover = start_city if step <= MAP_STEP else dest_city
 
 func _count() -> int:
-	return [CarStats.ALL_IDS.size(), SeasonPalette.SEASONS.size(), StageData.COUNT][step]
+	return [CarStats.ALL_IDS.size(), SeasonPalette.SEASONS.size()][step]
+
+func _pick_dest(id: String) -> void:
+	dest_city = id
+	legs = Route.find(start_city, dest_city)
 
 func _process(dt: float) -> void:
 	t += dt
 	queue_redraw()
 
 func _unhandled_input(event: InputEvent) -> void:
+	if step >= MAP_STEP and event is InputEventMouse:
+		_map_mouse(event)
+		return
 	if not (event is InputEventKey and event.pressed and not event.echo):
 		return
-	if event.is_action_pressed("left") or event.is_action_pressed("right") or event.keycode == KEY_ENTER or event.keycode == KEY_KP_ENTER or event.keycode == KEY_SPACE or (event.keycode == KEY_ESCAPE and step > 0):
+	var confirm: bool = event.keycode == KEY_ENTER or event.keycode == KEY_KP_ENTER or event.keycode == KEY_SPACE
+	var back: bool = event.keycode == KEY_ESCAPE and step > 0
+	var dir := Vector2.ZERO
+	if event.is_action_pressed("left"): dir = Vector2.LEFT
+	elif event.is_action_pressed("right"): dir = Vector2.RIGHT
+	elif event.keycode == KEY_UP or event.keycode == KEY_W: dir = Vector2.UP
+	elif event.keycode == KEY_DOWN or event.keycode == KEY_S: dir = Vector2.DOWN
+	if dir != Vector2.ZERO or confirm or back:
 		Sfx.play("blip", -8.0)
-	if event.is_action_pressed("left"):
-		sel[step] = (sel[step] + _count() - 1) % _count()
-	elif event.is_action_pressed("right"):
-		sel[step] = (sel[step] + 1) % _count()
-	elif event.keycode == KEY_ENTER or event.keycode == KEY_KP_ENTER or event.keycode == KEY_SPACE:
-		if step < 2:
-			step += 1
-		else:
-			_start()
-	elif event.keycode == KEY_ESCAPE and step > 0:
+	if back:
 		step -= 1
+		hover = start_city
+	elif confirm:
+		_confirm()
+	elif dir != Vector2.ZERO:
+		if step < MAP_STEP:
+			if dir.x != 0.0:
+				sel[step] = (sel[step] + _count() + int(dir.x)) % _count()
+		elif step == MAP_STEP:
+			start_city = map.step(start_city, dir)
+			hover = start_city
+		else:
+			_pick_dest(map.step(dest_city, dir, start_city))
+			hover = dest_city
+
+func _confirm() -> void:
+	if step < MAP_STEP:
+		step += 1
+	elif step == MAP_STEP:
+		step += 1
+		_pick_dest(dest_city if dest_city != start_city else map.step(start_city, Vector2.RIGHT))
+		hover = dest_city
+	elif not legs.is_empty():
+		_start()
+
+func _map_mouse(event: InputEventMouse) -> void:
+	var id := map.city_at(get_global_mouse_position())
+	if event is InputEventMouseMotion:
+		if id != "" and not (step > MAP_STEP and id == start_city):
+			hover = id
+		return
+	if not (event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT) or id == "":
+		return
+	Sfx.play("blip", -8.0)
+	if step == MAP_STEP:
+		start_city = id
+		_confirm()
+	elif id == dest_city:
+		_confirm()
+	elif id != start_city:
+		_pick_dest(id)
+		hover = id
 
 func _start() -> void:
 	Session.car_id = CarStats.ALL_IDS[sel[0]]
 	Session.season = SeasonPalette.SEASONS[sel[1]]
-	Session.stage = sel[2]
+	Session.from_city = start_city
+	Session.to_city = dest_city
 	get_tree().change_scene_to_file("res://src/scenes/game.tscn")
 
 func _t(pos: Vector2, text: String, size: int, col: Color, align := HORIZONTAL_ALIGNMENT_LEFT, width := -1.0) -> void:
@@ -56,20 +114,23 @@ func _draw() -> void:
 	draw_primitive(PackedVector2Array([Vector2(430, 400), Vector2(530, 400), Vector2(760, 540), Vector2(200, 540)]), PackedColorArray([pal.road_a, pal.road_a, pal.road_a, pal.road_a]), PackedVector2Array())
 	_t(Vector2(0, 62), "ROAD RACE", 54, Color(0, 0, 0, 0.25), HORIZONTAL_ALIGNMENT_CENTER, 964)
 	_t(Vector2(0, 60), "ROAD RACE", 54, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, 960)
-	_t(Vector2(0, 92), "Kraków - Zamość", 24, Color("1d2b38"), HORIZONTAL_ALIGNMENT_CENTER, 960)
-	_t(Vector2(0, 140), "%d / 3   %s" % [step + 1, STEP_TITLES[step]], 28, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, 960)
+	_t(Vector2(0, 92), "Podróż po Polsce", 24, Color("1d2b38"), HORIZONTAL_ALIGNMENT_CENTER, 960)
+	if step < MAP_STEP:
+		_t(Vector2(0, 140), "%d / 4   %s" % [step + 1, STEP_TITLES[step]], 28, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, 960)
 	match step:
 		0: _draw_cars()
 		1: _draw_seasons()
-		_: _draw_stages()
-	var summary := "%s  ·  %s  ·  %s" % [CarStats.by_id(CarStats.ALL_IDS[sel[0]]).name, SeasonPalette.label(SeasonPalette.SEASONS[sel[1]]), StageData.at(sel[2]).name]
-	if step == 0:
-		summary = ""
-	elif step == 1:
+		_: _draw_map()
+	var summary := ""
+	if step >= 1:
 		summary = CarStats.by_id(CarStats.ALL_IDS[sel[0]]).name
+	if step >= MAP_STEP:
+		summary += "  ·  " + SeasonPalette.label(SeasonPalette.SEASONS[sel[1]])
 	draw_rect(Rect2(0, 486, 960, 54), Color(0, 0, 0, 0.5))
-	_t(Vector2(24, 518), summary, 20, Color("ffd24a"))
-	var hint := "Strzałki: wybierz      Enter: dalej" if step < 2 else "Strzałki: wybierz      Enter: START!"
+	_t(Vector2(24, 518), summary, 20 if step < MAP_STEP else 17, Color("ffd24a"))
+	var hint := "Strzałki: wybierz      Enter: dalej" if step <= MAP_STEP else "Strzałki: wybierz      Enter: START!"
+	if step >= MAP_STEP:
+		hint = "Strzałki/myszka   " + ("Enter: dalej" if step == MAP_STEP else "Enter: START!")
 	if step > 0:
 		hint += "      Esc: wstecz"
 	hint += "      X: dźwięk"
@@ -98,10 +159,10 @@ func _draw_cars() -> void:
 		_card(r, on)
 		CarPainter.draw(self, id, Vector2(r.position.x + 130, r.position.y + 128), 0.78 if on else 0.68, sin(t * 2.0) * 0.3 if on else 0.0, false)
 		_t(r.position + Vector2(0, 160), c.name, 24, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, r.size.x)
-		_bar(r.position + Vector2(14, 196), "Prędkość", c.max_speed / 55.0)
-		_bar(r.position + Vector2(14, 224), "Przyspieszenie", c.accel / 9.0)
-		_bar(r.position + Vector2(14, 252), "Bak", c.tank / 60.0)
-		_bar(r.position + Vector2(14, 280), "Zwrotność", (c.handling - 0.7) / 0.5)
+		_bar(r.position + Vector2(14, 196), "Prędkość", c.max_speed / 56.0)
+		_bar(r.position + Vector2(14, 224), "Przyspieszenie", c.accel / 10.0)
+		_bar(r.position + Vector2(14, 252), "Bak", c.tank / 65.0)
+		_bar(r.position + Vector2(14, 280), "Zwrotność", (c.handling - 0.6) / 0.6)
 
 func _draw_seasons() -> void:
 	for i in 4:
@@ -126,15 +187,54 @@ func _draw_seasons() -> void:
 				draw_circle(pr.position + Vector2(px, py), 2.0, Color.WHITE if p.particle == "snow" else (Color("d9772a") if p.particle == "leaves" else Color("f7b8d2")))
 		_t(r.position + Vector2(0, 252), SeasonPalette.label(s), 26, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, r.size.x)
 
-func _draw_stages() -> void:
-	for i in 3:
-		var s := StageData.at(i)
-		var r := Rect2(60 + i * 290, 180, 260, 290)
-		var on: bool = sel[2] == i
-		_card(r, on)
-		_t(r.position + Vector2(0, 52), str(i + 1), 56, Color("ffd24a"), HORIZONTAL_ALIGNMENT_CENTER, r.size.x)
-		draw_multiline_string(font, r.position + Vector2(10, 92), s.name, HORIZONTAL_ALIGNMENT_CENTER, r.size.x - 20, 22, 2, Color.WHITE)
-		_t(r.position + Vector2(0, 160), "Czas: %s" % Hud.format_time(s.duration), 22, Color("4cc3ff"), HORIZONTAL_ALIGNMENT_CENTER, r.size.x)
-		_t(r.position + Vector2(0, 188), "Stacje paliw: %d" % s.stations.size(), 18, Color("f2c21b"), HORIZONTAL_ALIGNMENT_CENTER, r.size.x)
-		draw_multiline_string(font, r.position + Vector2(14, 220), STAGE_BLURBS[i], HORIZONTAL_ALIGNMENT_CENTER, r.size.x - 28, 17, 3, Color("c8d6e3"))
-		_t(r.position + Vector2(0, 262), "Meta: " + s.finish_label, 18, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, r.size.x)
+func _draw_map() -> void:
+	var bg := StyleBoxFlat.new()
+	bg.bg_color = Color("2b4763")
+	bg.set_corner_radius_all(16)
+	draw_style_box(bg, Rect2(16, 100, 456, 384))
+	map.draw(self, font, legs if step > MAP_STEP else [], start_city, dest_city if step > MAP_STEP else "", hover, t)
+	var r := Rect2(488, 100, 456, 384)
+	_card(r, true)
+	var x := r.position.x + 20
+	var w := r.size.x - 40
+	_t(Vector2(x, 140), "%d / 4   %s" % [step + 1, STEP_TITLES[step]], 26, Color.WHITE)
+	var id := hover if hover != "" else start_city
+	if step == MAP_STEP:
+		_city_info(id, Vector2(x, 186), w)
+		_t(Vector2(x, 460), "Wybierz miasto, z którego ruszasz", 16, Color("c8d6e3"))
+		return
+	_t(Vector2(x, 176), "Start: %s" % Geo.city(start_city).name, 18, Color("7fe0a0"))
+	if id != dest_city and id != start_city:
+		_city_info(id, Vector2(x, 214), w)
+		_t(Vector2(x, 460), "Kliknij lub naciśnij Enter, aby wybrać", 16, Color("c8d6e3"))
+		return
+	if legs.is_empty():
+		return
+	var st := Route.build(start_city, dest_city)
+	_t(Vector2(x, 206), "Cel: %s" % Geo.city(dest_city).name, 22, Color("ff9a86"))
+	var roads := []
+	for l in legs:
+		for rd in Route.leg_roads(l):
+			if rd[2] != "" and not roads.has(rd[2]): roads.append(rd[2])
+	_t(Vector2(x, 236), "%d km   ·   drogi: %s" % [st.km, ", ".join(roads) if not roads.is_empty() else "miejskie"], 17, Color.WHITE)
+	_t(Vector2(x, 262), "Czas: %s   ·   stacje paliw: %d" % [Hud.format_time(st.duration), st.stations.size()], 17, Color("4cc3ff"))
+	var via := []
+	var bigs := []
+	for tw in st.towns:
+		if tw.get("start", false) or tw.get("finish", false): continue
+		via.append(tw.name)
+		if tw.big: bigs.append(tw.name)
+	var via_text := "Po drodze: " + ", ".join(via)
+	if via.size() > 9:
+		via_text = "Przez miasta: %s, oraz %d mniejszych miejscowości" % [", ".join(bigs), via.size() - bigs.size()]
+	draw_multiline_string(font, Vector2(x, 292), via_text, HORIZONTAL_ALIGNMENT_LEFT, w, 15, 4, Color("e8eef4"))
+	var regions: Array = st.regions.slice(0, 6)
+	var reg_text := "Krainy: " + ", ".join(regions) + (" i inne" if st.regions.size() > regions.size() else "")
+	draw_multiline_string(font, Vector2(x, 386), reg_text, HORIZONTAL_ALIGNMENT_LEFT, w, 15, 3, Color("f1d9b5"))
+
+func _city_info(id: String, pos: Vector2, w: float) -> void:
+	var c := Geo.city(id)
+	_t(pos, c.name, 26, Color("ffd24a"))
+	_t(pos + Vector2(0, 30), "województwo %s" % c.voiv, 17, Color.WHITE)
+	_t(pos + Vector2(0, 56), "ok. %d tys. mieszkańców" % c.pop, 17, Color("c8d6e3"))
+	draw_multiline_string(font, pos + Vector2(0, 90), Geo.fact(c.name), HORIZONTAL_ALIGNMENT_LEFT, w, 17, 4, Color("e8eef4"))

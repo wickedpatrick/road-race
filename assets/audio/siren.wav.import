@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://dk5t44evaniwd"
-path="res://.godot/imported/gravel.wav-a844832139f530d60ed9eba8cee4705a.sample"
+uid="uid://b0s14jujauni0"
+path="res://.godot/imported/siren.wav-e70294bc7e157e67be910b9b4865b770.sample"
 
 [deps]
 
-source_file="res://assets/audio/gravel.wav"
-dest_files=["res://.godot/imported/gravel.wav-a844832139f530d60ed9eba8cee4705a.sample"]
+source_file="res://assets/audio/siren.wav"
+dest_files=["res://.godot/imported/siren.wav-e70294bc7e157e67be910b9b4865b770.sample"]
 
 [params]
 
