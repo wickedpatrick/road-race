@@ -1,0 +1,15 @@
+extends RefCounted
+func run(t) -> void:
+	var f := Fuel.new(40.0, 0.1)
+	t.check(is_equal_approx(f.level, 40.0), "starts full")
+	f.burn(10.0, 1.0)
+	t.check(is_equal_approx(f.level, 39.0), "burn at max speed")
+	var f2 := Fuel.new(40.0, 0.1)
+	f2.burn(10.0, 0.0)
+	t.check(is_equal_approx(f2.level, 39.9), "idle burns 10%")
+	var added := f.refuel(1.0, 5.0)
+	t.check(is_equal_approx(added, 1.0) and is_equal_approx(f.level, 40.0), "refuel capped at capacity")
+	var f3 := Fuel.new(1.0, 10.0)
+	f3.burn(10.0, 1.0)
+	t.check(f3.is_empty() and f3.level == 0.0, "empty and non-negative")
+	t.check(is_equal_approx(f.ratio(), 1.0), "ratio full")
