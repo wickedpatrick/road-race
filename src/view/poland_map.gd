@@ -11,6 +11,7 @@ const LABEL_LEFT := ["katowice", "bielsko", "opole", "gdynia", "bydgoszcz", "plo
 const LABEL_ABOVE := ["czestochowa"]
 const SHORT := {"gorzow": "Gorzów Wlkp.", "bielsko": "Bielsko-Biała"}
 var area: Rect2
+var visited: Array = [] ## city ids drawn with a gold ring (the cities the player has been to)
 var _scale := 1.0
 var _origin := Vector2.ZERO
 
@@ -73,14 +74,19 @@ func draw_network(cv: CanvasItem, wide: float, thin: float) -> void:
 			else:
 				cv.draw_line(p0, p1, LOCAL, thin)
 
+const VISITED := Color("f2b81b")
+
 func _legend(cv: CanvasItem, font: Font) -> void:
-	var box := Rect2(area.position + Vector2(0, area.size.y - 36), Vector2(162, 34))
+	var box := Rect2(area.position + Vector2(0, area.size.y - 50), Vector2(162, 48))
 	cv.draw_rect(box, Color(1, 1, 1, 0.85))
 	var p := box.position + Vector2(6, 11)
 	cv.draw_line(p, p + Vector2(22, 0), MOTORWAY, 4.0)
 	cv.draw_string(font, p + Vector2(28, 4), "autostrady, ekspresowe", HORIZONTAL_ALIGNMENT_LEFT, -1, 10, Color("16222e"))
 	cv.draw_line(p + Vector2(0, 14), p + Vector2(22, 14), LOCAL, 1.6)
 	cv.draw_string(font, p + Vector2(28, 18), "inne drogi", HORIZONTAL_ALIGNMENT_LEFT, -1, 10, Color("16222e"))
+	cv.draw_circle(p + Vector2(11, 28), 6.0, VISITED)
+	cv.draw_circle(p + Vector2(11, 28), 3.5, Color("2d3e50"))
+	cv.draw_string(font, p + Vector2(28, 32), "odwiedzone: %d / %d" % [visited.size(), Geo.CITIES.size()], HORIZONTAL_ALIGNMENT_LEFT, -1, 10, Color("16222e"))
 
 func draw(cv: CanvasItem, font: Font, legs: Array, start: String, dest: String, hover: String, t: float) -> void:
 	var poly := PackedVector2Array()
@@ -109,6 +115,8 @@ func draw(cv: CanvasItem, font: Font, legs: Array, start: String, dest: String, 
 		var col := Color("2d3e50")
 		if id == start: col = Color("2e9e4f")
 		elif id == dest: col = Color("d0402a")
+		if visited.has(id):
+			cv.draw_circle(p, r + 3.5, VISITED)
 		cv.draw_circle(p, r + 1.5, Color.WHITE)
 		cv.draw_circle(p, r, col)
 		if id == hover:

@@ -12,7 +12,7 @@ const DATA := {
 		"handling": 1.05, "body_color": Color("2f4a63"), "halfwidth": 0.19},
 	"bmw530": {"name": "BMW 530i", "hp": 258, "max_speed": 61.0, "accel": 10.5, "brake": 28.0, "tank": 68.0, "burn": 0.55,
 		"handling": 1.2, "body_color": Color("b9bec5"), "halfwidth": 0.18},
-	"rangerover": {"name": "Range Rover", "hp": 635, "max_speed": 70.0, "accel": 12.0, "brake": 30.0, "tank": 90.0, "burn": 0.75,
+	"rangerover": {"name": "Range Rover", "hp": 635, "max_speed": 70.0, "accel": 12.0, "brake": 30.0, "tank": 100.0, "burn": 1.0,
 		"handling": 1.15, "body_color": Color("2d4a3b"), "halfwidth": 0.20},
 }
 static func by_id(id: String) -> Dictionary:

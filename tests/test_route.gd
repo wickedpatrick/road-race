@@ -64,3 +64,9 @@ func run(t) -> void:
 				if it.lines[-1][0] != "Rzeszów" or it.lines[-1][1] < 1: boards_ok = false
 	t.check(signs == s.towns.size() - 1, "entry sign for every town after the start")
 	t.check(boards >= 3 and boards_ok, "distance boards end with the destination")
+	# cities reached for the "visited" map: start, cities passed, the destination only at the end
+	var cr := Route.build("krakow", "gdansk")
+	var mid := Route.cities_reached(cr, cr.length * 0.5)
+	t.check(mid.has("krakow") and not mid.has("gdansk"), "halfway: start reached, destination not yet")
+	var all := Route.cities_reached(cr, cr.length + 1.0)
+	t.check(all.has("gdansk") and all.size() >= 3, "at the finish: destination and the cities on the way (%s)" % str(all))

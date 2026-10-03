@@ -298,6 +298,7 @@ func _draw_map() -> void:
 	bg.set_corner_radius_all(16)
 	draw_style_box(bg, Rect2(16, 100, 456, 384))
 	var dest := kind() == "dest"
+	map.visited = Session.visited
 	map.draw(self, font, legs if dest else [], start_city, dest_city if dest else "", hover, t)
 	var r := Rect2(488, 100, 456, 384)
 	_card(r, true)

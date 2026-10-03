@@ -40,16 +40,30 @@ func _draw() -> void:
 		detail = "Wskazówka: tankuj na stacjach, jedź ok. 90 km/h i unikaj zderzeń"
 	draw_string(font, Vector2(0, 360), detail, HORIZONTAL_ALIGNMENT_CENTER, 960, 26, Color("23323f"))
 	draw_string(font, Vector2(0, 392), "+%d km   ·   razem przejechane: %d km" % [int(r.get("km_driven", 0.0)), int(Session.total_km)], HORIZONTAL_ALIGNMENT_CENTER, 960, 20, Color("23323f"))
+	var banner_y := 432.0
 	var unlocked: Array = r.get("unlocked", [])
 	if not unlocked.is_empty():
 		var names := []
 		for id in unlocked: names.append(CarStats.by_id(id).name)
-		draw_rect(Rect2(180, 432, 600, 34), Color(0.1, 0.5, 0.2, 0.85))
-		draw_string(font, Vector2(0, 457), "Nowe auto odblokowane: %s!" % ", ".join(names), HORIZONTAL_ALIGNMENT_CENTER, 960, 22, Color.WHITE)
+		_banner(banner_y, "Nowe auto odblokowane: %s!" % ", ".join(names), Color(0.1, 0.5, 0.2, 0.85))
+		banner_y += 38.0
+	var cities: Array = r.get("new_cities", [])
+	if not cities.is_empty():
+		var names := []
+		for id in cities: names.append(Geo.city(id).name)
+		var n := Session.visited.size()
+		var text := "Nowe miasto na mapie: %s!  (%d / %d)" % [", ".join(names), n, Geo.CITIES.size()]
+		if n >= Geo.CITIES.size():
+			text = "Byłeś we wszystkich %d miastach na mapie! Brawo!" % n
+		_banner(banner_y, text, Color(0.75, 0.55, 0.05, 0.9))
 	var fines: int = r.get("fines", 0)
 	if fines > 0:
 		draw_string(font, Vector2(0, 420), "Mandaty za prędkość: %d" % fines, HORIZONTAL_ALIGNMENT_CENTER, 960, 22, Color("c0392b"))
-	draw_string(font, Vector2(0, 506), "Naciśnij dowolny klawisz, aby wrócić do mapy", HORIZONTAL_ALIGNMENT_CENTER, 960, 26, Color.WHITE)
+	draw_string(font, Vector2(0, 528), "Naciśnij dowolny klawisz, aby wrócić do mapy", HORIZONTAL_ALIGNMENT_CENTER, 960, 22, Color.WHITE)
+
+func _banner(y: float, text: String, col: Color) -> void:
+	draw_rect(Rect2(150, y, 660, 34), col)
+	draw_string(font, Vector2(0, y + 25), text, HORIZONTAL_ALIGNMENT_CENTER, 960, 22, Color.WHITE)
 
 func _process(dt: float) -> void:
 	age += dt

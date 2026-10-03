@@ -31,6 +31,7 @@ var x := 0.0
 var time_left: float
 var elapsed := 0.0
 var gear := 1
+var load := 0.0 ## share of full acceleration used this step (extra fuel)
 var state := "running" ## running | won | out_of_time | out_of_fuel
 var refueling := false
 var braking := false
@@ -159,12 +160,13 @@ func step(dt: float, input: Dictionary) -> void:
 		input = {"accel": false, "brake": false, "steer": 0.0}
 		braking = speed > 0.0
 	# longitudinal
+	var v0 := speed
 	if held:
 		speed -= PULL_OVER_DECEL * dt
 	elif input.brake:
 		speed -= stats.brake * dt
 	elif input.accel and not fuel.is_empty():
-		speed += stats.accel * (1.15 - speed_ratio()) * dt
+		speed += stats.accel * (1.15 - speed_ratio()) * gearbox.pull(speed) * dt
 	else:
 		speed -= ROLL_DECEL * dt
 	if absf(x) > 1.0:
@@ -180,12 +182,14 @@ func step(dt: float, input: Dictionary) -> void:
 	x -= track.segment_at(z).curve * 0.35 * sr * sr * dt
 	x = clampf(x, -1.8, 1.8)
 	z += speed * dt
-	# fuel and stations
-	fuel.burn(dt, speed)
+	# gearbox and fuel: accelerating burns a lot, cruising in a high gear saves
+	var accelerating: bool = input.accel and not held and not input.brake and not fuel.is_empty() and speed < vmax * 0.98
+	gear = gearbox.update(dt, speed, accelerating)
+	load = clampf((speed - v0) / dt / stats.accel, 0.0, 1.2) if accelerating and dt > 0.0 else 0.0
+	fuel.burn(dt, speed, load, gearbox.rpm(speed))
 	refueling = station_in_range() and speed < STOP_SPEED and fuel.ratio() < 0.995
 	if refueling:
 		fuel.refuel(dt, fuel.capacity / 6.0)
-	gear = gearbox.gear_for(speed)
 	_update_speeding(dt)
 	_update_police(dt)
 	# traffic

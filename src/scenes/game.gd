@@ -73,7 +73,7 @@ func _update_audio(dt: float, inp: Dictionary) -> void:
 	var throttle: bool = inp.accel and has_fuel
 	if has_fuel or race.speed > 1.0:
 		var db := -17.0 + (5.0 if throttle else 0.0) + 4.0 * race.speed_ratio()
-		Sfx.set_loop("engine", db, EngineAudio.pitch(race.speed, race.stats.max_speed, throttle))
+		Sfx.set_loop("engine", db, EngineAudio.pitch(race.speed, race.stats.max_speed, throttle, race.gear))
 	else:
 		Sfx.set_loop("engine", Sfx.SILENT)
 	if absf(race.x) > 1.0 and race.speed > 4.0:
@@ -103,7 +103,7 @@ func _end_audio() -> void:
 	Sfx.set_loop("siren", Sfx.SILENT)
 	Sfx.set_loop("gravel", Sfx.SILENT)
 	Sfx.set_loop("pump", Sfx.SILENT)
-	Sfx.set_loop("engine", -24.0 + 10.0 * race.speed_ratio(), EngineAudio.pitch(race.speed, race.stats.max_speed, false))
+	Sfx.set_loop("engine", -24.0 + 10.0 * race.speed_ratio(), EngineAudio.pitch(race.speed, race.stats.max_speed, false, race.gear))
 	if not _end_sound_played:
 		_end_sound_played = true
 		Sfx.play("win" if race.state == "won" else "lose", 0.0 if race.state == "won" else -3.0) # fanfare on arrival
@@ -117,6 +117,8 @@ func _finish() -> void:
 		"km_driven": Route.km_between(race.stage, 0.0, minf(race.z, race.stage.length)),
 	}
 	Session.last_result.unlocked = Session.add_km(Session.last_result.km_driven)
+	var reached := Route.cities_reached(race.stage, race.z + (1.0 if race.state == "won" else 0.0))
+	Session.last_result.new_cities = Session.visit(reached)
 	get_tree().change_scene_to_file("res://src/scenes/results.tscn")
 
 func _unhandled_input(event: InputEvent) -> void:

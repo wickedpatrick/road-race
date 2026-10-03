@@ -67,7 +67,20 @@ static func draw(cv, it: Dictionary, b: Vector2, pm: float) -> void:
 		"devil": _devil()
 		"basket": _basket()
 		"big_apple": _big_apple()
-		"castle": Scenery.draw_item(cv, {"type": "castle", "w": it.w, "h": it.h, "v": it.v, "c": 0}, b, pm, {}, "", null)
+		"castle", "windmill": Scenery.draw_item(cv, {"type": it.kind, "w": it.w, "h": it.h, "v": it.v, "c": 0}, b, pm, {}, "", null)
+		"truss_bridge": _truss_bridge()
+		"basilica": _basilica()
+		"smile": _smile()
+		"sundial": _sundial()
+		"sieve": _sieve()
+		"hops": _hops()
+		"bunker": _bunker()
+		"sailboat": _sailboat()
+		"crown": _crown()
+		"center": _center()
+		"roses": _roses()
+		"wycinanka": _wycinanka()
+		"dinosaur": _dinosaur()
 		"milestone": _milestone()
 		"kremowka": _kremowka()
 		"narrow_train": _train()
@@ -619,3 +632,136 @@ static func _train() -> void:
 		_windows(x + 0.2, x + 4, 2.2, 3.1, 3, Color("e8e0c8"))
 		_c(x + 0.9, 0.7, 0.45, DARK)
 		_c(x + 3.3, 0.7, 0.45, DARK)
+
+## Old steel truss bridge over a river.
+static func _truss_bridge() -> void:
+	_r(-15, -0.4, 15, 0.8, Color("4f7fb0"))
+	_r(-15, 2.5, 15, 3.2, Color("5a5f66"))
+	for k in 2:
+		var x0 := -14.0 + k * 14.5
+		_l(x0, 3.2, x0 + 2.5, 9.5, Color("4a5560"), 0.35)
+		_l(x0 + 2.5, 9.5, x0 + 11, 9.5, Color("4a5560"), 0.35)
+		_l(x0 + 11, 9.5, x0 + 13.5, 3.2, Color("4a5560"), 0.35)
+		for j in 4:
+			var xa := x0 + 2.5 + j * 2.125
+			_l(xa, 9.5, xa + 2.125, 3.2, Color("4a5560"), 0.2)
+			_l(xa, 3.2, xa, 9.5, Color("4a5560"), 0.15)
+		_r(x0 + 6, 0, x0 + 7.5, 2.5, Color("b9b2a0"))
+
+## White baroque basilica with two towers.
+static func _basilica() -> void:
+	var w := Color("f2ece0")
+	_r(-6, 0, 6, 16, w)
+	_poly([-6.5, 16, 6.5, 16, 0, 21], w.darkened(0.06))
+	for x in [-10.0, 6.0]:
+		_r(x, 0, x + 4, 22, w.darkened(0.03))
+		_c(x + 2, 23.6, 1.8, COPPER)
+		_r(x + 1.6, 24.8, x + 2.4, 27, COPPER)
+		_c(x + 2, 27.6, 0.7, COPPER)
+		_l(x + 2, 28.2, x + 2, 30, GOLD, 0.15)
+	_poly([-2, 0, 2, 0, 2, 5, 0, 6.5, -2, 5], Color("6b4a2a"))
+	_c(0, 11, 1.4, GLASS)
+
+## Order Uśmiechu: the children's order, a smiling sun.
+static func _smile() -> void:
+	_l(0, 0, 0, 4, Color("8a8d92"), 0.25)
+	for k in 12:
+		var a := k * TAU / 12.0
+		_l(cos(a) * 2.2, 6.5 + sin(a) * 2.2, cos(a) * 3.2, 6.5 + sin(a) * 3.2, Color("f2b81b"), 0.35)
+	_c(0, 6.5, 2.3, Color("ffd24a"))
+	_c(-0.8, 7.1, 0.25, DARK)
+	_c(0.8, 7.1, 0.25, DARK)
+	_cv.draw_arc(_p(0, 6.6), 1.3 * _pm, PI * 0.2, PI * 0.8, 10, DARK, maxf(1.0, 0.18 * _pm))
+
+static func _sundial() -> void:
+	_pedestal(2.4, 2.6)
+	_c(0, 3.0, 1.6, Color("e8e4dc"))
+	_poly([0, 3.0, 0, 4.9, 1.1, 3.0], DARK)
+	if _pm > 3.0:
+		for k in 7:
+			var a := PI + k * PI / 6.0
+			_l(cos(a) * 1.2, 3.0 - sin(a) * 0.0, cos(a) * 1.5, 3.0, DARK, 0.05)
+
+## A sieve maker's sieve on a stand.
+static func _sieve() -> void:
+	_l(-1.5, 0, 0, 3, Color("6b4a26"), 0.2)
+	_l(1.5, 0, 0, 3, Color("6b4a26"), 0.2)
+	_c(0, 3.6, 2.4, Color("c9a265"))
+	_c(0, 3.6, 2.0, Color("8a7a5a"))
+	if _pm > 2.0:
+		for k in 7:
+			var d := -1.6 + k * 0.53
+			_l(d, 3.6 - 1.7, d, 3.6 + 1.7, Color("c9b48a"), 0.04)
+			_l(-1.7, 3.6 + d, 1.7, 3.6 + d, Color("c9b48a"), 0.04)
+
+## Hop garden: tall poles with climbing green bines.
+static func _hops() -> void:
+	for k in 5:
+		var x := -7.0 + k * 3.5
+		_l(x, 0, x, 8, Color("8a6a4a"), 0.18)
+		_poly([x - 0.7, 1, x + 0.7, 1, x + 0.5, 7, x, 7.6, x - 0.5, 7], Color("5f9a3f"))
+		if _pm > 1.5:
+			for j in 3:
+				_c(x + 0.5 - j * 0.4, 2.5 + j * 1.7, 0.35, Color("b9d86a"))
+	_l(-7, 8, 7, 8, Color("6b6b6b"), 0.08)
+
+## Concrete bunker half dug into the ground.
+static func _bunker() -> void:
+	_poly([-6, 0, -5, 2.5, -2, 4, 2, 4, 5, 2.5, 6, 0], Color("8f8f86"))
+	_poly([-6, 0, -5, 2.5, -4, 1.2, -4, 0], Color("6f8f45"))
+	_r(-2.2, 1.6, 2.2, 2.4, DARK)
+	_poly([-1, 0, 1, 0, 1, 1.3, -1, 1.3], Color("3a3a36"))
+
+static func _sailboat() -> void:
+	_r(-5, -0.4, 5, 0.8, Color("3f7fb3"))
+	_poly([-3.5, 0.6, 3.5, 0.6, 4.5, 1.8, -4, 1.8], Color("f4f4f2"))
+	_l(0, 1.8, 0, 11.5, Color("8a8d92"), 0.15)
+	_poly([0.2, 2.4, 0.2, 11.2, 4.2, 2.4], Color("faf8f0"))
+	_poly([-0.2, 3.0, -0.2, 9.0, -3.2, 3.0], Color("d0402a"))
+
+## The gold crown from the Środa treasure, on a pedestal.
+static func _crown() -> void:
+	_pedestal(2.6, 2.6)
+	_poly([-1.6, 2.8, 1.6, 2.8, 2.0, 5.2, 1.0, 4.2, 0, 5.6, -1.0, 4.2, -2.0, 5.2], GOLD)
+	_c(0, 3.6, 0.35, Color("d0402a"))
+	_c(-1.1, 3.6, 0.25, Color("2f6fd0"))
+	_c(1.1, 3.6, 0.25, Color("3f8f3a"))
+
+## Marker of the geometric centre of Poland.
+static func _center() -> void:
+	_r(-2, 0, 2, 0.6, Color("b9b4a8"))
+	_poly([-0.8, 0.6, 0.8, 0.6, 0.4, 6.5, -0.4, 6.5], Color("e8e4dc"))
+	_c(0, 7.2, 0.8, Color("d0202a"))
+	_c(0, 7.2, 0.45, Color.WHITE)
+
+static func _roses() -> void:
+	for k in 6:
+		var x := -4.2 + k * 1.7
+		_c(x, 1.0, 0.9, Color("3f6f35"))
+		_c(x - 0.2, 1.7, 0.45, Color("d0202a") if k % 2 == 0 else Color("f07aa0"))
+		_c(x + 0.4, 1.3, 0.35, Color("d0202a") if k % 3 == 0 else Color("f5c6d6"))
+
+## Łowicz paper cut-out: a colourful rooster, on a board.
+static func _wycinanka() -> void:
+	_l(0, 0, 0, 3, Color("8a8d92"), 0.2)
+	_c(0, 5.5, 2.6, Color("f4f1e8"))
+	_c(-0.4, 5.2, 1.3, Color("d0202a"))
+	_c(0.9, 6.4, 0.6, Color("2f6fd0"))
+	_poly([1.2, 6.9, 1.6, 7.6, 0.6, 7.0], Color("d0202a"))
+	_poly([1.4, 6.4, 2.2, 6.2, 1.4, 6.0], Color("e0b43a"))
+	_poly([-1.0, 5.8, -2.6, 7.6, -1.6, 7.9, -0.6, 6.4], Color("3f8f3a"))
+	_poly([-1.4, 5.0, -2.6, 6.0, -2.0, 4.6], Color("e0b43a"))
+	_l(-0.2, 4.1, -0.3, 3.4, Color("e0b43a"), 0.15)
+	_l(0.3, 4.1, 0.4, 3.4, Color("e0b43a"), 0.15)
+
+## Life-size dinosaur (a long-necked sauropod).
+static func _dinosaur() -> void:
+	var c := Color("6f8f5a")
+	_poly([-7, 2.5, -4, 4.5, 0, 5.5, 3, 4.5, 4, 3, 2, 2, -3, 2], c)
+	_poly([2.2, 4.6, 3.6, 4.0, 5.6, 9.0, 4.8, 9.4], c)
+	_c(5.6, 9.4, 0.7, c)
+	_r(-3, 0, -2, 2.6, c.darkened(0.15))
+	_r(-1, 0, 0, 2.6, c.darkened(0.15))
+	_r(1, 0, 2, 2.6, c.darkened(0.15))
+	_r(2.6, 0, 3.6, 2.6, c.darkened(0.15))
+	_c(5.9, 9.6, 0.15, DARK)

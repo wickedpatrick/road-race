@@ -91,8 +91,7 @@ func _draw() -> void:
 		var tx: float = bx + bw * clampf(t.z / race.stage.length, 0.0, 1.0)
 		draw_rect(Rect2(tx - 1, by - (4 if t.big else 1), 2, 10 if t.big else 7), Color(1, 1, 1, 0.9 if t.big else 0.55))
 	for s in race.stage.stations:
-		var sx: float = bx + bw * (s / race.stage.length)
-		draw_rect(Rect2(sx - 3, by - 5, 6, 18), Color("f2c21b"))
+		_pump_icon(Vector2(bx + bw * (s / race.stage.length), by + 4))
 	draw_circle(Vector2(bx + bw * race.progress(), by + 4), 8, Color.WHITE)
 	draw_circle(Vector2(bx + bw * race.progress(), by + 4), 5, Color("e14b3a"))
 	_text(Vector2(bx, 82), "%s: %d km" % [race.stage.finish_label, int(ceil(race.km_left()))], 16, Color("ffd24a"))
@@ -102,10 +101,11 @@ func _draw() -> void:
 	var low_fuel := fr < 0.15
 	var fblink := low_fuel and int(race.elapsed * 4.0) % 2 == 0
 	draw_style_box(_panel, Rect2(16, 446, 250, 80))
-	var l100 := race.fuel.litres_per_100km(race.speed, Route.M_PER_KM)
+	var l100 := minf(99.0, race.fuel.litres_per_100km(race.speed, Route.M_PER_KM, race.load, race.gearbox.rpm(race.speed)))
 	var eco := absf(race.speed * 3.6 - 90.0) < 12.0
 	var l100_text := "-" if race.speed < 1.0 else ("%.1f l/100 km" % l100).replace(".", ",")
-	_text(Vector2(28, 468), l100_text, 15, Color("7fe0a0") if eco else Color("d6e4f0"))
+	var lc := Color("ff8a7a") if l100 > 15.0 else (Color("7fe0a0") if eco else Color("d6e4f0"))
+	_text(Vector2(28, 468), l100_text, 15, lc)
 	_text(Vector2(28, 492), "PALIWO", 15, Color("ff6a5a") if fblink else Color("9fb3c8"))
 	_text(Vector2(28, 492), "%d / %d l" % [int(round(race.fuel.level)), int(race.fuel.capacity)], 15, Color.WHITE, HORIZONTAL_ALIGNMENT_RIGHT, 226)
 	draw_rect(Rect2(28, 500, 226, 16), Color(1, 1, 1, 0.2))
@@ -132,6 +132,15 @@ func _draw() -> void:
 	_info_card()
 	_board_echo()
 	_minimap()
+
+## Fuel pump: yellow body with a dark display and a hose, centred on the progress bar.
+func _pump_icon(c: Vector2) -> void:
+	var body := Rect2(c + Vector2(-5, -10), Vector2(10, 17))
+	draw_rect(body.grow(1.5), Color("1c2733"))
+	draw_rect(body, Color("f2c21b"))
+	draw_rect(Rect2(c + Vector2(-3, -8), Vector2(6, 4)), Color("1c2733"))
+	draw_rect(Rect2(c + Vector2(-6.5, 6), Vector2(13, 3)), Color("1c2733"))
+	draw_polyline(PackedVector2Array([c + Vector2(5, -6), c + Vector2(9, -4), c + Vector2(9, 4), c + Vector2(7, 5)]), Color("1c2733"), 2.0)
 
 ## Road-number plate (E-15), see Scenery.plate().
 func _shield(pos: Vector2, road: String) -> void:

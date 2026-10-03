@@ -112,7 +112,7 @@ static func build(from: String, to: String) -> Dictionary:
 	var regions := []
 	var express_km := 0
 	var off := 0.0
-	towns.append({"z": 0.0, "name": Geo.city(from).name, "big": true, "half": END_CITY, "start": true})
+	towns.append({"z": 0.0, "name": Geo.city(from).name, "id": from, "big": true, "half": END_CITY, "start": true})
 	for li in legs.size():
 		var leg: Dictionary = legs[li]
 		var r: Dictionary = leg.road
@@ -132,8 +132,8 @@ static func build(from: String, to: String) -> Dictionary:
 		off += leg_km
 		path.append(leg.to)
 		if li < legs.size() - 1:
-			towns.append({"z": off * mpk, "name": Geo.city(leg.to).name, "big": true, "half": CITY_HALF})
-	towns.append({"z": length, "name": Geo.city(to).name, "big": true, "half": END_CITY, "finish": true})
+			towns.append({"z": off * mpk, "name": Geo.city(leg.to).name, "id": leg.to, "big": true, "half": CITY_HALF})
+	towns.append({"z": length, "name": Geo.city(to).name, "id": to, "big": true, "half": END_CITY, "finish": true})
 	_separate(towns)
 	# the last zone runs on past the finish line (the track has a tail)
 	zones[-1].z1 = length + Track.TAIL + 200.0
@@ -251,6 +251,14 @@ static func road_at(stage: Dictionary, z: float) -> String:
 	for r in stage.roads:
 		if z < r.z1: return r.road
 	return stage.roads[-1].road
+
+## Ids of the map cities reached by track position z (the start, cities passed on the way, the destination at the end).
+static func cities_reached(stage: Dictionary, z: float) -> Array:
+	var out := []
+	for t in stage.towns:
+		if t.has("id") and t.z <= z:
+			out.append(t.id)
+	return out
 
 ## The settlement whose streets contain z, or {} on open road.
 static func town_at(stage: Dictionary, z: float) -> Dictionary:

@@ -7,6 +7,7 @@ var season := "summer"
 var from_city := "krakow"
 var to_city := "rzeszow"
 var total_km := 0.0
+var visited: Array = [] ## ids of the map cities the player has been to (the goal: all of them)
 var home_city := "" ## picked on the first start; "" until then (or after a progress reset)
 var menu_at_map := false ## the menu opens at the destination map (coming back from a race)
 var last_result := {}
@@ -28,9 +29,12 @@ func load_profile() -> void:
 	# profiles from before home cities existed: the player is already somewhere, keep it
 	home_city = d.get("home_city", d.get("from_city", ""))
 	if not Geo.CITIES.has(home_city): home_city = ""
+	visited = (d.get("visited", []) as Array).filter(func(id): return Geo.CITIES.has(id))
 	season = d.get("season", season) if SeasonPalette.SEASONS.has(d.get("season", "")) else season
 	from_city = d.get("from_city", from_city) if Geo.CITIES.has(d.get("from_city", "")) else from_city
 	to_city = d.get("to_city", to_city) if Geo.CITIES.has(d.get("to_city", "")) else to_city
+	if visited.is_empty() and has_home():
+		visited = [home_city] if home_city == from_city else [home_city, from_city]
 	var car: String = d.get("car_id", car_id)
 	car_id = car if CarStats.DATA.has(car) and Profile.is_unlocked(car, total_km) else CarStats.ALL_IDS[0]
 
@@ -39,7 +43,8 @@ func save_profile() -> void:
 	if f == null:
 		return
 	f.store_string(JSON.stringify({"total_km": total_km, "car_id": car_id, "season": season,
-		"from_city": from_city, "to_city": to_city, "home_city": home_city}))
+		"from_city": from_city, "to_city": to_city, "home_city": home_city,
+		"visited": visited}))
 
 func has_home() -> bool:
 	return home_city != ""
@@ -49,7 +54,7 @@ func set_home(id: String) -> void:
 	home_city = id
 	from_city = id
 	if to_city == id: to_city = ""
-	save_profile()
+	visit([id])
 
 ## Back to a new player: no kilometres, only the first car, default season and route.
 func reset_profile() -> void:
@@ -59,7 +64,18 @@ func reset_profile() -> void:
 	to_city = "rzeszow"
 	total_km = 0.0
 	home_city = ""
+	visited = []
 	save_profile()
+
+## Marks cities as visited and saves; returns the ones visited for the first time.
+func visit(ids: Array) -> Array:
+	var new := []
+	for id in ids:
+		if not visited.has(id):
+			visited.append(id)
+			new.append(id)
+	save_profile()
+	return new
 
 ## Adds driven kilometres; returns the ids of cars unlocked by them.
 func add_km(km: float) -> Array:

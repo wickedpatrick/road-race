@@ -19,3 +19,11 @@ func run(t) -> void:
 	t.check(f3.is_empty() and f3.level == 0.0, "empty and non-negative")
 	t.check(is_equal_approx(f.ratio(), 1.0), "ratio full")
 	t.check(absf(Fuel.new(65.0, 0.45, 56.0).litres_per_100km(25.0, 14.0) - 5.6) < 0.2, "Volvo shows a plausible l/100 km at 90")
+	# accelerating burns a lot: 20-40 l/100 km on the display for a normal car
+	var y := Fuel.new(40.0, 0.30, 43.0)
+	var acc := y.litres_per_100km(14.0, 14.0, 0.8)
+	t.check(acc > 18.0 and acc < 40.0, "accelerating shows 20-40 l/100 km (%.0f)" % acc)
+	t.check(y.litres_per_100km(14.0, 14.0, 0.0, 0.5) < y.litres_per_100km(14.0, 14.0, 0.0, 1.0), "high revs (low gear) burn more")
+	var rr := CarStats.by_id("rangerover")
+	var rf := Fuel.new(rr.tank, rr.burn, rr.max_speed)
+	t.check(rf.litres_per_100km(Fuel.ECO_SPEED, 14.0) >= 10.0, "Range Rover burns at least 10 l/100 km at 90")
