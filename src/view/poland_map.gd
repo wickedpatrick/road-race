@@ -56,6 +56,32 @@ func step(from: String, dir: Vector2, skip := "") -> String:
 			best = id
 	return best
 
+const MOTORWAY := Color("2f6fd0")
+const LOCAL := Color("8f9a8f")
+
+## Road network: motorways and expressways (A, S) thick and blue, other roads thin and grey.
+## A road that changes type part-way is drawn piece by piece.
+func draw_network(cv: CanvasItem, wide: float, thin: float) -> void:
+	for r in Geo.ROADS:
+		var a := city_pos(r.a)
+		var b := city_pos(r.b)
+		for part in Route.leg_roads({"road": r, "from": r.a, "to": r.b}):
+			var p0 := a.lerp(b, part[0] / float(r.km))
+			var p1 := a.lerp(b, part[1] / float(r.km))
+			if Route.lanes_for(part[2]) == 3:
+				cv.draw_line(p0, p1, MOTORWAY, wide)
+			else:
+				cv.draw_line(p0, p1, LOCAL, thin)
+
+func _legend(cv: CanvasItem, font: Font) -> void:
+	var box := Rect2(area.position + Vector2(0, area.size.y - 36), Vector2(162, 34))
+	cv.draw_rect(box, Color(1, 1, 1, 0.85))
+	var p := box.position + Vector2(6, 11)
+	cv.draw_line(p, p + Vector2(22, 0), MOTORWAY, 4.0)
+	cv.draw_string(font, p + Vector2(28, 4), "autostrady, ekspresowe", HORIZONTAL_ALIGNMENT_LEFT, -1, 10, Color("16222e"))
+	cv.draw_line(p + Vector2(0, 14), p + Vector2(22, 14), LOCAL, 1.6)
+	cv.draw_string(font, p + Vector2(28, 18), "inne drogi", HORIZONTAL_ALIGNMENT_LEFT, -1, 10, Color("16222e"))
+
 func draw(cv: CanvasItem, font: Font, legs: Array, start: String, dest: String, hover: String, t: float) -> void:
 	var poly := PackedVector2Array()
 	for p in Geo.BORDER:
@@ -67,8 +93,8 @@ func draw(cv: CanvasItem, font: Font, legs: Array, start: String, dest: String, 
 	for p in Geo.HEL:
 		hel.append(project(p[1], p[0]))
 	cv.draw_polyline(hel, Color("6f8f5a"), 2.0)
-	for r in Geo.ROADS:
-		cv.draw_line(city_pos(r.a), city_pos(r.b), Color("9aa59a"), 2.0)
+	draw_network(cv, 4.0, 1.6)
+	_legend(cv, font)
 	# chosen route with the towns along it
 	for leg in legs:
 		var a := city_pos(leg.from)
@@ -112,8 +138,7 @@ func draw_mini(cv: CanvasItem, font: Font, legs: Array, km: float, t: float) -> 
 	for p in Geo.BORDER:
 		poly.append(project(p[1], p[0]))
 	cv.draw_colored_polygon(poly, Color("d7e8bd", 0.9))
-	for r in Geo.ROADS:
-		cv.draw_line(city_pos(r.a), city_pos(r.b), Color("9aa59a", 0.7), 1.0)
+	draw_network(cv, 2.0, 1.0)
 	for leg in legs:
 		cv.draw_line(city_pos(leg.from), city_pos(leg.to), Color("e0a21a"), 3.0)
 	for id in Geo.CITIES:

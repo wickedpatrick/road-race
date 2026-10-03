@@ -1,6 +1,6 @@
-# Road Race: Podróż po Polsce
+# Rajd przez Polskę
 
-Edukacyjna gra wyścigowa w stylu Atari "Great American Cross Country Road Race", zrobiona w Godot 4.7.
+Edukacyjna gra wyścigowa w stylu klasycznych wyścigów z Atari, zrobiona w Godot 4.7.
 Jedziesz między 25 największymi miastami Polski (oraz Zakopanem, Zamościem i Łomżą) i poznajesz po drodze miejscowości, krainy geograficzne i polskie znaki drogowe.
 
 ## Granie

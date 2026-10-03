@@ -114,7 +114,9 @@ func _finish() -> void:
 		"state": race.state, "time_left": race.time_left, "elapsed": race.elapsed,
 		"duration": race.stage.duration, "fuel": race.fuel.ratio(), "name": race.stage.name, "km": race.stage.km,
 		"fines": race.fines,
+		"km_driven": Route.km_between(race.stage, 0.0, minf(race.z, race.stage.length)),
 	}
+	Session.last_result.unlocked = Session.add_km(Session.last_result.km_driven)
 	get_tree().change_scene_to_file("res://src/scenes/results.tscn")
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -138,6 +140,9 @@ func _draw_overlay() -> void:
 		o.draw_string(font, Vector2(0, 300), str(n), HORIZONTAL_ALIGNMENT_CENTER, 960, 140, Color(0, 0, 0, 0.5))
 		o.draw_string(font, Vector2(0, 296), str(n), HORIZONTAL_ALIGNMENT_CENTER, 960, 140, Color("ffd24a"))
 		o.draw_string(font, Vector2(0, 340), "%s  ·  %d km" % [race.stage.name, race.stage.km], HORIZONTAL_ALIGNMENT_CENTER, 960, 24, Color.WHITE)
+	elif race.elapsed < 0.9 and race.state == "running":
+		o.draw_string(font, Vector2(0, 300), "START!", HORIZONTAL_ALIGNMENT_CENTER, 960, 110, Color(0, 0, 0, 0.5))
+		o.draw_string(font, Vector2(0, 296), "START!", HORIZONTAL_ALIGNMENT_CENTER, 960, 110, Color("49d36b"))
 	elif race.state != "running":
 		var msg := {"won": "META!", "out_of_time": "KONIEC CZASU", "out_of_fuel": "KONIEC PALIWA"}[race.state] as String
 		var col := Color("49d36b") if race.state == "won" else Color("ff6a5a")

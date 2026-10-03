@@ -39,10 +39,17 @@ func _draw() -> void:
 	else:
 		detail = "Wskazówka: tankuj na stacjach, jedź ok. 90 km/h i unikaj zderzeń"
 	draw_string(font, Vector2(0, 360), detail, HORIZONTAL_ALIGNMENT_CENTER, 960, 26, Color("23323f"))
+	draw_string(font, Vector2(0, 392), "+%d km   ·   razem przejechane: %d km" % [int(r.get("km_driven", 0.0)), int(Session.total_km)], HORIZONTAL_ALIGNMENT_CENTER, 960, 20, Color("23323f"))
+	var unlocked: Array = r.get("unlocked", [])
+	if not unlocked.is_empty():
+		var names := []
+		for id in unlocked: names.append(CarStats.by_id(id).name)
+		draw_rect(Rect2(180, 432, 600, 34), Color(0.1, 0.5, 0.2, 0.85))
+		draw_string(font, Vector2(0, 457), "Nowe auto odblokowane: %s!" % ", ".join(names), HORIZONTAL_ALIGNMENT_CENTER, 960, 22, Color.WHITE)
 	var fines: int = r.get("fines", 0)
 	if fines > 0:
-		draw_string(font, Vector2(0, 400), "Mandaty za prędkość: %d" % fines, HORIZONTAL_ALIGNMENT_CENTER, 960, 22, Color("c0392b"))
-	draw_string(font, Vector2(0, 460), "Naciśnij dowolny klawisz, aby wrócić do mapy", HORIZONTAL_ALIGNMENT_CENTER, 960, 26, Color.WHITE)
+		draw_string(font, Vector2(0, 420), "Mandaty za prędkość: %d" % fines, HORIZONTAL_ALIGNMENT_CENTER, 960, 22, Color("c0392b"))
+	draw_string(font, Vector2(0, 506), "Naciśnij dowolny klawisz, aby wrócić do mapy", HORIZONTAL_ALIGNMENT_CENTER, 960, 26, Color.WHITE)
 
 func _process(dt: float) -> void:
 	age += dt

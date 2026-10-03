@@ -37,7 +37,9 @@ static func draw(cv, car_id: String, c: Vector2, s: float, steer: float, braking
 	cv.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 	match car_id:
 		"xc60": _xc60(cv, c, s, body, dark, light, lean, braking)
-		"rav4": _rav4(cv, c, s, body, dark, light, lean, braking)
+		"octavia": _octavia(cv, c, s, body, dark, light, lean, braking)
+		"bmw530": _bmw530(cv, c, s, body, dark, light, lean, braking)
+		"rangerover": _rangerover(cv, c, s, body, dark, light, lean, braking)
 		_: _yaris(cv, c, s, body, dark, light, lean, braking)
 
 static func _plate(cv, c: Vector2, s: float, y: float) -> void:
@@ -71,20 +73,57 @@ static func _xc60(cv, c, s, body, dark, light, lean, braking) -> void:
 	_rect(cv, c, s, -9, 68, 9, 76, light)                      # badge
 	_plate(cv, c, s, 38)
 
-static func _rav4(cv, c, s, body, dark, light, lean, braking) -> void:
-	_wheels(cv, c, s, 100)
-	_chamfer(cv, c, s, -107, 16, 107, 78, 8, body)
-	_chamfer(cv, c, s, -105, 10, 105, 32, 5, BUMPER)
-	_poly(cv, c, s, [[-90 + lean, 78], [-84 + lean, 124], [84 + lean, 124], [90 + lean, 78]], body)
-	_poly(cv, c, s, [[-76 + lean, 84], [-72 + lean, 118], [72 + lean, 118], [76 + lean, 84]], GLASS)
-	_rect(cv, c, s, -86 + lean, 124, 86 + lean, 132, dark)      # roof spoiler
+static func _exhausts(cv, c: Vector2, s: float, xs: Array) -> void:
+	for x in xs:
+		_chamfer(cv, c, s, x - 7, 12, x + 7, 20, 2, Color("4a4b50"))
+
+## Liftback with C-shaped lights and the maker's name across the tailgate.
+static func _octavia(cv, c, s, body, dark, light, lean, braking) -> void:
+	_wheels(cv, c, s, 92)
+	_chamfer(cv, c, s, -98, 16, 98, 64, 12, body)
+	_chamfer(cv, c, s, -96, 10, 96, 30, 6, BUMPER)
+	_poly(cv, c, s, [[-80 + lean, 64], [-62 + lean, 104], [62 + lean, 104], [80 + lean, 64]], body)
+	_poly(cv, c, s, [[-66 + lean, 68], [-52 + lean, 98], [52 + lean, 98], [66 + lean, 68]], GLASS)
 	var lc := _light(braking)
-	_chamfer(cv, c, s, -105, 56, -66, 76, 4, lc)               # horizontal pods
-	_chamfer(cv, c, s, 66, 56, 105, 76, 4, lc)
-	_rect(cv, c, s, -66, 64, 66, 68, lc.darkened(0.2))         # light bar
-	_rect(cv, c, s, -58, 44, 58, 48, dark)
-	_rect(cv, c, s, -12, 50, 12, 60, light)                    # Toyota badge area
-	_plate(cv, c, s, 34)
+	_poly(cv, c, s, [[-98, 46], [-58, 50], [-58, 62], [-98, 62]], lc)
+	_poly(cv, c, s, [[98, 46], [58, 50], [58, 62], [98, 62]], lc)
+	_rect(cv, c, s, -98, 46, -86, 56, dark)
+	_rect(cv, c, s, 86, 46, 98, 56, dark)
+	_rect(cv, c, s, -30, 54, 30, 58, light)
+	_plate(cv, c, s, 30)
+
+## Sedan with a short boot lid, L-shaped lights and four exhaust tips.
+static func _bmw530(cv, c, s, body, dark, light, lean, braking) -> void:
+	_wheels(cv, c, s, 96)
+	_chamfer(cv, c, s, -104, 16, 104, 70, 14, body)
+	_chamfer(cv, c, s, -102, 10, 102, 28, 6, BUMPER)
+	_exhausts(cv, c, s, [-74, -58, 58, 74])
+	_rect(cv, c, s, -82, 70, 82, 76, dark)
+	_poly(cv, c, s, [[-80 + lean, 76], [-60 + lean, 112], [60 + lean, 112], [80 + lean, 76]], body)
+	_poly(cv, c, s, [[-66 + lean, 80], [-50 + lean, 106], [50 + lean, 106], [66 + lean, 80]], GLASS)
+	var lc := _light(braking)
+	_rect(cv, c, s, -104, 54, -64, 66, lc)
+	_rect(cv, c, s, -104, 40, -90, 66, lc)
+	_rect(cv, c, s, 64, 54, 104, 66, lc)
+	_rect(cv, c, s, 90, 40, 104, 66, lc)
+	_chamfer(cv, c, s, -6, 56, 6, 64, 2, Color("2a5db0"))
+	_plate(cv, c, s, 32)
+
+## Tall, square luxury SUV: floating black roof, slim lights joined by a dark band.
+static func _rangerover(cv, c, s, body, dark, light, lean, braking) -> void:
+	_wheels(cv, c, s, 106)
+	_chamfer(cv, c, s, -112, 18, 112, 96, 10, body)
+	_chamfer(cv, c, s, -110, 10, 110, 36, 6, BUMPER)
+	_exhausts(cv, c, s, [-84, -68, 68, 84])
+	_poly(cv, c, s, [[-100 + lean, 96], [-94 + lean, 146], [94 + lean, 146], [100 + lean, 96]], body)
+	_poly(cv, c, s, [[-86 + lean, 102], [-82 + lean, 138], [82 + lean, 138], [86 + lean, 102]], GLASS)
+	_rect(cv, c, s, -96 + lean, 146, 96 + lean, 152, Color("17181a"))
+	var lc := _light(braking)
+	_rect(cv, c, s, -112, 70, 112, 80, Color("1b1b1d"))
+	_rect(cv, c, s, -112, 70, -70, 80, lc)
+	_rect(cv, c, s, 70, 70, 112, 80, lc)
+	_rect(cv, c, s, -50, 60, 50, 64, light)
+	_plate(cv, c, s, 40)
 
 static func _yaris(cv, c, s, body, dark, light, lean, braking) -> void:
 	_wheels(cv, c, s, 90)

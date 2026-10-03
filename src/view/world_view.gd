@@ -33,7 +33,7 @@ var _o1 := PackedFloat32Array()
 var _vis := PackedByteArray()
 var _buckets: Array = []
 var _b := DrawBatch.new()
-var _warm := false
+var _warm_left: Array = [] ## sign texts still to pre-render, a few per frame (see Scenery.warm_text)
 var _ground: Array = [] ## per track segment: Scenery.ground() strips
 var _lanes := PackedByteArray() ## per track segment: 2 or 3 lanes
 var _gcol: Array = [] ## per ground colour id: fogged colour for each view depth n
@@ -46,6 +46,7 @@ func bind(p_race: Race, p_season: String) -> void:
 	pal = SeasonPalette.by_name(season)
 	items = Scenery.build(race.stage, 1)
 	_ground = Scenery.ground(race.stage, race.track.segments.size())
+	_warm_left = Scenery.sign_texts(race.stage)
 	_lanes.resize(race.track.segments.size())
 	for k in _lanes.size():
 		_lanes[k] = Route.lanes_at(race.stage, k * SEG)
@@ -127,9 +128,9 @@ func _fog(c: Color, n: int) -> Color:
 func _draw() -> void:
 	if race == null:
 		return
-	if not _warm:
-		_warm = true
-		Scenery.warm_text(self, font, race.stage)
+	if not _warm_left.is_empty():
+		Scenery.warm_text(self, font, _warm_left.slice(0, 3))
+		_warm_left = _warm_left.slice(3)
 	_b.begin(self)
 	_draw_sky()
 	_draw_scene()

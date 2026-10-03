@@ -1,13 +1,21 @@
 extends RefCounted
 func run(t) -> void:
-	var car_keys := ["name", "max_speed", "accel", "brake", "tank", "burn", "handling", "body_color", "halfwidth"]
+	var car_keys := ["name", "hp", "max_speed", "accel", "brake", "tank", "burn", "handling", "body_color", "halfwidth"]
 	for id in CarStats.ALL_IDS:
 		var c: Dictionary = CarStats.by_id(id)
 		var ok := true
 		for k in car_keys:
 			if not c.has(k): ok = false
 		t.check(ok, "car %s has all keys" % id)
-	t.check(CarStats.ALL_IDS.size() == 3, "three cars")
+	t.check(CarStats.ALL_IDS == ["yaris", "octavia", "xc60", "bmw530", "rangerover"], "five cars, weakest first")
+	# each car beats the previous one on speed, acceleration and range, and burns more per km at 90 km/h
+	var ranked := true
+	for i in range(1, CarStats.ALL_IDS.size()):
+		var a: Dictionary = CarStats.by_id(CarStats.ALL_IDS[i - 1])
+		var b: Dictionary = CarStats.by_id(CarStats.ALL_IDS[i])
+		if b.max_speed <= a.max_speed or b.accel <= a.accel or b.tank <= a.tank or b.hp <= a.hp: ranked = false
+		if Fuel.new(b.tank, b.burn, b.max_speed).per_metre(25.0) <= Fuel.new(a.tank, a.burn, a.max_speed).per_metre(25.0): ranked = false
+	t.check(ranked, "cars ranked: better is faster but thirstier")
 	var stage_keys := ["name", "duration", "lanes", "length", "traffic_density", "stations", "finish_label", "zones", "towns", "roads", "km"]
 	var ids := Geo.city_ids()
 	var keys_ok := true

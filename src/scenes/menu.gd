@@ -11,6 +11,7 @@ var dest_city := "rzeszow"
 var hover := ""
 var legs: Array = []
 var map := PolandMap.new(Rect2(24, 104, 440, 378))
+var loading := false ## start chosen: the "get ready" card is shown while the race scene loads
 var t := 0.0
 
 func _ready() -> void:
@@ -38,6 +39,8 @@ func _process(dt: float) -> void:
 	queue_redraw()
 
 func _unhandled_input(event: InputEvent) -> void:
+	if loading:
+		return
 	if step >= MAP_STEP and event is InputEventMouse:
 		_map_mouse(event)
 		return
@@ -69,6 +72,8 @@ func _unhandled_input(event: InputEvent) -> void:
 			hover = dest_city
 
 func _confirm() -> void:
+	if step == 0 and not Profile.is_unlocked(CarStats.ALL_IDS[sel[0]], Session.total_km):
+		return # locked car
 	if step < MAP_STEP:
 		step += 1
 	elif step == MAP_STEP:
@@ -101,6 +106,12 @@ func _start() -> void:
 	Session.season = SeasonPalette.SEASONS[sel[1]]
 	Session.from_city = start_city
 	Session.to_city = dest_city
+	Session.save_profile()
+	loading = true
+	queue_redraw()
+	# let the "get ready" card reach the screen before the (blocking) scene change
+	await get_tree().process_frame
+	await get_tree().process_frame
 	get_tree().change_scene_to_file("res://src/scenes/game.tscn")
 
 func _t(pos: Vector2, text: String, size: int, col: Color, align := HORIZONTAL_ALIGNMENT_LEFT, width := -1.0) -> void:
@@ -112,9 +123,9 @@ func _draw() -> void:
 		PackedColorArray([pal.sky_top, pal.sky_top, pal.sky_bottom, pal.sky_bottom]))
 	draw_rect(Rect2(0, 400, 960, 140), pal.grass_a)
 	draw_primitive(PackedVector2Array([Vector2(430, 400), Vector2(530, 400), Vector2(760, 540), Vector2(200, 540)]), PackedColorArray([pal.road_a, pal.road_a, pal.road_a, pal.road_a]), PackedVector2Array())
-	_t(Vector2(0, 62), "ROAD RACE", 54, Color(0, 0, 0, 0.25), HORIZONTAL_ALIGNMENT_CENTER, 964)
-	_t(Vector2(0, 60), "ROAD RACE", 54, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, 960)
-	_t(Vector2(0, 92), "Podróż po Polsce", 24, Color("1d2b38"), HORIZONTAL_ALIGNMENT_CENTER, 960)
+	_t(Vector2(0, 62), "RAJD PRZEZ POLSKĘ", 54, Color(0, 0, 0, 0.25), HORIZONTAL_ALIGNMENT_CENTER, 964)
+	_t(Vector2(0, 60), "RAJD PRZEZ POLSKĘ", 54, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, 960)
+	_t(Vector2(0, 92), "Edukacyjna podróż po polskich drogach", 24, Color("1d2b38"), HORIZONTAL_ALIGNMENT_CENTER, 960)
 	if step < MAP_STEP:
 		_t(Vector2(0, 140), "%d / 4   %s" % [step + 1, STEP_TITLES[step]], 28, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, 960)
 	match step:
@@ -128,6 +139,8 @@ func _draw() -> void:
 		summary += "  ·  " + SeasonPalette.label(SeasonPalette.SEASONS[sel[1]])
 	draw_rect(Rect2(0, 486, 960, 54), Color(0, 0, 0, 0.5))
 	_t(Vector2(24, 518), summary, 20 if step < MAP_STEP else 17, Color("ffd24a"))
+	if step == 0:
+		_unlock_progress(Vector2(24, 505))
 	var hint := "Strzałki: wybierz      Enter: dalej" if step <= MAP_STEP else "Strzałki: wybierz      Enter: START!"
 	if step >= MAP_STEP:
 		hint = "Strzałki/myszka   " + ("Enter: dalej" if step == MAP_STEP else "Enter: START!")
@@ -135,6 +148,10 @@ func _draw() -> void:
 		hint += "      Esc: wstecz"
 	hint += "      X: dźwięk"
 	_t(Vector2(0, 518), hint, 20, Color.WHITE, HORIZONTAL_ALIGNMENT_RIGHT, 936)
+	if loading:
+		draw_rect(Rect2(0, 0, 960, 540), Color(0.03, 0.05, 0.08, 0.82))
+		_t(Vector2(0, 250), "Przygotuj się do rajdu!", 48, Color("ffd24a"), HORIZONTAL_ALIGNMENT_CENTER, 960)
+		_t(Vector2(0, 300), "%s - %s" % [Geo.city(start_city).name, Geo.city(dest_city).name], 26, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, 960)
 
 func _card(rect: Rect2, selected: bool) -> void:
 	var sb := StyleBoxFlat.new()
@@ -145,24 +162,52 @@ func _card(rect: Rect2, selected: bool) -> void:
 		sb.set_border_width_all(4)
 	draw_style_box(sb, rect)
 
-func _bar(pos: Vector2, label: String, v: float) -> void:
-	_t(pos, label, 14, Color("b8c7d6"))
-	draw_rect(Rect2(pos + Vector2(112, -11), Vector2(116, 9)), Color(1, 1, 1, 0.2))
-	draw_rect(Rect2(pos + Vector2(112, -11), Vector2(116 * clampf(v, 0.0, 1.0), 9)), Color("4cc3ff"))
+func _bar(pos: Vector2, label: String, v: float, w: float) -> void:
+	_t(pos, label, 12, Color("b8c7d6"))
+	draw_rect(Rect2(pos + Vector2(0, 4), Vector2(w, 6)), Color(1, 1, 1, 0.2))
+	draw_rect(Rect2(pos + Vector2(0, 4), Vector2(w * clampf(v, 0.0, 1.0), 6)), Color("4cc3ff"))
+
+## Total kilometres and a bar towards the next car to unlock.
+func _unlock_progress(pos: Vector2) -> void:
+	var km := Session.total_km
+	var n := Profile.unlocked_count(km)
+	_t(pos + Vector2(0, 0), "Przejechane: %d km" % int(km), 16, Color("ffd24a"))
+	if n >= CarStats.ALL_IDS.size():
+		_t(pos + Vector2(0, 22), "Wszystkie auta odblokowane!", 14, Color.WHITE)
+		return
+	var next: Dictionary = CarStats.by_id(CarStats.ALL_IDS[n])
+	_t(pos + Vector2(0, 24), "%s za %d km" % [next.name, int(ceil(Profile.unlock_km(n) - km))], 14, Color.WHITE)
+	draw_rect(Rect2(pos + Vector2(190, -12), Vector2(160, 10)), Color(1, 1, 1, 0.2))
+	draw_rect(Rect2(pos + Vector2(190, -12), Vector2(160 * Profile.next_progress(km), 10)), Color("49d36b"))
 
 func _draw_cars() -> void:
-	for i in 3:
+	var n := CarStats.ALL_IDS.size()
+	var w := 172.0
+	for i in n:
 		var id: String = CarStats.ALL_IDS[i]
 		var c := CarStats.by_id(id)
-		var r := Rect2(60 + i * 290, 180, 260, 290)
+		var r := Rect2(28 + i * (w + 11), 172, w, 302)
 		var on: bool = sel[0] == i
+		var open := Profile.is_unlocked(id, Session.total_km)
 		_card(r, on)
-		CarPainter.draw(self, id, Vector2(r.position.x + 130, r.position.y + 128), 0.78 if on else 0.68, sin(t * 2.0) * 0.3 if on else 0.0, false)
-		_t(r.position + Vector2(0, 160), c.name, 24, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, r.size.x)
-		_bar(r.position + Vector2(14, 196), "Prędkość", c.max_speed / 56.0)
-		_bar(r.position + Vector2(14, 224), "Przyspieszenie", c.accel / 10.0)
-		_bar(r.position + Vector2(14, 252), "Bak", c.tank / 65.0)
-		_bar(r.position + Vector2(14, 280), "Zwrotność", (c.handling - 0.6) / 0.6)
+		CarPainter.draw(self, id, Vector2(r.position.x + w * 0.5, r.position.y + 106), 0.62 if on else 0.55, sin(t * 2.0) * 0.3 if on and open else 0.0, false)
+		draw_multiline_string(font, r.position + Vector2(6, 138), c.name, HORIZONTAL_ALIGNMENT_CENTER, w - 12, 17, 2, Color.WHITE)
+		_t(r.position + Vector2(0, 180), "%d KM" % c.hp, 13, Color("c8d6e3"), HORIZONTAL_ALIGNMENT_CENTER, w)
+		var bx := r.position.x + 12
+		_bar(Vector2(bx, r.position.y + 200), "Prędkość", c.max_speed / 70.0, w - 24)
+		_bar(Vector2(bx, r.position.y + 224), "Przyspieszenie", c.accel / 12.0, w - 24)
+		_bar(Vector2(bx, r.position.y + 248), "Zwrotność", (c.handling - 0.6) / 0.65, w - 24)
+		_bar(Vector2(bx, r.position.y + 272), "Oszczędność", 0.3 / c.burn * 0.9, w - 24)
+		if not open:
+			var sb := StyleBoxFlat.new()
+			sb.bg_color = Color(0.03, 0.05, 0.08, 0.72)
+			sb.set_corner_radius_all(16)
+			draw_style_box(sb, r)
+			var lc := r.position + Vector2(w * 0.5, 84)
+			draw_rect(Rect2(lc + Vector2(-18, -6), Vector2(36, 28)), Color("ffd24a"))
+			draw_arc(lc + Vector2(0, -6), 12, PI, TAU, 16, Color("ffd24a"), 5.0)
+			draw_circle(lc + Vector2(0, 6), 4, Color("2b2b2f"))
+			_t(r.position + Vector2(0, 186), "od %d km" % int(Profile.unlock_km(i)), 18, Color("ffd24a"), HORIZONTAL_ALIGNMENT_CENTER, w)
 
 func _draw_seasons() -> void:
 	for i in 4:

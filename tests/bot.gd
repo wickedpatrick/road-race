@@ -11,7 +11,6 @@ func decide(r: Race) -> Dictionary:
 	var target_x := 0.0
 	var brake := false
 	var accel := true
-	var idx := r.traffic.nearest_ahead(r.z)
 	var lanes: Array = Traffic.LANES[Route.lanes_at(r.stage, r.z + 30.0)]
 	var best := 0.0
 	var best_gap := -1.0
@@ -24,12 +23,14 @@ func decide(r: Race) -> Dictionary:
 			best_gap = gap
 			best = lx
 	target_x = best
-	if idx >= 0:
-		var c: Dictionary = r.traffic.cars[idx]
+	# follow the closest slower car in the player's own lane (or the lane being moved into)
+	for c in r.traffic.cars:
+		if not c.active: continue
 		var gap: float = c.z - r.z
-		if absf(c.lane_x - r.x) < 0.38 and gap < 10.0 + r.speed * 0.9 and r.speed > c.speed:
-			brake = r.speed > c.speed + 3.0
+		if gap > -2.0 and gap < 10.0 + r.speed * 0.9 and r.speed > c.speed \
+				and (absf(c.lane_x - r.x) < 0.45 or absf(c.lane_x - target_x) < 0.3 and gap < 25.0):
 			accel = false
+			brake = brake or r.speed > c.speed + 3.0
 	# station logic
 	for s in r.stage.stations:
 		var d: float = s - r.z

@@ -1,14 +1,14 @@
-# Road Race Implementation Plan
+# Rajd przez Polskę: plan implementacji
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Wyścig pseudo-3D (styl OutRun / Atari Cross Country Road Race) w Godot 4.7, grywalny w przeglądarce na MacBooku Air (Intel i5, 8 GB).
+**Goal:** Wyścig pseudo-3D (styl OutRun / klasyczne wyścigi z Atari) w Godot 4.7, grywalny w przeglądarce na MacBooku Air (Intel i5, 8 GB).
 
 **Architecture:** Cała logika (paliwo, skrzynia, trasa, ruch, kolizje) siedzi w czystych klasach `RefCounted` bez zależności od scen, więc da się ją testować headless. Jedna scena `Game` rysuje świat w `_draw()` (pasy drogi z projekcją perspektywiczną, sprite'y wektorowe). Menu i HUD to osobne sceny budowane w kodzie.
 
 **Tech Stack:** Godot 4.7.2 (`/Applications/Godot.app/Contents/MacOS/Godot`), GDScript, renderer Compatibility, eksport Web bez wątków, `python3 -m http.server` do lokalnego grania.
 
-**Spec:** `docs/superpowers/specs/2026-10-02-road-race-design.md`
+**Spec:** `docs/superpowers/specs/2026-10-02-rajd-przez-polske-design.md`
 
 ## Global Constraints
 

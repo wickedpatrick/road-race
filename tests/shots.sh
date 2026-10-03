@@ -1,7 +1,7 @@
 #!/bin/bash
 # usage: tests/shots.sh out.png "stage season car z" ...   (renders 4 previews into a contact sheet)
 cd "$(dirname "$0")/.."
-G=/Applications/Godot.app/Contents/MacOS/Godot
+G=${GODOT:-$(ls /Applications/Godot*.app/Contents/MacOS/Godot 2>/dev/null | head -1)}
 out=$1; shift
 i=0
 for spec in "$@"; do

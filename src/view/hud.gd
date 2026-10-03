@@ -6,7 +6,7 @@ var font: Font
 var _panel := StyleBoxFlat.new()
 var _region := ""
 var _region_time := 0.0
-var _warm := false
+var _warm_left: Array = [] ## [text, size] still to pre-render, a few per frame
 var _legs: Array = []
 var _mini := PolandMap.new(Rect2(790, 384, 150, 138))
 var _t := 0.0
@@ -21,6 +21,15 @@ func _init() -> void:
 func bind(p_race: Race) -> void:
 	race = p_race
 	_legs = Route.find(race.stage.from, race.stage.to)
+	# town names, facts and regions shown in the HUD, pre-rendered during the countdown (see Scenery.warm_text)
+	for t in race.stage.towns:
+		for fs in [10, 11, 12, 13, 14, 15]:
+			_warm_left.append([t.name, fs])
+		_warm_left.append([t.name, 19])
+		_warm_left.append([t.fact, 15])
+	for zn in race.stage.zones:
+		_warm_left.append(["Kraina: " + zn.region, 19])
+		_warm_left.append([zn.region, 14])
 
 func _process(dt: float) -> void:
 	_t += dt
@@ -43,17 +52,9 @@ func _text(pos: Vector2, text: String, size: int, col: Color, align := HORIZONTA
 func _draw() -> void:
 	if race == null:
 		return
-	if not _warm:
-		_warm = true
-		# shape and rasterise the town names and facts up front (see Scenery.warm_text)
-		for t in race.stage.towns:
-			for fs in [10, 11, 12, 13, 14, 15, 19]:
-				draw_string(font, Vector2(-5000, -5000), t.name + " " + t.fact, HORIZONTAL_ALIGNMENT_LEFT, -1, fs)
-			draw_string(font, Vector2(-5000, -5000), t.name, HORIZONTAL_ALIGNMENT_LEFT, -1, 19)
-			draw_string(font, Vector2(-5000, -5000), t.fact, HORIZONTAL_ALIGNMENT_LEFT, -1, 15)
-		for zn in race.stage.zones:
-			draw_string(font, Vector2(-5000, -5000), "Kraina: " + zn.region, HORIZONTAL_ALIGNMENT_LEFT, -1, 19)
-			draw_string(font, Vector2(-5000, -5000), zn.region, HORIZONTAL_ALIGNMENT_LEFT, -1, 14)
+	for w in _warm_left.slice(0, 8):
+		draw_string(font, Vector2(-5000, -5000), w[0], HORIZONTAL_ALIGNMENT_LEFT, -1, w[1])
+	_warm_left = _warm_left.slice(8)
 	# time
 	var low_time := race.time_left < 20.0
 	var blink := low_time and int(race.elapsed * 3.0) % 2 == 0

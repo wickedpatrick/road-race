@@ -1,6 +1,6 @@
-# Road Race: Kraków → Zamość (Godot 4.7, Web)
+# Rajd przez Polskę (Godot 4.7, Web)
 
-Gra wyścigowa w stylu "The Great American Cross Country Road Race" (Atari), widok zza auta, pseudo-3D (OutRun). Dla syna Patryka, w przeglądarce na MacBooku Air (Intel i5, 8 GB).
+Gra wyścigowa w stylu klasycznych wyścigów z Atari, widok zza auta, pseudo-3D (OutRun). Dla syna Patryka, w przeglądarce na MacBooku Air (Intel i5, 8 GB).
 
 ## Wymagania
 - Wybór przed startem: auto (Volvo XC60, Toyota RAV4, Toyota Yaris, obecne generacje, widok z tyłu), pora roku (wiosna/lato/jesień/zima), odcinek.

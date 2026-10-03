@@ -8,7 +8,7 @@ const STOP_SPEED := 3.0
 const COLLISION_TIME_PENALTY := 5.0
 const COLLISION_SPEED_KEEP := 0.3
 const OFFROAD_SPEED_RATIO := 0.4
-const ROLL_DECEL := 1.0 ## off the throttle the car rolls on for a long time
+const ROLL_DECEL := 0.33 ## off the throttle the car rolls on for a long time
 ## speeding: the radar detector warns first; keep speeding past the grace time and the police pull you over
 const GRACE := 5.0
 const GRACE_EXPRESS := 10.0 ## on motorways / expressways

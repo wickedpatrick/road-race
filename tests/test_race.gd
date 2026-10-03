@@ -16,7 +16,7 @@ func run(t) -> void:
 	r.speed = 30.0
 	r.step(1.0, NONE)
 	t.check(r.speed < 30.0 and r.speed > 0.0, "coasting slows")
-	for i in 100: r.step(0.5, NONE)
+	for i in 250: r.step(0.5, NONE)
 	t.check(r.speed == 0.0, "coasting stops at zero, no reverse")
 	r = fresh()
 	for i in 20: r.step(0.1, BRAKE)

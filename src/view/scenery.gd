@@ -419,10 +419,10 @@ static func sign_texts(stage: Dictionary) -> Array:
 	for r in stage.roads: out.append(plate(r.road)[0])
 	return out
 
-## Draws all sign texts at every size far off-screen once, so glyph rasterisation happens before the race
+## Draws texts at every sign size far off-screen, so glyph rasterisation happens during the countdown
 ## instead of as a stutter when a sign comes close.
-static func warm_text(cv: CanvasItem, font: Font, stage: Dictionary) -> void:
-	for text in sign_texts(stage):
+static func warm_text(cv: CanvasItem, font: Font, texts: Array) -> void:
+	for text in texts:
 		for fs in TEXT_SIZES:
 			font.get_string_size(text, HORIZONTAL_ALIGNMENT_LEFT, -1, fs)
 			cv.draw_string(font, Vector2(-5000, -5000), text, HORIZONTAL_ALIGNMENT_LEFT, -1, fs)
