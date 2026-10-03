@@ -4,6 +4,9 @@ config_version=5
 config/name="Rajd przez Polskę"
 run/main_scene="res://src/scenes/menu.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
+boot_splash/bg_color=Color(0.0196, 0.0431, 0.0196, 1)
+boot_splash/fullsize=false
+boot_splash/image="res://assets/brand/muutex_logo.png"
 
 [audio]
 
