@@ -11,6 +11,7 @@ var dest_city := "rzeszow"
 var hover := ""
 var legs: Array = []
 var map := PolandMap.new(Rect2(24, 104, 440, 378))
+var confirm_reset := false ## "reset progress?" question is shown (car step, R key)
 var loading := false ## start chosen: the "get ready" card is shown while the race scene loads
 var t := 0.0
 
@@ -45,6 +46,17 @@ func _unhandled_input(event: InputEvent) -> void:
 		_map_mouse(event)
 		return
 	if not (event is InputEventKey and event.pressed and not event.echo):
+		return
+	if confirm_reset:
+		if event.keycode in [KEY_ENTER, KEY_KP_ENTER, KEY_T]:
+			_reset_progress()
+		elif event.keycode in [KEY_ESCAPE, KEY_N]:
+			Sfx.play("blip", -8.0)
+			confirm_reset = false
+		return
+	if step == 0 and event.keycode == KEY_R:
+		Sfx.play("blip", -8.0)
+		confirm_reset = true
 		return
 	var confirm: bool = event.keycode == KEY_ENTER or event.keycode == KEY_KP_ENTER or event.keycode == KEY_SPACE
 	var back: bool = event.keycode == KEY_ESCAPE and step > 0
@@ -82,6 +94,14 @@ func _confirm() -> void:
 		hover = dest_city
 	elif not legs.is_empty():
 		_start()
+
+func _reset_progress() -> void:
+	Session.reset_profile()
+	sel = [0, SeasonPalette.SEASONS.find(Session.season)]
+	start_city = Session.from_city
+	dest_city = Session.to_city
+	confirm_reset = false
+	Sfx.play("hit", -6.0)
 
 func _map_mouse(event: InputEventMouse) -> void:
 	var id := map.city_at(get_global_mouse_position())
@@ -146,12 +166,24 @@ func _draw() -> void:
 		hint = "Strzałki/myszka   " + ("Enter: dalej" if step == MAP_STEP else "Enter: START!")
 	if step > 0:
 		hint += "      Esc: wstecz"
+	if step == 0:
+		hint = "Strzałki   Enter: dalej   R: reset postępu"
 	hint += "      X: dźwięk"
 	_t(Vector2(0, 518), hint, 20, Color.WHITE, HORIZONTAL_ALIGNMENT_RIGHT, 936)
+	if confirm_reset:
+		_draw_reset_question()
 	if loading:
 		draw_rect(Rect2(0, 0, 960, 540), Color(0.03, 0.05, 0.08, 0.82))
 		_t(Vector2(0, 250), "Przygotuj się do rajdu!", 48, Color("ffd24a"), HORIZONTAL_ALIGNMENT_CENTER, 960)
 		_t(Vector2(0, 300), "%s - %s" % [Geo.city(start_city).name, Geo.city(dest_city).name], 26, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, 960)
+
+func _draw_reset_question() -> void:
+	draw_rect(Rect2(0, 0, 960, 540), Color(0.03, 0.05, 0.08, 0.75))
+	var r := Rect2(200, 160, 560, 220)
+	_card(r, true)
+	_t(Vector2(0, 220), "Zresetować postęp?", 40, Color("ffd24a"), HORIZONTAL_ALIGNMENT_CENTER, 960)
+	draw_multiline_string(font, Vector2(240, 262), "Licznik przejechanych kilometrów (%d km) i odblokowane auta zostaną skasowane. Zaczniesz od nowa Yarisem." % int(Session.total_km), HORIZONTAL_ALIGNMENT_CENTER, 480, 18, 3, Color.WHITE)
+	_t(Vector2(0, 352), "Enter: tak, resetuj      Esc: nie", 20, Color("c8d6e3"), HORIZONTAL_ALIGNMENT_CENTER, 960)
 
 func _card(rect: Rect2, selected: bool) -> void:
 	var sb := StyleBoxFlat.new()

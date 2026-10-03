@@ -1,5 +1,5 @@
 extends "res://src/scenes/menu.gd"
-## Dev-only: opens the menu at a given step. Args: step [season_index] [from] [to] [total_km]
+## Dev-only: opens the menu at a given step. Args: step [season_index] [from] [to] [total_km] ["reset"]
 func _ready() -> void:
 	super()
 	var a := OS.get_cmdline_user_args()
@@ -9,3 +9,4 @@ func _ready() -> void:
 	if a.size() > 3: _pick_dest(a[3])
 	if a.size() > 4: Session.total_km = float(a[4])
 	hover = dest_city if step > MAP_STEP else start_city
+	confirm_reset = a.size() > 5 and a[5] == "reset"

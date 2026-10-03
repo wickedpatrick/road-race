@@ -37,6 +37,15 @@ func save_profile() -> void:
 	f.store_string(JSON.stringify({"total_km": total_km, "car_id": car_id, "season": season,
 		"from_city": from_city, "to_city": to_city}))
 
+## Back to a new player: no kilometres, only the first car, default season and route.
+func reset_profile() -> void:
+	car_id = CarStats.ALL_IDS[0]
+	season = "summer"
+	from_city = "krakow"
+	to_city = "rzeszow"
+	total_km = 0.0
+	save_profile()
+
 ## Adds driven kilometres; returns the ids of cars unlocked by them.
 func add_km(km: float) -> Array:
 	var before := Profile.unlocked_count(total_km)
