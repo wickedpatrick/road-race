@@ -10,6 +10,7 @@ var _warm_left: Array = [] ## [text, size] still to pre-render, a few per frame
 var _legs: Array = []
 var _mini := PolandMap.new(Rect2(790, 384, 150, 138))
 var _t := 0.0
+var _landmarks: Array = []
 
 func _init() -> void:
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -27,6 +28,10 @@ func bind(p_race: Race) -> void:
 			_warm_left.append([t.name, fs])
 		_warm_left.append([t.name, 19])
 		_warm_left.append([t.fact, 15])
+	_landmarks = Landmarks.place(race.stage)
+	for lm in _landmarks:
+		_warm_left.append([_landmark_title(lm), 19])
+		_warm_left.append([lm.desc, 15])
 	for zn in race.stage.zones:
 		_warm_left.append(["Kraina: " + zn.region, 19])
 		_warm_left.append([zn.region, 14])
@@ -175,7 +180,11 @@ func _info_card() -> void:
 	var t := Route.town_at(race.stage, race.z)
 	var title := ""
 	var body := ""
-	if not t.is_empty():
+	var lm := Landmarks.in_view(_landmarks, race.z)
+	if not lm.is_empty():
+		title = _landmark_title(lm)
+		body = lm.desc
+	elif not t.is_empty():
 		title = t.name
 		body = t.fact if t.fact != "" else ("Duże miasto" if t.big else "Miejscowość na trasie")
 	elif _region_time > 0.0:
@@ -187,6 +196,9 @@ func _info_card() -> void:
 	draw_style_box(_panel, r)
 	_text(r.position + Vector2(16, 24), title, 19, Color("ffd24a"))
 	_text(r.position + Vector2(16, 48), body, 15, Color.WHITE, HORIZONTAL_ALIGNMENT_LEFT, r.size.x - 32)
+
+static func _landmark_title(lm: Dictionary) -> String:
+	return "%s: %s" % [lm.town, lm.name] if lm.town != lm.name else lm.name
 
 func _banner(text: String, col: Color) -> void:
 	draw_style_box(_panel, Rect2(180, 158, 600, 46))

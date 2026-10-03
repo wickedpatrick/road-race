@@ -104,6 +104,14 @@ func draw_line(a: Vector2, b: Vector2, col: Color, width := -1.0) -> void:
 	var nrm := Vector2(-d.y, d.x).normalized() * (maxf(width, 1.0) * 0.5)
 	fan(PackedVector2Array([a + nrm, b + nrm, b - nrm, a - nrm]), col)
 
+func draw_arc(c: Vector2, r: float, a0: float, a1: float, n: int, col: Color, width := -1.0, _aa := false) -> void:
+	var prev := c + Vector2(cos(a0), sin(a0)) * r
+	for k in range(1, n + 1):
+		var a := lerpf(a0, a1, float(k) / n)
+		var p := c + Vector2(cos(a), sin(a)) * r
+		draw_line(prev, p, col, width)
+		prev = p
+
 func draw_string(font: Font, pos: Vector2, text: String, align := HORIZONTAL_ALIGNMENT_LEFT, width := -1.0, size := 16, col := Color.WHITE) -> void:
 	flush()
 	_cv.draw_string(font, pos, text, align, width, size, col)

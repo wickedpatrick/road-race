@@ -1,9 +1,10 @@
 extends Node2D
-## Selection: car -> season -> start city -> destination on the map of Poland.
+## Selection: car -> season -> destination on the map of Poland. The race always starts where the last one ended;
+## the very first time (or after a progress reset) the player first picks a home city on the map.
 ## Arrow keys / WASD move, Enter or Space confirms, Esc goes back; on the map cities can also be clicked.
-const STEP_TITLES := ["Wybierz auto", "Wybierz porę roku", "Skąd jedziesz?", "Dokąd jedziesz?"]
-const MAP_STEP := 2
+const TITLES := {"home": "Skąd jesteś?", "car": "Wybierz auto", "season": "Wybierz porę roku", "dest": "Dokąd jedziesz?"}
 var font: Font
+var steps: Array = []
 var step := 0
 var sel := [0, 1]
 var start_city := "krakow"
@@ -20,16 +21,36 @@ func _ready() -> void:
 	Sfx.silence_all_loops()
 	sel[0] = maxi(0, CarStats.ALL_IDS.find(Session.car_id))
 	sel[1] = maxi(0, SeasonPalette.SEASONS.find(Session.season))
+	_set_steps()
 	start_city = Session.from_city
 	dest_city = Session.to_city
-	step = Session.menu_step
-	Session.menu_step = 0
-	if step == MAP_STEP + 1:
-		_pick_dest(dest_city if dest_city != start_city else map.step(start_city, Vector2.RIGHT))
-	hover = start_city if step <= MAP_STEP else dest_city
+	if Session.menu_at_map and Session.has_home():
+		step = steps.find("dest")
+	Session.menu_at_map = false
+	_enter_step()
+
+func _set_steps() -> void:
+	steps = ["car", "season", "dest"] if Session.has_home() else ["home", "car", "season", "dest"]
+	step = 0
+
+func kind() -> String:
+	return steps[step]
+
+func _on_map() -> bool:
+	return kind() == "home" or kind() == "dest"
+
+func _enter_step() -> void:
+	if kind() == "dest":
+		_pick_dest(dest_city if dest_city != start_city and Geo.CITIES.has(dest_city) else map.step(start_city, Vector2.RIGHT))
+		hover = dest_city
+	else:
+		hover = start_city
 
 func _count() -> int:
-	return [CarStats.ALL_IDS.size(), SeasonPalette.SEASONS.size()][step]
+	return CarStats.ALL_IDS.size() if kind() == "car" else SeasonPalette.SEASONS.size()
+
+func _sel_idx() -> int:
+	return 0 if kind() == "car" else 1
 
 func _pick_dest(id: String) -> void:
 	dest_city = id
@@ -42,7 +63,7 @@ func _process(dt: float) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if loading:
 		return
-	if step >= MAP_STEP and event is InputEventMouse:
+	if _on_map() and event is InputEventMouse:
 		_map_mouse(event)
 		return
 	if not (event is InputEventKey and event.pressed and not event.echo):
@@ -54,7 +75,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			Sfx.play("blip", -8.0)
 			confirm_reset = false
 		return
-	if step == 0 and event.keycode == KEY_R:
+	if kind() == "car" and event.keycode == KEY_R:
 		Sfx.play("blip", -8.0)
 		confirm_reset = true
 		return
@@ -69,31 +90,34 @@ func _unhandled_input(event: InputEvent) -> void:
 		Sfx.play("blip", -8.0)
 	if back:
 		step -= 1
-		hover = start_city
+		_enter_step()
 	elif confirm:
 		_confirm()
 	elif dir != Vector2.ZERO:
-		if step < MAP_STEP:
-			if dir.x != 0.0:
-				sel[step] = (sel[step] + _count() + int(dir.x)) % _count()
-		elif step == MAP_STEP:
-			start_city = map.step(start_city, dir)
-			hover = start_city
-		else:
-			_pick_dest(map.step(dest_city, dir, start_city))
-			hover = dest_city
+		match kind():
+			"car", "season":
+				if dir.x != 0.0:
+					sel[_sel_idx()] = (sel[_sel_idx()] + _count() + int(dir.x)) % _count()
+			"home":
+				start_city = map.step(start_city, dir)
+				hover = start_city
+			"dest":
+				_pick_dest(map.step(dest_city, dir, start_city))
+				hover = dest_city
 
 func _confirm() -> void:
-	if step == 0 and not Profile.is_unlocked(CarStats.ALL_IDS[sel[0]], Session.total_km):
-		return # locked car
-	if step < MAP_STEP:
-		step += 1
-	elif step == MAP_STEP:
-		step += 1
-		_pick_dest(dest_city if dest_city != start_city else map.step(start_city, Vector2.RIGHT))
-		hover = dest_city
-	elif not legs.is_empty():
-		_start()
+	match kind():
+		"car":
+			if not Profile.is_unlocked(CarStats.ALL_IDS[sel[0]], Session.total_km):
+				return # locked car
+		"home":
+			Session.set_home(start_city)
+		"dest":
+			if not legs.is_empty():
+				_start()
+			return
+	step += 1
+	_enter_step()
 
 func _reset_progress() -> void:
 	Session.reset_profile()
@@ -101,18 +125,20 @@ func _reset_progress() -> void:
 	start_city = Session.from_city
 	dest_city = Session.to_city
 	confirm_reset = false
+	_set_steps()
+	_enter_step()
 	Sfx.play("hit", -6.0)
 
 func _map_mouse(event: InputEventMouse) -> void:
 	var id := map.city_at(get_global_mouse_position())
 	if event is InputEventMouseMotion:
-		if id != "" and not (step > MAP_STEP and id == start_city):
+		if id != "" and not (kind() == "dest" and id == start_city):
 			hover = id
 		return
 	if not (event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT) or id == "":
 		return
 	Sfx.play("blip", -8.0)
-	if step == MAP_STEP:
+	if kind() == "home":
 		start_city = id
 		_confirm()
 	elif id == dest_city:
@@ -137,8 +163,11 @@ func _start() -> void:
 func _t(pos: Vector2, text: String, size: int, col: Color, align := HORIZONTAL_ALIGNMENT_LEFT, width := -1.0) -> void:
 	draw_string(font, pos, text, align, width, size, col)
 
+func _step_title() -> String:
+	return "%d / %d   %s" % [step + 1, steps.size(), TITLES[kind()]]
+
 func _draw() -> void:
-	var pal := SeasonPalette.by_name(SeasonPalette.SEASONS[sel[1]] if step > 0 else "summer")
+	var pal := SeasonPalette.by_name(SeasonPalette.SEASONS[sel[1]] if kind() != "car" and kind() != "home" else "summer")
 	draw_polygon(PackedVector2Array([Vector2(0, 0), Vector2(960, 0), Vector2(960, 540), Vector2(0, 540)]),
 		PackedColorArray([pal.sky_top, pal.sky_top, pal.sky_bottom, pal.sky_bottom]))
 	draw_rect(Rect2(0, 400, 960, 140), pal.grass_a)
@@ -146,28 +175,27 @@ func _draw() -> void:
 	_t(Vector2(0, 62), "RAJD PRZEZ POLSKĘ", 54, Color(0, 0, 0, 0.25), HORIZONTAL_ALIGNMENT_CENTER, 964)
 	_t(Vector2(0, 60), "RAJD PRZEZ POLSKĘ", 54, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, 960)
 	_t(Vector2(0, 92), "Edukacyjna podróż po polskich drogach", 24, Color("1d2b38"), HORIZONTAL_ALIGNMENT_CENTER, 960)
-	if step < MAP_STEP:
-		_t(Vector2(0, 140), "%d / 4   %s" % [step + 1, STEP_TITLES[step]], 28, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, 960)
-	match step:
-		0: _draw_cars()
-		1: _draw_seasons()
+	if not _on_map():
+		_t(Vector2(0, 140), _step_title(), 28, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, 960)
+	match kind():
+		"car": _draw_cars()
+		"season": _draw_seasons()
 		_: _draw_map()
 	var summary := ""
-	if step >= 1:
+	if kind() == "season" or kind() == "dest":
 		summary = CarStats.by_id(CarStats.ALL_IDS[sel[0]]).name
-	if step >= MAP_STEP:
+	if kind() == "dest":
 		summary += "  ·  " + SeasonPalette.label(SeasonPalette.SEASONS[sel[1]])
 	draw_rect(Rect2(0, 486, 960, 54), Color(0, 0, 0, 0.5))
-	_t(Vector2(24, 518), summary, 20 if step < MAP_STEP else 17, Color("ffd24a"))
-	if step == 0:
+	_t(Vector2(24, 518), summary, 17 if _on_map() else 20, Color("ffd24a"))
+	var hint := "Strzałki: wybierz      Enter: dalej"
+	if _on_map():
+		hint = "Strzałki/myszka   " + ("Enter: START!" if kind() == "dest" else "Enter: dalej")
+	if kind() == "car":
 		_unlock_progress(Vector2(24, 505))
-	var hint := "Strzałki: wybierz      Enter: dalej" if step <= MAP_STEP else "Strzałki: wybierz      Enter: START!"
-	if step >= MAP_STEP:
-		hint = "Strzałki/myszka   " + ("Enter: dalej" if step == MAP_STEP else "Enter: START!")
+		hint = "Strzałki   Enter: dalej   R: reset postępu"
 	if step > 0:
 		hint += "      Esc: wstecz"
-	if step == 0:
-		hint = "Strzałki   Enter: dalej   R: reset postępu"
 	hint += "      X: dźwięk"
 	_t(Vector2(0, 518), hint, 20, Color.WHITE, HORIZONTAL_ALIGNMENT_RIGHT, 936)
 	if confirm_reset:
@@ -182,7 +210,7 @@ func _draw_reset_question() -> void:
 	var r := Rect2(200, 160, 560, 220)
 	_card(r, true)
 	_t(Vector2(0, 220), "Zresetować postęp?", 40, Color("ffd24a"), HORIZONTAL_ALIGNMENT_CENTER, 960)
-	draw_multiline_string(font, Vector2(240, 262), "Licznik przejechanych kilometrów (%d km) i odblokowane auta zostaną skasowane. Zaczniesz od nowa Yarisem." % int(Session.total_km), HORIZONTAL_ALIGNMENT_CENTER, 480, 18, 3, Color.WHITE)
+	draw_multiline_string(font, Vector2(240, 262), "Licznik przejechanych kilometrów (%d km) i odblokowane auta zostaną skasowane. Zaczniesz od nowa Yarisem i znów wybierzesz swoje miasto." % int(Session.total_km), HORIZONTAL_ALIGNMENT_CENTER, 480, 18, 3, Color.WHITE)
 	_t(Vector2(0, 352), "Enter: tak, resetuj      Esc: nie", 20, Color("c8d6e3"), HORIZONTAL_ALIGNMENT_CENTER, 960)
 
 func _card(rect: Rect2, selected: bool) -> void:
@@ -269,18 +297,19 @@ func _draw_map() -> void:
 	bg.bg_color = Color("2b4763")
 	bg.set_corner_radius_all(16)
 	draw_style_box(bg, Rect2(16, 100, 456, 384))
-	map.draw(self, font, legs if step > MAP_STEP else [], start_city, dest_city if step > MAP_STEP else "", hover, t)
+	var dest := kind() == "dest"
+	map.draw(self, font, legs if dest else [], start_city, dest_city if dest else "", hover, t)
 	var r := Rect2(488, 100, 456, 384)
 	_card(r, true)
 	var x := r.position.x + 20
 	var w := r.size.x - 40
-	_t(Vector2(x, 140), "%d / 4   %s" % [step + 1, STEP_TITLES[step]], 26, Color.WHITE)
+	_t(Vector2(x, 140), _step_title(), 26, Color.WHITE)
 	var id := hover if hover != "" else start_city
-	if step == MAP_STEP:
+	if not dest:
 		_city_info(id, Vector2(x, 186), w)
-		_t(Vector2(x, 460), "Wybierz miasto, z którego ruszasz", 16, Color("c8d6e3"))
+		_t(Vector2(x, 460), "Wybierz swoje miasto: stąd ruszysz w pierwszy rajd", 16, Color("c8d6e3"))
 		return
-	_t(Vector2(x, 176), "Start: %s" % Geo.city(start_city).name, 18, Color("7fe0a0"))
+	_t(Vector2(x, 176), "Jesteś w: %s" % Geo.city(start_city).name, 18, Color("7fe0a0"))
 	if id != dest_city and id != start_city:
 		_city_info(id, Vector2(x, 214), w)
 		_t(Vector2(x, 460), "Kliknij lub naciśnij Enter, aby wybrać", 16, Color("c8d6e3"))

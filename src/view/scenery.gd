@@ -53,10 +53,30 @@ static func build(stage: Dictionary, seed_value: int) -> Dictionary:
 				_add(items, "billboard", z, 14.0, 9.0, 8.0, rng)
 				st.billboard = z + rng.randf_range(1100.0, 1800.0)
 	_signs(items, stage, rng)
+	for lm in Landmarks.place(stage):
+		_clear_around(items, lm)
+		var it := _add(items, "landmark", lm.z, lm.lat, lm.w, lm.h, rng)
+		it.kind = lm.kind
+		_add(items, "poi", lm.z - 22.0, SIGN_EDGE + REGION_W * 0.5, REGION_W, 5.0, rng).text = lm.name
 	for s in stage.stations:
 		_add(items, "station", s, 15.0, 14.0, 6.0, rng)
 	_add(items, "finish", length, 0.0, 0.0, 7.0, rng)
 	return items
+
+const CLEARABLE := ["building", "house", "woodhouse", "tree", "church", "cerkiew", "block", "farm", "apple", "pine",
+	"birch", "spruce", "poplar"]
+
+## Makes room for a landmark: removes houses and trees on its spot and on its side of the road before it, like a
+## square in front of it, so it can be seen while driving up to it.
+static func _clear_around(items: Dictionary, lm: Dictionary) -> void:
+	var z0: float = lm.z - lm.w * 0.5 - 140.0
+	var z1: float = lm.z + lm.w * 0.5 + 8.0
+	var far: float = absf(lm.lat) + lm.w * 0.5 + 10.0
+	for idx in range(int(z0 / Track.SEG_LEN), int(z1 / Track.SEG_LEN) + 1):
+		if not items.has(idx):
+			continue
+		items[idx] = items[idx].filter(func(it): return not (it.type in CLEARABLE and signf(it.lat) == signf(lm.lat)
+			and absf(it.lat) < far and it.z > z0 and it.z < z1))
 
 static func _add(items: Dictionary, type: String, z: float, lat: float, w: float, h: float, rng: RandomNumberGenerator) -> Dictionary:
 	var idx := int(z / Track.SEG_LEN)
@@ -381,6 +401,8 @@ static func draw_item(cv, it: Dictionary, b: Vector2, pm: float, pal: Dictionary
 		"board": _board(cv, it, b, pm, font)
 		"limit": _limit(cv, it, b, pm, font)
 		"region": _region(cv, it, b, pm, font)
+		"landmark": LandmarkPainter.draw(cv, it, b, pm)
+		"poi": _poi(cv, it, b, pm, font)
 		"station": _station(cv, b, pm, font)
 		"finish": pass # drawn across the road by WorldView
 		"bridge": pass # drawn across the road by WorldView
@@ -417,6 +439,7 @@ static func sign_texts(stage: Dictionary) -> Array:
 	for zn in stage.zones:
 		if not out.has(zn.region): out.append(zn.region)
 	for r in stage.roads: out.append(plate(r.road)[0])
+	for lm in Landmarks.place(stage): out.append(lm.name)
 	return out
 
 ## Draws texts at every sign size far off-screen, so glyph rasterisation happens during the countdown
@@ -478,6 +501,17 @@ static func _region(cv, it: Dictionary, b: Vector2, pm: float, font: Font) -> vo
 	cv.draw_rect(r.grow(-0.14 * pm), Color.WHITE, false, maxf(1.0, 0.1 * pm))
 	_fit_text(cv, font, Rect2(r.position + Vector2(0.35 * pm, 0.1 * pm), Vector2(w - 0.7 * pm, hh * 0.42)), "KRAINA", Color("f1d9b5"), 0.55 * pm)
 	_fit_text(cv, font, Rect2(r.position + Vector2(0.35 * pm, hh * 0.42), Vector2(w - 0.7 * pm, hh * 0.52)), it.text, Color.WHITE, 0.8 * pm)
+
+## Brown tourist board (E-22c style) naming the landmark next to it.
+static func _poi(cv, it: Dictionary, b: Vector2, pm: float, font: Font) -> void:
+	var post := 2.8 * pm
+	var w := REGION_W * pm
+	var hh := 1.7 * pm
+	_posts(cv, b, pm, post, [-3.0, 3.0])
+	var r := Rect2(b + Vector2(-w * 0.5, -post - hh), Vector2(w, hh))
+	cv.draw_rect(r, SIGN_BROWN)
+	cv.draw_rect(r.grow(-0.14 * pm), Color.WHITE, false, maxf(1.0, 0.1 * pm))
+	_fit_text(cv, font, r.grow_individual(-0.35 * pm, 0, -0.35 * pm, 0), it.text, Color.WHITE, 0.8 * pm)
 
 static func _block(cv, it: Dictionary, b: Vector2, pm: float) -> void:
 	var w: float = it.w * pm

@@ -7,7 +7,8 @@ var season := "summer"
 var from_city := "krakow"
 var to_city := "rzeszow"
 var total_km := 0.0
-var menu_step := 0 ## step the menu opens at (results jump straight to the map)
+var home_city := "" ## picked on the first start; "" until then (or after a progress reset)
+var menu_at_map := false ## the menu opens at the destination map (coming back from a race)
 var last_result := {}
 
 func _ready() -> void:
@@ -24,6 +25,9 @@ func load_profile() -> void:
 	if not d is Dictionary:
 		return
 	total_km = float(d.get("total_km", 0.0))
+	# profiles from before home cities existed: the player is already somewhere, keep it
+	home_city = d.get("home_city", d.get("from_city", ""))
+	if not Geo.CITIES.has(home_city): home_city = ""
 	season = d.get("season", season) if SeasonPalette.SEASONS.has(d.get("season", "")) else season
 	from_city = d.get("from_city", from_city) if Geo.CITIES.has(d.get("from_city", "")) else from_city
 	to_city = d.get("to_city", to_city) if Geo.CITIES.has(d.get("to_city", "")) else to_city
@@ -35,7 +39,17 @@ func save_profile() -> void:
 	if f == null:
 		return
 	f.store_string(JSON.stringify({"total_km": total_km, "car_id": car_id, "season": season,
-		"from_city": from_city, "to_city": to_city}))
+		"from_city": from_city, "to_city": to_city, "home_city": home_city}))
+
+func has_home() -> bool:
+	return home_city != ""
+
+## First start: the home city is where the first race starts.
+func set_home(id: String) -> void:
+	home_city = id
+	from_city = id
+	if to_city == id: to_city = ""
+	save_profile()
 
 ## Back to a new player: no kilometres, only the first car, default season and route.
 func reset_profile() -> void:
@@ -44,6 +58,7 @@ func reset_profile() -> void:
 	from_city = "krakow"
 	to_city = "rzeszow"
 	total_km = 0.0
+	home_city = ""
 	save_profile()
 
 ## Adds driven kilometres; returns the ids of cars unlocked by them.

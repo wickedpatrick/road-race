@@ -61,5 +61,5 @@ func _unhandled_input(event: InputEvent) -> void:
 	# back to the map; after arriving, the destination is preselected as the new start
 	if r.get("state", "") == "won":
 		Session.from_city = Session.to_city
-	Session.menu_step = 2
+	Session.menu_at_map = true
 	get_tree().change_scene_to_file("res://src/scenes/menu.tscn")
