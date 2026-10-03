@@ -31,6 +31,8 @@ func bind(p_race: Race) -> void:
 		_warm_left.append(["Kraina: " + zn.region, 19])
 		_warm_left.append([zn.region, 14])
 
+var _frame := 0
+
 func _process(dt: float) -> void:
 	_t += dt
 	if race != null:
@@ -39,7 +41,10 @@ func _process(dt: float) -> void:
 			_region = reg
 			_region_time = 5.0
 		_region_time = maxf(0.0, _region_time - dt)
-	queue_redraw()
+	# the HUD is mostly text: 30 redraws a second are plenty and halve its cost (the last drawing stays on screen)
+	_frame += 1
+	if _frame % 2 == 0 or not _warm_left.is_empty():
+		queue_redraw()
 
 static func format_time(t: float) -> String:
 	var s := maxi(0, int(ceil(t)))

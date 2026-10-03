@@ -16,7 +16,7 @@ func run(t) -> void:
 	r.speed = 30.0
 	r.step(1.0, NONE)
 	t.check(r.speed < 30.0 and r.speed > 0.0, "coasting slows")
-	for i in 250: r.step(0.5, NONE)
+	for i in 700: r.step(0.5, NONE)
 	t.check(r.speed == 0.0, "coasting stops at zero, no reverse")
 	r = fresh()
 	for i in 20: r.step(0.1, BRAKE)
@@ -97,6 +97,17 @@ func run(t) -> void:
 	var tl3 := r.time_left
 	for i in 120: r.step(1.0 / 60.0, BRAKE)
 	t.check(tl3 - r.time_left < 2.5, "no penalty when a faster car runs into a stopped player (lost %.1fs)" % (tl3 - r.time_left))
+	# overtaking slowly and cutting in just in front of a car: it must never hit the player from behind
+	r = fresh()
+	r.z = 1000.0
+	r.speed = 20.0
+	r.traffic.cars = [{"z": 997.0, "lane_x": r.x, "speed": 19.0, "pace": 0.9, "kind": "truck", "color_idx": 0, "active": true}]
+	var tl4 := r.time_left
+	var bumped := [0]
+	r.collided.connect(func(_i): bumped[0] += 1)
+	for i in 60 * 5: r.step(1.0 / 60.0, NONE)
+	t.check(bumped[0] == 0 and tl4 - r.time_left < 5.5, "a car just behind the player never counts as a bump")
+	t.check(r.traffic.cars[0].z < r.z, "traffic behind the player queues up instead of driving through it")
 	# review fix 2: after a bump the player is clear of the car, so the same car cannot hit again and again
 	r = fresh()
 	r.z = 500.0

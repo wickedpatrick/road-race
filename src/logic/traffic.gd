@@ -15,6 +15,7 @@ const GAP_TOWN := 18.0 ## and in towns, where traffic is much denser
 const PACE := {2: [0.6, 0.9], 3: [0.5, 0.7]}
 const SPEED_CHANGE := 3.0 ## m/s² when the limit changes
 const FOLLOW_GAP := 30.0 ## a car looks this far ahead for a slower car in its lane
+const FAR := 1500.0 ## only cars this close to the player react to each other and to the limits
 const SIDE_GAP := 25.0 ## and drops back when it would drive alongside a car in the next lane
 var _target := PackedFloat32Array() ## speed limit (m/s) per 5 m track segment
 var cars: Array = []
@@ -61,7 +62,8 @@ static func speed_for(pace: float, limit: float) -> float:
 func target_at(z: float) -> float:
 	return _target[clampi(int(z / Track.SEG_LEN), 0, _target.size() - 1)]
 
-func update(dt: float) -> void:
+## player_* describe the player's car: traffic behind it in its lane queues up instead of running into it.
+func update(dt: float, player_z := -INF, player_x := 0.0, player_speed := 0.0) -> void:
 	_sort_by_z()
 	var n := cars.size()
 	for i in n:
@@ -80,6 +82,8 @@ func update(dt: float) -> void:
 					best = lx
 			c.lane_x = move_toward(c.lane_x, best, LANE_CHANGE * dt)
 		if not c.has("pace") or _target.is_empty(): continue
+		if player_z > -INF and absf(c.z - player_z) > FAR:
+			continue # far from the player nobody sees the traffic, it just keeps its speed
 		var want := speed_for(c.pace, target_at(c.z + 20.0))
 		# look at the cars just ahead: queue behind a slower one in the same lane, and do not
 		# drive side by side with one in the next lane, so there is always a way through
@@ -93,6 +97,11 @@ func update(dt: float) -> void:
 				want = minf(want, o.speed - (1.5 if gap < FOLLOW_GAP * 0.5 else 0.0))
 			elif dx < 1.1 and gap < SIDE_GAP and absf(o.speed - c.speed) < 2.0:
 				want = minf(want, o.speed - 2.5)
+		var pgap: float = player_z - c.z
+		if pgap > 0.0 and pgap < FOLLOW_GAP and absf(player_x - c.lane_x) < 0.45:
+			want = minf(want, player_speed - (2.0 if pgap < FOLLOW_GAP * 0.5 else 0.0))
+			if pgap < 8.0:
+				c.speed = minf(c.speed, player_speed) # the player braked hard right in front of it
 		c.speed = move_toward(c.speed, maxf(want, 0.0), (SPEED_CHANGE if want > c.speed else SPEED_CHANGE * 2.0) * dt)
 
 ## Cars move at different speeds, but the order changes slowly, so an insertion sort is almost free.
@@ -105,11 +114,12 @@ func _sort_by_z() -> void:
 			j -= 1
 		cars[j + 1] = c
 
-## Cars at least as fast as the player cannot be "hit" by the player (they run into the player instead), so they are ignored.
+## Only the player can cause a bump, by running into a car ahead or alongside: cars at least as fast as the
+## player and cars behind the player (e.g. just overtaken, then cut in front of) never count.
 func check_collision(player_z: float, player_x: float, player_half: float, player_speed := INF) -> int:
 	for i in cars.size():
 		var c: Dictionary = cars[i]
-		if not c.active or c.speed >= player_speed: continue
+		if not c.active or c.speed >= player_speed or c.z < player_z - 1.0: continue
 		var half: float = KINDS[c.kind].half
 		var len_half: float = maxf(HIT_Z * 0.5, float(KINDS[c.kind].len) * 0.5)
 		if absf(c.z - player_z) < len_half + 1.0 and absf(c.lane_x - player_x) < half + player_half:

@@ -11,10 +11,11 @@ func decide(r: Race) -> Dictionary:
 	var target_x := 0.0
 	var brake := false
 	var accel := true
-	var lanes: Array = Traffic.LANES[Route.lanes_at(r.stage, r.z + 30.0)]
+	var lanes: Array = Traffic.LANES[Route.lanes_at(r.stage, r.z + 5.0)]
 	var best := 0.0
 	var best_gap := -1.0
 	for lx in lanes:
+		if absf(lx - r.x) > 0.8 and _busy_between(r, lx): continue # never cut across a car alongside
 		var gap := 400.0
 		for c in r.traffic.cars:
 			if c.active and c.z > r.z - 12.0 and c.z - r.z < gap and absf(c.lane_x - lx) < 0.3:
@@ -30,7 +31,7 @@ func decide(r: Race) -> Dictionary:
 		if gap > -2.0 and gap < 10.0 + r.speed * 0.9 and r.speed > c.speed \
 				and (absf(c.lane_x - r.x) < 0.45 or absf(c.lane_x - target_x) < 0.3 and gap < 25.0):
 			accel = false
-			brake = brake or r.speed > c.speed + 3.0
+			brake = brake or r.speed > c.speed + 3.0 or (gap < 8.0 + r.speed * 0.4 and r.speed > c.speed + 0.5)
 	# station logic
 	for s in r.stage.stations:
 		var d: float = s - r.z
@@ -59,6 +60,13 @@ func decide(r: Race) -> Dictionary:
 	var curve: float = r.track.segment_at(r.z + 20.0).curve
 	var steer := clampf((target_x - r.x) * 2.5 + curve * 0.35 * sr * sr / (r.stats.handling * 2.2), -1.0, 1.0)
 	return {"accel": accel, "brake": brake, "steer": steer}
+
+## A car next to the player in a lane between the player and lane lx.
+func _busy_between(r: Race, lx: float) -> bool:
+	for c in r.traffic.cars:
+		if c.active and absf(c.z - r.z) < 10.0 and (c.lane_x - r.x) * (c.lane_x - lx) < 0.0:
+			return true
+	return false
 
 static func run_race(car: String, stage: Dictionary, seed_value: int, cruise_ratio := 0.9) -> Race:
 	var r := Race.new(car, stage, seed_value)

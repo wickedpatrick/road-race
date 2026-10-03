@@ -28,7 +28,7 @@ func _process(_dt: float) -> void:
 	last = now
 	race.z += 45.0 / 60.0
 	race.speed = 45.0
-	race.traffic.update(1.0 / 60.0)
+	race.traffic.update(1.0 / 60.0, race.z, race.x, race.speed)
 	if race.z >= race.stage.length:
 		_report()
 

@@ -8,7 +8,7 @@ const STOP_SPEED := 3.0
 const COLLISION_TIME_PENALTY := 5.0
 const COLLISION_SPEED_KEEP := 0.3
 const OFFROAD_SPEED_RATIO := 0.4
-const ROLL_DECEL := 0.33 ## off the throttle the car rolls on for a long time
+const ROLL_DECEL := 0.1 ## off the throttle the car rolls on for a long time
 ## speeding: the radar detector warns first; keep speeding past the grace time and the police pull you over
 const GRACE := 5.0
 const GRACE_EXPRESS := 10.0 ## on motorways / expressways
@@ -70,7 +70,7 @@ func coast_after_finish(dt: float) -> void:
 	speed = maxf(0.0, speed - stats.brake * 0.5 * dt)
 	z += speed * dt
 	hit_flash = maxf(0.0, hit_flash - dt)
-	traffic.update(dt)
+	traffic.update(dt, z, x, speed)
 
 ## Real kilometres left to the destination.
 func km_left() -> float:
@@ -189,7 +189,7 @@ func step(dt: float, input: Dictionary) -> void:
 	_update_speeding(dt)
 	_update_police(dt)
 	# traffic
-	traffic.update(dt)
+	traffic.update(dt, z, x, speed)
 	var parked_at_station := station_in_range() and speed < STOP_SPEED
 	if hit_cooldown <= 0.0 and not parked_at_station and z < stage.length:
 		var idx := traffic.check_collision(z, x, stats.halfwidth, speed)
