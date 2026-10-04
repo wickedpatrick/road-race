@@ -9,6 +9,13 @@ var overlay: Control
 var pad: TouchPad
 const RESUME_BTN := Rect2(290, 300, 180, 64)
 const MAP_BTN := Rect2(490, 300, 180, 64)
+const QUALITY_BTN := Rect2(330, 384, 300, 48)
+const SLOW_FRAME := 1.0 / 45.0 ## average frame time that switches the graphics to the light mode
+var _world_vp: SubViewport ## light mode: the world is drawn at 960x540 and scaled up, the HUD stays sharp
+var _world_sprite: Sprite2D
+var _perf_t := 0.0
+var _perf_n := 0
+var _toast := 0.0
 var countdown := COUNTDOWN
 var paused := false
 var end_timer := 0.0
@@ -25,6 +32,7 @@ func _ready() -> void:
 	view = WorldView.new()
 	add_child(view)
 	view.bind(race, Session.season)
+	_apply_quality()
 	race.collided.connect(func(_i): Sfx.play("hit", -2.0))
 	race.fined.connect(func(): Sfx.play("lowfuel", -4.0))
 	var layer := CanvasLayer.new()
@@ -41,6 +49,46 @@ func _ready() -> void:
 	pad.enabled = Screen.touch
 	layer.add_child(pad)
 	layer.add_child(overlay)
+
+## Moves the world view into a 960x540 offscreen viewport (light mode) or back onto the full-resolution screen.
+func _apply_quality() -> void:
+	var low := Session.quality == "low"
+	if low and _world_vp == null:
+		_world_vp = SubViewport.new()
+		_world_vp.size = Vector2i(960, 540)
+		_world_vp.disable_3d = true
+		_world_vp.render_target_update_mode = SubViewport.UPDATE_ALWAYS
+		add_child(_world_vp)
+		_world_sprite = Sprite2D.new()
+		_world_sprite.centered = false
+		_world_sprite.texture = _world_vp.get_texture()
+		add_child(_world_sprite)
+		move_child(_world_sprite, 0)
+	if low and view.get_parent() != _world_vp:
+		view.reparent(_world_vp, false)
+	elif not low and view.get_parent() != self:
+		view.reparent(self, false)
+		move_child(view, 0)
+	if _world_sprite != null:
+		_world_sprite.visible = low
+
+func _set_quality(q: String) -> void:
+	Session.quality = q
+	Session.save_profile()
+	_apply_quality()
+
+## Watches the first seconds of driving: a device that cannot keep up gets the light graphics mode.
+func _process(dt: float) -> void:
+	_toast = maxf(0.0, _toast - dt)
+	if paused or countdown > 0.0 or race.state != "running" or Session.quality == "low" or _perf_n < 0:
+		return
+	_perf_t += dt
+	_perf_n += 1
+	if _perf_t >= 5.0:
+		if _perf_t / _perf_n > SLOW_FRAME:
+			_set_quality("low")
+			_toast = 5.0
+		_perf_n = -1 # checked once per race
 
 func _read_input() -> Dictionary:
 	var brake := Input.is_action_pressed("brake") or pad.pressed("brake")
@@ -138,6 +186,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		if paused:
 			if RESUME_BTN.has_point(p): _set_paused(false)
 			elif MAP_BTN.has_point(p): _back_to_map()
+			elif QUALITY_BTN.has_point(p): _set_quality("high" if Session.quality == "low" else "low")
 		elif Hud.PAUSE_BTN.grow(8).has_point(p) and race.state == "running":
 			_set_paused(true)
 
@@ -180,5 +229,9 @@ func _draw_overlay() -> void:
 		o.draw_string(font, Vector2(0, 250), "PAUZA", HORIZONTAL_ALIGNMENT_CENTER, 960, 72, Color.WHITE)
 		Ui.button(o, font, RESUME_BTN, "Graj dalej", true)
 		Ui.button(o, font, MAP_BTN, "Wróć do mapy", false)
+		Ui.button(o, font, QUALITY_BTN, "Grafika: " + ("oszczędna" if Session.quality == "low" else "wysoka jakość"), false, 18)
 		if not Screen.touch:
-			o.draw_string(font, Vector2(0, 410), "Esc: wznów     M: mapa     X: dźwięk wł./wył.", HORIZONTAL_ALIGNMENT_CENTER, 960, 22, Color("c8d6e3"))
+			o.draw_string(font, Vector2(0, 470), "Esc: wznów     M: mapa     X: dźwięk wł./wył.", HORIZONTAL_ALIGNMENT_CENTER, 960, 22, Color("c8d6e3"))
+	elif _toast > 0.0:
+		o.draw_rect(Rect2(230, 214, 500, 40), Color(0, 0, 0, 0.55))
+		o.draw_string(font, Vector2(0, 241), "Włączono oszczędną grafikę (zmienisz w pauzie)", HORIZONTAL_ALIGNMENT_CENTER, 960, 18, Color.WHITE)

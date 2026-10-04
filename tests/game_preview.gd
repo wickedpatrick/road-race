@@ -3,6 +3,7 @@ func _ready() -> void:
 	var a := OS.get_cmdline_user_args()
 	Session.from_city = a[0]; Session.to_city = a[1]; Session.season = a[2]; Session.car_id = a[3]
 	if OS.get_environment("RR_TOUCH") == "1": Screen.touch = true
+	if OS.get_environment("RR_LOW") == "1": Session.quality = "low"
 	super()
 	if a.size() > 4:
 		race.z = float(a[4]); race.speed = 35.0

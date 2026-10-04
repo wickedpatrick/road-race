@@ -8,6 +8,7 @@ var from_city := "krakow"
 var to_city := "rzeszow"
 var total_km := 0.0
 var visited: Array = [] ## ids of the map cities the player has been to (the goal: all of them)
+var quality := "high" ## "high": everything at full screen sharpness; "low": the race world is drawn at 960x540
 var home_city := "" ## picked on the first start; "" until then (or after a progress reset)
 var menu_at_map := false ## the menu opens at the destination map (coming back from a race)
 var last_result := {}
@@ -26,6 +27,7 @@ func load_profile() -> void:
 	if not d is Dictionary:
 		return
 	total_km = float(d.get("total_km", 0.0))
+	quality = "low" if d.get("quality", "high") == "low" else "high"
 	# profiles from before home cities existed: the player is already somewhere, keep it
 	home_city = d.get("home_city", d.get("from_city", ""))
 	if not Geo.CITIES.has(home_city): home_city = ""
@@ -44,7 +46,7 @@ func save_profile() -> void:
 		return
 	f.store_string(JSON.stringify({"total_km": total_km, "car_id": car_id, "season": season,
 		"from_city": from_city, "to_city": to_city, "home_city": home_city,
-		"visited": visited}))
+		"visited": visited, "quality": quality}))
 
 func has_home() -> bool:
 	return home_city != ""
