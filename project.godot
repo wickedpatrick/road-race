@@ -15,6 +15,7 @@ driver/output_latency.web=150
 [autoload]
 Session="*res://src/autoload/session.gd"
 Sfx="*res://src/autoload/sfx.gd"
+Screen="*res://src/autoload/screen.gd"
 
 [display]
 

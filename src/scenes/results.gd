@@ -59,7 +59,7 @@ func _draw() -> void:
 	var fines: int = r.get("fines", 0)
 	if fines > 0:
 		draw_string(font, Vector2(0, 420), "Mandaty za prędkość: %d" % fines, HORIZONTAL_ALIGNMENT_CENTER, 960, 22, Color("c0392b"))
-	draw_string(font, Vector2(0, 528), "Naciśnij dowolny klawisz, aby wrócić do mapy", HORIZONTAL_ALIGNMENT_CENTER, 960, 22, Color.WHITE)
+	draw_string(font, Vector2(0, 528), "Dotknij ekranu, aby wrócić do mapy" if Screen.touch else "Naciśnij dowolny klawisz, aby wrócić do mapy", HORIZONTAL_ALIGNMENT_CENTER, 960, 22, Color.WHITE)
 
 func _banner(y: float, text: String, col: Color) -> void:
 	draw_rect(Rect2(150, y, 660, 34), col)

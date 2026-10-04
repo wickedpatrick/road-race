@@ -13,3 +13,4 @@ func _ready() -> void:
 	_enter_step()
 	confirm_reset = a.size() > 5 and a[5] == "reset"
 	if a.size() > 6: Session.visited = Array(a[6].split(","))
+	if OS.get_environment("RR_TOUCH") == "1": Screen.touch = true

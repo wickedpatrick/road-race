@@ -8,7 +8,14 @@ var _region := ""
 var _region_time := 0.0
 var _warm_left: Array = [] ## [text, size] still to pre-render, a few per frame
 var _legs: Array = []
-var _mini := PolandMap.new(Rect2(790, 384, 150, 138))
+var _mini: PolandMap
+var touch := false ## touch-screen layout (set before bind): the bottom corners belong to the driving buttons
+const PAUSE_BTN := Rect2(16, 14, 46, 66)
+## positions that move on touch screens, where the bottom corners belong to the driving buttons
+var _fuel_pos := Vector2(16, 446)
+var _limit_pos := Vector2(312, 486)
+var _mini_rect := Rect2(780, 376, 170, 154)
+var _board_y := 92.0
 var _t := 0.0
 var _landmarks: Array = []
 
@@ -21,6 +28,12 @@ func _init() -> void:
 
 func bind(p_race: Race) -> void:
 	race = p_race
+	if touch:
+		_fuel_pos = Vector2(16, 88)
+		_limit_pos = Vector2(52, 208)
+		_mini_rect = Rect2(794, 88, 150, 132)
+		_board_y = 228.0
+	_mini = PolandMap.new(_mini_rect.grow_individual(-10, -8, -10, -8))
 	_legs = Route.find(race.stage.from, race.stage.to)
 	# town names, facts and regions shown in the HUD, pre-rendered during the countdown (see Scenery.warm_text)
 	for t in race.stage.towns:
@@ -68,9 +81,13 @@ func _draw() -> void:
 	# time
 	var low_time := race.time_left < 20.0
 	var blink := low_time and int(race.elapsed * 3.0) % 2 == 0
-	draw_style_box(_panel, Rect2(16, 14, 150, 66))
-	_text(Vector2(28, 36), "CZAS", 15, Color("9fb3c8"))
-	_text(Vector2(28, 70), format_time(race.time_left), 38, Color("ff5a4d") if blink else (Color("ff8a7a") if low_time else Color.WHITE))
+	draw_style_box(_panel, PAUSE_BTN)
+	var pc := PAUSE_BTN.get_center()
+	draw_rect(Rect2(pc + Vector2(-9, -13), Vector2(6, 26)), Color.WHITE)
+	draw_rect(Rect2(pc + Vector2(3, -13), Vector2(6, 26)), Color.WHITE)
+	draw_style_box(_panel, Rect2(70, 14, 112, 66))
+	_text(Vector2(82, 36), "CZAS", 15, Color("9fb3c8"))
+	_text(Vector2(82, 70), format_time(race.time_left), 38, Color("ff5a4d") if blink else (Color("ff8a7a") if low_time else Color.WHITE))
 	# speed + gear
 	draw_style_box(_panel, Rect2(794, 14, 150, 66))
 	_text(Vector2(806, 36), "KM/H", 15, Color("9fb3c8"))
@@ -100,17 +117,19 @@ func _draw() -> void:
 	var fr := race.fuel.ratio()
 	var low_fuel := fr < 0.15
 	var fblink := low_fuel and int(race.elapsed * 4.0) % 2 == 0
-	draw_style_box(_panel, Rect2(16, 446, 250, 80))
+	var fp := _fuel_pos
+	var fw := 170.0 if touch else 250.0
+	draw_style_box(_panel, Rect2(fp, Vector2(fw, 80)))
 	var l100 := minf(99.0, race.fuel.litres_per_100km(race.speed, Route.M_PER_KM, race.load, race.gearbox.rpm(race.speed)))
 	var eco := absf(race.speed * 3.6 - 90.0) < 12.0
 	var l100_text := "-" if race.speed < 1.0 else ("%.1f l/100 km" % l100).replace(".", ",")
 	var lc := Color("ff8a7a") if l100 > 15.0 else (Color("7fe0a0") if eco else Color("d6e4f0"))
-	_text(Vector2(28, 468), l100_text, 15, lc)
-	_text(Vector2(28, 492), "PALIWO", 15, Color("ff6a5a") if fblink else Color("9fb3c8"))
-	_text(Vector2(28, 492), "%d / %d l" % [int(round(race.fuel.level)), int(race.fuel.capacity)], 15, Color.WHITE, HORIZONTAL_ALIGNMENT_RIGHT, 226)
-	draw_rect(Rect2(28, 500, 226, 16), Color(1, 1, 1, 0.2))
+	_text(fp + Vector2(12, 22), l100_text, 15, lc)
+	_text(fp + Vector2(12, 46), "PALIWO", 15, Color("ff6a5a") if fblink else Color("9fb3c8"))
+	_text(fp + Vector2(12, 46), "%d / %d l" % [int(round(race.fuel.level)), int(race.fuel.capacity)], 15, Color.WHITE, HORIZONTAL_ALIGNMENT_RIGHT, fw - 24)
+	draw_rect(Rect2(fp + Vector2(12, 54), Vector2(fw - 24, 16)), Color(1, 1, 1, 0.2))
 	var fc := Color("49d36b") if fr > 0.35 else (Color("f2b01e") if fr > 0.15 else Color("ff4d3d"))
-	draw_rect(Rect2(28, 500, 226 * fr, 16), fc)
+	draw_rect(Rect2(fp + Vector2(12, 54), Vector2((fw - 24) * fr, 16)), fc)
 	_limit_sign()
 	# police / speeding / station / state hints
 	var ph: String = race.police.get("phase", "")
@@ -123,9 +142,9 @@ func _draw() -> void:
 	elif race.refueling:
 		_banner("TANKOWANIE...  %d%%" % int(fr * 100.0), Color("49d36b"))
 	elif race.station_in_range():
-		_banner("STACJA PALIW: ZATRZYMAJ SIĘ (spacja), ABY TANKOWAĆ", Color("f2c21b"))
+		_banner("STACJA PALIW: ZATRZYMAJ SIĘ (%s), ABY TANKOWAĆ" % ("hamulec" if touch else "spacja"), Color("f2c21b"))
 	elif race.next_station_distance() > 0.0 and race.next_station_distance() < 450.0 and fr < 0.85:
-		_banner("STACJA PALIW za %d m  -  zwalniaj (spacja)" % (int(race.next_station_distance() / 10.0) * 10), Color("f2c21b"))
+		_banner("STACJA PALIW za %d m  -  zwalniaj (%s)" % [int(race.next_station_distance() / 10.0) * 10, "hamulec" if touch else "spacja"], Color("f2c21b"))
 	elif low_fuel and int(race.elapsed * 2.0) % 2 == 0:
 		_banner("MAŁO PALIWA! Szukaj stacji", Color("ff6a5a"))
 
@@ -153,12 +172,12 @@ func _shield(pos: Vector2, road: String) -> void:
 func _minimap() -> void:
 	if _legs.is_empty():
 		return
-	draw_style_box(_panel, Rect2(780, 376, 170, 154))
+	draw_style_box(_panel, _mini_rect)
 	_mini.draw_mini(self, font, _legs, Route.km_between(race.stage, 0.0, minf(race.z, race.stage.length)), _t)
 
 ## Current speed limit (B-33), flashing while the radar detector warns.
 func _limit_sign() -> void:
-	var c := Vector2(312, 486)
+	var c := _limit_pos
 	var warn := race.speeding > 0.0 and int(race.elapsed * 6.0) % 2 == 0
 	draw_circle(c, 31, Color(0, 0, 0, 0.35))
 	draw_circle(c, 29, Color("ffd24a") if warn else Scenery.SIGN_RED)
@@ -170,7 +189,7 @@ func _board_echo() -> void:
 	for bd in race.stage.boards:
 		if race.z > bd.z - 160.0 and race.z < bd.z + 220.0:
 			var lines: Array = bd.lines
-			var r := Rect2(784, 92, 160, 34 + 22 * lines.size())
+			var r := Rect2(784, _board_y, 160, 34 + 22 * lines.size())
 			draw_rect(r, Scenery.SIGN_BLUE if bd.blue else Scenery.SIGN_GREEN)
 			draw_rect(r.grow(-3), Color.WHITE, false, 2.0)
 			if bd.road != "":

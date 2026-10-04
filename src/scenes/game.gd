@@ -6,6 +6,9 @@ var race: Race
 var view: WorldView
 var hud: Hud
 var overlay: Control
+var pad: TouchPad
+const RESUME_BTN := Rect2(290, 300, 180, 64)
+const MAP_BTN := Rect2(490, 300, 180, 64)
 var countdown := COUNTDOWN
 var paused := false
 var end_timer := 0.0
@@ -27,20 +30,24 @@ func _ready() -> void:
 	var layer := CanvasLayer.new()
 	add_child(layer)
 	hud = Hud.new()
+	hud.touch = Screen.touch
 	layer.add_child(hud)
 	hud.bind(race)
 	overlay = Control.new()
 	overlay.set_anchors_preset(Control.PRESET_FULL_RECT)
 	overlay.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	overlay.draw.connect(_draw_overlay)
+	pad = TouchPad.new()
+	pad.enabled = Screen.touch
+	layer.add_child(pad)
 	layer.add_child(overlay)
 
 func _read_input() -> Dictionary:
-	var brake := Input.is_action_pressed("brake")
+	var brake := Input.is_action_pressed("brake") or pad.pressed("brake")
 	return {
-		"accel": Input.is_action_pressed("accel") and not brake,
+		"accel": (Input.is_action_pressed("accel") or pad.pressed("accel")) and not brake,
 		"brake": brake,
-		"steer": Input.get_axis("left", "right"),
+		"steer": clampf(Input.get_axis("left", "right") + pad.steer(), -1.0, 1.0),
 	}
 
 func _physics_process(dt: float) -> void:
@@ -123,15 +130,33 @@ func _finish() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel") and not event.is_echo():
-		paused = not paused
-		if paused: Sfx.silence_all_loops()
+		_set_paused(not paused)
 	elif paused and event is InputEventKey and event.pressed and event.keycode == KEY_M:
-		get_tree().change_scene_to_file("res://src/scenes/menu.tscn")
+		_back_to_map()
+	elif event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		var p: Vector2 = event.position
+		if paused:
+			if RESUME_BTN.has_point(p): _set_paused(false)
+			elif MAP_BTN.has_point(p): _back_to_map()
+		elif Hud.PAUSE_BTN.grow(8).has_point(p) and race.state == "running":
+			_set_paused(true)
+
+func _set_paused(on: bool) -> void:
+	paused = on
+	pad.release_all()
+	if paused: Sfx.silence_all_loops()
+
+## Leaves the race without a result: back to the map, still in the start city.
+func _back_to_map() -> void:
+	Sfx.silence_all_loops()
+	Session.menu_at_map = true
+	get_tree().change_scene_to_file("res://src/scenes/menu.tscn")
 
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_WM_WINDOW_FOCUS_OUT or what == NOTIFICATION_APPLICATION_FOCUS_OUT:
 		for a in ["accel", "brake", "left", "right"]:
 			Input.action_release(a)
+		if pad != null: pad.release_all()
 		if race != null and race.state == "running" and countdown <= 0.0:
 			paused = true
 
@@ -153,4 +178,7 @@ func _draw_overlay() -> void:
 	if paused:
 		o.draw_rect(Rect2(0, 0, 960, 540), Color(0, 0, 0, 0.6))
 		o.draw_string(font, Vector2(0, 250), "PAUZA", HORIZONTAL_ALIGNMENT_CENTER, 960, 72, Color.WHITE)
-		o.draw_string(font, Vector2(0, 310), "Esc: wznów     M: menu     X: dźwięk wł./wył.", HORIZONTAL_ALIGNMENT_CENTER, 960, 26, Color("c8d6e3"))
+		Ui.button(o, font, RESUME_BTN, "Graj dalej", true)
+		Ui.button(o, font, MAP_BTN, "Wróć do mapy", false)
+		if not Screen.touch:
+			o.draw_string(font, Vector2(0, 410), "Esc: wznów     M: mapa     X: dźwięk wł./wył.", HORIZONTAL_ALIGNMENT_CENTER, 960, 22, Color("c8d6e3"))

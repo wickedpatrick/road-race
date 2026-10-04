@@ -13,6 +13,11 @@ var hover := ""
 var legs: Array = []
 var map := PolandMap.new(Rect2(24, 104, 440, 378))
 var confirm_reset := false ## "reset progress?" question is shown (car step, R key)
+const NEXT_BTN := Rect2(744, 490, 200, 44)
+const BACK_BTN := Rect2(584, 490, 148, 44)
+const RESET_BTN := Rect2(796, 14, 148, 40)
+const YES_BTN := Rect2(250, 330, 220, 54)
+const NO_BTN := Rect2(490, 330, 220, 54)
 var loading := false ## start chosen: the "get ready" card is shown while the race scene loads
 var t := 0.0
 
@@ -63,7 +68,12 @@ func _process(dt: float) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if loading:
 		return
-	if _on_map() and event is InputEventMouse:
+	var tp = Ui.tap(event)
+	if tp != null and _tap(tp):
+		return
+	if confirm_reset:
+		pass
+	elif _on_map() and event is InputEventMouse:
 		_map_mouse(event)
 		return
 	if not (event is InputEventKey and event.pressed and not event.echo):
@@ -118,6 +128,45 @@ func _confirm() -> void:
 			return
 	step += 1
 	_enter_step()
+
+## Clicks and taps on buttons and cards; true when handled.
+func _tap(p: Vector2) -> bool:
+	if confirm_reset:
+		if YES_BTN.has_point(p):
+			_reset_progress()
+		elif NO_BTN.has_point(p):
+			Sfx.play("blip", -8.0)
+			confirm_reset = false
+		return true
+	if Screen.touch:
+		if NEXT_BTN.has_point(p):
+			Sfx.play("blip", -8.0)
+			_confirm()
+			return true
+		if BACK_BTN.has_point(p) and step > 0:
+			Sfx.play("blip", -8.0)
+			step -= 1
+			_enter_step()
+			return true
+		if kind() == "car" and RESET_BTN.has_point(p):
+			Sfx.play("blip", -8.0)
+			confirm_reset = true
+			return true
+	if kind() == "car" or kind() == "season":
+		for i in _count():
+			if _card_rect(i).has_point(p):
+				Sfx.play("blip", -8.0)
+				if sel[_sel_idx()] == i:
+					_confirm() # tapping the chosen card again goes on
+				else:
+					sel[_sel_idx()] = i
+				return true
+	return false
+
+func _card_rect(i: int) -> Rect2:
+	if kind() == "car":
+		return Rect2(28 + i * 183, 172, 172, 302)
+	return Rect2(48 + i * 218, 180, 198, 290)
 
 func _reset_progress() -> void:
 	Session.reset_profile()
@@ -188,16 +237,24 @@ func _draw() -> void:
 		summary += "  ·  " + SeasonPalette.label(SeasonPalette.SEASONS[sel[1]])
 	draw_rect(Rect2(0, 486, 960, 54), Color(0, 0, 0, 0.5))
 	_t(Vector2(24, 518), summary, 17 if _on_map() else 20, Color("ffd24a"))
+	if kind() == "car":
+		_unlock_progress(Vector2(24, 505))
+	if Screen.touch:
+		if step > 0:
+			Ui.button(self, font, BACK_BTN, "Wstecz", false, 20)
+		Ui.button(self, font, NEXT_BTN, "START!" if kind() == "dest" else "Dalej", true, 22)
+		if kind() == "car":
+			Ui.button(self, font, RESET_BTN, "Reset postępu", false, 16)
 	var hint := "Strzałki: wybierz      Enter: dalej"
 	if _on_map():
 		hint = "Strzałki/myszka   " + ("Enter: START!" if kind() == "dest" else "Enter: dalej")
 	if kind() == "car":
-		_unlock_progress(Vector2(24, 505))
 		hint = "Strzałki   Enter: dalej   R: reset postępu"
 	if step > 0:
 		hint += "      Esc: wstecz"
 	hint += "      X: dźwięk"
-	_t(Vector2(0, 518), hint, 20, Color.WHITE, HORIZONTAL_ALIGNMENT_RIGHT, 936)
+	if not Screen.touch:
+		_t(Vector2(0, 518), hint, 20, Color.WHITE, HORIZONTAL_ALIGNMENT_RIGHT, 936)
 	if confirm_reset:
 		_draw_reset_question()
 	if loading:
@@ -207,11 +264,12 @@ func _draw() -> void:
 
 func _draw_reset_question() -> void:
 	draw_rect(Rect2(0, 0, 960, 540), Color(0.03, 0.05, 0.08, 0.75))
-	var r := Rect2(200, 160, 560, 220)
+	var r := Rect2(200, 150, 560, 256)
 	_card(r, true)
-	_t(Vector2(0, 220), "Zresetować postęp?", 40, Color("ffd24a"), HORIZONTAL_ALIGNMENT_CENTER, 960)
-	draw_multiline_string(font, Vector2(240, 262), "Licznik przejechanych kilometrów (%d km) i odblokowane auta zostaną skasowane. Zaczniesz od nowa Yarisem i znów wybierzesz swoje miasto." % int(Session.total_km), HORIZONTAL_ALIGNMENT_CENTER, 480, 18, 3, Color.WHITE)
-	_t(Vector2(0, 352), "Enter: tak, resetuj      Esc: nie", 20, Color("c8d6e3"), HORIZONTAL_ALIGNMENT_CENTER, 960)
+	_t(Vector2(0, 205), "Zresetować postęp?", 40, Color("ffd24a"), HORIZONTAL_ALIGNMENT_CENTER, 960)
+	draw_multiline_string(font, Vector2(240, 245), "Licznik przejechanych kilometrów (%d km) i odblokowane auta zostaną skasowane. Zaczniesz od nowa Yarisem i znów wybierzesz swoje miasto." % int(Session.total_km), HORIZONTAL_ALIGNMENT_CENTER, 480, 18, 3, Color.WHITE)
+	Ui.button(self, font, YES_BTN, "Tak, resetuj", false, 20)
+	Ui.button(self, font, NO_BTN, "Nie", true, 20)
 
 func _card(rect: Rect2, selected: bool) -> void:
 	var sb := StyleBoxFlat.new()
@@ -313,7 +371,7 @@ func _draw_map() -> void:
 	_t(Vector2(x, 176), "Jesteś w: %s" % Geo.city(start_city).name, 18, Color("7fe0a0"))
 	if id != dest_city and id != start_city:
 		_city_info(id, Vector2(x, 214), w)
-		_t(Vector2(x, 460), "Kliknij lub naciśnij Enter, aby wybrać", 16, Color("c8d6e3"))
+		_t(Vector2(x, 460), "Dotknij miasta, aby je wybrać" if Screen.touch else "Kliknij lub naciśnij Enter, aby wybrać", 16, Color("c8d6e3"))
 		return
 	if legs.is_empty():
 		return
