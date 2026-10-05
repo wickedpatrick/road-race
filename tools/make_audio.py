@@ -114,10 +114,9 @@ def win():  # arrival fanfare: trumpet call, then a held major chord
     for n in [64, 67, 72]: place(out, 1.0, brass(note(n), 1.3, 0.45))
     place(out, 1.0, tone(note(48), 1.3, "tri", 0.8, 0.01, 0.6))
     write("win", out, 0.7)
-def radar():  # radar detector: two short high chirps
+def radar():  # radar detector: a single short high beep (the game repeats it every 0.5 s while speeding)
     out = [0.0] * int(0.3 * SR)
     place(out, 0.0, tone(2400, 0.06, "sq", 0.5, 0.002, 0.02))
-    place(out, 0.09, tone(2900, 0.06, "sq", 0.5, 0.002, 0.02))
     write("radar", out, 0.45)
 def siren():  # police two-tone, 1 s loop; whole cycles per half so the loop and the switch are seamless
     out = []
