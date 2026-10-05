@@ -19,7 +19,7 @@ Kliknij dwukrotnie `graj.command` (otworzy grę w przeglądarce, najlepiej Chrom
 - Przy drodze stoją prawdziwe polskie znaki: zielone tablice z nazwą miejscowości (wjazd i wyjazd),
   drogowskazy z odległościami (niebieskie na autostradach, zielone na innych drogach) i brązowe tablice krain.
   Mijane miasta pokazują krótką ciekawostkę.
-- Paliwo się kończy. Na stacji paliw (żółty znacznik na pasku postępu) zatrzymaj się (spacja), a auto zatankuje samo.
+- Paliwo się kończy. Stacje paliw stoją przy prawym poboczu (żółty znacznik na pasku postępu). Żeby zatankować, zjedź na pobocze tak, by co najmniej połowa auta była poza drogą, i zatrzymaj się (spacja). Wtedy auto zatankuje samo.
 - Zderzenie z innym autem mocno zwalnia i zabiera 5 sekund, ale nie kończy gry.
 - Wygrywasz, gdy dojedziesz do celu, zanim skończy się czas lub paliwo. Po wygranej N: jedziesz dalej z miasta docelowego.
 - Odległości na znakach to prawdziwe kilometry; sama trasa w grze jest skrócona (ok. 14 m na kilometr).

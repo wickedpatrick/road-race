@@ -141,10 +141,12 @@ func _draw() -> void:
 		_banner("ZWOLNIJ! Ograniczenie %d km/h   (%d s)" % [race.speed_limit(), int(ceil(race.speeding_grace() - race.speeding))], Color("ff6a5a"))
 	elif race.refueling:
 		_banner("TANKOWANIE...  %d%%" % int(fr * 100.0), Color("49d36b"))
+	elif race.station_in_range() and race.shoulder_fraction() < Race.SHOULDER_MIN:
+		_banner("STACJA PALIW: ZJEDŹ W PRAWO NA POBOCZE", Color("f2c21b"))
 	elif race.station_in_range():
 		_banner("STACJA PALIW: ZATRZYMAJ SIĘ (%s), ABY TANKOWAĆ" % ("hamulec" if touch else "spacja"), Color("f2c21b"))
 	elif race.next_station_distance() > 0.0 and race.next_station_distance() < 450.0 and fr < 0.85:
-		_banner("STACJA PALIW za %d m  -  zwalniaj (%s)" % [int(race.next_station_distance() / 10.0) * 10, "hamulec" if touch else "spacja"], Color("f2c21b"))
+		_banner("STACJA za %d m: zjedź na prawe pobocze" % (int(race.next_station_distance() / 10.0) * 10), Color("f2c21b"))
 	elif low_fuel and int(race.elapsed * 2.0) % 2 == 0:
 		_banner("MAŁO PALIWA! Szukaj stacji", Color("ff6a5a"))
 

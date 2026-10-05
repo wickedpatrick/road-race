@@ -50,6 +50,7 @@ func run(t) -> void:
 	# fuel station
 	r = fresh()
 	r.z = r.stage.stations[0]
+	r.x = 1.1 # on the shoulder next to the station
 	r.fuel.level = 5.0
 	t.check(r.station_in_range(), "in station zone")
 	r.step(1.0, NONE)
@@ -63,6 +64,7 @@ func run(t) -> void:
 	t.check(r.fuel.level <= r.fuel.capacity + 0.0001, "refuel capped at capacity")
 	r = fresh()
 	r.z = r.stage.stations[0]
+	r.x = 1.1
 	r.fuel.level = 5.0
 	r.speed = 15.0
 	r.step(0.1, NONE)
@@ -143,8 +145,34 @@ func run(t) -> void:
 	# refuelling flag must drop once the tank is full
 	r = fresh()
 	r.z = r.stage.stations[0]
+	r.x = 1.1
 	for i in 60 * 10: r.step(1.0 / 60.0, NONE)
 	t.check(not r.refueling, "not 'refuelling' when the tank is full")
+	# refuelling needs the car at least 50% off the road, on the station's (right) shoulder
+	for case in [[0.0, false, "in the lane"], [0.9, false, "mostly on the road"], [0.97, false, "just under half outside"],
+			[1.0, true, "exactly half outside"], [1.2, true, "well on the shoulder"], [-1.2, false, "wrong (left) shoulder"]]:
+		r = fresh()
+		r.z = r.stage.stations[0]
+		r.x = case[0]
+		r.fuel.level = 5.0
+		r.step(0.5, NONE)
+		t.check(r.refueling == case[1] and (r.fuel.level > 5.0) == case[1], "refuel at x=%.2f (%s) -> %s" % [case[0], case[2], case[1]])
+	r = fresh()
+	r.x = 1.0
+	t.check(is_equal_approx(r.shoulder_fraction(), 0.5), "shoulder_fraction is 0.5 with the centre on the road edge")
+	r.x = 0.0
+	t.check(r.shoulder_fraction() == 0.0, "shoulder_fraction 0 in the lane")
+	r.x = 1.8
+	t.check(r.shoulder_fraction() == 1.0, "shoulder_fraction capped at 1")
+	r = fresh()
+	r.z = r.stage.stations[0]
+	r.x = 1.1
+	r.fuel.level = 5.0
+	r.speed = 0.0
+	r.step(0.2, NONE)
+	t.check(r.can_refuel_here(), "can_refuel_here when parked on the shoulder")
+	r.x = 0.0
+	t.check(not r.can_refuel_here(), "cannot refuel from the lane")
 	# off road
 	r = fresh()
 	r.x = 1.5

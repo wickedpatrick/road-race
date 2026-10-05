@@ -5,6 +5,7 @@ var cruise := 0.9
 var refuel_below := 0.55
 var obey_limits := true
 var _stopping := false
+const SHOULDER_X := 1.12 ## right shoulder, where the stations stand
 
 func decide(r: Race) -> Dictionary:
 	var sr := r.speed_ratio()
@@ -32,22 +33,34 @@ func decide(r: Race) -> Dictionary:
 				and (absf(c.lane_x - r.x) < 0.45 or absf(c.lane_x - target_x) < 0.3 and gap < 25.0):
 			accel = false
 			brake = brake or r.speed > c.speed + 3.0 or (gap < 8.0 + r.speed * 0.4 and r.speed > c.speed + 0.5)
-	# station logic
+	# station logic: pull over onto the right shoulder, stop there, refuel, rejoin the road
+	var on_shoulder := r.shoulder_fraction() >= 0.6
 	for s in r.stage.stations:
 		var d: float = s - r.z
 		if d > -20.0 and d < 400.0 and (r.fuel.ratio() < refuel_below or _stopping) and r.fuel.ratio() < 0.97:
 			_stopping = true
+			if d < 150.0:
+				target_x = SHOULDER_X
 			if d < Race.STATION_HALF_LEN - 10.0:
-				accel = false
-				brake = r.speed > 2.0
+				if on_shoulder:
+					accel = false
+					brake = r.speed > 2.0
+				else:
+					accel = r.speed < 6.0
+					brake = r.speed > 9.0
 			elif d < Race.STATION_HALF_LEN - 10.0 + r.speed * r.speed / (2.0 * r.stats.brake * 0.6):
 				brake = true
 				accel = false
 	if _stopping and r.fuel.ratio() >= 0.97:
 		_stopping = false
 	elif _stopping and r.station_in_range() and r.speed < 3.5:
-		accel = false
-		brake = r.speed > 0.5
+		if on_shoulder:
+			accel = false
+			brake = r.speed > 0.5
+		else:
+			target_x = SHOULDER_X
+			accel = r.speed < 6.0
+			brake = r.speed > 9.0
 	if sr > cruise:
 		accel = false
 	if obey_limits:

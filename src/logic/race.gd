@@ -5,6 +5,7 @@ signal collided(car_index: int)
 signal fined
 const STATION_HALF_LEN := 40.0
 const STOP_SPEED := 3.0
+const SHOULDER_MIN := 0.5 ## fraction of the car that must be off the road to refuel
 const COLLISION_TIME_PENALTY := 5.0
 const COLLISION_SPEED_KEEP := 0.3
 const OFFROAD_SPEED_RATIO := 0.4
@@ -140,6 +141,15 @@ func _update_police(dt: float) -> void:
 				return
 	p.z += p.speed * dt
 
+## Share of the car's width beyond the right road edge (x = 1.0 is the edge, the stations stand on that side).
+func shoulder_fraction() -> float:
+	var hw: float = stats.halfwidth
+	return clampf((x + hw - 1.0) / (2.0 * hw), 0.0, 1.0)
+
+## Refuelling needs the car stopped by the station with at least half of it off the road, on the shoulder.
+func can_refuel_here() -> bool:
+	return station_in_range() and speed < STOP_SPEED and shoulder_fraction() >= SHOULDER_MIN - 0.0001
+
 func station_in_range() -> bool:
 	for s in stage.stations:
 		if absf(z - s) < STATION_HALF_LEN:
@@ -187,7 +197,7 @@ func step(dt: float, input: Dictionary) -> void:
 	gear = gearbox.update(dt, speed, accelerating)
 	load = clampf((speed - v0) / dt / stats.accel, 0.0, 1.2) if accelerating and dt > 0.0 else 0.0
 	fuel.burn(dt, speed, load, gearbox.rpm(speed))
-	refueling = station_in_range() and speed < STOP_SPEED and fuel.ratio() < 0.995
+	refueling = can_refuel_here() and fuel.ratio() < 0.995
 	if refueling:
 		fuel.refuel(dt, fuel.capacity / 6.0)
 	_update_speeding(dt)
