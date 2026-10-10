@@ -164,3 +164,51 @@ trasy sensowne), miejscowości po drodze, krainy, ciekawostki po polsku, kontur 
 - Nazwy miast po polsku (Monachium, Mediolan, Nowy Jork). Lokalne nazwy przyjdą razem z tłumaczeniami gry
   na inne języki (osobny etap, poza tym planem); dane miast od razu przygotować tak, żeby nazwa była
   tłumaczalna (np. `name` jako klucz/słownik per język zamiast jednego stringa).
+
+## 10. Odblokowywanie krajów
+
+Przygotować razem z 9a (mechanizm działa już przy jednym kraju, testowany na danych testowych).
+
+- [ ] **Kraj gracza:** przy pierwszym uruchomieniu czytamy kraj z ustawień urządzenia (`OS.get_locale()`, np. `pl_PL`
+      -> PL; w przeglądarce język/region przeglądarki, ew. strefa czasowa jako podpowiedź). Ten kraj jest od razu
+      odblokowany. Jeśli kraju nie ma w grze (albo nie da się go odczytać), gracz wybiera kraj startowy z listy
+      dostępnych. Zapis w profilu (`Session`), bez ponownego wykrywania przy kolejnych uruchomieniach.
+- [ ] **Zaliczenie kraju** = odwiedzenie wszystkich jego miast (rozszerzyć obecne `Session.visit`/odwiedzone miasta
+      o podział na kraje). Pasek postępu „X / Y miast” na mapie kraju i na liście krajów.
+- [ ] **Nagroda za zaliczenie:** odblokowanie jednego sąsiedniego kraju. Najpierw „ulubiony sąsiad” z tabeli
+      (`FAVORITE_NEIGHBOUR` w danych krajów, z przymrużeniem oka, np. Polska -> Czechy, Rosja -> Białoruś,
+      Białoruś -> Rosja, Kanada -> USA, USA -> Kanada, Wielka Brytania -> Irlandia, Islandia -> Norwegia,
+      Malta -> Włochy, Cypr -> Grecja). Jeśli ulubiony jest już odblokowany: losowy zablokowany sąsiad; jeśli
+      wszyscy sąsiedzi odblokowani: losowy zablokowany sąsiad któregokolwiek odblokowanego kraju. Wyspy i kraje
+      bez sąsiadów lądowych mają sąsiadów zdefiniowanych ręcznie. Ekran „Odblokowano: <kraj>!” z animacją.
+- [ ] Zaliczenie odblokowanego kraju (nie tylko rodzimego) też daje kolejnego sąsiada (do potwierdzenia).
+- [ ] **Zakup:** każdy pozostały kraj można kupić w dowolnym momencie, niezależnie od postępu w kraju rodzimym.
+      Cena **$5 za kraj** (z warstwy płatności, nie na sztywno w UI).
+- [ ] **Na razie fake-payment:** warstwa `Store` z interfejsem (lista produktów z ceną, `purchase(id)`,
+      `restore_purchases()`, sygnały sukces/błąd/anulowano) i implementacją `FakeStore`: po kliknięciu „Kup za $5”
+      okno „Płatność trwa…” z animacją, po 2 s sukces i odblokowanie. Później `GooglePlayStore` (Play Billing)
+      i `AppStoreStore` (StoreKit) za tym samym interfejsem; w eksporcie Web `FakeStore` tylko w buildzie testowym.
+- [ ] Profil zapisuje odblokowane kraje ze źródłem (`home` / `earned` / `purchased`); zakupy do późniejszego
+      odtwarzania z platformy (restore), a nie tylko z pliku profilu.
+- [ ] Lista krajów w menu: odblokowane, zablokowane z kłódką + cena, „do zdobycia: zalicz <kraj>” przy sąsiadach.
+- [ ] Testy: wykrycie kraju z różnych locale, wybór ulubionego/losowego sąsiada, zakup przez `FakeStore`,
+      zapis i odczyt profilu, reset profilu (zakupy zostają).
+
+## 11. Rankingi
+
+Na razie lokalnie (zapis wyników w profilu) i z myślą o backendzie, który przyjdzie później.
+
+- [ ] **Ranking trasy:** tylko odcinki między sąsiednimi miastami (bezpośrednie drogi z danych kraju, np.
+      Kraków - Rzeszów). Przy dłuższej trasie (Kraków -> Gdańsk) zapisujemy międzyczasy na każdym mijanym mieście,
+      więc każdy przejechany odcinek liczy się do swojego rankingu. Kierunek: A -> B i B -> A to ten sam ranking
+      (do potwierdzenia).
+- [ ] **Najszybszy kierowca kraju:** suma najlepszych czasów gracza na wszystkich odcinkach kraju. Pełny ranking
+      dla graczy, którzy przejechali wszystkie odcinki; pozostali niżej, wg liczby przejechanych odcinków, potem
+      sumy czasu.
+- [ ] Wynik zapisywany tylko przy wygranej (dojechanie w limicie czasu i paliwa); kary (zderzenia, policja)
+      już są w czasie.
+- [ ] Do ustalenia: osobne rankingi per auto albo wspólny (szybsze auto = lepszy czas), wpływ pogody/nocy
+      (np. osobny ranking albo bonus), losowość ruchu ulicznego.
+- [ ] Ekrany: wynik trasy z pozycją i najlepszym czasem, tabela rankingu trasy z mapy, ranking kraju.
+- [ ] Pod backend: identyfikator gracza i nick, format wyniku (kraj, odcinek, kierunek, auto, warunki, czas,
+      wersja gry, seed), kolejka wysyłki offline, później weryfikacja po stronie serwera (anty-cheat).
