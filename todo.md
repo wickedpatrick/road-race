@@ -113,7 +113,7 @@ Dziś sterowanie przesuwa `x` natychmiast (`x += steer * handling * ...`), bez b
 Reguły jak dla Polski: największe miasta kraju, główne drogi między sąsiadującymi miastami (prawdziwe numery
 i przybliżone kilometry), mijane miejscowości, krainy geograficzne, ciekawostki o miastach.
 **20 największych miast**, a **30** dla dużych krajów (proponowane: Niemcy, Francja, Wielka Brytania,
-Włochy, Hiszpania, Ukraina, Turcja jeśli wchodzi, USA, Kanada). Polska zostaje jak jest (25 + Zakopane, Zamość,
+Włochy, Hiszpania, Ukraina, Rosja, Turcja, USA, Kanada). Polska zostaje jak jest (25 + Zakopane, Zamość,
 Łomża). Małe kraje, które nie mają 20 sensownych miast (np. Luksemburg, Malta, Islandia, Czarnogóra, Cypr),
 dostają tyle, ile ma sens.
 
@@ -152,14 +152,15 @@ trasy sensowne), miejscowości po drodze, krainy, ciekawostki po polsku, kontur 
 - [ ] Partia 3: Dania, Szwecja, Norwegia, Finlandia, Islandia, Irlandia, Estonia, Łotwa.
 - [ ] Partia 4: Węgry, Słowenia, Chorwacja, Bośnia i Hercegowina, Serbia, Czarnogóra, Kosowo, Albania,
       Macedonia Północna, Bułgaria, Rumunia, Mołdawia, Grecja, Cypr, Malta.
-- [ ] Partia 5: Ukraina (30) i kraje do decyzji (patrz niżej).
+- [ ] Partia 5: Ukraina (30), Rosja (30, europejska i azjatycka część: Moskwa, Petersburg, ale też Syberia),
+      Białoruś, Turcja (30).
 
-### Do decyzji
+### Decyzje (2026-10-10)
 
-- [ ] Rosja i Białoruś: czy w ogóle dodajemy.
-- [ ] Turcja oraz Gruzja, Armenia, Azerbejdżan: czy liczymy je jako Europę.
-- [ ] Mikropaństwa (Monako, San Marino, Watykan, Andora, Liechtenstein): proponowane jako miasta w krajach
-      sąsiednich, nie osobne kraje.
-- [ ] Czy dodać trasy między krajami (np. Kraków -> Praga) i przejścia graniczne, czy każdy kraj osobno.
-- [ ] Język gry: ciekawostki i interfejs zostają po polsku (gra edukacyjna), nazwy miast w lokalnej formie
-      czy polskiej (Monachium/München, Mediolan/Milano).
+- Rosja: tak (30 miast). Białoruś: tak. Turcja: tak (30 miast). Kaukaz (Gruzja, Armenia, Azerbejdżan): nie.
+- Mikropaństwa jako miasta w krajach sąsiednich: Monako -> Francja, San Marino i Watykan -> Włochy,
+  Andora -> Hiszpania, Liechtenstein -> Szwajcaria.
+- Każdy kraj osobno: bez tras między krajami i przejść granicznych.
+- Nazwy miast po polsku (Monachium, Mediolan, Nowy Jork). Lokalne nazwy przyjdą razem z tłumaczeniami gry
+  na inne języki (osobny etap, poza tym planem); dane miast od razu przygotować tak, żeby nazwa była
+  tłumaczalna (np. `name` jako klucz/słownik per język zamiast jednego stringa).
