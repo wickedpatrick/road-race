@@ -181,7 +181,8 @@ Przygotować razem z 9a (mechanizm działa już przy jednym kraju, testowany na 
       Malta -> Włochy, Cypr -> Grecja). Jeśli ulubiony jest już odblokowany: losowy zablokowany sąsiad; jeśli
       wszyscy sąsiedzi odblokowani: losowy zablokowany sąsiad któregokolwiek odblokowanego kraju. Wyspy i kraje
       bez sąsiadów lądowych mają sąsiadów zdefiniowanych ręcznie. Ekran „Odblokowano: <kraj>!” z animacją.
-- [ ] Zaliczenie odblokowanego kraju (nie tylko rodzimego) też daje kolejnego sąsiada (do potwierdzenia).
+- [ ] Nagroda tylko raz: sąsiada daje wyłącznie pierwsze zaliczenie kraju (rodzimego). Kolejne zaliczone kraje
+      (zdobyte lub kupione) nie odblokowują już nic; dalsze kraje tylko z zakupu.
 - [ ] **Zakup:** każdy pozostały kraj można kupić w dowolnym momencie, niezależnie od postępu w kraju rodzimym.
       Cena **$5 za kraj** (z warstwy płatności, nie na sztywno w UI).
 - [ ] **Na razie fake-payment:** warstwa `Store` z interfejsem (lista produktów z ceną, `purchase(id)`,
@@ -200,15 +201,14 @@ Na razie lokalnie (zapis wyników w profilu) i z myślą o backendzie, który pr
 
 - [ ] **Ranking trasy:** tylko odcinki między sąsiednimi miastami (bezpośrednie drogi z danych kraju, np.
       Kraków - Rzeszów). Przy dłuższej trasie (Kraków -> Gdańsk) zapisujemy międzyczasy na każdym mijanym mieście,
-      więc każdy przejechany odcinek liczy się do swojego rankingu. Kierunek: A -> B i B -> A to ten sam ranking
-      (do potwierdzenia).
+      więc każdy przejechany odcinek liczy się do swojego rankingu. A -> B i B -> A to jeden wspólny ranking.
 - [ ] **Najszybszy kierowca kraju:** suma najlepszych czasów gracza na wszystkich odcinkach kraju. Pełny ranking
       dla graczy, którzy przejechali wszystkie odcinki; pozostali niżej, wg liczby przejechanych odcinków, potem
       sumy czasu.
 - [ ] Wynik zapisywany tylko przy wygranej (dojechanie w limicie czasu i paliwa); kary (zderzenia, policja)
       już są w czasie.
-- [ ] Do ustalenia: osobne rankingi per auto albo wspólny (szybsze auto = lepszy czas), wpływ pogody/nocy
-      (np. osobny ranking albo bonus), losowość ruchu ulicznego.
+- [ ] Rankingi wspólne dla wszystkich aut i warunków (pogoda, noc, pora roku): bez podziału i bez bonusów.
+      Auto i warunki zapisujemy przy wyniku tylko informacyjnie.
 - [ ] Ekrany: wynik trasy z pozycją i najlepszym czasem, tabela rankingu trasy z mapy, ranking kraju.
 - [ ] Pod backend: identyfikator gracza i nick, format wyniku (kraj, odcinek, kierunek, auto, warunki, czas,
       wersja gry, seed), kolejka wysyłki offline, później weryfikacja po stronie serwera (anty-cheat).
