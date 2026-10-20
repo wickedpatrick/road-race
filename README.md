@@ -30,4 +30,5 @@ Kliknij dwukrotnie `graj.command` (otworzy grę w przeglądarce, najlepiej Chrom
 - Podgląd trasy: `Godot --headless --path . --script tests/sign_positions.gd -- krakow rzeszow`
 - Benchmark renderera: `Godot --path . res://tests/bench.tscn`
 - Eksport: `/Applications/Godot.app/Contents/MacOS/Godot --headless --path . --export-release "Web" build/web/index.html`
+- Deploy na serwer: `tools/deploy.sh` (testy, eksport Web, rsync do `api@vps-e96b8579.vps.ovh.net:/home/labs/www/rajd-przez-polske`)
 - Spec i plan: `docs/superpowers/`
