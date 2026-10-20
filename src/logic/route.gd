@@ -8,6 +8,7 @@ const MAX_LENGTH := 12500.0
 const STATION_EVERY := 3200.0
 const CITY_HALF := 260.0 ## half-length of a big city passed on the way (game metres)
 const TOWN_HALF := 90.0
+const HILL_TIME := 0.1 ## extra share of the time limit per unit of average Biome.hill
 const END_CITY := 380.0 ## city streets at the start and the finish
 
 ## Road dictionaries adjacent to a city, as [road, other_city_id].
@@ -146,13 +147,15 @@ static func build(from: String, to: String) -> Dictionary:
 	var stations := []
 	for k in range(1, n_st + 1):
 		stations.append(minf(_clear_spot(length * k / (n_st + 1), towns), length - 450.0))
-	var duration := ceilf((_legal_time(towns, roads, length) * 1.09 + 6.0 * n_st + 12.0) / 5.0) * 5.0
 	var curve := 0.0
 	var hill := 0.0
 	for zn in zones:
 		var w: float = minf(zn.z1, length) - zn.z0
 		curve += Biome.get_data(zn.biome).curve * w
 		hill += Biome.get_data(zn.biome).hill * w
+	# climbs slow every car down a little: hillier routes get more time
+	var legal := _legal_time(towns, roads, length) * (1.0 + HILL_TIME * hill / length)
+	var duration := ceilf((legal * 1.09 + 6.0 * n_st + 12.0) / 5.0) * 5.0
 	return {
 		"name": "%s - %s" % [Geo.city(from).name, Geo.city(to).name],
 		"from": from, "to": to, "path": path, "km": km, "m_per_km": mpk,

@@ -11,6 +11,14 @@ const COLLISION_SPEED_KEEP := 0.3
 const COLLISION_FUEL := 3.0 ## litres lost in every bump
 const OFFROAD_SPEED_RATIO := 0.4
 const ROLL_DECEL := 0.1 ## off the throttle the car rolls on for a long time
+## hills: the slope pulls with this share of gravity. Track grades are drawn steeper than real (see Track.MAX_GRADE),
+## the game's acceleration is arcade-strong; together a weak car loses speed on a climb. Downhill less, so the car
+## does not run away off the gas.
+const GRAVITY := 9.81
+const GRADE_K := 0.7
+const DOWNHILL_K := 0.5
+const ENGINE_BRAKE := 0.5 ## m/s^2 at full revs, off the gas downhill (the gearbox holds the gear)
+const DOWNHILL_BURN := 0.3 ## share of the usual fuel use while rolling downhill off the gas (fuel cut-off)
 ## speeding: the radar detector warns first; keep speeding past the grace time and the police pull you over
 const GRACE := 5.0
 const GRACE_EXPRESS := 10.0 ## on motorways / expressways
@@ -171,16 +179,21 @@ func step(dt: float, input: Dictionary) -> void:
 	if held:
 		input = {"accel": false, "brake": false, "steer": 0.0}
 		braking = speed > 0.0
-	# longitudinal
+	# longitudinal: engine or brakes, plus the slope (uphill slows, downhill speeds up)
 	var v0 := speed
+	var grade := track.grade_at(z)
+	var slope := GRAVITY * (GRADE_K if grade > 0.0 else DOWNHILL_K) * grade
+	var gas: bool = input.accel and not held and not input.brake and not fuel.is_empty()
 	if held:
 		speed -= PULL_OVER_DECEL * dt
 	elif input.brake:
-		speed -= stats.brake * dt
-	elif input.accel and not fuel.is_empty():
-		speed += stats.accel * (1.15 - speed_ratio()) * gearbox.pull(speed) * dt
+		speed -= (stats.brake + slope) * dt
+	elif gas:
+		speed += (stats.accel * (1.15 - speed_ratio()) * gearbox.pull(speed) - slope) * dt
 	else:
-		speed -= ROLL_DECEL * dt
+		speed -= (ROLL_DECEL + slope) * dt
+		if grade < 0.0:
+			speed -= ENGINE_BRAKE * gearbox.rpm(speed) * dt
 	if absf(x) > 1.0:
 		var cap := vmax * OFFROAD_SPEED_RATIO
 		if speed > cap:
@@ -194,11 +207,13 @@ func step(dt: float, input: Dictionary) -> void:
 	x -= track.segment_at(z).curve * 0.35 * sr * sr * dt
 	x = clampf(x, -1.8, 1.8)
 	z += speed * dt
-	# gearbox and fuel: accelerating burns a lot, cruising in a high gear saves
-	var accelerating: bool = input.accel and not held and not input.brake and not fuel.is_empty() and speed < vmax * 0.98
-	gear = gearbox.update(dt, speed, accelerating)
-	load = clampf((speed - v0) / dt / stats.accel, 0.0, 1.2) if accelerating and dt > 0.0 else 0.0
-	fuel.burn(dt, speed, load, gearbox.rpm(speed))
+	# gearbox and fuel: accelerating and climbing burn a lot, cruising in a high gear saves, rolling downhill
+	# off the gas almost nothing
+	var accelerating: bool = gas and speed < vmax * 0.98
+	var need := (ROLL_DECEL + slope) / maxf(stats.accel * (1.15 - speed_ratio()), 0.1)
+	gear = gearbox.update(dt, speed, accelerating, need)
+	load = clampf(((speed - v0) / dt + slope) / stats.accel, 0.0, 1.2) if gas and dt > 0.0 else 0.0
+	fuel.burn(dt * (DOWNHILL_BURN if not gas and grade < -0.025 else 1.0), speed, load, gearbox.rpm(speed))
 	refueling = can_refuel_here() and fuel.ratio() < 0.995
 	if refueling:
 		fuel.refuel(dt, fuel.capacity / 6.0)

@@ -33,19 +33,21 @@ Ma działać jak prawdziwy automat:
 Dane wysokości już są (`hills` w `Track.build`), ale amplituda (~5 m + 1,6 m razy `Biome.hill`) jest tak mała,
 że trasa wygląda na płaską, a nachylenie nie wpływa na jazdę.
 
-- [ ] Nowy profil terenu: kilka składowych o różnej długości fali (długie wzniesienia 0,5-2 km, krótkie
+- [x] Nowy profil terenu: kilka składowych o różnej długości fali (długie wzniesienia 0,5-2 km, krótkie
       garby), amplituda zależna od krainy (`Biome.hill`): niziny prawie płaskie, wyżyny wyraźne, góry strome.
       Autostrady łagodniej (mniejsze nachylenie, jak przy zakrętach).
-- [ ] Ograniczenie maksymalnego nachylenia (np. 6-8% na drogach krajowych, 4-5% na autostradach,
-      do 10-12% w górach), żeby nie było „ścian”.
-- [ ] Widoczne grzbiety: droga znika za szczytem i wyłania się na zjeździe (zasłanianie przez `maxy` już jest).
+- [x] Ograniczenie maksymalnego nachylenia, żeby nie było „ścian”. Trasa jest ok. 70x krótsza od prawdziwej, więc
+      realne 6-12% wyglądało płasko: nachylenia są rysowane kilka razy mocniej (pola ~12%, góry do 45%), a fizyka
+      liczy je odpowiednio słabiej (`Track.MAX_GRADE`, `Race.GRADE_K`).
+- [x] Widoczne grzbiety: droga znika za szczytem i wyłania się na zjeździe (zasłanianie przez `maxy` już jest).
       Sprawdzić, czy auta ruchu, znaki i obiekty przy drodze poprawnie chowają się za wzniesieniem.
-- [ ] Fizyka: składowa grawitacji (`g * sin(nachylenie)`) w przyspieszeniu; pod górę auto zwalnia bez gazu,
-      z góry przyspiesza. Słabsze auta (Yaris) wyraźnie wolniej pod górę.
-- [ ] Spalanie: więcej pod górę, mniej z góry.
+- [x] Fizyka: składowa grawitacji (`g * sin(nachylenie)`) w przyspieszeniu; pod górę auto zwalnia bez gazu,
+      z góry przyspiesza, hamowanie silnikiem na zjeździe. Słabsze auta (Yaris) wyraźnie wolniej pod górę.
+- [x] Spalanie: więcej pod górę, mniej z góry.
 - [ ] Kamera: lekkie pochylenie horyzontu/tła przy dużym nachyleniu (opcjonalnie).
-- [ ] Testy: deterministyczność, limit nachylenia, płaski start i meta, wpływ nachylenia na prędkość.
-- [ ] Sprawdzić wydajność (`tests/bench.tscn`) i bilans czasu/paliwa (`tests/test_balance.gd`, bot w `tests/bot.gd`).
+- [x] Testy: deterministyczność, limit nachylenia, płaski start i meta, wpływ nachylenia na prędkość.
+- [x] Bilans czasu/paliwa (`tests/test_balance.gd`): limit czasu rośnie z pagórkowatością trasy (`Route.HILL_TIME`).
+- [ ] Wydajność na słabym sprzęcie (`tests/bench.tscn`) nie mierzona; rysowanie się nie zmieniło.
 
 ## 3. Ostrzejsze zakręty (`src/logic/track.gd`)
 

@@ -30,6 +30,21 @@ func run(t) -> void:
 		for sg in tr.segments: m = maxf(m, absf(sg.y))
 		return m
 	t.check(hill.call(Route.build("katowice", "bielsko")) > hill.call(Route.build("gdansk", "elblag")) * 2.0, "mountain road hillier than Żuławy")
+	# grades: never steeper than allowed, flat start and finish, the elevation follows the grade
+	var mt: Track = Track.build(Route.build("krakow", "zakopane"), 3)
+	var steep := 0.0
+	var follows := true
+	for k in range(1, mt.segments.size()):
+		steep = maxf(steep, absf(mt.segments[k].grade))
+		if absf(mt.segments[k].y - mt.segments[k - 1].y - mt.segments[k - 1].grade * Track.SEG_LEN) > 0.001: follows = false
+	t.check(steep <= Track.STEEPEST + 0.0001 and steep > 0.2, "mountain road climbs, but never steeper than %.0f%% (got %.0f%%)" % [Track.STEEPEST * 100, steep * 100])
+	t.check(follows, "elevation follows the grade")
+	var mlen: float = Route.build("krakow", "zakopane").length
+	t.check(mt.grade_at(10.0) == 0.0 and mt.grade_at(mlen - 20.0) == 0.0 and mt.grade_at(mlen + 300.0) == 0.0, "flat at the start and the finish")
+	var ex: Track = Track.build(Route.build("warszawa", "lodz"), 3)
+	var ex_steep := 0.0
+	for sg in ex.segments: ex_steep = maxf(ex_steep, absf(sg.grade))
+	t.check(ex_steep < 0.1, "a motorway through flat fields is gentle (%.0f%%)" % (ex_steep * 100))
 	var near: Dictionary = Track.project(0, 3, 0, 0, 0, 20, 960, 540)
 	var far: Dictionary = Track.project(0, 3, 0, 0, 0, 200, 960, 540)
 	t.check(far.scale < near.scale and far.scale > 0.0, "far point is smaller")

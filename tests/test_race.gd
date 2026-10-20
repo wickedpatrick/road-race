@@ -119,6 +119,26 @@ func run(t) -> void:
 	r.collided.connect(func(_i): hits[0] += 1)
 	for i in 60 * 20: r.step(1.0 / 60.0, GAS)
 	t.check(hits[0] <= 1, "holding the throttle behind a slower car hits it at most once (hits=%d)" % hits[0])
+	# hills: uphill slows, downhill speeds up, a weak car loses more on a climb, climbing burns more fuel
+	# accel: true = gas held, false = off the gas, null = holding v0 with the gas (like a player tapping it)
+	var on_grade := func(car: String, g: float, accel, secs: float, v0: float) -> Race:
+		var rr: Race = fresh(car)
+		for sg in rr.track.segments: sg.grade = g
+		rr.z = 500.0
+		rr.speed = v0
+		for i in int(secs * 60):
+			var on: bool = rr.speed < v0 if accel == null else accel
+			rr.step(1.0 / 60.0, GAS if on else NONE)
+		return rr
+	t.check(on_grade.call("yaris", 0.2, false, 2.0, 20.0).speed < on_grade.call("yaris", 0.0, false, 2.0, 20.0).speed - 2.0, "uphill off the gas slows down")
+	t.check(on_grade.call("yaris", -0.2, false, 2.0, 10.0).speed > 11.0, "downhill off the gas speeds up")
+	var ya: Race = on_grade.call("yaris", 0.4, true, 20.0, 20.0)
+	var rv: Race = on_grade.call("rangerover", 0.4, true, 20.0, 20.0)
+	t.check(ya.speed_ratio() < 0.8 and ya.speed_ratio() < rv.speed_ratio() - 0.1, "a steep climb holds the Yaris back more than the Range Rover (%.2f vs %.2f)" % [ya.speed_ratio(), rv.speed_ratio()])
+	var fu: Race = on_grade.call("xc60", 0.3, null, 5.0, 25.0)
+	var ff: Race = on_grade.call("xc60", 0.0, null, 5.0, 25.0)
+	var fd: Race = on_grade.call("xc60", -0.3, false, 5.0, 25.0)
+	t.check(fu.fuel.level < ff.fuel.level and fd.fuel.level > ff.fuel.level, "climbing burns more fuel, rolling downhill less")
 	# every bump costs time and fuel
 	r = fresh()
 	r.z = 500.0
