@@ -40,6 +40,7 @@ var braking := false
 var steer_visual := 0.0
 var hit_cooldown := 0.0
 var hit_flash := 0.0
+var last_hit := -100.0 ## `elapsed` at the last bump (the HUD shows the penalty for a while)
 var speeding := 0.0 ## seconds over the limit (radar detector beeping while > 0)
 var fines := 0
 ## police car, empty when none: {z, x, speed, phase: chase | pull_over | ticket | leave, t}
@@ -215,6 +216,7 @@ func step(dt: float, input: Dictionary) -> void:
 			fuel.level = maxf(0.0, fuel.level - COLLISION_FUEL)
 			hit_cooldown = 1.0
 			hit_flash = 0.6
+			last_hit = elapsed
 			# slide fully clear of the car so the same bump cannot repeat
 			var clear: float = Traffic.KINDS[car.kind].half + stats.halfwidth + 0.08
 			x = clampf(car.lane_x + (clear if x >= car.lane_x else -clear), -1.8, 1.8)

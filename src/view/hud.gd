@@ -11,6 +11,7 @@ var _legs: Array = []
 var _mini: PolandMap
 var touch := false ## touch-screen layout (set before bind): the bottom corners belong to the driving buttons
 const PAUSE_BTN := Rect2(16, 14, 46, 66)
+const BUMP_BANNER_TIME := 2.5 ## seconds the collision penalty stays on screen
 ## positions that move on touch screens, where the bottom corners belong to the driving buttons
 var _fuel_pos := Vector2(16, 446)
 var _limit_pos := Vector2(312, 486)
@@ -137,6 +138,8 @@ func _draw() -> void:
 		_banner("MANDAT za przekroczenie prędkości: -%d l paliwa" % int(Race.FINE_FUEL), Color("ff6a5a"))
 	elif ph == "chase" or ph == "pull_over":
 		_banner("POLICJA! Zatrzymaj się", Color("6aa8ff") if int(race.elapsed * 4.0) % 2 == 0 else Color("ff6a5a"))
+	elif race.elapsed - race.last_hit < BUMP_BANNER_TIME:
+		_banner("ZDERZENIE! -%d s, -%d l paliwa" % [int(Race.COLLISION_TIME_PENALTY), int(Race.COLLISION_FUEL)], Color("ff6a5a"))
 	elif race.speeding > 0.0:
 		_banner("ZWOLNIJ! Ograniczenie %d km/h   (%d s)" % [race.speed_limit(), int(ceil(race.speeding_grace() - race.speeding))], Color("ff6a5a"))
 	elif race.refueling:

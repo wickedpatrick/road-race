@@ -128,6 +128,7 @@ func run(t) -> void:
 	var tl5 := r.time_left
 	r.step(1.0 / 60.0, NONE)
 	t.check(tl5 - r.time_left > Race.COLLISION_TIME_PENALTY - 0.1, "a bump costs %.0f s" % Race.COLLISION_TIME_PENALTY)
+	t.check(is_equal_approx(r.last_hit, r.elapsed), "the bump time is kept for the HUD")
 	t.check(absf(20.0 - r.fuel.level - Race.COLLISION_FUEL) < 0.05, "a bump costs %.0f l of fuel (lost %.2f)" % [Race.COLLISION_FUEL, 20.0 - r.fuel.level])
 	# review fix 3: the HUD needs to know how far the next station is
 	r = fresh()
