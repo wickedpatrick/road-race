@@ -209,6 +209,7 @@ Na razie lokalnie (zapis wyników w profilu) i z myślą o backendzie, który pr
       już są w czasie.
 - [ ] Rankingi wspólne dla wszystkich aut i warunków (pogoda, noc, pora roku): bez podziału i bez bonusów.
       Auto i warunki zapisujemy przy wyniku tylko informacyjnie.
+- [ ] Ruch uliczny w rankingach zostaje losowy (raz lepiej, raz gorzej): bez wspólnego seeda dla wszystkich graczy.
 - [ ] Ekrany: wynik trasy z pozycją i najlepszym czasem, tabela rankingu trasy z mapy, ranking kraju.
 - [ ] Pod backend: identyfikator gracza i nick, format wyniku (kraj, odcinek, kierunek, auto, warunki, czas,
       wersja gry, seed), kolejka wysyłki offline, później weryfikacja po stronie serwera (anty-cheat).
