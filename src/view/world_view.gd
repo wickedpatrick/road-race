@@ -12,6 +12,7 @@ const SEG := Track.SEG_LEN
 const CURVE_K := 0.0028
 const CAR_UNIT := 0.0086 ## metres per painter unit
 const PARTICLES := 70
+const ITEM_FADE := 0.8 ## objects fade out of the haze from this share of the drawing distance
 
 var race: Race
 var pal: Dictionary
@@ -31,6 +32,7 @@ var _s1 := PackedFloat32Array()
 var _o0 := PackedFloat32Array()
 var _o1 := PackedFloat32Array()
 var _vis := PackedByteArray()
+var _clip := PackedFloat32Array() ## per depth: screen y of the nearer ground's top edge (a crest hides what is below)
 var _buckets: Array = []
 var _b := DrawBatch.new()
 var _warm_left: Array = [] ## sign texts still to pre-render, a few per frame (see Scenery.warm_text)
@@ -65,6 +67,7 @@ func bind(p_race: Race, p_season: String) -> void:
 	_x1.resize(N + 1); _y1.resize(N + 1); _s1.resize(N + 1)
 	_o0.resize(N + 1); _o1.resize(N + 1)
 	_vis.resize(N + 1)
+	_clip.resize(N + 1)
 	_buckets.clear()
 	for i in N + 1:
 		_buckets.append([])
@@ -124,6 +127,12 @@ func _ground_y(z: float) -> float:
 func _fog(c: Color, n: int) -> Color:
 	var f := clampf((float(n) - N * 0.45) / (N * 0.55), 0.0, 1.0)
 	return c.lerp(pal.sky_bottom, f * 0.75)
+
+## Haze for objects at depth n: the same as the road, then fading out completely over the last stretch of the view,
+## so trees, buildings and cars come out of the haze instead of popping in at the edge of the drawing distance.
+func _item_fog(n: int) -> float:
+	var f := clampf((float(n) - N * 0.45) / (N * 0.55), 0.0, 1.0) * 0.75
+	return maxf(f, smoothstep(N * ITEM_FADE, float(N), float(n)))
 
 func _draw() -> void:
 	if race == null:
@@ -244,6 +253,7 @@ func _draw_scene() -> void:
 		_o0[n] = o0
 		_o1[n] = o1
 		_vis[n] = 0
+		_clip[n] = maxy
 		if z1 > cam_z + NEAR:
 			var wy0: float = sg.y
 			var wy1: float = _seg(i + 1).y
@@ -264,12 +274,14 @@ func _draw_scene() -> void:
 				maxy = _y0[n]
 		off = o1
 		dx += sg.curve * CURVE_K
-	# back to front
+	# back to front; objects behind a crest are drawn too: the nearer ground drawn after them hides their lower part,
+	# so a tall tree or tower rises over the hilltop instead of popping up when its road comes into view
 	for n in range(N - 1, -1, -1):
-		if _vis[n] == 0:
-			continue
 		var i := base + n
-		_draw_segment(n, i)
+		if _vis[n] == 1:
+			_draw_segment(n, i)
+		_b.fog = _item_fog(n)
+		_b.fog_color = pal.sky_bottom
 		var its = items.get(i)
 		if its != null:
 			for it in its:
@@ -278,6 +290,7 @@ func _draw_scene() -> void:
 			_draw_traffic_car(tcars[ci], n, cam_x, cam_y, cam_z)
 		if not race.police.is_empty() and int(floor(race.police.z / SEG)) == i:
 			_draw_traffic_car({"z": race.police.z, "lane_x": race.police.x, "kind": "police", "color_idx": 0}, n, cam_x, cam_y, cam_z)
+		_b.fog = 0.0
 
 func _draw_segment(n: int, i: int) -> void:
 	var band := (i / 3) % 2
@@ -354,6 +367,8 @@ func _draw_item(it: Dictionary, n: int, cam_x: float, cam_y: float, cam_z: float
 	if p.z <= 0.0:
 		return
 	var pm := p.z * W * 0.5
+	if _vis[n] == 0 and p.y - it.get("h", 10.0) * pm >= _clip[n]:
+		return # wholly behind a crest
 	var b := Vector2(p.x, p.y)
 	if it.type == "bridge":
 		_draw_bridge(b, pm)
@@ -399,7 +414,7 @@ func _draw_traffic_car(c: Dictionary, n: int, cam_x: float, cam_y: float, cam_z:
 	var px: float = W * 0.5 + s * (o + c.lane_x * Track.ROAD_HALF_WIDTH - cam_x) * W * 0.5
 	var py: float = HORIZON - s * (wy - cam_y) * HORIZON
 	var scale := s * W * 0.5 * CAR_UNIT
-	if scale < 0.04:
+	if scale < 0.04 or (_vis[n] == 0 and py - 4.5 * s * W * 0.5 >= _clip[n]):
 		return
 	CarPainter.draw_traffic(_b, c.kind, Vector2(px, py), scale, CarPainter.TRAFFIC_COLORS[c.color_idx])
 

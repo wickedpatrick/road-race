@@ -10,6 +10,9 @@ var _idx := PackedInt32Array()
 var _tmp_cols := PackedColorArray()
 var _xf := Transform2D.IDENTITY
 var _xf_on := false
+## distance haze: every colour added is blended this far (0..1) towards fog_color (set per depth by WorldView)
+var fog := 0.0
+var fog_color := Color.WHITE
 
 func begin(cv: CanvasItem) -> void:
 	_cv = cv
@@ -18,6 +21,7 @@ func begin(cv: CanvasItem) -> void:
 	_idx.clear()
 	_xf = Transform2D.IDENTITY
 	_xf_on = false
+	fog = 0.0
 
 func flush() -> void:
 	if _idx.is_empty():
@@ -33,7 +37,7 @@ func fan(p: PackedVector2Array, col: Color) -> void:
 	var base := _pts.size()
 	_pts.append_array(_xf * p if _xf_on else p)
 	_tmp_cols.resize(n)
-	_tmp_cols.fill(col)
+	_tmp_cols.fill(col.lerp(fog_color, fog) if fog > 0.0 else col)
 	_cols.append_array(_tmp_cols)
 	for k in range(1, n - 1):
 		_idx.append(base)
@@ -82,7 +86,7 @@ func draw_colored_polygon(p: PackedVector2Array, col: Color) -> void:
 	var base := _pts.size()
 	_pts.append_array(_xf * p if _xf_on else p)
 	_tmp_cols.resize(p.size())
-	_tmp_cols.fill(col)
+	_tmp_cols.fill(col.lerp(fog_color, fog) if fog > 0.0 else col)
 	_cols.append_array(_tmp_cols)
 	for i in tri:
 		_idx.append(base + i)
