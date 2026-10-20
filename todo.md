@@ -9,22 +9,23 @@ sprawdzone zrzutami ekranu i w eksporcie Web (także w trybie lekkiej grafiki).
 Dziś: w górę po jednym biegu co 0,35 s, przy dłużej trzymanym gazie od razu redukcja do `gear_for(speed)`.
 Ma działać jak prawdziwy automat:
 
-- [ ] Model obrotów i momentu: obroty z prędkości i przełożenia, prosta krzywa momentu (słaby dół, maksimum
+- [x] Model obrotów i momentu: obroty z prędkości i przełożenia, prosta krzywa momentu (słaby dół, maksimum
       w środku, spadek przy odcięciu). `pull()` liczony z momentu na danym biegu zamiast wzoru `1/(1+0.6*n)`.
-- [ ] **Odpuszczenie gazu / stała prędkość:** jeśli po zmianie obroty nie spadną poniżej progu, a silnik ma
+- [x] **Odpuszczenie gazu / stała prędkość:** jeśli po zmianie obroty nie spadną poniżej progu, a silnik ma
       zapas siły na utrzymanie prędkości (uwzględniając opory i nachylenie, patrz pkt 2), skrzynia wrzuca
       **+2 biegi** naraz (np. 3 -> 5). Gdy +2 się nie da, +1.
-- [ ] **Przyspieszanie:** wciśnięcie gazu przy niskich obrotach daje **redukcję o 2 biegi** (kick-down),
+- [x] **Przyspieszanie:** wciśnięcie gazu przy niskich obrotach daje **redukcję o 2 biegi** (kick-down),
       dalsze trzymanie gazu prowadzi do biegu maksymalnej mocy; krótkie dotknięcia gazu nie zmieniają biegu
       (zachować obecny `KICKDOWN_DELAY`).
-- [ ] Rozróżnić „gaz trzymany krótko” (lekkie przyspieszanie, -1 bieg) od „gaz trzymany długo / duża różnica
+- [x] Rozróżnić „gaz trzymany krótko” (lekkie przyspieszanie, -1 bieg) od „gaz trzymany długo / duża różnica
       prędkości” (-2 biegi). Sterowanie jest zero-jedynkowe (klawisz/dotyk), więc siłę wciśnięcia wyliczać
       z czasu trzymania.
-- [ ] Hamowanie i zwalnianie: redukcje stopniowe, żeby po puszczeniu hamulca auto miało właściwy bieg.
-- [ ] Pod górę nie wrzucać wyższego biegu, jeśli zabraknie siły; z góry trzymać niższy bieg (hamowanie silnikiem).
-- [ ] Histereza między progami w górę i w dół, żeby bieg nie „pływał” przy stałej prędkości.
-- [ ] Spójność z `Fuel` (spalanie zależne od obrotów) i `EngineAudio` (dźwięk silnika przy skokach o 2 biegi).
-- [ ] Testy scenariuszy: rozpędzanie od 0, utrzymywanie 90 i 140 km/h, odpuszczenie gazu przy 100 km/h,
+- [x] Hamowanie i zwalnianie: redukcje stopniowe, żeby po puszczeniu hamulca auto miało właściwy bieg.
+- [x] Pod górę nie wrzucać wyższego biegu, jeśli zabraknie siły; z góry trzymać niższy bieg (hamowanie silnikiem).
+      Gotowe w skrzyni (parametr `need` w `Gearbox.update`); `Race` poda nachylenie w pkt 2.
+- [x] Histereza między progami w górę i w dół, żeby bieg nie „pływał” przy stałej prędkości.
+- [x] Spójność z `Fuel` (spalanie zależne od obrotów) i `EngineAudio` (dźwięk silnika przy skokach o 2 biegi).
+- [x] Testy scenariuszy: rozpędzanie od 0, utrzymywanie 90 i 140 km/h, odpuszczenie gazu przy 100 km/h,
       kick-down przy wyprzedzaniu, podjazd, zjazd; brak więcej niż 1 zmiany biegu na `SHIFT_TIME`.
 
 ## 2. Podjazdy i zjazdy (`src/logic/track.gd`, `src/view/world_view.gd`, `src/logic/race.gd`)
