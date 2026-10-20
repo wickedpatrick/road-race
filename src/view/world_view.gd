@@ -12,6 +12,7 @@ const SEG := Track.SEG_LEN
 const CURVE_K := 0.0028
 const CAR_UNIT := 0.0086 ## metres per painter unit
 const PARTICLES := 70
+const MIN_CAR_SCALE := 0.008 ## traffic is drawn up to ~430 m ahead (it used to vanish beyond ~90 m)
 const ITEM_FADE := 0.8 ## objects fade out of the haze from this share of the drawing distance
 
 var race: Race
@@ -132,7 +133,10 @@ func _fog(c: Color, n: int) -> Color:
 ## so trees, buildings and cars come out of the haze instead of popping in at the edge of the drawing distance.
 func _item_fog(n: int) -> float:
 	var f := clampf((float(n) - N * 0.45) / (N * 0.55), 0.0, 1.0) * 0.75
-	return maxf(f, smoothstep(N * ITEM_FADE, float(N), float(n)))
+	return maxf(f, _edge_fade(n))
+
+func _edge_fade(n: int) -> float:
+	return smoothstep(N * ITEM_FADE, float(N), float(n))
 
 func _draw() -> void:
 	if race == null:
@@ -286,6 +290,7 @@ func _draw_scene() -> void:
 		if its != null:
 			for it in its:
 				_draw_item(it, n, cam_x, cam_y, cam_z)
+		_b.fog = _edge_fade(n) # traffic matters for driving: no haze, only coming into view at the far edge
 		for ci in _buckets[n]:
 			_draw_traffic_car(tcars[ci], n, cam_x, cam_y, cam_z)
 		if not race.police.is_empty() and int(floor(race.police.z / SEG)) == i:
@@ -414,7 +419,7 @@ func _draw_traffic_car(c: Dictionary, n: int, cam_x: float, cam_y: float, cam_z:
 	var px: float = W * 0.5 + s * (o + c.lane_x * Track.ROAD_HALF_WIDTH - cam_x) * W * 0.5
 	var py: float = HORIZON - s * (wy - cam_y) * HORIZON
 	var scale := s * W * 0.5 * CAR_UNIT
-	if scale < 0.04 or (_vis[n] == 0 and py - 4.5 * s * W * 0.5 >= _clip[n]):
+	if scale < MIN_CAR_SCALE or (_vis[n] == 0 and py - 4.5 * s * W * 0.5 >= _clip[n]):
 		return
 	CarPainter.draw_traffic(_b, c.kind, Vector2(px, py), scale, CarPainter.TRAFFIC_COLORS[c.color_idx])
 

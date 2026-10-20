@@ -13,6 +13,8 @@ class TimedView extends WorldView:
 		us += Time.get_ticks_usec() - t0
 
 func _ready() -> void:
+	DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, true) # dev runs: no window frame, no focus stealing
+	DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_NO_FOCUS, true)
 	DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
 	Engine.max_fps = 0
 	var a := OS.get_cmdline_user_args()
