@@ -119,6 +119,16 @@ func run(t) -> void:
 	r.collided.connect(func(_i): hits[0] += 1)
 	for i in 60 * 20: r.step(1.0 / 60.0, GAS)
 	t.check(hits[0] <= 1, "holding the throttle behind a slower car hits it at most once (hits=%d)" % hits[0])
+	# every bump costs time and fuel
+	r = fresh()
+	r.z = 500.0
+	r.speed = 30.0
+	r.fuel.level = 20.0
+	r.traffic.cars = [{"z": 500.3, "lane_x": r.x, "speed": 15.0, "kind": "car", "color_idx": 0, "active": true}]
+	var tl5 := r.time_left
+	r.step(1.0 / 60.0, NONE)
+	t.check(tl5 - r.time_left > Race.COLLISION_TIME_PENALTY - 0.1, "a bump costs %.0f s" % Race.COLLISION_TIME_PENALTY)
+	t.check(absf(20.0 - r.fuel.level - Race.COLLISION_FUEL) < 0.05, "a bump costs %.0f l of fuel (lost %.2f)" % [Race.COLLISION_FUEL, 20.0 - r.fuel.level])
 	# review fix 3: the HUD needs to know how far the next station is
 	r = fresh()
 	r.z = 100.0

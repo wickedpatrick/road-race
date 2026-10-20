@@ -8,6 +8,7 @@ const STOP_SPEED := 3.0
 const SHOULDER_MIN := 0.5 ## fraction of the car that must be off the road to refuel
 const COLLISION_TIME_PENALTY := 5.0
 const COLLISION_SPEED_KEEP := 0.3
+const COLLISION_FUEL := 3.0 ## litres lost in every bump
 const OFFROAD_SPEED_RATIO := 0.4
 const ROLL_DECEL := 0.1 ## off the throttle the car rolls on for a long time
 ## speeding: the radar detector warns first; keep speeding past the grace time and the police pull you over
@@ -211,6 +212,7 @@ func step(dt: float, input: Dictionary) -> void:
 			var car: Dictionary = traffic.cars[idx]
 			speed *= COLLISION_SPEED_KEEP
 			time_left -= COLLISION_TIME_PENALTY
+			fuel.level = maxf(0.0, fuel.level - COLLISION_FUEL)
 			hit_cooldown = 1.0
 			hit_flash = 0.6
 			# slide fully clear of the car so the same bump cannot repeat
