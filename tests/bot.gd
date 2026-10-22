@@ -70,8 +70,18 @@ func decide(r: Race) -> Dictionary:
 		if r.speed > lim:
 			accel = false
 			brake = brake or r.speed > lim + 1.5
+	# sharp bends: slow down in time to a speed the steering can hold the bend at
+	var look_c: float = 30.0 + r.speed * r.speed / (2.0 * r.stats.brake * 0.5)
+	var worst := 0.0
+	for d in range(0, int(look_c), 10):
+		worst = maxf(worst, absf(r.track.segment_at(r.z + d).curve))
+	if worst > 0.0:
+		var safe := r.corner_speed(worst) * 0.84 # keep some steering for the lane
+		if r.speed > safe:
+			accel = false
+			brake = brake or r.speed > safe + 1.5
 	var curve: float = r.track.segment_at(r.z + 20.0).curve
-	var steer := clampf((target_x - r.x) * 2.5 + curve * 0.35 * sr * sr / (r.stats.handling * 2.2), -1.0, 1.0)
+	var steer := clampf((target_x - r.x) * 2.5 + curve * Race.corner_push(r.speed) / (r.stats.handling * Race.STEER_RATE), -1.0, 1.0)
 	return {"accel": accel, "brake": brake, "steer": steer}
 
 ## A car next to the player in a lane between the player and lane lx.

@@ -282,8 +282,72 @@ static func _signs(items: Dictionary, stage: Dictionary, rng: RandomNumberGenera
 		last_region = z
 		_add(items, "region", z, SIGN_EDGE + REGION_W * 0.5, REGION_W, 5.0, rng).text = zn.region
 
+## Warning signs before sharp bends (A-1/A-2 one bend right/left, A-3/A-4 two bends, first right/left) and red-white
+## chevron boards (U-3a) on the outside of every sharp bend.
+static func bend_signs(items: Dictionary, sharp: Array) -> void:
+	var rng := RandomNumberGenerator.new()
+	rng.seed = 991
+	for b in sharp:
+		var it := _add(items, "bend", b.z - Track.SIGN_BEFORE, SIGN_EDGE + 1.4, 2.6, 4.6, rng)
+		it.dir = b.dir
+		it.double = b.double
+		_chevrons(items, b.z_hold, b.dir, rng)
+		if b.double:
+			_chevrons(items, b.z_hold2, -b.dir, rng)
+
+## Three chevron boards on the outer edge of a bend, pointing the way it turns.
+static func _chevrons(items: Dictionary, z: float, dir: float, rng: RandomNumberGenerator) -> void:
+	for k in 3:
+		_add(items, "chevron", z + k * 18.0, -dir * (SIGN_EDGE + 0.4), 1.8, 2.4, rng).dir = dir
+
 static func _limit_sign(items: Dictionary, z: float, kmh: int, rng: RandomNumberGenerator) -> void:
 	_add(items, "limit", z, SIGN_EDGE + 1.4, 2.4, 4.4, rng).limit = kmh
+
+## Bend warning sign (A-1..A-4): yellow triangle with a red border and a black arrow bending dir (+1 right).
+static func _bend_sign(cv, it: Dictionary, b: Vector2, pm: float) -> void:
+	var top := 3.0 * pm
+	var r := 1.35 * pm
+	_posts(cv, b, pm, top, [0.0])
+	var c := b + Vector2(0, -top - r * 0.75)
+	var tri := func(k: float) -> PackedVector2Array:
+		return PackedVector2Array([c + Vector2(0, -r * k), c + Vector2(r * 0.95 * k, r * 0.62 * k), c + Vector2(-r * 0.95 * k, r * 0.62 * k)])
+	cv.draw_colored_polygon(tri.call(1.0), SIGN_RED)
+	cv.draw_colored_polygon(tri.call(0.72), SIGN_YELLOW)
+	if pm < 2.0:
+		return
+	var d: float = it.dir
+	var w := maxf(1.0, 0.13 * pm)
+	var p0 := c + Vector2(-d * 0.18 * r, 0.42 * r)
+	var pts := PackedVector2Array([p0, p0 + Vector2(0, -0.35 * r)])
+	if it.double:
+		pts.append(p0 + Vector2(d * 0.3 * r, -0.55 * r))
+		pts.append(p0 + Vector2(d * 0.3 * r, -0.75 * r))
+		pts.append(p0 + Vector2(0, -0.95 * r))
+	else:
+		pts.append(p0 + Vector2(d * 0.4 * r, -0.62 * r))
+	for k in pts.size() - 1:
+		cv.draw_line(pts[k], pts[k + 1], Color.BLACK, w)
+	var tip := pts[pts.size() - 1]
+	var dirv := (tip - pts[pts.size() - 2]).normalized()
+	var side := Vector2(-dirv.y, dirv.x)
+	cv.draw_colored_polygon(PackedVector2Array([tip + dirv * 0.16 * r, tip + side * 0.13 * r, tip - side * 0.13 * r]), Color.BLACK)
+
+## Chevron board (U-3a): red with a white arrow pointing the way the road turns.
+static func _chevron(cv, it: Dictionary, b: Vector2, pm: float) -> void:
+	var post := 0.9 * pm
+	var w := 1.4 * pm
+	var h := 1.7 * pm
+	_posts(cv, b, pm, post, [0.0])
+	var r := Rect2(b + Vector2(-w * 0.5, -post - h), Vector2(w, h))
+	cv.draw_rect(r, SIGN_RED)
+	if pm < 1.5:
+		return
+	var d: float = it.dir
+	var c := r.get_center()
+	var tip := c + Vector2(d * 0.22 * w, 0)
+	var lw := maxf(1.0, 0.16 * w)
+	cv.draw_line(c + Vector2(-d * 0.22 * w, -0.3 * h), tip, Color.WHITE, lw)
+	cv.draw_line(tip, c + Vector2(-d * 0.22 * w, 0.3 * h), Color.WHITE, lw)
 
 ## Speed limit sign B-33: white disc, red ring, black number.
 static func _limit(cv, it: Dictionary, b: Vector2, pm: float, font: Font) -> void:
@@ -400,6 +464,8 @@ static func draw_item(cv, it: Dictionary, b: Vector2, pm: float, pal: Dictionary
 		"town_sign", "town_end": _town_sign(cv, it, b, pm, font, it.type == "town_end")
 		"board": _board(cv, it, b, pm, font)
 		"limit": _limit(cv, it, b, pm, font)
+		"bend": _bend_sign(cv, it, b, pm)
+		"chevron": _chevron(cv, it, b, pm)
 		"region": _region(cv, it, b, pm, font)
 		"landmark": LandmarkPainter.draw(cv, it, b, pm)
 		"poi": _poi(cv, it, b, pm, font)

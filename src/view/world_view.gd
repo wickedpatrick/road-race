@@ -48,6 +48,7 @@ func bind(p_race: Race, p_season: String) -> void:
 	season = p_season
 	pal = SeasonPalette.by_name(season)
 	items = Scenery.build(race.stage, 1)
+	Scenery.bend_signs(items, race.track.sharp)
 	_ground = Scenery.ground(race.stage, race.track.segments.size())
 	_warm_left = Scenery.sign_texts(race.stage)
 	_lanes.resize(race.track.segments.size())

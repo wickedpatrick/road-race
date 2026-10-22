@@ -18,6 +18,9 @@ const GRAVITY := 9.81
 const GRADE_K := 0.7
 const DOWNHILL_K := 0.5
 const ENGINE_BRAKE := 0.5 ## m/s^2 at full revs, off the gas downhill (the gearbox holds the gear)
+const STEER_RATE := 2.2 ## road half-widths per second at full lock, times stats.handling
+const CORNER_K := 0.35 ## a bend pushes the car outwards by curve * CORNER_K * (speed / CORNER_REF)^2 per second
+const CORNER_REF := 50.0 ## m/s; the push depends on the real speed, so every car feels a bend alike at the same km/h
 const DOWNHILL_BURN := 0.3 ## share of the usual fuel use while rolling downhill off the gas (fuel cut-off)
 ## speeding: the radar detector warns first; keep speeding past the grace time and the police pull you over
 const GRACE := 5.0
@@ -151,6 +154,17 @@ func _update_police(dt: float) -> void:
 				return
 	p.z += p.speed * dt
 
+## How hard a bend of curve 1 pushes the car outwards at `v` (road half-widths per second); the steering can hold
+## stats.handling * STEER_RATE against it.
+static func corner_push(v: float) -> float:
+	return CORNER_K * pow(v / CORNER_REF, 2.0)
+
+## Highest speed the steering can hold a bend of this curve at (m/s).
+func corner_speed(curve: float) -> float:
+	if absf(curve) < 0.001:
+		return stats.max_speed
+	return CORNER_REF * sqrt(stats.handling * STEER_RATE / (CORNER_K * absf(curve)))
+
 ## Share of the car's width beyond the right road edge (x = 1.0 is the edge, the stations stand on that side).
 func shoulder_fraction() -> float:
 	var hw: float = stats.halfwidth
@@ -203,8 +217,8 @@ func step(dt: float, input: Dictionary) -> void:
 	var steer: float = clampf(input.steer, -1.0, 1.0)
 	steer_visual = lerpf(steer_visual, steer, minf(1.0, dt * 10.0))
 	var sr := speed_ratio()
-	x += steer * stats.handling * 2.2 * clampf(speed / 12.0, 0.0, 1.0) * dt
-	x -= track.segment_at(z).curve * 0.35 * sr * sr * dt
+	x += steer * stats.handling * STEER_RATE * clampf(speed / 12.0, 0.0, 1.0) * dt
+	x -= track.segment_at(z).curve * corner_push(speed) * dt
 	x = clampf(x, -1.8, 1.8)
 	z += speed * dt
 	# gearbox and fuel: accelerating and climbing burn a lot, cruising in a high gear saves, rolling downhill

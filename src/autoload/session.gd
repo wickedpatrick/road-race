@@ -12,12 +12,35 @@ var quality := "high" ## "high": everything at full screen sharpness; "low": the
 var home_city := "" ## picked on the first start; "" until then (or after a progress reset)
 var menu_at_map := false ## the menu opens at the destination map (coming back from a race)
 var last_result := {}
+## test mode for tuning the sharp bends: every bend sharp, optionally with a given sharpness. In the browser add
+## ?zakrety (or ?zakrety=20) to the address; on the desktop pass -- --zakrety (or --zakrety=20).
+var sharp_test := false
+var sharp_amount := 0.0
 
 func _ready() -> void:
 	load_profile()
+	_read_test_flags()
 
 func stage() -> Dictionary:
-	return Route.build(from_city, to_city)
+	var st := Route.build(from_city, to_city)
+	if sharp_test:
+		st["sharp_test"] = true
+		if sharp_amount > 0.0:
+			st["sharp_amount"] = sharp_amount
+	return st
+
+func _read_test_flags() -> void:
+	var args := Array(OS.get_cmdline_user_args())
+	if OS.has_feature("web"):
+		var q = JavaScriptBridge.eval("window.location.search", true)
+		if q is String:
+			args.append_array((q as String).trim_prefix("?").split("&"))
+	for a in args:
+		var kv: PackedStringArray = (a as String).trim_prefix("--").split("=")
+		if kv[0] == "zakrety":
+			sharp_test = true
+			if kv.size() > 1 and kv[1].is_valid_float():
+				sharp_amount = kv[1].to_float()
 
 func load_profile() -> void:
 	var f := FileAccess.open(SAVE_PATH, FileAccess.READ)

@@ -15,8 +15,18 @@ const ROAD_HALF_WIDTH := 4.2
 const START_FLAT := 100.0
 const FINISH_FLAT := 220.0
 const TAIL := 1200.0 ## extra road past the finish so the horizon never ends
+## Sharp bends: a few times the usual curve, never on motorways/expressways or in towns. The chance scales with
+## the region's curviness (Biome.curve): more in the mountains, where some come as a serpentine (two opposite bends).
+## Stage keys for trying them out: "sharp_test" (every bend sharp), "sharp_amount" (overrides SHARP_AMOUNT).
+const SHARP_PER_STEP := 0.06 ## chance per 20 m of eligible road, times Biome.curve
+const SHARP_SPACING := 250.0 ## at least this much road between two sharp bends
+const SHARP_AMOUNT := 22.0 ## at 90 km/h a weak car has to brake a little (see Race.corner_speed)
+const SERPENTINE_CHANCE := 0.45 ## of the sharp bends in curvy regions (Biome.curve >= 1)
+const SIGN_BEFORE := 110.0 ## the warning sign stands this far before the bend
 var segments: Array = []
 var total_length := 0.0
+## sharp bends for the warning signs: [{z, z_hold, z_end, dir (+1 right, -1 left), double, z_hold2 (when double)}]
+var sharp: Array = []
 
 static func build(stage: Dictionary, seed_value: int) -> Track:
 	var tr := Track.new()
@@ -31,19 +41,68 @@ static func build(stage: Dictionary, seed_value: int) -> Track:
 	hills.resize(n)
 	var i := int(START_FLAT / SEG_LEN)
 	var end_i := int((length - FINISH_FLAT) / SEG_LEN)
+	# sharp bends first: reserved where they fit (open country, ordinary road), so the many towns and expressways of
+	# a short track do not crowd them out; ordinary bends then fill the road between them
+	var srng := RandomNumberGenerator.new() # separate stream: sharp bends do not reshuffle the rest of the road
+	srng.seed = seed_value + 101
+	var test: bool = stage.get("sharp_test", false)
+	var sharp_amount: float = stage.get("sharp_amount", SHARP_AMOUNT)
+	var plan := [] ## [{i, bends: [[enter, hold, leave, amount], ...], gap}]
+	var zs := START_FLAT + SIGN_BEFORE
+	while zs < length - FINISH_FLAT:
+		var curvy: float = Biome.get_data(Route.zone_at(stage, zs).biome).curve if stage.has("zones") else stage.curve_amount
+		var b1 := [srng.randi_range(8, 12), srng.randi_range(8, 20), srng.randi_range(8, 12)]
+		var len1: float = (b1[0] + b1[1] + b1[2]) * SEG_LEN
+		if not _sharp_allowed(stage, zs, zs + len1) or not (test or srng.randf() < SHARP_PER_STEP * curvy):
+			zs += 20.0
+			continue
+		var dir := 1.0 if srng.randf() < 0.5 else -1.0
+		var amount := sharp_amount * srng.randf_range(0.9, 1.15)
+		var bends := [b1 + [amount * dir]]
+		var gap := srng.randi_range(1, 4)
+		var b2 := [srng.randi_range(8, 12), srng.randi_range(8, 18), srng.randi_range(8, 12)]
+		var len2: float = len1 + (gap + b2[0] + b2[1] + b2[2]) * SEG_LEN
+		if srng.randf() < (0.5 if test else SERPENTINE_CHANCE * float(curvy >= 1.0)) and _sharp_allowed(stage, zs, zs + len2):
+			bends.append(b2 + [-amount * dir])
+		else:
+			len2 = len1
+		var si := int(zs / SEG_LEN)
+		plan.append({"i": si, "bends": bends, "gap": gap})
+		var entry := {"z": si * SEG_LEN, "z_hold": (si + b1[0]) * SEG_LEN, "z_end": zs + len2, "dir": dir, "double": bends.size() == 2}
+		if entry.double:
+			entry["z_hold2"] = (si + b1[0] + b1[1] + b1[2] + gap + b2[0]) * SEG_LEN
+		tr.sharp.append(entry)
+		zs += len2 + SHARP_SPACING
+	var pi := 0
 	while i < end_i:
+		if pi < plan.size() and i >= plan[pi].i:
+			var pl: Dictionary = plan[pi]
+			i = pl.i
+			for bi in pl.bends.size():
+				var bd: Array = pl.bends[bi]
+				if bi > 0: i += pl.gap
+				i = _bend(curves, i, end_i, bd[0], bd[1], bd[2], bd[3])
+			i += 6
+			pi += 1
+			continue
+		var limit: int = plan[pi].i - 6 if pi < plan.size() else end_i
+		var dir := 1.0 if rng.randf() < 0.5 else -1.0
+		var amount: float = rng.randf_range(1.0, 3.5) * _curve_amount(stage, i * SEG_LEN) * dir
+		if rng.randf() < 0.25 or test: amount = 0.0 # test mode: only the sharp bends
 		var enter := rng.randi_range(15, 40)
 		var hold := rng.randi_range(20, 90)
 		var leave := rng.randi_range(15, 40)
-		var amount: float = rng.randf_range(1.0, 3.5) * _curve_amount(stage, i * SEG_LEN) * (1.0 if rng.randf() < 0.5 else -1.0)
-		if rng.randf() < 0.25: amount = 0.0
-		for k in enter + hold + leave:
-			if i + k >= end_i: break
-			var f := 1.0
-			if k < enter: f = _ease(float(k) / enter)
-			elif k >= enter + hold: f = 1.0 - _ease(float(k - enter - hold) / leave)
-			curves[i + k] = amount * f
-		i += enter + hold + leave + rng.randi_range(10, 60)
+		var room := limit - i
+		if enter + hold + leave > room:
+			if room < 30:
+				i = limit + 6 # straight up to the sharp bend
+				continue
+			hold = maxi(0, room - enter - leave)
+			if enter + hold + leave > room:
+				enter = room / 2
+				leave = room - enter
+		i = _bend(curves, i, end_i, enter, hold, leave, amount)
+		i += rng.randi_range(10, 60)
 	# hills: the grade is a mix of long climbs (~1 km), shorter rises (~400 m) and small humps (~170 m) with random
 	# phases, never steeper than the region allows; the elevation follows from it. Flat at both ends.
 	var p1 := rng.randf() * TAU
@@ -62,6 +121,30 @@ static func build(stage: Dictionary, seed_value: int) -> Track:
 	for k in n:
 		tr.segments.append({"curve": curves[k], "y": hills[k], "grade": grades[k]})
 	return tr
+
+## Writes one bend (ease in, hold, ease out) from segment i and returns the segment after it.
+static func _bend(curves: PackedFloat32Array, i: int, end_i: int, enter: int, hold: int, leave: int, amount: float) -> int:
+	for k in enter + hold + leave:
+		if i + k >= end_i: break
+		var f := 1.0
+		if k < enter: f = _ease(float(k) / enter)
+		elif k >= enter + hold: f = 1.0 - _ease(float(k - enter - hold) / leave)
+		curves[i + k] = amount * f
+	return i + enter + hold + leave
+
+## Sharp bends only on ordinary roads in open country, with room for the warning sign before them.
+static func _sharp_allowed(stage: Dictionary, z0: float, z1: float) -> bool:
+	if not stage.has("zones"):
+		return stage.get("sharp_test", false)
+	if z0 < START_FLAT + SIGN_BEFORE or z1 > stage.length - FINISH_FLAT:
+		return false
+	var test: bool = stage.get("sharp_test", false)
+	var z := z0 - 60.0
+	while z <= z1:
+		if (Route.lanes_at(stage, z) == 3 and not test) or not Route.town_at(stage, z).is_empty():
+			return false
+		z += 20.0
+	return true
 
 ## Curviness at z: from the region (biome zones) when the stage has them, else one value for the whole stage.
 static func _curve_amount(stage: Dictionary, z: float) -> float:

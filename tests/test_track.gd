@@ -52,6 +52,39 @@ func run(t) -> void:
 	t.check(Track.project(0, 3, 50, 0, 0, 20, 960, 540).scale <= 0.0, "behind camera scale <= 0")
 	var right: Dictionary = Track.project(0, 3, 0, 5, 0, 20, 960, 540)
 	t.check(right.x > 480.0, "right of camera is right of centre")
+	# sharp bends: only on ordinary roads in open country, sharp enough, with signs placed before them
+	var sharp_total := 0
+	var sharp_ok := true
+	for rt in [["krakow", "bielsko"], ["szczecin", "lublin"], ["krakow", "zakopane"]]:
+		var sst := Route.build(rt[0], rt[1])
+		for sd in 8:
+			var str_: Track = Track.build(sst, sd)
+			for b in str_.sharp:
+				sharp_total += 1
+				var zz: float = b.z - 60.0
+				while zz <= b.z_end:
+					if Route.lanes_at(sst, zz) == 3 or not Route.town_at(sst, zz).is_empty(): sharp_ok = false
+					zz += 10.0
+				if absf(str_.segment_at(b.z_hold + 10.0).curve) < Track.SHARP_AMOUNT * 0.8: sharp_ok = false
+				if signf(str_.segment_at(b.z_hold + 10.0).curve) != b.dir: sharp_ok = false
+	t.check(sharp_total >= 10, "sharp bends turn up on mountain and long routes (%d on 24 tracks)" % sharp_total)
+	t.check(sharp_ok, "sharp bends: open country, ordinary road, sharp, turning the stated way")
+	var flat_sharp := 0
+	for sd in 8: flat_sharp += Track.build(Route.build("warszawa", "lodz"), sd).sharp.size()
+	t.check(flat_sharp == 0, "no sharp bends on the A2 motorway")
+	var tst := Route.build("krakow", "rzeszow")
+	tst["sharp_test"] = true
+	tst["sharp_amount"] = 30.0
+	var tt: Track = Track.build(tst, 2)
+	var tmax := 0.0
+	for sg in tt.segments: tmax = maxf(tmax, absf(sg.curve))
+	t.check(tt.sharp.size() >= 2 and tmax > 30.0 * 0.85, "test mode: sharp bends everywhere they fit, with the given sharpness")
+	var items := {}
+	Scenery.bend_signs(items, tt.sharp)
+	var kinds := {}
+	for k in items:
+		for it in items[k]: kinds[it.type] = kinds.get(it.type, 0) + 1
+	t.check(kinds.get("bend", 0) == tt.sharp.size() and kinds.get("chevron", 0) >= 3 * tt.sharp.size(), "a warning sign and chevrons for every sharp bend")
 	# out of range lookup must not crash
 	var tr: Track = Track.build(Route.build("krakow", "rzeszow"), 3)
 	t.check(tr.segment_at(-50.0).curve == 0.0 and tr.segment_at(1.0e6).curve == 0.0, "segment_at clamps")

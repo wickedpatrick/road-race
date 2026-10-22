@@ -27,6 +27,7 @@ Kliknij dwukrotnie `graj.command` (otworzy grę w przeglądarce, najlepiej Chrom
 ## Dla programisty
 - Testy: `tests/run.sh` (headless Godot)
 - Dane mapy (miasta, drogi, miejscowości, krainy, ciekawostki): `src/logic/geo.gd`; krajobrazy: `src/logic/biome.gd`
+- Test ostrych zakrętów: w przeglądarce dopisz `?zakrety` do adresu (np. `index.html?zakrety=30` ustawia ostrość, domyślnie 22), na desktopie `-- --zakrety[=N]`; wszystkie łuki są wtedy ostre
 - Podgląd trasy: `Godot --headless --path . --script tests/sign_positions.gd -- krakow rzeszow`
 - Benchmark renderera: `Godot --path . res://tests/bench.tscn`
 - Eksport: `/Applications/Godot.app/Contents/MacOS/Godot --headless --path . --export-release "Web" build/web/index.html`

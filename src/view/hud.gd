@@ -156,6 +156,8 @@ func _draw() -> void:
 	_info_card()
 	_board_echo()
 	_minimap()
+	if race.stage.get("sharp_test", false):
+		_text(Vector2(200, 532), "TRYB TESTOWY: same ostre zakręty, ostrość %.0f" % race.stage.get("sharp_amount", Track.SHARP_AMOUNT), 14, Color("ffd24a"))
 
 ## Fuel pump: yellow body with a dark display and a hose, centred on the progress bar.
 func _pump_icon(c: Vector2) -> void:

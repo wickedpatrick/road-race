@@ -51,15 +51,19 @@ Dane wysokości już są (`hills` w `Track.build`), ale amplituda (~5 m + 1,6 m 
 
 ## 3. Ostrzejsze zakręty (`src/logic/track.gd`)
 
-- [ ] Dodać rzadkie ostre zakręty (wyraźnie mocniejsze niż obecne `1.0-3.5 * curve`) i serpentyny
+- [x] Dodać rzadkie ostre zakręty (wyraźnie mocniejsze niż obecne `1.0-3.5 * curve`) i serpentyny
       w górach; na autostradach nadal łagodnie, w miastach bez zmian.
-- [ ] Ostrzeżenie przed ostrym zakrętem: polski znak A-1/A-2 (zakręt w prawo/lewo) i A-3/A-4 (dwa zakręty)
+- [x] Ostrzeżenie przed ostrym zakrętem: polski znak A-1/A-2 (zakręt w prawo/lewo) i A-3/A-4 (dwa zakręty)
       ok. 150-200 m wcześniej, opcjonalnie tablice prowadzące (biało-czerwone strzałki) na łuku.
-- [ ] Siła odśrodkowa (`curve * 0.35 * sr^2` w `Race.step`) dostroić tak, żeby ostry zakręt trzeba było
+- [x] Siła odśrodkowa (`curve * 0.35 * sr^2` w `Race.step`) dostroić tak, żeby ostry zakręt trzeba było
       wziąć z hamowaniem, ale dało się go przejechać każdym autem.
-- [ ] **Do przetestowania:** stałe ostrości w jednym miejscu + tryb testowy (np. parametr w `Session`
+- [x] **Do przetestowania:** stałe ostrości w jednym miejscu + tryb testowy (np. parametr w `Session`
       albo scena testowa), który generuje trasę z samymi ostrymi zakrętami, żeby dobrać wartości na żywo.
-- [ ] Bot (`tests/bot.gd`) ma przejeżdżać trasy z ostrymi zakrętami; test bilansu czasu nadal przechodzi.
+- [x] Bot (`tests/bot.gd`) ma przejeżdżać trasy z ostrymi zakrętami; test bilansu czasu nadal przechodzi.
+- Zrobione: siła odśrodkowa zależy teraz od prawdziwej prędkości (`Race.corner_push`), nie od ułamka vmax auta;
+  ostry łuk (`Track.SHARP_AMOUNT` = 22) przy 90 km/h wymusza na Yarisie hamowanie do ~85, Range Rover ~100.
+  Tryb testowy: `?zakrety` / `?zakrety=N` w adresie gry (`Session.sharp_test`).
+- [ ] Dostroić na żywo `SHARP_AMOUNT` i częstość (`SHARP_PER_STEP`) po testach gracza.
 
 ## 4. Pora dnia i pogoda: wspólna podstawa
 

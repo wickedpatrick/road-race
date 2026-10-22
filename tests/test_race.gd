@@ -129,6 +129,8 @@ func run(t) -> void:
 		for i in int(secs * 60):
 			var on: bool = rr.speed < v0 if accel == null else accel
 			rr.step(1.0 / 60.0, GAS if on else NONE)
+			rr.speeding = 0.0 # only the slope is under test, no police stops
+			rr.x = 0.0
 		return rr
 	t.check(on_grade.call("yaris", 0.2, false, 2.0, 20.0).speed < on_grade.call("yaris", 0.0, false, 2.0, 20.0).speed - 2.0, "uphill off the gas slows down")
 	t.check(on_grade.call("yaris", -0.2, false, 2.0, 10.0).speed > 11.0, "downhill off the gas speeds up")
@@ -139,6 +141,18 @@ func run(t) -> void:
 	var ff: Race = on_grade.call("xc60", 0.0, null, 5.0, 25.0)
 	var fd: Race = on_grade.call("xc60", -0.3, false, 5.0, 25.0)
 	t.check(fu.fuel.level < ff.fuel.level and fd.fuel.level > ff.fuel.level, "climbing burns more fuel, rolling downhill less")
+	# bends push outwards with the real speed: the same at the same km/h, a sharp bend needs a weak car to brake
+	var yr := fresh("yaris")
+	var rv2 := fresh("rangerover")
+	t.check(yr.corner_speed(Track.SHARP_AMOUNT) < 25.0 and rv2.corner_speed(Track.SHARP_AMOUNT) > 25.0, "a sharp bend: the Yaris brakes below 90 km/h, the Range Rover holds it (%.0f / %.0f km/h)" % [yr.corner_speed(Track.SHARP_AMOUNT) * 3.6, rv2.corner_speed(Track.SHARP_AMOUNT) * 3.6])
+	var pushed := func(car: String, kmh: float) -> float:
+		var rr: Race = fresh(car)
+		for sg in rr.track.segments: sg.curve = 10.0
+		rr.z = 500.0
+		rr.speed = kmh / 3.6
+		rr.step(0.1, NONE)
+		return rr.x
+	t.check(is_equal_approx(pushed.call("yaris", 80.0), pushed.call("rangerover", 80.0)), "the same bend pushes every car alike at the same speed")
 	# every bump costs time and fuel
 	r = fresh()
 	r.z = 500.0
