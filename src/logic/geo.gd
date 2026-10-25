@@ -15,6 +15,11 @@ static func roads() -> Array:
 static func city(id: String) -> Dictionary:
 	return cities()[id]
 
+## A city's name for the player (the exonym in the game's language, e.g. "Praga"); road signs show `name`, the local one.
+static func display_name(id: String) -> String:
+	var c := city(id)
+	return c.get("exonym", c.name)
+
 static func city_ids() -> Array:
 	return cities().keys()
 

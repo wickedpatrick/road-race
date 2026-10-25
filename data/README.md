@@ -7,7 +7,11 @@ The web export includes `data/*.json` (see `include_filter` in `export_presets.c
 
 **Texts** shown to the player are given by language: `{"pl": "Dawna stolica Polski"}`. The game picks
 `GameData.LANGUAGE` (or the first language given). Proper names (cities, towns, regions, road numbers) are plain
-strings in the country's own language.
+strings in the country's own language: that is what the road signs show. A city's name in the player's language
+(`exonym`, e.g. Praha -> `{"pl": "Praga"}`) is used on the map and in the menus and HUD; a language without one
+keeps the local name (no fallback to another language).
+
+Formatting: `tools/fmt_json.py <files>` rewrites files in the shared layout (short lists on one line).
 
 Numbers: distances along a road in real kilometres from city `a`; populations in thousands; lat/lon in degrees.
 
@@ -17,7 +21,9 @@ Numbers: distances along a road in real kilometres from city `a`; populations in
   (m/s²), `tank` (l), `burn` (l/s at top speed), `handling`, `body_color` (`"#rrggbb"`), `halfwidth` (share of the
   road half-width).
 - `biomes`: landscape by name. `curve` and `hill` shape the road; `wood`, `hills`, `mountains`, `sea`, `industry`
-  (0..1) shape the horizon. What grows beside the road per landscape is in `Scenery._nature`.
+  (0..1) shape the horizon, optional `ice` (0..1) keeps snow caps on the far mountains all year (glaciers).
+  What grows beside the road per landscape is in `Scenery._nature` (`lava`, `highland`, `glacier`, `fjords`: the
+  treeless north in `Scenery._iceland`).
 - `landmark_sizes`: landmark painter kind -> `[width, height]` in metres (see `LandmarkPainter`).
 
 ## `countries/index.json`
@@ -27,18 +33,21 @@ Numbers: distances along a road in real kilometres from city `a`; populations in
 ## `countries/<code>/country.json`
 
 - `code`, `name`, `language` (of the place names), `drive` (`"right"` / `"left"`), `region_label` (the word for a
-  region in the city card, e.g. "województwo").
+  region in the city card, e.g. "województwo"), `title` / `subtitle` (menu header), `start` (default first trip
+  `[from, to]`, neighbouring cities), `express_prefixes` (road numbers starting with these are motorways or
+  expressways: dual carriageways with the faster limit, e.g. `["A", "S"]` in Poland, `["D"]` in Czechia).
 - `limits` (km/h): `express` (motorways, expressways), `road`, `city` (through a big city), `town_on_express`,
   `town`.
-- `signs`: colours (`"#rrggbb"`) of the place-name signs (`town`) and of the direction boards (`board`,
-  `board_motorway`).
+- `signs`: colours (`"#rrggbb"`) of the place-name signs (`town`, lettering `town_text`) and of the direction
+  boards (`board`, `board_motorway`).
 - `map`: the lat/lon box of the country map: `lon0`, `lon1`, `lat0`, `lat1`, and `lon_k` = cos(middle latitude),
   which keeps the country's shape.
 - `outline`: the border as `[lon, lat]` points; `outline_lines`: extra lines drawn with it (e.g. the Hel peninsula).
 
 ## `countries/<code>/cities.json`
 
-City id -> `{name, lat, lon, pop, region}`; optional `short` (shorter name on the map), `label` (`"left"` /
+City id -> `{name, lat, lon, pop, region}`; optional `exonym` (name in the player's language, see Texts),
+`map_name` (shorter map label by language), `short` (shorter local name on the map), `label` (`"left"` /
 `"above"`: where the name goes when neighbours would collide), `note` (text shown instead of the population).
 Cities are the start and finish points; a trip goes from a city to a neighbouring one along one road.
 

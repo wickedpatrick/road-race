@@ -52,6 +52,10 @@ static func load_json(path: String) -> Variant:
 	assert(err == OK, "%s line %d: %s" % [path, json.get_error_line(), json.get_error_message()])
 	return json.data
 
+## Names in the player's language that replace a place's own name only when that language has one (Praha is
+## "Praga" in Polish, but stays "Praha" for a language with no name of its own): no fallback to another language.
+const OWN_LANGUAGE_ONLY := ["exonym", "map_name"]
+
 ## Replaces every {"pl": ..., "en": ...} text with the string in the game's language (or the first one given).
 static func localize(v: Variant) -> Variant:
 	if v is Dictionary:
@@ -59,6 +63,9 @@ static func localize(v: Variant) -> Variant:
 			return v.get(LANGUAGE, v.values()[0])
 		var out := {}
 		for k in v:
+			if k in OWN_LANGUAGE_ONLY and v[k] is Dictionary:
+				if v[k].has(LANGUAGE): out[k] = v[k][LANGUAGE]
+				continue
 			out[k] = localize(v[k])
 		return out
 	if v is Array:

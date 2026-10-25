@@ -1,0 +1,78 @@
+{
+	"Reykjavík": [
+		{
+			"kind": "hallgrims",
+			"name": {"pl": "Hallgrímskirkja"},
+			"desc": {"pl": "Kościół w kształcie bazaltowych kolumn"}
+		}
+	],
+	"Reykjanesbær": [
+		{
+			"kind": "truss_bridge",
+			"name": {"pl": "Most między kontynentami"},
+			"desc": {"pl": "Przejdziesz nad szczeliną między płytami Europy i Ameryki"}
+		}
+	],
+	"Selfoss": [
+		{
+			"kind": "geyser",
+			"name": {"pl": "Gorące źródła"},
+			"desc": {"pl": "W okolicy z ziemi bucha para i gorąca woda"}
+		}
+	],
+	"Geysir": [
+		{"kind": "geyser", "name": {"pl": "Strokkur"}, "desc": {"pl": "Gejzer wyrzuca wodę co kilka minut"}},
+		{"kind": "waterfall", "name": {"pl": "Gullfoss"}, "desc": {"pl": "Złoty wodospad w kanionie"}}
+	],
+	"Vík í Mýrdal": [{"kind": "sea_stacks", "name": {"pl": "Reynisdrangar"}, "desc": {"pl": "Bazaltowe iglice przy czarnej plaży"}}],
+	"Höfn": [{"kind": "ship", "name": {"pl": "Port rybacki"}, "desc": {"pl": "Stąd wypływają kutry po homarce"}}],
+	"Egilsstaðir": [
+		{
+			"kind": "dragon",
+			"name": {"pl": "Potwór z Lagarfljót"},
+			"desc": {"pl": "Legenda mówi, że w jeziorze żyje wielki wąż"}
+		}
+	],
+	"Akureyri": [
+		{
+			"kind": "cathedral",
+			"name": {"pl": "Kościół w Akureyri"},
+			"desc": {"pl": "Długie schody prowadzą do kościoła nad fiordem"}
+		}
+	],
+	"Húsavík": [{"kind": "ship", "name": {"pl": "Rejsy do wielorybów"}, "desc": {"pl": "W zatoce pływają wieloryby i delfiny"}}],
+	"Blönduós": [
+		{
+			"kind": "turf_house",
+			"name": {"pl": "Dawne gospodarstwo"},
+			"desc": {"pl": "Islandczycy mieszkali w domach krytych darnią"}
+		}
+	],
+	"Borgarnes": [
+		{
+			"kind": "turf_house",
+			"name": {"pl": "Centrum osadnictwa"},
+			"desc": {"pl": "Opowieść o pierwszych osadnikach Islandii"}
+		}
+	],
+	"Stykkishólmur": [{"kind": "puffin", "name": {"pl": "Maskonury"}, "desc": {"pl": "Na wysepkach zatoki gniazdują maskonury"}}],
+	"Ísafjörður": [{"kind": "ship", "name": {"pl": "Port w fiordzie"}, "desc": {"pl": "Miasto na mierzei pośrodku fiordu"}}],
+	"Hafnarfjörður": [
+		{
+			"kind": "dwarf",
+			"name": {"pl": "Elfy z Hafnarfjörður"},
+			"desc": {"pl": "Mówi się, że w skałach mieszkają elfy"}
+		}
+	],
+	"Skógar": [{"kind": "waterfall", "name": {"pl": "Skógafoss"}, "desc": {"pl": "Wodospad spadający z 60 metrów"}}],
+	"Skaftafell": [
+		{
+			"kind": "waterfall",
+			"name": {"pl": "Svartifoss"},
+			"desc": {"pl": "Wodospad wśród czarnych bazaltowych kolumn"}
+		}
+	],
+	"Jökulsárlón": [{"kind": "iceberg", "name": {"pl": "Laguna lodowcowa"}, "desc": {"pl": "Góry lodowe płyną z lodowca do morza"}}],
+	"Reykjahlíð": [{"kind": "geyser", "name": {"pl": "Hverir"}, "desc": {"pl": "Parujące źródła i bulgoczące błoto"}}],
+	"Varmahlíð": [{"kind": "turf_house", "name": {"pl": "Glaumbær"}, "desc": {"pl": "Domy kryte darnią sprzed stu lat"}}]
+}

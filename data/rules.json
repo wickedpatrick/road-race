@@ -78,7 +78,11 @@
 		"industrial": {"wood": 0.1, "curve": 0.6, "hill": 0.4, "hills": 0.3, "mountains": 0, "sea": 0, "industry": 1},
 		"coast": {"wood": 0.4, "curve": 0.8, "hill": 0.3, "hills": 0, "mountains": 0, "sea": 1, "industry": 0},
 		"zulawy": {"wood": 0.1, "curve": 0.4, "hill": 0.05, "hills": 0.1, "mountains": 0, "sea": 0, "industry": 0},
-		"podlasie": {"wood": 0.8, "curve": 0.8, "hill": 0.4, "hills": 0.4, "mountains": 0, "sea": 0, "industry": 0}
+		"podlasie": {"wood": 0.8, "curve": 0.8, "hill": 0.4, "hills": 0.4, "mountains": 0, "sea": 0, "industry": 0},
+		"lava": {"wood": 0, "curve": 0.8, "hill": 0.6, "hills": 0.5, "mountains": 0.4, "sea": 0, "industry": 0},
+		"highland": {"wood": 0, "curve": 1, "hill": 1.1, "hills": 0.9, "mountains": 0.7, "sea": 0, "industry": 0, "ice": 0.25},
+		"glacier": {"wood": 0, "curve": 0.7, "hill": 0.5, "hills": 0.3, "mountains": 1, "sea": 0, "industry": 0, "ice": 1},
+		"fjords": {"wood": 0, "curve": 1.4, "hill": 1, "hills": 0.5, "mountains": 0.9, "sea": 0.5, "industry": 0, "ice": 0.15}
 	},
 	"landmark_sizes": {
 		"wawel": [46, 30],
@@ -145,6 +149,13 @@
 		"wycinanka": [6, 8],
 		"dinosaur": [14, 10],
 		"windmill": [8, 16],
-		"border": [8, 6]
+		"border": [8, 6],
+		"waterfall": [22, 26],
+		"geyser": [10, 24],
+		"iceberg": [26, 8],
+		"hallgrims": [26, 46],
+		"puffin": [4, 4],
+		"turf_house": [18, 7],
+		"sea_stacks": [22, 18]
 	}
 }

@@ -1,7 +1,8 @@
 # Rajd przez Polskę
 
-Edukacyjna gra wyścigowa w stylu klasycznych wyścigów z Atari, zrobiona w Godot 4.7. Kraje: Polska i Czechy
-(przełącznik nad mapą albo klawisz C; postęp w każdym kraju osobno, kilometry i auta wspólne).
+Edukacyjna gra wyścigowa w stylu klasycznych wyścigów z Atari, zrobiona w Godot 4.7. Kraje: Polska, Czechy i Islandia
+(przełącznik nad mapą albo klawisz C; postęp w każdym kraju osobno, kilometry i auta wspólne). Na mapie i w menu
+miasta mają polskie nazwy (Praga, Pilzno), na tablicach przy drodze lokalne (Praha, Plzeň).
 Jedziesz między 25 największymi miastami Polski (oraz Zakopanem, Zamościem, Łomżą, Kamienną Górą i Zwardoniem) i poznajesz po drodze miejscowości, krainy geograficzne i polskie znaki drogowe.
 
 ## Granie

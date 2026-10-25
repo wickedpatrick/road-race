@@ -30,7 +30,7 @@ static func place(stage: Dictionary) -> Array:
 			var sz := size(kind)
 			var side := -1.0 if k == 0 else 1.0
 			out.append({"z": anchor + k * 55.0, "lat": side * (10.0 + sz[0] * 0.5), "kind": kind, "name": list[k].name,
-				"desc": list[k].desc, "town": t.name, "w": float(sz[0]), "h": float(sz[1])})
+				"desc": list[k].desc, "town": t.name, "town_display": t.get("display", t.name), "w": float(sz[0]), "h": float(sz[1])})
 	return out
 
 ## The landmark the player is looking at (coming up within `ahead` metres, or just passed), or {}.

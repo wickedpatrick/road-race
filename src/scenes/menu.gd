@@ -282,7 +282,7 @@ func _draw() -> void:
 	if loading:
 		draw_rect(Rect2(0, 0, 960, 540), Color(0.03, 0.05, 0.08, 0.82))
 		_t(Vector2(0, 250), "Przygotuj się do rajdu!", 48, Color("ffd24a"), HORIZONTAL_ALIGNMENT_CENTER, 960)
-		_t(Vector2(0, 300), "%s - %s" % [Geo.city(start_city).name, Geo.city(dest_city).name], 26, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, 960)
+		_t(Vector2(0, 300), "%s - %s" % [Geo.display_name(start_city), Geo.display_name(dest_city)], 26, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, 960)
 
 func _draw_reset_question() -> void:
 	draw_rect(Rect2(0, 0, 960, 540), Color(0.03, 0.05, 0.08, 0.75))
@@ -392,7 +392,7 @@ func _draw_map() -> void:
 		_city_info(id, Vector2(x, 186), w)
 		_t(Vector2(x, 460), "Wybierz swoje miasto: stąd ruszysz w pierwszy rajd", 16, Color("c8d6e3"))
 		return
-	_t(Vector2(x, 176), "Jesteś w: %s" % Geo.city(start_city).name, 18, Color("7fe0a0"))
+	_t(Vector2(x, 176), "Jesteś w: %s" % Geo.display_name(start_city), 18, Color("7fe0a0"))
 	if id != dest_city and id != start_city:
 		_city_info(id, Vector2(x, 214), w)
 		_t(Vector2(x, 460), "Dotknij miasta, aby je wybrać" if Screen.touch else "Kliknij lub naciśnij Enter, aby wybrać", 16, Color("c8d6e3"))
@@ -400,7 +400,7 @@ func _draw_map() -> void:
 	if legs.is_empty():
 		return
 	var st := Route.build(start_city, dest_city)
-	_t(Vector2(x, 206), "Cel: %s" % Geo.city(dest_city).name, 22, Color("ff9a86"))
+	_t(Vector2(x, 206), "Cel: %s" % Geo.display_name(dest_city), 22, Color("ff9a86"))
 	var roads := []
 	for l in legs:
 		for rd in Route.leg_roads(l):
@@ -411,8 +411,8 @@ func _draw_map() -> void:
 	var bigs := []
 	for tw in st.towns:
 		if tw.get("start", false) or tw.get("finish", false): continue
-		via.append(tw.name)
-		if tw.big: bigs.append(tw.name)
+		via.append(tw.get("display", tw.name))
+		if tw.big: bigs.append(tw.get("display", tw.name))
 	var via_text := "Po drodze: " + ", ".join(via)
 	if via.size() > 9:
 		via_text = "Przez miasta: %s, oraz %d mniejszych miejscowości" % [", ".join(bigs), via.size() - bigs.size()]
@@ -462,7 +462,8 @@ func _next_country() -> void:
 
 func _city_info(id: String, pos: Vector2, w: float) -> void:
 	var c := Geo.city(id)
-	_t(pos, c.name, 26, Color("ffd24a"))
+	var shown := Geo.display_name(id)
+	_t(pos, shown if shown == c.name else "%s (%s)" % [shown, c.name], 26, Color("ffd24a"))
 	_t(pos + Vector2(0, 30), "%s %s" % [GameData.country().region_label, c.region], 17, Color.WHITE)
 	_t(pos + Vector2(0, 56), c.get("note", "ok. %d tys. mieszkańców" % c.pop), 17, Color("c8d6e3"))
 	draw_multiline_string(font, pos + Vector2(0, 90), Geo.fact(c.name), HORIZONTAL_ALIGNMENT_LEFT, w, 17, 4, Color("e8eef4"))

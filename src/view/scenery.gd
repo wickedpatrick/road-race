@@ -147,7 +147,7 @@ static func _obstacle(out: Dictionary, z: float, a: float, b: float) -> void:
 static func _solid(it: Dictionary) -> Array:
 	var hw: float = it.w * 0.5
 	match it.type:
-		"limit", "bend", "chevron", "station_sign", "lamp", "stork", "cow":
+		"limit", "bend", "chevron", "station_sign", "lamp", "stork", "cow", "sheep", "horse":
 			return [[-0.15, 0.15]]
 		"town_sign", "town_end":
 			return [[-1.75, -1.45], [1.45, 1.75]]
@@ -163,13 +163,13 @@ static func _solid(it: Dictionary) -> Array:
 			var p := Track.ROAD_HALF_WIDTH + 2.5
 			var m := (1.0 + Track.MEDIAN * 0.5) * Track.ROAD_HALF_WIDTH # the median pillar of a dual carriageway
 			return [[-m - 0.4, -m + 0.4], [p - 0.9, p + 0.9]]
-		"haybale", "building", "house", "woodhouse", "farm", "church", "cerkiew", "block", "castle", "rock", "windmill", \
+		"haybale", "lavarock", "building", "house", "woodhouse", "farm", "church", "cerkiew", "block", "castle", "rock", "windmill", \
 				"chimney", "headframe", "cooling", "lighthouse", "landmark", "heap", "turbine":
 			return [[-hw, hw]]
 	return []
 
 const CLEARABLE := ["building", "house", "woodhouse", "tree", "church", "cerkiew", "block", "farm", "apple", "pine",
-	"birch", "spruce", "poplar", "cow"]
+	"birch", "spruce", "poplar", "cow", "sheep", "horse", "moss", "lavarock"]
 
 ## Makes room for a landmark: removes houses and trees on its spot and on its side of the road before it, like a
 ## square in front of it, so it can be seen while driving up to it.
@@ -258,6 +258,8 @@ static func _nature(items: Dictionary, biome: String, z: float, rng: RandomNumbe
 					if rng.randf() < 0.6:
 						_add(items, _forest_tree(rng, 0.25, 0.3), z, side * rng.randf_range(14.0, 30.0), 4.0, rng.randf_range(10.0, 15.0), rng)
 			return rng.randf_range(9.0, 14.0)
+		"lava", "highland", "glacier", "fjords":
+			return _iceland(items, biome, z, rng)
 		"jura":
 			for side in [-1, 1]:
 				if rng.randf() < 0.22:
@@ -325,6 +327,31 @@ static func _nature(items: Dictionary, biome: String, z: float, rng: RandomNumbe
 			return _fields(items, z, rng, 0.6)
 		_:
 			return _fields(items, z, rng, 1.0)
+
+## Treeless north (Iceland): mossy lava fields, bare highlands, glacier plains, fjord shores; sheep and horses graze,
+## a farm now and then. Returns the step length.
+static func _iceland(items: Dictionary, biome: String, z: float, rng: RandomNumberGenerator) -> float:
+	for side in [-1, 1]:
+		if biome == "lava" and rng.randf() < 0.65:
+			var w := rng.randf_range(3.0, 7.0)
+			_add(items, "moss", z + rng.randf_range(-4, 4), side * rng.randf_range(7.8, 30.0), w, w * 0.22, rng)
+		var rocky := {"lava": 0.18, "highland": 0.22, "glacier": 0.12, "fjords": 0.1}[biome] as float
+		if rng.randf() < rocky:
+			var w := rng.randf_range(1.5, 4.5)
+			_add(items, "lavarock" if biome == "lava" else "rock", z, side * rng.randf_range(8.5, 40.0), w, w * rng.randf_range(0.5, 0.9), rng)
+	var r := rng.randf()
+	if r < 0.07: _flock(items, z, rng, "sheep", 7)
+	elif r < 0.11 and biome != "highland": _flock(items, z, rng, "horse", 4)
+	elif r < 0.14 and biome != "highland": _add(items, "house", z, _side(rng) * rng.randf_range(24.0, 45.0), 8.0, 6.5, rng)
+	return rng.randf_range(10.0, 18.0)
+
+## A flock of sheep or a few horses beside the road.
+static func _flock(items: Dictionary, z: float, rng: RandomNumberGenerator, kind: String, most: int) -> void:
+	var side := _side(rng)
+	var lat := rng.randf_range(10.0, 24.0)
+	for k in rng.randi_range(2, most):
+		var a := _add(items, kind, z + rng.randf_range(-9.0, 9.0), side * (lat + rng.randf_range(-2.0, 6.0)), 1.6 if kind == "sheep" else 2.2, 1.0 if kind == "sheep" else 1.5, rng)
+		a.v = rng.randf()
 
 ## A few cows grazing on a pasture beside the road (fewest in the mountains, most on the farmland).
 static func _herd(items: Dictionary, z: float, rng: RandomNumberGenerator, most := 5) -> void:
@@ -508,6 +535,13 @@ static func ground(stage: Dictionary, nseg: int) -> Array:
 				"industrial":
 					if _h(int(z / 90.0), side * 5) < 0.45:
 						s.append_array([side * 12.0, side * 80.0, G_DARK])
+				"lava", "glacier":
+					# dark lava and black sand between the moss
+					if _h(int(z / 70.0), side * 13) < 0.5:
+						s.append_array([side * 9.0, side * 60.0, G_DARK])
+				"fjords":
+					if side == -1 and _h(int(z / 300.0), 17) < 0.65:
+						s.append_array([side * 13.0, side * 400.0, G_WATER])
 		if ls > 0.0:
 			for g in range(0, s.size(), 3):
 				if s[g] < 0.0:
@@ -587,6 +621,10 @@ static func draw_item(cv, it: Dictionary, b: Vector2, pm: float, pal: Dictionary
 		"lighthouse": _lighthouse(cv, b, h, pm)
 		"stork": _stork(cv, b, h, pm, season)
 		"cow": _cow(cv, it, b, pm, season)
+		"sheep": _sheep(cv, it, b, pm, season)
+		"horse": _horse(cv, it, b, pm)
+		"moss": _moss(cv, it, b, pm, season)
+		"lavarock": _lavarock(cv, it, b, h, pm)
 		"town_sign", "town_end": _town_sign(cv, it, b, pm, font, it.type == "town_end")
 		"board": _board(cv, it, b, pm, font)
 		"limit": _limit(cv, it, b, pm, font)
@@ -933,6 +971,54 @@ static func _cow(cv, it: Dictionary, b: Vector2, pm: float, season: String) -> v
 	if pm > 3.0:
 		cv.draw_line(head + Vector2(-f * 0.1 * pm, -0.2 * pm), head + Vector2(-f * 0.25 * pm, -0.4 * pm), Color("e8e0c8"), maxf(1.0, 0.06 * pm))
 		cv.draw_line(p.call(-1.0, 1.35), p.call(-1.15, 0.75), patch, maxf(1.0, 0.06 * pm)) # tail
+
+## Icelandic sheep: a woolly white (or dark) body on short legs. Indoors in winter.
+static func _sheep(cv, it: Dictionary, b: Vector2, pm: float, season: String) -> void:
+	if season == "winter" or pm < 1.2:
+		return
+	var f := 1.0 if it.v < 0.5 else -1.0
+	var wool := Color("3a3330") if it.c == 0 else (Color("8a7a68") if it.c == 1 else Color("efece4"))
+	for lx in [-0.45, 0.4]:
+		cv.draw_line(b + Vector2(f * lx * pm, 0), b + Vector2(f * lx * pm, -0.45 * pm), Color("2a2624"), maxf(1.0, 0.12 * pm))
+	cv.draw_set_transform(b + Vector2(0, -0.75 * pm), 0.0, Vector2(1.0, 0.62))
+	cv.draw_circle(Vector2.ZERO, 0.62 * pm, wool)
+	cv.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+	cv.draw_circle(b + Vector2(f * 0.72 * pm, -(0.6 if it.v < 0.3 or it.v > 0.7 else 0.95) * pm), 0.2 * pm, Color("2a2624"))
+
+## Icelandic horse: small and stocky, with a long mane; out in all weathers.
+static func _horse(cv, it: Dictionary, b: Vector2, pm: float) -> void:
+	if pm < 1.0:
+		return
+	var f := 1.0 if it.v < 0.5 else -1.0
+	var coat: Color = [Color("8a4b2a"), Color("5a3a24"), Color("e8e2d4"), Color("b8864a"), Color("3a302a")][it.c % 5]
+	var mane := coat.darkened(0.45) if it.c % 5 != 2 else Color("cfc8b8")
+	var p := func(x: float, y: float) -> Vector2: return b + Vector2(f * x * pm, -y * pm)
+	for lx in [-0.75, -0.5, 0.5, 0.75]:
+		cv.draw_line(p.call(lx, 0.0), p.call(lx, 0.75), coat.darkened(0.2), maxf(1.0, 0.13 * pm))
+	cv.draw_rect(Rect2(b + Vector2(-0.95 * pm, -1.35 * pm), Vector2(1.9 * pm, 0.65 * pm)), coat)
+	var grazing: bool = it.v < 0.25 or it.v > 0.75
+	var head: Vector2 = p.call(1.25, 0.45 if grazing else 1.65)
+	cv.draw_line(p.call(0.85, 1.2), head, coat, maxf(1.0, 0.32 * pm))
+	cv.draw_circle(head, 0.22 * pm, coat)
+	if pm > 2.5:
+		cv.draw_line(p.call(0.8, 1.4), head + Vector2(-f * 0.1 * pm, -0.15 * pm), mane, maxf(1.0, 0.12 * pm))
+		cv.draw_line(p.call(-0.95, 1.25), p.call(-1.15, 0.5), mane, maxf(1.0, 0.14 * pm)) # tail
+
+## Woolly moss on old lava: a low green-grey mound (snow-covered in winter).
+static func _moss(cv, it: Dictionary, b: Vector2, pm: float, season: String) -> void:
+	var w: float = it.w * pm
+	var h: float = maxf(it.h * pm, 1.0)
+	var col := Color("eef1f3") if season == "winter" else (Color("8a8a52") if season == "autumn" else Color("7d9a5a"))
+	cv.draw_colored_polygon(PackedVector2Array([b + Vector2(-w * 0.5, 0), b + Vector2(-w * 0.3, -h * 0.8), b + Vector2(0, -h),
+		b + Vector2(w * 0.3, -h * 0.75), b + Vector2(w * 0.5, 0)]), col)
+
+## Jagged black lava rock.
+static func _lavarock(cv, it: Dictionary, b: Vector2, h: float, pm: float) -> void:
+	var w: float = it.w * pm
+	cv.draw_colored_polygon(PackedVector2Array([b + Vector2(-w * 0.5, 0), b + Vector2(-w * 0.35, -h * 0.7), b + Vector2(-w * 0.1, -h),
+		b + Vector2(w * 0.15, -h * 0.65), b + Vector2(w * 0.35, -h * 0.9), b + Vector2(w * 0.5, 0)]), Color("37322f"))
+	cv.draw_colored_polygon(PackedVector2Array([b + Vector2(w * 0.15, 0), b + Vector2(w * 0.15, -h * 0.65), b + Vector2(w * 0.35, -h * 0.9),
+		b + Vector2(w * 0.5, 0)]), Color("27231f"))
 
 static func _stork(cv, b: Vector2, h: float, pm: float, season: String) -> void:
 	cv.draw_line(b, b + Vector2(0, -h), Color("8a8d92"), maxf(1.0, 0.15 * pm))

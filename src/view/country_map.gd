@@ -20,10 +20,10 @@ func _init(p_area: Rect2) -> void:
 func project(lat: float, lon: float) -> Vector2:
 	return _origin + Vector2((lon - _box.lon0) * _box.lon_k, _box.lat1 - lat) * _scale
 
-## Name shown on the map, and where: left of the dot, above it, or (default) right of it.
+## Name shown on the map: in the player's language (map_name, else the exonym), else the local short form or name.
 static func _label(id: String) -> String:
 	var c := Geo.city(id)
-	return c.get("short", c.name)
+	return c.get("map_name", c.get("exonym", c.get("short", c.name)))
 
 func city_pos(id: String) -> Vector2:
 	var c := Geo.city(id)

@@ -1,0 +1,29 @@
+{
+	"reykjavik": {
+		"name": "Reykjavík",
+		"lat": 64.15,
+		"lon": -21.94,
+		"pop": 140,
+		"region": "Höfuðborgarsvæðið",
+		"exonym": {"pl": "Reykjavik"}
+	},
+	"reykjanesbaer": {"name": "Reykjanesbær", "lat": 64, "lon": -22.56, "pop": 22, "region": "Suðurnes", "label": "above"},
+	"selfoss": {"name": "Selfoss", "lat": 63.93, "lon": -21, "pop": 11, "region": "Suðurland"},
+	"geysir": {
+		"name": "Geysir",
+		"lat": 64.31,
+		"lon": -20.3,
+		"pop": 0,
+		"region": "Suðurland",
+		"note": {"pl": "dolina gejzerów obok wodospadu Gullfoss"}
+	},
+	"vik": {"name": "Vík í Mýrdal", "lat": 63.42, "lon": -19.01, "pop": 1, "region": "Suðurland", "short": "Vík"},
+	"hofn": {"name": "Höfn", "lat": 64.25, "lon": -15.21, "pop": 2, "region": "Austurland"},
+	"egilsstadir": {"name": "Egilsstaðir", "lat": 65.27, "lon": -14.39, "pop": 3, "region": "Austurland", "label": "left"},
+	"akureyri": {"name": "Akureyri", "lat": 65.68, "lon": -18.09, "pop": 19, "region": "Norðurland eystra"},
+	"husavik": {"name": "Húsavík", "lat": 66.05, "lon": -17.34, "pop": 2, "region": "Norðurland eystra"},
+	"blonduos": {"name": "Blönduós", "lat": 65.66, "lon": -20.28, "pop": 1, "region": "Norðurland vestra"},
+	"borgarnes": {"name": "Borgarnes", "lat": 64.54, "lon": -21.92, "pop": 2, "region": "Vesturland"},
+	"stykkisholmur": {"name": "Stykkishólmur", "lat": 65.07, "lon": -22.73, "pop": 1, "region": "Vesturland"},
+	"isafjordur": {"name": "Ísafjörður", "lat": 66.07, "lon": -23.13, "pop": 3, "region": "Vestfirðir"}
+}

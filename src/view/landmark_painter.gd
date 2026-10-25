@@ -83,6 +83,13 @@ static func draw(cv, it: Dictionary, b: Vector2, pm: float) -> void:
 		"dinosaur": _dinosaur()
 		"milestone": _milestone()
 		"border": _border()
+		"waterfall": _waterfall()
+		"geyser": _geyser()
+		"iceberg": _iceberg()
+		"hallgrims": _hallgrims()
+		"puffin": _puffin()
+		"turf_house": _turf_house()
+		"sea_stacks": _sea_stacks()
 		"kremowka": _kremowka()
 		"narrow_train": _train()
 
@@ -603,6 +610,85 @@ static func _big_apple() -> void:
 	_poly([0.3, 6.6, 1.8, 7.2, 0.8, 6.2], Color("4f8a3a"))
 
 ## The oldest Polish road sign (Konin, 1151): a stone column.
+## Waterfall over a dark cliff (Skógafoss, Gullfoss, Svartifoss): a white curtain into a pool, spray at the foot.
+static func _waterfall() -> void:
+	_poly([-11, 0, -11, 22, -7, 25, -2, 24, -2, 0], Color("3d4a42"))
+	_poly([2, 0, 2, 24, 6, 26, 11, 23, 11, 0], Color("3d4a42"))
+	_poly([-11, 22, -7, 25, -2, 24, -2, 23, -7, 23.6, -11, 21], Color("6f8a52"))
+	_poly([2, 23, 2, 24, 6, 26, 11, 23, 11, 22, 6, 24.4], Color("6f8a52"))
+	_r(-2.2, 1.5, 2.2, 24.2, Color("eef5f8"))
+	if _pm > 1.5:
+		for k in 4:
+			_l(-1.4 + k * 0.95, 3, -1.2 + k * 0.95, 23.5, Color("c9dde6"), 0.12)
+	_r(-8, 0, 8, 1.2, Color("8fb6c8"))
+	_c(-2.2, 2.2, 2.2, Color(1, 1, 1, 0.7))
+	_c(2.0, 2.6, 2.6, Color(1, 1, 1, 0.65))
+	_c(0, 4.0, 2.0, Color(1, 1, 1, 0.55))
+
+## Geyser (Strokkur): a column of water and steam shooting up from a steaming pool.
+static func _geyser() -> void:
+	_poly([-5, 0, -3.5, 0.8, 3.5, 0.8, 5, 0], Color("b9a98a"))
+	_r(-3, 0.4, 3, 0.8, Color("5fb3c9"))
+	_poly([-1.2, 0.8, -0.6, 16, 0.6, 16, 1.2, 0.8], Color("eaf6fb"))
+	_poly([-0.5, 0.8, -0.2, 20, 0.2, 20, 0.5, 0.8], Color("ffffff"))
+	_c(0, 18.5, 2.6, Color(1, 1, 1, 0.85))
+	_c(-1.8, 20.5, 2.2, Color(1, 1, 1, 0.7))
+	_c(1.9, 21.5, 2.0, Color(1, 1, 1, 0.6))
+	_c(0.3, 22.5, 1.6, Color(1, 1, 1, 0.5))
+
+## Glacier lagoon (Jökulsárlón): blue-white icebergs floating on dark water.
+static func _iceberg() -> void:
+	_r(-13, 0, 13, 1.0, Color("2f4a5c"))
+	_poly([-11, 0.6, -10, 4.5, -7.5, 6, -6, 3.5, -5, 0.6], Color("e4f2f8"))
+	_poly([-7.5, 6, -6, 3.5, -5, 0.6, -7, 0.6], Color("9fd2e6"))
+	_poly([-3, 0.6, -1.5, 7.5, 1.0, 8, 3.5, 5, 4.5, 0.6], Color("f2f9fc"))
+	_poly([1.0, 8, 3.5, 5, 4.5, 0.6, 1.5, 0.6], Color("7fc4df"))
+	_poly([6, 0.6, 7.5, 3.2, 10, 3.8, 11.5, 0.6], Color("d6ecf5"))
+
+## Hallgrímskirkja: stepped wings like basalt columns rising to a tall central tower.
+static func _hallgrims() -> void:
+	var c := Color("d9d9d4")
+	var d := Color("bdbdb7")
+	for k in 6:
+		var x := 4.0 + k * 1.6
+		var h := 26.0 - k * 4.0
+		_r(-x - 1.6, 0, -x, h, c if k % 2 == 0 else d)
+		_r(x, 0, x + 1.6, h, c if k % 2 == 0 else d)
+	_r(-4, 0, 4, 34, c)
+	_poly([-4, 34, 4, 34, 0, 46], d)
+	_r(-0.2, 46, 0.2, 48, Color("7a7a74"))
+	_r(-1.2, 0, 1.2, 4, Color("6a5a48"))
+	_windows(-2.8, 2.8, 26, 30, 3, Color("5a6a78"))
+
+## Puffin statue: black back, white front, big orange beak.
+static func _puffin() -> void:
+	_l(-0.4, 0, -0.4, 0.6, Color("e8722a"), 0.2)
+	_l(0.4, 0, 0.4, 0.6, Color("e8722a"), 0.2)
+	_poly([-1.4, 0.6, -1.6, 2.4, -0.8, 3.4, 0.8, 3.4, 1.4, 2.4, 1.2, 0.6], Color("1e1f22"))
+	_poly([-0.6, 0.7, -0.9, 2.3, 0.2, 2.6, 0.9, 1.5, 0.7, 0.7], Color("f4f2ec"))
+	_c(0.2, 3.1, 0.75, Color("1e1f22"))
+	_c(0.35, 3.05, 0.5, Color("f4f2ec"))
+	_poly([0.8, 3.2, 1.9, 2.95, 0.8, 2.7], Color("e8722a"))
+	_c(0.45, 3.2, 0.1, Color("1e1f22"))
+
+## Turf houses (Glaumbær): grass roofs over white wooden gables.
+static func _turf_house() -> void:
+	var turf := Color("6f8a3a")
+	_poly([-9, 0, -9, 2.5, 9, 2.5, 9, 0], turf.darkened(0.15))
+	for k in 4:
+		var x := -7.5 + k * 5.0
+		_poly([x - 2.4, 2.5, x, 6.5, x + 2.4, 2.5], turf)
+		_poly([x - 1.6, 0, x - 1.6, 3.3, x, 5.2, x + 1.6, 3.3, x + 1.6, 0], Color("f1ece0"))
+		_r(x - 0.5, 0, x + 0.5, 1.8, Color("7a3a2a"))
+
+## Sea stacks off the black beach (Reynisdrangar).
+static func _sea_stacks() -> void:
+	_r(-11, 0, 11, 1.0, Color("2f3f4c"))
+	_poly([-9, 0.5, -8.4, 12, -7.2, 14, -6.2, 11, -5.6, 0.5], Color("26262a"))
+	_poly([-2.5, 0.5, -1.8, 15, -0.6, 18, 0.6, 14, 1.4, 0.5], Color("1f1f23"))
+	_poly([4.5, 0.5, 5.3, 9, 6.4, 10.5, 7.4, 8, 8, 0.5], Color("29292d"))
+	_r(-11, 0, 11, 0.4, Color("f4f6f8"))
+
 ## Border post: a red-white striped pole and a blue board with the EU stars and "SŁOWACJA".
 static func _border() -> void:
 	for k in 8:

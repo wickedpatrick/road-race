@@ -130,7 +130,8 @@ static func build(from: String, to: String) -> Dictionary:
 	var regions := []
 	var express_km := 0
 	var off := 0.0
-	towns.append({"z": 0.0, "name": Geo.city(from).name, "id": from, "big": _end_big(from), "half": _end_half(from), "start": true})
+	towns.append({"z": 0.0, "name": Geo.city(from).name, "display": Geo.display_name(from), "id": from, "big": _end_big(from),
+		"half": _end_half(from), "start": true})
 	for li in legs.size():
 		var leg: Dictionary = legs[li]
 		var r: Dictionary = leg.road
@@ -155,8 +156,10 @@ static func build(from: String, to: String) -> Dictionary:
 		off += leg_km
 		path.append(leg.to)
 		if li < legs.size() - 1:
-			towns.append({"z": off * mpk, "name": Geo.city(leg.to).name, "id": leg.to, "big": true, "half": CITY_HALF})
-	towns.append({"z": length, "name": Geo.city(to).name, "id": to, "big": _end_big(to), "half": _end_half(to), "finish": true})
+			towns.append({"z": off * mpk, "name": Geo.city(leg.to).name, "display": Geo.display_name(leg.to), "id": leg.to,
+				"big": true, "half": CITY_HALF})
+	towns.append({"z": length, "name": Geo.city(to).name, "display": Geo.display_name(to), "id": to, "big": _end_big(to),
+		"half": _end_half(to), "finish": true})
 	_separate(towns)
 	_fit_tunnels(tunnels, towns, length)
 	# the last zone runs on past the finish line (the track has a tail)
@@ -193,11 +196,11 @@ static func build(from: String, to: String) -> Dictionary:
 	var legal := _legal_time(towns, roads, length) * (1.0 + HILL_TIME * hill / length)
 	var duration := ceilf((legal * 1.09 + 6.0 * n_st + 12.0) / 5.0) * 5.0
 	var stage := {
-		"name": "%s - %s" % [Geo.city(from).name, Geo.city(to).name],
+		"name": "%s - %s" % [Geo.display_name(from), Geo.display_name(to)],
 		"from": from, "to": to, "path": path, "km": km, "m_per_km": mpk,
 		"length": length, "duration": duration, "lanes": lanes,
 		"traffic_density": 1.0 if lanes == 3 else 0.8,
-		"stations": stations, "finish_label": Geo.city(to).name,
+		"stations": stations, "finish_label": Geo.city(to).name, "finish_display": Geo.display_name(to),
 		"curve_amount": curve / length, "hill_amount": hill / length,
 		"zones": zones, "towns": towns, "roads": roads, "regions": regions, "boards": boards, "tunnels": tunnels,
 	}

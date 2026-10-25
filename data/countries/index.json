@@ -6,6 +6,7 @@
 			"neighbours": ["de", "cz", "sk", "ua", "by", "lt", "ru"],
 			"favorite_neighbour": "cz"
 		},
-		{"code": "cz", "name": {"pl": "Czechy"}, "neighbours": ["pl", "de", "at", "sk"], "favorite_neighbour": "sk"}
+		{"code": "cz", "name": {"pl": "Czechy"}, "neighbours": ["pl", "de", "at", "sk"], "favorite_neighbour": "sk"},
+		{"code": "is", "name": {"pl": "Islandia"}, "neighbours": [], "favorite_neighbour": "no"}
 	]
 }

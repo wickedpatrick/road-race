@@ -44,7 +44,7 @@ var _dualf := PackedFloat32Array() ## per track segment: Route.dual_f (0 single 
 var _portals := {} ## segment index where a tunnel starts -> the tunnel
 var _gcol: Array = [] ## per ground colour id: fogged colour for each view depth n
 ## horizon state, eased towards the region ahead: hills, mountains, sea, industry, wood, skyline
-var _hz := {"hills": 0.3, "mountains": 0.0, "sea": 0.0, "industry": 0.0, "wood": 0.2, "skyline": 1.0}
+var _hz := {"hills": 0.3, "mountains": 0.0, "sea": 0.0, "industry": 0.0, "wood": 0.2, "skyline": 1.0, "ice": 0.0}
 
 func bind(p_race: Race, p_season: String) -> void:
 	race = p_race
@@ -125,7 +125,7 @@ func _horizon_target() -> Dictionary:
 	for t in race.stage.towns:
 		if t.big and t.z + t.half > race.z and t.z - t.half - 500.0 < race.z:
 			sky = 1.0
-	return {"hills": bd.hills, "mountains": bd.mountains, "sea": bd.sea, "industry": bd.industry, "wood": bd.wood, "skyline": sky}
+	return {"hills": bd.hills, "mountains": bd.mountains, "sea": bd.sea, "industry": bd.industry, "wood": bd.wood, "skyline": sky, "ice": bd.get("ice", 0.0)}
 
 func _quad(a: Vector2, b: Vector2, c: Vector2, d: Vector2, col: Color) -> void:
 	_b.fan(PackedVector2Array([a, b, c, d]), col)
@@ -196,11 +196,12 @@ func _draw_sky() -> void:
 			mp.append(Vector2(xi, HORIZON - m * (55.0 + 45.0 * absf(sin(px * 0.007 + 0.3)) + 22.0 * sin(px * 0.023))))
 		mp.append(Vector2(W + 20, HORIZON + 4))
 		var mc := mt.darkened(0.15).lerp(pal.sky_bottom, 0.25)
-		if season == "winter":
-			# snowy peaks: white ridge, then the same ridge lowered in rock colour over it
+		var caps: float = 1.0 if season == "winter" else _hz.ice # glaciers keep their ice all year
+		if caps > 0.02:
+			# snowy peaks: white ridge, then the same ridge lowered in rock colour over it (deeper for a glacier)
 			_b.draw_colored_polygon(mp, Color("f4f7f9"))
 			for k in range(1, mp.size() - 1):
-				mp[k].y = minf(mp[k].y + 16.0 * m, HORIZON)
+				mp[k].y = minf(mp[k].y + (16.0 + 26.0 * _hz.ice) * m * maxf(caps, 0.3), HORIZON)
 		_b.draw_colored_polygon(mp, mc)
 	var sea: float = _hz.sea
 	var amp: float = (0.3 + 1.1 * _hz.hills) * (1.0 - sea)

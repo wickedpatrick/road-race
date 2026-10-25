@@ -1,0 +1,155 @@
+[
+	{
+		"a": "reykjavik",
+		"b": "reykjanesbaer",
+		"km": 45,
+		"road": "41",
+		"towns": [["Hafnarfjörður", 10]],
+		"zones": [[10, "fields", "Höfuðborgarsvæðið"], [45, "lava", "Reykjanes"]]
+	},
+	{
+		"a": "reykjavik",
+		"b": "selfoss",
+		"km": 57,
+		"road": "1",
+		"towns": [["Hveragerði", 45]],
+		"zones": [[15, "fields", "Höfuðborgarsvæðið"], [40, "lava", "Hellisheiði"], [57, "fields", "Ölfus"]]
+	},
+	{
+		"a": "selfoss",
+		"b": "geysir",
+		"km": 62,
+		"road": "35",
+		"towns": [["Reykholt", 45]],
+		"zones": [[62, "fields", "Biskupstungur"]]
+	},
+	{
+		"a": "selfoss",
+		"b": "vik",
+		"km": 130,
+		"road": "1",
+		"towns": [["Hella", 35], ["Hvolsvöllur", 50], ["Skógar", 100]],
+		"zones": [[55, "fields", "Suðurland"], [130, "glacier", "Mýrdalsjökull"]]
+	},
+	{
+		"a": "vik",
+		"b": "hofn",
+		"km": 270,
+		"road": "1",
+		"towns": [["Kirkjubæjarklaustur", 70], ["Skaftafell", 140], ["Jökulsárlón", 190]],
+		"zones": [
+			[60, "lava", "Mýrdalssandur"], [110, "lava", "Eldhraun"], [235, "glacier", "Vatnajökull"],
+			[270, "fields", "Hornafjörður"]
+		]
+	},
+	{
+		"a": "hofn",
+		"b": "egilsstadir",
+		"km": 260,
+		"road": "1",
+		"towns": [["Djúpivogur", 105], ["Breiðdalsvík", 165], ["Fáskrúðsfjörður", 205], ["Reyðarfjörður", 226]],
+		"zones": [[30, "glacier", "Vatnajökull"], [226, "fjords", "Austfirðir"], [260, "forest", "Fljótsdalshérað"]],
+		"tunnels": [
+			{
+				"from_km": 210,
+				"to_km": 215.9,
+				"name": {"pl": "Fáskrúðsfjarðargöng"},
+				"fact": {"pl": "Tunel pod górą między dwoma fiordami, prawie 6 km"}
+			}
+		]
+	},
+	{
+		"a": "egilsstadir",
+		"b": "akureyri",
+		"km": 265,
+		"road": "1",
+		"towns": [["Reykjahlíð", 165]],
+		"zones": [[120, "highland", "Möðrudalsöræfi"], [185, "lava", "Mývatn"], [265, "fields", "Eyjafjörður"]],
+		"tunnels": [
+			{
+				"from_km": 250,
+				"to_km": 257.5,
+				"name": {"pl": "Vaðlaheiðargöng"},
+				"fact": {"pl": "Tunel o długości 7,5 km pod górą naprzeciwko Akureyri"}
+			}
+		]
+	},
+	{
+		"a": "akureyri",
+		"b": "husavik",
+		"km": 75,
+		"road": [[15, "1"], [75, "85"]],
+		"towns": [],
+		"zones": [[15, "fjords", "Eyjafjörður"], [75, "lava", "Aðaldalshraun"]],
+		"tunnels": [
+			{
+				"from_km": 5,
+				"to_km": 12.5,
+				"name": {"pl": "Vaðlaheiðargöng"},
+				"fact": {"pl": "Tunel o długości 7,5 km pod górą naprzeciwko Akureyri"}
+			}
+		]
+	},
+	{
+		"a": "akureyri",
+		"b": "blonduos",
+		"km": 145,
+		"road": "1",
+		"towns": [["Varmahlíð", 95]],
+		"zones": [[55, "highland", "Öxnadalsheiði"], [145, "fields", "Skagafjörður"]]
+	},
+	{
+		"a": "blonduos",
+		"b": "borgarnes",
+		"km": 140,
+		"road": "1",
+		"towns": [["Staðarskáli", 60], ["Bifröst", 110]],
+		"zones": [[60, "fields", "Húnaþing"], [110, "highland", "Holtavörðuheiði"], [140, "fields", "Borgarfjörður"]]
+	},
+	{
+		"a": "borgarnes",
+		"b": "reykjavik",
+		"km": 75,
+		"road": "1",
+		"towns": [["Mosfellsbær", 62]],
+		"zones": [[30, "fields", "Borgarfjörður"], [60, "fjords", "Hvalfjörður"], [75, "fields", "Höfuðborgarsvæðið"]],
+		"tunnels": [
+			{
+				"from_km": 30,
+				"to_km": 35.8,
+				"name": {"pl": "Hvalfjarðargöng"},
+				"fact": {"pl": "Tunel pod dnem fiordu, 165 metrów pod powierzchnią morza"}
+			}
+		]
+	},
+	{
+		"a": "borgarnes",
+		"b": "stykkisholmur",
+		"km": 100,
+		"road": [[30, "54"], [100, "56"]],
+		"towns": [],
+		"zones": [[40, "fields", "Mýrar"], [100, "lava", "Snæfellsnes"]]
+	},
+	{
+		"a": "borgarnes",
+		"b": "isafjordur",
+		"km": 400,
+		"road": "60",
+		"towns": [["Búðardalur", 80], ["Þingeyri", 350]],
+		"zones": [[80, "fields", "Dalir"], [400, "fjords", "Vestfirðir"]],
+		"tunnels": [
+			{
+				"from_km": 330,
+				"to_km": 335.3,
+				"name": {"pl": "Dýrafjarðargöng"},
+				"fact": {"pl": "Tunel otwarty w 2020 roku, skraca drogę przez Fiordy Zachodnie"}
+			},
+			{
+				"from_km": 385,
+				"to_km": 394,
+				"name": {"pl": "Vestfjarðagöng"},
+				"fact": {"pl": "Tunel z rozgałęzieniem pod górami Fiordów Zachodnich"}
+			}
+		]
+	}
+]

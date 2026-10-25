@@ -50,7 +50,7 @@ func _draw() -> void:
 	var cities: Array = r.get("new_cities", [])
 	if not cities.is_empty():
 		var names := []
-		for id in cities: names.append(Geo.city(id).name)
+		for id in cities: names.append(Geo.display_name(id))
 		var n := Session.visited.size()
 		var text := "Nowe miasto na mapie: %s!  (%d / %d)" % [", ".join(names), n, Geo.cities().size()]
 		if n >= Geo.cities().size():

@@ -153,6 +153,11 @@ dostają tyle, ile ma sens.
 - [x] Czechy: 20 miast (bez Hawierzowa, Karwiny, Frydka-Mistka i Cieplic, które na mapie zlewają się z Ostrawą
       i Uściem), 31 dróg (D1, D5, D8, I/35...), tunel Radejčín na D8, ciekawostki i atrakcje po polsku, czeskie
       tablice (białe miejscowości, niebieskie kierunkowe, zielone autostradowe), limity 130/90/50.
+- [x] Islandia: 13 miejsc wokół Obwodnicy (droga 1), Fiordy Zachodnie i Złoty Krąg (Geysir), tunele Hvalfjarðargöng,
+      Vaðlaheiðargöng, Fáskrúðsfjarðargöng, Dýrafjarðargöng i Vestfjarðagöng; nowe krajobrazy (lawa z mchem,
+      wyżyny, lodowce, fiordy), owce i konie islandzkie, wodospady, gejzer, góry lodowe, Hallgrímskirkja.
+- [x] Nazwy miast w języku gracza na mapie i w menu (`exonym`), lokalne na tablicach.
+- [ ] Stacja paliw, znak D-23 i cennik są polskie we wszystkich krajach (napisy po polsku, waluta).
 
 Dla każdego kraju: lista miast z populacją i lat/lon, sieć dróg łącząca sąsiadów (spójny graf, najkrótsze
 trasy sensowne), miejscowości po drodze, krainy, ciekawostki po polsku, kontur granicy. Weryfikacja: test,

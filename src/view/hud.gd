@@ -41,7 +41,7 @@ func bind(p_race: Race) -> void:
 	for t in race.stage.towns:
 		for fs in [10, 11, 12, 13, 14, 15]:
 			_warm_left.append([t.name, fs])
-		_warm_left.append([t.name, 19])
+		_warm_left.append([t.get("display", t.name), 19])
 		_warm_left.append([t.fact, 15])
 	_landmarks = Landmarks.place(race.stage)
 	for lm in _landmarks:
@@ -116,7 +116,7 @@ func _draw() -> void:
 		_pump_icon(Vector2(bx + bw * (s / race.stage.length), by + 4))
 	draw_circle(Vector2(bx + bw * race.progress(), by + 4), 8, Color.WHITE)
 	draw_circle(Vector2(bx + bw * race.progress(), by + 4), 5, Color("e14b3a"))
-	_text(Vector2(bx, 82), "%s: %d km" % [race.stage.finish_label, int(ceil(race.km_left()))], 16, Color("ffd24a"))
+	_text(Vector2(bx, 82), "%s: %d km" % [race.stage.finish_display, int(ceil(race.km_left()))], 16, Color("ffd24a"))
 	_text(Vector2(bx, 82), _region, 14, Color("d6e4f0"), HORIZONTAL_ALIGNMENT_RIGHT, bw)
 	# fuel
 	var fr := race.fuel.ratio()
@@ -231,7 +231,7 @@ func _info_card() -> void:
 		title = _landmark_title(lm)
 		body = lm.desc
 	elif not t.is_empty():
-		title = t.name
+		title = t.get("display", t.name)
 		body = t.fact if t.fact != "" else ("Duże miasto" if t.big else "Miejscowość na trasie")
 	elif _region_time > 0.0:
 		title = "Kraina: " + _region
@@ -251,7 +251,8 @@ func _tunnel_ahead() -> Dictionary:
 	return {}
 
 static func _landmark_title(lm: Dictionary) -> String:
-	return "%s: %s" % [lm.town, lm.name] if lm.town != lm.name else lm.name
+	var town: String = lm.get("town_display", lm.town)
+	return "%s: %s" % [town, lm.name] if lm.town != lm.name else lm.name
 
 func _banner(text: String, col: Color) -> void:
 	draw_style_box(_panel, Rect2(180, 158, 600, 46))
