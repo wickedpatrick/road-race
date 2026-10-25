@@ -95,9 +95,12 @@ static func leg_roads(leg: Dictionary) -> Array:
 		out = rev
 	return out
 
-## Motorways (A) and expressways (S) get three lanes, every other road two.
+## Motorways and expressways (the country's express_prefixes, e.g. A and S in Poland, D in Czechia) are dual
+## carriageways ("3"), every other road a single one ("2").
 static func lanes_for(road: String) -> int:
-	return 3 if road.begins_with("A") or road.begins_with("S") else 2
+	for prefix in GameData.country().express_prefixes:
+		if road.begins_with(prefix): return 3
+	return 2
 
 static func _leg_zones(leg: Dictionary) -> Array:
 	var r: Dictionary = leg.road

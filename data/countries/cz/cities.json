@@ -1,0 +1,29 @@
+{
+	"praha": {"name": "Praha", "lat": 50.08, "lon": 14.43, "pop": 1380, "region": "Praha"},
+	"brno": {"name": "Brno", "lat": 49.2, "lon": 16.61, "pop": 400, "region": "jihomoravský"},
+	"ostrava": {"name": "Ostrava", "lat": 49.83, "lon": 18.29, "pop": 285, "region": "moravskoslezský"},
+	"plzen": {"name": "Plzeň", "lat": 49.75, "lon": 13.38, "pop": 185, "region": "plzeňský"},
+	"liberec": {"name": "Liberec", "lat": 50.77, "lon": 15.06, "pop": 105, "region": "liberecký"},
+	"olomouc": {"name": "Olomouc", "lat": 49.59, "lon": 17.25, "pop": 102, "region": "olomoucký"},
+	"ceske_budejovice": {
+		"name": "České Budějovice",
+		"lat": 48.97,
+		"lon": 14.47,
+		"pop": 97,
+		"region": "jihočeský",
+		"short": "Č. Budějovice"
+	},
+	"hradec_kralove": {"name": "Hradec Králové", "lat": 50.21, "lon": 15.83, "pop": 93, "region": "královéhradecký"},
+	"pardubice": {"name": "Pardubice", "lat": 50.04, "lon": 15.78, "pop": 92, "region": "pardubický"},
+	"usti": {"name": "Ústí nad Labem", "lat": 50.66, "lon": 14.03, "pop": 91, "region": "ústecký", "short": "Ústí n. L."},
+	"zlin": {"name": "Zlín", "lat": 49.22, "lon": 17.66, "pop": 74, "region": "zlínský"},
+	"kladno": {"name": "Kladno", "lat": 50.15, "lon": 14.1, "pop": 69, "region": "středočeský", "label": "left"},
+	"most": {"name": "Most", "lat": 50.5, "lon": 13.64, "pop": 65, "region": "ústecký", "label": "left"},
+	"opava": {"name": "Opava", "lat": 49.94, "lon": 17.9, "pop": 55, "region": "moravskoslezský", "label": "above"},
+	"jihlava": {"name": "Jihlava", "lat": 49.4, "lon": 15.59, "pop": 52, "region": "Vysočina"},
+	"karlovy_vary": {"name": "Karlovy Vary", "lat": 50.23, "lon": 12.87, "pop": 47, "region": "karlovarský"},
+	"mlada_boleslav": {"name": "Mladá Boleslav", "lat": 50.41, "lon": 14.9, "pop": 44, "region": "středočeský"},
+	"tabor": {"name": "Tábor", "lat": 49.41, "lon": 14.68, "pop": 34, "region": "jihočeský"},
+	"znojmo": {"name": "Znojmo", "lat": 48.86, "lon": 16.05, "pop": 33, "region": "jihomoravský"},
+	"cheb": {"name": "Cheb", "lat": 50.08, "lon": 12.37, "pop": 31, "region": "karlovarský", "label": "above"}
+}

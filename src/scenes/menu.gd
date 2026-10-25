@@ -1,5 +1,5 @@
 extends Node2D
-## Selection: car -> season -> destination on the map of Poland. The race always starts where the last one ended;
+## Selection: car -> season -> destination on the country map (tabs above the map, or C, switch the country). The race always starts where the last one ended;
 ## the very first time (or after a progress reset) the player first picks a home city on the map.
 ## Arrow keys / WASD move, Enter or Space confirms, Esc goes back; on the map cities can also be clicked.
 const TITLES := {"home": "Skąd jesteś?", "car": "Wybierz auto", "season": "Wybierz porę roku", "dest": "Dokąd jedziesz?"}
@@ -11,7 +11,8 @@ var start_city := "krakow"
 var dest_city := "rzeszow"
 var hover := ""
 var legs: Array = []
-var map := CountryMap.new(Rect2(24, 104, 440, 378))
+const MAP_RECT := Rect2(24, 104, 440, 378)
+var map: CountryMap
 var confirm_reset := false ## "reset progress?" question is shown (car step, R key)
 const NEXT_BTN := Rect2(744, 490, 200, 44)
 const BACK_BTN := Rect2(584, 490, 148, 44)
@@ -23,6 +24,7 @@ var t := 0.0
 
 func _ready() -> void:
 	font = ThemeDB.fallback_font
+	map = CountryMap.new(MAP_RECT)
 	Sfx.silence_all_loops()
 	sel[0] = maxi(0, CarStats.ids().find(Session.car_id))
 	sel[1] = maxi(0, SeasonPalette.SEASONS.find(Session.season))
@@ -96,6 +98,9 @@ func _unhandled_input(event: InputEvent) -> void:
 			Sfx.play("blip", -8.0)
 			confirm_reset = false
 		return
+	if _on_map() and event.keycode == KEY_C and _countries() > 1:
+		_next_country()
+		return
 	if kind() == "car" and event.keycode == KEY_R:
 		Sfx.play("blip", -8.0)
 		confirm_reset = true
@@ -142,6 +147,11 @@ func _confirm() -> void:
 
 ## Clicks and taps on buttons and cards; true when handled.
 func _tap(p: Vector2) -> bool:
+	if _on_map() and not confirm_reset and _countries() > 1:
+		for i in _countries():
+			if _tab_rect(i).has_point(p):
+				_switch_country(GameData.countries()[i].code)
+				return true
 	if confirm_reset:
 		if YES_BTN.has_point(p):
 			_reset_progress()
@@ -232,9 +242,10 @@ func _draw() -> void:
 		PackedColorArray([pal.sky_top, pal.sky_top, pal.sky_bottom, pal.sky_bottom]))
 	draw_rect(Rect2(0, 400, 960, 140), pal.grass_a)
 	draw_primitive(PackedVector2Array([Vector2(430, 400), Vector2(530, 400), Vector2(760, 540), Vector2(200, 540)]), PackedColorArray([pal.road_a, pal.road_a, pal.road_a, pal.road_a]), PackedVector2Array())
-	_t(Vector2(0, 62), "RAJD PRZEZ POLSKĘ", 54, Color(0, 0, 0, 0.25), HORIZONTAL_ALIGNMENT_CENTER, 964)
-	_t(Vector2(0, 60), "RAJD PRZEZ POLSKĘ", 54, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, 960)
-	_t(Vector2(0, 92), "Edukacyjna podróż po polskich drogach", 24, Color("1d2b38"), HORIZONTAL_ALIGNMENT_CENTER, 960)
+	var cn := GameData.country()
+	_t(Vector2(0, 62), cn.title, 54, Color(0, 0, 0, 0.25), HORIZONTAL_ALIGNMENT_CENTER, 964)
+	_t(Vector2(0, 60), cn.title, 54, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, 960)
+	_t(Vector2(0, 92), cn.subtitle, 24, Color("1d2b38"), HORIZONTAL_ALIGNMENT_CENTER, 960)
 	if not _on_map():
 		_t(Vector2(0, 140), _step_title(), 28, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, 960)
 	match kind():
@@ -258,7 +269,7 @@ func _draw() -> void:
 			Ui.button(self, font, RESET_BTN, "Reset postępu", false, 16)
 	var hint := "Strzałki: wybierz      Enter: dalej"
 	if _on_map():
-		hint = "Strzałki/myszka   " + ("Enter: START!" if kind() == "dest" else "Enter: dalej")
+		hint = "Strzałki/myszka   " + ("Enter: START!" if kind() == "dest" else "Enter: dalej") + ("   C: kraj" if _countries() > 1 else "")
 	if kind() == "car":
 		hint = "Strzałki   Enter: dalej   R: reset postępu"
 	if step > 0:
@@ -370,6 +381,7 @@ func _draw_map() -> void:
 	map.visited = Session.visited
 	map.reachable = Route.neighbours(start_city) + [start_city] if dest else []
 	map.draw(self, font, legs if dest else [], start_city, dest_city if dest else "", hover, t)
+	_draw_country_tabs()
 	var r := Rect2(488, 100, 456, 384)
 	_card(r, true)
 	var x := r.position.x + 20
@@ -408,6 +420,45 @@ func _draw_map() -> void:
 	var regions: Array = st.regions.slice(0, 6)
 	var reg_text := "Krainy: " + ", ".join(regions) + (" i inne" if st.regions.size() > regions.size() else "")
 	draw_multiline_string(font, Vector2(x, 386), reg_text, HORIZONTAL_ALIGNMENT_LEFT, w, 15, 3, Color("f1d9b5"))
+
+func _countries() -> int:
+	return GameData.countries().size()
+
+func _tab_rect(i: int) -> Rect2:
+	return Rect2(28 + i * 102, 108, 96, 28)
+
+## Country switch above the map (only when there is more than one country).
+func _draw_country_tabs() -> void:
+	if _countries() < 2:
+		return
+	var list := GameData.countries()
+	for i in list.size():
+		var r := _tab_rect(i)
+		var on: bool = list[i].code == Session.country
+		var sb := StyleBoxFlat.new()
+		sb.set_corner_radius_all(8)
+		sb.bg_color = Color("2e9e4f") if on else Color(0.06, 0.09, 0.13, 0.75)
+		sb.border_color = Color("ffd24a") if on else Color(1, 1, 1, 0.5)
+		sb.set_border_width_all(2)
+		draw_style_box(sb, r)
+		_t(Vector2(r.position.x, r.position.y + 20), list[i].name, 16, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, r.size.x)
+
+## Plays another country: its map and the player's progress there (a new country starts by picking a home city).
+func _switch_country(code: String) -> void:
+	if code == Session.country:
+		return
+	Sfx.play("blip", -8.0)
+	Session.switch_country(code)
+	map = CountryMap.new(MAP_RECT)
+	start_city = Session.from_city
+	dest_city = Session.to_city
+	_set_steps()
+	step = steps.find("dest") if Session.has_home() else 0
+	_enter_step()
+
+func _next_country() -> void:
+	var codes := GameData.country_codes()
+	_switch_country(codes[(codes.find(Session.country) + 1) % codes.size()])
 
 func _city_info(id: String, pos: Vector2, w: float) -> void:
 	var c := Geo.city(id)

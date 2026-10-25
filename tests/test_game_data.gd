@@ -10,6 +10,28 @@ func run(t) -> void:
 	t.check(codes.has("pl"), "Poland is in the country index")
 	for code in codes:
 		_check_country(t, code, rules)
+		_check_trips(t, code)
+	GameData.current = "pl"
+
+## Every trip between neighbouring cities builds a playable stage (stations, limits, a track, scenery).
+func _check_trips(t, code: String) -> void:
+	GameData.current = code
+	var ok := true
+	var trips := 0
+	for a in Geo.city_ids():
+		for b in Route.neighbours(a):
+			var s := Route.build(a, b)
+			trips += 1
+			if s.stations.is_empty() or s.duration <= 0.0 or s.towns[0].id != a or s.towns[-1].id != b:
+				ok = false; print("  %s: trip %s-%s broken" % [code, a, b])
+			for zz in [10.0, s.length * 0.5, s.length - 10.0]:
+				if Route.speed_limit_at(s, zz) <= 0: ok = false
+			for tn in s.tunnels:
+				for tw in s.towns:
+					if tw.z + tw.half > tn.z0 and tw.z - tw.half < tn.z1: ok = false; print("  %s: %s-%s tunnel in a town" % [code, a, b])
+	var r := Race.new("xc60", Route.build(Geo.city_ids()[0], Route.neighbours(Geo.city_ids()[0])[0]), 1)
+	for i in 120: r.step(1.0 / 60.0, {"accel": true, "brake": false, "steer": 0.0})
+	t.check(ok and trips > 0 and r.z > 10.0, "%s: all %d trips build and drive" % [code, trips])
 
 func _check_country(t, code: String, rules: Dictionary) -> void:
 	var c := GameData.country(code)

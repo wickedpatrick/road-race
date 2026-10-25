@@ -1,0 +1,258 @@
+[
+	{
+		"a": "praha",
+		"b": "kladno",
+		"km": 28,
+		"road": [[18, "D6"], [28, "61"]],
+		"towns": [],
+		"zones": [[28, "industrial", "Kladensko"]]
+	},
+	{
+		"a": "kladno",
+		"b": "karlovy_vary",
+		"km": 100,
+		"road": "D6",
+		"towns": [["Nové Strašecí", 20], ["Lubenec", 65]],
+		"zones": [[45, "forest", "Křivoklátsko"], [80, "upland", "Rakovnicko"], [100, "upland", "Doupovské hory"]]
+	},
+	{
+		"a": "praha",
+		"b": "plzen",
+		"km": 90,
+		"road": "D5",
+		"towns": [["Beroun", 30], ["Rokycany", 70]],
+		"zones": [[40, "forest", "Brdy"], [90, "upland", "Plzeňská pahorkatina"]]
+	},
+	{
+		"a": "praha",
+		"b": "usti",
+		"km": 85,
+		"road": "D8",
+		"towns": [["Lovosice", 60]],
+		"zones": [[45, "fields", "Polabí"], [85, "foothills", "České středohoří"]],
+		"tunnels": [
+			{
+				"from_km": 69.5,
+				"to_km": 70.1,
+				"name": {"pl": "Tunel Radejčín"},
+				"fact": {"pl": "Tunel autostrady D8 pod wzgórzami Czeskiego Średniogórza"}
+			}
+		]
+	},
+	{
+		"a": "praha",
+		"b": "mlada_boleslav",
+		"km": 55,
+		"road": "D10",
+		"towns": [["Benátky nad Jizerou", 35]],
+		"zones": [[55, "fields", "Polabí"]]
+	},
+	{
+		"a": "mlada_boleslav",
+		"b": "liberec",
+		"km": 57,
+		"road": [[32, "D10"], [57, "35"]],
+		"towns": [["Turnov", 32]],
+		"zones": [[38, "jura", "Český ráj"], [57, "mountains", "Jizerské hory"]]
+	},
+	{
+		"a": "praha",
+		"b": "hradec_kralove",
+		"km": 115,
+		"road": "D11",
+		"towns": [["Poděbrady", 50], ["Chlumec nad Cidlinou", 85]],
+		"zones": [[115, "fields", "Polabí"]]
+	},
+	{
+		"a": "praha",
+		"b": "tabor",
+		"km": 90,
+		"road": "D3",
+		"towns": [["Votice", 55]],
+		"zones": [[30, "forest", "Posázaví"], [90, "upland", "Středočeská pahorkatina"]]
+	},
+	{
+		"a": "tabor",
+		"b": "ceske_budejovice",
+		"km": 60,
+		"road": "D3",
+		"towns": [["Soběslav", 15], ["Veselí nad Lužnicí", 25]],
+		"zones": [[60, "lakes", "Třeboňsko"]]
+	},
+	{
+		"a": "praha",
+		"b": "jihlava",
+		"km": 125,
+		"road": "D1",
+		"towns": [["Humpolec", 95]],
+		"zones": [[35, "forest", "Posázaví"], [125, "upland", "Českomoravská vrchovina"]]
+	},
+	{
+		"a": "jihlava",
+		"b": "brno",
+		"km": 85,
+		"road": "D1",
+		"towns": [["Velké Meziříčí", 30], ["Velká Bíteš", 50]],
+		"zones": [[60, "upland", "Českomoravská vrchovina"], [85, "forest", "Brněnská vrchovina"]]
+	},
+	{
+		"a": "jihlava",
+		"b": "znojmo",
+		"km": 85,
+		"road": "38",
+		"towns": [["Moravské Budějovice", 50]],
+		"zones": [[55, "upland", "Českomoravská vrchovina"], [85, "orchard", "Znojemsko"]]
+	},
+	{
+		"a": "znojmo",
+		"b": "brno",
+		"km": 65,
+		"road": [[45, "53"], [65, "D52"]],
+		"towns": [["Pohořelice", 45]],
+		"zones": [[65, "orchard", "Jižní Morava"]]
+	},
+	{
+		"a": "cheb",
+		"b": "karlovy_vary",
+		"km": 45,
+		"road": "D6",
+		"towns": [["Sokolov", 25]],
+		"zones": [[25, "industrial", "Sokolovsko"], [45, "forest", "Slavkovský les"]]
+	},
+	{
+		"a": "cheb",
+		"b": "plzen",
+		"km": 95,
+		"road": [[55, "21"], [95, "D5"]],
+		"towns": [["Mariánské Lázně", 30], ["Planá", 45], ["Stříbro", 65]],
+		"zones": [[45, "forest", "Slavkovský les"], [95, "upland", "Plzeňská pahorkatina"]]
+	},
+	{
+		"a": "karlovy_vary",
+		"b": "plzen",
+		"km": 85,
+		"road": "20",
+		"towns": [["Toužim", 35], ["Manětín", 55]],
+		"zones": [[50, "forest", "Tepelská vrchovina"], [85, "upland", "Plzeňská pahorkatina"]]
+	},
+	{
+		"a": "karlovy_vary",
+		"b": "most",
+		"km": 75,
+		"road": "13",
+		"towns": [["Ostrov", 15], ["Kadaň", 45], ["Chomutov", 60]],
+		"zones": [[45, "foothills", "Krušné hory"], [75, "industrial", "Podkrušnohoří"]]
+	},
+	{
+		"a": "most",
+		"b": "usti",
+		"km": 40,
+		"road": "13",
+		"towns": [["Duchcov", 15], ["Teplice", 25]],
+		"zones": [[40, "industrial", "Podkrušnohoří"]]
+	},
+	{
+		"a": "usti",
+		"b": "liberec",
+		"km": 90,
+		"road": "13",
+		"towns": [["Děčín", 24], ["Česká Kamenice", 40], ["Nový Bor", 55], ["Chrastava", 80]],
+		"zones": [[30, "jura", "Labské pískovce"], [60, "mountains", "Lužické hory"], [90, "foothills", "Ještědský hřbet"]]
+	},
+	{
+		"a": "liberec",
+		"b": "hradec_kralove",
+		"km": 100,
+		"road": "35",
+		"towns": [["Turnov", 25], ["Jičín", 55], ["Hořice", 75]],
+		"zones": [[35, "jura", "Český ráj"], [100, "fields", "Podkrkonoší"]]
+	},
+	{
+		"a": "hradec_kralove",
+		"b": "pardubice",
+		"km": 25,
+		"road": "37",
+		"towns": [],
+		"zones": [[25, "fields", "Polabí"]]
+	},
+	{
+		"a": "pardubice",
+		"b": "olomouc",
+		"km": 125,
+		"road": "35",
+		"towns": [["Vysoké Mýto", 30], ["Litomyšl", 45], ["Svitavy", 65], ["Mohelnice", 100]],
+		"zones": [[50, "fields", "Východočeská tabule"], [100, "upland", "Svitavská pahorkatina"], [125, "fields", "Haná"]]
+	},
+	{
+		"a": "pardubice",
+		"b": "jihlava",
+		"km": 100,
+		"road": [[75, "37"], [100, "38"]],
+		"towns": [["Chrudim", 12], ["Ždírec nad Doubravou", 50], ["Havlíčkův Brod", 75]],
+		"zones": [[30, "fields", "Chrudimsko"], [100, "upland", "Českomoravská vrchovina"]]
+	},
+	{
+		"a": "plzen",
+		"b": "ceske_budejovice",
+		"km": 135,
+		"road": "20",
+		"towns": [["Nepomuk", 30], ["Blatná", 50], ["Písek", 85], ["Vodňany", 105]],
+		"zones": [[60, "upland", "Blatensko"], [135, "lakes", "Jihočeské rybníky"]]
+	},
+	{
+		"a": "ceske_budejovice",
+		"b": "jihlava",
+		"km": 110,
+		"road": [[45, "34"], [80, "23"], [110, "38"]],
+		"towns": [["Jindřichův Hradec", 45], ["Telč", 80]],
+		"zones": [[50, "lakes", "Jindřichohradecko"], [110, "upland", "Českomoravská vrchovina"]]
+	},
+	{
+		"a": "brno",
+		"b": "olomouc",
+		"km": 80,
+		"road": [[35, "D1"], [80, "D46"]],
+		"towns": [["Vyškov", 35], ["Prostějov", 60]],
+		"zones": [[35, "upland", "Drahanská vrchovina"], [80, "fields", "Haná"]]
+	},
+	{
+		"a": "brno",
+		"b": "zlin",
+		"km": 100,
+		"road": [[75, "D1"], [100, "55"]],
+		"towns": [["Vyškov", 35], ["Kroměříž", 65], ["Otrokovice", 90]],
+		"zones": [[40, "upland", "Drahanská vrchovina"], [75, "fields", "Haná"], [100, "foothills", "Zlínské vrchy"]]
+	},
+	{
+		"a": "zlin",
+		"b": "olomouc",
+		"km": 65,
+		"road": "55",
+		"towns": [["Otrokovice", 10], ["Přerov", 45]],
+		"zones": [[15, "foothills", "Zlínské vrchy"], [65, "fields", "Haná"]]
+	},
+	{
+		"a": "olomouc",
+		"b": "ostrava",
+		"km": 95,
+		"road": [[30, "D35"], [95, "D1"]],
+		"towns": [["Lipník nad Bečvou", 30], ["Hranice", 42], ["Bílovec", 75]],
+		"zones": [[40, "fields", "Haná"], [70, "foothills", "Moravská brána"], [95, "industrial", "Ostravsko"]]
+	},
+	{
+		"a": "olomouc",
+		"b": "opava",
+		"km": 80,
+		"road": "46",
+		"towns": [["Šternberk", 20], ["Moravský Beroun", 40], ["Hradec nad Moravicí", 70]],
+		"zones": [[20, "fields", "Haná"], [70, "upland", "Nízký Jeseník"], [80, "fields", "Opavsko"]]
+	},
+	{
+		"a": "ostrava",
+		"b": "opava",
+		"km": 30,
+		"road": "11",
+		"towns": [],
+		"zones": [[15, "industrial", "Ostravsko"], [30, "fields", "Opavsko"]]
+	}
+]

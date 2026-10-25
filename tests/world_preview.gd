@@ -1,6 +1,6 @@
 extends Node2D
 ## Dev-only preview: auto-drives a race and lets WorldView render it (used with --write-movie).
-## args: from to [season] [car] [z] [still] [--zakrety[=N]]
+## args: from to [season] [car] [z] [still] [--zakrety[=N]]; env RR_COUNTRY=cz for another country
 var race: Race
 var view: WorldView
 var t := 0.0
@@ -8,6 +8,7 @@ func _ready() -> void:
 	DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, true) # dev runs: no window frame, no focus stealing
 	DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_NO_FOCUS, true)
 	var args := OS.get_cmdline_user_args()
+	if OS.get_environment("RR_COUNTRY") != "": GameData.current = OS.get_environment("RR_COUNTRY") # e.g. RR_COUNTRY=cz
 	var stage := Route.build(args[0] if args.size() > 0 else "krakow", args[1] if args.size() > 1 else "rzeszow")
 	if Session.sharp_test: # -- ... --zakrety[=N]: same test mode as the game
 		stage["sharp_test"] = true

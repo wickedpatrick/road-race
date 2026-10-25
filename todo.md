@@ -131,8 +131,8 @@ dostają tyle, ile ma sens.
       (wszystkie trasy identyczne jak przed zmianą), opis formatu w `data/README.md`.
 - [x] `PolandMap` -> `CountryMap`: zakres lat/lon, współczynnik długości, kontur i etykiety miast z danych kraju.
       Zostało: USA i Kanada wymagają innej projekcji/skali niż Polska (rozważyć projekcję stożkową).
-- [ ] Menu: wybór kraju przed wyborem miast (lista/mapa Europy + Ameryka Północna), profil zapamiętuje
-      odwiedzone miasta per kraj.
+- [x] Menu: przełącznik krajów nad mapą (klawisz C), profil pamięta miasto domowe, bieżące i odwiedzone miasta
+      osobno dla każdego kraju (stare zapisy trafiają do Polski). Zostało: lista/mapa Europy, gdy krajów będzie dużo.
 - [ ] Reguły drogowe per kraj w danych, nie w kodzie (zrobione: limity prędkości i kolory tablic w `country.json`;
       zostało: tolerancja radaru, jednostki, klasy dróg): limity prędkości (teren zabudowany / poza / ekspresowa /
       autostrada), jednostki (km/h vs **mph i mile** w Wielkiej Brytanii i USA), klasy dróg i liczba pasów
@@ -149,6 +149,10 @@ dostają tyle, ile ma sens.
 - [ ] Policja/radar per kraj (limity, tolerancja), opcjonalnie lokalny wygląd radiowozu.
 
 ### 9b. Dane krajów (partiami, każdy kraj osobno sprawdzony)
+
+- [x] Czechy: 20 miast (bez Hawierzowa, Karwiny, Frydka-Mistka i Cieplic, które na mapie zlewają się z Ostrawą
+      i Uściem), 31 dróg (D1, D5, D8, I/35...), tunel Radejčín na D8, ciekawostki i atrakcje po polsku, czeskie
+      tablice (białe miejscowości, niebieskie kierunkowe, zielone autostradowe), limity 130/90/50.
 
 Dla każdego kraju: lista miast z populacją i lat/lon, sieć dróg łącząca sąsiadów (spójny graf, najkrótsze
 trasy sensowne), miejscowości po drodze, krainy, ciekawostki po polsku, kontur granicy. Weryfikacja: test,

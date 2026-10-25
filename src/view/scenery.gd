@@ -8,8 +8,8 @@ const SIGN_GREEN := Color("0f7a43")
 const SIGN_BLUE := Color("1d4f9e")
 static var _sign_cols := {} ## country code -> {town, board, board_motorway} colours (the country's "signs")
 
-## Colour of a road sign in the current country: "town" (place-name signs), "board" / "board_motorway" (direction
-## boards with distances).
+## Colour of a road sign in the current country: "town" / "town_text" (place-name signs and their lettering),
+## "board" / "board_motorway" (direction boards with distances).
 static func sign_color(kind: String) -> Color:
 	var code := GameData.current
 	if not _sign_cols.has(code):
@@ -657,14 +657,15 @@ static func _town_sign(cv, it: Dictionary, b: Vector2, pm: float, font: Font, en
 	var hh := 1.8 * pm
 	_posts(cv, b, pm, post, [-1.6, 1.6])
 	var r := Rect2(b + Vector2(-w * 0.5, -post - hh), Vector2(w, hh))
+	var ink := sign_color("town_text")
 	cv.draw_rect(r, sign_color("town"))
-	cv.draw_rect(r.grow(-0.14 * pm), Color.WHITE, false, maxf(1.0, 0.1 * pm))
-	_fit_text(cv, font, r.grow_individual(-0.35 * pm, 0, -0.35 * pm, 0), it.text, Color.WHITE, 0.95 * pm)
+	cv.draw_rect(r.grow(-0.14 * pm), ink, false, maxf(1.0, 0.1 * pm))
+	_fit_text(cv, font, r.grow_individual(-0.35 * pm, 0, -0.35 * pm, 0), it.text, ink, 0.95 * pm)
 	if ending:
 		cv.draw_line(r.position + Vector2(w * 0.08, hh * 0.85), r.position + Vector2(w * 0.92, hh * 0.15), SIGN_RED, maxf(1.0, 0.24 * pm))
 
 ## Distance board: road number on a red plate, then towns with kilometres (nearest first, destination last).
-## Blue on motorways, green on other roads.
+## Colours from the country (in Poland blue on motorways, green on other roads).
 static func _board(cv, it: Dictionary, b: Vector2, pm: float, font: Font) -> void:
 	var lines: Array = it.lines
 	var lh := 1.45 * pm

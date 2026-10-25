@@ -4,6 +4,10 @@ extends Node
 const SAVE_PATH := "user://profile.json"
 var car_id := "yaris"
 var season := "summer"
+## The country being played; from_city, to_city, home_city and visited belong to it. The other countries' are kept
+## in `places` (code -> {home_city, from_city, to_city, visited}); kilometres and cars are shared.
+var country := "pl"
+var places := {}
 var from_city := "krakow"
 var to_city := "rzeszow"
 var total_km := 0.0
@@ -51,15 +55,17 @@ func load_profile() -> void:
 		return
 	total_km = float(d.get("total_km", 0.0))
 	quality = "low" if d.get("quality", "high") == "low" else "high"
-	# profiles from before home cities existed: the player is already somewhere, keep it
-	home_city = d.get("home_city", d.get("from_city", ""))
-	if not Geo.cities().has(home_city): home_city = ""
-	visited = (d.get("visited", []) as Array).filter(func(id): return Geo.cities().has(id))
 	season = d.get("season", season) if SeasonPalette.SEASONS.has(d.get("season", "")) else season
-	from_city = d.get("from_city", from_city) if Geo.cities().has(d.get("from_city", "")) else from_city
-	to_city = d.get("to_city", to_city) if Geo.cities().has(d.get("to_city", "")) else to_city
-	if visited.is_empty() and has_home():
-		visited = [home_city] if home_city == from_city else [home_city, from_city]
+	places = d.get("places", {}) if d.get("places") is Dictionary else {}
+	if not d.has("places"):
+		# profiles from before countries: everything was Poland (and from before home cities: the player is
+		# already somewhere, keep it)
+		places = {"pl": {"home_city": d.get("home_city", d.get("from_city", "")), "from_city": d.get("from_city", ""),
+			"to_city": d.get("to_city", ""), "visited": d.get("visited", [])}}
+	var code: String = d.get("country", "pl")
+	country = code if GameData.country_codes().has(code) else "pl"
+	GameData.current = country
+	_apply_place(places.get(country, {}))
 	var car: String = d.get("car_id", car_id)
 	car_id = car if CarStats.has(car) and Profile.is_unlocked(car, total_km) else CarStats.ids()[0]
 
@@ -67,9 +73,34 @@ func save_profile() -> void:
 	var f := FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	if f == null:
 		return
-	f.store_string(JSON.stringify({"total_km": total_km, "car_id": car_id, "season": season,
-		"from_city": from_city, "to_city": to_city, "home_city": home_city,
-		"visited": visited, "quality": quality}))
+	places[country] = _place()
+	f.store_string(JSON.stringify({"total_km": total_km, "car_id": car_id, "season": season, "quality": quality,
+		"country": country, "places": places}))
+
+## The current country's progress, as kept in `places`.
+func _place() -> Dictionary:
+	return {"home_city": home_city, "from_city": from_city, "to_city": to_city, "visited": visited}
+
+## Takes a country's progress (checked against its map; a country never played starts at its default route).
+func _apply_place(p: Dictionary) -> void:
+	var ids := Geo.cities()
+	var start: Array = GameData.country().start
+	home_city = p.get("home_city", "") if ids.has(p.get("home_city", "")) else ""
+	from_city = p.get("from_city", "") if ids.has(p.get("from_city", "")) else start[0]
+	to_city = p.get("to_city", "") if ids.has(p.get("to_city", "")) else start[1]
+	visited = (p.get("visited", []) as Array).filter(func(id): return ids.has(id))
+	if visited.is_empty() and has_home():
+		visited = [home_city] if home_city == from_city else [home_city, from_city]
+
+## Plays another country from now on: its map, rules and the player's progress there.
+func switch_country(code: String) -> void:
+	if code == country:
+		return
+	places[country] = _place()
+	country = code
+	GameData.current = code
+	_apply_place(places.get(code, {}))
+	save_profile()
 
 func has_home() -> bool:
 	return home_city != ""
@@ -81,15 +112,13 @@ func set_home(id: String) -> void:
 	if to_city == id: to_city = ""
 	visit([id])
 
-## Back to a new player: no kilometres, only the first car, default season and route.
+## Back to a new player: no kilometres, only the first car, default season, no home city in any country.
 func reset_profile() -> void:
 	car_id = CarStats.ids()[0]
 	season = "summer"
-	from_city = "krakow"
-	to_city = "rzeszow"
 	total_km = 0.0
-	home_city = ""
-	visited = []
+	places = {}
+	_apply_place({})
 	save_profile()
 
 ## Marks cities as visited and saves; returns the ones visited for the first time.

@@ -7,6 +7,7 @@ const DIR := "res://data/"
 const LANGUAGE := "pl"
 static var _rules := {}
 static var _countries := {} ## code -> country, loaded on first use
+static var _index := [] ## countries/index.json
 static var current := "pl" ## the country the player drives in
 
 static func rules() -> Dictionary:
@@ -20,9 +21,14 @@ static func rules() -> Dictionary:
 		_rules.cars = cars
 	return _rules
 
-## Codes of all countries in the game, from countries/index.json.
+## All countries in the game, from countries/index.json: [{code, name, neighbours, favorite_neighbour}].
+static func countries() -> Array:
+	if _index.is_empty():
+		_index = localize(load_json(DIR + "countries/index.json").countries)
+	return _index
+
 static func country_codes() -> Array:
-	return load_json(DIR + "countries/index.json").countries.map(func(c): return c.code)
+	return countries().map(func(c): return c.code)
 
 ## Everything about one country (the current one by default): country.json plus "cities", "roads", "facts" and
 ## "landmarks" from the files next to it.
