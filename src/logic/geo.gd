@@ -1,10 +1,14 @@
 class_name Geo
 extends RefCounted
-## Map of Poland: the 25 biggest cities plus Zakopane, Zamość and Łomża, the main roads between them, the towns
+## Map of Poland: the 25 biggest cities plus Zakopane, Zamość, Łomża, Kamienna Góra and Zwardoń (the last two for the
+## tunnels on the S3 and the S1), the main roads between them, the towns
 ## passed on the way and the regions crossed. Distances are approximate road kilometres.
 ## `road` is the road number, or [[km from `a` where it ends, number], ...] when the leg changes road
 ## (A = motorway, S = expressway, DK = national road, DW = regional road; as of 2026).
 ## Towns are [name, km from `a`], zones [km from `a` where the zone ends, biome, region]. Travelling b -> a mirrors them.
+## Optional `tunnels`: [km from `a` where it starts, where it ends, name, fact, ("city" for a cut-and-cover tunnel
+## under a town district instead of one through a mountain)].
+## A city may have a `note` shown on the map instead of its population (a village at the border).
 
 ## lat/lon in degrees, pop in thousands (approx.)
 const CITIES := {
@@ -36,11 +40,15 @@ const CITIES := {
 	"lomza": {"name": "Łomża", "lat": 53.18, "lon": 22.06, "pop": 62, "voiv": "podlaskie"},
 	"zamosc": {"name": "Zamość", "lat": 50.72, "lon": 23.25, "pop": 60, "voiv": "lubelskie"},
 	"zakopane": {"name": "Zakopane", "lat": 49.30, "lon": 19.95, "pop": 26, "voiv": "małopolskie"},
+	"kamienna_gora": {"name": "Kamienna Góra", "lat": 50.78, "lon": 16.03, "pop": 18, "voiv": "dolnośląskie"},
+	"zwardon": {"name": "Zwardoń", "lat": 49.50, "lon": 18.97, "pop": 1, "voiv": "śląskie",
+		"note": "wieś w Beskidach, przy granicy ze Słowacją"},
 }
 
 const ROADS := [
-	{"a": "krakow", "b": "katowice", "road": "A4", "km": 80,
+	{"a": "krakow", "b": "katowice", "road": [[12, "S52"], [80, "A4"]], "km": 80,
 		"towns": [["Chrzanów", 40], ["Jaworzno", 55], ["Mysłowice", 70]],
+		"tunnels": [[5, 5.65, "Tunel pod Zielonkami", "Północna Obwodnica Krakowa (S52): jedyna obwodnica w Polsce z dwoma tunelami", "city"]],
 		"zones": [[30, "jura", "Wyżyna Krakowsko-Częstochowska"], [80, "industrial", "Górnośląski Okręg Przemysłowy"]]},
 	{"a": "krakow", "b": "rzeszow", "road": "A4", "km": 165,
 		"towns": [["Bochnia", 40], ["Brzesko", 55], ["Tarnów", 80], ["Dębica", 120], ["Ropczyce", 135], ["Sędziszów Małopolski", 145]],
@@ -140,6 +148,7 @@ const ROADS := [
 		"zones": [[40, "fields", "Mazowsze"], [80, "forest", "Puszcza Biała"], [140, "fields", "Wysoczyzna Wysokomazowiecka"], [200, "podlasie", "Podlasie"]]},
 	{"a": "warszawa", "b": "lublin", "road": "S17", "km": 170,
 		"towns": [["Garwolin", 60], ["Ryki", 90], ["Kurów", 125]],
+		"tunnels": [[4, 6.3, "Tunel pod Ursynowem", "Południowa Obwodnica Warszawy (S2): najdłuższy tunel drogowy w Polsce, 2,3 km", "city"]],
 		"zones": [[105, "fields", "Mazowsze"], [170, "upland", "Wyżyna Lubelska"]]},
 	{"a": "warszawa", "b": "radom", "road": "S7", "km": 100,
 		"towns": [["Grójec", 40], ["Białobrzegi", 65]],
@@ -159,6 +168,14 @@ const ROADS := [
 	{"a": "lublin", "b": "kielce", "road": [[50, "S19"], [170, "DK74"]], "km": 170,
 		"towns": [["Kraśnik", 50], ["Annopol", 75], ["Opatów", 115], ["Łagów", 135]],
 		"zones": [[60, "upland", "Wyżyna Lubelska"], [100, "fields", "Dolina Wisły"], [135, "upland", "Wyżyna Sandomierska"], [170, "forest", "Góry Świętokrzyskie"]]},
+	{"a": "bielsko", "b": "zwardon", "road": "S1", "km": 55,
+		"towns": [["Żywiec", 20], ["Węgierska Górka", 33], ["Milówka", 40]],
+		"zones": [[25, "foothills", "Kotlina Żywiecka"], [55, "mountains", "Beskid Żywiecki"]],
+		"tunnels": [[46, 46.7, "Tunel w Lalikach", "Pierwszy w Polsce tunel na drodze ekspresowej, otwarty w 2010 roku"]]},
+	{"a": "wroclaw", "b": "kamienna_gora", "road": [[62, "A4"], [115, "S3"]], "km": 115,
+		"towns": [["Środa Śląska", 35], ["Jawor", 75], ["Bolków", 90]],
+		"zones": [[50, "fields", "Nizina Śląska"], [80, "foothills", "Pogórze Kaczawskie"], [100, "mountains", "Góry Kaczawskie"], [115, "foothills", "Kotlina Kamiennogórska"]],
+		"tunnels": [[98, 100.3, "Tunel na S3 w Sudetach", "Najdłuższy w Polsce tunel drążony w skale: 2,3 km"]]},
 	{"a": "krakow", "b": "zakopane", "road": [[65, "S7"], [105, "DK47"]], "km": 105,
 		"towns": [["Myślenice", 35], ["Lubień", 48], ["Rabka-Zdrój", 65], ["Nowy Targ", 85]],
 		"tunnels": [[54, 56, "Tunel pod Luboniem Małym", "Ponad 2 km pod górą Luboń Mały, otwarty w 2022 roku"]],
@@ -182,6 +199,11 @@ const ROADS := [
 
 ## Short facts shown when the player drives through (big cities and selected towns).
 const FACTS := {
+	"Kamienna Góra": "Miasto w Sudetach, dawny ośrodek tkactwa",
+	"Zwardoń": "Wieś w Beskidzie Żywieckim, tuż przy granicy ze Słowacją",
+	"Żywiec": "Miasto nad Jeziorem Żywieckim, z zamkiem Habsburgów",
+	"Bolków": "Miasteczko pod średniowiecznym zamkiem na skale",
+	"Jawor": "Tu stoi drewniany Kościół Pokoju z listy UNESCO",
 	"Warszawa": "Stolica Polski, położona nad Wisłą",
 	"Kraków": "Dawna stolica Polski, zamek królewski na Wawelu",
 	"Wrocław": "Miasto na wyspach Odry, z ponad stu mostami",

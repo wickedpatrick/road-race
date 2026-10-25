@@ -10,8 +10,10 @@ const CITY_HALF := 260.0 ## half-length of a big city passed on the way (game me
 const TOWN_HALF := 90.0
 const HILL_TIME := 0.1 ## extra share of the time limit per unit of average Biome.hill
 const END_CITY := 380.0 ## city streets at the start and the finish
+const END_TOWN := 220.0 ## the same for a small place (under SMALL_POP thousand people)
+const SMALL_POP := 30
 const TUNNEL_MIN := 300.0 ## a tunnel is never shorter than this in the game (real ones would flash by)
-const TUNNEL_GAP := 55.0 ## open road kept between a tunnel and a town (name and speed limit signs)
+const TUNNEL_GAP := 40.0 ## open road kept between a tunnel and a town (name and speed limit signs)
 const STATION_AFTER_TOWN := 230.0 ## a station stands this far past a town's end (after its signs and boards)
 
 ## Road dictionaries adjacent to a city, as [road, other_city_id].
@@ -117,7 +119,7 @@ static func build(from: String, to: String) -> Dictionary:
 	var regions := []
 	var express_km := 0
 	var off := 0.0
-	towns.append({"z": 0.0, "name": Geo.city(from).name, "id": from, "big": true, "half": END_CITY, "start": true})
+	towns.append({"z": 0.0, "name": Geo.city(from).name, "id": from, "big": _end_big(from), "half": _end_half(from), "start": true})
 	for li in legs.size():
 		var leg: Dictionary = legs[li]
 		var r: Dictionary = leg.road
@@ -133,7 +135,8 @@ static func build(from: String, to: String) -> Dictionary:
 		for tn in r.get("tunnels", []):
 			var a := float(tn[0]) if leg.from == r.a else leg_km - float(tn[1])
 			var b := float(tn[1]) if leg.from == r.a else leg_km - float(tn[0])
-			tunnels.append({"z0": (off + a) * mpk, "z1": (off + b) * mpk, "name": tn[2], "fact": tn[3]})
+			tunnels.append({"z0": (off + a) * mpk, "z1": (off + b) * mpk, "name": tn[2], "fact": tn[3],
+				"city": tn.size() > 4 and tn[4] == "city"})
 		for t in _leg_towns(leg):
 			# a town shared by two consecutive legs (e.g. Stryków) appears once
 			if towns.size() > 0 and towns[-1].name == t[0]: continue
@@ -142,7 +145,7 @@ static func build(from: String, to: String) -> Dictionary:
 		path.append(leg.to)
 		if li < legs.size() - 1:
 			towns.append({"z": off * mpk, "name": Geo.city(leg.to).name, "id": leg.to, "big": true, "half": CITY_HALF})
-	towns.append({"z": length, "name": Geo.city(to).name, "id": to, "big": true, "half": END_CITY, "finish": true})
+	towns.append({"z": length, "name": Geo.city(to).name, "id": to, "big": _end_big(to), "half": _end_half(to), "finish": true})
 	_separate(towns)
 	_fit_tunnels(tunnels, towns, length)
 	# the last zone runs on past the finish line (the track has a tail)
@@ -244,6 +247,13 @@ static func _separate(towns: Array) -> void:
 			a.half = minf(a.half, room * 0.5)
 			b.half = room - a.half
 
+static func _end_half(id: String) -> float:
+	return END_CITY if _end_big(id) else END_TOWN
+
+## Small places at the start or finish (Zakopane, Zwardoń...) get houses, not city blocks.
+static func _end_big(id: String) -> bool:
+	return Geo.city(id).pop >= SMALL_POP
+
 ## Tunnels are stretched to at least TUNNEL_MIN and moved/shrunk to fit between the towns around them, whose
 ## streets give way a little when needed.
 static func _fit_tunnels(tunnels: Array, towns: Array, length: float) -> void:
@@ -255,14 +265,18 @@ static func _fit_tunnels(tunnels: Array, towns: Array, length: float) -> void:
 		for t in towns:
 			if t.z <= mid: prev = t
 			elif t.z < next.z: next = t
-		var lo: float = prev.z + minf(prev.half, 40.0) + TUNNEL_GAP
-		var hi: float = minf(next.z - minf(next.half, 40.0) - TUNNEL_GAP, length - 500.0)
+		# a small town may shrink to its centre, a city keeps most of its streets
+		var lo: float = prev.z + _min_half(prev) + TUNNEL_GAP
+		var hi: float = minf(next.z - _min_half(next) - TUNNEL_GAP, length - 150.0)
 		var len_t := minf(want, hi - lo)
 		mid = clampf(mid, lo + len_t * 0.5, hi - len_t * 0.5)
 		tn.z0 = mid - len_t * 0.5
 		tn.z1 = mid + len_t * 0.5
 		prev.half = minf(prev.half, tn.z0 - TUNNEL_GAP - prev.z)
 		next.half = minf(next.half, next.z - tn.z1 - TUNNEL_GAP)
+
+static func _min_half(t: Dictionary) -> float:
+	return t.half * 0.6 if t.big else minf(t.half, 25.0)
 
 ## Moves a station spot forward until it is clear of town streets and tunnels (stations sit between towns, past the
 ## signs at a town's end).

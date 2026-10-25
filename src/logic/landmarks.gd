@@ -109,6 +109,11 @@ const BY_TOWN := {
 	"Łagów": [["castle_brick", "Zamek Joannitów", "Zamek rycerzy zakonnych między jeziorami"]],
 	"Oleśnica": [["palace", "Zamek w Oleśnicy", "Zamek książąt oleśnickich"]],
 	"Siewierz": [["castle", "Zamek w Siewierzu", "Ruiny zamku biskupów krakowskich"]],
+	"Kamienna Góra": [["basilica", "Opactwo w Krzeszowie", "Barokowe opactwo pod Kamienną Górą, nazywane Perłą Baroku"]],
+	"Zwardoń": [["border", "Granica ze Słowacją", "Droga S1 prowadzi stąd dalej na Słowację"]],
+	"Żywiec": [["palace", "Zamek Habsburgów", "Nowy Zamek w Żywcu należał do Habsburgów"]],
+	"Bolków": [["castle", "Zamek Bolków", "Średniowieczny zamek Piastów na skale nad miastem"]],
+	"Jawor": [["basilica", "Kościół Pokoju", "Drewniany kościół z listy UNESCO"]],
 }
 
 ## kind -> [width, height] in metres
@@ -125,7 +130,7 @@ const SIZE := {
 	"castle": [24, 20], "milestone": [2, 3], "kremowka": [5, 5], "narrow_train": [16, 5],
 	"truss_bridge": [30, 10], "basilica": [20, 30], "smile": [6, 9], "sundial": [4, 5], "sieve": [5, 6],
 	"hops": [16, 8], "bunker": [12, 4], "sailboat": [10, 12], "crown": [5, 6], "center": [4, 8], "roses": [10, 3],
-	"wycinanka": [6, 8], "dinosaur": [14, 10], "windmill": [8, 16],
+	"wycinanka": [6, 8], "dinosaur": [14, 10], "windmill": [8, 16], "border": [8, 6],
 }
 
 ## Landmarks along the stage: [{z, lat, kind, name, desc, town, w, h}], in route order.

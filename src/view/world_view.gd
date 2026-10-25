@@ -40,7 +40,7 @@ var _warm_left: Array = [] ## sign texts still to pre-render, a few per frame (s
 var _ground: Array = [] ## per track segment: Scenery.ground() strips
 var _lanes := PackedByteArray() ## per track segment: 2 or 3 lanes
 var _tun := PackedByteArray() ## per track segment: 1 inside a tunnel
-var _portals := {} ## segment index where a tunnel starts -> true
+var _portals := {} ## segment index where a tunnel starts -> the tunnel
 var _gcol: Array = [] ## per ground colour id: fogged colour for each view depth n
 ## horizon state, eased towards the region ahead: hills, mountains, sea, industry, wood, skyline
 var _hz := {"hills": 0.3, "mountains": 0.0, "sea": 0.0, "industry": 0.0, "wood": 0.2, "skyline": 1.0}
@@ -64,7 +64,7 @@ func bind(p_race: Race, p_season: String) -> void:
 			if k * SEG + SEG * 0.5 >= tn.z0 and k * SEG + SEG * 0.5 <= tn.z1:
 				_tun[k] = 1
 				if first < 0: first = k
-		if first >= 0: _portals[first] = true
+		if first >= 0: _portals[first] = tn
 	_gcol.clear()
 	for key in Scenery.GROUND_KEYS:
 		var cols := PackedColorArray()
@@ -313,7 +313,7 @@ func _draw_scene() -> void:
 			_draw_traffic_car({"z": race.police.z, "lane_x": race.police.x, "kind": "police", "color_idx": 0}, n, cam_x, cam_y, cam_z)
 		if _portals.has(i) and _vis[n] != 0 and i * SEG > cam_z + NEAR:
 			_b.fog = _item_fog(n)
-			_draw_portal(n)
+			_draw_portal(n, _portals[i].get("city", false))
 		_b.fog = 0.0
 
 func _in_tunnel(i: int) -> bool:
@@ -436,14 +436,18 @@ func _draw_tunnel(n: int, i: int) -> void:
 
 ## Tunnel entrance: the mountain the road dives into, a concrete portal around the opening (the tunnel inside was
 ## drawn already and shows through it).
-func _draw_portal(n: int) -> void:
+## A city tunnel (cut and cover) dives under a low grassy embankment with houses and blocks on top instead.
+func _draw_portal(n: int, city := false) -> void:
 	var cx := _x0[n]
 	var gy := _y0[n]
 	var pm := _s0[n] * W * 0.5
 	var hill := (pal.tree as Color).darkened(0.25)
 	if season == "winter": hill = Color("dfe5ea")
+	if city: hill = (pal.grass_a as Color).darkened(0.1)
 	var ridge := func(x: float) -> float:
 		var lat := (x - cx) / pm
+		if city:
+			return gy - pm * 11.0
 		return gy - pm * maxf(14.0, 46.0 - absf(lat) * 0.09 + 5.0 * sin(lat * 0.045) + 3.0 * sin(lat * 0.13 + 1.0))
 	var half := func(sgn: float, inner: Array, outer: Callable, col: Color) -> void:
 		var pts := PackedVector2Array()
@@ -461,7 +465,19 @@ func _draw_portal(n: int) -> void:
 	var frame := [[Scenery.TUNNEL_WALL + 1.6, 0.0], [Scenery.TUNNEL_WALL + 1.6, 5.0], [4.6, 8.0], [0.0, 8.0]]
 	for sgn in [-1.0, 1.0]:
 		half.call(sgn, frame, ridge, hill)
-	if pm * 46.0 > 6.0:
+	if city:
+		# the district on top: blocks and houses along the embankment, set back from the portal
+		for k in 14:
+			var lat := (k - 6.5) * 16.0 + 4.0 * sin(k * 1.7)
+			if absf(lat) < 14.0: continue
+			var bw := 9.0 + 4.0 * absf(sin(k * 2.3))
+			var bh := 8.0 + 16.0 * absf(sin(k * 1.3)) if k % 3 != 0 else 6.0
+			var col: Color = Scenery.BUILDING_COLORS[k % Scenery.BUILDING_COLORS.size()]
+			_b.draw_rect(Rect2(cx + (lat - bw * 0.5) * pm, gy - (11.0 + bh) * pm, bw * pm, bh * pm), col)
+			if pm > 1.5:
+				for f in int(bh / 3.5):
+					_b.draw_rect(Rect2(cx + (lat - bw * 0.4) * pm, gy - (11.0 + bh - 1.0 - f * 3.5) * pm, bw * 0.8 * pm, 0.9 * pm), Color("4a5560"))
+	elif pm * 46.0 > 6.0:
 		var tree := hill.darkened(0.3)
 		for k in 18:
 			var xx := cx + (k - 8.5) * 9.0 * pm

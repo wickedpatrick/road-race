@@ -82,6 +82,7 @@ static func draw(cv, it: Dictionary, b: Vector2, pm: float) -> void:
 		"wycinanka": _wycinanka()
 		"dinosaur": _dinosaur()
 		"milestone": _milestone()
+		"border": _border()
 		"kremowka": _kremowka()
 		"narrow_train": _train()
 
@@ -602,6 +603,20 @@ static func _big_apple() -> void:
 	_poly([0.3, 6.6, 1.8, 7.2, 0.8, 6.2], Color("4f8a3a"))
 
 ## The oldest Polish road sign (Konin, 1151): a stone column.
+## Border post: a red-white striped pole and a blue board with the EU stars and "SŁOWACJA".
+static func _border() -> void:
+	for k in 8:
+		_r(-0.25, k * 0.6, 0.25, (k + 1) * 0.6, Color("d0202a") if k % 2 == 0 else Color.WHITE)
+	_c(0, 5.0, 0.35, Color("d0202a"))
+	_l(1.5, 0, 1.5, 3.2, Color("8a8d92"), 0.12)
+	_l(3.8, 0, 3.8, 3.2, Color("8a8d92"), 0.12)
+	_r(1.0, 3.2, 4.3, 5.4, Color("1d4f9e"))
+	if _pm > 3.0:
+		for k in 8:
+			var a := TAU * k / 8.0
+			_c(2.65 + cos(a) * 0.6, 4.55 + sin(a) * 0.6, 0.08, GOLD)
+		_r(1.3, 3.4, 4.0, 3.75, Color.WHITE)
+
 static func _milestone() -> void:
 	_poly([-0.7, 0, 0.7, 0, 0.55, 2.7, 0, 3, -0.55, 2.7], Color("b9b2a0"))
 	if _pm > 4.0:

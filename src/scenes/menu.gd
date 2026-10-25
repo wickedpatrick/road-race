@@ -401,5 +401,5 @@ func _city_info(id: String, pos: Vector2, w: float) -> void:
 	var c := Geo.city(id)
 	_t(pos, c.name, 26, Color("ffd24a"))
 	_t(pos + Vector2(0, 30), "województwo %s" % c.voiv, 17, Color.WHITE)
-	_t(pos + Vector2(0, 56), "ok. %d tys. mieszkańców" % c.pop, 17, Color("c8d6e3"))
+	_t(pos + Vector2(0, 56), c.get("note", "ok. %d tys. mieszkańców" % c.pop), 17, Color("c8d6e3"))
 	draw_multiline_string(font, pos + Vector2(0, 90), Geo.fact(c.name), HORIZONTAL_ALIGNMENT_LEFT, w, 17, 4, Color("e8eef4"))

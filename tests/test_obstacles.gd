@@ -100,3 +100,11 @@ func run(t) -> void:
 	t.check(zr.last_crash > 0.0 and zr.x < 1.4, "the tunnel wall is solid")
 	var back := Route.build("zakopane", "krakow")
 	t.check(back.tunnels.size() == 1 and back.tunnels[0].z1 < back.length, "the tunnel is there on the way back too")
+	# the other tunnels: S1 Laliki, S3 in the Sudetes, S52 Zielonki and S2 Ursynów (the last two under city districts)
+	for tc in [["bielsko", "zwardon", false], ["wroclaw", "kamienna_gora", false], ["krakow", "katowice", true], ["warszawa", "lublin", true]]:
+		var ts := Route.build(tc[0], tc[1])
+		var ok: bool = ts.tunnels.size() == 1 and ts.tunnels[0].city == tc[2] and ts.tunnels[0].z1 - ts.tunnels[0].z0 >= 200.0
+		for tw in ts.towns:
+			if tw.z + tw.half > ts.tunnels[0].z0 and tw.z - tw.half < ts.tunnels[0].z1: ok = false
+		t.check(ok, "%s - %s goes through a tunnel clear of the towns" % [tc[0], tc[1]])
+	t.check(not Route.build("bielsko", "zwardon").towns[-1].big, "a village at the finish gets houses, not city blocks")

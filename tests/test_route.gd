@@ -1,7 +1,7 @@
 extends RefCounted
 ## Map data sanity and route building.
 func run(t) -> void:
-	t.check(Geo.CITIES.size() == 28, "25 biggest cities plus Zakopane, Zamość, Łomża")
+	t.check(Geo.CITIES.size() == 30, "25 biggest cities plus Zakopane, Zamość, Łomża, Kamienna Góra, Zwardoń")
 	t.check(Geo.CITIES.has("zakopane") and Geo.CITIES.has("zamosc") and Geo.CITIES.has("lomza"), "required towns on the map")
 	var data_ok := true
 	for r in Geo.ROADS:

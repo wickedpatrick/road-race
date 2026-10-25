@@ -1,7 +1,7 @@
 # Rajd przez Polskę
 
 Edukacyjna gra wyścigowa w stylu klasycznych wyścigów z Atari, zrobiona w Godot 4.7.
-Jedziesz między 25 największymi miastami Polski (oraz Zakopanem, Zamościem i Łomżą) i poznajesz po drodze miejscowości, krainy geograficzne i polskie znaki drogowe.
+Jedziesz między 25 największymi miastami Polski (oraz Zakopanem, Zamościem, Łomżą, Kamienną Górą i Zwardoniem) i poznajesz po drodze miejscowości, krainy geograficzne i polskie znaki drogowe.
 
 ## Granie
 Kliknij dwukrotnie `graj.command` (otworzy grę w przeglądarce, najlepiej Chrome lub Safari).
@@ -23,7 +23,9 @@ Kliknij dwukrotnie `graj.command` (otworzy grę w przeglądarce, najlepiej Chrom
 - Zjazd z drogi (pobocze, trawa) mocno hamuje auto, do 40 km/h.
 - Uderzenie w znak, drzewo, latarnię, dom albo ścianę tunelu od razu zatrzymuje auto i zabiera 3 litry paliwa.
 - Zderzenie z innym autem mocno zwalnia, zabiera 5 sekund i 3 litry paliwa, ale nie kończy gry.
-- Na trasie Kraków - Zakopane (S7) przejeżdżasz tunelem pod Luboniem Małym.
+- Prawdziwe tunele: pod Luboniem Małym (S7, Kraków - Zakopane), w Lalikach (S1, Bielsko-Biała - Zwardoń),
+  na S3 w Sudetach (Wrocław - Kamienna Góra), pod Zielonkami (S52, Kraków - Katowice) i pod Ursynowem
+  (S2, Warszawa - Lublin). W grze są dłuższe niż w rzeczywistości (do ok. 300 m), żeby było je widać.
 - Wygrywasz, gdy dojedziesz do celu, zanim skończy się czas lub paliwo. Po wygranej N: jedziesz dalej z miasta docelowego.
 - Odległości na znakach to prawdziwe kilometry; sama trasa w grze jest skrócona (ok. 14 m na kilometr).
 

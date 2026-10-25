@@ -7,7 +7,7 @@ const LAT0 := 48.9
 const LAT1 := 54.95
 const LON_K := 0.6157 ## cos(52°): squeezes longitude so the country keeps its shape
 ## labels drawn left of the dot where neighbours would collide; shorter names for long ones
-const LABEL_LEFT := ["katowice", "bielsko", "opole", "gdynia", "bydgoszcz", "plock", "zielona_gora", "lomza"]
+const LABEL_LEFT := ["katowice", "bielsko", "opole", "gdynia", "bydgoszcz", "plock", "zielona_gora", "lomza", "kamienna_gora"]
 const LABEL_ABOVE := ["czestochowa"]
 const SHORT := {"gorzow": "Gorzów Wlkp.", "bielsko": "Bielsko-Biała"}
 var area: Rect2
