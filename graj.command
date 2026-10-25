@@ -3,7 +3,7 @@
 cd "$(dirname "$0")/build/web" || exit 1
 PORT=8060
 if ! lsof -i :$PORT >/dev/null 2>&1; then
-  python3 -m http.server $PORT >/dev/null 2>&1 &
+  python3 ../../tools/serve.py $PORT >/dev/null 2>&1 &
   sleep 1
 fi
 open "http://localhost:$PORT/index.html"
