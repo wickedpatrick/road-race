@@ -10,7 +10,7 @@ func _ready() -> void:
 	if a.size() > 2: start_city = a[2]
 	if a.size() > 3: dest_city = a[3]
 	if a.size() > 4: Session.total_km = float(a[4])
+	if a.size() > 6: Session.visited = Array(a[6].split(","))
 	_enter_step()
 	confirm_reset = a.size() > 5 and a[5] == "reset"
-	if a.size() > 6: Session.visited = Array(a[6].split(","))
 	if OS.get_environment("RR_TOUCH") == "1": Screen.touch = true

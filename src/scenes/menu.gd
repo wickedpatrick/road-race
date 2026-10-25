@@ -46,10 +46,23 @@ func _on_map() -> bool:
 
 func _enter_step() -> void:
 	if kind() == "dest":
-		_pick_dest(dest_city if dest_city != start_city and Geo.CITIES.has(dest_city) else map.step(start_city, Vector2.RIGHT))
+		_pick_dest(dest_city if dest_city != start_city and Geo.CITIES.has(dest_city) else _default_dest())
 		hover = dest_city
 	else:
 		hover = start_city
+
+## After arriving: the nearest city (by road) not visited yet, or a neighbour on the map when all are visited.
+func _default_dest() -> String:
+	var best := ""
+	var best_km := INF
+	for id in Geo.city_ids():
+		if id == start_city or Session.visited.has(id):
+			continue
+		var km := Route.total_km(Route.find(start_city, id))
+		if km < best_km:
+			best_km = km
+			best = id
+	return best if best != "" else map.step(start_city, Vector2.RIGHT)
 
 func _count() -> int:
 	return CarStats.ALL_IDS.size() if kind() == "car" else SeasonPalette.SEASONS.size()
