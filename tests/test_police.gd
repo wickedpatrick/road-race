@@ -10,7 +10,7 @@ func fresh() -> Race:
 
 func run(t) -> void:
 	var r := fresh()
-	t.check(r.speed_limit() == 50, "50 km/h in the start city")
+	t.check(r.speed_limit() == 70, "70 km/h in the start city (a big city)")
 	r.z = 430.0 # open A4 between Kraków and Bochnia
 	t.check(r.speed_limit() == 140, "140 km/h on the A4")
 	t.check(Route.speed_limit_at(Route.build("krakow", "bielsko"), 440.0) == 90, "90 km/h on a two-lane national road")

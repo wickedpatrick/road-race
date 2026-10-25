@@ -138,11 +138,21 @@ static func _yaris(cv, c, s, body, dark, light, lean, braking) -> void:
 	_rect(cv, c, s, -10, 52, 10, 60, light)
 	_plate(cv, c, s, 30)
 
-static func draw_traffic(cv, kind: String, c: Vector2, s: float, color: Color) -> void:
+## `front`: an oncoming car, seen from the front (headlights, the truck's cab instead of its cargo box).
+static func draw_traffic(cv, kind: String, c: Vector2, s: float, color: Color, front := false) -> void:
 	cv.draw_set_transform(c + Vector2(0, 2 * s), 0.0, Vector2(1.0, 0.16))
 	cv.draw_circle(Vector2.ZERO, 105.0 * s, Color(0, 0, 0, 0.3))
 	cv.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
-	var lc := Color("c4202a")
+	var lc := Color("fff2c4") if front else Color("c4202a")
+	if front and kind == "truck":
+		_wheels(cv, c, s, 98)
+		_chamfer(cv, c, s, -104, 14, 104, 170, 10, color)                 # cab
+		_rect(cv, c, s, -90, 100, 90, 158, GLASS)                          # windscreen
+		_rect(cv, c, s, -80, 34, 80, 70, Color("3a3d42"))                  # grille
+		_rect(cv, c, s, -100, 14, 100, 30, BUMPER)
+		_rect(cv, c, s, -100, 34, -84, 48, lc)
+		_rect(cv, c, s, 84, 34, 100, 48, lc)
+		return
 	match kind:
 		"truck":
 			_wheels(cv, c, s, 98)
@@ -184,3 +194,5 @@ static func draw_traffic(cv, kind: String, c: Vector2, s: float, color: Color) -
 			_rect(cv, c, s, -94, 44, -62, 60, lc)
 			_rect(cv, c, s, 62, 44, 94, 60, lc)
 			_plate(cv, c, s, 28)
+	if front:
+		_rect(cv, c, s, -50, 38, 50, 52, Color("1d1f23")) # grille

@@ -145,7 +145,7 @@ func _draw() -> void:
 	elif race.elapsed - race.last_crash < BUMP_BANNER_TIME:
 		_banner("UDERZENIE W PRZESZKODĘ! -%d l paliwa" % int(Race.CRASH_FUEL), Color("ff6a5a"))
 	elif race.elapsed - race.last_hit < BUMP_BANNER_TIME:
-		_banner("ZDERZENIE! -%d s, -%d l paliwa" % [int(Race.COLLISION_TIME_PENALTY), int(Race.COLLISION_FUEL)], Color("ff6a5a"))
+		_banner("%s -%d s, -%d l paliwa" % ["ZDERZENIE CZOŁOWE!" if race.head_on else "ZDERZENIE!", int(Race.COLLISION_TIME_PENALTY), int(Race.COLLISION_FUEL)], Color("ff6a5a"))
 	elif race.speeding > 0.0:
 		_banner("ZWOLNIJ! Ograniczenie %d km/h   (%d s)" % [race.speed_limit(), int(ceil(race.speeding_grace() - race.speeding))], Color("ff6a5a"))
 	elif race.refueling:

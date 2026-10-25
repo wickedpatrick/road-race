@@ -5,6 +5,7 @@ var cruise := 0.9
 var refuel_below := 0.55
 var obey_limits := true
 var _stopping := false
+var _overtaking := false
 const SHOULDER_X := 1.12 ## right shoulder, where the stations stand
 
 func decide(r: Race) -> Dictionary:
@@ -12,7 +13,7 @@ func decide(r: Race) -> Dictionary:
 	var target_x := 0.0
 	var brake := false
 	var accel := true
-	var lanes: Array = Traffic.LANES[Route.lanes_at(r.stage, r.z + 5.0)]
+	var lanes: Array = Traffic.own_lanes(Route.dual_f(r.stage, r.z + 5.0))
 	var best := 0.0
 	var best_gap := -1.0
 	for lx in lanes:
@@ -25,9 +26,20 @@ func decide(r: Race) -> Dictionary:
 			best_gap = gap
 			best = lx
 	target_x = best
+	# single road: overtake a slower car in the oncoming lane when it is clear far enough ahead
+	if lanes.size() == 1:
+		var slow := _slow_ahead(r)
+		if _overtaking and (slow.is_empty() or not _clear_oncoming(r, 2.5)):
+			_overtaking = false
+		if not _overtaking and not slow.is_empty() and r.speed_limit() >= 90 and _clear_oncoming(r, 5.0):
+			_overtaking = true
+		if _overtaking:
+			target_x = -0.5
+	else:
+		_overtaking = false
 	# follow the closest slower car in the player's own lane (or the lane being moved into)
 	for c in r.traffic.cars:
-		if not c.active: continue
+		if not c.active or c.get("dir", 1) < 0: continue
 		var gap: float = c.z - r.z
 		if gap > -2.0 and gap < 10.0 + r.speed * 0.9 and r.speed > c.speed \
 				and (absf(c.lane_x - r.x) < 0.45 or absf(c.lane_x - target_x) < 0.3 and gap < 25.0):
@@ -83,6 +95,23 @@ func decide(r: Race) -> Dictionary:
 	var curve: float = r.track.segment_at(r.z + 20.0).curve
 	var steer := clampf((target_x - r.x) * 2.5 + curve * Race.corner_push(r.speed) / (r.stats.handling * Race.STEER_RATE), -1.0, 1.0)
 	return {"accel": accel, "brake": brake, "steer": steer}
+
+## A slower car in the right lane just ahead (or alongside, while overtaking it), or {}.
+func _slow_ahead(r: Race) -> Dictionary:
+	for c in r.traffic.cars:
+		if c.active and c.get("dir", 1) > 0 and c.z - r.z > -8.0 and c.z - r.z < 45.0 and absf(c.lane_x - 0.5) < 0.3 \
+				and c.speed < r.stats.max_speed * cruise - 2.0:
+			return c
+	return {}
+
+## No oncoming car in the left lane for `secs` seconds of closing distance.
+func _clear_oncoming(r: Race, secs: float) -> bool:
+	for c in r.traffic.cars:
+		if c.active and c.get("dir", 1) < 0 and absf(c.lane_x + 0.5) < 0.4:
+			var gap: float = c.z - r.z
+			if gap > -6.0 and gap < (r.speed + c.speed) * secs + 30.0:
+				return false
+	return true
 
 ## A car next to the player in a lane between the player and lane lx.
 func _busy_between(r: Race, lx: float) -> bool:

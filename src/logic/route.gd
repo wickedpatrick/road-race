@@ -15,6 +15,7 @@ const HILL_TIME := 0.1 ## extra share of the time limit per unit of average Biom
 const END_CITY := 380.0 ## city streets at the start and the finish
 const END_TOWN := 220.0 ## the same for a small place (under SMALL_POP thousand people)
 const SMALL_POP := 30
+const DUAL_TAPER := 60.0 ## a road widens into a dual carriageway (and narrows back) over this many metres
 const TUNNEL_MIN := 300.0 ## a tunnel is never shorter than this in the game (real ones would flash by)
 const TUNNEL_GAP := 40.0 ## open road kept between a tunnel and a town (name and speed limit signs)
 const STATION_AFTER_TOWN := 230.0 ## a station stands this far past a town's end (after its signs and boards)
@@ -188,7 +189,7 @@ static func build(from: String, to: String) -> Dictionary:
 	# climbs slow every car down a little: hillier routes get more time
 	var legal := _legal_time(towns, roads, length) * (1.0 + HILL_TIME * hill / length)
 	var duration := ceilf((legal * 1.09 + 6.0 * n_st + 12.0) / 5.0) * 5.0
-	return {
+	var stage := {
 		"name": "%s - %s" % [Geo.city(from).name, Geo.city(to).name],
 		"from": from, "to": to, "path": path, "km": km, "m_per_km": mpk,
 		"length": length, "duration": duration, "lanes": lanes,
@@ -197,6 +198,8 @@ static func build(from: String, to: String) -> Dictionary:
 		"curve_amount": curve / length, "hill_amount": hill / length,
 		"zones": zones, "towns": towns, "roads": roads, "regions": regions, "boards": boards, "tunnels": tunnels,
 	}
+	stage["dual"] = _dual_profile(stage)
+	return stage
 
 ## Distance boards just past each town exit: the nearest town ahead, the next big city, and the destination last,
 ## with real kilometres. Blue on motorways, green elsewhere. Skipped where the next town is too close for one.
@@ -328,11 +331,42 @@ static func zone_at(stage: Dictionary, z: float) -> Dictionary:
 		if z < zn.z1: return zn
 	return zs[-1]
 
-## Posted speed limit in km/h: 50 in towns, 140 on motorways and expressways, 90 on other roads.
+## Posted speed limit in km/h: 140 on motorways and expressways, 90 on other roads; 70 through a big city and
+## through a small town on an expressway, 50 through a small town on an ordinary road.
 static func speed_limit_at(stage: Dictionary, z: float) -> int:
-	if not town_at(stage, z).is_empty():
-		return 50
-	return 140 if lanes_at(stage, z) == 3 else 90
+	var t := town_at(stage, z)
+	var express := lanes_at(stage, z) == 3
+	if not t.is_empty():
+		return 70 if t.big or express else 50
+	return 140 if express else 90
+
+## Dual carriageway here (two lanes each way with a green median): motorways, expressways and big city streets.
+## Every other road has one lane each way, with oncoming traffic in the left lane.
+static func dual_at(stage: Dictionary, z: float) -> bool:
+	return lanes_at(stage, z) == 3 or town_at(stage, z).get("big", false)
+
+## How far the road has widened into a dual carriageway at z, 0..1 (eased over DUAL_TAPER metres).
+static func dual_f(stage: Dictionary, z: float) -> float:
+	if not stage.has("dual"):
+		return 0.0
+	var d: PackedFloat32Array = stage.dual
+	return d[clampi(int(z / Track.SEG_LEN), 0, d.size() - 1)]
+
+static func _dual_profile(stage: Dictionary) -> PackedFloat32Array:
+	var n := int((stage.length + Track.TAIL) / Track.SEG_LEN) + 64
+	var raw := PackedFloat32Array()
+	raw.resize(n)
+	for k in n:
+		raw[k] = 1.0 if dual_at(stage, k * Track.SEG_LEN) else 0.0
+	var half := int(DUAL_TAPER / Track.SEG_LEN / 2.0)
+	var out := PackedFloat32Array()
+	out.resize(n)
+	for k in n:
+		var acc := 0.0
+		for j in range(k - half, k + half + 1):
+			acc += raw[clampi(j, 0, n - 1)]
+		out[k] = smoothstep(0.0, 1.0, acc / (2 * half + 1))
+	return out
 
 static func lanes_at(stage: Dictionary, z: float) -> int:
 	for r in stage.roads:

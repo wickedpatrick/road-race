@@ -108,3 +108,20 @@ func run(t) -> void:
 			if tw.z + tw.half > ts.tunnels[0].z0 and tw.z - tw.half < ts.tunnels[0].z1: ok = false
 		t.check(ok, "%s - %s goes through a tunnel clear of the towns" % [tc[0], tc[1]])
 	t.check(not Route.build("bielsko", "zwardon").towns[-1].big, "a village at the finish gets houses, not city blocks")
+	# head-on: an oncoming car in the player's lane stops the car dead
+	var hr := fresh("krakow", "bielsko")
+	hr.z = 440.0
+	hr.x = -0.5
+	hr.speed = 20.0
+	hr.traffic.cars = [{"z": 444.0, "lane_x": -0.5, "speed": 20.0, "pace": 0.5, "kind": "car", "color_idx": 0, "active": true, "dir": -1}]
+	for i in 30:
+		hr.step(1.0 / 60.0, GAS)
+		if hr.last_hit > 0.0: break
+	t.check(hr.last_hit > 0.0 and hr.speed == 0.0 and hr.x > -0.2, "a head-on crash stops the car and puts it back in its lane")
+	# a dual carriageway: the median barrier keeps the car off the oncoming carriageway
+	var dr := fresh()
+	dr.z = 1225.0
+	dr.x = -1.0
+	dr.speed = 10.0
+	for i in 60: dr.step(1.0 / 60.0, {"accel": true, "brake": false, "steer": -1.0})
+	t.check(dr.x >= -Race.MEDIAN_X - 0.001, "the median stops the car on a dual carriageway")

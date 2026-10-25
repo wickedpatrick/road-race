@@ -15,6 +15,7 @@ const OFFROAD_DECEL := 30.0 ## m/s^2 while slowing down to OFFROAD_SPEED: hard, 
 const CRASH_FUEL := 3.0 ## litres lost when the car hits a roadside obstacle (it stops dead)
 const CRASH_FRONT := 2.0 ## the car's front is this far ahead of z (an obstacle is hit when the front reaches it)
 const STATION_MAX_X := 1.4 ## at a station the kerb past the pit lane keeps the car off the pumps
+const MEDIAN_X := 1.3 ## on a dual carriageway the barrier in the median stops the car here (left of the road edge)
 const ROLL_DECEL := 0.1 ## off the throttle the car rolls on for a long time
 ## hills: the slope pulls with this share of gravity. Track grades are drawn steeper than real (see Track.MAX_GRADE),
 ## the game's acceleration is arcade-strong; together a weak car loses speed on a climb. Downhill less, so the car
@@ -60,6 +61,7 @@ var hit_cooldown := 0.0
 var hit_flash := 0.0
 var last_hit := -100.0 ## `elapsed` at the last bump (the HUD shows the penalty for a while)
 var last_crash := -100.0 ## `elapsed` at the last hit of a roadside obstacle
+var head_on := false ## the last bump was with an oncoming car
 var speeding := 0.0 ## seconds over the limit (radar detector beeping while > 0)
 var fines := 0
 ## police car, empty when none: {z, x, speed, phase: chase | pull_over | ticket | leave, t}
@@ -252,7 +254,7 @@ func step(dt: float, input: Dictionary) -> void:
 	var sr := speed_ratio()
 	x += steer * stats.handling * STEER_RATE * clampf(speed / 12.0, 0.0, 1.0) * dt
 	x -= track.segment_at(z).curve * corner_push(speed) * dt
-	x = clampf(x, -1.8, STATION_MAX_X if station_in_range() else 1.8)
+	x = clampf(x, -MEDIAN_X if Route.dual_f(stage, z) >= 0.5 else -1.8, STATION_MAX_X if station_in_range() else 1.8)
 	var z_prev := z
 	z += speed * dt
 	if hit_cooldown <= 0.0 and z < stage.length:
@@ -276,7 +278,8 @@ func step(dt: float, input: Dictionary) -> void:
 		var idx := traffic.check_collision(z, x, stats.halfwidth, speed)
 		if idx >= 0:
 			var car: Dictionary = traffic.cars[idx]
-			speed *= COLLISION_SPEED_KEEP
+			head_on = car.get("dir", 1) < 0
+			speed = 0.0 if head_on else speed * COLLISION_SPEED_KEEP
 			time_left -= COLLISION_TIME_PENALTY
 			fuel.level = maxf(0.0, fuel.level - COLLISION_FUEL)
 			hit_cooldown = 1.0
@@ -284,7 +287,8 @@ func step(dt: float, input: Dictionary) -> void:
 			last_hit = elapsed
 			# slide fully clear of the car so the same bump cannot repeat
 			var clear: float = Traffic.KINDS[car.kind].half + stats.halfwidth + 0.08
-			x = clampf(car.lane_x + (clear if x >= car.lane_x else -clear), -1.8, 1.8)
+			# after a head-on crash the car is put back towards its own lane
+			x = clampf(car.lane_x + (clear if head_on or x >= car.lane_x else -clear), -1.8, 1.8)
 			collided.emit(idx)
 	# end of race
 	if z >= stage.length:

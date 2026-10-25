@@ -38,8 +38,8 @@ var _buckets: Array = []
 var _b := DrawBatch.new()
 var _warm_left: Array = [] ## sign texts still to pre-render, a few per frame (see Scenery.warm_text)
 var _ground: Array = [] ## per track segment: Scenery.ground() strips
-var _lanes := PackedByteArray() ## per track segment: 2 or 3 lanes
 var _tun := PackedByteArray() ## per track segment: 1 inside a tunnel
+var _dualf := PackedFloat32Array() ## per track segment: Route.dual_f (0 single road .. 1 dual carriageway)
 var _portals := {} ## segment index where a tunnel starts -> the tunnel
 var _gcol: Array = [] ## per ground colour id: fogged colour for each view depth n
 ## horizon state, eased towards the region ahead: hills, mountains, sea, industry, wood, skyline
@@ -52,9 +52,9 @@ func bind(p_race: Race, p_season: String) -> void:
 	items = race.scenery
 	_ground = Scenery.ground(race.stage, race.track.segments.size())
 	_warm_left = Scenery.sign_texts(race.stage)
-	_lanes.resize(race.track.segments.size())
-	for k in _lanes.size():
-		_lanes[k] = Route.lanes_at(race.stage, k * SEG)
+	_dualf.resize(race.track.segments.size())
+	for k in _dualf.size():
+		_dualf[k] = Route.dual_f(race.stage, k * SEG)
 	_tun.resize(race.track.segments.size())
 	_tun.fill(0)
 	_portals.clear()
@@ -363,18 +363,15 @@ func _draw_segment(n: int, i: int) -> void:
 				var ew0 := maxf(1.0, w0 * 0.03)
 				var ew1 := maxf(1.0, w1 * 0.03)
 				_quad(Vector2(x0 + w0 + r0 + pw0 - ew0, y0), Vector2(x0 + w0 + r0 + pw0, y0), Vector2(x1 + w1 + r1 + pw1, y1), Vector2(x1 + w1 + r1 + pw1 - ew1, y1), yc)
-	# lane markings (dashed on alternate bands)
-	var lanes: int = _lanes[clampi(i, 0, _lanes.size() - 1)]
+	# lane markings (dashed on alternate bands): two lanes, ours both ways on a single road
 	var lc: Color = _fog(pal.line, n)
 	var lw0 := maxf(1.0, w0 * 0.018)
 	var lw1 := maxf(1.0, w1 * 0.018)
-	if lanes == 2:
-		if band == 0:
-			_quad(Vector2(x0 - lw0, y0), Vector2(x0 + lw0, y0), Vector2(x1 + lw1, y1), Vector2(x1 - lw1, y1), lc)
-	else:
-		if band == 0:
-			for k in [-1.0 / 3.0, 1.0 / 3.0]:
-				_quad(Vector2(x0 + w0 * k - lw0, y0), Vector2(x0 + w0 * k + lw0, y0), Vector2(x1 + w1 * k + lw1, y1), Vector2(x1 + w1 * k - lw1, y1), lc)
+	if band == 0:
+		_quad(Vector2(x0 - lw0, y0), Vector2(x0 + lw0, y0), Vector2(x1 + lw1, y1), Vector2(x1 - lw1, y1), lc)
+	var d := _dualf[clampi(i, 0, _dualf.size() - 1)]
+	if d > 0.01:
+		_draw_far_carriageway(n, d, band, lc, lw0, lw1)
 	# solid edge lines
 	for sgn in [-1.0, 1.0]:
 		var ex0: float = x0 + sgn * w0 * 0.94
@@ -409,7 +406,7 @@ func _draw_tunnel(n: int, i: int) -> void:
 		var lw1 := maxf(1.0, w1 * 0.018)
 		var marks: Array = [-0.94, 0.94]
 		if band == 0:
-			marks.append_array([-1.0 / 3.0, 1.0 / 3.0] if _lanes[clampi(i, 0, _lanes.size() - 1)] == 3 else [0.0])
+			marks.append(0.0)
 		for k in marks:
 			_quad(Vector2(x0 + w0 * k - lw0, y0), Vector2(x0 + w0 * k + lw0, y0), Vector2(x1 + w1 * k + lw1, y1), Vector2(x1 + w1 * k - lw1, y1), lc)
 	# walls and vault, face by face; the lower wall is lighter (tiled), lamps along the top
@@ -493,6 +490,28 @@ func _draw_portal(n: int, city := false) -> void:
 		_b.draw_colored_polygon(pts, conc)
 	_b.draw_rect(Rect2(cx - 9.0 * pm, gy - 9.4 * pm, 18.0 * pm, 0.5 * pm), conc.darkened(0.25))
 
+## Dual carriageway: a guardrail in the green median, then the oncoming carriageway (widening in with d).
+func _draw_far_carriageway(n: int, d: float, band: int, lc: Color, lw0: float, lw1: float) -> void:
+	var y0 := _y0[n]
+	var y1 := _y1[n]
+	var x0 := _x0[n]
+	var x1 := _x1[n]
+	var h0 := Track.ROAD_HALF_WIDTH * _s0[n] * W * 0.5
+	var h1 := Track.ROAD_HALF_WIDTH * _s1[n] * W * 0.5
+	var mid := -1.0 - Track.MEDIAN * d * 0.5
+	var g := _fog(Color("9a9ea4"), n)
+	var gw0 := maxf(1.0, h0 * 0.03)
+	var gw1 := maxf(1.0, h1 * 0.03)
+	_quad(Vector2(x0 + mid * h0 - gw0, y0 - gw0 * 3.0), Vector2(x0 + mid * h0 + gw0, y0 - gw0 * 3.0), Vector2(x1 + mid * h1 + gw1, y1 - gw1 * 3.0), Vector2(x1 + mid * h1 - gw1, y1 - gw1 * 3.0), g)
+	var a := -1.0 - Track.MEDIAN * d
+	var b := a - Track.ONCOMING * d
+	var road: Color = _fog(pal.road_a if band == 0 else pal.road_b, n)
+	_quad(Vector2(x0 + b * h0, y0), Vector2(x0 + a * h0, y0), Vector2(x1 + a * h1, y1), Vector2(x1 + b * h1, y1), road)
+	var marks: Array = [a - 0.06 * d, b + 0.06 * d]
+	if band == 0: marks.append((a + b) * 0.5)
+	for k in marks:
+		_quad(Vector2(x0 + k * h0 - lw0, y0), Vector2(x0 + k * h0 + lw0, y0), Vector2(x1 + k * h1 + lw1, y1), Vector2(x1 + k * h1 - lw1, y1), lc)
+
 func _item_point(it: Dictionary, n: int, cam_x: float, cam_y: float, cam_z: float) -> Vector3:
 	var dz: float = it.z - cam_z
 	if dz <= 0.3:
@@ -513,21 +532,25 @@ func _draw_item(it: Dictionary, n: int, cam_x: float, cam_y: float, cam_z: float
 		return # wholly behind a crest
 	var b := Vector2(p.x, p.y)
 	if it.type == "bridge":
-		_draw_bridge(b, pm)
+		_draw_bridge(b, pm, Route.dual_f(race.stage, it.z))
 		return
 	if it.type == "finish":
 		_draw_finish(b, pm)
 		return
 	Scenery.draw_item(_b, it, b, pm, pal, season, font)
 
-func _draw_bridge(b: Vector2, pm: float) -> void:
-	var half := (Track.ROAD_HALF_WIDTH + 2.5) * pm
+## Viaduct over the road: pillars past both edges (and in the median of a dual carriageway).
+func _draw_bridge(b: Vector2, pm: float, d: float) -> void:
+	var right := (Track.ROAD_HALF_WIDTH + 2.5) * pm
+	var left := (Track.ROAD_HALF_WIDTH + 2.5) * pm + Track.left_shift(d) * pm
 	var top := 6.2 * pm
 	var col := Color("9a9ca1")
-	_b.draw_rect(Rect2(b + Vector2(-half - 0.9 * pm, -top), Vector2(1.8 * pm, top)), col.darkened(0.1))
-	_b.draw_rect(Rect2(b + Vector2(half - 0.9 * pm, -top), Vector2(1.8 * pm, top)), col.darkened(0.1))
-	_b.draw_rect(Rect2(b + Vector2(-half - 2.0 * pm, -top - 1.6 * pm), Vector2(half * 2.0 + 4.0 * pm, 1.7 * pm)), col)
-	_b.draw_rect(Rect2(b + Vector2(-half - 2.0 * pm, -top - 0.3 * pm), Vector2(half * 2.0 + 4.0 * pm, 0.3 * pm)), col.darkened(0.3))
+	var pillars := [-left, right]
+	if d > 0.5: pillars.append(-(1.0 + Track.MEDIAN * 0.5) * Track.ROAD_HALF_WIDTH * pm)
+	for px in pillars:
+		_b.draw_rect(Rect2(b + Vector2(px - 0.9 * pm, -top), Vector2(1.8 * pm, top)), col.darkened(0.1))
+	_b.draw_rect(Rect2(b + Vector2(-left - 2.0 * pm, -top - 1.6 * pm), Vector2(left + right + 4.0 * pm, 1.7 * pm)), col)
+	_b.draw_rect(Rect2(b + Vector2(-left - 2.0 * pm, -top - 0.3 * pm), Vector2(left + right + 4.0 * pm, 0.3 * pm)), col.darkened(0.3))
 
 func _draw_finish(b: Vector2, pm: float) -> void:
 	var half := (Track.ROAD_HALF_WIDTH + 1.2) * pm
@@ -558,7 +581,9 @@ func _draw_traffic_car(c: Dictionary, n: int, cam_x: float, cam_y: float, cam_z:
 	var scale := s * W * 0.5 * CAR_UNIT
 	if scale < MIN_CAR_SCALE or (_vis[n] == 0 and py - 4.5 * s * W * 0.5 >= _clip[n]):
 		return
-	CarPainter.draw_traffic(_b, c.kind, Vector2(px, py), scale, CarPainter.TRAFFIC_COLORS[c.color_idx])
+	if _in_tunnel(i) and c.lane_x * Track.ROAD_HALF_WIDTH < -Scenery.TUNNEL_WALL:
+		return # the far carriageway runs in its own tube
+	CarPainter.draw_traffic(_b, c.kind, Vector2(px, py), scale, CarPainter.TRAFFIC_COLORS[c.color_idx], c.get("dir", 1) < 0)
 
 func _draw_player() -> void:
 	var s := Track.CAM_DEPTH / PLAYER_DZ

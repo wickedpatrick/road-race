@@ -11,7 +11,11 @@ const EXPRESS_GRADE := 0.65 ## motorways and expressways
 const STEEPEST := 0.45 ## mountain roads never steeper than this
 const TOWN_GRADE := 0.7
 const CAM_DEPTH := 0.84
-const ROAD_HALF_WIDTH := 4.2
+const ROAD_HALF_WIDTH := 4.2 ## the player's carriageway; x = -1..1 across it
+## Dual carriageway (see Route.dual_f): left of the player's carriageway a green median MEDIAN wide, then the
+## oncoming carriageway ONCOMING wide (both in road half-widths). On a single road the oncoming lane is the left half.
+const MEDIAN := 0.6
+const ONCOMING := 2.0
 const START_FLAT := 100.0
 const FINISH_FLAT := 220.0
 const TAIL := 1200.0 ## extra road past the finish so the horizon never ends
@@ -210,6 +214,10 @@ func segment_at(z: float) -> Dictionary:
 	if z < 0.0 or z >= total_length:
 		return {"curve": 0.0, "y": segments[0].y if z < 0.0 else segments[segments.size() - 1].y, "grade": 0.0}
 	return segments[mini(int(z / SEG_LEN), segments.size() - 1)]
+
+## Metres the left roadside moves out where the road is a dual carriageway (d = Route.dual_f).
+static func left_shift(d: float) -> float:
+	return (MEDIAN + ONCOMING) * d * ROAD_HALF_WIDTH
 
 ## Rise per metre at z (+ uphill).
 func grade_at(z: float) -> float:

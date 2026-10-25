@@ -23,7 +23,11 @@ Kliknij dwukrotnie `graj.command` (otworzy grę w przeglądarce, najlepiej Chrom
 - Paliwo się kończy. Stacje paliw stoją przy prawym poboczu (żółty znacznik na pasku postępu, niebieski znak D-23 przed stacją, dystrybutory tuż przy drodze). Żeby zatankować, zjedź na pobocze tak, by co najmniej połowa auta była poza drogą, i zatrzymaj się (spacja). Wtedy auto zatankuje samo.
 - Zjazd z drogi (pobocze, trawa) mocno hamuje auto, do 40 km/h.
 - Uderzenie w znak, drzewo, latarnię, dom albo ścianę tunelu od razu zatrzymuje auto i zabiera 3 litry paliwa.
-- Zderzenie z innym autem mocno zwalnia, zabiera 5 sekund i 3 litry paliwa, ale nie kończy gry.
+- Drogi: autostrady i ekspresówki oraz ulice dużych miast mają po dwa pasy w każdą stronę i pas zieleni z barierą;
+  zwykłe drogi mają jeden pas w każdą stronę i ruch z naprzeciwka - wyprzedza się lewym pasem, uważając na nadjeżdżające auta.
+- Ograniczenia: 140 km/h na A i S, 90 na zwykłych drogach, 70 w dużych miastach i w miejscowościach na trasach A/S,
+  50 w pozostałych miejscowościach.
+- Zderzenie z innym autem mocno zwalnia, zabiera 5 sekund i 3 litry paliwa, ale nie kończy gry; czołowe zatrzymuje auto.
 - Prawdziwe tunele: pod Luboniem Małym (S7, Kraków - Zakopane), w Lalikach (S1, Bielsko-Biała - Zwardoń),
   na S3 w Sudetach (Wrocław - Kamienna Góra), pod Zielonkami (S52, Kraków - Katowice) i pod Ursynowem
   (S2, Warszawa - Lublin). W grze są dłuższe niż w rzeczywistości (do ok. 300 m), żeby było je widać.

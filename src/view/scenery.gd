@@ -66,6 +66,11 @@ static func build(stage: Dictionary, seed_value: int) -> Dictionary:
 	for s in stage.stations:
 		_station_items(items, s, rng)
 	_add(items, "finish", length, 0.0, 0.0, 7.0, rng)
+	# on a dual carriageway the left roadside stands beyond the median and the oncoming carriageway
+	for idx in items:
+		for it in items[idx]:
+			if it.lat < 0.0:
+				it.lat -= Track.left_shift(Route.dual_f(stage, it.z))
 	return items
 
 ## A fuel station on the right: the blue D-23 sign before it, a tall price pylon, pumps right beside the pit lane under
@@ -142,7 +147,8 @@ static func _solid(it: Dictionary) -> Array:
 			return [[-0.6, 0.6]]
 		"bridge":
 			var p := Track.ROAD_HALF_WIDTH + 2.5
-			return [[-p - 0.9, -p + 0.9], [p - 0.9, p + 0.9]]
+			var m := (1.0 + Track.MEDIAN * 0.5) * Track.ROAD_HALF_WIDTH # the median pillar of a dual carriageway
+			return [[-m - 0.4, -m + 0.4], [p - 0.9, p + 0.9]]
 		"haybale", "building", "house", "woodhouse", "farm", "church", "cerkiew", "block", "castle", "rock", "windmill", \
 				"chimney", "headframe", "cooling", "lighthouse", "landmark", "heap", "turbine":
 			return [[-hw, hw]]
@@ -339,7 +345,7 @@ static func _signs(items: Dictionary, stage: Dictionary, rng: RandomNumberGenera
 	# speed limit signs (B-33): 50 entering a town, the open-road limit leaving it and where the road type changes
 	for t in stage.towns:
 		if not t.get("start", false):
-			_limit_sign(items, t.z - t.half + 15.0, 50, rng)
+			_limit_sign(items, t.z - t.half + 15.0, Route.speed_limit_at(stage, t.z - t.half + 16.0), rng)
 		if not t.get("finish", false):
 			_limit_sign(items, t.z + t.half + 25.0, Route.speed_limit_at(stage, t.z + t.half + 30.0), rng)
 	for i in range(1, stage.roads.size()):
@@ -451,8 +457,9 @@ static func ground(stage: Dictionary, nseg: int) -> Array:
 	for i in nseg:
 		var z := i * Track.SEG_LEN
 		var s := PackedFloat32Array()
+		var ls := Track.left_shift(Route.dual_f(stage, z))
 		if not Route.town_at(stage, z).is_empty():
-			s.append_array([-7.4, -4.8, G_PAVE, 4.8, 7.4, G_PAVE])
+			s.append_array([-7.4 - ls, -4.8 - ls, G_PAVE, 4.8, 7.4, G_PAVE])
 			out[i] = s
 			continue
 		var biome: String = Route.zone_at(stage, z).biome
@@ -473,6 +480,11 @@ static func ground(stage: Dictionary, nseg: int) -> Array:
 				"industrial":
 					if _h(int(z / 90.0), side * 5) < 0.45:
 						s.append_array([side * 12.0, side * 80.0, G_DARK])
+		if ls > 0.0:
+			for g in range(0, s.size(), 3):
+				if s[g] < 0.0:
+					s[g] -= ls
+					s[g + 1] -= ls
 		out[i] = s
 	return out
 
