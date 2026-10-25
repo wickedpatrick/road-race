@@ -16,6 +16,7 @@ static func plate(road: String) -> Array:
 	if road.begins_with("DW"):
 		return [road.trim_prefix("DW"), SIGN_YELLOW, Color.BLACK]
 	return [road.trim_prefix("DK"), SIGN_RED, Color.WHITE]
+const HERD_CHANCE := 0.18 ## chance of a herd of cows per step of open farmland (other regions scale it)
 const SIGN_EDGE := 5.0 ## signs start just past the rumble strip on the right shoulder
 const STATION_SIGN_BEFORE := 150.0 ## the blue fuel station sign (D-23) stands this far before the station
 const PUMP_LAT := 7.4 ## the nearer pumps stand right past the station's pit lane
@@ -133,7 +134,7 @@ static func _obstacle(out: Dictionary, z: float, a: float, b: float) -> void:
 static func _solid(it: Dictionary) -> Array:
 	var hw: float = it.w * 0.5
 	match it.type:
-		"limit", "bend", "chevron", "station_sign", "lamp", "stork":
+		"limit", "bend", "chevron", "station_sign", "lamp", "stork", "cow":
 			return [[-0.15, 0.15]]
 		"town_sign", "town_end":
 			return [[-1.75, -1.45], [1.45, 1.75]]
@@ -155,7 +156,7 @@ static func _solid(it: Dictionary) -> Array:
 	return []
 
 const CLEARABLE := ["building", "house", "woodhouse", "tree", "church", "cerkiew", "block", "farm", "apple", "pine",
-	"birch", "spruce", "poplar"]
+	"birch", "spruce", "poplar", "cow"]
 
 ## Makes room for a landmark: removes houses and trees on its spot and on its side of the road before it, like a
 ## square in front of it, so it can be seen while driving up to it.
@@ -225,6 +226,8 @@ static func _nature(items: Dictionary, biome: String, z: float, rng: RandomNumbe
 				_add(items, _forest_tree(rng, spruce), z + rng.randf_range(-3, 3), side * rng.randf_range(7.6, 12.0), 3.5, rng.randf_range(8.0, 14.0), rng)
 				if rng.randf() < 0.7:
 					_add(items, _forest_tree(rng, spruce), z + rng.randf_range(-4, 4), side * rng.randf_range(13.0, 30.0), 4.0, rng.randf_range(10.0, 17.0), rng)
+			if biome == "mountains" and rng.randf() < HERD_CHANCE * 0.3:
+				_herd(items, z, rng, 3)
 			if biome == "mountains" and rng.randf() < 0.04:
 				_add(items, "woodhouse", z, _side(rng) * rng.randf_range(16.0, 24.0), 8.0, 7.0, rng)
 			elif rng.randf() < 0.01:
@@ -281,6 +284,7 @@ static func _nature(items: Dictionary, biome: String, z: float, rng: RandomNumbe
 			if r < 0.04: _add(items, "windmill", z, _side(rng) * rng.randf_range(26.0, 60.0), 6.0, 14.0, rng)
 			elif r < 0.08: _add(items, "farm", z, _side(rng) * rng.randf_range(24.0, 40.0), 9.0, 7.0, rng)
 			elif r < 0.11: _add(items, "turbine", z, _side(rng) * rng.randf_range(70.0, 150.0), 2.0, 70.0, rng)
+			elif r < 0.11 + HERD_CHANCE * 1.2: _herd(items, z, rng)
 			return rng.randf_range(14.0, 22.0)
 		"podlasie":
 			var village := _h(int(z / 260.0), 5) < 0.35
@@ -292,6 +296,7 @@ static func _nature(items: Dictionary, biome: String, z: float, rng: RandomNumbe
 				var r := rng.randf()
 				if r < 0.1: _add(items, "stork", z, _side(rng) * rng.randf_range(9.0, 16.0), 1.6, 7.0, rng)
 				elif r < 0.14: _add(items, "cerkiew", z, _side(rng) * rng.randf_range(20.0, 26.0), 10.0, 16.0, rng)
+				elif r < 0.14 + HERD_CHANCE * 1.2: _herd(items, z, rng)
 				return rng.randf_range(16.0, 24.0)
 			for side in [-1, 1]:
 				_add(items, _forest_tree(rng, 0.35, 0.3), z + rng.randf_range(-3, 3), side * rng.randf_range(7.6, 14.0), 3.5, rng.randf_range(8.0, 14.0), rng)
@@ -308,6 +313,14 @@ static func _nature(items: Dictionary, biome: String, z: float, rng: RandomNumbe
 		_:
 			return _fields(items, z, rng, 1.0)
 
+## A few cows grazing on a pasture beside the road (fewest in the mountains, most on the farmland).
+static func _herd(items: Dictionary, z: float, rng: RandomNumberGenerator, most := 5) -> void:
+	var side := _side(rng)
+	var lat := rng.randf_range(10.5, 26.0)
+	for k in rng.randi_range(1, most):
+		var cow := _add(items, "cow", z + rng.randf_range(-9.0, 9.0), side * (lat + rng.randf_range(-2.5, 6.0)), 2.4, 1.5, rng)
+		cow.v = rng.randf() # facing and pose
+
 ## Spruce share `spruce`, birch share `birch`, rest split between pine and broadleaf.
 static func _forest_tree(rng: RandomNumberGenerator, spruce: float, birch := 0.1) -> String:
 	var r := rng.randf()
@@ -317,6 +330,8 @@ static func _forest_tree(rng: RandomNumberGenerator, spruce: float, birch := 0.1
 
 ## Open farmland: tree-lined stretches, farms, hay bales, wind turbines, a stork now and then.
 static func _fields(items: Dictionary, z: float, rng: RandomNumberGenerator, busy: float) -> float:
+	if rng.randf() < HERD_CHANCE * busy:
+		_herd(items, z, rng)
 	if _h(int(z / 300.0), 1) < 0.3:
 		var type := "poplar" if _h(int(z / 300.0), 2) < 0.5 else "tree"
 		for side in [-1, 1]:
@@ -558,6 +573,7 @@ static func draw_item(cv, it: Dictionary, b: Vector2, pm: float, pal: Dictionary
 				cv.draw_line(b + Vector2((k - 1) * w * 0.2, -h * 0.85), b + Vector2((k - 1) * w * 0.2 + 0.3 * pm, -h * 1.3), Color("8a9a50"), maxf(1.0, 0.1 * pm))
 		"lighthouse": _lighthouse(cv, b, h, pm)
 		"stork": _stork(cv, b, h, pm, season)
+		"cow": _cow(cv, it, b, pm, season)
 		"town_sign", "town_end": _town_sign(cv, it, b, pm, font, it.type == "town_end")
 		"board": _board(cv, it, b, pm, font)
 		"limit": _limit(cv, it, b, pm, font)
@@ -879,6 +895,31 @@ static func _lighthouse(cv, b: Vector2, h: float, pm: float) -> void:
 	cv.draw_colored_polygon(PackedVector2Array([b + Vector2(-tw * 1.2, -h * 0.97), b + Vector2(tw * 1.2, -h * 0.97), b + Vector2(0, -h * 1.05)]), Color("3a3a3a"))
 
 ## Stork nest on a pole; the storks are away in autumn and winter.
+## Cow seen from the side, black-and-white or brown, grazing (head down) or looking up. Kept in the barn in winter.
+static func _cow(cv, it: Dictionary, b: Vector2, pm: float, season: String) -> void:
+	if season == "winter" or pm < 1.0:
+		return
+	var f := 1.0 if it.v < 0.5 else -1.0 # facing right or left
+	var brown: bool = it.c % 3 == 0
+	var body := Color("8a5a3a") if brown else Color("f4f2ee")
+	var patch := Color("5e3a24") if brown else Color("1f1f22")
+	var leg := Color("3a2a20") if brown else Color("2a2a2c")
+	var p := func(x: float, y: float) -> Vector2: return b + Vector2(f * x * pm, -y * pm)
+	for lx in [-0.85, -0.6, 0.55, 0.8]:
+		cv.draw_line(p.call(lx, 0.0), p.call(lx, 0.8), leg, maxf(1.0, 0.16 * pm))
+	cv.draw_rect(Rect2(b + Vector2(minf(f * -1.0, f * 1.0) * pm, -1.45 * pm), Vector2(2.0 * pm, 0.75 * pm)), body)
+	if pm > 2.0:
+		cv.draw_circle(p.call(-0.35, 1.15), 0.28 * pm, patch)
+		cv.draw_circle(p.call(0.4, 1.05), 0.22 * pm, patch)
+		cv.draw_circle(b + Vector2(0, -0.7 * pm), 0.14 * pm, Color("f0a8a8")) # udder
+	var grazing: bool = it.v < 0.25 or it.v > 0.75
+	var head: Vector2 = p.call(1.25, 0.55 if grazing else 1.45)
+	cv.draw_line(p.call(0.95, 1.25), head, body, maxf(1.0, 0.35 * pm))
+	cv.draw_circle(head, 0.26 * pm, patch if not brown else body.darkened(0.15))
+	if pm > 3.0:
+		cv.draw_line(head + Vector2(-f * 0.1 * pm, -0.2 * pm), head + Vector2(-f * 0.25 * pm, -0.4 * pm), Color("e8e0c8"), maxf(1.0, 0.06 * pm))
+		cv.draw_line(p.call(-1.0, 1.35), p.call(-1.15, 0.75), patch, maxf(1.0, 0.06 * pm)) # tail
+
 static func _stork(cv, b: Vector2, h: float, pm: float, season: String) -> void:
 	cv.draw_line(b, b + Vector2(0, -h), Color("8a8d92"), maxf(1.0, 0.15 * pm))
 	var top := b + Vector2(0, -h)
