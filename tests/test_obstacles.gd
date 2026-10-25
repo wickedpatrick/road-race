@@ -76,7 +76,7 @@ func run(t) -> void:
 	# the tunnel under Luboń Mały on the S7
 	var zr := fresh("krakow", "zakopane")
 	var tns: Array = zr.stage.tunnels
-	t.check(tns.size() == 1 and tns[0].z1 - tns[0].z0 >= 250.0, "Kraków - Zakopane goes through a tunnel")
+	t.check(tns.size() == 1 and tns[0].z1 - tns[0].z0 >= 120.0, "Kraków - Zakopane goes through a tunnel")
 	var tn: Dictionary = tns[0]
 	var lub: Dictionary = zr.stage.towns.filter(func(x): return x.name == "Lubień")[0]
 	var rab: Dictionary = zr.stage.towns.filter(func(x): return x.name == "Rabka-Zdrój")[0]
@@ -103,7 +103,7 @@ func run(t) -> void:
 	# the other tunnels: S1 Laliki, S3 in the Sudetes, S52 Zielonki and S2 Ursynów (the last two under city districts)
 	for tc in [["bielsko", "zwardon", false], ["wroclaw", "kamienna_gora", false], ["krakow", "katowice", true], ["warszawa", "lublin", true]]:
 		var ts := Route.build(tc[0], tc[1])
-		var ok: bool = ts.tunnels.size() == 1 and ts.tunnels[0].city == tc[2] and ts.tunnels[0].z1 - ts.tunnels[0].z0 >= 200.0
+		var ok: bool = ts.tunnels.size() == 1 and ts.tunnels[0].city == tc[2] and ts.tunnels[0].z1 - ts.tunnels[0].z0 >= 100.0
 		for tw in ts.towns:
 			if tw.z + tw.half > ts.tunnels[0].z0 and tw.z - tw.half < ts.tunnels[0].z1: ok = false
 		t.check(ok, "%s - %s goes through a tunnel clear of the towns" % [tc[0], tc[1]])

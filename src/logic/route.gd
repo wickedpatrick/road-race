@@ -3,7 +3,10 @@ extends RefCounted
 ## Turns a trip between two cities into a playable stage: shortest path over Geo.ROADS, real kilometres squeezed
 ## into a game track, regions as biome zones along it, and every town / big city passed with its position.
 const M_PER_KM := 14.0
-const MIN_LENGTH := 3000.0
+## Short trips are stretched, but gently: a longer real trip is always longer in the game. Below ~160 km the track
+## is SHORT_BASE + SHORT_PER_KM per km (the shortest trips take about a minute and a half), above it M_PER_KM.
+const SHORT_BASE := 800.0
+const SHORT_PER_KM := 9.0
 const MAX_LENGTH := 12500.0
 const STATION_EVERY := 3200.0
 const CITY_HALF := 260.0 ## half-length of a big city passed on the way (game metres)
@@ -15,6 +18,10 @@ const SMALL_POP := 30
 const TUNNEL_MIN := 300.0 ## a tunnel is never shorter than this in the game (real ones would flash by)
 const TUNNEL_GAP := 40.0 ## open road kept between a tunnel and a town (name and speed limit signs)
 const STATION_AFTER_TOWN := 230.0 ## a station stands this far past a town's end (after its signs and boards)
+
+## Cities one road away from `id` (the only places a trip from it can go to).
+static func neighbours(id: String) -> Array:
+	return _neighbours(id).map(func(nb): return nb[1])
 
 ## Road dictionaries adjacent to a city, as [road, other_city_id].
 static func _neighbours(id: String) -> Array:
@@ -109,7 +116,7 @@ static func build(from: String, to: String) -> Dictionary:
 	var legs := find(from, to)
 	assert(not legs.is_empty(), "no route %s -> %s" % [from, to])
 	var km := total_km(legs)
-	var length := clampf(km * M_PER_KM, MIN_LENGTH, MAX_LENGTH)
+	var length := minf(maxf(km * M_PER_KM, SHORT_BASE + km * SHORT_PER_KM), MAX_LENGTH)
 	var mpk := length / km
 	var zones := []
 	var towns := []

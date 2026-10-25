@@ -13,7 +13,8 @@ Kliknij dwukrotnie `graj.command` (otworzy grę w przeglądarce, najlepiej Chrom
 
 ## Zasady
 - Wybierasz auto (Volvo XC60 - najlepsze, Toyota RAV4 - średnie, Toyota Yaris - najsłabsze) i porę roku, a potem na mapie Polski miasto startu i cel
-  (strzałki lub myszka). Gra wybiera najkrótszą trasę po głównych drogach (autostrady A, ekspresówki S, drogi krajowe).
+  (strzałki lub myszka). Cel to zawsze sąsiednie miasto, jedną drogą dalej (autostrady A, ekspresówki S, drogi krajowe);
+  dalsze miasta odwiedzasz kolejnymi etapami. Po dojechaniu mapa podpowiada najbliższe nieodwiedzone miasto.
 - Krajobraz zmienia się z regionem: Beskidy, Jura ze skałkami, Górny Śląsk z kopalniami, Mazury z jeziorami,
   Żuławy z kanałami i wiatrakami, Podlasie z bocianami i cerkwiami, sady grójeckie, wybrzeże i inne.
 - Przy drodze stoją prawdziwe polskie znaki: zielone tablice z nazwą miejscowości (wjazd i wyjazd),
@@ -27,7 +28,8 @@ Kliknij dwukrotnie `graj.command` (otworzy grę w przeglądarce, najlepiej Chrom
   na S3 w Sudetach (Wrocław - Kamienna Góra), pod Zielonkami (S52, Kraków - Katowice) i pod Ursynowem
   (S2, Warszawa - Lublin). W grze są dłuższe niż w rzeczywistości (do ok. 300 m), żeby było je widać.
 - Wygrywasz, gdy dojedziesz do celu, zanim skończy się czas lub paliwo. Po wygranej N: jedziesz dalej z miasta docelowego.
-- Odległości na znakach to prawdziwe kilometry; sama trasa w grze jest skrócona (ok. 14 m na kilometr).
+- Odległości na znakach to prawdziwe kilometry; sama trasa w grze jest skrócona (ok. 14 m na kilometr, krótkie
+  odcinki trochę mniej, żeby najkrótsza jazda trwała ok. półtorej minuty; dłuższa trasa zawsze jedzie się dłużej).
 
 ## Dla programisty
 - Testy: `tests/run.sh` (headless Godot)

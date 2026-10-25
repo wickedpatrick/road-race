@@ -12,6 +12,7 @@ const LABEL_ABOVE := ["czestochowa"]
 const SHORT := {"gorzow": "Gorzów Wlkp.", "bielsko": "Bielsko-Biała"}
 var area: Rect2
 var visited: Array = [] ## city ids drawn with a gold ring (the cities the player has been to)
+var reachable: Array = [] ## when not empty, only these cities can be picked; the others are drawn faded
 var _scale := 1.0
 var _origin := Vector2.ZERO
 
@@ -39,13 +40,13 @@ func city_at(p: Vector2) -> String:
 			best = id
 	return best
 
-## Closest city roughly in direction `dir` from `from` (for arrow-key navigation).
-func step(from: String, dir: Vector2, skip := "") -> String:
+## Closest city roughly in direction `dir` from `from` (for arrow-key navigation), among `only` when given.
+func step(from: String, dir: Vector2, skip := "", only: Array = []) -> String:
 	var o := city_pos(from)
 	var best := from
 	var best_score := INF
 	for id in Geo.CITIES:
-		if id == from or id == skip:
+		if id == from or id == skip or (not only.is_empty() and not only.has(id)):
 			continue
 		var v := city_pos(id) - o
 		var ang := absf(v.angle_to(dir))
@@ -112,23 +113,24 @@ func draw(cv: CanvasItem, font: Font, legs: Array, start: String, dest: String, 
 		var c := Geo.city(id)
 		var p := city_pos(id)
 		var r := 3.0 + sqrt(c.pop / 100.0) * 1.2
-		var col := Color("2d3e50")
+		var col := Color("2d3e50") if reachable.is_empty() or reachable.has(id) else Color("2d3e50", 0.35)
 		if id == start: col = Color("2e9e4f")
 		elif id == dest: col = Color("d0402a")
 		if visited.has(id):
 			cv.draw_circle(p, r + 3.5, VISITED)
-		cv.draw_circle(p, r + 1.5, Color.WHITE)
+		cv.draw_circle(p, r + 1.5, Color(1, 1, 1, 0.4) if not reachable.is_empty() and not reachable.has(id) else Color.WHITE)
 		cv.draw_circle(p, r, col)
 		if id == hover:
 			cv.draw_arc(p, r + 5.0 + sin(t * 6.0) * 1.5, 0.0, TAU, 24, Color("ffd24a"), 2.5)
 		var label: String = SHORT.get(id, c.name)
 		var size := 13 if id in [start, dest, hover] else 11
+		var faded := not reachable.is_empty() and not reachable.has(id)
 		var w := font.get_string_size(label, HORIZONTAL_ALIGNMENT_LEFT, -1, size).x
 		var lp := p + Vector2(-r - 4.0 - w if id in LABEL_LEFT else r + 4.0, 4.0)
 		if id in LABEL_ABOVE:
 			lp = p + Vector2(-w * 0.5, -r - 4.0)
-		cv.draw_string(font, lp + Vector2(1, 1), label, HORIZONTAL_ALIGNMENT_LEFT, -1, size, Color(1, 1, 1, 0.8))
-		cv.draw_string(font, lp, label, HORIZONTAL_ALIGNMENT_LEFT, -1, size, Color("16222e"))
+		cv.draw_string(font, lp + Vector2(1, 1), label, HORIZONTAL_ALIGNMENT_LEFT, -1, size, Color(1, 1, 1, 0.3 if faded else 0.8))
+		cv.draw_string(font, lp, label, HORIZONTAL_ALIGNMENT_LEFT, -1, size, Color("16222e", 0.4 if faded else 1.0))
 
 ## Point on the route `km` real kilometres from the start (legs as from Route.find()).
 func route_point(legs: Array, km: float) -> Vector2:

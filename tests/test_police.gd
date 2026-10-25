@@ -11,16 +11,16 @@ func fresh() -> Race:
 func run(t) -> void:
 	var r := fresh()
 	t.check(r.speed_limit() == 50, "50 km/h in the start city")
-	r.z = 600.0
+	r.z = 430.0 # open A4 between Kraków and Bochnia
 	t.check(r.speed_limit() == 140, "140 km/h on the A4")
-	t.check(Route.speed_limit_at(Route.build("krakow", "bielsko"), 600.0) == 90, "90 km/h on a two-lane national road")
+	t.check(Route.speed_limit_at(Route.build("krakow", "bielsko"), 440.0) == 90, "90 km/h on a two-lane national road")
 	# 10 km/h over the posted limit is tolerated
 	r.speed = 148.0 / 3.6
 	r.step(0.1, NONE)
 	t.check(r.speeding == 0.0, "148 km/h under a 140 limit is tolerated")
 	# a short burst over the limit only warns
 	r = fresh()
-	r.z = 420.0 # open A4 between Kraków and Bochnia
+	r.z = 1225.0 # open A4 between Tarnów and Dębica
 	r.speed = 155.0 / 3.6
 	for i in 30: r.step(0.1, GAS)
 	t.check(r.speeding > 0.0 and r.police.is_empty(), "speeding starts the radar warning")

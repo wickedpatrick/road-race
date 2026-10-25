@@ -22,7 +22,7 @@ func run(t) -> void:
 		t.check(has_curve, "track %d has curves" % i)
 		t.check(a.total_length >= s.length, "track %d total length" % i)
 	var kb := Route.build("krakow", "bielsko")
-	t.check(Track.build(kb, 1).segments[300].curve != Track.build(kb, 2).segments[300].curve or Track.build(kb, 1).segments[500].curve != Track.build(kb, 2).segments[500].curve, "different seeds differ")
+	t.check(Track.build(kb, 1).segments[120].curve != Track.build(kb, 2).segments[120].curve or Track.build(kb, 1).segments[200].curve != Track.build(kb, 2).segments[200].curve, "different seeds differ")
 	# mountains are hillier than the flat Żuławy
 	var hill := func(st: Dictionary) -> float:
 		var tr: Track = Track.build(st, 4)
@@ -72,7 +72,7 @@ func run(t) -> void:
 	var flat_sharp := 0
 	for sd in 8: flat_sharp += Track.build(Route.build("warszawa", "lodz"), sd).sharp.size()
 	t.check(flat_sharp == 0, "no sharp bends on the A2 motorway")
-	var tst := Route.build("krakow", "rzeszow")
+	var tst := Route.build("poznan", "koszalin")
 	tst["sharp_test"] = true
 	tst["sharp_amount"] = 30.0
 	var tt: Track = Track.build(tst, 2)

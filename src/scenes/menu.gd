@@ -46,23 +46,21 @@ func _on_map() -> bool:
 
 func _enter_step() -> void:
 	if kind() == "dest":
-		_pick_dest(dest_city if dest_city != start_city and Geo.CITIES.has(dest_city) else _default_dest())
+		_pick_dest(dest_city if Route.neighbours(start_city).has(dest_city) else _default_dest())
 		hover = dest_city
 	else:
 		hover = start_city
 
-## After arriving: the nearest city (by road) not visited yet, or a neighbour on the map when all are visited.
+## A trip goes one road, to a neighbouring city. By default the nearest one not visited yet, else the nearest one.
 func _default_dest() -> String:
 	var best := ""
-	var best_km := INF
-	for id in Geo.city_ids():
-		if id == start_city or Session.visited.has(id):
-			continue
-		var km := Route.total_km(Route.find(start_city, id))
-		if km < best_km:
-			best_km = km
+	var best_score := INF
+	for id in Route.neighbours(start_city):
+		var score := Route.total_km(Route.find(start_city, id)) + (0.0 if not Session.visited.has(id) else 10000.0)
+		if score < best_score:
+			best_score = score
 			best = id
-	return best if best != "" else map.step(start_city, Vector2.RIGHT)
+	return best
 
 func _count() -> int:
 	return CarStats.ALL_IDS.size() if kind() == "car" else SeasonPalette.SEASONS.size()
@@ -125,7 +123,7 @@ func _unhandled_input(event: InputEvent) -> void:
 				start_city = map.step(start_city, dir)
 				hover = start_city
 			"dest":
-				_pick_dest(map.step(dest_city, dir, start_city))
+				_pick_dest(map.step(dest_city, dir, start_city, Route.neighbours(start_city)))
 				hover = dest_city
 
 func _confirm() -> void:
@@ -194,7 +192,7 @@ func _reset_progress() -> void:
 func _map_mouse(event: InputEventMouse) -> void:
 	var id := map.city_at(get_global_mouse_position())
 	if event is InputEventMouseMotion:
-		if id != "" and not (kind() == "dest" and id == start_city):
+		if id != "" and not (kind() == "dest" and not Route.neighbours(start_city).has(id)):
 			hover = id
 		return
 	if not (event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT) or id == "":
@@ -205,7 +203,7 @@ func _map_mouse(event: InputEventMouse) -> void:
 		_confirm()
 	elif id == dest_city:
 		_confirm()
-	elif id != start_city:
+	elif Route.neighbours(start_city).has(id):
 		_pick_dest(id)
 		hover = id
 
@@ -370,6 +368,7 @@ func _draw_map() -> void:
 	draw_style_box(bg, Rect2(16, 100, 456, 384))
 	var dest := kind() == "dest"
 	map.visited = Session.visited
+	map.reachable = Route.neighbours(start_city) + [start_city] if dest else []
 	map.draw(self, font, legs if dest else [], start_city, dest_city if dest else "", hover, t)
 	var r := Rect2(488, 100, 456, 384)
 	_card(r, true)
