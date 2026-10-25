@@ -51,7 +51,8 @@ func run(t) -> void:
 	# speeding again (faster than the leaving patrol car) gets a second ticket
 	var n2 := 0
 	while r.fines == 1 and n2 < 60 * 90 and r.state == "running":
-		r.step(1.0 / 60.0, NONE if r.held_by_police() else GAS)
+		# keep to the road: off it the car is held at 40 km/h and could never speed
+		r.step(1.0 / 60.0, NONE if r.held_by_police() else {"accel": true, "brake": false, "steer": clampf(-r.x * 2.0, -1.0, 1.0)})
 		n2 += 1
 	t.check(r.fines == 2, "the police catch a repeat offender again (fines: %d)" % r.fines)
 	# in town the grace is 5 s

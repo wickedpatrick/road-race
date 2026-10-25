@@ -115,7 +115,7 @@ static func build(stage: Dictionary, seed_value: int) -> Track:
 		var z := k * SEG_LEN
 		var fade: float = clampf((z - START_FLAT) / 150.0, 0.0, 1.0) * clampf((length - FINISH_FLAT * 0.6 - z) / 150.0, 0.0, 1.0)
 		var wave := clampf(0.6 * sin(z / 95.0 + p1) + 0.3 * sin(z / 41.0 + p2) + 0.18 * sin(z / 19.0 + p3), -1.0, 1.0)
-		grades[k] = clampf(wave * MAX_GRADE * amp[k], -STEEPEST, STEEPEST) * fade
+		grades[k] = clampf(wave * MAX_GRADE * amp[k], -STEEPEST, STEEPEST) * fade * _tunnel_flat(stage, z)
 	for k in range(1, n):
 		hills[k] = hills[k - 1] + grades[k - 1] * SEG_LEN
 	for k in n:
@@ -132,18 +132,35 @@ static func _bend(curves: PackedFloat32Array, i: int, end_i: int, enter: int, ho
 		curves[i + k] = amount * f
 	return i + enter + hold + leave
 
-## Sharp bends only on ordinary roads in open country, with room for the warning sign before them.
+## Tunnels run almost level: 1 far from them, easing down to a gentle grade inside.
+static func _tunnel_flat(stage: Dictionary, z: float) -> float:
+	var f := 1.0
+	for tn in stage.get("tunnels", []):
+		var d: float = maxf(tn.z0 - z, z - tn.z1)
+		f = minf(f, lerpf(0.12, 1.0, clampf(d / 120.0, 0.0, 1.0)))
+	return f
+
+## Sharp bends only on ordinary roads in open country, away from stations and tunnels, with room for the warning
+## sign before them.
 static func _sharp_allowed(stage: Dictionary, z0: float, z1: float) -> bool:
 	if not stage.has("zones"):
 		return stage.get("sharp_test", false)
 	if z0 < START_FLAT + SIGN_BEFORE or z1 > stage.length - FINISH_FLAT:
 		return false
 	var test: bool = stage.get("sharp_test", false)
+	for st in stage.get("stations", []):
+		if st > z0 - 120.0 and st < z1 + 80.0:
+			return false
+	for tn in stage.get("tunnels", []):
+		if tn.z1 > z0 - 150.0 and tn.z0 < z1 + 150.0:
+			return false
 	var z := z0 - 60.0
-	while z <= z1:
+	while true:
 		if (Route.lanes_at(stage, z) == 3 and not test) or not Route.town_at(stage, z).is_empty():
 			return false
-		z += 20.0
+		if z >= z1:
+			return true
+		z = minf(z + 20.0, z1)
 	return true
 
 ## Curviness at z: from the region (biome zones) when the stage has them, else one value for the whole stage.

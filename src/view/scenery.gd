@@ -17,6 +17,9 @@ static func plate(road: String) -> Array:
 		return [road.trim_prefix("DW"), SIGN_YELLOW, Color.BLACK]
 	return [road.trim_prefix("DK"), SIGN_RED, Color.WHITE]
 const SIGN_EDGE := 5.0 ## signs start just past the rumble strip on the right shoulder
+const STATION_SIGN_BEFORE := 150.0 ## the blue fuel station sign (D-23) stands this far before the station
+const PUMP_LAT := 7.4 ## the nearer pumps stand right past the station's pit lane
+const TUNNEL_WALL := 5.8 ## tunnel walls, metres from the road centre
 const TOWN_SIGN_W := 6.4
 const BOARD_W := 10.0
 const REGION_W := 8.6
@@ -58,10 +61,92 @@ static func build(stage: Dictionary, seed_value: int) -> Dictionary:
 		var it := _add(items, "landmark", lm.z, lm.lat, lm.w, lm.h, rng)
 		it.kind = lm.kind
 		_add(items, "poi", lm.z - 22.0, SIGN_EDGE + REGION_W * 0.5, REGION_W, 5.0, rng).text = lm.name
+	for tn in stage.get("tunnels", []):
+		_clear_range(items, tn.z0 - 6.0, tn.z1 + 6.0, -1000.0, 1000.0)
 	for s in stage.stations:
-		_add(items, "station", s, 15.0, 14.0, 6.0, rng)
+		_station_items(items, s, rng)
 	_add(items, "finish", length, 0.0, 0.0, 7.0, rng)
 	return items
+
+## A fuel station on the right: the blue D-23 sign before it, a tall price pylon, pumps right beside the pit lane under
+## a canopy, the shop further back. Whatever grew there before is cleared away.
+static func _station_items(items: Dictionary, s: float, rng: RandomNumberGenerator) -> void:
+	var half := Race.STATION_HALF_LEN
+	_clear_range(items, s - half - 30.0, s + half + 25.0, 0.0, 40.0)
+	_clear_range(items, s - STATION_SIGN_BEFORE - 6.0, s - STATION_SIGN_BEFORE + 6.0, 0.0, 9.0)
+	_add(items, "station_sign", s - STATION_SIGN_BEFORE, SIGN_EDGE + 1.4, 2.4, 4.6, rng)
+	_add(items, "pylon", s - half - 8.0, 9.6, 3.2, 17.0, rng)
+	_add(items, "shop", s + 12.0, 24.0, 14.0, 5.0, rng)
+	for dz in [16.0, -6.0]:
+		for lat in [PUMP_LAT, PUMP_LAT + 4.6]:
+			_add(items, "pump", s + dz, lat, 1.0, 2.0, rng)
+	_add(items, "canopy", s - 14.0, PUMP_LAT + 2.3, 12.0, 6.8, rng)
+
+static func _clear_range(items: Dictionary, z0: float, z1: float, lat0: float, lat1: float) -> void:
+	for idx in range(int(z0 / Track.SEG_LEN), int(z1 / Track.SEG_LEN) + 1):
+		if items.has(idx):
+			items[idx] = items[idx].filter(func(it): return not (it.z >= z0 and it.z <= z1 and it.lat >= lat0 and it.lat <= lat1))
+
+## Solid parts of the roadside objects the car can reach: segment -> [[z, lat0, lat1], ...]. Sign boards stand high
+## on their posts (the car would pass under), so only the posts count; trees by their trunk, houses by their width.
+## Fuel stations are a safe zone; tunnel walls are solid all along.
+static func obstacles(items: Dictionary, stage: Dictionary) -> Dictionary:
+	var out := {}
+	var reach := 9.0 ## metres from the road centre: the car's edge never gets further
+	for idx in items:
+		for it in items[idx]:
+			var spans: Array = _solid(it)
+			if spans.is_empty():
+				continue
+			var near_station := false
+			for st in stage.stations:
+				if absf(it.z - st) < Race.STATION_HALF_LEN + 6.0:
+					near_station = true
+			if near_station:
+				continue
+			for sp in spans:
+				var a: float = it.lat + sp[0]
+				var b: float = it.lat + sp[1]
+				if minf(absf(a), absf(b)) > reach and signf(a) == signf(b):
+					continue
+				_obstacle(out, it.z, a, b)
+	for tn in stage.get("tunnels", []):
+		var z: float = tn.z0
+		while z <= tn.z1:
+			_obstacle(out, z, -40.0, -TUNNEL_WALL)
+			_obstacle(out, z, TUNNEL_WALL, 40.0)
+			z += 2.0
+	return out
+
+static func _obstacle(out: Dictionary, z: float, a: float, b: float) -> void:
+	var idx := int(z / Track.SEG_LEN)
+	if not out.has(idx):
+		out[idx] = []
+	out[idx].append([z, minf(a, b), maxf(a, b)])
+
+## Solid spans of one object, relative to its lat.
+static func _solid(it: Dictionary) -> Array:
+	var hw: float = it.w * 0.5
+	match it.type:
+		"limit", "bend", "chevron", "station_sign", "lamp", "stork":
+			return [[-0.15, 0.15]]
+		"town_sign", "town_end":
+			return [[-1.75, -1.45], [1.45, 1.75]]
+		"board":
+			return [[-3.65, -3.35], [3.35, 3.65]]
+		"region", "poi", "billboard":
+			return [[-3.15, -2.85], [2.85, 3.15]]
+		"tree", "pine", "birch", "spruce", "poplar", "willow", "apple":
+			return [[-0.3, 0.3]]
+		"shrine":
+			return [[-0.6, 0.6]]
+		"bridge":
+			var p := Track.ROAD_HALF_WIDTH + 2.5
+			return [[-p - 0.9, -p + 0.9], [p - 0.9, p + 0.9]]
+		"haybale", "building", "house", "woodhouse", "farm", "church", "cerkiew", "block", "castle", "rock", "windmill", \
+				"chimney", "headframe", "cooling", "lighthouse", "landmark", "heap", "turbine":
+			return [[-hw, hw]]
+	return []
 
 const CLEARABLE := ["building", "house", "woodhouse", "tree", "church", "cerkiew", "block", "farm", "apple", "pine",
 	"birch", "spruce", "poplar"]
@@ -469,7 +554,11 @@ static func draw_item(cv, it: Dictionary, b: Vector2, pm: float, pal: Dictionary
 		"region": _region(cv, it, b, pm, font)
 		"landmark": LandmarkPainter.draw(cv, it, b, pm)
 		"poi": _poi(cv, it, b, pm, font)
-		"station": _station(cv, b, pm, font)
+		"station_sign": _station_sign(cv, b, pm)
+		"pylon": _pylon(cv, b, pm, font)
+		"pump": _pump(cv, b, pm)
+		"canopy": _canopy(cv, b, pm, font)
+		"shop": _shop(cv, it, b, pm)
 		"finish": pass # drawn across the road by WorldView
 		"bridge": pass # drawn across the road by WorldView
 
@@ -500,7 +589,7 @@ static func _fit_text(cv, font: Font, r: Rect2, text: String, col: Color, size: 
 
 ## Every text the signs of this stage can show, for warming the font cache.
 static func sign_texts(stage: Dictionary) -> Array:
-	var out := ["KRAINA", "PALIWO", "0123456789", "50", "90", "140"]
+	var out := ["KRAINA", "PALIWO", "STACJA PALIW", "95  6,49", "ON  6,79", "LPG 3,09", "0123456789", "50", "90", "140"]
 	for t in stage.towns: out.append(t.name)
 	for zn in stage.zones:
 		if not out.has(zn.region): out.append(zn.region)
@@ -846,17 +935,72 @@ static func _house(cv, it: Dictionary, b: Vector2, pm: float) -> void:
 	cv.draw_colored_polygon(PackedVector2Array([b + Vector2(-w * 0.6, -h * 0.6), b + Vector2(w * 0.6, -h * 0.6), b + Vector2(0, -h)]), Color("9a4a35"))
 	cv.draw_rect(Rect2(b + Vector2(-w * 0.12, -h * 0.32), Vector2(w * 0.24, h * 0.32)), Color("5a3a28"))
 
-static func _station(cv, b: Vector2, pm: float, font: Font) -> void:
-	var w := 14.0 * pm
-	var h := 6.0 * pm
-	cv.draw_rect(Rect2(b + Vector2(-w * 0.5, -h * 0.55), Vector2(w * 0.4, h * 0.55)), Color("e8e8ea"))
-	cv.draw_rect(Rect2(b + Vector2(-w * 0.55, -h), Vector2(w * 1.1, h * 0.18)), Color("f2b01e"))      # canopy
-	cv.draw_line(b + Vector2(-w * 0.35, -h * 0.82), b + Vector2(-w * 0.35, 0), Color("55595f"), maxf(1.0, 0.25 * pm))
-	cv.draw_line(b + Vector2(w * 0.4, -h * 0.82), b + Vector2(w * 0.4, 0), Color("55595f"), maxf(1.0, 0.25 * pm))
-	cv.draw_rect(Rect2(b + Vector2(w * 0.05, -h * 0.28), Vector2(0.9 * pm, h * 0.28)), Color("c0392b"))  # pump
-	cv.draw_rect(Rect2(b + Vector2(w * 0.25, -h * 0.28), Vector2(0.9 * pm, h * 0.28)), Color("c0392b"))
-	# tall price pylon, readable from afar
-	cv.draw_line(b + Vector2(-w * 0.62, 0), b + Vector2(-w * 0.62, -h * 2.2), Color("55595f"), maxf(1.0, 0.3 * pm))
-	cv.draw_rect(Rect2(b + Vector2(-w * 0.62 - 1.6 * pm, -h * 2.2 - 3.0 * pm), Vector2(3.2 * pm, 3.0 * pm)), Color("f2b01e"))
-	if pm > 6.0:
-		cv.draw_string(font, b + Vector2(-w * 0.62 - 1.4 * pm, -h * 2.2 - 0.9 * pm), "PALIWO", HORIZONTAL_ALIGNMENT_LEFT, 2.8 * pm, int(clampf(0.9 * pm, 6, 36)), Color("1d1d1f"))
+const STATION_COLOR := Color("1f9d55") ## station brand colour (canopy stripe, pylon)
+
+## D-23 "stacja paliw": blue board, white panel with a black fuel pump.
+static func _station_sign(cv, b: Vector2, pm: float) -> void:
+	var top := 2.8 * pm
+	var w := 1.8 * pm
+	var h := 2.3 * pm
+	_posts(cv, b, pm, top, [0.0])
+	var r := Rect2(b + Vector2(-w * 0.5, -top - h), Vector2(w, h))
+	cv.draw_rect(r, SIGN_BLUE)
+	var wr := Rect2(r.position + Vector2(0.22 * pm, 0.22 * pm), Vector2(w - 0.44 * pm, h * 0.62))
+	cv.draw_rect(wr, Color.WHITE)
+	if pm < 2.0:
+		return
+	var c := wr.get_center()
+	var pw := wr.size.x * 0.34
+	var ph := wr.size.y * 0.66
+	cv.draw_rect(Rect2(c + Vector2(-pw * 0.7, -ph * 0.5), Vector2(pw, ph)), Color.BLACK)
+	cv.draw_rect(Rect2(c + Vector2(-pw * 0.55, -ph * 0.38), Vector2(pw * 0.7, ph * 0.25)), Color.WHITE)
+	var lw := maxf(1.0, 0.08 * pm)
+	cv.draw_line(c + Vector2(pw * 0.3, -ph * 0.3), c + Vector2(pw * 0.75, -ph * 0.1), Color.BLACK, lw)
+	cv.draw_line(c + Vector2(pw * 0.75, -ph * 0.1), c + Vector2(pw * 0.75, ph * 0.3), Color.BLACK, lw)
+
+## Tall price pylon, seen from far away.
+static func _pylon(cv, b: Vector2, pm: float, font: Font) -> void:
+	var h := 13.0 * pm
+	var w := 3.2 * pm
+	cv.draw_rect(Rect2(b + Vector2(-0.3 * pm, -h), Vector2(0.6 * pm, h)), Color("55595f"))
+	var r := Rect2(b + Vector2(-w * 0.5, -h - 4.2 * pm), Vector2(w, 5.4 * pm))
+	cv.draw_rect(r, STATION_COLOR)
+	cv.draw_rect(Rect2(r.position + Vector2(0.2 * pm, 0.2 * pm), Vector2(w - 0.4 * pm, 1.4 * pm)), SIGN_YELLOW)
+	_fit_text(cv, font, Rect2(r.position + Vector2(0.25 * pm, 0.2 * pm), Vector2(w - 0.5 * pm, 1.4 * pm)), "PALIWO", Color("1d1d1f"), 0.75 * pm)
+	for k in 3:
+		var row := Rect2(r.position + Vector2(0.25 * pm, (1.95 + k * 1.1) * pm), Vector2(w - 0.5 * pm, 0.85 * pm))
+		cv.draw_rect(row, Color("10161c"))
+		_fit_text(cv, font, row, ["95  6,49", "ON  6,79", "LPG 3,09"][k], Color("ffd24a"), 0.6 * pm)
+
+## Fuel dispenser on its island.
+static func _pump(cv, b: Vector2, pm: float) -> void:
+	var w := 1.1 * pm
+	var h := 2.2 * pm
+	cv.draw_rect(Rect2(b + Vector2(-w * 0.8, -0.2 * pm), Vector2(w * 1.6, 0.2 * pm)), Color("b7bbc0"))
+	cv.draw_rect(Rect2(b + Vector2(-w * 0.5, -h), Vector2(w, h)), Color("f4f5f6"))
+	cv.draw_rect(Rect2(b + Vector2(-w * 0.5, -h), Vector2(w, h * 0.18)), STATION_COLOR)
+	cv.draw_rect(Rect2(b + Vector2(-w * 0.32, -h * 0.72), Vector2(w * 0.64, h * 0.2)), Color("10161c"))
+	if pm > 3.0:
+		cv.draw_line(b + Vector2(-w * 0.5, -h * 0.45), b + Vector2(-w * 0.85, -h * 0.2), Color("1d1d1f"), maxf(1.0, 0.08 * pm))
+
+## Canopy over the pumps: a white roof with the brand stripe and lights underneath, on two pillars.
+static func _canopy(cv, b: Vector2, pm: float, font: Font) -> void:
+	var w := 12.0 * pm
+	var top := 6.8 * pm
+	var th := 1.5 * pm
+	for px in [-3.6, 3.6]:
+		cv.draw_rect(Rect2(b + Vector2(px * pm - 0.25 * pm, -top + th), Vector2(0.5 * pm, top - th)), Color("d6d9dd"))
+	var r := Rect2(b + Vector2(-w * 0.5, -top), Vector2(w, th))
+	cv.draw_rect(r, Color("f7f8f9"))
+	cv.draw_rect(Rect2(r.position + Vector2(0, th * 0.55), Vector2(w, th * 0.3)), STATION_COLOR)
+	cv.draw_rect(Rect2(r.position + Vector2(0, th), Vector2(w, 0.12 * pm)), Color("fff6c8"))
+	_fit_text(cv, font, Rect2(r.position, Vector2(w, th * 0.55)), "STACJA PALIW", STATION_COLOR, 0.7 * pm)
+
+## Station shop behind the pumps.
+static func _shop(cv, it: Dictionary, b: Vector2, pm: float) -> void:
+	var w: float = it.w * pm
+	var h: float = it.h * pm
+	cv.draw_rect(Rect2(b + Vector2(-w * 0.5, -h), Vector2(w, h)), Color("eceef0"))
+	cv.draw_rect(Rect2(b + Vector2(-w * 0.5, -h), Vector2(w, h * 0.16)), STATION_COLOR)
+	cv.draw_rect(Rect2(b + Vector2(-w * 0.42, -h * 0.72), Vector2(w * 0.55, h * 0.5)), Color("8fb4cf"))
+	cv.draw_rect(Rect2(b + Vector2(w * 0.2, -h * 0.72), Vector2(w * 0.16, h * 0.72)), Color("6f8ea6"))

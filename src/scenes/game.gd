@@ -34,6 +34,7 @@ func _ready() -> void:
 	view.bind(race, Session.season)
 	_apply_quality()
 	race.collided.connect(func(_i): Sfx.play("hit", -2.0))
+	race.crashed.connect(func(): Sfx.play("hit", 0.0))
 	race.fined.connect(func(): Sfx.play("lowfuel", -4.0))
 	var layer := CanvasLayer.new()
 	add_child(layer)

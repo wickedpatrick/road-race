@@ -223,7 +223,12 @@ func run(t) -> void:
 	r.x = 1.5
 	r.speed = 40.0
 	for i in 30: r.step(0.1, GAS)
-	t.check(r.speed <= 47.0 * 0.4 + 0.5, "off road caps speed")
+	t.check(r.speed <= Race.OFFROAD_SPEED + 0.01, "off road holds the car at 40 km/h")
+	r = fresh("rangerover")
+	r.speed = 140.0 / 3.6
+	r.x = 1.2
+	for i in 90: r.step(1.0 / 60.0, GAS)
+	t.check(r.speed <= Race.OFFROAD_SPEED + 0.01, "off road slows even a fast car to 40 km/h within 1.5 s")
 	# straight start, no steering
 	r = fresh()
 	r.speed = 20.0

@@ -10,6 +10,9 @@ const CITY_HALF := 260.0 ## half-length of a big city passed on the way (game me
 const TOWN_HALF := 90.0
 const HILL_TIME := 0.1 ## extra share of the time limit per unit of average Biome.hill
 const END_CITY := 380.0 ## city streets at the start and the finish
+const TUNNEL_MIN := 300.0 ## a tunnel is never shorter than this in the game (real ones would flash by)
+const TUNNEL_GAP := 55.0 ## open road kept between a tunnel and a town (name and speed limit signs)
+const STATION_AFTER_TOWN := 230.0 ## a station stands this far past a town's end (after its signs and boards)
 
 ## Road dictionaries adjacent to a city, as [road, other_city_id].
 static func _neighbours(id: String) -> Array:
@@ -108,6 +111,7 @@ static func build(from: String, to: String) -> Dictionary:
 	var mpk := length / km
 	var zones := []
 	var towns := []
+	var tunnels := []
 	var roads := []
 	var path := [from]
 	var regions := []
@@ -126,6 +130,10 @@ static func build(from: String, to: String) -> Dictionary:
 		for zn in _leg_zones(leg):
 			zones.append({"z0": (off + zn[0]) * mpk, "z1": (off + zn[1]) * mpk, "biome": zn[2], "region": zn[3]})
 			if not regions.has(zn[3]): regions.append(zn[3])
+		for tn in r.get("tunnels", []):
+			var a := float(tn[0]) if leg.from == r.a else leg_km - float(tn[1])
+			var b := float(tn[1]) if leg.from == r.a else leg_km - float(tn[0])
+			tunnels.append({"z0": (off + a) * mpk, "z1": (off + b) * mpk, "name": tn[2], "fact": tn[3]})
 		for t in _leg_towns(leg):
 			# a town shared by two consecutive legs (e.g. Stryków) appears once
 			if towns.size() > 0 and towns[-1].name == t[0]: continue
@@ -136,17 +144,31 @@ static func build(from: String, to: String) -> Dictionary:
 			towns.append({"z": off * mpk, "name": Geo.city(leg.to).name, "id": leg.to, "big": true, "half": CITY_HALF})
 	towns.append({"z": length, "name": Geo.city(to).name, "id": to, "big": true, "half": END_CITY, "finish": true})
 	_separate(towns)
+	_fit_tunnels(tunnels, towns, length)
 	# the last zone runs on past the finish line (the track has a tail)
 	zones[-1].z1 = length + Track.TAIL + 200.0
 	roads[-1].z1 = length + Track.TAIL + 200.0
 	for t in towns:
 		t["fact"] = Geo.fact(t.name)
-	var boards := _boards(towns, mpk, roads)
+	var boards := _boards(towns, mpk, roads).filter(func(bd): return not tunnels.any(func(tn): return bd.z > tn.z0 - 20.0 and bd.z < tn.z1 + 20.0))
 	var lanes := 3 if express_km * 2 > km else 2
 	var n_st := maxi(1, roundi(length / STATION_EVERY))
 	var stations := []
 	for k in range(1, n_st + 1):
-		stations.append(minf(_clear_spot(length * k / (n_st + 1), towns), length - 450.0))
+		# well past the last town's signs if there is room, closer to the town on short crowded tracks
+		var z0 := length * k / (n_st + 1)
+		var prev: float = stations[-1] if not stations.is_empty() else 0.0
+		var zs := -1.0
+		for after in [STATION_AFTER_TOWN, 150.0, 80.0]:
+			# the nearer of the free spots after and before the towns around the ideal place
+			for c in [_clear_spot(z0, towns, tunnels, after), _clear_spot_back(z0, towns, tunnels)]:
+				if c <= length - 450.0 and c > prev + 400.0 and (zs < 0.0 or absf(c - z0) < absf(zs - z0)):
+					zs = c
+			if zs >= 0.0: break
+		if zs < 0.0:
+			zs = minf(_clear_spot(z0, towns, tunnels, 80.0), length - 450.0)
+		if zs > prev + 50.0:
+			stations.append(zs)
 	var curve := 0.0
 	var hill := 0.0
 	for zn in zones:
@@ -163,7 +185,7 @@ static func build(from: String, to: String) -> Dictionary:
 		"traffic_density": 1.0 if lanes == 3 else 0.8,
 		"stations": stations, "finish_label": Geo.city(to).name,
 		"curve_amount": curve / length, "hill_amount": hill / length,
-		"zones": zones, "towns": towns, "roads": roads, "regions": regions, "boards": boards,
+		"zones": zones, "towns": towns, "roads": roads, "regions": regions, "boards": boards, "tunnels": tunnels,
 	}
 
 ## Distance boards just past each town exit: the nearest town ahead, the next big city, and the destination last,
@@ -222,16 +244,62 @@ static func _separate(towns: Array) -> void:
 			a.half = minf(a.half, room * 0.5)
 			b.half = room - a.half
 
-## Moves a station spot forward until it is clear of town streets (stations sit between towns).
-static func _clear_spot(z: float, towns: Array) -> float:
+## Tunnels are stretched to at least TUNNEL_MIN and moved/shrunk to fit between the towns around them, whose
+## streets give way a little when needed.
+static func _fit_tunnels(tunnels: Array, towns: Array, length: float) -> void:
+	for tn in tunnels:
+		var mid: float = (tn.z0 + tn.z1) * 0.5
+		var want: float = maxf(tn.z1 - tn.z0, TUNNEL_MIN)
+		var prev: Dictionary = towns[0]
+		var next: Dictionary = towns[-1]
+		for t in towns:
+			if t.z <= mid: prev = t
+			elif t.z < next.z: next = t
+		var lo: float = prev.z + minf(prev.half, 40.0) + TUNNEL_GAP
+		var hi: float = minf(next.z - minf(next.half, 40.0) - TUNNEL_GAP, length - 500.0)
+		var len_t := minf(want, hi - lo)
+		mid = clampf(mid, lo + len_t * 0.5, hi - len_t * 0.5)
+		tn.z0 = mid - len_t * 0.5
+		tn.z1 = mid + len_t * 0.5
+		prev.half = minf(prev.half, tn.z0 - TUNNEL_GAP - prev.z)
+		next.half = minf(next.half, next.z - tn.z1 - TUNNEL_GAP)
+
+## Moves a station spot forward until it is clear of town streets and tunnels (stations sit between towns, past the
+## signs at a town's end).
+static func _clear_spot(z: float, towns: Array, tunnels: Array = [], after := STATION_AFTER_TOWN) -> float:
 	for i in 12:
 		var hit := false
 		for t in towns:
-			if absf(z - t.z) < t.half + 70.0:
+			if z > t.z - t.half - 70.0 and z < t.z + t.half + after - 10.0:
 				hit = true
-				z = t.z + t.half + 80.0
+				z = t.z + t.half + after
+		for tn in tunnels:
+			if z > tn.z0 - 250.0 and z < tn.z1 + 120.0:
+				hit = true
+				z = tn.z1 + 130.0
 		if not hit: break
 	return z
+
+## Like _clear_spot, but moving back: the station goes before the town (when the road past it is taken).
+static func _clear_spot_back(z: float, towns: Array, tunnels: Array) -> float:
+	for i in 12:
+		var hit := false
+		for t in towns:
+			if z > t.z - t.half - 110.0 and z < t.z + t.half + 80.0:
+				hit = true
+				z = t.z - t.half - 120.0
+		for tn in tunnels:
+			if z > tn.z0 - 250.0 and z < tn.z1 + 120.0:
+				hit = true
+				z = tn.z0 - 260.0
+		if not hit: break
+	return z
+
+## The tunnel at z, or {}.
+static func tunnel_at(stage: Dictionary, z: float) -> Dictionary:
+	for tn in stage.get("tunnels", []):
+		if z >= tn.z0 and z <= tn.z1: return tn
+	return {}
 
 static func zone_at(stage: Dictionary, z: float) -> Dictionary:
 	var zs: Array = stage.zones

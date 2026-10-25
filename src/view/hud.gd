@@ -12,6 +12,7 @@ var _mini: PolandMap
 var touch := false ## touch-screen layout (set before bind): the bottom corners belong to the driving buttons
 const PAUSE_BTN := Rect2(16, 14, 46, 66)
 const BUMP_BANNER_TIME := 2.5 ## seconds the collision penalty stays on screen
+const STATION_NOTICE := 225.0 ## game metres before a station its notice appears (in real kilometres)
 ## positions that move on touch screens, where the bottom corners belong to the driving buttons
 var _fuel_pos := Vector2(16, 446)
 var _limit_pos := Vector2(312, 486)
@@ -46,6 +47,9 @@ func bind(p_race: Race) -> void:
 	for lm in _landmarks:
 		_warm_left.append([_landmark_title(lm), 19])
 		_warm_left.append([lm.desc, 15])
+	for tn in race.stage.get("tunnels", []):
+		_warm_left.append([tn.name, 19])
+		_warm_left.append([tn.fact, 15])
 	for zn in race.stage.zones:
 		_warm_left.append(["Kraina: " + zn.region, 19])
 		_warm_left.append([zn.region, 14])
@@ -138,6 +142,8 @@ func _draw() -> void:
 		_banner("MANDAT za przekroczenie prędkości: -%d l paliwa" % int(Race.FINE_FUEL), Color("ff6a5a"))
 	elif ph == "chase" or ph == "pull_over":
 		_banner("POLICJA! Zatrzymaj się", Color("6aa8ff") if int(race.elapsed * 4.0) % 2 == 0 else Color("ff6a5a"))
+	elif race.elapsed - race.last_crash < BUMP_BANNER_TIME:
+		_banner("UDERZENIE W PRZESZKODĘ! -%d l paliwa" % int(Race.CRASH_FUEL), Color("ff6a5a"))
 	elif race.elapsed - race.last_hit < BUMP_BANNER_TIME:
 		_banner("ZDERZENIE! -%d s, -%d l paliwa" % [int(Race.COLLISION_TIME_PENALTY), int(Race.COLLISION_FUEL)], Color("ff6a5a"))
 	elif race.speeding > 0.0:
@@ -148,8 +154,9 @@ func _draw() -> void:
 		_banner("STACJA PALIW: ZJEDŹ W PRAWO NA POBOCZE", Color("f2c21b"))
 	elif race.station_in_range():
 		_banner("STACJA PALIW: ZATRZYMAJ SIĘ (%s), ABY TANKOWAĆ" % ("hamulec" if touch else "spacja"), Color("f2c21b"))
-	elif race.next_station_distance() > 0.0 and race.next_station_distance() < 450.0 and fr < 0.85:
-		_banner("STACJA za %d m: zjedź na prawe pobocze" % (int(race.next_station_distance() / 10.0) * 10), Color("f2c21b"))
+	elif race.next_station_distance() > 0.0 and race.next_station_distance() < STATION_NOTICE and fr < 0.85:
+		var km := maxi(1, int(ceil(Route.km_between(race.stage, 0.0, race.next_station_distance()))))
+		_banner("STACJA PALIW za %d km: zjedź na prawe pobocze" % km, Color("f2c21b"))
 	elif low_fuel and int(race.elapsed * 2.0) % 2 == 0:
 		_banner("MAŁO PALIWA! Szukaj stacji", Color("ff6a5a"))
 
@@ -216,7 +223,11 @@ func _info_card() -> void:
 	var title := ""
 	var body := ""
 	var lm := Landmarks.in_view(_landmarks, race.z)
-	if not lm.is_empty():
+	var tn := _tunnel_ahead()
+	if not tn.is_empty():
+		title = tn.name
+		body = tn.fact
+	elif not lm.is_empty():
 		title = _landmark_title(lm)
 		body = lm.desc
 	elif not t.is_empty():
@@ -231,6 +242,13 @@ func _info_card() -> void:
 	draw_style_box(_panel, r)
 	_text(r.position + Vector2(16, 24), title, 19, Color("ffd24a"))
 	_text(r.position + Vector2(16, 48), body, 15, Color.WHITE, HORIZONTAL_ALIGNMENT_LEFT, r.size.x - 32)
+
+## A tunnel being driven through or coming up within 120 m.
+func _tunnel_ahead() -> Dictionary:
+	for tn in race.stage.get("tunnels", []):
+		if race.z > tn.z0 - 120.0 and race.z < tn.z1:
+			return tn
+	return {}
 
 static func _landmark_title(lm: Dictionary) -> String:
 	return "%s: %s" % [lm.town, lm.name] if lm.town != lm.name else lm.name

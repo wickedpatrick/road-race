@@ -2,6 +2,7 @@ class_name Race
 extends RefCounted
 ## Whole race state. Pure logic, no scene dependencies.
 signal collided(car_index: int)
+signal crashed ## hit a sign, a tree, a lamp post or a tunnel wall
 signal fined
 const STATION_HALF_LEN := 40.0
 const STOP_SPEED := 3.0
@@ -9,7 +10,11 @@ const SHOULDER_MIN := 0.5 ## fraction of the car that must be off the road to re
 const COLLISION_TIME_PENALTY := 5.0
 const COLLISION_SPEED_KEEP := 0.3
 const COLLISION_FUEL := 3.0 ## litres lost in every bump
-const OFFROAD_SPEED_RATIO := 0.4
+const OFFROAD_SPEED := 40.0 / 3.6 ## off the road (on the shoulder or the grass) the car slows down to this
+const OFFROAD_DECEL := 30.0 ## m/s^2 while slowing down to OFFROAD_SPEED: hard, like braking
+const CRASH_FUEL := 3.0 ## litres lost when the car hits a roadside obstacle (it stops dead)
+const CRASH_FRONT := 2.0 ## the car's front is this far ahead of z (an obstacle is hit when the front reaches it)
+const STATION_MAX_X := 1.4 ## at a station the kerb past the pit lane keeps the car off the pumps
 const ROLL_DECEL := 0.1 ## off the throttle the car rolls on for a long time
 ## hills: the slope pulls with this share of gravity. Track grades are drawn steeper than real (see Track.MAX_GRADE),
 ## the game's acceleration is arcade-strong; together a weak car loses speed on a climb. Downhill less, so the car
@@ -35,6 +40,8 @@ var stats: Dictionary
 var stage: Dictionary
 var track: Track
 var traffic: Traffic
+var scenery: Dictionary ## roadside objects per track segment (Scenery.build), drawn by WorldView
+var obstacles: Dictionary ## segment -> [[z, lat0, lat1], ...]: solid parts of the roadside objects (Scenery.obstacles)
 var gearbox: Gearbox
 var fuel: Fuel
 
@@ -52,6 +59,7 @@ var steer_visual := 0.0
 var hit_cooldown := 0.0
 var hit_flash := 0.0
 var last_hit := -100.0 ## `elapsed` at the last bump (the HUD shows the penalty for a while)
+var last_crash := -100.0 ## `elapsed` at the last hit of a roadside obstacle
 var speeding := 0.0 ## seconds over the limit (radar detector beeping while > 0)
 var fines := 0
 ## police car, empty when none: {z, x, speed, phase: chase | pull_over | ticket | leave, t}
@@ -63,6 +71,9 @@ func _init(p_car_id: String, p_stage: Dictionary, seed_value: int) -> void:
 	stage = p_stage
 	track = Track.build(stage, seed_value)
 	traffic = Traffic.build(stage, seed_value)
+	scenery = Scenery.build(stage, 1)
+	Scenery.bend_signs(scenery, track.sharp)
+	obstacles = Scenery.obstacles(scenery, stage)
 	gearbox = Gearbox.new(stats.max_speed)
 	fuel = Fuel.new(stats.tank, stats.burn, stats.max_speed)
 	time_left = stage.duration
@@ -165,6 +176,30 @@ func corner_speed(curve: float) -> float:
 		return stats.max_speed
 	return CORNER_REF * sqrt(stats.handling * STEER_RATE / (CORNER_K * absf(curve)))
 
+## Roadside obstacle (sign post, tree, lamp, tunnel wall...) hit by the car's front between z_prev and z: the car
+## stops dead, loses fuel and is put back beside the obstacle, towards the road, so it can drive on.
+func _check_obstacles(z_prev: float) -> void:
+	var hw: float = stats.halfwidth * Track.ROAD_HALF_WIDTH
+	var cx := x * Track.ROAD_HALF_WIDTH
+	var a := z_prev + CRASH_FRONT - 0.5
+	var b := z + CRASH_FRONT
+	for idx in range(int(a / Track.SEG_LEN), int(b / Track.SEG_LEN) + 1):
+		for ob in obstacles.get(idx, []):
+			if ob[0] < a or ob[0] > b or cx + hw <= ob[1] or cx - hw >= ob[2]:
+				continue
+			speed = 0.0
+			z = maxf(z_prev, ob[0] - CRASH_FRONT - 0.3)
+			fuel.level = maxf(0.0, fuel.level - CRASH_FUEL)
+			# step clear of the obstacle on the road side
+			var mid: float = (ob[1] + ob[2]) * 0.5
+			var nx: float = (ob[1] - hw - 0.1) if mid > 0.0 else (ob[2] + hw + 0.1)
+			x = clampf(nx / Track.ROAD_HALF_WIDTH, -1.8, 1.8)
+			hit_cooldown = 1.0
+			hit_flash = 0.6
+			last_crash = elapsed
+			crashed.emit()
+			return
+
 ## Share of the car's width beyond the right road edge (x = 1.0 is the edge, the stations stand on that side).
 func shoulder_fraction() -> float:
 	var hw: float = stats.halfwidth
@@ -208,10 +243,8 @@ func step(dt: float, input: Dictionary) -> void:
 		speed -= (ROLL_DECEL + slope) * dt
 		if grade < 0.0:
 			speed -= ENGINE_BRAKE * gearbox.rpm(speed) * dt
-	if absf(x) > 1.0:
-		var cap := vmax * OFFROAD_SPEED_RATIO
-		if speed > cap:
-			speed = maxf(cap, speed - 35.0 * dt)
+	if absf(x) > 1.0 and speed > OFFROAD_SPEED:
+		speed = maxf(OFFROAD_SPEED, speed - OFFROAD_DECEL * dt)
 	speed = clampf(speed, 0.0, vmax)
 	# lateral
 	var steer: float = clampf(input.steer, -1.0, 1.0)
@@ -219,8 +252,11 @@ func step(dt: float, input: Dictionary) -> void:
 	var sr := speed_ratio()
 	x += steer * stats.handling * STEER_RATE * clampf(speed / 12.0, 0.0, 1.0) * dt
 	x -= track.segment_at(z).curve * corner_push(speed) * dt
-	x = clampf(x, -1.8, 1.8)
+	x = clampf(x, -1.8, STATION_MAX_X if station_in_range() else 1.8)
+	var z_prev := z
 	z += speed * dt
+	if hit_cooldown <= 0.0 and z < stage.length:
+		_check_obstacles(z_prev)
 	# gearbox and fuel: accelerating and climbing burn a lot, cruising in a high gear saves, rolling downhill
 	# off the gas almost nothing
 	var accelerating: bool = gas and speed < vmax * 0.98

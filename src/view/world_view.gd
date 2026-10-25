@@ -39,6 +39,8 @@ var _b := DrawBatch.new()
 var _warm_left: Array = [] ## sign texts still to pre-render, a few per frame (see Scenery.warm_text)
 var _ground: Array = [] ## per track segment: Scenery.ground() strips
 var _lanes := PackedByteArray() ## per track segment: 2 or 3 lanes
+var _tun := PackedByteArray() ## per track segment: 1 inside a tunnel
+var _portals := {} ## segment index where a tunnel starts -> true
 var _gcol: Array = [] ## per ground colour id: fogged colour for each view depth n
 ## horizon state, eased towards the region ahead: hills, mountains, sea, industry, wood, skyline
 var _hz := {"hills": 0.3, "mountains": 0.0, "sea": 0.0, "industry": 0.0, "wood": 0.2, "skyline": 1.0}
@@ -47,13 +49,22 @@ func bind(p_race: Race, p_season: String) -> void:
 	race = p_race
 	season = p_season
 	pal = SeasonPalette.by_name(season)
-	items = Scenery.build(race.stage, 1)
-	Scenery.bend_signs(items, race.track.sharp)
+	items = race.scenery
 	_ground = Scenery.ground(race.stage, race.track.segments.size())
 	_warm_left = Scenery.sign_texts(race.stage)
 	_lanes.resize(race.track.segments.size())
 	for k in _lanes.size():
 		_lanes[k] = Route.lanes_at(race.stage, k * SEG)
+	_tun.resize(race.track.segments.size())
+	_tun.fill(0)
+	_portals.clear()
+	for tn in race.stage.get("tunnels", []):
+		var first := -1
+		for k in range(int(tn.z0 / SEG), mini(int(tn.z1 / SEG) + 1, _tun.size())):
+			if k * SEG + SEG * 0.5 >= tn.z0 and k * SEG + SEG * 0.5 <= tn.z1:
+				_tun[k] = 1
+				if first < 0: first = k
+		if first >= 0: _portals[first] = true
 	_gcol.clear()
 	for key in Scenery.GROUND_KEYS:
 		var cols := PackedColorArray()
@@ -277,6 +288,8 @@ func _draw_scene() -> void:
 			if _y1[n] < _y0[n] and _y1[n] < maxy:
 				_vis[n] = 1
 				maxy = _y0[n]
+			elif _in_tunnel(i):
+				_vis[n] = 2 # floor hidden, but its walls and ceiling still show
 		off = o1
 		dx += sg.curve * CURVE_K
 	# back to front; objects behind a crest are drawn too: the nearer ground drawn after them hides their lower part,
@@ -285,6 +298,8 @@ func _draw_scene() -> void:
 		var i := base + n
 		if _vis[n] == 1:
 			_draw_segment(n, i)
+		elif _vis[n] == 2:
+			_draw_tunnel(n, i)
 		_b.fog = _item_fog(n)
 		_b.fog_color = pal.sky_bottom
 		var its = items.get(i)
@@ -296,9 +311,18 @@ func _draw_scene() -> void:
 			_draw_traffic_car(tcars[ci], n, cam_x, cam_y, cam_z)
 		if not race.police.is_empty() and int(floor(race.police.z / SEG)) == i:
 			_draw_traffic_car({"z": race.police.z, "lane_x": race.police.x, "kind": "police", "color_idx": 0}, n, cam_x, cam_y, cam_z)
+		if _portals.has(i) and _vis[n] != 0 and i * SEG > cam_z + NEAR:
+			_b.fog = _item_fog(n)
+			_draw_portal(n)
 		_b.fog = 0.0
 
+func _in_tunnel(i: int) -> bool:
+	return i >= 0 and i < _tun.size() and _tun[i] == 1
+
 func _draw_segment(n: int, i: int) -> void:
+	if _in_tunnel(i):
+		_draw_tunnel(n, i)
+		return
 	var band := (i / 3) % 2
 	var y0 := _y0[n]
 	var y1 := _y1[n]
@@ -356,6 +380,102 @@ func _draw_segment(n: int, i: int) -> void:
 		var ex0: float = x0 + sgn * w0 * 0.94
 		var ex1: float = x1 + sgn * w1 * 0.94
 		_quad(Vector2(ex0 - lw0, y0), Vector2(ex0 + lw0, y0), Vector2(ex1 + lw1, y1), Vector2(ex1 - lw1, y1), lc)
+
+## Tunnel cross-section, [lat, height] in metres from the left wall foot over the vault to the right wall foot.
+const TUNNEL_SECTION := [[-Scenery.TUNNEL_WALL, 0.0], [-Scenery.TUNNEL_WALL, 4.4], [-3.9, 6.6], [3.9, 6.6], [Scenery.TUNNEL_WALL, 4.4], [Scenery.TUNNEL_WALL, 0.0]]
+const TUNNEL_DARK := Color(0.03, 0.035, 0.04)
+
+## Tunnel lighting: bright near the camera, dark further in (the exit still shines at the end).
+func _tfog(c: Color, n: int) -> Color:
+	return c.lerp(TUNNEL_DARK, clampf(0.25 + float(n) / 50.0, 0.0, 0.9))
+
+## One tunnel segment: dark floor, the road, the walls and the vault with a row of lamps.
+func _draw_tunnel(n: int, i: int) -> void:
+	var band := (i / 3) % 2
+	var y0 := _y0[n]
+	var y1 := _y1[n]
+	var x0 := _x0[n]
+	var x1 := _x1[n]
+	var p0 := _s0[n] * W * 0.5
+	var p1 := _s1[n] * W * 0.5
+	var w0 := Track.ROAD_HALF_WIDTH * p0
+	var w1 := Track.ROAD_HALF_WIDTH * p1
+	if y1 < y0:
+		_b.draw_rect(Rect2(-20, y1, W + 40, y0 - y1 + 1.0), _tfog(Color("4a4c4f"), n))
+		var road: Color = _tfog((pal.road_a if band == 0 else pal.road_b) as Color, n)
+		_quad(Vector2(x0 - w0, y0), Vector2(x0 + w0, y0), Vector2(x1 + w1, y1), Vector2(x1 - w1, y1), road)
+		var lc: Color = _tfog(pal.line, n)
+		var lw0 := maxf(1.0, w0 * 0.018)
+		var lw1 := maxf(1.0, w1 * 0.018)
+		var marks: Array = [-0.94, 0.94]
+		if band == 0:
+			marks.append_array([-1.0 / 3.0, 1.0 / 3.0] if _lanes[clampi(i, 0, _lanes.size() - 1)] == 3 else [0.0])
+		for k in marks:
+			_quad(Vector2(x0 + w0 * k - lw0, y0), Vector2(x0 + w0 * k + lw0, y0), Vector2(x1 + w1 * k + lw1, y1), Vector2(x1 + w1 * k - lw1, y1), lc)
+	# walls and vault, face by face; the lower wall is lighter (tiled), lamps along the top
+	var sec := TUNNEL_SECTION
+	for f in sec.size() - 1:
+		var a: Array = sec[f]
+		var c: Array = sec[f + 1]
+		var col := Color("8d9094") if f != 2 else Color("3d3f43")
+		if f == 1 or f == 3: col = Color("6b6e72")
+		col = _tfog(col, n) if band == 0 else _tfog(col.darkened(0.06), n)
+		_quad(Vector2(x0 + a[0] * p0, y0 - a[1] * p0), Vector2(x0 + c[0] * p0, y0 - c[1] * p0),
+			Vector2(x1 + c[0] * p1, y1 - c[1] * p1), Vector2(x1 + a[0] * p1, y1 - a[1] * p1), col)
+	for sgn in [-1.0, 1.0]:
+		var lat: float = sgn * Scenery.TUNNEL_WALL
+		var tile := _tfog(Color("d8dbd6"), n)
+		_quad(Vector2(x0 + lat * p0, y0 - 0.3 * p0), Vector2(x0 + lat * p0, y0 - 1.6 * p0), Vector2(x1 + lat * p1, y1 - 1.6 * p1), Vector2(x1 + lat * p1, y1 - 0.3 * p1), tile)
+	if i % 2 == 0:
+		var lamp := Color("ffd890").lerp(Color("8a7a50"), clampf(float(n) / 110.0, 0.0, 0.7))
+		var ym0 := 6.58
+		var lx := 0.35
+		_quad(Vector2(x0 - lx * p0, y0 - ym0 * p0), Vector2(x0 + lx * p0, y0 - ym0 * p0),
+			Vector2(lerpf(x0, x1, 0.5) + lx * lerpf(p0, p1, 0.5), lerpf(y0, y1, 0.5) - ym0 * lerpf(p0, p1, 0.5)),
+			Vector2(lerpf(x0, x1, 0.5) - lx * lerpf(p0, p1, 0.5), lerpf(y0, y1, 0.5) - ym0 * lerpf(p0, p1, 0.5)), lamp)
+
+## Tunnel entrance: the mountain the road dives into, a concrete portal around the opening (the tunnel inside was
+## drawn already and shows through it).
+func _draw_portal(n: int) -> void:
+	var cx := _x0[n]
+	var gy := _y0[n]
+	var pm := _s0[n] * W * 0.5
+	var hill := (pal.tree as Color).darkened(0.25)
+	if season == "winter": hill = Color("dfe5ea")
+	var ridge := func(x: float) -> float:
+		var lat := (x - cx) / pm
+		return gy - pm * maxf(14.0, 46.0 - absf(lat) * 0.09 + 5.0 * sin(lat * 0.045) + 3.0 * sin(lat * 0.13 + 1.0))
+	var half := func(sgn: float, inner: Array, outer: Callable, col: Color) -> void:
+		var pts := PackedVector2Array()
+		pts.append(Vector2(cx, outer.call(cx)))
+		var xe := -20.0 if sgn < 0.0 else W + 20.0
+		for k in range(1, 13):
+			var xx := lerpf(cx, xe, float(k) / 12.0)
+			pts.append(Vector2(xx, outer.call(xx)))
+		pts.append(Vector2(xe, gy))
+		for pt in inner:
+			pts.append(Vector2(cx + sgn * pt[0] * pm, gy - pt[1] * pm))
+		_b.draw_colored_polygon(pts, col)
+	# opening (left half, from the wall foot up to the vault's crown)
+	var open := [[Scenery.TUNNEL_WALL, 0.0], [Scenery.TUNNEL_WALL, 4.4], [3.9, 6.6], [0.0, 6.6]]
+	var frame := [[Scenery.TUNNEL_WALL + 1.6, 0.0], [Scenery.TUNNEL_WALL + 1.6, 5.0], [4.6, 8.0], [0.0, 8.0]]
+	for sgn in [-1.0, 1.0]:
+		half.call(sgn, frame, ridge, hill)
+	if pm * 46.0 > 6.0:
+		var tree := hill.darkened(0.3)
+		for k in 18:
+			var xx := cx + (k - 8.5) * 9.0 * pm
+			var ty: float = ridge.call(xx)
+			_b.draw_colored_polygon(PackedVector2Array([Vector2(xx - 1.6 * pm, ty + 1.0 * pm), Vector2(xx, ty - 5.0 * pm), Vector2(xx + 1.6 * pm, ty + 1.0 * pm)]), tree)
+	var conc := Color("b4b6b8")
+	for sgn in [-1.0, 1.0]:
+		var pts := PackedVector2Array()
+		for pt in [[0.0, 9.4], [9.0, 9.4], [12.0, 5.8], [12.0, 0.0]]:
+			pts.append(Vector2(cx + sgn * pt[0] * pm, gy - pt[1] * pm))
+		for pt in open:
+			pts.append(Vector2(cx + sgn * pt[0] * pm, gy - pt[1] * pm))
+		_b.draw_colored_polygon(pts, conc)
+	_b.draw_rect(Rect2(cx - 9.0 * pm, gy - 9.4 * pm, 18.0 * pm, 0.5 * pm), conc.darkened(0.25))
 
 func _item_point(it: Dictionary, n: int, cam_x: float, cam_y: float, cam_z: float) -> Vector3:
 	var dz: float = it.z - cam_z
