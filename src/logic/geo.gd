@@ -161,7 +161,7 @@ const ROADS := [
 		"zones": [[60, "upland", "Wyżyna Lubelska"], [100, "fields", "Dolina Wisły"], [135, "upland", "Wyżyna Sandomierska"], [170, "forest", "Góry Świętokrzyskie"]]},
 	{"a": "krakow", "b": "zakopane", "road": [[65, "S7"], [105, "DK47"]], "km": 105,
 		"towns": [["Myślenice", 35], ["Lubień", 48], ["Rabka-Zdrój", 65], ["Nowy Targ", 85]],
-		"tunnels": [[54, 56, "Tunel pod Luboniem Małym", "Najdłuższy tunel drogowy w Polsce: ponad 2 km pod górą Luboń Mały"]],
+		"tunnels": [[54, 56, "Tunel pod Luboniem Małym", "Ponad 2 km pod górą Luboń Mały, otwarty w 2022 roku"]],
 		"zones": [[25, "foothills", "Pogórze Wielickie"], [70, "mountains", "Beskidy"], [105, "mountains", "Podhale"]]},
 	{"a": "lublin", "b": "zamosc", "road": "S17", "km": 90,
 		"towns": [["Piaski", 25], ["Krasnystaw", 55]],
