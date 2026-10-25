@@ -13,6 +13,7 @@ const CURVE_K := 0.0028
 const CAR_UNIT := 0.0086 ## metres per painter unit
 const PARTICLES := 70
 const MIN_CAR_SCALE := 0.008 ## traffic is drawn up to ~430 m ahead (it used to vanish beyond ~90 m)
+const FAR_DETAIL := 70 ## beyond this depth the far carriageway is drawn without its guardrail and lines
 const ITEM_FADE := 0.8 ## objects fade out of the haze from this share of the drawing distance
 
 var race: Race
@@ -498,15 +499,17 @@ func _draw_far_carriageway(n: int, d: float, band: int, lc: Color, lw0: float, l
 	var x1 := _x1[n]
 	var h0 := Track.ROAD_HALF_WIDTH * _s0[n] * W * 0.5
 	var h1 := Track.ROAD_HALF_WIDTH * _s1[n] * W * 0.5
+	var a := -1.0 - Track.MEDIAN * d
+	var b := a - Track.ONCOMING * d
+	var road: Color = _fog(pal.road_a if band == 0 else pal.road_b, n)
+	_quad(Vector2(x0 + b * h0, y0), Vector2(x0 + a * h0, y0), Vector2(x1 + a * h1, y1), Vector2(x1 + b * h1, y1), road)
+	if n > FAR_DETAIL:
+		return # guardrail and lines would be under a pixel wide
 	var mid := -1.0 - Track.MEDIAN * d * 0.5
 	var g := _fog(Color("9a9ea4"), n)
 	var gw0 := maxf(1.0, h0 * 0.03)
 	var gw1 := maxf(1.0, h1 * 0.03)
 	_quad(Vector2(x0 + mid * h0 - gw0, y0 - gw0 * 3.0), Vector2(x0 + mid * h0 + gw0, y0 - gw0 * 3.0), Vector2(x1 + mid * h1 + gw1, y1 - gw1 * 3.0), Vector2(x1 + mid * h1 - gw1, y1 - gw1 * 3.0), g)
-	var a := -1.0 - Track.MEDIAN * d
-	var b := a - Track.ONCOMING * d
-	var road: Color = _fog(pal.road_a if band == 0 else pal.road_b, n)
-	_quad(Vector2(x0 + b * h0, y0), Vector2(x0 + a * h0, y0), Vector2(x1 + a * h1, y1), Vector2(x1 + b * h1, y1), road)
 	var marks: Array = [a - 0.06 * d, b + 0.06 * d]
 	if band == 0: marks.append((a + b) * 0.5)
 	for k in marks:

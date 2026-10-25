@@ -37,11 +37,16 @@ var _express := PackedByteArray() ## 1 on motorways and expressways (traffic pac
 var _rng := RandomNumberGenerator.new()
 
 ## Lane centres (x) for cars going the player's way, and for oncoming cars, where the road is `d` dual.
+const OWN_DUAL := [-0.5, 0.5]
+const OWN_SINGLE := [0.5]
+const ONC_DUAL := [-1.0 - Track.MEDIAN - 0.5, -1.0 - Track.MEDIAN - 1.5]
+const ONC_SINGLE := [-0.5]
+
 static func own_lanes(d: float) -> Array:
-	return [-0.5, 0.5] if d >= 0.5 else [0.5]
+	return OWN_DUAL if d >= 0.5 else OWN_SINGLE
 
 static func oncoming_lanes(d: float) -> Array:
-	return [-1.0 - Track.MEDIAN - 0.5, -1.0 - Track.MEDIAN - 1.5] if d >= 0.5 else [-0.5]
+	return ONC_DUAL if d >= 0.5 else ONC_SINGLE
 
 static func build(stage: Dictionary, seed_value: int) -> Traffic:
 	var tf := Traffic.new()
@@ -135,6 +140,8 @@ func update(dt: float, player_z := -INF, player_x := 0.0, player_speed := 0.0) -
 			continue
 		if dir < 0 and c.z < 0.0:
 			c.active = false
+		if player_z > -INF and absf(c.z - player_z) > FAR:
+			continue # far from the player nobody sees the traffic, it just keeps its speed and lane
 		# keep to a lane of the road the car is on now (a road widens into a dual carriageway and narrows back)
 		if not _dual.is_empty():
 			var d := dual_at(c.z)
@@ -146,8 +153,6 @@ func update(dt: float, player_z := -INF, player_x := 0.0, player_speed := 0.0) -
 					best = lx
 			c.lane_x = move_toward(c.lane_x, best, LANE_CHANGE * dt)
 		if not c.has("pace") or _target.is_empty(): continue
-		if player_z > -INF and absf(c.z - player_z) > FAR:
-			continue # far from the player nobody sees the traffic, it just keeps its speed
 		var want := _want(c, c.z + 20.0 * dir)
 		if dir < 0:
 			# queue behind a slower oncoming car (ahead of it means lower z)

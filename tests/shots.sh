@@ -6,7 +6,7 @@ out=$1; shift
 i=0
 for spec in "$@"; do
   rm -f /tmp/rr_s$i*.png
-  perl -e 'alarm 60; exec @ARGV' $G --path . --write-movie /tmp/rr_s$i.png --quit-after 150 res://tests/world_preview.tscn -- $spec > /tmp/rr_s$i.log 2>&1
+  perl -e 'alarm 60; exec @ARGV' $G --path . --position 6000,6000 --write-movie /tmp/rr_s$i.png --quit-after 150 res://tests/world_preview.tscn -- $spec > /tmp/rr_s$i.log 2>&1
   grep -E "ERROR|SCRIPT" /tmp/rr_s$i.log | sort | uniq -c | head -3
   i=$((i+1))
 done
