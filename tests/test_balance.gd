@@ -6,12 +6,12 @@ func run(t) -> void:
 	var careful_wins := 0
 	for rt in ROUTES:
 		var st := Route.build(rt[0], rt[1])
-		for car in CarStats.ALL_IDS:
+		for car in CarStats.ids():
 			var r: Race = Bot.run_race(car, st, 11, 0.9)
 			t.check(r.state == "won" and r.time_left > 15.0, "autopilot wins %s %s with >15s spare (got %s, %.0fs)" % [car, st.name, r.state, r.time_left])
 			var c: Race = Bot.run_race(car, st, 11, 0.7)
 			if c.state == "won": careful_wins += 1
-	var total := ROUTES.size() * CarStats.ALL_IDS.size()
+	var total := ROUTES.size() * CarStats.ids().size()
 	t.check(careful_wins >= total * 3 / 4, "careful driving still wins most combinations (%d/%d)" % [careful_wins, total])
 	# without ever stopping for fuel a long route cannot be finished
 	var b := Bot.new()

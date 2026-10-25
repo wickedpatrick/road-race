@@ -1,18 +1,18 @@
 extends RefCounted
 ## Map data sanity and route building.
 func run(t) -> void:
-	t.check(Geo.CITIES.size() == 30, "25 biggest cities plus Zakopane, Zamość, Łomża, Kamienna Góra, Zwardoń")
-	t.check(Geo.CITIES.has("zakopane") and Geo.CITIES.has("zamosc") and Geo.CITIES.has("lomza"), "required towns on the map")
+	t.check(Geo.cities().size() == 30, "25 biggest cities plus Zakopane, Zamość, Łomża, Kamienna Góra, Zwardoń")
+	t.check(Geo.cities().has("zakopane") and Geo.cities().has("zamosc") and Geo.cities().has("lomza"), "required towns on the map")
 	var data_ok := true
-	for r in Geo.ROADS:
-		if not Geo.CITIES.has(r.a) or not Geo.CITIES.has(r.b): data_ok = false
+	for r in Geo.roads():
+		if not Geo.cities().has(r.a) or not Geo.cities().has(r.b): data_ok = false
 		var prev := 0.0
 		for tw in r.towns:
 			if tw[1] <= prev or tw[1] >= r.km: data_ok = false
 			prev = tw[1]
 		prev = 0.0
 		for zn in r.zones:
-			if zn[0] <= prev or not Biome.DATA.has(zn[1]): data_ok = false
+			if zn[0] <= prev or not Biome.all().has(zn[1]): data_ok = false
 			prev = zn[0]
 		if prev != r.km: data_ok = false
 	t.check(data_ok, "roads: known cities, towns and zones ordered inside the road, zones cover it")

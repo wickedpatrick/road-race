@@ -1,29 +1,29 @@
-class_name PolandMap
+class_name CountryMap
 extends RefCounted
-## Map of Poland drawn into a screen rectangle: outline, road network, cities, and the chosen route.
-const LON0 := 14.0
-const LON1 := 24.3
-const LAT0 := 48.9
-const LAT1 := 54.95
-const LON_K := 0.6157 ## cos(52°): squeezes longitude so the country keeps its shape
-## labels drawn left of the dot where neighbours would collide; shorter names for long ones
-const LABEL_LEFT := ["katowice", "bielsko", "opole", "gdynia", "bydgoszcz", "plock", "zielona_gora", "lomza", "kamienna_gora"]
-const LABEL_ABOVE := ["czestochowa"]
-const SHORT := {"gorzow": "Gorzów Wlkp.", "bielsko": "Bielsko-Biała"}
+## Map of the current country drawn into a screen rectangle: outline, road network, cities, and the chosen route.
+## The lat/lon box and lon_k (cos of the middle latitude, so the country keeps its shape) come from the country's
+## "map"; a city's "label" ("left"/"above") moves its name where neighbours would collide, "short" shortens it.
 var area: Rect2
 var visited: Array = [] ## city ids drawn with a gold ring (the cities the player has been to)
 var reachable: Array = [] ## when not empty, only these cities can be picked; the others are drawn faded
 var _scale := 1.0
 var _origin := Vector2.ZERO
+var _box: Dictionary ## the country's "map": lon0, lon1, lat0, lat1, lon_k
 
 func _init(p_area: Rect2) -> void:
 	area = p_area
-	_scale = minf(area.size.x / ((LON1 - LON0) * LON_K), area.size.y / (LAT1 - LAT0))
-	var size := Vector2((LON1 - LON0) * LON_K, LAT1 - LAT0) * _scale
-	_origin = area.position + (area.size - size) * 0.5
+	_box = GameData.country().map
+	var span := Vector2((_box.lon1 - _box.lon0) * _box.lon_k, _box.lat1 - _box.lat0)
+	_scale = minf(area.size.x / span.x, area.size.y / span.y)
+	_origin = area.position + (area.size - span * _scale) * 0.5
 
 func project(lat: float, lon: float) -> Vector2:
-	return _origin + Vector2((lon - LON0) * LON_K, LAT1 - lat) * _scale
+	return _origin + Vector2((lon - _box.lon0) * _box.lon_k, _box.lat1 - lat) * _scale
+
+## Name shown on the map, and where: left of the dot, above it, or (default) right of it.
+static func _label(id: String) -> String:
+	var c := Geo.city(id)
+	return c.get("short", c.name)
 
 func city_pos(id: String) -> Vector2:
 	var c := Geo.city(id)
@@ -33,7 +33,7 @@ func city_pos(id: String) -> Vector2:
 func city_at(p: Vector2) -> String:
 	var best := ""
 	var best_d := 16.0
-	for id in Geo.CITIES:
+	for id in Geo.cities():
 		var d := city_pos(id).distance_to(p)
 		if d < best_d:
 			best_d = d
@@ -45,7 +45,7 @@ func step(from: String, dir: Vector2, skip := "", only: Array = []) -> String:
 	var o := city_pos(from)
 	var best := from
 	var best_score := INF
-	for id in Geo.CITIES:
+	for id in Geo.cities():
 		if id == from or id == skip or (not only.is_empty() and not only.has(id)):
 			continue
 		var v := city_pos(id) - o
@@ -64,7 +64,7 @@ const LOCAL := Color("8f9a8f")
 ## Road network: motorways and expressways (A, S) thick and blue, other roads thin and grey.
 ## A road that changes type part-way is drawn piece by piece.
 func draw_network(cv: CanvasItem, wide: float, thin: float) -> void:
-	for r in Geo.ROADS:
+	for r in Geo.roads():
 		var a := city_pos(r.a)
 		var b := city_pos(r.b)
 		for part in Route.leg_roads({"road": r, "from": r.a, "to": r.b}):
@@ -87,19 +87,20 @@ func _legend(cv: CanvasItem, font: Font) -> void:
 	cv.draw_string(font, p + Vector2(28, 18), "inne drogi", HORIZONTAL_ALIGNMENT_LEFT, -1, 10, Color("16222e"))
 	cv.draw_circle(p + Vector2(11, 28), 6.0, VISITED)
 	cv.draw_circle(p + Vector2(11, 28), 3.5, Color("2d3e50"))
-	cv.draw_string(font, p + Vector2(28, 32), "odwiedzone: %d / %d" % [visited.size(), Geo.CITIES.size()], HORIZONTAL_ALIGNMENT_LEFT, -1, 10, Color("16222e"))
+	cv.draw_string(font, p + Vector2(28, 32), "odwiedzone: %d / %d" % [visited.size(), Geo.cities().size()], HORIZONTAL_ALIGNMENT_LEFT, -1, 10, Color("16222e"))
 
 func draw(cv: CanvasItem, font: Font, legs: Array, start: String, dest: String, hover: String, t: float) -> void:
 	var poly := PackedVector2Array()
-	for p in Geo.BORDER:
+	for p in Geo.outline():
 		poly.append(project(p[1], p[0]))
 	cv.draw_colored_polygon(poly, Color("d7e8bd"))
 	poly.append(poly[0])
 	cv.draw_polyline(poly, Color("6f8f5a"), 2.0)
-	var hel := PackedVector2Array()
-	for p in Geo.HEL:
-		hel.append(project(p[1], p[0]))
-	cv.draw_polyline(hel, Color("6f8f5a"), 2.0)
+	for line in Geo.outline_lines():
+		var pts := PackedVector2Array()
+		for p in line:
+			pts.append(project(p[1], p[0]))
+		cv.draw_polyline(pts, Color("6f8f5a"), 2.0)
 	draw_network(cv, 4.0, 1.6)
 	_legend(cv, font)
 	# chosen route with the towns along it
@@ -109,7 +110,7 @@ func draw(cv: CanvasItem, font: Font, legs: Array, start: String, dest: String, 
 		cv.draw_line(a, b, Color("e0a21a"), 5.0)
 		for tw in Route._leg_towns(leg):
 			cv.draw_circle(a.lerp(b, tw[1] / float(leg.road.km)), 2.0, Color("7a4d00"))
-	for id in Geo.CITIES:
+	for id in Geo.cities():
 		var c := Geo.city(id)
 		var p := city_pos(id)
 		var r := 3.0 + sqrt(c.pop / 100.0) * 1.2
@@ -122,12 +123,13 @@ func draw(cv: CanvasItem, font: Font, legs: Array, start: String, dest: String, 
 		cv.draw_circle(p, r, col)
 		if id == hover:
 			cv.draw_arc(p, r + 5.0 + sin(t * 6.0) * 1.5, 0.0, TAU, 24, Color("ffd24a"), 2.5)
-		var label: String = SHORT.get(id, c.name)
+		var label := _label(id)
 		var size := 13 if id in [start, dest, hover] else 11
 		var faded := not reachable.is_empty() and not reachable.has(id)
 		var w := font.get_string_size(label, HORIZONTAL_ALIGNMENT_LEFT, -1, size).x
-		var lp := p + Vector2(-r - 4.0 - w if id in LABEL_LEFT else r + 4.0, 4.0)
-		if id in LABEL_ABOVE:
+		var side: String = c.get("label", "right")
+		var lp := p + Vector2(-r - 4.0 - w if side == "left" else r + 4.0, 4.0)
+		if side == "above":
 			lp = p + Vector2(-w * 0.5, -r - 4.0)
 		cv.draw_string(font, lp + Vector2(1, 1), label, HORIZONTAL_ALIGNMENT_LEFT, -1, size, Color(1, 1, 1, 0.3 if faded else 0.8))
 		cv.draw_string(font, lp, label, HORIZONTAL_ALIGNMENT_LEFT, -1, size, Color("16222e", 0.4 if faded else 1.0))
@@ -145,13 +147,13 @@ func route_point(legs: Array, km: float) -> Vector2:
 ## Small in-race map: outline, road network, the route, start/finish names and the car.
 func draw_mini(cv: CanvasItem, font: Font, legs: Array, km: float, t: float) -> void:
 	var poly := PackedVector2Array()
-	for p in Geo.BORDER:
+	for p in Geo.outline():
 		poly.append(project(p[1], p[0]))
 	cv.draw_colored_polygon(poly, Color("d7e8bd", 0.9))
 	draw_network(cv, 2.0, 1.0)
 	for leg in legs:
 		cv.draw_line(city_pos(leg.from), city_pos(leg.to), Color("e0a21a"), 3.0)
-	for id in Geo.CITIES:
+	for id in Geo.cities():
 		cv.draw_circle(city_pos(id), 1.6, Color("2d3e50"))
 	var a: String = legs[0].from
 	var b: String = legs[-1].to
@@ -159,7 +161,7 @@ func draw_mini(cv: CanvasItem, font: Font, legs: Array, km: float, t: float) -> 
 	cv.draw_circle(city_pos(b), 3.0, Color("d0402a"))
 	for id in [a, b]:
 		var p := city_pos(id)
-		var label: String = SHORT.get(id, Geo.city(id).name)
+		var label := _label(id)
 		var w := font.get_string_size(label, HORIZONTAL_ALIGNMENT_LEFT, -1, 10).x
 		var x := clampf(p.x - w * 0.5, area.position.x + 2.0, area.end.x - w - 2.0)
 		# start above its dot, destination below, so close cities do not overlap

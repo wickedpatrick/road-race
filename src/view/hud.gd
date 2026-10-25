@@ -8,7 +8,7 @@ var _region := ""
 var _region_time := 0.0
 var _warm_left: Array = [] ## [text, size] still to pre-render, a few per frame
 var _legs: Array = []
-var _mini: PolandMap
+var _mini: CountryMap
 var touch := false ## touch-screen layout (set before bind): the bottom corners belong to the driving buttons
 const PAUSE_BTN := Rect2(16, 14, 46, 66)
 const BUMP_BANNER_TIME := 2.5 ## seconds the collision penalty stays on screen
@@ -35,7 +35,7 @@ func bind(p_race: Race) -> void:
 		_limit_pos = Vector2(52, 208)
 		_mini_rect = Rect2(794, 88, 150, 132)
 		_board_y = 228.0
-	_mini = PolandMap.new(_mini_rect.grow_individual(-10, -8, -10, -8))
+	_mini = CountryMap.new(_mini_rect.grow_individual(-10, -8, -10, -8))
 	_legs = Route.find(race.stage.from, race.stage.to)
 	# town names, facts and regions shown in the HUD, pre-rendered during the countdown (see Scenery.warm_text)
 	for t in race.stage.towns:
@@ -204,7 +204,7 @@ func _board_echo() -> void:
 		if race.z > bd.z - 160.0 and race.z < bd.z + 220.0:
 			var lines: Array = bd.lines
 			var r := Rect2(784, _board_y, 160, 34 + 22 * lines.size())
-			draw_rect(r, Scenery.SIGN_BLUE if bd.blue else Scenery.SIGN_GREEN)
+			draw_rect(r, Scenery.sign_color("board_motorway" if bd.blue else "board"))
 			draw_rect(r.grow(-3), Color.WHITE, false, 2.0)
 			if bd.road != "":
 				_shield(Vector2(r.position.x + 58, r.position.y + 7), bd.road)

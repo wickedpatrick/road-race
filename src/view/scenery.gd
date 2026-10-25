@@ -6,6 +6,19 @@ const BUILDING_COLORS := [Color("d9b26b"), Color("e7dcc0"), Color("d98a6c"), Col
 const WALL_DARK := Color(0, 0, 0, 0.18)
 const SIGN_GREEN := Color("0f7a43")
 const SIGN_BLUE := Color("1d4f9e")
+static var _sign_cols := {} ## country code -> {town, board, board_motorway} colours (the country's "signs")
+
+## Colour of a road sign in the current country: "town" (place-name signs), "board" / "board_motorway" (direction
+## boards with distances).
+static func sign_color(kind: String) -> Color:
+	var code := GameData.current
+	if not _sign_cols.has(code):
+		var cols := {}
+		var signs: Dictionary = GameData.country().signs
+		for k in signs:
+			cols[k] = Color(signs[k])
+		_sign_cols[code] = cols
+	return _sign_cols[code][kind]
 const SIGN_BROWN := Color("7b4a26")
 const SIGN_RED := Color("d0202a")
 const SIGN_YELLOW := Color("f2c21b")
@@ -644,7 +657,7 @@ static func _town_sign(cv, it: Dictionary, b: Vector2, pm: float, font: Font, en
 	var hh := 1.8 * pm
 	_posts(cv, b, pm, post, [-1.6, 1.6])
 	var r := Rect2(b + Vector2(-w * 0.5, -post - hh), Vector2(w, hh))
-	cv.draw_rect(r, SIGN_GREEN)
+	cv.draw_rect(r, sign_color("town"))
 	cv.draw_rect(r.grow(-0.14 * pm), Color.WHITE, false, maxf(1.0, 0.1 * pm))
 	_fit_text(cv, font, r.grow_individual(-0.35 * pm, 0, -0.35 * pm, 0), it.text, Color.WHITE, 0.95 * pm)
 	if ending:
@@ -661,7 +674,7 @@ static func _board(cv, it: Dictionary, b: Vector2, pm: float, font: Font) -> voi
 	var post := 3.0 * pm
 	_posts(cv, b, pm, post, [-3.5, 3.5])
 	var r := Rect2(b + Vector2(-w * 0.5, -post - hh), Vector2(w, hh))
-	cv.draw_rect(r, SIGN_BLUE if it.blue else SIGN_GREEN)
+	cv.draw_rect(r, sign_color("board_motorway" if it.blue else "board"))
 	cv.draw_rect(r.grow(-0.14 * pm), Color.WHITE, false, maxf(1.0, 0.1 * pm))
 	if it.road != "":
 		var pl := plate(it.road)

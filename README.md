@@ -37,7 +37,9 @@ Kliknij dwukrotnie `graj.command` (otworzy grę w przeglądarce, najlepiej Chrom
 
 ## Dla programisty
 - Testy: `tests/run.sh` (headless Godot)
-- Dane mapy (miasta, drogi, miejscowości, krainy, ciekawostki): `src/logic/geo.gd`; krajobrazy: `src/logic/biome.gd`
+- Dane (JSON) w `data/`: wspólne (`rules.json`: auta, krajobrazy, rozmiary atrakcji) i osobny folder dla każdego kraju
+  (`countries/<kod>/`: mapa i przepisy, miasta, drogi z miejscowościami, krainami i tunelami, ciekawostki, atrakcje).
+  Opis formatu: `data/README.md`; wczytuje `src/logic/game_data.gd`, sprawdza `tests/test_game_data.gd`.
 - Test ostrych zakrętów: w przeglądarce dopisz `?zakrety` do adresu (np. `index.html?zakrety=30` ustawia ostrość, domyślnie 22), na desktopie `-- --zakrety[=N]`; wszystkie łuki są wtedy ostre
 - Podgląd trasy: `Godot --headless --path . --script tests/sign_positions.gd -- krakow rzeszow`
 - Benchmark renderera: `Godot --path . res://tests/bench.tscn`

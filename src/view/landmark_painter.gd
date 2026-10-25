@@ -1,6 +1,6 @@
 class_name LandmarkPainter
 extends RefCounted
-## Draws the landmarks from Landmarks.BY_TOWN. Shapes are given in metres from the base point: x to the right,
+## Draws the landmarks (Landmarks.by_town()). Shapes are given in metres from the base point: x to the right,
 ## y up; `pm` is pixels per metre at the landmark's depth. `cv` is a CanvasItem or a DrawBatch.
 const BRICK := Color("a5452f")
 const BRICK_D := Color("7f3424")

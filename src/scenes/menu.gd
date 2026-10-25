@@ -11,7 +11,7 @@ var start_city := "krakow"
 var dest_city := "rzeszow"
 var hover := ""
 var legs: Array = []
-var map := PolandMap.new(Rect2(24, 104, 440, 378))
+var map := CountryMap.new(Rect2(24, 104, 440, 378))
 var confirm_reset := false ## "reset progress?" question is shown (car step, R key)
 const NEXT_BTN := Rect2(744, 490, 200, 44)
 const BACK_BTN := Rect2(584, 490, 148, 44)
@@ -24,7 +24,7 @@ var t := 0.0
 func _ready() -> void:
 	font = ThemeDB.fallback_font
 	Sfx.silence_all_loops()
-	sel[0] = maxi(0, CarStats.ALL_IDS.find(Session.car_id))
+	sel[0] = maxi(0, CarStats.ids().find(Session.car_id))
 	sel[1] = maxi(0, SeasonPalette.SEASONS.find(Session.season))
 	_set_steps()
 	start_city = Session.from_city
@@ -63,7 +63,7 @@ func _default_dest() -> String:
 	return best
 
 func _count() -> int:
-	return CarStats.ALL_IDS.size() if kind() == "car" else SeasonPalette.SEASONS.size()
+	return CarStats.ids().size() if kind() == "car" else SeasonPalette.SEASONS.size()
 
 func _sel_idx() -> int:
 	return 0 if kind() == "car" else 1
@@ -129,7 +129,7 @@ func _unhandled_input(event: InputEvent) -> void:
 func _confirm() -> void:
 	match kind():
 		"car":
-			if not Profile.is_unlocked(CarStats.ALL_IDS[sel[0]], Session.total_km):
+			if not Profile.is_unlocked(CarStats.ids()[sel[0]], Session.total_km):
 				return # locked car
 		"home":
 			Session.set_home(start_city)
@@ -208,7 +208,7 @@ func _map_mouse(event: InputEventMouse) -> void:
 		hover = id
 
 func _start() -> void:
-	Session.car_id = CarStats.ALL_IDS[sel[0]]
+	Session.car_id = CarStats.ids()[sel[0]]
 	Session.season = SeasonPalette.SEASONS[sel[1]]
 	Session.from_city = start_city
 	Session.to_city = dest_city
@@ -243,7 +243,7 @@ func _draw() -> void:
 		_: _draw_map()
 	var summary := ""
 	if kind() == "season" or kind() == "dest":
-		summary = CarStats.by_id(CarStats.ALL_IDS[sel[0]]).name
+		summary = CarStats.by_id(CarStats.ids()[sel[0]]).name
 	if kind() == "dest":
 		summary += "  ·  " + SeasonPalette.label(SeasonPalette.SEASONS[sel[1]])
 	draw_rect(Rect2(0, 486, 960, 54), Color(0, 0, 0, 0.5))
@@ -301,19 +301,19 @@ func _unlock_progress(pos: Vector2) -> void:
 	var km := Session.total_km
 	var n := Profile.unlocked_count(km)
 	_t(pos + Vector2(0, 0), "Przejechane: %d km" % int(km), 16, Color("ffd24a"))
-	if n >= CarStats.ALL_IDS.size():
+	if n >= CarStats.ids().size():
 		_t(pos + Vector2(0, 22), "Wszystkie auta odblokowane!", 14, Color.WHITE)
 		return
-	var next: Dictionary = CarStats.by_id(CarStats.ALL_IDS[n])
+	var next: Dictionary = CarStats.by_id(CarStats.ids()[n])
 	_t(pos + Vector2(0, 24), "%s za %d km" % [next.name, int(ceil(Profile.unlock_km(n) - km))], 14, Color.WHITE)
 	draw_rect(Rect2(pos + Vector2(190, -12), Vector2(160, 10)), Color(1, 1, 1, 0.2))
 	draw_rect(Rect2(pos + Vector2(190, -12), Vector2(160 * Profile.next_progress(km), 10)), Color("49d36b"))
 
 func _draw_cars() -> void:
-	var n := CarStats.ALL_IDS.size()
+	var n := CarStats.ids().size()
 	var w := 172.0
 	for i in n:
-		var id: String = CarStats.ALL_IDS[i]
+		var id: String = CarStats.ids()[i]
 		var c := CarStats.by_id(id)
 		var r := Rect2(28 + i * (w + 11), 172, w, 302)
 		var on: bool = sel[0] == i
@@ -412,6 +412,6 @@ func _draw_map() -> void:
 func _city_info(id: String, pos: Vector2, w: float) -> void:
 	var c := Geo.city(id)
 	_t(pos, c.name, 26, Color("ffd24a"))
-	_t(pos + Vector2(0, 30), "województwo %s" % c.voiv, 17, Color.WHITE)
+	_t(pos + Vector2(0, 30), "%s %s" % [GameData.country().region_label, c.region], 17, Color.WHITE)
 	_t(pos + Vector2(0, 56), c.get("note", "ok. %d tys. mieszkańców" % c.pop), 17, Color("c8d6e3"))
 	draw_multiline_string(font, pos + Vector2(0, 90), Geo.fact(c.name), HORIZONTAL_ALIGNMENT_LEFT, w, 17, 4, Color("e8eef4"))

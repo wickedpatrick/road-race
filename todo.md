@@ -126,13 +126,15 @@ dostają tyle, ile ma sens.
 
 ### 9a. Przebudowa na wiele krajów (najpierw, na samej Polsce)
 
-- [ ] Dane per kraj: `src/logic/geo.gd` -> np. `src/logic/countries/<kod>.gd` (miasta, drogi, ciekawostki,
-      kontur granicy) + rejestr krajów. Polska jako pierwszy kraj w nowym formacie, testy bez zmian zachowania.
-- [ ] `PolandMap` -> ogólna mapa kraju: zakres lat/lon i współczynnik długości z danych kraju (USA i Kanada
-      wymagają innej projekcji/skali niż Polska; rozważyć projekcję stożkową).
+- [x] Dane per kraj w JSON: `data/countries/<kod>/` (kraj z mapą i przepisami, miasta, drogi, ciekawostki,
+      atrakcje) + rejestr `data/countries/index.json`, wspólne `data/rules.json`. Polska przeniesiona 1:1
+      (wszystkie trasy identyczne jak przed zmianą), opis formatu w `data/README.md`.
+- [x] `PolandMap` -> `CountryMap`: zakres lat/lon, współczynnik długości, kontur i etykiety miast z danych kraju.
+      Zostało: USA i Kanada wymagają innej projekcji/skali niż Polska (rozważyć projekcję stożkową).
 - [ ] Menu: wybór kraju przed wyborem miast (lista/mapa Europy + Ameryka Północna), profil zapamiętuje
       odwiedzone miasta per kraj.
-- [ ] Reguły drogowe per kraj w danych, nie w kodzie: limity prędkości (teren zabudowany / poza / ekspresowa /
+- [ ] Reguły drogowe per kraj w danych, nie w kodzie (zrobione: limity prędkości i kolory tablic w `country.json`;
+      zostało: tolerancja radaru, jednostki, klasy dróg): limity prędkości (teren zabudowany / poza / ekspresowa /
       autostrada), jednostki (km/h vs **mph i mile** w Wielkiej Brytanii i USA), klasy dróg i liczba pasów
       (np. M/A w UK, Interstate/US Route w USA, Highway w Kanadzie, Autobahn bez ogólnego limitu w Niemczech).
 - [ ] **Ruch lewostronny** w Wielkiej Brytanii, Irlandii, na Malcie i Cyprze: lustrzane pasy, ruch z naprzeciwka,

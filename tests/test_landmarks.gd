@@ -2,19 +2,19 @@ extends RefCounted
 ## Landmarks: known towns, sizes for every painter, placed inside their town and in route order.
 func run(t) -> void:
 	var known := {}
-	for id in Geo.CITIES: known[Geo.city(id).name] = true
-	for r in Geo.ROADS:
+	for id in Geo.cities(): known[Geo.city(id).name] = true
+	for r in Geo.roads():
 		for tw in r.towns: known[tw[0]] = true
 	var ok_town := true
 	var ok_kind := true
-	for town in Landmarks.BY_TOWN:
+	for town in Landmarks.by_town():
 		if not known.has(town): ok_town = false; print("  unknown town ", town)
-		for lm in Landmarks.BY_TOWN[town]:
-			if not Landmarks.SIZE.has(lm[0]): ok_kind = false; print("  no size for ", lm[0])
+		for lm in Landmarks.by_town()[town]:
+			if not GameData.rules().landmark_sizes.has(lm.kind): ok_kind = false; print("  no size for ", lm.kind)
 	t.check(ok_town, "every landmark town is on some road")
 	t.check(ok_kind, "every landmark kind has a size")
 	for id in Geo.city_ids():
-		t.check(Landmarks.BY_TOWN.has(Geo.city(id).name), "big city %s has a landmark" % Geo.city(id).name)
+		t.check(Landmarks.by_town().has(Geo.city(id).name), "big city %s has a landmark" % Geo.city(id).name)
 	var st := Route.build("krakow", "warszawa")
 	var lms := Landmarks.place(st)
 	t.check(lms.size() >= 4 and lms[0].kind == "wawel" and lms[-1].kind == "mermaid", "Kraków - Warszawa: Wawel first, Syrenka last")

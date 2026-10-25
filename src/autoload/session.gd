@@ -53,15 +53,15 @@ func load_profile() -> void:
 	quality = "low" if d.get("quality", "high") == "low" else "high"
 	# profiles from before home cities existed: the player is already somewhere, keep it
 	home_city = d.get("home_city", d.get("from_city", ""))
-	if not Geo.CITIES.has(home_city): home_city = ""
-	visited = (d.get("visited", []) as Array).filter(func(id): return Geo.CITIES.has(id))
+	if not Geo.cities().has(home_city): home_city = ""
+	visited = (d.get("visited", []) as Array).filter(func(id): return Geo.cities().has(id))
 	season = d.get("season", season) if SeasonPalette.SEASONS.has(d.get("season", "")) else season
-	from_city = d.get("from_city", from_city) if Geo.CITIES.has(d.get("from_city", "")) else from_city
-	to_city = d.get("to_city", to_city) if Geo.CITIES.has(d.get("to_city", "")) else to_city
+	from_city = d.get("from_city", from_city) if Geo.cities().has(d.get("from_city", "")) else from_city
+	to_city = d.get("to_city", to_city) if Geo.cities().has(d.get("to_city", "")) else to_city
 	if visited.is_empty() and has_home():
 		visited = [home_city] if home_city == from_city else [home_city, from_city]
 	var car: String = d.get("car_id", car_id)
-	car_id = car if CarStats.DATA.has(car) and Profile.is_unlocked(car, total_km) else CarStats.ALL_IDS[0]
+	car_id = car if CarStats.has(car) and Profile.is_unlocked(car, total_km) else CarStats.ids()[0]
 
 func save_profile() -> void:
 	var f := FileAccess.open(SAVE_PATH, FileAccess.WRITE)
@@ -83,7 +83,7 @@ func set_home(id: String) -> void:
 
 ## Back to a new player: no kilometres, only the first car, default season and route.
 func reset_profile() -> void:
-	car_id = CarStats.ALL_IDS[0]
+	car_id = CarStats.ids()[0]
 	season = "summer"
 	from_city = "krakow"
 	to_city = "rzeszow"
@@ -107,4 +107,4 @@ func add_km(km: float) -> Array:
 	var before := Profile.unlocked_count(total_km)
 	total_km += km
 	save_profile()
-	return CarStats.ALL_IDS.slice(before, Profile.unlocked_count(total_km))
+	return CarStats.ids().slice(before, Profile.unlocked_count(total_km))

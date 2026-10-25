@@ -1,6 +1,6 @@
 class_name Route
 extends RefCounted
-## Turns a trip between two cities into a playable stage: shortest path over Geo.ROADS, real kilometres squeezed
+## Turns a trip between two cities into a playable stage: shortest path over Geo.roads(), real kilometres squeezed
 ## into a game track, regions as biome zones along it, and every town / big city passed with its position.
 const M_PER_KM := 14.0
 ## Short trips are stretched, but gently: a longer real trip is always longer in the game. Below ~160 km the track
@@ -27,14 +27,14 @@ static func neighbours(id: String) -> Array:
 ## Road dictionaries adjacent to a city, as [road, other_city_id].
 static func _neighbours(id: String) -> Array:
 	var out := []
-	for r in Geo.ROADS:
+	for r in Geo.roads():
 		if r.a == id: out.append([r, r.b])
 		elif r.b == id: out.append([r, r.a])
 	return out
 
 ## Shortest path by kilometres. Returns legs [{"road": dict, "from": id, "to": id}], empty when unreachable.
 static func find(from: String, to: String) -> Array:
-	if from == to or not Geo.CITIES.has(from) or not Geo.CITIES.has(to):
+	if from == to or not Geo.cities().has(from) or not Geo.cities().has(to):
 		return []
 	var dist := {from: 0.0}
 	var prev := {}
@@ -141,10 +141,10 @@ static func build(from: String, to: String) -> Dictionary:
 			zones.append({"z0": (off + zn[0]) * mpk, "z1": (off + zn[1]) * mpk, "biome": zn[2], "region": zn[3]})
 			if not regions.has(zn[3]): regions.append(zn[3])
 		for tn in r.get("tunnels", []):
-			var a := float(tn[0]) if leg.from == r.a else leg_km - float(tn[1])
-			var b := float(tn[1]) if leg.from == r.a else leg_km - float(tn[0])
-			tunnels.append({"z0": (off + a) * mpk, "z1": (off + b) * mpk, "name": tn[2], "fact": tn[3],
-				"city": tn.size() > 4 and tn[4] == "city"})
+			var a := float(tn.from_km) if leg.from == r.a else leg_km - float(tn.to_km)
+			var b := float(tn.to_km) if leg.from == r.a else leg_km - float(tn.from_km)
+			tunnels.append({"z0": (off + a) * mpk, "z1": (off + b) * mpk, "name": tn.name, "fact": tn.fact,
+				"city": tn.get("city", false)})
 		for t in _leg_towns(leg):
 			# a town shared by two consecutive legs (e.g. Stryków) appears once
 			if towns.size() > 0 and towns[-1].name == t[0]: continue
@@ -331,14 +331,15 @@ static func zone_at(stage: Dictionary, z: float) -> Dictionary:
 		if z < zn.z1: return zn
 	return zs[-1]
 
-## Posted speed limit in km/h: 140 on motorways and expressways, 90 on other roads; 70 through a big city and
-## through a small town on an expressway, 50 through a small town on an ordinary road.
+## Posted speed limit in km/h, from the country's limits (Poland: 140 on motorways and expressways, 90 on other
+## roads; 70 through a big city and through a small town on an expressway, 50 through a small town on an ordinary road).
 static func speed_limit_at(stage: Dictionary, z: float) -> int:
+	var lim := Geo.limits()
 	var t := town_at(stage, z)
 	var express := lanes_at(stage, z) == 3
 	if not t.is_empty():
-		return 70 if t.big or express else 50
-	return 140 if express else 90
+		return int(lim.city if t.big else (lim.town_on_express if express else lim.town))
+	return int(lim.express if express else lim.road)
 
 ## Dual carriageway here (two lanes each way with a green median): motorways, expressways and big city streets.
 ## Every other road has one lane each way, with oncoming traffic in the left lane.

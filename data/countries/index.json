@@ -1,0 +1,10 @@
+{
+	"countries": [
+		{
+			"code": "pl",
+			"name": {"pl": "Polska"},
+			"neighbours": ["de", "cz", "sk", "ua", "by", "lt", "ru"],
+			"favorite_neighbour": "cz"
+		}
+	]
+}

@@ -2,14 +2,14 @@ extends Node2D
 ## Dev-only: every landmark painter on one screen. Arg: page (0, 1).
 func _draw() -> void:
 	draw_rect(Rect2(0, 0, 960, 540), Color("9fc6e6"))
-	var kinds: Array = Landmarks.SIZE.keys()
+	var kinds: Array = GameData.rules().landmark_sizes.keys()
 	var a := OS.get_cmdline_user_args()
 	var page := int(a[0]) if a.size() > 0 else 0
 	kinds = kinds.slice(page * 24, page * 24 + 24)
 	var font := ThemeDB.fallback_font
 	for i in kinds.size():
 		var k: String = kinds[i]
-		var sz: Array = Landmarks.SIZE[k]
+		var sz: Array = Landmarks.size(k)
 		var cell := Vector2(160, 135)
 		var o := Vector2((i % 6) * cell.x, (i / 6) * cell.y)
 		draw_rect(Rect2(o + Vector2(0, 100), Vector2(cell.x, 35)), Color("7fae5a"))

@@ -1,0 +1,513 @@
+[
+	{
+		"a": "krakow",
+		"b": "katowice",
+		"km": 80,
+		"road": [[12, "S52"], [80, "A4"]],
+		"towns": [["Chrzanów", 40], ["Jaworzno", 55], ["Mysłowice", 70]],
+		"zones": [[30, "jura", "Wyżyna Krakowsko-Częstochowska"], [80, "industrial", "Górnośląski Okręg Przemysłowy"]],
+		"tunnels": [
+			{
+				"from_km": 5,
+				"to_km": 5.65,
+				"name": {"pl": "Tunel pod Zielonkami"},
+				"fact": {"pl": "Północna Obwodnica Krakowa (S52): jedyna obwodnica w Polsce z dwoma tunelami"},
+				"city": true
+			}
+		]
+	},
+	{
+		"a": "krakow",
+		"b": "rzeszow",
+		"km": 165,
+		"road": "A4",
+		"towns": [
+			["Bochnia", 40], ["Brzesko", 55], ["Tarnów", 80], ["Dębica", 120], ["Ropczyce", 135],
+			["Sędziszów Małopolski", 145]
+		],
+		"zones": [
+			[55, "foothills", "Pogórze Karpackie"],
+			[125, "fields", "Kotlina Sandomierska"],
+			[165, "foothills", "Pogórze Rzeszowskie"]
+		]
+	},
+	{
+		"a": "krakow",
+		"b": "kielce",
+		"km": 115,
+		"road": "S7",
+		"towns": [["Miechów", 40], ["Jędrzejów", 75], ["Chęciny", 100]],
+		"zones": [
+			[60, "upland", "Wyżyna Miechowska"], [95, "fields", "Niecka Nidziańska"],
+			[115, "forest", "Góry Świętokrzyskie"]
+		]
+	},
+	{
+		"a": "krakow",
+		"b": "bielsko",
+		"km": 90,
+		"road": "DK52",
+		"towns": [["Kalwaria Zebrzydowska", 35], ["Wadowice", 50], ["Andrychów", 62], ["Kęty", 72]],
+		"zones": [[30, "foothills", "Pogórze Wielickie"], [90, "mountains", "Beskid Mały"]]
+	},
+	{
+		"a": "katowice",
+		"b": "bielsko",
+		"km": 60,
+		"road": "S1",
+		"towns": [["Tychy", 18], ["Pszczyna", 35], ["Czechowice-Dziedzice", 48]],
+		"zones": [
+			[25, "industrial", "Górnośląski Okręg Przemysłowy"],
+			[45, "forest", "Kotlina Oświęcimska"],
+			[60, "mountains", "Beskid Śląski"]
+		]
+	},
+	{
+		"a": "katowice",
+		"b": "czestochowa",
+		"km": 75,
+		"road": "A1",
+		"towns": [["Piekary Śląskie", 15], ["Siewierz", 38], ["Koziegłowy", 52]],
+		"zones": [[25, "industrial", "Górnośląski Okręg Przemysłowy"], [75, "jura", "Wyżyna Krakowsko-Częstochowska"]]
+	},
+	{
+		"a": "katowice",
+		"b": "opole",
+		"km": 100,
+		"road": "A4",
+		"towns": [["Gliwice", 25], ["Strzelce Opolskie", 65]],
+		"zones": [
+			[30, "industrial", "Górnośląski Okręg Przemysłowy"],
+			[55, "fields", "Wyżyna Śląska"],
+			[75, "upland", "Chełm (Góra Świętej Anny)"],
+			[100, "fields", "Nizina Śląska"]
+		]
+	},
+	{
+		"a": "opole",
+		"b": "wroclaw",
+		"km": 95,
+		"road": "A4",
+		"towns": [["Brzeg", 45], ["Oława", 70]],
+		"zones": [[30, "fields", "Nizina Śląska"], [50, "forest", "Bory Niemodlińskie"], [95, "fields", "Nizina Śląska"]]
+	},
+	{
+		"a": "czestochowa",
+		"b": "lodz",
+		"km": 125,
+		"road": "A1",
+		"towns": [["Radomsko", 45], ["Kamieńsk", 60], ["Piotrków Trybunalski", 80], ["Tuszyn", 105]],
+		"zones": [
+			[50, "fields", "Wyżyna Wieluńska"], [80, "forest", "Równina Piotrkowska"],
+			[125, "fields", "Wzniesienia Łódzkie"]
+		]
+	},
+	{
+		"a": "czestochowa",
+		"b": "opole",
+		"km": 95,
+		"road": "DK46",
+		"towns": [["Lubliniec", 35], ["Dobrodzień", 55], ["Ozimek", 75]],
+		"zones": [[45, "forest", "Lasy Lublinieckie"], [95, "fields", "Równina Opolska"]]
+	},
+	{
+		"a": "lodz",
+		"b": "warszawa",
+		"km": 135,
+		"road": "A2",
+		"towns": [["Stryków", 20], ["Łowicz", 60], ["Żyrardów", 90], ["Grodzisk Mazowiecki", 105], ["Pruszków", 120]],
+		"zones": [[25, "fields", "Wzniesienia Łódzkie"], [135, "fields", "Mazowsze"]]
+	},
+	{
+		"a": "lodz",
+		"b": "poznan",
+		"km": 210,
+		"road": "A2",
+		"towns": [["Łęczyca", 40], ["Dąbie", 75], ["Koło", 90], ["Konin", 115], ["Słupca", 140], ["Września", 165]],
+		"zones": [
+			[45, "fields", "Równina Łęczycka"],
+			[100, "fields", "Dolina Warty"],
+			[125, "industrial", "Zagłębie Konińskie"],
+			[210, "fields", "Wielkopolska"]
+		]
+	},
+	{
+		"a": "lodz",
+		"b": "torun",
+		"km": 180,
+		"road": "A1",
+		"towns": [["Stryków", 20], ["Piątek", 45], ["Kutno", 65], ["Kowal", 110], ["Włocławek", 125]],
+		"zones": [[50, "fields", "Ziemia Łęczycka"], [110, "fields", "Równina Kutnowska"], [180, "fields", "Kujawy"]]
+	},
+	{
+		"a": "lodz",
+		"b": "wroclaw",
+		"km": 210,
+		"road": "S8",
+		"towns": [["Łask", 30], ["Sieradz", 55], ["Wieruszów", 110], ["Kępno", 125], ["Syców", 150], ["Oleśnica", 180]],
+		"zones": [
+			[110, "fields", "Ziemia Sieradzka"],
+			[165, "forest", "Wzgórza Ostrzeszowskie"],
+			[210, "fields", "Nizina Śląska"]
+		]
+	},
+	{
+		"a": "wroclaw",
+		"b": "poznan",
+		"km": 180,
+		"road": "S5",
+		"towns": [["Trzebnica", 25], ["Rawicz", 85], ["Leszno", 105], ["Kościan", 135], ["Stęszew", 160]],
+		"zones": [
+			[30, "upland", "Wzgórza Trzebnickie"],
+			[70, "lakes", "Dolina Baryczy"],
+			[100, "fields", "Wielkopolska"],
+			[125, "lakes", "Pojezierze Leszczyńskie"],
+			[180, "fields", "Wielkopolska"]
+		]
+	},
+	{
+		"a": "wroclaw",
+		"b": "zielona_gora",
+		"km": 190,
+		"road": [[65, "A4"], [190, "S3"]],
+		"towns": [["Środa Śląska", 35], ["Legnica", 65], ["Lubin", 90], ["Polkowice", 105], ["Nowa Sól", 165]],
+		"zones": [
+			[50, "fields", "Nizina Śląska"],
+			[115, "industrial", "Legnicko-Głogowski Okręg Miedziowy"],
+			[190, "forest", "Dolina Odry"]
+		]
+	},
+	{
+		"a": "poznan",
+		"b": "bydgoszcz",
+		"km": 130,
+		"road": "S5",
+		"towns": [["Gniezno", 50], ["Żnin", 90], ["Szubin", 105]],
+		"zones": [[65, "lakes", "Pojezierze Gnieźnieńskie"], [130, "fields", "Pałuki"]]
+	},
+	{
+		"a": "poznan",
+		"b": "zielona_gora",
+		"km": 135,
+		"road": [[95, "A2"], [135, "S3"]],
+		"towns": [["Buk", 30], ["Nowy Tomyśl", 60], ["Świebodzin", 95], ["Sulechów", 115]],
+		"zones": [[65, "fields", "Wielkopolska"], [135, "lakes", "Pojezierze Lubuskie"]]
+	},
+	{
+		"a": "poznan",
+		"b": "koszalin",
+		"km": 240,
+		"road": [[170, "DK11"], [240, "S11"]],
+		"towns": [
+			["Oborniki", 35], ["Chodzież", 70], ["Piła", 100], ["Jastrowie", 125], ["Szczecinek", 170],
+			["Bobolice", 200]
+		],
+		"zones": [
+			[65, "fields", "Wielkopolska"],
+			[120, "forest", "Dolina Noteci"],
+			[190, "lakes", "Pojezierze Szczecineckie"],
+			[240, "forest", "Pomorze Środkowe"]
+		]
+	},
+	{
+		"a": "bydgoszcz",
+		"b": "torun",
+		"km": 50,
+		"road": "S10",
+		"towns": [["Solec Kujawski", 20]],
+		"zones": [[50, "forest", "Puszcza Bydgoska"]]
+	},
+	{
+		"a": "torun",
+		"b": "gdansk",
+		"km": 175,
+		"road": "A1",
+		"towns": [["Grudziądz", 60], ["Pelplin", 115], ["Tczew", 140], ["Pruszcz Gdański", 165]],
+		"zones": [[60, "fields", "Ziemia Chełmińska"], [100, "forest", "Bory Tucholskie"], [175, "fields", "Kociewie"]]
+	},
+	{
+		"a": "torun",
+		"b": "plock",
+		"km": 110,
+		"road": [[55, "DK91"], [110, "DK62"]],
+		"towns": [["Ciechocinek", 20], ["Włocławek", 55], ["Dobrzyków", 85]],
+		"zones": [[60, "fields", "Kujawy"], [110, "fields", "Dolina Wisły"]]
+	},
+	{
+		"a": "gdansk",
+		"b": "gdynia",
+		"km": 25,
+		"road": "",
+		"towns": [["Sopot", 12]],
+		"zones": [[25, "coast", "Trójmiasto"]]
+	},
+	{
+		"a": "gdansk",
+		"b": "elblag",
+		"km": 60,
+		"road": "S7",
+		"towns": [["Nowy Dwór Gdański", 35]],
+		"zones": [[60, "zulawy", "Żuławy Wiślane"]]
+	},
+	{
+		"a": "gdynia",
+		"b": "koszalin",
+		"km": 170,
+		"road": "S6",
+		"towns": [["Wejherowo", 20], ["Lębork", 60], ["Słupsk", 115], ["Sławno", 140]],
+		"zones": [[30, "forest", "Puszcza Darżlubska"], [70, "lakes", "Kaszuby"], [170, "coast", "Pobrzeże Koszalińskie"]]
+	},
+	{
+		"a": "koszalin",
+		"b": "szczecin",
+		"km": 165,
+		"road": "S6",
+		"towns": [["Karlino", 30], ["Płoty", 70], ["Nowogard", 100], ["Goleniów", 125]],
+		"zones": [
+			[40, "coast", "Pobrzeże Koszalińskie"], [110, "fields", "Równina Nowogardzka"],
+			[150, "forest", "Puszcza Goleniowska"], [165, "fields", "Dolina Dolnej Odry"]
+		]
+	},
+	{
+		"a": "szczecin",
+		"b": "gorzow",
+		"km": 105,
+		"road": "S3",
+		"towns": [["Pyrzyce", 45], ["Myślibórz", 75]],
+		"zones": [[50, "fields", "Równina Pyrzycka"], [105, "lakes", "Pojezierze Myśliborskie"]]
+	},
+	{
+		"a": "szczecin",
+		"b": "bydgoszcz",
+		"km": 260,
+		"road": [[35, "S10"], [260, "DK10"]],
+		"towns": [["Stargard", 35], ["Kalisz Pomorski", 85], ["Wałcz", 130], ["Piła", 165], ["Nakło nad Notecią", 230]],
+		"zones": [
+			[50, "fields", "Równina Pyrzycka"], [150, "lakes", "Pojezierze Wałeckie"],
+			[190, "forest", "Dolina Noteci"], [260, "fields", "Krajna"]
+		]
+	},
+	{
+		"a": "gorzow",
+		"b": "zielona_gora",
+		"km": 110,
+		"road": "S3",
+		"towns": [["Skwierzyna", 25], ["Międzyrzecz", 45], ["Świebodzin", 70], ["Sulechów", 95]],
+		"zones": [
+			[30, "forest", "Kotlina Gorzowska"], [75, "lakes", "Pojezierze Łagowskie"],
+			[110, "forest", "Ziemia Lubuska"]
+		]
+	},
+	{
+		"a": "elblag",
+		"b": "olsztyn",
+		"km": 105,
+		"road": [[70, "S7"], [105, "DK16"]],
+		"towns": [["Pasłęk", 20], ["Miłomłyn", 55], ["Ostróda", 70]],
+		"zones": [[25, "fields", "Wysoczyzna Elbląska"], [75, "lakes", "Pojezierze Iławskie"], [105, "forest", "Warmia"]]
+	},
+	{
+		"a": "olsztyn",
+		"b": "warszawa",
+		"km": 210,
+		"road": [[30, "S51"], [210, "S7"]],
+		"towns": [["Olsztynek", 30], ["Nidzica", 55], ["Mława", 100], ["Płońsk", 140], ["Łomianki", 195]],
+		"zones": [[55, "lakes", "Warmia i Mazury"], [100, "fields", "Wzniesienia Mławskie"], [210, "fields", "Mazowsze"]]
+	},
+	{
+		"a": "olsztyn",
+		"b": "bialystok",
+		"km": 230,
+		"road": [[150, "DK16"], [230, "DK65"]],
+		"towns": [["Biskupiec", 30], ["Mrągowo", 60], ["Orzysz", 95], ["Ełk", 125], ["Grajewo", 150], ["Mońki", 190]],
+		"zones": [[130, "lakes", "Mazury"], [175, "lakes", "Dolina Biebrzy"], [230, "podlasie", "Podlasie"]]
+	},
+	{
+		"a": "warszawa",
+		"b": "bialystok",
+		"km": 200,
+		"road": "S8",
+		"towns": [["Radzymin", 25], ["Wyszków", 55], ["Ostrów Mazowiecka", 95], ["Zambrów", 130]],
+		"zones": [
+			[40, "fields", "Mazowsze"],
+			[80, "forest", "Puszcza Biała"],
+			[140, "fields", "Wysoczyzna Wysokomazowiecka"],
+			[200, "podlasie", "Podlasie"]
+		]
+	},
+	{
+		"a": "warszawa",
+		"b": "lublin",
+		"km": 170,
+		"road": "S17",
+		"towns": [["Garwolin", 60], ["Ryki", 90], ["Kurów", 125]],
+		"zones": [[105, "fields", "Mazowsze"], [170, "upland", "Wyżyna Lubelska"]],
+		"tunnels": [
+			{
+				"from_km": 4,
+				"to_km": 6.3,
+				"name": {"pl": "Tunel pod Ursynowem"},
+				"fact": {"pl": "Południowa Obwodnica Warszawy (S2): najdłuższy tunel drogowy w Polsce, 2,3 km"},
+				"city": true
+			}
+		]
+	},
+	{
+		"a": "warszawa",
+		"b": "radom",
+		"km": 100,
+		"road": "S7",
+		"towns": [["Grójec", 40], ["Białobrzegi", 65]],
+		"zones": [[25, "fields", "Mazowsze"], [70, "orchard", "Sady Grójeckie"], [100, "fields", "Równina Radomska"]]
+	},
+	{
+		"a": "warszawa",
+		"b": "plock",
+		"km": 115,
+		"road": [[40, "S7"], [115, "DK62"]],
+		"towns": [["Łomianki", 15], ["Zakroczym", 40], ["Wyszogród", 70]],
+		"zones": [[35, "forest", "Puszcza Kampinoska"], [115, "fields", "Dolina Wisły"]]
+	},
+	{
+		"a": "radom",
+		"b": "kielce",
+		"km": 80,
+		"road": "S7",
+		"towns": [["Szydłowiec", 30], ["Skarżysko-Kamienna", 45], ["Suchedniów", 55]],
+		"zones": [[25, "fields", "Równina Radomska"], [80, "forest", "Góry Świętokrzyskie"]]
+	},
+	{
+		"a": "lublin",
+		"b": "rzeszow",
+		"km": 170,
+		"road": "S19",
+		"towns": [["Kraśnik", 50], ["Janów Lubelski", 80], ["Nisko", 110], ["Sokołów Małopolski", 145]],
+		"zones": [
+			[50, "upland", "Wyżyna Lubelska"], [120, "forest", "Lasy Janowskie"],
+			[170, "fields", "Kotlina Sandomierska"]
+		]
+	},
+	{
+		"a": "lublin",
+		"b": "bialystok",
+		"km": 250,
+		"road": [[25, "S19"], [205, "DK19"], [250, "S19"]],
+		"towns": [
+			["Lubartów", 25], ["Radzyń Podlaski", 65], ["Międzyrzec Podlaski", 95], ["Siemiatycze", 165],
+			["Bielsk Podlaski", 205]
+		],
+		"zones": [[35, "upland", "Wyżyna Lubelska"], [100, "fields", "Południowe Podlasie"], [250, "podlasie", "Podlasie"]]
+	},
+	{
+		"a": "lublin",
+		"b": "kielce",
+		"km": 170,
+		"road": [[50, "S19"], [170, "DK74"]],
+		"towns": [["Kraśnik", 50], ["Annopol", 75], ["Opatów", 115], ["Łagów", 135]],
+		"zones": [
+			[60, "upland", "Wyżyna Lubelska"], [100, "fields", "Dolina Wisły"], [135, "upland", "Wyżyna Sandomierska"],
+			[170, "forest", "Góry Świętokrzyskie"]
+		]
+	},
+	{
+		"a": "bielsko",
+		"b": "zwardon",
+		"km": 55,
+		"road": "S1",
+		"towns": [["Żywiec", 20], ["Węgierska Górka", 33], ["Milówka", 40]],
+		"zones": [[25, "foothills", "Kotlina Żywiecka"], [55, "mountains", "Beskid Żywiecki"]],
+		"tunnels": [
+			{
+				"from_km": 46,
+				"to_km": 46.7,
+				"name": {"pl": "Tunel w Lalikach"},
+				"fact": {"pl": "Pierwszy w Polsce tunel na drodze ekspresowej, otwarty w 2010 roku"}
+			}
+		]
+	},
+	{
+		"a": "wroclaw",
+		"b": "kamienna_gora",
+		"km": 115,
+		"road": [[62, "A4"], [115, "S3"]],
+		"towns": [["Środa Śląska", 35], ["Jawor", 75], ["Bolków", 90]],
+		"zones": [
+			[50, "fields", "Nizina Śląska"],
+			[80, "foothills", "Pogórze Kaczawskie"],
+			[100, "mountains", "Góry Kaczawskie"],
+			[115, "foothills", "Kotlina Kamiennogórska"]
+		],
+		"tunnels": [
+			{
+				"from_km": 98,
+				"to_km": 100.3,
+				"name": {"pl": "Tunel na S3 w Sudetach"},
+				"fact": {"pl": "Najdłuższy w Polsce tunel drążony w skale: 2,3 km"}
+			}
+		]
+	},
+	{
+		"a": "krakow",
+		"b": "zakopane",
+		"km": 105,
+		"road": [[65, "S7"], [105, "DK47"]],
+		"towns": [["Myślenice", 35], ["Lubień", 48], ["Rabka-Zdrój", 65], ["Nowy Targ", 85]],
+		"zones": [[25, "foothills", "Pogórze Wielickie"], [70, "mountains", "Beskidy"], [105, "mountains", "Podhale"]],
+		"tunnels": [
+			{
+				"from_km": 54,
+				"to_km": 56,
+				"name": {"pl": "Tunel pod Luboniem Małym"},
+				"fact": {"pl": "Ponad 2 km pod górą Luboń Mały, otwarty w 2022 roku"}
+			}
+		]
+	},
+	{
+		"a": "lublin",
+		"b": "zamosc",
+		"km": 90,
+		"road": "S17",
+		"towns": [["Piaski", 25], ["Krasnystaw", 55]],
+		"zones": [[60, "upland", "Wyżyna Lubelska"], [90, "fields", "Padół Zamojski"]]
+	},
+	{
+		"a": "zamosc",
+		"b": "rzeszow",
+		"km": 160,
+		"road": [[20, "DK74"], [110, ""], [135, "DW877"], [160, "A4"]],
+		"towns": [["Szczebrzeszyn", 20], ["Biłgoraj", 50], ["Leżajsk", 110], ["Łańcut", 135]],
+		"zones": [
+			[30, "upland", "Roztocze"],
+			[90, "forest", "Puszcza Solska"],
+			[130, "fields", "Kotlina Sandomierska"],
+			[160, "foothills", "Pogórze Rzeszowskie"]
+		]
+	},
+	{
+		"a": "warszawa",
+		"b": "lomza",
+		"km": 150,
+		"road": [[95, "S8"], [150, "S61"]],
+		"towns": [["Radzymin", 25], ["Wyszków", 55], ["Ostrów Mazowiecka", 95], ["Śniadowo", 120]],
+		"zones": [[40, "fields", "Mazowsze"], [80, "forest", "Puszcza Biała"], [150, "fields", "Ziemia Łomżyńska"]]
+	},
+	{
+		"a": "lomza",
+		"b": "bialystok",
+		"km": 80,
+		"road": [[50, "DK64"], [80, "S8"]],
+		"towns": [["Wizna", 25], ["Tykocin", 55]],
+		"zones": [[35, "lakes", "Dolina Narwi"], [80, "podlasie", "Podlasie"]]
+	},
+	{
+		"a": "lomza",
+		"b": "olsztyn",
+		"km": 180,
+		"road": [[75, "DK63"], [135, "DK58"], [180, "DK53"]],
+		"towns": [["Kolno", 30], ["Pisz", 75], ["Ruciane-Nida", 95], ["Szczytno", 135]],
+		"zones": [
+			[40, "fields", "Kurpie"], [100, "forest", "Puszcza Piska"], [150, "lakes", "Mazury"],
+			[180, "forest", "Warmia"]
+		]
+	}
+]

@@ -52,8 +52,8 @@ func _draw() -> void:
 		var names := []
 		for id in cities: names.append(Geo.city(id).name)
 		var n := Session.visited.size()
-		var text := "Nowe miasto na mapie: %s!  (%d / %d)" % [", ".join(names), n, Geo.CITIES.size()]
-		if n >= Geo.CITIES.size():
+		var text := "Nowe miasto na mapie: %s!  (%d / %d)" % [", ".join(names), n, Geo.cities().size()]
+		if n >= Geo.cities().size():
 			text = "Byłeś we wszystkich %d miastach na mapie! Brawo!" % n
 		_banner(banner_y, text, Color(0.75, 0.55, 0.05, 0.9))
 	var fines: int = r.get("fines", 0)

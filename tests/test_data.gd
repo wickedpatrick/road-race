@@ -1,18 +1,18 @@
 extends RefCounted
 func run(t) -> void:
 	var car_keys := ["name", "hp", "max_speed", "accel", "brake", "tank", "burn", "handling", "body_color", "halfwidth"]
-	for id in CarStats.ALL_IDS:
+	for id in CarStats.ids():
 		var c: Dictionary = CarStats.by_id(id)
 		var ok := true
 		for k in car_keys:
 			if not c.has(k): ok = false
 		t.check(ok, "car %s has all keys" % id)
-	t.check(CarStats.ALL_IDS == ["yaris", "octavia", "xc60", "bmw530", "rangerover"], "five cars, weakest first")
+	t.check(CarStats.ids() == ["yaris", "octavia", "xc60", "bmw530", "rangerover"], "five cars, weakest first")
 	# each car beats the previous one on speed, acceleration and range, and burns more per km at 90 km/h
 	var ranked := true
-	for i in range(1, CarStats.ALL_IDS.size()):
-		var a: Dictionary = CarStats.by_id(CarStats.ALL_IDS[i - 1])
-		var b: Dictionary = CarStats.by_id(CarStats.ALL_IDS[i])
+	for i in range(1, CarStats.ids().size()):
+		var a: Dictionary = CarStats.by_id(CarStats.ids()[i - 1])
+		var b: Dictionary = CarStats.by_id(CarStats.ids()[i])
 		if b.max_speed <= a.max_speed or b.accel <= a.accel or b.tank <= a.tank or b.hp <= a.hp: ranked = false
 		if Fuel.new(b.tank, b.burn, b.max_speed).per_metre(25.0) <= Fuel.new(a.tank, a.burn, a.max_speed).per_metre(25.0): ranked = false
 	t.check(ranked, "cars ranked: better is faster but thirstier")
@@ -33,7 +33,7 @@ func run(t) -> void:
 			for z in s.stations:
 				if z <= prev or z >= s.length - 300.0: st_ok = false
 				prev = z
-			for id in CarStats.ALL_IDS:
+			for id in CarStats.ids():
 				var c: Dictionary = CarStats.by_id(id)
 				var fm := Fuel.new(c.tank, c.burn, c.max_speed)
 				var empty_in: float = c.tank / fm.rate(c.max_speed * 0.8)
