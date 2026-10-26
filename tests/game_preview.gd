@@ -11,7 +11,8 @@ func _ready() -> void:
 		countdown = 0.0
 		if a.size() > 5: race.fuel.level = float(a[5])
 		if a.size() > 6 and a[6] == "police":
-			race.police = {"z": race.z + 20.0, "x": race.x + 0.3, "speed": 30.0, "phase": "pull_over", "t": 0.0}
+			race.police = {"z": race.z + 20.0, "x": race.x + 0.3, "speed": 30.0, "phase": "pull_over", "t": 0.0,
+				"weak": false, "need": 3, "swerves": 0, "dir": 0.0, "swerve_t": -100.0}
 func _physics_process(dt: float) -> void:
 	paused = false
 	if countdown <= 0.0 and race.state == "running":

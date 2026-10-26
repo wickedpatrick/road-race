@@ -4,6 +4,7 @@ extends RefCounted
 signal collided(car_index: int)
 signal crashed ## hit a sign, a tree, a lamp post or a tunnel wall
 signal fined
+signal police_crashed ## a patrol car shaken off: it went off the road or into another car
 const STATION_HALF_LEN := 40.0
 const STOP_SPEED := 3.0
 const SHOULDER_MIN := 0.5 ## fraction of the car that must be off the road to refuel
@@ -40,6 +41,15 @@ const TOLERANCE := 10.0 ## km/h over the posted limit before the radar detector 
 const FINE_FUEL := 10.0
 const TICKET_TIME := 3.0
 const PULL_OVER_DECEL := 9.0
+## escaping the patrol car (data/rules.json "police"): while it pulls the player over the steering stays free; sharp
+## changes of direction at high speed make a weak officer copy the move too hard and crash
+const POLICE_FOLLOW := 2.0 ## road half-widths per second the patrol car moves sideways to stay in front of the player
+const SWERVE_STEER := 0.9 ## steering this hard counts as a sharp turn
+const SWERVE_GAP := 1.5 ## seconds: a slower next change of direction starts the count again
+const POLICE_OFF_X := 1.7 ## the crashed patrol car ends up this far out (or against the median barrier)
+const POLICE_CRASH_DECEL := 22.0
+const POLICE_EASE_DECEL := 3.0 ## m/s^2: pulled over above the escape speed the car first only rolls off, which leaves
+## a few seconds for the swerves (a faster car longer); below it the usual PULL_OVER_DECEL
 
 var car_id: String
 var stats: Dictionary
@@ -69,8 +79,11 @@ var last_crash := -100.0 ## `elapsed` at the last hit of a roadside obstacle
 var head_on := false ## the last bump was with an oncoming car
 var speeding := 0.0 ## seconds over the limit (radar detector beeping while > 0)
 var fines := 0
-## police car, empty when none: {z, x, speed, phase: chase | pull_over | ticket | leave, t}
+## police car, empty when none: {z, x, speed, phase: chase | pull_over | ticket | leave | crashed, t, weak (can be
+## shaken off), need (sharp changes of direction that do it), swerves, dir, swerve_t (the count so far), off_x}
 var police := {}
+var police_rules: Dictionary
+var police_rng := RandomNumberGenerator.new() ## a separate stream: the officers do not reshuffle anything else
 
 func _init(p_car_id: String, p_stage: Dictionary, seed_value: int) -> void:
 	car_id = p_car_id
@@ -84,6 +97,8 @@ func _init(p_car_id: String, p_stage: Dictionary, seed_value: int) -> void:
 	gearbox = Gearbox.new(stats.max_speed)
 	fuel = Fuel.new(stats.tank, stats.burn, stats.max_speed)
 	time_left = stage.duration
+	police_rules = GameData.rules().police
+	police_rng.seed = seed_value + 303
 
 func speed_ratio() -> float:
 	return clampf(speed / stats.max_speed, 0.0, 1.0)
@@ -134,11 +149,15 @@ func _update_speeding(dt: float) -> void:
 			speeding = 0.0
 			# the patrol car comes from behind in the next lane
 			var side := 0.6 if x < 0.4 else -0.6
-			police = {"z": z - 45.0, "x": clampf(x + side, -0.9, 0.9), "speed": speed + 10.0, "phase": "chase", "t": 0.0}
+			# who is driving it: a weak officer can be shaken off by a few sharp changes of direction, a sharp one not
+			var need: Array = police_rules.escape_swerves
+			police = {"z": z - 45.0, "x": clampf(x + side, -0.9, 0.9), "speed": speed + 10.0, "phase": "chase", "t": 0.0,
+				"weak": police_rng.randf() < stage.get("police_escape", police_rules.escape_chance),
+				"need": police_rng.randi_range(need[0], need[1]), "swerves": 0, "dir": 0.0, "swerve_t": -100.0}
 	else:
 		speeding = 0.0
 
-func _update_police(dt: float) -> void:
+func _update_police(dt: float, steer: float) -> void:
 	if police.is_empty():
 		return
 	var p := police
@@ -149,8 +168,10 @@ func _update_police(dt: float) -> void:
 			if p.z > z + 16.0:
 				p.phase = "pull_over"
 		"pull_over":
-			# cut in ahead of the player and brake together with them
-			p.x = move_toward(p.x, x, 0.8 * dt)
+			# cut in ahead of the player and brake together with them, following every move to stay in front
+			p.x = move_toward(p.x, x, POLICE_FOLLOW * dt)
+			if _swerve(p, steer):
+				return
 			p.speed = maxf(0.0, speed + (z + 11.0 - p.z) * 1.5)
 			if speed <= 0.0 and p.speed < 0.5:
 				p.speed = 0.0
@@ -170,7 +191,43 @@ func _update_police(dt: float) -> void:
 			if p.z > z + 400.0 or p.t > 6.0 or p.z < z - 30.0:
 				police = {}
 				return
+		"crashed":
+			# off the road (or into a car on the way there), it stays behind; gone once far out of sight
+			if p.speed > 0.0:
+				p.x = move_toward(p.x, p.off_x, POLICE_FOLLOW * 1.5 * dt)
+				p.speed = maxf(0.0, p.speed - POLICE_CRASH_DECEL * dt)
+				if traffic.check_collision(p.z, p.x, 0.2, p.speed) >= 0:
+					p.speed = 0.0
+			elif p.z < z - 150.0:
+				police = {}
+				return
 	p.z += p.speed * dt
+
+## Counts the player's sharp changes of direction at escape speed while the patrol car pulls them over; the weak
+## officer copies the last one too hard and crashes. True when it did.
+func _swerve(p: Dictionary, steer: float) -> bool:
+	if speed * 3.6 < police_rules.escape_kmh:
+		p.swerves = 0
+		p.dir = 0.0
+		return false
+	if absf(steer) < SWERVE_STEER or signf(steer) == p.dir:
+		return false
+	if elapsed - p.swerve_t > SWERVE_GAP:
+		p.swerves = 0
+	p.swerves += 1
+	p.dir = signf(steer)
+	p.swerve_t = elapsed
+	if not p.weak or p.swerves < p.need:
+		return false
+	p.phase = "crashed"
+	p.t = 0.0
+	p.off_x = _clamp_x(p.dir * POLICE_OFF_X, p.z)
+	police_crashed.emit()
+	return true
+
+## Keeps a car's x on the drivable ground at zz: the median barrier of a dual carriageway, the kerb at a station.
+func _clamp_x(xv: float, zz: float) -> float:
+	return clampf(xv, -MEDIAN_X if Route.dual_f(stage, zz) >= 0.5 else -1.8, STATION_MAX_X if _station_near(zz) else 1.8)
 
 ## How hard a bend of curve 1 pushes the car outwards at `v` (road half-widths per second); the steering can hold
 ## stats.handling * STEER_RATE against it.
@@ -225,8 +282,11 @@ func can_refuel_here() -> bool:
 	return station_in_range() and speed < STOP_SPEED and shoulder_fraction() >= SHOULDER_MIN - 0.0001
 
 func station_in_range() -> bool:
+	return _station_near(z)
+
+func _station_near(zz: float) -> bool:
 	for s in stage.stations:
-		if absf(z - s) < STATION_HALF_LEN:
+		if absf(zz - s) < STATION_HALF_LEN:
 			return true
 	return false
 
@@ -241,7 +301,8 @@ func step(dt: float, input: Dictionary) -> void:
 	var vmax: float = stats.max_speed
 	var held := held_by_police()
 	if held:
-		input = {"accel": false, "brake": false, "steer": 0.0}
+		# pulled over the player can still steer (and swerve to shake off a weak officer), not drive away
+		input = {"accel": false, "brake": false, "steer": input.steer if police.phase == "pull_over" else 0.0}
 		braking = speed > 0.0
 	# longitudinal: engine or brakes, plus the slope (uphill slows, downhill speeds up)
 	var v0 := speed
@@ -249,7 +310,8 @@ func step(dt: float, input: Dictionary) -> void:
 	var slope := GRAVITY * (GRADE_K if grade > 0.0 else DOWNHILL_K) * grade
 	var gas: bool = input.accel and not held and not input.brake and not fuel.is_empty()
 	if held:
-		speed -= PULL_OVER_DECEL * dt
+		var easing: bool = police.phase == "pull_over" and speed * 3.6 >= police_rules.escape_kmh
+		speed -= (POLICE_EASE_DECEL if easing else PULL_OVER_DECEL) * dt
 	elif input.brake:
 		speed -= (stats.brake + slope) * dt
 	elif gas:
@@ -267,7 +329,7 @@ func step(dt: float, input: Dictionary) -> void:
 	var sr := speed_ratio()
 	x += steer * stats.handling * STEER_RATE * clampf(speed / 12.0, 0.0, 1.0) * dt
 	x -= bend_push(track.segment_at(z).curve, speed, stats.handling * STEER_RATE) * dt
-	x = clampf(x, -MEDIAN_X if Route.dual_f(stage, z) >= 0.5 else -1.8, STATION_MAX_X if station_in_range() else 1.8)
+	x = _clamp_x(x, z)
 	if not Route.tunnel_at(stage, z).is_empty():
 		var wall: float = (Scenery.TUNNEL_WALL + TUNNEL_SCRAPE) / Track.ROAD_HALF_WIDTH - stats.halfwidth
 		x = clampf(x, -wall, wall)
@@ -286,7 +348,7 @@ func step(dt: float, input: Dictionary) -> void:
 	if refueling:
 		fuel.refuel(dt, fuel.capacity / 6.0)
 	_update_speeding(dt)
-	_update_police(dt)
+	_update_police(dt, steer)
 	# traffic
 	traffic.update(dt, z, x, speed)
 	var parked_at_station := station_in_range() and speed < STOP_SPEED

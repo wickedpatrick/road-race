@@ -25,6 +25,9 @@ Numbers: distances along a road in real kilometres from city `a`; populations in
   What grows beside the road per landscape is in `Scenery._nature` (`lava`, `highland`, `glacier`, `fjords`: the
   treeless north in `Scenery._iceland`).
 - `landmark_sizes`: landmark painter kind -> `[width, height]` in metres (see `LandmarkPainter`).
+- `police`: escaping a patrol car that is pulling the player over. `escape_chance`: share of patrol officers who can
+  be shaken off (rolled once per chase); `escape_kmh`: no escape below this speed; `escape_swerves`: `[min, max]`
+  sharp changes of direction (full lock, alternating) needed, rolled once per chase.
 
 ## `countries/index.json`
 

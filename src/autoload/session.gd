@@ -20,6 +20,9 @@ var last_result := {}
 ## ?zakrety (or ?zakrety=20) to the address; on the desktop pass -- --zakrety (or --zakrety=20).
 var sharp_test := false
 var sharp_amount := 0.0
+## test mode for the police chase: every patrol officer can be shaken off. ?policja in the browser, -- --policja on
+## the desktop.
+var police_test := false
 
 func _ready() -> void:
 	load_profile()
@@ -31,6 +34,8 @@ func stage() -> Dictionary:
 		st["sharp_test"] = true
 		if sharp_amount > 0.0:
 			st["sharp_amount"] = sharp_amount
+	if police_test:
+		st["police_escape"] = 1.0
 	return st
 
 func _read_test_flags() -> void:
@@ -45,6 +50,8 @@ func _read_test_flags() -> void:
 			sharp_test = true
 			if kv.size() > 1 and kv[1].is_valid_float():
 				sharp_amount = kv[1].to_float()
+		elif kv[0] == "policja":
+			police_test = true
 
 func load_profile() -> void:
 	var f := FileAccess.open(SAVE_PATH, FileAccess.READ)

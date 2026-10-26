@@ -140,6 +140,8 @@ func _draw() -> void:
 	var ph: String = race.police.get("phase", "")
 	if ph == "ticket" or (ph == "leave" and race.police.t < 3.0):
 		_banner("MANDAT za przekroczenie prędkości: -%d l paliwa" % int(Race.FINE_FUEL), Color("ff6a5a"))
+	elif ph == "crashed" and race.police.t < 3.0:
+		_banner("UCIECZKA! Radiowóz wypadł z drogi", Color("49d36b"))
 	elif ph == "chase" or ph == "pull_over":
 		_banner("POLICJA! Zatrzymaj się", Color("6aa8ff") if int(race.elapsed * 4.0) % 2 == 0 else Color("ff6a5a"))
 	elif race.elapsed - race.last_crash < BUMP_BANNER_TIME:

@@ -157,5 +157,6 @@
 		"puffin": [4, 4],
 		"turf_house": [18, 7],
 		"sea_stacks": [22, 18]
-	}
+	},
+	"police": {"escape_chance": 0.2, "escape_kmh": 180, "escape_swerves": [3, 5]}
 }
