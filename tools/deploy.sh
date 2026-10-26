@@ -10,6 +10,7 @@ if [ -n "$(git status --porcelain -- src assets data project.godot export_preset
   echo "Uncommitted changes in the game files: commit them first, so the server runs a known version."; exit 1
 fi
 tests/run.sh
+mkdir -p build/web
 "$G" --headless --path . --export-release "Web" build/web/index.html
 rsync -rtvz --exclude '*.import' build/web/ "$DEST"
 echo "Deployed $(git rev-parse --short HEAD) to $DEST"
