@@ -19,6 +19,7 @@ func _ready() -> void:
 	if args.size() > 4:
 		race.z = float(args[4])
 		race.speed = 30.0
+	if OS.get_environment("RR_X") != "": race.x = float(OS.get_environment("RR_X")) # e.g. RR_X=1.2: by the right edge
 	view = WorldView.new()
 	add_child(view)
 	view.bind(race, season)
@@ -26,6 +27,7 @@ func _physics_process(dt: float) -> void:
 	t += dt
 	if OS.get_cmdline_user_args().has("still"): # a still frame at the given z
 		race.speed = 0.0
+		view.shelter = 1.0 if view._in_tunnel(int(floor((race.z - WorldView.PLAYER_DZ) / WorldView.SEG))) else 0.0
 		return
 	var ahead: float = race.track.segment_at(race.z + 40.0).curve
 	var steer := clampf((-race.x * 1.5 + ahead * 0.35), -1.0, 1.0)

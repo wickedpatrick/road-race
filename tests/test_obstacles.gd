@@ -98,6 +98,15 @@ func run(t) -> void:
 	zr.speed = 10.0
 	for i in 30: zr.step(1.0 / 60.0, GAS)
 	t.check(zr.last_crash > 0.0 and zr.x < 1.4, "the tunnel wall is solid")
+	for side in [-1.0, 1.0]:
+		zr.z = (tn.z0 + tn.z1) * 0.5
+		zr.x = 0.0
+		zr.hit_cooldown = 0.0
+		var widest := 0.0
+		for i in 120:
+			zr.step(1.0 / 60.0, {"accel": true, "brake": false, "steer": side})
+			widest = maxf(widest, absf(zr.x) * Track.ROAD_HALF_WIDTH + zr.stats.halfwidth * Track.ROAD_HALF_WIDTH)
+		t.check(widest <= Scenery.TUNNEL_WALL + Race.TUNNEL_SCRAPE + 0.001, "steering into the tunnel wall never takes the car through it (%.2f m)" % widest)
 	var back := Route.build("zakopane", "krakow")
 	t.check(back.tunnels.size() == 1 and back.tunnels[0].z1 < back.length, "the tunnel is there on the way back too")
 	# the other tunnels: S1 Laliki, S3 in the Sudetes, S52 Zielonki and S2 Ursynów (the last two under city districts)

@@ -153,6 +153,13 @@ func run(t) -> void:
 		rr.step(0.1, NONE)
 		return rr.x
 	t.check(is_equal_approx(pushed.call("yaris", 80.0), pushed.call("rangerover", 80.0)), "the same bend pushes every car alike at the same speed")
+	# far too fast for a sharp bend: the car slides wide gently, it is not flung across the road
+	var bm := fresh("bmw530")
+	for sg in bm.track.segments: sg.curve = Track.SHARP_AMOUNT * 1.15
+	bm.z = 500.0
+	bm.speed = bm.stats.max_speed
+	for i in 30: bm.step(1.0 / 60.0, {"accel": true, "brake": false, "steer": 1.0})
+	t.check(bm.x > -Race.SLIDE_MAX * 0.5 - 0.01 and bm.x < -0.2, "flat out into a sharp bend, steering against it: the BMW drifts wide slowly (x=%.2f after 0.5 s)" % bm.x)
 	# every bump costs time and fuel
 	r = fresh()
 	r.z = 500.0

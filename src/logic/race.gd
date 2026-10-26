@@ -27,6 +27,11 @@ const ENGINE_BRAKE := 0.5 ## m/s^2 at full revs, off the gas downhill (the gearb
 const STEER_RATE := 2.2 ## road half-widths per second at full lock, times stats.handling
 const CORNER_K := 0.35 ## a bend pushes the car outwards by curve * CORNER_K * (speed / CORNER_REF)^2 per second
 const CORNER_REF := 50.0 ## m/s; the push depends on the real speed, so every car feels a bend alike at the same km/h
+## too fast for a bend: the push beyond what the steering can hold is softened (SLIDE_K) and capped (SLIDE_MAX road
+## half-widths per second), so the car slides wide over a second or two instead of being flung off the road
+const SLIDE_K := 0.3
+const SLIDE_MAX := 1.2
+const TUNNEL_SCRAPE := 0.1 ## metres the car may reach into a tunnel wall: enough to hit it, never to see past it
 const DOWNHILL_BURN := 0.3 ## share of the usual fuel use while rolling downhill off the gas (fuel cut-off)
 ## speeding: the radar detector warns first; keep speeding past the grace time and the police pull you over
 const GRACE := 5.0
@@ -172,6 +177,14 @@ func _update_police(dt: float) -> void:
 static func corner_push(v: float) -> float:
 	return CORNER_K * pow(v / CORNER_REF, 2.0)
 
+## Outward push of a bend of `curve` at `v` (road half-widths per second, signed like the curve) for a car that
+## holds `grip` with the steering: in full up to the grip, softened and capped beyond it.
+static func bend_push(curve: float, v: float, grip: float) -> float:
+	var p := absf(curve) * corner_push(v)
+	if p > grip:
+		p = grip + minf((p - grip) * SLIDE_K, SLIDE_MAX)
+	return signf(curve) * p
+
 ## Highest speed the steering can hold a bend of this curve at (m/s).
 func corner_speed(curve: float) -> float:
 	if absf(curve) < 0.001:
@@ -253,8 +266,11 @@ func step(dt: float, input: Dictionary) -> void:
 	steer_visual = lerpf(steer_visual, steer, minf(1.0, dt * 10.0))
 	var sr := speed_ratio()
 	x += steer * stats.handling * STEER_RATE * clampf(speed / 12.0, 0.0, 1.0) * dt
-	x -= track.segment_at(z).curve * corner_push(speed) * dt
+	x -= bend_push(track.segment_at(z).curve, speed, stats.handling * STEER_RATE) * dt
 	x = clampf(x, -MEDIAN_X if Route.dual_f(stage, z) >= 0.5 else -1.8, STATION_MAX_X if station_in_range() else 1.8)
+	if not Route.tunnel_at(stage, z).is_empty():
+		var wall: float = (Scenery.TUNNEL_WALL + TUNNEL_SCRAPE) / Track.ROAD_HALF_WIDTH - stats.halfwidth
+		x = clampf(x, -wall, wall)
 	var z_prev := z
 	z += speed * dt
 	if hit_cooldown <= 0.0 and z < stage.length:

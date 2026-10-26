@@ -7,6 +7,7 @@ const HORIZON := 270.0
 const CAM_H := 3.4
 const PLAYER_DZ := 3.6
 const NEAR := 2.2
+const NEAR_TUNNEL := 0.3 ## inside a tunnel the walls are drawn up to the camera: close to one, nothing outside shows
 const N := 130
 const SEG := Track.SEG_LEN
 const CURVE_K := 0.0028
@@ -23,6 +24,7 @@ var items: Dictionary = {}
 var font: Font
 var parallax := 0.0
 var particles: Array = []
+var shelter := 0.0 ## 1 under a roof (a tunnel): no snow, leaves or rain falling there
 var rng := RandomNumberGenerator.new()
 # per-frame projected segment data, preallocated
 var _x0 := PackedFloat32Array()
@@ -99,6 +101,7 @@ func _process(delta: float) -> void:
 	var k := minf(1.0, delta * 0.6)
 	for key in _hz:
 		_hz[key] = lerpf(_hz[key], target[key], k)
+	shelter = move_toward(shelter, 1.0 if _in_tunnel(int(floor((race.z - PLAYER_DZ) / SEG))) else 0.0, delta * 4.0)
 	for p in particles:
 		match pal.particle:
 			"snow":
@@ -247,6 +250,7 @@ func _draw_scene() -> void:
 	var base_pct := cam_z / SEG - base
 	var cam_x := race.x * Track.ROAD_HALF_WIDTH
 	var cam_y := _ground_y(cam_z) + CAM_H
+	var near := NEAR_TUNNEL if _in_tunnel(base) else NEAR
 	# base layer: ground colour under the horizon
 	_b.draw_rect(Rect2(-20, HORIZON, W + 40, H - HORIZON + 20), _fog(pal.grass_a, N))
 	var dx: float = -_seg(base).curve * CURVE_K * base_pct
@@ -272,10 +276,10 @@ func _draw_scene() -> void:
 		_o1[n] = o1
 		_vis[n] = 0
 		_clip[n] = maxy
-		if z1 > cam_z + NEAR:
+		if z1 > cam_z + near:
 			var wy0: float = sg.y
 			var wy1: float = _seg(i + 1).y
-			var zc := maxf(z0, cam_z + NEAR)
+			var zc := maxf(z0, cam_z + near)
 			var t := (zc - z0) / SEG
 			var oc := lerpf(o0, o1, t)
 			var yc := lerpf(wy0, wy1, t)
@@ -597,12 +601,16 @@ func _draw_player() -> void:
 	CarPainter.draw(_b, race.car_id, Vector2(W * 0.5, py), s * W * 0.5 * CAR_UNIT, race.steer_visual, race.braking)
 
 func _draw_particles() -> void:
+	var a := 1.0 - shelter
+	if a <= 0.0:
+		return
 	for p in particles:
 		match pal.particle:
 			"snow":
-				_b.draw_circle(Vector2(p.x, p.y), 1.6 * p.s, Color(1, 1, 1, 0.9))
+				_b.draw_circle(Vector2(p.x, p.y), 1.6 * p.s, Color(1, 1, 1, 0.9 * a))
 			"leaves":
 				var c := Color("d9772a") if int(p.ph * 10.0) % 2 == 0 else Color("b83a2a")
+				c.a = a
 				_quad(Vector2(p.x, p.y - 3), Vector2(p.x + 3, p.y), Vector2(p.x, p.y + 3), Vector2(p.x - 3, p.y), c)
 			_:
-				_b.draw_circle(Vector2(p.x, p.y), 2.0 * p.s, Color("f7b8d2"))
+				_b.draw_circle(Vector2(p.x, p.y), 2.0 * p.s, Color("f7b8d2", a))
