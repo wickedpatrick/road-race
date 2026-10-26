@@ -6,7 +6,7 @@ cd "$(dirname "$0")/.."
 DEST="api@vps-e96b8579.vps.ovh.net:/home/labs/www/rajd-przez-polske/"
 G=${GODOT:-$(ls /Applications/Godot*.app/Contents/MacOS/Godot 2>/dev/null | head -1)}
 [ -x "$G" ] || { echo "Godot not found (set GODOT=/path/to/Godot)"; exit 1; }
-if [ -n "$(git status --porcelain -- src assets project.godot export_presets.cfg)" ]; then
+if [ -n "$(git status --porcelain -- src assets data project.godot export_presets.cfg)" ]; then
   echo "Uncommitted changes in the game files: commit them first, so the server runs a known version."; exit 1
 fi
 tests/run.sh
