@@ -1,7 +1,7 @@
 extends Node
-## Dev-only renderer benchmark: drives each stage/season with vsync off and prints frame times.
+## Dev-only renderer benchmark: drives each stage in every weather with vsync off and prints frame times.
 ## Run: Godot --path . res://tests/bench.tscn [-- frames]
-const SEASONS := ["spring", "summer", "autumn", "winter"]
+const SEASONS := Weather.KINDS
 const ROUTES := [["krakow", "katowice"], ["katowice", "bielsko"], ["warszawa", "radom"], ["gdansk", "elblag"], ["olsztyn", "bialystok"]]
 var frames := 300
 

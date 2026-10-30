@@ -38,5 +38,6 @@
 		"board": "PALIWO",
 		"prices": [["95", "6,49"], ["ON", "6,79"], ["LPG", "3,09"]],
 		"region_sign": "KRAINA"
-	}
+	},
+	"weather": {"default": "sun", "landscape": true}
 }

@@ -1,5 +1,5 @@
 #!/bin/bash
-# usage: tests/shots.sh out.png "stage season car z" ...   (renders 4 previews into a contact sheet)
+# usage: tests/shots.sh out.png "from to weather car z" ...   (renders 4 previews into a contact sheet)
 cd "$(dirname "$0")/.."
 G=${GODOT:-$(ls /Applications/Godot*.app/Contents/MacOS/Godot 2>/dev/null | head -1)}
 out=$1; shift

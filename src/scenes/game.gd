@@ -31,7 +31,7 @@ func _ready() -> void:
 	race = Race.new(Session.car_id, Session.stage(), randi())
 	view = WorldView.new()
 	add_child(view)
-	view.bind(race, Session.season)
+	view.bind(race)
 	_apply_quality()
 	race.collided.connect(func(_i): Sfx.play("hit", -2.0))
 	race.crashed.connect(func(): Sfx.play("hit", 0.0))
@@ -170,7 +170,7 @@ func _finish() -> void:
 	Session.last_result = {
 		"state": race.state, "time_left": race.time_left, "elapsed": race.elapsed,
 		"duration": race.stage.duration, "fuel": race.fuel.ratio(), "name": race.stage.name, "km": race.stage.km,
-		"fines": race.fines,
+		"fines": race.fines, "weather": race.weather,
 		"km_driven": Route.km_between(race.stage, 0.0, minf(race.z, race.stage.length)),
 	}
 	Session.last_result.unlocked = Session.add_km(Session.last_result.km_driven)

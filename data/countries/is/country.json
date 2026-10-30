@@ -34,5 +34,6 @@
 		"board": "ELDSNEYTI",
 		"prices": [["95 okt.", "319,9"], ["Dísel", "324,9"]],
 		"region_sign": "LANDSHLUTI"
-	}
+	},
+	"weather": {"default": "snow", "landscape": false}
 }

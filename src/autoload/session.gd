@@ -3,7 +3,6 @@ extends Node
 ## site's IndexedDB storage), so progress survives closing the page.
 const SAVE_PATH := "user://profile.json"
 var car_id := "yaris"
-var season := "summer"
 ## The country being played; from_city, to_city, home_city and visited belong to it. The other countries' are kept
 ## in `places` (code -> {home_city, from_city, to_city, visited}); kilometres and cars are shared.
 var country := "pl"
@@ -24,6 +23,8 @@ var sharp_amount := 0.0
 ## test mode for the police chase: every patrol officer can be shaken off. ?policja in the browser, -- --policja on
 ## the desktop.
 var police_test := false
+## test mode for the weather: every trip in this weather. ?pogoda=snow in the browser, -- --pogoda=fog on the desktop.
+var weather_test := ""
 
 func _ready() -> void:
 	GameData.set_language(GameData.language_for(OS.get_locale())) # the device's language, English if the game lacks it
@@ -38,6 +39,8 @@ func stage() -> Dictionary:
 			st["sharp_amount"] = sharp_amount
 	if police_test:
 		st["police_escape"] = 1.0
+	if weather_test != "":
+		st["weather"] = weather_test
 	return st
 
 func _read_test_flags() -> void:
@@ -54,6 +57,8 @@ func _read_test_flags() -> void:
 				sharp_amount = kv[1].to_float()
 		elif kv[0] == "policja":
 			police_test = true
+		elif kv[0] == "pogoda" and kv.size() > 1 and Weather.KINDS.has(kv[1]):
+			weather_test = kv[1]
 
 func load_profile() -> void:
 	var f := FileAccess.open(SAVE_PATH, FileAccess.READ)
@@ -68,7 +73,6 @@ func load_profile() -> void:
 	if d.get("language", "") in GameData.LANGUAGES:
 		GameData.set_language(d.language)
 	Units.imperial = units == "imperial"
-	season = d.get("season", season) if SeasonPalette.SEASONS.has(d.get("season", "")) else season
 	places = d.get("places", {}) if d.get("places") is Dictionary else {}
 	if not d.has("places"):
 		# profiles from before countries: everything was Poland (and from before home cities: the player is
@@ -97,7 +101,7 @@ func save_profile() -> void:
 	if f == null:
 		return
 	places[country] = _place()
-	f.store_string(JSON.stringify({"total_km": total_km, "car_id": car_id, "season": season, "quality": quality, "units": units, "language": GameData.language,
+	f.store_string(JSON.stringify({"total_km": total_km, "car_id": car_id, "quality": quality, "units": units, "language": GameData.language,
 		"country": country, "places": places}))
 
 ## The current country's progress, as kept in `places`.
@@ -135,10 +139,9 @@ func set_home(id: String) -> void:
 	if to_city == id: to_city = ""
 	visit([id])
 
-## Back to a new player: no kilometres, only the first car, default season, no home city in any country.
+## Back to a new player: no kilometres, only the first car, no home city in any country.
 func reset_profile() -> void:
 	car_id = CarStats.ids()[0]
-	season = "summer"
 	total_km = 0.0
 	places = {}
 	_apply_place({})

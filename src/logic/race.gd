@@ -86,6 +86,10 @@ var police_rules: Dictionary
 ## +1, or -1 with left-hand traffic: x always grows towards the near-side kerb (stations, signs), so on the left the
 ## steering works the other way round (the view draws the world mirrored)
 var side := 1.0
+var weather := "sun" ## the trip's weather (Weather): rain and snow take grip away
+var _grip_steer := 1.0
+var _grip_brake := 1.0
+var _grip_accel := 1.0
 var police_rng := RandomNumberGenerator.new() ## a separate stream: the officers do not reshuffle anything else
 
 func _init(p_car_id: String, p_stage: Dictionary, seed_value: int) -> void:
@@ -102,6 +106,10 @@ func _init(p_car_id: String, p_stage: Dictionary, seed_value: int) -> void:
 	time_left = stage.duration
 	police_rules = GameData.rules().police
 	side = -1.0 if stage.get("left", false) else 1.0
+	weather = stage.get("weather", "sun")
+	_grip_steer = Weather.grip(weather, "steer")
+	_grip_brake = Weather.grip(weather, "brake")
+	_grip_accel = Weather.grip(weather, "accel")
 	police_rng.seed = seed_value + 303
 
 func speed_ratio() -> float:
@@ -250,7 +258,7 @@ static func bend_push(curve: float, v: float, grip: float) -> float:
 func corner_speed(curve: float) -> float:
 	if absf(curve) < 0.001:
 		return stats.max_speed
-	return CORNER_REF * sqrt(stats.handling * STEER_RATE / (CORNER_K * absf(curve)))
+	return CORNER_REF * sqrt(stats.handling * STEER_RATE * _grip_steer / (CORNER_K * absf(curve)))
 
 ## Roadside obstacle (sign post, tree, lamp, tunnel wall...) hit by the car's front between z_prev and z: the car
 ## stops dead, loses fuel and is put back beside the obstacle, towards the road, so it can drive on.
@@ -317,9 +325,9 @@ func step(dt: float, input: Dictionary) -> void:
 		var easing: bool = police.phase == "pull_over" and speed * 3.6 >= police_rules.escape_kmh
 		speed -= (POLICE_EASE_DECEL if easing else PULL_OVER_DECEL) * dt
 	elif input.brake:
-		speed -= (stats.brake + slope) * dt
+		speed -= (stats.brake * _grip_brake + slope) * dt
 	elif gas:
-		speed += (stats.accel * (1.15 - speed_ratio()) * gearbox.pull(speed) - slope) * dt
+		speed += (stats.accel * _grip_accel * (1.15 - speed_ratio()) * gearbox.pull(speed) - slope) * dt
 	else:
 		speed -= (ROLL_DECEL + slope) * dt
 		if grade < 0.0:
@@ -332,8 +340,9 @@ func step(dt: float, input: Dictionary) -> void:
 	steer_visual = lerpf(steer_visual, steer_screen, minf(1.0, dt * 10.0))
 	var steer := steer_screen * side
 	var sr := speed_ratio()
-	x += steer * stats.handling * STEER_RATE * clampf(speed / 12.0, 0.0, 1.0) * dt
-	x -= bend_push(track.segment_at(z).curve, speed, stats.handling * STEER_RATE) * dt
+	var grip: float = stats.handling * STEER_RATE * _grip_steer # on snow the car turns less and slides wide sooner
+	x += steer * grip * clampf(speed / 12.0, 0.0, 1.0) * dt
+	x -= bend_push(track.segment_at(z).curve, speed, grip) * dt
 	x = _clamp_x(x, z)
 	if not Route.tunnel_at(stage, z).is_empty():
 		var wall: float = (Scenery.TUNNEL_WALL + TUNNEL_SCRAPE) / Track.ROAD_HALF_WIDTH - stats.halfwidth

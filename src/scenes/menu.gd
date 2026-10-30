@@ -1,5 +1,5 @@
 extends Node2D
-## Selection: car -> season -> destination on the country map (tabs above the map, or C, switch the country). The race always starts where the last one ended;
+## Selection: car -> destination on the country map (each road has its weather, shown on the map) (tabs above the map, or C, switch the country). The race always starts where the last one ended;
 ## the very first time (or after a progress reset) the player first picks a home city on the map.
 ## Arrow keys / WASD move, Enter or Space confirms, Esc goes back; on the map cities can also be clicked.
 
@@ -47,7 +47,6 @@ func _ready() -> void:
 	_new_map()
 	Sfx.silence_all_loops()
 	sel[0] = maxi(0, CarStats.ids().find(Session.car_id))
-	sel[1] = maxi(0, SeasonPalette.SEASONS.find(Session.season))
 	_set_steps()
 	start_city = Session.from_city
 	dest_city = Session.to_city
@@ -57,7 +56,7 @@ func _ready() -> void:
 	_enter_step()
 
 func _set_steps() -> void:
-	steps = ["car", "season", "dest"] if Session.has_home() else ["home", "car", "season", "dest"]
+	steps = ["car", "dest"] if Session.has_home() else ["home", "car", "dest"]
 	step = 0
 
 func kind() -> String:
@@ -92,10 +91,10 @@ func _default_dest() -> String:
 	return best
 
 func _count() -> int:
-	return CarStats.ids().size() if kind() == "car" else SeasonPalette.SEASONS.size()
+	return CarStats.ids().size()
 
 func _sel_idx() -> int:
-	return 0 if kind() == "car" else 1
+	return 0
 
 func _pick_dest(id: String) -> void:
 	dest_city = id
@@ -159,7 +158,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		_confirm()
 	elif dir != Vector2.ZERO:
 		match kind():
-			"car", "season":
+			"car":
 				if dir.x != 0.0:
 					sel[_sel_idx()] = (sel[_sel_idx()] + _count() + int(dir.x)) % _count()
 			"home":
@@ -229,7 +228,7 @@ func _tap(p: Vector2) -> bool:
 			Sfx.play("blip", -8.0)
 			confirm_reset = true
 			return true
-	if kind() == "car" or kind() == "season":
+	if kind() == "car":
 		for i in _count():
 			if _card_rect(i).has_point(p):
 				Sfx.play("blip", -8.0)
@@ -247,7 +246,7 @@ func _card_rect(i: int) -> Rect2:
 
 func _reset_progress() -> void:
 	Session.reset_profile()
-	sel = [0, SeasonPalette.SEASONS.find(Session.season)]
+	sel = [0, 0]
 	start_city = Session.from_city
 	dest_city = Session.to_city
 	confirm_reset = false
@@ -301,7 +300,6 @@ func _map_mouse(event: InputEventMouse) -> void:
 
 func _start() -> void:
 	Session.car_id = CarStats.ids()[sel[0]]
-	Session.season = SeasonPalette.SEASONS[sel[1]]
 	Session.from_city = start_city
 	Session.to_city = dest_city
 	Session.save_profile()
@@ -319,7 +317,7 @@ func _step_title() -> String:
 	return "%d / %d   %s" % [step + 1, steps.size(), Lang.t("title_" + kind())]
 
 func _draw() -> void:
-	var pal := SeasonPalette.by_name(SeasonPalette.SEASONS[sel[1]] if kind() != "car" and kind() != "home" else "summer")
+	var pal := Weather.palette("sun")
 	draw_polygon(PackedVector2Array([Vector2(0, 0), Vector2(960, 0), Vector2(960, 540), Vector2(0, 540)]),
 		PackedColorArray([pal.sky_top, pal.sky_top, pal.sky_bottom, pal.sky_bottom]))
 	draw_rect(Rect2(0, 400, 960, 140), pal.grass_a)
@@ -332,13 +330,10 @@ func _draw() -> void:
 		_t(Vector2(0, 140), _step_title(), 28, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, 960)
 	match kind():
 		"car": _draw_cars()
-		"season": _draw_seasons()
 		_: _draw_map()
 	var summary := ""
-	if kind() == "season" or kind() == "dest":
-		summary = CarStats.by_id(CarStats.ids()[sel[0]]).name
 	if kind() == "dest":
-		summary += "  ·  " + SeasonPalette.label(SeasonPalette.SEASONS[sel[1]])
+		summary = CarStats.by_id(CarStats.ids()[sel[0]]).name
 	draw_rect(Rect2(0, 486, 960, 54), Color(0, 0, 0, 0.5))
 	_t(Vector2(24, 518), summary, 17 if _on_map() else 20, Color("ffd24a"))
 	if kind() == "car":
@@ -433,29 +428,6 @@ func _draw_cars() -> void:
 			draw_circle(lc + Vector2(0, 6), 4, Color("2b2b2f"))
 			_t(r.position + Vector2(0, 186), Lang.t("from_dist") % Units.dist_text(Profile.unlock_km(i)), 18, Color("ffd24a"), HORIZONTAL_ALIGNMENT_CENTER, w)
 
-func _draw_seasons() -> void:
-	for i in 4:
-		var s: String = SeasonPalette.SEASONS[i]
-		var p := SeasonPalette.by_name(s)
-		var r := Rect2(48 + i * 218, 180, 198, 290)
-		var on: bool = sel[1] == i
-		_card(r, on)
-		var pr := Rect2(r.position + Vector2(12, 12), Vector2(174, 200))
-		draw_polygon(PackedVector2Array([pr.position, pr.position + Vector2(pr.size.x, 0), pr.position + pr.size * Vector2(1, 0.55), pr.position + pr.size * Vector2(0, 0.55)]), PackedColorArray([p.sky_top, p.sky_top, p.sky_bottom, p.sky_bottom]))
-		draw_rect(Rect2(pr.position + Vector2(0, pr.size.y * 0.55), Vector2(pr.size.x, pr.size.y * 0.45)), p.grass_a)
-		draw_primitive(PackedVector2Array([pr.position + Vector2(76, 110), pr.position + Vector2(98, 110), pr.position + Vector2(140, 200), pr.position + Vector2(34, 200)]), PackedColorArray([p.road_a, p.road_a, p.road_a, p.road_a]), PackedVector2Array())
-		draw_circle(pr.position + Vector2(24, 140), 16, p.tree)
-		draw_circle(pr.position + Vector2(152, 135), 18, p.tree2)
-		draw_circle(pr.position + Vector2(160, 160), 14, p.tree)
-		if p.sun:
-			draw_circle(pr.position + Vector2(130, 30), 18, Color("fff3c4"))
-		if p.particle != "none":
-			for k in 14:
-				var px := fposmod(k * 47.0 + sin(t + k) * 10.0, pr.size.x)
-				var py := fposmod(k * 31.0 + t * 30.0, pr.size.y * 0.9)
-				draw_circle(pr.position + Vector2(px, py), 2.0, Color.WHITE if p.particle == "snow" else (Color("d9772a") if p.particle == "leaves" else Color("f7b8d2")))
-		_t(r.position + Vector2(0, 252), SeasonPalette.label(s), 26, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, r.size.x)
-
 func _draw_map() -> void:
 	var bg := StyleBoxFlat.new()
 	bg.bg_color = Color("2b4763")
@@ -481,6 +453,11 @@ func _draw_map() -> void:
 		return
 	var st := Route.build(start_city, dest_city)
 	_t(Vector2(x, 206), Lang.t("goal") % Geo.display_name(dest_city), 22, Color("ff9a86"))
+	# the trip's weather, top right of the card
+	var wl := Weather.label(st.weather)
+	var ww := font.get_string_size(wl, HORIZONTAL_ALIGNMENT_LEFT, -1, 17).x
+	CountryMap.weather_icon(self, Vector2(x + w - ww - 16, 200), st.weather, 11.0)
+	_t(Vector2(x, 206), wl, 17, Color.WHITE, HORIZONTAL_ALIGNMENT_RIGHT, w)
 	var roads := []
 	for l in legs:
 		for rd in Route.leg_roads(l):

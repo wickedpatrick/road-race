@@ -67,22 +67,169 @@
 		}
 	],
 	"biomes": {
-		"fields": {"wood": 0.2, "curve": 0.6, "hill": 0.3, "hills": 0.25, "mountains": 0, "sea": 0, "industry": 0},
-		"orchard": {"wood": 0.3, "curve": 0.5, "hill": 0.3, "hills": 0.25, "mountains": 0, "sea": 0, "industry": 0},
-		"forest": {"wood": 1, "curve": 1, "hill": 0.8, "hills": 0.6, "mountains": 0, "sea": 0, "industry": 0},
-		"lakes": {"wood": 0.8, "curve": 1.1, "hill": 0.6, "hills": 0.45, "mountains": 0, "sea": 0, "industry": 0},
-		"upland": {"wood": 0.5, "curve": 0.9, "hill": 1, "hills": 0.8, "mountains": 0, "sea": 0, "industry": 0},
-		"jura": {"wood": 0.6, "curve": 1, "hill": 1, "hills": 0.8, "mountains": 0, "sea": 0, "industry": 0},
-		"foothills": {"wood": 0.4, "curve": 1, "hill": 0.8, "hills": 0.6, "mountains": 0.6, "sea": 0, "industry": 0},
-		"mountains": {"wood": 0.7, "curve": 1.5, "hill": 1.4, "hills": 0.9, "mountains": 1, "sea": 0, "industry": 0},
-		"industrial": {"wood": 0.1, "curve": 0.6, "hill": 0.4, "hills": 0.3, "mountains": 0, "sea": 0, "industry": 1},
-		"coast": {"wood": 0.4, "curve": 0.8, "hill": 0.3, "hills": 0, "mountains": 0, "sea": 1, "industry": 0},
-		"zulawy": {"wood": 0.1, "curve": 0.4, "hill": 0.05, "hills": 0.1, "mountains": 0, "sea": 0, "industry": 0},
-		"podlasie": {"wood": 0.8, "curve": 0.8, "hill": 0.4, "hills": 0.4, "mountains": 0, "sea": 0, "industry": 0},
-		"lava": {"wood": 0, "curve": 0.8, "hill": 0.6, "hills": 0.5, "mountains": 0.4, "sea": 0, "industry": 0},
-		"highland": {"wood": 0, "curve": 1, "hill": 1.1, "hills": 0.9, "mountains": 0.7, "sea": 0, "industry": 0, "ice": 0.25},
-		"glacier": {"wood": 0, "curve": 0.7, "hill": 0.5, "hills": 0.3, "mountains": 1, "sea": 0, "industry": 0, "ice": 1},
-		"fjords": {"wood": 0, "curve": 1.4, "hill": 1, "hills": 0.5, "mountains": 0.9, "sea": 0.5, "industry": 0, "ice": 0.15}
+		"fields": {
+			"wood": 0.2,
+			"curve": 0.6,
+			"hill": 0.3,
+			"hills": 0.25,
+			"mountains": 0,
+			"sea": 0,
+			"industry": 0,
+			"weather": "sun"
+		},
+		"orchard": {
+			"wood": 0.3,
+			"curve": 0.5,
+			"hill": 0.3,
+			"hills": 0.25,
+			"mountains": 0,
+			"sea": 0,
+			"industry": 0,
+			"weather": "sun"
+		},
+		"forest": {
+			"wood": 1,
+			"curve": 1,
+			"hill": 0.8,
+			"hills": 0.6,
+			"mountains": 0,
+			"sea": 0,
+			"industry": 0,
+			"weather": "autumn"
+		},
+		"lakes": {
+			"wood": 0.8,
+			"curve": 1.1,
+			"hill": 0.6,
+			"hills": 0.45,
+			"mountains": 0,
+			"sea": 0,
+			"industry": 0,
+			"weather": "fog"
+		},
+		"upland": {
+			"wood": 0.5,
+			"curve": 0.9,
+			"hill": 1,
+			"hills": 0.8,
+			"mountains": 0,
+			"sea": 0,
+			"industry": 0,
+			"weather": "cloudy"
+		},
+		"jura": {
+			"wood": 0.6,
+			"curve": 1,
+			"hill": 1,
+			"hills": 0.8,
+			"mountains": 0,
+			"sea": 0,
+			"industry": 0,
+			"weather": "autumn"
+		},
+		"foothills": {
+			"wood": 0.4,
+			"curve": 1,
+			"hill": 0.8,
+			"hills": 0.6,
+			"mountains": 0.6,
+			"sea": 0,
+			"industry": 0,
+			"weather": "rain"
+		},
+		"mountains": {
+			"wood": 0.7,
+			"curve": 1.5,
+			"hill": 1.4,
+			"hills": 0.9,
+			"mountains": 1,
+			"sea": 0,
+			"industry": 0,
+			"weather": "snow"
+		},
+		"industrial": {
+			"wood": 0.1,
+			"curve": 0.6,
+			"hill": 0.4,
+			"hills": 0.3,
+			"mountains": 0,
+			"sea": 0,
+			"industry": 1,
+			"weather": "cloudy"
+		},
+		"coast": {
+			"wood": 0.4,
+			"curve": 0.8,
+			"hill": 0.3,
+			"hills": 0,
+			"mountains": 0,
+			"sea": 1,
+			"industry": 0,
+			"weather": "cloudy"
+		},
+		"zulawy": {
+			"wood": 0.1,
+			"curve": 0.4,
+			"hill": 0.05,
+			"hills": 0.1,
+			"mountains": 0,
+			"sea": 0,
+			"industry": 0,
+			"weather": "fog"
+		},
+		"podlasie": {
+			"wood": 0.8,
+			"curve": 0.8,
+			"hill": 0.4,
+			"hills": 0.4,
+			"mountains": 0,
+			"sea": 0,
+			"industry": 0,
+			"weather": "autumn"
+		},
+		"lava": {
+			"wood": 0,
+			"curve": 0.8,
+			"hill": 0.6,
+			"hills": 0.5,
+			"mountains": 0.4,
+			"sea": 0,
+			"industry": 0,
+			"weather": "snow"
+		},
+		"highland": {
+			"wood": 0,
+			"curve": 1,
+			"hill": 1.1,
+			"hills": 0.9,
+			"mountains": 0.7,
+			"sea": 0,
+			"industry": 0,
+			"ice": 0.25,
+			"weather": "snow"
+		},
+		"glacier": {
+			"wood": 0,
+			"curve": 0.7,
+			"hill": 0.5,
+			"hills": 0.3,
+			"mountains": 1,
+			"sea": 0,
+			"industry": 0,
+			"ice": 1,
+			"weather": "snow"
+		},
+		"fjords": {
+			"wood": 0,
+			"curve": 1.4,
+			"hill": 1,
+			"hills": 0.5,
+			"mountains": 0.9,
+			"sea": 0.5,
+			"industry": 0,
+			"ice": 0.15,
+			"weather": "snow"
+		}
 	},
 	"landmark_sizes": {
 		"wawel": [46, 30],

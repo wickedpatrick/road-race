@@ -33,5 +33,6 @@
 		"board": "PALIVO",
 		"prices": [["Natural 95", "38,90"], ["Nafta", "37,90"], ["LPG", "17,90"]],
 		"region_sign": "REGION"
-	}
+	},
+	"weather": {"default": "sun", "landscape": true}
 }

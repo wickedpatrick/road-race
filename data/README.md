@@ -23,7 +23,8 @@ Numbers: distances along a road in real kilometres from city `a`; populations in
   (m/s²), `tank` (l), `burn` (l/s at top speed), `handling`, `body_color` (`"#rrggbb"`), `halfwidth` (share of the
   road half-width).
 - `biomes`: landscape by name. `curve` and `hill` shape the road; `wood`, `hills`, `mountains`, `sea`, `industry`
-  (0..1) shape the horizon, optional `ice` (0..1) keeps snow caps on the far mountains all year (glaciers).
+  (0..1) shape the horizon, optional `ice` (0..1) keeps snow caps on the far mountains all year (glaciers),
+  `weather` is the usual weather there (`sun`, `cloudy`, `rain`, `fog`, `autumn`, `snow`; see `Weather`).
   What grows beside the road per landscape is in `Scenery._nature` (`lava`, `highland`, `glacier`, `fjords`: the
   treeless north in `Scenery._iceland`).
 - `landmark_sizes`: landmark painter kind -> `[width, height]` in metres (see `LandmarkPainter`).
@@ -50,6 +51,10 @@ Numbers: distances along a road in real kilometres from city `a`; populations in
   `["95", "6,49"]`), `region_sign` (the small word over a region's name on the brown board, e.g. "KRAINA").
 - `signs`: colours (`"#rrggbb"`) of the place-name signs (`town`, lettering `town_text`) and of the direction
   boards (`board`, `board_motorway`).
+- `weather`: how the country's roads get their weather (shown on the map, it sets the look and the grip):
+  `default`, `landscape` (false: the default everywhere, e.g. snow in Iceland; true: from the road's longest
+  landscape), `biomes` (landscape -> weather, over rules.json), `cities` (a city region -> weather for every road
+  from or to it, e.g. Scotland -> rain). A road can set its own `weather` in roads.json.
 - `plates` (optional): road number plates as `[[prefix, plate colour, text colour], ...]`, the first matching
   prefix wins (e.g. blue M and green A roads in Great Britain); without it the Polish ones (red, yellow for DW).
 - `map`: the lat/lon box of the country map: `lon0`, `lon1`, `lat0`, `lat1`, and `lon_k` = cos(middle latitude),

@@ -1,7 +1,9 @@
 extends "res://src/scenes/game.gd"
 func _ready() -> void:
 	var a := OS.get_cmdline_user_args()
-	Session.from_city = a[0]; Session.to_city = a[1]; Session.season = a[2]; Session.car_id = a[3]
+	var w: String = {"summer": "sun", "spring": "sun", "winter": "snow"}.get(a[2], a[2]) # the weather, or a season name
+	Session.from_city = a[0]; Session.to_city = a[1]; Session.car_id = a[3]
+	Session.weather_test = w if Weather.KINDS.has(w) else ""
 	if OS.get_environment("RR_LANG") != "": GameData.set_language(OS.get_environment("RR_LANG")) # e.g. RR_LANG=is
 	if OS.get_environment("RR_TOUCH") == "1": Screen.touch = true
 	if OS.get_environment("RR_LOW") == "1": Session.quality = "low"

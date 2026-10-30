@@ -19,7 +19,9 @@ const ITEM_FADE := 0.8 ## objects fade out of the haze from this share of the dr
 
 var race: Race
 var pal: Dictionary
-var season := "summer"
+var season := "summer" ## the ground's season, from the weather
+var weather := "sun"
+var _fog_reach := 0.0 ## thick fog: the world fades to white within this share of the drawing distance
 var items: Dictionary = {}
 var font: Font
 var parallax := 0.0
@@ -49,10 +51,13 @@ var _gcol: Array = [] ## per ground colour id: fogged colour for each view depth
 ## horizon state, eased towards the region ahead: hills, mountains, sea, industry, wood, skyline
 var _hz := {"hills": 0.3, "mountains": 0.0, "sea": 0.0, "industry": 0.0, "wood": 0.2, "skyline": 1.0, "ice": 0.0}
 
-func bind(p_race: Race, p_season: String) -> void:
+## `p_weather` overrides the trip's weather (previews).
+func bind(p_race: Race, p_weather := "") -> void:
 	race = p_race
-	season = p_season
-	pal = SeasonPalette.by_name(season)
+	weather = p_weather if Weather.KINDS.has(p_weather) else race.stage.get("weather", "sun")
+	season = Weather.season(weather)
+	pal = Weather.palette(weather)
+	_fog_reach = Weather.fog_reach(weather)
 	items = race.scenery
 	_left = race.stage.get("left", false)
 	Scenery.flip = -1.0 if _left else 1.0
@@ -112,6 +117,9 @@ func _process(delta: float) -> void:
 			"snow":
 				p.y += (55.0 + 30.0 * p.s) * delta
 				p.x += sin(p.ph + race.elapsed * 1.3) * 14.0 * delta - 8.0 * delta
+			"rain":
+				p.y += (520.0 + 160.0 * p.s) * delta
+				p.x -= 90.0 * delta
 			"leaves":
 				p.y += (45.0 + 25.0 * p.s) * delta
 				p.x += sin(p.ph + race.elapsed * 2.0) * 50.0 * delta - 14.0 * delta
@@ -148,13 +156,19 @@ func _ground_y(z: float) -> float:
 
 func _fog(c: Color, n: int) -> Color:
 	var f := clampf((float(n) - N * 0.45) / (N * 0.55), 0.0, 1.0)
-	return c.lerp(pal.sky_bottom, f * 0.75)
+	return c.lerp(pal.sky_bottom, maxf(f * 0.75, _thick_fog(n)))
+
+## Thick fog (Weather.fog_reach): 0 at the camera, almost white at the reach.
+func _thick_fog(n: int) -> float:
+	if _fog_reach <= 0.0:
+		return 0.0
+	return smoothstep(0.0, 1.0, float(n) / (N * _fog_reach)) * 0.97
 
 ## Haze for objects at depth n: the same as the road, then fading out completely over the last stretch of the view,
 ## so trees, buildings and cars come out of the haze instead of popping in at the edge of the drawing distance.
 func _item_fog(n: int) -> float:
 	var f := clampf((float(n) - N * 0.45) / (N * 0.55), 0.0, 1.0) * 0.75
-	return maxf(f, _edge_fade(n))
+	return maxf(maxf(f, _edge_fade(n)), _thick_fog(n))
 
 func _edge_fade(n: int) -> float:
 	return smoothstep(N * ITEM_FADE, float(N), float(n))
@@ -248,6 +262,11 @@ func _draw_sky() -> void:
 		pts2.append(Vector2(xi, HORIZON - hgt))
 	pts2.append(Vector2(W + 20, HORIZON + 4))
 	_b.draw_colored_polygon(pts2, mt.lerp(woods, _hz.wood * 0.6))
+	if _fog_reach > 0.0: # thick fog hides the hills and mountains on the horizon
+		var clear := Color(pal.sky_bottom, 0.0)
+		var thick := Color(pal.sky_bottom, 0.92)
+		_b.draw_polygon(PackedVector2Array([Vector2(-20, HORIZON - 170), Vector2(W + 20, HORIZON - 170), Vector2(W + 20, HORIZON + 6), Vector2(-20, HORIZON + 6)]),
+			PackedColorArray([clear, clear, thick, thick]))
 
 func _draw_scene() -> void:
 	var cam_z := race.z - PLAYER_DZ
@@ -317,7 +336,7 @@ func _draw_scene() -> void:
 		if its != null:
 			for it in its:
 				_draw_item(it, n, cam_x, cam_y, cam_z)
-		_b.fog = _edge_fade(n) # traffic matters for driving: no haze, only coming into view at the far edge
+		_b.fog = maxf(_edge_fade(n), _thick_fog(n)) # traffic matters: no haze, only the edge of the view (or thick fog)
 		for ci in _buckets[n]:
 			_draw_traffic_car(tcars[ci], n, cam_x, cam_y, cam_z)
 		if not race.police.is_empty() and int(floor(race.police.z / SEG)) == i:
@@ -620,6 +639,8 @@ func _draw_particles() -> void:
 		match pal.particle:
 			"snow":
 				_b.draw_circle(Vector2(p.x, p.y), 1.6 * p.s, Color(1, 1, 1, 0.9 * a))
+			"rain":
+				_b.draw_line(Vector2(p.x, p.y), Vector2(p.x - 2.5 * p.s, p.y + 13.0 * p.s), Color(0.82, 0.88, 0.95, 0.55 * a), 1.2)
 			"leaves":
 				var c := Color("d9772a") if int(p.ph * 10.0) % 2 == 0 else Color("b83a2a")
 				c.a = a

@@ -67,5 +67,11 @@
 		["M", "#1d5bbf", "#ffffff"], ["A1(M)", "#1d5bbf", "#ffffff"], ["A3(M)", "#1d5bbf", "#ffffff"],
 		["A38(M)", "#1d5bbf", "#ffffff"], ["A48(M)", "#1d5bbf", "#ffffff"], ["A74(M)", "#1d5bbf", "#ffffff"],
 		["A", "#00703c", "#ffd200"], ["B", "#ffffff", "#111111"]
-	]
+	],
+	"weather": {
+		"default": "cloudy",
+		"landscape": true,
+		"cities": {"Scotland": "rain"},
+		"biomes": {"fields": "cloudy", "upland": "fog", "coast": "rain", "mountains": "rain"}
+	}
 }

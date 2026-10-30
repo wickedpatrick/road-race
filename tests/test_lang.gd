@@ -20,7 +20,7 @@ func run(t) -> void:
 				_texts(GameData.load_json(GameData.DIR + "countries/%s/%s.json" % [cc, part]), code, "%s/%s" % [cc, part], missing)
 		t.check(missing.is_empty(), "%s: every text in the data translated (%d missing, e.g. %s)" % [code, missing.size(), missing.slice(0, 3)])
 	GameData.set_language("en")
-	t.check(Lang.t("pause") == "PAUSED" and SeasonPalette.label("winter") == "Winter", "English interface")
+	t.check(Lang.t("pause") == "PAUSED" and Weather.label("snow") == "Snow", "English interface")
 	t.check(Units.consumption_text(6.44) == "6.4 l/100 km", "a decimal point in English")
 	var lms := Landmarks.place(Route.build("krakow", "zakopane"))
 	t.check(lms.any(func(lm): return lm.local == "Wawel"), "Polish landmark boards stay Polish in English")

@@ -1,6 +1,6 @@
 extends Node2D
 ## Dev-only preview: auto-drives a race and lets WorldView render it (used with --write-movie).
-## args: from to [season] [car] [z] [still] [--zakrety[=N]]; env RR_COUNTRY=cz for another country
+## args: from to [weather] [car] [z] [still] [--zakrety[=N]]; env RR_COUNTRY=cz for another country
 var race: Race
 var view: WorldView
 var t := 0.0
@@ -14,7 +14,8 @@ func _ready() -> void:
 		stage["sharp_test"] = true
 		if Session.sharp_amount > 0.0: stage["sharp_amount"] = Session.sharp_amount
 	if OS.get_environment("RR_LEFT") == "1": stage["left"] = true # try left-hand traffic on any country's road
-	var season: String = args[2] if args.size() > 2 else "summer"
+	# the weather, or a season name as before (summer -> sun, winter -> snow)
+	var weather: String = {"summer": "sun", "spring": "sun", "winter": "snow"}.get(args[2], args[2]) if args.size() > 2 else ""
 	var car: String = args[3] if args.size() > 3 else "xc60"
 	race = Race.new(car, stage, 1)
 	if args.size() > 4:
@@ -23,7 +24,7 @@ func _ready() -> void:
 	if OS.get_environment("RR_X") != "": race.x = float(OS.get_environment("RR_X")) # e.g. RR_X=1.2: by the right edge
 	view = WorldView.new()
 	add_child(view)
-	view.bind(race, season)
+	view.bind(race, weather)
 func _physics_process(dt: float) -> void:
 	t += dt
 	if OS.get_cmdline_user_args().has("still"): # a still frame at the given z

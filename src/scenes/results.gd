@@ -14,7 +14,7 @@ func _stars() -> int:
 	return 3 if f > 0.35 else (2 if f > 0.12 else 1)
 
 func _draw() -> void:
-	var pal := SeasonPalette.by_name(Session.season)
+	var pal := Weather.palette(r.get("weather", "sun"))
 	draw_polygon(PackedVector2Array([Vector2(0, 0), Vector2(960, 0), Vector2(960, 540), Vector2(0, 540)]),
 		PackedColorArray([pal.sky_top, pal.sky_top, pal.sky_bottom, pal.sky_bottom]))
 	var won: bool = r.get("state", "") == "won"
@@ -22,7 +22,7 @@ func _draw() -> void:
 	var col := Color("2e9e4f") if won else Color("c0392b")
 	draw_string(font, Vector2(2, 142), title, HORIZONTAL_ALIGNMENT_CENTER, 960, 64, Color(0, 0, 0, 0.35))
 	draw_string(font, Vector2(0, 140), title, HORIZONTAL_ALIGNMENT_CENTER, 960, 64, col)
-	draw_string(font, Vector2(0, 190), "%s (%s)  ·  %s  ·  %s" % [r.get("name", ""), Units.dist_text(r.get("km", 0)), CarStats.by_id(Session.car_id).name, SeasonPalette.label(Session.season)], HORIZONTAL_ALIGNMENT_CENTER, 960, 24, Color("23323f"))
+	draw_string(font, Vector2(0, 190), "%s (%s)  ·  %s  ·  %s" % [r.get("name", ""), Units.dist_text(r.get("km", 0)), CarStats.by_id(Session.car_id).name, Weather.label(r.get("weather", "sun"))], HORIZONTAL_ALIGNMENT_CENTER, 960, 24, Color("23323f"))
 	var stars := _stars()
 	for i in 3:
 		var c := Vector2(380 + i * 100, 270)

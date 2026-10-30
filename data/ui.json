@@ -1,7 +1,6 @@
 {
 	"title_home": {"pl": "Skąd jesteś?", "en": "Where are you from?", "cs": "Odkud jsi?", "is": "Hvaðan ertu?"},
 	"title_car": {"pl": "Wybierz auto", "en": "Choose your car", "cs": "Vyber si auto", "is": "Veldu bíl"},
-	"title_season": {"pl": "Wybierz porę roku", "en": "Choose a season", "cs": "Vyber roční období", "is": "Veldu árstíð"},
 	"title_dest": {"pl": "Dokąd jedziesz?", "en": "Where are you going?", "cs": "Kam jedeš?", "is": "Hvert ertu að fara?"},
 	"units_btn": {"pl": "Jednostki: %s", "en": "Units: %s", "cs": "Jednotky: %s", "is": "Einingar: %s"},
 	"lang_btn": {"pl": "Język: %s", "en": "Language: %s", "cs": "Jazyk: %s", "is": "Tungumál: %s"},
@@ -99,10 +98,6 @@
 		"cs": "Připrav se na jízdu!",
 		"is": "Gerðu þig klár í ferðina!"
 	},
-	"season_spring": {"pl": "Wiosna", "en": "Spring", "cs": "Jaro", "is": "Vor"},
-	"season_summer": {"pl": "Lato", "en": "Summer", "cs": "Léto", "is": "Sumar"},
-	"season_autumn": {"pl": "Jesień", "en": "Autumn", "cs": "Podzim", "is": "Haust"},
-	"season_winter": {"pl": "Zima", "en": "Winter", "cs": "Zima", "is": "Vetur"},
 	"hud_time": {"pl": "CZAS", "en": "TIME", "cs": "ČAS", "is": "TÍMI"},
 	"hud_fuel": {"pl": "PALIWO", "en": "FUEL", "cs": "PALIVO", "is": "ELDSNEYTI"},
 	"fine": {
@@ -301,5 +296,11 @@
 		"is": "hraðbrautir"
 	},
 	"map_roads": {"pl": "inne drogi", "en": "other roads", "cs": "ostatní silnice", "is": "aðrir vegir"},
-	"map_visited": {"pl": "odwiedzone: %d / %d", "en": "visited: %d / %d", "cs": "navštíveno: %d / %d", "is": "heimsótt: %d / %d"}
+	"map_visited": {"pl": "odwiedzone: %d / %d", "en": "visited: %d / %d", "cs": "navštíveno: %d / %d", "is": "heimsótt: %d / %d"},
+	"weather_sun": {"pl": "Słonecznie", "en": "Sunny", "cs": "Slunečno", "is": "Sól"},
+	"weather_cloudy": {"pl": "Pochmurno", "en": "Cloudy", "cs": "Zataženo", "is": "Skýjað"},
+	"weather_rain": {"pl": "Deszcz", "en": "Rain", "cs": "Déšť", "is": "Rigning"},
+	"weather_fog": {"pl": "Mgła", "en": "Fog", "cs": "Mlha", "is": "Þoka"},
+	"weather_autumn": {"pl": "Jesień", "en": "Autumn", "cs": "Podzim", "is": "Haust"},
+	"weather_snow": {"pl": "Śnieg", "en": "Snow", "cs": "Sníh", "is": "Snjór"}
 }

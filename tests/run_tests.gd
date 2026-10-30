@@ -13,7 +13,10 @@ func _init() -> void:
 	files.sort()
 	for f in files:
 		if f.begins_with("test_") and f.ends_with(".gd"):
-			var t = load("res://tests/" + f).new()
-			t.run(self)
+			var script = load("res://tests/" + f)
+			if script == null or not script.can_instantiate(): # a test file that does not compile is a failure too
+				check(false, "%s does not compile" % f)
+				continue
+			script.new().run(self)
 	print("RESULT: %d passed, %d failed" % [passes, failures])
 	quit(1 if failures > 0 else 0)

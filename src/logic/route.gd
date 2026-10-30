@@ -194,10 +194,11 @@ static func build(from: String, to: String) -> Dictionary:
 		hill += Biome.get_data(zn.biome).hill * w
 	# climbs slow every car down a little: hillier routes get more time
 	var legal := _legal_time(towns, roads, length) * (1.0 + HILL_TIME * hill / length)
-	var duration := ceilf((legal * 1.09 + 6.0 * n_st + 12.0) / 5.0) * 5.0
+	var weather := Weather.for_legs(legs)
+	var duration := ceilf((legal * 1.09 * Weather.time_factor(weather) + 6.0 * n_st + 12.0) / 5.0) * 5.0
 	var stage := {
 		"name": "%s - %s" % [Geo.display_name(from), Geo.display_name(to)],
-		"from": from, "to": to, "path": path, "km": km, "m_per_km": mpk, "left": Geo.left_hand(),
+		"from": from, "to": to, "path": path, "km": km, "m_per_km": mpk, "left": Geo.left_hand(), "weather": weather,
 		"length": length, "duration": duration, "lanes": lanes,
 		"traffic_density": 1.0 if lanes == 3 else 0.8,
 		"stations": stations, "finish_label": Geo.city(to).name, "finish_display": Geo.display_name(to),

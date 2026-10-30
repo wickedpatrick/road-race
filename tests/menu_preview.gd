@@ -1,12 +1,12 @@
 extends "res://src/scenes/menu.gd"
-## Dev-only: opens the menu at a given step. Args: step (home|car|season|dest) [season_index] [from] [to] [total_km] ["reset"] [visited,ids]
+## Dev-only: opens the menu at a given step. Args: step (home|car|dest) [unused] [from] [to] [total_km] ["reset"] [visited,ids]
 func _ready() -> void:
 	if OS.get_environment("RR_LANG") != "": GameData.set_language(OS.get_environment("RR_LANG")) # e.g. RR_LANG=is
 	if OS.get_environment("RR_COUNTRY") != "": Session.switch_country(OS.get_environment("RR_COUNTRY")) # e.g. RR_COUNTRY=cz
 	super()
 	var a := OS.get_cmdline_user_args()
 	var want: String = a[0] if a.size() > 0 else "car"
-	steps = ["home", "car", "season", "dest"] if want == "home" else ["car", "season", "dest"]
+	steps = ["home", "car", "dest"] if want == "home" else ["car", "dest"]
 	step = steps.find(want)
 	sel[1] = int(a[1]) if a.size() > 1 else 1
 	if a.size() > 2: start_city = a[2]

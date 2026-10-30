@@ -161,6 +161,9 @@ dostają tyle, ile ma sens.
       Vaðlaheiðargöng, Fáskrúðsfjarðargöng, Dýrafjarðargöng i Vestfjarðagöng; nowe krajobrazy (lawa z mchem,
       wyżyny, lodowce, fiordy), owce i konie islandzkie, wodospady, gejzer, góry lodowe, Hallgrímskirkja.
 - [x] Nazwy miast w języku gracza na mapie i w menu (`exonym`), lokalne na tablicach.
+- [x] Pogoda zamiast pór roku: każda droga ma swoją (słońce, pochmurno, deszcz, mgła, jesień, śnieg) z krajobrazu
+      i reguł kraju (Szkocja deszcz, Islandia śnieg), ikonki na mapie; śnieg i deszcz zabierają przyczepność,
+      mgła skraca widoczność, limit czasu rośnie. Do zrobienia później: burza, wiatr, noc, zorza.
 - [x] Języki gry: polski, angielski, czeski, islandzki (interfejs `data/ui.json`, wszystkie teksty danych, nazwy
       miast w języku gracza tam, gdzie język ma własną). Język z urządzenia, angielski, gdy gry nie ma w języku
       gracza; zmiana na ekranie auta (L). Nowy kraj = nowy język w `GameData.LANGUAGES` i tłumaczenia wszystkich tekstów.

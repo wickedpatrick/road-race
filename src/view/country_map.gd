@@ -143,6 +143,7 @@ func draw(cv: CanvasItem, font: Font, legs: Array, start: String, dest: String, 
 		cv.draw_line(a, b, Color("e0a21a"), 5.0)
 		for tw in Route._leg_towns(leg):
 			cv.draw_circle(a.lerp(b, tw[1] / float(leg.road.km)), 2.0, Color("7a4d00"))
+	_weather_icons(cv, start, legs)
 	for id in Geo.cities():
 		var c := Geo.city(id)
 		var p := city_pos(id)
@@ -168,6 +169,53 @@ func draw(cv: CanvasItem, font: Font, legs: Array, start: String, dest: String, 
 		cv.draw_string(font, lp, label, HORIZONTAL_ALIGNMENT_LEFT, -1, size, Color("16222e", 0.4 if faded else 1.0))
 	_more_arrows(cv, t)
 	_legend(cv, font)
+
+## The weather of every road, on the middle of it: the roads the player can take now bigger, the rest faded.
+func _weather_icons(cv: CanvasItem, start: String, legs: Array) -> void:
+	var picked: String = "" if legs.is_empty() else legs[0].to
+	for r in Geo.roads():
+		var mid := city_pos(r.a).lerp(city_pos(r.b), 0.5)
+		if not area.grow(12.0).has_point(mid):
+			continue
+		var near: bool = start != "" and (r.a == start or r.b == start) and not reachable.is_empty()
+		var big: bool = near or (r.a == start and r.b == picked) or (r.b == start and r.a == picked)
+		weather_icon(cv, mid, Weather.for_road(r), 9.0 if big else 6.5, 1.0 if big or reachable.is_empty() else 0.55)
+
+## A weather sign on a white disc of radius s: sun, cloud, rain cloud, fog, leaf or snowflake.
+static func weather_icon(cv: CanvasItem, c: Vector2, kind: String, s: float, alpha := 1.0) -> void:
+	cv.draw_circle(c, s + 1.2, Color("16222e", 0.45 * alpha))
+	cv.draw_circle(c, s, Color(1, 1, 1, 0.92 * alpha))
+	var k := s / 10.0
+	var cloud := func(col: Color, dy: float) -> void:
+		cv.draw_circle(c + Vector2(-3.2, 1.5 + dy) * k, 3.2 * k, col)
+		cv.draw_circle(c + Vector2(0.5, -0.8 + dy) * k, 4.2 * k, col)
+		cv.draw_circle(c + Vector2(3.8, 1.8 + dy) * k, 2.9 * k, col)
+		cv.draw_rect(Rect2(c + Vector2(-3.2, 1.6 + dy) * k, Vector2(7.0, 3.1) * k), col)
+	match kind:
+		"sun":
+			for i in 8:
+				var d := Vector2.from_angle(i * TAU / 8.0)
+				cv.draw_line(c + d * 4.6 * k, c + d * 7.6 * k, Color("f2a71b", alpha), maxf(1.0, 1.4 * k))
+			cv.draw_circle(c, 3.8 * k, Color("f6c21b", alpha))
+		"cloudy":
+			cloud.call(Color("8e9aa5", alpha), 0.0)
+		"rain":
+			cloud.call(Color("6c7884", alpha), -2.2)
+			for dx in [-3.0, 0.5, 4.0]:
+				cv.draw_line(c + Vector2(dx, 3.6) * k, c + Vector2(dx - 1.2, 7.0) * k, Color("2f7fd0", alpha), maxf(1.0, 1.3 * k))
+		"fog":
+			for i in 3:
+				var y := (i - 1) * 3.2
+				cv.draw_line(c + Vector2(-5.5 + i, y) * k, c + Vector2(5.5 - i * 0.5, y) * k, Color("8e9aa5", alpha), maxf(1.0, 1.7 * k))
+		"autumn":
+			var leaf := PackedVector2Array([c + Vector2(0, -6.2) * k, c + Vector2(4.4, -0.6) * k, c + Vector2(0, 4.6) * k, c + Vector2(-4.4, -0.6) * k])
+			cv.draw_colored_polygon(leaf, Color("d9772a", alpha))
+			cv.draw_line(c + Vector2(0, -4.5) * k, c + Vector2(0.6, 7.0) * k, Color("8a4a1a", alpha), maxf(1.0, 1.0 * k))
+		"snow":
+			for i in 3:
+				var d := Vector2.from_angle(i * PI / 3.0 + PI / 2.0) * 6.2 * k
+				cv.draw_line(c - d, c + d, Color("2f7fd0", alpha), maxf(1.0, 1.4 * k))
+			cv.draw_circle(c, 1.4 * k, Color("2f7fd0", alpha))
 
 ## Small arrows on the edges where the scrolling map goes on.
 func _more_arrows(cv: CanvasItem, t: float) -> void:

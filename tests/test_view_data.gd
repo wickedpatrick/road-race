@@ -8,12 +8,11 @@ func run(t) -> void:
 		for k in keys:
 			if not p.has(k): ok = false
 		t.check(ok, "palette %s complete" % s)
-	t.check(SeasonPalette.SEASONS.size() == 4, "four seasons")
-	t.check(SeasonPalette.by_name("winter").particle == "snow", "winter has snow")
-	t.check(SeasonPalette.by_name("autumn").particle == "leaves", "autumn has leaves")
-	t.check(SeasonPalette.by_name("spring").particle == "petals", "spring has petals")
-	t.check(SeasonPalette.by_name("summer").sun, "summer has sun")
-	t.check(SeasonPalette.label("autumn") == "Jesień", "polish label")
+	t.check(SeasonPalette.SEASONS == ["summer", "autumn", "winter"], "three seasons of the ground (spring went into summer)")
+	t.check(Weather.palette("snow").particle == "snow" and Weather.palette("autumn").particle == "leaves", "snow falls, leaves fly")
+	t.check(Weather.palette("sun").sun and not Weather.palette("cloudy").sun and not Weather.palette("rain").sun, "the sun only in sunny weather")
+	t.check(Weather.palette("rain").particle == "rain" and Weather.palette("rain").road_a.v < Weather.palette("sun").road_a.v, "rain falls on a darker, wet road")
+	t.check(Weather.label("autumn") == "Jesień", "polish label")
 
 ## The menu map: a country with a "zoom" (Great Britain) is drawn larger than its panel and scrolls inside it.
 func _test_scrolling_map(t) -> void:
