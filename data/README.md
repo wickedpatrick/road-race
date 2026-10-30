@@ -53,7 +53,8 @@ Numbers: distances along a road in real kilometres from city `a`; populations in
 - `plates` (optional): road number plates as `[[prefix, plate colour, text colour], ...]`, the first matching
   prefix wins (e.g. blue M and green A roads in Great Britain); without it the Polish ones (red, yellow for DW).
 - `map`: the lat/lon box of the country map: `lon0`, `lon1`, `lat0`, `lat1`, and `lon_k` = cos(middle latitude),
-  which keeps the country's shape.
+  which keeps the country's shape. Optional `zoom` (> 1) draws the menu map that many times larger than its panel, and it scrolls
+  (follows the chosen city, drag or mouse wheel): for tall or crowded countries such as Great Britain.
 - `outline`: the border as `[lon, lat]` points; `outline_lines`: extra lines drawn with it (e.g. the Hel peninsula).
 
 ## `countries/<code>/cities.json`

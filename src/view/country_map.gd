@@ -3,22 +3,56 @@ extends RefCounted
 ## Map of the current country drawn into a screen rectangle: outline, road network, cities, and the chosen route.
 ## The lat/lon box and lon_k (cos of the middle latitude, so the country keeps its shape) come from the country's
 ## "map"; a city's "label" ("left"/"above") moves its name where neighbours would collide, "short" shortens it.
+## A big or crowded country (map "zoom" > 1) is drawn larger than the rectangle and scrolls inside it: `pan`
+## moves it, follow() glides to a city, the owner clips the drawing to the rectangle.
 var area: Rect2
 var visited: Array = [] ## city ids drawn with a gold ring (the cities the player has been to)
 var reachable: Array = [] ## when not empty, only these cities can be picked; the others are drawn faded
 var _scale := 1.0
 var _origin := Vector2.ZERO
+var _content := Vector2.ZERO ## the drawn country's size in pixels
+var pan := Vector2.ZERO ## scroll offset (pixels), kept so the country covers the rectangle
+const PAN_MARGIN := 24.0 ## a scrolling map can be pulled this far past its edge (names by the border stay readable)
 var _box: Dictionary ## the country's "map": lon0, lon1, lat0, lat1, lon_k
 
-func _init(p_area: Rect2) -> void:
+## `zoomable`: the country's map "zoom" applies (the menu's map; the small map in the race always fits).
+func _init(p_area: Rect2, zoomable := false) -> void:
 	area = p_area
 	_box = GameData.country().map
 	var span := Vector2((_box.lon1 - _box.lon0) * _box.lon_k, _box.lat1 - _box.lat0)
-	_scale = minf(area.size.x / span.x, area.size.y / span.y)
-	_origin = area.position + (area.size - span * _scale) * 0.5
+	_scale = minf(area.size.x / span.x, area.size.y / span.y) * (float(_box.get("zoom", 1.0)) if zoomable else 1.0)
+	_content = span * _scale
+	_origin = area.position + (area.size - _content) * 0.5
 
 func project(lat: float, lon: float) -> Vector2:
-	return _origin + Vector2((lon - _box.lon0) * _box.lon_k, _box.lat1 - lat) * _scale
+	return _origin + pan + Vector2((lon - _box.lon0) * _box.lon_k, _box.lat1 - lat) * _scale
+
+## The map is larger than its rectangle and can be moved.
+func scrolls() -> bool:
+	return _content.x > area.size.x + 1.0 or _content.y > area.size.y + 1.0
+
+func _clamp_pan(p: Vector2) -> Vector2:
+	var out := Vector2.ZERO
+	for k in 2:
+		if _content[k] > area.size[k] + 1.0:
+			var lo: float = area.end[k] - PAN_MARGIN - _content[k] - _origin[k]
+			var hi: float = area.position[k] + PAN_MARGIN - _origin[k]
+			out[k] = clampf(p[k], lo, hi)
+	return out
+
+func pan_by(d: Vector2) -> void:
+	pan = _clamp_pan(pan + d)
+
+## Scroll offset that puts a city in the middle of the rectangle (as far as the map allows).
+func _pan_to(id: String) -> Vector2:
+	return _clamp_pan(area.get_center() - (city_pos(id) - pan))
+
+func center_on(id: String) -> void:
+	pan = _pan_to(id)
+
+## Glides towards the city (call every frame).
+func follow(id: String, dt: float) -> void:
+	pan = pan.lerp(_pan_to(id), minf(1.0, dt * 6.0))
 
 ## Name shown on the map: in the player's language (map_name, else the exonym), else the local short form or name.
 static func _label(id: String) -> String:
@@ -102,7 +136,6 @@ func draw(cv: CanvasItem, font: Font, legs: Array, start: String, dest: String, 
 			pts.append(project(p[1], p[0]))
 		cv.draw_polyline(pts, Color("6f8f5a"), 2.0)
 	draw_network(cv, 4.0, 1.6)
-	_legend(cv, font)
 	# chosen route with the towns along it
 	for leg in legs:
 		var a := city_pos(leg.from)
@@ -133,6 +166,29 @@ func draw(cv: CanvasItem, font: Font, legs: Array, start: String, dest: String, 
 			lp = p + Vector2(-w * 0.5, -r - 4.0)
 		cv.draw_string(font, lp + Vector2(1, 1), label, HORIZONTAL_ALIGNMENT_LEFT, -1, size, Color(1, 1, 1, 0.3 if faded else 0.8))
 		cv.draw_string(font, lp, label, HORIZONTAL_ALIGNMENT_LEFT, -1, size, Color("16222e", 0.4 if faded else 1.0))
+	_more_arrows(cv, t)
+	_legend(cv, font)
+
+## Small arrows on the edges where the scrolling map goes on.
+func _more_arrows(cv: CanvasItem, t: float) -> void:
+	if not scrolls():
+		return
+	var top := _origin + pan
+	var a := 0.55 + 0.25 * sin(t * 3.0)
+	var c := area.get_center()
+	var col := Color("16222e", a)
+	if top.y < area.position.y - 2.0:
+		var p := Vector2(c.x, area.position.y + 42.0)
+		cv.draw_colored_polygon(PackedVector2Array([p + Vector2(0, -8), p + Vector2(12, 4), p + Vector2(-12, 4)]), col)
+	if top.y + _content.y > area.end.y + 2.0:
+		var p := Vector2(c.x, area.end.y - 10.0)
+		cv.draw_colored_polygon(PackedVector2Array([p + Vector2(0, 8), p + Vector2(12, -4), p + Vector2(-12, -4)]), col)
+	if top.x < area.position.x - 2.0:
+		var p := Vector2(area.position.x + 10.0, c.y)
+		cv.draw_colored_polygon(PackedVector2Array([p + Vector2(-8, 0), p + Vector2(4, 12), p + Vector2(4, -12)]), col)
+	if top.x + _content.x > area.end.x + 2.0:
+		var p := Vector2(area.end.x - 10.0, c.y)
+		cv.draw_colored_polygon(PackedVector2Array([p + Vector2(8, 0), p + Vector2(-4, 12), p + Vector2(-4, -12)]), col)
 
 ## Point on the route `km` real kilometres from the start (legs as from Route.find()).
 func route_point(legs: Array, km: float) -> Vector2:

@@ -12,7 +12,15 @@ var dest_city := "rzeszow"
 var hover := ""
 var legs: Array = []
 const MAP_RECT := Rect2(24, 104, 440, 378)
+const MAP_PANEL := Rect2(16, 100, 456, 384)
 var map: CountryMap
+## the map is drawn on its own layer clipped to the panel, so a big country can scroll inside it
+var _map_clip: Control
+var _map_layer: Node2D
+var _follow := "" ## city the scrolling map glides to ("" while the player drags it)
+var _press := Vector2(-1, -1) ## where the left button went down on the map (-1: not pressed)
+var _dragging := false
+const DRAG_START := 8.0 ## pixels moved before a press becomes a drag (not a click on a city)
 var confirm_reset := false ## "reset progress?" question is shown (car step, R key)
 const NEXT_BTN := Rect2(744, 490, 200, 44)
 const BACK_BTN := Rect2(584, 490, 148, 44)
@@ -26,7 +34,17 @@ var t := 0.0
 
 func _ready() -> void:
 	font = ThemeDB.fallback_font
-	map = CountryMap.new(MAP_RECT)
+	_map_clip = Control.new()
+	_map_clip.clip_contents = true
+	_map_clip.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_map_clip.position = MAP_PANEL.position
+	_map_clip.size = MAP_PANEL.size
+	_map_layer = Node2D.new()
+	_map_layer.position = -MAP_PANEL.position # draws in screen coordinates
+	_map_layer.draw.connect(_draw_map_layer)
+	_map_clip.add_child(_map_layer)
+	add_child(_map_clip)
+	_new_map()
 	Sfx.silence_all_loops()
 	sel[0] = maxi(0, CarStats.ids().find(Session.car_id))
 	sel[1] = maxi(0, SeasonPalette.SEASONS.find(Session.season))
@@ -48,12 +66,19 @@ func kind() -> String:
 func _on_map() -> bool:
 	return kind() == "home" or kind() == "dest"
 
+func _new_map() -> void:
+	map = CountryMap.new(MAP_RECT, true)
+	if steps.size() > 0 and _on_map():
+		map.center_on(start_city)
+
 func _enter_step() -> void:
 	if kind() == "dest":
 		_pick_dest(dest_city if Route.neighbours(start_city).has(dest_city) else _default_dest())
 		hover = dest_city
 	else:
 		hover = start_city
+	_follow = start_city
+	map.center_on(start_city)
 
 ## A trip goes one road, to a neighbouring city. By default the nearest one not visited yet, else the nearest one.
 func _default_dest() -> String:
@@ -78,6 +103,11 @@ func _pick_dest(id: String) -> void:
 
 func _process(dt: float) -> void:
 	t += dt
+	_map_clip.visible = _on_map() and not loading and not confirm_reset
+	if _map_clip.visible:
+		if _follow != "" and not _dragging:
+			map.follow(_follow, dt)
+		_map_layer.queue_redraw()
 	queue_redraw()
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -135,9 +165,11 @@ func _unhandled_input(event: InputEvent) -> void:
 			"home":
 				start_city = map.step(start_city, dir)
 				hover = start_city
+				_follow = start_city
 			"dest":
 				_pick_dest(map.step(dest_city, dir, start_city, Route.neighbours(start_city)))
 				hover = dest_city
+				_follow = dest_city
 
 func _toggle_units() -> void:
 	Sfx.play("blip", -8.0)
@@ -147,7 +179,7 @@ func _next_language() -> void:
 	Sfx.play("blip", -8.0)
 	var langs := GameData.LANGUAGES
 	Session.set_language(langs[(langs.find(GameData.language) + 1) % langs.size()])
-	map = CountryMap.new(MAP_RECT) # city names on the map follow the language
+	_new_map() # city names on the map follow the language
 
 func _confirm() -> void:
 	match kind():
@@ -223,13 +255,38 @@ func _reset_progress() -> void:
 	_enter_step()
 	Sfx.play("hit", -6.0)
 
+## Mouse or finger on the map: hover, drag to scroll a big map, a click (a press released without dragging) picks a city.
 func _map_mouse(event: InputEventMouse) -> void:
-	var id := map.city_at(get_global_mouse_position())
-	if event is InputEventMouseMotion:
-		if id != "" and not (kind() == "dest" and not Route.neighbours(start_city).has(id)):
-			hover = id
+	var pos := get_global_mouse_position()
+	if event is InputEventMouseButton and event.button_index in [MOUSE_BUTTON_WHEEL_UP, MOUSE_BUTTON_WHEEL_DOWN]:
+		if event.pressed and map.scrolls():
+			map.pan_by(Vector2(0, 40.0 if event.button_index == MOUSE_BUTTON_WHEEL_UP else -40.0))
+			_follow = ""
 		return
-	if not (event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT) or id == "":
+	if event is InputEventMouseMotion:
+		if _press.x >= 0.0 and map.scrolls() and (_dragging or pos.distance_to(_press) > DRAG_START):
+			if not _dragging:
+				map.pan_by(pos - _press - event.relative) # the first steps of the drag too
+			_dragging = true
+			_follow = ""
+			map.pan_by(event.relative)
+			return
+		var hid := map.city_at(pos)
+		if hid != "" and not (kind() == "dest" and not Route.neighbours(start_city).has(hid)):
+			hover = hid
+		return
+	if not (event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT):
+		return
+	if event.pressed:
+		_press = pos if MAP_PANEL.has_point(pos) else Vector2(-1, -1)
+		_dragging = false
+		return
+	var was_drag := _dragging
+	var pressed_here := _press.x >= 0.0
+	_press = Vector2(-1, -1)
+	_dragging = false
+	var id := map.city_at(pos)
+	if was_drag or not pressed_here or id == "":
 		return
 	Sfx.play("blip", -8.0)
 	if kind() == "home":
@@ -240,6 +297,7 @@ func _map_mouse(event: InputEventMouse) -> void:
 	elif Route.neighbours(start_city).has(id):
 		_pick_dest(id)
 		hover = id
+		_follow = id
 
 func _start() -> void:
 	Session.car_id = CarStats.ids()[sel[0]]
@@ -402,12 +460,8 @@ func _draw_map() -> void:
 	var bg := StyleBoxFlat.new()
 	bg.bg_color = Color("2b4763")
 	bg.set_corner_radius_all(16)
-	draw_style_box(bg, Rect2(16, 100, 456, 384))
+	draw_style_box(bg, MAP_PANEL)
 	var dest := kind() == "dest"
-	map.visited = Session.visited
-	map.reachable = Route.neighbours(start_city) + [start_city] if dest else []
-	map.draw(self, font, legs if dest else [], start_city, dest_city if dest else "", hover, t)
-	_draw_country_tabs()
 	var r := Rect2(488, 100, 456, 384)
 	_card(r, true)
 	var x := r.position.x + 20
@@ -453,8 +507,16 @@ func _countries() -> int:
 func _tab_rect(i: int) -> Rect2:
 	return Rect2(28 + i * 102, 108, 96, 28)
 
+## The map and the country tabs over it, on the clipped layer.
+func _draw_map_layer() -> void:
+	var dest := kind() == "dest"
+	map.visited = Session.visited
+	map.reachable = Route.neighbours(start_city) + [start_city] if dest else []
+	map.draw(_map_layer, font, legs if dest else [], start_city, dest_city if dest else "", hover, t)
+	_draw_country_tabs(_map_layer)
+
 ## Country switch above the map (only when there is more than one country).
-func _draw_country_tabs() -> void:
+func _draw_country_tabs(cv: CanvasItem) -> void:
 	if _countries() < 2:
 		return
 	var list := GameData.countries()
@@ -466,11 +528,11 @@ func _draw_country_tabs() -> void:
 		sb.bg_color = Color("2e9e4f") if on else Color(0.06, 0.09, 0.13, 0.75)
 		sb.border_color = Color("ffd24a") if on else Color(1, 1, 1, 0.5)
 		sb.set_border_width_all(2)
-		draw_style_box(sb, r)
+		cv.draw_style_box(sb, r)
 		var fs := 16 # long names ("Wielka Brytania") shrink to fit the tab
 		while fs > 10 and font.get_string_size(list[i].name, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x > r.size.x - 8:
 			fs -= 1
-		_t(Vector2(r.position.x, r.position.y + 20), list[i].name, fs, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, r.size.x)
+		cv.draw_string(font, Vector2(r.position.x, r.position.y + 20), list[i].name, HORIZONTAL_ALIGNMENT_CENTER, r.size.x, fs, Color.WHITE)
 
 ## Plays another country: its map and the player's progress there (a new country starts by picking a home city).
 func _switch_country(code: String) -> void:
@@ -478,7 +540,7 @@ func _switch_country(code: String) -> void:
 		return
 	Sfx.play("blip", -8.0)
 	Session.switch_country(code)
-	map = CountryMap.new(MAP_RECT)
+	_new_map()
 	start_city = Session.from_city
 	dest_city = Session.to_city
 	_set_steps()
