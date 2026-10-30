@@ -17,7 +17,7 @@ func _physics_process(dt: float) -> void:
 	paused = false
 	if countdown <= 0.0 and race.state == "running":
 		var ahead: float = race.track.segment_at(race.z + 40.0).curve
-		race.step(dt, {"accel": race.speed < 28.0, "brake": race.speed > 33.0, "steer": clampf(-race.x * 1.5 + ahead * 0.35, -1.0, 1.0)})
+		race.step(dt, {"accel": race.speed < 28.0, "brake": race.speed > 33.0, "steer": clampf(-race.x * 1.5 + ahead * 0.35, -1.0, 1.0) * race.side})
 		overlay.queue_redraw()
 	else:
 		super(dt)

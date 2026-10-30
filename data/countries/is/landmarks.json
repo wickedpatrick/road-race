@@ -3,76 +3,158 @@
 		{
 			"kind": "hallgrims",
 			"name": {"pl": "Hallgrímskirkja"},
-			"desc": {"pl": "Kościół w kształcie bazaltowych kolumn"}
+			"desc": {"pl": "Kościół w kształcie bazaltowych kolumn"},
+			"local": "Hallgrímskirkja"
 		}
 	],
 	"Reykjanesbær": [
 		{
 			"kind": "truss_bridge",
 			"name": {"pl": "Most między kontynentami"},
-			"desc": {"pl": "Przejdziesz nad szczeliną między płytami Europy i Ameryki"}
+			"desc": {"pl": "Przejdziesz nad szczeliną między płytami Europy i Ameryki"},
+			"local": "Brú milli heimsálfa"
 		}
 	],
 	"Selfoss": [
 		{
 			"kind": "geyser",
 			"name": {"pl": "Gorące źródła"},
-			"desc": {"pl": "W okolicy z ziemi bucha para i gorąca woda"}
+			"desc": {"pl": "W okolicy z ziemi bucha para i gorąca woda"},
+			"local": "Hverasvæði"
 		}
 	],
 	"Geysir": [
-		{"kind": "geyser", "name": {"pl": "Strokkur"}, "desc": {"pl": "Gejzer wyrzuca wodę co kilka minut"}},
-		{"kind": "waterfall", "name": {"pl": "Gullfoss"}, "desc": {"pl": "Złoty wodospad w kanionie"}}
+		{
+			"kind": "geyser",
+			"name": {"pl": "Strokkur"},
+			"desc": {"pl": "Gejzer wyrzuca wodę co kilka minut"},
+			"local": "Strokkur"
+		},
+		{
+			"kind": "waterfall",
+			"name": {"pl": "Gullfoss"},
+			"desc": {"pl": "Złoty wodospad w kanionie"},
+			"local": "Gullfoss"
+		}
 	],
-	"Vík í Mýrdal": [{"kind": "sea_stacks", "name": {"pl": "Reynisdrangar"}, "desc": {"pl": "Bazaltowe iglice przy czarnej plaży"}}],
-	"Höfn": [{"kind": "ship", "name": {"pl": "Port rybacki"}, "desc": {"pl": "Stąd wypływają kutry po homarce"}}],
+	"Vík í Mýrdal": [
+		{
+			"kind": "sea_stacks",
+			"name": {"pl": "Reynisdrangar"},
+			"desc": {"pl": "Bazaltowe iglice przy czarnej plaży"},
+			"local": "Reynisdrangar"
+		}
+	],
+	"Höfn": [
+		{
+			"kind": "ship",
+			"name": {"pl": "Port rybacki"},
+			"desc": {"pl": "Stąd wypływają kutry po homarce"},
+			"local": "Höfn"
+		}
+	],
 	"Egilsstaðir": [
 		{
 			"kind": "dragon",
 			"name": {"pl": "Potwór z Lagarfljót"},
-			"desc": {"pl": "Legenda mówi, że w jeziorze żyje wielki wąż"}
+			"desc": {"pl": "Legenda mówi, że w jeziorze żyje wielki wąż"},
+			"local": "Lagarfljótsormurinn"
 		}
 	],
 	"Akureyri": [
 		{
 			"kind": "cathedral",
 			"name": {"pl": "Kościół w Akureyri"},
-			"desc": {"pl": "Długie schody prowadzą do kościoła nad fiordem"}
+			"desc": {"pl": "Długie schody prowadzą do kościoła nad fiordem"},
+			"local": "Akureyrarkirkja"
 		}
 	],
-	"Húsavík": [{"kind": "ship", "name": {"pl": "Rejsy do wielorybów"}, "desc": {"pl": "W zatoce pływają wieloryby i delfiny"}}],
+	"Húsavík": [
+		{
+			"kind": "ship",
+			"name": {"pl": "Rejsy do wielorybów"},
+			"desc": {"pl": "W zatoce pływają wieloryby i delfiny"},
+			"local": "Hvalaskoðun"
+		}
+	],
 	"Blönduós": [
 		{
 			"kind": "turf_house",
 			"name": {"pl": "Dawne gospodarstwo"},
-			"desc": {"pl": "Islandczycy mieszkali w domach krytych darnią"}
+			"desc": {"pl": "Islandczycy mieszkali w domach krytych darnią"},
+			"local": "Torfbær"
 		}
 	],
 	"Borgarnes": [
 		{
 			"kind": "turf_house",
 			"name": {"pl": "Centrum osadnictwa"},
-			"desc": {"pl": "Opowieść o pierwszych osadnikach Islandii"}
+			"desc": {"pl": "Opowieść o pierwszych osadnikach Islandii"},
+			"local": "Landnámssetur"
 		}
 	],
-	"Stykkishólmur": [{"kind": "puffin", "name": {"pl": "Maskonury"}, "desc": {"pl": "Na wysepkach zatoki gniazdują maskonury"}}],
-	"Ísafjörður": [{"kind": "ship", "name": {"pl": "Port w fiordzie"}, "desc": {"pl": "Miasto na mierzei pośrodku fiordu"}}],
+	"Stykkishólmur": [
+		{
+			"kind": "puffin",
+			"name": {"pl": "Maskonury"},
+			"desc": {"pl": "Na wysepkach zatoki gniazdują maskonury"},
+			"local": "Lundar"
+		}
+	],
+	"Ísafjörður": [
+		{
+			"kind": "ship",
+			"name": {"pl": "Port w fiordzie"},
+			"desc": {"pl": "Miasto na mierzei pośrodku fiordu"},
+			"local": "Ísafjarðarhöfn"
+		}
+	],
 	"Hafnarfjörður": [
 		{
 			"kind": "dwarf",
 			"name": {"pl": "Elfy z Hafnarfjörður"},
-			"desc": {"pl": "Mówi się, że w skałach mieszkają elfy"}
+			"desc": {"pl": "Mówi się, że w skałach mieszkają elfy"},
+			"local": "Hellisgerði"
 		}
 	],
-	"Skógar": [{"kind": "waterfall", "name": {"pl": "Skógafoss"}, "desc": {"pl": "Wodospad spadający z 60 metrów"}}],
+	"Skógar": [
+		{
+			"kind": "waterfall",
+			"name": {"pl": "Skógafoss"},
+			"desc": {"pl": "Wodospad spadający z 60 metrów"},
+			"local": "Skógafoss"
+		}
+	],
 	"Skaftafell": [
 		{
 			"kind": "waterfall",
 			"name": {"pl": "Svartifoss"},
-			"desc": {"pl": "Wodospad wśród czarnych bazaltowych kolumn"}
+			"desc": {"pl": "Wodospad wśród czarnych bazaltowych kolumn"},
+			"local": "Svartifoss"
 		}
 	],
-	"Jökulsárlón": [{"kind": "iceberg", "name": {"pl": "Laguna lodowcowa"}, "desc": {"pl": "Góry lodowe płyną z lodowca do morza"}}],
-	"Reykjahlíð": [{"kind": "geyser", "name": {"pl": "Hverir"}, "desc": {"pl": "Parujące źródła i bulgoczące błoto"}}],
-	"Varmahlíð": [{"kind": "turf_house", "name": {"pl": "Glaumbær"}, "desc": {"pl": "Domy kryte darnią sprzed stu lat"}}]
+	"Jökulsárlón": [
+		{
+			"kind": "iceberg",
+			"name": {"pl": "Laguna lodowcowa"},
+			"desc": {"pl": "Góry lodowe płyną z lodowca do morza"},
+			"local": "Jökulsárlón"
+		}
+	],
+	"Reykjahlíð": [
+		{
+			"kind": "geyser",
+			"name": {"pl": "Hverir"},
+			"desc": {"pl": "Parujące źródła i bulgoczące błoto"},
+			"local": "Hverir"
+		}
+	],
+	"Varmahlíð": [
+		{
+			"kind": "turf_house",
+			"name": {"pl": "Glaumbær"},
+			"desc": {"pl": "Domy kryte darnią sprzed stu lat"},
+			"local": "Glaumbær"
+		}
+	]
 }

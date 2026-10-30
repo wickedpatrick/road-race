@@ -33,6 +33,28 @@ static func outline() -> Array:
 static func outline_lines() -> Array:
 	return GameData.country().outline_lines
 
-## Speed limits in km/h: express (motorway/expressway), road, city (big city), town_on_express, town.
+## Speed limits as posted on the signs (km/h, or mph where the country's `units` are imperial): express
+## (motorway/expressway), road, city (big city), town_on_express, town.
 static func limits() -> Dictionary:
 	return GameData.country().limits
+
+## Traffic drives on the left (Great Britain): the world is drawn mirrored, the logic stays the same.
+static func left_hand() -> bool:
+	return GameData.country().get("drive", "right") == "left"
+
+## The road signs give speeds in mph and distances in miles.
+static func miles() -> bool:
+	return GameData.country().get("units", "metric") == "imperial"
+
+## A posted limit in km/h, for the game's logic.
+static func limit_kmh(posted: int) -> int:
+	return roundi(posted * Units.KM_PER_MILE) if miles() else posted
+
+## Kilometres as the road signs give them (miles where the country uses them).
+static func sign_distance(km: float) -> int:
+	return roundi(km / Units.KM_PER_MILE) if miles() else roundi(km)
+
+## The fuel station's texts in the country's language: sign (by the road), board (over the price list), prices
+## [[fuel, price], ...], region_sign (the word on the region boards). See data/README.md.
+static func station() -> Dictionary:
+	return GameData.country().station

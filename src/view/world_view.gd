@@ -44,6 +44,7 @@ var _ground: Array = [] ## per track segment: Scenery.ground() strips
 var _tun := PackedByteArray() ## per track segment: 1 inside a tunnel
 var _dualf := PackedFloat32Array() ## per track segment: Route.dual_f (0 single road .. 1 dual carriageway)
 var _portals := {} ## segment index where a tunnel starts -> the tunnel
+var _left := false ## left-hand traffic: the batch mirrors the world; signs, cars and landmarks are drawn unmirrored
 var _gcol: Array = [] ## per ground colour id: fogged colour for each view depth n
 ## horizon state, eased towards the region ahead: hills, mountains, sea, industry, wood, skyline
 var _hz := {"hills": 0.3, "mountains": 0.0, "sea": 0.0, "industry": 0.0, "wood": 0.2, "skyline": 1.0, "ice": 0.0}
@@ -53,6 +54,10 @@ func bind(p_race: Race, p_season: String) -> void:
 	season = p_season
 	pal = SeasonPalette.by_name(season)
 	items = race.scenery
+	_left = race.stage.get("left", false)
+	Scenery.flip = -1.0 if _left else 1.0
+	_b.mirror_w = W
+	_b.set_mirror(_left)
 	_ground = Scenery.ground(race.stage, race.track.segments.size())
 	_warm_left = Scenery.sign_texts(race.stage)
 	_dualf.resize(race.track.segments.size())
@@ -545,7 +550,10 @@ func _draw_item(it: Dictionary, n: int, cam_x: float, cam_y: float, cam_z: float
 	if it.type == "finish":
 		_draw_finish(b, pm)
 		return
-	Scenery.draw_item(_b, it, b, pm, pal, season, font)
+	# left-hand traffic: drawn unmirrored at the mirrored point, so lettering and shapes stay the right way round
+	_b.set_mirror(false)
+	Scenery.draw_item(_b, it, Vector2(W - b.x, b.y) if _left else b, pm, pal, season, font)
+	_b.set_mirror(_left)
 
 ## Viaduct over the road: pillars past both edges (and in the median of a dual carriageway).
 func _draw_bridge(b: Vector2, pm: float, d: float) -> void:
@@ -591,14 +599,18 @@ func _draw_traffic_car(c: Dictionary, n: int, cam_x: float, cam_y: float, cam_z:
 		return
 	if _in_tunnel(i) and c.lane_x * Track.ROAD_HALF_WIDTH < -Scenery.TUNNEL_WALL:
 		return # the far carriageway runs in its own tube
-	CarPainter.draw_traffic(_b, c.kind, Vector2(px, py), scale, CarPainter.TRAFFIC_COLORS[c.color_idx], c.get("dir", 1) < 0)
+	_b.set_mirror(false)
+	CarPainter.draw_traffic(_b, c.kind, Vector2(W - px if _left else px, py), scale, CarPainter.TRAFFIC_COLORS[c.color_idx], c.get("dir", 1) < 0)
+	_b.set_mirror(_left)
 
 func _draw_player() -> void:
 	var s := Track.CAM_DEPTH / PLAYER_DZ
 	var cam_y := _ground_y(race.z - PLAYER_DZ) + CAM_H
 	var py := HORIZON - s * (_ground_y(race.z) - cam_y) * HORIZON
 	py += sin(race.z * 0.8) * 1.2 * race.speed_ratio()
+	_b.set_mirror(false) # steer_visual is already the way the player steers on screen
 	CarPainter.draw(_b, race.car_id, Vector2(W * 0.5, py), s * W * 0.5 * CAR_UNIT, race.steer_visual, race.braking)
+	_b.set_mirror(_left)
 
 func _draw_particles() -> void:
 	var a := 1.0 - shelter

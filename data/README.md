@@ -35,14 +35,21 @@ Numbers: distances along a road in real kilometres from city `a`; populations in
 
 ## `countries/<code>/country.json`
 
-- `code`, `name`, `language` (of the place names), `drive` (`"right"` / `"left"`), `region_label` (the word for a
+- `code`, `name`, `language` (of the place names and every road sign), `drive` (`"right"` / `"left"`: on the left
+  the world is drawn mirrored, signs and stations on the left shoulder), `units` (`"metric"` / `"imperial"`: the road
+  signs post mph and miles), `region_label` (the word for a
   region in the city card, e.g. "województwo"), `title` / `subtitle` (menu header), `start` (default first trip
   `[from, to]`, neighbouring cities), `express_prefixes` (road numbers starting with these are motorways or
   expressways: dual carriageways with the faster limit, e.g. `["A", "S"]` in Poland, `["D"]` in Czechia).
-- `limits` (km/h): `express` (motorways, expressways), `road`, `city` (through a big city), `town_on_express`,
-  `town`.
+- `limits` as posted on the signs (km/h, or mph with imperial `units`; the game converts to km/h): `express`
+  (motorways, expressways), `road`, `city` (through a big city), `town_on_express`, `town`.
+- `station`: texts in the country's language on the fuel station and region boards: `sign` (over the pumps),
+  `board` (over the price list), `prices` (`[[fuel, price], ...]`, two or three, as on the pylon, e.g.
+  `["95", "6,49"]`), `region_sign` (the small word over a region's name on the brown board, e.g. "KRAINA").
 - `signs`: colours (`"#rrggbb"`) of the place-name signs (`town`, lettering `town_text`) and of the direction
   boards (`board`, `board_motorway`).
+- `plates` (optional): road number plates as `[[prefix, plate colour, text colour], ...]`, the first matching
+  prefix wins (e.g. blue M and green A roads in Great Britain); without it the Polish ones (red, yellow for DW).
 - `map`: the lat/lon box of the country map: `lon0`, `lon1`, `lat0`, `lat1`, and `lon_k` = cos(middle latitude),
   which keeps the country's shape.
 - `outline`: the border as `[lon, lat]` points; `outline_lines`: extra lines drawn with it (e.g. the Hel peninsula).
@@ -73,5 +80,6 @@ Town or city name -> short fact shown while driving through it.
 
 ## `countries/<code>/landmarks.json`
 
-Town or city name -> `[{kind, name, desc}, ...]` (one or two). `kind` is a painter in `LandmarkPainter` with a size
-in `rules.json`.
+Town or city name -> `[{kind, name, desc, local}, ...]` (one or two). `kind` is a painter in `LandmarkPainter` with
+a size in `rules.json`. `name` and `desc` are for the player (HUD); `local` is the name in the country's language on
+the brown board by the road (required when the country's language is not the game's; defaults to `name`).

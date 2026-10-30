@@ -90,6 +90,30 @@ static func draw(cv, it: Dictionary, b: Vector2, pm: float) -> void:
 		"puffin": _puffin()
 		"turf_house": _turf_house()
 		"sea_stacks": _sea_stacks()
+		"big_ben": _big_ben()
+		"tower_bridge": _tower_bridge()
+		"narrowboat": _narrowboat()
+		"castle_rock": _castle_rock()
+		"liver_building": _liver_building()
+		"suspension_bridge": _suspension_bridge()
+		"tyne_bridge": _tyne_bridge()
+		"pavilion": _pavilion()
+		"pier": _pier()
+		"lighthouse": _lighthouse()
+		"bottle_kiln": _bottle_kiln()
+		"liner": _liner()
+		"spinnaker": _spinnaker()
+		"radcliffe": _radcliffe()
+		"kings_chapel": _kings_chapel()
+		"spire_cathedral": _spire_church(false)
+		"crooked_spire": _spire_church(true)
+		"stonehenge": _stonehenge()
+		"angel": _angel()
+		"forth_bridge": _forth_bridge()
+		"nessie": _nessie()
+		"roman_wall": _roman_wall()
+		"radio_telescope": _radio_telescope()
+		"viaduct": _viaduct()
 		"kremowka": _kremowka()
 		"narrow_train": _train()
 
@@ -866,3 +890,430 @@ static func _dinosaur() -> void:
 	_r(1, 0, 2, 2.6, c.darkened(0.15))
 	_r(2.6, 0, 3.6, 2.6, c.darkened(0.15))
 	_c(5.9, 9.6, 0.15, DARK)
+
+# --- Great Britain ------------------------------------------------------------------------------------------
+
+## Flat [x, y, ...] points of an arc around (cx, cy), from angle a0 to a1 (radians, counter-clockwise, y up).
+static func _arc_pts(cx: float, cy: float, rx: float, ry: float, a0: float, a1: float, n: int) -> Array:
+	var out := []
+	for k in n + 1:
+		var a := lerpf(a0, a1, float(k) / n)
+		out.append_array([cx + cos(a) * rx, cy + sin(a) * ry])
+	return out
+
+## Ellipse turned by `rot` radians.
+static func _ell(cx: float, cy: float, rx: float, ry: float, rot: float, col: Color) -> void:
+	var xy := []
+	for k in 20:
+		var a := TAU * k / 20.0
+		var x := cos(a) * rx
+		var y := sin(a) * ry
+		xy.append_array([cx + x * cos(rot) - y * sin(rot), cy + x * sin(rot) + y * cos(rot)])
+	_poly(xy, col)
+
+## Polyline through flat [x, y, ...] points.
+static func _pl(xy: Array, col: Color, w: float) -> void:
+	for k in range(0, xy.size() - 2, 2):
+		_l(xy[k], xy[k + 1], xy[k + 2], xy[k + 3], col, w)
+
+## Big Ben (the Elizabeth Tower) beside a gothic wing of the Houses of Parliament.
+static func _big_ben() -> void:
+	var s := Color("d8c38e")
+	_r(-15, 0, -4, 16, s.darkened(0.05))
+	for x in [-14.5, -11.0, -7.5]:
+		_poly([x, 16, x + 1.2, 16, x + 0.6, 19], s)
+	_windows(-14.5, -4.5, 3, 13, 5, Color("6a6248"))
+	_r(-4, 0, 4, 40, s)
+	if _pm > 1.2:
+		for x in [-2.5, 0.0, 2.5]:
+			_l(x, 2, x, 38, s.darkened(0.12), 0.25)
+	_r(-4.6, 40, 4.6, 48, s.lightened(0.05))
+	_c(0, 44, 3.1, GOLD)
+	_c(0, 44, 2.6, Color("f4f1e6"))
+	_l(0, 44, 0, 46.1, DARK, 0.25)
+	_l(0, 44, 1.5, 44.4, DARK, 0.25)
+	_r(-4, 48, 4, 52, s)
+	_windows(-3.6, 3.6, 48.6, 51.4, 3, Color("4a4434"))
+	_poly([-4.4, 52, 4.4, 52, 0, 59], Color("3e4a52"))
+	for x in [-4.2, 4.2]:
+		_poly([x - 0.5, 52, x + 0.5, 52, x, 54.5], GOLD)
+	_l(0, 59, 0, 60, GOLD, 0.25)
+
+## Tower Bridge: two stone towers joined by the high blue walkways, the bascules and the side chains.
+static func _tower_bridge() -> void:
+	var blue := Color("5d84a8")
+	var stone := Color("cfc6b2")
+	_r(-25, -0.5, 25, 1.2, Color("4f7fb0"))
+	_r(-25, 7.5, 25, 9.0, blue)
+	_r(-9, 22, 9, 24.5, blue)
+	_l(-9, 22, 9, 22, Color.WHITE, 0.2)
+	for x in [-12.0, 12.0]:
+		_r(x - 3, 0, x + 3, 26, stone)
+		_windows(x - 2.5, x + 2.5, 12, 18, 2, Color("4a5560"))
+		_poly([x - 3.4, 26, x + 3.4, 26, x, 32], Color("4a5560"))
+		for d in [-3.0, 3.0]:
+			_r(x + d - 0.6, 24, x + d + 0.6, 28, stone)
+			_poly([x + d - 0.8, 28, x + d + 0.8, 28, x + d, 30.5], Color("4a5560"))
+		_r(x - 1.2, 9, x + 1.2, 12.5, Color("3d4650"))
+	for side in [-1.0, 1.0]:
+		_pl([side * 15, 21, side * 19, 15, side * 22, 11.5, side * 25, 9.5], blue, 0.6)
+		_r(side * 25 - 0.8, 0, side * 25 + 0.8, 9, stone)
+
+## A narrowboat on a canal, green with red trim (Birmingham's canals).
+static func _narrowboat() -> void:
+	_r(-8, 0, 8, 0.7, Color("4f7f8f"))
+	_poly([-7.4, 0.6, 7, 0.6, 7.8, 1.8, -7.4, 1.8], Color("1f2a24"))
+	_r(-5.6, 1.8, 6, 3.2, Color("2f6a3a"))
+	_r(-5.6, 3.0, 6, 3.3, Color("c0392b"))
+	_windows(-5, 5.5, 2.2, 2.8, 5, Color("e8e0c8"))
+	_r(-4.2, 3.3, -3.8, 4.4, DARK)
+	_c(6.6, 2.4, 0.35, GOLD)
+	_l(-7.4, 1.8, -7.8, 3.2, Color("6b4a2a"), 0.15)
+
+## Edinburgh Castle on its volcanic rock.
+static func _castle_rock() -> void:
+	_poly([-22, 0, -20, 7, -15, 13, -7, 16.5, 6, 17.5, 14, 15.5, 19, 9, 22, 0], Color("57534c"))
+	_poly([-22, 0, -20, 7, -17, 9, -13, 4, -8, 0], Color("6f8f45"))
+	_poly([22, 0, 19, 9, 16, 6, 12, 0], Color("6f8f45"))
+	var w := Color("9a9184")
+	_r(-13, 16, 15, 22, w)
+	for x in range(-13, 15, 2):
+		_r(x, 22, x + 1, 23, w)
+	_r(-10, 22, -2, 28, w.lightened(0.06))
+	_poly([-10.5, 28, -1.5, 28, -6, 30.5], Color("5f6b70"))
+	_r(4, 22, 12, 26.5, w.darkened(0.05))
+	_windows(-9.5, -2.5, 24, 26.5, 4, DARK)
+	_windows(4.5, 11.5, 23, 25, 3, DARK)
+	_poly([-16, 16, -12, 16, -12, 19, -16, 18], w.darkened(0.1))
+	_l(8, 26.5, 8, 32, Color("8a8d92"), 0.15)
+	_r(8, 30, 10.4, 31.6, Color("1d4f9e"))
+	_l(8, 30, 10.4, 31.6, Color.WHITE, 0.15)
+	_l(8, 31.6, 10.4, 30, Color.WHITE, 0.15)
+
+## Royal Liver Building: a white office block with two clock towers, domes and the Liver birds on top.
+static func _liver_building() -> void:
+	var w := Color("e6e0d2")
+	_r(-12, 0, 12, 30, w)
+	_windows(-11, 11, 3, 27, 8, GLASS)
+	if _pm > 1.2:
+		for y in [8.0, 14.0, 20.0]:
+			_l(-12, y, 12, y, w.darkened(0.08), 0.2)
+	_r(-4, 30, 4, 33, w.darkened(0.04))
+	for x in [-7.5, 7.5]:
+		_r(x - 3.5, 30, x + 3.5, 40, w)
+		_c(x, 36, 2.4, Color("f4f1e6"))
+		_l(x, 36, x, 37.8, DARK, 0.2)
+		_r(x - 2.6, 40, x + 2.6, 42, w.darkened(0.05))
+		_poly(_arc_pts(x, 42, 2.6, 3.0, 0, PI, 8), COPPER)
+		_r(x - 0.5, 45, x + 0.5, 46.5, COPPER)
+		_poly([x - 1.2, 46.5, x + 0.4, 47.2, x + 1.4, 46.6, x + 0.6, 48.4, x - 0.2, 47.8, x - 0.6, 49.5, x - 0.9, 47.6], COPPER.darkened(0.15))
+
+## Suspension bridge (Clifton, Menai, Humber): two pylons, sagging main cables, hangers and the deck.
+static func _suspension_bridge() -> void:
+	_r(-30, -0.5, 30, 1.2, Color("4f7fb0"))
+	var stone := Color("c9bfa8")
+	var cab := Color("4a4f55")
+	var pts := []
+	for k in 21:
+		var x := -20.0 + k * 2.0
+		pts.append_array([x, 11.6 + 7.4 * pow(x / 20.0, 2)])
+	_pl(pts, cab, 0.35)
+	_pl([-30, 11.2, -25, 14.5, -20, 19], cab, 0.35)
+	_pl([30, 11.2, 25, 14.5, 20, 19], cab, 0.35)
+	for k in range(1, 20):
+		var x := -20.0 + k * 2.0
+		_l(x, 10.6, x, 11.6 + 7.4 * pow(x / 20.0, 2), cab, 0.08)
+	_r(-30, 9.6, 30, 10.6, Color("5a5f66"))
+	for x in [-20.0, 20.0]:
+		_r(x - 1.6, 0, x + 1.6, 20, stone)
+		_poly(_arc_pts(x, 13, 0.9, 1.2, 0, PI, 6) + [x - 0.9, 10.6, x + 0.9, 10.6], Color("3a3a3a"))
+		_r(x - 1.9, 19.5, x + 1.9, 20.3, stone.darkened(0.1))
+
+## Tyne Bridge: a green steel arch with the deck hung below its crown, granite towers at both ends.
+static func _tyne_bridge() -> void:
+	_r(-25, -0.5, 25, 1.2, Color("4f7fb0"))
+	var g := Color("4f7a5a")
+	var outer := []
+	var inner := []
+	for k in 19:
+		var x := -18.0 + k * 2.0
+		outer.append_array([x, 21.5 - 19.5 * pow(x / 18.0, 2)])
+		inner.append_array([x * 0.97, 19.6 - 17.6 * pow(x / 18.0, 2)])
+	_pl(outer, g, 0.6)
+	_pl(inner, g, 0.4)
+	for k in range(1, 18):
+		var x := -18.0 + k * 2.0
+		var y := 19.6 - 17.6 * pow(x / 18.0, 2)
+		if y > 9.0: _l(x, 9, x, y, g, 0.15)
+		_l(x, 19.6 - 17.6 * pow(x / 18.0, 2), x + 2.0, 21.5 - 19.5 * pow((x + 2.0) / 18.0, 2), g, 0.12)
+	_r(-25, 8, 25, 9, g.darkened(0.2))
+	for x in [-22.0, 22.0]:
+		_r(x - 3, 0, x + 3, 14, Color("c9bfa8"))
+		_windows(x - 2.5, x + 2.5, 10, 12.5, 2, DARK)
+		_r(x - 3.3, 14, x + 3.3, 14.8, Color("b9b2a0"))
+
+## Royal Pavilion, Brighton: Indian-style onion domes and minarets.
+static func _pavilion() -> void:
+	var w := Color("f2ead6")
+	_r(-17, 0, 17, 9, w)
+	_windows(-16, 16, 2, 7, 10, Color("7a8a90"))
+	_r(-5, 9, 5, 12, w)
+	_c(0, 15, 4.6, w.darkened(0.03))
+	_poly([-1.8, 18.8, 1.8, 18.8, 0, 22], w.darkened(0.03))
+	for x in [-11.0, 11.0]:
+		_r(x - 2.6, 9, x + 2.6, 10.5, w)
+		_c(x, 12, 2.4, w.darkened(0.03))
+		_poly([x - 1, 13.9, x + 1, 13.9, x, 15.8], w.darkened(0.03))
+	for x in [-16.0, -6.5, 6.5, 16.0]:
+		_r(x - 0.4, 9, x + 0.4, 15, w.darkened(0.06))
+		_c(x, 15.4, 0.7, w.darkened(0.03))
+		_l(x, 16, x, 17, GOLD, 0.12)
+
+## Seaside pier on iron legs with a domed pavilion and a striped helter-skelter.
+static func _pier() -> void:
+	_r(-22, -0.5, 22, 1.5, Color("3f7fb3"))
+	for k in 15:
+		var x := -21.0 + k * 3.0
+		_l(x, 0, x, 4, Color("4a4f55"), 0.3)
+	_r(-22, 4, 22, 4.8, Color("8a6a4a"))
+	_r(-22, 4.8, 22, 5.2, Color("f4f4f2"))
+	_r(8, 4.8, 18, 8.5, Color("f4f0e6"))
+	_windows(8.5, 17.5, 5.6, 7.6, 4, Color("6a9ac0"))
+	_poly(_arc_pts(13, 8.5, 3, 2.6, 0, PI, 8), Color("e0e4e8"))
+	_l(13, 11, 13, 12, GOLD, 0.15)
+	for k in 5:
+		var y0 := 4.8 + k * 1.3
+		var h0 := 2.2 - k * 0.38
+		var h1 := 2.2 - (k + 1) * 0.38
+		_poly([-6 - h0, y0, -6 + h0, y0, -6 + h1, y0 + 1.3, -6 - h1, y0 + 1.3], Color("d0302a") if k % 2 == 0 else Color.WHITE)
+	_poly([-6.5, 11.3, -5.5, 11.3, -6, 12], Color("d0302a"))
+	_r(-16, 4.8, -12, 7, Color("6a9ac0"))
+	_poly([-16.4, 7, -11.6, 7, -14, 8.4], Color("d0302a"))
+
+## Red-and-white striped lighthouse (Smeaton's Tower).
+static func _lighthouse() -> void:
+	for k in 6:
+		var y0 := k * 3.0
+		var y1 := y0 + 3.0
+		_poly([-3.4 + y0 * 0.066, y0, 3.4 - y0 * 0.066, y0, 3.4 - y1 * 0.066, y1, -3.4 + y1 * 0.066, y1],
+			Color("c8302a") if k % 2 == 0 else Color("f4f2ec"))
+	_r(-2.6, 18, 2.6, 18.7, DARK)
+	_r(-1.6, 18.7, 1.6, 21.6, Color("f8e7a0"))
+	_l(-1.6, 18.7, -1.6, 21.6, DARK, 0.15)
+	_l(1.6, 18.7, 1.6, 21.6, DARK, 0.15)
+	_poly(_arc_pts(0, 21.6, 1.9, 1.8, 0, PI, 8), Color("c8302a"))
+	_l(0, 23.4, 0, 25, DARK, 0.15)
+	_c(0, 25.2, 0.3, GOLD)
+
+## Bottle kilns of the Potteries: brick bottles over a low workshop.
+static func _bottle_kiln() -> void:
+	_r(-10, 0, 10, 4, BRICK_D)
+	_windows(-9.5, 9.5, 1, 3, 6, DARK)
+	for k in [[-5.0, 1.0], [5.5, 1.15]]:
+		var x: float = k[0]
+		var s: float = k[1]
+		_poly([x - 4 * s, 0, x + 4 * s, 0, x + 4.4 * s, 5 * s, x + 3 * s, 9.5 * s, x + 1.3 * s, 12.5 * s,
+			x + 1.3 * s, 14.5 * s, x - 1.3 * s, 14.5 * s, x - 1.3 * s, 12.5 * s, x - 3 * s, 9.5 * s, x - 4.4 * s, 5 * s], BRICK)
+		_r(x - 1.5 * s, 14.2 * s, x + 1.5 * s, 14.8 * s, BRICK_D)
+		_poly([x - 1.4, 0, x + 1.4, 0, x + 1.4, 2.4, x, 3, x - 1.4, 2.4], DARK)
+
+## Ocean liner with four funnels (the Titanic sailed from Southampton).
+static func _liner() -> void:
+	_r(-22, -0.5, 22, 1.0, Color("3f7fb3"))
+	_poly([-20, 0.6, 20, 0.6, 22, 2.0, -21, 2.0], Color("a8302a"))
+	_poly([-21, 2.0, 22, 2.0, 22.5, 6.2, -21.5, 6.2], Color("1e1f22"))
+	_r(-16, 6.2, 15, 9.4, Color("f4f4f2"))
+	_r(-12, 9.4, 11, 10.4, Color("f4f4f2"))
+	_windows(-15.5, 14.5, 7.2, 8.4, 14, Color("6a7a88"))
+	for x in [-8.0, -2.5, 3.0, 8.5]:
+		_poly([x - 1.3, 10.4, x + 1.3, 10.4, x + 1.7, 15.5, x - 0.9, 15.5], Color("c98a3a"))
+		_poly([x - 0.9, 15.5, x + 1.7, 15.5, x + 1.8, 17, x - 0.8, 17], DARK)
+	_l(-18, 6.2, -18, 16, Color("8a6a4a"), 0.15)
+	_l(17, 6.2, 17, 16, Color("8a6a4a"), 0.15)
+
+## Spinnaker Tower: a white sail curving up beside a slim spire, the viewing decks near the top.
+static func _spinnaker() -> void:
+	var w := Color("f2f4f6")
+	var outer := []
+	var inner := []
+	for k in 13:
+		var t := float(k) / 12.0
+		var bulge := sin(t * PI * 0.9) * (1.0 - t * 0.25)
+		outer.append_array([1.0 + 12.0 * bulge, t * 58.0])
+		inner.append_array([1.0 + 8.5 * bulge, 4.0 + t * 50.0])
+	var xy := outer.duplicate()
+	for k in range(inner.size() - 2, -1, -2): xy.append_array([inner[k], inner[k + 1]])
+	_poly(xy, w)
+	if _pm > 1.0:
+		for k in range(2, 22, 4):
+			_l(inner[k], inner[k + 1], outer[k + 2], outer[k + 3], Color("cfd8e0"), 0.2)
+	_poly([-1.6, 0, 1.6, 0, 0.5, 68, -0.5, 68], w.darkened(0.04))
+	_l(0, 68, 0, 70, Color("8a8d92"), 0.15)
+	_poly([-3.6, 47, 5.0, 47, 4.6, 53, -3.2, 53], Color("5d8bb0"))
+	_r(-2.8, 53, 4.0, 54.6, w)
+	_r(-2, 0, 12, 1.2, w.darkened(0.1))
+
+## Radcliffe Camera: a round honey-stone library with a lead dome.
+static func _radcliffe() -> void:
+	var s := Color("e2cf9a")
+	_r(-10, 0, 10, 7, s.darkened(0.06))
+	_windows(-9.5, 9.5, 1.5, 5, 6, Color("4a4434"))
+	_r(-8, 7, 8, 16, s)
+	if _pm > 1.0:
+		for x in [-7.0, -4.5, -1.5, 1.5, 4.5, 7.0]:
+			_l(x, 7.4, x, 15.6, s.darkened(0.15), 0.35)
+	_r(-8.6, 16, 8.6, 17.2, s.darkened(0.04))
+	_r(-6.6, 17.2, 6.6, 18.4, s)
+	_poly(_arc_pts(0, 18.4, 6.4, 5.6, 0, PI, 14), Color("8f9498"))
+	_r(-1.2, 23.6, 1.2, 25.4, s)
+	_poly([-1.4, 25.4, 1.4, 25.4, 0, 26.6], Color("8f9498"))
+
+## King's College Chapel: a long perpendicular gothic chapel with four corner turrets.
+static func _kings_chapel() -> void:
+	var s := Color("e6dcc0")
+	_r(-13, 0, 13, 18, s)
+	for k in 6:
+		var x := -11.0 + k * 4.4
+		_poly([x, 3, x + 2.6, 3, x + 2.6, 13.5, x + 1.3, 15.5, x, 13.5], GLASS)
+	_r(-13, 18, 13, 18.8, s.darkened(0.08))
+	for k in 9:
+		var x := -12.0 + k * 3.0
+		_poly([x - 0.4, 18.8, x + 0.4, 18.8, x, 21], s.darkened(0.04))
+	for x in [-13.6, 13.6]:
+		_r(x - 1.4, 0, x + 1.4, 25, s.lightened(0.04))
+		_poly([x - 1.6, 25, x + 1.6, 25, x + 0.6, 27.5, x, 30, x - 0.6, 27.5], s.darkened(0.06))
+
+## A cathedral with a tall stone spire over the crossing (Norwich); `crooked` twists it (Chesterfield).
+static func _spire_church(crooked: bool) -> void:
+	var s := Color("d8d2c2") if not crooked else Color("cdbf9f")
+	if crooked:
+		_r(-8, 0, 8, 10, s)
+		_poly([-8.4, 10, 8.4, 10, 6.5, 13, -6.5, 13], Color("6b6b70"))
+		_r(-2.6, 0, 2.6, 18, s.darkened(0.05))
+		_windows(-7, 7, 3, 7, 4, GLASS)
+		var lead := Color("5a5a62")
+		_poly([-2.8, 18, 2.8, 18, 2.6, 24, 2.6, 32, 2.0, 38, 1.4, 40, 0.8, 36, -0.6, 30, -1.6, 24], lead)
+		if _pm > 1.0:
+			for k in 6:
+				var y := 19.5 + k * 3.2
+				_l(-1.8 + k * 0.4, y, 2.2 + k * 0.05, y + 1.8, lead.lightened(0.2), 0.15)
+		return
+	_r(-15, 0, 15, 14, s)
+	_poly([-15.5, 14, 15.5, 14, 13, 17.5, -13, 17.5], Color("6b6b70"))
+	_windows(-14, -4, 4, 11, 4, GLASS)
+	_windows(4, 14, 4, 11, 4, GLASS)
+	_r(-3.5, 0, 3.5, 26, s.darkened(0.04))
+	_windows(-2.5, 2.5, 19, 23, 2, DARK)
+	for x in [-3.3, 3.3]:
+		_poly([x - 0.5, 26, x + 0.5, 26, x, 29], s.darkened(0.1))
+	_poly([-3, 26, 3, 26, 0, 50], s.darkened(0.06))
+
+## Stonehenge: sarsen uprights and lintels on the grass of Salisbury Plain.
+static func _stonehenge() -> void:
+	_poly([-12, 0, -9, 0.8, 9, 0.8, 12, 0], Color("7fa05a"))
+	var st := Color("9c9a92")
+	for k in 9:
+		var x := -9.6 + k * 2.4
+		var h := 4.2 if k != 4 else 5.4
+		if k == 7:
+			_poly([x - 1.4, 0.4, x + 1.6, 0.4, x + 1.6, 1.4, x - 1.2, 1.2], st.darkened(0.1))
+			continue
+		_r(x - 0.6, 0.4, x + 0.6, h, st.darkened(0.05 * (k % 2)))
+		if k % 2 == 0 and k < 8:
+			_r(x - 0.8, h, x + 3.0, h + 0.7, st.lightened(0.05))
+	_r(-11.4, 0.4, -10.8, 2.0, st.darkened(0.15))
+
+## The Angel of the North: a rusty steel figure with wide, slightly forward wings.
+static func _angel() -> void:
+	_poly([-6, 0, -3, 1.2, 3, 1.2, 6, 0], Color("6f8f45"))
+	var c := Color("8a4a2a")
+	_poly([-1.3, 1, 1.3, 1, 1.0, 14, -1.0, 14], c)
+	_poly([-0.8, 14, 0.8, 14, 0.9, 16, 0.5, 17, -0.5, 17, -0.9, 16], c)
+	for side in [-1.0, 1.0]:
+		_poly([side * 0.8, 13.4, side * 15, 14.2, side * 15, 12.4, side * 0.8, 10.6], c)
+		if _pm > 1.0:
+			for k in 6:
+				var x: float = side * (2.0 + k * 2.2)
+				_l(x, 10.9 + k * 0.28, x, 13.5 + k * 0.1, c.darkened(0.25), 0.12)
+
+## Forth Bridge: three red cantilever towers (double diamonds) carrying the railway over the firth.
+static func _forth_bridge() -> void:
+	_r(-35, -0.5, 35, 1.2, Color("3f6f9a"))
+	var red := Color("b03a2e")
+	for cx in [-23.0, 0.0, 23.0]:
+		_r(cx - 3, 0, cx + 3, 2.5, Color("b9b2a0"))
+		for side in [-1.0, 1.0]:
+			var tx: float = cx + side * 1.5
+			var ex: float = cx + side * 10.5
+			_l(tx, 2.5, tx, 24, red, 0.6)
+			_l(tx, 24, ex, 10.5, red, 0.6)
+			_pl([tx, 2.5, cx + side * 4.5, 4.5, cx + side * 7.5, 7.0, ex, 9.0], red, 0.6)
+			_l(ex, 9.0, ex, 10.5, red, 0.4)
+			for k in 3:
+				var xa: float = lerpf(tx, ex, (k + 1) / 4.0)
+				var top: float = lerpf(24.0, 10.5, (k + 1) / 4.0)
+				_l(xa, 9.0, xa, top, red, 0.25)
+				_l(lerpf(tx, ex, k / 4.0), lerpf(24.0, 10.5, k / 4.0), xa, 9.0, red, 0.2)
+	for x0 in [-35.0, -12.5, 10.5, 33.5]:
+		_r(x0, 9.0, x0 + 2.0, 11.5, red)
+	_r(-35, 9.0, 35, 9.8, red.darkened(0.25))
+
+## Nessie: neck, head and humps rising from the dark water of Loch Ness.
+static func _nessie() -> void:
+	var g := Color("3f6a4a")
+	_r(-8, 0, 8, 0.7, Color("2f4a5c"))
+	for h in [[-0.6, 1.5], [2.8, 1.1], [5.2, 0.7]]:
+		_poly(_arc_pts(h[0], 0.7, h[1], h[1], 0, PI, 10), g)
+	_pl([-2.6, 0.7, -3.8, 2.6, -4.6, 4.6, -4.8, 5.8], g, 0.9)
+	_c(-5.1, 6.1, 0.75, g)
+	_poly([-5.4, 6.4, -7.2, 6.0, -7.0, 5.6, -5.4, 5.6], g)
+	_c(-5.3, 6.4, 0.15, Color.WHITE)
+
+## Hadrian's Wall running along a grassy ridge, with a milecastle.
+static func _roman_wall() -> void:
+	_poly([-18, 0, -18, 2, -10, 3.4, -2, 4, 6, 3.2, 18, 1.4, 18, 0], Color("6f8f45"))
+	var st := Color("a49e8c")
+	var ridge := [-18.0, 2.0, -10.0, 3.4, -2.0, 4.0, 6.0, 3.2, 18.0, 1.4]
+	var top := []
+	for k in range(0, ridge.size(), 2): top.append_array([ridge[k], ridge[k + 1] + 1.5])
+	var xy := ridge.duplicate()
+	for k in range(top.size() - 2, -1, -2): xy.append_array([top[k], top[k + 1]])
+	_poly(xy, st)
+	_r(1, 3.5, 6.5, 6, st.darkened(0.05))
+	_poly([3, 3.5, 4.5, 3.5, 4.5, 4.8, 3.75, 5.3, 3, 4.8], DARK)
+
+## Jodrell Bank: the Lovell radio telescope, a huge white dish between two towers.
+static func _radio_telescope() -> void:
+	var w := Color("e4e8ea")
+	_r(-18, 0, 18, 0.8, Color("6b6b6b"))
+	for side in [-1.0, 1.0]:
+		_l(side * 17, 0.8, side * 13, 24, w.darkened(0.08), 0.8)
+		_l(side * 9, 0.8, side * 13, 24, w.darkened(0.08), 0.8)
+		_l(side * 15.5, 9, side * 10.5, 9, w.darkened(0.08), 0.4)
+	_ell(0, 25, 15, 7.5, -0.45, w.darkened(0.12))
+	_ell(0.3, 25.6, 13.6, 6.2, -0.45, Color("aeb8c0"))
+	_l(0.3, 25.6, -6, 37, w.darkened(0.2), 0.3)
+	_l(4, 23, -6, 37, w.darkened(0.2), 0.2)
+	_c(-6, 37.2, 0.8, w)
+	_l(-13, 24, 13, 24, w.darkened(0.15), 0.5)
+
+## A stone railway viaduct striding across the moor on arches, a train on top.
+static func _viaduct() -> void:
+	_poly([-30, 0, -30, 15, -26, 15, -22, 6, -18, 0], Color("7a8a4a"))
+	_poly([30, 0, 30, 15, 26, 15, 22, 6, 18, 0], Color("7a8a4a"))
+	var st := Color("8f8678")
+	var n := 10
+	var x0 := -24.0
+	var span := 48.0 / n
+	_r(-26, 15, 26, 16.2, st.darkened(0.08))
+	for k in n:
+		var a := x0 + k * span
+		var b := a + span
+		_poly([a, 15, a, 10.5] + _arc_pts((a + b) * 0.5, 10.5, (b - a) * 0.5 - 0.6, 2.0, PI, 0, 8) + [b, 10.5, b, 15], st)
+	for k in n + 1:
+		var x := x0 + k * span
+		_r(x - 0.6, 0, x + 0.6, 10.6, st)
+	_r(-8, 16.2, -4.5, 18.2, Color("8b3a2b"))
+	_r(-4.2, 16.2, 1.5, 18.0, Color("7a2e22"))
+	_r(1.8, 16.2, 7.5, 18.0, Color("7a2e22"))
+	_c(-7.4, 19, 0.6, Color(0.9, 0.9, 0.9, 0.7))

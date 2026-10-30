@@ -4,7 +4,8 @@ extends RefCounted
 ## Szczebrzeszyn...). place() puts them in the middle of every town the route passes through; the scenery draws
 ## them (LandmarkPainter) with a brown tourist board, and the HUD names them while they are in view.
 
-## The current country's landmarks: town name -> [{kind (painter), name, desc}, ...] (one or two per town).
+## The current country's landmarks: town name -> [{kind (painter), name, desc, local}, ...] (one or two per town);
+## `name` in the player's language for the HUD, `local` (default: name) in the country's language for the brown sign.
 static func by_town() -> Dictionary:
 	return GameData.country().landmarks
 
@@ -12,7 +13,7 @@ static func by_town() -> Dictionary:
 static func size(kind: String) -> Array:
 	return GameData.rules().landmark_sizes[kind]
 
-## Landmarks along the stage: [{z, lat, kind, name, desc, town, w, h}], in route order.
+## Landmarks along the stage: [{z, lat, kind, name, local, desc, town, w, h}], in route order.
 static func place(stage: Dictionary) -> Array:
 	var out := []
 	for t in stage.towns:
@@ -29,7 +30,7 @@ static func place(stage: Dictionary) -> Array:
 			var kind: String = list[k].kind
 			var sz := size(kind)
 			var side := -1.0 if k == 0 else 1.0
-			out.append({"z": anchor + k * 55.0, "lat": side * (10.0 + sz[0] * 0.5), "kind": kind, "name": list[k].name,
+			out.append({"z": anchor + k * 55.0, "lat": side * (10.0 + sz[0] * 0.5), "kind": kind, "name": list[k].name, "local": list[k].get("local", list[k].name),
 				"desc": list[k].desc, "town": t.name, "town_display": t.get("display", t.name), "w": float(sz[0]), "h": float(sz[1])})
 	return out
 

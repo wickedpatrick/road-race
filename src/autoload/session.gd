@@ -12,6 +12,7 @@ var from_city := "krakow"
 var to_city := "rzeszow"
 var total_km := 0.0
 var visited: Array = [] ## ids of the map cities the player has been to (the goal: all of them)
+var units := "metric" ## the interface's units (Units): "metric" or "imperial", picked on the car screen
 var quality := "high" ## "high": everything at full screen sharpness; "low": the race world is drawn at 960x540
 var home_city := "" ## picked on the first start; "" until then (or after a progress reset)
 var menu_at_map := false ## the menu opens at the destination map (coming back from a race)
@@ -62,6 +63,8 @@ func load_profile() -> void:
 		return
 	total_km = float(d.get("total_km", 0.0))
 	quality = "low" if d.get("quality", "high") == "low" else "high"
+	units = "imperial" if d.get("units", "metric") == "imperial" else "metric"
+	Units.imperial = units == "imperial"
 	season = d.get("season", season) if SeasonPalette.SEASONS.has(d.get("season", "")) else season
 	places = d.get("places", {}) if d.get("places") is Dictionary else {}
 	if not d.has("places"):
@@ -76,12 +79,17 @@ func load_profile() -> void:
 	var car: String = d.get("car_id", car_id)
 	car_id = car if CarStats.has(car) and Profile.is_unlocked(car, total_km) else CarStats.ids()[0]
 
+func set_units(u: String) -> void:
+	units = u
+	Units.imperial = u == "imperial"
+	save_profile()
+
 func save_profile() -> void:
 	var f := FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	if f == null:
 		return
 	places[country] = _place()
-	f.store_string(JSON.stringify({"total_km": total_km, "car_id": car_id, "season": season, "quality": quality,
+	f.store_string(JSON.stringify({"total_km": total_km, "car_id": car_id, "season": season, "quality": quality, "units": units,
 		"country": country, "places": places}))
 
 ## The current country's progress, as kept in `places`.

@@ -83,6 +83,9 @@ var fines := 0
 ## shaken off), need (sharp changes of direction that do it), swerves, dir, swerve_t (the count so far), off_x}
 var police := {}
 var police_rules: Dictionary
+## +1, or -1 with left-hand traffic: x always grows towards the near-side kerb (stations, signs), so on the left the
+## steering works the other way round (the view draws the world mirrored)
+var side := 1.0
 var police_rng := RandomNumberGenerator.new() ## a separate stream: the officers do not reshuffle anything else
 
 func _init(p_car_id: String, p_stage: Dictionary, seed_value: int) -> void:
@@ -98,6 +101,7 @@ func _init(p_car_id: String, p_stage: Dictionary, seed_value: int) -> void:
 	fuel = Fuel.new(stats.tank, stats.burn, stats.max_speed)
 	time_left = stage.duration
 	police_rules = GameData.rules().police
+	side = -1.0 if stage.get("left", false) else 1.0
 	police_rng.seed = seed_value + 303
 
 func speed_ratio() -> float:
@@ -324,8 +328,9 @@ func step(dt: float, input: Dictionary) -> void:
 		speed = maxf(OFFROAD_SPEED, speed - OFFROAD_DECEL * dt)
 	speed = clampf(speed, 0.0, vmax)
 	# lateral
-	var steer: float = clampf(input.steer, -1.0, 1.0)
-	steer_visual = lerpf(steer_visual, steer, minf(1.0, dt * 10.0))
+	var steer_screen: float = clampf(input.steer, -1.0, 1.0)
+	steer_visual = lerpf(steer_visual, steer_screen, minf(1.0, dt * 10.0))
+	var steer := steer_screen * side
 	var sr := speed_ratio()
 	x += steer * stats.handling * STEER_RATE * clampf(speed / 12.0, 0.0, 1.0) * dt
 	x -= bend_push(track.segment_at(z).curve, speed, stats.handling * STEER_RATE) * dt

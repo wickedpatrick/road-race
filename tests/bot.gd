@@ -94,7 +94,7 @@ func decide(r: Race) -> Dictionary:
 			brake = brake or r.speed > safe + 1.5
 	var curve: float = r.track.segment_at(r.z + 20.0).curve
 	var steer := clampf((target_x - r.x) * 2.5 + curve * Race.corner_push(r.speed) / (r.stats.handling * Race.STEER_RATE), -1.0, 1.0)
-	return {"accel": accel, "brake": brake, "steer": steer}
+	return {"accel": accel, "brake": brake, "steer": steer * r.side} # the steering is mirrored with left-hand traffic
 
 ## A slower car in the right lane just ahead (or alongside, while overtaking it), or {}.
 func _slow_ahead(r: Race) -> Dictionary:

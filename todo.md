@@ -133,12 +133,16 @@ dostają tyle, ile ma sens.
       Zostało: USA i Kanada wymagają innej projekcji/skali niż Polska (rozważyć projekcję stożkową).
 - [x] Menu: przełącznik krajów nad mapą (klawisz C), profil pamięta miasto domowe, bieżące i odwiedzone miasta
       osobno dla każdego kraju (stare zapisy trafiają do Polski). Zostało: lista/mapa Europy, gdy krajów będzie dużo.
-- [ ] Reguły drogowe per kraj w danych, nie w kodzie (zrobione: limity prędkości i kolory tablic w `country.json`;
-      zostało: tolerancja radaru, jednostki, klasy dróg): limity prędkości (teren zabudowany / poza / ekspresowa /
+- [ ] Reguły drogowe per kraj w danych, nie w kodzie (zrobione: limity prędkości, kolory tablic i numerów dróg,
+      jednostki na znakach (`units`: mph i mile w Wielkiej Brytanii) w `country.json`; zostało: tolerancja radaru,
+      klasy dróg): limity prędkości (teren zabudowany / poza / ekspresowa /
       autostrada), jednostki (km/h vs **mph i mile** w Wielkiej Brytanii i USA), klasy dróg i liczba pasów
       (np. M/A w UK, Interstate/US Route w USA, Highway w Kanadzie, Autobahn bez ogólnego limitu w Niemczech).
-- [ ] **Ruch lewostronny** w Wielkiej Brytanii, Irlandii, na Malcie i Cyprze: lustrzane pasy, ruch z naprzeciwka,
-      pobocze ze stacjami po lewej, wyprzedzanie z prawej.
+- [x] **Ruch lewostronny** (`drive: "left"`): świat rysowany w lustrze (`DrawBatch.mirror`), znaki, auta i zabytki
+      bez odbicia, kierownica odwrócona w `Race.side`; stacje po lewej, wyprzedzanie z prawej. Do użycia w Irlandii,
+      na Malcie i Cyprze.
+- [x] Interfejs w km/h albo mph do wyboru na ekranie auta (przycisk/klawisz U, zapisywane w profilu); znaki
+      zawsze w jednostkach kraju.
 - [ ] Znaki drogowe per kraj: kolory tablic kierunkowych (np. niebieskie autostrady i zielone krajowe
       jak w PL vs odwrotnie w Szwajcarii/Włoszech, zielone w USA), tablice miejscowości, znaki ostrzegawcze
       (trójkąt w Europie, żółty romb w USA/Kanadzie).
@@ -157,7 +161,8 @@ dostają tyle, ile ma sens.
       Vaðlaheiðargöng, Fáskrúðsfjarðargöng, Dýrafjarðargöng i Vestfjarðagöng; nowe krajobrazy (lawa z mchem,
       wyżyny, lodowce, fiordy), owce i konie islandzkie, wodospady, gejzer, góry lodowe, Hallgrímskirkja.
 - [x] Nazwy miast w języku gracza na mapie i w menu (`exonym`), lokalne na tablicach.
-- [ ] Stacja paliw, znak D-23 i cennik są polskie we wszystkich krajach (napisy po polsku, waluta).
+- [x] Napisy przy drodze w języku kraju: stacja i cennik (waluta), tablice krain, brązowe tablice zabytków
+      (`local`), numery dróg. Czcionka ma cyrylicę i grekę (sprawdzone).
 
 Dla każdego kraju: lista miast z populacją i lat/lon, sieć dróg łącząca sąsiadów (spójny graf, najkrótsze
 trasy sensowne), miejscowości po drodze, krainy, ciekawostki po polsku, kontur granicy. Weryfikacja: test,

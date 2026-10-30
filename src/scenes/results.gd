@@ -22,7 +22,7 @@ func _draw() -> void:
 	var col := Color("2e9e4f") if won else Color("c0392b")
 	draw_string(font, Vector2(2, 142), title, HORIZONTAL_ALIGNMENT_CENTER, 960, 64, Color(0, 0, 0, 0.35))
 	draw_string(font, Vector2(0, 140), title, HORIZONTAL_ALIGNMENT_CENTER, 960, 64, col)
-	draw_string(font, Vector2(0, 190), "%s (%d km)  ·  %s  ·  %s" % [r.get("name", ""), r.get("km", 0), CarStats.by_id(Session.car_id).name, SeasonPalette.label(Session.season)], HORIZONTAL_ALIGNMENT_CENTER, 960, 24, Color("23323f"))
+	draw_string(font, Vector2(0, 190), "%s (%s)  ·  %s  ·  %s" % [r.get("name", ""), Units.dist_text(r.get("km", 0)), CarStats.by_id(Session.car_id).name, SeasonPalette.label(Session.season)], HORIZONTAL_ALIGNMENT_CENTER, 960, 24, Color("23323f"))
 	var stars := _stars()
 	for i in 3:
 		var c := Vector2(380 + i * 100, 270)
@@ -37,9 +37,9 @@ func _draw() -> void:
 	if won:
 		detail = "Czas przejazdu %s   ·   zostało %s" % [Hud.format_time(r.elapsed), Hud.format_time(r.time_left)]
 	else:
-		detail = "Wskazówka: tankuj na stacjach, jedź ok. 90 km/h i unikaj zderzeń"
+		detail = "Wskazówka: tankuj na stacjach, jedź ok. %s i unikaj zderzeń" % Units.speed_text(90.0)
 	draw_string(font, Vector2(0, 360), detail, HORIZONTAL_ALIGNMENT_CENTER, 960, 26, Color("23323f"))
-	draw_string(font, Vector2(0, 392), "+%d km   ·   razem przejechane: %d km" % [int(r.get("km_driven", 0.0)), int(Session.total_km)], HORIZONTAL_ALIGNMENT_CENTER, 960, 20, Color("23323f"))
+	draw_string(font, Vector2(0, 392), "+%s   ·   razem przejechane: %s" % [Units.dist_text(r.get("km_driven", 0.0)), Units.dist_text(Session.total_km)], HORIZONTAL_ALIGNMENT_CENTER, 960, 20, Color("23323f"))
 	var banner_y := 432.0
 	var unlocked: Array = r.get("unlocked", [])
 	if not unlocked.is_empty():

@@ -95,8 +95,8 @@ func _draw() -> void:
 	_text(Vector2(82, 70), format_time(race.time_left), 38, Color("ff5a4d") if blink else (Color("ff8a7a") if low_time else Color.WHITE))
 	# speed + gear
 	draw_style_box(_panel, Rect2(794, 14, 150, 66))
-	_text(Vector2(806, 36), "KM/H", 15, Color("9fb3c8"))
-	_text(Vector2(806, 70), str(int(race.speed * 3.6)), 38, Color.WHITE)
+	_text(Vector2(806, 36), Units.speed_unit().to_upper(), 15, Color("9fb3c8"))
+	_text(Vector2(806, 70), str(Units.speed(race.speed * 3.6)), 38, Color.WHITE)
 	_text(Vector2(840, 70), "D%d" % race.gear, 26, Color("ffd24a"), HORIZONTAL_ALIGNMENT_RIGHT, 92)
 	# progress bar
 	var bx := 200.0
@@ -116,7 +116,7 @@ func _draw() -> void:
 		_pump_icon(Vector2(bx + bw * (s / race.stage.length), by + 4))
 	draw_circle(Vector2(bx + bw * race.progress(), by + 4), 8, Color.WHITE)
 	draw_circle(Vector2(bx + bw * race.progress(), by + 4), 5, Color("e14b3a"))
-	_text(Vector2(bx, 82), "%s: %d km" % [race.stage.finish_display, int(ceil(race.km_left()))], 16, Color("ffd24a"))
+	_text(Vector2(bx, 82), "%s: %s" % [race.stage.finish_display, Units.dist_text(race.km_left(), true)], 16, Color("ffd24a"))
 	_text(Vector2(bx, 82), _region, 14, Color("d6e4f0"), HORIZONTAL_ALIGNMENT_RIGHT, bw)
 	# fuel
 	var fr := race.fuel.ratio()
@@ -127,7 +127,7 @@ func _draw() -> void:
 	draw_style_box(_panel, Rect2(fp, Vector2(fw, 80)))
 	var l100 := minf(99.0, race.fuel.litres_per_100km(race.speed, Route.M_PER_KM, race.load, race.gearbox.rpm(race.speed)))
 	var eco := absf(race.speed * 3.6 - 90.0) < 12.0
-	var l100_text := "-" if race.speed < 1.0 else ("%.1f l/100 km" % l100).replace(".", ",")
+	var l100_text := "-" if race.speed < 1.0 else Units.consumption_text(l100)
 	var lc := Color("ff8a7a") if l100 > 15.0 else (Color("7fe0a0") if eco else Color("d6e4f0"))
 	_text(fp + Vector2(12, 22), l100_text, 15, lc)
 	_text(fp + Vector2(12, 46), "PALIWO", 15, Color("ff6a5a") if fblink else Color("9fb3c8"))
@@ -149,16 +149,16 @@ func _draw() -> void:
 	elif race.elapsed - race.last_hit < BUMP_BANNER_TIME:
 		_banner("%s -%d s, -%d l paliwa" % ["ZDERZENIE CZOŁOWE!" if race.head_on else "ZDERZENIE!", int(Race.COLLISION_TIME_PENALTY), int(Race.COLLISION_FUEL)], Color("ff6a5a"))
 	elif race.speeding > 0.0:
-		_banner("ZWOLNIJ! Ograniczenie %d km/h   (%d s)" % [race.speed_limit(), int(ceil(race.speeding_grace() - race.speeding))], Color("ff6a5a"))
+		_banner("ZWOLNIJ! Ograniczenie %s   (%d s)" % [Units.speed_text(race.speed_limit()), int(ceil(race.speeding_grace() - race.speeding))], Color("ff6a5a"))
 	elif race.refueling:
 		_banner("TANKOWANIE...  %d%%" % int(fr * 100.0), Color("49d36b"))
 	elif race.station_in_range() and race.shoulder_fraction() < Race.SHOULDER_MIN:
-		_banner("STACJA PALIW: ZJEDŹ W PRAWO NA POBOCZE", Color("f2c21b"))
+		_banner("STACJA PALIW: ZJEDŹ %s NA POBOCZE" % ("W LEWO" if race.side < 0.0 else "W PRAWO"), Color("f2c21b"))
 	elif race.station_in_range():
 		_banner("STACJA PALIW: ZATRZYMAJ SIĘ (%s), ABY TANKOWAĆ" % ("hamulec" if touch else "spacja"), Color("f2c21b"))
 	elif race.next_station_distance() > 0.0 and race.next_station_distance() < STATION_NOTICE and fr < 0.85:
-		var km := maxi(1, int(ceil(Route.km_between(race.stage, 0.0, race.next_station_distance()))))
-		_banner("STACJA PALIW za %d km: zjedź na prawe pobocze" % km, Color("f2c21b"))
+		var km := maxf(Units.KM_PER_MILE if Units.imperial else 1.0, Route.km_between(race.stage, 0.0, race.next_station_distance()))
+		_banner("STACJA PALIW za %s: zjedź na %s pobocze" % [Units.dist_text(km, true), "lewe" if race.side < 0.0 else "prawe"], Color("f2c21b"))
 	elif low_fuel and int(race.elapsed * 2.0) % 2 == 0:
 		_banner("MAŁO PALIWA! Szukaj stacji", Color("ff6a5a"))
 
@@ -198,7 +198,7 @@ func _limit_sign() -> void:
 	draw_circle(c, 31, Color(0, 0, 0, 0.35))
 	draw_circle(c, 29, Color("ffd24a") if warn else Scenery.SIGN_RED)
 	draw_circle(c, 22, Color.WHITE)
-	draw_string(font, c + Vector2(-22, 8), str(race.speed_limit()), HORIZONTAL_ALIGNMENT_CENTER, 44, 21, Color.BLACK)
+	draw_string(font, c + Vector2(-22, 8), str(Units.speed(race.speed_limit())), HORIZONTAL_ALIGNMENT_CENTER, 44, 21, Color.BLACK)
 
 ## Copy of the distance board being passed, so its towns and kilometres can be read at speed.
 func _board_echo() -> void:

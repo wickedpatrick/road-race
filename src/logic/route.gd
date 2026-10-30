@@ -197,7 +197,7 @@ static func build(from: String, to: String) -> Dictionary:
 	var duration := ceilf((legal * 1.09 + 6.0 * n_st + 12.0) / 5.0) * 5.0
 	var stage := {
 		"name": "%s - %s" % [Geo.display_name(from), Geo.display_name(to)],
-		"from": from, "to": to, "path": path, "km": km, "m_per_km": mpk,
+		"from": from, "to": to, "path": path, "km": km, "m_per_km": mpk, "left": Geo.left_hand(),
 		"length": length, "duration": duration, "lanes": lanes,
 		"traffic_density": 1.0 if lanes == 3 else 0.8,
 		"stations": stations, "finish_label": Geo.city(to).name, "finish_display": Geo.display_name(to),
@@ -223,13 +223,13 @@ static func _boards(towns: Array, mpk: float, roads: Array) -> Array:
 			var o: Dictionary = towns[k]
 			if k == i + 1 or (o.big and lines.size() < 2) or o.get("finish", false):
 				if lines.any(func(l): return l[0] == o.name): continue
-				lines.append([o.name, maxi(1, roundi((o.z - zb) / mpk))])
+				lines.append([o.name, maxi(1, Geo.sign_distance((o.z - zb) / mpk))])
 		var road := ""
 		for r in roads:
 			if zb < r.z1:
 				road = r.road
 				break
-		out.append({"z": zb, "lines": lines, "road": road, "blue": road.begins_with("A")})
+		out.append({"z": zb, "lines": lines, "road": road, "blue": lanes_for(road) == 3})
 		last = zb
 	return out
 
@@ -337,9 +337,14 @@ static func zone_at(stage: Dictionary, z: float) -> Dictionary:
 		if z < zn.z1: return zn
 	return zs[-1]
 
-## Posted speed limit in km/h, from the country's limits (Poland: 140 on motorways and expressways, 90 on other
-## roads; 70 through a big city and through a small town on an expressway, 50 through a small town on an ordinary road).
+## Speed limit in km/h at z (the posted limit, converted from mph where the signs use it).
 static func speed_limit_at(stage: Dictionary, z: float) -> int:
+	return Geo.limit_kmh(sign_limit_at(stage, z))
+
+## Speed limit as the sign shows it, from the country's limits (Poland: 140 on motorways and expressways, 90 on other
+## roads; 70 through a big city and through a small town on an expressway, 50 through a small town on an ordinary road;
+## Great Britain in mph).
+static func sign_limit_at(stage: Dictionary, z: float) -> int:
 	var lim := Geo.limits()
 	var t := town_at(stage, z)
 	var express := lanes_at(stage, z) == 3

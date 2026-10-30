@@ -1,0 +1,643 @@
+[
+	{
+		"a": "london",
+		"b": "brighton",
+		"km": 85,
+		"road": [[25, "A23"], [53, "M23"], [85, "A23"]],
+		"towns": [["Croydon", 15], ["Crawley", 50], ["Pyecombe", 77]],
+		"zones": [
+			[22, "industrial", "Greater London"], [38, "upland", "North Downs"], [68, "forest", "High Weald"],
+			[85, "upland", "South Downs"]
+		]
+	},
+	{
+		"a": "london",
+		"b": "portsmouth",
+		"km": 120,
+		"road": "A3",
+		"towns": [
+			["Kingston upon Thames", 18], ["Guildford", 50], ["Liphook", 79], ["Petersfield", 92],
+			["Waterlooville", 108]
+		],
+		"zones": [
+			[22, "industrial", "Greater London"], [62, "forest", "Surrey Hills"], [100, "upland", "South Downs"],
+			[120, "coast", "Solent"]
+		],
+		"tunnels": [
+			{
+				"from_km": 69,
+				"to_km": 70.8,
+				"name": {"pl": "Tunel Hindhead"},
+				"fact": {"pl": "Tunel drogi A3 pod wzgórzami Hindhead (1,8 km); stara droga nad nim zarosła wrzosowiskiem"}
+			}
+		]
+	},
+	{
+		"a": "london",
+		"b": "southampton",
+		"km": 125,
+		"road": [[20, "A316"], [125, "M3"]],
+		"towns": [["Camberley", 50], ["Basingstoke", 78], ["Winchester", 108]],
+		"zones": [
+			[20, "industrial", "Greater London"],
+			[60, "forest", "Thames Basin Heaths"],
+			[100, "upland", "North Hampshire Downs"],
+			[115, "upland", "South Downs"],
+			[125, "coast", "Southampton Water"]
+		]
+	},
+	{
+		"a": "southampton",
+		"b": "portsmouth",
+		"km": 35,
+		"road": "M27",
+		"towns": [["Fareham", 25]],
+		"zones": [[35, "coast", "Solent"]]
+	},
+	{
+		"a": "brighton",
+		"b": "portsmouth",
+		"km": 80,
+		"road": "A27",
+		"towns": [["Shoreham-by-Sea", 12], ["Worthing", 20], ["Arundel", 35], ["Chichester", 52], ["Havant", 70]],
+		"zones": [[25, "coast", "Sussex Coast"], [58, "upland", "South Downs"], [80, "coast", "Chichester Harbour"]]
+	},
+	{
+		"a": "london",
+		"b": "exeter",
+		"km": 275,
+		"road": [[20, "A316"], [95, "M3"], [250, "A303"], [275, "A30"]],
+		"towns": [
+			["Basingstoke", 78], ["Andover", 112], ["Amesbury", 140], ["Wincanton", 182], ["Ilminster", 222],
+			["Honiton", 250]
+		],
+		"zones": [
+			[20, "industrial", "Greater London"], [60, "forest", "Thames Basin Heaths"],
+			[125, "upland", "North Wessex Downs"], [160, "fields", "Salisbury Plain"], [210, "orchard", "Somerset"],
+			[245, "upland", "Blackdown Hills"], [275, "fields", "East Devon"]
+		]
+	},
+	{
+		"a": "southampton",
+		"b": "exeter",
+		"km": 187,
+		"road": [[160, "A35"], [187, "A30"]],
+		"towns": [
+			["Lyndhurst", 15], ["Christchurch", 38], ["Bournemouth", 48], ["Poole", 58], ["Dorchester", 95],
+			["Bridport", 120], ["Axminster", 145], ["Honiton", 160]
+		],
+		"zones": [
+			[32, "forest", "New Forest"], [62, "coast", "Poole Bay"], [110, "upland", "Dorset Downs"],
+			[135, "coast", "Jurassic Coast"], [165, "upland", "East Devon"], [187, "fields", "Exe Valley"]
+		]
+	},
+	{
+		"a": "exeter",
+		"b": "plymouth",
+		"km": 70,
+		"road": "A38",
+		"towns": [["Chudleigh", 15], ["Ashburton", 32], ["Buckfastleigh", 38], ["Ivybridge", 57]],
+		"zones": [[15, "forest", "Haldon Forest"], [55, "upland", "Dartmoor"], [70, "fields", "South Hams"]]
+	},
+	{
+		"a": "exeter",
+		"b": "bristol",
+		"km": 120,
+		"road": [[115, "M5"], [120, "A4"]],
+		"towns": [["Cullompton", 20], ["Taunton", 50], ["Bridgwater", 68], ["Weston-super-Mare", 95]],
+		"zones": [
+			[35, "fields", "Mid Devon"],
+			[60, "orchard", "Vale of Taunton Deane"],
+			[88, "zulawy", "Somerset Levels"],
+			[104, "upland", "Mendip Hills"],
+			[120, "fields", "North Somerset"]
+		]
+	},
+	{
+		"a": "london",
+		"b": "oxford",
+		"km": 90,
+		"road": [[25, "A40"], [82, "M40"], [90, "A40"]],
+		"towns": [["Beaconsfield", 38], ["High Wycombe", 48], ["Stokenchurch", 62]],
+		"zones": [[24, "industrial", "Greater London"], [72, "forest", "Chiltern Hills"], [90, "fields", "Vale of Oxford"]]
+	},
+	{
+		"a": "london",
+		"b": "bristol",
+		"km": 190,
+		"road": [[15, "A4"], [182, "M4"], [190, "M32"]],
+		"towns": [["Slough", 35], ["Reading", 65], ["Newbury", 95], ["Swindon", 130], ["Chippenham", 155]],
+		"zones": [
+			[25, "industrial", "Greater London"],
+			[80, "fields", "Thames Valley"],
+			[135, "upland", "North Wessex Downs"],
+			[172, "upland", "Cotswolds"],
+			[190, "fields", "South Gloucestershire"]
+		]
+	},
+	{
+		"a": "oxford",
+		"b": "bristol",
+		"km": 118,
+		"road": "A420",
+		"towns": [["Faringdon", 28], ["Swindon", 48], ["Chippenham", 78], ["Marshfield", 98]],
+		"zones": [
+			[26, "fields", "Vale of White Horse"],
+			[55, "upland", "North Wessex Downs"],
+			[85, "fields", "Wiltshire"],
+			[108, "upland", "Cotswolds"],
+			[118, "fields", "South Gloucestershire"]
+		]
+	},
+	{
+		"a": "oxford",
+		"b": "birmingham",
+		"km": 110,
+		"road": [[12, "A34"], [98, "M40"], [110, "M42"]],
+		"towns": [["Bicester", 22], ["Banbury", 45], ["Warwick", 75]],
+		"zones": [[45, "fields", "Cherwell Valley"], [72, "upland", "Edge Hill"], [110, "forest", "Forest of Arden"]]
+	},
+	{
+		"a": "london",
+		"b": "birmingham",
+		"km": 192,
+		"road": [[10, "A41"], [135, "M1"], [187, "M6"], [192, "A38(M)"]],
+		"towns": [["Luton", 50], ["Milton Keynes", 80], ["Northampton", 105], ["Rugby", 140], ["Coventry", 160]],
+		"zones": [
+			[20, "industrial", "Greater London"], [58, "upland", "Chiltern Hills"],
+			[125, "fields", "Northamptonshire"], [168, "fields", "Warwickshire"], [192, "industrial", "West Midlands"]
+		]
+	},
+	{
+		"a": "london",
+		"b": "leicester",
+		"km": 160,
+		"road": [[10, "A41"], [155, "M1"], [160, "A6"]],
+		"towns": [["Luton", 50], ["Milton Keynes", 80], ["Northampton", 105], ["Lutterworth", 140]],
+		"zones": [
+			[20, "industrial", "Greater London"], [58, "upland", "Chiltern Hills"],
+			[125, "fields", "Northamptonshire"], [160, "fields", "Leicestershire"]
+		]
+	},
+	{
+		"a": "london",
+		"b": "cambridge",
+		"km": 95,
+		"road": [[12, "A406"], [90, "M11"], [95, "A1309"]],
+		"towns": [["Harlow", 38], ["Bishop's Stortford", 52], ["Saffron Walden", 72]],
+		"zones": [
+			[20, "industrial", "Greater London"], [45, "forest", "Epping Forest"],
+			[95, "fields", "East Anglian Heights"]
+		]
+	},
+	{
+		"a": "london",
+		"b": "norwich",
+		"km": 185,
+		"road": [[120, "A12"], [185, "A140"]],
+		"towns": [
+			["Romford", 22], ["Brentwood", 35], ["Chelmsford", 55], ["Colchester", 90], ["Ipswich", 118],
+			["Scole", 155], ["Long Stratton", 168]
+		],
+		"zones": [
+			[25, "industrial", "Greater London"], [80, "fields", "Essex"], [100, "orchard", "Dedham Vale"],
+			[150, "fields", "Suffolk"], [185, "fields", "South Norfolk"]
+		]
+	},
+	{
+		"a": "cambridge",
+		"b": "norwich",
+		"km": 100,
+		"road": [[15, "A14"], [100, "A11"]],
+		"towns": [["Newmarket", 22], ["Thetford", 55], ["Attleborough", 75], ["Wymondham", 86]],
+		"zones": [[30, "fields", "Newmarket Heath"], [65, "forest", "Thetford Forest"], [100, "fields", "Norfolk"]]
+	},
+	{
+		"a": "cambridge",
+		"b": "leicester",
+		"km": 115,
+		"road": [[75, "A14"], [115, "A6"]],
+		"towns": [["Huntingdon", 25], ["Thrapston", 50], ["Kettering", 75], ["Market Harborough", 95]],
+		"zones": [
+			[22, "fields", "Cambridgeshire"], [42, "zulawy", "Fens"], [80, "fields", "Nene Valley"],
+			[115, "fields", "Leicestershire"]
+		]
+	},
+	{
+		"a": "bristol",
+		"b": "cardiff",
+		"km": 70,
+		"road": [[5, "M32"], [65, "M4"], [70, "A48(M)"]],
+		"towns": [["Magor", 32], ["Newport", 42]],
+		"zones": [[22, "coast", "Severn Estuary"], [70, "zulawy", "Gwent Levels"]],
+		"tunnels": [
+			{
+				"from_km": 45,
+				"to_km": 45.4,
+				"name": {"pl": "Tunele Brynglas"},
+				"fact": {
+					"pl": "Dwa tunele autostrady M4 pod wzgórzem w Newport, jedne z pierwszych tuneli autostradowych w Wielkiej Brytanii (1967)"
+				}
+			}
+		]
+	},
+	{
+		"a": "cardiff",
+		"b": "swansea",
+		"km": 65,
+		"road": "M4",
+		"towns": [["Bridgend", 32], ["Port Talbot", 50]],
+		"zones": [[35, "fields", "Vale of Glamorgan"], [65, "industrial", "Swansea Bay"]]
+	},
+	{
+		"a": "cardiff",
+		"b": "bangor",
+		"km": 285,
+		"road": [[245, "A470"], [285, "A5"]],
+		"towns": [
+			["Merthyr Tydfil", 37], ["Brecon", 65], ["Builth Wells", 92], ["Rhayader", 115], ["Llanidloes", 137],
+			["Dolgellau", 190], ["Trawsfynydd", 213], ["Blaenau Ffestiniog", 225], ["Betws-y-Coed", 245],
+			["Capel Curig", 254], ["Bethesda", 272]
+		],
+		"zones": [
+			[30, "industrial", "South Wales Valleys"],
+			[80, "mountains", "Bannau Brycheiniog"],
+			[150, "upland", "Cambrian Mountains"],
+			[175, "forest", "Dyfi Forest"],
+			[285, "mountains", "Eryri"]
+		]
+	},
+	{
+		"a": "swansea",
+		"b": "bangor",
+		"km": 255,
+		"road": [[45, "A48"], [120, "A485"], [255, "A487"]],
+		"towns": [
+			["Llanelli", 15], ["Carmarthen", 45], ["Lampeter", 82], ["Aberaeron", 110], ["Aberystwyth", 128],
+			["Machynlleth", 155], ["Dolgellau", 180], ["Porthmadog", 215], ["Caernarfon", 242]
+		],
+		"zones": [
+			[45, "fields", "Carmarthenshire"], [100, "upland", "Cambrian Mountains"], [150, "coast", "Cardigan Bay"],
+			[210, "mountains", "Eryri"], [255, "coast", "Menai Strait"]
+		]
+	},
+	{
+		"a": "bangor",
+		"b": "liverpool",
+		"km": 125,
+		"road": [[95, "A55"], [121, "M53"], [125, "A59"]],
+		"towns": [["Colwyn Bay", 33], ["Abergele", 42], ["St Asaph", 52], ["Holywell", 68], ["Chester", 95]],
+		"zones": [
+			[30, "mountains", "Eryri"], [55, "coast", "North Wales Coast"], [90, "upland", "Clwydian Range"],
+			[110, "fields", "Cheshire"], [125, "industrial", "Wirral"]
+		],
+		"tunnels": [
+			{
+				"from_km": 22.5,
+				"to_km": 23.6,
+				"name": {"pl": "Tunel Conwy"},
+				"fact": {
+					"pl": "Pierwszy w Wielkiej Brytanii tunel zatapiany: pod ujściem rzeki, by nie zasłonić zamku w Conwy. Przed nim drogę A55 prowadzą skalne tunele Penmaenbach"
+				}
+			},
+			{
+				"from_km": 121,
+				"to_km": 123.4,
+				"name": {"pl": "Tunel Kingsway"},
+				"fact": {
+					"pl": "Tunel pod rzeką Mersey z Wallasey do Liverpoolu; obok biegnie starszy tunel Queensway z 1934 roku"
+				},
+				"city": true
+			}
+		]
+	},
+	{
+		"a": "liverpool",
+		"b": "manchester",
+		"km": 55,
+		"road": "M62",
+		"towns": [["Warrington", 27]],
+		"zones": [[18, "industrial", "Merseyside"], [40, "fields", "Mersey Valley"], [55, "zulawy", "Chat Moss"]]
+	},
+	{
+		"a": "birmingham",
+		"b": "stoke",
+		"km": 70,
+		"road": [[62, "M6"], [70, "A500"]],
+		"towns": [["Walsall", 15], ["Cannock", 30], ["Stafford", 46]],
+		"zones": [[25, "industrial", "Black Country"], [40, "forest", "Cannock Chase"], [70, "fields", "Trent Valley"]]
+	},
+	{
+		"a": "stoke",
+		"b": "manchester",
+		"km": 70,
+		"road": [[8, "A500"], [45, "M6"], [70, "M56"]],
+		"towns": [["Holmes Chapel", 28], ["Knutsford", 42]],
+		"zones": [[12, "industrial", "Potteries"], [55, "fields", "Cheshire Plain"], [70, "industrial", "Greater Manchester"]]
+	},
+	{
+		"a": "stoke",
+		"b": "liverpool",
+		"km": 92,
+		"road": [[8, "A500"], [60, "M6"], [92, "M62"]],
+		"towns": [["Sandbach", 20], ["Warrington", 60]],
+		"zones": [
+			[12, "industrial", "Potteries"], [55, "fields", "Cheshire Plain"], [75, "fields", "Mersey Valley"],
+			[92, "industrial", "Merseyside"]
+		]
+	},
+	{
+		"a": "birmingham",
+		"b": "bristol",
+		"km": 140,
+		"road": [[132, "M5"], [140, "M32"]],
+		"towns": [["Bromsgrove", 22], ["Worcester", 45], ["Tewkesbury", 70], ["Gloucester", 86]],
+		"zones": [
+			[20, "industrial", "West Midlands"],
+			[60, "orchard", "Vale of Evesham"],
+			[92, "fields", "Severn Vale"],
+			[125, "upland", "Cotswolds"],
+			[140, "fields", "South Gloucestershire"]
+		]
+	},
+	{
+		"a": "birmingham",
+		"b": "leicester",
+		"km": 70,
+		"road": [[35, "M6"], [65, "M69"], [70, "A5460"]],
+		"towns": [["Coventry", 30], ["Hinckley", 48]],
+		"zones": [[25, "industrial", "West Midlands"], [45, "fields", "Warwickshire"], [70, "fields", "Leicestershire"]]
+	},
+	{
+		"a": "nottingham",
+		"b": "birmingham",
+		"km": 85,
+		"road": [[25, "A52"], [75, "A38"], [85, "A38(M)"]],
+		"towns": [["Derby", 25], ["Burton upon Trent", 45], ["Lichfield", 65]],
+		"zones": [[35, "fields", "Trent Valley"], [62, "forest", "National Forest"], [85, "industrial", "West Midlands"]]
+	},
+	{
+		"a": "leicester",
+		"b": "nottingham",
+		"km": 45,
+		"road": [[20, "A6"], [45, "A60"]],
+		"towns": [["Loughborough", 18]],
+		"zones": [[45, "fields", "Soar Valley"]]
+	},
+	{
+		"a": "nottingham",
+		"b": "sheffield",
+		"km": 62,
+		"road": [[8, "A610"], [56, "M1"], [62, "A61"]],
+		"towns": [["Chesterfield", 42]],
+		"zones": [
+			[25, "industrial", "Erewash Valley"], [50, "fields", "North East Derbyshire"],
+			[62, "industrial", "South Yorkshire"]
+		]
+	},
+	{
+		"a": "nottingham",
+		"b": "hull",
+		"km": 130,
+		"road": [[60, "A46"], [120, "A15"], [130, "A63"]],
+		"towns": [["Newark-on-Trent", 30], ["Lincoln", 60], ["Brigg", 98], ["Barton-upon-Humber", 115]],
+		"zones": [[45, "fields", "Trent Vale"], [100, "fields", "Lincoln Cliff"], [130, "coast", "Humber Estuary"]]
+	},
+	{
+		"a": "manchester",
+		"b": "leeds",
+		"km": 70,
+		"road": [[65, "M62"], [70, "M621"]],
+		"towns": [["Rochdale", 18], ["Huddersfield", 42]],
+		"zones": [
+			[20, "industrial", "Greater Manchester"],
+			[40, "upland", "South Pennines"],
+			[70, "industrial", "West Yorkshire"]
+		]
+	},
+	{
+		"a": "manchester",
+		"b": "sheffield",
+		"km": 62,
+		"road": [[15, "M67"], [62, "A57"]],
+		"towns": [["Hyde", 12], ["Glossop", 25]],
+		"zones": [
+			[22, "industrial", "Greater Manchester"],
+			[54, "mountains", "Peak District"],
+			[62, "industrial", "South Yorkshire"]
+		]
+	},
+	{
+		"a": "sheffield",
+		"b": "leeds",
+		"km": 55,
+		"road": [[51, "M1"], [55, "M621"]],
+		"towns": [["Barnsley", 22], ["Wakefield", 38]],
+		"zones": [[28, "industrial", "South Yorkshire"], [55, "industrial", "West Yorkshire"]]
+	},
+	{
+		"a": "leeds",
+		"b": "york",
+		"km": 40,
+		"road": "A64",
+		"towns": [["Tadcaster", 22]],
+		"zones": [[10, "industrial", "West Yorkshire"], [40, "fields", "Vale of York"]]
+	},
+	{
+		"a": "york",
+		"b": "hull",
+		"km": 62,
+		"road": "A1079",
+		"towns": [["Pocklington", 22], ["Market Weighton", 32], ["Beverley", 50]],
+		"zones": [[25, "fields", "Vale of York"], [52, "upland", "Yorkshire Wolds"], [62, "fields", "Holderness"]]
+	},
+	{
+		"a": "leeds",
+		"b": "hull",
+		"km": 95,
+		"road": [[10, "M1"], [75, "M62"], [95, "A63"]],
+		"towns": [["Pontefract", 22], ["Goole", 50], ["Howden", 58]],
+		"zones": [[25, "industrial", "West Yorkshire"], [75, "zulawy", "Humberhead Levels"], [95, "coast", "Humber Estuary"]]
+	},
+	{
+		"a": "leeds",
+		"b": "newcastle",
+		"km": 152,
+		"road": [[18, "A58"], [146, "A1(M)"], [152, "A167"]],
+		"towns": [["Wetherby", 20], ["Boroughbridge", 40], ["Darlington", 100], ["Durham", 125], ["Gateshead", 146]],
+		"zones": [
+			[18, "industrial", "West Yorkshire"], [80, "fields", "Vale of Mowbray"], [110, "fields", "Tees Valley"],
+			[140, "upland", "County Durham"], [152, "industrial", "Tyneside"]
+		]
+	},
+	{
+		"a": "york",
+		"b": "newcastle",
+		"km": 140,
+		"road": [[132, "A19"], [140, "A1058"]],
+		"towns": [["Easingwold", 20], ["Thirsk", 36], ["Middlesbrough", 72], ["Peterlee", 100], ["Sunderland", 118]],
+		"zones": [
+			[35, "fields", "Vale of York"], [62, "upland", "North York Moors"], [90, "industrial", "Teesside"],
+			[120, "coast", "Durham Coast"], [140, "industrial", "Tyneside"]
+		],
+		"tunnels": [
+			{
+				"from_km": 128.5,
+				"to_km": 130.1,
+				"name": {"pl": "Tunel pod Tyne"},
+				"fact": {"pl": "Dwa tunele drogi A19 pod rzeką Tyne między Jarrow a Howdon; drugi otwarto w 2011 roku"},
+				"city": true
+			}
+		]
+	},
+	{
+		"a": "leeds",
+		"b": "carlisle",
+		"km": 190,
+		"road": [[110, "A65"], [190, "M6"]],
+		"towns": [
+			["Ilkley", 25], ["Skipton", 42], ["Settle", 65], ["Ingleton", 85], ["Kirkby Lonsdale", 100],
+			["Tebay", 135], ["Penrith", 160]
+		],
+		"zones": [
+			[20, "industrial", "Aire Valley"], [48, "upland", "Wharfedale"], [95, "upland", "Yorkshire Dales"],
+			[115, "fields", "Lune Valley"], [130, "foothills", "Howgill Fells"], [148, "highland", "Shap Fell"],
+			[190, "fields", "Eden Valley"]
+		]
+	},
+	{
+		"a": "manchester",
+		"b": "carlisle",
+		"km": 192,
+		"road": [[30, "M61"], [192, "M6"]],
+		"towns": [["Bolton", 18], ["Preston", 50], ["Lancaster", 82], ["Kendal", 108], ["Tebay", 137], ["Penrith", 162]],
+		"zones": [
+			[30, "industrial", "Greater Manchester"],
+			[75, "fields", "Lancashire Plain"],
+			[98, "coast", "Morecambe Bay"],
+			[122, "foothills", "Lake District"],
+			[132, "foothills", "Howgill Fells"],
+			[150, "highland", "Shap Fell"],
+			[192, "fields", "Eden Valley"]
+		]
+	},
+	{
+		"a": "newcastle",
+		"b": "carlisle",
+		"km": 95,
+		"road": "A69",
+		"towns": [["Hexham", 35], ["Haltwhistle", 60], ["Brampton", 80]],
+		"zones": [
+			[15, "industrial", "Tyneside"], [40, "fields", "Tyne Valley"], [78, "upland", "Hadrian's Wall"],
+			[95, "fields", "Eden Valley"]
+		]
+	},
+	{
+		"a": "newcastle",
+		"b": "edinburgh",
+		"km": 190,
+		"road": "A1",
+		"towns": [["Morpeth", 25], ["Alnwick", 55], ["Berwick-upon-Tweed", 105], ["Dunbar", 150], ["Musselburgh", 180]],
+		"zones": [
+			[12, "industrial", "Tyneside"], [55, "fields", "Northumberland"], [110, "coast", "Northumberland Coast"],
+			[145, "upland", "Lammermuir Hills"], [190, "fields", "East Lothian"]
+		]
+	},
+	{
+		"a": "carlisle",
+		"b": "edinburgh",
+		"km": 150,
+		"road": "A7",
+		"towns": [["Longtown", 15], ["Langholm", 35], ["Hawick", 70], ["Selkirk", 88], ["Galashiels", 96], ["Dalkeith", 138]],
+		"zones": [
+			[18, "fields", "Solway Plain"], [60, "upland", "Eskdale"], [105, "upland", "Scottish Borders"],
+			[130, "upland", "Moorfoot Hills"], [150, "fields", "Midlothian"]
+		]
+	},
+	{
+		"a": "carlisle",
+		"b": "glasgow",
+		"km": 155,
+		"road": [[15, "M6"], [105, "A74(M)"], [155, "M74"]],
+		"towns": [["Gretna", 15], ["Lockerbie", 40], ["Moffat", 65], ["Abington", 95], ["Hamilton", 140]],
+		"zones": [
+			[20, "fields", "Solway Plain"], [60, "fields", "Annandale"], [110, "upland", "Southern Uplands"],
+			[140, "fields", "Clydesdale"], [155, "industrial", "Lanarkshire"]
+		]
+	},
+	{
+		"a": "glasgow",
+		"b": "edinburgh",
+		"km": 75,
+		"road": "M8",
+		"towns": [["Harthill", 35], ["Livingston", 52]],
+		"zones": [[20, "industrial", "North Lanarkshire"], [45, "upland", "Central Belt"], [75, "fields", "West Lothian"]]
+	},
+	{
+		"a": "edinburgh",
+		"b": "dundee",
+		"km": 100,
+		"road": [[15, "A90"], [70, "M90"], [100, "A90"]],
+		"towns": [["South Queensferry", 14], ["Dunfermline", 24], ["Kinross", 42], ["Perth", 70]],
+		"zones": [
+			[14, "fields", "Lothian"], [30, "coast", "Firth of Forth"], [70, "upland", "Ochil Hills"],
+			[100, "fields", "Carse of Gowrie"]
+		]
+	},
+	{
+		"a": "glasgow",
+		"b": "dundee",
+		"km": 135,
+		"road": [[40, "M80"], [55, "M9"], [110, "A9"], [135, "A90"]],
+		"towns": [["Cumbernauld", 22], ["Stirling", 42], ["Dunblane", 52], ["Auchterarder", 78], ["Perth", 105]],
+		"zones": [
+			[25, "industrial", "North Lanarkshire"], [55, "fields", "Forth Valley"], [100, "upland", "Strathearn"],
+			[135, "fields", "Carse of Gowrie"]
+		]
+	},
+	{
+		"a": "dundee",
+		"b": "aberdeen",
+		"km": 107,
+		"road": "A90",
+		"towns": [["Forfar", 22], ["Brechin", 42], ["Stonehaven", 85]],
+		"zones": [[45, "fields", "Strathmore"], [80, "fields", "Howe of the Mearns"], [107, "coast", "Kincardineshire"]]
+	},
+	{
+		"a": "aberdeen",
+		"b": "inverness",
+		"km": 170,
+		"road": "A96",
+		"towns": [["Inverurie", 25], ["Huntly", 60], ["Keith", 78], ["Elgin", 105], ["Forres", 125], ["Nairn", 145]],
+		"zones": [[55, "fields", "Aberdeenshire"], [100, "forest", "Speyside"], [170, "coast", "Moray Firth"]]
+	},
+	{
+		"a": "edinburgh",
+		"b": "inverness",
+		"km": 250,
+		"road": [[15, "A90"], [70, "M90"], [250, "A9"]],
+		"towns": [
+			["South Queensferry", 14], ["Dunfermline", 24], ["Kinross", 42], ["Perth", 70], ["Dunkeld", 95],
+			["Pitlochry", 115], ["Dalwhinnie", 160], ["Newtonmore", 180], ["Aviemore", 200], ["Carrbridge", 212]
+		],
+		"zones": [
+			[14, "fields", "Lothian"], [30, "coast", "Firth of Forth"], [70, "upland", "Ochil Hills"],
+			[125, "forest", "Highland Perthshire"], [168, "highland", "Drumochter"], [215, "forest", "Cairngorms"],
+			[250, "highland", "Monadhliath"]
+		]
+	},
+	{
+		"a": "glasgow",
+		"b": "inverness",
+		"km": 270,
+		"road": "A82",
+		"towns": [
+			["Dumbarton", 25], ["Tarbet", 55], ["Crianlarich", 85], ["Tyndrum", 100], ["Glencoe", 145],
+			["Fort William", 170], ["Spean Bridge", 185], ["Fort Augustus", 220], ["Drumnadrochit", 250]
+		],
+		"zones": [
+			[25, "industrial", "Clydeside"], [85, "lakes", "Loch Lomond"], [130, "highland", "Rannoch Moor"],
+			[165, "mountains", "Glen Coe"], [195, "mountains", "Lochaber"], [270, "lakes", "Great Glen"]
+		]
+	}
+]

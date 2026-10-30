@@ -11,7 +11,15 @@ func run(t) -> void:
 	for code in codes:
 		_check_country(t, code, rules)
 		_check_trips(t, code)
+	_check_gb(t)
 	GameData.current = "pl"
+
+## Great Britain: motorways are M roads and the A roads built as motorways ("A1(M)"); Polish names on the map.
+func _check_gb(t) -> void:
+	GameData.current = "gb"
+	t.check(Route.lanes_for("M6") == 3 and Route.lanes_for("A1(M)") == 3 and Route.lanes_for("A74(M)") == 3, "gb: M and A(M) roads are motorways")
+	t.check(Route.lanes_for("A1") == 2 and Route.lanes_for("A38") == 2, "gb: other A roads are single carriageways")
+	t.check(Geo.display_name("london") == "Londyn" and Geo.city("london").name == "London", "gb: Londyn on the map, London on the signs")
 
 ## Every trip between neighbouring cities builds a playable stage (stations, limits, a track, scenery).
 func _check_trips(t, code: String) -> void:
@@ -42,6 +50,16 @@ func _check_country(t, code: String, rules: Dictionary) -> void:
 		t.check(c.limits.get(k, 0.0) > 0.0, "%s: speed limit %s" % [code, k])
 	for k in ["town", "board", "board_motorway"]:
 		t.check(c.signs.get(k, "") is String and Color.html_is_valid(c.signs.get(k, "")), "%s: sign colour %s" % [code, k])
+	t.check(c.drive in ["right", "left"] and c.get("units", "") in ["metric", "imperial"], "%s: drive side and sign units" % code)
+	var stn: Dictionary = c.get("station", {})
+	t.check(stn.get("sign", "") != "" and stn.get("board", "") != "" and stn.get("region_sign", "") != ""
+		and stn.get("prices", []).size() >= 2 and stn.prices.all(func(p): return p.size() == 2), "%s: fuel station texts in the country's language" % code)
+	if c.language != GameData.LANGUAGE: # landmark boards by the road show the local name, not the player's
+		var locals := true
+		for town in c.landmarks:
+			for lm in c.landmarks[town]:
+				if not (lm.get("local", "") is String and lm.get("local", "") != ""): locals = false; print("  %s: %s %s has no local name" % [code, town, lm.kind])
+		t.check(locals, "%s: every landmark has its local name for the sign" % code)
 	var box: Dictionary = c.map
 	var cities_ok := true
 	for id in c.cities:

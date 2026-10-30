@@ -3,6 +3,7 @@
 cd "$(dirname "$0")/.."
 G=${GODOT:-$(ls /Applications/Godot*.app/Contents/MacOS/Godot 2>/dev/null | head -1)}
 [ -x "$G" ] || { echo "Godot not found (set GODOT=/path/to/Godot)"; exit 1; }
+perl -e 'alarm 120; exec @ARGV' $G --headless --path . --import > /tmp/rr_import.log 2>&1 # class cache: new class_name scripts, fresh clones
 perl -e 'alarm 400; exec @ARGV' $G --headless --path . --script tests/run_tests.gd > /tmp/rr_test.log 2>&1
 code=$?
 grep -E "ERROR|SCRIPT ERROR|FAIL|RESULT|Parse" /tmp/rr_test.log | head -20

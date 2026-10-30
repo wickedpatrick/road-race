@@ -6,6 +6,7 @@ const BUILDING_COLORS := [Color("d9b26b"), Color("e7dcc0"), Color("d98a6c"), Col
 const WALL_DARK := Color(0, 0, 0, 0.18)
 const SIGN_GREEN := Color("0f7a43")
 const SIGN_BLUE := Color("1d4f9e")
+static var flip := 1.0 ## -1 with left-hand traffic: the world is mirrored, so bend arrows and lamp arms turn round
 static var _sign_cols := {} ## country code -> {town, board, board_motorway} colours (the country's "signs")
 
 ## Colour of a road sign in the current country: "town" / "town_text" (place-name signs and their lettering),
@@ -25,7 +26,11 @@ const SIGN_YELLOW := Color("f2c21b")
 
 ## Road number plate (E-15): red with white for A, S and national roads (DK shows just the number),
 ## yellow with black for regional roads (DW). Returns [label, plate colour, text colour].
+## A country can give its own plates in data ("plates": [[prefix, plate colour, text colour], ...], first match).
 static func plate(road: String) -> Array:
+	for pl in GameData.country().get("plates", []):
+		if road.begins_with(pl[0]):
+			return [road, Color(pl[1]), Color(pl[2])]
 	if road.begins_with("DW"):
 		return [road.trim_prefix("DW"), SIGN_YELLOW, Color.BLACK]
 	return [road.trim_prefix("DK"), SIGN_RED, Color.WHITE]
@@ -74,7 +79,7 @@ static func build(stage: Dictionary, seed_value: int) -> Dictionary:
 		_clear_around(items, lm)
 		var it := _add(items, "landmark", lm.z, lm.lat, lm.w, lm.h, rng)
 		it.kind = lm.kind
-		_add(items, "poi", lm.z - 22.0, SIGN_EDGE + REGION_W * 0.5, REGION_W, 5.0, rng).text = lm.name
+		_add(items, "poi", lm.z - 22.0, SIGN_EDGE + REGION_W * 0.5, REGION_W, 5.0, rng).text = lm.local
 	for tn in stage.get("tunnels", []):
 		_clear_range(items, tn.z0 - 6.0, tn.z1 + 6.0, -1000.0, 1000.0)
 	for s in stage.stations:
@@ -400,13 +405,13 @@ static func _signs(items: Dictionary, stage: Dictionary, rng: RandomNumberGenera
 	# speed limit signs (B-33): 50 entering a town, the open-road limit leaving it and where the road type changes
 	for t in stage.towns:
 		if not t.get("start", false):
-			_limit_sign(items, t.z - t.half + 15.0, Route.speed_limit_at(stage, t.z - t.half + 16.0), rng)
+			_limit_sign(items, t.z - t.half + 15.0, Route.sign_limit_at(stage, t.z - t.half + 16.0), rng)
 		if not t.get("finish", false):
-			_limit_sign(items, t.z + t.half + 25.0, Route.speed_limit_at(stage, t.z + t.half + 30.0), rng)
+			_limit_sign(items, t.z + t.half + 25.0, Route.sign_limit_at(stage, t.z + t.half + 30.0), rng)
 	for i in range(1, stage.roads.size()):
 		var zr: float = stage.roads[i].z0 + 20.0
 		if stage.roads[i].lanes != stage.roads[i - 1].lanes and Route.town_at(stage, zr).is_empty():
-			_limit_sign(items, zr, Route.speed_limit_at(stage, zr), rng)
+			_limit_sign(items, zr, Route.sign_limit_at(stage, zr), rng)
 	for bd in stage.boards:
 		var it := _add(items, "board", bd.z, SIGN_EDGE + BOARD_W * 0.5, BOARD_W, 6.0, rng)
 		it.lines = bd.lines
@@ -446,8 +451,8 @@ static func _chevrons(items: Dictionary, z: float, dir: float, rng: RandomNumber
 	for k in 3:
 		_add(items, "chevron", z + k * 18.0, -dir * (SIGN_EDGE + 0.4), 1.8, 2.4, rng).dir = dir
 
-static func _limit_sign(items: Dictionary, z: float, kmh: int, rng: RandomNumberGenerator) -> void:
-	_add(items, "limit", z, SIGN_EDGE + 1.4, 2.4, 4.4, rng).limit = kmh
+static func _limit_sign(items: Dictionary, z: float, posted: int, rng: RandomNumberGenerator) -> void:
+	_add(items, "limit", z, SIGN_EDGE + 1.4, 2.4, 4.4, rng).limit = posted
 
 ## Bend warning sign (A-1..A-4): yellow triangle with a red border and a black arrow bending dir (+1 right).
 static func _bend_sign(cv, it: Dictionary, b: Vector2, pm: float) -> void:
@@ -461,7 +466,7 @@ static func _bend_sign(cv, it: Dictionary, b: Vector2, pm: float) -> void:
 	cv.draw_colored_polygon(tri.call(0.72), SIGN_YELLOW)
 	if pm < 2.0:
 		return
-	var d: float = it.dir
+	var d: float = it.dir * flip
 	var w := maxf(1.0, 0.13 * pm)
 	var p0 := c + Vector2(-d * 0.18 * r, 0.42 * r)
 	var pts := PackedVector2Array([p0, p0 + Vector2(0, -0.35 * r)])
@@ -488,7 +493,7 @@ static func _chevron(cv, it: Dictionary, b: Vector2, pm: float) -> void:
 	cv.draw_rect(r, SIGN_RED)
 	if pm < 1.5:
 		return
-	var d: float = it.dir
+	var d: float = it.dir * flip
 	var c := r.get_center()
 	var tip := c + Vector2(d * 0.22 * w, 0)
 	var lw := maxf(1.0, 0.16 * w)
@@ -570,7 +575,7 @@ static func draw_item(cv, it: Dictionary, b: Vector2, pm: float, pal: Dictionary
 		"block": _block(cv, it, b, pm)
 		"lamp":
 			cv.draw_line(b, b + Vector2(0, -h), Color("3b3f45"), maxf(1.0, 0.25 * pm))
-			cv.draw_rect(Rect2(b + Vector2(-0.4 * pm if it.lat > 0 else -0.1 * pm, -h), Vector2(0.9 * pm, 0.35 * pm)), Color("3b3f45"))
+			cv.draw_rect(Rect2(b + Vector2(-0.4 * pm if it.lat * flip > 0 else -0.1 * pm, -h), Vector2(0.9 * pm, 0.35 * pm)), Color("3b3f45"))
 		"tree": _tree(cv, it, b, pm, pal, season)
 		"spruce": _spruce(cv, it, b, pm, pal, season)
 		"pine": _pine(cv, b, h, pm, season)
@@ -668,12 +673,15 @@ static func _fit_text(cv, font: Font, r: Rect2, text: String, col: Color, size: 
 
 ## Every text the signs of this stage can show, for warming the font cache.
 static func sign_texts(stage: Dictionary) -> Array:
-	var out := ["KRAINA", "PALIWO", "STACJA PALIW", "95  6,49", "ON  6,79", "LPG 3,09", "0123456789", "50", "90", "140"]
+	var stn := Geo.station()
+	var out := [stn.region_sign, stn.board, stn.sign, "0123456789"]
+	out.append_array(price_rows())
+	for k in Geo.limits(): out.append(str(Geo.limits()[k]))
 	for t in stage.towns: out.append(t.name)
 	for zn in stage.zones:
 		if not out.has(zn.region): out.append(zn.region)
 	for r in stage.roads: out.append(plate(r.road)[0])
-	for lm in Landmarks.place(stage): out.append(lm.name)
+	for lm in Landmarks.place(stage): out.append(lm.local)
 	return out
 
 ## Draws texts at every sign size far off-screen, so glyph rasterisation happens during the countdown
@@ -734,7 +742,7 @@ static func _region(cv, it: Dictionary, b: Vector2, pm: float, font: Font) -> vo
 	var r := Rect2(b + Vector2(-w * 0.5, -post - hh), Vector2(w, hh))
 	cv.draw_rect(r, SIGN_BROWN)
 	cv.draw_rect(r.grow(-0.14 * pm), Color.WHITE, false, maxf(1.0, 0.1 * pm))
-	_fit_text(cv, font, Rect2(r.position + Vector2(0.35 * pm, 0.1 * pm), Vector2(w - 0.7 * pm, hh * 0.42)), "KRAINA", Color("f1d9b5"), 0.55 * pm)
+	_fit_text(cv, font, Rect2(r.position + Vector2(0.35 * pm, 0.1 * pm), Vector2(w - 0.7 * pm, hh * 0.42)), Geo.station().region_sign, Color("f1d9b5"), 0.55 * pm)
 	_fit_text(cv, font, Rect2(r.position + Vector2(0.35 * pm, hh * 0.42), Vector2(w - 0.7 * pm, hh * 0.52)), it.text, Color.WHITE, 0.8 * pm)
 
 ## Brown tourist board (E-22c style) naming the landmark next to it.
@@ -1119,11 +1127,16 @@ static func _pylon(cv, b: Vector2, pm: float, font: Font) -> void:
 	var r := Rect2(b + Vector2(-w * 0.5, -h - 4.2 * pm), Vector2(w, 5.4 * pm))
 	cv.draw_rect(r, STATION_COLOR)
 	cv.draw_rect(Rect2(r.position + Vector2(0.2 * pm, 0.2 * pm), Vector2(w - 0.4 * pm, 1.4 * pm)), SIGN_YELLOW)
-	_fit_text(cv, font, Rect2(r.position + Vector2(0.25 * pm, 0.2 * pm), Vector2(w - 0.5 * pm, 1.4 * pm)), "PALIWO", Color("1d1d1f"), 0.75 * pm)
-	for k in 3:
+	_fit_text(cv, font, Rect2(r.position + Vector2(0.25 * pm, 0.2 * pm), Vector2(w - 0.5 * pm, 1.4 * pm)), Geo.station().board, Color("1d1d1f"), 0.75 * pm)
+	var prices: Array = price_rows()
+	for k in mini(prices.size(), 3):
 		var row := Rect2(r.position + Vector2(0.25 * pm, (1.95 + k * 1.1) * pm), Vector2(w - 0.5 * pm, 0.85 * pm))
 		cv.draw_rect(row, Color("10161c"))
-		_fit_text(cv, font, row, ["95  6,49", "ON  6,79", "LPG 3,09"][k], Color("ffd24a"), 0.6 * pm)
+		_fit_text(cv, font, row, prices[k], Color("ffd24a"), 0.6 * pm)
+
+## The station's price list rows, "95  6,49".
+static func price_rows() -> Array:
+	return Geo.station().prices.map(func(p): return "%s  %s" % [p[0], p[1]])
 
 ## Fuel dispenser on its island.
 static func _pump(cv, b: Vector2, pm: float) -> void:
@@ -1147,7 +1160,7 @@ static func _canopy(cv, b: Vector2, pm: float, font: Font) -> void:
 	cv.draw_rect(r, Color("f7f8f9"))
 	cv.draw_rect(Rect2(r.position + Vector2(0, th * 0.55), Vector2(w, th * 0.3)), STATION_COLOR)
 	cv.draw_rect(Rect2(r.position + Vector2(0, th), Vector2(w, 0.12 * pm)), Color("fff6c8"))
-	_fit_text(cv, font, Rect2(r.position, Vector2(w, th * 0.55)), "STACJA PALIW", STATION_COLOR, 0.7 * pm)
+	_fit_text(cv, font, Rect2(r.position, Vector2(w, th * 0.55)), Geo.station().sign, STATION_COLOR, 0.7 * pm)
 
 ## Station shop behind the pumps.
 static func _shop(cv, it: Dictionary, b: Vector2, pm: float) -> void:

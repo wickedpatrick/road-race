@@ -17,6 +17,7 @@ var confirm_reset := false ## "reset progress?" question is shown (car step, R k
 const NEXT_BTN := Rect2(744, 490, 200, 44)
 const BACK_BTN := Rect2(584, 490, 148, 44)
 const RESET_BTN := Rect2(796, 14, 148, 40)
+const UNITS_BTN := Rect2(16, 14, 168, 40) ## car step: km/h <-> mph for the speedometer and distances (U key)
 const YES_BTN := Rect2(250, 330, 220, 54)
 const NO_BTN := Rect2(490, 330, 220, 54)
 var loading := false ## start chosen: the "get ready" card is shown while the race scene loads
@@ -101,6 +102,9 @@ func _unhandled_input(event: InputEvent) -> void:
 	if _on_map() and event.keycode == KEY_C and _countries() > 1:
 		_next_country()
 		return
+	if kind() == "car" and event.keycode == KEY_U:
+		_toggle_units()
+		return
 	if kind() == "car" and event.keycode == KEY_R:
 		Sfx.play("blip", -8.0)
 		confirm_reset = true
@@ -131,6 +135,10 @@ func _unhandled_input(event: InputEvent) -> void:
 				_pick_dest(map.step(dest_city, dir, start_city, Route.neighbours(start_city)))
 				hover = dest_city
 
+func _toggle_units() -> void:
+	Sfx.play("blip", -8.0)
+	Session.set_units("metric" if Session.units == "imperial" else "imperial")
+
 func _confirm() -> void:
 	match kind():
 		"car":
@@ -158,6 +166,9 @@ func _tap(p: Vector2) -> bool:
 		elif NO_BTN.has_point(p):
 			Sfx.play("blip", -8.0)
 			confirm_reset = false
+		return true
+	if kind() == "car" and UNITS_BTN.has_point(p):
+		_toggle_units()
 		return true
 	if Screen.touch:
 		if NEXT_BTN.has_point(p):
@@ -261,6 +272,7 @@ func _draw() -> void:
 	_t(Vector2(24, 518), summary, 17 if _on_map() else 20, Color("ffd24a"))
 	if kind() == "car":
 		_unlock_progress(Vector2(24, 505))
+		Ui.button(self, font, UNITS_BTN, "Jednostki: %s" % Units.speed_unit(), false, 16)
 	if Screen.touch:
 		if step > 0:
 			Ui.button(self, font, BACK_BTN, "Wstecz", false, 20)
@@ -271,7 +283,7 @@ func _draw() -> void:
 	if _on_map():
 		hint = "Strzałki/myszka   " + ("Enter: START!" if kind() == "dest" else "Enter: dalej") + ("   C: kraj" if _countries() > 1 else "")
 	if kind() == "car":
-		hint = "Strzałki   Enter: dalej   R: reset postępu"
+		hint = "Strzałki   Enter: dalej   U: jednostki   R: reset postępu"
 	if step > 0:
 		hint += "      Esc: wstecz"
 	hint += "      X: dźwięk"
@@ -311,12 +323,12 @@ func _bar(pos: Vector2, label: String, v: float, w: float) -> void:
 func _unlock_progress(pos: Vector2) -> void:
 	var km := Session.total_km
 	var n := Profile.unlocked_count(km)
-	_t(pos + Vector2(0, 0), "Przejechane: %d km" % int(km), 16, Color("ffd24a"))
+	_t(pos + Vector2(0, 0), "Przejechane: %s" % Units.dist_text(km), 16, Color("ffd24a"))
 	if n >= CarStats.ids().size():
 		_t(pos + Vector2(0, 22), "Wszystkie auta odblokowane!", 14, Color.WHITE)
 		return
 	var next: Dictionary = CarStats.by_id(CarStats.ids()[n])
-	_t(pos + Vector2(0, 24), "%s za %d km" % [next.name, int(ceil(Profile.unlock_km(n) - km))], 14, Color.WHITE)
+	_t(pos + Vector2(0, 24), "%s za %s" % [next.name, Units.dist_text(Profile.unlock_km(n) - km, true)], 14, Color.WHITE)
 	draw_rect(Rect2(pos + Vector2(190, -12), Vector2(160, 10)), Color(1, 1, 1, 0.2))
 	draw_rect(Rect2(pos + Vector2(190, -12), Vector2(160 * Profile.next_progress(km), 10)), Color("49d36b"))
 
@@ -347,7 +359,7 @@ func _draw_cars() -> void:
 			draw_rect(Rect2(lc + Vector2(-18, -6), Vector2(36, 28)), Color("ffd24a"))
 			draw_arc(lc + Vector2(0, -6), 12, PI, TAU, 16, Color("ffd24a"), 5.0)
 			draw_circle(lc + Vector2(0, 6), 4, Color("2b2b2f"))
-			_t(r.position + Vector2(0, 186), "od %d km" % int(Profile.unlock_km(i)), 18, Color("ffd24a"), HORIZONTAL_ALIGNMENT_CENTER, w)
+			_t(r.position + Vector2(0, 186), "od %s" % Units.dist_text(Profile.unlock_km(i)), 18, Color("ffd24a"), HORIZONTAL_ALIGNMENT_CENTER, w)
 
 func _draw_seasons() -> void:
 	for i in 4:
@@ -405,7 +417,7 @@ func _draw_map() -> void:
 	for l in legs:
 		for rd in Route.leg_roads(l):
 			if rd[2] != "" and not roads.has(rd[2]): roads.append(rd[2])
-	_t(Vector2(x, 236), "%d km   ·   drogi: %s" % [st.km, ", ".join(roads) if not roads.is_empty() else "miejskie"], 17, Color.WHITE)
+	_t(Vector2(x, 236), "%s   ·   drogi: %s" % [Units.dist_text(st.km), ", ".join(roads) if not roads.is_empty() else "miejskie"], 17, Color.WHITE)
 	_t(Vector2(x, 262), "Czas: %s   ·   stacje paliw: %d" % [Hud.format_time(st.duration), st.stations.size()], 17, Color("4cc3ff"))
 	var via := []
 	var bigs := []

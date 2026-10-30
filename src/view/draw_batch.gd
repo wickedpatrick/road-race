@@ -10,6 +10,11 @@ var _idx := PackedInt32Array()
 var _tmp_cols := PackedColorArray()
 var _xf := Transform2D.IDENTITY
 var _xf_on := false
+var _user_xf := Transform2D.IDENTITY ## set by draw_set_transform
+## left-hand traffic: the whole world is drawn mirrored (x -> mirror_w - x); painters of signs, cars and landmarks
+## turn it off and draw at a mirrored point, so their lettering and shapes stay the right way round
+var mirror := false
+var mirror_w := 960.0
 ## distance haze: every colour added is blended this far (0..1) towards fog_color (set per depth by WorldView)
 var fog := 0.0
 var fog_color := Color.WHITE
@@ -19,8 +24,8 @@ func begin(cv: CanvasItem) -> void:
 	_pts.clear()
 	_cols.clear()
 	_idx.clear()
-	_xf = Transform2D.IDENTITY
-	_xf_on = false
+	_user_xf = Transform2D.IDENTITY
+	_update_xf()
 	fog = 0.0
 
 func flush() -> void:
@@ -45,7 +50,15 @@ func fan(p: PackedVector2Array, col: Color) -> void:
 		_idx.append(base + k + 1)
 
 func draw_set_transform(pos: Vector2, rot := 0.0, scl := Vector2.ONE) -> void:
-	_xf = Transform2D(rot, scl, 0.0, pos)
+	_user_xf = Transform2D(rot, scl, 0.0, pos)
+	_update_xf()
+
+func set_mirror(on: bool) -> void:
+	mirror = on
+	_update_xf()
+
+func _update_xf() -> void:
+	_xf = Transform2D(Vector2(-1, 0), Vector2(0, 1), Vector2(mirror_w, 0)) * _user_xf if mirror else _user_xf
 	_xf_on = _xf != Transform2D.IDENTITY
 
 func draw_rect(r: Rect2, col: Color, filled := true, width := -1.0) -> void:
@@ -63,7 +76,7 @@ func draw_rect(r: Rect2, col: Color, filled := true, width := -1.0) -> void:
 
 func draw_circle(c: Vector2, r: float, col: Color, _filled := true, _width := -1.0, _aa := false) -> void:
 	# segment count follows the on-screen radius: distant trees get 8, the sun gets 32
-	var sx := r * (_xf.get_scale().x if _xf_on else 1.0)
+	var sx := r * (absf(_xf.get_scale().x) if _xf_on else 1.0)
 	var n := clampi(int(sx * 0.5) + 6, 8, 32)
 	var p := PackedVector2Array()
 	p.resize(n)
@@ -118,4 +131,7 @@ func draw_arc(c: Vector2, r: float, a0: float, a1: float, n: int, col: Color, wi
 
 func draw_string(font: Font, pos: Vector2, text: String, align := HORIZONTAL_ALIGNMENT_LEFT, width := -1.0, size := 16, col := Color.WHITE) -> void:
 	flush()
+	if mirror: # the text's box moves to the mirrored place, the letters stay readable
+		var w := width if width > 0.0 else font.get_string_size(text, HORIZONTAL_ALIGNMENT_LEFT, -1, size).x
+		pos = Vector2(mirror_w - pos.x - w, pos.y)
 	_cv.draw_string(font, pos, text, align, width, size, col)

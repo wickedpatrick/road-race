@@ -1,0 +1,500 @@
+{
+	"London": [
+		{
+			"kind": "big_ben",
+			"name": {"pl": "Big Ben"},
+			"desc": {"pl": "Wieża zegarowa parlamentu, dzwon waży 13,7 tony"},
+			"local": "Big Ben"
+		},
+		{
+			"kind": "tower_bridge",
+			"name": {"pl": "Tower Bridge"},
+			"desc": {"pl": "Zwodzony most nad Tamizą przy Twierdzy Tower"},
+			"local": "Tower Bridge"
+		}
+	],
+	"Birmingham": [
+		{
+			"kind": "narrowboat",
+			"name": {"pl": "Kanały Birmingham"},
+			"desc": {"pl": "Wąskie łodzie pływają po 160 kilometrach kanałów"},
+			"local": "Gas Street Basin"
+		}
+	],
+	"Leeds": [
+		{
+			"kind": "townhall",
+			"name": {"pl": "Ratusz w Leeds"},
+			"desc": {"pl": "Wiktoriański ratusz z wieżą zegarową"},
+			"local": "Leeds Town Hall"
+		}
+	],
+	"Glasgow": [
+		{
+			"kind": "port_crane",
+			"name": {"pl": "Dźwig Finnieston"},
+			"desc": {"pl": "Olbrzymi dźwig, który ładował parowozy na statki"},
+			"local": "Finnieston Crane"
+		},
+		{
+			"kind": "cathedral",
+			"name": {"pl": "Katedra w Glasgow"},
+			"desc": {"pl": "Jedyna szkocka katedra, która przetrwała reformację nietknięta"},
+			"local": "Glasgow Cathedral"
+		}
+	],
+	"Sheffield": [
+		{
+			"kind": "factory",
+			"name": {"pl": "Dzielnica stali"},
+			"desc": {"pl": "Dawne huty i warsztaty nożowników, dziś muzeum"},
+			"local": "Kelham Island Museum"
+		}
+	],
+	"Manchester": [
+		{
+			"kind": "factory",
+			"name": {"pl": "Przędzalnie Ancoats"},
+			"desc": {"pl": "Pierwsza przemysłowa dzielnica świata"},
+			"local": "Ancoats Mills"
+		},
+		{
+			"kind": "townhall_gothic",
+			"name": {"pl": "Ratusz w Manchesterze"},
+			"desc": {"pl": "Neogotycki ratusz z wieżą zegarową"},
+			"local": "Manchester Town Hall"
+		}
+	],
+	"Edinburgh": [
+		{
+			"kind": "castle_rock",
+			"name": {"pl": "Zamek Edynburski"},
+			"desc": {"pl": "Twierdza na skale dawnego wulkanu; codziennie o 13 strzela działo"},
+			"local": "Edinburgh Castle"
+		}
+	],
+	"Liverpool": [
+		{
+			"kind": "liver_building",
+			"name": {"pl": "Royal Liver Building"},
+			"desc": {"pl": "Na wieżach siedzą dwa ptaki Liver; legenda mówi, że gdy odlecą, miasto zniknie"},
+			"local": "Royal Liver Building"
+		},
+		{
+			"kind": "music",
+			"name": {"pl": "Beatlesi"},
+			"desc": {"pl": "Liverpool to miasto zespołu The Beatles"},
+			"local": "The Beatles Story"
+		}
+	],
+	"Bristol": [
+		{
+			"kind": "suspension_bridge",
+			"name": {"pl": "Most Clifton"},
+			"desc": {"pl": "Wiszący most Brunela nad wąwozem rzeki Avon"},
+			"local": "Clifton Suspension Bridge"
+		},
+		{
+			"kind": "ship",
+			"name": {"pl": "SS Great Britain"},
+			"desc": {"pl": "Pierwszy wielki żelazny statek ze śrubą napędową"},
+			"local": "SS Great Britain"
+		}
+	],
+	"Leicester": [
+		{
+			"kind": "crown",
+			"name": {"pl": "Król Ryszard III"},
+			"desc": {"pl": "Szczątki króla znaleziono w 2012 roku pod parkingiem"},
+			"local": "King Richard III Visitor Centre"
+		}
+	],
+	"Cardiff": [
+		{
+			"kind": "castle",
+			"name": {"pl": "Zamek w Cardiff"},
+			"desc": {"pl": "Zamek w samym centrum miasta, z rzymskimi murami"},
+			"local": "Cardiff Castle"
+		}
+	],
+	"Nottingham": [
+		{
+			"kind": "archer",
+			"name": {"pl": "Robin Hood"},
+			"desc": {"pl": "Pomnik łucznika z lasu Sherwood pod zamkiem"},
+			"local": "Robin Hood Statue"
+		},
+		{
+			"kind": "castle",
+			"name": {"pl": "Zamek Nottingham"},
+			"desc": {"pl": "Zamek na skale pełnej jaskiń"},
+			"local": "Nottingham Castle"
+		}
+	],
+	"Newcastle upon Tyne": [
+		{
+			"kind": "tyne_bridge",
+			"name": {"pl": "Most Tyne"},
+			"desc": {"pl": "Stalowy łuk nad rzeką, symbol miasta"},
+			"local": "Tyne Bridge"
+		}
+	],
+	"Brighton": [
+		{
+			"kind": "pavilion",
+			"name": {"pl": "Royal Pavilion"},
+			"desc": {"pl": "Letni pałac króla w stylu indyjskim"},
+			"local": "Royal Pavilion"
+		},
+		{
+			"kind": "pier",
+			"name": {"pl": "Brighton Palace Pier"},
+			"desc": {"pl": "Molo z karuzelami i wesołym miasteczkiem"},
+			"local": "Brighton Palace Pier"
+		}
+	],
+	"Hull": [
+		{
+			"kind": "cathedral",
+			"name": {"pl": "Hull Minster"},
+			"desc": {"pl": "Największy kościół parafialny Anglii, z cegły"},
+			"local": "Hull Minster"
+		}
+	],
+	"Plymouth": [
+		{
+			"kind": "lighthouse",
+			"name": {"pl": "Smeaton's Tower"},
+			"desc": {"pl": "Czerwono-biała latarnia morska przeniesiona na brzeg"},
+			"local": "Smeaton's Tower"
+		}
+	],
+	"Stoke-on-Trent": [
+		{
+			"kind": "bottle_kiln",
+			"name": {"pl": "Piece butelkowe"},
+			"desc": {"pl": "Ceglane piece w kształcie butelek do wypalania porcelany"},
+			"local": "Gladstone Pottery Museum"
+		}
+	],
+	"Southampton": [
+		{
+			"kind": "liner",
+			"name": {"pl": "Pamięć Titanica"},
+			"desc": {"pl": "Muzeum statków, które wypływały z tego portu"},
+			"local": "SeaCity Museum"
+		}
+	],
+	"Swansea": [
+		{
+			"kind": "sailboat",
+			"name": {"pl": "Przystań w Swansea"},
+			"desc": {"pl": "Jachty w dawnym doku portowym"},
+			"local": "Swansea Marina"
+		}
+	],
+	"Portsmouth": [
+		{
+			"kind": "spinnaker",
+			"name": {"pl": "Spinnaker Tower"},
+			"desc": {"pl": "Wieża w kształcie żagla, 170 metrów nad portem"},
+			"local": "Spinnaker Tower"
+		},
+		{
+			"kind": "ship",
+			"name": {"pl": "HMS Victory"},
+			"desc": {"pl": "Okręt admirała Nelsona spod Trafalgaru"},
+			"local": "HMS Victory"
+		}
+	],
+	"York": [
+		{
+			"kind": "cathedral",
+			"name": {"pl": "York Minster"},
+			"desc": {"pl": "Jedna z największych gotyckich katedr Europy"},
+			"local": "York Minster"
+		},
+		{
+			"kind": "gate",
+			"name": {"pl": "Mury Yorku"},
+			"desc": {"pl": "Średniowieczne bramy i mury wokół starego miasta"},
+			"local": "Micklegate Bar"
+		}
+	],
+	"Aberdeen": [
+		{
+			"kind": "townhall_gothic",
+			"name": {"pl": "Marischal College"},
+			"desc": {"pl": "Drugi największy granitowy budynek świata"},
+			"local": "Marischal College"
+		}
+	],
+	"Oxford": [
+		{
+			"kind": "radcliffe",
+			"name": {"pl": "Radcliffe Camera"},
+			"desc": {"pl": "Okrągła biblioteka z kopułą"},
+			"local": "Radcliffe Camera"
+		}
+	],
+	"Dundee": [
+		{
+			"kind": "ship",
+			"name": {"pl": "RRS Discovery"},
+			"desc": {"pl": "Statek, którym kapitan Scott popłynął na Antarktydę"},
+			"local": "RRS Discovery"
+		}
+	],
+	"Cambridge": [
+		{
+			"kind": "kings_chapel",
+			"name": {"pl": "Kaplica King's College"},
+			"desc": {"pl": "Gotycka kaplica z największym wachlarzowym sklepieniem świata"},
+			"local": "King's College Chapel"
+		}
+	],
+	"Norwich": [
+		{
+			"kind": "spire_cathedral",
+			"name": {"pl": "Katedra w Norwich"},
+			"desc": {"pl": "Druga najwyższa iglica katedry w Anglii"},
+			"local": "Norwich Cathedral"
+		},
+		{
+			"kind": "castle",
+			"name": {"pl": "Zamek Norwich"},
+			"desc": {"pl": "Normański zamek nad miastem"},
+			"local": "Norwich Castle"
+		}
+	],
+	"Exeter": [
+		{
+			"kind": "cathedral",
+			"name": {"pl": "Katedra w Exeter"},
+			"desc": {"pl": "Najdłuższe nieprzerwane gotyckie sklepienie świata"},
+			"local": "Exeter Cathedral"
+		}
+	],
+	"Carlisle": [
+		{
+			"kind": "castle",
+			"name": {"pl": "Zamek Carlisle"},
+			"desc": {"pl": "Graniczna twierdza z czerwonego piaskowca"},
+			"local": "Carlisle Castle"
+		}
+	],
+	"Inverness": [
+		{
+			"kind": "castle",
+			"name": {"pl": "Zamek Inverness"},
+			"desc": {"pl": "Zamek z czerwonego piaskowca nad rzeką Ness"},
+			"local": "Inverness Castle"
+		}
+	],
+	"Bangor": [
+		{
+			"kind": "suspension_bridge",
+			"name": {"pl": "Most Menai"},
+			"desc": {"pl": "Wiszący most Telforda z 1826 roku na wyspę Anglesey"},
+			"local": "Menai Suspension Bridge"
+		}
+	],
+	"Amesbury": [
+		{
+			"kind": "stonehenge",
+			"name": {"pl": "Stonehenge"},
+			"desc": {"pl": "Kamienny krąg sprzed 4500 lat"},
+			"local": "Stonehenge"
+		}
+	],
+	"Gateshead": [
+		{
+			"kind": "angel",
+			"name": {"pl": "Anioł Północy"},
+			"desc": {"pl": "Stalowy anioł o skrzydłach szerokich jak samolot"},
+			"local": "Angel of the North"
+		}
+	],
+	"South Queensferry": [
+		{
+			"kind": "forth_bridge",
+			"name": {"pl": "Most na zatoce Forth"},
+			"desc": {"pl": "Czerwony kolejowy most wspornikowy z 1890 roku"},
+			"local": "Forth Bridge"
+		}
+	],
+	"Drumnadrochit": [
+		{
+			"kind": "nessie",
+			"name": {"pl": "Potwór z Loch Ness"},
+			"desc": {"pl": "Legenda mówi, że w jeziorze mieszka Nessie"},
+			"local": "Loch Ness Centre"
+		},
+		{
+			"kind": "castle",
+			"name": {"pl": "Zamek Urquhart"},
+			"desc": {"pl": "Ruiny zamku nad brzegiem Loch Ness"},
+			"local": "Urquhart Castle"
+		}
+	],
+	"Haltwhistle": [
+		{
+			"kind": "roman_wall",
+			"name": {"pl": "Wał Hadriana"},
+			"desc": {"pl": "Rzymski mur przez całą wyspę, z fortami co milę"},
+			"local": "Hadrian's Wall"
+		}
+	],
+	"Holmes Chapel": [
+		{
+			"kind": "radio_telescope",
+			"name": {"pl": "Jodrell Bank"},
+			"desc": {"pl": "Wielki radioteleskop, który śledził pierwsze satelity"},
+			"local": "Jodrell Bank"
+		}
+	],
+	"Chesterfield": [
+		{
+			"kind": "crooked_spire",
+			"name": {"pl": "Krzywa iglica"},
+			"desc": {"pl": "Iglica kościoła wygięta i skręcona"},
+			"local": "Crooked Spire"
+		}
+	],
+	"Settle": [
+		{
+			"kind": "viaduct",
+			"name": {"pl": "Wiadukt Ribblehead"},
+			"desc": {"pl": "Kolejowy wiadukt z 24 łukami na wrzosowisku"},
+			"local": "Ribblehead Viaduct"
+		}
+	],
+	"Barton-upon-Humber": [
+		{
+			"kind": "suspension_bridge",
+			"name": {"pl": "Most Humber"},
+			"desc": {"pl": "Wiszący most nad estuarium Humber"},
+			"local": "Humber Bridge"
+		}
+	],
+	"Coventry": [
+		{
+			"kind": "cathedral",
+			"name": {"pl": "Katedra w Coventry"},
+			"desc": {"pl": "Ruiny starej katedry obok nowej"},
+			"local": "Coventry Cathedral"
+		}
+	],
+	"Lincoln": [
+		{
+			"kind": "cathedral",
+			"name": {"pl": "Katedra w Lincoln"},
+			"desc": {"pl": "Gotycka katedra na wzgórzu nad miastem"},
+			"local": "Lincoln Cathedral"
+		}
+	],
+	"Durham": [
+		{
+			"kind": "cathedral",
+			"name": {"pl": "Katedra w Durham"},
+			"desc": {"pl": "Romańska katedra i zamek z listy UNESCO"},
+			"local": "Durham Cathedral"
+		}
+	],
+	"Winchester": [
+		{
+			"kind": "cathedral",
+			"name": {"pl": "Katedra w Winchesterze"},
+			"desc": {"pl": "Najdłuższa średniowieczna katedra Europy"},
+			"local": "Winchester Cathedral"
+		}
+	],
+	"Warwick": [
+		{
+			"kind": "castle",
+			"name": {"pl": "Zamek Warwick"},
+			"desc": {"pl": "Średniowieczny zamek nad rzeką Avon"},
+			"local": "Warwick Castle"
+		}
+	],
+	"Alnwick": [
+		{
+			"kind": "castle",
+			"name": {"pl": "Zamek Alnwick"},
+			"desc": {"pl": "Zamek z filmów o Harrym Potterze"},
+			"local": "Alnwick Castle"
+		}
+	],
+	"Stirling": [
+		{
+			"kind": "castle",
+			"name": {"pl": "Zamek Stirling"},
+			"desc": {"pl": "Zamek szkockich królów na skale"},
+			"local": "Stirling Castle"
+		}
+	],
+	"Caernarfon": [
+		{
+			"kind": "castle",
+			"name": {"pl": "Zamek Caernarfon"},
+			"desc": {"pl": "Twierdza z wielobocznymi wieżami nad cieśniną Menai"},
+			"local": "Caernarfon Castle"
+		}
+	],
+	"Arundel": [
+		{
+			"kind": "castle",
+			"name": {"pl": "Zamek Arundel"},
+			"desc": {"pl": "Zamek książąt Norfolk nad rzeką Arun"},
+			"local": "Arundel Castle"
+		}
+	],
+	"Chester": [
+		{
+			"kind": "gate",
+			"name": {"pl": "Zegar Eastgate"},
+			"desc": {"pl": "Zegar na rzymskiej bramie miejskiej"},
+			"local": "Eastgate Clock"
+		}
+	],
+	"Burton upon Trent": [
+		{
+			"kind": "hops",
+			"name": {"pl": "Stolica piwa"},
+			"desc": {"pl": "Chmiel i browary nad rzeką Trent"},
+			"local": "National Brewery Centre"
+		}
+	],
+	"Brechin": [
+		{
+			"kind": "round_tower",
+			"name": {"pl": "Okrągła wieża"},
+			"desc": {"pl": "Wieża z XI wieku przy katedrze"},
+			"local": "Brechin Round Tower"
+		}
+	],
+	"Betws-y-Coed": [
+		{
+			"kind": "waterfall",
+			"name": {"pl": "Swallow Falls"},
+			"desc": {"pl": "Wodospad w lesie nad rzeką Llugwy"},
+			"local": "Swallow Falls"
+		}
+	],
+	"Bournemouth": [
+		{
+			"kind": "pier",
+			"name": {"pl": "Molo w Bournemouth"},
+			"desc": {"pl": "Molo nad długą piaszczystą plażą"},
+			"local": "Bournemouth Pier"
+		}
+	],
+	"Stonehaven": [
+		{
+			"kind": "castle",
+			"name": {"pl": "Zamek Dunnottar"},
+			"desc": {"pl": "Ruiny zamku na skale nad morzem"},
+			"local": "Dunnottar Castle"
+		}
+	]
+}

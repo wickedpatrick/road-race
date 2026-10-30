@@ -1,108 +1,263 @@
 {
 	"Praha": [
-		{"kind": "castle", "name": {"pl": "Zamek Praski"}, "desc": {"pl": "Jeden z największych zamków na świecie"}},
+		{
+			"kind": "castle",
+			"name": {"pl": "Zamek Praski"},
+			"desc": {"pl": "Jeden z największych zamków na świecie"},
+			"local": "Pražský hrad"
+		},
 		{
 			"kind": "townhall_gothic",
 			"name": {"pl": "Orloj"},
-			"desc": {"pl": "Średniowieczny zegar astronomiczny na ratuszu"}
+			"desc": {"pl": "Średniowieczny zegar astronomiczny na ratuszu"},
+			"local": "Orloj"
 		}
 	],
 	"Brno": [
-		{"kind": "castle", "name": {"pl": "Špilberk"}, "desc": {"pl": "Twierdza na wzgórzu nad miastem"}},
+		{
+			"kind": "castle",
+			"name": {"pl": "Špilberk"},
+			"desc": {"pl": "Twierdza na wzgórzu nad miastem"},
+			"local": "Špilberk"
+		},
 		{
 			"kind": "cathedral",
 			"name": {"pl": "Katedra na Petrovie"},
-			"desc": {"pl": "Dzwony biją tu południe już o jedenastej"}
+			"desc": {"pl": "Dzwony biją tu południe już o jedenastej"},
+			"local": "Katedrála sv. Petra a Pavla"
 		}
 	],
-	"Ostrava": [{"kind": "mine", "name": {"pl": "Dolní Vítkovice"}, "desc": {"pl": "Dawna kopalnia i huta, dziś muzeum"}}],
+	"Ostrava": [
+		{
+			"kind": "mine",
+			"name": {"pl": "Dolní Vítkovice"},
+			"desc": {"pl": "Dawna kopalnia i huta, dziś muzeum"},
+			"local": "Dolní Vítkovice"
+		}
+	],
 	"Plzeň": [
 		{
 			"kind": "cathedral",
 			"name": {"pl": "Katedra św. Bartłomieja"},
-			"desc": {"pl": "Najwyższa wieża kościelna w Czechach"}
+			"desc": {"pl": "Najwyższa wieża kościelna w Czechach"},
+			"local": "Katedrála sv. Bartoloměje"
 		}
 	],
-	"Liberec": [{"kind": "radio_tower", "name": {"pl": "Ještěd"}, "desc": {"pl": "Nadajnik i hotel na szczycie góry"}}],
+	"Liberec": [
+		{
+			"kind": "radio_tower",
+			"name": {"pl": "Ještěd"},
+			"desc": {"pl": "Nadajnik i hotel na szczycie góry"},
+			"local": "Ještěd"
+		}
+	],
 	"Olomouc": [
 		{
 			"kind": "christ",
 			"name": {"pl": "Kolumna Trójcy Przenajświętszej"},
-			"desc": {"pl": "Barokowa kolumna z listy UNESCO"}
+			"desc": {"pl": "Barokowa kolumna z listy UNESCO"},
+			"local": "Sloup Nejsvětější Trojice"
 		}
 	],
-	"České Budějovice": [{"kind": "round_tower", "name": {"pl": "Czarna Wieża"}, "desc": {"pl": "Wieża widokowa nad wielkim rynkiem"}}],
-	"Hradec Králové": [{"kind": "round_tower", "name": {"pl": "Biała Wieża"}, "desc": {"pl": "Renesansowa dzwonnica na Wielkim Rynku"}}],
+	"České Budějovice": [
+		{
+			"kind": "round_tower",
+			"name": {"pl": "Czarna Wieża"},
+			"desc": {"pl": "Wieża widokowa nad wielkim rynkiem"},
+			"local": "Černá věž"
+		}
+	],
+	"Hradec Králové": [
+		{
+			"kind": "round_tower",
+			"name": {"pl": "Biała Wieża"},
+			"desc": {"pl": "Renesansowa dzwonnica na Wielkim Rynku"},
+			"local": "Bílá věž"
+		}
+	],
 	"Pardubice": [
 		{
 			"kind": "gingerbread",
 			"name": {"pl": "Pardubickie pierniki"},
-			"desc": {"pl": "Pierniki z Pardubic znane są w całych Czechach"}
+			"desc": {"pl": "Pierniki z Pardubic znane są w całych Czechach"},
+			"local": "Pardubický perník"
 		}
 	],
-	"Ústí nad Labem": [{"kind": "castle", "name": {"pl": "Zamek Střekov"}, "desc": {"pl": "Ruiny zamku na skale nad Łabą"}}],
+	"Ústí nad Labem": [
+		{
+			"kind": "castle",
+			"name": {"pl": "Zamek Střekov"},
+			"desc": {"pl": "Ruiny zamku na skale nad Łabą"},
+			"local": "Hrad Střekov"
+		}
+	],
 	"Zlín": [
 		{
 			"kind": "factory",
 			"name": {"pl": "Fabryka Bati"},
-			"desc": {"pl": "Tomáš Baťa robił tu buty dla całego świata"}
+			"desc": {"pl": "Tomáš Baťa robił tu buty dla całego świata"},
+			"local": "Baťův areál"
 		}
 	],
-	"Kladno": [{"kind": "mine", "name": {"pl": "Kopalnia Mayrau"}, "desc": {"pl": "Kopalnia węgla zamieniona w muzeum"}}],
+	"Kladno": [
+		{
+			"kind": "mine",
+			"name": {"pl": "Kopalnia Mayrau"},
+			"desc": {"pl": "Kopalnia węgla zamieniona w muzeum"},
+			"local": "Důl Mayrau"
+		}
+	],
 	"Most": [
 		{
 			"kind": "basilica",
 			"name": {"pl": "Kościół w Moście"},
-			"desc": {"pl": "Gotycki kościół przesunięty w całości o 841 metrów"}
+			"desc": {"pl": "Gotycki kościół przesunięty w całości o 841 metrów"},
+			"local": "Kostel Nanebevzetí Panny Marie"
 		}
 	],
-	"Opava": [{"kind": "townhall", "name": {"pl": "Hláska"}, "desc": {"pl": "Wieża ratuszowa w centrum miasta"}}],
-	"Jihlava": [{"kind": "gate", "name": {"pl": "Brama Matki Bożej"}, "desc": {"pl": "Jedyna zachowana brama dawnych murów"}}],
-	"Karlovy Vary": [{"kind": "palace", "name": {"pl": "Kolonada Młyńska"}, "desc": {"pl": "Kolumnada nad gorącymi źródłami"}}],
+	"Opava": [
+		{
+			"kind": "townhall",
+			"name": {"pl": "Hláska"},
+			"desc": {"pl": "Wieża ratuszowa w centrum miasta"},
+			"local": "Hláska"
+		}
+	],
+	"Jihlava": [
+		{
+			"kind": "gate",
+			"name": {"pl": "Brama Matki Bożej"},
+			"desc": {"pl": "Jedyna zachowana brama dawnych murów"},
+			"local": "Brána Matky Boží"
+		}
+	],
+	"Karlovy Vary": [
+		{
+			"kind": "palace",
+			"name": {"pl": "Kolonada Młyńska"},
+			"desc": {"pl": "Kolumnada nad gorącymi źródłami"},
+			"local": "Mlýnská kolonáda"
+		}
+	],
 	"Mladá Boleslav": [
 		{
 			"kind": "factory",
 			"name": {"pl": "Fabryka Škody"},
-			"desc": {"pl": "Od ponad 100 lat powstają tu samochody Škoda"}
+			"desc": {"pl": "Od ponad 100 lat powstają tu samochody Škoda"},
+			"local": "Škoda Muzeum"
 		}
 	],
-	"Tábor": [{"kind": "townhall", "name": {"pl": "Ratusz"}, "desc": {"pl": "Husycki rynek z podziemnymi korytarzami"}}],
-	"Znojmo": [{"kind": "grapes", "name": {"pl": "Winnice"}, "desc": {"pl": "Wokół Znojma rosną winorośle"}}],
+	"Tábor": [
+		{
+			"kind": "townhall",
+			"name": {"pl": "Ratusz"},
+			"desc": {"pl": "Husycki rynek z podziemnymi korytarzami"},
+			"local": "Radnice"
+		}
+	],
+	"Znojmo": [{"kind": "grapes", "name": {"pl": "Winnice"}, "desc": {"pl": "Wokół Znojma rosną winorośle"}, "local": "Vinice"}],
 	"Cheb": [
 		{
 			"kind": "castle_brick",
 			"name": {"pl": "Zamek w Chebie"},
-			"desc": {"pl": "Romański zamek cesarski z Czarną Wieżą"}
+			"desc": {"pl": "Romański zamek cesarski z Czarną Wieżą"},
+			"local": "Chebský hrad"
 		}
 	],
-	"Beroun": [{"kind": "castle", "name": {"pl": "Karlštejn"}, "desc": {"pl": "Gotycki zamek cesarza Karola IV"}}],
-	"Turnov": [{"kind": "castle", "name": {"pl": "Trosky"}, "desc": {"pl": "Ruiny zamku na dwóch skałach w Czeskim Raju"}}],
-	"Litomyšl": [{"kind": "palace", "name": {"pl": "Zamek w Litomyślu"}, "desc": {"pl": "Renesansowy zamek z listy UNESCO"}}],
-	"Kroměříž": [{"kind": "palace", "name": {"pl": "Pałac Arcybiskupi"}, "desc": {"pl": "Pałac i ogrody z listy UNESCO"}}],
+	"Beroun": [
+		{
+			"kind": "castle",
+			"name": {"pl": "Karlštejn"},
+			"desc": {"pl": "Gotycki zamek cesarza Karola IV"},
+			"local": "Karlštejn"
+		}
+	],
+	"Turnov": [
+		{
+			"kind": "castle",
+			"name": {"pl": "Trosky"},
+			"desc": {"pl": "Ruiny zamku na dwóch skałach w Czeskim Raju"},
+			"local": "Trosky"
+		}
+	],
+	"Litomyšl": [
+		{
+			"kind": "palace",
+			"name": {"pl": "Zamek w Litomyślu"},
+			"desc": {"pl": "Renesansowy zamek z listy UNESCO"},
+			"local": "Zámek Litomyšl"
+		}
+	],
+	"Kroměříž": [
+		{
+			"kind": "palace",
+			"name": {"pl": "Pałac Arcybiskupi"},
+			"desc": {"pl": "Pałac i ogrody z listy UNESCO"},
+			"local": "Arcibiskupský zámek"
+		}
+	],
 	"Telč": [
 		{
 			"kind": "townhall_zamosc",
 			"name": {"pl": "Rynek w Telču"},
-			"desc": {"pl": "Kolorowe renesansowe kamieniczki z podcieniami"}
+			"desc": {"pl": "Kolorowe renesansowe kamieniczki z podcieniami"},
+			"local": "Náměstí Zachariáše z Hradce"
 		}
 	],
-	"Mariánské Lázně": [{"kind": "music", "name": {"pl": "Śpiewająca fontanna"}, "desc": {"pl": "Fontanna tańczy w rytm muzyki"}}],
-	"Jičín": [{"kind": "gate", "name": {"pl": "Brama Valdická"}, "desc": {"pl": "Pod bramą mieszkał bajkowy zbójnik Rumcajs"}}],
-	"Hořice": [{"kind": "kremowka", "name": {"pl": "Hořickie rurki"}, "desc": {"pl": "Słodkie rurki z kremem"}}],
-	"Děčín": [{"kind": "castle", "name": {"pl": "Zamek Děčín"}, "desc": {"pl": "Zamek na skale nad Łabą"}}],
-	"Teplice": [{"kind": "palace", "name": {"pl": "Zamek w Teplicach"}, "desc": {"pl": "Najstarsze czeskie uzdrowisko"}}],
+	"Mariánské Lázně": [
+		{
+			"kind": "music",
+			"name": {"pl": "Śpiewająca fontanna"},
+			"desc": {"pl": "Fontanna tańczy w rytm muzyki"},
+			"local": "Zpívající fontána"
+		}
+	],
+	"Jičín": [
+		{
+			"kind": "gate",
+			"name": {"pl": "Brama Valdická"},
+			"desc": {"pl": "Pod bramą mieszkał bajkowy zbójnik Rumcajs"},
+			"local": "Valdická brána"
+		}
+	],
+	"Hořice": [
+		{
+			"kind": "kremowka",
+			"name": {"pl": "Hořickie rurki"},
+			"desc": {"pl": "Słodkie rurki z kremem"},
+			"local": "Hořické trubičky"
+		}
+	],
+	"Děčín": [
+		{
+			"kind": "castle",
+			"name": {"pl": "Zamek Děčín"},
+			"desc": {"pl": "Zamek na skale nad Łabą"},
+			"local": "Zámek Děčín"
+		}
+	],
+	"Teplice": [
+		{
+			"kind": "palace",
+			"name": {"pl": "Zamek w Teplicach"},
+			"desc": {"pl": "Najstarsze czeskie uzdrowisko"},
+			"local": "Zámek Teplice"
+		}
+	],
 	"Velké Meziříčí": [
 		{
 			"kind": "truss_bridge",
 			"name": {"pl": "Most Vysočina"},
-			"desc": {"pl": "Wysoki most autostrady D1 nad doliną"}
+			"desc": {"pl": "Wysoki most autostrady D1 nad doliną"},
+			"local": "Most Vysočina"
 		}
 	],
 	"Jindřichův Hradec": [
 		{
 			"kind": "castle",
 			"name": {"pl": "Zamek w Jindřichowym Hradcu"},
-			"desc": {"pl": "Trzeci co do wielkości zamek w Czechach"}
+			"desc": {"pl": "Trzeci co do wielkości zamek w Czechach"},
+			"local": "Zámek Jindřichův Hradec"
 		}
 	]
 }

@@ -217,7 +217,7 @@ func _draw_overlay() -> void:
 		var n := int(ceil(countdown))
 		o.draw_string(font, Vector2(0, 300), str(n), HORIZONTAL_ALIGNMENT_CENTER, 960, 140, Color(0, 0, 0, 0.5))
 		o.draw_string(font, Vector2(0, 296), str(n), HORIZONTAL_ALIGNMENT_CENTER, 960, 140, Color("ffd24a"))
-		o.draw_string(font, Vector2(0, 340), "%s  ·  %d km" % [race.stage.name, race.stage.km], HORIZONTAL_ALIGNMENT_CENTER, 960, 24, Color.WHITE)
+		o.draw_string(font, Vector2(0, 340), "%s  ·  %s" % [race.stage.name, Units.dist_text(race.stage.km)], HORIZONTAL_ALIGNMENT_CENTER, 960, 24, Color.WHITE)
 	elif race.elapsed < 0.9 and race.state == "running":
 		o.draw_string(font, Vector2(0, 300), "START!", HORIZONTAL_ALIGNMENT_CENTER, 960, 110, Color(0, 0, 0, 0.5))
 		o.draw_string(font, Vector2(0, 296), "START!", HORIZONTAL_ALIGNMENT_CENTER, 960, 110, Color("49d36b"))
