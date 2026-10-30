@@ -1,78 +1,453 @@
 {
-	"Kamienna Góra": {"pl": "Miasto w Sudetach, dawny ośrodek tkactwa"},
-	"Zwardoń": {"pl": "Wieś w Beskidzie Żywieckim, tuż przy granicy ze Słowacją"},
-	"Żywiec": {"pl": "Miasto nad Jeziorem Żywieckim, z zamkiem Habsburgów"},
-	"Bolków": {"pl": "Miasteczko pod średniowiecznym zamkiem na skale"},
-	"Jawor": {"pl": "Tu stoi drewniany Kościół Pokoju z listy UNESCO"},
-	"Warszawa": {"pl": "Stolica Polski, położona nad Wisłą"},
-	"Kraków": {"pl": "Dawna stolica Polski, zamek królewski na Wawelu"},
-	"Wrocław": {"pl": "Miasto na wyspach Odry, z ponad stu mostami"},
-	"Łódź": {"pl": "Dawne centrum przemysłu włókienniczego, ulica Piotrkowska"},
-	"Poznań": {"pl": "Koziołki na ratuszu, Ostrów Tumski - kolebka państwa polskiego"},
-	"Gdańsk": {"pl": "Fontanna Neptuna i Żuraw nad Motławą, tu narodziła się Solidarność"},
-	"Szczecin": {"pl": "Wielki port nad Odrą, Wały Chrobrego"},
-	"Lublin": {"pl": "W 1569 r. zawarto tu Unię Lubelską"},
-	"Bydgoszcz": {"pl": "Miasto nad Brdą i Kanałem Bydgoskim"},
-	"Białystok": {"pl": "Pałac Branickich nazywany Wersalem Podlasia"},
-	"Katowice": {"pl": "Stolica Górnego Śląska, hala Spodek"},
-	"Gdynia": {"pl": "Port zbudowany w dwudziestoleciu międzywojennym, statek Dar Pomorza"},
-	"Częstochowa": {"pl": "Sanktuarium na Jasnej Górze"},
-	"Radom": {"pl": "Słynie z pokazów lotniczych Air Show"},
-	"Rzeszów": {"pl": "Stolica Podkarpacia, podziemna trasa turystyczna pod rynkiem"},
-	"Toruń": {"pl": "Miasto Mikołaja Kopernika i pierników"},
-	"Kielce": {"pl": "Stolica regionu świętokrzyskiego, rezerwat Kadzielnia"},
-	"Olsztyn": {"pl": "Stolica Warmii, na zamku mieszkał Mikołaj Kopernik"},
-	"Bielsko-Biała": {"pl": "Tu powstały bajki o Bolku i Lolku"},
-	"Zielona Góra": {"pl": "Miasto wina, co roku święto Winobrania"},
-	"Opole": {"pl": "Stolica polskiej piosenki - Krajowy Festiwal Piosenki Polskiej"},
-	"Gorzów Wielkopolski": {"pl": "Miasto nad Wartą, słynie z żużla"},
-	"Płock": {"pl": "W latach 1079-1138 stolica Polski"},
-	"Elbląg": {"pl": "Kanał Elbląski - statki pokonują tu wzgórza na pochylniach"},
-	"Koszalin": {"pl": "Kilkanaście kilometrów od Bałtyku, Góra Chełmska"},
-	"Zakopane": {"pl": "Zimowa stolica Polski, u stóp Tatr"},
-	"Zamość": {"pl": "Renesansowe miasto idealne, Stare Miasto na liście UNESCO"},
-	"Łomża": {"pl": "Miasto nad Narwią, na skraju Kurpiów"},
-	"Nowy Targ": {"pl": "Stolica Podhala"},
-	"Rabka-Zdrój": {"pl": "Uzdrowisko nazywane miastem dzieci świata"},
-	"Szczebrzeszyn": {"pl": "W Szczebrzeszynie chrząszcz brzmi w trzcinie"},
-	"Łańcut": {"pl": "Zamek z kolekcją dawnych powozów"},
-	"Leżajsk": {"pl": "Bazylika słynąca z zabytkowych organów"},
-	"Tykocin": {"pl": "Barokowe miasteczko nad Narwią z wielką synagogą"},
-	"Wizna": {"pl": "Bitwa pod Wizną w 1939 r. - polskie Termopile"},
-	"Ruciane-Nida": {"pl": "Wśród jezior i lasów Puszczy Piskiej"},
-	"Bochnia": {"pl": "Najstarsza kopalnia soli w Polsce"},
-	"Tarnów": {"pl": "Uchodzi za najcieplejsze miasto w Polsce"},
-	"Wadowice": {"pl": "Miasto rodzinne papieża Jana Pawła II"},
-	"Kalwaria Zebrzydowska": {"pl": "Sanktuarium wpisane na listę UNESCO"},
-	"Pszczyna": {"pl": "Zamek i pokazowa zagroda żubrów"},
-	"Tychy": {"pl": "Znane z browaru i fabryki samochodów"},
-	"Gliwice": {"pl": "Radiostacja - najwyższa drewniana wieża w Europie"},
-	"Strzelce Opolskie": {"pl": "W pobliżu Góra Świętej Anny"},
-	"Brzeg": {"pl": "Zamek Piastów Śląskich"},
-	"Trzebnica": {"pl": "Sanktuarium świętej Jadwigi Śląskiej"},
-	"Legnica": {"pl": "W 1241 r. stoczono tu bitwę z Mongołami"},
-	"Lubin": {"pl": "Kopalnie miedzi - Zagłębie Miedziowe"},
-	"Polkowice": {"pl": "Kopalnie miedzi - Zagłębie Miedziowe"},
-	"Konin": {"pl": "Kopalnie węgla brunatnego i elektrownie"},
-	"Września": {"pl": "Strajk dzieci wrzesińskich w obronie języka polskiego (1901)"},
-	"Łowicz": {"pl": "Kolorowe wycinanki i stroje ludowe"},
-	"Żyrardów": {"pl": "Dawna osada fabryczna przemysłu lnianego"},
-	"Piątek": {"pl": "Uznawany za geometryczny środek Polski"},
-	"Kutno": {"pl": "Miasto róż"},
-	"Włocławek": {"pl": "Zapora na Wiśle i Jezioro Włocławskie"},
-	"Ciechocinek": {"pl": "Uzdrowisko z tężniami solankowymi"},
-	"Piotrków Trybunalski": {"pl": "Dawna siedziba Trybunału Koronnego"},
-	"Gniezno": {"pl": "Pierwsza stolica Polski, Drzwi Gnieźnieńskie"},
-	"Żnin": {"pl": "Niedaleko Biskupin - osada sprzed ok. 2700 lat"},
-	"Grudziądz": {"pl": "Spichrze nad Wisłą"},
-	"Pelplin": {"pl": "W katedrze przechowywana jest Biblia Gutenberga"},
-	"Sopot": {"pl": "Najdłuższe drewniane molo w Europie"},
-	"Nowy Dwór Gdański": {"pl": "Stolica Żuław"},
-	"Olsztynek": {"pl": "Niedaleko pole bitwy pod Grunwaldem (1410)"},
-	"Piła": {"pl": "Miasto urodzenia Stanisława Staszica"},
-	"Świebodzin": {"pl": "Pomnik Chrystusa Króla"},
-	"Międzyrzecz": {"pl": "Bunkry Międzyrzeckiego Rejonu Umocnionego"},
-	"Grójec": {"pl": "Zagłębie sadownicze - stąd pochodzi wiele polskich jabłek"},
-	"Jędrzejów": {"pl": "Muzeum zegarów im. Przypkowskich"},
-	"Chęciny": {"pl": "Ruiny zamku królewskiego na wzgórzu"}
+	"Kamienna Góra": {
+		"pl": "Miasto w Sudetach, dawny ośrodek tkactwa",
+		"en": "A town in the Sudetes, once a weaving centre",
+		"cs": "Město v Sudetech, dřívější středisko tkalcovství",
+		"is": "Bær í Súdetafjöllum, áður miðstöð vefnaðar"
+	},
+	"Zwardoń": {
+		"pl": "Wieś w Beskidzie Żywieckim, tuż przy granicy ze Słowacją",
+		"en": "A village in the Żywiec Beskids, right by the Slovak border",
+		"cs": "Vesnice v Žywieckých Beskydech, hned u hranic se Slovenskem",
+		"is": "Þorp í Żywiec-Beskídum, alveg við landamæri Slóvakíu"
+	},
+	"Żywiec": {
+		"pl": "Miasto nad Jeziorem Żywieckim, z zamkiem Habsburgów",
+		"en": "A town on Lake Żywiec, with a Habsburg castle",
+		"cs": "Město u Žywieckého jezera, se zámkem Habsburků",
+		"is": "Bær við Żywiec-vatn, með kastala Habsborgara"
+	},
+	"Bolków": {
+		"pl": "Miasteczko pod średniowiecznym zamkiem na skale",
+		"en": "A small town below a medieval castle on a rock",
+		"cs": "Městečko pod středověkým hradem na skále",
+		"is": "Smábær undir miðaldakastala á kletti"
+	},
+	"Jawor": {
+		"pl": "Tu stoi drewniany Kościół Pokoju z listy UNESCO",
+		"en": "The wooden Church of Peace from the UNESCO list stands here",
+		"cs": "Stojí tu dřevěný Kostel míru ze seznamu UNESCO",
+		"is": "Hér stendur Friðarkirkjan úr timbri, á heimsminjaskrá UNESCO"
+	},
+	"Warszawa": {
+		"pl": "Stolica Polski, położona nad Wisłą",
+		"en": "The capital of Poland, on the River Vistula",
+		"cs": "Hlavní město Polska, leží na Visle",
+		"is": "Höfuðborg Póllands, við ána Wisła"
+	},
+	"Kraków": {
+		"pl": "Dawna stolica Polski, zamek królewski na Wawelu",
+		"en": "Former capital of Poland, with the royal castle on Wawel Hill",
+		"cs": "Bývalé hlavní město Polska, královský hrad na Wawelu",
+		"is": "Fyrrum höfuðborg Póllands, konungskastalinn á Wawel"
+	},
+	"Wrocław": {
+		"pl": "Miasto na wyspach Odry, z ponad stu mostami",
+		"en": "A city on the islands of the Oder, with over a hundred bridges",
+		"cs": "Město na ostrovech Odry, s více než stovkou mostů",
+		"is": "Borg á eyjum í ánni Oder, með yfir hundrað brúm"
+	},
+	"Łódź": {
+		"pl": "Dawne centrum przemysłu włókienniczego, ulica Piotrkowska",
+		"en": "Once the centre of the textile industry, with Piotrkowska Street",
+		"cs": "Bývalé centrum textilního průmyslu, ulice Piotrkowska",
+		"is": "Fyrrum miðstöð vefnaðariðnaðar, gatan Piotrkowska"
+	},
+	"Poznań": {
+		"pl": "Koziołki na ratuszu, Ostrów Tumski - kolebka państwa polskiego",
+		"en": "Goats on the town hall; Ostrów Tumski, the cradle of the Polish state",
+		"cs": "Kozlíci na radnici, Ostrów Tumski – kolébka polského státu",
+		"is": "Geithafrar á ráðhúsinu, Ostrów Tumski – vagga pólska ríkisins"
+	},
+	"Gdańsk": {
+		"pl": "Fontanna Neptuna i Żuraw nad Motławą, tu narodziła się Solidarność",
+		"en": "Neptune's Fountain and the Crane on the Motława; Solidarity was born here",
+		"cs": "Neptunova kašna a Jeřáb na Motławě, tady se zrodila Solidarita",
+		"is": "Neptúnusarbrunnurinn og Kraninn við Motława, hér varð Samstaða til"
+	},
+	"Szczecin": {
+		"pl": "Wielki port nad Odrą, Wały Chrobrego",
+		"en": "A big port on the Oder, with the Chrobry Embankment",
+		"cs": "Velký přístav na Odře, Chrabrého valy",
+		"is": "Stór höfn við Oder, Chrobry-bakkarnir"
+	},
+	"Lublin": {
+		"pl": "W 1569 r. zawarto tu Unię Lubelską",
+		"en": "The Union of Lublin was signed here in 1569",
+		"cs": "Roku 1569 tu byla uzavřena Lublinská unie",
+		"is": "Hér var Lublin-sambandið gert árið 1569"
+	},
+	"Bydgoszcz": {
+		"pl": "Miasto nad Brdą i Kanałem Bydgoskim",
+		"en": "A city on the River Brda and the Bydgoszcz Canal",
+		"cs": "Město na Brdě a Bydhošťském kanálu",
+		"is": "Borg við ána Brda og Bydgoszcz-skurðinn"
+	},
+	"Białystok": {
+		"pl": "Pałac Branickich nazywany Wersalem Podlasia",
+		"en": "The Branicki Palace, called the Versailles of Podlasie",
+		"cs": "Palác Branických zvaný Versailles Podlesí",
+		"is": "Branicki-höllin, kölluð Versalir Podlasie"
+	},
+	"Katowice": {
+		"pl": "Stolica Górnego Śląska, hala Spodek",
+		"en": "Capital of Upper Silesia, with the Spodek arena",
+		"cs": "Hlavní město Horního Slezska, hala Spodek",
+		"is": "Höfuðborg Efri-Slésíu, höllin Spodek"
+	},
+	"Gdynia": {
+		"pl": "Port zbudowany w dwudziestoleciu międzywojennym, statek Dar Pomorza",
+		"en": "A port built between the two world wars, with the ship Dar Pomorza",
+		"cs": "Přístav postavený mezi světovými válkami, loď Dar Pomorza",
+		"is": "Höfn byggð á milli heimsstyrjaldanna, seglskipið Dar Pomorza"
+	},
+	"Częstochowa": {
+		"pl": "Sanktuarium na Jasnej Górze",
+		"en": "The Jasna Góra shrine",
+		"cs": "Poutní místo na Jasné Hoře",
+		"is": "Helgistaðurinn á Jasna Góra"
+	},
+	"Radom": {
+		"pl": "Słynie z pokazów lotniczych Air Show",
+		"en": "Famous for its Air Show",
+		"cs": "Proslulý leteckými přehlídkami Air Show",
+		"is": "Fræg fyrir flugsýninguna Air Show"
+	},
+	"Rzeszów": {
+		"pl": "Stolica Podkarpacia, podziemna trasa turystyczna pod rynkiem",
+		"en": "Capital of Podkarpacie, with an underground tourist route under the market square",
+		"cs": "Hlavní město Podkarpatí, podzemní turistická trasa pod náměstím",
+		"is": "Höfuðborg Podkarpacie, neðanjarðarleið undir torginu"
+	},
+	"Toruń": {
+		"pl": "Miasto Mikołaja Kopernika i pierników",
+		"en": "The city of Nicolaus Copernicus and gingerbread",
+		"cs": "Město Mikuláše Koperníka a perníku",
+		"is": "Borg Nikulásar Kópernikusar og piparkakna"
+	},
+	"Kielce": {
+		"pl": "Stolica regionu świętokrzyskiego, rezerwat Kadzielnia",
+		"en": "Capital of the Świętokrzyskie region, with the Kadzielnia nature reserve",
+		"cs": "Hlavní město Svatokřížského regionu, rezervace Kadzielnia",
+		"is": "Höfuðborg Świętokrzyskie-héraðs, friðlandið Kadzielnia"
+	},
+	"Olsztyn": {
+		"pl": "Stolica Warmii, na zamku mieszkał Mikołaj Kopernik",
+		"en": "Capital of Warmia; Nicolaus Copernicus lived in its castle",
+		"cs": "Hlavní město Varmie, na hradě žil Mikuláš Koperník",
+		"is": "Höfuðborg Ermlands, Nikulás Kópernikus bjó í kastalanum"
+	},
+	"Bielsko-Biała": {
+		"pl": "Tu powstały bajki o Bolku i Lolku",
+		"en": "The cartoons about Bolek and Lolek were made here",
+		"cs": "Tady vznikly pohádky o Bolkovi a Lolkovi",
+		"is": "Hér urðu teiknimyndirnar um Bolek og Lolek til"
+	},
+	"Zielona Góra": {
+		"pl": "Miasto wina, co roku święto Winobrania",
+		"en": "City of wine, with a grape harvest festival every year",
+		"cs": "Město vína, každý rok slavnost vinobraní",
+		"is": "Borg vínsins, vínuppskeruhátíð á hverju ári"
+	},
+	"Opole": {
+		"pl": "Stolica polskiej piosenki - Krajowy Festiwal Piosenki Polskiej",
+		"en": "Capital of Polish song: the National Festival of Polish Song",
+		"cs": "Hlavní město polské písničky – Národní festival polské písně",
+		"is": "Höfuðborg pólskra dægurlaga – hér er Pólska söngvahátíðin"
+	},
+	"Gorzów Wielkopolski": {
+		"pl": "Miasto nad Wartą, słynie z żużla",
+		"en": "A city on the Warta, famous for speedway",
+		"cs": "Město na Vartě, proslulé plochodrážními závody",
+		"is": "Borg við ána Warta, fræg fyrir speedway-kappakstur"
+	},
+	"Płock": {
+		"pl": "W latach 1079-1138 stolica Polski",
+		"en": "Capital of Poland from 1079 to 1138",
+		"cs": "V letech 1079–1138 hlavní město Polska",
+		"is": "Höfuðborg Póllands á árunum 1079–1138"
+	},
+	"Elbląg": {
+		"pl": "Kanał Elbląski - statki pokonują tu wzgórza na pochylniach",
+		"en": "The Elbląg Canal: boats are carried over hills on slipways here",
+		"cs": "Elbląžský kanál – lodě tu přejíždějí kopce po kolejových svazích",
+		"is": "Elbląg-skurðurinn – hér fara skip yfir hæðir á hallandi teinum"
+	},
+	"Koszalin": {
+		"pl": "Kilkanaście kilometrów od Bałtyku, Góra Chełmska",
+		"en": "A dozen or so kilometres from the Baltic, with Chełmska Hill",
+		"cs": "Kousek od Baltu, hora Chełmska",
+		"is": "Rúma tíu kílómetra frá Eystrasalti, fjallið Góra Chełmska"
+	},
+	"Zakopane": {
+		"pl": "Zimowa stolica Polski, u stóp Tatr",
+		"en": "Poland's winter capital, at the foot of the Tatras",
+		"cs": "Zimní hlavní město Polska, na úpatí Tater",
+		"is": "Vetrarhöfuðborg Póllands, við rætur Tatrafjalla"
+	},
+	"Zamość": {
+		"pl": "Renesansowe miasto idealne, Stare Miasto na liście UNESCO",
+		"en": "A Renaissance ideal town; its Old Town is on the UNESCO list",
+		"cs": "Renesanční ideální město, Staré Město na seznamu UNESCO",
+		"is": "Hin fullkomna borg endurreisnarinnar, gamli bærinn er á heimsminjaskrá UNESCO"
+	},
+	"Łomża": {
+		"pl": "Miasto nad Narwią, na skraju Kurpiów",
+		"en": "A town on the Narew, at the edge of the Kurpie region",
+		"cs": "Město na Narevu, na okraji Kurpie",
+		"is": "Borg við ána Narew, á jaðri Kurpie-svæðisins"
+	},
+	"Nowy Targ": {
+		"pl": "Stolica Podhala",
+		"en": "Capital of the Podhale region",
+		"cs": "Hlavní město Podhalí",
+		"is": "Höfuðstaður Podhale"
+	},
+	"Rabka-Zdrój": {
+		"pl": "Uzdrowisko nazywane miastem dzieci świata",
+		"en": "A spa town called the city of the world's children",
+		"cs": "Lázně zvané městem dětí světa",
+		"is": "Heilsulindabær sem kallaður er borg barna heimsins"
+	},
+	"Szczebrzeszyn": {
+		"pl": "W Szczebrzeszynie chrząszcz brzmi w trzcinie",
+		"en": "Home of a famous Polish tongue twister about a beetle buzzing in the reeds",
+		"cs": "Ve Szczebrzeszyně bzučí brouk v rákosí – slavný polský jazykolam",
+		"is": "Í Szczebrzeszyn suðar bjallan í sefinu (frægur pólskur tungubrjótur)"
+	},
+	"Łańcut": {
+		"pl": "Zamek z kolekcją dawnych powozów",
+		"en": "A castle with a collection of old carriages",
+		"cs": "Zámek se sbírkou starých kočárů",
+		"is": "Kastali með safni gamalla hestvagna"
+	},
+	"Leżajsk": {
+		"pl": "Bazylika słynąca z zabytkowych organów",
+		"en": "A basilica famous for its historic organ",
+		"cs": "Bazilika proslulá historickými varhanami",
+		"is": "Basilíka fræg fyrir sögulegt orgel"
+	},
+	"Tykocin": {
+		"pl": "Barokowe miasteczko nad Narwią z wielką synagogą",
+		"en": "A Baroque town on the Narew with a great synagogue",
+		"cs": "Barokní městečko na Narevu s velkou synagogou",
+		"is": "Barokksmábær við Narew með stóru samkunduhúsi"
+	},
+	"Wizna": {
+		"pl": "Bitwa pod Wizną w 1939 r. - polskie Termopile",
+		"en": "The Battle of Wizna in 1939, the Polish Thermopylae",
+		"cs": "Bitva u Wizny roku 1939 – polské Thermopyly",
+		"is": "Orrustan við Wizna árið 1939 – Laugaskarð Póllands"
+	},
+	"Ruciane-Nida": {
+		"pl": "Wśród jezior i lasów Puszczy Piskiej",
+		"en": "Among the lakes and woods of the Pisz Forest",
+		"cs": "Mezi jezery a lesy Piské pustiny",
+		"is": "Á milli vatna og skóga Pisz-skógarins"
+	},
+	"Bochnia": {
+		"pl": "Najstarsza kopalnia soli w Polsce",
+		"en": "The oldest salt mine in Poland",
+		"cs": "Nejstarší solný důl v Polsku",
+		"is": "Elsta saltnáma Póllands"
+	},
+	"Tarnów": {
+		"pl": "Uchodzi za najcieplejsze miasto w Polsce",
+		"en": "Said to be the warmest city in Poland",
+		"cs": "Pokládá se za nejteplejší město v Polsku",
+		"is": "Talin hlýjasta borg Póllands"
+	},
+	"Wadowice": {
+		"pl": "Miasto rodzinne papieża Jana Pawła II",
+		"en": "Home town of Pope John Paul II",
+		"cs": "Rodné město papeže Jana Pavla II.",
+		"is": "Heimabær Jóhannesar Páls II. páfa"
+	},
+	"Kalwaria Zebrzydowska": {
+		"pl": "Sanktuarium wpisane na listę UNESCO",
+		"en": "A shrine on the UNESCO list",
+		"cs": "Poutní místo zapsané na seznam UNESCO",
+		"is": "Helgistaður á heimsminjaskrá UNESCO"
+	},
+	"Pszczyna": {
+		"pl": "Zamek i pokazowa zagroda żubrów",
+		"en": "A castle and a European bison show enclosure",
+		"cs": "Zámek a ukázková obora zubrů",
+		"is": "Kastali og vísundagerði"
+	},
+	"Tychy": {
+		"pl": "Znane z browaru i fabryki samochodów",
+		"en": "Known for its brewery and car factory",
+		"cs": "Známé pivovarem a automobilkou",
+		"is": "Þekkt fyrir brugghús og bílaverksmiðju"
+	},
+	"Gliwice": {
+		"pl": "Radiostacja - najwyższa drewniana wieża w Europie",
+		"en": "The radio station: the tallest wooden tower in Europe",
+		"cs": "Vysílačka – nejvyšší dřevěná věž v Evropě",
+		"is": "Útvarpsstöðin – hæsti timburturn í Evrópu"
+	},
+	"Strzelce Opolskie": {
+		"pl": "W pobliżu Góra Świętej Anny",
+		"en": "St Anne's Mountain is nearby",
+		"cs": "Nedaleko je Hora svaté Anny",
+		"is": "Rétt hjá er Fjall heilagrar Önnu"
+	},
+	"Brzeg": {
+		"pl": "Zamek Piastów Śląskich",
+		"en": "The castle of the Silesian Piasts",
+		"cs": "Zámek slezských Piastovců",
+		"is": "Kastali Slésíu-Piastanna"
+	},
+	"Trzebnica": {
+		"pl": "Sanktuarium świętej Jadwigi Śląskiej",
+		"en": "The shrine of Saint Hedwig of Silesia",
+		"cs": "Poutní místo svaté Hedviky Slezské",
+		"is": "Helgistaður heilagrar Heiðveigar af Slésíu"
+	},
+	"Legnica": {
+		"pl": "W 1241 r. stoczono tu bitwę z Mongołami",
+		"en": "A battle against the Mongols was fought here in 1241",
+		"cs": "Roku 1241 se tu bojovalo s Mongoly",
+		"is": "Hér var barist við Mongóla árið 1241"
+	},
+	"Lubin": {
+		"pl": "Kopalnie miedzi - Zagłębie Miedziowe",
+		"en": "Copper mines: the Copper Basin",
+		"cs": "Měděné doly – Měděná pánev",
+		"is": "Koparnámur – Koparsvæðið"
+	},
+	"Polkowice": {
+		"pl": "Kopalnie miedzi - Zagłębie Miedziowe",
+		"en": "Copper mines: the Copper Basin",
+		"cs": "Měděné doly – Měděná pánev",
+		"is": "Koparnámur – Koparsvæðið"
+	},
+	"Konin": {
+		"pl": "Kopalnie węgla brunatnego i elektrownie",
+		"en": "Brown coal mines and power stations",
+		"cs": "Doly na hnědé uhlí a elektrárny",
+		"is": "Brúnkolanámur og orkuver"
+	},
+	"Września": {
+		"pl": "Strajk dzieci wrzesińskich w obronie języka polskiego (1901)",
+		"en": "The Września children's strike in defence of the Polish language (1901)",
+		"cs": "Stávka dětí z Wrześni na obranu polštiny (1901)",
+		"is": "Skólaverkfall barnanna í Września til varnar pólskri tungu (1901)"
+	},
+	"Łowicz": {
+		"pl": "Kolorowe wycinanki i stroje ludowe",
+		"en": "Colourful paper cut-outs and folk costumes",
+		"cs": "Barevné vystřihovánky a lidové kroje",
+		"is": "Litríkar pappírsklippimyndir og þjóðbúningar"
+	},
+	"Żyrardów": {
+		"pl": "Dawna osada fabryczna przemysłu lnianego",
+		"en": "A former factory settlement of the linen industry",
+		"cs": "Bývalá tovární osada lnářského průmyslu",
+		"is": "Fyrrum verksmiðjubær línframleiðslu"
+	},
+	"Piątek": {
+		"pl": "Uznawany za geometryczny środek Polski",
+		"en": "Considered the geometric centre of Poland",
+		"cs": "Považuje se za geometrický střed Polska",
+		"is": "Talinn landfræðileg miðja Póllands"
+	},
+	"Kutno": {"pl": "Miasto róż", "en": "City of roses", "cs": "Město růží", "is": "Borg rósanna"},
+	"Włocławek": {
+		"pl": "Zapora na Wiśle i Jezioro Włocławskie",
+		"en": "A dam on the Vistula and the Włocławek Reservoir",
+		"cs": "Přehrada na Visle a Włocławské jezero",
+		"is": "Stífla í Wisła og Włocławek-lónið"
+	},
+	"Ciechocinek": {
+		"pl": "Uzdrowisko z tężniami solankowymi",
+		"en": "A spa town with brine graduation towers",
+		"cs": "Lázně se solnými gradovnami",
+		"is": "Heilsulindabær með saltúðaveggjum"
+	},
+	"Piotrków Trybunalski": {
+		"pl": "Dawna siedziba Trybunału Koronnego",
+		"en": "Former seat of the Crown Tribunal",
+		"cs": "Bývalé sídlo Korunního tribunálu",
+		"is": "Fyrrum aðsetur Krúnudómstólsins"
+	},
+	"Gniezno": {
+		"pl": "Pierwsza stolica Polski, Drzwi Gnieźnieńskie",
+		"en": "The first capital of Poland, with the Gniezno Doors",
+		"cs": "První hlavní město Polska, Hnězdenské dveře",
+		"is": "Fyrsta höfuðborg Póllands, Gniezno-dyrnar"
+	},
+	"Żnin": {
+		"pl": "Niedaleko Biskupin - osada sprzed ok. 2700 lat",
+		"en": "Biskupin, a settlement about 2700 years old, is nearby",
+		"cs": "Nedaleko Biskupin – osada stará asi 2700 let",
+		"is": "Rétt hjá er Biskupin – byggð frá því fyrir um 2700 árum"
+	},
+	"Grudziądz": {
+		"pl": "Spichrze nad Wisłą",
+		"en": "Granaries on the Vistula",
+		"cs": "Sýpky na Visle",
+		"is": "Kornhlöður við Wisła"
+	},
+	"Pelplin": {
+		"pl": "W katedrze przechowywana jest Biblia Gutenberga",
+		"en": "A Gutenberg Bible is kept in the cathedral",
+		"cs": "V katedrále se uchovává Gutenbergova bible",
+		"is": "Í dómkirkjunni er Gutenberg-biblía varðveitt"
+	},
+	"Sopot": {
+		"pl": "Najdłuższe drewniane molo w Europie",
+		"en": "The longest wooden pier in Europe",
+		"cs": "Nejdelší dřevěné molo v Evropě",
+		"is": "Lengsta timburbryggja í Evrópu"
+	},
+	"Nowy Dwór Gdański": {
+		"pl": "Stolica Żuław",
+		"en": "Capital of Żuławy",
+		"cs": "Hlavní město Žuław",
+		"is": "Höfuðstaður Żuławy-sléttunnar"
+	},
+	"Olsztynek": {
+		"pl": "Niedaleko pole bitwy pod Grunwaldem (1410)",
+		"en": "The Grunwald battlefield (1410) is nearby",
+		"cs": "Nedaleko bojiště u Grunwaldu (1410)",
+		"is": "Rétt hjá er vígvöllurinn við Grunwald (1410)"
+	},
+	"Piła": {
+		"pl": "Miasto urodzenia Stanisława Staszica",
+		"en": "Birthplace of Stanisław Staszic",
+		"cs": "Rodné město Stanisława Staszice",
+		"is": "Fæðingarbær Stanisław Staszic"
+	},
+	"Świebodzin": {
+		"pl": "Pomnik Chrystusa Króla",
+		"en": "The Statue of Christ the King",
+		"cs": "Socha Krista Krále",
+		"is": "Styttan af Kristi konungi"
+	},
+	"Międzyrzecz": {
+		"pl": "Bunkry Międzyrzeckiego Rejonu Umocnionego",
+		"en": "Bunkers of the Międzyrzecz Fortified Region",
+		"cs": "Bunkry Międzyrzeckého opevněného pásma",
+		"is": "Byrgi Międzyrzecz-varnarsvæðisins"
+	},
+	"Grójec": {
+		"pl": "Zagłębie sadownicze - stąd pochodzi wiele polskich jabłek",
+		"en": "Orchard country: many Polish apples come from here",
+		"cs": "Ovocnářský kraj – odtud pochází mnoho polských jablek",
+		"is": "Ávaxtaræktarsvæði – héðan koma mörg pólsk epli"
+	},
+	"Jędrzejów": {
+		"pl": "Muzeum zegarów im. Przypkowskich",
+		"en": "The Przypkowski Clock Museum",
+		"cs": "Muzeum hodin rodiny Przypkowských",
+		"is": "Klukkusafn Przypkowski-fjölskyldunnar"
+	},
+	"Chęciny": {
+		"pl": "Ruiny zamku królewskiego na wzgórzu",
+		"en": "Ruins of a royal castle on a hill",
+		"cs": "Zřícenina královského hradu na kopci",
+		"is": "Rústir konungskastala á hæð"
+	}
 }

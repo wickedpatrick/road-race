@@ -5,8 +5,10 @@ the data only names things (a landmark kind, a landscape), the painters in `src/
 `tests/test_game_data.gd` checks every country listed in `countries/index.json`; run `tests/run.sh` after editing.
 The web export includes `data/*.json` (see `include_filter` in `export_presets.cfg`).
 
-**Texts** shown to the player are given by language: `{"pl": "Dawna stolica Polski"}`. The game picks
-`GameData.LANGUAGE` (or the first language given). Proper names (cities, towns, regions, road numbers) are plain
+**Texts** shown to the player are given by language: `{"pl": "Dawna stolica Polski", "en": ..., "cs": ..., "is": ...}`,
+one for each of `GameData.LANGUAGES` (`tests/test_lang.gd` checks they are all there). The game picks the player's
+language (from the device on the first start, changed on the car screen), English when a text lacks it.
+Interface texts are in `ui.json` (key -> texts by language, with the same `%s`/`%d` values in every language). Proper names (cities, towns, regions, road numbers) are plain
 strings in the country's own language: that is what the road signs show. A city's name in the player's language
 (`exonym`, e.g. Praha -> `{"pl": "Praga"}`) is used on the map and in the menus and HUD; a language without one
 keeps the local name (no fallback to another language).

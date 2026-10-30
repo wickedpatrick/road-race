@@ -1,48 +1,273 @@
 {
-	"Praha": {"pl": "Stolica Czech, Złota Praga z Mostem Karola"},
-	"Brno": {"pl": "Drugie co do wielkości miasto Czech, stolica Moraw"},
-	"Ostrava": {"pl": "Dawne serce czeskiego górnictwa i hutnictwa"},
-	"Plzeň": {"pl": "Tu powstały zakłady Škoda: lokomotywy, tramwaje i maszyny"},
-	"Liberec": {"pl": "Miasto pod górą Ještěd z wieżą jak rakieta"},
-	"Olomouc": {"pl": "Słynie z tvarůžków: serków o bardzo mocnym zapachu"},
-	"České Budějovice": {"pl": "Jeden z największych kwadratowych rynków w Europie"},
-	"Hradec Králové": {"pl": "Dawne miasto posagowe czeskich królowych"},
-	"Pardubice": {"pl": "Słynie z pierników i z wyścigów konnych Wielka Pardubicka"},
-	"Ústí nad Labem": {"pl": "Miasto nad Łabą wśród wzgórz Czeskiego Średniogórza"},
-	"Zlín": {"pl": "Miasto butów: tu działała fabryka Tomáša Bati"},
-	"Kladno": {"pl": "Dawne miasto górników i hutników"},
-	"Most": {"pl": "Stare miasto rozebrano dla kopalni węgla"},
-	"Opava": {"pl": "Dawna stolica Śląska Czeskiego"},
-	"Jihlava": {"pl": "Najstarsze górnicze miasto Czech, wydobywano tu srebro"},
-	"Karlovy Vary": {"pl": "Uzdrowisko z gorącymi źródłami i gejzerem"},
-	"Mladá Boleslav": {"pl": "Tu powstają samochody Škoda"},
-	"Tábor": {"pl": "Miasto husytów z podziemnymi korytarzami"},
-	"Znojmo": {"pl": "Miasto winnic nad rzeką Dyją"},
-	"Cheb": {"pl": "Najdalej na zachód położone duże miasto Czech"},
-	"Beroun": {"pl": "Niedaleko stoi gotycki zamek Karlštejn"},
-	"Poděbrady": {"pl": "Uzdrowisko nad Łabą"},
-	"Turnov": {"pl": "Brama do Czeskiego Raju, krainy skalnych miast"},
-	"Jičín": {"pl": "Miasto bajki o zbójniku Rumcajsie"},
-	"Hořice": {"pl": "Słynie ze słodkich rurek z kremem"},
-	"Litomyšl": {"pl": "Renesansowy zamek z listy UNESCO"},
-	"Kroměříž": {"pl": "Pałac i ogrody biskupów z listy UNESCO"},
-	"Telč": {"pl": "Rynek z kolorowymi kamieniczkami z listy UNESCO"},
-	"Mariánské Lázně": {"pl": "Uzdrowisko ze śpiewającą fontanną"},
-	"Teplice": {"pl": "Najstarsze uzdrowisko w Czechach"},
-	"Děčín": {"pl": "Zamek nad Łabą, obok Czeska Szwajcaria"},
-	"Nový Bor": {"pl": "Miasto szklarzy, słynie ze szkła i kryształów"},
-	"Písek": {"pl": "Najstarszy kamienny most w Czechach"},
-	"Velké Meziříčí": {"pl": "Autostrada D1 przejeżdża tu wysokim mostem nad doliną"},
-	"Jindřichův Hradec": {"pl": "Trzeci co do wielkości zamek w Czechach"},
-	"Hranice": {"pl": "Obok najgłębsza zalana jaskinia świata: Przepaść Hranicka"},
-	"Šternberk": {"pl": "Zamek i muzeum zegarów"},
-	"Chrudim": {"pl": "Co roku odbywa się tu festiwal teatrów lalek"},
-	"Nepomuk": {"pl": "Rodzinne miasto świętego Jana Nepomucena"},
-	"Blatná": {"pl": "Zamek otoczony wodą"},
-	"Vodňany": {"pl": "Słynie z hodowli ryb w stawach"},
-	"Sokolov": {"pl": "Kopalnie węgla brunatnego"},
-	"Vyškov": {"pl": "Park z dinozaurami w miejskim zoo"},
-	"Přerov": {"pl": "W szkole w Przerowie uczył się Jan Amos Komeński"},
-	"Hradec nad Moravicí": {"pl": "Zamek z czerwonej cegły na wzgórzu"},
-	"Lovosice": {"pl": "Brama do Czeskiego Średniogórza"}
+	"Praha": {
+		"pl": "Stolica Czech, Złota Praga z Mostem Karola",
+		"en": "Capital of Czechia, Golden Prague with the Charles Bridge",
+		"cs": "Hlavní město Česka, zlatá Praha s Karlovým mostem",
+		"is": "Höfuðborg Tékklands, Gullna Prag með Karlsbrúnni"
+	},
+	"Brno": {
+		"pl": "Drugie co do wielkości miasto Czech, stolica Moraw",
+		"en": "Czechia's second-largest city, capital of Moravia",
+		"cs": "Druhé největší město Česka, metropole Moravy",
+		"is": "Næststærsta borg Tékklands, höfuðborg Mæris"
+	},
+	"Ostrava": {
+		"pl": "Dawne serce czeskiego górnictwa i hutnictwa",
+		"en": "Once the heart of Czech coal mining and steelmaking",
+		"cs": "Bývalé srdce českého hornictví a hutnictví",
+		"is": "Áður hjarta tékkneskrar námuvinnslu og stáliðnaðar"
+	},
+	"Plzeň": {
+		"pl": "Tu powstały zakłady Škoda: lokomotywy, tramwaje i maszyny",
+		"en": "The Škoda works started here: locomotives, trams and machines",
+		"cs": "Tady vznikly závody Škoda: lokomotivy, tramvaje a stroje",
+		"is": "Hér urðu Škoda-verksmiðjurnar til: eimreiðar, sporvagnar og vélar"
+	},
+	"Liberec": {
+		"pl": "Miasto pod górą Ještěd z wieżą jak rakieta",
+		"en": "A city below Ještěd mountain, with a tower like a rocket",
+		"cs": "Město pod Ještědem s věží jako raketa",
+		"is": "Borg undir fjallinu Ještěd með turni eins og eldflaug"
+	},
+	"Olomouc": {
+		"pl": "Słynie z tvarůžków: serków o bardzo mocnym zapachu",
+		"en": "Famous for tvarůžky: very smelly little cheeses",
+		"cs": "Proslulé tvarůžky: sýrečky s velmi silnou vůní",
+		"is": "Fræg fyrir tvarůžky: osta með mjög sterkri lykt"
+	},
+	"České Budějovice": {
+		"pl": "Jeden z największych kwadratowych rynków w Europie",
+		"en": "One of the largest square market squares in Europe",
+		"cs": "Jedno z největších čtvercových náměstí v Evropě",
+		"is": "Eitt stærsta ferhyrnda torg í Evrópu"
+	},
+	"Hradec Králové": {
+		"pl": "Dawne miasto posagowe czeskich królowych",
+		"en": "Once a dowry town of Czech queens",
+		"cs": "Bývalé věnné město českých královen",
+		"is": "Áður borg sem tékkneskar drottningar fengu í heimanmund"
+	},
+	"Pardubice": {
+		"pl": "Słynie z pierników i z wyścigów konnych Wielka Pardubicka",
+		"en": "Famous for gingerbread and the Velká Pardubická horse race",
+		"cs": "Proslulé perníkem a dostihem Velká pardubická",
+		"is": "Fræg fyrir piparkökur og veðreiðarnar Velká pardubická"
+	},
+	"Ústí nad Labem": {
+		"pl": "Miasto nad Łabą wśród wzgórz Czeskiego Średniogórza",
+		"en": "A city on the Elbe among the hills of the Central Bohemian Uplands",
+		"cs": "Město na Labi mezi kopci Českého středohoří",
+		"is": "Borg við Saxelfi umkringd Tékknesku miðhæðunum"
+	},
+	"Zlín": {
+		"pl": "Miasto butów: tu działała fabryka Tomáša Bati",
+		"en": "City of shoes: Tomáš Baťa's factory worked here",
+		"cs": "Město bot: tady fungovala továrna Tomáše Bati",
+		"is": "Borg skónna: hér var skóverksmiðja Tomáš Baťa"
+	},
+	"Kladno": {
+		"pl": "Dawne miasto górników i hutników",
+		"en": "Once a town of miners and steelworkers",
+		"cs": "Bývalé město horníků a hutníků",
+		"is": "Áður borg námumanna og stálverkamanna"
+	},
+	"Most": {
+		"pl": "Stare miasto rozebrano dla kopalni węgla",
+		"en": "The old town was pulled down to make way for a coal mine",
+		"cs": "Staré město zbourali kvůli uhelnému dolu",
+		"is": "Gamli bærinn var rifinn vegna kolanámu"
+	},
+	"Opava": {
+		"pl": "Dawna stolica Śląska Czeskiego",
+		"en": "Former capital of Czech Silesia",
+		"cs": "Bývalé hlavní město Českého Slezska",
+		"is": "Fyrrum höfuðborg tékknesku Slésíu"
+	},
+	"Jihlava": {
+		"pl": "Najstarsze górnicze miasto Czech, wydobywano tu srebro",
+		"en": "The oldest mining town in Czechia, where silver was dug",
+		"cs": "Nejstarší hornické město Česka, těžilo se tu stříbro",
+		"is": "Elsti námubær Tékklands, hér var grafið eftir silfri"
+	},
+	"Karlovy Vary": {
+		"pl": "Uzdrowisko z gorącymi źródłami i gejzerem",
+		"en": "A spa town with hot springs and a geyser",
+		"cs": "Lázně s horkými prameny a gejzírem",
+		"is": "Heilsulindabær með heitum lindum og goshver"
+	},
+	"Mladá Boleslav": {
+		"pl": "Tu powstają samochody Škoda",
+		"en": "Škoda cars are made here",
+		"cs": "Tady se vyrábějí auta Škoda",
+		"is": "Hér eru Škoda-bílar smíðaðir"
+	},
+	"Tábor": {
+		"pl": "Miasto husytów z podziemnymi korytarzami",
+		"en": "A Hussite town with underground passages",
+		"cs": "Husitské město s podzemními chodbami",
+		"is": "Bær hússíta með neðanjarðargöngum"
+	},
+	"Znojmo": {
+		"pl": "Miasto winnic nad rzeką Dyją",
+		"en": "A town of vineyards on the River Dyje",
+		"cs": "Město vinic na řece Dyji",
+		"is": "Bær vínekra við ána Dyje"
+	},
+	"Cheb": {
+		"pl": "Najdalej na zachód położone duże miasto Czech",
+		"en": "The westernmost large town in Czechia",
+		"cs": "Nejzápadněji položené velké město Česka",
+		"is": "Vestlægasta stærri borg Tékklands"
+	},
+	"Beroun": {
+		"pl": "Niedaleko stoi gotycki zamek Karlštejn",
+		"en": "The Gothic castle of Karlštejn stands nearby",
+		"cs": "Nedaleko stojí gotický hrad Karlštejn",
+		"is": "Skammt frá stendur gotneski kastalinn Karlštejn"
+	},
+	"Poděbrady": {
+		"pl": "Uzdrowisko nad Łabą",
+		"en": "A spa town on the Elbe",
+		"cs": "Lázně na Labi",
+		"is": "Heilsulindabær við Saxelfi"
+	},
+	"Turnov": {
+		"pl": "Brama do Czeskiego Raju, krainy skalnych miast",
+		"en": "Gateway to Bohemian Paradise, a land of rock towns",
+		"cs": "Brána do Českého ráje, kraje skalních měst",
+		"is": "Hlið að Tékknesku paradísinni, landi klettaborga"
+	},
+	"Jičín": {
+		"pl": "Miasto bajki o zbójniku Rumcajsie",
+		"en": "Home of the fairy tale about Rumcajs the robber",
+		"cs": "Město pohádky o loupežníku Rumcajsovi",
+		"is": "Bær ævintýrisins um ræningjann Rumcajs"
+	},
+	"Hořice": {
+		"pl": "Słynie ze słodkich rurek z kremem",
+		"en": "Famous for sweet cream rolls",
+		"cs": "Proslulé sladkými trubičkami se šlehačkou",
+		"is": "Frægur fyrir sætar rúllur fylltar með rjóma"
+	},
+	"Litomyšl": {
+		"pl": "Renesansowy zamek z listy UNESCO",
+		"en": "A Renaissance castle on the UNESCO list",
+		"cs": "Renesanční zámek ze seznamu UNESCO",
+		"is": "Endurreisnarkastali á heimsminjaskrá UNESCO"
+	},
+	"Kroměříž": {
+		"pl": "Pałac i ogrody biskupów z listy UNESCO",
+		"en": "A bishops' palace and gardens on the UNESCO list",
+		"cs": "Zámek a zahrady biskupů ze seznamu UNESCO",
+		"is": "Höll og garðar biskupa á heimsminjaskrá UNESCO"
+	},
+	"Telč": {
+		"pl": "Rynek z kolorowymi kamieniczkami z listy UNESCO",
+		"en": "A market square with colourful houses on the UNESCO list",
+		"cs": "Náměstí s barevnými domky ze seznamu UNESCO",
+		"is": "Torg með litríkum húsum á heimsminjaskrá UNESCO"
+	},
+	"Mariánské Lázně": {
+		"pl": "Uzdrowisko ze śpiewającą fontanną",
+		"en": "A spa town with a singing fountain",
+		"cs": "Lázně se zpívající fontánou",
+		"is": "Heilsulindabær með syngjandi gosbrunni"
+	},
+	"Teplice": {
+		"pl": "Najstarsze uzdrowisko w Czechach",
+		"en": "The oldest spa town in Czechia",
+		"cs": "Nejstarší lázně v Česku",
+		"is": "Elsti heilsulindabær Tékklands"
+	},
+	"Děčín": {
+		"pl": "Zamek nad Łabą, obok Czeska Szwajcaria",
+		"en": "A castle on the Elbe, next to Bohemian Switzerland",
+		"cs": "Zámek na Labi, vedle České Švýcarsko",
+		"is": "Kastali við Saxelfi, rétt hjá Tékknesku Sviss"
+	},
+	"Nový Bor": {
+		"pl": "Miasto szklarzy, słynie ze szkła i kryształów",
+		"en": "A town of glassmakers, famous for glass and crystal",
+		"cs": "Město sklářů, proslulé sklem a křišťálem",
+		"is": "Bær glergerðarmanna, frægur fyrir gler og kristal"
+	},
+	"Písek": {
+		"pl": "Najstarszy kamienny most w Czechach",
+		"en": "The oldest stone bridge in Czechia",
+		"cs": "Nejstarší kamenný most v Česku",
+		"is": "Elsta steinbrú Tékklands"
+	},
+	"Velké Meziříčí": {
+		"pl": "Autostrada D1 przejeżdża tu wysokim mostem nad doliną",
+		"en": "The D1 motorway crosses a valley here on a high bridge",
+		"cs": "Dálnice D1 tu vede po vysokém mostě přes údolí",
+		"is": "Hraðbrautin D1 fer hér yfir dalinn á hárri brú"
+	},
+	"Jindřichův Hradec": {
+		"pl": "Trzeci co do wielkości zamek w Czechach",
+		"en": "The third-largest castle in Czechia",
+		"cs": "Třetí největší zámek v Česku",
+		"is": "Þriðji stærsti kastali Tékklands"
+	},
+	"Hranice": {
+		"pl": "Obok najgłębsza zalana jaskinia świata: Przepaść Hranicka",
+		"en": "Nearby is the world's deepest flooded cave: the Hranice Abyss",
+		"cs": "Vedle je nejhlubší zatopená propast světa: Hranická propast",
+		"is": "Rétt hjá er dýpsti vatnsfyllti hellir heims: Hranice-gjáin"
+	},
+	"Šternberk": {
+		"pl": "Zamek i muzeum zegarów",
+		"en": "A castle and a clock museum",
+		"cs": "Hrad a muzeum hodin",
+		"is": "Kastali og klukkusafn"
+	},
+	"Chrudim": {
+		"pl": "Co roku odbywa się tu festiwal teatrów lalek",
+		"en": "A puppet theatre festival is held here every year",
+		"cs": "Každý rok se tu koná festival loutkového divadla",
+		"is": "Hér er haldin brúðuleikhúshátíð á hverju ári"
+	},
+	"Nepomuk": {
+		"pl": "Rodzinne miasto świętego Jana Nepomucena",
+		"en": "Hometown of Saint John of Nepomuk",
+		"cs": "Rodné město svatého Jana Nepomuckého",
+		"is": "Heimabær heilags Jóhannesar frá Nepomuk"
+	},
+	"Blatná": {
+		"pl": "Zamek otoczony wodą",
+		"en": "A castle surrounded by water",
+		"cs": "Zámek obklopený vodou",
+		"is": "Kastali umkringdur vatni"
+	},
+	"Vodňany": {
+		"pl": "Słynie z hodowli ryb w stawach",
+		"en": "Famous for raising fish in ponds",
+		"cs": "Proslulé chovem ryb v rybnících",
+		"is": "Frægur fyrir fiskeldi í tjörnum"
+	},
+	"Sokolov": {"pl": "Kopalnie węgla brunatnego", "en": "Brown coal mines", "cs": "Doly na hnědé uhlí", "is": "Brúnkolanámur"},
+	"Vyškov": {
+		"pl": "Park z dinozaurami w miejskim zoo",
+		"en": "A dinosaur park in the town zoo",
+		"cs": "Park s dinosaury v městské zoo",
+		"is": "Garður með risaeðlum í dýragarði bæjarins"
+	},
+	"Přerov": {
+		"pl": "W szkole w Przerowie uczył się Jan Amos Komeński",
+		"en": "John Amos Comenius went to school in Přerov",
+		"cs": "Ve škole v Přerově studoval Jan Amos Komenský",
+		"is": "Jan Amos Comenius gekk hér í skóla"
+	},
+	"Hradec nad Moravicí": {
+		"pl": "Zamek z czerwonej cegły na wzgórzu",
+		"en": "A red-brick castle on a hill",
+		"cs": "Zámek z červených cihel na kopci",
+		"is": "Kastali úr rauðum múrsteini á hæð"
+	},
+	"Lovosice": {
+		"pl": "Brama do Czeskiego Średniogórza",
+		"en": "Gateway to the Central Bohemian Uplands",
+		"cs": "Brána do Českého středohoří",
+		"is": "Hlið að Tékknesku miðhæðunum"
+	}
 }

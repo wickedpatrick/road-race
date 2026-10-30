@@ -1,6 +1,7 @@
 extends "res://src/scenes/menu.gd"
 ## Dev-only: opens the menu at a given step. Args: step (home|car|season|dest) [season_index] [from] [to] [total_km] ["reset"] [visited,ids]
 func _ready() -> void:
+	if OS.get_environment("RR_LANG") != "": GameData.set_language(OS.get_environment("RR_LANG")) # e.g. RR_LANG=is
 	if OS.get_environment("RR_COUNTRY") != "": Session.switch_country(OS.get_environment("RR_COUNTRY")) # e.g. RR_COUNTRY=cz
 	super()
 	var a := OS.get_cmdline_user_args()

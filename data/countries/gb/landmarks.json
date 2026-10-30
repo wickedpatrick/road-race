@@ -2,498 +2,918 @@
 	"London": [
 		{
 			"kind": "big_ben",
-			"name": {"pl": "Big Ben"},
-			"desc": {"pl": "Wieża zegarowa parlamentu, dzwon waży 13,7 tony"},
+			"name": {"pl": "Big Ben", "en": "Big Ben", "cs": "Big Ben", "is": "Big Ben"},
+			"desc": {
+				"pl": "Wieża zegarowa parlamentu, dzwon waży 13,7 tony",
+				"en": "The clock tower of Parliament; its bell weighs 13.7 tonnes",
+				"cs": "Hodinová věž parlamentu, zvon váží 13,7 tuny",
+				"is": "Klukkuturn þinghússins, klukkan vegur 13,7 tonn"
+			},
 			"local": "Big Ben"
 		},
 		{
 			"kind": "tower_bridge",
-			"name": {"pl": "Tower Bridge"},
-			"desc": {"pl": "Zwodzony most nad Tamizą przy Twierdzy Tower"},
+			"name": {"pl": "Tower Bridge", "en": "Tower Bridge", "cs": "Tower Bridge", "is": "Tower Bridge"},
+			"desc": {
+				"pl": "Zwodzony most nad Tamizą przy Twierdzy Tower",
+				"en": "A bascule bridge over the Thames by the Tower of London",
+				"cs": "Zvedací most přes Temži u pevnosti Tower",
+				"is": "Vindubrú yfir Thames við Lundúnaturn"
+			},
 			"local": "Tower Bridge"
 		}
 	],
 	"Birmingham": [
 		{
 			"kind": "narrowboat",
-			"name": {"pl": "Kanały Birmingham"},
-			"desc": {"pl": "Wąskie łodzie pływają po 160 kilometrach kanałów"},
+			"name": {
+				"pl": "Kanały Birmingham",
+				"en": "Birmingham Canals",
+				"cs": "Birminghamské kanály",
+				"is": "Skipaskurðir Birmingham"
+			},
+			"desc": {
+				"pl": "Wąskie łodzie pływają po 160 kilometrach kanałów",
+				"en": "Narrowboats travel along 160 kilometres of canals",
+				"cs": "Úzké lodě plují po 160 kilometrech kanálů",
+				"is": "Mjóir bátar sigla um 160 kílómetra af skurðum"
+			},
 			"local": "Gas Street Basin"
 		}
 	],
 	"Leeds": [
 		{
 			"kind": "townhall",
-			"name": {"pl": "Ratusz w Leeds"},
-			"desc": {"pl": "Wiktoriański ratusz z wieżą zegarową"},
+			"name": {"pl": "Ratusz w Leeds", "en": "Leeds Town Hall", "cs": "Radnice v Leedsu", "is": "Ráðhúsið í Leeds"},
+			"desc": {
+				"pl": "Wiktoriański ratusz z wieżą zegarową",
+				"en": "A Victorian town hall with a clock tower",
+				"cs": "Viktoriánská radnice s hodinovou věží",
+				"is": "Ráðhús frá Viktoríutímanum með klukkuturni"
+			},
 			"local": "Leeds Town Hall"
 		}
 	],
 	"Glasgow": [
 		{
 			"kind": "port_crane",
-			"name": {"pl": "Dźwig Finnieston"},
-			"desc": {"pl": "Olbrzymi dźwig, który ładował parowozy na statki"},
+			"name": {"pl": "Dźwig Finnieston", "en": "Finnieston Crane", "cs": "Jeřáb Finnieston", "is": "Finnieston-kraninn"},
+			"desc": {
+				"pl": "Olbrzymi dźwig, który ładował parowozy na statki",
+				"en": "A giant crane that loaded steam locomotives onto ships",
+				"cs": "Obří jeřáb, který nakládal parní lokomotivy na lodě",
+				"is": "Risastór krani sem hífði eimreiðar um borð í skip"
+			},
 			"local": "Finnieston Crane"
 		},
 		{
 			"kind": "cathedral",
-			"name": {"pl": "Katedra w Glasgow"},
-			"desc": {"pl": "Jedyna szkocka katedra, która przetrwała reformację nietknięta"},
+			"name": {
+				"pl": "Katedra w Glasgow",
+				"en": "Glasgow Cathedral",
+				"cs": "Katedrála v Glasgow",
+				"is": "Dómkirkjan í Glasgow"
+			},
+			"desc": {
+				"pl": "Jedyna szkocka katedra, która przetrwała reformację nietknięta",
+				"en": "The only Scottish cathedral to survive the Reformation untouched",
+				"cs": "Jediná skotská katedrála, která přečkala reformaci nedotčená",
+				"is": "Eina skoska dómkirkjan sem lifði siðaskiptin af óskemmd"
+			},
 			"local": "Glasgow Cathedral"
 		}
 	],
 	"Sheffield": [
 		{
 			"kind": "factory",
-			"name": {"pl": "Dzielnica stali"},
-			"desc": {"pl": "Dawne huty i warsztaty nożowników, dziś muzeum"},
+			"name": {"pl": "Dzielnica stali", "en": "Steel quarter", "cs": "Čtvrť oceli", "is": "Stálhverfið"},
+			"desc": {
+				"pl": "Dawne huty i warsztaty nożowników, dziś muzeum",
+				"en": "Old steelworks and cutlers' workshops, now a museum",
+				"cs": "Bývalé hutě a nožířské dílny, dnes muzeum",
+				"is": "Gömul stálver og verkstæði hnífasmiða, nú safn"
+			},
 			"local": "Kelham Island Museum"
 		}
 	],
 	"Manchester": [
 		{
 			"kind": "factory",
-			"name": {"pl": "Przędzalnie Ancoats"},
-			"desc": {"pl": "Pierwsza przemysłowa dzielnica świata"},
+			"name": {
+				"pl": "Przędzalnie Ancoats",
+				"en": "Ancoats Mills",
+				"cs": "Přádelny v Ancoats",
+				"is": "Spunaverksmiðjurnar í Ancoats"
+			},
+			"desc": {
+				"pl": "Pierwsza przemysłowa dzielnica świata",
+				"en": "The world's first industrial suburb",
+				"cs": "První průmyslová čtvrť na světě",
+				"is": "Fyrsta iðnaðarhverfi heims"
+			},
 			"local": "Ancoats Mills"
 		},
 		{
 			"kind": "townhall_gothic",
-			"name": {"pl": "Ratusz w Manchesterze"},
-			"desc": {"pl": "Neogotycki ratusz z wieżą zegarową"},
+			"name": {
+				"pl": "Ratusz w Manchesterze",
+				"en": "Manchester Town Hall",
+				"cs": "Radnice v Manchesteru",
+				"is": "Ráðhúsið í Manchester"
+			},
+			"desc": {
+				"pl": "Neogotycki ratusz z wieżą zegarową",
+				"en": "A Neo-Gothic town hall with a clock tower",
+				"cs": "Novogotická radnice s hodinovou věží",
+				"is": "Nýgotneskt ráðhús með klukkuturni"
+			},
 			"local": "Manchester Town Hall"
 		}
 	],
 	"Edinburgh": [
 		{
 			"kind": "castle_rock",
-			"name": {"pl": "Zamek Edynburski"},
-			"desc": {"pl": "Twierdza na skale dawnego wulkanu; codziennie o 13 strzela działo"},
+			"name": {"pl": "Zamek Edynburski", "en": "Edinburgh Castle", "cs": "Edinburský hrad", "is": "Edinborgarkastali"},
+			"desc": {
+				"pl": "Twierdza na skale dawnego wulkanu; codziennie o 13 strzela działo",
+				"en": "A fortress on the rock of an old volcano; a gun is fired every day at 1 pm",
+				"cs": "Pevnost na skále bývalé sopky; každý den ve 13 hodin vystřelí dělo",
+				"is": "Virki á kletti gamals eldfjalls; á hverjum degi klukkan 13 er hleypt af fallbyssu"
+			},
 			"local": "Edinburgh Castle"
 		}
 	],
 	"Liverpool": [
 		{
 			"kind": "liver_building",
-			"name": {"pl": "Royal Liver Building"},
-			"desc": {"pl": "Na wieżach siedzą dwa ptaki Liver; legenda mówi, że gdy odlecą, miasto zniknie"},
+			"name": {
+				"pl": "Royal Liver Building",
+				"en": "Royal Liver Building",
+				"cs": "Royal Liver Building",
+				"is": "Royal Liver Building"
+			},
+			"desc": {
+				"pl": "Na wieżach siedzą dwa ptaki Liver; legenda mówi, że gdy odlecą, miasto zniknie",
+				"en": "Two Liver Birds sit on its towers; legend says that if they fly away, the city will vanish",
+				"cs": "Na věžích sedí dva ptáci Liver; podle legendy, až odletí, město zmizí",
+				"is": "Á turnunum sitja tveir Liver-fuglar; sagt er að ef þeir fljúgi burt hverfi borgin"
+			},
 			"local": "Royal Liver Building"
 		},
 		{
 			"kind": "music",
-			"name": {"pl": "Beatlesi"},
-			"desc": {"pl": "Liverpool to miasto zespołu The Beatles"},
+			"name": {"pl": "Beatlesi", "en": "The Beatles", "cs": "Beatles", "is": "Bítlarnir"},
+			"desc": {
+				"pl": "Liverpool to miasto zespołu The Beatles",
+				"en": "Liverpool is the city of The Beatles",
+				"cs": "Liverpool je město skupiny The Beatles",
+				"is": "Liverpool er borg hljómsveitarinnar The Beatles"
+			},
 			"local": "The Beatles Story"
 		}
 	],
 	"Bristol": [
 		{
 			"kind": "suspension_bridge",
-			"name": {"pl": "Most Clifton"},
-			"desc": {"pl": "Wiszący most Brunela nad wąwozem rzeki Avon"},
+			"name": {"pl": "Most Clifton", "en": "Clifton Suspension Bridge", "cs": "Cliftonský most", "is": "Clifton-brúin"},
+			"desc": {
+				"pl": "Wiszący most Brunela nad wąwozem rzeki Avon",
+				"en": "Brunel's suspension bridge over the Avon Gorge",
+				"cs": "Brunelův visutý most nad soutěskou řeky Avon",
+				"is": "Hengibrú Brunels yfir gljúfur árinnar Avon"
+			},
 			"local": "Clifton Suspension Bridge"
 		},
 		{
 			"kind": "ship",
-			"name": {"pl": "SS Great Britain"},
-			"desc": {"pl": "Pierwszy wielki żelazny statek ze śrubą napędową"},
+			"name": {"pl": "SS Great Britain", "en": "SS Great Britain", "cs": "SS Great Britain", "is": "SS Great Britain"},
+			"desc": {
+				"pl": "Pierwszy wielki żelazny statek ze śrubą napędową",
+				"en": "The first big iron ship driven by a propeller",
+				"cs": "První velká železná loď s lodním šroubem",
+				"is": "Fyrsta stóra járnskipið með skrúfu"
+			},
 			"local": "SS Great Britain"
 		}
 	],
 	"Leicester": [
 		{
 			"kind": "crown",
-			"name": {"pl": "Król Ryszard III"},
-			"desc": {"pl": "Szczątki króla znaleziono w 2012 roku pod parkingiem"},
+			"name": {
+				"pl": "Król Ryszard III",
+				"en": "King Richard III",
+				"cs": "Král Richard III.",
+				"is": "Ríkharður III. konungur"
+			},
+			"desc": {
+				"pl": "Szczątki króla znaleziono w 2012 roku pod parkingiem",
+				"en": "The king's remains were found under a car park in 2012",
+				"cs": "Ostatky krále našli v roce 2012 pod parkovištěm",
+				"is": "Líkamsleifar konungsins fundust árið 2012 undir bílastæði"
+			},
 			"local": "King Richard III Visitor Centre"
 		}
 	],
 	"Cardiff": [
 		{
 			"kind": "castle",
-			"name": {"pl": "Zamek w Cardiff"},
-			"desc": {"pl": "Zamek w samym centrum miasta, z rzymskimi murami"},
+			"name": {"pl": "Zamek w Cardiff", "en": "Cardiff Castle", "cs": "Hrad Cardiff", "is": "Kastalinn í Cardiff"},
+			"desc": {
+				"pl": "Zamek w samym centrum miasta, z rzymskimi murami",
+				"en": "A castle right in the city centre, with Roman walls",
+				"cs": "Hrad v samém centru města, s římskými hradbami",
+				"is": "Kastali í miðri borginni, með rómverskum múrum"
+			},
 			"local": "Cardiff Castle"
 		}
 	],
 	"Nottingham": [
 		{
 			"kind": "archer",
-			"name": {"pl": "Robin Hood"},
-			"desc": {"pl": "Pomnik łucznika z lasu Sherwood pod zamkiem"},
+			"name": {"pl": "Robin Hood", "en": "Robin Hood", "cs": "Robin Hood", "is": "Hrói höttur"},
+			"desc": {
+				"pl": "Pomnik łucznika z lasu Sherwood pod zamkiem",
+				"en": "A statue of the archer from Sherwood Forest below the castle",
+				"cs": "Socha lučištníka ze Sherwoodského lesa pod hradem",
+				"is": "Stytta af bogmanninum úr Skírisskógi við kastalann"
+			},
 			"local": "Robin Hood Statue"
 		},
 		{
 			"kind": "castle",
-			"name": {"pl": "Zamek Nottingham"},
-			"desc": {"pl": "Zamek na skale pełnej jaskiń"},
+			"name": {"pl": "Zamek Nottingham", "en": "Nottingham Castle", "cs": "Hrad Nottingham", "is": "Nottingham-kastali"},
+			"desc": {
+				"pl": "Zamek na skale pełnej jaskiń",
+				"en": "A castle on a rock full of caves",
+				"cs": "Hrad na skále plné jeskyní",
+				"is": "Kastali á kletti fullum af hellum"
+			},
 			"local": "Nottingham Castle"
 		}
 	],
 	"Newcastle upon Tyne": [
 		{
 			"kind": "tyne_bridge",
-			"name": {"pl": "Most Tyne"},
-			"desc": {"pl": "Stalowy łuk nad rzeką, symbol miasta"},
+			"name": {"pl": "Most Tyne", "en": "Tyne Bridge", "cs": "Most Tyne", "is": "Tyne-brúin"},
+			"desc": {
+				"pl": "Stalowy łuk nad rzeką, symbol miasta",
+				"en": "A steel arch over the river, symbol of the city",
+				"cs": "Ocelový oblouk nad řekou, symbol města",
+				"is": "Stálbogi yfir ána, tákn borgarinnar"
+			},
 			"local": "Tyne Bridge"
 		}
 	],
 	"Brighton": [
 		{
 			"kind": "pavilion",
-			"name": {"pl": "Royal Pavilion"},
-			"desc": {"pl": "Letni pałac króla w stylu indyjskim"},
+			"name": {"pl": "Royal Pavilion", "en": "Royal Pavilion", "cs": "Royal Pavilion", "is": "Royal Pavilion"},
+			"desc": {
+				"pl": "Letni pałac króla w stylu indyjskim",
+				"en": "A king's summer palace in Indian style",
+				"cs": "Letní palác krále v indickém stylu",
+				"is": "Sumarhöll konungs í indverskum stíl"
+			},
 			"local": "Royal Pavilion"
 		},
 		{
 			"kind": "pier",
-			"name": {"pl": "Brighton Palace Pier"},
-			"desc": {"pl": "Molo z karuzelami i wesołym miasteczkiem"},
+			"name": {
+				"pl": "Brighton Palace Pier",
+				"en": "Brighton Palace Pier",
+				"cs": "Brighton Palace Pier",
+				"is": "Brighton Palace Pier"
+			},
+			"desc": {
+				"pl": "Molo z karuzelami i wesołym miasteczkiem",
+				"en": "A pier with carousels and a funfair",
+				"cs": "Molo s kolotoči a lunaparkem",
+				"is": "Bryggja með hringekjum og skemmtigarði"
+			},
 			"local": "Brighton Palace Pier"
 		}
 	],
 	"Hull": [
 		{
 			"kind": "cathedral",
-			"name": {"pl": "Hull Minster"},
-			"desc": {"pl": "Największy kościół parafialny Anglii, z cegły"},
+			"name": {"pl": "Hull Minster", "en": "Hull Minster", "cs": "Hull Minster", "is": "Hull Minster"},
+			"desc": {
+				"pl": "Największy kościół parafialny Anglii, z cegły",
+				"en": "England's largest parish church, built of brick",
+				"cs": "Největší farní kostel v Anglii, z cihel",
+				"is": "Stærsta sóknarkirkja Englands, úr múrsteini"
+			},
 			"local": "Hull Minster"
 		}
 	],
 	"Plymouth": [
 		{
 			"kind": "lighthouse",
-			"name": {"pl": "Smeaton's Tower"},
-			"desc": {"pl": "Czerwono-biała latarnia morska przeniesiona na brzeg"},
+			"name": {"pl": "Smeaton's Tower", "en": "Smeaton's Tower", "cs": "Smeaton's Tower", "is": "Smeaton's Tower"},
+			"desc": {
+				"pl": "Czerwono-biała latarnia morska przeniesiona na brzeg",
+				"en": "A red-and-white lighthouse moved onto the shore",
+				"cs": "Červenobílý maják přenesený na břeh",
+				"is": "Rauður og hvítur viti sem var fluttur upp á land"
+			},
 			"local": "Smeaton's Tower"
 		}
 	],
 	"Stoke-on-Trent": [
 		{
 			"kind": "bottle_kiln",
-			"name": {"pl": "Piece butelkowe"},
-			"desc": {"pl": "Ceglane piece w kształcie butelek do wypalania porcelany"},
+			"name": {"pl": "Piece butelkowe", "en": "Bottle kilns", "cs": "Lahvové pece", "is": "Flöskuofnar"},
+			"desc": {
+				"pl": "Ceglane piece w kształcie butelek do wypalania porcelany",
+				"en": "Bottle-shaped brick kilns for firing china",
+				"cs": "Cihlové pece ve tvaru lahví na vypalování porcelánu",
+				"is": "Múrsteinsofnar eins og flöskur í laginu til að brenna postulín"
+			},
 			"local": "Gladstone Pottery Museum"
 		}
 	],
 	"Southampton": [
 		{
 			"kind": "liner",
-			"name": {"pl": "Pamięć Titanica"},
-			"desc": {"pl": "Muzeum statków, które wypływały z tego portu"},
+			"name": {"pl": "Pamięć Titanica", "en": "Titanic memorial", "cs": "Památka Titaniku", "is": "Minning Titanic"},
+			"desc": {
+				"pl": "Muzeum statków, które wypływały z tego portu",
+				"en": "A museum of the ships that sailed from this port",
+				"cs": "Muzeum lodí, které vyplouvaly z tohoto přístavu",
+				"is": "Safn um skipin sem sigldu frá þessari höfn"
+			},
 			"local": "SeaCity Museum"
 		}
 	],
 	"Swansea": [
 		{
 			"kind": "sailboat",
-			"name": {"pl": "Przystań w Swansea"},
-			"desc": {"pl": "Jachty w dawnym doku portowym"},
+			"name": {
+				"pl": "Przystań w Swansea",
+				"en": "Swansea Marina",
+				"cs": "Přístav ve Swansea",
+				"is": "Smábátahöfnin í Swansea"
+			},
+			"desc": {
+				"pl": "Jachty w dawnym doku portowym",
+				"en": "Yachts in an old harbour dock",
+				"cs": "Jachty v bývalém přístavním doku",
+				"is": "Snekkjur í gamalli hafnarkví"
+			},
 			"local": "Swansea Marina"
 		}
 	],
 	"Portsmouth": [
 		{
 			"kind": "spinnaker",
-			"name": {"pl": "Spinnaker Tower"},
-			"desc": {"pl": "Wieża w kształcie żagla, 170 metrów nad portem"},
+			"name": {"pl": "Spinnaker Tower", "en": "Spinnaker Tower", "cs": "Spinnaker Tower", "is": "Spinnaker Tower"},
+			"desc": {
+				"pl": "Wieża w kształcie żagla, 170 metrów nad portem",
+				"en": "A sail-shaped tower, 170 metres above the harbour",
+				"cs": "Věž ve tvaru plachty, 170 metrů nad přístavem",
+				"is": "Turn eins og segl í laginu, 170 metrar yfir höfninni"
+			},
 			"local": "Spinnaker Tower"
 		},
 		{
 			"kind": "ship",
-			"name": {"pl": "HMS Victory"},
-			"desc": {"pl": "Okręt admirała Nelsona spod Trafalgaru"},
+			"name": {"pl": "HMS Victory", "en": "HMS Victory", "cs": "HMS Victory", "is": "HMS Victory"},
+			"desc": {
+				"pl": "Okręt admirała Nelsona spod Trafalgaru",
+				"en": "Admiral Nelson's ship from the Battle of Trafalgar",
+				"cs": "Loď admirála Nelsona od Trafalgaru",
+				"is": "Skip Nelsons aðmíráls úr orrustunni við Trafalgar"
+			},
 			"local": "HMS Victory"
 		}
 	],
 	"York": [
 		{
 			"kind": "cathedral",
-			"name": {"pl": "York Minster"},
-			"desc": {"pl": "Jedna z największych gotyckich katedr Europy"},
+			"name": {"pl": "York Minster", "en": "York Minster", "cs": "York Minster", "is": "York Minster"},
+			"desc": {
+				"pl": "Jedna z największych gotyckich katedr Europy",
+				"en": "One of the largest Gothic cathedrals in Europe",
+				"cs": "Jedna z největších gotických katedrál Evropy",
+				"is": "Ein stærsta gotneska dómkirkja Evrópu"
+			},
 			"local": "York Minster"
 		},
 		{
 			"kind": "gate",
-			"name": {"pl": "Mury Yorku"},
-			"desc": {"pl": "Średniowieczne bramy i mury wokół starego miasta"},
+			"name": {"pl": "Mury Yorku", "en": "York City Walls", "cs": "Hradby Yorku", "is": "Borgarmúrar York"},
+			"desc": {
+				"pl": "Średniowieczne bramy i mury wokół starego miasta",
+				"en": "Medieval gates and walls around the old town",
+				"cs": "Středověké brány a hradby kolem starého města",
+				"is": "Hlið og múrar frá miðöldum umhverfis gamla bæinn"
+			},
 			"local": "Micklegate Bar"
 		}
 	],
 	"Aberdeen": [
 		{
 			"kind": "townhall_gothic",
-			"name": {"pl": "Marischal College"},
-			"desc": {"pl": "Drugi największy granitowy budynek świata"},
+			"name": {
+				"pl": "Marischal College",
+				"en": "Marischal College",
+				"cs": "Marischal College",
+				"is": "Marischal College"
+			},
+			"desc": {
+				"pl": "Drugi największy granitowy budynek świata",
+				"en": "The second-largest granite building in the world",
+				"cs": "Druhá největší žulová budova světa",
+				"is": "Næststærsta granítbygging heims"
+			},
 			"local": "Marischal College"
 		}
 	],
 	"Oxford": [
 		{
 			"kind": "radcliffe",
-			"name": {"pl": "Radcliffe Camera"},
-			"desc": {"pl": "Okrągła biblioteka z kopułą"},
+			"name": {"pl": "Radcliffe Camera", "en": "Radcliffe Camera", "cs": "Radcliffe Camera", "is": "Radcliffe Camera"},
+			"desc": {
+				"pl": "Okrągła biblioteka z kopułą",
+				"en": "A round library with a dome",
+				"cs": "Kulatá knihovna s kupolí",
+				"is": "Hringlaga bókasafn með hvolfþaki"
+			},
 			"local": "Radcliffe Camera"
 		}
 	],
 	"Dundee": [
 		{
 			"kind": "ship",
-			"name": {"pl": "RRS Discovery"},
-			"desc": {"pl": "Statek, którym kapitan Scott popłynął na Antarktydę"},
+			"name": {"pl": "RRS Discovery", "en": "RRS Discovery", "cs": "RRS Discovery", "is": "RRS Discovery"},
+			"desc": {
+				"pl": "Statek, którym kapitan Scott popłynął na Antarktydę",
+				"en": "The ship Captain Scott sailed to Antarctica",
+				"cs": "Loď, na které kapitán Scott plul do Antarktidy",
+				"is": "Skipið sem Scott skipstjóri sigldi á til Suðurskautslandsins"
+			},
 			"local": "RRS Discovery"
 		}
 	],
 	"Cambridge": [
 		{
 			"kind": "kings_chapel",
-			"name": {"pl": "Kaplica King's College"},
-			"desc": {"pl": "Gotycka kaplica z największym wachlarzowym sklepieniem świata"},
+			"name": {
+				"pl": "Kaplica King's College",
+				"en": "King's College Chapel",
+				"cs": "Kaple King's College",
+				"is": "Kapella King's College"
+			},
+			"desc": {
+				"pl": "Gotycka kaplica z największym wachlarzowym sklepieniem świata",
+				"en": "A Gothic chapel with the largest fan vault in the world",
+				"cs": "Gotická kaple s největší vějířovou klenbou na světě",
+				"is": "Gotnesk kapella með stærstu blævængshvelfingu heims"
+			},
 			"local": "King's College Chapel"
 		}
 	],
 	"Norwich": [
 		{
 			"kind": "spire_cathedral",
-			"name": {"pl": "Katedra w Norwich"},
-			"desc": {"pl": "Druga najwyższa iglica katedry w Anglii"},
+			"name": {
+				"pl": "Katedra w Norwich",
+				"en": "Norwich Cathedral",
+				"cs": "Katedrála v Norwichi",
+				"is": "Dómkirkjan í Norwich"
+			},
+			"desc": {
+				"pl": "Druga najwyższa iglica katedry w Anglii",
+				"en": "The second-tallest cathedral spire in England",
+				"cs": "Druhá nejvyšší věž katedrály v Anglii",
+				"is": "Næsthæsta dómkirkjuspíra Englands"
+			},
 			"local": "Norwich Cathedral"
 		},
 		{
 			"kind": "castle",
-			"name": {"pl": "Zamek Norwich"},
-			"desc": {"pl": "Normański zamek nad miastem"},
+			"name": {"pl": "Zamek Norwich", "en": "Norwich Castle", "cs": "Hrad Norwich", "is": "Norwich-kastali"},
+			"desc": {
+				"pl": "Normański zamek nad miastem",
+				"en": "A Norman castle above the city",
+				"cs": "Normanský hrad nad městem",
+				"is": "Normannskur kastali fyrir ofan borgina"
+			},
 			"local": "Norwich Castle"
 		}
 	],
 	"Exeter": [
 		{
 			"kind": "cathedral",
-			"name": {"pl": "Katedra w Exeter"},
-			"desc": {"pl": "Najdłuższe nieprzerwane gotyckie sklepienie świata"},
+			"name": {
+				"pl": "Katedra w Exeter",
+				"en": "Exeter Cathedral",
+				"cs": "Katedrála v Exeteru",
+				"is": "Dómkirkjan í Exeter"
+			},
+			"desc": {
+				"pl": "Najdłuższe nieprzerwane gotyckie sklepienie świata",
+				"en": "The longest unbroken Gothic vault in the world",
+				"cs": "Nejdelší nepřerušená gotická klenba na světě",
+				"is": "Lengsta samfellda gotneska hvelfing heims"
+			},
 			"local": "Exeter Cathedral"
 		}
 	],
 	"Carlisle": [
 		{
 			"kind": "castle",
-			"name": {"pl": "Zamek Carlisle"},
-			"desc": {"pl": "Graniczna twierdza z czerwonego piaskowca"},
+			"name": {"pl": "Zamek Carlisle", "en": "Carlisle Castle", "cs": "Hrad Carlisle", "is": "Carlisle-kastali"},
+			"desc": {
+				"pl": "Graniczna twierdza z czerwonego piaskowca",
+				"en": "A border fortress of red sandstone",
+				"cs": "Pohraniční pevnost z červeného pískovce",
+				"is": "Landamæravirki úr rauðum sandsteini"
+			},
 			"local": "Carlisle Castle"
 		}
 	],
 	"Inverness": [
 		{
 			"kind": "castle",
-			"name": {"pl": "Zamek Inverness"},
-			"desc": {"pl": "Zamek z czerwonego piaskowca nad rzeką Ness"},
+			"name": {"pl": "Zamek Inverness", "en": "Inverness Castle", "cs": "Hrad Inverness", "is": "Inverness-kastali"},
+			"desc": {
+				"pl": "Zamek z czerwonego piaskowca nad rzeką Ness",
+				"en": "A red sandstone castle on the River Ness",
+				"cs": "Hrad z červeného pískovce nad řekou Ness",
+				"is": "Kastali úr rauðum sandsteini við ána Ness"
+			},
 			"local": "Inverness Castle"
 		}
 	],
 	"Bangor": [
 		{
 			"kind": "suspension_bridge",
-			"name": {"pl": "Most Menai"},
-			"desc": {"pl": "Wiszący most Telforda z 1826 roku na wyspę Anglesey"},
+			"name": {"pl": "Most Menai", "en": "Menai Bridge", "cs": "Most Menai", "is": "Menai-brúin"},
+			"desc": {
+				"pl": "Wiszący most Telforda z 1826 roku na wyspę Anglesey",
+				"en": "Telford's 1826 suspension bridge to the island of Anglesey",
+				"cs": "Telfordův visutý most z roku 1826 na ostrov Anglesey",
+				"is": "Hengibrú Telfords frá 1826 út í eyjuna Anglesey"
+			},
 			"local": "Menai Suspension Bridge"
 		}
 	],
 	"Amesbury": [
 		{
 			"kind": "stonehenge",
-			"name": {"pl": "Stonehenge"},
-			"desc": {"pl": "Kamienny krąg sprzed 4500 lat"},
+			"name": {"pl": "Stonehenge", "en": "Stonehenge", "cs": "Stonehenge", "is": "Stonehenge"},
+			"desc": {
+				"pl": "Kamienny krąg sprzed 4500 lat",
+				"en": "A stone circle 4500 years old",
+				"cs": "Kamenný kruh starý 4500 let",
+				"is": "Steinhringur frá því fyrir 4500 árum"
+			},
 			"local": "Stonehenge"
 		}
 	],
 	"Gateshead": [
 		{
 			"kind": "angel",
-			"name": {"pl": "Anioł Północy"},
-			"desc": {"pl": "Stalowy anioł o skrzydłach szerokich jak samolot"},
+			"name": {"pl": "Anioł Północy", "en": "Angel of the North", "cs": "Anděl severu", "is": "Engill norðursins"},
+			"desc": {
+				"pl": "Stalowy anioł o skrzydłach szerokich jak samolot",
+				"en": "A steel angel with wings as wide as a plane's",
+				"cs": "Ocelový anděl s křídly širokými jako letadlo",
+				"is": "Stálengill með vængi breiða eins og flugvél"
+			},
 			"local": "Angel of the North"
 		}
 	],
 	"South Queensferry": [
 		{
 			"kind": "forth_bridge",
-			"name": {"pl": "Most na zatoce Forth"},
-			"desc": {"pl": "Czerwony kolejowy most wspornikowy z 1890 roku"},
+			"name": {"pl": "Most na zatoce Forth", "en": "Forth Bridge", "cs": "Most přes záliv Forth", "is": "Forth-brúin"},
+			"desc": {
+				"pl": "Czerwony kolejowy most wspornikowy z 1890 roku",
+				"en": "A red cantilever railway bridge from 1890",
+				"cs": "Červený železniční konzolový most z roku 1890",
+				"is": "Rauð járnbrautarbrú á burðarörmum frá 1890"
+			},
 			"local": "Forth Bridge"
 		}
 	],
 	"Drumnadrochit": [
 		{
 			"kind": "nessie",
-			"name": {"pl": "Potwór z Loch Ness"},
-			"desc": {"pl": "Legenda mówi, że w jeziorze mieszka Nessie"},
+			"name": {
+				"pl": "Potwór z Loch Ness",
+				"en": "Loch Ness Monster",
+				"cs": "Lochnesská příšera",
+				"is": "Loch Ness-skrímslið"
+			},
+			"desc": {
+				"pl": "Legenda mówi, że w jeziorze mieszka Nessie",
+				"en": "Legend says Nessie lives in the loch",
+				"cs": "Podle legendy v jezeře žije Nessie",
+				"is": "Sagt er að Nessie búi í vatninu"
+			},
 			"local": "Loch Ness Centre"
 		},
 		{
 			"kind": "castle",
-			"name": {"pl": "Zamek Urquhart"},
-			"desc": {"pl": "Ruiny zamku nad brzegiem Loch Ness"},
+			"name": {"pl": "Zamek Urquhart", "en": "Urquhart Castle", "cs": "Hrad Urquhart", "is": "Urquhart-kastali"},
+			"desc": {
+				"pl": "Ruiny zamku nad brzegiem Loch Ness",
+				"en": "Castle ruins on the shore of Loch Ness",
+				"cs": "Zřícenina hradu na břehu Loch Ness",
+				"is": "Kastalarústir á bakka Loch Ness"
+			},
 			"local": "Urquhart Castle"
 		}
 	],
 	"Haltwhistle": [
 		{
 			"kind": "roman_wall",
-			"name": {"pl": "Wał Hadriana"},
-			"desc": {"pl": "Rzymski mur przez całą wyspę, z fortami co milę"},
+			"name": {"pl": "Wał Hadriana", "en": "Hadrian's Wall", "cs": "Hadriánův val", "is": "Hadríanusarmúrinn"},
+			"desc": {
+				"pl": "Rzymski mur przez całą wyspę, z fortami co milę",
+				"en": "A Roman wall right across the island, with a fort every mile",
+				"cs": "Římská zeď přes celý ostrov, s pevnůstkami každou míli",
+				"is": "Rómverskur múr þvert yfir alla eyjuna, með virki á hverri mílu"
+			},
 			"local": "Hadrian's Wall"
 		}
 	],
 	"Holmes Chapel": [
 		{
 			"kind": "radio_telescope",
-			"name": {"pl": "Jodrell Bank"},
-			"desc": {"pl": "Wielki radioteleskop, który śledził pierwsze satelity"},
+			"name": {"pl": "Jodrell Bank", "en": "Jodrell Bank", "cs": "Jodrell Bank", "is": "Jodrell Bank"},
+			"desc": {
+				"pl": "Wielki radioteleskop, który śledził pierwsze satelity",
+				"en": "A huge radio telescope that tracked the first satellites",
+				"cs": "Velký radioteleskop, který sledoval první družice",
+				"is": "Stór útvarpssjónauki sem fylgdist með fyrstu gervitunglunum"
+			},
 			"local": "Jodrell Bank"
 		}
 	],
 	"Chesterfield": [
 		{
 			"kind": "crooked_spire",
-			"name": {"pl": "Krzywa iglica"},
-			"desc": {"pl": "Iglica kościoła wygięta i skręcona"},
+			"name": {"pl": "Krzywa iglica", "en": "Crooked spire", "cs": "Křivá věž", "is": "Skakka spíran"},
+			"desc": {
+				"pl": "Iglica kościoła wygięta i skręcona",
+				"en": "A church spire that is bent and twisted",
+				"cs": "Věž kostela ohnutá a zkroucená",
+				"is": "Kirkjuspíra sem er bogin og snúin"
+			},
 			"local": "Crooked Spire"
 		}
 	],
 	"Settle": [
 		{
 			"kind": "viaduct",
-			"name": {"pl": "Wiadukt Ribblehead"},
-			"desc": {"pl": "Kolejowy wiadukt z 24 łukami na wrzosowisku"},
+			"name": {
+				"pl": "Wiadukt Ribblehead",
+				"en": "Ribblehead Viaduct",
+				"cs": "Viadukt Ribblehead",
+				"is": "Ribblehead-brúin"
+			},
+			"desc": {
+				"pl": "Kolejowy wiadukt z 24 łukami na wrzosowisku",
+				"en": "A railway viaduct with 24 arches on the moors",
+				"cs": "Železniční viadukt s 24 oblouky na vřesovišti",
+				"is": "Járnbrautarbrú með 24 boga á lyngheiði"
+			},
 			"local": "Ribblehead Viaduct"
 		}
 	],
 	"Barton-upon-Humber": [
 		{
 			"kind": "suspension_bridge",
-			"name": {"pl": "Most Humber"},
-			"desc": {"pl": "Wiszący most nad estuarium Humber"},
+			"name": {"pl": "Most Humber", "en": "Humber Bridge", "cs": "Most Humber", "is": "Humber-brúin"},
+			"desc": {
+				"pl": "Wiszący most nad estuarium Humber",
+				"en": "A suspension bridge over the Humber estuary",
+				"cs": "Visutý most přes estuár Humber",
+				"is": "Hengibrú yfir Humber-ósa"
+			},
 			"local": "Humber Bridge"
 		}
 	],
 	"Coventry": [
 		{
 			"kind": "cathedral",
-			"name": {"pl": "Katedra w Coventry"},
-			"desc": {"pl": "Ruiny starej katedry obok nowej"},
+			"name": {
+				"pl": "Katedra w Coventry",
+				"en": "Coventry Cathedral",
+				"cs": "Katedrála v Coventry",
+				"is": "Dómkirkjan í Coventry"
+			},
+			"desc": {
+				"pl": "Ruiny starej katedry obok nowej",
+				"en": "Ruins of the old cathedral next to the new one",
+				"cs": "Zřícenina staré katedrály vedle nové",
+				"is": "Rústir gömlu dómkirkjunnar við hlið þeirrar nýju"
+			},
 			"local": "Coventry Cathedral"
 		}
 	],
 	"Lincoln": [
 		{
 			"kind": "cathedral",
-			"name": {"pl": "Katedra w Lincoln"},
-			"desc": {"pl": "Gotycka katedra na wzgórzu nad miastem"},
+			"name": {
+				"pl": "Katedra w Lincoln",
+				"en": "Lincoln Cathedral",
+				"cs": "Katedrála v Lincolnu",
+				"is": "Dómkirkjan í Lincoln"
+			},
+			"desc": {
+				"pl": "Gotycka katedra na wzgórzu nad miastem",
+				"en": "A Gothic cathedral on a hill above the city",
+				"cs": "Gotická katedrála na kopci nad městem",
+				"is": "Gotnesk dómkirkja á hæð fyrir ofan borgina"
+			},
 			"local": "Lincoln Cathedral"
 		}
 	],
 	"Durham": [
 		{
 			"kind": "cathedral",
-			"name": {"pl": "Katedra w Durham"},
-			"desc": {"pl": "Romańska katedra i zamek z listy UNESCO"},
+			"name": {
+				"pl": "Katedra w Durham",
+				"en": "Durham Cathedral",
+				"cs": "Katedrála v Durhamu",
+				"is": "Dómkirkjan í Durham"
+			},
+			"desc": {
+				"pl": "Romańska katedra i zamek z listy UNESCO",
+				"en": "A Romanesque cathedral and castle on the UNESCO list",
+				"cs": "Románská katedrála a hrad ze seznamu UNESCO",
+				"is": "Rómönsk dómkirkja og kastali á heimsminjaskrá UNESCO"
+			},
 			"local": "Durham Cathedral"
 		}
 	],
 	"Winchester": [
 		{
 			"kind": "cathedral",
-			"name": {"pl": "Katedra w Winchesterze"},
-			"desc": {"pl": "Najdłuższa średniowieczna katedra Europy"},
+			"name": {
+				"pl": "Katedra w Winchesterze",
+				"en": "Winchester Cathedral",
+				"cs": "Katedrála ve Winchesteru",
+				"is": "Dómkirkjan í Winchester"
+			},
+			"desc": {
+				"pl": "Najdłuższa średniowieczna katedra Europy",
+				"en": "The longest medieval cathedral in Europe",
+				"cs": "Nejdelší středověká katedrála v Evropě",
+				"is": "Lengsta miðaldadómkirkja Evrópu"
+			},
 			"local": "Winchester Cathedral"
 		}
 	],
 	"Warwick": [
 		{
 			"kind": "castle",
-			"name": {"pl": "Zamek Warwick"},
-			"desc": {"pl": "Średniowieczny zamek nad rzeką Avon"},
+			"name": {"pl": "Zamek Warwick", "en": "Warwick Castle", "cs": "Hrad Warwick", "is": "Warwick-kastali"},
+			"desc": {
+				"pl": "Średniowieczny zamek nad rzeką Avon",
+				"en": "A medieval castle on the River Avon",
+				"cs": "Středověký hrad na řece Avon",
+				"is": "Miðaldakastali við ána Avon"
+			},
 			"local": "Warwick Castle"
 		}
 	],
 	"Alnwick": [
 		{
 			"kind": "castle",
-			"name": {"pl": "Zamek Alnwick"},
-			"desc": {"pl": "Zamek z filmów o Harrym Potterze"},
+			"name": {"pl": "Zamek Alnwick", "en": "Alnwick Castle", "cs": "Hrad Alnwick", "is": "Alnwick-kastali"},
+			"desc": {
+				"pl": "Zamek z filmów o Harrym Potterze",
+				"en": "The castle from the Harry Potter films",
+				"cs": "Hrad z filmů o Harrym Potterovi",
+				"is": "Kastalinn úr myndunum um Harry Potter"
+			},
 			"local": "Alnwick Castle"
 		}
 	],
 	"Stirling": [
 		{
 			"kind": "castle",
-			"name": {"pl": "Zamek Stirling"},
-			"desc": {"pl": "Zamek szkockich królów na skale"},
+			"name": {"pl": "Zamek Stirling", "en": "Stirling Castle", "cs": "Hrad Stirling", "is": "Stirling-kastali"},
+			"desc": {
+				"pl": "Zamek szkockich królów na skale",
+				"en": "The castle of Scottish kings on a rock",
+				"cs": "Hrad skotských králů na skále",
+				"is": "Kastali skoskra konunga á kletti"
+			},
 			"local": "Stirling Castle"
 		}
 	],
 	"Caernarfon": [
 		{
 			"kind": "castle",
-			"name": {"pl": "Zamek Caernarfon"},
-			"desc": {"pl": "Twierdza z wielobocznymi wieżami nad cieśniną Menai"},
+			"name": {"pl": "Zamek Caernarfon", "en": "Caernarfon Castle", "cs": "Hrad Caernarfon", "is": "Caernarfon-kastali"},
+			"desc": {
+				"pl": "Twierdza z wielobocznymi wieżami nad cieśniną Menai",
+				"en": "A fortress with many-sided towers on the Menai Strait",
+				"cs": "Pevnost s mnohobokými věžemi u průlivu Menai",
+				"is": "Virki með marghyrndum turnum við Menai-sund"
+			},
 			"local": "Caernarfon Castle"
 		}
 	],
 	"Arundel": [
 		{
 			"kind": "castle",
-			"name": {"pl": "Zamek Arundel"},
-			"desc": {"pl": "Zamek książąt Norfolk nad rzeką Arun"},
+			"name": {"pl": "Zamek Arundel", "en": "Arundel Castle", "cs": "Hrad Arundel", "is": "Arundel-kastali"},
+			"desc": {
+				"pl": "Zamek książąt Norfolk nad rzeką Arun",
+				"en": "The castle of the Dukes of Norfolk on the River Arun",
+				"cs": "Hrad vévodů z Norfolku na řece Arun",
+				"is": "Kastali hertoganna af Norfolk við ána Arun"
+			},
 			"local": "Arundel Castle"
 		}
 	],
 	"Chester": [
 		{
 			"kind": "gate",
-			"name": {"pl": "Zegar Eastgate"},
-			"desc": {"pl": "Zegar na rzymskiej bramie miejskiej"},
+			"name": {"pl": "Zegar Eastgate", "en": "Eastgate Clock", "cs": "Hodiny Eastgate", "is": "Eastgate-klukkan"},
+			"desc": {
+				"pl": "Zegar na rzymskiej bramie miejskiej",
+				"en": "A clock on the Roman city gate",
+				"cs": "Hodiny na římské městské bráně",
+				"is": "Klukka á rómversku borgarhliði"
+			},
 			"local": "Eastgate Clock"
 		}
 	],
 	"Burton upon Trent": [
 		{
 			"kind": "hops",
-			"name": {"pl": "Stolica piwa"},
-			"desc": {"pl": "Chmiel i browary nad rzeką Trent"},
+			"name": {"pl": "Stolica piwa", "en": "Beer capital", "cs": "Hlavní město piva", "is": "Höfuðborg bjórsins"},
+			"desc": {
+				"pl": "Chmiel i browary nad rzeką Trent",
+				"en": "Hops and breweries on the River Trent",
+				"cs": "Chmel a pivovary na řece Trent",
+				"is": "Humlar og brugghús við ána Trent"
+			},
 			"local": "National Brewery Centre"
 		}
 	],
 	"Brechin": [
 		{
 			"kind": "round_tower",
-			"name": {"pl": "Okrągła wieża"},
-			"desc": {"pl": "Wieża z XI wieku przy katedrze"},
+			"name": {"pl": "Okrągła wieża", "en": "Round tower", "cs": "Kulatá věž", "is": "Hringlaga turninn"},
+			"desc": {
+				"pl": "Wieża z XI wieku przy katedrze",
+				"en": "An 11th-century tower by the cathedral",
+				"cs": "Věž z 11. století u katedrály",
+				"is": "Turn frá 11. öld við dómkirkjuna"
+			},
 			"local": "Brechin Round Tower"
 		}
 	],
 	"Betws-y-Coed": [
 		{
 			"kind": "waterfall",
-			"name": {"pl": "Swallow Falls"},
-			"desc": {"pl": "Wodospad w lesie nad rzeką Llugwy"},
+			"name": {"pl": "Swallow Falls", "en": "Swallow Falls", "cs": "Swallow Falls", "is": "Swallow Falls"},
+			"desc": {
+				"pl": "Wodospad w lesie nad rzeką Llugwy",
+				"en": "A waterfall in the woods on the River Llugwy",
+				"cs": "Vodopád v lese na řece Llugwy",
+				"is": "Foss í skógi við ána Llugwy"
+			},
 			"local": "Swallow Falls"
 		}
 	],
 	"Bournemouth": [
 		{
 			"kind": "pier",
-			"name": {"pl": "Molo w Bournemouth"},
-			"desc": {"pl": "Molo nad długą piaszczystą plażą"},
+			"name": {
+				"pl": "Molo w Bournemouth",
+				"en": "Bournemouth Pier",
+				"cs": "Molo v Bournemouthu",
+				"is": "Bryggjan í Bournemouth"
+			},
+			"desc": {
+				"pl": "Molo nad długą piaszczystą plażą",
+				"en": "A pier above a long sandy beach",
+				"cs": "Molo nad dlouhou písečnou pláží",
+				"is": "Bryggja við langa sandströnd"
+			},
 			"local": "Bournemouth Pier"
 		}
 	],
 	"Stonehaven": [
 		{
 			"kind": "castle",
-			"name": {"pl": "Zamek Dunnottar"},
-			"desc": {"pl": "Ruiny zamku na skale nad morzem"},
+			"name": {"pl": "Zamek Dunnottar", "en": "Dunnottar Castle", "cs": "Hrad Dunnottar", "is": "Dunnottar-kastali"},
+			"desc": {
+				"pl": "Ruiny zamku na skale nad morzem",
+				"en": "Castle ruins on a rock above the sea",
+				"cs": "Zřícenina hradu na skále nad mořem",
+				"is": "Kastalarústir á kletti við sjóinn"
+			},
 			"local": "Dunnottar Castle"
 		}
 	]

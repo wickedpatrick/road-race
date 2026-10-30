@@ -18,7 +18,7 @@ func _draw() -> void:
 	draw_polygon(PackedVector2Array([Vector2(0, 0), Vector2(960, 0), Vector2(960, 540), Vector2(0, 540)]),
 		PackedColorArray([pal.sky_top, pal.sky_top, pal.sky_bottom, pal.sky_bottom]))
 	var won: bool = r.get("state", "") == "won"
-	var title := {"won": "DOJECHAŁEŚ!", "out_of_time": "Skończył się czas", "out_of_fuel": "Skończyło się paliwo"}.get(r.get("state", "won"), "") as String
+	var title := Lang.t({"won": "won", "out_of_time": "time_up", "out_of_fuel": "fuel_out"}.get(r.get("state", "won"), "won"))
 	var col := Color("2e9e4f") if won else Color("c0392b")
 	draw_string(font, Vector2(2, 142), title, HORIZONTAL_ALIGNMENT_CENTER, 960, 64, Color(0, 0, 0, 0.35))
 	draw_string(font, Vector2(0, 140), title, HORIZONTAL_ALIGNMENT_CENTER, 960, 64, col)
@@ -35,31 +35,31 @@ func _draw() -> void:
 		draw_colored_polygon(pts, Color("f6c21b") if on else Color(0, 0, 0, 0.2))
 	var detail := ""
 	if won:
-		detail = "Czas przejazdu %s   ·   zostało %s" % [Hud.format_time(r.elapsed), Hud.format_time(r.time_left)]
+		detail = Lang.t("trip_result") % [Hud.format_time(r.elapsed), Hud.format_time(r.time_left)]
 	else:
-		detail = "Wskazówka: tankuj na stacjach, jedź ok. %s i unikaj zderzeń" % Units.speed_text(90.0)
+		detail = Lang.t("tip") % Units.speed_text(90.0)
 	draw_string(font, Vector2(0, 360), detail, HORIZONTAL_ALIGNMENT_CENTER, 960, 26, Color("23323f"))
-	draw_string(font, Vector2(0, 392), "+%s   ·   razem przejechane: %s" % [Units.dist_text(r.get("km_driven", 0.0)), Units.dist_text(Session.total_km)], HORIZONTAL_ALIGNMENT_CENTER, 960, 20, Color("23323f"))
+	draw_string(font, Vector2(0, 392), Lang.t("total_driven") % [Units.dist_text(r.get("km_driven", 0.0)), Units.dist_text(Session.total_km)], HORIZONTAL_ALIGNMENT_CENTER, 960, 20, Color("23323f"))
 	var banner_y := 432.0
 	var unlocked: Array = r.get("unlocked", [])
 	if not unlocked.is_empty():
 		var names := []
 		for id in unlocked: names.append(CarStats.by_id(id).name)
-		_banner(banner_y, "Nowe auto odblokowane: %s!" % ", ".join(names), Color(0.1, 0.5, 0.2, 0.85))
+		_banner(banner_y, Lang.t("new_car") % ", ".join(names), Color(0.1, 0.5, 0.2, 0.85))
 		banner_y += 38.0
 	var cities: Array = r.get("new_cities", [])
 	if not cities.is_empty():
 		var names := []
 		for id in cities: names.append(Geo.display_name(id))
 		var n := Session.visited.size()
-		var text := "Nowe miasto na mapie: %s!  (%d / %d)" % [", ".join(names), n, Geo.cities().size()]
+		var text := Lang.t("new_city") % [", ".join(names), n, Geo.cities().size()]
 		if n >= Geo.cities().size():
-			text = "Byłeś we wszystkich %d miastach na mapie! Brawo!" % n
+			text = Lang.t("all_cities") % n
 		_banner(banner_y, text, Color(0.75, 0.55, 0.05, 0.9))
 	var fines: int = r.get("fines", 0)
 	if fines > 0:
-		draw_string(font, Vector2(0, 420), "Mandaty za prędkość: %d" % fines, HORIZONTAL_ALIGNMENT_CENTER, 960, 22, Color("c0392b"))
-	draw_string(font, Vector2(0, 528), "Dotknij ekranu, aby wrócić do mapy" if Screen.touch else "Naciśnij dowolny klawisz, aby wrócić do mapy", HORIZONTAL_ALIGNMENT_CENTER, 960, 22, Color.WHITE)
+		draw_string(font, Vector2(0, 420), Lang.t("fines") % fines, HORIZONTAL_ALIGNMENT_CENTER, 960, 22, Color("c0392b"))
+	draw_string(font, Vector2(0, 528), Lang.t("back_touch") if Screen.touch else Lang.t("back_key"), HORIZONTAL_ALIGNMENT_CENTER, 960, 22, Color.WHITE)
 
 func _banner(y: float, text: String, col: Color) -> void:
 	draw_rect(Rect2(150, y, 660, 34), col)

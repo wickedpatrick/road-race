@@ -10,8 +10,18 @@
 			{
 				"from_km": 5,
 				"to_km": 5.65,
-				"name": {"pl": "Tunel pod Zielonkami"},
-				"fact": {"pl": "Północna Obwodnica Krakowa (S52): jedyna obwodnica w Polsce z dwoma tunelami"},
+				"name": {
+					"pl": "Tunel pod Zielonkami",
+					"en": "Zielonki Tunnel",
+					"cs": "Tunel pod Zielonkami",
+					"is": "Zielonki-göngin"
+				},
+				"fact": {
+					"pl": "Północna Obwodnica Krakowa (S52): jedyna obwodnica w Polsce z dwoma tunelami",
+					"en": "Kraków's Northern Bypass (S52): the only bypass in Poland with two tunnels",
+					"cs": "Severní obchvat Krakova (S52): jediný obchvat v Polsku se dvěma tunely",
+					"is": "Norðurhjáleið Kraká (S52): eina hjáleiðin í Póllandi með tvennum göngum"
+				},
 				"city": true
 			}
 		]
@@ -346,8 +356,18 @@
 			{
 				"from_km": 4,
 				"to_km": 6.3,
-				"name": {"pl": "Tunel pod Ursynowem"},
-				"fact": {"pl": "Południowa Obwodnica Warszawy (S2): najdłuższy tunel drogowy w Polsce, 2,3 km"},
+				"name": {
+					"pl": "Tunel pod Ursynowem",
+					"en": "Ursynów Tunnel",
+					"cs": "Tunel pod Ursynówem",
+					"is": "Ursynów-göngin"
+				},
+				"fact": {
+					"pl": "Południowa Obwodnica Warszawy (S2): najdłuższy tunel drogowy w Polsce, 2,3 km",
+					"en": "Warsaw's Southern Bypass (S2): the longest road tunnel in Poland, 2.3 km",
+					"cs": "Jižní obchvat Varšavy (S2): nejdelší silniční tunel v Polsku, 2,3 km",
+					"is": "Suðurhjáleið Varsjár (S2): lengstu veggöng Póllands, 2,3 km"
+				},
 				"city": true
 			}
 		]
@@ -420,8 +440,13 @@
 			{
 				"from_km": 46,
 				"to_km": 46.7,
-				"name": {"pl": "Tunel w Lalikach"},
-				"fact": {"pl": "Pierwszy w Polsce tunel na drodze ekspresowej, otwarty w 2010 roku"}
+				"name": {"pl": "Tunel w Lalikach", "en": "Laliki Tunnel", "cs": "Tunel v Lalikách", "is": "Laliki-göngin"},
+				"fact": {
+					"pl": "Pierwszy w Polsce tunel na drodze ekspresowej, otwarty w 2010 roku",
+					"en": "Poland's first tunnel on an expressway, opened in 2010",
+					"cs": "První tunel na rychlostní silnici v Polsku, otevřený v roce 2010",
+					"is": "Fyrstu göngin á hraðvegi í Póllandi, opnuð árið 2010"
+				}
 			}
 		]
 	},
@@ -441,8 +466,18 @@
 			{
 				"from_km": 98,
 				"to_km": 100.3,
-				"name": {"pl": "Tunel na S3 w Sudetach"},
-				"fact": {"pl": "Najdłuższy w Polsce tunel drążony w skale: 2,3 km"}
+				"name": {
+					"pl": "Tunel na S3 w Sudetach",
+					"en": "S3 tunnel in the Sudetes",
+					"cs": "Tunel na S3 v Sudetech",
+					"is": "Göngin á S3 í Súdetafjöllum"
+				},
+				"fact": {
+					"pl": "Najdłuższy w Polsce tunel drążony w skale: 2,3 km",
+					"en": "Poland's longest tunnel bored through rock: 2.3 km",
+					"cs": "Nejdelší tunel ražený ve skále v Polsku: 2,3 km",
+					"is": "Lengstu göng Póllands sem boruð eru í berg: 2,3 km"
+				}
 			}
 		]
 	},
@@ -457,8 +492,18 @@
 			{
 				"from_km": 54,
 				"to_km": 56,
-				"name": {"pl": "Tunel pod Luboniem Małym"},
-				"fact": {"pl": "Ponad 2 km pod górą Luboń Mały, otwarty w 2022 roku"}
+				"name": {
+					"pl": "Tunel pod Luboniem Małym",
+					"en": "Luboń Mały Tunnel",
+					"cs": "Tunel pod Luboněm Malým",
+					"is": "Göngin undir Luboń Mały"
+				},
+				"fact": {
+					"pl": "Ponad 2 km pod górą Luboń Mały, otwarty w 2022 roku",
+					"en": "Over 2 km under Luboń Mały mountain, opened in 2022",
+					"cs": "Přes 2 km pod horou Luboń Mały, otevřený v roce 2022",
+					"is": "Rúmir 2 km undir fjallinu Luboń Mały, opnuð árið 2022"
+				}
 			}
 		]
 	},

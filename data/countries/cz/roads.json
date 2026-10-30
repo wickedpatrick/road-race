@@ -34,8 +34,13 @@
 			{
 				"from_km": 69.5,
 				"to_km": 70.1,
-				"name": {"pl": "Tunel Radejčín"},
-				"fact": {"pl": "Tunel autostrady D8 pod wzgórzami Czeskiego Średniogórza"}
+				"name": {"pl": "Tunel Radejčín", "en": "Radejčín Tunnel", "cs": "Tunel Radejčín", "is": "Radejčín-göngin"},
+				"fact": {
+					"pl": "Tunel autostrady D8 pod wzgórzami Czeskiego Średniogórza",
+					"en": "A D8 motorway tunnel under the hills of the Central Bohemian Uplands",
+					"cs": "Tunel dálnice D8 pod kopci Českého středohoří",
+					"is": "Göng hraðbrautarinnar D8 undir Tékknesku miðhæðunum"
+				}
 			}
 		]
 	},

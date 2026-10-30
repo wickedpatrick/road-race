@@ -51,7 +51,7 @@ func bind(p_race: Race) -> void:
 		_warm_left.append([tn.name, 19])
 		_warm_left.append([tn.fact, 15])
 	for zn in race.stage.zones:
-		_warm_left.append(["Kraina: " + zn.region, 19])
+		_warm_left.append([Lang.t("region_title") % zn.region, 19])
 		_warm_left.append([zn.region, 14])
 
 var _frame := 0
@@ -91,7 +91,7 @@ func _draw() -> void:
 	draw_rect(Rect2(pc + Vector2(-9, -13), Vector2(6, 26)), Color.WHITE)
 	draw_rect(Rect2(pc + Vector2(3, -13), Vector2(6, 26)), Color.WHITE)
 	draw_style_box(_panel, Rect2(70, 14, 112, 66))
-	_text(Vector2(82, 36), "CZAS", 15, Color("9fb3c8"))
+	_text(Vector2(82, 36), Lang.t("hud_time"), 15, Color("9fb3c8"))
 	_text(Vector2(82, 70), format_time(race.time_left), 38, Color("ff5a4d") if blink else (Color("ff8a7a") if low_time else Color.WHITE))
 	# speed + gear
 	draw_style_box(_panel, Rect2(794, 14, 150, 66))
@@ -130,7 +130,7 @@ func _draw() -> void:
 	var l100_text := "-" if race.speed < 1.0 else Units.consumption_text(l100)
 	var lc := Color("ff8a7a") if l100 > 15.0 else (Color("7fe0a0") if eco else Color("d6e4f0"))
 	_text(fp + Vector2(12, 22), l100_text, 15, lc)
-	_text(fp + Vector2(12, 46), "PALIWO", 15, Color("ff6a5a") if fblink else Color("9fb3c8"))
+	_text(fp + Vector2(12, 46), Lang.t("hud_fuel"), 15, Color("ff6a5a") if fblink else Color("9fb3c8"))
 	_text(fp + Vector2(12, 46), "%d / %d l" % [int(round(race.fuel.level)), int(race.fuel.capacity)], 15, Color.WHITE, HORIZONTAL_ALIGNMENT_RIGHT, fw - 24)
 	draw_rect(Rect2(fp + Vector2(12, 54), Vector2(fw - 24, 16)), Color(1, 1, 1, 0.2))
 	var fc := Color("49d36b") if fr > 0.35 else (Color("f2b01e") if fr > 0.15 else Color("ff4d3d"))
@@ -139,34 +139,34 @@ func _draw() -> void:
 	# police / speeding / station / state hints
 	var ph: String = race.police.get("phase", "")
 	if ph == "ticket" or (ph == "leave" and race.police.t < 3.0):
-		_banner("MANDAT za przekroczenie prędkości: -%d l paliwa" % int(Race.FINE_FUEL), Color("ff6a5a"))
+		_banner(Lang.t("fine") % int(Race.FINE_FUEL), Color("ff6a5a"))
 	elif ph == "crashed" and race.police.t < 3.0:
-		_banner("UCIECZKA! Radiowóz wypadł z drogi", Color("49d36b"))
+		_banner(Lang.t("escaped"), Color("49d36b"))
 	elif ph == "chase" or ph == "pull_over":
-		_banner("POLICJA! Zatrzymaj się", Color("6aa8ff") if int(race.elapsed * 4.0) % 2 == 0 else Color("ff6a5a"))
+		_banner(Lang.t("police"), Color("6aa8ff") if int(race.elapsed * 4.0) % 2 == 0 else Color("ff6a5a"))
 	elif race.elapsed - race.last_crash < BUMP_BANNER_TIME:
-		_banner("UDERZENIE W PRZESZKODĘ! -%d l paliwa" % int(Race.CRASH_FUEL), Color("ff6a5a"))
+		_banner(Lang.t("crash") % int(Race.CRASH_FUEL), Color("ff6a5a"))
 	elif race.elapsed - race.last_hit < BUMP_BANNER_TIME:
-		_banner("%s -%d s, -%d l paliwa" % ["ZDERZENIE CZOŁOWE!" if race.head_on else "ZDERZENIE!", int(Race.COLLISION_TIME_PENALTY), int(Race.COLLISION_FUEL)], Color("ff6a5a"))
+		_banner(Lang.t("bump_cost") % [Lang.t("head_on") if race.head_on else Lang.t("bump"), int(Race.COLLISION_TIME_PENALTY), int(Race.COLLISION_FUEL)], Color("ff6a5a"))
 	elif race.speeding > 0.0:
-		_banner("ZWOLNIJ! Ograniczenie %s   (%d s)" % [Units.speed_text(race.speed_limit()), int(ceil(race.speeding_grace() - race.speeding))], Color("ff6a5a"))
+		_banner(Lang.t("slow_down") % [Units.speed_text(race.speed_limit()), int(ceil(race.speeding_grace() - race.speeding))], Color("ff6a5a"))
 	elif race.refueling:
-		_banner("TANKOWANIE...  %d%%" % int(fr * 100.0), Color("49d36b"))
+		_banner(Lang.t("refueling") % int(fr * 100.0), Color("49d36b"))
 	elif race.station_in_range() and race.shoulder_fraction() < Race.SHOULDER_MIN:
-		_banner("STACJA PALIW: ZJEDŹ %s NA POBOCZE" % ("W LEWO" if race.side < 0.0 else "W PRAWO"), Color("f2c21b"))
+		_banner(Lang.t("station_pull_left" if race.side < 0.0 else "station_pull_right"), Color("f2c21b"))
 	elif race.station_in_range():
-		_banner("STACJA PALIW: ZATRZYMAJ SIĘ (%s), ABY TANKOWAĆ" % ("hamulec" if touch else "spacja"), Color("f2c21b"))
+		_banner(Lang.t("station_stop") % Lang.t("key_brake" if touch else "key_space"), Color("f2c21b"))
 	elif race.next_station_distance() > 0.0 and race.next_station_distance() < STATION_NOTICE and fr < 0.85:
 		var km := maxf(Units.KM_PER_MILE if Units.imperial else 1.0, Route.km_between(race.stage, 0.0, race.next_station_distance()))
-		_banner("STACJA PALIW za %s: zjedź na %s pobocze" % [Units.dist_text(km, true), "lewe" if race.side < 0.0 else "prawe"], Color("f2c21b"))
+		_banner(Lang.t("station_ahead_left" if race.side < 0.0 else "station_ahead_right") % Units.dist_text(km, true), Color("f2c21b"))
 	elif low_fuel and int(race.elapsed * 2.0) % 2 == 0:
-		_banner("MAŁO PALIWA! Szukaj stacji", Color("ff6a5a"))
+		_banner(Lang.t("low_fuel"), Color("ff6a5a"))
 
 	_info_card()
 	_board_echo()
 	_minimap()
 	if race.stage.get("sharp_test", false):
-		_text(Vector2(200, 532), "TRYB TESTOWY: same ostre zakręty, ostrość %.0f" % race.stage.get("sharp_amount", Track.SHARP_AMOUNT), 14, Color("ffd24a"))
+		_text(Vector2(200, 532), Lang.t("sharp_test") % race.stage.get("sharp_amount", Track.SHARP_AMOUNT), 14, Color("ffd24a"))
 
 ## Fuel pump: yellow body with a dark display and a hose, centred on the progress bar.
 func _pump_icon(c: Vector2) -> void:
@@ -234,10 +234,10 @@ func _info_card() -> void:
 		body = lm.desc
 	elif not t.is_empty():
 		title = t.get("display", t.name)
-		body = t.fact if t.fact != "" else ("Duże miasto" if t.big else "Miejscowość na trasie")
+		body = t.fact if t.fact != "" else Lang.t("big_city" if t.big else "town_on_route")
 	elif _region_time > 0.0:
-		title = "Kraina: " + _region
-		body = "Wjeżdżasz w nowy region"
+		title = Lang.t("region_title") % _region
+		body = Lang.t("region_body")
 	else:
 		return
 	var r := Rect2(200, 92, 560, 58)

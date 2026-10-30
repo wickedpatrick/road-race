@@ -2,7 +2,7 @@ extends Node2D
 ## Selection: car -> season -> destination on the country map (tabs above the map, or C, switch the country). The race always starts where the last one ended;
 ## the very first time (or after a progress reset) the player first picks a home city on the map.
 ## Arrow keys / WASD move, Enter or Space confirms, Esc goes back; on the map cities can also be clicked.
-const TITLES := {"home": "Skąd jesteś?", "car": "Wybierz auto", "season": "Wybierz porę roku", "dest": "Dokąd jedziesz?"}
+
 var font: Font
 var steps: Array = []
 var step := 0
@@ -17,7 +17,8 @@ var confirm_reset := false ## "reset progress?" question is shown (car step, R k
 const NEXT_BTN := Rect2(744, 490, 200, 44)
 const BACK_BTN := Rect2(584, 490, 148, 44)
 const RESET_BTN := Rect2(796, 14, 148, 40)
-const UNITS_BTN := Rect2(16, 14, 168, 40) ## car step: km/h <-> mph for the speedometer and distances (U key)
+const UNITS_BTN := Rect2(28, 124, 168, 36) ## car step: km/h <-> mph for the speedometer and distances (U key)
+const LANG_BTN := Rect2(736, 124, 196, 36) ## car step: the game's language (L key)
 const YES_BTN := Rect2(250, 330, 220, 54)
 const NO_BTN := Rect2(490, 330, 220, 54)
 var loading := false ## start chosen: the "get ready" card is shown while the race scene loads
@@ -105,6 +106,9 @@ func _unhandled_input(event: InputEvent) -> void:
 	if kind() == "car" and event.keycode == KEY_U:
 		_toggle_units()
 		return
+	if kind() == "car" and event.keycode == KEY_L:
+		_next_language()
+		return
 	if kind() == "car" and event.keycode == KEY_R:
 		Sfx.play("blip", -8.0)
 		confirm_reset = true
@@ -139,6 +143,12 @@ func _toggle_units() -> void:
 	Sfx.play("blip", -8.0)
 	Session.set_units("metric" if Session.units == "imperial" else "imperial")
 
+func _next_language() -> void:
+	Sfx.play("blip", -8.0)
+	var langs := GameData.LANGUAGES
+	Session.set_language(langs[(langs.find(GameData.language) + 1) % langs.size()])
+	map = CountryMap.new(MAP_RECT) # city names on the map follow the language
+
 func _confirm() -> void:
 	match kind():
 		"car":
@@ -169,6 +179,9 @@ func _tap(p: Vector2) -> bool:
 		return true
 	if kind() == "car" and UNITS_BTN.has_point(p):
 		_toggle_units()
+		return true
+	if kind() == "car" and LANG_BTN.has_point(p):
+		_next_language()
 		return true
 	if Screen.touch:
 		if NEXT_BTN.has_point(p):
@@ -245,7 +258,7 @@ func _t(pos: Vector2, text: String, size: int, col: Color, align := HORIZONTAL_A
 	draw_string(font, pos, text, align, width, size, col)
 
 func _step_title() -> String:
-	return "%d / %d   %s" % [step + 1, steps.size(), TITLES[kind()]]
+	return "%d / %d   %s" % [step + 1, steps.size(), Lang.t("title_" + kind())]
 
 func _draw() -> void:
 	var pal := SeasonPalette.by_name(SeasonPalette.SEASONS[sel[1]] if kind() != "car" and kind() != "home" else "summer")
@@ -272,38 +285,39 @@ func _draw() -> void:
 	_t(Vector2(24, 518), summary, 17 if _on_map() else 20, Color("ffd24a"))
 	if kind() == "car":
 		_unlock_progress(Vector2(24, 505))
-		Ui.button(self, font, UNITS_BTN, "Jednostki: %s" % Units.speed_unit(), false, 16)
+		Ui.button(self, font, UNITS_BTN, Lang.t("units_btn") % Units.speed_unit(), false, 16)
+		Ui.button(self, font, LANG_BTN, Lang.t("lang_btn") % Lang.NAMES[GameData.language], false, 16)
 	if Screen.touch:
 		if step > 0:
-			Ui.button(self, font, BACK_BTN, "Wstecz", false, 20)
-		Ui.button(self, font, NEXT_BTN, "START!" if kind() == "dest" else "Dalej", true, 22)
+			Ui.button(self, font, BACK_BTN, Lang.t("back"), false, 20)
+		Ui.button(self, font, NEXT_BTN, Lang.t("start") if kind() == "dest" else Lang.t("next"), true, 22)
 		if kind() == "car":
-			Ui.button(self, font, RESET_BTN, "Reset postępu", false, 16)
-	var hint := "Strzałki: wybierz      Enter: dalej"
+			Ui.button(self, font, RESET_BTN, Lang.t("reset_btn"), false, 16)
+	var hint := Lang.t("hint_select")
 	if _on_map():
-		hint = "Strzałki/myszka   " + ("Enter: START!" if kind() == "dest" else "Enter: dalej") + ("   C: kraj" if _countries() > 1 else "")
+		hint = Lang.t("hint_map") + Lang.t("hint_enter_start" if kind() == "dest" else "hint_enter_next") + (Lang.t("hint_country") if _countries() > 1 else "")
 	if kind() == "car":
-		hint = "Strzałki   Enter: dalej   U: jednostki   R: reset postępu"
+		hint = Lang.t("hint_car")
 	if step > 0:
-		hint += "      Esc: wstecz"
-	hint += "      X: dźwięk"
+		hint += Lang.t("hint_back")
+	hint += Lang.t("hint_sound")
 	if not Screen.touch:
 		_t(Vector2(0, 518), hint, 20, Color.WHITE, HORIZONTAL_ALIGNMENT_RIGHT, 936)
 	if confirm_reset:
 		_draw_reset_question()
 	if loading:
 		draw_rect(Rect2(0, 0, 960, 540), Color(0.03, 0.05, 0.08, 0.82))
-		_t(Vector2(0, 250), "Przygotuj się do rajdu!", 48, Color("ffd24a"), HORIZONTAL_ALIGNMENT_CENTER, 960)
+		_t(Vector2(0, 250), Lang.t("get_ready"), 48, Color("ffd24a"), HORIZONTAL_ALIGNMENT_CENTER, 960)
 		_t(Vector2(0, 300), "%s - %s" % [Geo.display_name(start_city), Geo.display_name(dest_city)], 26, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, 960)
 
 func _draw_reset_question() -> void:
 	draw_rect(Rect2(0, 0, 960, 540), Color(0.03, 0.05, 0.08, 0.75))
 	var r := Rect2(200, 150, 560, 256)
 	_card(r, true)
-	_t(Vector2(0, 205), "Zresetować postęp?", 40, Color("ffd24a"), HORIZONTAL_ALIGNMENT_CENTER, 960)
-	draw_multiline_string(font, Vector2(240, 245), "Licznik przejechanych kilometrów (%d km) i odblokowane auta zostaną skasowane. Zaczniesz od nowa Yarisem i znów wybierzesz swoje miasto." % int(Session.total_km), HORIZONTAL_ALIGNMENT_CENTER, 480, 18, 3, Color.WHITE)
-	Ui.button(self, font, YES_BTN, "Tak, resetuj", false, 20)
-	Ui.button(self, font, NO_BTN, "Nie", true, 20)
+	_t(Vector2(0, 205), Lang.t("reset_title"), 40, Color("ffd24a"), HORIZONTAL_ALIGNMENT_CENTER, 960)
+	draw_multiline_string(font, Vector2(240, 245), Lang.t("reset_text") % Units.dist_text(Session.total_km), HORIZONTAL_ALIGNMENT_CENTER, 480, 18, 3, Color.WHITE)
+	Ui.button(self, font, YES_BTN, Lang.t("reset_yes"), false, 20)
+	Ui.button(self, font, NO_BTN, Lang.t("reset_no"), true, 20)
 
 func _card(rect: Rect2, selected: bool) -> void:
 	var sb := StyleBoxFlat.new()
@@ -323,12 +337,12 @@ func _bar(pos: Vector2, label: String, v: float, w: float) -> void:
 func _unlock_progress(pos: Vector2) -> void:
 	var km := Session.total_km
 	var n := Profile.unlocked_count(km)
-	_t(pos + Vector2(0, 0), "Przejechane: %s" % Units.dist_text(km), 16, Color("ffd24a"))
+	_t(pos + Vector2(0, 0), Lang.t("driven") % Units.dist_text(km), 16, Color("ffd24a"))
 	if n >= CarStats.ids().size():
-		_t(pos + Vector2(0, 22), "Wszystkie auta odblokowane!", 14, Color.WHITE)
+		_t(pos + Vector2(0, 22), Lang.t("all_cars"), 14, Color.WHITE)
 		return
 	var next: Dictionary = CarStats.by_id(CarStats.ids()[n])
-	_t(pos + Vector2(0, 24), "%s za %s" % [next.name, Units.dist_text(Profile.unlock_km(n) - km, true)], 14, Color.WHITE)
+	_t(pos + Vector2(0, 24), Lang.t("next_car") % [next.name, Units.dist_text(Profile.unlock_km(n) - km, true)], 14, Color.WHITE)
 	draw_rect(Rect2(pos + Vector2(190, -12), Vector2(160, 10)), Color(1, 1, 1, 0.2))
 	draw_rect(Rect2(pos + Vector2(190, -12), Vector2(160 * Profile.next_progress(km), 10)), Color("49d36b"))
 
@@ -344,12 +358,12 @@ func _draw_cars() -> void:
 		_card(r, on)
 		CarPainter.draw(self, id, Vector2(r.position.x + w * 0.5, r.position.y + 106), 0.62 if on else 0.55, sin(t * 2.0) * 0.3 if on and open else 0.0, false)
 		draw_multiline_string(font, r.position + Vector2(6, 138), c.name, HORIZONTAL_ALIGNMENT_CENTER, w - 12, 17, 2, Color.WHITE)
-		_t(r.position + Vector2(0, 180), "%d KM" % c.hp, 13, Color("c8d6e3"), HORIZONTAL_ALIGNMENT_CENTER, w)
+		_t(r.position + Vector2(0, 180), Lang.t("hp") % c.hp, 13, Color("c8d6e3"), HORIZONTAL_ALIGNMENT_CENTER, w)
 		var bx := r.position.x + 12
-		_bar(Vector2(bx, r.position.y + 200), "Prędkość", c.max_speed / 70.0, w - 24)
-		_bar(Vector2(bx, r.position.y + 224), "Przyspieszenie", c.accel / 12.0, w - 24)
-		_bar(Vector2(bx, r.position.y + 248), "Zwrotność", (c.handling - 0.6) / 0.65, w - 24)
-		_bar(Vector2(bx, r.position.y + 272), "Oszczędność", 0.3 / c.burn * 0.9, w - 24)
+		_bar(Vector2(bx, r.position.y + 200), Lang.t("bar_speed"), c.max_speed / 70.0, w - 24)
+		_bar(Vector2(bx, r.position.y + 224), Lang.t("bar_accel"), c.accel / 12.0, w - 24)
+		_bar(Vector2(bx, r.position.y + 248), Lang.t("bar_handling"), (c.handling - 0.6) / 0.65, w - 24)
+		_bar(Vector2(bx, r.position.y + 272), Lang.t("bar_economy"), 0.3 / c.burn * 0.9, w - 24)
 		if not open:
 			var sb := StyleBoxFlat.new()
 			sb.bg_color = Color(0.03, 0.05, 0.08, 0.72)
@@ -359,7 +373,7 @@ func _draw_cars() -> void:
 			draw_rect(Rect2(lc + Vector2(-18, -6), Vector2(36, 28)), Color("ffd24a"))
 			draw_arc(lc + Vector2(0, -6), 12, PI, TAU, 16, Color("ffd24a"), 5.0)
 			draw_circle(lc + Vector2(0, 6), 4, Color("2b2b2f"))
-			_t(r.position + Vector2(0, 186), "od %s" % Units.dist_text(Profile.unlock_km(i)), 18, Color("ffd24a"), HORIZONTAL_ALIGNMENT_CENTER, w)
+			_t(r.position + Vector2(0, 186), Lang.t("from_dist") % Units.dist_text(Profile.unlock_km(i)), 18, Color("ffd24a"), HORIZONTAL_ALIGNMENT_CENTER, w)
 
 func _draw_seasons() -> void:
 	for i in 4:
@@ -402,35 +416,35 @@ func _draw_map() -> void:
 	var id := hover if hover != "" else start_city
 	if not dest:
 		_city_info(id, Vector2(x, 186), w)
-		_t(Vector2(x, 460), "Wybierz swoje miasto: stąd ruszysz w pierwszy rajd", 16, Color("c8d6e3"))
+		_t(Vector2(x, 460), Lang.t("pick_home"), 16, Color("c8d6e3"))
 		return
-	_t(Vector2(x, 176), "Jesteś w: %s" % Geo.display_name(start_city), 18, Color("7fe0a0"))
+	_t(Vector2(x, 176), Lang.t("you_are_in") % Geo.display_name(start_city), 18, Color("7fe0a0"))
 	if id != dest_city and id != start_city:
 		_city_info(id, Vector2(x, 214), w)
-		_t(Vector2(x, 460), "Dotknij miasta, aby je wybrać" if Screen.touch else "Kliknij lub naciśnij Enter, aby wybrać", 16, Color("c8d6e3"))
+		_t(Vector2(x, 460), Lang.t("tap_city") if Screen.touch else Lang.t("click_city"), 16, Color("c8d6e3"))
 		return
 	if legs.is_empty():
 		return
 	var st := Route.build(start_city, dest_city)
-	_t(Vector2(x, 206), "Cel: %s" % Geo.display_name(dest_city), 22, Color("ff9a86"))
+	_t(Vector2(x, 206), Lang.t("goal") % Geo.display_name(dest_city), 22, Color("ff9a86"))
 	var roads := []
 	for l in legs:
 		for rd in Route.leg_roads(l):
 			if rd[2] != "" and not roads.has(rd[2]): roads.append(rd[2])
-	_t(Vector2(x, 236), "%s   ·   drogi: %s" % [Units.dist_text(st.km), ", ".join(roads) if not roads.is_empty() else "miejskie"], 17, Color.WHITE)
-	_t(Vector2(x, 262), "Czas: %s   ·   stacje paliw: %d" % [Hud.format_time(st.duration), st.stations.size()], 17, Color("4cc3ff"))
+	_t(Vector2(x, 236), Lang.t("trip_roads") % [Units.dist_text(st.km), ", ".join(roads) if not roads.is_empty() else Lang.t("city_roads")], 17, Color.WHITE)
+	_t(Vector2(x, 262), Lang.t("trip_time") % [Hud.format_time(st.duration), st.stations.size()], 17, Color("4cc3ff"))
 	var via := []
 	var bigs := []
 	for tw in st.towns:
 		if tw.get("start", false) or tw.get("finish", false): continue
 		via.append(tw.get("display", tw.name))
 		if tw.big: bigs.append(tw.get("display", tw.name))
-	var via_text := "Po drodze: " + ", ".join(via)
+	var via_text := Lang.t("via") % ", ".join(via)
 	if via.size() > 9:
-		via_text = "Przez miasta: %s, oraz %d mniejszych miejscowości" % [", ".join(bigs), via.size() - bigs.size()]
+		via_text = Lang.t("via_big") % [", ".join(bigs), via.size() - bigs.size()]
 	draw_multiline_string(font, Vector2(x, 292), via_text, HORIZONTAL_ALIGNMENT_LEFT, w, 15, 4, Color("e8eef4"))
 	var regions: Array = st.regions.slice(0, 6)
-	var reg_text := "Krainy: " + ", ".join(regions) + (" i inne" if st.regions.size() > regions.size() else "")
+	var reg_text := Lang.t("regions") % (", ".join(regions) + (Lang.t("and_more") if st.regions.size() > regions.size() else ""))
 	draw_multiline_string(font, Vector2(x, 386), reg_text, HORIZONTAL_ALIGNMENT_LEFT, w, 15, 3, Color("f1d9b5"))
 
 func _countries() -> int:
@@ -453,7 +467,10 @@ func _draw_country_tabs() -> void:
 		sb.border_color = Color("ffd24a") if on else Color(1, 1, 1, 0.5)
 		sb.set_border_width_all(2)
 		draw_style_box(sb, r)
-		_t(Vector2(r.position.x, r.position.y + 20), list[i].name, 16, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, r.size.x)
+		var fs := 16 # long names ("Wielka Brytania") shrink to fit the tab
+		while fs > 10 and font.get_string_size(list[i].name, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x > r.size.x - 8:
+			fs -= 1
+		_t(Vector2(r.position.x, r.position.y + 20), list[i].name, fs, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, r.size.x)
 
 ## Plays another country: its map and the player's progress there (a new country starts by picking a home city).
 func _switch_country(code: String) -> void:
@@ -477,5 +494,5 @@ func _city_info(id: String, pos: Vector2, w: float) -> void:
 	var shown := Geo.display_name(id)
 	_t(pos, shown if shown == c.name else "%s (%s)" % [shown, c.name], 26, Color("ffd24a"))
 	_t(pos + Vector2(0, 30), "%s %s" % [GameData.country().region_label, c.region], 17, Color.WHITE)
-	_t(pos + Vector2(0, 56), c.get("note", "ok. %d tys. mieszkańców" % c.pop), 17, Color("c8d6e3"))
+	_t(pos + Vector2(0, 56), c.get("note", Lang.t("population") % c.pop), 17, Color("c8d6e3"))
 	draw_multiline_string(font, pos + Vector2(0, 90), Geo.fact(c.name), HORIZONTAL_ALIGNMENT_LEFT, w, 17, 4, Color("e8eef4"))

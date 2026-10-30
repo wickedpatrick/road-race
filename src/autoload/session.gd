@@ -26,6 +26,7 @@ var sharp_amount := 0.0
 var police_test := false
 
 func _ready() -> void:
+	GameData.set_language(GameData.language_for(OS.get_locale())) # the device's language, English if the game lacks it
 	load_profile()
 	_read_test_flags()
 
@@ -64,6 +65,8 @@ func load_profile() -> void:
 	total_km = float(d.get("total_km", 0.0))
 	quality = "low" if d.get("quality", "high") == "low" else "high"
 	units = "imperial" if d.get("units", "metric") == "imperial" else "metric"
+	if d.get("language", "") in GameData.LANGUAGES:
+		GameData.set_language(d.language)
 	Units.imperial = units == "imperial"
 	season = d.get("season", season) if SeasonPalette.SEASONS.has(d.get("season", "")) else season
 	places = d.get("places", {}) if d.get("places") is Dictionary else {}
@@ -79,6 +82,11 @@ func load_profile() -> void:
 	var car: String = d.get("car_id", car_id)
 	car_id = car if CarStats.has(car) and Profile.is_unlocked(car, total_km) else CarStats.ids()[0]
 
+## The player's choice on the car screen; texts from the data are read again in the new language.
+func set_language(code: String) -> void:
+	GameData.set_language(code)
+	save_profile()
+
 func set_units(u: String) -> void:
 	units = u
 	Units.imperial = u == "imperial"
@@ -89,7 +97,7 @@ func save_profile() -> void:
 	if f == null:
 		return
 	places[country] = _place()
-	f.store_string(JSON.stringify({"total_km": total_km, "car_id": car_id, "season": season, "quality": quality, "units": units,
+	f.store_string(JSON.stringify({"total_km": total_km, "car_id": car_id, "season": season, "quality": quality, "units": units, "language": GameData.language,
 		"country": country, "places": places}))
 
 ## The current country's progress, as kept in `places`.

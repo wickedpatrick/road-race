@@ -1,5 +1,12 @@
 {
-	"praha": {"name": "Praha", "lat": 50.08, "lon": 14.43, "pop": 1380, "region": "Praha", "exonym": {"pl": "Praga"}},
+	"praha": {
+		"name": "Praha",
+		"lat": 50.08,
+		"lon": 14.43,
+		"pop": 1380,
+		"region": "Praha",
+		"exonym": {"pl": "Praga", "en": "Prague", "is": "Prag"}
+	},
 	"brno": {"name": "Brno", "lat": 49.2, "lon": 16.61, "pop": 400, "region": "jihomoravský"},
 	"ostrava": {
 		"name": "Ostrava",
@@ -9,7 +16,14 @@
 		"region": "moravskoslezský",
 		"exonym": {"pl": "Ostrawa"}
 	},
-	"plzen": {"name": "Plzeň", "lat": 49.75, "lon": 13.38, "pop": 185, "region": "plzeňský", "exonym": {"pl": "Pilzno"}},
+	"plzen": {
+		"name": "Plzeň",
+		"lat": 49.75,
+		"lon": 13.38,
+		"pop": 185,
+		"region": "plzeňský",
+		"exonym": {"pl": "Pilzno", "en": "Pilsen"}
+	},
 	"liberec": {"name": "Liberec", "lat": 50.77, "lon": 15.06, "pop": 105, "region": "liberecký"},
 	"olomouc": {"name": "Olomouc", "lat": 49.59, "lon": 17.25, "pop": 102, "region": "olomoucký", "exonym": {"pl": "Ołomuniec"}},
 	"ceske_budejovice": {

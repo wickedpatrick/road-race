@@ -219,21 +219,21 @@ func _draw_overlay() -> void:
 		o.draw_string(font, Vector2(0, 296), str(n), HORIZONTAL_ALIGNMENT_CENTER, 960, 140, Color("ffd24a"))
 		o.draw_string(font, Vector2(0, 340), "%s  ·  %s" % [race.stage.name, Units.dist_text(race.stage.km)], HORIZONTAL_ALIGNMENT_CENTER, 960, 24, Color.WHITE)
 	elif race.elapsed < 0.9 and race.state == "running":
-		o.draw_string(font, Vector2(0, 300), "START!", HORIZONTAL_ALIGNMENT_CENTER, 960, 110, Color(0, 0, 0, 0.5))
-		o.draw_string(font, Vector2(0, 296), "START!", HORIZONTAL_ALIGNMENT_CENTER, 960, 110, Color("49d36b"))
+		o.draw_string(font, Vector2(0, 300), Lang.t("start"), HORIZONTAL_ALIGNMENT_CENTER, 960, 110, Color(0, 0, 0, 0.5))
+		o.draw_string(font, Vector2(0, 296), Lang.t("start"), HORIZONTAL_ALIGNMENT_CENTER, 960, 110, Color("49d36b"))
 	elif race.state != "running":
-		var msg := {"won": "META!", "out_of_time": "KONIEC CZASU", "out_of_fuel": "KONIEC PALIWA"}[race.state] as String
+		var msg := Lang.t({"won": "finish", "out_of_time": "out_of_time", "out_of_fuel": "out_of_fuel"}[race.state])
 		var col := Color("49d36b") if race.state == "won" else Color("ff6a5a")
 		o.draw_rect(Rect2(0, 190, 960, 110), Color(0, 0, 0, 0.45))
 		o.draw_string(font, Vector2(0, 268), msg, HORIZONTAL_ALIGNMENT_CENTER, 960, 80, col)
 	if paused:
 		o.draw_rect(Rect2(0, 0, 960, 540), Color(0, 0, 0, 0.6))
-		o.draw_string(font, Vector2(0, 250), "PAUZA", HORIZONTAL_ALIGNMENT_CENTER, 960, 72, Color.WHITE)
-		Ui.button(o, font, RESUME_BTN, "Graj dalej", true)
-		Ui.button(o, font, MAP_BTN, "Wróć do mapy", false)
-		Ui.button(o, font, QUALITY_BTN, "Grafika: " + ("oszczędna" if Session.quality == "low" else "wysoka jakość"), false, 18)
+		o.draw_string(font, Vector2(0, 250), Lang.t("pause"), HORIZONTAL_ALIGNMENT_CENTER, 960, 72, Color.WHITE)
+		Ui.button(o, font, RESUME_BTN, Lang.t("resume"), true)
+		Ui.button(o, font, MAP_BTN, Lang.t("to_map"), false)
+		Ui.button(o, font, QUALITY_BTN, Lang.t("graphics") % Lang.t("gfx_low" if Session.quality == "low" else "gfx_high"), false, 18)
 		if not Screen.touch:
-			o.draw_string(font, Vector2(0, 470), "Esc: wznów     M: mapa     X: dźwięk wł./wył.", HORIZONTAL_ALIGNMENT_CENTER, 960, 22, Color("c8d6e3"))
+			o.draw_string(font, Vector2(0, 470), Lang.t("pause_keys"), HORIZONTAL_ALIGNMENT_CENTER, 960, 22, Color("c8d6e3"))
 	elif _toast > 0.0:
 		o.draw_rect(Rect2(230, 214, 500, 40), Color(0, 0, 0, 0.55))
-		o.draw_string(font, Vector2(0, 241), "Włączono oszczędną grafikę (zmienisz w pauzie)", HORIZONTAL_ALIGNMENT_CENTER, 960, 18, Color.WHITE)
+		o.draw_string(font, Vector2(0, 241), Lang.t("low_gfx_toast"), HORIZONTAL_ALIGNMENT_CENTER, 960, 18, Color.WHITE)

@@ -27,8 +27,13 @@
 			{
 				"from_km": 69,
 				"to_km": 70.8,
-				"name": {"pl": "Tunel Hindhead"},
-				"fact": {"pl": "Tunel drogi A3 pod wzgórzami Hindhead (1,8 km); stara droga nad nim zarosła wrzosowiskiem"}
+				"name": {"pl": "Tunel Hindhead", "en": "Hindhead Tunnel", "cs": "Tunel Hindhead", "is": "Hindhead-göngin"},
+				"fact": {
+					"pl": "Tunel drogi A3 pod wzgórzami Hindhead (1,8 km); stara droga nad nim zarosła wrzosowiskiem",
+					"en": "An A3 road tunnel under the Hindhead hills (1.8 km); the old road above it has turned back into heathland",
+					"cs": "Tunel silnice A3 pod kopci Hindhead (1,8 km); stará silnice nad ním zarostla vřesovištěm",
+					"is": "Göng vegar A3 undir Hindhead-hæðum (1,8 km); gamli vegurinn yfir þeim er nú gróinn lyngi"
+				}
 			}
 		]
 	},
@@ -234,9 +239,12 @@
 			{
 				"from_km": 45,
 				"to_km": 45.4,
-				"name": {"pl": "Tunele Brynglas"},
+				"name": {"pl": "Tunele Brynglas", "en": "Brynglas Tunnels", "cs": "Tunely Brynglas", "is": "Brynglas-göngin"},
 				"fact": {
-					"pl": "Dwa tunele autostrady M4 pod wzgórzem w Newport, jedne z pierwszych tuneli autostradowych w Wielkiej Brytanii (1967)"
+					"pl": "Dwa tunele autostrady M4 pod wzgórzem w Newport, jedne z pierwszych tuneli autostradowych w Wielkiej Brytanii (1967)",
+					"en": "Two M4 motorway tunnels under a hill in Newport, among the first motorway tunnels in Britain (1967)",
+					"cs": "Dva tunely dálnice M4 pod kopcem v Newportu, jedny z prvních dálničních tunelů ve Velké Británii (1967)",
+					"is": "Tvenn göng hraðbrautarinnar M4 undir hæð í Newport, meðal fyrstu hraðbrautarganga Bretlands (1967)"
 				}
 			}
 		]
@@ -295,17 +303,23 @@
 			{
 				"from_km": 22.5,
 				"to_km": 23.6,
-				"name": {"pl": "Tunel Conwy"},
+				"name": {"pl": "Tunel Conwy", "en": "Conwy Tunnel", "cs": "Tunel Conwy", "is": "Conwy-göngin"},
 				"fact": {
-					"pl": "Pierwszy w Wielkiej Brytanii tunel zatapiany: pod ujściem rzeki, by nie zasłonić zamku w Conwy. Przed nim drogę A55 prowadzą skalne tunele Penmaenbach"
+					"pl": "Pierwszy w Wielkiej Brytanii tunel zatapiany: pod ujściem rzeki, by nie zasłonić zamku w Conwy. Przed nim drogę A55 prowadzą skalne tunele Penmaenbach",
+					"en": "Britain's first immersed-tube tunnel: under the river mouth, so as not to hide Conwy Castle. Before it, the A55 runs through the Penmaenbach rock tunnels",
+					"cs": "První ponořený tunel ve Velké Británii: vede pod ústím řeky, aby nezakryl hrad v Conwy. Před ním vedou silnici A55 skalní tunely Penmaenbach",
+					"is": "Fyrstu sökkvigöng Bretlands: undir árósnum, svo að þau skyggðu ekki á kastalann í Conwy. Á undan þeim liggur vegur A55 um klettagöngin Penmaenbach"
 				}
 			},
 			{
 				"from_km": 121,
 				"to_km": 123.4,
-				"name": {"pl": "Tunel Kingsway"},
+				"name": {"pl": "Tunel Kingsway", "en": "Kingsway Tunnel", "cs": "Tunel Kingsway", "is": "Kingsway-göngin"},
 				"fact": {
-					"pl": "Tunel pod rzeką Mersey z Wallasey do Liverpoolu; obok biegnie starszy tunel Queensway z 1934 roku"
+					"pl": "Tunel pod rzeką Mersey z Wallasey do Liverpoolu; obok biegnie starszy tunel Queensway z 1934 roku",
+					"en": "A tunnel under the River Mersey from Wallasey to Liverpool; the older Queensway Tunnel from 1934 runs nearby",
+					"cs": "Tunel pod řekou Mersey z Wallasey do Liverpoolu; vedle vede starší tunel Queensway z roku 1934",
+					"is": "Göng undir ána Mersey frá Wallasey til Liverpool; við hliðina liggja eldri Queensway-göngin frá 1934"
 				},
 				"city": true
 			}
@@ -484,8 +498,13 @@
 			{
 				"from_km": 128.5,
 				"to_km": 130.1,
-				"name": {"pl": "Tunel pod Tyne"},
-				"fact": {"pl": "Dwa tunele drogi A19 pod rzeką Tyne między Jarrow a Howdon; drugi otwarto w 2011 roku"},
+				"name": {"pl": "Tunel pod Tyne", "en": "Tyne Tunnel", "cs": "Tunel pod Tyne", "is": "Tyne-göngin"},
+				"fact": {
+					"pl": "Dwa tunele drogi A19 pod rzeką Tyne między Jarrow a Howdon; drugi otwarto w 2011 roku",
+					"en": "Two A19 road tunnels under the River Tyne between Jarrow and Howdon; the second opened in 2011",
+					"cs": "Dva tunely silnice A19 pod řekou Tyne mezi Jarrow a Howdonem; druhý otevřeli v roce 2011",
+					"is": "Tvenn göng vegar A19 undir ána Tyne milli Jarrow og Howdon; þau seinni voru opnuð árið 2011"
+				},
 				"city": true
 			}
 		]

@@ -82,12 +82,12 @@ func _legend(cv: CanvasItem, font: Font) -> void:
 	cv.draw_rect(box, Color(1, 1, 1, 0.85))
 	var p := box.position + Vector2(6, 11)
 	cv.draw_line(p, p + Vector2(22, 0), MOTORWAY, 4.0)
-	cv.draw_string(font, p + Vector2(28, 4), "autostrady, ekspresowe", HORIZONTAL_ALIGNMENT_LEFT, -1, 10, Color("16222e"))
+	cv.draw_string(font, p + Vector2(28, 4), Lang.t("map_motorways"), HORIZONTAL_ALIGNMENT_LEFT, -1, 10, Color("16222e"))
 	cv.draw_line(p + Vector2(0, 14), p + Vector2(22, 14), LOCAL, 1.6)
-	cv.draw_string(font, p + Vector2(28, 18), "inne drogi", HORIZONTAL_ALIGNMENT_LEFT, -1, 10, Color("16222e"))
+	cv.draw_string(font, p + Vector2(28, 18), Lang.t("map_roads"), HORIZONTAL_ALIGNMENT_LEFT, -1, 10, Color("16222e"))
 	cv.draw_circle(p + Vector2(11, 28), 6.0, VISITED)
 	cv.draw_circle(p + Vector2(11, 28), 3.5, Color("2d3e50"))
-	cv.draw_string(font, p + Vector2(28, 32), "odwiedzone: %d / %d" % [visited.size(), Geo.cities().size()], HORIZONTAL_ALIGNMENT_LEFT, -1, 10, Color("16222e"))
+	cv.draw_string(font, p + Vector2(28, 32), Lang.t("map_visited") % [visited.size(), Geo.cities().size()], HORIZONTAL_ALIGNMENT_LEFT, -1, 10, Color("16222e"))
 
 func draw(cv: CanvasItem, font: Font, legs: Array, start: String, dest: String, hover: String, t: float) -> void:
 	var poly := PackedVector2Array()

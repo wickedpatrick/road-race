@@ -1,7 +1,6 @@
 class_name SeasonPalette
 extends RefCounted
 const SEASONS := ["spring", "summer", "autumn", "winter"]
-const LABELS := {"spring": "Wiosna", "summer": "Lato", "autumn": "Jesień", "winter": "Zima"}
 const DATA := {
 	"spring": {"crop_a": Color("e2cf3a"), "crop_b": Color("8cc84b"), "crop_c": Color("8a6a45"), "water": Color("4a8fc4"), "sand": Color("e3d3a3"), "pave": Color("a9abb0"), "dark": Color("6b6656"), "sky_top": Color("5aaee8"), "sky_bottom": Color("e3f3fb"), "grass_a": Color("6cc04b"), "grass_b": Color("62b544"),
 		"road_a": Color("6d7075"), "road_b": Color("6a6d72"), "rumble_a": Color("e6e6e6"), "rumble_b": Color("c9392c"), "line": Color("f1f1f1"),
@@ -19,4 +18,4 @@ const DATA := {
 static func by_name(season: String) -> Dictionary:
 	return DATA[season]
 static func label(season: String) -> String:
-	return LABELS[season]
+	return Lang.t("season_" + season)

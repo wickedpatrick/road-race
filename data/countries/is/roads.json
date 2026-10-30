@@ -53,8 +53,18 @@
 			{
 				"from_km": 210,
 				"to_km": 215.9,
-				"name": {"pl": "Fáskrúðsfjarðargöng"},
-				"fact": {"pl": "Tunel pod górą między dwoma fiordami, prawie 6 km"}
+				"name": {
+					"pl": "Fáskrúðsfjarðargöng",
+					"en": "Fáskrúðsfjarðargöng",
+					"cs": "Fáskrúðsfjarðargöng",
+					"is": "Fáskrúðsfjarðargöng"
+				},
+				"fact": {
+					"pl": "Tunel pod górą między dwoma fiordami, prawie 6 km",
+					"en": "A tunnel under a mountain between two fjords, almost 6 km long",
+					"cs": "Tunel pod horou mezi dvěma fjordy, skoro 6 km",
+					"is": "Göng undir fjall milli tveggja fjarða, tæpir 6 km"
+				}
 			}
 		]
 	},
@@ -69,8 +79,13 @@
 			{
 				"from_km": 250,
 				"to_km": 257.5,
-				"name": {"pl": "Vaðlaheiðargöng"},
-				"fact": {"pl": "Tunel o długości 7,5 km pod górą naprzeciwko Akureyri"}
+				"name": {"pl": "Vaðlaheiðargöng", "en": "Vaðlaheiðargöng", "cs": "Vaðlaheiðargöng", "is": "Vaðlaheiðargöng"},
+				"fact": {
+					"pl": "Tunel o długości 7,5 km pod górą naprzeciwko Akureyri",
+					"en": "A 7.5 km tunnel under the mountain opposite Akureyri",
+					"cs": "Tunel dlouhý 7,5 km pod horou naproti Akureyri",
+					"is": "7,5 km löng göng undir fjallið gegnt Akureyri"
+				}
 			}
 		]
 	},
@@ -85,8 +100,13 @@
 			{
 				"from_km": 5,
 				"to_km": 12.5,
-				"name": {"pl": "Vaðlaheiðargöng"},
-				"fact": {"pl": "Tunel o długości 7,5 km pod górą naprzeciwko Akureyri"}
+				"name": {"pl": "Vaðlaheiðargöng", "en": "Vaðlaheiðargöng", "cs": "Vaðlaheiðargöng", "is": "Vaðlaheiðargöng"},
+				"fact": {
+					"pl": "Tunel o długości 7,5 km pod górą naprzeciwko Akureyri",
+					"en": "A 7.5 km tunnel under the mountain opposite Akureyri",
+					"cs": "Tunel dlouhý 7,5 km pod horou naproti Akureyri",
+					"is": "7,5 km löng göng undir fjallið gegnt Akureyri"
+				}
 			}
 		]
 	},
@@ -117,8 +137,13 @@
 			{
 				"from_km": 30,
 				"to_km": 35.8,
-				"name": {"pl": "Hvalfjarðargöng"},
-				"fact": {"pl": "Tunel pod dnem fiordu, 165 metrów pod powierzchnią morza"}
+				"name": {"pl": "Hvalfjarðargöng", "en": "Hvalfjarðargöng", "cs": "Hvalfjarðargöng", "is": "Hvalfjarðargöng"},
+				"fact": {
+					"pl": "Tunel pod dnem fiordu, 165 metrów pod powierzchnią morza",
+					"en": "A tunnel under the fjord floor, 165 metres below sea level",
+					"cs": "Tunel pod dnem fjordu, 165 metrů pod hladinou moře",
+					"is": "Göng undir botni fjarðarins, 165 metra undir sjávarmáli"
+				}
 			}
 		]
 	},
@@ -141,14 +166,24 @@
 			{
 				"from_km": 330,
 				"to_km": 335.3,
-				"name": {"pl": "Dýrafjarðargöng"},
-				"fact": {"pl": "Tunel otwarty w 2020 roku, skraca drogę przez Fiordy Zachodnie"}
+				"name": {"pl": "Dýrafjarðargöng", "en": "Dýrafjarðargöng", "cs": "Dýrafjarðargöng", "is": "Dýrafjarðargöng"},
+				"fact": {
+					"pl": "Tunel otwarty w 2020 roku, skraca drogę przez Fiordy Zachodnie",
+					"en": "A tunnel opened in 2020 that shortens the road through the Westfjords",
+					"cs": "Tunel otevřený v roce 2020, zkracuje cestu přes Západní fjordy",
+					"is": "Göng opnuð árið 2020, þau stytta leiðina um Vestfirði"
+				}
 			},
 			{
 				"from_km": 385,
 				"to_km": 394,
-				"name": {"pl": "Vestfjarðagöng"},
-				"fact": {"pl": "Tunel z rozgałęzieniem pod górami Fiordów Zachodnich"}
+				"name": {"pl": "Vestfjarðagöng", "en": "Vestfjarðagöng", "cs": "Vestfjarðagöng", "is": "Vestfjarðagöng"},
+				"fact": {
+					"pl": "Tunel z rozgałęzieniem pod górami Fiordów Zachodnich",
+					"en": "A tunnel that branches in two under the mountains of the Westfjords",
+					"cs": "Rozvětvený tunel pod horami Západních fjordů",
+					"is": "Göng með gatnamótum inni í fjöllum Vestfjarða"
+				}
 			}
 		]
 	}

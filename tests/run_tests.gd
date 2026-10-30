@@ -8,6 +8,7 @@ func check(cond: bool, msg: String) -> void:
 		print("FAIL ", msg)
 		failures += 1
 func _init() -> void:
+	GameData.set_language("pl") # the tests read the Polish texts, whatever the machine's language
 	var files := DirAccess.get_files_at("res://tests")
 	files.sort()
 	for f in files:

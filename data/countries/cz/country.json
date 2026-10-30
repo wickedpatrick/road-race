@@ -1,11 +1,16 @@
 {
 	"code": "cz",
-	"name": {"pl": "Czechy"},
+	"name": {"pl": "Czechy", "en": "Czechia", "cs": "Česko", "is": "Tékkland"},
 	"language": "cs",
 	"drive": "right",
-	"title": {"pl": "RAJD PRZEZ CZECHY"},
-	"subtitle": {"pl": "Edukacyjna podróż po czeskich drogach"},
-	"region_label": {"pl": "kraj"},
+	"title": {"pl": "RAJD PRZEZ CZECHY", "en": "ROAD TRIP ACROSS CZECHIA", "cs": "RALLY ČESKEM", "is": "ÖKUFERÐ UM TÉKKLAND"},
+	"subtitle": {
+		"pl": "Edukacyjna podróż po czeskich drogach",
+		"en": "An educational journey along Czech roads",
+		"cs": "Vzdělávací cesta po českých silnicích",
+		"is": "Fræðandi ferðalag um vegi Tékklands"
+	},
+	"region_label": {"pl": "kraj", "en": "region", "cs": "kraj", "is": "hérað"},
 	"start": ["praha", "plzen"],
 	"express_prefixes": ["D"],
 	"limits": {"express": 130, "road": 90, "city": 50, "town_on_express": 80, "town": 50},

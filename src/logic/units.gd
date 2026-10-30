@@ -31,4 +31,4 @@ static func dist_text(km: float, round_up := false) -> String:
 static func consumption_text(l100: float) -> String:
 	if imperial:
 		return "%d mpg" % roundi(L100_MPG / maxf(l100, 0.1))
-	return ("%.1f l/100 km" % l100).replace(".", ",")
+	return Lang.decimal("%.1f l/100 km" % l100)

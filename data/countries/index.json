@@ -2,12 +2,27 @@
 	"countries": [
 		{
 			"code": "pl",
-			"name": {"pl": "Polska"},
+			"name": {"pl": "Polska", "en": "Poland", "cs": "Polsko", "is": "Pólland"},
 			"neighbours": ["de", "cz", "sk", "ua", "by", "lt", "ru"],
 			"favorite_neighbour": "cz"
 		},
-		{"code": "cz", "name": {"pl": "Czechy"}, "neighbours": ["pl", "de", "at", "sk"], "favorite_neighbour": "sk"},
-		{"code": "is", "name": {"pl": "Islandia"}, "neighbours": [], "favorite_neighbour": "no"},
-		{"code": "gb", "name": {"pl": "Wielka Brytania"}, "neighbours": [], "favorite_neighbour": "ie"}
+		{
+			"code": "cz",
+			"name": {"pl": "Czechy", "en": "Czechia", "cs": "Česko", "is": "Tékkland"},
+			"neighbours": ["pl", "de", "at", "sk"],
+			"favorite_neighbour": "sk"
+		},
+		{
+			"code": "is",
+			"name": {"pl": "Islandia", "en": "Iceland", "cs": "Island", "is": "Ísland"},
+			"neighbours": [],
+			"favorite_neighbour": "no"
+		},
+		{
+			"code": "gb",
+			"name": {"pl": "Wielka Brytania", "en": "Great Britain", "cs": "Velká Británie", "is": "Bretland"},
+			"neighbours": [],
+			"favorite_neighbour": "ie"
+		}
 	]
 }

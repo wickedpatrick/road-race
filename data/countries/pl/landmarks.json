@@ -1,412 +1,1371 @@
 {
 	"Kraków": [
-		{"kind": "wawel", "name": {"pl": "Wawel"}, "desc": {"pl": "Zamek królewski na wzgórzu nad Wisłą"}},
+		{
+			"kind": "wawel",
+			"name": {"pl": "Wawel", "en": "Wawel", "cs": "Wawel", "is": "Wawel"},
+			"desc": {
+				"pl": "Zamek królewski na wzgórzu nad Wisłą",
+				"en": "The royal castle on a hill above the Vistula",
+				"cs": "Královský hrad na kopci nad Vislou",
+				"is": "Konungskastali á hæð við Wisła"
+			}
+		},
 		{
 			"kind": "dragon",
-			"name": {"pl": "Smok Wawelski"},
-			"desc": {"pl": "Legenda mówi, że smoka pokonał szewczyk Skuba"}
+			"name": {"pl": "Smok Wawelski", "en": "Wawel Dragon", "cs": "Wawelský drak", "is": "Wawel-drekinn"},
+			"desc": {
+				"pl": "Legenda mówi, że smoka pokonał szewczyk Skuba",
+				"en": "Legend says the dragon was beaten by Skuba the shoemaker",
+				"cs": "Podle legendy draka porazil ševcovský učeň Skuba",
+				"is": "Sagan segir að skósmiðurinn Skuba hafi sigrað drekann"
+			}
 		}
 	],
 	"Warszawa": [
 		{
 			"kind": "pkin",
-			"name": {"pl": "Pałac Kultury i Nauki"},
-			"desc": {"pl": "Przez ponad 60 lat najwyższy budynek w Polsce"}
+			"name": {
+				"pl": "Pałac Kultury i Nauki",
+				"en": "Palace of Culture and Science",
+				"cs": "Palác kultury a vědy",
+				"is": "Menningar- og vísindahöllin"
+			},
+			"desc": {
+				"pl": "Przez ponad 60 lat najwyższy budynek w Polsce",
+				"en": "The tallest building in Poland for over 60 years",
+				"cs": "Přes 60 let nejvyšší budova v Polsku",
+				"is": "Hæsta bygging Póllands í meira en 60 ár"
+			}
 		},
-		{"kind": "mermaid", "name": {"pl": "Syrenka"}, "desc": {"pl": "Syrenka z mieczem i tarczą to herb Warszawy"}}
+		{
+			"kind": "mermaid",
+			"name": {"pl": "Syrenka", "en": "The Mermaid", "cs": "Siréna", "is": "Hafmeyjan"},
+			"desc": {
+				"pl": "Syrenka z mieczem i tarczą to herb Warszawy",
+				"en": "The mermaid with a sword and shield is Warsaw's coat of arms",
+				"cs": "Siréna s mečem a štítem je ve znaku Varšavy",
+				"is": "Hafmeyjan með sverð og skjöld er skjaldarmerki Varsjár"
+			}
+		}
 	],
 	"Gdańsk": [
-		{"kind": "zuraw", "name": {"pl": "Żuraw"}, "desc": {"pl": "Średniowieczny dźwig portowy nad Motławą"}},
+		{
+			"kind": "zuraw",
+			"name": {"pl": "Żuraw", "en": "The Crane", "cs": "Jeřáb", "is": "Kraninn"},
+			"desc": {
+				"pl": "Średniowieczny dźwig portowy nad Motławą",
+				"en": "A medieval harbour crane on the Motława",
+				"cs": "Středověký přístavní jeřáb na řece Motławě",
+				"is": "Hafnarkrani frá miðöldum við Motława"
+			}
+		},
 		{
 			"kind": "neptune",
-			"name": {"pl": "Fontanna Neptuna"},
-			"desc": {"pl": "Bóg mórz stoi na Długim Targu od 1633 roku"}
+			"name": {
+				"pl": "Fontanna Neptuna",
+				"en": "Neptune's Fountain",
+				"cs": "Neptunova kašna",
+				"is": "Neptúnusarbrunnurinn"
+			},
+			"desc": {
+				"pl": "Bóg mórz stoi na Długim Targu od 1633 roku",
+				"en": "The god of the seas has stood in the Long Market since 1633",
+				"cs": "Bůh moří stojí na Dlouhém trhu od roku 1633",
+				"is": "Sjávarguðinn hefur staðið á Długi Targ síðan 1633"
+			}
 		}
 	],
 	"Wrocław": [
 		{
 			"kind": "townhall_gothic",
-			"name": {"pl": "Ratusz"},
-			"desc": {"pl": "Gotycki ratusz na jednym z największych rynków Europy"}
+			"name": {"pl": "Ratusz", "en": "Town Hall", "cs": "Radnice", "is": "Ráðhúsið"},
+			"desc": {
+				"pl": "Gotycki ratusz na jednym z największych rynków Europy",
+				"en": "A Gothic town hall on one of the largest market squares in Europe",
+				"cs": "Gotická radnice na jednom z největších náměstí Evropy",
+				"is": "Gotneskt ráðhús á einu stærsta torgi Evrópu"
+			}
 		},
 		{
 			"kind": "dwarf",
-			"name": {"pl": "Krasnale"},
-			"desc": {"pl": "We Wrocławiu mieszka ponad 600 krasnali z brązu"}
+			"name": {"pl": "Krasnale", "en": "Dwarfs", "cs": "Trpaslíci", "is": "Dvergarnir"},
+			"desc": {
+				"pl": "We Wrocławiu mieszka ponad 600 krasnali z brązu",
+				"en": "Over 600 little bronze dwarfs live in Wrocław",
+				"cs": "Ve Vratislavi žije přes 600 bronzových trpaslíků",
+				"is": "Í Wrocław búa yfir 600 bronsdvergar"
+			}
 		}
 	],
 	"Łódź": [
-		{"kind": "factory", "name": {"pl": "Manufaktura"}, "desc": {"pl": "Dawna fabryka tkanin z czerwonej cegły"}},
+		{
+			"kind": "factory",
+			"name": {"pl": "Manufaktura", "en": "Manufaktura", "cs": "Manufaktura", "is": "Manufaktura"},
+			"desc": {
+				"pl": "Dawna fabryka tkanin z czerwonej cegły",
+				"en": "A former red-brick textile factory",
+				"cs": "Bývalá továrna na látky z červených cihel",
+				"is": "Fyrrum vefnaðarverksmiðja úr rauðum múrsteini"
+			}
+		},
 		{
 			"kind": "teddy",
-			"name": {"pl": "Miś Uszatek"},
-			"desc": {"pl": "W łódzkim studiu Se-ma-for powstał Miś Uszatek"}
+			"name": {"pl": "Miś Uszatek", "en": "Floppy-Eared Teddy", "cs": "Medvídek Ušáček", "is": "Bangsinn Uszatek"},
+			"desc": {
+				"pl": "W łódzkim studiu Se-ma-for powstał Miś Uszatek",
+				"en": "Miś Uszatek, the floppy-eared teddy bear, was made at Łódź's Se-ma-for studio",
+				"cs": "V lodžském studiu Se-ma-for vznikl Medvídek Ušáček",
+				"is": "Bangsinn Uszatek varð til í Se-ma-for-myndverinu í Łódź"
+			}
 		}
 	],
 	"Poznań": [
 		{
 			"kind": "goats",
-			"name": {"pl": "Koziołki"},
-			"desc": {"pl": "Codziennie w południe koziołki trykają się na ratuszu"}
+			"name": {"pl": "Koziołki", "en": "Billy goats", "cs": "Kozlíci", "is": "Geithafrarnir"},
+			"desc": {
+				"pl": "Codziennie w południe koziołki trykają się na ratuszu",
+				"en": "Every day at noon, two billy goats butt heads on the town hall",
+				"cs": "Každý den v poledne se kozlíci na radnici trkají",
+				"is": "Á hverjum degi á hádegi stangast geithafrarnir á ráðhúsinu"
+			}
 		}
 	],
 	"Szczecin": [
-		{"kind": "waly", "name": {"pl": "Wały Chrobrego"}, "desc": {"pl": "Tarasy widokowe nad Odrą"}},
-		{"kind": "port_crane", "name": {"pl": "Port"}, "desc": {"pl": "Jeden z największych portów nad Bałtykiem"}}
+		{
+			"kind": "waly",
+			"name": {"pl": "Wały Chrobrego", "en": "Chrobry Embankment", "cs": "Chrabrého valy", "is": "Chrobry-bakkarnir"},
+			"desc": {
+				"pl": "Tarasy widokowe nad Odrą",
+				"en": "Viewing terraces above the Oder",
+				"cs": "Vyhlídkové terasy nad Odrou",
+				"is": "Útsýnissvalir við ána Oder"
+			}
+		},
+		{
+			"kind": "port_crane",
+			"name": {"pl": "Port", "en": "Port", "cs": "Přístav", "is": "Höfnin"},
+			"desc": {
+				"pl": "Jeden z największych portów nad Bałtykiem",
+				"en": "One of the largest ports on the Baltic",
+				"cs": "Jeden z největších přístavů u Baltu",
+				"is": "Ein stærsta höfn við Eystrasalt"
+			}
+		}
 	],
 	"Lublin": [
 		{
 			"kind": "gate",
-			"name": {"pl": "Brama Krakowska"},
-			"desc": {"pl": "Gotycka brama prowadząca na Stare Miasto"}
+			"name": {"pl": "Brama Krakowska", "en": "Kraków Gate", "cs": "Krakovská brána", "is": "Kraká-hliðið"},
+			"desc": {
+				"pl": "Gotycka brama prowadząca na Stare Miasto",
+				"en": "A Gothic gate leading into the Old Town",
+				"cs": "Gotická brána vedoucí do Starého Města",
+				"is": "Gotneskt hlið inn í gamla bæinn"
+			}
 		},
-		{"kind": "castle_brick", "name": {"pl": "Zamek Lubelski"}, "desc": {"pl": "Zamek z kaplicą Świętej Trójcy"}}
+		{
+			"kind": "castle_brick",
+			"name": {"pl": "Zamek Lubelski", "en": "Lublin Castle", "cs": "Lublinský hrad", "is": "Lublin-kastali"},
+			"desc": {
+				"pl": "Zamek z kaplicą Świętej Trójcy",
+				"en": "A castle with the Holy Trinity Chapel",
+				"cs": "Hrad s kaplí Nejsvětější Trojice",
+				"is": "Kastali með kapellu heilagrar þrenningar"
+			}
+		}
 	],
 	"Bydgoszcz": [
-		{"kind": "archer", "name": {"pl": "Łuczniczka"}, "desc": {"pl": "Słynna rzeźba kobiety z łukiem"}},
+		{
+			"kind": "archer",
+			"name": {"pl": "Łuczniczka", "en": "The Archer", "cs": "Lukostřelkyně", "is": "Bogmærin"},
+			"desc": {
+				"pl": "Słynna rzeźba kobiety z łukiem",
+				"en": "A famous statue of a woman with a bow",
+				"cs": "Slavná socha ženy s lukem",
+				"is": "Fræg stytta af konu með boga"
+			}
+		},
 		{
 			"kind": "granaries",
-			"name": {"pl": "Spichrze nad Brdą"},
-			"desc": {"pl": "Drewniano-ceglane spichrze nad rzeką"}
+			"name": {
+				"pl": "Spichrze nad Brdą",
+				"en": "Granaries on the Brda",
+				"cs": "Sýpky na Brdě",
+				"is": "Kornhlöðurnar við Brda"
+			},
+			"desc": {
+				"pl": "Drewniano-ceglane spichrze nad rzeką",
+				"en": "Timber-and-brick granaries by the river",
+				"cs": "Dřevěné a cihlové sýpky u řeky",
+				"is": "Kornhlöður úr timbri og múrsteini við ána"
+			}
 		}
 	],
 	"Białystok": [
-		{"kind": "palace", "name": {"pl": "Pałac Branickich"}, "desc": {"pl": "Pałac nazywany Wersalem Podlasia"}},
-		{"kind": "bison", "name": {"pl": "Żubr"}, "desc": {"pl": "Żubr to największe zwierzę żyjące w Polsce"}}
+		{
+			"kind": "palace",
+			"name": {"pl": "Pałac Branickich", "en": "Branicki Palace", "cs": "Palác Branických", "is": "Branicki-höllin"},
+			"desc": {
+				"pl": "Pałac nazywany Wersalem Podlasia",
+				"en": "A palace called the Versailles of Podlasie",
+				"cs": "Palác zvaný Versailles Podlesí",
+				"is": "Höll sem kölluð er Versalir Podlasie"
+			}
+		},
+		{
+			"kind": "bison",
+			"name": {"pl": "Żubr", "en": "European bison", "cs": "Zubr", "is": "Vísundur"},
+			"desc": {
+				"pl": "Żubr to największe zwierzę żyjące w Polsce",
+				"en": "The European bison is the largest animal living in Poland",
+				"cs": "Zubr je největší zvíře, které žije v Polsku",
+				"is": "Evrópski vísundurinn er stærsta dýr sem lifir í Póllandi"
+			}
+		}
 	],
 	"Katowice": [
-		{"kind": "spodek", "name": {"pl": "Spodek"}, "desc": {"pl": "Hala widowiskowa w kształcie latającego spodka"}},
-		{"kind": "mine", "name": {"pl": "Szyb kopalni"}, "desc": {"pl": "Śląsk to kraina kopalń węgla"}}
+		{
+			"kind": "spodek",
+			"name": {"pl": "Spodek", "en": "Spodek", "cs": "Spodek", "is": "Spodek"},
+			"desc": {
+				"pl": "Hala widowiskowa w kształcie latającego spodka",
+				"en": "An arena shaped like a flying saucer",
+				"cs": "Sportovní hala ve tvaru létajícího talíře",
+				"is": "Íþrótta- og tónleikahöll eins og fljúgandi diskur í laginu"
+			}
+		},
+		{
+			"kind": "mine",
+			"name": {"pl": "Szyb kopalni", "en": "Mine shaft", "cs": "Důlní šachta", "is": "Námustokkur"},
+			"desc": {
+				"pl": "Śląsk to kraina kopalń węgla",
+				"en": "Silesia is a land of coal mines",
+				"cs": "Slezsko je kraj uhelných dolů",
+				"is": "Slésía er land kolanáma"
+			}
+		}
 	],
-	"Gdynia": [{"kind": "ship", "name": {"pl": "Dar Pomorza"}, "desc": {"pl": "Żaglowiec nazywany Białą Fregatą"}}],
-	"Częstochowa": [{"kind": "jasna_gora", "name": {"pl": "Jasna Góra"}, "desc": {"pl": "Klasztor z wieżą wysoką na 106 metrów"}}],
-	"Radom": [{"kind": "jet", "name": {"pl": "Air Show"}, "desc": {"pl": "W Radomiu odbywają się wielkie pokazy lotnicze"}}],
-	"Rzeszów": [{"kind": "townhall", "name": {"pl": "Ratusz"}, "desc": {"pl": "Ratusz na rzeszowskim Rynku"}}],
+	"Gdynia": [
+		{
+			"kind": "ship",
+			"name": {"pl": "Dar Pomorza", "en": "Dar Pomorza", "cs": "Dar Pomorza", "is": "Dar Pomorza"},
+			"desc": {
+				"pl": "Żaglowiec nazywany Białą Fregatą",
+				"en": "A sailing ship called the White Frigate",
+				"cs": "Plachetnice zvaná Bílá fregata",
+				"is": "Seglskip sem kallað er Hvíta freigátan"
+			}
+		}
+	],
+	"Częstochowa": [
+		{
+			"kind": "jasna_gora",
+			"name": {"pl": "Jasna Góra", "en": "Jasna Góra", "cs": "Jasná Hora", "is": "Jasna Góra"},
+			"desc": {
+				"pl": "Klasztor z wieżą wysoką na 106 metrów",
+				"en": "A monastery with a 106-metre-tall tower",
+				"cs": "Klášter s věží vysokou 106 metrů",
+				"is": "Klaustur með 106 metra háum turni"
+			}
+		}
+	],
+	"Radom": [
+		{
+			"kind": "jet",
+			"name": {"pl": "Air Show", "en": "Air Show", "cs": "Air Show", "is": "Air Show"},
+			"desc": {
+				"pl": "W Radomiu odbywają się wielkie pokazy lotnicze",
+				"en": "Big air shows are held in Radom",
+				"cs": "V Radomi se konají velké letecké přehlídky",
+				"is": "Í Radom eru haldnar stórar flugsýningar"
+			}
+		}
+	],
+	"Rzeszów": [
+		{
+			"kind": "townhall",
+			"name": {"pl": "Ratusz", "en": "Town Hall", "cs": "Radnice", "is": "Ráðhúsið"},
+			"desc": {
+				"pl": "Ratusz na rzeszowskim Rynku",
+				"en": "The town hall on Rzeszów's Market Square",
+				"cs": "Radnice na náměstí v Řešově",
+				"is": "Ráðhúsið á torginu í Rzeszów"
+			}
+		}
+	],
 	"Toruń": [
 		{
 			"kind": "copernicus",
-			"name": {"pl": "Pomnik Kopernika"},
-			"desc": {"pl": "Mikołaj Kopernik urodził się w Toruniu"}
+			"name": {
+				"pl": "Pomnik Kopernika",
+				"en": "Copernicus Monument",
+				"cs": "Pomník Koperníka",
+				"is": "Stytta af Kópernikusi"
+			},
+			"desc": {
+				"pl": "Mikołaj Kopernik urodził się w Toruniu",
+				"en": "Nicolaus Copernicus was born in Toruń",
+				"cs": "Mikuláš Koperník se narodil v Toruni",
+				"is": "Nikulás Kópernikus fæddist í Toruń"
+			}
 		},
 		{
 			"kind": "gingerbread",
-			"name": {"pl": "Toruński piernik"},
-			"desc": {"pl": "Toruń od wieków słynie z pierników"}
+			"name": {
+				"pl": "Toruński piernik",
+				"en": "Toruń gingerbread",
+				"cs": "Toruňský perník",
+				"is": "Piparkökur frá Toruń"
+			},
+			"desc": {
+				"pl": "Toruń od wieków słynie z pierników",
+				"en": "Toruń has been famous for gingerbread for centuries",
+				"cs": "Toruň je už po staletí proslulá perníkem",
+				"is": "Toruń hefur verið fræg fyrir piparkökur öldum saman"
+			}
 		}
 	],
-	"Kielce": [{"kind": "palace", "name": {"pl": "Pałac Biskupów"}, "desc": {"pl": "Barokowy pałac w centrum Kielc"}}],
+	"Kielce": [
+		{
+			"kind": "palace",
+			"name": {"pl": "Pałac Biskupów", "en": "Bishops' Palace", "cs": "Biskupský palác", "is": "Biskupahöllin"},
+			"desc": {
+				"pl": "Barokowy pałac w centrum Kielc",
+				"en": "A Baroque palace in the centre of Kielce",
+				"cs": "Barokní palác v centru Kielců",
+				"is": "Barokkhöll í miðbæ Kielce"
+			}
+		}
+	],
 	"Olsztyn": [
 		{
 			"kind": "castle_brick",
-			"name": {"pl": "Zamek w Olsztynie"},
-			"desc": {"pl": "Na zamku mieszkał i pracował Mikołaj Kopernik"}
+			"name": {"pl": "Zamek w Olsztynie", "en": "Olsztyn Castle", "cs": "Hrad v Olštýně", "is": "Kastalinn í Olsztyn"},
+			"desc": {
+				"pl": "Na zamku mieszkał i pracował Mikołaj Kopernik",
+				"en": "Nicolaus Copernicus lived and worked in this castle",
+				"cs": "Na hradě žil a pracoval Mikuláš Koperník",
+				"is": "Nikulás Kópernikus bjó og starfaði í kastalanum"
+			}
 		}
 	],
 	"Bielsko-Biała": [
 		{
 			"kind": "bolek_lolek",
-			"name": {"pl": "Bolek i Lolek"},
-			"desc": {"pl": "W Bielsku-Białej powstały bajki o Bolku i Lolku"}
+			"name": {"pl": "Bolek i Lolek", "en": "Bolek and Lolek", "cs": "Bolek a Lolek", "is": "Bolek og Lolek"},
+			"desc": {
+				"pl": "W Bielsku-Białej powstały bajki o Bolku i Lolku",
+				"en": "The cartoons about Bolek and Lolek were made in Bielsko-Biała",
+				"cs": "V Bílsku-Bělé vznikly pohádky o Bolkovi a Lolkovi",
+				"is": "Teiknimyndirnar um Bolek og Lolek urðu til í Bielsko-Biała"
+			}
 		}
 	],
-	"Zielona Góra": [{"kind": "grapes", "name": {"pl": "Winnice"}, "desc": {"pl": "Miasto winnic i jesiennego Winobrania"}}],
+	"Zielona Góra": [
+		{
+			"kind": "grapes",
+			"name": {"pl": "Winnice", "en": "Vineyards", "cs": "Vinice", "is": "Vínekrur"},
+			"desc": {
+				"pl": "Miasto winnic i jesiennego Winobrania",
+				"en": "A city of vineyards and the autumn grape harvest festival",
+				"cs": "Město vinic a podzimního vinobraní",
+				"is": "Borg vínekra og vínuppskeruhátíðar á haustin"
+			}
+		}
+	],
 	"Opole": [
-		{"kind": "round_tower", "name": {"pl": "Wieża Piastowska"}, "desc": {"pl": "Najstarsza budowla w Opolu"}},
+		{
+			"kind": "round_tower",
+			"name": {"pl": "Wieża Piastowska", "en": "Piast Tower", "cs": "Piastovská věž", "is": "Piastaturninn"},
+			"desc": {
+				"pl": "Najstarsza budowla w Opolu",
+				"en": "The oldest building in Opole",
+				"cs": "Nejstarší stavba v Opolí",
+				"is": "Elsta bygging í Opole"
+			}
+		},
 		{
 			"kind": "music",
-			"name": {"pl": "Festiwal Piosenki"},
-			"desc": {"pl": "W Opolu co roku śpiewają najlepsi polscy artyści"}
+			"name": {"pl": "Festiwal Piosenki", "en": "Song Festival", "cs": "Festival písní", "is": "Söngvahátíðin"},
+			"desc": {
+				"pl": "W Opolu co roku śpiewają najlepsi polscy artyści",
+				"en": "The best Polish artists sing in Opole every year",
+				"cs": "V Opolí každý rok zpívají nejlepší polští umělci",
+				"is": "Bestu söngvarar Póllands syngja í Opole á hverju ári"
+			}
 		}
 	],
-	"Gorzów Wielkopolski": [{"kind": "cathedral", "name": {"pl": "Katedra"}, "desc": {"pl": "Gotycka katedra, najstarsza budowla Gorzowa"}}],
+	"Gorzów Wielkopolski": [
+		{
+			"kind": "cathedral",
+			"name": {"pl": "Katedra", "en": "Cathedral", "cs": "Katedrála", "is": "Dómkirkjan"},
+			"desc": {
+				"pl": "Gotycka katedra, najstarsza budowla Gorzowa",
+				"en": "A Gothic cathedral, the oldest building in Gorzów",
+				"cs": "Gotická katedrála, nejstarší stavba Gorzówa",
+				"is": "Gotnesk dómkirkja, elsta bygging Gorzów"
+			}
+		}
+	],
 	"Płock": [
 		{
 			"kind": "cathedral",
-			"name": {"pl": "Wzgórze Tumskie"},
-			"desc": {"pl": "Katedra nad Wisłą, tu pochowano polskich władców"}
+			"name": {"pl": "Wzgórze Tumskie", "en": "Cathedral Hill", "cs": "Tumské návrší", "is": "Tumski-hæðin"},
+			"desc": {
+				"pl": "Katedra nad Wisłą, tu pochowano polskich władców",
+				"en": "A cathedral above the Vistula where Polish rulers are buried",
+				"cs": "Katedrála nad Vislou, jsou tu pohřbeni polští panovníci",
+				"is": "Dómkirkja við Wisła, hér voru pólskir þjóðhöfðingjar grafnir"
+			}
 		}
 	],
 	"Elbląg": [
-		{"kind": "gate", "name": {"pl": "Brama Targowa"}, "desc": {"pl": "Jedyna zachowana brama dawnych murów"}},
+		{
+			"kind": "gate",
+			"name": {"pl": "Brama Targowa", "en": "Market Gate", "cs": "Tržní brána", "is": "Markaðshliðið"},
+			"desc": {
+				"pl": "Jedyna zachowana brama dawnych murów",
+				"en": "The only surviving gate of the old town walls",
+				"cs": "Jediná zachovaná brána starých hradeb",
+				"is": "Eina varðveitta hliðið í gömlu borgarmúrunum"
+			}
+		},
 		{
 			"kind": "boat_rail",
-			"name": {"pl": "Kanał Elbląski"},
-			"desc": {"pl": "Na tym kanale statki przejeżdżają po trawie"}
+			"name": {"pl": "Kanał Elbląski", "en": "Elbląg Canal", "cs": "Elbląžský kanál", "is": "Elbląg-skurðurinn"},
+			"desc": {
+				"pl": "Na tym kanale statki przejeżdżają po trawie",
+				"en": "On this canal, boats ride over the grass",
+				"cs": "Na tomto kanálu lodě přejíždějí po trávě",
+				"is": "Á þessum skurði fara skipin yfir gras"
+			}
 		}
 	],
-	"Koszalin": [{"kind": "cathedral", "name": {"pl": "Katedra"}, "desc": {"pl": "Gotycka katedra w centrum Koszalina"}}],
-	"Łomża": [{"kind": "cathedral", "name": {"pl": "Katedra"}, "desc": {"pl": "Gotycka katedra nad Narwią"}}],
+	"Koszalin": [
+		{
+			"kind": "cathedral",
+			"name": {"pl": "Katedra", "en": "Cathedral", "cs": "Katedrála", "is": "Dómkirkjan"},
+			"desc": {
+				"pl": "Gotycka katedra w centrum Koszalina",
+				"en": "A Gothic cathedral in the centre of Koszalin",
+				"cs": "Gotická katedrála v centru Koszalinu",
+				"is": "Gotnesk dómkirkja í miðbæ Koszalin"
+			}
+		}
+	],
+	"Łomża": [
+		{
+			"kind": "cathedral",
+			"name": {"pl": "Katedra", "en": "Cathedral", "cs": "Katedrála", "is": "Dómkirkjan"},
+			"desc": {
+				"pl": "Gotycka katedra nad Narwią",
+				"en": "A Gothic cathedral on the Narew",
+				"cs": "Gotická katedrála nad Narevem",
+				"is": "Gotnesk dómkirkja við ána Narew"
+			}
+		}
+	],
 	"Zamość": [
 		{
 			"kind": "townhall_zamosc",
-			"name": {"pl": "Ratusz"},
-			"desc": {"pl": "Renesansowy ratusz z wachlarzowymi schodami"}
+			"name": {"pl": "Ratusz", "en": "Town Hall", "cs": "Radnice", "is": "Ráðhúsið"},
+			"desc": {
+				"pl": "Renesansowy ratusz z wachlarzowymi schodami",
+				"en": "A Renaissance town hall with fan-shaped stairs",
+				"cs": "Renesanční radnice s vějířovitým schodištěm",
+				"is": "Endurreisnarráðhús með blævængslaga tröppum"
+			}
 		}
 	],
 	"Zakopane": [
-		{"kind": "ski_jump", "name": {"pl": "Wielka Krokiew"}, "desc": {"pl": "Skocznia narciarska pod Tatrami"}},
+		{
+			"kind": "ski_jump",
+			"name": {"pl": "Wielka Krokiew", "en": "Wielka Krokiew", "cs": "Wielka Krokiew", "is": "Wielka Krokiew"},
+			"desc": {
+				"pl": "Skocznia narciarska pod Tatrami",
+				"en": "A ski jump below the Tatras",
+				"cs": "Skokanský můstek pod Tatrami",
+				"is": "Skíðastökkpallur við rætur Tatrafjalla"
+			}
+		},
 		{
 			"kind": "goral_house",
-			"name": {"pl": "Styl zakopiański"},
-			"desc": {"pl": "Drewniane domy góralskie ze stromymi dachami"}
+			"name": {"pl": "Styl zakopiański", "en": "Zakopane style", "cs": "Zakopanský styl", "is": "Zakopane-stíllinn"},
+			"desc": {
+				"pl": "Drewniane domy góralskie ze stromymi dachami",
+				"en": "Wooden highlander houses with steep roofs",
+				"cs": "Dřevěné horalské domy se strmými střechami",
+				"is": "Fjallabændahús úr timbri með bröttum þökum"
+			}
 		}
 	],
-	"Szczebrzeszyn": [{"kind": "beetle", "name": {"pl": "Chrząszcz"}, "desc": {"pl": "W Szczebrzeszynie chrząszcz brzmi w trzcinie"}}],
+	"Szczebrzeszyn": [
+		{
+			"kind": "beetle",
+			"name": {"pl": "Chrząszcz", "en": "The Beetle", "cs": "Brouk", "is": "Bjallan"},
+			"desc": {
+				"pl": "W Szczebrzeszynie chrząszcz brzmi w trzcinie",
+				"en": "In Szczebrzeszyn a beetle buzzes in the reeds: a famous Polish tongue twister",
+				"cs": "Ve Szczebrzeszyně bzučí brouk v rákosí – slavný polský jazykolam",
+				"is": "Í Szczebrzeszyn suðar bjallan í sefinu"
+			}
+		}
+	],
 	"Sopot": [
 		{
 			"kind": "crooked",
-			"name": {"pl": "Krzywy Domek"},
-			"desc": {"pl": "Budynek jak z bajki, bez jednej prostej ściany"}
+			"name": {"pl": "Krzywy Domek", "en": "Crooked House", "cs": "Křivý domek", "is": "Skakka húsið"},
+			"desc": {
+				"pl": "Budynek jak z bajki, bez jednej prostej ściany",
+				"en": "A fairy-tale building without a single straight wall",
+				"cs": "Budova jako z pohádky, bez jediné rovné stěny",
+				"is": "Hús eins og úr ævintýri, án eins einasta beins veggjar"
+			}
 		}
 	],
 	"Ciechocinek": [
 		{
 			"kind": "teznie",
-			"name": {"pl": "Tężnie"},
-			"desc": {"pl": "Drewniane tężnie solankowe: tu oddycha się morskim powietrzem"}
+			"name": {"pl": "Tężnie", "en": "Graduation towers", "cs": "Gradovny", "is": "Saltúðaveggirnir"},
+			"desc": {
+				"pl": "Drewniane tężnie solankowe: tu oddycha się morskim powietrzem",
+				"en": "Wooden brine graduation towers: here you breathe sea-like air",
+				"cs": "Dřevěné solné gradovny: dýchá se tu mořský vzduch",
+				"is": "Saltúðaveggir úr timbri: hér andar maður að sér sjávarlofti"
+			}
 		}
 	],
-	"Gliwice": [{"kind": "radio_tower", "name": {"pl": "Radiostacja"}, "desc": {"pl": "Najwyższa drewniana wieża w Europie"}}],
-	"Bochnia": [{"kind": "mine", "name": {"pl": "Kopalnia soli"}, "desc": {"pl": "Najstarsza kopalnia soli w Polsce"}}],
+	"Gliwice": [
+		{
+			"kind": "radio_tower",
+			"name": {"pl": "Radiostacja", "en": "Radio station", "cs": "Vysílačka", "is": "Útvarpsstöðin"},
+			"desc": {
+				"pl": "Najwyższa drewniana wieża w Europie",
+				"en": "The tallest wooden tower in Europe",
+				"cs": "Nejvyšší dřevěná věž v Evropě",
+				"is": "Hæsti timburturn í Evrópu"
+			}
+		}
+	],
+	"Bochnia": [
+		{
+			"kind": "mine",
+			"name": {"pl": "Kopalnia soli", "en": "Salt mine", "cs": "Solný důl", "is": "Saltnáman"},
+			"desc": {
+				"pl": "Najstarsza kopalnia soli w Polsce",
+				"en": "The oldest salt mine in Poland",
+				"cs": "Nejstarší solný důl v Polsku",
+				"is": "Elsta saltnáma Póllands"
+			}
+		}
+	],
 	"Gniezno": [
 		{
 			"kind": "cathedral",
-			"name": {"pl": "Katedra Gnieźnieńska"},
-			"desc": {"pl": "Gniezno było pierwszą stolicą Polski"}
+			"name": {
+				"pl": "Katedra Gnieźnieńska",
+				"en": "Gniezno Cathedral",
+				"cs": "Hnězdenská katedrála",
+				"is": "Dómkirkjan í Gniezno"
+			},
+			"desc": {
+				"pl": "Gniezno było pierwszą stolicą Polski",
+				"en": "Gniezno was the first capital of Poland",
+				"cs": "Hnězdno bylo prvním hlavním městem Polska",
+				"is": "Gniezno var fyrsta höfuðborg Póllands"
+			}
 		},
 		{
 			"kind": "eagle",
-			"name": {"pl": "Orle gniazdo"},
-			"desc": {"pl": "Legenda o Lechu, który zobaczył białego orła"}
+			"name": {"pl": "Orle gniazdo", "en": "Eagle's nest", "cs": "Orlí hnízdo", "is": "Arnarhreiðrið"},
+			"desc": {
+				"pl": "Legenda o Lechu, który zobaczył białego orła",
+				"en": "The legend of Lech, who saw a white eagle",
+				"cs": "Legenda o Lechovi, který uviděl bílého orla",
+				"is": "Sagan af Lech sem sá hvítan örn"
+			}
 		}
 	],
 	"Łańcut": [
 		{
 			"kind": "palace",
-			"name": {"pl": "Zamek w Łańcucie"},
-			"desc": {"pl": "Jedna z najpiękniejszych rezydencji w Polsce"}
+			"name": {"pl": "Zamek w Łańcucie", "en": "Łańcut Castle", "cs": "Zámek v Łańcutě", "is": "Kastalinn í Łańcut"},
+			"desc": {
+				"pl": "Jedna z najpiękniejszych rezydencji w Polsce",
+				"en": "One of the most beautiful residences in Poland",
+				"cs": "Jedno z nejkrásnějších sídel v Polsku",
+				"is": "Eitt fegursta höfðingjasetur Póllands"
+			}
 		}
 	],
 	"Pszczyna": [
-		{"kind": "palace", "name": {"pl": "Zamek w Pszczynie"}, "desc": {"pl": "Zamek otoczony wielkim parkiem"}},
-		{"kind": "bison", "name": {"pl": "Zagroda Żubrów"}, "desc": {"pl": "W Pszczynie można zobaczyć żubry"}}
+		{
+			"kind": "palace",
+			"name": {"pl": "Zamek w Pszczynie", "en": "Pszczyna Castle", "cs": "Zámek v Pštině", "is": "Kastalinn í Pszczyna"},
+			"desc": {
+				"pl": "Zamek otoczony wielkim parkiem",
+				"en": "A castle surrounded by a big park",
+				"cs": "Zámek obklopený velkým parkem",
+				"is": "Kastali umkringdur stórum garði"
+			}
+		},
+		{
+			"kind": "bison",
+			"name": {"pl": "Zagroda Żubrów", "en": "Bison enclosure", "cs": "Obora zubrů", "is": "Vísundagerðið"},
+			"desc": {
+				"pl": "W Pszczynie można zobaczyć żubry",
+				"en": "You can see European bison in Pszczyna",
+				"cs": "V Pštině můžeš vidět zubry",
+				"is": "Í Pszczyna er hægt að sjá vísunda"
+			}
+		}
 	],
 	"Świebodzin": [
 		{
 			"kind": "christ",
-			"name": {"pl": "Pomnik Chrystusa Króla"},
-			"desc": {"pl": "Jeden z największych takich pomników na świecie"}
+			"name": {
+				"pl": "Pomnik Chrystusa Króla",
+				"en": "Statue of Christ the King",
+				"cs": "Socha Krista Krále",
+				"is": "Styttan af Kristi konungi"
+			},
+			"desc": {
+				"pl": "Jeden z największych takich pomników na świecie",
+				"en": "One of the largest statues of its kind in the world",
+				"cs": "Jedna z největších takových soch na světě",
+				"is": "Ein stærsta stytta sinnar tegundar í heiminum"
+			}
 		}
 	],
-	"Żnin": [{"kind": "fort", "name": {"pl": "Biskupin"}, "desc": {"pl": "Obok Żnina stoi drewniana osada sprzed 2700 lat"}}],
+	"Żnin": [
+		{
+			"kind": "fort",
+			"name": {"pl": "Biskupin", "en": "Biskupin", "cs": "Biskupin", "is": "Biskupin"},
+			"desc": {
+				"pl": "Obok Żnina stoi drewniana osada sprzed 2700 lat",
+				"en": "A wooden settlement 2700 years old stands near Żnin",
+				"cs": "U Żnina stojí dřevěná osada stará 2700 let",
+				"is": "Hjá Żnin stendur timburþorp frá því fyrir 2700 árum"
+			}
+		}
+	],
 	"Łęczyca": [
 		{
 			"kind": "devil",
-			"name": {"pl": "Diabeł Boruta"},
-			"desc": {"pl": "Legenda mówi, że Boruta pilnuje skarbów zamku"}
+			"name": {"pl": "Diabeł Boruta", "en": "Boruta the Devil", "cs": "Čert Boruta", "is": "Djöfullinn Boruta"},
+			"desc": {
+				"pl": "Legenda mówi, że Boruta pilnuje skarbów zamku",
+				"en": "Legend says Boruta guards the castle's treasure",
+				"cs": "Podle legendy Boruta hlídá poklady hradu",
+				"is": "Sagan segir að Boruta gæti fjársjóða kastalans"
+			}
 		}
 	],
 	"Nowy Tomyśl": [
 		{
 			"kind": "basket",
-			"name": {"pl": "Wielki kosz"},
-			"desc": {"pl": "Tu stoi największy wiklinowy kosz na świecie"}
+			"name": {"pl": "Wielki kosz", "en": "Giant basket", "cs": "Velký koš", "is": "Stóra karfan"},
+			"desc": {
+				"pl": "Tu stoi największy wiklinowy kosz na świecie",
+				"en": "The world's largest wicker basket stands here",
+				"cs": "Stojí tu největší proutěný koš na světě",
+				"is": "Hér stendur stærsta tágakarfa í heimi"
+			}
 		}
 	],
-	"Grójec": [{"kind": "big_apple", "name": {"pl": "Jabłka"}, "desc": {"pl": "Wokół Grójca rośnie największy sad w Europie"}}],
-	"Tarnów": [{"kind": "townhall", "name": {"pl": "Ratusz"}, "desc": {"pl": "Renesansowy ratusz na tarnowskim Rynku"}}],
-	"Chęciny": [{"kind": "castle", "name": {"pl": "Zamek w Chęcinach"}, "desc": {"pl": "Ruiny królewskiego zamku na wzgórzu"}}],
+	"Grójec": [
+		{
+			"kind": "big_apple",
+			"name": {"pl": "Jabłka", "en": "Apples", "cs": "Jablka", "is": "Epli"},
+			"desc": {
+				"pl": "Wokół Grójca rośnie największy sad w Europie",
+				"en": "The largest orchard in Europe grows around Grójec",
+				"cs": "Kolem Grójce roste největší sad v Evropě",
+				"is": "Í kringum Grójec vex stærsti ávaxtagarður Evrópu"
+			}
+		}
+	],
+	"Tarnów": [
+		{
+			"kind": "townhall",
+			"name": {"pl": "Ratusz", "en": "Town Hall", "cs": "Radnice", "is": "Ráðhúsið"},
+			"desc": {
+				"pl": "Renesansowy ratusz na tarnowskim Rynku",
+				"en": "A Renaissance town hall on Tarnów's Market Square",
+				"cs": "Renesanční radnice na náměstí v Tarnowě",
+				"is": "Endurreisnarráðhús á torginu í Tarnów"
+			}
+		}
+	],
+	"Chęciny": [
+		{
+			"kind": "castle",
+			"name": {"pl": "Zamek w Chęcinach", "en": "Chęciny Castle", "cs": "Hrad v Chęcinách", "is": "Kastalinn í Chęciny"},
+			"desc": {
+				"pl": "Ruiny królewskiego zamku na wzgórzu",
+				"en": "Ruins of a royal castle on a hill",
+				"cs": "Zřícenina královského hradu na kopci",
+				"is": "Rústir konungskastala á hæð"
+			}
+		}
+	],
 	"Konin": [
 		{
 			"kind": "milestone",
-			"name": {"pl": "Słup milowy"},
-			"desc": {"pl": "Najstarszy znak drogowy w Polsce, z 1151 roku"}
+			"name": {"pl": "Słup milowy", "en": "Milestone", "cs": "Milník", "is": "Mílusteinn"},
+			"desc": {
+				"pl": "Najstarszy znak drogowy w Polsce, z 1151 roku",
+				"en": "The oldest road sign in Poland, from 1151",
+				"cs": "Nejstarší dopravní značka v Polsku, z roku 1151",
+				"is": "Elsta vegamerki Póllands, frá 1151"
+			}
 		}
 	],
 	"Pelplin": [
 		{
 			"kind": "cathedral",
-			"name": {"pl": "Bazylika w Pelplinie"},
-			"desc": {"pl": "Ogromny gotycki kościół cystersów"}
+			"name": {
+				"pl": "Bazylika w Pelplinie",
+				"en": "Pelplin Basilica",
+				"cs": "Bazilika v Pelplině",
+				"is": "Basilíkan í Pelplin"
+			},
+			"desc": {
+				"pl": "Ogromny gotycki kościół cystersów",
+				"en": "A huge Gothic Cistercian church",
+				"cs": "Obrovský gotický kostel cisterciáků",
+				"is": "Gríðarstór gotnesk kirkja Sistersíana"
+			}
 		}
 	],
-	"Wadowice": [{"kind": "kremowka", "name": {"pl": "Kremówki"}, "desc": {"pl": "Wadowice słyną z kremówek"}}],
-	"Nidzica": [{"kind": "castle_brick", "name": {"pl": "Zamek w Nidzicy"}, "desc": {"pl": "Krzyżacki zamek z czerwonej cegły"}}],
+	"Wadowice": [
+		{
+			"kind": "kremowka",
+			"name": {"pl": "Kremówki", "en": "Cream cakes", "cs": "Krémové řezy", "is": "Rjómakökur"},
+			"desc": {
+				"pl": "Wadowice słyną z kremówek",
+				"en": "Wadowice is famous for kremówka cream cakes",
+				"cs": "Wadowice jsou proslulé krémovými řezy",
+				"is": "Wadowice er fræg fyrir rjómakökurnar kremówki"
+			}
+		}
+	],
+	"Nidzica": [
+		{
+			"kind": "castle_brick",
+			"name": {"pl": "Zamek w Nidzicy", "en": "Nidzica Castle", "cs": "Hrad v Nidzici", "is": "Kastalinn í Nidzica"},
+			"desc": {
+				"pl": "Krzyżacki zamek z czerwonej cegły",
+				"en": "A red-brick castle of the Teutonic Knights",
+				"cs": "Křižácký hrad z červených cihel",
+				"is": "Kastali Þýsku riddarareglunnar úr rauðum múrsteini"
+			}
+		}
+	],
 	"Ełk": [
 		{
 			"kind": "narrow_train",
-			"name": {"pl": "Kolejka wąskotorowa"},
-			"desc": {"pl": "Zabytkowa kolejka jeździ tu od ponad 100 lat"}
+			"name": {"pl": "Kolejka wąskotorowa", "en": "Narrow-gauge railway", "cs": "Úzkokolejka", "is": "Mjósporalest"},
+			"desc": {
+				"pl": "Zabytkowa kolejka jeździ tu od ponad 100 lat",
+				"en": "A historic little train has run here for over 100 years",
+				"cs": "Historický vláček tu jezdí už přes 100 let",
+				"is": "Gömul lest hefur ekið hér í meira en 100 ár"
+			}
 		}
 	],
 	"Piotrków Trybunalski": [
 		{
 			"kind": "townhall",
-			"name": {"pl": "Trybunał Koronny"},
-			"desc": {"pl": "Tu obradował najwyższy sąd dawnej Polski"}
+			"name": {"pl": "Trybunał Koronny", "en": "Crown Tribunal", "cs": "Korunní tribunál", "is": "Krúnudómstóllinn"},
+			"desc": {
+				"pl": "Tu obradował najwyższy sąd dawnej Polski",
+				"en": "The highest court of old Poland met here",
+				"cs": "Zasedal tu nejvyšší soud starého Polska",
+				"is": "Hér kom æðsti dómstóll gamla Póllands saman"
+			}
 		}
 	],
 	"Tczew": [
 		{
 			"kind": "truss_bridge",
-			"name": {"pl": "Most Tczewski"},
-			"desc": {"pl": "Jeden z najstarszych mostów na Wiśle, z 1857 roku"}
+			"name": {"pl": "Most Tczewski", "en": "Tczew Bridge", "cs": "Tczewský most", "is": "Tczew-brúin"},
+			"desc": {
+				"pl": "Jeden z najstarszych mostów na Wiśle, z 1857 roku",
+				"en": "One of the oldest bridges over the Vistula, from 1857",
+				"cs": "Jeden z nejstarších mostů přes Vislu, z roku 1857",
+				"is": "Ein elsta brúin yfir Wisła, frá 1857"
+			}
 		}
 	],
 	"Kalwaria Zebrzydowska": [
 		{
 			"kind": "basilica",
-			"name": {"pl": "Sanktuarium"},
-			"desc": {"pl": "Kalwaria wpisana na listę światowego dziedzictwa UNESCO"}
+			"name": {"pl": "Sanktuarium", "en": "Shrine", "cs": "Poutní místo", "is": "Helgistaðurinn"},
+			"desc": {
+				"pl": "Kalwaria wpisana na listę światowego dziedzictwa UNESCO",
+				"en": "A Calvary on the UNESCO World Heritage list",
+				"cs": "Kalvárie zapsaná na seznam světového dědictví UNESCO",
+				"is": "Kalvaría á heimsminjaskrá UNESCO"
+			}
 		}
 	],
-	"Leżajsk": [{"kind": "basilica", "name": {"pl": "Bazylika"}, "desc": {"pl": "Słynie z wielkich, pięknych organów"}}],
+	"Leżajsk": [
+		{
+			"kind": "basilica",
+			"name": {"pl": "Bazylika", "en": "Basilica", "cs": "Bazilika", "is": "Basilíkan"},
+			"desc": {
+				"pl": "Słynie z wielkich, pięknych organów",
+				"en": "Famous for its big, beautiful organ",
+				"cs": "Proslulá velkými, krásnými varhanami",
+				"is": "Fræg fyrir stórt og fallegt orgel"
+			}
+		}
+	],
 	"Wejherowo": [
 		{
 			"kind": "basilica",
-			"name": {"pl": "Kalwaria Wejherowska"},
-			"desc": {"pl": "Kaplice rozsiane po wzgórzach nad miastem"}
+			"name": {
+				"pl": "Kalwaria Wejherowska",
+				"en": "Wejherowo Calvary",
+				"cs": "Wejherowská kalvárie",
+				"is": "Wejherowo-kalvarían"
+			},
+			"desc": {
+				"pl": "Kaplice rozsiane po wzgórzach nad miastem",
+				"en": "Chapels scattered over the hills above the town",
+				"cs": "Kaple rozeseté po kopcích nad městem",
+				"is": "Kapellur á víð og dreif um hæðirnar ofan við bæinn"
+			}
 		}
 	],
 	"Trzebnica": [
 		{
 			"kind": "basilica",
-			"name": {"pl": "Bazylika św. Jadwigi"},
-			"desc": {"pl": "Tu pochowana jest święta Jadwiga Śląska"}
+			"name": {
+				"pl": "Bazylika św. Jadwigi",
+				"en": "Basilica of St Hedwig",
+				"cs": "Bazilika sv. Hedviky",
+				"is": "Basilíka heilagrar Heiðveigar"
+			},
+			"desc": {
+				"pl": "Tu pochowana jest święta Jadwiga Śląska",
+				"en": "Saint Hedwig of Silesia is buried here",
+				"cs": "Je tu pohřbena svatá Hedvika Slezská",
+				"is": "Hér er heilög Heiðveig af Slésíu grafin"
+			}
 		}
 	],
 	"Miechów": [
 		{
 			"kind": "basilica",
-			"name": {"pl": "Bazylika Grobu Bożego"},
-			"desc": {"pl": "Miechów był siedzibą zakonu Bożogrobców"}
+			"name": {
+				"pl": "Bazylika Grobu Bożego",
+				"en": "Basilica of the Holy Sepulchre",
+				"cs": "Bazilika Božího hrobu",
+				"is": "Basilíka hinnar heilögu grafar"
+			},
+			"desc": {
+				"pl": "Miechów był siedzibą zakonu Bożogrobców",
+				"en": "Miechów was the seat of the Order of the Holy Sepulchre",
+				"cs": "Miechów byl sídlem řádu strážců Božího hrobu",
+				"is": "Miechów var aðsetur Riddara hinnar heilögu grafar"
+			}
 		}
 	],
-	"Rabka-Zdrój": [{"kind": "smile", "name": {"pl": "Order Uśmiechu"}, "desc": {"pl": "Rabka to miasto dzieci świata"}}],
+	"Rabka-Zdrój": [
+		{
+			"kind": "smile",
+			"name": {"pl": "Order Uśmiechu", "en": "Order of the Smile", "cs": "Řád úsměvu", "is": "Brosorðan"},
+			"desc": {
+				"pl": "Rabka to miasto dzieci świata",
+				"en": "Rabka is the city of the world's children",
+				"cs": "Rabka je město dětí světa",
+				"is": "Rabka er borg barna heimsins"
+			}
+		}
+	],
 	"Jędrzejów": [
 		{
 			"kind": "sundial",
-			"name": {"pl": "Zegary słoneczne"},
-			"desc": {"pl": "Muzeum Przypkowskich ma wielką kolekcję zegarów"}
+			"name": {"pl": "Zegary słoneczne", "en": "Sundials", "cs": "Sluneční hodiny", "is": "Sólúr"},
+			"desc": {
+				"pl": "Muzeum Przypkowskich ma wielką kolekcję zegarów",
+				"en": "The Przypkowski Museum has a huge collection of clocks",
+				"cs": "Muzeum Przypkowských má velkou sbírku hodin",
+				"is": "Przypkowski-safnið á stórt safn af klukkum"
+			}
 		}
 	],
-	"Biłgoraj": [{"kind": "sieve", "name": {"pl": "Sito"}, "desc": {"pl": "Biłgoraj słynął z rzemiosła sitarzy"}}],
-	"Krasnystaw": [{"kind": "hops", "name": {"pl": "Chmiel"}, "desc": {"pl": "Stolica chmielu, co roku odbywają się tu Chmielaki"}}],
-	"Wizna": [{"kind": "bunker", "name": {"pl": "Bunkry"}, "desc": {"pl": "Bitwa pod Wizną w 1939 roku: polskie Termopile"}}],
+	"Biłgoraj": [
+		{
+			"kind": "sieve",
+			"name": {"pl": "Sito", "en": "Sieve", "cs": "Síto", "is": "Sigti"},
+			"desc": {
+				"pl": "Biłgoraj słynął z rzemiosła sitarzy",
+				"en": "Biłgoraj was famous for its sieve makers",
+				"cs": "Biłgoraj byl proslulý řemeslem sítařů",
+				"is": "Biłgoraj var fræg fyrir sigtagerð"
+			}
+		}
+	],
+	"Krasnystaw": [
+		{
+			"kind": "hops",
+			"name": {"pl": "Chmiel", "en": "Hops", "cs": "Chmel", "is": "Humlar"},
+			"desc": {
+				"pl": "Stolica chmielu, co roku odbywają się tu Chmielaki",
+				"en": "Capital of hops, with the Chmielaki hop festival every year",
+				"cs": "Hlavní město chmele, každý rok se tu konají Chmielaki",
+				"is": "Höfuðborg humlanna, hér er humlahátíðin Chmielaki haldin á hverju ári"
+			}
+		}
+	],
+	"Wizna": [
+		{
+			"kind": "bunker",
+			"name": {"pl": "Bunkry", "en": "Bunkers", "cs": "Bunkry", "is": "Byrgi"},
+			"desc": {
+				"pl": "Bitwa pod Wizną w 1939 roku: polskie Termopile",
+				"en": "The Battle of Wizna in 1939: the Polish Thermopylae",
+				"cs": "Bitva u Wizny roku 1939: polské Thermopyly",
+				"is": "Orrustan við Wizna árið 1939: Laugaskarð Póllands"
+			}
+		}
+	],
 	"Międzyrzecz": [
 		{
 			"kind": "bunker",
-			"name": {"pl": "Międzyrzecki Rejon Umocniony"},
-			"desc": {"pl": "Podziemne korytarze, w których zimują nietoperze"}
+			"name": {
+				"pl": "Międzyrzecki Rejon Umocniony",
+				"en": "Międzyrzecz Fortified Region",
+				"cs": "Międzyrzecké opevněné pásmo",
+				"is": "Międzyrzecz-varnarsvæðið"
+			},
+			"desc": {
+				"pl": "Podziemne korytarze, w których zimują nietoperze",
+				"en": "Underground tunnels where bats spend the winter",
+				"cs": "Podzemní chodby, ve kterých zimují netopýři",
+				"is": "Neðanjarðargöng þar sem leðurblökur leggjast í vetrardvala"
+			}
 		}
 	],
-	"Ruciane-Nida": [{"kind": "sailboat", "name": {"pl": "Mazury"}, "desc": {"pl": "Kraina tysiąca jezior i żeglarzy"}}],
+	"Ruciane-Nida": [
+		{
+			"kind": "sailboat",
+			"name": {"pl": "Mazury", "en": "Masuria", "cs": "Mazury", "is": "Mazury"},
+			"desc": {
+				"pl": "Kraina tysiąca jezior i żeglarzy",
+				"en": "Land of a thousand lakes and sailors",
+				"cs": "Kraj tisíce jezer a jachtařů",
+				"is": "Land þúsund vatna og siglingafólks"
+			}
+		}
+	],
 	"Środa Śląska": [
 		{
 			"kind": "crown",
-			"name": {"pl": "Skarb Średzki"},
-			"desc": {"pl": "Znaleziono tu średniowieczny skarb ze złotą koroną"}
+			"name": {"pl": "Skarb Średzki", "en": "Środa Treasure", "cs": "Středský poklad", "is": "Fjársjóðurinn frá Środa"},
+			"desc": {
+				"pl": "Znaleziono tu średniowieczny skarb ze złotą koroną",
+				"en": "A medieval treasure with a golden crown was found here",
+				"cs": "Našli tu středověký poklad se zlatou korunou",
+				"is": "Hér fannst fjársjóður frá miðöldum með gullkórónu"
+			}
 		}
 	],
-	"Piątek": [{"kind": "center", "name": {"pl": "Środek Polski"}, "desc": {"pl": "Tu jest geometryczny środek Polski"}}],
-	"Kutno": [{"kind": "roses", "name": {"pl": "Róże"}, "desc": {"pl": "Kutno to miasto róż, co roku jest tu Święto Róży"}}],
+	"Piątek": [
+		{
+			"kind": "center",
+			"name": {"pl": "Środek Polski", "en": "Centre of Poland", "cs": "Střed Polska", "is": "Miðja Póllands"},
+			"desc": {
+				"pl": "Tu jest geometryczny środek Polski",
+				"en": "The geometric centre of Poland is here",
+				"cs": "Je tu geometrický střed Polska",
+				"is": "Hér er landfræðileg miðja Póllands"
+			}
+		}
+	],
+	"Kutno": [
+		{
+			"kind": "roses",
+			"name": {"pl": "Róże", "en": "Roses", "cs": "Růže", "is": "Rósir"},
+			"desc": {
+				"pl": "Kutno to miasto róż, co roku jest tu Święto Róży",
+				"en": "Kutno is the city of roses, with a Rose Festival every year",
+				"cs": "Kutno je město růží, každý rok se tu slaví Svátek růží",
+				"is": "Kutno er borg rósanna, hér er rósahátíð á hverju ári"
+			}
+		}
+	],
 	"Łowicz": [
 		{
 			"kind": "wycinanka",
-			"name": {"pl": "Wycinanka łowicka"},
-			"desc": {"pl": "Kolorowe wycinanki i pasiaki z Łowicza"}
+			"name": {
+				"pl": "Wycinanka łowicka",
+				"en": "Łowicz paper cut-out",
+				"cs": "Łowická vystřihovánka",
+				"is": "Łowicz-klippimyndir"
+			},
+			"desc": {
+				"pl": "Kolorowe wycinanki i pasiaki z Łowicza",
+				"en": "Colourful paper cut-outs and striped fabrics from Łowicz",
+				"cs": "Barevné vystřihovánky a pruhované látky z Łowicze",
+				"is": "Litríkar klippimyndir og röndótt efni frá Łowicz"
+			}
 		}
 	],
-	"Solec Kujawski": [{"kind": "dinosaur", "name": {"pl": "JuraPark"}, "desc": {"pl": "Park z dinozaurami naturalnej wielkości"}}],
+	"Solec Kujawski": [
+		{
+			"kind": "dinosaur",
+			"name": {"pl": "JuraPark", "en": "JuraPark", "cs": "JuraPark", "is": "JuraPark"},
+			"desc": {
+				"pl": "Park z dinozaurami naturalnej wielkości",
+				"en": "A park with life-size dinosaurs",
+				"cs": "Park s dinosaury v životní velikosti",
+				"is": "Garður með risaeðlum í fullri stærð"
+			}
+		}
+	],
 	"Ozimek": [
 		{
 			"kind": "truss_bridge",
-			"name": {"pl": "Most wiszący"},
-			"desc": {"pl": "Najstarszy żelazny most wiszący w Europie kontynentalnej"}
+			"name": {"pl": "Most wiszący", "en": "Suspension bridge", "cs": "Visutý most", "is": "Hengibrúin"},
+			"desc": {
+				"pl": "Najstarszy żelazny most wiszący w Europie kontynentalnej",
+				"en": "The oldest iron suspension bridge in continental Europe",
+				"cs": "Nejstarší železný visutý most v kontinentální Evropě",
+				"is": "Elsta hengibrú úr járni á meginlandi Evrópu"
+			}
 		}
 	],
 	"Słupsk": [
 		{
 			"kind": "round_tower",
-			"name": {"pl": "Baszta Czarownic"},
-			"desc": {"pl": "Według legendy więziono tu czarownice"}
+			"name": {"pl": "Baszta Czarownic", "en": "Witches' Tower", "cs": "Čarodějnická bašta", "is": "Nornaturninn"},
+			"desc": {
+				"pl": "Według legendy więziono tu czarownice",
+				"en": "Legend says witches were imprisoned here",
+				"cs": "Podle legendy tu věznili čarodějnice",
+				"is": "Samkvæmt goðsögninni voru nornir fangelsaðar hér"
+			}
 		}
 	],
-	"Brzeg": [{"kind": "palace", "name": {"pl": "Zamek Piastów Śląskich"}, "desc": {"pl": "Zamek nazywany Śląskim Wawelem"}}],
+	"Brzeg": [
+		{
+			"kind": "palace",
+			"name": {
+				"pl": "Zamek Piastów Śląskich",
+				"en": "Castle of the Silesian Piasts",
+				"cs": "Zámek slezských Piastovců",
+				"is": "Kastali Slésíu-Piastanna"
+			},
+			"desc": {
+				"pl": "Zamek nazywany Śląskim Wawelem",
+				"en": "A castle called the Silesian Wawel",
+				"cs": "Zámek zvaný Slezský Wawel",
+				"is": "Kastali sem kallaður er Wawel Slésíu"
+			}
+		}
+	],
 	"Stargard": [
 		{
 			"kind": "gate",
-			"name": {"pl": "Brama Młyńska"},
-			"desc": {"pl": "Brama nad rzeką Iną, przez którą wpływały statki"}
+			"name": {"pl": "Brama Młyńska", "en": "Mill Gate", "cs": "Mlýnská brána", "is": "Mylluhliðið"},
+			"desc": {
+				"pl": "Brama nad rzeką Iną, przez którą wpływały statki",
+				"en": "A gate over the River Ina that boats sailed through",
+				"cs": "Brána nad řekou Inou, kterou proplouvaly lodě",
+				"is": "Hlið yfir ánni Ina sem skip sigldu í gegnum"
+			}
 		}
 	],
 	"Legnica": [
 		{
 			"kind": "castle_brick",
-			"name": {"pl": "Zamek Piastowski"},
-			"desc": {"pl": "Siedziba dawnych książąt legnickich"}
+			"name": {"pl": "Zamek Piastowski", "en": "Piast Castle", "cs": "Piastovský hrad", "is": "Piastakastalinn"},
+			"desc": {
+				"pl": "Siedziba dawnych książąt legnickich",
+				"en": "Seat of the old Dukes of Legnica",
+				"cs": "Sídlo dávných lehnických knížat",
+				"is": "Aðsetur fyrrum hertoganna af Legnica"
+			}
 		}
 	],
-	"Lubin": [{"kind": "mine", "name": {"pl": "Kopalnia miedzi"}, "desc": {"pl": "Zagłębie Miedziowe: tu wydobywa się miedź"}}],
-	"Polkowice": [{"kind": "mine", "name": {"pl": "Kopalnia miedzi"}, "desc": {"pl": "Tu wydobywa się rudę miedzi"}}],
-	"Grudziądz": [{"kind": "granaries", "name": {"pl": "Spichrze"}, "desc": {"pl": "Rząd spichrzy na skarpie nad Wisłą"}}],
-	"Włocławek": [{"kind": "cathedral", "name": {"pl": "Katedra"}, "desc": {"pl": "Gotycka katedra nad Wisłą"}}],
-	"Żyrardów": [{"kind": "factory", "name": {"pl": "Osada fabryczna"}, "desc": {"pl": "Zabytkowe miasto fabryki lnu"}}],
+	"Lubin": [
+		{
+			"kind": "mine",
+			"name": {"pl": "Kopalnia miedzi", "en": "Copper mine", "cs": "Měděný důl", "is": "Koparnáma"},
+			"desc": {
+				"pl": "Zagłębie Miedziowe: tu wydobywa się miedź",
+				"en": "The Copper Basin: copper is mined here",
+				"cs": "Měděná pánev: tady se těží měď",
+				"is": "Koparsvæðið: hér er grafið eftir kopar"
+			}
+		}
+	],
+	"Polkowice": [
+		{
+			"kind": "mine",
+			"name": {"pl": "Kopalnia miedzi", "en": "Copper mine", "cs": "Měděný důl", "is": "Koparnáma"},
+			"desc": {
+				"pl": "Tu wydobywa się rudę miedzi",
+				"en": "Copper ore is mined here",
+				"cs": "Těží se tu měděná ruda",
+				"is": "Hér er koparmálmgrýti unnið"
+			}
+		}
+	],
+	"Grudziądz": [
+		{
+			"kind": "granaries",
+			"name": {"pl": "Spichrze", "en": "Granaries", "cs": "Sýpky", "is": "Kornhlöður"},
+			"desc": {
+				"pl": "Rząd spichrzy na skarpie nad Wisłą",
+				"en": "A row of granaries on the escarpment above the Vistula",
+				"cs": "Řada sýpek na srázu nad Vislou",
+				"is": "Röð kornhlaðna á bakkanum fyrir ofan Wisła"
+			}
+		}
+	],
+	"Włocławek": [
+		{
+			"kind": "cathedral",
+			"name": {"pl": "Katedra", "en": "Cathedral", "cs": "Katedrála", "is": "Dómkirkjan"},
+			"desc": {
+				"pl": "Gotycka katedra nad Wisłą",
+				"en": "A Gothic cathedral on the Vistula",
+				"cs": "Gotická katedrála nad Vislou",
+				"is": "Gotnesk dómkirkja við Wisła"
+			}
+		}
+	],
+	"Żyrardów": [
+		{
+			"kind": "factory",
+			"name": {"pl": "Osada fabryczna", "en": "Factory settlement", "cs": "Tovární osada", "is": "Verksmiðjuþorpið"},
+			"desc": {
+				"pl": "Zabytkowe miasto fabryki lnu",
+				"en": "A historic linen factory town",
+				"cs": "Historické město továrny na len",
+				"is": "Sögulegur verksmiðjubær línframleiðslu"
+			}
+		}
+	],
 	"Nowy Dwór Gdański": [
 		{
 			"kind": "windmill",
-			"name": {"pl": "Wiatraki Żuław"},
-			"desc": {"pl": "Na Żuławach wiatraki pompowały wodę z pól"}
+			"name": {
+				"pl": "Wiatraki Żuław",
+				"en": "Windmills of Żuławy",
+				"cs": "Větrné mlýny Žuław",
+				"is": "Vindmyllur Żuławy"
+			},
+			"desc": {
+				"pl": "Na Żuławach wiatraki pompowały wodę z pól",
+				"en": "In Żuławy, windmills pumped water from the fields",
+				"cs": "Na Žuławách větrné mlýny čerpaly vodu z polí",
+				"is": "Á Żuławy dældu vindmyllur vatni af ökrunum"
+			}
 		}
 	],
-	"Olsztynek": [{"kind": "windmill", "name": {"pl": "Skansen"}, "desc": {"pl": "Muzeum dawnych wiejskich domów i wiatraków"}}],
+	"Olsztynek": [
+		{
+			"kind": "windmill",
+			"name": {"pl": "Skansen", "en": "Open-air museum", "cs": "Skanzen", "is": "Byggðasafn"},
+			"desc": {
+				"pl": "Muzeum dawnych wiejskich domów i wiatraków",
+				"en": "A museum of old village houses and windmills",
+				"cs": "Muzeum starých venkovských domů a větrných mlýnů",
+				"is": "Safn gamalla sveitahúsa og vindmyllna"
+			}
+		}
+	],
 	"Tykocin": [
 		{
 			"kind": "castle_brick",
-			"name": {"pl": "Zamek w Tykocinie"},
-			"desc": {"pl": "Zamek nad Narwią, odbudowany z ruin"}
+			"name": {"pl": "Zamek w Tykocinie", "en": "Tykocin Castle", "cs": "Zámek v Tykocině", "is": "Kastalinn í Tykocin"},
+			"desc": {
+				"pl": "Zamek nad Narwią, odbudowany z ruin",
+				"en": "A castle on the Narew, rebuilt from ruins",
+				"cs": "Zámek na Narevu, obnovený z trosek",
+				"is": "Kastali við Narew, endurreistur úr rústum"
+			}
 		}
 	],
-	"Radzyń Podlaski": [{"kind": "palace", "name": {"pl": "Pałac Potockich"}, "desc": {"pl": "Pałac nazywany Wersalem Podlasia"}}],
-	"Lubartów": [{"kind": "palace", "name": {"pl": "Pałac Sanguszków"}, "desc": {"pl": "Barokowy pałac w centrum miasta"}}],
-	"Bielsk Podlaski": [{"kind": "townhall", "name": {"pl": "Ratusz"}, "desc": {"pl": "Ratusz na rynku dawnego miasta królewskiego"}}],
-	"Szydłowiec": [{"kind": "palace", "name": {"pl": "Zamek w Szydłowcu"}, "desc": {"pl": "Renesansowy zamek otoczony wodą"}}],
+	"Radzyń Podlaski": [
+		{
+			"kind": "palace",
+			"name": {"pl": "Pałac Potockich", "en": "Potocki Palace", "cs": "Palác Potockých", "is": "Potocki-höllin"},
+			"desc": {
+				"pl": "Pałac nazywany Wersalem Podlasia",
+				"en": "A palace called the Versailles of Podlasie",
+				"cs": "Palác zvaný Versailles Podlesí",
+				"is": "Höll sem kölluð er Versalir Podlasie"
+			}
+		}
+	],
+	"Lubartów": [
+		{
+			"kind": "palace",
+			"name": {"pl": "Pałac Sanguszków", "en": "Sanguszko Palace", "cs": "Palác Sanguszků", "is": "Sanguszko-höllin"},
+			"desc": {
+				"pl": "Barokowy pałac w centrum miasta",
+				"en": "A Baroque palace in the town centre",
+				"cs": "Barokní palác v centru města",
+				"is": "Barokkhöll í miðbænum"
+			}
+		}
+	],
+	"Bielsk Podlaski": [
+		{
+			"kind": "townhall",
+			"name": {"pl": "Ratusz", "en": "Town Hall", "cs": "Radnice", "is": "Ráðhúsið"},
+			"desc": {
+				"pl": "Ratusz na rynku dawnego miasta królewskiego",
+				"en": "A town hall on the market square of a former royal town",
+				"cs": "Radnice na náměstí bývalého královského města",
+				"is": "Ráðhús á torgi fyrrum konungsborgar"
+			}
+		}
+	],
+	"Szydłowiec": [
+		{
+			"kind": "palace",
+			"name": {
+				"pl": "Zamek w Szydłowcu",
+				"en": "Szydłowiec Castle",
+				"cs": "Zámek v Szydłowci",
+				"is": "Kastalinn í Szydłowiec"
+			},
+			"desc": {
+				"pl": "Renesansowy zamek otoczony wodą",
+				"en": "A Renaissance castle surrounded by water",
+				"cs": "Renesanční zámek obklopený vodou",
+				"is": "Endurreisnarkastali umkringdur vatni"
+			}
+		}
+	],
 	"Łagów": [
 		{
 			"kind": "castle_brick",
-			"name": {"pl": "Zamek Joannitów"},
-			"desc": {"pl": "Zamek rycerzy zakonnych między jeziorami"}
+			"name": {
+				"pl": "Zamek Joannitów",
+				"en": "Castle of the Knights Hospitaller",
+				"cs": "Hrad johanitů",
+				"is": "Kastali Jóhannesarriddara"
+			},
+			"desc": {
+				"pl": "Zamek rycerzy zakonnych między jeziorami",
+				"en": "A castle of the knightly order between lakes",
+				"cs": "Hrad rytířského řádu mezi jezery",
+				"is": "Kastali riddarareglu á milli vatna"
+			}
 		}
 	],
-	"Oleśnica": [{"kind": "palace", "name": {"pl": "Zamek w Oleśnicy"}, "desc": {"pl": "Zamek książąt oleśnickich"}}],
-	"Siewierz": [{"kind": "castle", "name": {"pl": "Zamek w Siewierzu"}, "desc": {"pl": "Ruiny zamku biskupów krakowskich"}}],
+	"Oleśnica": [
+		{
+			"kind": "palace",
+			"name": {
+				"pl": "Zamek w Oleśnicy",
+				"en": "Oleśnica Castle",
+				"cs": "Zámek v Olešnici",
+				"is": "Kastalinn í Oleśnica"
+			},
+			"desc": {
+				"pl": "Zamek książąt oleśnickich",
+				"en": "The castle of the Dukes of Oleśnica",
+				"cs": "Zámek olešnických knížat",
+				"is": "Kastali hertoganna af Oleśnica"
+			}
+		}
+	],
+	"Siewierz": [
+		{
+			"kind": "castle",
+			"name": {
+				"pl": "Zamek w Siewierzu",
+				"en": "Siewierz Castle",
+				"cs": "Hrad v Siewierzu",
+				"is": "Kastalinn í Siewierz"
+			},
+			"desc": {
+				"pl": "Ruiny zamku biskupów krakowskich",
+				"en": "Ruins of the castle of the Bishops of Kraków",
+				"cs": "Zřícenina hradu krakovských biskupů",
+				"is": "Kastalarústir biskupanna í Kraká"
+			}
+		}
+	],
 	"Kamienna Góra": [
 		{
 			"kind": "basilica",
-			"name": {"pl": "Opactwo w Krzeszowie"},
-			"desc": {"pl": "Barokowe opactwo pod Kamienną Górą, nazywane Perłą Baroku"}
+			"name": {
+				"pl": "Opactwo w Krzeszowie",
+				"en": "Krzeszów Abbey",
+				"cs": "Opatství v Křešově",
+				"is": "Klaustrið í Krzeszów"
+			},
+			"desc": {
+				"pl": "Barokowe opactwo pod Kamienną Górą, nazywane Perłą Baroku",
+				"en": "A Baroque abbey near Kamienna Góra, called the Pearl of the Baroque",
+				"cs": "Barokní opatství u Kamienné Góry, zvané Perla baroka",
+				"is": "Barokkklaustur hjá Kamienna Góra, kallað Perla barokksins"
+			}
 		}
 	],
 	"Zwardoń": [
 		{
 			"kind": "border",
-			"name": {"pl": "Granica ze Słowacją"},
-			"desc": {"pl": "Droga S1 prowadzi stąd dalej na Słowację"}
+			"name": {
+				"pl": "Granica ze Słowacją",
+				"en": "Border with Slovakia",
+				"cs": "Hranice se Slovenskem",
+				"is": "Landamærin við Slóvakíu"
+			},
+			"desc": {
+				"pl": "Droga S1 prowadzi stąd dalej na Słowację",
+				"en": "The S1 road continues from here into Slovakia",
+				"cs": "Silnice S1 odtud vede dál na Slovensko",
+				"is": "Vegurinn S1 liggur héðan áfram til Slóvakíu"
+			}
 		}
 	],
 	"Żywiec": [
 		{
 			"kind": "palace",
-			"name": {"pl": "Zamek Habsburgów"},
-			"desc": {"pl": "Nowy Zamek w Żywcu należał do Habsburgów"}
+			"name": {"pl": "Zamek Habsburgów", "en": "Habsburg Castle", "cs": "Zámek Habsburků", "is": "Kastali Habsborgara"},
+			"desc": {
+				"pl": "Nowy Zamek w Żywcu należał do Habsburgów",
+				"en": "The New Castle in Żywiec belonged to the Habsburgs",
+				"cs": "Nový zámek v Żywci patřil Habsburkům",
+				"is": "Nýi kastalinn í Żywiec var í eigu Habsborgara"
+			}
 		}
 	],
 	"Bolków": [
 		{
 			"kind": "castle",
-			"name": {"pl": "Zamek Bolków"},
-			"desc": {"pl": "Średniowieczny zamek Piastów na skale nad miastem"}
+			"name": {"pl": "Zamek Bolków", "en": "Bolków Castle", "cs": "Hrad Bolków", "is": "Bolków-kastali"},
+			"desc": {
+				"pl": "Średniowieczny zamek Piastów na skale nad miastem",
+				"en": "A medieval Piast castle on a rock above the town",
+				"cs": "Středověký piastovský hrad na skále nad městem",
+				"is": "Miðaldakastali Piasta á kletti fyrir ofan bæinn"
+			}
 		}
 	],
-	"Jawor": [{"kind": "basilica", "name": {"pl": "Kościół Pokoju"}, "desc": {"pl": "Drewniany kościół z listy UNESCO"}}]
+	"Jawor": [
+		{
+			"kind": "basilica",
+			"name": {"pl": "Kościół Pokoju", "en": "Church of Peace", "cs": "Kostel míru", "is": "Friðarkirkjan"},
+			"desc": {
+				"pl": "Drewniany kościół z listy UNESCO",
+				"en": "A wooden church on the UNESCO list",
+				"cs": "Dřevěný kostel ze seznamu UNESCO",
+				"is": "Timburkirkja á heimsminjaskrá UNESCO"
+			}
+		}
+	]
 }

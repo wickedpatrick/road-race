@@ -1,11 +1,16 @@
 {
 	"code": "pl",
-	"name": {"pl": "Polska"},
+	"name": {"pl": "Polska", "en": "Poland", "cs": "Polsko", "is": "Pólland"},
 	"language": "pl",
 	"drive": "right",
-	"title": {"pl": "RAJD PRZEZ POLSKĘ"},
-	"subtitle": {"pl": "Edukacyjna podróż po polskich drogach"},
-	"region_label": {"pl": "województwo"},
+	"title": {"pl": "RAJD PRZEZ POLSKĘ", "en": "ROAD TRIP ACROSS POLAND", "cs": "RALLY POLSKEM", "is": "ÖKUFERÐ UM PÓLLAND"},
+	"subtitle": {
+		"pl": "Edukacyjna podróż po polskich drogach",
+		"en": "An educational journey along Polish roads",
+		"cs": "Vzdělávací cesta po polských silnicích",
+		"is": "Fræðandi ferðalag um vegi Póllands"
+	},
+	"region_label": {"pl": "województwo", "en": "province", "cs": "vojvodství", "is": "hérað"},
 	"start": ["krakow", "rzeszow"],
 	"express_prefixes": ["A", "S"],
 	"limits": {"express": 140, "road": 90, "city": 70, "town_on_express": 70, "town": 50},

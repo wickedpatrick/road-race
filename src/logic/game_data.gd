@@ -4,7 +4,9 @@ extends RefCounted
 ## time (map, cities, roads, facts, landmarks, traffic rules). Read once and cached. Texts in the files are
 ## {"pl": "...", ...} by language; the loader turns them into plain strings in the game's language.
 const DIR := "res://data/"
-const LANGUAGE := "pl"
+const LANGUAGES := ["pl", "en", "cs", "is"] ## the game's languages; any other player language gets English
+const FALLBACK := "en"
+static var language := "pl" ## the player's language (Session sets it; set_language() reloads the texts)
 static var _rules := {}
 static var _countries := {} ## code -> country, loaded on first use
 static var _index := [] ## countries/index.json
@@ -39,9 +41,25 @@ static func country(code := "") -> Dictionary:
 		var dir := DIR + "countries/%s/" % code
 		var c: Dictionary = localize(load_json(dir + "country.json"))
 		for part in ["cities", "roads", "facts", "landmarks"]:
-			c[part] = localize(load_json(dir + part + ".json"))
+			var raw = load_json(dir + part + ".json")
+			if part == "landmarks": # the brown board by the road names it in the country's language
+				for town in raw:
+					for lm in raw[town]:
+						if not lm.has("local"): lm["local"] = lm.name.get(c.language, lm.name.values()[0])
+			c[part] = localize(raw)
 		_countries[code] = c
 	return _countries[code]
+
+## Switches the language of every text read from the data (cached countries are read again).
+static func set_language(code: String) -> void:
+	language = code if LANGUAGES.has(code) else FALLBACK
+	_countries.clear()
+	_index = []
+
+## The game's language for a locale like "cs_CZ" or "is-IS": its own when the game has it, else English.
+static func language_for(locale: String) -> String:
+	var code := locale.substr(0, 2).to_lower()
+	return code if LANGUAGES.has(code) else FALLBACK
 
 ## Parsed JSON file; a broken or missing file stops the game with the file name (data errors must not go unnoticed).
 static func load_json(path: String) -> Variant:
@@ -60,11 +78,11 @@ const OWN_LANGUAGE_ONLY := ["exonym", "map_name"]
 static func localize(v: Variant) -> Variant:
 	if v is Dictionary:
 		if _is_text(v):
-			return v.get(LANGUAGE, v.values()[0])
+			return v.get(language, v.get(FALLBACK, v.values()[0]))
 		var out := {}
 		for k in v:
 			if k in OWN_LANGUAGE_ONLY and v[k] is Dictionary:
-				if v[k].has(LANGUAGE): out[k] = v[k][LANGUAGE]
+				if v[k].has(language): out[k] = v[k][language]
 				continue
 			out[k] = localize(v[k])
 		return out

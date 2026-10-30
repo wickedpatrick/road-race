@@ -67,7 +67,7 @@ func _draw() -> void:
 				draw_colored_polygon(PackedVector2Array([c + Vector2(22, 0), c + Vector2(-16, -26), c + Vector2(-16, 26)]), col)
 			"accel":
 				draw_colored_polygon(PackedVector2Array([c + Vector2(0, -34), c + Vector2(26, 0), c + Vector2(-26, 0)]), Color("7fe0a0"))
-				draw_string(ThemeDB.fallback_font, c + Vector2(-50, 36), "GAZ", HORIZONTAL_ALIGNMENT_CENTER, 100, 20, col)
+				draw_string(ThemeDB.fallback_font, c + Vector2(-50, 36), Lang.t("pad_gas"), HORIZONTAL_ALIGNMENT_CENTER, 100, 20, col)
 			"brake":
 				draw_rect(Rect2(c + Vector2(-20, -24), Vector2(40, 22)), Color("ff8a7a"))
-				draw_string(ThemeDB.fallback_font, c + Vector2(-50, 26), "HAMULEC", HORIZONTAL_ALIGNMENT_CENTER, 100, 16, col)
+				draw_string(ThemeDB.fallback_font, c + Vector2(-50, 26), Lang.t("pad_brake"), HORIZONTAL_ALIGNMENT_CENTER, 100, 16, col)

@@ -53,5 +53,5 @@ func _draw_veil() -> void:
 	_veil.draw_rect(Rect2(c + Vector2(80, -10), Vector2(120, 70)), Color("ffd24a"), false, 6.0)
 	_veil.draw_arc(c + Vector2(0, 0), 60, -PI * 0.9, -PI * 0.2, 16, Color.WHITE, 5.0)
 	_veil.draw_colored_polygon(PackedVector2Array([c + Vector2(48, -52), c + Vector2(66, -30), c + Vector2(38, -28)]), Color.WHITE)
-	_veil.draw_string(_font, Vector2(0, 360), "Obróć telefon poziomo", HORIZONTAL_ALIGNMENT_CENTER, 960, 52, Color.WHITE)
-	_veil.draw_string(_font, Vector2(0, 410), "Rajd przez Polskę gra się w poziomie", HORIZONTAL_ALIGNMENT_CENTER, 960, 26, Color("9fb3c8"))
+	_veil.draw_string(_font, Vector2(0, 360), Lang.t("rotate"), HORIZONTAL_ALIGNMENT_CENTER, 960, 52, Color.WHITE)
+	_veil.draw_string(_font, Vector2(0, 410), Lang.t("rotate_hint"), HORIZONTAL_ALIGNMENT_CENTER, 960, 26, Color("9fb3c8"))

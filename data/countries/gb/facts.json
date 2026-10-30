@@ -1,193 +1,1143 @@
 {
-	"London": {"pl": "Stolica Wielkiej Brytanii nad Tamizą; metro działa tu od 1863 roku, najdłużej na świecie"},
-	"Birmingham": {"pl": "Miasto kanałów: ma ich więcej niż Wenecja"},
-	"Leeds": {"pl": "Tu w 1888 roku nakręcono najstarszy zachowany film na świecie"},
-	"Glasgow": {"pl": "Największe miasto Szkocji, dawniej stocznie budowały tu statki dla całego świata"},
-	"Sheffield": {"pl": "Stolica stali: tu wynaleziono stal nierdzewną"},
-	"Manchester": {"pl": "Kolebka rewolucji przemysłowej i dwóch słynnych klubów piłkarskich"},
-	"Edinburgh": {"pl": "Stolica Szkocji z zamkiem na wygasłym wulkanie"},
-	"Liverpool": {"pl": "Miasto Beatlesów i wielkiego portu nad rzeką Mersey"},
-	"Bristol": {"pl": "Tu Isambard Kingdom Brunel zbudował wiszący most i parowiec SS Great Britain"},
-	"Leicester": {"pl": "Pod parkingiem w centrum znaleziono grób króla Ryszarda III"},
-	"Cardiff": {"pl": "Stolica Walii; napisy są tu w dwóch językach, angielskim i walijskim"},
-	"Nottingham": {"pl": "Miasto Robin Hooda, obok rośnie las Sherwood"},
-	"Newcastle upon Tyne": {"pl": "Siedem mostów nad rzeką Tyne, w tym most uchylny, który się przechyla"},
-	"Brighton": {"pl": "Nadmorski kurort z orientalnym pałacem króla i molem pełnym atrakcji"},
-	"Hull": {"pl": "Port nad estuarium Humber; miasto ma własne kremowe budki telefoniczne"},
-	"Plymouth": {"pl": "Stąd w 1620 roku wypłynął Mayflower z pielgrzymami do Ameryki"},
-	"Stoke-on-Trent": {"pl": "Stolica porcelany i ceramiki: dawniej nad miastem dymiły setki pieców"},
-	"Southampton": {"pl": "Stąd w 1912 roku wypłynął w swój jedyny rejs Titanic"},
-	"Swansea": {"pl": "Drugie miasto Walii, tu urodził się poeta Dylan Thomas"},
-	"Portsmouth": {"pl": "Port Królewskiej Marynarki Wojennej, jedyne miasto-wyspa w Anglii"},
-	"York": {"pl": "Średniowieczne miasto otoczone murami, dawniej rzymskie Eboracum i wikińskie Jorvik"},
-	"Aberdeen": {"pl": "Granitowe miasto, stolica przemysłu naftowego Morza Północnego"},
-	"Oxford": {"pl": "Najstarszy uniwersytet anglojęzycznego świata, uczono tu już w XI wieku"},
-	"Dundee": {"pl": "Tu zbudowano statek polarny Discovery kapitana Scotta"},
-	"Cambridge": {"pl": "Miasto uniwersyteckie; po rzece Cam pływa się płaskimi łodziami pchanymi tyczką"},
-	"Norwich": {"pl": "Średniowieczne miasto z katedrą i zamkiem; ma ponoć kościół na każdy tydzień roku"},
-	"Exeter": {"pl": "Pod miastem biegną średniowieczne podziemne korytarze z wodociągiem"},
-	"Carlisle": {"pl": "Graniczne miasto, o które przez wieki walczyli Anglicy i Szkoci"},
-	"Inverness": {"pl": "Stolica Szkockiej Wyżyny, blisko jeziora Loch Ness"},
-	"Bangor": {"pl": "Jedno z najmniejszych miast w Wielkiej Brytanii, z katedrą założoną 1500 lat temu"},
-	"Croydon": {"pl": "Dzielnica Londynu, tu działało pierwsze lotnisko międzynarodowe Londynu"},
-	"Crawley": {"pl": "Obok leży lotnisko Gatwick, drugie co do wielkości w kraju"},
-	"Guildford": {"pl": "Tu zmarł i jest pochowany Lewis Carroll, autor Alicji w Krainie Czarów"},
-	"Petersfield": {"pl": "Miasteczko w Parku Narodowym South Downs"},
-	"Basingstoke": {"pl": "Niedaleko urodziła się pisarka Jane Austen"},
-	"Winchester": {"pl": "Dawna stolica Anglii; w zamku wisi okrągły stół króla Artura"},
-	"Arundel": {"pl": "Miasteczko pod wielkim zamkiem książąt Norfolk"},
-	"Chichester": {"pl": "Katedra z wolnostojącą dzwonnicą"},
-	"Worthing": {"pl": "Nadmorski kurort z drewnianym molem"},
-	"Amesbury": {"pl": "Obok stoi Stonehenge: kamienny krąg sprzed 4500 lat"},
-	"Andover": {"pl": "Miasteczko na kredowych wzgórzach Hampshire"},
-	"Honiton": {"pl": "Słynęło z ręcznie robionych koronek"},
-	"Lyndhurst": {"pl": "Stolica Nowego Lasu, po drogach chodzą tu kucyki"},
-	"Bournemouth": {"pl": "Kurort z 11 kilometrami piaszczystej plaży"},
-	"Poole": {"pl": "Jeden z największych naturalnych portów na świecie"},
-	"Dorchester": {"pl": "Miasto pisarza Thomasa Hardy'ego"},
-	"Bridport": {"pl": "Wybrzeże Jurajskie: na plażach szuka się tu skamieniałości"},
-	"Axminster": {"pl": "Słynie z ręcznie tkanych dywanów"},
-	"Ashburton": {"pl": "Brama Dartmoor, wrzosowiska z dzikimi kucykami"},
-	"Ivybridge": {"pl": "Tu zaczyna się 165-kilometrowy szlak przez Dartmoor"},
-	"Taunton": {"pl": "Stolica Somerset, krainy cydru"},
-	"Bridgwater": {"pl": "Brama na Somerset Levels, nizinę z rowami jak na Żuławach"},
-	"Weston-super-Mare": {"pl": "Kurort z molem nad Kanałem Bristolskim o ogromnych pływach"},
-	"High Wycombe": {"pl": "Dawna stolica meblarzy, słynęło z krzeseł"},
-	"Slough": {"pl": "Tu działa jeden z największych parków przemysłowych w Europie"},
-	"Reading": {"pl": "Słynie z festiwalu muzycznego; dawniej z ciastek Huntley & Palmers wysyłanych na cały świat"},
-	"Newbury": {"pl": "Słynny tor wyścigów konnych"},
-	"Swindon": {"pl": "Miasto kolejarzy: tu budowano parowozy Great Western Railway"},
-	"Chippenham": {"pl": "Targowe miasteczko nad rzeką Avon"},
-	"Faringdon": {"pl": "Brama do Vale of White Horse z wielkim białym koniem na zboczu"},
-	"Bicester": {"pl": "Obok jest dawne lotnisko RAF, dziś centrum zabytkowych samochodów"},
-	"Banbury": {"pl": "Słynne z rymowanki o pani na białym koniu"},
-	"Warwick": {"pl": "Miasto z jednym z najpiękniejszych średniowiecznych zamków Anglii"},
-	"Luton": {"pl": "Tu działa jedno z londyńskich lotnisk"},
-	"Milton Keynes": {"pl": "Nowe miasto z rondami i betonowymi krowami"},
-	"Northampton": {"pl": "Stolica angielskiego obuwia"},
-	"Rugby": {"pl": "Tu w szkole narodziła się gra w rugby"},
-	"Coventry": {"pl": "Zbombardowana katedra stoi jako pomnik pokoju obok nowej"},
-	"Lutterworth": {"pl": "Tu Frank Whittle zbudował pierwszy brytyjski silnik odrzutowy"},
-	"Harlow": {"pl": "Jedno z pierwszych powojennych nowych miast"},
-	"Saffron Walden": {"pl": "Nazwa od szafranu, który tu kiedyś uprawiano"},
-	"Chelmsford": {"pl": "Tu Marconi otworzył pierwszą na świecie fabrykę radia"},
-	"Colchester": {"pl": "Najstarsze zapisane miasto Brytanii, dawna rzymska stolica"},
-	"Ipswich": {"pl": "Port nad estuarium Orwell, jedno z najstarszych miast Anglii"},
-	"Newmarket": {"pl": "Stolica wyścigów konnych, w okolicy trenuje tysiące koni"},
-	"Thetford": {"pl": "Wokół rośnie największy nizinny las Anglii"},
-	"Huntingdon": {"pl": "Tu urodził się Oliver Cromwell"},
-	"Kettering": {"pl": "Miasto obuwników na wschodzie Northamptonshire"},
-	"Market Harborough": {"pl": "Targowe miasteczko ze szkołą na palach z 1614 roku"},
-	"Newport": {"pl": "Tu stoi most transporterowy: przewozi samochody wiszącą gondolą"},
-	"Bridgend": {"pl": "Miasto w połowie drogi między Cardiff a Swansea"},
-	"Port Talbot": {"pl": "Największa huta stali w Wielkiej Brytanii"},
-	"Merthyr Tydfil": {"pl": "Dawna stolica żelaza; tu w 1804 roku pojechał pierwszy parowóz na szynach"},
-	"Brecon": {"pl": "Brama do Bannau Brycheiniog, gór z najwyższym szczytem południowej Brytanii"},
-	"Builth Wells": {"pl": "Tu odbywa się wielka walijska wystawa rolnicza"},
-	"Rhayader": {"pl": "Obok są tamy doliny Elan, które zaopatrują w wodę Birmingham"},
-	"Llanidloes": {"pl": "Miasteczko u źródeł rzeki Severn, najdłuższej w Wielkiej Brytanii"},
-	"Dolgellau": {"pl": "Miasteczko u stóp góry Cadair Idris"},
-	"Blaenau Ffestiniog": {"pl": "Miasto łupku: wokół góry kamienia z kopalni"},
-	"Betws-y-Coed": {"pl": "Wioska wśród lasów Eryri z wodospadem Swallow Falls"},
-	"Capel Curig": {"pl": "Baza wspinaczy: stąd wyrusza się na szczyty Eryri"},
-	"Bethesda": {"pl": "Obok jest kamieniołom Penrhyn, kiedyś największy na świecie"},
-	"Carmarthen": {"pl": "Według legendy tu urodził się czarodziej Merlin"},
-	"Aberystwyth": {"pl": "Uniwersytecki kurort z kolejką na klif"},
-	"Machynlleth": {"pl": "Tu Owain Glyndŵr zwołał pierwszy walijski parlament"},
-	"Porthmadog": {"pl": "Stąd kursują wąskotorowe kolejki parowe do Eryri"},
-	"Caernarfon": {"pl": "Potężny zamek króla Edwarda I nad cieśniną Menai"},
-	"Colwyn Bay": {"pl": "Nadmorski kurort na północnym wybrzeżu Walii"},
-	"St Asaph": {"pl": "Miasto z najmniejszą katedrą w Wielkiej Brytanii"},
-	"Holywell": {"pl": "Święte źródło świętej Winifredy, cel pielgrzymek od wieków"},
-	"Chester": {"pl": "Rzymskie miasto z najpełniejszymi murami w Anglii"},
-	"Warrington": {"pl": "Miasto w połowie drogi między Liverpoolem a Manchesterem"},
-	"Stafford": {"pl": "Miasto Izaaka Waltona, autora słynnej książki o wędkowaniu"},
-	"Holmes Chapel": {"pl": "Obok stoi radioteleskop Jodrell Bank"},
-	"Knutsford": {"pl": "Pierwowzór miasteczka Cranford z powieści Elizabeth Gaskell"},
-	"Worcester": {"pl": "Tu wymyślono słynny sos Worcestershire"},
-	"Tewkesbury": {"pl": "Średniowieczne miasteczko u zbiegu Severn i Avon"},
-	"Gloucester": {"pl": "W krużgankach tutejszej katedry kręcono Harry'ego Pottera"},
-	"Derby": {"pl": "Tu Rolls-Royce produkuje silniki lotnicze"},
-	"Burton upon Trent": {"pl": "Stolica piwa: woda z tutejszych studni idealnie nadaje się do warzenia"},
-	"Lichfield": {"pl": "Katedra z trzema iglicami, jedyna taka w Anglii"},
-	"Loughborough": {"pl": "Tu odlewa się dzwony dla kościołów całego świata"},
-	"Chesterfield": {"pl": "Kościół z krzywą iglicą, skręconą jak korkociąg"},
-	"Lincoln": {"pl": "Katedra w Lincoln przez ponad 200 lat była najwyższą budowlą świata"},
-	"Newark-on-Trent": {"pl": "Ruiny zamku, w którym zmarł król Jan bez Ziemi"},
-	"Barton-upon-Humber": {"pl": "Tu zaczyna się most Humber, kiedyś najdłuższy most wiszący świata"},
-	"Rochdale": {"pl": "Tu w 1844 roku założono pierwszą nowoczesną spółdzielnię"},
-	"Huddersfield": {"pl": "Tu narodziła się liga rugby"},
-	"Glossop": {"pl": "Za miastem droga wspina się na przełęcz Snake Pass"},
-	"Barnsley": {"pl": "Dawne miasto górników węgla"},
-	"Wakefield": {"pl": "Miasto rzeźbiarki Barbary Hepworth"},
-	"Tadcaster": {"pl": "Miasto browarów"},
-	"Beverley": {"pl": "Gotycki kościół Beverley Minster jest większy od wielu katedr"},
-	"Pontefract": {"pl": "Słynie z lukrecjowych cukierków"},
-	"Goole": {"pl": "Port śródlądowy nad rzeką Ouse"},
-	"Howden": {"pl": "Miasteczko z wielkim kościołem Howden Minster"},
-	"Wetherby": {"pl": "Miasteczko w połowie drogi między Londynem a Edynburgiem"},
-	"Darlington": {"pl": "Stąd w 1825 roku ruszyła pierwsza publiczna kolej parowa"},
-	"Durham": {"pl": "Katedra i zamek na wzgórzu w zakolu rzeki"},
-	"Gateshead": {"pl": "Obok stoi Anioł Północy, stalowa rzeźba o rozpiętości skrzydeł 54 metrów"},
-	"Thirsk": {"pl": "Tu pracował weterynarz James Herriot, autor książek o zwierzętach"},
-	"Middlesbrough": {"pl": "Miasto stali; most transporterowy przewozi ludzi gondolą nad rzeką Tees"},
-	"Sunderland": {"pl": "Tu zbudowano tysiące statków; dziś działa fabryka samochodów Nissan"},
-	"Skipton": {"pl": "Brama do Yorkshire Dales z zamkiem sprzed 900 lat"},
-	"Settle": {"pl": "Stąd jedzie kolej przez wiadukt Ribblehead"},
-	"Ingleton": {"pl": "Szlak wodospadów wzdłuż dwóch rzek"},
-	"Kirkby Lonsdale": {"pl": "Widok z tego miasteczka malował William Turner"},
-	"Tebay": {"pl": "Autostrada M6 wspina się tu na przełęcz Shap"},
-	"Penrith": {"pl": "Brama do Krainy Jezior"},
-	"Preston": {"pl": "Stąd w 1958 roku poprowadzono pierwszą brytyjską autostradę"},
-	"Lancaster": {"pl": "Zamek, w którym przez wieki był sąd i więzienie"},
-	"Kendal": {"pl": "Słynie z miętowego ciasta, które zabierali zdobywcy Everestu"},
-	"Bolton": {"pl": "Miasto przędzalni bawełny"},
-	"Hexham": {"pl": "Opactwo z kryptą z kamieni z rzymskiego fortu"},
-	"Haltwhistle": {"pl": "Środek Wielkiej Brytanii; obok biegnie Wał Hadriana"},
-	"Brampton": {"pl": "Miasteczko przy Wale Hadriana"},
-	"Morpeth": {"pl": "Miasteczko nad rzeką Wansbeck z wieżą zegarową z XVII wieku"},
-	"Alnwick": {"pl": "Zamek, który grał Hogwart w filmach o Harrym Potterze"},
-	"Berwick-upon-Tweed": {"pl": "Przechodziło z rąk do rąk między Anglią a Szkocją 13 razy"},
-	"Dunbar": {"pl": "Tu urodził się John Muir, ojciec parków narodowych w USA"},
-	"Musselburgh": {"pl": "Najstarsze pole golfowe świata, na którym wciąż się gra"},
-	"Hawick": {"pl": "Stolica szkockiej wełny i kaszmiru"},
-	"Galashiels": {"pl": "Miasto tkaczy nad rzeką Gala"},
-	"Langholm": {"pl": "Neil Armstrong został honorowym obywatelem tego gniazda rodu Armstrongów"},
-	"Gretna": {"pl": "Pierwsza wioska w Szkocji; uciekające pary brały tu śluby"},
-	"Lockerbie": {"pl": "Targowe miasteczko w dolinie Annandale"},
-	"Moffat": {"pl": "Dawne uzdrowisko ze źródłami siarkowymi"},
-	"Hamilton": {"pl": "Mauzoleum książąt Hamilton z najdłuższym echem świata"},
-	"Livingston": {"pl": "Nowe miasto szkockiej Doliny Krzemowej"},
-	"South Queensferry": {"pl": "Trzy mosty nad zatoką Forth z trzech różnych stuleci"},
-	"Dunfermline": {"pl": "Dawna stolica Szkocji, tu urodził się Andrew Carnegie"},
-	"Kinross": {"pl": "Na wyspie w jeziorze Loch Leven więziono Marię Stuart"},
-	"Perth": {"pl": "Obok jest Scone, gdzie koronowano szkockich królów"},
-	"Stirling": {"pl": "Tu William Wallace pokonał Anglików w 1297 roku"},
-	"Cumbernauld": {"pl": "Nowe miasto z wielkim centrum handlowym na palach"},
-	"Dunblane": {"pl": "Rodzinne miasto tenisisty Andy'ego Murraya"},
-	"Auchterarder": {"pl": "Obok jest słynne pole golfowe Gleneagles"},
-	"Forfar": {"pl": "Słynie z pasztecików z mięsem zwanych bridie"},
-	"Brechin": {"pl": "Okrągła wieża z XI wieku obok katedry"},
-	"Stonehaven": {"pl": "Obok, na skale nad morzem, stoją ruiny zamku Dunnottar"},
-	"Inverurie": {"pl": "Miasteczko w dolinie rzeki Don"},
-	"Huntly": {"pl": "Miasteczko z ruinami zamku"},
-	"Keith": {"pl": "Najstarsza działająca destylarnia whisky w Highlands"},
-	"Elgin": {"pl": "Ruiny katedry nazywanej Latarnią Północy"},
-	"Forres": {"pl": "Tu według Szekspira Makbet spotkał trzy wiedźmy"},
-	"Nairn": {"pl": "Kurort nad zatoką Moray Firth, gdzie pływają delfiny"},
-	"Dunkeld": {"pl": "Katedra w lesie nad rzeką Tay"},
-	"Pitlochry": {"pl": "Drabina dla łososi przy tamie, ryby płyną pod prąd"},
-	"Dalwhinnie": {"pl": "Jedna z najwyżej położonych destylarni whisky w Szkocji"},
-	"Newtonmore": {"pl": "Muzeum na wolnym powietrzu: dawne domy Highlands"},
-	"Aviemore": {"pl": "Kurort narciarski w Górach Cairngorm, żyją tu dzikie renifery"},
-	"Carrbridge": {"pl": "Najstarszy kamienny most w Highlands"},
-	"Dumbarton": {"pl": "Zamek na skale wulkanicznej nad rzeką Clyde"},
-	"Tarbet": {"pl": "Wioska nad Loch Lomond, największym jeziorem Wielkiej Brytanii"},
-	"Crianlarich": {"pl": "Skrzyżowanie dróg i kolei w sercu gór"},
-	"Tyndrum": {"pl": "W okolicznych górach wydobywa się szkockie złoto"},
-	"Glencoe": {"pl": "Dolina dramatycznych gór i krwawej masakry z 1692 roku"},
-	"Fort William": {"pl": "U stóp Ben Nevis, najwyższej góry Wielkiej Brytanii (1345 m)"},
-	"Spean Bridge": {"pl": "Pomnik komandosów, którzy szkolili się w tych górach"},
-	"Fort Augustus": {"pl": "Śluzy Kanału Kaledońskiego schodzą tu do Loch Ness"},
-	"Drumnadrochit": {"pl": "Nad Loch Ness: tu wypatruje się potwora Nessie"}
+	"London": {
+		"pl": "Stolica Wielkiej Brytanii nad Tamizą; metro działa tu od 1863 roku, najdłużej na świecie",
+		"en": "Capital of the United Kingdom on the Thames; its Underground has run since 1863, the oldest in the world",
+		"cs": "Hlavní město Velké Británie na Temži; metro tu jezdí od roku 1863, nejdéle na světě",
+		"is": "Höfuðborg Bretlands við Thames; neðanjarðarlestin hefur gengið hér síðan 1863, lengst allra í heiminum"
+	},
+	"Birmingham": {
+		"pl": "Miasto kanałów: ma ich więcej niż Wenecja",
+		"en": "City of canals: it has more of them than Venice",
+		"cs": "Město kanálů: má jich víc než Benátky",
+		"is": "Borg skipaskurða: þeir eru fleiri en í Feneyjum"
+	},
+	"Leeds": {
+		"pl": "Tu w 1888 roku nakręcono najstarszy zachowany film na świecie",
+		"en": "The oldest surviving film in the world was shot here in 1888",
+		"cs": "Tady byl roku 1888 natočen nejstarší dochovaný film na světě",
+		"is": "Hér var elsta varðveitta kvikmynd heims tekin árið 1888"
+	},
+	"Glasgow": {
+		"pl": "Największe miasto Szkocji, dawniej stocznie budowały tu statki dla całego świata",
+		"en": "Scotland's largest city, where shipyards once built ships for the whole world",
+		"cs": "Největší město Skotska, dřív tu loděnice stavěly lodě pro celý svět",
+		"is": "Stærsta borg Skotlands, áður smíðuðu skipasmíðastöðvar hér skip fyrir allan heiminn"
+	},
+	"Sheffield": {
+		"pl": "Stolica stali: tu wynaleziono stal nierdzewną",
+		"en": "Steel City: stainless steel was invented here",
+		"cs": "Hlavní město oceli: tady vynalezli nerezovou ocel",
+		"is": "Höfuðborg stálsins: hér var ryðfrítt stál fundið upp"
+	},
+	"Manchester": {
+		"pl": "Kolebka rewolucji przemysłowej i dwóch słynnych klubów piłkarskich",
+		"en": "Birthplace of the Industrial Revolution and home of two famous football clubs",
+		"cs": "Kolébka průmyslové revoluce a dvou slavných fotbalových klubů",
+		"is": "Vagga iðnbyltingarinnar og tveggja frægra knattspyrnuliða"
+	},
+	"Edinburgh": {
+		"pl": "Stolica Szkocji z zamkiem na wygasłym wulkanie",
+		"en": "Capital of Scotland, with a castle on an extinct volcano",
+		"cs": "Hlavní město Skotska s hradem na vyhaslé sopce",
+		"is": "Höfuðborg Skotlands með kastala á kulnuðu eldfjalli"
+	},
+	"Liverpool": {
+		"pl": "Miasto Beatlesów i wielkiego portu nad rzeką Mersey",
+		"en": "City of the Beatles and a big port on the River Mersey",
+		"cs": "Město Beatles a velkého přístavu na řece Mersey",
+		"is": "Borg Bítlanna og stórrar hafnar við ána Mersey"
+	},
+	"Bristol": {
+		"pl": "Tu Isambard Kingdom Brunel zbudował wiszący most i parowiec SS Great Britain",
+		"en": "Isambard Kingdom Brunel built a suspension bridge and the steamship SS Great Britain here",
+		"cs": "Tady Isambard Kingdom Brunel postavil visutý most a parník SS Great Britain",
+		"is": "Hér smíðaði Isambard Kingdom Brunel hengibrú og gufuskipið SS Great Britain"
+	},
+	"Leicester": {
+		"pl": "Pod parkingiem w centrum znaleziono grób króla Ryszarda III",
+		"en": "The grave of King Richard III was found under a car park in the centre",
+		"cs": "Pod parkovištěm v centru našli hrob krále Richarda III.",
+		"is": "Undir bílastæði í miðbænum fannst gröf Ríkharðs III. konungs"
+	},
+	"Cardiff": {
+		"pl": "Stolica Walii; napisy są tu w dwóch językach, angielskim i walijskim",
+		"en": "Capital of Wales; signs here are in two languages, English and Welsh",
+		"cs": "Hlavní město Walesu; nápisy jsou tu ve dvou jazycích, angličtině a velštině",
+		"is": "Höfuðborg Wales; skilti eru hér á tveimur tungumálum, ensku og velsku"
+	},
+	"Nottingham": {
+		"pl": "Miasto Robin Hooda, obok rośnie las Sherwood",
+		"en": "Robin Hood's city, with Sherwood Forest nearby",
+		"cs": "Město Robina Hooda, vedle roste Sherwoodský les",
+		"is": "Borg Hróa hattar, rétt hjá vex Skírisskógur"
+	},
+	"Newcastle upon Tyne": {
+		"pl": "Siedem mostów nad rzeką Tyne, w tym most uchylny, który się przechyla",
+		"en": "Seven bridges over the River Tyne, including one that tilts to let ships pass",
+		"cs": "Sedm mostů přes řeku Tyne, mezi nimi sklopný most, který se naklání",
+		"is": "Sjö brýr yfir ána Tyne, þar á meðal brú sem hallar sér"
+	},
+	"Brighton": {
+		"pl": "Nadmorski kurort z orientalnym pałacem króla i molem pełnym atrakcji",
+		"en": "A seaside resort with a king's oriental palace and a pier full of fun",
+		"cs": "Přímořské letovisko s orientálním královským palácem a molem plným atrakcí",
+		"is": "Strandbær með austurlenskri konungshöll og bryggju fullri af skemmtunum"
+	},
+	"Hull": {
+		"pl": "Port nad estuarium Humber; miasto ma własne kremowe budki telefoniczne",
+		"en": "A port on the Humber estuary; the city has its own cream-coloured phone boxes",
+		"cs": "Přístav na estuáru Humber; město má vlastní krémové telefonní budky",
+		"is": "Höfn við Humber-ósa; borgin á sína eigin rjómalituðu símaklefa"
+	},
+	"Plymouth": {
+		"pl": "Stąd w 1620 roku wypłynął Mayflower z pielgrzymami do Ameryki",
+		"en": "The Mayflower sailed from here with the Pilgrims to America in 1620",
+		"cs": "Odtud roku 1620 vyplula loď Mayflower s poutníky do Ameriky",
+		"is": "Héðan sigldi Mayflower árið 1620 með pílagríma til Ameríku"
+	},
+	"Stoke-on-Trent": {
+		"pl": "Stolica porcelany i ceramiki: dawniej nad miastem dymiły setki pieców",
+		"en": "Capital of china and pottery: hundreds of kilns once smoked over the city",
+		"cs": "Hlavní město porcelánu a keramiky: dřív nad městem kouřily stovky pecí",
+		"is": "Höfuðborg postulíns og leirmuna: áður rauk úr hundruðum ofna yfir borginni"
+	},
+	"Southampton": {
+		"pl": "Stąd w 1912 roku wypłynął w swój jedyny rejs Titanic",
+		"en": "The Titanic set off from here on its only voyage in 1912",
+		"cs": "Odtud roku 1912 vyplul na svou jedinou plavbu Titanic",
+		"is": "Héðan lagði Titanic af stað í sína einu ferð árið 1912"
+	},
+	"Swansea": {
+		"pl": "Drugie miasto Walii, tu urodził się poeta Dylan Thomas",
+		"en": "Wales's second city, where the poet Dylan Thomas was born",
+		"cs": "Druhé město Walesu, narodil se tu básník Dylan Thomas",
+		"is": "Næststærsta borg Wales, hér fæddist skáldið Dylan Thomas"
+	},
+	"Portsmouth": {
+		"pl": "Port Królewskiej Marynarki Wojennej, jedyne miasto-wyspa w Anglii",
+		"en": "Home port of the Royal Navy, England's only island city",
+		"cs": "Přístav Královského námořnictva, jediné ostrovní město v Anglii",
+		"is": "Höfn breska sjóhersins, eina eyjaborgin á Englandi"
+	},
+	"York": {
+		"pl": "Średniowieczne miasto otoczone murami, dawniej rzymskie Eboracum i wikińskie Jorvik",
+		"en": "A medieval walled city, once Roman Eboracum and Viking Jorvik",
+		"cs": "Středověké město obehnané hradbami, dřív římské Eboracum a vikinský Jorvik",
+		"is": "Miðaldaborg umkringd múrum, áður rómverska Eboracum og víkingabærinn Jórvík"
+	},
+	"Aberdeen": {
+		"pl": "Granitowe miasto, stolica przemysłu naftowego Morza Północnego",
+		"en": "The Granite City, capital of the North Sea oil industry",
+		"cs": "Žulové město, centrum ropného průmyslu Severního moře",
+		"is": "Granítborgin, höfuðborg olíuiðnaðarins í Norðursjó"
+	},
+	"Oxford": {
+		"pl": "Najstarszy uniwersytet anglojęzycznego świata, uczono tu już w XI wieku",
+		"en": "The oldest university in the English-speaking world, teaching since the 11th century",
+		"cs": "Nejstarší univerzita anglicky mluvícího světa, učilo se tu už v 11. století",
+		"is": "Elsti háskóli hins enskumælandi heims, hér var kennt strax á 11. öld"
+	},
+	"Dundee": {
+		"pl": "Tu zbudowano statek polarny Discovery kapitana Scotta",
+		"en": "Captain Scott's polar ship Discovery was built here",
+		"cs": "Tady postavili polární loď Discovery kapitána Scotta",
+		"is": "Hér var heimskautaskipið Discovery smíðað fyrir Scott skipstjóra"
+	},
+	"Cambridge": {
+		"pl": "Miasto uniwersyteckie; po rzece Cam pływa się płaskimi łodziami pchanymi tyczką",
+		"en": "A university city; on the River Cam people ride flat boats pushed with a pole",
+		"cs": "Univerzitní město; po řece Cam se pluje plochými loďkami poháněnými bidlem",
+		"is": "Háskólaborg; á ánni Cam er siglt á flatbotna bátum sem ýtt er áfram með stöng"
+	},
+	"Norwich": {
+		"pl": "Średniowieczne miasto z katedrą i zamkiem; ma ponoć kościół na każdy tydzień roku",
+		"en": "A medieval city with a cathedral and a castle; it's said to have a church for every week of the year",
+		"cs": "Středověké město s katedrálou a hradem; prý má kostel na každý týden v roce",
+		"is": "Miðaldaborg með dómkirkju og kastala; sagt er að hún eigi kirkju fyrir hverja viku ársins"
+	},
+	"Exeter": {
+		"pl": "Pod miastem biegną średniowieczne podziemne korytarze z wodociągiem",
+		"en": "Medieval underground passages carrying water run beneath the city",
+		"cs": "Pod městem vedou středověké podzemní chodby s vodovodem",
+		"is": "Undir borginni liggja neðanjarðargöng frá miðöldum með vatnsleiðslu"
+	},
+	"Carlisle": {
+		"pl": "Graniczne miasto, o które przez wieki walczyli Anglicy i Szkoci",
+		"en": "A border city that the English and the Scots fought over for centuries",
+		"cs": "Pohraniční město, o které po staletí bojovali Angličané a Skotové",
+		"is": "Landamæraborg sem Englendingar og Skotar börðust um öldum saman"
+	},
+	"Inverness": {
+		"pl": "Stolica Szkockiej Wyżyny, blisko jeziora Loch Ness",
+		"en": "Capital of the Scottish Highlands, close to Loch Ness",
+		"cs": "Hlavní město Skotské vysočiny, blízko jezera Loch Ness",
+		"is": "Höfuðborg Skosku hálandanna, nálægt vatninu Loch Ness"
+	},
+	"Bangor": {
+		"pl": "Jedno z najmniejszych miast w Wielkiej Brytanii, z katedrą założoną 1500 lat temu",
+		"en": "One of the smallest cities in Britain, with a cathedral founded 1500 years ago",
+		"cs": "Jedno z nejmenších měst ve Velké Británii, s katedrálou založenou před 1500 lety",
+		"is": "Ein minnsta borg Bretlands, með dómkirkju sem var stofnuð fyrir 1500 árum"
+	},
+	"Croydon": {
+		"pl": "Dzielnica Londynu, tu działało pierwsze lotnisko międzynarodowe Londynu",
+		"en": "A part of London, home to London's first international airport",
+		"cs": "Čtvrť Londýna, fungovalo tu první mezinárodní letiště Londýna",
+		"is": "Hverfi í Lundúnum, hér var fyrsti alþjóðaflugvöllur Lundúna"
+	},
+	"Crawley": {
+		"pl": "Obok leży lotnisko Gatwick, drugie co do wielkości w kraju",
+		"en": "Gatwick Airport, the country's second-largest, is next door",
+		"cs": "Vedle leží letiště Gatwick, druhé největší v zemi",
+		"is": "Rétt hjá er Gatwick-flugvöllur, sá næststærsti í landinu"
+	},
+	"Guildford": {
+		"pl": "Tu zmarł i jest pochowany Lewis Carroll, autor Alicji w Krainie Czarów",
+		"en": "Lewis Carroll, author of Alice in Wonderland, died and is buried here",
+		"cs": "Tady zemřel a je pohřben Lewis Carroll, autor Alenky v říši divů",
+		"is": "Hér dó og er grafinn Lewis Carroll, höfundur Lísu í Undralandi"
+	},
+	"Petersfield": {
+		"pl": "Miasteczko w Parku Narodowym South Downs",
+		"en": "A small town in the South Downs National Park",
+		"cs": "Městečko v národním parku South Downs",
+		"is": "Smábær í South Downs-þjóðgarðinum"
+	},
+	"Basingstoke": {
+		"pl": "Niedaleko urodziła się pisarka Jane Austen",
+		"en": "The writer Jane Austen was born nearby",
+		"cs": "Nedaleko se narodila spisovatelka Jane Austenová",
+		"is": "Skammt héðan fæddist rithöfundurinn Jane Austen"
+	},
+	"Winchester": {
+		"pl": "Dawna stolica Anglii; w zamku wisi okrągły stół króla Artura",
+		"en": "Former capital of England; King Arthur's Round Table hangs in its castle",
+		"cs": "Bývalé hlavní město Anglie; na hradě visí kulatý stůl krále Artuše",
+		"is": "Fyrrum höfuðborg Englands; í kastalanum hangir hringborð Artúrs konungs"
+	},
+	"Arundel": {
+		"pl": "Miasteczko pod wielkim zamkiem książąt Norfolk",
+		"en": "A small town below the great castle of the Dukes of Norfolk",
+		"cs": "Městečko pod velkým hradem vévodů z Norfolku",
+		"is": "Smábær undir stórum kastala hertoganna af Norfolk"
+	},
+	"Chichester": {
+		"pl": "Katedra z wolnostojącą dzwonnicą",
+		"en": "A cathedral with a free-standing bell tower",
+		"cs": "Katedrála se samostatně stojící zvonicí",
+		"is": "Dómkirkja með frístandandi klukkuturni"
+	},
+	"Worthing": {
+		"pl": "Nadmorski kurort z drewnianym molem",
+		"en": "A seaside resort with a wooden pier",
+		"cs": "Přímořské letovisko s dřevěným molem",
+		"is": "Strandbær með bryggju úr timbri"
+	},
+	"Amesbury": {
+		"pl": "Obok stoi Stonehenge: kamienny krąg sprzed 4500 lat",
+		"en": "Stonehenge stands nearby: a stone circle 4500 years old",
+		"cs": "Vedle stojí Stonehenge: kamenný kruh starý 4500 let",
+		"is": "Rétt hjá stendur Stonehenge: steinhringur frá því fyrir 4500 árum"
+	},
+	"Andover": {
+		"pl": "Miasteczko na kredowych wzgórzach Hampshire",
+		"en": "A small town on the chalk hills of Hampshire",
+		"cs": "Městečko na křídových kopcích Hampshiru",
+		"is": "Smábær á krítarhæðum Hampshire"
+	},
+	"Honiton": {
+		"pl": "Słynęło z ręcznie robionych koronek",
+		"en": "Once famous for handmade lace",
+		"cs": "Proslulo ručně paličkovanou krajkou",
+		"is": "Var frægur fyrir handgerðar blúndur"
+	},
+	"Lyndhurst": {
+		"pl": "Stolica Nowego Lasu, po drogach chodzą tu kucyki",
+		"en": "Capital of the New Forest, where ponies walk along the roads",
+		"cs": "Hlavní město New Forestu, po silnicích tu chodí poníci",
+		"is": "Höfuðstaður New Forest, hér ganga smáhestar um vegina"
+	},
+	"Bournemouth": {
+		"pl": "Kurort z 11 kilometrami piaszczystej plaży",
+		"en": "A resort with 11 kilometres of sandy beach",
+		"cs": "Letovisko s 11 kilometry písečné pláže",
+		"is": "Strandbær með 11 kílómetra sandströnd"
+	},
+	"Poole": {
+		"pl": "Jeden z największych naturalnych portów na świecie",
+		"en": "One of the largest natural harbours in the world",
+		"cs": "Jeden z největších přírodních přístavů na světě",
+		"is": "Ein stærsta náttúrulega höfn í heimi"
+	},
+	"Dorchester": {
+		"pl": "Miasto pisarza Thomasa Hardy'ego",
+		"en": "The town of the writer Thomas Hardy",
+		"cs": "Město spisovatele Thomase Hardyho",
+		"is": "Bær rithöfundarins Thomas Hardy"
+	},
+	"Bridport": {
+		"pl": "Wybrzeże Jurajskie: na plażach szuka się tu skamieniałości",
+		"en": "The Jurassic Coast: people hunt for fossils on the beaches here",
+		"cs": "Jurské pobřeží: na plážích se tu hledají zkameněliny",
+		"is": "Júrasíska ströndin: hér leitar fólk að steingervingum í fjörunni"
+	},
+	"Axminster": {
+		"pl": "Słynie z ręcznie tkanych dywanów",
+		"en": "Famous for hand-woven carpets",
+		"cs": "Proslulé ručně tkanými koberci",
+		"is": "Frægur fyrir handofin teppi"
+	},
+	"Ashburton": {
+		"pl": "Brama Dartmoor, wrzosowiska z dzikimi kucykami",
+		"en": "Gateway to Dartmoor, moorland with wild ponies",
+		"cs": "Brána do Dartmooru, vřesovišť s divokými poníky",
+		"is": "Hlið að Dartmoor, lyngheiðum með villtum smáhestum"
+	},
+	"Ivybridge": {
+		"pl": "Tu zaczyna się 165-kilometrowy szlak przez Dartmoor",
+		"en": "A 165-kilometre trail across Dartmoor starts here",
+		"cs": "Tady začíná 165kilometrová stezka přes Dartmoor",
+		"is": "Hér hefst 165 kílómetra gönguleið yfir Dartmoor"
+	},
+	"Taunton": {
+		"pl": "Stolica Somerset, krainy cydru",
+		"en": "County town of Somerset, the land of cider",
+		"cs": "Hlavní město Somersetu, kraje cidru",
+		"is": "Höfuðstaður Somerset, lands eplasíderins"
+	},
+	"Bridgwater": {
+		"pl": "Brama na Somerset Levels, nizinę z rowami jak na Żuławach",
+		"en": "Gateway to the Somerset Levels, flat land criss-crossed by drainage ditches",
+		"cs": "Brána do Somerset Levels, nížiny protkané odvodňovacími kanály",
+		"is": "Hlið að Somerset Levels, láglendi með skurðum eins og á pólsku Żuławy-sléttunni"
+	},
+	"Weston-super-Mare": {
+		"pl": "Kurort z molem nad Kanałem Bristolskim o ogromnych pływach",
+		"en": "A resort with a pier on the Bristol Channel, which has huge tides",
+		"cs": "Letovisko s molem u Bristolského kanálu s obrovským přílivem",
+		"is": "Strandbær með bryggju við Bristolsund, þar sem munur flóðs og fjöru er gríðarlegur"
+	},
+	"High Wycombe": {
+		"pl": "Dawna stolica meblarzy, słynęło z krzeseł",
+		"en": "Once the capital of furniture makers, famous for chairs",
+		"cs": "Bývalé hlavní město nábytkářů, proslulo židlemi",
+		"is": "Fyrrum höfuðborg húsgagnasmiða, frægur fyrir stóla"
+	},
+	"Slough": {
+		"pl": "Tu działa jeden z największych parków przemysłowych w Europie",
+		"en": "One of the largest industrial estates in Europe is here",
+		"cs": "Je tu jeden z největších průmyslových parků v Evropě",
+		"is": "Hér er einn stærsti iðngarður í Evrópu"
+	},
+	"Reading": {
+		"pl": "Słynie z festiwalu muzycznego; dawniej z ciastek Huntley & Palmers wysyłanych na cały świat",
+		"en": "Famous for its music festival, and once for Huntley & Palmers biscuits sent all over the world",
+		"cs": "Proslulý hudebním festivalem; dřív sušenkami Huntley & Palmers posílanými do celého světa",
+		"is": "Frægur fyrir tónlistarhátíð; áður fyrir Huntley & Palmers-kex sem sent var um allan heim"
+	},
+	"Newbury": {
+		"pl": "Słynny tor wyścigów konnych",
+		"en": "A famous horse racing course",
+		"cs": "Slavné dostihové závodiště",
+		"is": "Frægur veðreiðavöllur"
+	},
+	"Swindon": {
+		"pl": "Miasto kolejarzy: tu budowano parowozy Great Western Railway",
+		"en": "A railway town: Great Western Railway steam engines were built here",
+		"cs": "Město železničářů: stavěly se tu parní lokomotivy Great Western Railway",
+		"is": "Bær járnbrautarmanna: hér voru eimreiðar Great Western Railway smíðaðar"
+	},
+	"Chippenham": {
+		"pl": "Targowe miasteczko nad rzeką Avon",
+		"en": "A market town on the River Avon",
+		"cs": "Trhové městečko na řece Avon",
+		"is": "Kaupstaður við ána Avon"
+	},
+	"Faringdon": {
+		"pl": "Brama do Vale of White Horse z wielkim białym koniem na zboczu",
+		"en": "Gateway to the Vale of White Horse, with a giant white horse on the hillside",
+		"cs": "Brána do Vale of White Horse s velkým bílým koněm na svahu",
+		"is": "Hlið að Vale of White Horse með stórum hvítum hesti í hlíðinni"
+	},
+	"Bicester": {
+		"pl": "Obok jest dawne lotnisko RAF, dziś centrum zabytkowych samochodów",
+		"en": "A former RAF airfield nearby is now a centre for classic cars",
+		"cs": "Vedle je bývalé letiště RAF, dnes centrum historických aut",
+		"is": "Rétt hjá er fyrrum flugvöllur RAF, nú miðstöð fornbíla"
+	},
+	"Banbury": {
+		"pl": "Słynne z rymowanki o pani na białym koniu",
+		"en": "Famous for the nursery rhyme about a fine lady on a white horse",
+		"cs": "Proslulé říkankou o paní na bílém koni",
+		"is": "Frægur úr barnaþulunni um konuna á hvíta hestinum"
+	},
+	"Warwick": {
+		"pl": "Miasto z jednym z najpiękniejszych średniowiecznych zamków Anglii",
+		"en": "A town with one of England's finest medieval castles",
+		"cs": "Město s jedním z nejkrásnějších středověkých hradů Anglie",
+		"is": "Borg með einum fegursta miðaldakastala Englands"
+	},
+	"Luton": {
+		"pl": "Tu działa jedno z londyńskich lotnisk",
+		"en": "One of London's airports is here",
+		"cs": "Je tu jedno z londýnských letišť",
+		"is": "Hér er einn af flugvöllum Lundúna"
+	},
+	"Milton Keynes": {
+		"pl": "Nowe miasto z rondami i betonowymi krowami",
+		"en": "A new town with roundabouts and concrete cows",
+		"cs": "Nové město s kruhovými objezdy a betonovými kravami",
+		"is": "Ný borg með hringtorgum og steinsteyptum kúm"
+	},
+	"Northampton": {
+		"pl": "Stolica angielskiego obuwia",
+		"en": "England's shoemaking capital",
+		"cs": "Hlavní město anglické obuvi",
+		"is": "Höfuðborg enskrar skógerðar"
+	},
+	"Rugby": {
+		"pl": "Tu w szkole narodziła się gra w rugby",
+		"en": "The game of rugby was born at a school here",
+		"cs": "Tady ve škole vznikla hra ragby",
+		"is": "Hér, í skóla, varð ruðningur (rugby) til"
+	},
+	"Coventry": {
+		"pl": "Zbombardowana katedra stoi jako pomnik pokoju obok nowej",
+		"en": "The bombed cathedral stands as a monument to peace next to the new one",
+		"cs": "Vybombardovaná katedrála stojí jako památník míru vedle nové",
+		"is": "Sprengd dómkirkja stendur sem friðarminnismerki við hlið þeirrar nýju"
+	},
+	"Lutterworth": {
+		"pl": "Tu Frank Whittle zbudował pierwszy brytyjski silnik odrzutowy",
+		"en": "Frank Whittle built the first British jet engine here",
+		"cs": "Tady Frank Whittle sestrojil první britský proudový motor",
+		"is": "Hér smíðaði Frank Whittle fyrsta breska þotuhreyfilinn"
+	},
+	"Harlow": {
+		"pl": "Jedno z pierwszych powojennych nowych miast",
+		"en": "One of the first new towns built after the war",
+		"cs": "Jedno z prvních poválečných nových měst",
+		"is": "Einn af fyrstu nýju bæjunum eftir stríðið"
+	},
+	"Saffron Walden": {
+		"pl": "Nazwa od szafranu, który tu kiedyś uprawiano",
+		"en": "Named after saffron, which was once grown here",
+		"cs": "Jméno má po šafránu, který se tu kdysi pěstoval",
+		"is": "Nafnið kemur af saffrani sem áður var ræktað hér"
+	},
+	"Chelmsford": {
+		"pl": "Tu Marconi otworzył pierwszą na świecie fabrykę radia",
+		"en": "Marconi opened the world's first radio factory here",
+		"cs": "Tady Marconi otevřel první továrnu na rádia na světě",
+		"is": "Hér opnaði Marconi fyrstu útvarpsverksmiðju heims"
+	},
+	"Colchester": {
+		"pl": "Najstarsze zapisane miasto Brytanii, dawna rzymska stolica",
+		"en": "Britain's oldest recorded town, once the Roman capital",
+		"cs": "Nejstarší zapsané město Británie, bývalé římské hlavní město",
+		"is": "Elsti skráði bær Bretlands, fyrrum höfuðborg Rómverja"
+	},
+	"Ipswich": {
+		"pl": "Port nad estuarium Orwell, jedno z najstarszych miast Anglii",
+		"en": "A port on the Orwell estuary, one of England's oldest towns",
+		"cs": "Přístav na estuáru Orwell, jedno z nejstarších měst Anglie",
+		"is": "Höfn við Orwell-ósa, einn elsti bær Englands"
+	},
+	"Newmarket": {
+		"pl": "Stolica wyścigów konnych, w okolicy trenuje tysiące koni",
+		"en": "Home of horse racing, thousands of horses train around here",
+		"cs": "Hlavní město dostihů, v okolí trénují tisíce koní",
+		"is": "Höfuðborg veðreiða, þúsundir hesta æfa hér í kring"
+	},
+	"Thetford": {
+		"pl": "Wokół rośnie największy nizinny las Anglii",
+		"en": "England's largest lowland forest grows all around",
+		"cs": "Kolem roste největší nížinný les Anglie",
+		"is": "Í kring vex stærsti láglendisskógur Englands"
+	},
+	"Huntingdon": {
+		"pl": "Tu urodził się Oliver Cromwell",
+		"en": "Oliver Cromwell was born here",
+		"cs": "Tady se narodil Oliver Cromwell",
+		"is": "Hér fæddist Oliver Cromwell"
+	},
+	"Kettering": {
+		"pl": "Miasto obuwników na wschodzie Northamptonshire",
+		"en": "A town of shoemakers in eastern Northamptonshire",
+		"cs": "Město obuvníků na východě Northamptonshiru",
+		"is": "Bær skósmiða í austurhluta Northamptonshire"
+	},
+	"Market Harborough": {
+		"pl": "Targowe miasteczko ze szkołą na palach z 1614 roku",
+		"en": "A market town with a school on stilts from 1614",
+		"cs": "Trhové městečko se školou na sloupech z roku 1614",
+		"is": "Kaupstaður með skóla á stólpum frá 1614"
+	},
+	"Newport": {
+		"pl": "Tu stoi most transporterowy: przewozi samochody wiszącą gondolą",
+		"en": "A transporter bridge stands here: it carries cars in a hanging gondola",
+		"cs": "Stojí tu transportní most: převáží auta zavěšenou gondolou",
+		"is": "Hér stendur ferjubrú: hún flytur bíla í hangandi kláfi"
+	},
+	"Bridgend": {
+		"pl": "Miasto w połowie drogi między Cardiff a Swansea",
+		"en": "A town halfway between Cardiff and Swansea",
+		"cs": "Město v půli cesty mezi Cardiffem a Swansea",
+		"is": "Bær miðja vegu milli Cardiff og Swansea"
+	},
+	"Port Talbot": {
+		"pl": "Największa huta stali w Wielkiej Brytanii",
+		"en": "The largest steelworks in the United Kingdom",
+		"cs": "Největší ocelárna ve Velké Británii",
+		"is": "Stærsta stálver Bretlands"
+	},
+	"Merthyr Tydfil": {
+		"pl": "Dawna stolica żelaza; tu w 1804 roku pojechał pierwszy parowóz na szynach",
+		"en": "Once the iron capital; the first steam locomotive ran on rails here in 1804",
+		"cs": "Bývalé hlavní město železa; tady roku 1804 vyjela první parní lokomotiva na kolejích",
+		"is": "Fyrrum höfuðborg járnsins; hér ók fyrsta gufueimreiðin á teinum árið 1804"
+	},
+	"Brecon": {
+		"pl": "Brama do Bannau Brycheiniog, gór z najwyższym szczytem południowej Brytanii",
+		"en": "Gateway to Bannau Brycheiniog, mountains with the highest peak in southern Britain",
+		"cs": "Brána do Bannau Brycheiniog, hor s nejvyšším vrcholem jižní Británie",
+		"is": "Hlið að Bannau Brycheiniog, fjöllum með hæsta tind Suður-Bretlands"
+	},
+	"Builth Wells": {
+		"pl": "Tu odbywa się wielka walijska wystawa rolnicza",
+		"en": "The great Welsh agricultural show is held here",
+		"cs": "Koná se tu velká velšská zemědělská výstava",
+		"is": "Hér er haldin stóra velska landbúnaðarsýningin"
+	},
+	"Rhayader": {
+		"pl": "Obok są tamy doliny Elan, które zaopatrują w wodę Birmingham",
+		"en": "Nearby are the Elan Valley dams, which supply Birmingham with water",
+		"cs": "Vedle jsou přehrady v údolí Elan, které zásobují vodou Birmingham",
+		"is": "Rétt hjá eru stíflurnar í Elan-dal sem sjá Birmingham fyrir vatni"
+	},
+	"Llanidloes": {
+		"pl": "Miasteczko u źródeł rzeki Severn, najdłuższej w Wielkiej Brytanii",
+		"en": "A small town near the source of the River Severn, the longest in Britain",
+		"cs": "Městečko u pramenů řeky Severn, nejdelší ve Velké Británii",
+		"is": "Smábær við upptök Severn, lengstu ár Bretlands"
+	},
+	"Dolgellau": {
+		"pl": "Miasteczko u stóp góry Cadair Idris",
+		"en": "A small town at the foot of Cadair Idris",
+		"cs": "Městečko na úpatí hory Cadair Idris",
+		"is": "Smábær við rætur fjallsins Cadair Idris"
+	},
+	"Blaenau Ffestiniog": {
+		"pl": "Miasto łupku: wokół góry kamienia z kopalni",
+		"en": "Slate town: mountains of waste rock from the quarries all around",
+		"cs": "Město břidlice: kolem hory kamení z dolů",
+		"is": "Borg flögubergsins: í kring eru fjöll af grjóti úr námunum"
+	},
+	"Betws-y-Coed": {
+		"pl": "Wioska wśród lasów Eryri z wodospadem Swallow Falls",
+		"en": "A village in the forests of Eryri with the Swallow Falls waterfall",
+		"cs": "Vesnice v lesích Eryri s vodopádem Swallow Falls",
+		"is": "Þorp í skógum Eryri með fossinum Swallow Falls"
+	},
+	"Capel Curig": {
+		"pl": "Baza wspinaczy: stąd wyrusza się na szczyty Eryri",
+		"en": "A climbers' base: people set off from here for the peaks of Eryri",
+		"cs": "Základna horolezců: odtud se vyráží na vrcholy Eryri",
+		"is": "Bækistöð fjallgöngumanna: héðan er lagt á tinda Eryri"
+	},
+	"Bethesda": {
+		"pl": "Obok jest kamieniołom Penrhyn, kiedyś największy na świecie",
+		"en": "Nearby is Penrhyn Quarry, once the largest in the world",
+		"cs": "Vedle je lom Penrhyn, kdysi největší na světě",
+		"is": "Rétt hjá er Penrhyn-grjótnáman, eitt sinn sú stærsta í heimi"
+	},
+	"Carmarthen": {
+		"pl": "Według legendy tu urodził się czarodziej Merlin",
+		"en": "Legend says the wizard Merlin was born here",
+		"cs": "Podle legendy se tu narodil čaroděj Merlin",
+		"is": "Samkvæmt goðsögninni fæddist galdramaðurinn Merlín hér"
+	},
+	"Aberystwyth": {
+		"pl": "Uniwersytecki kurort z kolejką na klif",
+		"en": "A university seaside town with a cliff railway",
+		"cs": "Univerzitní letovisko s lanovkou na útes",
+		"is": "Háskólabær við sjóinn með togbraut upp á bjargið"
+	},
+	"Machynlleth": {
+		"pl": "Tu Owain Glyndŵr zwołał pierwszy walijski parlament",
+		"en": "Owain Glyndŵr gathered the first Welsh parliament here",
+		"cs": "Tady Owain Glyndŵr svolal první velšský parlament",
+		"is": "Hér kallaði Owain Glyndŵr saman fyrsta velska þingið"
+	},
+	"Porthmadog": {
+		"pl": "Stąd kursują wąskotorowe kolejki parowe do Eryri",
+		"en": "Narrow-gauge steam trains run from here into Eryri",
+		"cs": "Odtud jezdí úzkokolejné parní vláčky do Eryri",
+		"is": "Héðan ganga mjóspora gufulestir til Eryri"
+	},
+	"Caernarfon": {
+		"pl": "Potężny zamek króla Edwarda I nad cieśniną Menai",
+		"en": "King Edward I's mighty castle on the Menai Strait",
+		"cs": "Mohutný hrad krále Eduarda I. u průlivu Menai",
+		"is": "Voldugur kastali Játvarðar I. konungs við Menai-sund"
+	},
+	"Colwyn Bay": {
+		"pl": "Nadmorski kurort na północnym wybrzeżu Walii",
+		"en": "A seaside resort on the north coast of Wales",
+		"cs": "Přímořské letovisko na severním pobřeží Walesu",
+		"is": "Strandbær á norðurströnd Wales"
+	},
+	"St Asaph": {
+		"pl": "Miasto z najmniejszą katedrą w Wielkiej Brytanii",
+		"en": "A city with the smallest cathedral in Britain",
+		"cs": "Město s nejmenší katedrálou ve Velké Británii",
+		"is": "Borg með minnstu dómkirkju Bretlands"
+	},
+	"Holywell": {
+		"pl": "Święte źródło świętej Winifredy, cel pielgrzymek od wieków",
+		"en": "The holy well of Saint Winefride, visited by pilgrims for centuries",
+		"cs": "Svatý pramen svaté Winifredy, cíl poutí po staletí",
+		"is": "Heilög lind heilagrar Winifred, áfangastaður pílagríma um aldir"
+	},
+	"Chester": {
+		"pl": "Rzymskie miasto z najpełniejszymi murami w Anglii",
+		"en": "A Roman city with the most complete walls in England",
+		"cs": "Římské město s nejúplnějšími hradbami v Anglii",
+		"is": "Rómversk borg með heillegustu borgarmúrum Englands"
+	},
+	"Warrington": {
+		"pl": "Miasto w połowie drogi między Liverpoolem a Manchesterem",
+		"en": "A town halfway between Liverpool and Manchester",
+		"cs": "Město v půli cesty mezi Liverpoolem a Manchesterem",
+		"is": "Bær miðja vegu milli Liverpool og Manchester"
+	},
+	"Stafford": {
+		"pl": "Miasto Izaaka Waltona, autora słynnej książki o wędkowaniu",
+		"en": "Home town of Izaak Walton, author of a famous book about fishing",
+		"cs": "Město Izaaka Waltona, autora slavné knihy o rybaření",
+		"is": "Bær Izaak Walton, höfundar frægrar bókar um stangveiði"
+	},
+	"Holmes Chapel": {
+		"pl": "Obok stoi radioteleskop Jodrell Bank",
+		"en": "The Jodrell Bank radio telescope stands nearby",
+		"cs": "Vedle stojí radioteleskop Jodrell Bank",
+		"is": "Rétt hjá stendur útvarpssjónaukinn Jodrell Bank"
+	},
+	"Knutsford": {
+		"pl": "Pierwowzór miasteczka Cranford z powieści Elizabeth Gaskell",
+		"en": "The model for the town of Cranford in Elizabeth Gaskell's novel",
+		"cs": "Předobraz městečka Cranford z románu Elizabeth Gaskellové",
+		"is": "Fyrirmynd smábæjarins Cranford í skáldsögu Elizabeth Gaskell"
+	},
+	"Worcester": {
+		"pl": "Tu wymyślono słynny sos Worcestershire",
+		"en": "The famous Worcestershire sauce was invented here",
+		"cs": "Tady vymysleli slavnou worcesterskou omáčku",
+		"is": "Hér var hin fræga Worcestershire-sósa fundin upp"
+	},
+	"Tewkesbury": {
+		"pl": "Średniowieczne miasteczko u zbiegu Severn i Avon",
+		"en": "A medieval town where the Severn and the Avon meet",
+		"cs": "Středověké městečko na soutoku Severnu a Avonu",
+		"is": "Miðaldabær þar sem árnar Severn og Avon mætast"
+	},
+	"Gloucester": {
+		"pl": "W krużgankach tutejszej katedry kręcono Harry'ego Pottera",
+		"en": "Harry Potter scenes were filmed in the cloisters of its cathedral",
+		"cs": "V křížové chodbě zdejší katedrály se natáčel Harry Potter",
+		"is": "Í krossgöngum dómkirkjunnar hér var Harry Potter kvikmyndaður"
+	},
+	"Derby": {
+		"pl": "Tu Rolls-Royce produkuje silniki lotnicze",
+		"en": "Rolls-Royce makes aircraft engines here",
+		"cs": "Tady Rolls-Royce vyrábí letecké motory",
+		"is": "Hér framleiðir Rolls-Royce flugvélahreyfla"
+	},
+	"Burton upon Trent": {
+		"pl": "Stolica piwa: woda z tutejszych studni idealnie nadaje się do warzenia",
+		"en": "Beer capital: the water from its wells is perfect for brewing",
+		"cs": "Hlavní město piva: voda ze zdejších studní se skvěle hodí k vaření piva",
+		"is": "Höfuðborg bjórsins: vatnið úr brunnunum hér hentar fullkomlega til bruggunar"
+	},
+	"Lichfield": {
+		"pl": "Katedra z trzema iglicami, jedyna taka w Anglii",
+		"en": "A cathedral with three spires, the only one like it in England",
+		"cs": "Katedrála se třemi věžemi, jediná taková v Anglii",
+		"is": "Dómkirkja með þremur turnspírum, sú eina á Englandi"
+	},
+	"Loughborough": {
+		"pl": "Tu odlewa się dzwony dla kościołów całego świata",
+		"en": "Bells for churches all over the world are cast here",
+		"cs": "Tady se odlévají zvony pro kostely celého světa",
+		"is": "Hér eru steyptar klukkur fyrir kirkjur um allan heim"
+	},
+	"Chesterfield": {
+		"pl": "Kościół z krzywą iglicą, skręconą jak korkociąg",
+		"en": "A church with a crooked spire, twisted like a corkscrew",
+		"cs": "Kostel s křivou věží, zkroucenou jako vývrtka",
+		"is": "Kirkja með skakkri turnspíru, snúinni eins og tappatogari"
+	},
+	"Lincoln": {
+		"pl": "Katedra w Lincoln przez ponad 200 lat była najwyższą budowlą świata",
+		"en": "Lincoln Cathedral was the tallest building in the world for over 200 years",
+		"cs": "Katedrála v Lincolnu byla přes 200 let nejvyšší stavbou světa",
+		"is": "Dómkirkjan í Lincoln var hæsta bygging heims í meira en 200 ár"
+	},
+	"Newark-on-Trent": {
+		"pl": "Ruiny zamku, w którym zmarł król Jan bez Ziemi",
+		"en": "Ruins of the castle where King John died",
+		"cs": "Zřícenina hradu, kde zemřel král Jan Bezzemek",
+		"is": "Kastalarústir þar sem Jóhann landlausi konungur dó"
+	},
+	"Barton-upon-Humber": {
+		"pl": "Tu zaczyna się most Humber, kiedyś najdłuższy most wiszący świata",
+		"en": "The Humber Bridge starts here, once the longest suspension bridge in the world",
+		"cs": "Tady začíná most Humber, kdysi nejdelší visutý most světa",
+		"is": "Hér hefst Humber-brúin, eitt sinn lengsta hengibrú heims"
+	},
+	"Rochdale": {
+		"pl": "Tu w 1844 roku założono pierwszą nowoczesną spółdzielnię",
+		"en": "The first modern co-operative was founded here in 1844",
+		"cs": "Tady roku 1844 založili první moderní družstvo",
+		"is": "Hér var fyrsta nútímalega samvinnufélagið stofnað árið 1844"
+	},
+	"Huddersfield": {
+		"pl": "Tu narodziła się liga rugby",
+		"en": "Rugby league was born here",
+		"cs": "Tady se zrodila rugbyová liga",
+		"is": "Hér varð ruðningsafbrigðið rugby league til"
+	},
+	"Glossop": {
+		"pl": "Za miastem droga wspina się na przełęcz Snake Pass",
+		"en": "Beyond the town the road climbs up to the Snake Pass",
+		"cs": "Za městem silnice stoupá na průsmyk Snake Pass",
+		"is": "Fyrir utan bæinn klifrar vegurinn upp í fjallaskarðið Snake Pass"
+	},
+	"Barnsley": {
+		"pl": "Dawne miasto górników węgla",
+		"en": "Once a coal-mining town",
+		"cs": "Bývalé město uhelných horníků",
+		"is": "Fyrrum bær kolanámumanna"
+	},
+	"Wakefield": {
+		"pl": "Miasto rzeźbiarki Barbary Hepworth",
+		"en": "Home town of the sculptor Barbara Hepworth",
+		"cs": "Město sochařky Barbary Hepworthové",
+		"is": "Bær myndhöggvarans Barbara Hepworth"
+	},
+	"Tadcaster": {"pl": "Miasto browarów", "en": "A town of breweries", "cs": "Město pivovarů", "is": "Bær brugghúsanna"},
+	"Beverley": {
+		"pl": "Gotycki kościół Beverley Minster jest większy od wielu katedr",
+		"en": "The Gothic church of Beverley Minster is bigger than many cathedrals",
+		"cs": "Gotický kostel Beverley Minster je větší než mnoho katedrál",
+		"is": "Gotneska kirkjan Beverley Minster er stærri en margar dómkirkjur"
+	},
+	"Pontefract": {
+		"pl": "Słynie z lukrecjowych cukierków",
+		"en": "Famous for liquorice sweets",
+		"cs": "Proslulé lékořicovými bonbony",
+		"is": "Frægur fyrir lakkrísmola"
+	},
+	"Goole": {
+		"pl": "Port śródlądowy nad rzeką Ouse",
+		"en": "An inland port on the River Ouse",
+		"cs": "Vnitrozemský přístav na řece Ouse",
+		"is": "Höfn inni í landi við ána Ouse"
+	},
+	"Howden": {
+		"pl": "Miasteczko z wielkim kościołem Howden Minster",
+		"en": "A small town with the large church of Howden Minster",
+		"cs": "Městečko s velkým kostelem Howden Minster",
+		"is": "Smábær með stóru kirkjunni Howden Minster"
+	},
+	"Wetherby": {
+		"pl": "Miasteczko w połowie drogi między Londynem a Edynburgiem",
+		"en": "A small town halfway between London and Edinburgh",
+		"cs": "Městečko v půli cesty mezi Londýnem a Edinburghem",
+		"is": "Smábær miðja vegu milli Lundúna og Edinborgar"
+	},
+	"Darlington": {
+		"pl": "Stąd w 1825 roku ruszyła pierwsza publiczna kolej parowa",
+		"en": "The first public steam railway set off from here in 1825",
+		"cs": "Odtud roku 1825 vyjela první veřejná parní železnice",
+		"is": "Héðan lagði fyrsta almenningsjárnbrautin með gufuafli af stað árið 1825"
+	},
+	"Durham": {
+		"pl": "Katedra i zamek na wzgórzu w zakolu rzeki",
+		"en": "A cathedral and castle on a hill in a bend of the river",
+		"cs": "Katedrála a hrad na kopci v meandru řeky",
+		"is": "Dómkirkja og kastali á hæð í árbugðu"
+	},
+	"Gateshead": {
+		"pl": "Obok stoi Anioł Północy, stalowa rzeźba o rozpiętości skrzydeł 54 metrów",
+		"en": "The Angel of the North stands nearby, a steel sculpture with 54-metre wings",
+		"cs": "Vedle stojí Anděl severu, ocelová socha s rozpětím křídel 54 metrů",
+		"is": "Rétt hjá stendur Engill norðursins, stálskúlptúr með 54 metra vænghaf"
+	},
+	"Thirsk": {
+		"pl": "Tu pracował weterynarz James Herriot, autor książek o zwierzętach",
+		"en": "The vet James Herriot, who wrote books about animals, worked here",
+		"cs": "Pracoval tu zvěrolékař James Herriot, autor knih o zvířatech",
+		"is": "Hér starfaði dýralæknirinn James Herriot, höfundur bóka um dýr"
+	},
+	"Middlesbrough": {
+		"pl": "Miasto stali; most transporterowy przewozi ludzi gondolą nad rzeką Tees",
+		"en": "A steel town; a transporter bridge carries people across the River Tees in a gondola",
+		"cs": "Město oceli; transportní most převáží lidi gondolou přes řeku Tees",
+		"is": "Stálborg; ferjubrú flytur fólk í kláfi yfir ána Tees"
+	},
+	"Sunderland": {
+		"pl": "Tu zbudowano tysiące statków; dziś działa fabryka samochodów Nissan",
+		"en": "Thousands of ships were built here; today there is a Nissan car factory",
+		"cs": "Postavily se tu tisíce lodí; dnes tu funguje automobilka Nissan",
+		"is": "Hér voru þúsundir skipa smíðaðar; í dag er hér bílaverksmiðja Nissan"
+	},
+	"Skipton": {
+		"pl": "Brama do Yorkshire Dales z zamkiem sprzed 900 lat",
+		"en": "Gateway to the Yorkshire Dales, with a 900-year-old castle",
+		"cs": "Brána do Yorkshire Dales s hradem starým 900 let",
+		"is": "Hlið að Yorkshire Dales með 900 ára gömlum kastala"
+	},
+	"Settle": {
+		"pl": "Stąd jedzie kolej przez wiadukt Ribblehead",
+		"en": "The railway runs from here over the Ribblehead Viaduct",
+		"cs": "Odtud vede železnice přes viadukt Ribblehead",
+		"is": "Héðan liggur járnbrautin yfir Ribblehead-brúna"
+	},
+	"Ingleton": {
+		"pl": "Szlak wodospadów wzdłuż dwóch rzek",
+		"en": "A waterfall trail along two rivers",
+		"cs": "Stezka vodopádů podél dvou řek",
+		"is": "Fossaleið meðfram tveimur ám"
+	},
+	"Kirkby Lonsdale": {
+		"pl": "Widok z tego miasteczka malował William Turner",
+		"en": "William Turner painted the view from this little town",
+		"cs": "Výhled z tohoto městečka maloval William Turner",
+		"is": "William Turner málaði útsýnið frá þessum smábæ"
+	},
+	"Tebay": {
+		"pl": "Autostrada M6 wspina się tu na przełęcz Shap",
+		"en": "The M6 motorway climbs up to Shap summit here",
+		"cs": "Dálnice M6 tu stoupá na průsmyk Shap",
+		"is": "Hraðbrautin M6 klifrar hér upp í Shap-skarð"
+	},
+	"Penrith": {
+		"pl": "Brama do Krainy Jezior",
+		"en": "Gateway to the Lake District",
+		"cs": "Brána do Jezerní oblasti",
+		"is": "Hlið að Vatnahéraðinu"
+	},
+	"Preston": {
+		"pl": "Stąd w 1958 roku poprowadzono pierwszą brytyjską autostradę",
+		"en": "Britain's first motorway was built here in 1958",
+		"cs": "Odtud roku 1958 vedla první britská dálnice",
+		"is": "Héðan var fyrsta breska hraðbrautin lögð árið 1958"
+	},
+	"Lancaster": {
+		"pl": "Zamek, w którym przez wieki był sąd i więzienie",
+		"en": "A castle that was a court and a prison for centuries",
+		"cs": "Hrad, kde po staletí sídlil soud a vězení",
+		"is": "Kastali sem hýsti dómstól og fangelsi öldum saman"
+	},
+	"Kendal": {
+		"pl": "Słynie z miętowego ciasta, które zabierali zdobywcy Everestu",
+		"en": "Famous for mint cake, which climbers took up Everest",
+		"cs": "Proslulý mátovým koláčem, který si brali dobyvatelé Everestu",
+		"is": "Frægur fyrir myntukökuna sem Everest-farar tóku með sér"
+	},
+	"Bolton": {
+		"pl": "Miasto przędzalni bawełny",
+		"en": "A town of cotton mills",
+		"cs": "Město přádelen bavlny",
+		"is": "Bær bómullarspunaverksmiðjanna"
+	},
+	"Hexham": {
+		"pl": "Opactwo z kryptą z kamieni z rzymskiego fortu",
+		"en": "An abbey with a crypt made of stones from a Roman fort",
+		"cs": "Opatství s kryptou z kamenů z římské pevnosti",
+		"is": "Klaustur með grafhvelfingu úr steinum úr rómversku virki"
+	},
+	"Haltwhistle": {
+		"pl": "Środek Wielkiej Brytanii; obok biegnie Wał Hadriana",
+		"en": "The centre of Britain; Hadrian's Wall runs nearby",
+		"cs": "Střed Velké Británie; vedle vede Hadriánův val",
+		"is": "Miðja Bretlands; rétt hjá liggur Hadríanusarmúrinn"
+	},
+	"Brampton": {
+		"pl": "Miasteczko przy Wale Hadriana",
+		"en": "A small town by Hadrian's Wall",
+		"cs": "Městečko u Hadriánova valu",
+		"is": "Smábær við Hadríanusarmúrinn"
+	},
+	"Morpeth": {
+		"pl": "Miasteczko nad rzeką Wansbeck z wieżą zegarową z XVII wieku",
+		"en": "A small town on the River Wansbeck with a 17th-century clock tower",
+		"cs": "Městečko na řece Wansbeck s hodinovou věží ze 17. století",
+		"is": "Smábær við ána Wansbeck með klukkuturni frá 17. öld"
+	},
+	"Alnwick": {
+		"pl": "Zamek, który grał Hogwart w filmach o Harrym Potterze",
+		"en": "The castle that played Hogwarts in the Harry Potter films",
+		"cs": "Hrad, který hrál Bradavice ve filmech o Harrym Potterovi",
+		"is": "Kastali sem lék Hogwarts í myndunum um Harry Potter"
+	},
+	"Berwick-upon-Tweed": {
+		"pl": "Przechodziło z rąk do rąk między Anglią a Szkocją 13 razy",
+		"en": "It changed hands between England and Scotland 13 times",
+		"cs": "Přecházelo z rukou do rukou mezi Anglií a Skotskem 13krát",
+		"is": "Gekk 13 sinnum á milli Englands og Skotlands"
+	},
+	"Dunbar": {
+		"pl": "Tu urodził się John Muir, ojciec parków narodowych w USA",
+		"en": "John Muir, father of the national parks in the USA, was born here",
+		"cs": "Narodil se tu John Muir, otec národních parků v USA",
+		"is": "Hér fæddist John Muir, faðir þjóðgarðanna í Bandaríkjunum"
+	},
+	"Musselburgh": {
+		"pl": "Najstarsze pole golfowe świata, na którym wciąż się gra",
+		"en": "The oldest golf course in the world that is still played on",
+		"cs": "Nejstarší golfové hřiště světa, na kterém se stále hraje",
+		"is": "Elsti golfvöllur heims sem enn er leikið á"
+	},
+	"Hawick": {
+		"pl": "Stolica szkockiej wełny i kaszmiru",
+		"en": "Capital of Scottish wool and cashmere",
+		"cs": "Hlavní město skotské vlny a kašmíru",
+		"is": "Höfuðborg skoskrar ullar og kasmírs"
+	},
+	"Galashiels": {
+		"pl": "Miasto tkaczy nad rzeką Gala",
+		"en": "A weavers' town on the Gala Water",
+		"cs": "Město tkalců na řece Gala",
+		"is": "Bær vefara við ána Gala"
+	},
+	"Langholm": {
+		"pl": "Neil Armstrong został honorowym obywatelem tego gniazda rodu Armstrongów",
+		"en": "Neil Armstrong was made an honorary citizen of this home of the Armstrong clan",
+		"cs": "Neil Armstrong se stal čestným občanem tohoto sídla rodu Armstrongů",
+		"is": "Neil Armstrong varð heiðursborgari þessa ættarbæjar Armstrong-ættarinnar"
+	},
+	"Gretna": {
+		"pl": "Pierwsza wioska w Szkocji; uciekające pary brały tu śluby",
+		"en": "The first village in Scotland; runaway couples got married here",
+		"cs": "První vesnice ve Skotsku; utíkající páry se tu braly",
+		"is": "Fyrsta þorpið í Skotlandi; pör sem struku að heiman giftu sig hér"
+	},
+	"Lockerbie": {
+		"pl": "Targowe miasteczko w dolinie Annandale",
+		"en": "A market town in Annandale",
+		"cs": "Trhové městečko v údolí Annandale",
+		"is": "Kaupstaður í Annandale-dal"
+	},
+	"Moffat": {
+		"pl": "Dawne uzdrowisko ze źródłami siarkowymi",
+		"en": "A former spa town with sulphur springs",
+		"cs": "Bývalé lázně se sirnými prameny",
+		"is": "Fyrrum heilsulindabær með brennisteinslindum"
+	},
+	"Hamilton": {
+		"pl": "Mauzoleum książąt Hamilton z najdłuższym echem świata",
+		"en": "The Hamilton Mausoleum has the longest echo in the world",
+		"cs": "Mauzoleum vévodů z Hamiltonu s nejdelší ozvěnou na světě",
+		"is": "Grafhýsi hertoganna af Hamilton með lengsta bergmál heims"
+	},
+	"Livingston": {
+		"pl": "Nowe miasto szkockiej Doliny Krzemowej",
+		"en": "A new town in Scotland's Silicon Glen",
+		"cs": "Nové město skotského Křemíkového údolí",
+		"is": "Ný borg í skoska Kísildalnum"
+	},
+	"South Queensferry": {
+		"pl": "Trzy mosty nad zatoką Forth z trzech różnych stuleci",
+		"en": "Three bridges over the Firth of Forth from three different centuries",
+		"cs": "Tři mosty přes záliv Forth ze tří různých století",
+		"is": "Þrjár brýr yfir Forth-fjörð frá þremur ólíkum öldum"
+	},
+	"Dunfermline": {
+		"pl": "Dawna stolica Szkocji, tu urodził się Andrew Carnegie",
+		"en": "Former capital of Scotland, where Andrew Carnegie was born",
+		"cs": "Bývalé hlavní město Skotska, narodil se tu Andrew Carnegie",
+		"is": "Fyrrum höfuðborg Skotlands, hér fæddist Andrew Carnegie"
+	},
+	"Kinross": {
+		"pl": "Na wyspie w jeziorze Loch Leven więziono Marię Stuart",
+		"en": "Mary, Queen of Scots was imprisoned on an island in Loch Leven",
+		"cs": "Na ostrově v jezeře Loch Leven věznili Marii Stuartovnu",
+		"is": "María Stúart var fangelsuð á eyju í vatninu Loch Leven"
+	},
+	"Perth": {
+		"pl": "Obok jest Scone, gdzie koronowano szkockich królów",
+		"en": "Nearby is Scone, where Scottish kings were crowned",
+		"cs": "Vedle je Scone, kde korunovali skotské krále",
+		"is": "Rétt hjá er Scone, þar sem skoskir konungar voru krýndir"
+	},
+	"Stirling": {
+		"pl": "Tu William Wallace pokonał Anglików w 1297 roku",
+		"en": "William Wallace defeated the English here in 1297",
+		"cs": "Tady William Wallace roku 1297 porazil Angličany",
+		"is": "Hér sigraði William Wallace Englendinga árið 1297"
+	},
+	"Cumbernauld": {
+		"pl": "Nowe miasto z wielkim centrum handlowym na palach",
+		"en": "A new town with a big shopping centre on stilts",
+		"cs": "Nové město s velkým nákupním centrem na sloupech",
+		"is": "Ný borg með stórri verslunarmiðstöð á stólpum"
+	},
+	"Dunblane": {
+		"pl": "Rodzinne miasto tenisisty Andy'ego Murraya",
+		"en": "Home town of the tennis player Andy Murray",
+		"cs": "Rodné město tenisty Andyho Murrayho",
+		"is": "Heimabær tennisleikarans Andy Murray"
+	},
+	"Auchterarder": {
+		"pl": "Obok jest słynne pole golfowe Gleneagles",
+		"en": "The famous Gleneagles golf course is nearby",
+		"cs": "Vedle je slavné golfové hřiště Gleneagles",
+		"is": "Rétt hjá er hinn frægi golfvöllur Gleneagles"
+	},
+	"Forfar": {
+		"pl": "Słynie z pasztecików z mięsem zwanych bridie",
+		"en": "Famous for meat pasties called bridies",
+		"cs": "Proslulé masovými taštičkami zvanými bridie",
+		"is": "Frægur fyrir kjötbökur sem kallast bridie"
+	},
+	"Brechin": {
+		"pl": "Okrągła wieża z XI wieku obok katedry",
+		"en": "An 11th-century round tower next to the cathedral",
+		"cs": "Kulatá věž z 11. století vedle katedrály",
+		"is": "Hringlaga turn frá 11. öld við dómkirkjuna"
+	},
+	"Stonehaven": {
+		"pl": "Obok, na skale nad morzem, stoją ruiny zamku Dunnottar",
+		"en": "Nearby, on a rock above the sea, stand the ruins of Dunnottar Castle",
+		"cs": "Vedle, na skále nad mořem, stojí zřícenina hradu Dunnottar",
+		"is": "Rétt hjá, á kletti við sjóinn, standa rústir Dunnottar-kastala"
+	},
+	"Inverurie": {
+		"pl": "Miasteczko w dolinie rzeki Don",
+		"en": "A small town in the valley of the River Don",
+		"cs": "Městečko v údolí řeky Don",
+		"is": "Smábær í dal árinnar Don"
+	},
+	"Huntly": {
+		"pl": "Miasteczko z ruinami zamku",
+		"en": "A small town with castle ruins",
+		"cs": "Městečko se zříceninou hradu",
+		"is": "Smábær með kastalarústum"
+	},
+	"Keith": {
+		"pl": "Najstarsza działająca destylarnia whisky w Highlands",
+		"en": "The oldest working whisky distillery in the Highlands",
+		"cs": "Nejstarší fungující palírna whisky na Vysočině",
+		"is": "Elsta starfandi viskígerð Hálandanna"
+	},
+	"Elgin": {
+		"pl": "Ruiny katedry nazywanej Latarnią Północy",
+		"en": "Ruins of a cathedral called the Lantern of the North",
+		"cs": "Zřícenina katedrály zvané Lucerna severu",
+		"is": "Rústir dómkirkju sem kölluð er Lukt norðursins"
+	},
+	"Forres": {
+		"pl": "Tu według Szekspira Makbet spotkał trzy wiedźmy",
+		"en": "According to Shakespeare, Macbeth met three witches here",
+		"cs": "Tady podle Shakespeara potkal Macbeth tři čarodějnice",
+		"is": "Samkvæmt Shakespeare hitti Makbeð þrjár nornir hér"
+	},
+	"Nairn": {
+		"pl": "Kurort nad zatoką Moray Firth, gdzie pływają delfiny",
+		"en": "A resort on the Moray Firth, where dolphins swim",
+		"cs": "Letovisko u zálivu Moray Firth, kde plavou delfíni",
+		"is": "Strandbær við Moray-fjörð þar sem höfrungar synda"
+	},
+	"Dunkeld": {
+		"pl": "Katedra w lesie nad rzeką Tay",
+		"en": "A cathedral in the woods by the River Tay",
+		"cs": "Katedrála v lese u řeky Tay",
+		"is": "Dómkirkja í skóginum við ána Tay"
+	},
+	"Pitlochry": {
+		"pl": "Drabina dla łososi przy tamie, ryby płyną pod prąd",
+		"en": "A salmon ladder at the dam: the fish swim upstream",
+		"cs": "Rybí žebřík u přehrady, lososi plavou proti proudu",
+		"is": "Laxastigi við stífluna, fiskarnir synda á móti straumnum"
+	},
+	"Dalwhinnie": {
+		"pl": "Jedna z najwyżej położonych destylarni whisky w Szkocji",
+		"en": "One of the highest whisky distilleries in Scotland",
+		"cs": "Jedna z nejvýše položených paláren whisky ve Skotsku",
+		"is": "Ein hæst setta viskígerð Skotlands"
+	},
+	"Newtonmore": {
+		"pl": "Muzeum na wolnym powietrzu: dawne domy Highlands",
+		"en": "An open-air museum of old Highland houses",
+		"cs": "Skanzen: staré domy Skotské vysočiny",
+		"is": "Útisafn: gömul hús frá Hálöndunum"
+	},
+	"Aviemore": {
+		"pl": "Kurort narciarski w Górach Cairngorm, żyją tu dzikie renifery",
+		"en": "A ski resort in the Cairngorms, where wild reindeer live",
+		"cs": "Lyžařské středisko v pohoří Cairngorms, žijí tu divocí sobi",
+		"is": "Skíðasvæði í Cairngorm-fjöllum, hér lifa villt hreindýr"
+	},
+	"Carrbridge": {
+		"pl": "Najstarszy kamienny most w Highlands",
+		"en": "The oldest stone bridge in the Highlands",
+		"cs": "Nejstarší kamenný most na Skotské vysočině",
+		"is": "Elsta steinbrú Hálandanna"
+	},
+	"Dumbarton": {
+		"pl": "Zamek na skale wulkanicznej nad rzeką Clyde",
+		"en": "A castle on a volcanic rock above the River Clyde",
+		"cs": "Hrad na sopečné skále nad řekou Clyde",
+		"is": "Kastali á eldfjallakletti við ána Clyde"
+	},
+	"Tarbet": {
+		"pl": "Wioska nad Loch Lomond, największym jeziorem Wielkiej Brytanii",
+		"en": "A village on Loch Lomond, the largest lake in Britain",
+		"cs": "Vesnice u Loch Lomond, největšího jezera Velké Británie",
+		"is": "Þorp við Loch Lomond, stærsta stöðuvatn Bretlands"
+	},
+	"Crianlarich": {
+		"pl": "Skrzyżowanie dróg i kolei w sercu gór",
+		"en": "A road and railway junction in the heart of the mountains",
+		"cs": "Křižovatka silnic a železnic v srdci hor",
+		"is": "Vega- og járnbrautamót í hjarta fjallanna"
+	},
+	"Tyndrum": {
+		"pl": "W okolicznych górach wydobywa się szkockie złoto",
+		"en": "Scottish gold is mined in the nearby hills",
+		"cs": "V okolních horách se těží skotské zlato",
+		"is": "Í fjöllunum í kring er grafið eftir skosku gulli"
+	},
+	"Glencoe": {
+		"pl": "Dolina dramatycznych gór i krwawej masakry z 1692 roku",
+		"en": "A valley of dramatic mountains and a bloody massacre in 1692",
+		"cs": "Údolí dramatických hor a krvavého masakru z roku 1692",
+		"is": "Dalur tilkomumikilla fjalla og blóðugs fjöldamorðs árið 1692"
+	},
+	"Fort William": {
+		"pl": "U stóp Ben Nevis, najwyższej góry Wielkiej Brytanii (1345 m)",
+		"en": "At the foot of Ben Nevis, the highest mountain in Britain (1345 m)",
+		"cs": "Na úpatí Ben Nevisu, nejvyšší hory Velké Británie (1345 m)",
+		"is": "Við rætur Ben Nevis, hæsta fjalls Bretlands (1345 m)"
+	},
+	"Spean Bridge": {
+		"pl": "Pomnik komandosów, którzy szkolili się w tych górach",
+		"en": "A memorial to the commandos who trained in these mountains",
+		"cs": "Památník komand, která cvičila v těchto horách",
+		"is": "Minnisvarði um sérsveitarmenn sem æfðu í þessum fjöllum"
+	},
+	"Fort Augustus": {
+		"pl": "Śluzy Kanału Kaledońskiego schodzą tu do Loch Ness",
+		"en": "The Caledonian Canal locks step down to Loch Ness here",
+		"cs": "Zdymadla Kaledonského kanálu tu sestupují k Loch Ness",
+		"is": "Skipastigar Kaledóníuskurðarins liggja hér niður að Loch Ness"
+	},
+	"Drumnadrochit": {
+		"pl": "Nad Loch Ness: tu wypatruje się potwora Nessie",
+		"en": "On Loch Ness: people watch out for Nessie the monster here",
+		"cs": "U Loch Ness: tady se vyhlíží příšera Nessie",
+		"is": "Við Loch Ness: hér skimar fólk eftir skrímslinu Nessie"
+	}
 }

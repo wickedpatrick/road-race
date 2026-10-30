@@ -1,11 +1,16 @@
 {
 	"code": "is",
-	"name": {"pl": "Islandia"},
+	"name": {"pl": "Islandia", "en": "Iceland", "cs": "Island", "is": "Ísland"},
 	"language": "is",
 	"drive": "right",
-	"title": {"pl": "RAJD PRZEZ ISLANDIĘ"},
-	"subtitle": {"pl": "Edukacyjna podróż wokół wyspy lodu i ognia"},
-	"region_label": {"pl": "region"},
+	"title": {"pl": "RAJD PRZEZ ISLANDIĘ", "en": "ROAD TRIP ACROSS ICELAND", "cs": "RALLY ISLANDEM", "is": "ÖKUFERÐ UM ÍSLAND"},
+	"subtitle": {
+		"pl": "Edukacyjna podróż wokół wyspy lodu i ognia",
+		"en": "An educational journey around the island of ice and fire",
+		"cs": "Vzdělávací cesta kolem ostrova ledu a ohně",
+		"is": "Fræðandi ferðalag hringinn í kringum eyju íss og elds"
+	},
+	"region_label": {"pl": "region", "en": "region", "cs": "region", "is": "landshluti"},
 	"start": ["reykjavik", "selfoss"],
 	"express_prefixes": ["41"],
 	"limits": {"express": 90, "road": 90, "city": 50, "town_on_express": 70, "town": 50},

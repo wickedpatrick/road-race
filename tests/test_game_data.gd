@@ -54,7 +54,7 @@ func _check_country(t, code: String, rules: Dictionary) -> void:
 	var stn: Dictionary = c.get("station", {})
 	t.check(stn.get("sign", "") != "" and stn.get("board", "") != "" and stn.get("region_sign", "") != ""
 		and stn.get("prices", []).size() >= 2 and stn.prices.all(func(p): return p.size() == 2), "%s: fuel station texts in the country's language" % code)
-	if c.language != GameData.LANGUAGE: # landmark boards by the road show the local name, not the player's
+	if true: # landmark boards by the road show the local name, not the player's
 		var locals := true
 		for town in c.landmarks:
 			for lm in c.landmarks[town]:

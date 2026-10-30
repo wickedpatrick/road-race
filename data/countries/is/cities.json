@@ -15,7 +15,12 @@
 		"lon": -20.3,
 		"pop": 0,
 		"region": "Suðurland",
-		"note": {"pl": "dolina gejzerów obok wodospadu Gullfoss"}
+		"note": {
+			"pl": "dolina gejzerów obok wodospadu Gullfoss",
+			"en": "valley of geysers near the Gullfoss waterfall",
+			"cs": "údolí gejzírů vedle vodopádu Gullfoss",
+			"is": "hveradalur rétt hjá Gullfossi"
+		}
 	},
 	"vik": {"name": "Vík í Mýrdal", "lat": 63.42, "lon": -19.01, "pop": 1, "region": "Suðurland", "short": "Vík"},
 	"hofn": {"name": "Höfn", "lat": 64.25, "lon": -15.21, "pop": 2, "region": "Austurland"},

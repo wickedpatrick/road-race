@@ -1,12 +1,22 @@
 {
 	"code": "gb",
-	"name": {"pl": "Wielka Brytania"},
+	"name": {"pl": "Wielka Brytania", "en": "Great Britain", "cs": "Velká Británie", "is": "Bretland"},
 	"language": "en",
 	"drive": "left",
 	"units": "imperial",
-	"title": {"pl": "RAJD PRZEZ WIELKĄ BRYTANIĘ"},
-	"subtitle": {"pl": "Edukacyjna podróż przez Anglię, Szkocję i Walię"},
-	"region_label": {"pl": "region"},
+	"title": {
+		"pl": "RAJD PRZEZ WIELKĄ BRYTANIĘ",
+		"en": "ROAD TRIP ACROSS GREAT BRITAIN",
+		"cs": "RALLY VELKOU BRITÁNIÍ",
+		"is": "ÖKUFERÐ UM BRETLAND"
+	},
+	"subtitle": {
+		"pl": "Edukacyjna podróż przez Anglię, Szkocję i Walię",
+		"en": "An educational journey through England, Scotland and Wales",
+		"cs": "Vzdělávací cesta Anglií, Skotskem a Walesem",
+		"is": "Fræðandi ferðalag um England, Skotland og Wales"
+	},
+	"region_label": {"pl": "region", "en": "region", "cs": "region", "is": "svæði"},
 	"start": ["london", "oxford"],
 	"express_prefixes": ["M", "A1(M)", "A3(M)", "A38(M)", "A48(M)", "A74(M)"],
 	"limits": {"express": 70, "road": 60, "city": 30, "town_on_express": 50, "town": 30},

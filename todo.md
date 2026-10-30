@@ -161,6 +161,9 @@ dostają tyle, ile ma sens.
       Vaðlaheiðargöng, Fáskrúðsfjarðargöng, Dýrafjarðargöng i Vestfjarðagöng; nowe krajobrazy (lawa z mchem,
       wyżyny, lodowce, fiordy), owce i konie islandzkie, wodospady, gejzer, góry lodowe, Hallgrímskirkja.
 - [x] Nazwy miast w języku gracza na mapie i w menu (`exonym`), lokalne na tablicach.
+- [x] Języki gry: polski, angielski, czeski, islandzki (interfejs `data/ui.json`, wszystkie teksty danych, nazwy
+      miast w języku gracza tam, gdzie język ma własną). Język z urządzenia, angielski, gdy gry nie ma w języku
+      gracza; zmiana na ekranie auta (L). Nowy kraj = nowy język w `GameData.LANGUAGES` i tłumaczenia wszystkich tekstów.
 - [x] Napisy przy drodze w języku kraju: stacja i cennik (waluta), tablice krain, brązowe tablice zabytków
       (`local`), numery dróg. Czcionka ma cyrylicę i grekę (sprawdzone).
 
