@@ -11,7 +11,6 @@ var from_city := "krakow"
 var to_city := "rzeszow"
 var total_km := 0.0
 var visited: Array = [] ## ids of the map cities the player has been to (the goal: all of them)
-var units := "metric" ## the interface's units (Units): "metric" or "imperial", picked on the car screen
 var quality := "high" ## "high": everything at full screen sharpness; "low": the race world is drawn at 960x540
 var home_city := "" ## picked on the first start; "" until then (or after a progress reset)
 var menu_at_map := false ## the menu opens at the destination map (coming back from a race)
@@ -69,10 +68,8 @@ func load_profile() -> void:
 		return
 	total_km = float(d.get("total_km", 0.0))
 	quality = "low" if d.get("quality", "high") == "low" else "high"
-	units = "imperial" if d.get("units", "metric") == "imperial" else "metric"
 	if d.get("language", "") in GameData.LANGUAGES:
 		GameData.set_language(d.language)
-	Units.imperial = units == "imperial"
 	places = d.get("places", {}) if d.get("places") is Dictionary else {}
 	if not d.has("places"):
 		# profiles from before countries: everything was Poland (and from before home cities: the player is
@@ -91,17 +88,12 @@ func set_language(code: String) -> void:
 	GameData.set_language(code)
 	save_profile()
 
-func set_units(u: String) -> void:
-	units = u
-	Units.imperial = u == "imperial"
-	save_profile()
-
 func save_profile() -> void:
 	var f := FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	if f == null:
 		return
 	places[country] = _place()
-	f.store_string(JSON.stringify({"total_km": total_km, "car_id": car_id, "quality": quality, "units": units, "language": GameData.language,
+	f.store_string(JSON.stringify({"total_km": total_km, "car_id": car_id, "quality": quality, "language": GameData.language,
 		"country": country, "places": places}))
 
 ## The current country's progress, as kept in `places`.

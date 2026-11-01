@@ -25,7 +25,6 @@ var confirm_reset := false ## "reset progress?" question is shown (car step, R k
 const NEXT_BTN := Rect2(744, 490, 200, 44)
 const BACK_BTN := Rect2(584, 490, 148, 44)
 const RESET_BTN := Rect2(796, 14, 148, 40)
-const UNITS_BTN := Rect2(28, 124, 168, 36) ## car step: km/h <-> mph for the speedometer and distances (U key)
 const LANG_BTN := Rect2(736, 124, 196, 36) ## car step: the game's language (L key)
 const YES_BTN := Rect2(250, 330, 220, 54)
 const NO_BTN := Rect2(490, 330, 220, 54)
@@ -132,9 +131,6 @@ func _unhandled_input(event: InputEvent) -> void:
 	if _on_map() and event.keycode == KEY_C and _countries() > 1:
 		_next_country()
 		return
-	if kind() == "car" and event.keycode == KEY_U:
-		_toggle_units()
-		return
 	if kind() == "car" and event.keycode == KEY_L:
 		_next_language()
 		return
@@ -170,10 +166,6 @@ func _unhandled_input(event: InputEvent) -> void:
 				hover = dest_city
 				_follow = dest_city
 
-func _toggle_units() -> void:
-	Sfx.play("blip", -8.0)
-	Session.set_units("metric" if Session.units == "imperial" else "imperial")
-
 func _next_language() -> void:
 	Sfx.play("blip", -8.0)
 	var langs := GameData.LANGUAGES
@@ -207,9 +199,6 @@ func _tap(p: Vector2) -> bool:
 		elif NO_BTN.has_point(p):
 			Sfx.play("blip", -8.0)
 			confirm_reset = false
-		return true
-	if kind() == "car" and UNITS_BTN.has_point(p):
-		_toggle_units()
 		return true
 	if kind() == "car" and LANG_BTN.has_point(p):
 		_next_language()
@@ -338,7 +327,6 @@ func _draw() -> void:
 	_t(Vector2(24, 518), summary, 17 if _on_map() else 20, Color("ffd24a"))
 	if kind() == "car":
 		_unlock_progress(Vector2(24, 505))
-		Ui.button(self, font, UNITS_BTN, Lang.t("units_btn") % Units.speed_unit(), false, 16)
 		Ui.button(self, font, LANG_BTN, Lang.t("lang_btn") % Lang.NAMES[GameData.language], false, 16)
 	if Screen.touch:
 		if step > 0:

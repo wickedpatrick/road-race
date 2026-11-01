@@ -42,7 +42,7 @@ Numbers: distances along a road in real kilometres from city `a`; populations in
 
 - `code`, `name`, `language` (of the place names and every road sign), `drive` (`"right"` / `"left"`: on the left
   the world is drawn mirrored, signs and stations on the left shoulder), `units` (`"metric"` / `"imperial"`: the road
-  signs post mph and miles), `region_label` (the word for a
+  signs and the interface (speedometer, distances, fuel use) in mph, miles and mpg), `region_label` (the word for a
   region in the city card, e.g. "województwo"), `title` / `subtitle` (menu header), `start` (default first trip
   `[from, to]`, neighbouring cities), `express_prefixes` (road numbers starting with these are motorways or
   expressways: dual carriageways with the faster limit, e.g. `["A", "S"]` in Poland, `["D"]` in Czechia).

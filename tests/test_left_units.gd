@@ -1,5 +1,5 @@
 extends RefCounted
-## Left-hand traffic (the world mirrored, the steering turned round), road signs in miles, the player's units.
+## Left-hand traffic (the world mirrored, the steering turned round), road signs in miles, the interface in the country's units.
 func run(t) -> void:
 	GameData.current = "pl"
 	# left-hand traffic: x still grows towards the near-side kerb, steering right takes the car away from it
@@ -21,12 +21,12 @@ func run(t) -> void:
 	b.set_mirror(false)
 	b.fan(PackedVector2Array([Vector2(100, 10), Vector2(200, 10), Vector2(200, 20)]), Color.WHITE)
 	t.check(b._pts[3].is_equal_approx(Vector2(100, 10)), "signs and cars are drawn with the mirror off")
-	# the player's units
-	Units.imperial = false
+	# the interface's units follow the country: kilometres in Poland, miles in Britain
+	GameData.current = "pl"
 	t.check(Units.speed_text(90.0) == "90 km/h" and Units.dist_text(45.4) == "45 km" and Units.consumption_text(6.44) == "6,4 l/100 km", "metric interface")
-	Units.imperial = true
+	GameData.current = "gb"
 	t.check(Units.speed_text(112.65) == "70 mph" and Units.dist_text(16.1) == "10 mi" and Units.consumption_text(6.44) == "44 mpg", "imperial interface (%s, %s, %s)" % [Units.speed_text(112.65), Units.dist_text(16.1), Units.consumption_text(6.44)])
-	Units.imperial = false
+	GameData.current = "pl"
 	# signs in the country's units: kilometres and km/h in Poland
 	t.check(Route.sign_limit_at(st, 600.0) == Route.speed_limit_at(st, 600.0), "Polish signs post km/h")
 	t.check(Geo.sign_distance(45.4) == 45 and Geo.limit_kmh(90) == 90, "Polish boards give kilometres")

@@ -159,7 +159,20 @@ func run(t) -> void:
 	bm.z = 500.0
 	bm.speed = bm.stats.max_speed
 	for i in 30: bm.step(1.0 / 60.0, {"accel": true, "brake": false, "steer": 1.0})
-	t.check(bm.x > -Race.SLIDE_MAX * 0.5 - 0.01 and bm.x < -0.2, "flat out into a sharp bend, steering against it: the BMW drifts wide slowly (x=%.2f after 0.5 s)" % bm.x)
+	t.check(bm.x > -Race.SLIDE_MAX * 0.5 - 0.01 and bm.x < -0.1, "flat out into a sharp bend, steering against it: the BMW drifts wide slowly (x=%.2f after 0.5 s)" % bm.x)
+	t.check(bm.speed < bm.stats.max_speed - 3.0, "holding a bend taken too fast scrubs speed (%.0f km/h after 0.5 s)" % (bm.speed * 3.6))
+	# on snow, too fast into a long bend and holding it: the car slows down and stays on the road
+	var sw := Route.build("krakow", "rzeszow")
+	sw.weather = "snow"
+	var sr := Race.new("yaris", sw, 1)
+	for sg in sr.track.segments: sg.curve = 8.5
+	sr.z = 500.0
+	sr.speed = sr.stats.max_speed
+	var widest := 0.0
+	for i in 300:
+		sr.step(1.0 / 60.0, {"accel": true, "brake": false, "steer": 1.0 if sr.x < 0.3 else 0.0})
+		widest = minf(widest, sr.x)
+	t.check(widest > -1.0 and sr.speed < sr.stats.max_speed - 4.0, "on snow, holding a long bend taken too fast: the car slows down and stays on the road (x=%.2f, %.0f km/h)" % [widest, sr.speed * 3.6])
 	# every bump costs time and fuel
 	r = fresh()
 	r.z = 500.0

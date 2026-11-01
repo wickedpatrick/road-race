@@ -32,6 +32,12 @@ const CORNER_REF := 50.0 ## m/s; the push depends on the real speed, so every ca
 ## half-widths per second), so the car slides wide over a second or two instead of being flung off the road
 const SLIDE_K := 0.3
 const SLIDE_MAX := 1.2
+## steering into a bend taken too fast the tyres scrub: the car loses speed (SCRUB_K m/s^2 per unit of push beyond
+## the grip, at most SCRUB_MAX of the brakes) and slides wide only SCRUB_SLIDE as much, so holding the bend keeps
+## the car on the road (also on snow, where the grip is lower)
+const SCRUB_K := 8.0
+const SCRUB_MAX := 0.6
+const SCRUB_SLIDE := 0.35
 const TUNNEL_SCRAPE := 0.1 ## metres the car may reach into a tunnel wall: enough to hit it, never to see past it
 const DOWNHILL_BURN := 0.3 ## share of the usual fuel use while rolling downhill off the gas (fuel cut-off)
 ## speeding: the radar detector warns first; keep speeding past the grace time and the police pull you over
@@ -248,10 +254,10 @@ static func corner_push(v: float) -> float:
 
 ## Outward push of a bend of `curve` at `v` (road half-widths per second, signed like the curve) for a car that
 ## holds `grip` with the steering: in full up to the grip, softened and capped beyond it.
-static func bend_push(curve: float, v: float, grip: float) -> float:
+static func bend_push(curve: float, v: float, grip: float, slide := SLIDE_K) -> float:
 	var p := absf(curve) * corner_push(v)
 	if p > grip:
-		p = grip + minf((p - grip) * SLIDE_K, SLIDE_MAX)
+		p = grip + minf((p - grip) * slide, SLIDE_MAX)
 	return signf(curve) * p
 
 ## Highest speed the steering can hold a bend of this curve at (m/s).
@@ -342,7 +348,12 @@ func step(dt: float, input: Dictionary) -> void:
 	var sr := speed_ratio()
 	var grip: float = stats.handling * STEER_RATE * _grip_steer # on snow the car turns less and slides wide sooner
 	x += steer * grip * clampf(speed / 12.0, 0.0, 1.0) * dt
-	x -= bend_push(track.segment_at(z).curve, speed, grip) * dt
+	var curve: float = track.segment_at(z).curve
+	var excess := absf(curve) * corner_push(speed) - grip
+	var holding := excess > 0.0 and steer != 0.0 and signf(steer) == signf(curve)
+	x -= bend_push(curve, speed, grip, SLIDE_K * SCRUB_SLIDE if holding else SLIDE_K) * dt
+	if holding:
+		speed = maxf(0.0, speed - minf(SCRUB_K * excess, stats.brake * SCRUB_MAX) * dt)
 	x = _clamp_x(x, z)
 	if not Route.tunnel_at(stage, z).is_empty():
 		var wall: float = (Scenery.TUNNEL_WALL + TUNNEL_SCRAPE) / Track.ROAD_HALF_WIDTH - stats.halfwidth

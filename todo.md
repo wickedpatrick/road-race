@@ -141,8 +141,8 @@ dostają tyle, ile ma sens.
 - [x] **Ruch lewostronny** (`drive: "left"`): świat rysowany w lustrze (`DrawBatch.mirror`), znaki, auta i zabytki
       bez odbicia, kierownica odwrócona w `Race.side`; stacje po lewej, wyprzedzanie z prawej. Do użycia w Irlandii,
       na Malcie i Cyprze.
-- [x] Interfejs w km/h albo mph do wyboru na ekranie auta (przycisk/klawisz U, zapisywane w profilu); znaki
-      zawsze w jednostkach kraju.
+- [x] Jednostki interfejsu (licznik, odległości, spalanie) jak na znakach w danym kraju: mph, mile i mpg w
+      Wielkiej Brytanii, km/h i km gdzie indziej (bez wyboru w opcjach).
 - [ ] Znaki drogowe per kraj: kolory tablic kierunkowych (np. niebieskie autostrady i zielone krajowe
       jak w PL vs odwrotnie w Szwajcarii/Włoszech, zielone w USA), tablice miejscowości, znaki ostrzegawcze
       (trójkąt w Europie, żółty romb w USA/Kanadzie).

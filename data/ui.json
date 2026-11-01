@@ -2,7 +2,6 @@
 	"title_home": {"pl": "Skąd jesteś?", "en": "Where are you from?", "cs": "Odkud jsi?", "is": "Hvaðan ertu?"},
 	"title_car": {"pl": "Wybierz auto", "en": "Choose your car", "cs": "Vyber si auto", "is": "Veldu bíl"},
 	"title_dest": {"pl": "Dokąd jedziesz?", "en": "Where are you going?", "cs": "Kam jedeš?", "is": "Hvert ertu að fara?"},
-	"units_btn": {"pl": "Jednostki: %s", "en": "Units: %s", "cs": "Jednotky: %s", "is": "Einingar: %s"},
 	"lang_btn": {"pl": "Język: %s", "en": "Language: %s", "cs": "Jazyk: %s", "is": "Tungumál: %s"},
 	"back": {"pl": "Wstecz", "en": "Back", "cs": "Zpět", "is": "Til baka"},
 	"next": {"pl": "Dalej", "en": "Next", "cs": "Dál", "is": "Áfram"},
@@ -19,10 +18,10 @@
 	"hint_enter_next": {"pl": "Enter: dalej", "en": "Enter: next", "cs": "Enter: dál", "is": "Enter: áfram"},
 	"hint_country": {"pl": "   C: kraj", "en": "   C: country", "cs": "   C: země", "is": "   C: land"},
 	"hint_car": {
-		"pl": "Strzałki   Enter: dalej   U: jednostki   L: język   R: reset",
-		"en": "Arrows   Enter: next   U: units   L: language   R: reset",
-		"cs": "Šipky   Enter: dál   U: jednotky   L: jazyk   R: reset",
-		"is": "Örvar   Enter: áfram   U: einingar   L: tungumál   R: endurstilla"
+		"pl": "Strzałki   Enter: dalej   L: język   R: reset",
+		"en": "Arrows   Enter: next   L: language   R: reset",
+		"cs": "Šipky   Enter: dál   L: jazyk   R: reset",
+		"is": "Örvar   Enter: áfram   L: tungumál   R: endurstilla"
 	},
 	"hint_back": {"pl": "      Esc: wstecz", "en": "      Esc: back", "cs": "      Esc: zpět", "is": "      Esc: til baka"},
 	"hint_sound": {"pl": "      X: dźwięk", "en": "      X: sound", "cs": "      X: zvuk", "is": "      X: hljóð"},

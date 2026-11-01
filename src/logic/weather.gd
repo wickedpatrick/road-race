@@ -10,7 +10,7 @@ const SEASON := {"sun": "summer", "cloudy": "summer", "rain": "summer", "fog": "
 ## share of the car's grip: steering (and holding a bend), braking, pulling away
 const GRIP := {
 	"rain": {"steer": 0.92, "brake": 0.75, "accel": 1.0},
-	"snow": {"steer": 0.72, "brake": 0.55, "accel": 0.8},
+	"snow": {"steer": 0.8, "brake": 0.55, "accel": 0.8},
 }
 ## more time for the trip where the weather slows the car down
 const TIME := {"rain": 1.05, "fog": 1.08, "snow": 1.15}
