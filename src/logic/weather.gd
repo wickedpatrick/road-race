@@ -56,11 +56,30 @@ static func for_legs(legs: Array) -> String:
 static func season(kind: String) -> String:
 	return SEASON.get(kind, "summer")
 
-## The colours to draw with: the season's palette with this weather's sky (and wet road, rain).
+## The colours to draw with: the season's palette, the country's own colours for that season (country.json
+## "palette": darker British grass), and this weather's sky (and wet road, rain).
 static func palette(kind: String) -> Dictionary:
 	var pal := SeasonPalette.by_name(season(kind)).duplicate()
+	pal.merge(_colors(GameData.country().get("palette", {}).get(season(kind), {})), true)
 	pal.merge(SKY.get(kind, {}), true)
 	return pal
+
+## The grass in a landscape, [grass_a, grass_b]: the country's colours for it ("palette" "biomes"), else the
+## landscape's own (rules.json biome "grass"), else the palette's.
+static func grass(kind: String, biome: String, pal: Dictionary) -> Array:
+	var s := season(kind)
+	var own: Dictionary = GameData.country().get("palette", {}).get("biomes", {}).get(biome, {})
+	var g: Array = own.get(s, Biome.get_data(biome).get("grass", {}).get(s, []))
+	if g.size() == 2:
+		return [Color(g[0]), Color(g[1])]
+	return [pal.grass_a, pal.grass_b]
+
+## {"grass_a": "#rrggbb", ...} -> colours.
+static func _colors(d: Dictionary) -> Dictionary:
+	var out := {}
+	for k in d:
+		out[k] = Color(d[k])
+	return out
 
 ## Share of grip for "steer", "brake" or "accel" (1 in dry weather).
 static func grip(kind: String, what: String) -> float:

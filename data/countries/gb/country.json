@@ -73,5 +73,28 @@
 		"landscape": true,
 		"cities": {"Scotland": "rain"},
 		"biomes": {"fields": "cloudy", "upland": "fog", "coast": "rain", "mountains": "rain"}
+	},
+	"palette": {
+		"summer": {
+			"grass_a": "#3c7d2e",
+			"grass_b": "#367429",
+			"tree": "#22602a",
+			"tree2": "#1b4f22",
+			"crop_a": "#c2a54a",
+			"crop_b": "#4c8f36",
+			"crop_c": "#6a9a3e"
+		},
+		"autumn": {"grass_a": "#6f8a3a", "grass_b": "#67813a"},
+		"biomes": {
+			"upland": {"summer": ["#3f7f30", "#39762b"]},
+			"forest": {"summer": ["#356f29", "#306626"]},
+			"mountains": {"summer": ["#5e7240", "#566a3b"]},
+			"coast": {"summer": ["#4f8a3a", "#48813a"]},
+			"lakes": {"summer": ["#3a7a2e", "#34712a"]},
+			"zulawy": {"summer": ["#4a8a34", "#43812f"]},
+			"industrial": {"summer": ["#557f3e", "#4e7639"]},
+			"foothills": {"summer": ["#44803a", "#3d7734"]},
+			"highland": {"summer": ["#786f45", "#6e6640"], "autumn": ["#7a5f45", "#705740"]}
+		}
 	}
 }

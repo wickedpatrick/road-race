@@ -27,6 +27,8 @@ Numbers: distances along a road in real kilometres from city `a`; populations in
   `weather` is the usual weather there (`sun`, `cloudy`, `rain`, `fog`, `autumn`, `snow`; see `Weather`).
   What grows beside the road per landscape is in `Scenery._nature` (`lava`, `highland`, `glacier`, `fjords`: the
   treeless north in `Scenery._iceland`).
+- `biomes` may also give their `grass`: `{season: ["#rrggbb", "#rrggbb"]}` (the two bands, e.g. moorland brown);
+  the grass turns from one landscape's into the next one's over 150 m.
 - `landmark_sizes`: landmark painter kind -> `[width, height]` in metres (see `LandmarkPainter`).
 - `police`: escaping a patrol car that is pulling the player over. `escape_chance`: share of patrol officers who can
   be shaken off (rolled once per chase); `escape_kmh`: no escape below this speed; `escape_swerves`: `[min, max]`
@@ -51,6 +53,9 @@ Numbers: distances along a road in real kilometres from city `a`; populations in
   `["95", "6,49"]`), `region_sign` (the small word over a region's name on the brown board, e.g. "KRAINA").
 - `signs`: colours (`"#rrggbb"`) of the place-name signs (`town`, lettering `town_text`) and of the direction
   boards (`board`, `board_motorway`).
+- `palette` (optional): the country's own colours by season, over the default ones (`src/view/season_palette.gd`
+  keys: `grass_a`, `grass_b`, `tree`, `crop_a`, ...), e.g. Britain's dark green grass; `biomes`: landscape ->
+  `{season: [grass_a, grass_b]}`, over the landscape's `grass` in rules.json.
 - `weather`: how the country's roads get their weather (shown on the map, it sets the look and the grip):
   `default`, `landscape` (false: the default everywhere, e.g. snow in Iceland; true: from the road's longest
   landscape), `biomes` (landscape -> weather, over rules.json), `cities` (a city region -> weather for every road

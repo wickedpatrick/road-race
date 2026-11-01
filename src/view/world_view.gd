@@ -43,6 +43,8 @@ var _buckets: Array = []
 var _b := DrawBatch.new()
 var _warm_left: Array = [] ## sign texts still to pre-render, a few per frame (see Scenery.warm_text)
 var _ground: Array = [] ## per track segment: Scenery.ground() strips
+var _grass := PackedColorArray() ## per track segment: the two grass bands of its landscape (Weather.grass)
+const GRASS_BLEND := 150.0 ## metres over which the grass turns into the next landscape's
 var _tun := PackedByteArray() ## per track segment: 1 inside a tunnel
 var _dualf := PackedFloat32Array() ## per track segment: Route.dual_f (0 single road .. 1 dual carriageway)
 var _portals := {} ## segment index where a tunnel starts -> the tunnel
@@ -64,6 +66,7 @@ func bind(p_race: Race, p_weather := "") -> void:
 	_b.mirror_w = W
 	_b.set_mirror(_left)
 	_ground = Scenery.ground(race.stage, race.track.segments.size())
+	_build_grass()
 	_warm_left = Scenery.sign_texts(race.stage)
 	_dualf.resize(race.track.segments.size())
 	for k in _dualf.size():
@@ -153,6 +156,31 @@ func _ground_y(z: float) -> float:
 	var f := z / SEG
 	var i := int(floor(f))
 	return lerpf(_seg(i).y, _seg(i + 1).y, f - i)
+
+## Grass colours along the track: each landscape's, blended into the next one's over GRASS_BLEND.
+func _build_grass() -> void:
+	var count := race.track.segments.size()
+	_grass.resize(count * 2)
+	var zones: Array = race.stage.zones
+	var cols := zones.map(func(zn): return Weather.grass(weather, zn.biome, pal))
+	var zi := 0
+	for k in count:
+		var z := k * SEG
+		while zi < zones.size() - 1 and z >= zones[zi].z1:
+			zi += 1
+		var c: Array = cols[zi]
+		var a: Color = c[0]
+		var b: Color = c[1]
+		if zi < zones.size() - 1 and z > zones[zi].z1 - GRASS_BLEND:
+			var f: float = (z - (zones[zi].z1 - GRASS_BLEND)) / GRASS_BLEND * 0.5
+			a = a.lerp(cols[zi + 1][0], f)
+			b = b.lerp(cols[zi + 1][1], f)
+		elif zi > 0 and z < zones[zi - 1].z1 + GRASS_BLEND:
+			var f: float = 0.5 - (z - zones[zi - 1].z1) / GRASS_BLEND * 0.5
+			a = a.lerp(cols[zi - 1][0], f)
+			b = b.lerp(cols[zi - 1][1], f)
+		_grass[k * 2] = a
+		_grass[k * 2 + 1] = b
 
 func _fog(c: Color, n: int) -> Color:
 	var f := clampf((float(n) - N * 0.45) / (N * 0.55), 0.0, 1.0)
@@ -276,7 +304,7 @@ func _draw_scene() -> void:
 	var cam_y := _ground_y(cam_z) + CAM_H
 	var near := NEAR_TUNNEL if _in_tunnel(base) else NEAR
 	# base layer: ground colour under the horizon
-	_b.draw_rect(Rect2(-20, HORIZON, W + 40, H - HORIZON + 20), _fog(pal.grass_a, N))
+	_b.draw_rect(Rect2(-20, HORIZON, W + 40, H - HORIZON + 20), _fog(_grass[clampi(base + N, 0, _grass.size() / 2 - 1) * 2], N))
 	var dx: float = -_seg(base).curve * CURVE_K * base_pct
 	var off := 0.0
 	var maxy := H + 1.0
@@ -360,7 +388,7 @@ func _draw_segment(n: int, i: int) -> void:
 	var x1 := _x1[n]
 	var w0 := Track.ROAD_HALF_WIDTH * _s0[n] * W * 0.5
 	var w1 := Track.ROAD_HALF_WIDTH * _s1[n] * W * 0.5
-	var grass: Color = _fog(pal.grass_a if band == 0 else pal.grass_b, n)
+	var grass: Color = _fog(_grass[clampi(i, 0, _grass.size() / 2 - 1) * 2 + band], n)
 	_b.draw_rect(Rect2(-20, y1, W + 40, y0 - y1 + 1.0), grass)
 	# fields, lakes, canals, pavements beside the road
 	var gs: PackedFloat32Array = _ground[clampi(i, 0, _ground.size() - 1)]

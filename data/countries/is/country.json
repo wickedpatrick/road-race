@@ -35,5 +35,6 @@
 		"prices": [["95 okt.", "319,9"], ["Dísel", "324,9"]],
 		"region_sign": "LANDSHLUTI"
 	},
-	"weather": {"default": "snow", "landscape": false}
+	"weather": {"default": "snow", "landscape": false},
+	"palette": {"summer": {"grass_a": "#69a24a", "grass_b": "#619846", "tree": "#4d6e3a", "tree2": "#3f5f30"}}
 }

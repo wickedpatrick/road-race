@@ -95,7 +95,8 @@
 			"mountains": 0,
 			"sea": 0,
 			"industry": 0,
-			"weather": "autumn"
+			"weather": "autumn",
+			"grass": {"summer": ["#43963a", "#3c8d34"]}
 		},
 		"lakes": {
 			"wood": 0.8,
@@ -105,7 +106,8 @@
 			"mountains": 0,
 			"sea": 0,
 			"industry": 0,
-			"weather": "fog"
+			"weather": "fog",
+			"grass": {"summer": ["#48a03c", "#419537"]}
 		},
 		"upland": {
 			"wood": 0.5,
@@ -115,7 +117,8 @@
 			"mountains": 0,
 			"sea": 0,
 			"industry": 0,
-			"weather": "cloudy"
+			"weather": "cloudy",
+			"grass": {"summer": ["#52a03c", "#4b9636"]}
 		},
 		"jura": {
 			"wood": 0.6,
@@ -135,7 +138,8 @@
 			"mountains": 0.6,
 			"sea": 0,
 			"industry": 0,
-			"weather": "rain"
+			"weather": "rain",
+			"grass": {"summer": ["#4e9a3c", "#479136"]}
 		},
 		"mountains": {
 			"wood": 0.7,
@@ -145,7 +149,8 @@
 			"mountains": 1,
 			"sea": 0,
 			"industry": 0,
-			"weather": "snow"
+			"weather": "snow",
+			"grass": {"summer": ["#4b8a3c", "#447f36"]}
 		},
 		"industrial": {
 			"wood": 0.1,
@@ -155,7 +160,8 @@
 			"mountains": 0,
 			"sea": 0,
 			"industry": 1,
-			"weather": "cloudy"
+			"weather": "cloudy",
+			"grass": {"summer": ["#6c9a4a", "#659245"]}
 		},
 		"coast": {
 			"wood": 0.4,
@@ -165,7 +171,8 @@
 			"mountains": 0,
 			"sea": 1,
 			"industry": 0,
-			"weather": "cloudy"
+			"weather": "cloudy",
+			"grass": {"summer": ["#8db35a", "#84a953"]}
 		},
 		"zulawy": {
 			"wood": 0.1,
@@ -175,7 +182,8 @@
 			"mountains": 0,
 			"sea": 0,
 			"industry": 0,
-			"weather": "fog"
+			"weather": "fog",
+			"grass": {"summer": ["#5cb345", "#53a83e"]}
 		},
 		"podlasie": {
 			"wood": 0.8,
@@ -195,7 +203,8 @@
 			"mountains": 0.4,
 			"sea": 0,
 			"industry": 0,
-			"weather": "snow"
+			"weather": "snow",
+			"grass": {"summer": ["#6d8a55", "#648050"], "autumn": ["#6f7552", "#676d4c"]}
 		},
 		"highland": {
 			"wood": 0,
@@ -206,7 +215,8 @@
 			"sea": 0,
 			"industry": 0,
 			"ice": 0.25,
-			"weather": "snow"
+			"weather": "snow",
+			"grass": {"summer": ["#7d8a4e", "#74804a"], "autumn": ["#8a7a4a", "#806f44"]}
 		},
 		"glacier": {
 			"wood": 0,
@@ -217,7 +227,8 @@
 			"sea": 0,
 			"industry": 0,
 			"ice": 1,
-			"weather": "snow"
+			"weather": "snow",
+			"grass": {"summer": ["#8a917e", "#818874"]}
 		},
 		"fjords": {
 			"wood": 0,
@@ -228,7 +239,8 @@
 			"sea": 0.5,
 			"industry": 0,
 			"ice": 0.15,
-			"weather": "snow"
+			"weather": "snow",
+			"grass": {"summer": ["#5d9145", "#568840"]}
 		}
 	},
 	"landmark_sizes": {

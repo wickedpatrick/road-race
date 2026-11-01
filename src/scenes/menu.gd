@@ -1,5 +1,5 @@
 extends Node2D
-## Selection: car -> destination on the country map (each road has its weather, shown on the map) (tabs above the map, or C, switch the country). The race always starts where the last one ended;
+## Selection: car -> destination on the country map (each trip's weather shown on the card beside it) (tabs above the map, or C, switch the country). The race always starts where the last one ended;
 ## the very first time (or after a progress reset) the player first picks a home city on the map.
 ## Arrow keys / WASD move, Enter or Space confirms, Esc goes back; on the map cities can also be clicked.
 
@@ -447,17 +447,15 @@ func _draw_map() -> void:
 	_t(Vector2(x, 176), Lang.t("you_are_in") % Geo.display_name(start_city), 18, Color("7fe0a0"))
 	if id != dest_city and id != start_city:
 		_city_info(id, Vector2(x, 214), w)
+		if Route.neighbours(start_city).has(id):
+			_weather_line(Weather.for_legs(Route.find(start_city, id)), x, 214 + 56, w)
 		_t(Vector2(x, 460), Lang.t("tap_city") if Screen.touch else Lang.t("click_city"), 16, Color("c8d6e3"))
 		return
 	if legs.is_empty():
 		return
 	var st := Route.build(start_city, dest_city)
 	_t(Vector2(x, 206), Lang.t("goal") % Geo.display_name(dest_city), 22, Color("ff9a86"))
-	# the trip's weather, top right of the card
-	var wl := Weather.label(st.weather)
-	var ww := font.get_string_size(wl, HORIZONTAL_ALIGNMENT_LEFT, -1, 17).x
-	CountryMap.weather_icon(self, Vector2(x + w - ww - 16, 200), st.weather, 11.0)
-	_t(Vector2(x, 206), wl, 17, Color.WHITE, HORIZONTAL_ALIGNMENT_RIGHT, w)
+	_weather_line(st.weather, x, 206, w)
 	var roads := []
 	for l in legs:
 		for rd in Route.leg_roads(l):
@@ -477,6 +475,13 @@ func _draw_map() -> void:
 	var regions: Array = st.regions.slice(0, 6)
 	var reg_text := Lang.t("regions") % (", ".join(regions) + (Lang.t("and_more") if st.regions.size() > regions.size() else ""))
 	draw_multiline_string(font, Vector2(x, 386), reg_text, HORIZONTAL_ALIGNMENT_LEFT, w, 15, 3, Color("f1d9b5"))
+
+## The trip's weather, right of the destination's name: an icon and its name.
+func _weather_line(kind: String, x: float, y: float, w: float) -> void:
+	var wl := Weather.label(kind)
+	var ww := font.get_string_size(wl, HORIZONTAL_ALIGNMENT_LEFT, -1, 17).x
+	CountryMap.weather_icon(self, Vector2(x + w - ww - 18, y - 6), kind, 12.0)
+	_t(Vector2(x, y), wl, 17, Color.WHITE, HORIZONTAL_ALIGNMENT_RIGHT, w)
 
 func _countries() -> int:
 	return GameData.countries().size()

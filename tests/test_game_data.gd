@@ -60,6 +60,22 @@ func _check_country(t, code: String, rules: Dictionary) -> void:
 			for lm in c.landmarks[town]:
 				if not (lm.get("local", "") is String and lm.get("local", "") != ""): locals = false; print("  %s: %s %s has no local name" % [code, town, lm.kind])
 		t.check(locals, "%s: every landmark has its local name for the sign" % code)
+	# colours: palette keys known, every colour valid; landscape grass in pairs
+	var pal_ok := true
+	var pal: Dictionary = c.get("palette", {})
+	for season in pal:
+		if season == "biomes": continue
+		for k in pal[season]:
+			if not SeasonPalette.SEASONS.has(season) or not SeasonPalette.by_name("summer").has(k) or not Color.html_is_valid(pal[season][k]):
+				pal_ok = false; print("  %s: bad palette %s %s" % [code, season, k])
+	var grass: Array = pal.get("biomes", {}).values()
+	for b in rules.biomes:
+		grass.append(rules.biomes[b].get("grass", {}))
+	for g in grass:
+		for season in g:
+			if not SeasonPalette.SEASONS.has(season) or g[season].size() != 2 or not g[season].all(func(h): return Color.html_is_valid(h)):
+				pal_ok = false; print("  %s: bad grass %s" % [code, str(g)])
+	t.check(pal_ok, "%s: palette and grass colours valid" % code)
 	var box: Dictionary = c.map
 	var cities_ok := true
 	for id in c.cities:

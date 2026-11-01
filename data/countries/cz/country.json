@@ -34,5 +34,6 @@
 		"prices": [["Natural 95", "38,90"], ["Nafta", "37,90"], ["LPG", "17,90"]],
 		"region_sign": "REGION"
 	},
-	"weather": {"default": "sun", "landscape": true}
+	"weather": {"default": "sun", "landscape": true},
+	"palette": {"summer": {"grass_a": "#4c9f3a", "grass_b": "#459636"}}
 }
