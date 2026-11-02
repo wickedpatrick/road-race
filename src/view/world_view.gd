@@ -43,6 +43,7 @@ var _buckets: Array = []
 var _b := DrawBatch.new()
 var _warm_left: Array = [] ## sign texts still to pre-render, a few per frame (see Scenery.warm_text)
 var _ground: Array = [] ## per track segment: Scenery.ground() strips
+var _tunnel_road: Array = [] ## road colours under cover (no snow or rain in a tunnel)
 var _grass := PackedColorArray() ## per track segment: the two grass bands of its landscape (Weather.grass)
 const GRASS_BLEND := 150.0 ## metres over which the grass turns into the next landscape's
 var _tun := PackedByteArray() ## per track segment: 1 inside a tunnel
@@ -67,6 +68,8 @@ func bind(p_race: Race, p_weather := "") -> void:
 	_b.set_mirror(_left)
 	_ground = Scenery.ground(race.stage, race.track.segments.size())
 	_build_grass()
+	var dry := SeasonPalette.by_name(season)
+	_tunnel_road = [dry.road_a, dry.road_b, dry.line]
 	_warm_left = Scenery.sign_texts(race.stage)
 	_dualf.resize(race.track.segments.size())
 	for k in _dualf.size():
@@ -407,6 +410,8 @@ func _draw_segment(n: int, i: int) -> void:
 	_quad(Vector2(x0 + w0, y0), Vector2(x0 + w0 + r0, y0), Vector2(x1 + w1 + r1, y1), Vector2(x1 + w1, y1), rc)
 	var road: Color = _fog(pal.road_a if band == 0 else pal.road_b, n)
 	_quad(Vector2(x0 - w0, y0), Vector2(x0 + w0, y0), Vector2(x1 + w1, y1), Vector2(x1 - w1, y1), road)
+	if pal.has("rut") and n <= FAR_DETAIL:
+		_draw_ruts(n, -1.0, 1.0, band)
 	# station pit lane on the right shoulder
 	var z := i * SEG
 	for st in race.stage.stations:
@@ -436,6 +441,19 @@ func _draw_segment(n: int, i: int) -> void:
 		var ex1: float = x1 + sgn * w1 * 0.94
 		_quad(Vector2(ex0 - lw0, y0), Vector2(ex0 + lw0, y0), Vector2(ex1 + lw1, y1), Vector2(ex1 - lw1, y1), lc)
 
+## Wheel ruts in the snow: two darker tracks in each of the two lanes between road half-width offsets a and b.
+const RUTS := [0.1, 0.36, 0.64, 0.9] ## across a carriageway, as shares of its width
+func _draw_ruts(n: int, a: float, b: float, band: int) -> void:
+	var c: Color = _fog((pal.rut as Color).lightened(0.04 * band), n)
+	var h0 := Track.ROAD_HALF_WIDTH * _s0[n] * W * 0.5
+	var h1 := Track.ROAD_HALF_WIDTH * _s1[n] * W * 0.5
+	var x0 := _x0[n]
+	var x1 := _x1[n]
+	var rw := (b - a) * 0.022
+	for f in RUTS:
+		var k: float = lerpf(a, b, f)
+		_quad(Vector2(x0 + (k - rw) * h0, _y0[n]), Vector2(x0 + (k + rw) * h0, _y0[n]), Vector2(x1 + (k + rw) * h1, _y1[n]), Vector2(x1 + (k - rw) * h1, _y1[n]), c)
+
 ## Tunnel cross-section, [lat, height] in metres from the left wall foot over the vault to the right wall foot.
 const TUNNEL_SECTION := [[-Scenery.TUNNEL_WALL, 0.0], [-Scenery.TUNNEL_WALL, 4.4], [-3.9, 6.6], [3.9, 6.6], [Scenery.TUNNEL_WALL, 4.4], [Scenery.TUNNEL_WALL, 0.0]]
 const TUNNEL_DARK := Color(0.03, 0.035, 0.04)
@@ -457,9 +475,9 @@ func _draw_tunnel(n: int, i: int) -> void:
 	var w1 := Track.ROAD_HALF_WIDTH * p1
 	if y1 < y0:
 		_b.draw_rect(Rect2(-20, y1, W + 40, y0 - y1 + 1.0), _tfog(Color("4a4c4f"), n))
-		var road: Color = _tfog((pal.road_a if band == 0 else pal.road_b) as Color, n)
+		var road: Color = _tfog(_tunnel_road[band] as Color, n)
 		_quad(Vector2(x0 - w0, y0), Vector2(x0 + w0, y0), Vector2(x1 + w1, y1), Vector2(x1 - w1, y1), road)
-		var lc: Color = _tfog(pal.line, n)
+		var lc: Color = _tfog(_tunnel_road[2], n)
 		var lw0 := maxf(1.0, w0 * 0.018)
 		var lw1 := maxf(1.0, w1 * 0.018)
 		var marks: Array = [-0.94, 0.94]
@@ -562,6 +580,8 @@ func _draw_far_carriageway(n: int, d: float, band: int, lc: Color, lw0: float, l
 	_quad(Vector2(x0 + b * h0, y0), Vector2(x0 + a * h0, y0), Vector2(x1 + a * h1, y1), Vector2(x1 + b * h1, y1), road)
 	if n > FAR_DETAIL:
 		return # guardrail and lines would be under a pixel wide
+	if pal.has("rut"):
+		_draw_ruts(n, b, a, band)
 	var mid := -1.0 - Track.MEDIAN * d * 0.5
 	var g := _fog(Color("9a9ea4"), n)
 	var gw0 := maxf(1.0, h0 * 0.03)

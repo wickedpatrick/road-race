@@ -26,6 +26,9 @@ const SKY := {
 	"rain": {"sky_top": Color("5f6b76"), "sky_bottom": Color("a9b2ba"), "mountain": Color("6f7a82"), "sun": false,
 		"road_a": Color("4f5257"), "road_b": Color("4c4f54"), "particle": "rain"},
 	"fog": {"sky_top": Color("c3c9ce"), "sky_bottom": Color("dde1e4"), "mountain": Color("d5dadd"), "sun": false},
+	# a snow-covered road: packed snow with darker wheel ruts in every lane, the markings barely showing
+	"snow": {"road_a": Color("c3cad1"), "road_b": Color("bec5cc"), "line": Color("e6ebee"), "rumble_a": Color("eef1f3"),
+		"rumble_b": Color("c0564c"), "rut": Color("a2a9b1")},
 }
 
 ## The weather on a road between two cities (a road from Geo.roads()).

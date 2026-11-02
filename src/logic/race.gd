@@ -26,7 +26,7 @@ const GRADE_K := 0.7
 const DOWNHILL_K := 0.5
 const ENGINE_BRAKE := 0.5 ## m/s^2 at full revs, off the gas downhill (the gearbox holds the gear)
 const STEER_RATE := 2.2 ## road half-widths per second at full lock, times stats.handling
-const CORNER_K := 0.245 ## a bend pushes the car outwards by curve * CORNER_K * (speed / CORNER_REF)^2 per second
+const CORNER_K := 0.17 ## a bend pushes the car outwards by curve * CORNER_K * (speed / CORNER_REF)^2 per second
 const CORNER_REF := 50.0 ## m/s; the push depends on the real speed, so every car feels a bend alike at the same km/h
 ## too fast for a bend: the push beyond what the steering can hold is softened (SLIDE_K) and capped (SLIDE_MAX road
 ## half-widths per second), so the car slides wide over a second or two instead of being flung off the road
