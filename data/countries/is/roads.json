@@ -5,7 +5,8 @@
 		"km": 45,
 		"road": "41",
 		"towns": [["Hafnarfjörður", 10]],
-		"zones": [[10, "fields", "Höfuðborgarsvæðið"], [45, "lava", "Reykjanes"]]
+		"zones": [[10, "fields", "Höfuðborgarsvæðið"], [45, "lava", "Reykjanes"]],
+		"weather": "sun"
 	},
 	{
 		"a": "reykjavik",
@@ -13,7 +14,8 @@
 		"km": 57,
 		"road": "1",
 		"towns": [["Hveragerði", 45]],
-		"zones": [[15, "fields", "Höfuðborgarsvæðið"], [40, "lava", "Hellisheiði"], [57, "fields", "Ölfus"]]
+		"zones": [[15, "fields", "Höfuðborgarsvæðið"], [40, "lava", "Hellisheiði"], [57, "fields", "Ölfus"]],
+		"weather": "cloudy"
 	},
 	{
 		"a": "selfoss",
@@ -21,7 +23,8 @@
 		"km": 62,
 		"road": "35",
 		"towns": [["Reykholt", 45]],
-		"zones": [[62, "fields", "Biskupstungur"]]
+		"zones": [[62, "fields", "Biskupstungur"]],
+		"weather": "sun"
 	},
 	{
 		"a": "selfoss",
@@ -29,7 +32,8 @@
 		"km": 130,
 		"road": "1",
 		"towns": [["Hella", 35], ["Hvolsvöllur", 50], ["Skógar", 100]],
-		"zones": [[55, "fields", "Suðurland"], [130, "glacier", "Mýrdalsjökull"]]
+		"zones": [[55, "fields", "Suðurland"], [130, "glacier", "Mýrdalsjökull"]],
+		"weather": "sun"
 	},
 	{
 		"a": "vik",
@@ -40,7 +44,8 @@
 		"zones": [
 			[60, "lava", "Mýrdalssandur"], [110, "lava", "Eldhraun"], [235, "glacier", "Vatnajökull"],
 			[270, "fields", "Hornafjörður"]
-		]
+		],
+		"weather": "cloudy"
 	},
 	{
 		"a": "hofn",
