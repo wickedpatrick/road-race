@@ -24,7 +24,7 @@ const TAIL := 1200.0 ## extra road past the finish so the horizon never ends
 ## Stage keys for trying them out: "sharp_test" (every bend sharp), "sharp_amount" (overrides SHARP_AMOUNT).
 const SHARP_PER_STEP := 0.06 ## chance per 20 m of eligible road, times Biome.curve
 const SHARP_SPACING := 250.0 ## at least this much road between two sharp bends
-const SHARP_AMOUNT := 22.0 ## around 120 km/h a weak car has to brake a little (see Race.corner_speed)
+const SHARP_AMOUNT := 22.0 ## near its top speed a weak car has to brake a little (see Race.corner_speed)
 const SERPENTINE_CHANCE := 0.45 ## of the sharp bends in curvy regions (Biome.curve >= 1)
 const SIGN_BEFORE := 110.0 ## the warning sign stands this far before the bend
 var segments: Array = []

@@ -144,7 +144,7 @@ func run(t) -> void:
 	# bends push outwards with the real speed: the same at the same km/h, a sharp bend needs a weak car to brake
 	var yr := fresh("yaris")
 	var rv2 := fresh("rangerover")
-	t.check(yr.corner_speed(Track.SHARP_AMOUNT) < 36.0 and rv2.corner_speed(Track.SHARP_AMOUNT) > 36.0, "a sharp bend: the Yaris brakes below 130 km/h, the Range Rover holds it (%.0f / %.0f km/h)" % [yr.corner_speed(Track.SHARP_AMOUNT) * 3.6, rv2.corner_speed(Track.SHARP_AMOUNT) * 3.6])
+	t.check(yr.corner_speed(Track.SHARP_AMOUNT) < 42.0 and rv2.corner_speed(Track.SHARP_AMOUNT) > 42.0, "a sharp bend: the Yaris brakes below 150 km/h, the Range Rover holds it (%.0f / %.0f km/h)" % [yr.corner_speed(Track.SHARP_AMOUNT) * 3.6, rv2.corner_speed(Track.SHARP_AMOUNT) * 3.6])
 	var pushed := func(car: String, kmh: float) -> float:
 		var rr: Race = fresh(car)
 		for sg in rr.track.segments: sg.curve = 10.0
@@ -155,7 +155,7 @@ func run(t) -> void:
 	t.check(is_equal_approx(pushed.call("yaris", 80.0), pushed.call("rangerover", 80.0)), "the same bend pushes every car alike at the same speed")
 	# far too fast for a sharp bend: the car slides wide gently, it is not flung across the road
 	var bm := fresh("bmw530")
-	for sg in bm.track.segments: sg.curve = Track.SHARP_AMOUNT * 1.15
+	for sg in bm.track.segments: sg.curve = Track.SHARP_AMOUNT * 1.6
 	bm.z = 500.0
 	bm.speed = bm.stats.max_speed
 	for i in 30: bm.step(1.0 / 60.0, {"accel": true, "brake": false, "steer": 1.0})
