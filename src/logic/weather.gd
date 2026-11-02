@@ -12,6 +12,12 @@ const GRIP := {
 	"rain": {"steer": 0.92, "brake": 0.75, "accel": 1.0},
 	"snow": {"steer": 0.8, "brake": 0.55, "accel": 0.8},
 }
+## steering on a slippery road: "turn" times as long to move sideways (the steering's speed / turn), and after the
+## key is let go the car keeps turning that way for "drift" seconds before it settles. Rain gets its own values
+## once snow is tuned.
+const HANDLING := {
+	"snow": {"turn": 1.6, "drift": 0.1},
+}
 ## more time for the trip where the weather slows the car down
 const TIME := {"rain": 1.05, "fog": 1.08, "snow": 1.15}
 ## the look on top of the season's palette
@@ -84,6 +90,14 @@ static func _colors(d: Dictionary) -> Dictionary:
 ## Share of grip for "steer", "brake" or "accel" (1 in dry weather).
 static func grip(kind: String, what: String) -> float:
 	return GRIP.get(kind, {}).get(what, 1.0)
+
+## How many times as long moving sideways takes (1 in dry weather).
+static func turn_time(kind: String) -> float:
+	return HANDLING.get(kind, {}).get("turn", 1.0)
+
+## Seconds the car keeps turning after the steering is let go (0 in dry weather).
+static func drift(kind: String) -> float:
+	return HANDLING.get(kind, {}).get("drift", 0.0)
 
 static func time_factor(kind: String) -> float:
 	return TIME.get(kind, 1.0)

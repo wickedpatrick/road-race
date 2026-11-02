@@ -96,6 +96,10 @@ var weather := "sun" ## the trip's weather (Weather): rain and snow take grip aw
 var _grip_steer := 1.0
 var _grip_brake := 1.0
 var _grip_accel := 1.0
+var _turn_time := 1.0
+var _drift := 0.0
+var _drift_left := 0.0 ## seconds the car still turns after the steering was let go
+var _drift_steer := 0.0 ## the way it was turning then
 var police_rng := RandomNumberGenerator.new() ## a separate stream: the officers do not reshuffle anything else
 
 func _init(p_car_id: String, p_stage: Dictionary, seed_value: int) -> void:
@@ -116,6 +120,8 @@ func _init(p_car_id: String, p_stage: Dictionary, seed_value: int) -> void:
 	_grip_steer = Weather.grip(weather, "steer")
 	_grip_brake = Weather.grip(weather, "brake")
 	_grip_accel = Weather.grip(weather, "accel")
+	_turn_time = Weather.turn_time(weather)
+	_drift = Weather.drift(weather)
 	police_rng.seed = seed_value + 303
 
 func speed_ratio() -> float:
@@ -346,8 +352,16 @@ func step(dt: float, input: Dictionary) -> void:
 	steer_visual = lerpf(steer_visual, steer_screen, minf(1.0, dt * 10.0))
 	var steer := steer_screen * side
 	var sr := speed_ratio()
-	var grip: float = stats.handling * STEER_RATE * _grip_steer # on snow the car turns less and slides wide sooner
-	x += steer * grip * clampf(speed / 12.0, 0.0, 1.0) * dt
+	var grip: float = stats.handling * STEER_RATE * _grip_steer # on snow the car holds a bend less and slides wide sooner
+	if steer != 0.0:
+		_drift_left = _drift
+		_drift_steer = steer
+	elif _drift_left > 0.0:
+		# let go on a slippery road: the car keeps turning a moment before it settles
+		var t := minf(dt, _drift_left)
+		_drift_left -= t
+		x += _drift_steer * stats.handling * STEER_RATE / _turn_time * clampf(speed / 12.0, 0.0, 1.0) * t
+	x += steer * stats.handling * STEER_RATE / _turn_time * clampf(speed / 12.0, 0.0, 1.0) * dt
 	var curve: float = track.segment_at(z).curve
 	var excess := absf(curve) * corner_push(speed) - grip
 	var holding := excess > 0.0 and steer != 0.0 and signf(steer) == signf(curve)

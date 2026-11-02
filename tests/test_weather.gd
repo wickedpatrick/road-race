@@ -37,6 +37,28 @@ func run(t) -> void:
 	var sn := Route.build("krakow", "rzeszow")
 	sn.weather = "snow"
 	t.check(Race.new("xc60", sn, 1).corner_speed(10.0) < dry.corner_speed(10.0) * 0.9, "a bend must be taken slower on snow")
+	# snow: moving sideways takes 1.6x as long, and let go the car keeps turning a moment (sideways moves measured
+	# against the same drive without steering, so the bend's own push cancels out)
+	var side_move := func(w: String, steer_frames: int, frames: int) -> float:
+		var moved := 0.0
+		for steering in [true, false]:
+			var st := Route.build("krakow", "rzeszow")
+			st.weather = w
+			var r := Race.new("xc60", st, 1)
+			r.traffic.cars = []
+			r.z = 600.0
+			r.speed = 20.0
+			for i in frames:
+				r.step(1.0 / 60.0, {"accel": false, "brake": false, "steer": 1.0 if steering and i < steer_frames else 0.0})
+			moved += r.x if steering else -r.x
+		return moved
+	var dry_turn: float = side_move.call("sun", 15, 15)
+	var snow_turn: float = side_move.call("snow", 15, 15)
+	t.check(absf(dry_turn / snow_turn - Weather.turn_time("snow")) < 0.01, "on snow a turn takes 1.6x as long (%.3f / %.3f)" % [dry_turn, snow_turn])
+	t.check(is_equal_approx(side_move.call("sun", 15, 30), dry_turn), "dry: let go, the car goes straight at once")
+	var drift: float = side_move.call("snow", 15, 30) - snow_turn
+	var per_s := snow_turn / 0.25
+	t.check(absf(drift - per_s * Weather.drift("snow")) < 0.005, "snow: let go, the car turns on for %.1f s (%.3f)" % [Weather.drift("snow"), drift])
 	t.check(Weather.time_factor("snow") > 1.0 and Weather.time_factor("sun") == 1.0, "slippery or foggy trips get more time")
 	# fog: the view fades to white close ahead
 	var v := WorldView.new()
