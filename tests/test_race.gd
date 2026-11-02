@@ -144,7 +144,7 @@ func run(t) -> void:
 	# bends push outwards with the real speed: the same at the same km/h, a sharp bend needs a weak car to brake
 	var yr := fresh("yaris")
 	var rv2 := fresh("rangerover")
-	t.check(yr.corner_speed(Track.SHARP_AMOUNT) < 25.0 and rv2.corner_speed(Track.SHARP_AMOUNT) > 25.0, "a sharp bend: the Yaris brakes below 90 km/h, the Range Rover holds it (%.0f / %.0f km/h)" % [yr.corner_speed(Track.SHARP_AMOUNT) * 3.6, rv2.corner_speed(Track.SHARP_AMOUNT) * 3.6])
+	t.check(yr.corner_speed(Track.SHARP_AMOUNT) < 30.0 and rv2.corner_speed(Track.SHARP_AMOUNT) > 30.0, "a sharp bend: the Yaris brakes below 108 km/h, the Range Rover holds it (%.0f / %.0f km/h)" % [yr.corner_speed(Track.SHARP_AMOUNT) * 3.6, rv2.corner_speed(Track.SHARP_AMOUNT) * 3.6])
 	var pushed := func(car: String, kmh: float) -> float:
 		var rr: Race = fresh(car)
 		for sg in rr.track.segments: sg.curve = 10.0

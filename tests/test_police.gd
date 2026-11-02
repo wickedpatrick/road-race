@@ -3,8 +3,8 @@ extends RefCounted
 const GAS := {"accel": true, "brake": false, "steer": 0.0}
 const NONE := {"accel": false, "brake": false, "steer": 0.0}
 
-func fresh() -> Race:
-	var r := Race.new("xc60", Route.build("krakow", "rzeszow"), 1)
+func fresh(from := "krakow", to := "rzeszow") -> Race:
+	var r := Race.new("xc60", Route.build(from, to), 1)
 	r.traffic.cars = []
 	return r
 
@@ -32,8 +32,8 @@ func run(t) -> void:
 	r.speed = 139.0 / 3.6
 	r.step(0.1, NONE)
 	t.check(r.speeding == 0.0, "140 km/h on the motorway clears the warning")
-	# keep speeding past the grace time: the police come, stop the car and fine it
-	r = fresh()
+	# keep speeding past the grace time: the police come, stop the car and fine it (a long motorway: room for two)
+	r = fresh("lodz", "poznan")
 	r.z = 600.0
 	var held := false
 	var n := 0
@@ -55,7 +55,7 @@ func run(t) -> void:
 		# keep to the road: off it the car is held at 40 km/h and could never speed
 		r.step(1.0 / 60.0, NONE if r.held_by_police() else {"accel": true, "brake": false, "steer": clampf(-r.x * 2.0, -1.0, 1.0)})
 		n2 += 1
-	t.check(r.fines == 2, "the police catch a repeat offender again (fines: %d)" % r.fines)
+	t.check(r.fines == 2, "the police catch a repeat offender again (fines: %d, %s, z=%.0f/%.0f, x=%.2f, %.0f km/h, n=%d)" % [r.fines, r.state, r.z, r.stage.length, r.x, r.speed * 3.6, n2])
 	# in town the grace is 5 s
 	r = fresh()
 	r.speed = 80.0 / 3.6

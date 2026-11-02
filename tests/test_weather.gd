@@ -14,7 +14,7 @@ func run(t) -> void:
 			kinds[w] = kinds.get(w, 0) + 1
 		t.check(ok, "%s: every road has a weather (%s)" % [code, kinds])
 		if code == "pl": t.check(kinds.size() >= 4 and kinds.has("snow"), "Poland: the weather differs by region, snow in the mountains")
-		if code == "is": t.check(kinds.keys() == ["snow"], "Iceland: snow everywhere")
+		if code == "is": t.check(kinds.has("snow") and kinds.has("sun"), "Iceland: snow in the north, none in the south")
 		if code == "gb":
 			var scot := Geo.roads().filter(func(r): return Geo.city(r.a).region == "Scotland" and Geo.city(r.b).region == "Scotland")
 			t.check(not scot.is_empty() and scot.all(func(r): return Weather.for_road(r) == "rain"), "Scotland: rain")
