@@ -1,4 +1,4 @@
-# Rajd przez Polskę
+# Postcard Road Trip
 
 Edukacyjna gra wyścigowa w stylu klasycznych wyścigów z Atari, zrobiona w Godot 4.7. Kraje: Polska, Czechy i Islandia
 (przełącznik nad mapą albo klawisz C; postęp w każdym kraju osobno, kilometry i auta wspólne). Na mapie i w menu

@@ -1,7 +1,7 @@
 config_version=5
 
 [application]
-config/name="Rajd przez Polskę"
+config/name="Postcard Road Trip"
 run/main_scene="res://src/scenes/menu.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 boot_splash/bg_color=Color(0.0196, 0.0431, 0.0196, 1)
