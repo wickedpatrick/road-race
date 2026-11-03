@@ -256,8 +256,10 @@ func draw_mini(cv: CanvasItem, font: Font, legs: Array, km: float, t: float) -> 
 		var label := _label(id)
 		var w := font.get_string_size(label, HORIZONTAL_ALIGNMENT_LEFT, -1, 10).x
 		var x := clampf(p.x - w * 0.5, area.position.x + 2.0, area.end.x - w - 2.0)
-		# start above its dot, destination below, so close cities do not overlap
-		var y := p.y - 5.0 if id == a else p.y + 13.0
+		# the upper city's name above its dot, the lower one's below, so close cities do not overlap
+		var other := city_pos(b if id == a else a)
+		var up: bool = p.y < other.y or (p.y == other.y and id == a)
+		var y := p.y - 5.0 if up else p.y + 13.0
 		y = clampf(y, area.position.y + 10.0, area.end.y - 2.0)
 		cv.draw_string(font, Vector2(x + 1, y + 1), label, HORIZONTAL_ALIGNMENT_LEFT, -1, 10, Color(1, 1, 1, 0.9))
 		cv.draw_string(font, Vector2(x, y), label, HORIZONTAL_ALIGNMENT_LEFT, -1, 10, Color("16222e"))
