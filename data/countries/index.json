@@ -35,6 +35,12 @@
 			"name": {"pl": "Niemcy", "en": "Germany", "cs": "Německo", "is": "Þýskaland", "de": "Deutschland"},
 			"neighbours": ["pl", "cz", "at", "ch", "fr", "lu", "be", "nl", "dk"],
 			"favorite_neighbour": "at"
+		},
+		{
+			"code": "sk",
+			"name": {"pl": "Słowacja", "en": "Slovakia", "cs": "Slovensko", "is": "Slóvakía", "de": "Slowakei"},
+			"neighbours": ["cz", "pl", "ua", "hu", "at"],
+			"favorite_neighbour": "cz"
 		}
 	]
 }

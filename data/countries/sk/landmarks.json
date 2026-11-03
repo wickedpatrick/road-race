@@ -1,0 +1,434 @@
+{
+	"Bratislava": [
+		{
+			"kind": "bratislava_castle",
+			"name": {
+				"pl": "Zamek Bratysławski",
+				"en": "Bratislava Castle",
+				"cs": "Bratislavský hrad",
+				"is": "Bratislava-kastali",
+				"de": "Burg Bratislava"
+			},
+			"desc": {
+				"pl": "Biały zamek z czterema wieżami, jak odwrócony stół",
+				"en": "A white castle with four towers, like an upturned table",
+				"cs": "Bílý hrad se čtyřmi věžemi, jako obrácený stůl",
+				"is": "Hvítur kastali með fjórum turnum, eins og borð á hvolfi",
+				"de": "Eine weiße Burg mit vier Türmen, wie ein umgedrehter Tisch"
+			},
+			"local": "Bratislavský hrad"
+		},
+		{
+			"kind": "ufo_bridge",
+			"name": {
+				"pl": "Most SNP (UFO)",
+				"en": "SNP Bridge (UFO)",
+				"cs": "Most SNP (UFO)",
+				"is": "SNP-brúin (UFO)",
+				"de": "SNP-Brücke (UFO)"
+			},
+			"desc": {
+				"pl": "Na pylonie mostu siedzi latający talerz z restauracją",
+				"en": "A flying saucer with a restaurant sits on the bridge's pylon",
+				"cs": "Na pylonu mostu sedí létající talíř s restaurací",
+				"is": "Fljúgandi diskur með veitingastað situr á brúarstólpanum",
+				"de": "Auf dem Pylon der Brücke sitzt eine fliegende Untertasse mit Restaurant"
+			},
+			"local": "Most SNP"
+		}
+	],
+	"Košice": [
+		{
+			"kind": "elisabeth_cathedral",
+			"name": {
+				"pl": "Katedra św. Elżbiety",
+				"en": "St Elisabeth Cathedral",
+				"cs": "Dóm svaté Alžběty",
+				"is": "Dómkirkja heilagrar Elísabetar",
+				"de": "Elisabethdom"
+			},
+			"desc": {
+				"pl": "Największy kościół Słowacji, z kolorowym dachem",
+				"en": "Slovakia's largest church, with a colourful tiled roof",
+				"cs": "Největší kostel Slovenska s barevnou střechou",
+				"is": "Stærsta kirkja Slóvakíu, með litríku þaki",
+				"de": "Die größte Kirche der Slowakei, mit einem bunten Ziegeldach"
+			},
+			"local": "Dóm svätej Alžbety"
+		}
+	],
+	"Prešov": [
+		{
+			"kind": "cathedral",
+			"name": {
+				"pl": "Kościół św. Mikołaja",
+				"en": "St Nicholas Church",
+				"cs": "Kostel svatého Mikuláše",
+				"is": "Kirkja heilags Nikulásar",
+				"de": "Nikolauskirche"
+			},
+			"desc": {
+				"pl": "Gotycki kościół na środku długiego rynku",
+				"en": "A Gothic church in the middle of the long main square",
+				"cs": "Gotický kostel uprostřed dlouhého náměstí",
+				"is": "Gotnesk kirkja á miðju langa torginu",
+				"de": "Eine gotische Kirche mitten auf dem langen Marktplatz"
+			},
+			"local": "Konkatedrála svätého Mikuláša"
+		}
+	],
+	"Žilina": [
+		{
+			"kind": "townhall",
+			"name": {
+				"pl": "Rynek Mariański",
+				"en": "Mariánske Square",
+				"cs": "Mariánské náměstí",
+				"is": "Maríutorg",
+				"de": "Marienplatz"
+			},
+			"desc": {
+				"pl": "Kwadratowy rynek z podcieniami dookoła",
+				"en": "A square marketplace with arcades all around",
+				"cs": "Čtvercové náměstí s podloubím kolem dokola",
+				"is": "Ferhyrnt torg með súlnagöngum allt í kring",
+				"de": "Ein quadratischer Marktplatz mit Laubengängen ringsum"
+			},
+			"local": "Mariánske námestie"
+		}
+	],
+	"Nitra": [
+		{
+			"kind": "castle",
+			"name": {
+				"pl": "Zamek w Nitrze",
+				"en": "Nitra Castle",
+				"cs": "Nitranský hrad",
+				"is": "Nitra-kastali",
+				"de": "Burg Nitra"
+			},
+			"desc": {
+				"pl": "Zamek z katedrą na skale nad miastem",
+				"en": "A castle with a cathedral on a rock above the town",
+				"cs": "Hrad s katedrálou na skále nad městem",
+				"is": "Kastali með dómkirkju á kletti yfir bænum",
+				"de": "Eine Burg mit Kathedrale auf einem Felsen über der Stadt"
+			},
+			"local": "Nitriansky hrad"
+		}
+	],
+	"Banská Bystrica": [
+		{
+			"kind": "leaning_clock_tower",
+			"name": {
+				"pl": "Krzywa wieża zegarowa",
+				"en": "Leaning Clock Tower",
+				"cs": "Šikmá hodinová věž",
+				"is": "Skakki klukkuturninn",
+				"de": "Schiefer Uhrturm"
+			},
+			"desc": {
+				"pl": "Wieża na rynku przechyla się jak ta w Pizie",
+				"en": "The tower on the square leans like the one in Pisa",
+				"cs": "Věž na náměstí se naklání jako ta v Pise",
+				"is": "Turninn á torginu hallar eins og sá í Písa",
+				"de": "Der Turm am Platz neigt sich wie der in Pisa"
+			},
+			"local": "Hodinová veža"
+		}
+	],
+	"Trnava": [
+		{
+			"kind": "basilica",
+			"name": {
+				"pl": "Bazylika św. Mikołaja",
+				"en": "St Nicholas Basilica",
+				"cs": "Bazilika svatého Mikuláše",
+				"is": "Basilíka heilags Nikulásar",
+				"de": "Nikolausbasilika"
+			},
+			"desc": {
+				"pl": "Dwie wieże z hełmami nad słowackim Rzymem",
+				"en": "Two towers with domed caps above the Slovak Rome",
+				"cs": "Dvě věže s bání nad slovenským Římem",
+				"is": "Tveir turnar með hvolfþökum yfir slóvakísku Róm",
+				"de": "Zwei Türme mit Hauben über dem slowakischen Rom"
+			},
+			"local": "Bazilika svätého Mikuláša"
+		}
+	],
+	"Trenčín": [
+		{
+			"kind": "trencin_castle",
+			"name": {
+				"pl": "Zamek Trenczyński",
+				"en": "Trenčín Castle",
+				"cs": "Trenčínský hrad",
+				"is": "Trenčín-kastali",
+				"de": "Burg Trenčín"
+			},
+			"desc": {
+				"pl": "Zamek na skale z wysoką wieżą Mateusza",
+				"en": "A castle on a rock with the tall Matthew Tower",
+				"cs": "Hrad na skále s vysokou Matúšovou věží",
+				"is": "Kastali á kletti með háa Matúsar-turninum",
+				"de": "Eine Burg auf einem Felsen mit dem hohen Matthäusturm"
+			},
+			"local": "Trenčiansky hrad"
+		}
+	],
+	"Martin": [
+		{
+			"kind": "goral_house",
+			"name": {
+				"pl": "Muzeum Wsi Słowackiej",
+				"en": "Museum of the Slovak Village",
+				"cs": "Muzeum slovenské vesnice",
+				"is": "Safn slóvakíska þorpsins",
+				"de": "Museum des slowakischen Dorfes"
+			},
+			"desc": {
+				"pl": "Skansen pełen drewnianych chałup",
+				"en": "An open-air museum full of wooden cottages",
+				"cs": "Skanzen plný dřevěných chalup",
+				"is": "Útisafn fullt af timburhúsum",
+				"de": "Ein Freilichtmuseum voller Holzhäuser"
+			},
+			"local": "Múzeum slovenskej dediny"
+		}
+	],
+	"Poprad": [
+		{
+			"kind": "tatras",
+			"name": {"pl": "Tatry Wysokie", "en": "High Tatras", "cs": "Vysoké Tatry", "is": "Háu-Tatra", "de": "Hohe Tatra"},
+			"desc": {
+				"pl": "Ostre szczyty nad miastem, Gerlach ma 2655 m",
+				"en": "Sharp peaks above the town, Gerlach is 2655 m high",
+				"cs": "Ostré štíty nad městem, Gerlach měří 2655 m",
+				"is": "Hvassir tindar yfir bænum, Gerlach er 2655 m",
+				"de": "Spitze Gipfel über der Stadt, der Gerlach ist 2655 m hoch"
+			},
+			"local": "Vysoké Tatry"
+		}
+	],
+	"Zvolen": [
+		{
+			"kind": "castle",
+			"name": {
+				"pl": "Zamek Zwoleński",
+				"en": "Zvolen Castle",
+				"cs": "Zvolenský zámek",
+				"is": "Zvolen-kastali",
+				"de": "Schloss Zvolen"
+			},
+			"desc": {
+				"pl": "Gotycki zamek królów węgierskich",
+				"en": "A Gothic castle of the Hungarian kings",
+				"cs": "Gotický zámek uherských králů",
+				"is": "Gotneskur kastali ungversku konunganna",
+				"de": "Ein gotisches Schloss der ungarischen Könige"
+			},
+			"local": "Zvolenský zámok"
+		}
+	],
+	"Michalovce": [
+		{
+			"kind": "sailboat",
+			"name": {
+				"pl": "Zemplińska Szirawa",
+				"en": "Zemplínska šírava",
+				"cs": "Zemplínská šírava",
+				"is": "Zemplínska šírava",
+				"de": "Zemplínska šírava"
+			},
+			"desc": {
+				"pl": "Wielkie jezioro z plażami i żaglówkami",
+				"en": "A big lake with beaches and sailing boats",
+				"cs": "Velké jezero s plážemi a plachetnicemi",
+				"is": "Stórt vatn með ströndum og seglbátum",
+				"de": "Ein großer See mit Stränden und Segelbooten"
+			},
+			"local": "Zemplínska šírava"
+		}
+	],
+	"Komárno": [
+		{
+			"kind": "komarno_fortress",
+			"name": {
+				"pl": "Twierdza Komárno",
+				"en": "Komárno Fortress",
+				"cs": "Komárenská pevnost",
+				"is": "Komárno-virkið",
+				"de": "Festung Komárno"
+			},
+			"desc": {
+				"pl": "Jedna z największych twierdz Europy, nigdy nie zdobyta",
+				"en": "One of Europe's largest fortresses, never taken",
+				"cs": "Jedna z největších pevností Evropy, nikdy nedobytá",
+				"is": "Eitt stærsta virki Evrópu, aldrei tekið",
+				"de": "Eine der größten Festungen Europas, nie erobert"
+			},
+			"local": "Komárňanská pevnosť"
+		}
+	],
+	"Liptovský Mikuláš": [
+		{
+			"kind": "sailboat",
+			"name": {
+				"pl": "Liptowska Mara",
+				"en": "Liptovská Mara",
+				"cs": "Liptovská Mara",
+				"is": "Liptovská Mara",
+				"de": "Liptovská Mara"
+			},
+			"desc": {
+				"pl": "Duży zalew pod górami, z żaglówkami",
+				"en": "A big reservoir below the mountains, with sailing boats",
+				"cs": "Velká přehrada pod horami s plachetnicemi",
+				"is": "Stórt uppistöðulón undir fjöllunum, með seglbátum",
+				"de": "Ein großer Stausee unter den Bergen, mit Segelbooten"
+			},
+			"local": "Liptovská Mara"
+		}
+	],
+	"Lučenec": [
+		{
+			"kind": "spire_cathedral",
+			"name": {
+				"pl": "Kościół kalwiński",
+				"en": "Calvinist Church",
+				"cs": "Kalvínský kostel",
+				"is": "Kalvínska kirkjan",
+				"de": "Kalvinistische Kirche"
+			},
+			"desc": {
+				"pl": "Wysoka wieża z kogutem na szczycie",
+				"en": "A tall tower with a rooster on top",
+				"cs": "Vysoká věž s kohoutem na vrcholu",
+				"is": "Hár turn með hana á toppnum",
+				"de": "Ein hoher Turm mit einem Hahn auf der Spitze"
+			},
+			"local": "Kalvínsky kostol"
+		}
+	],
+	"Piešťany": [
+		{
+			"kind": "crutch_breaker",
+			"name": {
+				"pl": "Łamacz kul",
+				"en": "The Crutch Breaker",
+				"cs": "Lamač berlí",
+				"is": "Hækjubrjóturinn",
+				"de": "Der Krückenbrecher"
+			},
+			"desc": {
+				"pl": "Wyleczony pacjent łamie kulę: znak uzdrowiska",
+				"en": "A healed patient breaking his crutch: the spa's symbol",
+				"cs": "Vyléčený pacient láme berli: symbol lázní",
+				"is": "Læknaður sjúklingur brýtur hækjuna sína: tákn heilsulindarinnar",
+				"de": "Ein geheilter Patient zerbricht seine Krücke: das Symbol des Kurorts"
+			},
+			"local": "Barlolamač"
+		}
+	],
+	"Spišské Podhradie": [
+		{
+			"kind": "spis_castle",
+			"name": {
+				"pl": "Zamek Spiski",
+				"en": "Spiš Castle",
+				"cs": "Spišský hrad",
+				"is": "Spiš-kastali",
+				"de": "Zipser Burg"
+			},
+			"desc": {
+				"pl": "Ruiny ogromnego zamku na białej skale",
+				"en": "The ruins of a huge castle on a white rock",
+				"cs": "Zřícenina obrovského hradu na bílé skále",
+				"is": "Rústir risastórs kastala á hvítum kletti",
+				"de": "Die Ruinen einer riesigen Burg auf einem weißen Felsen"
+			},
+			"local": "Spišský hrad"
+		}
+	],
+	"Levoča": [
+		{
+			"kind": "townhall",
+			"name": {
+				"pl": "Ratusz w Lewoczy",
+				"en": "Levoča Town Hall",
+				"cs": "Levočská radnice",
+				"is": "Ráðhúsið í Levoča",
+				"de": "Rathaus Levoča"
+			},
+			"desc": {
+				"pl": "Renesansowy ratusz z arkadami i klatką hańby",
+				"en": "A Renaissance town hall with arcades and a cage of shame",
+				"cs": "Renesanční radnice s arkádami a klecí hanby",
+				"is": "Endurreisnarráðhús með bogagöngum og skammarbúri",
+				"de": "Ein Renaissance-Rathaus mit Arkaden und einem Schandkäfig"
+			},
+			"local": "Radnica v Levoči"
+		}
+	],
+	"Štrba": [
+		{
+			"kind": "ski_jump",
+			"name": {
+				"pl": "Skocznie na Szczyrbskim Jeziorze",
+				"en": "Štrbské Pleso ski jumps",
+				"cs": "Můstky na Štrbském Plese",
+				"is": "Skíðastökkpallarnir við Štrbské Pleso",
+				"de": "Schanzen am Tschirmer See"
+			},
+			"desc": {
+				"pl": "Skocznie narciarskie wysoko w Tatrach",
+				"en": "Ski jumps high up in the Tatras",
+				"cs": "Skokanské můstky vysoko v Tatrách",
+				"is": "Skíðastökkpallar hátt uppi í Tatra",
+				"de": "Skisprungschanzen hoch oben in der Tatra"
+			},
+			"local": "Skokanské mostíky"
+		}
+	],
+	"Bytča": [
+		{
+			"kind": "palace",
+			"name": {
+				"pl": "Pałac ślubny w Bytčy",
+				"en": "Bytča Wedding Palace",
+				"cs": "Svatební palác v Bytči",
+				"is": "Brúðkaupshöllin í Bytča",
+				"de": "Hochzeitspalast Bytča"
+			},
+			"desc": {
+				"pl": "Renesansowy pałac zbudowany na wesela",
+				"en": "A Renaissance palace built for weddings",
+				"cs": "Renesanční palác postavený pro svatby",
+				"is": "Endurreisnarhöll byggð fyrir brúðkaup",
+				"de": "Ein Renaissance-Palast, gebaut für Hochzeiten"
+			},
+			"local": "Sobášny palác"
+		}
+	],
+	"Rožňava": [
+		{
+			"kind": "castle",
+			"name": {
+				"pl": "Zamek Krásna Hôrka",
+				"en": "Krásna Hôrka Castle",
+				"cs": "Hrad Krásna Hôrka",
+				"is": "Krásna Hôrka-kastali",
+				"de": "Burg Krásna Hôrka"
+			},
+			"desc": {
+				"pl": "Zamek na stożkowatym wzgórzu koło Rożniawy",
+				"en": "A castle on a cone-shaped hill near Rožňava",
+				"cs": "Hrad na kuželovitém kopci u Rožňavy",
+				"is": "Kastali á keilulaga hæð við Rožňava",
+				"de": "Eine Burg auf einem kegelförmigen Hügel bei Rožňava"
+			},
+			"local": "Hrad Krásna Hôrka"
+		}
+	]
+}

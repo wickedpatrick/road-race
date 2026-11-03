@@ -1,0 +1,96 @@
+{
+	"bratislava": {
+		"name": "Bratislava",
+		"lat": 48.15,
+		"lon": 17.11,
+		"pop": 475,
+		"region": "Bratislavský kraj",
+		"exonym": {"pl": "Bratysława"}
+	},
+	"kosice": {"name": "Košice", "lat": 48.72, "lon": 21.26, "pop": 229, "region": "Košický kraj", "exonym": {"pl": "Koszyce"}},
+	"presov": {"name": "Prešov", "lat": 49, "lon": 21.24, "pop": 85, "region": "Prešovský kraj", "exonym": {"pl": "Preszów"}},
+	"zilina": {
+		"name": "Žilina",
+		"lat": 49.22,
+		"lon": 18.74,
+		"pop": 80,
+		"region": "Žilinský kraj",
+		"exonym": {"pl": "Żylina"},
+		"label": "above"
+	},
+	"nitra": {"name": "Nitra", "lat": 48.31, "lon": 18.09, "pop": 76, "region": "Nitriansky kraj"},
+	"banska_bystrica": {
+		"name": "Banská Bystrica",
+		"lat": 48.74,
+		"lon": 19.15,
+		"pop": 75,
+		"region": "Banskobystrický kraj",
+		"short": "B. Bystrica",
+		"exonym": {"pl": "Bańska Bystrzyca"},
+		"map_name": {"pl": "B. Bystrzyca"}
+	},
+	"trnava": {
+		"name": "Trnava",
+		"lat": 48.38,
+		"lon": 17.59,
+		"pop": 63,
+		"region": "Trnavský kraj",
+		"exonym": {"pl": "Trnawa"},
+		"label": "left"
+	},
+	"trencin": {
+		"name": "Trenčín",
+		"lat": 48.89,
+		"lon": 18.04,
+		"pop": 53,
+		"region": "Trenčiansky kraj",
+		"exonym": {"pl": "Trenczyn"},
+		"label": "left"
+	},
+	"martin": {"name": "Martin", "lat": 49.07, "lon": 18.92, "pop": 52, "region": "Žilinský kraj"},
+	"poprad": {"name": "Poprad", "lat": 49.06, "lon": 20.3, "pop": 49, "region": "Prešovský kraj", "label": "above"},
+	"zvolen": {
+		"name": "Zvolen",
+		"lat": 48.58,
+		"lon": 19.13,
+		"pop": 40,
+		"region": "Banskobystrický kraj",
+		"exonym": {"pl": "Zwoleń"}
+	},
+	"michalovce": {"name": "Michalovce", "lat": 48.75, "lon": 21.92, "pop": 37, "region": "Košický kraj", "label": "above"},
+	"komarno": {
+		"name": "Komárno",
+		"lat": 47.76,
+		"lon": 18.13,
+		"pop": 32,
+		"region": "Nitriansky kraj",
+		"exonym": {"pl": "Komarno"}
+	},
+	"liptovsky_mikulas": {
+		"name": "Liptovský Mikuláš",
+		"lat": 49.08,
+		"lon": 19.61,
+		"pop": 30,
+		"region": "Žilinský kraj",
+		"short": "Lipt. Mikuláš",
+		"label": "above",
+		"exonym": {"pl": "Liptowski Mikułasz"},
+		"map_name": {"pl": "Lipt. Mikułasz"}
+	},
+	"lucenec": {
+		"name": "Lučenec",
+		"lat": 48.33,
+		"lon": 19.67,
+		"pop": 27,
+		"region": "Banskobystrický kraj",
+		"exonym": {"pl": "Łuczeniec"}
+	},
+	"piestany": {
+		"name": "Piešťany",
+		"lat": 48.59,
+		"lon": 17.83,
+		"pop": 27,
+		"region": "Trnavský kraj",
+		"exonym": {"pl": "Pieszczany"}
+	}
+}

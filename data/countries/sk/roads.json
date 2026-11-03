@@ -1,0 +1,238 @@
+[
+	{
+		"a": "bratislava",
+		"b": "trnava",
+		"km": 47,
+		"road": "D1",
+		"towns": [["Senec", 25]],
+		"zones": [[47, "fields", "Podunajsko"]]
+	},
+	{
+		"a": "trnava",
+		"b": "piestany",
+		"km": 30,
+		"road": "D1",
+		"towns": [["Leopoldov", 16]],
+		"zones": [[30, "fields", "Považie"]]
+	},
+	{
+		"a": "piestany",
+		"b": "trencin",
+		"km": 45,
+		"road": "D1",
+		"towns": [["Nové Mesto nad Váhom", 22]],
+		"zones": [[30, "orchard", "Považie"], [45, "upland", "Považský Inovec"]]
+	},
+	{
+		"a": "trencin",
+		"b": "zilina",
+		"km": 80,
+		"road": "D1",
+		"towns": [["Dubnica nad Váhom", 15], ["Púchov", 40], ["Považská Bystrica", 52], ["Bytča", 68]],
+		"zones": [[35, "upland", "Považie"], [80, "foothills", "Javorníky"]]
+	},
+	{
+		"a": "zilina",
+		"b": "martin",
+		"km": 32,
+		"road": "D1",
+		"towns": [["Vrútky", 26]],
+		"zones": [[18, "mountains", "Malá Fatra"], [32, "foothills", "Turiec"]],
+		"tunnels": [
+			{
+				"from_km": 8,
+				"to_km": 15.5,
+				"name": {
+					"pl": "Tunel Višňové",
+					"en": "Višňové Tunnel",
+					"cs": "Tunel Višňové",
+					"is": "Višňové-göngin",
+					"de": "Tunnel Višňové"
+				},
+				"fact": {
+					"pl": "Najdłuższy tunel Słowacji, 7,5 km pod Małą Fatrą",
+					"en": "Slovakia's longest tunnel, 7.5 km under the Malá Fatra",
+					"cs": "Nejdelší tunel Slovenska, 7,5 km pod Malou Fatrou",
+					"is": "Lengstu göng Slóvakíu, 7,5 km undir Malá Fatra",
+					"de": "Der längste Tunnel der Slowakei, 7,5 km unter der Kleinen Fatra"
+				}
+			}
+		]
+	},
+	{
+		"a": "martin",
+		"b": "liptovsky_mikulas",
+		"km": 60,
+		"road": [[12, "18"], [60, "D1"]],
+		"towns": [["Turany", 14], ["Ružomberok", 38]],
+		"zones": [[20, "foothills", "Turiec"], [42, "mountains", "Veľká Fatra"], [60, "foothills", "Liptov"]]
+	},
+	{
+		"a": "liptovsky_mikulas",
+		"b": "poprad",
+		"km": 50,
+		"road": "D1",
+		"towns": [["Liptovský Hrádok", 12], ["Štrba", 32], ["Svit", 43]],
+		"zones": [[20, "foothills", "Liptov"], [50, "mountains", "Vysoké Tatry"]]
+	},
+	{
+		"a": "poprad",
+		"b": "presov",
+		"km": 80,
+		"road": "D1",
+		"towns": [["Levoča", 24], ["Spišské Podhradie", 40]],
+		"zones": [[45, "upland", "Spiš"], [58, "foothills", "Branisko"], [80, "upland", "Šariš"]],
+		"tunnels": [
+			{
+				"from_km": 15,
+				"to_km": 15.6,
+				"name": {
+					"pl": "Tunel Šibenik",
+					"en": "Šibenik Tunnel",
+					"cs": "Tunel Šibenik",
+					"is": "Šibenik-göngin",
+					"de": "Tunnel Šibenik"
+				},
+				"fact": {
+					"pl": "Krótki tunel autostrady D1 pod wzgórzem koło Lewoczy",
+					"en": "A short D1 motorway tunnel under a hill near Levoča",
+					"cs": "Krátký tunel dálnice D1 pod kopcem u Levoče",
+					"is": "Stutt göng á D1 undir hæð við Levoča",
+					"de": "Ein kurzer Tunnel der D1 unter einem Hügel bei Levoča"
+				}
+			},
+			{
+				"from_km": 48,
+				"to_km": 53,
+				"name": {
+					"pl": "Tunel Branisko",
+					"en": "Branisko Tunnel",
+					"cs": "Tunel Branisko",
+					"is": "Branisko-göngin",
+					"de": "Tunnel Branisko"
+				},
+				"fact": {
+					"pl": "Prawie 5 km pod pasmem Branisko, między Spiszem a Szaryszem",
+					"en": "Almost 5 km under the Branisko range, between Spiš and Šariš",
+					"cs": "Téměř 5 km pod pohořím Branisko, mezi Spišem a Šarišem",
+					"is": "Næstum 5 km undir Branisko-fjöllunum, milli Spiš og Šariš",
+					"de": "Fast 5 km unter dem Branisko-Gebirge, zwischen der Zips und Šariš"
+				}
+			}
+		]
+	},
+	{"a": "presov", "b": "kosice", "km": 36, "road": "D1", "towns": [], "zones": [[36, "fields", "Košická kotlina"]]},
+	{
+		"a": "kosice",
+		"b": "michalovce",
+		"km": 60,
+		"road": "19",
+		"towns": [["Slanec", 25], ["Sečovce", 37]],
+		"zones": [[30, "foothills", "Slanské vrchy"], [60, "fields", "Východoslovenská nížina"]]
+	},
+	{
+		"a": "kosice",
+		"b": "lucenec",
+		"km": 165,
+		"road": "16",
+		"towns": [["Moldava nad Bodvou", 28], ["Rožňava", 70], ["Tornaľa", 100], ["Rimavská Sobota", 125]],
+		"zones": [
+			[45, "fields", "Košická kotlina"], [85, "jura", "Slovenský kras"], [130, "upland", "Gemer"],
+			[165, "fields", "Novohrad"]
+		]
+	},
+	{
+		"a": "lucenec",
+		"b": "zvolen",
+		"km": 60,
+		"road": [[22, "16"], [60, "R2"]],
+		"towns": [["Lovinobaňa", 12]],
+		"zones": [[25, "upland", "Novohrad"], [60, "foothills", "Podpoľanie"]],
+		"tunnels": [
+			{
+				"from_km": 42,
+				"to_km": 43,
+				"name": {
+					"pl": "Tunel Bôrik",
+					"en": "Bôrik Tunnel",
+					"cs": "Tunel Bôrik",
+					"is": "Bôrik-göngin",
+					"de": "Tunnel Bôrik"
+				},
+				"fact": {
+					"pl": "Tunel drogi ekspresowej R2 pod lasami Podpolania",
+					"en": "An R2 expressway tunnel under the forests of Podpoľanie",
+					"cs": "Tunel rychlostní silnice R2 pod lesy Podpolaní",
+					"is": "Göng á hraðveginum R2 undir skógum Podpoľanie",
+					"de": "Ein Tunnel der Schnellstraße R2 unter den Wäldern von Podpoľanie"
+				}
+			},
+			{
+				"from_km": 48,
+				"to_km": 48.9,
+				"name": {
+					"pl": "Tunel Poľana",
+					"en": "Poľana Tunnel",
+					"cs": "Tunel Poľana",
+					"is": "Poľana-göngin",
+					"de": "Tunnel Poľana"
+				},
+				"fact": {
+					"pl": "Nazwany od wulkanu Poľana, największego w Europie Środkowej",
+					"en": "Named after Poľana, the largest volcano in Central Europe",
+					"cs": "Pojmenovaný po Poľaně, největší sopce střední Evropy",
+					"is": "Nefnd eftir Poľana, stærsta eldfjalli Mið-Evrópu",
+					"de": "Benannt nach der Poľana, dem größten Vulkan Mitteleuropas"
+				}
+			}
+		]
+	},
+	{
+		"a": "zvolen",
+		"b": "banska_bystrica",
+		"km": 20,
+		"road": "R1",
+		"towns": [["Sliač", 8]],
+		"zones": [[20, "foothills", "Pohronie"]]
+	},
+	{
+		"a": "banska_bystrica",
+		"b": "martin",
+		"km": 62,
+		"road": "14",
+		"towns": [["Harmanec", 18], ["Turčianske Teplice", 40]],
+		"zones": [[32, "mountains", "Veľká Fatra"], [62, "upland", "Turiec"]]
+	},
+	{
+		"a": "zvolen",
+		"b": "nitra",
+		"km": 100,
+		"road": "R1",
+		"towns": [["Žiar nad Hronom", 28], ["Žarnovica", 42], ["Nová Baňa", 52], ["Zlaté Moravce", 72]],
+		"zones": [[35, "foothills", "Štiavnické vrchy"], [70, "upland", "Tekov"], [100, "fields", "Ponitrie"]]
+	},
+	{
+		"a": "nitra",
+		"b": "trnava",
+		"km": 50,
+		"road": "R1",
+		"towns": [["Sereď", 30]],
+		"zones": [[50, "fields", "Podunajská nížina"]]
+	},
+	{
+		"a": "bratislava",
+		"b": "komarno",
+		"km": 100,
+		"road": "63",
+		"towns": [["Šamorín", 22], ["Dunajská Streda", 45], ["Veľký Meder", 70]],
+		"zones": [[100, "fields", "Žitný ostrov"]]
+	},
+	{
+		"a": "komarno",
+		"b": "nitra",
+		"km": 75,
+		"road": "64",
+		"towns": [["Nové Zámky", 30], ["Šurany", 42]],
+		"zones": [[75, "fields", "Podunajská nížina"]]
+	}
+]
