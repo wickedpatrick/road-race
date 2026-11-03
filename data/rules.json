@@ -401,7 +401,16 @@
 		"neuschwanstein": [36, 40],
 		"zollhof": [34, 26],
 		"mainz_dom": [34, 44],
-		"printing_press": [12, 9]
+		"printing_press": [12, 9],
+		"gediminas_tower": [30, 34],
+		"vilnius_cathedral": [42, 40],
+		"trakai_castle": [50, 30],
+		"basketball": [32, 14],
+		"hill_of_crosses": [34, 14],
+		"stork": [8, 13],
+		"amber": [6, 5],
+		"snow_arena": [60, 30],
+		"dunes": [50, 26]
 	},
 	"police": {"escape_chance": 0.2, "escape_kmh": 180, "escape_swerves": [3, 5]},
 	"postcards": {"stamps": [0.1, 0.25, 0.4, 0.5], "top_stamp_car": 5}

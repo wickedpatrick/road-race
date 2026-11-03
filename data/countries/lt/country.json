@@ -1,0 +1,44 @@
+{
+	"code": "lt",
+	"name": {"pl": "Litwa", "en": "Lithuania", "cs": "Litva", "is": "Litháen", "de": "Litauen"},
+	"language": "lt",
+	"drive": "right",
+	"units": "metric",
+	"title": {
+		"pl": "RAJD PRZEZ LITWĘ",
+		"en": "ROAD TRIP ACROSS LITHUANIA",
+		"cs": "RALLY LITVOU",
+		"is": "ÖKUFERÐ UM LITHÁEN",
+		"de": "ROADTRIP DURCH LITAUEN"
+	},
+	"subtitle": {
+		"pl": "Edukacyjna podróż po litewskich drogach",
+		"en": "An educational journey along Lithuanian roads",
+		"cs": "Vzdělávací cesta po litevských silnicích",
+		"is": "Fræðandi ferðalag um vegi Litháens",
+		"de": "Eine lehrreiche Reise über litauische Straßen"
+	},
+	"region_label": {"pl": "okręg", "en": "county", "cs": "kraj", "is": "sýsla", "de": "Bezirk"},
+	"start": ["vilnius", "kaunas"],
+	"express_prefixes": ["A1", "A2"],
+	"limits": {"express": 130, "road": 90, "city": 50, "town_on_express": 70, "town": 50},
+	"signs": {"town": "#ffffff", "town_text": "#111111", "board": "#1d4ea1", "board_motorway": "#0f7a43"},
+	"map": {"lon0": 20.75, "lon1": 26.95, "lat0": 53.8, "lat1": 56.55, "lon_k": 0.571},
+	"outline": [
+		[21.06, 56.07], [21.35, 56.22], [21.65, 56.32], [22, 56.41], [22.6, 56.38], [23.1, 56.33], [23.7, 56.37],
+		[24.15, 56.27], [24.6, 56.38], [25.1, 56.18], [25.6, 56.15], [26.05, 55.95], [26.6, 55.7], [26.8, 55.3],
+		[26.45, 55.13], [25.85, 54.93], [25.75, 54.8], [25.55, 54.33], [25.79, 54.16], [25.55, 54.15], [25.2, 54.25],
+		[24.8, 54.05], [24.4, 53.92], [23.9, 53.95], [23.5, 53.95], [23.45, 54.18], [23, 54.38], [22.79, 54.37],
+		[22.7, 54.7], [22.85, 54.9], [22.6, 55.05], [22, 55.08], [21.6, 55.2], [21.27, 55.25], [21.25, 55.45],
+		[21.2, 55.6], [21.14, 55.72], [21.08, 55.92]
+	],
+	"outline_lines": [[[20.95, 55.28], [20.99, 55.4], [21.06, 55.58], [21.1, 55.7]]],
+	"station": {
+		"sign": "DEGALINĖ",
+		"board": "KURAS",
+		"prices": [["95", "1,59"], ["Dyzelinas", "1,52"], ["LPG", "0,79"]],
+		"region_sign": "REGIONAS"
+	},
+	"weather": {"default": "cloudy", "landscape": true},
+	"palette": {"summer": {"grass_a": "#4f9a3c", "grass_b": "#479238"}}
+}
