@@ -99,10 +99,13 @@ static func leg_roads(leg: Dictionary) -> Array:
 	return out
 
 ## Motorways and expressways (the country's express_prefixes, e.g. A and S in Poland, D in Czechia) are dual
-## carriageways ("3"), every other road a single one ("2").
+## carriageways ("3"), every other road a single one ("2"). A prefix ending in a digit names whole numbers: Lithuania's
+## "A1" is the A1 motorway, not the A12.
 static func lanes_for(road: String) -> int:
-	for prefix in GameData.country().express_prefixes:
-		if road.begins_with(prefix): return 3
+	for prefix: String in GameData.country().express_prefixes:
+		if not road.begins_with(prefix): continue
+		if prefix.right(1).is_valid_int() and road.length() > prefix.length() and road[prefix.length()].is_valid_int(): continue
+		return 3
 	return 2
 
 static func _leg_zones(leg: Dictionary) -> Array:

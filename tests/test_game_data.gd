@@ -20,6 +20,9 @@ func _check_gb(t) -> void:
 	t.check(Route.lanes_for("M6") == 3 and Route.lanes_for("A1(M)") == 3 and Route.lanes_for("A74(M)") == 3, "gb: M and A(M) roads are motorways")
 	t.check(Route.lanes_for("A1") == 2 and Route.lanes_for("A38") == 2, "gb: other A roads are single carriageways")
 	t.check(Geo.display_name("london") == "Londyn" and Geo.city("london").name == "London", "gb: Londyn on the map, London on the signs")
+	GameData.current = "lt"
+	t.check(Route.lanes_for("A1") == 3 and Route.lanes_for("A2") == 3, "lt: the A1 and A2 are motorways")
+	t.check(Route.lanes_for("A12") == 2 and Route.lanes_for("A5") == 2 and Route.lanes_for("128") == 2, "lt: the A12, A5 and other roads are not")
 
 ## Every trip between neighbouring cities builds a playable stage (stations, limits, a track, scenery).
 func _check_trips(t, code: String) -> void:

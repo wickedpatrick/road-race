@@ -1,0 +1,486 @@
+{
+	"Vilnius": [
+		{
+			"kind": "gediminas_tower",
+			"name": {
+				"pl": "Wieża Giedymina",
+				"en": "Gediminas' Tower",
+				"cs": "Gediminova věž",
+				"is": "Turn Gediminas",
+				"de": "Gediminas-Turm"
+			},
+			"desc": {
+				"pl": "Czerwona wieża zamku na wzgórzu, z flagą Litwy na szczycie",
+				"en": "A red brick castle tower on a hill, the Lithuanian flag on top",
+				"cs": "Červená hradní věž na kopci s litevskou vlajkou nahoře",
+				"is": "Rauður kastalaturn á hæð, með fána Litháens efst",
+				"de": "Ein roter Burgturm auf einem Hügel, oben die Flagge Litauens"
+			},
+			"local": "Gedimino pilies bokštas"
+		},
+		{
+			"kind": "vilnius_cathedral",
+			"name": {
+				"pl": "Katedra Wileńska",
+				"en": "Vilnius Cathedral",
+				"cs": "Vilniuská katedrála",
+				"is": "Dómkirkjan í Vilníus",
+				"de": "Kathedrale von Vilnius"
+			},
+			"desc": {
+				"pl": "Biała katedra jak grecka świątynia, obok wysoka dzwonnica",
+				"en": "A white cathedral like a Greek temple, with a tall bell tower beside it",
+				"cs": "Bílá katedrála jako řecký chrám, vedle vysoká zvonice",
+				"is": "Hvít dómkirkja eins og grískt hof, með háan klukkuturn við hliðina",
+				"de": "Eine weiße Kathedrale wie ein griechischer Tempel, daneben ein hoher Glockenturm"
+			},
+			"local": "Vilniaus arkikatedra"
+		}
+	],
+	"Trakai": [
+		{
+			"kind": "trakai_castle",
+			"name": {
+				"pl": "Zamek w Trokach",
+				"en": "Trakai Island Castle",
+				"cs": "Hrad Trakai",
+				"is": "Eyjakastalinn í Trakai",
+				"de": "Wasserburg Trakai"
+			},
+			"desc": {
+				"pl": "Ceglany zamek na wyspie pośrodku jeziora",
+				"en": "A red brick castle on an island in the middle of a lake",
+				"cs": "Cihlový hrad na ostrově uprostřed jezera",
+				"is": "Múrsteinskastali á eyju úti í vatni",
+				"de": "Eine Backsteinburg auf einer Insel mitten im See"
+			},
+			"local": "Trakų salos pilis"
+		}
+	],
+	"Kaunas": [
+		{
+			"kind": "castle_brick",
+			"name": {
+				"pl": "Zamek Kowieński",
+				"en": "Kaunas Castle",
+				"cs": "Kaunaský hrad",
+				"is": "Kastalinn í Kaunas",
+				"de": "Burg Kaunas"
+			},
+			"desc": {
+				"pl": "Najstarszy murowany zamek Litwy, tam gdzie Wilia wpada do Niemna",
+				"en": "Lithuania's oldest stone castle, where the Neris flows into the Nemunas",
+				"cs": "Nejstarší zděný hrad Litvy, kde se Neris vlévá do Němenu",
+				"is": "Elsti steinkastali Litháens, þar sem Neris rennur í Nemunas",
+				"de": "Litauens älteste Steinburg, wo die Neris in die Memel fließt"
+			},
+			"local": "Kauno pilis"
+		},
+		{
+			"kind": "basketball",
+			"name": {
+				"pl": "Hala Žalgirisu",
+				"en": "Žalgiris Arena",
+				"cs": "Žalgiris Arena",
+				"is": "Žalgiris-höllin",
+				"de": "Žalgiris-Arena"
+			},
+			"desc": {
+				"pl": "Dom drużyny Žalgiris: koszykówka to na Litwie druga religia",
+				"en": "Home of the Žalgiris team: in Lithuania basketball is almost a religion",
+				"cs": "Domov týmu Žalgiris: basketbal je v Litvě skoro náboženství",
+				"is": "Heimavöllur Žalgiris: körfubolti er nánast trúarbrögð í Litháen",
+				"de": "Heimat des Teams Žalgiris: Basketball ist in Litauen fast eine Religion"
+			},
+			"local": "Žalgirio arena"
+		}
+	],
+	"Klaipėda": [
+		{
+			"kind": "ship",
+			"name": {
+				"pl": "Żaglowiec Meridianas",
+				"en": "The Meridianas sailing ship",
+				"cs": "Plachetnice Meridianas",
+				"is": "Seglskipið Meridianas",
+				"de": "Segelschiff Meridianas"
+			},
+			"desc": {
+				"pl": "Stary żaglowiec zacumowany w środku miasta, symbol Kłajpedy",
+				"en": "An old sailing ship moored in the city centre, the symbol of Klaipėda",
+				"cs": "Stará plachetnice zakotvená v centru města, symbol Klaipėdy",
+				"is": "Gamalt seglskip við bryggju í miðbænum, tákn Klaipėda",
+				"de": "Ein altes Segelschiff mitten in der Stadt, das Wahrzeichen von Klaipėda"
+			},
+			"local": "Burlaivis Meridianas"
+		}
+	],
+	"Šiauliai": [
+		{
+			"kind": "hill_of_crosses",
+			"name": {
+				"pl": "Góra Krzyży",
+				"en": "Hill of Crosses",
+				"cs": "Hora křížů",
+				"is": "Krossahæðin",
+				"de": "Berg der Kreuze"
+			},
+			"desc": {
+				"pl": "Wzgórze, na którym ludzie postawili ponad sto tysięcy krzyży",
+				"en": "A hill where people have placed more than a hundred thousand crosses",
+				"cs": "Kopec, na který lidé postavili přes sto tisíc křížů",
+				"is": "Hæð þar sem fólk hefur sett upp meira en hundrað þúsund krossa",
+				"de": "Ein Hügel, auf den Menschen mehr als hunderttausend Kreuze gestellt haben"
+			},
+			"local": "Kryžių kalnas"
+		},
+		{
+			"kind": "archer",
+			"name": {
+				"pl": "Złoty Chłopiec",
+				"en": "The Golden Boy",
+				"cs": "Zlatý chlapec",
+				"is": "Gullni drengurinn",
+				"de": "Der Goldene Junge"
+			},
+			"desc": {
+				"pl": "Złoty łucznik na kolumnie zegara słonecznego",
+				"en": "A golden archer on the column of a huge sundial",
+				"cs": "Zlatý lukostřelec na sloupu slunečních hodin",
+				"is": "Gullinn bogmaður á súlu risastórrar sólklukku",
+				"de": "Ein goldener Bogenschütze auf der Säule einer riesigen Sonnenuhr"
+			},
+			"local": "Saulės laikrodis"
+		}
+	],
+	"Panevėžys": [
+		{
+			"kind": "cathedral",
+			"name": {
+				"pl": "Katedra Chrystusa Króla",
+				"en": "Cathedral of Christ the King",
+				"cs": "Katedrála Krista Krále",
+				"is": "Dómkirkja Krists konungs",
+				"de": "Christkönigskathedrale"
+			},
+			"desc": {
+				"pl": "Ceglana katedra z wysoką wieżą w centrum miasta",
+				"en": "A brick cathedral with a tall tower in the city centre",
+				"cs": "Cihlová katedrála s vysokou věží v centru města",
+				"is": "Múrsteinsdómkirkja með háan turn í miðbænum",
+				"de": "Eine Backsteinkathedrale mit hohem Turm im Stadtzentrum"
+			},
+			"local": "Kristaus Karaliaus katedra"
+		}
+	],
+	"Alytus": [
+		{
+			"kind": "stork",
+			"name": {
+				"pl": "Bocian biały",
+				"en": "The white stork",
+				"cs": "Čáp bílý",
+				"is": "Hvíti storkurinn",
+				"de": "Der Weißstorch"
+			},
+			"desc": {
+				"pl": "Ptak narodowy Litwy, gniazduje na słupach przy drogach",
+				"en": "Lithuania's national bird, nesting on poles beside the roads",
+				"cs": "Národní pták Litvy, hnízdí na sloupech u silnic",
+				"is": "Þjóðarfugl Litháens, verpir á staurum við vegina",
+				"de": "Litauens Nationalvogel, er nistet auf Masten an den Straßen"
+			},
+			"local": "Baltasis gandras"
+		}
+	],
+	"Marijampolė": [
+		{
+			"kind": "basilica",
+			"name": {
+				"pl": "Bazylika św. Michała",
+				"en": "Basilica of St Michael",
+				"cs": "Bazilika sv. Michaela",
+				"is": "Basilíka heilags Mikaels",
+				"de": "Basilika St. Michael"
+			},
+			"desc": {
+				"pl": "Biała bazylika z dwiema wieżami nad rzeką Szeszupą",
+				"en": "A white basilica with two towers by the river Šešupė",
+				"cs": "Bílá bazilika se dvěma věžemi u řeky Šešupė",
+				"is": "Hvít basilíka með tvo turna við ána Šešupė",
+				"de": "Eine weiße Basilika mit zwei Türmen am Fluss Šešupė"
+			},
+			"local": "Šv. arkangelo Mykolo bazilika"
+		}
+	],
+	"Mažeikiai": [
+		{
+			"kind": "factory",
+			"name": {
+				"pl": "Rafineria",
+				"en": "The oil refinery",
+				"cs": "Rafinerie",
+				"is": "Olíuhreinsunarstöðin",
+				"de": "Die Raffinerie"
+			},
+			"desc": {
+				"pl": "Tu z ropy naftowej robi się benzynę dla całych krajów bałtyckich",
+				"en": "Turns crude oil into petrol for the whole Baltic region",
+				"cs": "Tady se z ropy vyrábí benzín pro celé Pobaltí",
+				"is": "Hér er hráolíu breytt í bensín fyrir öll Eystrasaltsríkin",
+				"de": "Hier wird aus Erdöl Benzin für das ganze Baltikum"
+			},
+			"local": "Naftos perdirbimo gamykla"
+		}
+	],
+	"Utena": [
+		{
+			"kind": "sailboat",
+			"name": {
+				"pl": "Jeziora Auksztoty",
+				"en": "The lakes of Aukštaitija",
+				"cs": "Jezera Aukštaitije",
+				"is": "Vötnin í Aukštaitija",
+				"de": "Die Seen von Aukštaitija"
+			},
+			"desc": {
+				"pl": "Wokół Uciany są setki jezior, latem pełne żaglówek",
+				"en": "Hundreds of lakes around Utena, full of sailing boats in summer",
+				"cs": "Kolem Uteny jsou stovky jezer, v létě plné plachetnic",
+				"is": "Hundruð vatna kringum Utena, full af seglbátum á sumrin",
+				"de": "Hunderte Seen um Utena, im Sommer voller Segelboote"
+			},
+			"local": "Aukštaitijos ežerai"
+		}
+	],
+	"Tauragė": [
+		{
+			"kind": "castle",
+			"name": {
+				"pl": "Zamek w Taurogach",
+				"en": "Tauragė Castle",
+				"cs": "Hrad Tauragė",
+				"is": "Kastalinn í Tauragė",
+				"de": "Schloss Tauroggen"
+			},
+			"desc": {
+				"pl": "Mały zamek z czerwonym dachem, dziś muzeum",
+				"en": "A small castle with a red roof, now a museum",
+				"cs": "Malý hrad s červenou střechou, dnes muzeum",
+				"is": "Lítill kastali með rautt þak, nú safn",
+				"de": "Ein kleines Schloss mit rotem Dach, heute ein Museum"
+			},
+			"local": "Tauragės pilis"
+		}
+	],
+	"Palanga": [
+		{
+			"kind": "pier",
+			"name": {
+				"pl": "Molo w Połądze",
+				"en": "Palanga Pier",
+				"cs": "Molo v Palanze",
+				"is": "Bryggjan í Palanga",
+				"de": "Seebrücke Palanga"
+			},
+			"desc": {
+				"pl": "Długie molo w morze, wieczorem wszyscy patrzą stąd na zachód słońca",
+				"en": "A long pier into the sea where everyone watches the sunset",
+				"cs": "Dlouhé molo do moře, večer se odtud všichni dívají na západ slunce",
+				"is": "Löng bryggja út í sjó þar sem allir horfa á sólarlagið",
+				"de": "Eine lange Seebrücke, von der alle abends den Sonnenuntergang sehen"
+			},
+			"local": "Palangos tiltas"
+		},
+		{
+			"kind": "amber",
+			"name": {
+				"pl": "Muzeum Bursztynu",
+				"en": "Amber Museum",
+				"cs": "Muzeum jantaru",
+				"is": "Rafsafnið",
+				"de": "Bernsteinmuseum"
+			},
+			"desc": {
+				"pl": "Bursztyn to skamieniała żywica, czasem z owadem w środku",
+				"en": "Amber is fossil tree resin, sometimes with an insect inside",
+				"cs": "Jantar je zkamenělá pryskyřice, někdy s hmyzem uvnitř",
+				"is": "Raf er steingert trjákvoða, stundum með skordýr inni í",
+				"de": "Bernstein ist versteinertes Baumharz, manchmal mit einem Insekt darin"
+			},
+			"local": "Gintaro muziejus"
+		}
+	],
+	"Druskininkai": [
+		{
+			"kind": "snow_arena",
+			"name": {"pl": "Snow Arena", "en": "Snow Arena", "cs": "Snow Arena", "is": "Snow Arena", "de": "Snow Arena"},
+			"desc": {
+				"pl": "Kryty stok narciarski: można jeździć na nartach nawet latem",
+				"en": "An indoor ski slope: you can ski even in summer",
+				"cs": "Krytá sjezdovka: lyžovat se dá i v létě",
+				"is": "Skíðabrekka innanhúss: hægt að skíða líka á sumrin",
+				"de": "Eine Skihalle: hier kann man sogar im Sommer Ski fahren"
+			},
+			"local": "Snow Arena"
+		}
+	],
+	"Nida": [
+		{
+			"kind": "dunes",
+			"name": {
+				"pl": "Wydma Parnidzka",
+				"en": "The Parnidis Dune",
+				"cs": "Duna Parnidis",
+				"is": "Parnidis-sandaldan",
+				"de": "Parnidis-Düne"
+			},
+			"desc": {
+				"pl": "Wielka wędrująca wydma z ogromnym zegarem słonecznym",
+				"en": "A huge moving dune with a giant sundial on top",
+				"cs": "Obří putovní duna s velkými slunečními hodinami",
+				"is": "Risastór sandalda á ferð með stóra sólklukku",
+				"de": "Eine riesige Wanderdüne mit einer großen Sonnenuhr"
+			},
+			"local": "Parnidžio kopa"
+		},
+		{
+			"kind": "lighthouse",
+			"name": {
+				"pl": "Latarnia w Nidzie",
+				"en": "Nida Lighthouse",
+				"cs": "Maják v Nidě",
+				"is": "Vitinn í Nida",
+				"de": "Leuchtturm Nida"
+			},
+			"desc": {
+				"pl": "Czerwono-biała latarnia na wzgórzu w lesie",
+				"en": "A red and white lighthouse on a wooded hill",
+				"cs": "Červenobílý maják na zalesněném kopci",
+				"is": "Rauður og hvítur viti á skógi vaxinni hæð",
+				"de": "Ein rot-weißer Leuchtturm auf einem bewaldeten Hügel"
+			},
+			"local": "Nidos švyturys"
+		}
+	],
+	"Juodkrantė": [
+		{
+			"kind": "devil",
+			"name": {
+				"pl": "Wzgórze Czarownic",
+				"en": "Hill of Witches",
+				"cs": "Kopec čarodějnic",
+				"is": "Nornahæð",
+				"de": "Hexenberg"
+			},
+			"desc": {
+				"pl": "Ścieżka w lesie z drewnianymi diabłami i czarownicami z bajek",
+				"en": "A forest path with carved wooden devils and witches from folk tales",
+				"cs": "Lesní stezka s dřevěnými čerty a čarodějnicemi z pohádek",
+				"is": "Skógarstígur með útskornum djöflum og nornum úr þjóðsögum",
+				"de": "Ein Waldweg mit geschnitzten Teufeln und Hexen aus Sagen"
+			},
+			"local": "Raganų kalnas"
+		}
+	],
+	"Šeduva": [
+		{
+			"kind": "windmill",
+			"name": {
+				"pl": "Wiatrak w Szadowie",
+				"en": "Šeduva Windmill",
+				"cs": "Větrný mlýn v Šeduvě",
+				"is": "Vindmyllan í Šeduva",
+				"de": "Windmühle Šeduva"
+			},
+			"desc": {
+				"pl": "Stary wiatrak, w którym dziś jest restauracja",
+				"en": "An old windmill that is now a restaurant",
+				"cs": "Starý větrný mlýn, dnes restaurace",
+				"is": "Gömul vindmylla sem er nú veitingastaður",
+				"de": "Eine alte Windmühle, heute ein Restaurant"
+			},
+			"local": "Šeduvos malūnas"
+		}
+	],
+	"Purnuškės": [
+		{
+			"kind": "center",
+			"name": {
+				"pl": "Środek Europy",
+				"en": "Centre of Europe",
+				"cs": "Střed Evropy",
+				"is": "Miðja Evrópu",
+				"de": "Mittelpunkt Europas"
+			},
+			"desc": {
+				"pl": "Biały słup z koroną gwiazd w miejscu, gdzie wypada środek Europy",
+				"en": "A white pillar crowned with stars where the middle of Europe lies",
+				"cs": "Bílý sloup s korunou hvězd tam, kde je střed Evropy",
+				"is": "Hvít súla með stjörnukórónu þar sem miðja Evrópu er",
+				"de": "Eine weiße Säule mit einem Sternenkranz, wo die Mitte Europas liegt"
+			},
+			"local": "Europos centras"
+		}
+	],
+	"Anykščiai": [
+		{
+			"kind": "narrow_train",
+			"name": {
+				"pl": "Kolejka wąskotorowa",
+				"en": "Narrow-gauge railway",
+				"cs": "Úzkorozchodná dráha",
+				"is": "Mjóspora járnbrautin",
+				"de": "Schmalspurbahn"
+			},
+			"desc": {
+				"pl": "Mały pociąg jeździ tu ponad sto lat",
+				"en": "A little train that has been running here for more than a hundred years",
+				"cs": "Malý vláček tu jezdí přes sto let",
+				"is": "Lítil lest sem hefur gengið hér í meira en hundrað ár",
+				"de": "Ein kleiner Zug, der hier seit über hundert Jahren fährt"
+			},
+			"local": "Siaurasis geležinkelis"
+		}
+	],
+	"Plungė": [
+		{
+			"kind": "palace",
+			"name": {
+				"pl": "Pałac Ogińskich",
+				"en": "Oginski Palace",
+				"cs": "Palác Ogińských",
+				"is": "Oginski-höllin",
+				"de": "Oginski-Palais"
+			},
+			"desc": {
+				"pl": "Pałac w parku, dziś muzeum sztuki Żmudzi",
+				"en": "A palace in a park, now a museum of Samogitian art",
+				"cs": "Palác v parku, dnes muzeum žemaitského umění",
+				"is": "Höll í garði, nú listasafn Samógitíu",
+				"de": "Ein Palast im Park, heute ein Museum für niederlitauische Kunst"
+			},
+			"local": "Oginskių rūmai"
+		}
+	],
+	"Elektrėnai": [
+		{
+			"kind": "factory",
+			"name": {
+				"pl": "Elektrownia Elektreny",
+				"en": "Elektrėnai Power Station",
+				"cs": "Elektrárna Elektrėnai",
+				"is": "Orkuverið í Elektrėnai",
+				"de": "Kraftwerk Elektrėnai"
+			},
+			"desc": {
+				"pl": "Największa elektrownia Litwy z wysokimi kominami",
+				"en": "Lithuania's biggest power station, with tall chimneys",
+				"cs": "Největší elektrárna Litvy s vysokými komíny",
+				"is": "Stærsta orkuver Litháens, með háa reykháfa",
+				"de": "Litauens größtes Kraftwerk, mit hohen Schornsteinen"
+			},
+			"local": "Elektrėnų elektrinė"
+		}
+	]
+}

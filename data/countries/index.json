@@ -35,6 +35,12 @@
 			"name": {"pl": "Niemcy", "en": "Germany", "cs": "Německo", "is": "Þýskaland", "de": "Deutschland"},
 			"neighbours": ["pl", "cz", "at", "ch", "fr", "lu", "be", "nl", "dk"],
 			"favorite_neighbour": "at"
+		},
+		{
+			"code": "lt",
+			"name": {"pl": "Litwa", "en": "Lithuania", "cs": "Litva", "is": "Litháen", "de": "Litauen"},
+			"neighbours": ["lv", "by", "pl", "ru"],
+			"favorite_neighbour": "lv"
 		}
 	]
 }

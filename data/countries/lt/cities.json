@@ -1,0 +1,73 @@
+{
+	"vilnius": {
+		"name": "Vilnius",
+		"lat": 54.69,
+		"lon": 25.28,
+		"pop": 590,
+		"region": "Vilniaus",
+		"exonym": {"pl": "Wilno", "de": "Wilna"}
+	},
+	"kaunas": {
+		"name": "Kaunas",
+		"lat": 54.9,
+		"lon": 23.9,
+		"pop": 300,
+		"region": "Kauno",
+		"exonym": {"pl": "Kowno", "de": "Kauen"}
+	},
+	"klaipeda": {
+		"name": "Klaipėda",
+		"lat": 55.71,
+		"lon": 21.13,
+		"pop": 158,
+		"region": "Klaipėdos",
+		"exonym": {"pl": "Kłajpeda", "de": "Memel"}
+	},
+	"siauliai": {
+		"name": "Šiauliai",
+		"lat": 55.93,
+		"lon": 23.32,
+		"pop": 110,
+		"region": "Šiaulių",
+		"exonym": {"pl": "Szawle", "de": "Schaulen"}
+	},
+	"panevezys": {"name": "Panevėžys", "lat": 55.73, "lon": 24.36, "pop": 88, "region": "Panevėžio", "exonym": {"pl": "Poniewież"}},
+	"alytus": {"name": "Alytus", "lat": 54.4, "lon": 24.05, "pop": 51, "region": "Alytaus", "exonym": {"pl": "Olita"}},
+	"marijampole": {
+		"name": "Marijampolė",
+		"lat": 54.56,
+		"lon": 23.35,
+		"pop": 37,
+		"region": "Marijampolės",
+		"label": "left",
+		"exonym": {"pl": "Mariampol"}
+	},
+	"mazeikiai": {"name": "Mažeikiai", "lat": 56.31, "lon": 22.34, "pop": 32, "region": "Telšių", "exonym": {"pl": "Możejki"}},
+	"utena": {"name": "Utena", "lat": 55.5, "lon": 25.6, "pop": 26, "region": "Utenos", "exonym": {"pl": "Uciana"}},
+	"taurage": {
+		"name": "Tauragė",
+		"lat": 55.25,
+		"lon": 22.29,
+		"pop": 22,
+		"region": "Tauragės",
+		"exonym": {"pl": "Taurogi", "de": "Tauroggen"}
+	},
+	"palanga": {
+		"name": "Palanga",
+		"lat": 55.92,
+		"lon": 21.07,
+		"pop": 18,
+		"region": "Klaipėdos",
+		"label": "above",
+		"exonym": {"pl": "Połąga", "de": "Polangen"}
+	},
+	"druskininkai": {
+		"name": "Druskininkai",
+		"lat": 54.02,
+		"lon": 23.97,
+		"pop": 13,
+		"region": "Alytaus",
+		"exonym": {"pl": "Druskieniki"}
+	},
+	"nida": {"name": "Nida", "lat": 55.3, "lon": 21, "pop": 2, "region": "Klaipėdos", "label": "left"}
+}

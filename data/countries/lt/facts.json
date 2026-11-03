@@ -1,0 +1,233 @@
+{
+	"Vilnius": {
+		"pl": "Stolica Litwy, ma jedno z największych starych miast w Europie",
+		"en": "Capital of Lithuania, with one of the largest old towns in Europe",
+		"cs": "Hlavní město Litvy s jedním z největších starých měst v Evropě",
+		"is": "Höfuðborg Litháens, með einn stærsta gamla bæ Evrópu",
+		"de": "Hauptstadt Litauens, mit einer der größten Altstädte Europas"
+	},
+	"Kaunas": {
+		"pl": "Między wojnami była stolicą Litwy; tu kochają koszykówkę jak nigdzie",
+		"en": "Lithuania's capital between the wars; nobody loves basketball more",
+		"cs": "Mezi válkami hlavní město Litvy; basketbal tu milují jako nikde jinde",
+		"is": "Höfuðborg Litháens milli stríða; hér elska allir körfubolta",
+		"de": "Zwischen den Weltkriegen Litauens Hauptstadt; niemand liebt Basketball mehr"
+	},
+	"Klaipėda": {
+		"pl": "Jedyny port morski Litwy, nad Bałtykiem",
+		"en": "Lithuania's only seaport, on the Baltic Sea",
+		"cs": "Jediný námořní přístav Litvy, u Baltského moře",
+		"is": "Eina hafnarborg Litháens við Eystrasalt",
+		"de": "Litauens einziger Seehafen, an der Ostsee"
+	},
+	"Šiauliai": {
+		"pl": "Miasto słońca: na herbie ma niedźwiedzia, a w centrum wielki zegar słoneczny",
+		"en": "The city of the sun, with a giant sundial in the middle",
+		"cs": "Město slunce s obřími slunečními hodinami uprostřed",
+		"is": "Borg sólarinnar, með risastóra sólklukku í miðbænum",
+		"de": "Die Stadt der Sonne, mit einer riesigen Sonnenuhr in der Mitte"
+	},
+	"Panevėžys": {
+		"pl": "Piąte co do wielkości miasto Litwy, słynie ze swojego teatru",
+		"en": "Lithuania's fifth-largest city, famous for its theatre",
+		"cs": "Páté největší město Litvy, proslulé svým divadlem",
+		"is": "Fimmta stærsta borg Litháens, fræg fyrir leikhúsið sitt",
+		"de": "Fünftgrößte Stadt Litauens, berühmt für ihr Theater"
+	},
+	"Alytus": {
+		"pl": "Stolica Dzukii, krainy lasów, grzybów i piosenek",
+		"en": "Capital of Dzūkija, a land of forests, mushrooms and songs",
+		"cs": "Metropole Dzūkije, kraje lesů, hub a písní",
+		"is": "Höfuðstaður Dzūkija, lands skóga, sveppa og söngva",
+		"de": "Hauptort von Dzūkija, dem Land der Wälder, Pilze und Lieder"
+	},
+	"Marijampolė": {
+		"pl": "Stolica Suwalszczyzny, przez nią biegnie Via Baltica",
+		"en": "Capital of Suvalkija, on the Via Baltica road",
+		"cs": "Metropole Suvalkije, vede tudy silnice Via Baltica",
+		"is": "Höfuðstaður Suvalkija, við veginn Via Baltica",
+		"de": "Hauptort von Suvalkija, an der Via Baltica"
+	},
+	"Mažeikiai": {
+		"pl": "Tu stoi jedyna rafineria w krajach bałtyckich",
+		"en": "Home of the only oil refinery in the Baltic states",
+		"cs": "Stojí tu jediná rafinerie v pobaltských státech",
+		"is": "Hér er eina olíuhreinsunarstöð Eystrasaltsríkjanna",
+		"de": "Hier steht die einzige Ölraffinerie im Baltikum"
+	},
+	"Utena": {
+		"pl": "Miasto w Auksztocie, krainie setek jezior",
+		"en": "A town in Aukštaitija, the land of hundreds of lakes",
+		"cs": "Město v Aukštaitiji, kraji stovek jezer",
+		"is": "Bær í Aukštaitija, landi hundraða vatna",
+		"de": "Eine Stadt in Aukštaitija, dem Land der hundert Seen"
+	},
+	"Tauragė": {
+		"pl": "Miasto nad rzeką Jurą, z małym zamkiem w centrum",
+		"en": "A town on the river Jūra with a small castle",
+		"cs": "Město na řece Jūra s malým zámkem",
+		"is": "Bær við ána Jūra með litlum kastala",
+		"de": "Eine Stadt am Fluss Jūra mit einem kleinen Schloss"
+	},
+	"Palanga": {
+		"pl": "Letnia stolica Litwy: plaże, wydmy i bursztyn na brzegu",
+		"en": "Lithuania's summer capital: beaches, dunes and amber on the shore",
+		"cs": "Letní hlavní město Litvy: pláže, duny a jantar na břehu",
+		"is": "Sumarhöfuðborg Litháens: strendur, sandöldur og raf í fjörunni",
+		"de": "Litauens Sommerhauptstadt: Strände, Dünen und Bernstein am Ufer"
+	},
+	"Druskininkai": {
+		"pl": "Uzdrowisko z wodami mineralnymi i krytym stokiem narciarskim",
+		"en": "A spa town with mineral springs and an indoor ski slope",
+		"cs": "Lázně s minerálními prameny a krytou sjezdovkou",
+		"is": "Heilsubær með ölkeldum og skíðabrekku innanhúss",
+		"de": "Ein Kurort mit Mineralquellen und einer Skihalle"
+	},
+	"Nida": {
+		"pl": "Wioska na Mierzei Kurońskiej, między morzem a zalewem",
+		"en": "A village on the Curonian Spit, between the sea and the lagoon",
+		"cs": "Vesnice na Kuršské kose, mezi mořem a zálivem",
+		"is": "Þorp á Kúrlandseiðinu, milli hafs og lóns",
+		"de": "Ein Dorf auf der Kurischen Nehrung, zwischen Meer und Haff"
+	},
+	"Trakai": {
+		"pl": "Dawna stolica Litwy na wyspie wśród jezior; mieszkają tu Karaimi",
+		"en": "An old capital of Lithuania among lakes; home of the Karaim people",
+		"cs": "Bývalé hlavní město Litvy mezi jezery; žijí tu Karaimové",
+		"is": "Forn höfuðborg Litháens meðal vatna; hér búa Karaítar",
+		"de": "Eine alte Hauptstadt Litauens zwischen Seen; hier leben die Karäer"
+	},
+	"Elektrėnai": {
+		"pl": "Miasto zbudowane dla elektrowni, nad sztucznym jeziorem",
+		"en": "A town built for a power station, by a man-made lake",
+		"cs": "Město postavené pro elektrárnu, u umělého jezera",
+		"is": "Bær byggður fyrir orkuver, við manngert vatn",
+		"de": "Eine Stadt, für ein Kraftwerk gebaut, an einem künstlichen See"
+	},
+	"Rumšiškės": {
+		"pl": "Skansen: dawne litewskie wsie, wiatraki i chaty",
+		"en": "An open-air museum of old Lithuanian villages, windmills and cottages",
+		"cs": "Skanzen starých litevských vesnic, mlýnů a chalup",
+		"is": "Útisafn gamalla litháískra þorpa, myllna og kofa",
+		"de": "Ein Freilichtmuseum alter litauischer Dörfer, Mühlen und Hütten"
+	},
+	"Ukmergė": {
+		"pl": "Jedno z najstarszych miast Litwy",
+		"en": "One of the oldest towns in Lithuania",
+		"cs": "Jedno z nejstarších měst Litvy",
+		"is": "Einn elsti bær Litháens",
+		"de": "Eine der ältesten Städte Litauens"
+	},
+	"Kėdainiai": {
+		"pl": "Stolica ogórków: co roku jest tu święto ogórka",
+		"en": "The cucumber capital, with a cucumber festival every year",
+		"cs": "Hlavní město okurek, každý rok se tu slaví svátek okurek",
+		"is": "Gúrkuhöfuðborgin, með gúrkuhátíð á hverju ári",
+		"de": "Die Gurkenhauptstadt, mit einem Gurkenfest jedes Jahr"
+	},
+	"Šeduva": {
+		"pl": "Miasteczko z wiatrakiem i rezerwatem wilków",
+		"en": "A small town with a windmill and a wolf park",
+		"cs": "Městečko s větrným mlýnem a vlčím parkem",
+		"is": "Lítill bær með vindmyllu og úlfagarði",
+		"de": "Ein Städtchen mit Windmühle und Wolfspark"
+	},
+	"Plungė": {
+		"pl": "Pałac Ogińskich, tu uczył się malarz i kompozytor Čiurlionis",
+		"en": "The Oginski palace, where the painter and composer Čiurlionis studied music",
+		"cs": "Palác Ogińských, kde studoval malíř a skladatel Čiurlionis",
+		"is": "Höll Oginski-ættarinnar, þar sem Čiurlionis lærði tónlist",
+		"de": "Das Oginski-Palais, wo der Maler und Komponist Čiurlionis Musik lernte"
+	},
+	"Kretinga": {
+		"pl": "Tu jest zimowy ogród z palmami w pałacu hrabiów",
+		"en": "A palace with a winter garden full of palms",
+		"cs": "Zámek se zimní zahradou plnou palem",
+		"is": "Höll með vetrargarði fullum af pálmum",
+		"de": "Ein Schloss mit einem Wintergarten voller Palmen"
+	},
+	"Kelmė": {
+		"pl": "Kraina bocianów: na Litwie gniazdo bociana jest prawie na każdej wsi",
+		"en": "Stork country: almost every Lithuanian village has a stork's nest",
+		"cs": "Kraj čápů: skoro v každé litevské vesnici je čapí hnízdo",
+		"is": "Storkaland: nær hvert þorp í Litháen á storkahreiður",
+		"de": "Storchenland: fast jedes litauische Dorf hat ein Storchennest"
+	},
+	"Juodkrantė": {
+		"pl": "Wzgórze Czarownic: las pełen drewnianych rzeźb diabłów i wiedźm",
+		"en": "The Hill of Witches: a forest full of carved devils and witches",
+		"cs": "Kopec čarodějnic: les plný dřevěných čertů a čarodějnic",
+		"is": "Nornahæð: skógur fullur af útskornum djöflum og nornum",
+		"de": "Der Hexenberg: ein Wald voller geschnitzter Teufel und Hexen"
+	},
+	"Purnuškės": {
+		"pl": "Tu jest geograficzny środek Europy",
+		"en": "The geographical centre of Europe is here",
+		"cs": "Tady je zeměpisný střed Evropy",
+		"is": "Hér er landfræðileg miðja Evrópu",
+		"de": "Hier liegt der geografische Mittelpunkt Europas"
+	},
+	"Molėtai": {
+		"pl": "Kraina jezior, a na wzgórzu obserwatorium do oglądania gwiazd",
+		"en": "Lake country, with an observatory on a hill for watching the stars",
+		"cs": "Kraj jezer s hvězdárnou na kopci",
+		"is": "Vatnaland með stjörnuathugunarstöð á hæð",
+		"de": "Seenland, mit einer Sternwarte auf einem Hügel"
+	},
+	"Anykščiai": {
+		"pl": "Wąskotorowa kolejka i spacer w koronach drzew",
+		"en": "A narrow-gauge railway and a treetop walk",
+		"cs": "Úzkorozchodná dráha a stezka v korunách stromů",
+		"is": "Mjóspora járnbraut og gönguleið í trjátoppunum",
+		"de": "Eine Schmalspurbahn und ein Baumwipfelpfad"
+	},
+	"Birštonas": {
+		"pl": "Uzdrowisko w wielkiej pętli Niemna",
+		"en": "A spa town in a great loop of the river Nemunas",
+		"cs": "Lázně ve velkém meandru Němenu",
+		"is": "Heilsubær í stórri lykkju árinnar Nemunas",
+		"de": "Ein Kurort in einer großen Schleife der Memel"
+	},
+	"Varėna": {
+		"pl": "Stolica grzybów: co roku jest tu święto grzybiarzy",
+		"en": "The mushroom capital, with a mushroom festival every year",
+		"cs": "Hlavní město hub, každý rok se tu slaví houbařský svátek",
+		"is": "Sveppahöfuðborgin, með sveppahátíð á hverju ári",
+		"de": "Die Pilzhauptstadt, mit einem Pilzfest jedes Jahr"
+	},
+	"Merkinė": {
+		"pl": "Tu Niemen spotyka rzekę Merkys, a na wzgórzu stał gród",
+		"en": "Where the Nemunas meets the Merkys, below an old hill fort",
+		"cs": "Tady se Němen setkává s řekou Merkys pod starým hradištěm",
+		"is": "Þar sem Nemunas mætir Merkys, undir fornu virki",
+		"de": "Hier trifft die Memel auf die Merkys, unter einem alten Burgberg"
+	},
+	"Prienai": {
+		"pl": "Miasteczko nad Niemnem, tu buduje się szybowce",
+		"en": "A town on the Nemunas where gliders are built",
+		"cs": "Městečko na Němenu, kde se stavějí kluzáky",
+		"is": "Bær við Nemunas þar sem svifflugur eru smíðaðar",
+		"de": "Eine Stadt an der Memel, in der Segelflugzeuge gebaut werden"
+	},
+	"Kryžkalnis": {
+		"pl": "Skrzyżowanie dwóch głównych dróg Litwy",
+		"en": "The crossing of Lithuania's two main roads",
+		"cs": "Křižovatka dvou hlavních silnic Litvy",
+		"is": "Gatnamót tveggja aðalvega Litháens",
+		"de": "Die Kreuzung der zwei wichtigsten Straßen Litauens"
+	},
+	"Raseiniai": {
+		"pl": "Stolica Żmudzi z pomnikiem Żmudzina na koniu",
+		"en": "A town in Samogitia with a monument to a Samogitian rider",
+		"cs": "Město na Žemaitsku s pomníkem žemaitského jezdce",
+		"is": "Bær í Samógitíu með styttu af reiðmanni",
+		"de": "Eine Stadt in Niederlitauen mit einem Reiterdenkmal"
+	},
+	"Gargždai": {
+		"pl": "Ostatnie miasto przed morzem",
+		"en": "The last town before the sea",
+		"cs": "Poslední město před mořem",
+		"is": "Síðasti bærinn fyrir sjóinn",
+		"de": "Die letzte Stadt vor dem Meer"
+	}
+}

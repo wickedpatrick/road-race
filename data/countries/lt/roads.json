@@ -1,0 +1,141 @@
+[
+	{
+		"a": "vilnius",
+		"b": "kaunas",
+		"km": 102,
+		"road": "A1",
+		"towns": [["Grigiškės", 12], ["Vievis", 38], ["Elektrėnai", 48], ["Rumšiškės", 82]],
+		"zones": [[30, "forest", "Neris"], [70, "lakes", "Elektrėnų marios"], [102, "fields", "Kauno marios"]]
+	},
+	{
+		"a": "kaunas",
+		"b": "klaipeda",
+		"km": 212,
+		"road": "A1",
+		"towns": [["Raseiniai", 88], ["Kryžkalnis", 118], ["Gargždai", 196]],
+		"zones": [
+			[60, "fields", "Vidurio Lietuva"], [150, "upland", "Žemaitija"], [190, "forest", "Žemaitija"],
+			[212, "coast", "Pajūris"]
+		]
+	},
+	{
+		"a": "vilnius",
+		"b": "panevezys",
+		"km": 135,
+		"road": "A2",
+		"towns": [["Širvintos", 45], ["Ukmergė", 72]],
+		"zones": [[50, "forest", "Neris"], [135, "fields", "Aukštaitija"]]
+	},
+	{
+		"a": "kaunas",
+		"b": "panevezys",
+		"km": 110,
+		"road": "A8",
+		"towns": [["Babtai", 22], ["Kėdainiai", 50], ["Krekenava", 80]],
+		"zones": [[110, "fields", "Vidurio Lietuva"]]
+	},
+	{
+		"a": "panevezys",
+		"b": "siauliai",
+		"km": 78,
+		"road": "A9",
+		"towns": [["Šeduva", 45], ["Radviliškis", 58]],
+		"zones": [[78, "fields", "Vidurio Lietuva"]]
+	},
+	{
+		"a": "siauliai",
+		"b": "palanga",
+		"km": 147,
+		"road": "A11",
+		"towns": [["Kuršėnai", 25], ["Plungė", 105], ["Kretinga", 132]],
+		"zones": [[60, "fields", "Šiaulių kraštas"], [125, "upland", "Žemaitija"], [147, "coast", "Pajūris"]]
+	},
+	{
+		"a": "siauliai",
+		"b": "taurage",
+		"km": 125,
+		"road": "A12",
+		"towns": [["Kelmė", 45], ["Kryžkalnis", 85], ["Skaudvilė", 105]],
+		"zones": [[40, "fields", "Šiaulių kraštas"], [100, "upland", "Žemaitija"], [125, "forest", "Žemaitija"]]
+	},
+	{
+		"a": "siauliai",
+		"b": "mazeikiai",
+		"km": 85,
+		"road": "155",
+		"towns": [["Kuršėnai", 23], ["Venta", 55]],
+		"zones": [[85, "fields", "Žemaitija"]]
+	},
+	{
+		"a": "klaipeda",
+		"b": "palanga",
+		"km": 25,
+		"road": "A13",
+		"towns": [["Giruliai", 8]],
+		"zones": [[25, "coast", "Pajūris"]]
+	},
+	{
+		"a": "klaipeda",
+		"b": "nida",
+		"km": 50,
+		"road": "167",
+		"towns": [["Juodkrantė", 20], ["Pervalka", 37], ["Preila", 41]],
+		"zones": [[50, "coast", "Kuršių nerija"]]
+	},
+	{
+		"a": "vilnius",
+		"b": "utena",
+		"km": 95,
+		"road": "A14",
+		"towns": [["Purnuškės", 26], ["Molėtai", 60]],
+		"zones": [[40, "forest", "Neris"], [95, "lakes", "Aukštaitija"]]
+	},
+	{
+		"a": "utena",
+		"b": "panevezys",
+		"km": 70,
+		"road": "121",
+		"towns": [["Anykščiai", 33], ["Troškūnai", 48]],
+		"zones": [[40, "lakes", "Aukštaitija"], [70, "fields", "Aukštaitija"]]
+	},
+	{
+		"a": "kaunas",
+		"b": "marijampole",
+		"km": 57,
+		"road": "A5",
+		"towns": [["Garliava", 10], ["Kazlų Rūda", 32]],
+		"zones": [[25, "fields", "Suvalkija"], [40, "forest", "Kazlų Rūdos miškai"], [57, "fields", "Suvalkija"]]
+	},
+	{
+		"a": "vilnius",
+		"b": "marijampole",
+		"km": 140,
+		"road": "A16",
+		"towns": [["Trakai", 27], ["Prienai", 92]],
+		"zones": [[40, "lakes", "Trakai"], [80, "forest", "Dzūkija"], [140, "fields", "Suvalkija"]]
+	},
+	{
+		"a": "kaunas",
+		"b": "alytus",
+		"km": 65,
+		"road": "130",
+		"towns": [["Birštonas", 38]],
+		"zones": [[45, "forest", "Nemuno kilpos"], [65, "forest", "Dzūkija"]]
+	},
+	{
+		"a": "alytus",
+		"b": "druskininkai",
+		"km": 55,
+		"road": "129",
+		"towns": [["Merkinė", 38]],
+		"zones": [[55, "forest", "Dzūkija"]]
+	},
+	{
+		"a": "vilnius",
+		"b": "druskininkai",
+		"km": 130,
+		"road": [[85, "A4"], [130, "128"]],
+		"towns": [["Valkininkai", 60], ["Varėna", 85]],
+		"zones": [[30, "forest", "Vilniaus kraštas"], [130, "forest", "Dzūkija"]]
+	}
+]
