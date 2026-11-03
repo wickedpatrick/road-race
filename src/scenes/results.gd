@@ -69,6 +69,9 @@ func _draw() -> void:
 		for id in unlocked: names.append(CarStats.by_id(id).name)
 		_banner(banner_y, ys.banner_h, Lang.t("new_car") % ", ".join(names), Color(0.1, 0.5, 0.2, 0.85))
 		banner_y += ys.banner_h + 4.0
+	if pc.get("faster_car", false):
+		_banner(banner_y, ys.banner_h, Lang.t("stamp_faster_car") % CarStats.by_id(Postcards.first_top_stamp_car()).name, Color(0.55, 0.15, 0.15, 0.85))
+		banner_y += ys.banner_h + 4.0
 	var cities: Array = r.get("new_cities", [])
 	if not cities.is_empty():
 		var names := []

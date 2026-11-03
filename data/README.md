@@ -35,6 +35,7 @@ Numbers: distances along a road in real kilometres from city `a`; populations in
   sharp changes of direction (full lock, alternating) needed, rolled once per chase.
 - `postcards`: every map city's postcard (its landmarks from `landmarks.json`). `stamps`: shares of the time limit
   left at the finish for the 2nd, 3rd, 4th and 5th stamp (arriving at all gives the 1st); the best result is kept.
+  `top_stamp_car`: the 5th stamp only with this car (its place in `cars`, from 1) or a later one.
 
 ## `countries/index.json`
 

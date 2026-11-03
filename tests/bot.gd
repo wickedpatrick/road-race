@@ -4,6 +4,7 @@ extends RefCounted
 var cruise := 0.9
 var refuel_below := 0.55
 var obey_limits := true
+var limit_factor := 1.0 ## keeps to the limits times this (1.2: 20% over them)
 var _stopping := false
 var _overtaking := false
 const SHOULDER_X := 1.12 ## right shoulder, where the stations stand
@@ -78,7 +79,7 @@ func decide(r: Race) -> Dictionary:
 	if obey_limits:
 		# slow down in time for a lower limit ahead (towns), stay just under the limit
 		var look: float = 40.0 + r.speed * r.speed / (2.0 * r.stats.brake * 0.5)
-		var lim: float = minf(_limit(r.stage, r.z), _limit(r.stage, r.z + look)) / 3.6 - 1.0
+		var lim: float = minf(_limit(r.stage, r.z), _limit(r.stage, r.z + look)) * limit_factor / 3.6 - 1.0
 		if r.speed > lim:
 			accel = false
 			brake = brake or r.speed > lim + 1.5

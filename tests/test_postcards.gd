@@ -14,8 +14,11 @@ func run(t) -> void:
 	t.check(Postcards.landmarks("pl", "krakow").map(func(lm): return lm.kind) == ["wawel", "dragon"], "Kraków: Wawel and the dragon")
 	t.check(Postcards.landmarks("pl", "poznan").size() == 1, "Poznań: one landmark")
 	# stamps: 1 for arriving, up to 5 with lots of time left
-	var cases := [[10.0, 2], [0.0, 1], [4.9, 1], [15.0, 3], [25.0, 4], [35.0, 5], [90.0, 5]]
+	var cases := [[0.0, 1], [9.9, 1], [10.0, 2], [25.0, 3], [40.0, 4], [50.0, 5], [90.0, 5]]
 	t.check(cases.all(func(c): return Postcards.stamps_for(c[0], 100.0) == c[1]), "stamps by the time left: 1 to 5")
+	var ids := CarStats.ids()
+	t.check(Postcards.stamps_for(60.0, 100.0, ids[3]) == 4 and Postcards.stamps_for(60.0, 100.0, ids[4]) == 5 and Postcards.stamps_for(60.0, 100.0, ids[-1]) == 5, "the fifth stamp only with the fifth car or a better one")
+	t.check(Postcards.stamps_for(45.0, 100.0, ids[0]) == 4 and Postcards.first_top_stamp_car() == ids[4], "a slower car still gets four")
 	var cards := {}
 	t.check(Postcards.grant(cards, ["krakow"], 2026) == ["krakow"] and cards.krakow == {"stamps": 1, "year": 2026}, "a visit gives the postcard with one stamp")
 	t.check(Postcards.grant(cards, ["krakow"], 2027).is_empty(), "visiting again gives nothing new")

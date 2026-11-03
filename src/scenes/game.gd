@@ -180,8 +180,10 @@ func _finish() -> void:
 	Session.collect_towns(Route.towns_reached(race.stage, race.z))
 	Session.last_result.new_cities = Session.visit(reached)
 	if race.state == "won":
-		Session.stamp(dest, Postcards.stamps_for(race.time_left, race.stage.duration))
-		Session.last_result.postcard = {"city": dest, "before": before, "after": int(Session.postcards[dest].stamps)}
+		var n := Postcards.stamps_for(race.time_left, race.stage.duration, Session.car_id)
+		Session.stamp(dest, n)
+		Session.last_result.postcard = {"city": dest, "before": before, "after": int(Session.postcards[dest].stamps),
+			"faster_car": n < Postcards.stamps_for(race.time_left, race.stage.duration)} # fast enough, the car was not
 	get_tree().change_scene_to_file("res://src/scenes/results.tscn")
 
 func _unhandled_input(event: InputEvent) -> void:
