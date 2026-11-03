@@ -1,0 +1,166 @@
+{
+	"berlin": {
+		"name": "Berlin",
+		"lat": 52.52,
+		"lon": 13.4,
+		"pop": 3755,
+		"region": "Berlin",
+		"exonym": {"cs": "Berlín", "is": "Berlín"}
+	},
+	"hamburg": {
+		"name": "Hamburg",
+		"lat": 53.55,
+		"lon": 9.99,
+		"pop": 1892,
+		"region": "Hamburg",
+		"exonym": {"cs": "Hamburk", "is": "Hamborg"}
+	},
+	"munchen": {
+		"name": "München",
+		"lat": 48.14,
+		"lon": 11.58,
+		"pop": 1512,
+		"region": "Bayern",
+		"exonym": {"pl": "Monachium", "en": "Munich", "cs": "Mnichov"}
+	},
+	"koln": {
+		"name": "Köln",
+		"lat": 50.94,
+		"lon": 6.96,
+		"pop": 1084,
+		"region": "Nordrhein-Westfalen",
+		"exonym": {"pl": "Kolonia", "en": "Cologne", "cs": "Kolín nad Rýnem"},
+		"map_name": {"cs": "Kolín n. R."}
+	},
+	"frankfurt": {
+		"name": "Frankfurt am Main",
+		"lat": 50.11,
+		"lon": 8.68,
+		"pop": 775,
+		"region": "Hessen",
+		"exonym": {"pl": "Frankfurt nad Menem", "en": "Frankfurt", "cs": "Frankfurt nad Mohanem", "is": "Frankfurt"},
+		"short": "Frankfurt",
+		"map_name": {"pl": "Frankfurt", "cs": "Frankfurt"}
+	},
+	"stuttgart": {"name": "Stuttgart", "lat": 48.78, "lon": 9.18, "pop": 633, "region": "Baden-Württemberg"},
+	"dusseldorf": {"name": "Düsseldorf", "lat": 51.23, "lon": 6.78, "pop": 631, "region": "Nordrhein-Westfalen", "label": "left"},
+	"leipzig": {
+		"name": "Leipzig",
+		"lat": 51.34,
+		"lon": 12.37,
+		"pop": 616,
+		"region": "Sachsen",
+		"exonym": {"pl": "Lipsk", "cs": "Lipsko"}
+	},
+	"dortmund": {"name": "Dortmund", "lat": 51.51, "lon": 7.47, "pop": 595, "region": "Nordrhein-Westfalen"},
+	"essen": {"name": "Essen", "lat": 51.46, "lon": 7.01, "pop": 584, "region": "Nordrhein-Westfalen", "label": "left"},
+	"bremen": {
+		"name": "Bremen",
+		"lat": 53.08,
+		"lon": 8.8,
+		"pop": 569,
+		"region": "Bremen",
+		"exonym": {"pl": "Brema", "cs": "Brémy", "is": "Brimum"}
+	},
+	"dresden": {
+		"name": "Dresden",
+		"lat": 51.05,
+		"lon": 13.74,
+		"pop": 566,
+		"region": "Sachsen",
+		"exonym": {"pl": "Drezno", "cs": "Drážďany"}
+	},
+	"hannover": {
+		"name": "Hannover",
+		"lat": 52.37,
+		"lon": 9.73,
+		"pop": 548,
+		"region": "Niedersachsen",
+		"exonym": {"pl": "Hanower", "en": "Hanover"}
+	},
+	"nurnberg": {
+		"name": "Nürnberg",
+		"lat": 49.45,
+		"lon": 11.08,
+		"pop": 527,
+		"region": "Bayern",
+		"exonym": {"pl": "Norymberga", "en": "Nuremberg", "cs": "Norimberk"}
+	},
+	"bielefeld": {"name": "Bielefeld", "lat": 52.02, "lon": 8.53, "pop": 334, "region": "Nordrhein-Westfalen"},
+	"munster": {"name": "Münster", "lat": 51.96, "lon": 7.63, "pop": 320, "region": "Nordrhein-Westfalen"},
+	"mannheim": {"name": "Mannheim", "lat": 49.49, "lon": 8.47, "pop": 316, "region": "Baden-Württemberg", "label": "left"},
+	"karlsruhe": {"name": "Karlsruhe", "lat": 49.01, "lon": 8.4, "pop": 308, "region": "Baden-Württemberg", "label": "left"},
+	"augsburg": {"name": "Augsburg", "lat": 48.37, "lon": 10.9, "pop": 302, "region": "Bayern", "exonym": {"cs": "Augšpurk"}},
+	"mainz": {
+		"name": "Mainz",
+		"lat": 50,
+		"lon": 8.27,
+		"pop": 220,
+		"region": "Rheinland-Pfalz",
+		"exonym": {"pl": "Moguncja", "cs": "Mohuč"},
+		"label": "left"
+	},
+	"aachen": {
+		"name": "Aachen",
+		"lat": 50.78,
+		"lon": 6.08,
+		"pop": 252,
+		"region": "Nordrhein-Westfalen",
+		"exonym": {"pl": "Akwizgran", "cs": "Cáchy"}
+	},
+	"braunschweig": {
+		"name": "Braunschweig",
+		"lat": 52.27,
+		"lon": 10.52,
+		"pop": 251,
+		"region": "Niedersachsen",
+		"exonym": {"pl": "Brunszwik", "en": "Brunswick", "cs": "Brunšvik"}
+	},
+	"kiel": {
+		"name": "Kiel",
+		"lat": 54.32,
+		"lon": 10.13,
+		"pop": 248,
+		"region": "Schleswig-Holstein",
+		"exonym": {"pl": "Kilonia"}
+	},
+	"chemnitz": {
+		"name": "Chemnitz",
+		"lat": 50.83,
+		"lon": 12.92,
+		"pop": 248,
+		"region": "Sachsen",
+		"exonym": {"cs": "Saská Kamenice"},
+		"map_name": {"cs": "Kamenice"}
+	},
+	"magdeburg": {
+		"name": "Magdeburg",
+		"lat": 52.13,
+		"lon": 11.63,
+		"pop": 240,
+		"region": "Sachsen-Anhalt",
+		"exonym": {"cs": "Magdeburk"}
+	},
+	"freiburg": {
+		"name": "Freiburg im Breisgau",
+		"lat": 47.99,
+		"lon": 7.85,
+		"pop": 237,
+		"region": "Baden-Württemberg",
+		"exonym": {"pl": "Fryburg Bryzgowijski", "cs": "Freiburg im Breisgau"},
+		"short": "Freiburg",
+		"map_name": {"pl": "Fryburg", "cs": "Freiburg"}
+	},
+	"lubeck": {
+		"name": "Lübeck",
+		"lat": 53.87,
+		"lon": 10.69,
+		"pop": 217,
+		"region": "Schleswig-Holstein",
+		"exonym": {"pl": "Lubeka"}
+	},
+	"erfurt": {"name": "Erfurt", "lat": 50.98, "lon": 11.03, "pop": 215, "region": "Thüringen"},
+	"rostock": {"name": "Rostock", "lat": 54.09, "lon": 12.14, "pop": 209, "region": "Mecklenburg-Vorpommern"},
+	"kassel": {"name": "Kassel", "lat": 51.32, "lon": 9.5, "pop": 201, "region": "Hessen"},
+	"fussen": {"name": "Füssen", "lat": 47.57, "lon": 10.7, "pop": 15, "region": "Bayern"}
+}

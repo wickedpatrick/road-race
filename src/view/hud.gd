@@ -196,6 +196,9 @@ func _limit_sign() -> void:
 	var c := _limit_pos
 	var warn := race.speeding > 0.0 and int(race.elapsed * 6.0) % 2 == 0
 	draw_circle(c, 31, Color(0, 0, 0, 0.35))
+	if race.speed_limit() == Route.NO_LIMIT:
+		Scenery.no_limit_disc(self, c, 29.0)
+		return
 	draw_circle(c, 29, Color("ffd24a") if warn else Scenery.SIGN_RED)
 	draw_circle(c, 22, Color.WHITE)
 	draw_string(font, c + Vector2(-22, 8), str(Units.speed(race.speed_limit())), HORIZONTAL_ALIGNMENT_CENTER, 44, 21, Color.BLACK)
@@ -207,7 +210,8 @@ func _board_echo() -> void:
 			var lines: Array = bd.lines
 			var r := Rect2(784, _board_y, 160, 34 + 22 * lines.size())
 			draw_rect(r, Scenery.sign_color("board_motorway" if bd.blue else "board"))
-			draw_rect(r.grow(-3), Color.WHITE, false, 2.0)
+			var ink := Color.WHITE if bd.blue else Scenery.sign_color("board_text")
+			draw_rect(r.grow(-3), ink, false, 2.0)
 			if bd.road != "":
 				_shield(Vector2(r.position.x + 58, r.position.y + 7), bd.road)
 			for i in lines.size():
@@ -215,8 +219,8 @@ func _board_echo() -> void:
 				var fs := 15
 				while fs > 10 and font.get_string_size(lines[i][0], HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x > 108:
 					fs -= 1
-				draw_string(font, Vector2(r.position.x + 10, y), lines[i][0], HORIZONTAL_ALIGNMENT_LEFT, 112, fs, Color.WHITE)
-				draw_string(font, Vector2(r.position.x + 10, y), str(lines[i][1]), HORIZONTAL_ALIGNMENT_RIGHT, 140, 15, Color.WHITE)
+				draw_string(font, Vector2(r.position.x + 10, y), lines[i][0], HORIZONTAL_ALIGNMENT_LEFT, 112, fs, ink)
+				draw_string(font, Vector2(r.position.x + 10, y), str(lines[i][1]), HORIZONTAL_ALIGNMENT_RIGHT, 140, 15, ink)
 			return
 
 ## Top card: the town being driven through (with a fact when there is one), or the region just entered.

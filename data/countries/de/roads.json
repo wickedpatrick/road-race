@@ -1,0 +1,577 @@
+[
+	{
+		"a": "kiel",
+		"b": "lubeck",
+		"km": 80,
+		"road": "B76",
+		"towns": [["Preetz", 15], ["Plön", 28], ["Eutin", 45], ["Bad Schwartau", 72]],
+		"zones": [[10, "coast", "Kieler Förde"], [60, "lakes", "Holsteinische Schweiz"], [80, "fields", "Ostholstein"]]
+	},
+	{
+		"a": "kiel",
+		"b": "hamburg",
+		"km": 96,
+		"road": [[12, "A215"], [96, "A7"]],
+		"towns": [["Neumünster", 35], ["Bad Bramstedt", 52], ["Kaltenkirchen", 62], ["Norderstedt", 80]],
+		"zones": [[30, "fields", "Holstein"], [75, "forest", "Segeberger Forst"], [96, "industrial", "Hamburg"]]
+	},
+	{
+		"a": "lubeck",
+		"b": "hamburg",
+		"km": 66,
+		"road": "A1",
+		"towns": [["Reinfeld", 18], ["Bargteheide", 35], ["Ahrensburg", 45]],
+		"zones": [[45, "fields", "Stormarn"], [66, "industrial", "Hamburg"]]
+	},
+	{
+		"a": "lubeck",
+		"b": "rostock",
+		"km": 120,
+		"road": "A20",
+		"towns": [["Schönberg", 20], ["Grevesmühlen", 40], ["Wismar", 62], ["Kröpelin", 95]],
+		"zones": [[30, "fields", "Klützer Winkel"], [90, "coast", "Mecklenburger Bucht"], [120, "fields", "Mecklenburg"]]
+	},
+	{
+		"a": "rostock",
+		"b": "berlin",
+		"km": 230,
+		"road": [[30, "B103"], [120, "A19"], [230, "A24"]],
+		"towns": [
+			["Güstrow", 40], ["Krakow am See", 60], ["Malchow", 85], ["Wittstock", 125], ["Neuruppin", 165],
+			["Oranienburg", 205]
+		],
+		"zones": [
+			[30, "fields", "Mecklenburg"],
+			[110, "lakes", "Mecklenburgische Seenplatte"],
+			[180, "forest", "Ruppiner Land"],
+			[210, "fields", "Havelland"],
+			[230, "industrial", "Berlin"]
+		]
+	},
+	{
+		"a": "hamburg",
+		"b": "bremen",
+		"km": 120,
+		"road": "A1",
+		"towns": [["Hamburg-Harburg", 15], ["Buchholz in der Nordheide", 35], ["Sittensen", 58], ["Oyten", 105]],
+		"zones": [
+			[18, "industrial", "Hamburg"], [70, "forest", "Lüneburger Heide"], [105, "fields", "Niedersachsen"],
+			[120, "industrial", "Bremen"]
+		]
+	},
+	{
+		"a": "hamburg",
+		"b": "hannover",
+		"km": 150,
+		"road": "A7",
+		"towns": [["Egestorf", 45], ["Bispingen", 65], ["Soltau", 80], ["Bad Fallingbostel", 95], ["Langenhagen", 140]],
+		"zones": [[18, "industrial", "Hamburg"], [110, "forest", "Lüneburger Heide"], [150, "fields", "Hannover Region"]],
+		"tunnels": [
+			{
+				"from_km": 4,
+				"to_km": 7.3,
+				"name": {
+					"pl": "Nowy Tunel pod Łabą",
+					"en": "New Elbe Tunnel",
+					"cs": "Nový tunel pod Labem",
+					"is": "Nýju Saxelfargöngin",
+					"de": "Neuer Elbtunnel"
+				},
+				"fact": {
+					"pl": "Autostrada A7 przejeżdża pod Łabą i portem w Hamburgu (3,3 km), czterema rurami",
+					"en": "The A7 passes under the Elbe and Hamburg's port (3.3 km), in four tubes",
+					"cs": "Dálnice A7 vede pod Labem a hamburským přístavem (3,3 km), čtyřmi troubami",
+					"is": "A7-hraðbrautin liggur undir Saxelfi og höfninni í Hamborg (3,3 km), í fjórum göngum",
+					"de": "Die A7 führt in vier Röhren unter der Elbe und dem Hamburger Hafen hindurch (3,3 km)"
+				},
+				"city": true
+			}
+		]
+	},
+	{
+		"a": "hamburg",
+		"b": "berlin",
+		"km": 290,
+		"road": "A24",
+		"towns": [
+			["Reinbek", 20], ["Zarrentin", 60], ["Hagenow", 95], ["Ludwigslust", 125], ["Meyenburg", 165],
+			["Pritzwalk", 180], ["Neuruppin", 235], ["Kremmen", 255]
+		],
+		"zones": [
+			[20, "industrial", "Hamburg"], [70, "lakes", "Schaalsee"], [150, "forest", "Griese Gegend"],
+			[220, "fields", "Prignitz"], [265, "fields", "Ruppiner Land"], [290, "industrial", "Berlin"]
+		]
+	},
+	{
+		"a": "bremen",
+		"b": "hannover",
+		"km": 125,
+		"road": [[70, "A27"], [125, "A7"]],
+		"towns": [["Achim", 20], ["Verden", 40], ["Walsrode", 70], ["Mellendorf", 108]],
+		"zones": [
+			[15, "industrial", "Bremen"], [60, "fields", "Aller-Weser"], [100, "forest", "Lüneburger Heide"],
+			[125, "fields", "Hannover Region"]
+		]
+	},
+	{
+		"a": "bremen",
+		"b": "munster",
+		"km": 175,
+		"road": "A1",
+		"towns": [["Delmenhorst", 18], ["Wildeshausen", 35], ["Vechta", 70], ["Osnabrück", 120], ["Lengerich", 140]],
+		"zones": [
+			[15, "industrial", "Bremen"],
+			[90, "fields", "Oldenburger Münsterland"],
+			[130, "forest", "Teutoburger Wald"],
+			[175, "fields", "Münsterland"]
+		]
+	},
+	{
+		"a": "hannover",
+		"b": "bielefeld",
+		"km": 110,
+		"road": "A2",
+		"towns": [["Garbsen", 15], ["Bad Nenndorf", 30], ["Porta Westfalica", 70], ["Bad Oeynhausen", 80], ["Herford", 95]],
+		"zones": [
+			[15, "industrial", "Hannover"], [55, "fields", "Schaumburger Land"], [85, "upland", "Weserbergland"],
+			[110, "forest", "Teutoburger Wald"]
+		]
+	},
+	{
+		"a": "bielefeld",
+		"b": "munster",
+		"km": 85,
+		"road": [[20, "A2"], [85, "B64"]],
+		"towns": [["Gütersloh", 18], ["Warendorf", 55], ["Telgte", 70]],
+		"zones": [[15, "forest", "Teutoburger Wald"], [85, "fields", "Münsterland"]]
+	},
+	{
+		"a": "bielefeld",
+		"b": "dortmund",
+		"km": 115,
+		"road": "A2",
+		"towns": [["Gütersloh", 18], ["Rheda-Wiedenbrück", 30], ["Oelde", 45], ["Beckum", 55], ["Hamm", 75], ["Kamen", 92]],
+		"zones": [[10, "forest", "Teutoburger Wald"], [70, "fields", "Münsterland"], [115, "industrial", "Ruhrgebiet"]]
+	},
+	{
+		"a": "munster",
+		"b": "dortmund",
+		"km": 70,
+		"road": "A1",
+		"towns": [["Ascheberg", 25], ["Werne", 37], ["Kamen", 52]],
+		"zones": [[45, "fields", "Münsterland"], [70, "industrial", "Ruhrgebiet"]]
+	},
+	{
+		"a": "munster",
+		"b": "essen",
+		"km": 85,
+		"road": "A43",
+		"towns": [["Dülmen", 25], ["Haltern am See", 40], ["Recklinghausen", 55], ["Herne", 65], ["Bochum", 75]],
+		"zones": [[35, "fields", "Münsterland"], [50, "forest", "Hohe Mark"], [85, "industrial", "Ruhrgebiet"]]
+	},
+	{
+		"a": "dortmund",
+		"b": "essen",
+		"km": 37,
+		"road": "A40",
+		"towns": [["Bochum", 18]],
+		"zones": [[37, "industrial", "Ruhrgebiet"]]
+	},
+	{
+		"a": "essen",
+		"b": "dusseldorf",
+		"km": 35,
+		"road": "A52",
+		"towns": [["Essen-Kettwig", 12], ["Ratingen", 22]],
+		"zones": [[10, "industrial", "Ruhrgebiet"], [25, "forest", "Bergisches Land"], [35, "industrial", "Rheinland"]]
+	},
+	{
+		"a": "dusseldorf",
+		"b": "koln",
+		"km": 40,
+		"road": "A3",
+		"towns": [["Hilden", 15], ["Langenfeld", 22], ["Leverkusen", 30]],
+		"zones": [[40, "industrial", "Rheinland"]]
+	},
+	{
+		"a": "dusseldorf",
+		"b": "aachen",
+		"km": 80,
+		"road": "A44",
+		"towns": [["Neuss", 10], ["Jüchen", 30], ["Erkelenz", 45], ["Alsdorf", 68]],
+		"zones": [[15, "industrial", "Rheinland"], [60, "fields", "Niederrhein"], [80, "upland", "Aachener Land"]]
+	},
+	{
+		"a": "koln",
+		"b": "aachen",
+		"km": 70,
+		"road": "A4",
+		"towns": [["Frechen", 12], ["Kerpen", 22], ["Düren", 40], ["Eschweiler", 55]],
+		"zones": [[15, "industrial", "Köln"], [45, "industrial", "Rheinisches Braunkohlerevier"], [70, "upland", "Eifel"]]
+	},
+	{
+		"a": "koln",
+		"b": "mainz",
+		"km": 175,
+		"road": [[90, "B9"], [175, "A61"]],
+		"towns": [
+			["Bonn", 28], ["Remagen", 50], ["Andernach", 72], ["Koblenz", 90], ["Boppard", 108], ["Sankt Goar", 125],
+			["Bingen am Rhein", 150], ["Ingelheim", 160]
+		],
+		"zones": [
+			[20, "industrial", "Köln"], [60, "orchard", "Siebengebirge"], [100, "upland", "Mittelrhein"],
+			[150, "orchard", "Mittelrhein"], [175, "orchard", "Rheinhessen"]
+		]
+	},
+	{
+		"a": "koln",
+		"b": "frankfurt",
+		"km": 190,
+		"road": "A3",
+		"towns": [["Siegburg", 30], ["Montabaur", 90], ["Limburg an der Lahn", 110], ["Idstein", 145], ["Niedernhausen", 155]],
+		"zones": [
+			[20, "industrial", "Köln"], [100, "forest", "Westerwald"], [165, "upland", "Taunus"],
+			[190, "industrial", "Frankfurt"]
+		]
+	},
+	{
+		"a": "mainz",
+		"b": "frankfurt",
+		"km": 40,
+		"road": "A66",
+		"towns": [["Wiesbaden", 10], ["Hofheim am Taunus", 25]],
+		"zones": [[30, "upland", "Taunus"], [40, "industrial", "Frankfurt"]]
+	},
+	{
+		"a": "mainz",
+		"b": "mannheim",
+		"km": 75,
+		"road": "A61",
+		"towns": [["Alzey", 35], ["Worms", 50], ["Ludwigshafen am Rhein", 72]],
+		"zones": [[50, "orchard", "Rheinhessen"], [75, "fields", "Rheinebene"]]
+	},
+	{
+		"a": "frankfurt",
+		"b": "mannheim",
+		"km": 80,
+		"road": [[30, "A5"], [80, "A67"]],
+		"towns": [["Darmstadt", 30], ["Bensheim", 50], ["Viernheim", 72]],
+		"zones": [[20, "industrial", "Frankfurt"], [60, "orchard", "Bergstraße"], [80, "fields", "Rheinebene"]]
+	},
+	{
+		"a": "frankfurt",
+		"b": "kassel",
+		"km": 190,
+		"road": [[110, "A5"], [190, "A7"]],
+		"towns": [
+			["Friedberg", 30], ["Bad Nauheim", 36], ["Gießen", 65], ["Alsfeld", 110], ["Bad Hersfeld", 135],
+			["Melsungen", 165]
+		],
+		"zones": [
+			[20, "industrial", "Frankfurt"], [60, "fields", "Wetterau"], [120, "upland", "Vogelsberg"],
+			[170, "forest", "Knüll"], [190, "upland", "Nordhessen"]
+		]
+	},
+	{
+		"a": "frankfurt",
+		"b": "nurnberg",
+		"km": 225,
+		"road": "A3",
+		"towns": [["Hanau", 25], ["Aschaffenburg", 45], ["Würzburg", 120], ["Kitzingen", 135], ["Erlangen", 200]],
+		"zones": [
+			[20, "industrial", "Frankfurt"], [90, "forest", "Spessart"], [150, "orchard", "Mainfranken"],
+			[200, "fields", "Franken"], [225, "industrial", "Nürnberg"]
+		]
+	},
+	{
+		"a": "kassel",
+		"b": "erfurt",
+		"km": 145,
+		"road": [[50, "A7"], [145, "A4"]],
+		"towns": [["Hessisch Lichtenau", 25], ["Herleshausen", 80], ["Eisenach", 95], ["Gotha", 120]],
+		"zones": [[60, "upland", "Kaufunger Wald"], [105, "forest", "Thüringer Wald"], [145, "fields", "Thüringer Becken"]]
+	},
+	{
+		"a": "kassel",
+		"b": "hannover",
+		"km": 165,
+		"road": "A7",
+		"towns": [["Hann. Münden", 22], ["Göttingen", 45], ["Northeim", 65], ["Seesen", 95], ["Hildesheim", 135]],
+		"zones": [
+			[30, "forest", "Reinhardswald"], [100, "upland", "Leinebergland"], [135, "upland", "Harzvorland"],
+			[165, "fields", "Hannover Region"]
+		]
+	},
+	{
+		"a": "kassel",
+		"b": "dortmund",
+		"km": 165,
+		"road": "A44",
+		"towns": [
+			["Warburg", 35], ["Marsberg", 50], ["Büren", 85], ["Geseke", 100], ["Soest", 115], ["Werl", 130],
+			["Unna", 145]
+		],
+		"zones": [
+			[60, "upland", "Diemeltal"], [105, "forest", "Sauerland"], [145, "fields", "Hellweg"],
+			[165, "industrial", "Ruhrgebiet"]
+		]
+	},
+	{
+		"a": "erfurt",
+		"b": "leipzig",
+		"km": 135,
+		"road": [[60, "A4"], [135, "A9"]],
+		"towns": [["Weimar", 25], ["Jena", 50], ["Eisenberg", 80], ["Weißenfels", 105]],
+		"zones": [
+			[25, "fields", "Thüringer Becken"], [70, "upland", "Saaletal"], [115, "fields", "Burgenlandkreis"],
+			[135, "industrial", "Leipzig"]
+		]
+	},
+	{
+		"a": "erfurt",
+		"b": "nurnberg",
+		"km": 210,
+		"road": [[105, "A71"], [210, "A73"]],
+		"towns": [["Arnstadt", 20], ["Suhl", 65], ["Coburg", 120], ["Bamberg", 160], ["Erlangen", 190]],
+		"zones": [
+			[30, "fields", "Thüringer Becken"], [80, "mountains", "Thüringer Wald"], [130, "upland", "Coburger Land"],
+			[190, "fields", "Franken"], [210, "industrial", "Nürnberg"]
+		],
+		"tunnels": [
+			{
+				"from_km": 48,
+				"to_km": 55.9,
+				"name": {
+					"pl": "Tunel Rennsteig",
+					"en": "Rennsteig Tunnel",
+					"cs": "Tunel Rennsteig",
+					"is": "Rennsteig-göngin",
+					"de": "Rennsteigtunnel"
+				},
+				"fact": {
+					"pl": "Najdłuższy tunel drogowy w Niemczech (7,9 km), pod grzbietem Lasu Turyngskiego",
+					"en": "Germany's longest road tunnel (7.9 km), under the ridge of the Thuringian Forest",
+					"cs": "Nejdelší silniční tunel v Německu (7,9 km), pod hřebenem Durynského lesa",
+					"is": "Lengstu veggöng Þýskalands (7,9 km), undir hrygg Thüringen-skógar",
+					"de": "Der längste Straßentunnel Deutschlands (7,9 km), unter dem Kamm des Thüringer Waldes"
+				}
+			}
+		]
+	},
+	{
+		"a": "leipzig",
+		"b": "dresden",
+		"km": 115,
+		"road": "A14",
+		"towns": [["Grimma", 30], ["Döbeln", 65], ["Nossen", 85], ["Wilsdruff", 100]],
+		"zones": [[15, "industrial", "Leipzig"], [90, "fields", "Mittelsachsen"], [115, "upland", "Elbtal"]]
+	},
+	{
+		"a": "leipzig",
+		"b": "berlin",
+		"km": 190,
+		"road": "A9",
+		"towns": [["Bitterfeld-Wolfen", 35], ["Dessau-Roßlau", 65], ["Niemegk", 120], ["Beelitz", 150], ["Potsdam", 175]],
+		"zones": [
+			[15, "industrial", "Leipzig"], [60, "fields", "Anhalt"], [130, "forest", "Fläming"],
+			[175, "lakes", "Havelland"], [190, "industrial", "Berlin"]
+		]
+	},
+	{
+		"a": "leipzig",
+		"b": "magdeburg",
+		"km": 120,
+		"road": "A14",
+		"towns": [["Halle (Saale)", 35], ["Könnern", 70], ["Bernburg", 80], ["Schönebeck", 105]],
+		"zones": [[15, "industrial", "Leipzig"], [40, "industrial", "Halle"], [120, "fields", "Magdeburger Börde"]]
+	},
+	{
+		"a": "leipzig",
+		"b": "chemnitz",
+		"km": 80,
+		"road": "A72",
+		"towns": [["Borna", 30], ["Frohburg", 45], ["Penig", 60]],
+		"zones": [[15, "industrial", "Leipzig"], [40, "fields", "Leipziger Land"], [80, "upland", "Erzgebirgsvorland"]]
+	},
+	{
+		"a": "chemnitz",
+		"b": "dresden",
+		"km": 80,
+		"road": "A4",
+		"towns": [["Hainichen", 30], ["Siebenlehn", 45], ["Wilsdruff", 65]],
+		"zones": [[20, "upland", "Erzgebirgsvorland"], [65, "fields", "Mittelsachsen"], [80, "upland", "Elbtal"]]
+	},
+	{
+		"a": "dresden",
+		"b": "berlin",
+		"km": 190,
+		"road": "A13",
+		"towns": [["Radeburg", 25], ["Ruhland", 60], ["Lübbenau", 115], ["Lübben", 125], ["Königs Wusterhausen", 165]],
+		"zones": [
+			[30, "forest", "Moritzburger Teichgebiet"],
+			[100, "forest", "Lausitz"],
+			[135, "lakes", "Spreewald"],
+			[175, "forest", "Dahme-Seenland"],
+			[190, "industrial", "Berlin"]
+		]
+	},
+	{
+		"a": "magdeburg",
+		"b": "berlin",
+		"km": 150,
+		"road": "A2",
+		"towns": [["Burg", 25], ["Genthin", 50], ["Brandenburg an der Havel", 85], ["Werder", 115], ["Potsdam", 125]],
+		"zones": [[60, "fields", "Jerichower Land"], [125, "lakes", "Havelland"], [150, "industrial", "Berlin"]]
+	},
+	{
+		"a": "magdeburg",
+		"b": "braunschweig",
+		"km": 95,
+		"road": [[60, "B188"], [95, "A39"]],
+		"towns": [["Haldensleben", 25], ["Oebisfelde", 55], ["Wolfsburg", 70]],
+		"zones": [
+			[30, "fields", "Magdeburger Börde"], [60, "forest", "Altmark"], [75, "industrial", "Wolfsburg"],
+			[95, "fields", "Braunschweiger Land"]
+		]
+	},
+	{
+		"a": "braunschweig",
+		"b": "hannover",
+		"km": 65,
+		"road": "A2",
+		"towns": [["Peine", 25], ["Lehrte", 45]],
+		"zones": [[50, "fields", "Braunschweiger Land"], [65, "industrial", "Hannover"]]
+	},
+	{
+		"a": "nurnberg",
+		"b": "munchen",
+		"km": 165,
+		"road": "A9",
+		"towns": [["Hilpoltstein", 35], ["Greding", 55], ["Ingolstadt", 95], ["Pfaffenhofen", 120], ["Garching", 150]],
+		"zones": [
+			[15, "industrial", "Nürnberg"], [70, "jura", "Altmühltal"], [100, "fields", "Donaumoos"],
+			[140, "fields", "Hallertau"], [165, "industrial", "München"]
+		]
+	},
+	{
+		"a": "munchen",
+		"b": "augsburg",
+		"km": 70,
+		"road": "A8",
+		"towns": [["Sulzemoos", 35], ["Dasing", 55], ["Friedberg", 62]],
+		"zones": [[15, "industrial", "München"], [70, "fields", "Dachauer Land"]]
+	},
+	{
+		"a": "augsburg",
+		"b": "stuttgart",
+		"km": 160,
+		"road": "A8",
+		"towns": [["Günzburg", 50], ["Ulm", 80], ["Merklingen", 100], ["Kirchheim unter Teck", 125], ["Esslingen", 145]],
+		"zones": [
+			[45, "fields", "Schwaben"], [85, "fields", "Donautal"], [125, "jura", "Schwäbische Alb"],
+			[160, "industrial", "Stuttgart"]
+		]
+	},
+	{
+		"a": "munchen",
+		"b": "fussen",
+		"km": 120,
+		"road": [[60, "A96"], [120, "B17"]],
+		"towns": [["Landsberg am Lech", 55], ["Schongau", 85], ["Steingaden", 100]],
+		"zones": [
+			[15, "industrial", "München"], [60, "fields", "Oberbayern"], [100, "foothills", "Pfaffenwinkel"],
+			[120, "mountains", "Allgäuer Alpen"]
+		]
+	},
+	{
+		"a": "augsburg",
+		"b": "fussen",
+		"km": 110,
+		"road": "B17",
+		"towns": [["Landsberg am Lech", 40], ["Schongau", 70], ["Steingaden", 90]],
+		"zones": [[40, "fields", "Lechfeld"], [90, "foothills", "Pfaffenwinkel"], [110, "mountains", "Allgäuer Alpen"]]
+	},
+	{
+		"a": "stuttgart",
+		"b": "karlsruhe",
+		"km": 80,
+		"road": "A8",
+		"towns": [["Leonberg", 15], ["Pforzheim", 50]],
+		"zones": [[12, "industrial", "Stuttgart"], [60, "forest", "Nordschwarzwald"], [80, "fields", "Rheinebene"]],
+		"tunnels": [
+			{
+				"from_km": 12,
+				"to_km": 14.5,
+				"name": {
+					"pl": "Tunel Engelberg",
+					"en": "Engelberg Tunnel",
+					"cs": "Tunel Engelberg",
+					"is": "Engelberg-göngin",
+					"de": "Engelbergtunnel"
+				},
+				"fact": {
+					"pl": "Tunel pod wzgórzem Engelberg w Leonbergu (2,5 km); największy tunel drogowy w Niemczech pod względem przekroju",
+					"en": "A tunnel under the Engelberg hill at Leonberg (2.5 km); the widest road tunnel in Germany",
+					"cs": "Tunel pod vrchem Engelberg u Leonbergu (2,5 km); nejširší silniční tunel v Německu",
+					"is": "Göng undir Engelberg-hæð við Leonberg (2,5 km); breiðustu veggöng Þýskalands",
+					"de": "Ein Tunnel unter dem Engelberg bei Leonberg (2,5 km); der Straßentunnel mit dem größten Querschnitt in Deutschland"
+				}
+			}
+		]
+	},
+	{
+		"a": "stuttgart",
+		"b": "nurnberg",
+		"km": 205,
+		"road": [[50, "A81"], [205, "A6"]],
+		"towns": [
+			["Ludwigsburg", 15], ["Heilbronn", 50], ["Öhringen", 75], ["Crailsheim", 140], ["Ansbach", 165],
+			["Schwabach", 190]
+		],
+		"zones": [
+			[15, "industrial", "Stuttgart"], [60, "orchard", "Neckartal"], [120, "fields", "Hohenlohe"],
+			[190, "forest", "Frankenhöhe"], [205, "industrial", "Nürnberg"]
+		]
+	},
+	{
+		"a": "stuttgart",
+		"b": "mannheim",
+		"km": 130,
+		"road": [[50, "A81"], [130, "A6"]],
+		"towns": [["Ludwigsburg", 15], ["Heilbronn", 50], ["Sinsheim", 85], ["Walldorf", 105], ["Heidelberg", 115]],
+		"zones": [
+			[15, "industrial", "Stuttgart"], [60, "orchard", "Neckartal"], [100, "upland", "Kraichgau"],
+			[130, "fields", "Rheinebene"]
+		]
+	},
+	{
+		"a": "karlsruhe",
+		"b": "mannheim",
+		"km": 65,
+		"road": "A5",
+		"towns": [["Bruchsal", 25], ["Walldorf", 45], ["Heidelberg", 55]],
+		"zones": [[65, "fields", "Rheinebene"]]
+	},
+	{
+		"a": "karlsruhe",
+		"b": "freiburg",
+		"km": 135,
+		"road": "A5",
+		"towns": [["Rastatt", 25], ["Baden-Baden", 40], ["Bühl", 50], ["Offenburg", 75], ["Lahr", 95], ["Emmendingen", 120]],
+		"zones": [[30, "fields", "Rheinebene"], [100, "orchard", "Ortenau"], [135, "orchard", "Breisgau"]]
+	},
+	{
+		"a": "freiburg",
+		"b": "stuttgart",
+		"km": 195,
+		"road": [[65, "B31"], [195, "A81"]],
+		"towns": [
+			["Kirchzarten", 10], ["Titisee-Neustadt", 30], ["Donaueschingen", 65], ["Rottweil", 90],
+			["Horb am Neckar", 130], ["Böblingen", 175]
+		],
+		"zones": [
+			[30, "mountains", "Hochschwarzwald"], [65, "forest", "Schwarzwald"], [100, "fields", "Baar"],
+			[150, "upland", "Oberer Neckar"], [175, "forest", "Schönbuch"], [195, "industrial", "Stuttgart"]
+		]
+	}
+]

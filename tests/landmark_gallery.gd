@@ -1,11 +1,14 @@
 extends Node2D
-## Dev-only: every landmark painter on one screen. Arg: page (0, 1).
+## Dev-only: every landmark painter on one screen. Arg: page (0, 1...) or kinds separated by commas.
 func _draw() -> void:
 	draw_rect(Rect2(0, 0, 960, 540), Color("9fc6e6"))
 	var kinds: Array = GameData.rules().landmark_sizes.keys()
 	var a := OS.get_cmdline_user_args()
-	var page := int(a[0]) if a.size() > 0 else 0
-	kinds = kinds.slice(page * 24, page * 24 + 24)
+	if a.size() > 0 and a[0].contains(","): # a list of kinds instead of a page
+		kinds = Array(a[0].split(","))
+	else:
+		var page := int(a[0]) if a.size() > 0 else 0
+		kinds = kinds.slice(page * 24, page * 24 + 24)
 	var font := ThemeDB.fallback_font
 	for i in kinds.size():
 		var k: String = kinds[i]

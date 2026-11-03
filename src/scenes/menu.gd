@@ -516,8 +516,10 @@ func _weather_line(kind: String, x: float, y: float, w: float) -> void:
 func _countries() -> int:
 	return GameData.countries().size()
 
+## The tabs share the map's width (five countries: 84 px each).
 func _tab_rect(i: int) -> Rect2:
-	return Rect2(28 + i * 102, 108, 96, 28)
+	var w := minf(102.0, (MAP_RECT.size.x - 8.0) / _countries())
+	return Rect2(28 + i * w, 108, w - 6.0, 28)
 
 ## The map and the country tabs over it, on the clipped layer.
 func _draw_map_layer() -> void:

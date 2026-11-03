@@ -49,12 +49,15 @@ Numbers: distances along a road in real kilometres from city `a`; populations in
   `[from, to]`, neighbouring cities), `express_prefixes` (road numbers starting with these are motorways or
   expressways: dual carriageways with the faster limit, e.g. `["A", "S"]` in Poland, `["D"]` in Czechia).
 - `limits` as posted on the signs (km/h, or mph with imperial `units`; the game converts to km/h): `express`
-  (motorways, expressways), `road`, `city` (through a big city), `town_on_express`, `town`.
+  (motorways, expressways), `road`, `city` (through a big city), `town_on_express`, `town`. Optional
+  `unlimited_beyond_km` (Germany): motorway stretches farther than that (and than `Route.LIMITED_NEAR_CITY` track metres) from both ends of a trip have no limit
+  (an end-of-restrictions sign, no radar, no police; traffic keeps `Route.UNLIMITED_CRUISE`), `express` near them.
 - `station`: texts in the country's language on the fuel station and region boards: `sign` (over the pumps),
   `board` (over the price list), `prices` (`[[fuel, price], ...]`, two or three, as on the pylon, e.g.
   `["95", "6,49"]`), `region_sign` (the small word over a region's name on the brown board, e.g. "KRAINA").
 - `signs`: colours (`"#rrggbb"`) of the place-name signs (`town`, lettering `town_text`) and of the direction
-  boards (`board`, `board_motorway`).
+  boards (`board`, `board_motorway`); optional `board_text` for the lettering on the ordinary boards (white by
+  default, black on Germany's yellow ones).
 - `palette` (optional): the country's own colours by season, over the default ones (`src/view/season_palette.gd`
   keys: `grass_a`, `grass_b`, `tree`, `crop_a`, ...), e.g. Britain's dark green grass; `biomes`: landscape ->
   `{season: [grass_a, grass_b]}`, over the landscape's `grass` in rules.json.

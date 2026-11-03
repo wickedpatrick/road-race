@@ -149,7 +149,7 @@ func speed_limit() -> int:
 	return Route.speed_limit_at(stage, z)
 
 func _express() -> bool:
-	return speed_limit() == 140
+	return Route.lanes_at(stage, z) == 3 and Route.town_at(stage, z).is_empty() # open motorway, not its towns
 
 func speeding_grace() -> float:
 	return GRACE_EXPRESS if _express() else GRACE
@@ -160,6 +160,9 @@ func held_by_police() -> bool:
 
 func _update_speeding(dt: float) -> void:
 	if not police.is_empty():
+		return
+	if speed_limit() == Route.NO_LIMIT: # an Autobahn without a limit: nothing to catch
+		speeding = 0.0
 		return
 	var kmh := speed * 3.6
 	# warn above limit + 10; on motorways only slowing to the posted limit clears the warning

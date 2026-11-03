@@ -1,0 +1,996 @@
+{
+	"Berlin": [
+		{
+			"kind": "brandenburg_gate",
+			"name": {
+				"pl": "Brama Brandenburska",
+				"en": "Brandenburg Gate",
+				"cs": "Braniborská brána",
+				"is": "Brandenborgarhliðið",
+				"de": "Brandenburger Tor"
+			},
+			"desc": {
+				"pl": "Brama miejska z kwadrygą, rydwanem z czterema końmi, na szczycie",
+				"en": "A city gate topped by the Quadriga, a chariot pulled by four horses",
+				"cs": "Městská brána s kvadrigou, vozem se čtyřmi koňmi, na vrcholu",
+				"is": "Borgarhlið með fjóra hesta fyrir vagni efst uppi",
+				"de": "Ein Stadttor mit der Quadriga, einem Wagen mit vier Pferden, obendrauf"
+			},
+			"local": "Brandenburger Tor"
+		},
+		{
+			"kind": "tv_tower",
+			"name": {
+				"pl": "Wieża telewizyjna",
+				"en": "Berlin TV Tower",
+				"cs": "Berlínská televizní věž",
+				"is": "Sjónvarpsturninn í Berlín",
+				"de": "Berliner Fernsehturm"
+			},
+			"desc": {
+				"pl": "Ma 368 metrów, to najwyższa budowla w Niemczech",
+				"en": "At 368 metres, the tallest structure in Germany",
+				"cs": "Měří 368 metrů, je to nejvyšší stavba v Německu",
+				"is": "368 metra hár, hæsta mannvirki Þýskalands",
+				"de": "Mit 368 Metern das höchste Bauwerk Deutschlands"
+			},
+			"local": "Berliner Fernsehturm"
+		}
+	],
+	"Hamburg": [
+		{
+			"kind": "elbphilharmonie",
+			"name": {
+				"pl": "Elbphilharmonie",
+				"en": "Elbphilharmonie",
+				"cs": "Elbphilharmonie",
+				"is": "Elbphilharmonie",
+				"de": "Elbphilharmonie"
+			},
+			"desc": {
+				"pl": "Sala koncertowa na dachu starego magazynu, ze szklaną falą na górze",
+				"en": "A concert hall built on top of an old warehouse, crowned with glass waves",
+				"cs": "Koncertní síň postavená na starém skladišti, nahoře se skleněnými vlnami",
+				"is": "Tónleikahöll byggð ofan á gamalt vöruhús, með glerbylgjum efst",
+				"de": "Ein Konzerthaus auf einem alten Speicher, oben mit gläsernen Wellen"
+			},
+			"local": "Elbphilharmonie"
+		},
+		{
+			"kind": "speicherstadt",
+			"name": {
+				"pl": "Speicherstadt",
+				"en": "Speicherstadt",
+				"cs": "Speicherstadt",
+				"is": "Speicherstadt",
+				"de": "Speicherstadt"
+			},
+			"desc": {
+				"pl": "Ceglane magazyny nad kanałami; w środku największa makieta kolejowa świata",
+				"en": "Red-brick warehouses on canals, with the world's largest model railway inside",
+				"cs": "Cihlová skladiště nad kanály; uvnitř je největší modelová železnice světa",
+				"is": "Múrsteinsvöruhús við síki; þar inni er stærsta módeljárnbraut heims",
+				"de": "Backsteinspeicher an Kanälen; drinnen die größte Modelleisenbahn der Welt"
+			},
+			"local": "Speicherstadt"
+		}
+	],
+	"München": [
+		{
+			"kind": "frauenkirche_munich",
+			"name": {
+				"pl": "Frauenkirche",
+				"en": "Frauenkirche",
+				"cs": "Frauenkirche",
+				"is": "Frúarkirkjan",
+				"de": "Frauenkirche"
+			},
+			"desc": {
+				"pl": "Dwie wieże z okrągłymi kopułami; w posadzce widać „ślad diabła”",
+				"en": "Two towers with round domes; the 'Devil's Footprint' is in the floor",
+				"cs": "Dvě věže s kulatými kopulemi; v podlaze je vidět „čertova stopa“",
+				"is": "Tveir turnar með kúptum hettum; í gólfinu sést „fótspor djöfulsins“",
+				"de": "Zwei Türme mit runden Hauben; im Boden ist der „Teufelstritt“ zu sehen"
+			},
+			"local": "Frauenkirche"
+		},
+		{
+			"kind": "bmw",
+			"name": {"pl": "BMW Welt", "en": "BMW Welt", "cs": "BMW Welt", "is": "BMW Welt", "de": "BMW Welt"},
+			"desc": {
+				"pl": "Tu klienci odbierają nowe BMW, obok wieżowca w kształcie czterech cylindrów",
+				"en": "Buyers collect their new BMWs here, beside a tower shaped like four engine cylinders",
+				"cs": "Tady si zákazníci přebírají nová BMW, vedle věžáku ve tvaru čtyř válců",
+				"is": "Hér sækja kaupendur nýju BMW-bílana sína, við turn sem líkist fjórum strokkum",
+				"de": "Hier holen Käufer ihre neuen BMWs ab, neben dem Hochhaus in Form von vier Zylindern"
+			},
+			"local": "BMW Welt"
+		}
+	],
+	"Köln": [
+		{
+			"kind": "twin_spires",
+			"name": {
+				"pl": "Katedra w Kolonii",
+				"en": "Cologne Cathedral",
+				"cs": "Kolínská katedrála",
+				"is": "Dómkirkjan í Köln",
+				"de": "Kölner Dom"
+			},
+			"desc": {
+				"pl": "Budowano ją 632 lata; jej dwie wieże mają 157 metrów",
+				"en": "It took 632 years to build; its twin spires are 157 metres tall",
+				"cs": "Stavěla se 632 let; její dvě věže měří 157 metrů",
+				"is": "Það tók 632 ár að byggja hana; turnarnir tveir eru 157 metra háir",
+				"de": "Er wurde 632 Jahre lang gebaut; seine zwei Türme sind 157 Meter hoch"
+			},
+			"local": "Kölner Dom"
+		},
+		{
+			"kind": "truss_bridge",
+			"name": {
+				"pl": "Most Hohenzollernów",
+				"en": "Hohenzollern Bridge",
+				"cs": "Hohenzollernský most",
+				"is": "Hohenzollern-brúin",
+				"de": "Hohenzollernbrücke"
+			},
+			"desc": {
+				"pl": "Kolejowy most na Renie obwieszony tysiącami kłódek zakochanych",
+				"en": "A railway bridge over the Rhine hung with thousands of love locks",
+				"cs": "Železniční most přes Rýn ověšený tisíci zámků lásky",
+				"is": "Járnbrautarbrú yfir Rín, hlaðin þúsundum ástarlása",
+				"de": "Eine Eisenbahnbrücke über den Rhein mit Tausenden Liebesschlössern"
+			},
+			"local": "Hohenzollernbrücke"
+		}
+	],
+	"Frankfurt am Main": [
+		{
+			"kind": "skyline",
+			"name": {
+				"pl": "Wieżowce Frankfurtu",
+				"en": "Frankfurt skyline",
+				"cs": "Mrakodrapy Frankfurtu",
+				"is": "Skýjakljúfar Frankfurt",
+				"de": "Frankfurter Skyline"
+			},
+			"desc": {
+				"pl": "Najwyższe wieżowce Niemiec, zwane „Mainhattan”",
+				"en": "Germany's tallest skyscrapers, nicknamed 'Mainhattan'",
+				"cs": "Nejvyšší mrakodrapy Německa, přezdívané „Mainhattan“",
+				"is": "Hæstu skýjakljúfar Þýskalands, kallaðir „Mainhattan“",
+				"de": "Deutschlands höchste Hochhäuser, genannt „Mainhattan“"
+			},
+			"local": "Skyline"
+		},
+		{
+			"kind": "romer",
+			"name": {"pl": "Römer", "en": "Römer", "cs": "Römer", "is": "Römer", "de": "Römer"},
+			"desc": {
+				"pl": "Ratusz ze schodkowymi szczytami; świętowano tu koronacje cesarzy",
+				"en": "The town hall with stepped gables, where emperors' coronations were celebrated",
+				"cs": "Radnice se stupňovitými štíty; slavily se tu korunovace císařů",
+				"is": "Ráðhús með tröppugöflum þar sem krýningum keisara var fagnað",
+				"de": "Das Rathaus mit Stufengiebeln, in dem Kaiserkrönungen gefeiert wurden"
+			},
+			"local": "Römer"
+		}
+	],
+	"Stuttgart": [
+		{
+			"kind": "mercedes_museum",
+			"name": {
+				"pl": "Muzeum Mercedesa-Benza",
+				"en": "Mercedes-Benz Museum",
+				"cs": "Muzeum Mercedes-Benz",
+				"is": "Mercedes-Benz-safnið",
+				"de": "Mercedes-Benz Museum"
+			},
+			"desc": {
+				"pl": "Od pierwszego auta z 1886 roku po bolidy Formuły 1, na dziewięciu piętrach",
+				"en": "From the very first car of 1886 to Formula 1 racers, on nine floors",
+				"cs": "Od prvního auta z roku 1886 po vozy formule 1, na devíti patrech",
+				"is": "Frá fyrsta bíl heims frá 1886 til Formúlu 1 bíla, á níu hæðum",
+				"de": "Vom ersten Auto von 1886 bis zu Formel-1-Rennwagen, auf neun Ebenen"
+			},
+			"local": "Mercedes-Benz Museum"
+		},
+		{
+			"kind": "porsche_museum",
+			"name": {
+				"pl": "Muzeum Porsche",
+				"en": "Porsche Museum",
+				"cs": "Muzeum Porsche",
+				"is": "Porsche-safnið",
+				"de": "Porsche Museum"
+			},
+			"desc": {
+				"pl": "Dom Porsche 911 i wyścigówek, które wygrywały w Le Mans",
+				"en": "Home of the Porsche 911 and the racing cars that won at Le Mans",
+				"cs": "Domov Porsche 911 a závodních vozů, které vyhrávaly v Le Mans",
+				"is": "Heimili Porsche 911 og kappakstursbílanna sem unnu í Le Mans",
+				"de": "Das Zuhause des Porsche 911 und der Rennwagen, die in Le Mans siegten"
+			},
+			"local": "Porsche Museum"
+		}
+	],
+	"Düsseldorf": [
+		{
+			"kind": "rheinturm",
+			"name": {"pl": "Rheinturm", "en": "Rhine Tower", "cs": "Rýnská věž", "is": "Rínarturninn", "de": "Rheinturm"},
+			"desc": {
+				"pl": "Wieża wysoka na 240 metrów; jej światła to olbrzymi zegar",
+				"en": "A 240-metre tower whose lights form a giant clock",
+				"cs": "Věž vysoká 240 metrů; její světla tvoří obří hodiny",
+				"is": "240 metra hár turn; ljósin á honum mynda risastóra klukku",
+				"de": "Ein 240 Meter hoher Turm; seine Lichter bilden eine riesige Uhr"
+			},
+			"local": "Rheinturm"
+		}
+	],
+	"Leipzig": [
+		{
+			"kind": "voelkerschlacht",
+			"name": {
+				"pl": "Pomnik Bitwy Narodów",
+				"en": "Battle of the Nations Monument",
+				"cs": "Památník Bitvy národů",
+				"is": "Minnisvarði Þjóðaorrustunnar",
+				"de": "Völkerschlachtdenkmal"
+			},
+			"desc": {
+				"pl": "Pomnik wysoki na 91 metrów, upamiętnia bitwę z Napoleonem z 1813 roku",
+				"en": "A 91-metre monument to the battle against Napoleon in 1813",
+				"cs": "91 metrů vysoký památník bitvy s Napoleonem roku 1813",
+				"is": "91 metra hár minnisvarði um orrustuna við Napóleon árið 1813",
+				"de": "Ein 91 Meter hohes Denkmal für die Schlacht gegen Napoleon 1813"
+			},
+			"local": "Völkerschlachtdenkmal"
+		}
+	],
+	"Dortmund": [
+		{
+			"kind": "stadium",
+			"name": {
+				"pl": "Signal Iduna Park",
+				"en": "Signal Iduna Park",
+				"cs": "Signal Iduna Park",
+				"is": "Signal Iduna Park",
+				"de": "Signal Iduna Park"
+			},
+			"desc": {
+				"pl": "Największy stadion piłkarski Niemiec; „Żółta Ściana” mieści 25 tysięcy kibiców",
+				"en": "Germany's largest football stadium; the 'Yellow Wall' holds 25,000 fans",
+				"cs": "Největší fotbalový stadion Německa; „Žlutá zeď“ pojme 25 tisíc fanoušků",
+				"is": "Stærsti fótboltavöllur Þýskalands; „Guli veggurinn“ rúmar 25 þúsund áhorfendur",
+				"de": "Deutschlands größtes Fußballstadion; die „Gelbe Wand“ fasst 25.000 Fans"
+			},
+			"local": "Signal Iduna Park"
+		}
+	],
+	"Essen": [
+		{
+			"kind": "zollverein",
+			"name": {
+				"pl": "Kopalnia Zollverein",
+				"en": "Zollverein Coal Mine",
+				"cs": "Důl Zollverein",
+				"is": "Zollverein-kolanáman",
+				"de": "Zeche Zollverein"
+			},
+			"desc": {
+				"pl": "Dawniej największa kopalnia węgla na świecie, dziś zabytek UNESCO",
+				"en": "Once the world's biggest coal mine, now a UNESCO World Heritage site",
+				"cs": "Kdysi největší uhelný důl na světě, dnes památka UNESCO",
+				"is": "Einu sinni stærsta kolanáma heims, nú á heimsminjaskrá UNESCO",
+				"de": "Einst die größte Steinkohlenzeche der Welt, heute UNESCO-Welterbe"
+			},
+			"local": "Zeche Zollverein"
+		}
+	],
+	"Bremen": [
+		{
+			"kind": "town_musicians",
+			"name": {
+				"pl": "Muzykanci z Bremy",
+				"en": "Town Musicians of Bremen",
+				"cs": "Brémští muzikanti",
+				"is": "Tónlistarmennirnir frá Brimum",
+				"de": "Bremer Stadtmusikanten"
+			},
+			"desc": {
+				"pl": "Osioł, pies, kot i kogut z baśni braci Grimm",
+				"en": "The donkey, dog, cat and rooster from the Grimm brothers' fairy tale",
+				"cs": "Osel, pes, kočka a kohout z pohádky bratří Grimmů",
+				"is": "Asninn, hundurinn, kötturinn og haninn úr ævintýri Grimmsbræðra",
+				"de": "Esel, Hund, Katze und Hahn aus dem Märchen der Brüder Grimm"
+			},
+			"local": "Bremer Stadtmusikanten"
+		},
+		{
+			"kind": "roland",
+			"name": {
+				"pl": "Roland z Bremy",
+				"en": "Bremen Roland",
+				"cs": "Brémský Roland",
+				"is": "Roland í Brimum",
+				"de": "Bremer Roland"
+			},
+			"desc": {
+				"pl": "Kamienny rycerz strzeże wolności miasta od 1404 roku",
+				"en": "A stone knight who has guarded the city's freedom since 1404",
+				"cs": "Kamenný rytíř, který střeží svobodu města od roku 1404",
+				"is": "Steinriddari sem hefur gætt frelsis borgarinnar síðan 1404",
+				"de": "Ein steinerner Ritter, der seit 1404 über die Freiheit der Stadt wacht"
+			},
+			"local": "Bremer Roland"
+		}
+	],
+	"Dresden": [
+		{
+			"kind": "frauenkirche_dresden",
+			"name": {
+				"pl": "Frauenkirche",
+				"en": "Frauenkirche",
+				"cs": "Frauenkirche",
+				"is": "Frúarkirkjan",
+				"de": "Frauenkirche"
+			},
+			"desc": {
+				"pl": "Kościół zburzony w 1945 roku i odbudowany z dawnych kamieni do 2005 roku",
+				"en": "A church destroyed in 1945 and rebuilt from its old stones by 2005",
+				"cs": "Kostel zničený roku 1945 a do roku 2005 obnovený z původních kamenů",
+				"is": "Kirkja sem hrundi 1945 og var endurreist úr gömlu steinunum fyrir 2005",
+				"de": "Eine 1945 zerstörte Kirche, bis 2005 aus ihren alten Steinen neu errichtet"
+			},
+			"local": "Frauenkirche"
+		},
+		{
+			"kind": "zwinger",
+			"name": {"pl": "Zwinger", "en": "Zwinger", "cs": "Zwinger", "is": "Zwinger", "de": "Zwinger"},
+			"desc": {
+				"pl": "Barokowy pałac, w którym wisi obraz z dwoma słynnymi znudzonymi aniołkami",
+				"en": "A Baroque palace, home of the painting with two famous bored little angels",
+				"cs": "Barokní palác, kde visí obraz se dvěma slavnými znuděnými andílky",
+				"is": "Barokkhöll þar sem málverkið með tveimur frægu leiðu englunum hangir",
+				"de": "Ein Barockbau mit dem Gemälde der zwei berühmten gelangweilten Engelchen"
+			},
+			"local": "Zwinger"
+		}
+	],
+	"Hannover": [
+		{
+			"kind": "rathaus_dome",
+			"name": {
+				"pl": "Nowy Ratusz",
+				"en": "New Town Hall",
+				"cs": "Nová radnice",
+				"is": "Nýja ráðhúsið",
+				"de": "Neues Rathaus"
+			},
+			"desc": {
+				"pl": "Ma windę, która jedzie w górę kopuły po łuku",
+				"en": "Its lift travels up inside the dome along a curve",
+				"cs": "Má výtah, který jede vzhůru kopulí po oblouku",
+				"is": "Þar er lyfta sem fer upp hvelfinguna í boga",
+				"de": "Sein Aufzug fährt im Bogen die Kuppel hinauf"
+			},
+			"local": "Neues Rathaus"
+		}
+	],
+	"Nürnberg": [
+		{
+			"kind": "castle",
+			"name": {
+				"pl": "Zamek Cesarski",
+				"en": "Imperial Castle",
+				"cs": "Císařský hrad",
+				"is": "Keisarakastalinn",
+				"de": "Kaiserburg"
+			},
+			"desc": {
+				"pl": "Mieszkali tu cesarze; zamkowa studnia ma 50 metrów głębokości",
+				"en": "Emperors stayed here; the castle well is 50 metres deep",
+				"cs": "Pobývali tu císaři; hradní studna je 50 metrů hluboká",
+				"is": "Keisarar dvöldu hér; brunnur kastalans er 50 metra djúpur",
+				"de": "Hier wohnten Kaiser; der Burgbrunnen ist 50 Meter tief"
+			},
+			"local": "Kaiserburg"
+		},
+		{
+			"kind": "gingerbread",
+			"name": {
+				"pl": "Pierniki norymberskie",
+				"en": "Nuremberg gingerbread",
+				"cs": "Norimberský perník",
+				"is": "Piparkökur frá Nürnberg",
+				"de": "Nürnberger Lebkuchen"
+			},
+			"desc": {
+				"pl": "Miękkie korzenne pierniki pieczone tu od ponad 600 lat",
+				"en": "Soft spiced gingerbread, baked here for over 600 years",
+				"cs": "Měkký kořeněný perník, který se tu peče přes 600 let",
+				"is": "Mjúkar kryddkökur sem hafa verið bakaðar hér í yfir 600 ár",
+				"de": "Weiche, würzige Lebkuchen, hier seit über 600 Jahren gebacken"
+			},
+			"local": "Nürnberger Lebkuchen"
+		}
+	],
+	"Bielefeld": [
+		{
+			"kind": "round_tower",
+			"name": {
+				"pl": "Zamek Sparrenburg",
+				"en": "Sparrenburg Castle",
+				"cs": "Hrad Sparrenburg",
+				"is": "Sparrenburg-kastali",
+				"de": "Sparrenburg"
+			},
+			"desc": {
+				"pl": "Zamek z wysoką okrągłą wieżą i tajnymi korytarzami pod wzgórzem",
+				"en": "A castle with a tall round tower and secret tunnels under the hill",
+				"cs": "Hrad s vysokou kulatou věží a tajnými chodbami pod kopcem",
+				"is": "Kastali með háum hringturni og leynigöngum undir hæðinni",
+				"de": "Eine Burg mit hohem Rundturm und geheimen Gängen unter dem Berg"
+			},
+			"local": "Sparrenburg"
+		}
+	],
+	"Münster": [
+		{
+			"kind": "prinzipalmarkt",
+			"name": {
+				"pl": "Prinzipalmarkt",
+				"en": "Prinzipalmarkt",
+				"cs": "Prinzipalmarkt",
+				"is": "Prinzipalmarkt",
+				"de": "Prinzipalmarkt"
+			},
+			"desc": {
+				"pl": "Kamienice ze szczytami i podcieniami; wieczorem z wieży wciąż gra róg",
+				"en": "Gabled houses with arcades; in the evening a horn still sounds from the tower",
+				"cs": "Štítové domy s podloubím; večer tu z věže dosud troubí roh",
+				"is": "Gaflhús með bogagöngum; á kvöldin hljómar enn horn úr turninum",
+				"de": "Giebelhäuser mit Bogengängen; abends tönt vom Turm noch immer ein Horn"
+			},
+			"local": "Prinzipalmarkt"
+		}
+	],
+	"Mannheim": [
+		{
+			"kind": "wasserturm",
+			"name": {
+				"pl": "Wieża ciśnień",
+				"en": "Water Tower",
+				"cs": "Vodárenská věž",
+				"is": "Vatnsturninn",
+				"de": "Wasserturm"
+			},
+			"desc": {
+				"pl": "Wieża ciśnień z 1889 roku wśród fontann i ogrodów",
+				"en": "A water tower from 1889, surrounded by fountains and gardens",
+				"cs": "Vodárenská věž z roku 1889 uprostřed fontán a zahrad",
+				"is": "Vatnsturn frá 1889 umkringdur gosbrunnum og görðum",
+				"de": "Ein Wasserturm von 1889 zwischen Brunnen und Gärten"
+			},
+			"local": "Wasserturm"
+		}
+	],
+	"Karlsruhe": [
+		{
+			"kind": "palace",
+			"name": {
+				"pl": "Pałac w Karlsruhe",
+				"en": "Karlsruhe Palace",
+				"cs": "Zámek Karlsruhe",
+				"is": "Höllin í Karlsruhe",
+				"de": "Schloss Karlsruhe"
+			},
+			"desc": {
+				"pl": "Ulice miasta rozchodzą się od pałacu jak wachlarz",
+				"en": "The city's streets spread out from the palace like a fan",
+				"cs": "Ulice města se od zámku rozbíhají jako vějíř",
+				"is": "Götur borgarinnar liggja út frá höllinni eins og blævængur",
+				"de": "Die Straßen der Stadt laufen vom Schloss aus wie ein Fächer"
+			},
+			"local": "Schloss Karlsruhe"
+		}
+	],
+	"Augsburg": [
+		{
+			"kind": "townhall",
+			"name": {
+				"pl": "Ratusz w Augsburgu",
+				"en": "Augsburg Town Hall",
+				"cs": "Augšpurská radnice",
+				"is": "Ráðhúsið í Augsburg",
+				"de": "Augsburger Rathaus"
+			},
+			"desc": {
+				"pl": "Renesansowy ratusz ze Złotą Salą lśniącą od złota",
+				"en": "A Renaissance town hall with a Golden Hall gleaming with gold",
+				"cs": "Renesanční radnice se Zlatým sálem zářícím zlatem",
+				"is": "Endurreisnarráðhús með Gullsalnum sem glóir af gulli",
+				"de": "Ein Renaissance-Rathaus mit dem Goldenen Saal voller Blattgold"
+			},
+			"local": "Augsburger Rathaus"
+		}
+	],
+	"Mainz": [
+		{
+			"kind": "cathedral",
+			"name": {
+				"pl": "Katedra w Moguncji",
+				"en": "Mainz Cathedral",
+				"cs": "Mohučská katedrála",
+				"is": "Dómkirkjan í Mainz",
+				"de": "Mainzer Dom"
+			},
+			"desc": {
+				"pl": "Katedra z czerwonego piaskowca, ma ponad 1000 lat",
+				"en": "A red sandstone cathedral more than 1,000 years old",
+				"cs": "Katedrála z červeného pískovce, stará přes 1000 let",
+				"is": "Dómkirkja úr rauðum sandsteini, yfir 1000 ára gömul",
+				"de": "Ein Dom aus rotem Sandstein, über 1000 Jahre alt"
+			},
+			"local": "Mainzer Dom"
+		}
+	],
+	"Aachen": [
+		{
+			"kind": "basilica",
+			"name": {
+				"pl": "Katedra w Akwizgranie",
+				"en": "Aachen Cathedral",
+				"cs": "Cášská katedrála",
+				"is": "Dómkirkjan í Aachen",
+				"de": "Aachener Dom"
+			},
+			"desc": {
+				"pl": "Spoczywa tu Karol Wielki; koronowano tu ponad 30 królów",
+				"en": "Charlemagne is buried here, and over 30 kings were crowned here",
+				"cs": "Leží tu Karel Veliký a korunovalo se tu přes 30 králů",
+				"is": "Karlamagnús hvílir hér og yfir 30 konungar voru krýndir hér",
+				"de": "Hier ruht Karl der Große; über 30 Könige wurden hier gekrönt"
+			},
+			"local": "Aachener Dom"
+		}
+	],
+	"Braunschweig": [
+		{
+			"kind": "lion",
+			"name": {
+				"pl": "Lew Brunszwicki",
+				"en": "Brunswick Lion",
+				"cs": "Brunšvický lev",
+				"is": "Ljónið í Braunschweig",
+				"de": "Burglöwe"
+			},
+			"desc": {
+				"pl": "Lew z brązu, którego Henryk Lew postawił w 1166 roku",
+				"en": "A bronze lion set up by Henry the Lion in 1166",
+				"cs": "Bronzový lev, kterého tu roku 1166 postavil Jindřich Lev",
+				"is": "Bronsljón sem Hinrik ljón lét reisa árið 1166",
+				"de": "Ein Bronzelöwe, den Heinrich der Löwe 1166 aufstellen ließ"
+			},
+			"local": "Burglöwe"
+		}
+	],
+	"Kiel": [
+		{
+			"kind": "sailboat",
+			"name": {
+				"pl": "Tydzień Kiloński",
+				"en": "Kiel Week",
+				"cs": "Kielský týden",
+				"is": "Kielarvikan",
+				"de": "Kieler Woche"
+			},
+			"desc": {
+				"pl": "Największe święto żeglarstwa na świecie, co roku w czerwcu",
+				"en": "The biggest sailing festival in the world, every June",
+				"cs": "Největší jachtařský svátek na světě, každý rok v červnu",
+				"is": "Stærsta siglingahátíð heims, í júní ár hvert",
+				"de": "Das größte Segelfest der Welt, jedes Jahr im Juni"
+			},
+			"local": "Kieler Woche"
+		}
+	],
+	"Chemnitz": [
+		{
+			"kind": "marx_head",
+			"name": {
+				"pl": "Pomnik Karola Marksa",
+				"en": "Karl Marx Monument",
+				"cs": "Pomník Karla Marxe",
+				"is": "Minnisvarði Karls Marx",
+				"de": "Karl-Marx-Monument"
+			},
+			"desc": {
+				"pl": "Głowa z brązu wysoka na 7 metrów i ważąca 40 ton",
+				"en": "A bronze head 7 metres tall, weighing 40 tonnes",
+				"cs": "Bronzová hlava vysoká 7 metrů a těžká 40 tun",
+				"is": "Bronshöfuð, 7 metra hátt og 40 tonn að þyngd",
+				"de": "Ein 7 Meter hoher Kopf aus Bronze, 40 Tonnen schwer"
+			},
+			"local": "Karl-Marx-Monument"
+		}
+	],
+	"Magdeburg": [
+		{
+			"kind": "water_bridge",
+			"name": {
+				"pl": "Most wodny",
+				"en": "Magdeburg Water Bridge",
+				"cs": "Vodní most",
+				"is": "Vatnsbrúin",
+				"de": "Wasserstraßenkreuz"
+			},
+			"desc": {
+				"pl": "Statki płyną nad Łabą po moście wodnym długim na 918 metrów",
+				"en": "Ships sail over the River Elbe on a 918-metre water bridge",
+				"cs": "Lodě plují přes Labe po 918 metrů dlouhém vodním mostě",
+				"is": "Skip sigla yfir Saxelfi á 918 metra langri vatnsbrú",
+				"de": "Schiffe fahren auf einer 918 Meter langen Trogbrücke über die Elbe"
+			},
+			"local": "Wasserstraßenkreuz"
+		}
+	],
+	"Freiburg im Breisgau": [
+		{
+			"kind": "cuckoo_clock",
+			"name": {
+				"pl": "Zegar z kukułką",
+				"en": "Black Forest cuckoo clock",
+				"cs": "Kukačkové hodiny",
+				"is": "Gaukklukka úr Svartaskógi",
+				"de": "Schwarzwälder Kuckucksuhr"
+			},
+			"desc": {
+				"pl": "Drewniany ptaszek wyskakuje i kuka co godzinę",
+				"en": "A wooden bird pops out and calls 'cuckoo' every hour",
+				"cs": "Dřevěný ptáček vyskočí a každou hodinu zakuká",
+				"is": "Trefugl stekkur út og galar „kú-kú“ á hverri klukkustund",
+				"de": "Ein Holzvogel springt heraus und ruft jede Stunde „Kuckuck“"
+			},
+			"local": "Schwarzwälder Kuckucksuhr"
+		}
+	],
+	"Lübeck": [
+		{
+			"kind": "holstentor",
+			"name": {
+				"pl": "Brama Holsztyńska",
+				"en": "Holsten Gate",
+				"cs": "Holštýnská brána",
+				"is": "Holsten-hliðið",
+				"de": "Holstentor"
+			},
+			"desc": {
+				"pl": "Ceglana brama z 1478 roku, przechylona w miękkim gruncie",
+				"en": "A brick city gate from 1478 that leans in the soft ground",
+				"cs": "Cihlová brána z roku 1478, nakloněná v měkké půdě",
+				"is": "Múrsteinshlið frá 1478 sem hallar í mjúkum jarðveginum",
+				"de": "Ein Backsteintor von 1478, das sich im weichen Boden neigt"
+			},
+			"local": "Holstentor"
+		}
+	],
+	"Erfurt": [
+		{
+			"kind": "kraemerbruecke",
+			"name": {
+				"pl": "Most Kramarzy",
+				"en": "Merchants' Bridge",
+				"cs": "Kupecký most",
+				"is": "Kaupmannabrúin",
+				"de": "Krämerbrücke"
+			},
+			"desc": {
+				"pl": "Most zabudowany 32 domami, w których wciąż mieszkają ludzie",
+				"en": "A bridge lined with 32 houses where people still live",
+				"cs": "Most lemovaný 32 domy, ve kterých lidé dodnes bydlí",
+				"is": "Brú með 32 húsum þar sem fólk býr enn",
+				"de": "Eine Brücke mit 32 Häusern, in denen noch Menschen wohnen"
+			},
+			"local": "Krämerbrücke"
+		}
+	],
+	"Rostock": [
+		{
+			"kind": "lighthouse",
+			"name": {
+				"pl": "Latarnia w Warnemünde",
+				"en": "Warnemünde Lighthouse",
+				"cs": "Maják Warnemünde",
+				"is": "Vitinn í Warnemünde",
+				"de": "Leuchtturm Warnemünde"
+			},
+			"desc": {
+				"pl": "Biała latarnia morska z 1898 roku przy plaży nad Bałtykiem",
+				"en": "A white lighthouse from 1898 beside a Baltic beach",
+				"cs": "Bílý maják z roku 1898 u pláže na Baltu",
+				"is": "Hvítur viti frá 1898 við strönd Eystrasalts",
+				"de": "Ein weißer Leuchtturm von 1898 am Ostseestrand"
+			},
+			"local": "Leuchtturm Warnemünde"
+		}
+	],
+	"Kassel": [
+		{
+			"kind": "hercules",
+			"name": {"pl": "Herkules", "en": "Hercules", "cs": "Herkules", "is": "Herkúles", "de": "Herkules"},
+			"desc": {
+				"pl": "Miedziany olbrzym na wzgórzu, spod którego kaskadami spływa woda",
+				"en": "A copper giant on a hill, with water rushing down cascades below him",
+				"cs": "Měděný obr na kopci, pod nímž se po kaskádách valí voda",
+				"is": "Koparrisi á hæð og vatn steypist niður fossaþrep fyrir neðan hann",
+				"de": "Ein Riese aus Kupfer auf dem Berg, unter ihm rauscht Wasser die Kaskaden hinab"
+			},
+			"local": "Herkules"
+		}
+	],
+	"Füssen": [
+		{
+			"kind": "neuschwanstein",
+			"name": {
+				"pl": "Zamek Neuschwanstein",
+				"en": "Neuschwanstein Castle",
+				"cs": "Zámek Neuschwanstein",
+				"is": "Neuschwanstein-kastali",
+				"de": "Schloss Neuschwanstein"
+			},
+			"desc": {
+				"pl": "Bajkowy zamek króla Ludwika II; wzorował się na nim Disney",
+				"en": "King Ludwig II's fairy-tale castle, which inspired Disney",
+				"cs": "Pohádkový zámek krále Ludvíka II., inspiroval i Disneyho",
+				"is": "Ævintýrakastali Lúðvíks II. konungs, fyrirmynd Disney",
+				"de": "Das Märchenschloss von König Ludwig II., Vorbild für Disney"
+			},
+			"local": "Schloss Neuschwanstein"
+		}
+	],
+	"Ingolstadt": [
+		{
+			"kind": "audi",
+			"name": {"pl": "Audi Forum", "en": "Audi Forum", "cs": "Audi Forum", "is": "Audi Forum", "de": "Audi Forum"},
+			"desc": {
+				"pl": "Dom czterech pierścieni: tu Audi buduje auta, a w muzeum stoją wyścigówki",
+				"en": "Home of the four rings: Audi builds its cars here and shows its racers in a museum",
+				"cs": "Domov čtyř kruhů: Audi tu staví auta a v muzeu vystavuje závodní vozy",
+				"is": "Heimili hringjanna fjögurra: Audi smíðar bíla hér og sýnir kappakstursbíla í safni",
+				"de": "Heimat der vier Ringe: Audi baut hier Autos und zeigt seine Rennwagen im Museum"
+			},
+			"local": "Audi Forum"
+		}
+	],
+	"Wolfsburg": [
+		{
+			"kind": "vw",
+			"name": {"pl": "Autostadt", "en": "Autostadt", "cs": "Autostadt", "is": "Autostadt", "de": "Autostadt"},
+			"desc": {
+				"pl": "Nowe auta zjeżdżają windą z dwóch szklanych wież prosto do właścicieli",
+				"en": "New cars come down by lift from two glass towers to their owners",
+				"cs": "Nová auta sjíždějí výtahem ze dvou skleněných věží přímo k majitelům",
+				"is": "Nýir bílar koma með lyftu niður úr tveimur glerturnum til eigenda sinna",
+				"de": "Neue Autos kommen per Aufzug aus zwei Glastürmen zu ihren Besitzern"
+			},
+			"local": "Autostadt"
+		}
+	],
+	"Bonn": [
+		{
+			"kind": "music",
+			"name": {
+				"pl": "Dom Beethovena",
+				"en": "Beethoven House",
+				"cs": "Beethovenův dům",
+				"is": "Hús Beethovens",
+				"de": "Beethoven-Haus"
+			},
+			"desc": {
+				"pl": "Dom, w którym w 1770 roku urodził się Ludwig van Beethoven",
+				"en": "The house where Ludwig van Beethoven was born in 1770",
+				"cs": "Dům, kde se roku 1770 narodil Ludwig van Beethoven",
+				"is": "Húsið þar sem Ludwig van Beethoven fæddist árið 1770",
+				"de": "Das Haus, in dem Ludwig van Beethoven 1770 geboren wurde"
+			},
+			"local": "Beethoven-Haus"
+		}
+	],
+	"Potsdam": [
+		{
+			"kind": "palace",
+			"name": {
+				"pl": "Pałac Sanssouci",
+				"en": "Sanssouci Palace",
+				"cs": "Zámek Sanssouci",
+				"is": "Sanssouci-höllin",
+				"de": "Schloss Sanssouci"
+			},
+			"desc": {
+				"pl": "Pałac Fryderyka Wielkiego; na jego grobie ludzie kładą ziemniaki",
+				"en": "Frederick the Great's palace; visitors leave potatoes on his grave",
+				"cs": "Zámek Fridricha Velikého; na jeho hrob lidé pokládají brambory",
+				"is": "Höll Friðriks mikla; gestir leggja kartöflur á gröf hans",
+				"de": "Das Schloss Friedrichs des Großen; Besucher legen Kartoffeln auf sein Grab"
+			},
+			"local": "Schloss Sanssouci"
+		}
+	],
+	"Heidelberg": [
+		{
+			"kind": "castle",
+			"name": {
+				"pl": "Zamek w Heidelbergu",
+				"en": "Heidelberg Castle",
+				"cs": "Heidelberský zámek",
+				"is": "Heidelberg-kastali",
+				"de": "Heidelberger Schloss"
+			},
+			"desc": {
+				"pl": "Ruiny zamku; w piwnicy stoi beczka na 220 tysięcy litrów wina",
+				"en": "Castle ruins with a barrel for 220,000 litres of wine in the cellar",
+				"cs": "Zřícenina zámku, ve sklepě stojí sud na 220 tisíc litrů vína",
+				"is": "Kastalarústir; í kjallaranum er tunna fyrir 220 þúsund lítra af víni",
+				"de": "Eine Schlossruine; im Keller steht ein Fass für 220.000 Liter Wein"
+			},
+			"local": "Heidelberger Schloss"
+		}
+	],
+	"Ulm": [
+		{
+			"kind": "spire_cathedral",
+			"name": {
+				"pl": "Katedra w Ulm",
+				"en": "Ulm Minster",
+				"cs": "Ulmský chrám",
+				"is": "Dómkirkjan í Ulm",
+				"de": "Ulmer Münster"
+			},
+			"desc": {
+				"pl": "Na wieżę wysoką na 161,5 metra prowadzi 768 stopni",
+				"en": "768 steps lead up its 161.5-metre spire",
+				"cs": "Na 161,5 metru vysokou věž vede 768 schodů",
+				"is": "768 þrep liggja upp 161,5 metra háan turninn",
+				"de": "768 Stufen führen auf den 161,5 Meter hohen Turm"
+			},
+			"local": "Ulmer Münster"
+		}
+	],
+	"Eisenach": [
+		{
+			"kind": "castle",
+			"name": {
+				"pl": "Wartburg",
+				"en": "Wartburg Castle",
+				"cs": "Hrad Wartburg",
+				"is": "Wartburg-kastali",
+				"de": "Wartburg"
+			},
+			"desc": {
+				"pl": "Tu Marcin Luter przetłumaczył Nowy Testament na niemiecki",
+				"en": "Martin Luther translated the New Testament into German here",
+				"cs": "Tady Martin Luther přeložil Nový zákon do němčiny",
+				"is": "Hér þýddi Marteinn Lúther Nýja testamentið á þýsku",
+				"de": "Hier übersetzte Martin Luther das Neue Testament ins Deutsche"
+			},
+			"local": "Wartburg"
+		}
+	],
+	"Sankt Goar": [
+		{
+			"kind": "mermaid",
+			"name": {"pl": "Lorelei", "en": "Loreley", "cs": "Loreley", "is": "Loreley", "de": "Loreley"},
+			"desc": {
+				"pl": "Według legendy dziewczyna śpiewała na tej skale tak pięknie, że żeglarze się rozbijali",
+				"en": "Legend says a maiden on this rock sang so sweetly that boatmen crashed",
+				"cs": "Podle pověsti tu na skále zpívala dívka tak krásně, že lodníci ztroskotávali",
+				"is": "Sagan segir að mær á klettinum hafi sungið svo fagurt að bátar fórust",
+				"de": "Der Sage nach sang hier eine Jungfrau so schön, dass Schiffer verunglückten"
+			},
+			"local": "Loreley"
+		}
+	],
+	"Würzburg": [
+		{
+			"kind": "palace",
+			"name": {
+				"pl": "Rezydencja w Würzburgu",
+				"en": "Würzburg Residence",
+				"cs": "Würzburská rezidence",
+				"is": "Würzburg-höllin",
+				"de": "Würzburger Residenz"
+			},
+			"desc": {
+				"pl": "Pałac z największym freskiem sufitowym na świecie nad schodami",
+				"en": "A palace with the world's largest ceiling fresco above its staircase",
+				"cs": "Palác s největší stropní freskou na světě nad schodištěm",
+				"is": "Höll með stærsta loftmálverki heims yfir stiganum",
+				"de": "Ein Schloss mit dem größten Deckenfresko der Welt über der Treppe"
+			},
+			"local": "Würzburger Residenz"
+		}
+	],
+	"Bamberg": [
+		{
+			"kind": "townhall",
+			"name": {
+				"pl": "Stary Ratusz",
+				"en": "Old Town Hall",
+				"cs": "Stará radnice",
+				"is": "Gamla ráðhúsið",
+				"de": "Altes Rathaus"
+			},
+			"desc": {
+				"pl": "Ratusz zbudowany na wysepce pośrodku rzeki",
+				"en": "A town hall built on a little island in the middle of the river",
+				"cs": "Radnice postavená na ostrůvku uprostřed řeky",
+				"is": "Ráðhús byggt á lítilli eyju úti í miðri ánni",
+				"de": "Ein Rathaus, gebaut auf einer kleinen Insel mitten im Fluss"
+			},
+			"local": "Altes Rathaus"
+		}
+	],
+	"Lübbenau": [
+		{
+			"kind": "narrowboat",
+			"name": {
+				"pl": "Łódź ze Spreewaldu",
+				"en": "Spreewald punt",
+				"cs": "Spreewaldská pramice",
+				"is": "Spreewald-bátur",
+				"de": "Spreewaldkahn"
+			},
+			"desc": {
+				"pl": "Łodzie pcha się tyczką; nawet poczta przypływa tu łodzią",
+				"en": "Punts are pushed along with a pole; even the post arrives by boat",
+				"cs": "Pramice se pohánějí bidlem; i pošta sem připlouvá lodí",
+				"is": "Bátunum er ýtt áfram með stöng; meira að segja pósturinn kemur á bát",
+				"de": "Die Kähne werden gestakt; sogar die Post kommt per Boot"
+			},
+			"local": "Spreewaldkahn"
+		}
+	],
+	"Pfaffenhofen": [
+		{
+			"kind": "hops",
+			"name": {
+				"pl": "Chmielniki Hallertau",
+				"en": "Hallertau hop gardens",
+				"cs": "Chmelnice Hallertau",
+				"is": "Humlagarðar í Hallertau",
+				"de": "Hopfengarten Hallertau"
+			},
+			"desc": {
+				"pl": "Chmiel wspina się tu po drutach na wysokość 7 metrów",
+				"en": "Hop plants climb wires up to 7 metres high",
+				"cs": "Chmel tu šplhá po drátech až 7 metrů vysoko",
+				"is": "Humlar klifra hér upp víra allt að 7 metra hátt",
+				"de": "Hopfenranken klettern hier an Drähten bis 7 Meter hoch"
+			},
+			"local": "Hopfengarten Hallertau"
+		}
+	],
+	"Bingen am Rhein": [
+		{
+			"kind": "grapes",
+			"name": {
+				"pl": "Winnice nad Renem",
+				"en": "Rhine vineyards",
+				"cs": "Vinice na Rýně",
+				"is": "Vínekrur við Rín",
+				"de": "Weinberge am Rhein"
+			},
+			"desc": {
+				"pl": "Winogrona dojrzewają na zboczach tak stromych, że zbiera się je ręcznie",
+				"en": "Grapes ripen on slopes so steep they are picked by hand",
+				"cs": "Hrozny zrají na svazích tak strmých, že se sbírají ručně",
+				"is": "Vínber þroskast í svo bröttum hlíðum að þau eru tínd með höndunum",
+				"de": "Trauben reifen an so steilen Hängen, dass sie von Hand gelesen werden"
+			},
+			"local": "Weinberge am Rhein"
+		}
+	]
+}

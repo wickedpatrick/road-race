@@ -62,7 +62,7 @@ static func build(stage: Dictionary, seed_value: int) -> Traffic:
 	for k in n_seg:
 		tf._dual[k] = Route.dual_f(stage, k * Track.SEG_LEN)
 		tf._express[k] = 1 if Route.lanes_at(stage, k * Track.SEG_LEN) == 3 else 0
-		tf._target[k] = Route.speed_limit_at(stage, k * Track.SEG_LEN) / 3.6
+		tf._target[k] = Route.cruise_kmh(stage, k * Track.SEG_LEN) / 3.6
 	var density := maxf(stage.traffic_density, 0.1)
 	# the player's way
 	var z := 160.0

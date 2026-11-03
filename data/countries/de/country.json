@@ -1,0 +1,58 @@
+{
+	"code": "de",
+	"name": {"pl": "Niemcy", "en": "Germany", "cs": "Německo", "is": "Þýskaland", "de": "Deutschland"},
+	"language": "de",
+	"drive": "right",
+	"units": "metric",
+	"title": {
+		"pl": "RAJD PRZEZ NIEMCY",
+		"en": "GERMANY ROAD TRIP",
+		"cs": "RALLY NĚMECKEM",
+		"is": "ÖKUFERÐ UM ÞÝSKALAND",
+		"de": "DEUTSCHLAND-TOUR"
+	},
+	"subtitle": {
+		"pl": "Edukacyjna podróż po niemieckich autostradach i drogach",
+		"en": "An educational journey along German Autobahns and roads",
+		"cs": "Vzdělávací cesta po německých dálnicích a silnicích",
+		"is": "Fræðandi ferðalag um þýskar hraðbrautir og vegi",
+		"de": "Eine lehrreiche Reise über deutsche Autobahnen und Straßen"
+	},
+	"region_label": {"pl": "kraj związkowy", "en": "federal state", "cs": "spolková země", "is": "sambandsland", "de": "Bundesland"},
+	"start": ["munchen", "augsburg"],
+	"express_prefixes": ["A"],
+	"limits": {"express": 120, "road": 100, "city": 50, "town_on_express": 70, "town": 50, "unlimited_beyond_km": 15},
+	"signs": {
+		"town": "#f5c400",
+		"town_text": "#111111",
+		"board": "#f5c400",
+		"board_text": "#111111",
+		"board_motorway": "#1d5bbf"
+	},
+	"map": {"lon0": 5.6, "lon1": 15.3, "lat0": 47.1, "lat1": 55.2, "lon_k": 0.627, "zoom": 2},
+	"outline": [
+		[7.2, 53.25], [7.05, 53.45], [7.2, 53.62], [7.7, 53.7], [8.05, 53.7], [8.12, 53.53], [8.25, 53.42],
+		[8.35, 53.6], [8.5, 53.55], [8.55, 53.75], [8.7, 53.88], [9, 53.86], [8.88, 54.05], [8.85, 54.27],
+		[8.6, 54.33], [8.85, 54.5], [8.6, 54.9], [8.95, 54.91], [9.42, 54.83], [9.9, 54.78], [10, 54.62],
+		[9.85, 54.47], [10.15, 54.45], [10.2, 54.33], [10.6, 54.36], [10.95, 54.38], [11.1, 54.45], [11.2, 54.4],
+		[11, 54.25], [10.82, 54.1], [10.9, 53.95], [11.15, 53.95], [11.42, 53.98], [11.6, 54.13], [12.1, 54.18],
+		[12.4, 54.35], [12.55, 54.47], [13, 54.44], [13.15, 54.6], [13.4, 54.68], [13.68, 54.57], [13.62, 54.2],
+		[13.9, 54.1], [14.2, 53.93], [14.4, 53.3], [14.15, 52.85], [14.6, 52.6], [14.55, 52.2], [14.72, 51.65],
+		[14.95, 51.2], [15, 51], [14.8, 50.85], [14.6, 50.9], [14.3, 50.88], [13.85, 50.73], [13.5, 50.6], [13, 50.45],
+		[12.7, 50.4], [12.3, 50.3], [12.1, 50.25], [12.5, 49.95], [12.45, 49.7], [12.85, 49.4], [13.4, 49.05],
+		[13.8, 48.77], [13.45, 48.57], [13, 48.3], [12.75, 48.1], [13, 47.8], [13, 47.5], [12.75, 47.65],
+		[12.25, 47.7], [11.65, 47.58], [11.1, 47.4], [10.45, 47.55], [10.15, 47.38], [9.95, 47.53], [9.6, 47.55],
+		[9.2, 47.65], [8.75, 47.72], [8.6, 47.65], [8.2, 47.6], [7.6, 47.58], [7.55, 48], [7.8, 48.5], [8.2, 48.97],
+		[7.6, 49.05], [7.05, 49.12], [6.6, 49.2], [6.35, 49.47], [6.5, 49.8], [6.15, 50.15], [6.4, 50.35], [6, 50.75],
+		[5.9, 51.05], [6.2, 51.4], [5.95, 51.82], [6.8, 51.95], [7.05, 52.25], [6.7, 52.5], [7.05, 52.65], [7.2, 53]
+	],
+	"outline_lines": [],
+	"station": {
+		"sign": "TANKSTELLE",
+		"board": "KRAFTSTOFF",
+		"prices": [["Super", "1,79"], ["Diesel", "1,69"], ["E10", "1,73"]],
+		"region_sign": "WILLKOMMEN IN"
+	},
+	"plates": [["A", "#1d5bbf", "#ffffff"], ["B", "#f5c400", "#111111"]],
+	"weather": {"default": "sun", "landscape": true}
+}

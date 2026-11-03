@@ -10,7 +10,8 @@ static var flip := 1.0 ## -1 with left-hand traffic: the world is mirrored, so b
 static var _sign_cols := {} ## country code -> {town, board, board_motorway} colours (the country's "signs")
 
 ## Colour of a road sign in the current country: "town" / "town_text" (place-name signs and their lettering),
-## "board" / "board_motorway" (direction boards with distances).
+## "board" / "board_motorway" (direction boards with distances), "board_text" (lettering on the ordinary boards,
+## white unless given, e.g. black on Germany's yellow ones).
 static func sign_color(kind: String) -> Color:
 	var code := GameData.current
 	if not _sign_cols.has(code):
@@ -19,7 +20,7 @@ static func sign_color(kind: String) -> Color:
 		for k in signs:
 			cols[k] = Color(signs[k])
 		_sign_cols[code] = cols
-	return _sign_cols[code][kind]
+	return _sign_cols[code].get(kind, Color.WHITE)
 const SIGN_BROWN := Color("7b4a26")
 const SIGN_RED := Color("d0202a")
 const SIGN_YELLOW := Color("f2c21b")
@@ -412,6 +413,13 @@ static func _signs(items: Dictionary, stage: Dictionary, rng: RandomNumberGenera
 		var zr: float = stage.roads[i].z0 + 20.0
 		if stage.roads[i].lanes != stage.roads[i - 1].lanes and Route.town_at(stage, zr).is_empty():
 			_limit_sign(items, zr, Route.sign_limit_at(stage, zr), rng)
+	# where an Autobahn's limit ends or starts again away from towns (Germany)
+	var zl := 40.0
+	while zl < stage.length:
+		var here := Route.sign_limit_at(stage, zl)
+		if (here == Route.NO_LIMIT) != (Route.sign_limit_at(stage, zl - 20.0) == Route.NO_LIMIT) and Route.town_at(stage, zl).is_empty():
+			_limit_sign(items, zl + 10.0, here, rng)
+		zl += 20.0
 	for bd in stage.boards:
 		var it := _add(items, "board", bd.z, SIGN_EDGE + BOARD_W * 0.5, BOARD_W, 6.0, rng)
 		it.lines = bd.lines
@@ -506,9 +514,23 @@ static func _limit(cv, it: Dictionary, b: Vector2, pm: float, font: Font) -> voi
 	var top := 3.0 * pm
 	_posts(cv, b, pm, top, [0.0])
 	var c := b + Vector2(0, -top - r)
+	if it.limit == Route.NO_LIMIT:
+		no_limit_disc(cv, c, r)
+		return
 	cv.draw_circle(c, r, SIGN_RED)
 	cv.draw_circle(c, r * 0.78, Color.WHITE)
 	_fit_text(cv, font, Rect2(c - Vector2(r * 0.7, r * 0.5), Vector2(r * 1.4, r)), str(it.limit), Color.BLACK, 0.9 * pm)
+
+## End of all restrictions (German Zeichen 282): a white disc with a thin grey rim and black diagonal stripes.
+static func no_limit_disc(cv, c: Vector2, r: float) -> void:
+	cv.draw_circle(c, r, Color("8a8d92"))
+	cv.draw_circle(c, r * 0.93, Color.WHITE)
+	var d := Vector2(1, -1).normalized() # stripes from bottom-left to top-right
+	var n := Vector2(d.y, -d.x)
+	for k in 5:
+		var off := (k - 2) * 0.16 * r
+		var half := sqrt(maxf(0.0, (r * 0.86) * (r * 0.86) - off * off))
+		cv.draw_line(c + n * off - d * half, c + n * off + d * half, Color.BLACK, maxf(1.0, r * 0.07))
 
 ## Flat strips beside the road for every track segment: [lat0, lat1, colour id, ...] (negative lat = left).
 static func ground(stage: Dictionary, nseg: int) -> Array:
@@ -722,7 +744,8 @@ static func _board(cv, it: Dictionary, b: Vector2, pm: float, font: Font) -> voi
 	_posts(cv, b, pm, post, [-3.5, 3.5])
 	var r := Rect2(b + Vector2(-w * 0.5, -post - hh), Vector2(w, hh))
 	cv.draw_rect(r, sign_color("board_motorway" if it.blue else "board"))
-	cv.draw_rect(r.grow(-0.14 * pm), Color.WHITE, false, maxf(1.0, 0.1 * pm))
+	var ink := Color.WHITE if it.blue else sign_color("board_text")
+	cv.draw_rect(r.grow(-0.14 * pm), ink, false, maxf(1.0, 0.1 * pm))
 	if it.road != "":
 		var pl := plate(it.road)
 		var pr := Rect2(r.position + Vector2(w * 0.5 - 1.2 * pm, 0.3 * pm), Vector2(2.4 * pm, 1.0 * pm))
@@ -730,8 +753,8 @@ static func _board(cv, it: Dictionary, b: Vector2, pm: float, font: Font) -> voi
 		_fit_text(cv, font, pr, pl[0], pl[2], 0.8 * pm)
 	for i in lines.size():
 		var row := Rect2(r.position + Vector2(0.5 * pm, head + lh * i), Vector2(w - 1.0 * pm, lh))
-		_fit_text(cv, font, Rect2(row.position, Vector2(row.size.x * 0.78, lh)), lines[i][0], Color.WHITE, 0.85 * pm, HORIZONTAL_ALIGNMENT_LEFT)
-		_fit_text(cv, font, row, str(lines[i][1]), Color.WHITE, 0.85 * pm, HORIZONTAL_ALIGNMENT_RIGHT)
+		_fit_text(cv, font, Rect2(row.position, Vector2(row.size.x * 0.78, lh)), lines[i][0], ink, 0.85 * pm, HORIZONTAL_ALIGNMENT_LEFT)
+		_fit_text(cv, font, row, str(lines[i][1]), ink, 0.85 * pm, HORIZONTAL_ALIGNMENT_RIGHT)
 
 ## Brown tourist board with the name of the region being entered.
 static func _region(cv, it: Dictionary, b: Vector2, pm: float, font: Font) -> void:

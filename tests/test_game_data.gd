@@ -33,7 +33,7 @@ func _check_trips(t, code: String) -> void:
 			if s.stations.is_empty() or s.duration <= 0.0 or s.towns[0].id != a or s.towns[-1].id != b:
 				ok = false; print("  %s: trip %s-%s broken" % [code, a, b])
 			for zz in [10.0, s.length * 0.5, s.length - 10.0]:
-				if Route.speed_limit_at(s, zz) <= 0: ok = false
+				if Route.speed_limit_at(s, zz) <= 0 and not (Route.lanes_at(s, zz) == 3 and Geo.limits().has("unlimited_beyond_km")): ok = false
 			for tn in s.tunnels:
 				for tw in s.towns:
 					if tw.z + tw.half > tn.z0 and tw.z - tw.half < tn.z1: ok = false; print("  %s: %s-%s tunnel in a town" % [code, a, b])
@@ -43,7 +43,7 @@ func _check_trips(t, code: String) -> void:
 
 func _check_country(t, code: String, rules: Dictionary) -> void:
 	var c := GameData.country(code)
-	for key in ["code", "name", "drive", "region_label", "limits", "signs", "map", "outline", "cities", "roads", "facts", "landmarks"]:
+	for key in ["code", "name", "drive", "region_label", "limits", "signs", "map", "outline", "outline_lines", "cities", "roads", "facts", "landmarks"]:
 		t.check(c.has(key), "%s: country has %s" % [code, key])
 	t.check(c.code == code, "%s: code matches its folder" % code)
 	for k in ["express", "road", "city", "town_on_express", "town"]:

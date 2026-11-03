@@ -31,7 +31,7 @@ func decide(r: Race) -> Dictionary:
 		var slow := _slow_ahead(r)
 		if _overtaking and (slow.is_empty() or not _clear_oncoming(r, 2.5)):
 			_overtaking = false
-		if not _overtaking and not slow.is_empty() and r.speed_limit() >= 90 and _clear_oncoming(r, 5.0):
+		if not _overtaking and not slow.is_empty() and (r.speed_limit() >= 90 or r.speed_limit() == Route.NO_LIMIT) and _clear_oncoming(r, 5.0):
 			_overtaking = true
 		if _overtaking:
 			target_x = -0.5
@@ -78,7 +78,7 @@ func decide(r: Race) -> Dictionary:
 	if obey_limits:
 		# slow down in time for a lower limit ahead (towns), stay just under the limit
 		var look: float = 40.0 + r.speed * r.speed / (2.0 * r.stats.brake * 0.5)
-		var lim: float = minf(r.speed_limit(), Route.speed_limit_at(r.stage, r.z + look)) / 3.6 - 1.0
+		var lim: float = minf(_limit(r.stage, r.z), _limit(r.stage, r.z + look)) / 3.6 - 1.0
 		if r.speed > lim:
 			accel = false
 			brake = brake or r.speed > lim + 1.5
@@ -129,3 +129,8 @@ static func run_race(car: String, stage: Dictionary, seed_value: int, cruise_rat
 		r.step(1.0 / 60.0, b.decide(r))
 		guard += 1
 	return r
+
+## The limit the autopilot keeps, km/h: none (its own cruise) on an Autobahn without one.
+static func _limit(stage: Dictionary, z: float) -> float:
+	var lim := Route.speed_limit_at(stage, z)
+	return INF if lim == Route.NO_LIMIT else float(lim)

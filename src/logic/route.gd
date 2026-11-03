@@ -11,6 +11,9 @@ const MAX_LENGTH := 12500.0
 const STATION_EVERY := 3200.0
 const CITY_HALF := 260.0 ## half-length of a big city passed on the way (game metres)
 const TOWN_HALF := 90.0
+const NO_LIMIT := 0 ## speed_limit_at() on an Autobahn stretch without a limit
+const LIMITED_NEAR_CITY := 900.0 ## track metres from each end of a trip where the Autobahn still has its limit
+const UNLIMITED_CRUISE := 130 ## km/h traffic keeps there (the German advisory speed)
 const HILL_TIME := 0.1 ## extra share of the time limit per unit of average Biome.hill
 const END_CITY := 380.0 ## city streets at the start and the finish
 const END_TOWN := 220.0 ## the same for a small place (under SMALL_POP thousand people)
@@ -193,7 +196,7 @@ static func build(from: String, to: String) -> Dictionary:
 		curve += Biome.get_data(zn.biome).curve * w
 		hill += Biome.get_data(zn.biome).hill * w
 	# climbs slow every car down a little: hillier routes get more time
-	var legal := _legal_time(towns, roads, length) * (1.0 + HILL_TIME * hill / length)
+	var legal := _legal_time(towns, roads, length, mpk) * (1.0 + HILL_TIME * hill / length)
 	var weather := Weather.for_legs(legs)
 	var duration := ceilf((legal * 1.09 * Weather.time_factor(weather) + 6.0 * n_st + 12.0) / 5.0) * 5.0
 	var stage := {
@@ -236,12 +239,16 @@ static func _boards(towns: Array, mpk: float, roads: Array) -> Array:
 
 ## Seconds needed to drive the track keeping to the speed limits (capped at a typical cruising speed), plus
 ## time to slow down for and speed up after every town.
-static func _legal_time(towns: Array, roads: Array, length: float) -> float:
-	var probe := {"towns": towns, "roads": roads}
+static func _legal_time(towns: Array, roads: Array, length: float, mpk: float) -> float:
+	var probe := {"towns": towns, "roads": roads, "length": length, "m_per_km": mpk}
 	var t := 0.0
 	var z := 0.0
 	while z < length:
-		t += 10.0 / (minf(speed_limit_at(probe, z), 135.0) / 3.6 * 0.95)
+		# no limit counts as the posted motorway limit: the time stays fair in heavy Autobahn traffic, and the open
+		# stretches are a gain for whoever drives faster
+		var lim := speed_limit_at(probe, z)
+		if lim == NO_LIMIT: lim = Geo.limit_kmh(int(Geo.limits().express))
+		t += 10.0 / (minf(lim, 135.0) / 3.6 * 0.95)
 		z += 10.0
 	return t + 1.5 * towns.size()
 
@@ -338,9 +345,15 @@ static func zone_at(stage: Dictionary, z: float) -> Dictionary:
 		if z < zn.z1: return zn
 	return zs[-1]
 
-## Speed limit in km/h at z (the posted limit, converted from mph where the signs use it).
+## Speed limit in km/h at z (the posted limit, converted from mph where the signs use it); NO_LIMIT (0) on an
+## Autobahn stretch without one.
 static func speed_limit_at(stage: Dictionary, z: float) -> int:
 	return Geo.limit_kmh(sign_limit_at(stage, z))
+
+## The speed traffic keeps at z, km/h: the limit, or a usual motorway cruise where there is none.
+static func cruise_kmh(stage: Dictionary, z: float) -> int:
+	var lim := speed_limit_at(stage, z)
+	return UNLIMITED_CRUISE if lim == NO_LIMIT else lim
 
 ## Speed limit as the sign shows it, from the country's limits (Poland: 140 on motorways and expressways, 90 on other
 ## roads; 70 through a big city and through a small town on an expressway, 50 through a small town on an ordinary road;
@@ -351,6 +364,10 @@ static func sign_limit_at(stage: Dictionary, z: float) -> int:
 	var express := lanes_at(stage, z) == 3
 	if not t.is_empty():
 		return int(lim.city if t.big else (lim.town_on_express if express else lim.town))
+	if express and lim.has("unlimited_beyond_km"): # Germany: no limit on the Autobahn away from the cities
+		var edge: float = maxf(lim.unlimited_beyond_km * stage.m_per_km, LIMITED_NEAR_CITY)
+		if z > edge and z < stage.length - edge:
+			return NO_LIMIT
 	return int(lim.express if express else lim.road)
 
 ## Dual carriageway here (two lanes each way with a green median): motorways, expressways and big city streets.

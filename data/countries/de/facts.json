@@ -1,0 +1,1101 @@
+{
+	"Berlin": {
+		"pl": "Stolica Niemiec; od 1961 do 1989 roku miasto dzielił na pół mur",
+		"en": "Germany's capital; from 1961 to 1989 a wall split the city in two",
+		"cs": "Hlavní město Německa; v letech 1961 až 1989 dělila město na půl zeď",
+		"is": "Höfuðborg Þýskalands; frá 1961 til 1989 skipti múr borginni í tvennt",
+		"de": "Deutschlands Hauptstadt; von 1961 bis 1989 teilte eine Mauer die Stadt in zwei Hälften"
+	},
+	"Hamburg": {
+		"pl": "Największy port Niemiec; ma około 2500 mostów, więcej niż Wenecja",
+		"en": "Germany's biggest port, with about 2,500 bridges – more than Venice",
+		"cs": "Největší přístav Německa; má asi 2500 mostů, víc než Benátky",
+		"is": "Stærsta höfn Þýskalands, með um 2500 brýr – fleiri en í Feneyjum",
+		"de": "Deutschlands größter Hafen, mit rund 2500 Brücken – mehr als Venedig"
+	},
+	"München": {
+		"pl": "Stolica Bawarii; co roku odbywa się tu Oktoberfest, największy festyn na świecie",
+		"en": "Capital of Bavaria and home of the Oktoberfest, the world's biggest folk festival",
+		"cs": "Hlavní město Bavorska; každý rok se tu koná Oktoberfest, největší lidová slavnost světa",
+		"is": "Höfuðborg Bæjaralands; hér er Oktoberfest haldin ár hvert, stærsta alþýðuhátíð heims",
+		"de": "Hauptstadt Bayerns und Heimat des Oktoberfests, des größten Volksfests der Welt"
+	},
+	"Köln": {
+		"pl": "Założyli ją Rzymianie; tu wymyślono wodę kolońską",
+		"en": "Founded by the Romans; eau de Cologne perfume was invented here",
+		"cs": "Založili ji Římané; tady vznikla kolínská voda",
+		"is": "Rómverjar stofnuðu borgina; hér var kölnarvatnið fundið upp",
+		"de": "Von den Römern gegründet; hier wurde das Kölnisch Wasser erfunden"
+	},
+	"Frankfurt am Main": {
+		"pl": "Tu Europejski Bank Centralny pilnuje euro, a lotnisko jest największe w Niemczech",
+		"en": "The European Central Bank looks after the euro here, and its airport is Germany's busiest",
+		"cs": "Evropská centrální banka tu hlídá euro a letiště je největší v Německu",
+		"is": "Hér gætir Seðlabanki Evrópu evrunnar og flugvöllurinn er sá stærsti í Þýskalandi",
+		"de": "Hier wacht die Europäische Zentralbank über den Euro, und der Flughafen ist Deutschlands größter"
+	},
+	"Stuttgart": {
+		"pl": "Czarny koń z herbu Stuttgartu skacze na znaczku każdego Porsche",
+		"en": "The black horse from Stuttgart's coat of arms prances on every Porsche badge",
+		"cs": "Černý kůň ze stuttgartského znaku skáče na znaku každého Porsche",
+		"is": "Svarti hesturinn úr skjaldarmerki Stuttgart stekkur á merki hvers Porsche",
+		"de": "Das schwarze Pferd aus dem Stuttgarter Wappen springt auf jedem Porsche-Wappen"
+	},
+	"Düsseldorf": {
+		"pl": "Symbolem miasta jest chłopiec, który robi gwiazdę na ulicy",
+		"en": "City of cartwheels: its symbol is a boy turning cartwheels in the street",
+		"cs": "Město přemetů: jeho symbolem je kluk, který na ulici dělá hvězdy",
+		"is": "Borg handahlaupanna: tákn hennar er strákur sem fer handahlaup á götunni",
+		"de": "Stadt der Radschläger: Ihr Wahrzeichen ist ein Junge, der auf der Straße Rad schlägt"
+	},
+	"Leipzig": {
+		"pl": "Miasto muzyki: Jan Sebastian Bach przez 27 lat prowadził tu chór chłopięcy",
+		"en": "City of music: Johann Sebastian Bach led the boys' choir here for 27 years",
+		"cs": "Město hudby: Johann Sebastian Bach tu 27 let vedl chlapecký sbor",
+		"is": "Borg tónlistar: Johann Sebastian Bach stjórnaði drengjakórnum hér í 27 ár",
+		"de": "Musikstadt: Johann Sebastian Bach leitete hier 27 Jahre lang den Thomanerchor"
+	},
+	"Dortmund": {
+		"pl": "Dawniej miasto węgla, stali i piwa; dziś jest tu Niemieckie Muzeum Piłki Nożnej",
+		"en": "Once a city of coal, steel and beer; today it has the German Football Museum",
+		"cs": "Kdysi město uhlí, oceli a piva; dnes tu je Německé fotbalové muzeum",
+		"is": "Áður borg kola, stáls og bjórs; nú er Þýska fótboltasafnið hér",
+		"de": "Einst Stadt von Kohle, Stahl und Bier; heute steht hier das Deutsche Fußballmuseum"
+	},
+	"Essen": {
+		"pl": "Po niemiecku „essen” znaczy „jeść”, ale nazwa miasta nie ma nic wspólnego z jedzeniem",
+		"en": "In German 'essen' means 'to eat', but the city's name has nothing to do with food",
+		"cs": "Německy „essen“ znamená „jíst“, ale jméno města s jídlem nesouvisí",
+		"is": "Á þýsku þýðir „essen“ „að borða“, en nafn borgarinnar tengist ekki mat",
+		"de": "Klingt nach Mittagessen, doch der Name der Stadt hat mit Essen nichts zu tun"
+	},
+	"Bremen": {
+		"pl": "Razem z Bremerhaven tworzy osobny kraj związkowy; port wysyła ponad milion aut rocznie",
+		"en": "With Bremerhaven it forms a state of its own; the port ships over a million cars a year",
+		"cs": "S Bremerhavenem tvoří samostatnou spolkovou zemi; přístav odveze přes milion aut ročně",
+		"is": "Ásamt Bremerhaven er hún sérstakt sambandsland; höfnin flytur yfir milljón bíla á ári",
+		"de": "Mit Bremerhaven ein eigenes Bundesland; der Hafen verschifft über eine Million Autos im Jahr"
+	},
+	"Dresden": {
+		"pl": "Za barokowe budowle nad rzeką nazywane „Florencją nad Łabą”",
+		"en": "Called 'Florence on the Elbe' for its Baroque buildings along the river",
+		"cs": "Pro barokní stavby u řeky se mu říká „Florencie na Labi“",
+		"is": "Kölluð „Flórens við Saxelfi“ vegna barokkbygginganna við ána",
+		"de": "Wegen der Barockbauten am Fluss „Elbflorenz“ genannt"
+	},
+	"Hannover": {
+		"pl": "Odbywają się tu największe targi na świecie, a w 2000 roku wystawa światowa Expo",
+		"en": "It hosts the world's biggest trade fairs and held the Expo 2000 world's fair",
+		"cs": "Konají se tu největší veletrhy na světě a v roce 2000 světová výstava Expo",
+		"is": "Hér eru haldnar stærstu vörusýningar heims og heimssýningin Expo 2000",
+		"de": "Hier finden die größten Messen der Welt statt, im Jahr 2000 auch die Weltausstellung Expo"
+	},
+	"Nürnberg": {
+		"pl": "Miasto zabawek: co roku odbywają się tu największe targi zabawek na świecie",
+		"en": "Toy city: the world's biggest toy fair takes place here every year",
+		"cs": "Město hraček: každý rok se tu konají největší veletrhy hraček na světě",
+		"is": "Leikfangaborg: stærsta leikfangasýning heims er haldin hér á hverju ári",
+		"de": "Spielzeugstadt: Hier findet jedes Jahr die größte Spielwarenmesse der Welt statt"
+	},
+	"Bielefeld": {
+		"pl": "Niemcy żartują, że Bielefeld nie istnieje – a jednak tu jest!",
+		"en": "Germans joke that Bielefeld doesn't exist – and yet here it is!",
+		"cs": "Němci vtipkují, že Bielefeld neexistuje – a přece tu je!",
+		"is": "Þjóðverjar grínast með að Bielefeld sé ekki til – en hér er hún samt!",
+		"de": "Man witzelt, Bielefeld gebe es gar nicht – und doch ist es hier!"
+	},
+	"Münster": {
+		"pl": "Miasto rowerów: jest ich tu więcej niż mieszkańców",
+		"en": "City of bicycles: there are more bikes here than people",
+		"cs": "Město kol: je jich tu víc než obyvatel",
+		"is": "Borg reiðhjólanna: hér eru fleiri hjól en íbúar",
+		"de": "Fahrradstadt: Hier gibt es mehr Fahrräder als Einwohner"
+	},
+	"Mannheim": {
+		"pl": "Tu w 1817 roku Karl Drais jechał pierwszym rowerem biegowym, a Karl Benz zbudował auto",
+		"en": "Karl Drais rode the first 'running machine', the bike's ancestor, here in 1817; Karl Benz built his car here",
+		"cs": "Tady roku 1817 Karl Drais vyjel na prvním odrážedle a Karl Benz tu postavil auto",
+		"is": "Hér hjólaði Karl Drais á fyrsta sparkhjólinu árið 1817 og Karl Benz smíðaði bílinn sinn",
+		"de": "Hier fuhr Karl Drais 1817 die erste Laufmaschine, und Karl Benz baute sein Auto"
+	},
+	"Karlsruhe": {
+		"pl": "Obradują tu najwyższe sądy Niemiec; miasto założono dopiero w 1715 roku",
+		"en": "Germany's highest courts sit here; the city was only founded in 1715",
+		"cs": "Sídlí tu nejvyšší soudy Německa; město bylo založeno až roku 1715",
+		"is": "Hér sitja æðstu dómstólar Þýskalands; borgin var ekki stofnuð fyrr en 1715",
+		"de": "Hier sitzen Deutschlands höchste Gerichte; die Stadt wurde erst 1715 gegründet"
+	},
+	"Augsburg": {
+		"pl": "W osiedlu Fuggerei, najstarszym osiedlu socjalnym świata, czynsz to mniej niż 1 euro rocznie",
+		"en": "In the Fuggerei, the world's oldest social housing, the rent is under 1 euro a year",
+		"cs": "Ve Fuggerei, nejstarším sociálním sídlišti světa, je nájem pod 1 euro ročně",
+		"is": "Í Fuggerei, elstu félagsíbúðum heims, er leigan undir 1 evru á ári",
+		"de": "In der Fuggerei, der ältesten Sozialsiedlung der Welt, kostet die Miete unter 1 Euro im Jahr"
+	},
+	"Mainz": {
+		"pl": "Tu około 1450 roku Jan Gutenberg wynalazł druk ruchomymi czcionkami",
+		"en": "Johannes Gutenberg invented printing with movable letters here around 1450",
+		"cs": "Tady Johannes Gutenberg kolem roku 1450 vynalezl knihtisk s pohyblivými literami",
+		"is": "Hér fann Jóhann Gutenberg upp prentun með lausaletri um 1450",
+		"de": "Hier erfand Johannes Gutenberg um 1450 den Buchdruck mit beweglichen Lettern"
+	},
+	"Aachen": {
+		"pl": "Karol Wielki pokochał to miasto za gorące źródła",
+		"en": "Charlemagne made it his favourite home because of its hot springs",
+		"cs": "Karel Veliký si město oblíbil kvůli horkým pramenům",
+		"is": "Karlamagnús gerði borgina að eftirlætisheimili sínu vegna heitu lindanna",
+		"de": "Karl der Große machte die Stadt wegen ihrer heißen Quellen zu seinem Lieblingsort"
+	},
+	"Braunschweig": {
+		"pl": "Tu urodził się Carl Friedrich Gauss, jeden z największych matematyków w historii",
+		"en": "Birthplace of Carl Friedrich Gauss, one of the greatest mathematicians ever",
+		"cs": "Rodiště Carla Friedricha Gausse, jednoho z největších matematiků všech dob",
+		"is": "Hér fæddist Carl Friedrich Gauss, einn mesti stærðfræðingur sögunnar",
+		"de": "Geburtsort von Carl Friedrich Gauß, einem der größten Mathematiker aller Zeiten"
+	},
+	"Kiel": {
+		"pl": "Tu zaczyna się Kanał Kiloński, najruchliwszy sztuczny kanał na świecie",
+		"en": "The Kiel Canal starts here: the world's busiest man-made waterway",
+		"cs": "Začíná tu Kielský průplav, nejrušnější umělá vodní cesta světa",
+		"is": "Hér byrjar skurðurinn til Norðursjávar, fjölfarnasti manngerði skipaskurður heims",
+		"de": "Der Nord-Ostsee-Kanal beginnt hier: die meistbefahrene künstliche Wasserstraße der Welt"
+	},
+	"Chemnitz": {
+		"pl": "Od 1953 do 1990 roku nazywało się Karl-Marx-Stadt; w 2025 było Europejską Stolicą Kultury",
+		"en": "From 1953 to 1990 it was called Karl-Marx-Stadt; European Capital of Culture in 2025",
+		"cs": "V letech 1953 až 1990 se jmenovalo Karl-Marx-Stadt; v roce 2025 Evropské hlavní město kultury",
+		"is": "Frá 1953 til 1990 hét borgin Karl-Marx-Stadt; menningarborg Evrópu árið 2025",
+		"de": "Von 1953 bis 1990 hieß sie Karl-Marx-Stadt; 2025 Kulturhauptstadt Europas"
+	},
+	"Magdeburg": {
+		"pl": "Burmistrz Otto von Guericke pokazał, że 16 koni nie rozerwie kuli, z której wypompowano powietrze",
+		"en": "Its mayor Otto von Guericke showed that 16 horses could not pull apart a ball with the air pumped out",
+		"cs": "Starosta Otto von Guericke ukázal, že 16 koní neroztrhne kouli, z níž vyčerpal vzduch",
+		"is": "Bæjarstjórinn Otto von Guericke sýndi að 16 hestar gátu ekki slitið sundur loftlausa kúlu",
+		"de": "Bürgermeister Otto von Guericke zeigte: 16 Pferde reißen eine luftleere Kugel nicht auseinander"
+	},
+	"Freiburg im Breisgau": {
+		"pl": "Ulicami płyną wąskie strumyki „Bächle”; kto w nie wdepnie, ten według legendy poślubi kogoś stąd",
+		"en": "Little streams called 'Bächle' run along its streets; step in one and, legend says, you'll marry a local",
+		"cs": "Ulicemi tečou potůčky „Bächle“; kdo do nich šlápne, ten si podle pověsti vezme někoho odsud",
+		"is": "Litlir lækir, „Bächle“, renna um göturnar; sá sem stígur í þá giftist heimamanni, segir sagan",
+		"de": "Durch die Straßen fließen die „Bächle“; wer hineintritt, heiratet der Sage nach jemanden von hier"
+	},
+	"Lübeck": {
+		"pl": "Królowa Hanzy, słynna z marcepanu",
+		"en": "Queen of the Hanseatic League, famous for its marzipan",
+		"cs": "Královna Hanzy, proslulá marcipánem",
+		"is": "Drottning Hansasambandsins, fræg fyrir marsípan",
+		"de": "Königin der Hanse, berühmt für ihr Marzipan"
+	},
+	"Erfurt": {
+		"pl": "Stolica Turyngii; stąd nadaje dziecięcy kanał telewizyjny KiKA",
+		"en": "Capital of Thuringia; the German children's TV channel KiKA broadcasts from here",
+		"cs": "Hlavní město Durynska; vysílá odsud německý dětský televizní kanál KiKA",
+		"is": "Höfuðborg Þýringalands; þýska barnasjónvarpsstöðin KiKA sendir út héðan",
+		"de": "Hauptstadt Thüringens; von hier sendet der Kinderkanal KiKA"
+	},
+	"Rostock": {
+		"pl": "Port hanzeatycki z uniwersytetem z 1419 roku, najstarszym nad Bałtykiem",
+		"en": "A Hanseatic port whose university, founded in 1419, is the oldest on the Baltic",
+		"cs": "Hanzovní přístav s univerzitou z roku 1419, nejstarší u Baltu",
+		"is": "Hansahöfn með háskóla frá 1419, þeim elsta við Eystrasalt",
+		"de": "Hansehafen mit einer Universität von 1419, der ältesten im Ostseeraum"
+	},
+	"Kassel": {
+		"pl": "Tu bracia Grimm spisywali baśnie; co pięć lat odbywa się wystawa sztuki documenta",
+		"en": "The Brothers Grimm collected fairy tales here; every five years it hosts the art show documenta",
+		"cs": "Tady bratři Grimmové sbírali pohádky; každých pět let se tu koná výstava umění documenta",
+		"is": "Hér söfnuðu Grimmsbræður ævintýrum; á fimm ára fresti er listsýningin documenta haldin hér",
+		"de": "Hier sammelten die Brüder Grimm Märchen; alle fünf Jahre findet die documenta statt"
+	},
+	"Füssen": {
+		"pl": "Dawniej słynne miasto lutników, którzy robili lutnie i skrzypce",
+		"en": "Once a famous town of craftsmen who made lutes and violins",
+		"cs": "Kdysi slavné město houslařů, kteří vyráběli loutny a housle",
+		"is": "Áður frægur bær handverksmanna sem smíðuðu lútur og fiðlur",
+		"de": "Einst berühmte Stadt der Lauten- und Geigenbauer"
+	},
+	"Preetz": {
+		"pl": "Dawniej zwane miastem szewców, bo mieszkało tu ich bardzo wielu",
+		"en": "Once called the shoemakers' town because so many cobblers lived here",
+		"cs": "Kdysi se mu říkalo město ševců, protože jich tu žilo velmi mnoho",
+		"is": "Var kallaður skósmiðabærinn því svo margir skósmiðir bjuggu hér",
+		"de": "Früher „Schusterstadt“ genannt, weil hier so viele Schuhmacher lebten"
+	},
+	"Plön": {
+		"pl": "Zamek stoi nad Wielkim Jeziorem Plöner, największym w Szlezwiku-Holsztynie",
+		"en": "Its castle looks over the Great Plön Lake, the largest in Schleswig-Holstein",
+		"cs": "Zámek se tyčí nad Velkým plönským jezerem, největším ve Šlesvicku-Holštýnsku",
+		"is": "Kastalinn gnæfir yfir Stóra Plön-vatni, því stærsta í Slésvík-Holtsetalandi",
+		"de": "Das Schloss thront über dem Großen Plöner See, dem größten See Schleswig-Holsteins"
+	},
+	"Eutin": {
+		"pl": "Tu urodził się kompozytor Carl Maria von Weber, autor opery „Wolny strzelec”",
+		"en": "Birthplace of the composer Carl Maria von Weber, who wrote the opera 'Der Freischütz'",
+		"cs": "Rodiště skladatele Carla Marii von Webera, autora opery „Čarostřelec“",
+		"is": "Hér fæddist tónskáldið Carl Maria von Weber sem samdi óperuna „Der Freischütz“",
+		"de": "Geburtsort des Komponisten Carl Maria von Weber, der den „Freischütz“ schrieb"
+	},
+	"Bad Schwartau": {
+		"pl": "Pachnie tu dżemem: od ponad stu lat działa tu znana fabryka konfitur",
+		"en": "It smells of jam: a famous jam factory has worked here for over a hundred years",
+		"cs": "Voní to tu džemem: přes sto let tu funguje známá továrna na marmelády",
+		"is": "Hér ilmar af sultu: fræg sultugerð hefur starfað hér í yfir hundrað ár",
+		"de": "Hier duftet es nach Marmelade: Eine bekannte Konfitürenfabrik arbeitet hier seit über 100 Jahren"
+	},
+	"Bad Bramstedt": {
+		"pl": "Na rynku stoi Roland, kamienny rycerz, taki jak w Bremie",
+		"en": "A Roland, a stone knight like Bremen's, stands in its market square",
+		"cs": "Na náměstí stojí Roland, kamenný rytíř jako v Brémách",
+		"is": "Á torginu stendur Roland, steinriddari eins og sá í Brimum",
+		"de": "Auf dem Marktplatz steht ein Roland, ein steinerner Ritter wie in Bremen"
+	},
+	"Reinfeld": {
+		"pl": "Tu urodził się poeta Matthias Claudius, autor słynnej niemieckiej kołysanki o księżycu",
+		"en": "Birthplace of the poet Matthias Claudius, who wrote a famous German song about the moon",
+		"cs": "Rodiště básníka Matthiase Claudia, autora slavné německé písně o měsíci",
+		"is": "Hér fæddist skáldið Matthias Claudius sem orti frægt þýskt kvöldljóð um tunglið",
+		"de": "Geburtsort von Matthias Claudius, der „Der Mond ist aufgegangen“ dichtete"
+	},
+	"Ahrensburg": {
+		"pl": "Ma biały renesansowy zamek otoczony fosą",
+		"en": "It has a white Renaissance castle surrounded by a moat",
+		"cs": "Má bílý renesanční zámek obklopený vodním příkopem",
+		"is": "Hér er hvítur endurreisnarkastali umkringdur síki",
+		"de": "Hier steht ein weißes Renaissanceschloss mit Wassergraben"
+	},
+	"Grevesmühlen": {
+		"pl": "Każdego lata pod gołym niebem gra się tu wielkie przedstawienie o piratach",
+		"en": "Every summer a big pirate show is performed here in the open air",
+		"cs": "Každé léto se tu pod širým nebem hraje velká pirátská show",
+		"is": "Á hverju sumri er stór sjóræningjasýning sett upp hér undir berum himni",
+		"de": "Jeden Sommer wird hier unter freiem Himmel ein großes Piratenspektakel aufgeführt"
+	},
+	"Wismar": {
+		"pl": "Dawny port Hanzy z ceglanymi kościołami, na liście UNESCO razem ze Stralsundem",
+		"en": "An old Hanseatic port with brick churches, a UNESCO site together with Stralsund",
+		"cs": "Starý hanzovní přístav s cihlovými kostely, spolu se Stralsundem památka UNESCO",
+		"is": "Gömul Hansahöfn með múrsteinskirkjum, á heimsminjaskrá UNESCO ásamt Stralsund",
+		"de": "Alte Hansestadt mit Backsteinkirchen, zusammen mit Stralsund UNESCO-Welterbe"
+	},
+	"Güstrow": {
+		"pl": "Miasto rzeźbiarza Ernsta Barlacha, z pięknym renesansowym zamkiem",
+		"en": "The town of the sculptor Ernst Barlach, with a beautiful Renaissance castle",
+		"cs": "Město sochaře Ernsta Barlacha s krásným renesančním zámkem",
+		"is": "Bær myndhöggvarans Ernst Barlach, með fallegum endurreisnarkastala",
+		"de": "Stadt des Bildhauers Ernst Barlach, mit einem schönen Renaissanceschloss"
+	},
+	"Krakow am See": {
+		"pl": "Nazywa się prawie jak Kraków, ale to małe miasteczko nad jeziorem",
+		"en": "Its name sounds just like Kraków in Poland, but it's a little town on a lake",
+		"cs": "Jmenuje se skoro jako Krakov, ale je to městečko u jezera",
+		"is": "Nafnið hljómar eins og Kraká í Póllandi, en þetta er smábær við vatn",
+		"de": "Es heißt fast wie Krakau in Polen, ist aber ein Städtchen am See"
+	},
+	"Malchow": {
+		"pl": "Stare miasto leży na wyspie, a prowadzi na nią most obrotowy",
+		"en": "Its old town sits on an island, reached by a swing bridge",
+		"cs": "Staré město leží na ostrově, na který vede otočný most",
+		"is": "Gamli bærinn er á eyju og þangað liggur snúningsbrú",
+		"de": "Die Altstadt liegt auf einer Insel, zu der eine Drehbrücke führt"
+	},
+	"Wittstock": {
+		"pl": "Prawie cały średniowieczny mur miejski przetrwał do dziś",
+		"en": "Almost all of its medieval town wall still stands",
+		"cs": "Téměř celé středověké městské hradby se zachovaly dodnes",
+		"is": "Nær allur miðaldaborgarmúrinn stendur enn",
+		"de": "Die mittelalterliche Stadtmauer ist fast vollständig erhalten"
+	},
+	"Neuruppin": {
+		"pl": "Tu urodzili się pisarz Theodor Fontane i architekt Karl Friedrich Schinkel",
+		"en": "Birthplace of the writer Theodor Fontane and the architect Karl Friedrich Schinkel",
+		"cs": "Rodiště spisovatele Theodora Fontana a architekta Karla Friedricha Schinkela",
+		"is": "Hér fæddust rithöfundurinn Theodor Fontane og arkitektinn Karl Friedrich Schinkel",
+		"de": "Geburtsort des Dichters Theodor Fontane und des Baumeisters Karl Friedrich Schinkel"
+	},
+	"Oranienburg": {
+		"pl": "Nazwę zawdzięcza księżniczce Ludwice Henrietcie Orańskiej z Holandii",
+		"en": "Named after Princess Louise Henriette of Orange from the Netherlands",
+		"cs": "Jméno dostalo po princezně Luise Henriettě Oranžské z Nizozemska",
+		"is": "Nefnd eftir Louise Henriette prinsessu af Óraníu frá Hollandi",
+		"de": "Benannt nach Prinzessin Luise Henriette von Oranien aus den Niederlanden"
+	},
+	"Egestorf": {
+		"pl": "Brama do Pustaci Lüneburskiej, która w sierpniu robi się fioletowa od wrzosów",
+		"en": "Gateway to the Lüneburg Heath, which turns purple with heather in August",
+		"cs": "Brána do Lüneburských vřesovišť, která v srpnu zfialoví vřesem",
+		"is": "Hlið að Lüneburg-heiðinni sem verður fjólublá af beitilyngi í ágúst",
+		"de": "Tor zur Lüneburger Heide, die im August lila vom Heidekraut wird"
+	},
+	"Bispingen": {
+		"pl": "Pośrodku płaskiej pustaci jest tu kryty stok narciarski",
+		"en": "There's an indoor ski slope here in the middle of the flat heath",
+		"cs": "Uprostřed rovinatých vřesovišť je tu krytá sjezdovka",
+		"is": "Hér er yfirbyggð skíðabrekka mitt á flatri heiðinni",
+		"de": "Mitten in der flachen Heide gibt es hier eine Skihalle"
+	},
+	"Soltau": {
+		"pl": "Obok jest Heide Park, jeden z największych parków rozrywki w Niemczech",
+		"en": "Next to it is Heide Park, one of Germany's biggest amusement parks",
+		"cs": "Hned vedle je Heide Park, jeden z největších zábavních parků v Německu",
+		"is": "Rétt hjá er Heide Park, einn stærsti skemmtigarður Þýskalands",
+		"de": "Gleich daneben liegt der Heide Park, einer der größten Freizeitparks Deutschlands"
+	},
+	"Walsrode": {
+		"pl": "Weltvogelpark to jeden z największych parków ptaków na świecie",
+		"en": "Its Weltvogelpark is one of the largest bird parks in the world",
+		"cs": "Weltvogelpark je jeden z největších ptačích parků na světě",
+		"is": "Weltvogelpark hér er einn stærsti fuglagarður heims",
+		"de": "Der Weltvogelpark hier ist einer der größten Vogelparks der Welt"
+	},
+	"Langenhagen": {
+		"pl": "Tu startują i lądują samoloty lotniska w Hanowerze",
+		"en": "Hanover's airport is here, with planes taking off right by the town",
+		"cs": "Je tu letiště Hannoveru, letadla startují hned u města",
+		"is": "Hér er flugvöllur Hannover og flugvélarnar taka á loft rétt við bæinn",
+		"de": "Hier liegt der Flughafen Hannover, die Flugzeuge starten direkt neben der Stadt"
+	},
+	"Zarrentin": {
+		"pl": "Leży nad jeziorem Schaalsee, przez które biegła granica między NRD a RFN",
+		"en": "It lies on Schaalsee, a lake the border between East and West Germany once crossed",
+		"cs": "Leží u jezera Schaalsee, kterým kdysi vedla hranice mezi NDR a NSR",
+		"is": "Bærinn stendur við Schaalsee-vatn sem landamæri Austur- og Vestur-Þýskalands lágu um",
+		"de": "Liegt am Schaalsee, durch den einst die Grenze zwischen DDR und Bundesrepublik lief"
+	},
+	"Ludwigslust": {
+		"pl": "Miasteczko pałacowe nazywane „Wersalem Północy”",
+		"en": "A palace town nicknamed the 'Versailles of the North'",
+		"cs": "Zámecké městečko přezdívané „Versailles severu“",
+		"is": "Hallarbær sem kallaður er „Versalir norðursins“",
+		"de": "Eine Schlossstadt, „Versailles des Nordens“ genannt"
+	},
+	"Verden": {
+		"pl": "Miasto koni: odbywają się tu słynne aukcje koni i jest Muzeum Konia",
+		"en": "A horse town, with famous horse auctions and the German Horse Museum",
+		"cs": "Město koní se slavnými aukcemi koní a Německým muzeem koní",
+		"is": "Hestabær með frægum hestauppboðum og Þýska hestasafninu",
+		"de": "Reiterstadt mit berühmten Pferdeauktionen und dem Deutschen Pferdemuseum"
+	},
+	"Osnabrück": {
+		"pl": "W 1648 roku zawarto tu i w Münsterze pokój kończący wojnę trzydziestoletnią",
+		"en": "In 1648 the peace that ended the Thirty Years' War was made here and in Münster",
+		"cs": "Roku 1648 tu a v Münsteru uzavřeli mír, který ukončil třicetiletou válku",
+		"is": "Árið 1648 var friðurinn sem lauk Þrjátíu ára stríðinu saminn hér og í Münster",
+		"de": "1648 wurde hier und in Münster der Frieden geschlossen, der den Dreißigjährigen Krieg beendete"
+	},
+	"Porta Westfalica": {
+		"pl": "Wezera przebija się tu przez wzgórza, a z góry patrzy olbrzymi pomnik cesarza Wilhelma",
+		"en": "The Weser breaks through the hills here, watched by a giant monument to Emperor Wilhelm",
+		"cs": "Vezera se tu prodírá kopci a shora na ni hledí obří pomník císaře Viléma",
+		"is": "Weser-áin brýst hér í gegnum hæðirnar og risastór minnisvarði Vilhjálms keisara horfir á",
+		"de": "Hier bricht die Weser durch die Berge, darüber wacht das riesige Kaiser-Wilhelm-Denkmal"
+	},
+	"Herford": {
+		"pl": "Muzeum MARTa ma powyginane ściany zaprojektowane przez Franka Gehry'ego",
+		"en": "Its MARTa museum has wobbly walls designed by the architect Frank Gehry",
+		"cs": "Muzeum MARTa má zvlněné zdi, které navrhl architekt Frank Gehry",
+		"is": "Safnið MARTa hefur bylgjótta veggi eftir arkitektinn Frank Gehry",
+		"de": "Das Museum MARTa hat schiefe, wellige Wände des Architekten Frank Gehry"
+	},
+	"Gütersloh": {
+		"pl": "Tu mieści się siedziba Miele, które robi pralki i odkurzacze",
+		"en": "Home of Miele, the company that makes washing machines and vacuum cleaners",
+		"cs": "Sídlo firmy Miele, která vyrábí pračky a vysavače",
+		"is": "Hér eru höfuðstöðvar Miele sem framleiðir þvottavélar og ryksugur",
+		"de": "Sitz von Miele, das Waschmaschinen und Staubsauger baut"
+	},
+	"Warendorf": {
+		"pl": "Miasto koni: jest tu stadnina i ośrodek, w którym trenują olimpijscy jeźdźcy",
+		"en": "A horse town, with a state stud and the centre where Olympic riders train",
+		"cs": "Město koní s hřebčínem a střediskem, kde trénují olympijští jezdci",
+		"is": "Hestabær með ríkishrossabúi og miðstöð þar sem ólympíuknapar æfa",
+		"de": "Stadt des Pferdes, mit Landgestüt und dem Zentrum, in dem Olympiareiter trainieren"
+	},
+	"Hamm": {
+		"pl": "W parku stoi szklany słoń wysoki na 35 metrów – to budynek, do którego można wejść",
+		"en": "Its park has a 35-metre glass elephant – a building you can walk into",
+		"cs": "V parku stojí 35 metrů vysoký skleněný slon – budova, do které se dá vejít",
+		"is": "Í garðinum er 35 metra hár glerfíll – bygging sem hægt er að ganga inn í",
+		"de": "Im Park steht ein 35 Meter hoher Glaselefant – ein Gebäude, das man betreten kann"
+	},
+	"Kamen": {
+		"pl": "Tu krzyżują się autostrady A1 i A2 – to jeden z najruchliwszych węzłów w Niemczech",
+		"en": "The A1 and A2 motorways cross here at one of Germany's busiest junctions",
+		"cs": "Křižují se tu dálnice A1 a A2 – jedna z nejrušnějších křižovatek v Německu",
+		"is": "Hraðbrautirnar A1 og A2 mætast hér á einum fjölfarnasta vegamótum Þýskalands",
+		"de": "Hier kreuzen sich die A1 und A2 – eines der meistbefahrenen Autobahnkreuze Deutschlands"
+	},
+	"Dülmen": {
+		"pl": "W pobliżu od stuleci żyje na wolności stado dzikich koników",
+		"en": "A herd of wild ponies has roamed free near here for centuries",
+		"cs": "Nedaleko odsud už staletí žije na svobodě stádo divokých koníků",
+		"is": "Hjörð villtra smáhesta hefur gengið laus hér í grennd í aldaraðir",
+		"de": "In der Nähe leben seit Jahrhunderten Wildpferde in Freiheit"
+	},
+	"Haltern am See": {
+		"pl": "2000 lat temu stał tu rzymski obóz; dziś pokazuje go muzeum",
+		"en": "A Roman camp stood here 2,000 years ago; today a museum shows it",
+		"cs": "Před 2000 lety tu stál římský tábor; dnes ho ukazuje muzeum",
+		"is": "Fyrir 2000 árum stóðu hér rómverskar herbúðir; nú sýnir safn þær",
+		"de": "Vor 2000 Jahren stand hier ein Römerlager; heute zeigt es ein Museum"
+	},
+	"Recklinghausen": {
+		"pl": "Festiwal teatralny zaczął się tu, gdy górnicy dali aktorom węgiel w mroźną zimę",
+		"en": "Its theatre festival began when miners gave actors coal in a freezing winter",
+		"cs": "Divadelní festival tu začal, když horníci v mrazivé zimě dali hercům uhlí",
+		"is": "Leiklistarhátíðin hófst þegar námumenn gáfu leikurum kol í frostavetri",
+		"de": "Die Ruhrfestspiele begannen, als Bergleute Schauspielern im kalten Winter Kohle schenkten"
+	},
+	"Herne": {
+		"pl": "Jarmark Cranger Kirmes to jeden z największych festynów w Niemczech",
+		"en": "Its Cranger Kirmes is one of Germany's biggest funfairs",
+		"cs": "Pouť Cranger Kirmes je jedna z největších v Německu",
+		"is": "Cranger Kirmes hér er ein stærsta tívolíhátíð Þýskalands",
+		"de": "Die Cranger Kirmes ist eines der größten Volksfeste Deutschlands"
+	},
+	"Bochum": {
+		"pl": "Pod Muzeum Górnictwa jest prawdziwa kopalnia; Opel produkował tu auta do 2014 roku",
+		"en": "The Mining Museum has a real mine beneath it; Opel built cars here until 2014",
+		"cs": "Pod Hornickým muzeem je skutečný důl; Opel tu vyráběl auta až do roku 2014",
+		"is": "Undir Námusafninu er alvöru náma; Opel smíðaði bíla hér til 2014",
+		"de": "Unter dem Bergbau-Museum liegt ein echtes Bergwerk; Opel baute hier bis 2014 Autos"
+	},
+	"Ratingen": {
+		"pl": "Tu w 1783 roku powstała pierwsza fabryka na kontynencie europejskim",
+		"en": "The first factory on the European continent was built here in 1783",
+		"cs": "Tady roku 1783 vznikla první továrna na evropské pevnině",
+		"is": "Hér var fyrsta verksmiðjan á meginlandi Evrópu reist árið 1783",
+		"de": "Hier entstand 1783 die erste Fabrik auf dem europäischen Kontinent"
+	},
+	"Leverkusen": {
+		"pl": "Nad miastem świeci krzyż firmy Bayer, jeden z największych neonów na świecie",
+		"en": "The lit-up Bayer cross, one of the world's biggest illuminated signs, shines over the city",
+		"cs": "Nad městem svítí kříž firmy Bayer, jeden z největších světelných nápisů na světě",
+		"is": "Yfir borginni skín Bayer-krossinn, eitt stærsta ljósaskilti heims",
+		"de": "Über der Stadt leuchtet das Bayer-Kreuz, eine der größten Leuchtreklamen der Welt"
+	},
+	"Neuss": {
+		"pl": "Założyli je Rzymianie, to jedno z najstarszych miast w Niemczech",
+		"en": "Founded by the Romans, it is one of Germany's oldest towns",
+		"cs": "Založili ho Římané, je to jedno z nejstarších měst v Německu",
+		"is": "Rómverjar stofnuðu bæinn, einn þann elsta í Þýskalandi",
+		"de": "Von den Römern gegründet, eine der ältesten Städte Deutschlands"
+	},
+	"Jüchen": {
+		"pl": "Obok jest odkrywka Garzweiler, w której olbrzymie koparki kopią węgiel",
+		"en": "Next to it is the Garzweiler pit, where giant excavators dig up coal",
+		"cs": "Vedle je povrchový důl Garzweiler, kde obří rypadla těží uhlí",
+		"is": "Rétt hjá er Garzweiler-náman þar sem risastórar gröfur grafa upp kol",
+		"de": "Daneben liegt der Tagebau Garzweiler, wo riesige Bagger Kohle abbauen"
+	},
+	"Kerpen": {
+		"pl": "Tu na torze gokartowym zaczynał Michael Schumacher, siedmiokrotny mistrz Formuły 1",
+		"en": "Michael Schumacher, seven-time Formula 1 champion, started on the go-kart track here",
+		"cs": "Tady na motokárové dráze začínal Michael Schumacher, sedminásobný mistr formule 1",
+		"is": "Michael Schumacher, sjöfaldur heimsmeistari í Formúlu 1, byrjaði á gokartbrautinni hér",
+		"de": "Michael Schumacher, siebenfacher Formel-1-Weltmeister, fing hier auf der Kartbahn an"
+	},
+	"Frechen": {
+		"pl": "Od wieków wyrabia się tu kamionkowe dzbany",
+		"en": "Stoneware jugs have been made here for centuries",
+		"cs": "Už po staletí se tu vyrábějí kameninové džbány",
+		"is": "Hér hafa steinleirskönnur verið gerðar í aldaraðir",
+		"de": "Hier werden seit Jahrhunderten Steinzeugkrüge hergestellt"
+	},
+	"Düren": {
+		"pl": "Miasto papierników z muzeum papieru",
+		"en": "A town of papermakers, with its own paper museum",
+		"cs": "Město papírníků s vlastním muzeem papíru",
+		"is": "Bær pappírsgerðarmanna, með sitt eigið pappírssafn",
+		"de": "Stadt der Papiermacher, mit einem eigenen Papiermuseum"
+	},
+	"Bonn": {
+		"pl": "Stolica RFN w latach 1949–1990; tu wymyślono żelki misie Haribo",
+		"en": "Capital of West Germany from 1949 to 1990; Haribo gummy bears were invented here",
+		"cs": "Hlavní město západního Německa v letech 1949–1990; tady vznikli gumoví medvídci Haribo",
+		"is": "Höfuðborg Vestur-Þýskalands 1949–1990; hér voru Haribo-gúmmíbangsarnir fundnir upp",
+		"de": "Hauptstadt der Bundesrepublik von 1949 bis 1990; hier wurden die Haribo-Gummibärchen erfunden"
+	},
+	"Remagen": {
+		"pl": "Stał tu słynny most na Renie z 1945 roku; dziś zostały tylko jego wieże",
+		"en": "The famous Remagen bridge over the Rhine stood here; only its towers remain",
+		"cs": "Stál tu slavný most přes Rýn z roku 1945; dnes z něj zbyly jen věže",
+		"is": "Hin fræga brú yfir Rín frá 1945 stóð hér; aðeins turnarnir standa eftir",
+		"de": "Hier stand die berühmte Brücke von Remagen; heute sind nur noch ihre Türme übrig"
+	},
+	"Andernach": {
+		"pl": "Ma najwyższy gejzer zimnej wody na świecie, tryska nawet na 60 metrów",
+		"en": "Home of the world's highest cold-water geyser, shooting up to 60 metres",
+		"cs": "Má nejvyšší studený gejzír na světě, stříká až do výšky 60 metrů",
+		"is": "Hér er hæsti kaldavatnshver heims sem gýs allt að 60 metrum",
+		"de": "Hier steht der höchste Kaltwassergeysir der Welt, bis zu 60 Meter hoch"
+	},
+	"Koblenz": {
+		"pl": "Przy Deutsches Eck Mozela wpada do Renu, a nad rzeką jedzie kolejka linowa",
+		"en": "At the 'German Corner' the Moselle flows into the Rhine, and a cable car crosses the river",
+		"cs": "U Německého rohu se Mosela vlévá do Rýna a přes řeku jezdí lanovka",
+		"is": "Við „Þýska hornið“ rennur Mósel í Rín og kláfur fer yfir ána",
+		"de": "Am Deutschen Eck fließt die Mosel in den Rhein, und eine Seilbahn schwebt über den Fluss"
+	},
+	"Boppard": {
+		"pl": "Ren zatacza tu swoją największą pętlę",
+		"en": "The Rhine makes its biggest loop here",
+		"cs": "Rýn tu dělá svou největší smyčku",
+		"is": "Rín tekur hér sína stærstu lykkju",
+		"de": "Der Rhein macht hier seine größte Schleife"
+	},
+	"Sankt Goar": {
+		"pl": "Nad miastem stoi zamek Rheinfels, niegdyś największy zamek nad Renem",
+		"en": "Above the town stands Rheinfels, once the biggest castle on the Rhine",
+		"cs": "Nad městem stojí hrad Rheinfels, kdysi největší hrad na Rýně",
+		"is": "Yfir bænum stendur Rheinfels, áður stærsti kastali við Rín",
+		"de": "Über der Stadt thront Burg Rheinfels, einst die größte Burg am Rhein"
+	},
+	"Bingen am Rhein": {
+		"pl": "Według legendy w Mysiej Wieży na wyspie na Renie myszy zjadły chciwego biskupa",
+		"en": "Legend says mice ate a greedy bishop in the Mouse Tower on a Rhine island",
+		"cs": "Podle pověsti myši sežraly lakomého biskupa v Myší věži na ostrově v Rýně",
+		"is": "Sagan segir að mýs hafi étið gráðugan biskup í Músaturninum á eyju í Rín",
+		"de": "Der Sage nach fraßen Mäuse einen gierigen Bischof im Mäuseturm auf einer Rheininsel"
+	},
+	"Ingelheim": {
+		"pl": "Miasto czerwonego wina, w którym Karol Wielki zbudował pałac",
+		"en": "A red-wine town where Charlemagne built a palace",
+		"cs": "Město červeného vína, kde Karel Veliký postavil palác",
+		"is": "Rauðvínsbær þar sem Karlamagnús reisti höll",
+		"de": "Rotweinstadt, in der Karl der Große eine Pfalz baute"
+	},
+	"Montabaur": {
+		"pl": "Nad miastem stoi jaskrawożółty zamek",
+		"en": "A bright yellow castle stands above the town",
+		"cs": "Nad městem stojí jasně žlutý zámek",
+		"is": "Skærgulur kastali stendur yfir bænum",
+		"de": "Über der Stadt steht ein leuchtend gelbes Schloss"
+	},
+	"Limburg an der Lahn": {
+		"pl": "Katedra z siedmioma wieżami stoi na skale nad rzeką",
+		"en": "Its cathedral with seven towers stands on a rock above the river",
+		"cs": "Katedrála se sedmi věžemi stojí na skále nad řekou",
+		"is": "Dómkirkjan með sjö turnum stendur á kletti yfir ánni",
+		"de": "Der Dom mit sieben Türmen steht auf einem Felsen über dem Fluss"
+	},
+	"Idstein": {
+		"pl": "Ma starówkę z domów z muru pruskiego i Wieżę Czarownic",
+		"en": "It has a half-timbered old town and a Witches' Tower",
+		"cs": "Má staré město z hrázděných domů a Čarodějnickou věž",
+		"is": "Hér er gamall bær úr bindingsverkshúsum og Nornaturninn",
+		"de": "Hier gibt es eine Fachwerk-Altstadt und einen Hexenturm"
+	},
+	"Wiesbaden": {
+		"pl": "Stolica Hesji z 26 gorącymi źródłami",
+		"en": "Capital of Hesse, with 26 hot springs",
+		"cs": "Hlavní město Hesenska s 26 horkými prameny",
+		"is": "Höfuðborg Hessen með 26 heitar lindir",
+		"de": "Hauptstadt Hessens mit 26 heißen Quellen"
+	},
+	"Worms": {
+		"pl": "Tu rozgrywa się saga o Nibelungach i smokobójcy Zygfrydzie",
+		"en": "The Nibelung saga of Siegfried the dragon-slayer is set here",
+		"cs": "Odehrává se tu Píseň o Nibelunzích a drakobijci Siegfriedovi",
+		"is": "Hér gerist Niflungasagan um drekabanann Sigurð",
+		"de": "Hier spielt die Nibelungensage um den Drachentöter Siegfried"
+	},
+	"Ludwigshafen am Rhein": {
+		"pl": "Zakłady BASF to największy kompleks chemiczny na świecie",
+		"en": "The BASF works here are the largest chemical site in the world",
+		"cs": "Závod BASF je největší chemický komplex na světě",
+		"is": "BASF-verksmiðjurnar hér eru stærsta efnaverksmiðjusvæði heims",
+		"de": "Das BASF-Werk hier ist der größte Chemiestandort der Welt"
+	},
+	"Darmstadt": {
+		"pl": "Miasto nauki: jego nazwę nosi pierwiastek darmsztadt",
+		"en": "City of science: the chemical element darmstadtium is named after it",
+		"cs": "Město vědy: je po něm pojmenován chemický prvek darmstadtium",
+		"is": "Vísindaborg: frumefnið darmstadtín er nefnt eftir henni",
+		"de": "Wissenschaftsstadt: Das chemische Element Darmstadtium ist nach ihr benannt"
+	},
+	"Bensheim": {
+		"pl": "Leży przy Bergstraße, gdzie drzewa owocowe kwitną najwcześniej w Niemczech",
+		"en": "It lies on the Bergstraße, where fruit trees blossom earliest in Germany",
+		"cs": "Leží na Bergstraße, kde ovocné stromy kvetou nejdřív v Německu",
+		"is": "Bærinn stendur við Bergstraße þar sem ávaxtatré blómstra fyrst í Þýskalandi",
+		"de": "Liegt an der Bergstraße, wo die Obstbäume in Deutschland zuerst blühen"
+	},
+	"Bad Nauheim": {
+		"pl": "Elvis Presley mieszkał tu jako żołnierz w latach 1958–1960",
+		"en": "Elvis Presley lived here as a soldier from 1958 to 1960",
+		"cs": "Elvis Presley tu žil jako voják v letech 1958–1960",
+		"is": "Elvis Presley bjó hér sem hermaður 1958–1960",
+		"de": "Elvis Presley wohnte hier von 1958 bis 1960 als Soldat"
+	},
+	"Gießen": {
+		"pl": "Mathematikum było pierwszym na świecie muzeum matematyki, w którym wszystkiego można dotknąć",
+		"en": "The Mathematikum here was the world's first hands-on maths museum",
+		"cs": "Mathematikum bylo první matematické muzeum na světě, kde se dá na všechno sáhnout",
+		"is": "Mathematikum hér var fyrsta stærðfræðisafn heims þar sem má snerta allt",
+		"de": "Das Mathematikum war das erste Mitmach-Museum für Mathematik weltweit"
+	},
+	"Alsfeld": {
+		"pl": "Leży na Niemieckim Szlaku Baśni; ratusz z muru pruskiego pochodzi z 1516 roku",
+		"en": "On the German Fairy Tale Route; its timber-framed town hall dates from 1516",
+		"cs": "Leží na Německé pohádkové cestě; hrázděná radnice je z roku 1516",
+		"is": "Bærinn er á þýsku ævintýraleiðinni; bindingsverksráðhúsið er frá 1516",
+		"de": "Liegt an der Deutschen Märchenstraße; das Fachwerkrathaus stammt von 1516"
+	},
+	"Bad Hersfeld": {
+		"pl": "W ruinach ogromnego romańskiego kościoła co lato gra się przedstawienia",
+		"en": "Plays are staged every summer in the ruins of its huge Romanesque church",
+		"cs": "V troskách obrovského románského kostela se každé léto hraje divadlo",
+		"is": "Á hverju sumri eru leikrit sýnd í rústum risastórrar rómanskrar kirkju",
+		"de": "In der riesigen romanischen Stiftsruine wird jeden Sommer Theater gespielt"
+	},
+	"Melsungen": {
+		"pl": "Mieszkańców przezywa się „ostrzycielami siekier”",
+		"en": "Its people are nicknamed the 'axe sharpeners'",
+		"cs": "Obyvatelům se přezdívá „brusiči seker“",
+		"is": "Íbúarnir eru kallaðir „axarbrýnararnir“",
+		"de": "Die Einwohner heißen „Bartenwetzer“, Axtschleifer"
+	},
+	"Hanau": {
+		"pl": "Tu urodzili się bracia Grimm; stąd zaczyna się Niemiecki Szlak Baśni",
+		"en": "Birthplace of the Brothers Grimm, where the German Fairy Tale Route begins",
+		"cs": "Rodiště bratří Grimmů, odkud začíná Německá pohádková cesta",
+		"is": "Hér fæddust Grimmsbræður og hér byrjar þýska ævintýraleiðin",
+		"de": "Geburtsort der Brüder Grimm, hier beginnt die Deutsche Märchenstraße"
+	},
+	"Aschaffenburg": {
+		"pl": "W zamku są modele rzymskich budowli zrobione z korka",
+		"en": "Its castle holds models of Roman buildings made of cork",
+		"cs": "Na zámku jsou modely římských staveb z korku",
+		"is": "Í kastalanum eru líkön af rómverskum byggingum úr korki",
+		"de": "Im Schloss stehen Modelle römischer Bauten aus Kork"
+	},
+	"Würzburg": {
+		"pl": "Tu w 1895 roku Wilhelm Röntgen odkrył promienie rentgenowskie",
+		"en": "Wilhelm Röntgen discovered X-rays here in 1895",
+		"cs": "Tady roku 1895 Wilhelm Röntgen objevil rentgenové paprsky",
+		"is": "Hér uppgötvaði Wilhelm Röntgen röntgengeislana árið 1895",
+		"de": "Hier entdeckte Wilhelm Röntgen 1895 die Röntgenstrahlen"
+	},
+	"Kitzingen": {
+		"pl": "Krzywa wieża ma zgięty dach; legenda mówi, że zaprawę rozrobiono winem",
+		"en": "Its crooked tower has a bent roof; legend says the mortar was mixed with wine",
+		"cs": "Šikmá věž má pokřivenou střechu; podle pověsti maltu míchali s vínem",
+		"is": "Skakki turninn er með bogið þak; sagan segir að múrinn hafi verið hrærður í víni",
+		"de": "Der Falterturm hat ein schiefes Dach; der Sage nach mischte man den Mörtel mit Wein"
+	},
+	"Erlangen": {
+		"pl": "Francuscy uchodźcy hugenoci zbudowali tu nowe miasto o prostych ulicach",
+		"en": "French Huguenot refugees built a new town here with neat straight streets",
+		"cs": "Francouzští uprchlíci hugenoti tu postavili nové město s rovnými ulicemi",
+		"is": "Franskir húgenottar á flótta reistu hér nýjan bæ með beinum götum",
+		"de": "Französische Hugenotten bauten hier eine Neustadt mit schnurgeraden Straßen"
+	},
+	"Hessisch Lichtenau": {
+		"pl": "Na pobliskiej górze Hoher Meißner mieszka podobno Pani Zima z baśni braci Grimm",
+		"en": "Mother Holle from the Grimm fairy tale is said to live on the nearby Hoher Meißner",
+		"cs": "Na nedaleké hoře Hoher Meißner prý bydlí Paní Zima z pohádky bratří Grimmů",
+		"is": "Sagt er að frú Holle úr ævintýri Grimmsbræðra búi á fjallinu Hoher Meißner hér hjá",
+		"de": "Auf dem nahen Hohen Meißner soll Frau Holle aus dem Grimm-Märchen wohnen"
+	},
+	"Herleshausen": {
+		"pl": "Było tu przejście graniczne między RFN a NRD",
+		"en": "A border crossing between West and East Germany was here",
+		"cs": "Býval tu hraniční přechod mezi západním a východním Německem",
+		"is": "Hér var landamærastöð milli Vestur- og Austur-Þýskalands",
+		"de": "Hier lag ein Grenzübergang zwischen Bundesrepublik und DDR"
+	},
+	"Eisenach": {
+		"pl": "Tu urodził się Jan Sebastian Bach i produkowano samochody marki Wartburg",
+		"en": "Johann Sebastian Bach was born here, and Wartburg cars were built here",
+		"cs": "Narodil se tu Johann Sebastian Bach a vyráběla se tu auta Wartburg",
+		"is": "Hér fæddist Johann Sebastian Bach og hér voru Wartburg-bílar smíðaðir",
+		"de": "Hier wurde Johann Sebastian Bach geboren, und hier baute man den Wartburg"
+	},
+	"Gotha": {
+		"pl": "Słynęła z map: wydawnictwo Perthesa drukowało tu atlasy dla całego świata",
+		"en": "Famous for maps: the Perthes publishers printed atlases here for the whole world",
+		"cs": "Proslula mapami: Perthesovo nakladatelství tu tisklo atlasy pro celý svět",
+		"is": "Fræg fyrir landakort: Perthes-forlagið prentaði hér kortabækur fyrir allan heiminn",
+		"de": "Berühmt für Landkarten: Der Perthes-Verlag druckte hier Atlanten für die ganze Welt"
+	},
+	"Hann. Münden": {
+		"pl": "Tu Werra i Fulda łączą się i tworzą Wezerę",
+		"en": "Here the Werra and the Fulda join to form the Weser",
+		"cs": "Tady se Werra a Fulda spojují ve Vezeru",
+		"is": "Hér renna Werra og Fulda saman og mynda Weser",
+		"de": "Hier fließen Werra und Fulda zur Weser zusammen"
+	},
+	"Göttingen": {
+		"pl": "Nowi doktorzy całują tu na rynku pomnik Gęsiarki",
+		"en": "New doctors of the university kiss the Goose Girl statue in the market square",
+		"cs": "Noví doktoři tu na náměstí líbají sochu Husopasky",
+		"is": "Nýir doktorar kyssa styttuna af Gæsastelpunni á torginu",
+		"de": "Frisch gebackene Doktoren küssen hier das Gänseliesel auf dem Markt"
+	},
+	"Seesen": {
+		"pl": "Tu Heinrich Steinweg zbudował pierwszy fortepian, zanim założył firmę Steinway",
+		"en": "Heinrich Steinweg built his first piano here before founding Steinway",
+		"cs": "Tady Heinrich Steinweg postavil první klavír, než založil firmu Steinway",
+		"is": "Hér smíðaði Heinrich Steinweg fyrsta píanóið sitt áður en hann stofnaði Steinway",
+		"de": "Hier baute Heinrich Steinweg sein erstes Klavier, bevor er Steinway gründete"
+	},
+	"Hildesheim": {
+		"pl": "Na murze katedry rośnie krzew róży, który ma podobno 1000 lat",
+		"en": "A rosebush said to be 1,000 years old grows on the cathedral wall",
+		"cs": "Na zdi katedrály roste růžový keř, který je prý 1000 let starý",
+		"is": "Á vegg dómkirkjunnar vex rósarunni sem sagður er 1000 ára",
+		"de": "An der Domwand wächst der Tausendjährige Rosenstock"
+	},
+	"Soest": {
+		"pl": "Kościoły zbudowano tu z zielonkawego piaskowca",
+		"en": "Its churches are built of greenish sandstone",
+		"cs": "Kostely tu postavili ze zelenavého pískovce",
+		"is": "Kirkjurnar hér eru byggðar úr grænleitum sandsteini",
+		"de": "Die Kirchen hier sind aus grünlichem Sandstein gebaut"
+	},
+	"Unna": {
+		"pl": "W piwnicach starego browaru jest muzeum sztuki ze światła",
+		"en": "A museum of light art lies in the cellars of an old brewery",
+		"cs": "Ve sklepích starého pivovaru je muzeum světelného umění",
+		"is": "Í kjöllurum gamals brugghúss er safn ljóslistar",
+		"de": "In den Kellern einer alten Brauerei liegt ein Museum für Lichtkunst"
+	},
+	"Weimar": {
+		"pl": "Mieszkali tu Goethe i Schiller; w 1919 roku założono tu szkołę Bauhaus",
+		"en": "Goethe and Schiller lived here, and the Bauhaus school was founded here in 1919",
+		"cs": "Žili tu Goethe a Schiller; roku 1919 tu vznikla škola Bauhaus",
+		"is": "Goethe og Schiller bjuggu hér og Bauhaus-skólinn var stofnaður hér 1919",
+		"de": "Hier lebten Goethe und Schiller; 1919 wurde hier das Bauhaus gegründet"
+	},
+	"Jena": {
+		"pl": "Carl Zeiss budował tu mikroskopy i soczewki znane na całym świecie",
+		"en": "Carl Zeiss built world-famous microscopes and lenses here",
+		"cs": "Carl Zeiss tu stavěl mikroskopy a čočky známé po celém světě",
+		"is": "Carl Zeiss smíðaði hér heimsfræg smásjár og linsur",
+		"de": "Carl Zeiss baute hier weltberühmte Mikroskope und Linsen"
+	},
+	"Arnstadt": {
+		"pl": "Tu młody Bach dostał swoją pierwszą posadę organisty",
+		"en": "Young Bach got his first job as an organist here",
+		"cs": "Tady dostal mladý Bach své první místo varhaníka",
+		"is": "Hér fékk ungi Bach sitt fyrsta starf sem organisti",
+		"de": "Hier bekam der junge Bach seine erste Stelle als Organist"
+	},
+	"Suhl": {
+		"pl": "Produkowano tu motorowery i motocykle Simson, popularne w NRD",
+		"en": "Simson mopeds and motorbikes, loved in East Germany, were made here",
+		"cs": "Vyráběly se tu mopedy a motorky Simson, oblíbené v NDR",
+		"is": "Hér voru Simson-skellinöðrur og mótorhjól smíðuð, vinsæl í Austur-Þýskalandi",
+		"de": "Hier wurden die Simson-Mopeds gebaut, in der DDR heiß geliebt"
+	},
+	"Coburg": {
+		"pl": "Dorastał tu książę Albert, mąż brytyjskiej królowej Wiktorii",
+		"en": "Prince Albert, husband of Britain's Queen Victoria, grew up here",
+		"cs": "Vyrůstal tu princ Albert, manžel britské královny Viktorie",
+		"is": "Albert prins, eiginmaður Viktoríu Bretadrottningar, ólst upp hér",
+		"de": "Hier wuchs Prinz Albert auf, der Mann der britischen Königin Victoria"
+	},
+	"Bamberg": {
+		"pl": "Jak Rzym leży na siedmiu wzgórzach; całe stare miasto jest na liście UNESCO",
+		"en": "Like Rome it is built on seven hills; its whole old town is a UNESCO site",
+		"cs": "Stejně jako Řím leží na sedmi pahorcích; celé staré město je památkou UNESCO",
+		"is": "Eins og Róm stendur bærinn á sjö hæðum; allur gamli bærinn er á lista UNESCO",
+		"de": "Wie Rom auf sieben Hügeln gebaut; die ganze Altstadt ist UNESCO-Welterbe"
+	},
+	"Döbeln": {
+		"pl": "W wybrane dni jeździ tu tramwaj ciągnięty przez konie",
+		"en": "On special days a horse-drawn tram still runs here",
+		"cs": "Ve vybrané dny tu jezdí tramvaj tažená koňmi",
+		"is": "Á sérstökum dögum gengur hér enn hestadreginn sporvagn",
+		"de": "An besonderen Tagen fährt hier noch eine Pferdebahn"
+	},
+	"Bitterfeld-Wolfen": {
+		"pl": "W Wolfen w 1936 roku powstał pierwszy nowoczesny kolorowy film fotograficzny",
+		"en": "The first modern colour photo film was made in Wolfen in 1936",
+		"cs": "Ve Wolfenu vznikl roku 1936 první moderní barevný fotografický film",
+		"is": "Fyrsta nútímalega litfilman var gerð í Wolfen árið 1936",
+		"de": "In Wolfen entstand 1936 der erste moderne Farbfilm"
+	},
+	"Dessau-Roßlau": {
+		"pl": "Działała tu szkoła Bauhaus, a Hugo Junkers zbudował pierwszy samolot z metalu",
+		"en": "The Bauhaus school worked here, and Hugo Junkers built the first all-metal plane",
+		"cs": "Působila tu škola Bauhaus a Hugo Junkers tu postavil první celokovové letadlo",
+		"is": "Bauhaus-skólinn starfaði hér og Hugo Junkers smíðaði fyrstu flugvélina úr málmi",
+		"de": "Hier wirkte das Bauhaus, und Hugo Junkers baute das erste Ganzmetallflugzeug"
+	},
+	"Beelitz": {
+		"pl": "Słynie ze szparagów: wiosną pola są pełne białych szparagów",
+		"en": "Famous for asparagus: in spring its fields are full of white asparagus",
+		"cs": "Proslulé chřestem: na jaře jsou pole plná bílého chřestu",
+		"is": "Frægur fyrir spergil: á vorin eru akrarnir fullir af hvítum spergli",
+		"de": "Berühmt für Spargel: Im Frühling sind die Felder voll weißem Spargel"
+	},
+	"Potsdam": {
+		"pl": "W Babelsbergu działa najstarsze wielkie studio filmowe na świecie",
+		"en": "Babelsberg here has the oldest large film studio in the world",
+		"cs": "V Babelsbergu je nejstarší velké filmové studio na světě",
+		"is": "Í Babelsberg er elsta stóra kvikmyndaver heims",
+		"de": "In Babelsberg steht das älteste Großfilmstudio der Welt"
+	},
+	"Halle (Saale)": {
+		"pl": "Tu urodził się Händel, a fabryka Halloren to najstarsza fabryka czekolady w Niemczech",
+		"en": "Handel was born here, and Halloren is Germany's oldest chocolate factory",
+		"cs": "Narodil se tu Händel a Halloren je nejstarší továrna na čokoládu v Německu",
+		"is": "Händel fæddist hér og Halloren er elsta súkkulaðiverksmiðja Þýskalands",
+		"de": "Hier wurde Händel geboren, und Halloren ist die älteste Schokoladenfabrik Deutschlands"
+	},
+	"Bernburg": {
+		"pl": "W fosie zamku mieszkają prawdziwe niedźwiedzie",
+		"en": "Real bears live in the moat of its castle",
+		"cs": "V hradním příkopu žijí skuteční medvědi",
+		"is": "Alvöru birnir búa í síkinu við kastalann",
+		"de": "Im Burggraben des Schlosses leben echte Bären"
+	},
+	"Hainichen": {
+		"pl": "Friedrich Gottlob Keller wymyślił tu, jak robić papier z drewna",
+		"en": "Friedrich Gottlob Keller invented making paper from wood here",
+		"cs": "Friedrich Gottlob Keller tu vymyslel, jak vyrábět papír ze dřeva",
+		"is": "Friedrich Gottlob Keller fann hér upp á að búa til pappír úr viði",
+		"de": "Friedrich Gottlob Keller erfand hier das Papier aus Holzschliff"
+	},
+	"Radeburg": {
+		"pl": "Tu urodził się Heinrich Zille, który rysował dzieci z berlińskich podwórek",
+		"en": "Birthplace of Heinrich Zille, who drew the children of Berlin's backyards",
+		"cs": "Rodiště Heinricha Zilleho, který kreslil děti z berlínských dvorků",
+		"is": "Hér fæddist Heinrich Zille sem teiknaði börnin í bakgörðum Berlínar",
+		"de": "Geburtsort von Heinrich Zille, der die Kinder der Berliner Hinterhöfe zeichnete"
+	},
+	"Lübbenau": {
+		"pl": "Słynie z ogórków kiszonych ze Spreewaldu, znanych w całych Niemczech",
+		"en": "Famous for Spreewald gherkins, pickled cucumbers loved all over Germany",
+		"cs": "Proslulé spreewaldskými okurkami, oblíbenými po celém Německu",
+		"is": "Frægur fyrir Spreewald-gúrkur, súrsaðar gúrkur sem allt Þýskaland elskar",
+		"de": "Berühmt für Spreewaldgurken, die in ganz Deutschland geliebt werden"
+	},
+	"Lübben": {
+		"pl": "Mieszkają tu Łużyczanie, słowiański naród; po łużycku miasto nazywa się Lubin",
+		"en": "The Sorbs, a Slavic people, live here; in their language the town is called Lubin",
+		"cs": "Žijí tu Lužičtí Srbové, slovanský národ; lužickosrbsky se město jmenuje Lubin",
+		"is": "Sorbar, slavnesk þjóð, búa hér; á þeirra máli heitir bærinn Lubin",
+		"de": "Hier leben Sorben, ein slawisches Volk; auf Sorbisch heißt die Stadt Lubin"
+	},
+	"Königs Wusterhausen": {
+		"pl": "Stąd w 1920 roku nadano pierwszą audycję radiową w Niemczech",
+		"en": "Germany's first radio broadcast was sent from here in 1920",
+		"cs": "Odsud se roku 1920 vysílal první rozhlasový pořad v Německu",
+		"is": "Héðan var fyrsta útvarpsútsending Þýskalands send árið 1920",
+		"de": "Von hier wurde 1920 die erste Rundfunksendung Deutschlands ausgestrahlt"
+	},
+	"Burg": {
+		"pl": "Nazywane „miastem wież”, bo zachowało wiele średniowiecznych wież",
+		"en": "Called the 'town of towers' for its many medieval towers",
+		"cs": "Říká se mu „město věží“ kvůli mnoha středověkým věžím",
+		"is": "Kallaður „bær turnanna“ vegna allra miðaldaturnanna",
+		"de": "Wegen ihrer vielen mittelalterlichen Türme „Stadt der Türme“ genannt"
+	},
+	"Brandenburg an der Havel": {
+		"pl": "Od tego miasta wziął nazwę cały kraj związkowy; dawniej robiono tu auta Brennabor",
+		"en": "The whole state is named after this town; Brennabor cars were once built here",
+		"cs": "Podle tohoto města se jmenuje celá spolková země; kdysi se tu vyráběla auta Brennabor",
+		"is": "Allt sambandslandið er nefnt eftir bænum; Brennabor-bílar voru áður smíðaðir hér",
+		"de": "Das ganze Bundesland ist nach dieser Stadt benannt; einst wurden hier Brennabor-Autos gebaut"
+	},
+	"Werder": {
+		"pl": "Każdej wiosny odbywa się tu święto kwitnących drzew owocowych",
+		"en": "Every spring it holds a festival when the fruit trees blossom",
+		"cs": "Každé jaro se tu slaví svátek kvetoucích ovocných stromů",
+		"is": "Á hverju vori er hér haldin hátíð þegar ávaxtatrén blómstra",
+		"de": "Jeden Frühling feiert man hier das Baumblütenfest"
+	},
+	"Wolfsburg": {
+		"pl": "Założone w 1938 roku dla fabryki Garbusa; zakłady Volkswagena należą do największych na świecie",
+		"en": "Founded in 1938 to build the VW Beetle; its Volkswagen plant is one of the biggest in the world",
+		"cs": "Založeno roku 1938 kvůli výrobě Brouka; závod Volkswagenu patří k největším na světě",
+		"is": "Stofnuð 1938 til að smíða Bjölluna; Volkswagen-verksmiðjan er ein sú stærsta í heimi",
+		"de": "1938 für den VW Käfer gegründet; das Volkswagenwerk gehört zu den größten der Welt"
+	},
+	"Ingolstadt": {
+		"pl": "W słynnej powieści właśnie tu Wiktor Frankenstein stworzył swojego potwora",
+		"en": "In the famous novel, Victor Frankenstein made his monster here",
+		"cs": "Ve slavném románu tu Victor Frankenstein stvořil svou obludu",
+		"is": "Í frægu skáldsögunni skapaði Viktor Frankenstein skrímslið sitt hér",
+		"de": "Im berühmten Roman erschuf Victor Frankenstein hier sein Monster"
+	},
+	"Pfaffenhofen": {
+		"pl": "Serce Hallertau, największego obszaru uprawy chmielu na świecie",
+		"en": "The heart of the Hallertau, the largest hop-growing area in the world",
+		"cs": "Srdce Hallertau, největší chmelařské oblasti na světě",
+		"is": "Hjarta Hallertau, stærsta humlaræktarsvæðis heims",
+		"de": "Herz der Hallertau, des größten Hopfenanbaugebiets der Welt"
+	},
+	"Garching": {
+		"pl": "Reaktor badawczy ma tu kształt jajka, więc nazywa się „Atomowe Jajo”",
+		"en": "Its research reactor is egg-shaped, so it is called the 'Atomic Egg'",
+		"cs": "Výzkumný reaktor má tvar vejce, a proto se mu říká „Atomové vejce“",
+		"is": "Rannsóknarkjarnaofninn er eins og egg og er því kallaður „Atóm-eggið“",
+		"de": "Der Forschungsreaktor sieht aus wie ein Ei und heißt deshalb „Atom-Ei“"
+	},
+	"Günzburg": {
+		"pl": "Tu jest LEGOLAND Deutschland, park zbudowany z milionów klocków",
+		"en": "Home of LEGOLAND Germany, a park built from millions of bricks",
+		"cs": "Je tu LEGOLAND Deutschland, park postavený z milionů kostiček",
+		"is": "Hér er LEGOLAND Þýskalands, garður byggður úr milljónum kubba",
+		"de": "Hier liegt das LEGOLAND Deutschland, gebaut aus Millionen Steinen"
+	},
+	"Ulm": {
+		"pl": "Tu w 1879 roku urodził się Albert Einstein",
+		"en": "Albert Einstein was born here in 1879",
+		"cs": "Tady se roku 1879 narodil Albert Einstein",
+		"is": "Albert Einstein fæddist hér árið 1879",
+		"de": "Hier wurde 1879 Albert Einstein geboren"
+	},
+	"Esslingen": {
+		"pl": "Na starym ratuszu jest zegar astronomiczny z 1592 roku",
+		"en": "Its old town hall has an astronomical clock from 1592",
+		"cs": "Stará radnice má orloj z roku 1592",
+		"is": "Á gamla ráðhúsinu er stjörnuklukka frá 1592",
+		"de": "Am Alten Rathaus hängt eine astronomische Uhr von 1592"
+	},
+	"Landsberg am Lech": {
+		"pl": "Rzeka Lech spada tu szerokim progiem wodnym w samym środku miasta",
+		"en": "The River Lech tumbles over a wide weir right in the middle of town",
+		"cs": "Řeka Lech tu padá přes široký jez přímo uprostřed města",
+		"is": "Áin Lech steypist hér yfir breiða stíflu í miðjum bænum",
+		"de": "Der Lech stürzt hier mitten in der Stadt über ein breites Wehr"
+	},
+	"Steingaden": {
+		"pl": "Niedaleko stoi Wieskirche, kościół na łące wpisany na listę UNESCO",
+		"en": "Nearby is the Wieskirche, a church in a meadow on the UNESCO list",
+		"cs": "Nedaleko stojí Wieskirche, kostel na louce zapsaný na seznam UNESCO",
+		"is": "Rétt hjá stendur Wieskirche, kirkja á engi sem er á lista UNESCO",
+		"de": "In der Nähe steht die Wieskirche, eine Kirche auf der Wiese und UNESCO-Welterbe"
+	},
+	"Leonberg": {
+		"pl": "Od nazwy miasta pochodzi wielka rasa psów leonberger",
+		"en": "The big Leonberger dog breed is named after the town",
+		"cs": "Podle města se jmenuje velké psí plemeno leonberger",
+		"is": "Stóra hundategundin Leonberger er nefnd eftir bænum",
+		"de": "Die große Hunderasse Leonberger ist nach der Stadt benannt"
+	},
+	"Pforzheim": {
+		"pl": "Nazywane „Złotym Miastem” od biżuterii i zegarków",
+		"en": "Called the 'Golden City' for its jewellery and watches",
+		"cs": "Říká se mu „Zlaté město“ kvůli šperkům a hodinkám",
+		"is": "Kölluð „Gullborgin“ vegna skartgripa og úra",
+		"de": "Wegen Schmuck und Uhren „Goldstadt“ genannt"
+	},
+	"Ludwigsburg": {
+		"pl": "Co jesień przy barokowym pałacu odbywa się wielki festiwal dyń",
+		"en": "Every autumn a huge pumpkin festival is held at its Baroque palace",
+		"cs": "Každý podzim se u barokního zámku koná velký dýňový festival",
+		"is": "Á hverju hausti er stór graskershátíð haldin við barokkhöllina",
+		"de": "Jeden Herbst findet am Barockschloss eine riesige Kürbisausstellung statt"
+	},
+	"Heilbronn": {
+		"pl": "Experimenta to jedno z największych centrów nauki w Niemczech",
+		"en": "Its Experimenta is one of Germany's biggest science centres",
+		"cs": "Experimenta je jedno z největších vědeckých center v Německu",
+		"is": "Experimenta hér er ein stærsta vísindamiðstöð Þýskalands",
+		"de": "Die Experimenta ist eines der größten Science Center Deutschlands"
+	},
+	"Schwabach": {
+		"pl": "Miasto złota: bije się tu złoto w listki cieńsze niż włos",
+		"en": "City of gold: gold is beaten here into leaves thinner than a hair",
+		"cs": "Město zlata: zlato se tu tepe na plátky tenčí než vlas",
+		"is": "Gullborg: hér er gull barið í blöð þynnri en hár",
+		"de": "Goldschlägerstadt: Gold wird hier zu Blättern dünner als ein Haar geschlagen"
+	},
+	"Sinsheim": {
+		"pl": "Na dachu muzeum stoją dwa naddźwiękowe samoloty: Concorde i Tu-144",
+		"en": "Two supersonic jets, Concorde and the Tu-144, stand on its museum's roof",
+		"cs": "Na střeše muzea stojí dvě nadzvuková letadla: Concorde a Tu-144",
+		"is": "Á þaki safnsins standa tvær hljóðfráar þotur: Concorde og Tu-144",
+		"de": "Auf dem Museumsdach stehen zwei Überschalljets: Concorde und Tu-144"
+	},
+	"Walldorf": {
+		"pl": "Tu urodził się John Jacob Astor; od nazwy miasta pochodzi hotel Waldorf-Astoria",
+		"en": "John Jacob Astor was born here; the Waldorf-Astoria hotel is named after the town",
+		"cs": "Narodil se tu John Jacob Astor; po městě se jmenuje hotel Waldorf-Astoria",
+		"is": "John Jacob Astor fæddist hér; Waldorf-Astoria hótelið er nefnt eftir bænum",
+		"de": "Hier wurde John Jacob Astor geboren; das Hotel Waldorf-Astoria ist nach der Stadt benannt"
+	},
+	"Heidelberg": {
+		"pl": "Ma najstarszy uniwersytet w Niemczech, założony w 1386 roku",
+		"en": "It has Germany's oldest university, founded in 1386",
+		"cs": "Má nejstarší univerzitu v Německu, založenou roku 1386",
+		"is": "Hér er elsti háskóli Þýskalands, stofnaður árið 1386",
+		"de": "Hier steht Deutschlands älteste Universität, gegründet 1386"
+	},
+	"Bruchsal": {
+		"pl": "W pałacu jest muzeum instrumentów, które grają same",
+		"en": "Its palace has a museum of instruments that play by themselves",
+		"cs": "Na zámku je muzeum hudebních nástrojů, které hrají samy",
+		"is": "Í höllinni er safn hljóðfæra sem spila sjálf",
+		"de": "Im Schloss gibt es ein Museum mit Instrumenten, die von selbst spielen"
+	},
+	"Rastatt": {
+		"pl": "Fabryka Mercedesa produkuje tu kompaktowe samochody",
+		"en": "A Mercedes-Benz factory builds compact cars here",
+		"cs": "Továrna Mercedes-Benz tu vyrábí kompaktní auta",
+		"is": "Mercedes-Benz verksmiðja smíðar hér smærri bíla",
+		"de": "Ein Mercedes-Benz-Werk baut hier Kompaktwagen"
+	},
+	"Baden-Baden": {
+		"pl": "W gorących źródłach kąpali się już Rzymianie",
+		"en": "The Romans already bathed in its hot springs",
+		"cs": "V horkých pramenech se koupali už Římané",
+		"is": "Rómverjar böðuðu sig þegar í heitu lindunum hér",
+		"de": "Schon die Römer badeten in den heißen Quellen"
+	},
+	"Bühl": {
+		"pl": "Słynie ze śliwek, które dojrzewają tu bardzo wcześnie",
+		"en": "Famous for its plums, which ripen here very early",
+		"cs": "Proslulý švestkami, které tu dozrávají velmi brzy",
+		"is": "Frægur fyrir plómur sem þroskast hér mjög snemma",
+		"de": "Berühmt für die Bühler Zwetschge, die hier sehr früh reif wird"
+	},
+	"Lahr": {
+		"pl": "Co jesień miasto zakwita tysiącami chryzantem",
+		"en": "Every autumn the town blooms with thousands of chrysanthemums",
+		"cs": "Každý podzim město rozkvete tisíci chryzantém",
+		"is": "Á hverju hausti blómstrar bærinn af þúsundum glitfífla",
+		"de": "Jeden Herbst blüht die Stadt mit Tausenden Chrysanthemen"
+	},
+	"Titisee-Neustadt": {
+		"pl": "Jezioro Titisee to największe naturalne jezioro Szwarcwaldu",
+		"en": "Lake Titisee is the largest natural lake in the Black Forest",
+		"cs": "Titisee je největší přírodní jezero Schwarzwaldu",
+		"is": "Titisee er stærsta náttúrulega stöðuvatn Svartaskógar",
+		"de": "Der Titisee ist der größte natürliche See im Schwarzwald"
+	},
+	"Donaueschingen": {
+		"pl": "Tu zaczyna się Dunaj, druga co do długości rzeka Europy",
+		"en": "The Danube, Europe's second-longest river, begins here",
+		"cs": "Tady začíná Dunaj, druhá nejdelší řeka Evropy",
+		"is": "Hér byrjar Dóná, næstlengsta fljót Evrópu",
+		"de": "Hier beginnt die Donau, der zweitlängste Fluss Europas"
+	},
+	"Rottweil": {
+		"pl": "Od miasta pochodzi nazwa psów rottweiler; stoi tu 246-metrowa wieża do testowania wind",
+		"en": "The Rottweiler dog is named after it; a 246-metre tower here tests lifts",
+		"cs": "Po městě se jmenuje pes rotvajler; stojí tu 246 metrů vysoká věž na zkoušení výtahů",
+		"is": "Rottweiler-hundurinn er nefndur eftir bænum; hér er 246 metra hár turn til að prófa lyftur",
+		"de": "Der Rottweiler ist nach der Stadt benannt; ein 246 Meter hoher Turm testet hier Aufzüge"
+	},
+	"Böblingen": {
+		"pl": "Na dawnym lotnisku Motorworld pokazuje zabytkowe i sportowe auta",
+		"en": "At the old airport, Motorworld shows classic and sports cars",
+		"cs": "Na starém letišti ukazuje Motorworld veterány a sportovní auta",
+		"is": "Á gamla flugvellinum sýnir Motorworld fornbíla og sportbíla",
+		"de": "Auf dem alten Flughafen zeigt die Motorworld Oldtimer und Sportwagen"
+	},
+	"Emmendingen": {
+		"pl": "Pochowana jest tu Cornelia, siostra poety Goethego",
+		"en": "Cornelia, the sister of the poet Goethe, is buried here",
+		"cs": "Je tu pohřbena Cornelie, sestra básníka Goetha",
+		"is": "Cornelia, systir skáldsins Goethe, er grafin hér",
+		"de": "Hier ist Cornelia, die Schwester Goethes, begraben"
+	}
+}

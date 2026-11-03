@@ -29,6 +29,12 @@
 			},
 			"neighbours": [],
 			"favorite_neighbour": "ie"
+		},
+		{
+			"code": "de",
+			"name": {"pl": "Niemcy", "en": "Germany", "cs": "Německo", "is": "Þýskaland", "de": "Deutschland"},
+			"neighbours": ["pl", "cz", "at", "ch", "fr", "lu", "be", "nl", "dk"],
+			"favorite_neighbour": "at"
 		}
 	]
 }
