@@ -18,6 +18,14 @@ var mirror_w := 960.0
 ## distance haze: every colour added is blended this far (0..1) towards fog_color (set per depth by WorldView)
 var fog := 0.0
 var fog_color := Color.WHITE
+## every colour added is blended this far (0..1) towards its grey (postcards not collected yet)
+var gray := 0.0
+## a convex polygon (any winding): when set, flush() keeps only the parts of the triangles inside it (a postcard's
+## frame, half a card along its diagonal); empty: no clipping
+var clip := PackedVector2Array()
+## tests: every flush also appends the (clipped) triangle points it sends to `sent`
+var keep_sent := false
+var sent := PackedVector2Array()
 
 func begin(cv: CanvasItem) -> void:
 	_cv = cv
@@ -27,8 +35,15 @@ func begin(cv: CanvasItem) -> void:
 	_user_xf = Transform2D.IDENTITY
 	_update_xf()
 	fog = 0.0
+	gray = 0.0
 
 func flush() -> void:
+	if _idx.is_empty():
+		return
+	if not clip.is_empty():
+		_clip_all()
+	if keep_sent:
+		for i in _idx: sent.append(_pts[i])
 	if _idx.is_empty():
 		return
 	RenderingServer.canvas_item_add_triangle_array(_cv.get_canvas_item(), _idx, _pts, _cols)
@@ -36,13 +51,68 @@ func flush() -> void:
 	_cols.clear()
 	_idx.clear()
 
+## The colour as drawn: hazed by the fog, greyed.
+func _tone(col: Color) -> Color:
+	if fog > 0.0:
+		col = col.lerp(fog_color, fog)
+	if gray > 0.0:
+		var l := col.r * 0.3 + col.g * 0.59 + col.b * 0.11
+		col = col.lerp(Color(l, l, l, col.a), gray)
+	return col
+
+## Cuts every triangle to the clip polygon (Sutherland-Hodgman; colours interpolated along cut edges).
+func _clip_all() -> void:
+	var pts := PackedVector2Array()
+	var cols := PackedColorArray()
+	var idx := PackedInt32Array()
+	var n := clip.size()
+	var area := 0.0
+	for k in n:
+		area += clip[k].cross(clip[(k + 1) % n])
+	var turn := 1.0 if area > 0.0 else -1.0 # inside is left of every edge for this winding
+	for i in range(0, _idx.size(), 3):
+		var poly := [_pts[_idx[i]], _pts[_idx[i + 1]], _pts[_idx[i + 2]]]
+		var pc := [_cols[_idx[i]], _cols[_idx[i + 1]], _cols[_idx[i + 2]]]
+		for k in n:
+			if poly.is_empty():
+				break
+			var a := clip[k]
+			var e := clip[(k + 1) % n] - a
+			var out := []
+			var oc := []
+			for j in poly.size():
+				var p: Vector2 = poly[j]
+				var q: Vector2 = poly[(j + 1) % poly.size()]
+				var dp := e.cross(p - a) * turn
+				var dq := e.cross(q - a) * turn
+				if dp >= 0.0:
+					out.append(p)
+					oc.append(pc[j])
+				if (dp >= 0.0) != (dq >= 0.0):
+					var f := dp / (dp - dq)
+					out.append(p.lerp(q, f))
+					oc.append((pc[j] as Color).lerp(pc[(j + 1) % poly.size()], f))
+			poly = out
+			pc = oc
+		if poly.size() < 3:
+			continue
+		var base := pts.size()
+		for j in poly.size():
+			pts.append(poly[j])
+			cols.append(pc[j])
+		for j in range(1, poly.size() - 1):
+			idx.append_array([base, base + j, base + j + 1])
+	_pts = pts
+	_cols = cols
+	_idx = idx
+
 ## Convex polygon as a triangle fan.
 func fan(p: PackedVector2Array, col: Color) -> void:
 	var n := p.size()
 	var base := _pts.size()
 	_pts.append_array(_xf * p if _xf_on else p)
 	_tmp_cols.resize(n)
-	_tmp_cols.fill(col.lerp(fog_color, fog) if fog > 0.0 else col)
+	_tmp_cols.fill(_tone(col))
 	_cols.append_array(_tmp_cols)
 	for k in range(1, n - 1):
 		_idx.append(base)
@@ -99,7 +169,7 @@ func draw_colored_polygon(p: PackedVector2Array, col: Color) -> void:
 	var base := _pts.size()
 	_pts.append_array(_xf * p if _xf_on else p)
 	_tmp_cols.resize(p.size())
-	_tmp_cols.fill(col.lerp(fog_color, fog) if fog > 0.0 else col)
+	_tmp_cols.fill(_tone(col))
 	_cols.append_array(_tmp_cols)
 	for i in tri:
 		_idx.append(base + i)
@@ -108,7 +178,10 @@ func draw_colored_polygon(p: PackedVector2Array, col: Color) -> void:
 func draw_polygon(p: PackedVector2Array, cols: PackedColorArray) -> void:
 	var base := _pts.size()
 	_pts.append_array(_xf * p if _xf_on else p)
-	_cols.append_array(cols)
+	if gray > 0.0:
+		for c in cols: _cols.append(_tone(c))
+	else:
+		_cols.append_array(cols)
 	for k in range(1, p.size() - 1):
 		_idx.append(base)
 		_idx.append(base + k)
