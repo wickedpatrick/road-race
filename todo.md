@@ -242,3 +242,16 @@ Na razie lokalnie (zapis wyników w profilu) i z myślą o backendzie, który pr
 - [ ] Ekrany: wynik trasy z pozycją i najlepszym czasem, tabela rankingu trasy z mapy, ranking kraju.
 - [ ] Pod backend: identyfikator gracza i nick, format wyniku (kraj, odcinek, kierunek, auto, warunki, czas,
       wersja gry, seed), kolejka wysyłki offline, później weryfikacja po stronie serwera (anty-cheat).
+
+## 12. Pocztówki (`src/logic/postcards.gd`, `src/view/postcard_painter.gd`, `src/scenes/album.gd`)
+
+Opis: `docs/superpowers/specs/2026-11-03-postcards-design.md`.
+
+- [x] Pocztówka każdego miasta z mapy: jego zabytek (dwa: po przekątnej), szara i bez nazwy, dopóki jej nie ma.
+- [x] Dojechanie: pocztówka z szarej robi się kolorowa, pieczątka miasta z rokiem, 1-5 pieczątek za zapas czasu
+      (progi w `rules.json` `postcards`), zostaje najlepszy wynik. Zamiast gwiazdek.
+- [x] Miasta mijane po drodze i miasto domowe: pocztówka z 1 pieczątką (bez pokazywania na koniec trasy).
+- [x] Album per kraj z ekranu auta i mapy (P); stare profile dostają pocztówki odwiedzonych miast.
+- [ ] Jak pokazać pocztówki zebrane po drodze (np. na mapie albo po trasie).
+- [ ] Pocztówki miejscowości między miastami z mapy.
+- [ ] Drugi zabytek dla miast, które mają jeden (66 z 93), a potem przebudowa menu z albumem.
