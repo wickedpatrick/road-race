@@ -26,6 +26,8 @@ const NEXT_BTN := Rect2(744, 490, 200, 44)
 const BACK_BTN := Rect2(584, 490, 148, 44)
 const RESET_BTN := Rect2(796, 14, 148, 40)
 const LANG_BTN := Rect2(736, 124, 196, 36) ## car step: the game's language (L key)
+const ALBUM_CAR_BTN := Rect2(28, 124, 196, 36) ## the postcard album (P key): on the car step
+const ALBUM_MAP_BTN := Rect2(796, 14, 148, 40) ## and on the map steps
 const YES_BTN := Rect2(250, 330, 220, 54)
 const NO_BTN := Rect2(490, 330, 220, 54)
 var loading := false ## start chosen: the "get ready" card is shown while the race scene loads
@@ -131,6 +133,9 @@ func _unhandled_input(event: InputEvent) -> void:
 	if _on_map() and event.keycode == KEY_C and _countries() > 1:
 		_next_country()
 		return
+	if event.keycode == KEY_P and (kind() == "car" or kind() == "dest"):
+		_open_album()
+		return
 	if kind() == "car" and event.keycode == KEY_L:
 		_next_language()
 		return
@@ -165,6 +170,14 @@ func _unhandled_input(event: InputEvent) -> void:
 				_pick_dest(map.step(dest_city, dir, start_city, Route.neighbours(start_city)))
 				hover = dest_city
 				_follow = dest_city
+
+func _album_btn() -> Rect2:
+	return ALBUM_CAR_BTN if kind() == "car" else ALBUM_MAP_BTN
+
+func _open_album() -> void:
+	Sfx.play("blip", -8.0)
+	Session.album_back_to_map = _on_map()
+	get_tree().change_scene_to_file("res://src/scenes/album.tscn")
 
 func _next_language() -> void:
 	Sfx.play("blip", -8.0)
@@ -202,6 +215,9 @@ func _tap(p: Vector2) -> bool:
 		return true
 	if kind() == "car" and LANG_BTN.has_point(p):
 		_next_language()
+		return true
+	if (kind() == "car" or kind() == "dest") and _album_btn().has_point(p):
+		_open_album()
 		return true
 	if Screen.touch:
 		if NEXT_BTN.has_point(p):
@@ -328,6 +344,8 @@ func _draw() -> void:
 	if kind() == "car":
 		_unlock_progress(Vector2(24, 505))
 		Ui.button(self, font, LANG_BTN, Lang.t("lang_btn") % Lang.NAMES[GameData.language], false, 16)
+	if kind() == "car" or kind() == "dest":
+		Ui.button(self, font, _album_btn(), Lang.t("album_btn"), false, 16)
 	if Screen.touch:
 		if step > 0:
 			Ui.button(self, font, BACK_BTN, Lang.t("back"), false, 20)
@@ -339,6 +357,8 @@ func _draw() -> void:
 		hint = Lang.t("hint_map") + Lang.t("hint_enter_start" if kind() == "dest" else "hint_enter_next") + (Lang.t("hint_country") if _countries() > 1 else "")
 	if kind() == "car":
 		hint = Lang.t("hint_car")
+	if kind() == "car" or kind() == "dest":
+		hint += Lang.t("hint_album")
 	if step > 0:
 		hint += Lang.t("hint_back")
 	hint += Lang.t("hint_sound")
