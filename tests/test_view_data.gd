@@ -11,6 +11,7 @@ class Pen:
 func run(t) -> void:
 	_test_scrolling_map(t)
 	_test_batch_clip(t)
+	_test_postcards(t)
 	for kind in ["cow", "sheep", "horse"]:
 		var drawn := {}
 		for season in ["summer", "winter"]:
@@ -85,3 +86,30 @@ func _test_batch_clip(t) -> void:
 	t.check(is_equal_approx(c.r, c.g) and is_equal_approx(c.g, c.b) and absf(c.r - 0.3) < 0.01, "a grey batch draws red as grey (%s)" % c)
 	b.flush()
 	n.free()
+
+func _test_postcards(t) -> void:
+	var n := Node2D.new()
+	var b := DrawBatch.new()
+	b.begin(n)
+	b.keep_sent = true
+	var r := Rect2(10, 20, 200, 100)
+	for code in GameData.country_codes():
+		var ok := true
+		for id in Postcards.cities(code):
+			b.sent.clear()
+			PostcardPainter.art(b, r, code, id, 0.0)
+			if b.sent.is_empty() or not sent_inside(b, r): ok = false
+		t.check(ok, "%s: every postcard's picture is drawn, inside its card" % code)
+	var lms := Postcards.landmarks("pl", "krakow")
+	b.sent.clear()
+	PostcardPainter.half(b, r, lms[0], true)
+	var top_left := Array(b.sent).all(func(p): return (p.x - r.position.x) / r.size.x + (p.y - r.position.y) / r.size.y <= 1.01)
+	b.sent.clear()
+	PostcardPainter.half(b, r, lms[1], false)
+	var bottom_right := Array(b.sent).all(func(p): return (p.x - r.position.x) / r.size.x + (p.y - r.position.y) / r.size.y >= 0.99)
+	t.check(top_left and bottom_right and not b.sent.is_empty(), "Kraków: Wawel in the top-left half, the dragon in the bottom-right")
+	n.free()
+	t.check(PostcardPainter.caption("pl", "warszawa")[1].contains("Pałac Kultury"), "caption: the landmarks' names")
+	GameData.set_language("en")
+	t.check(PostcardPainter.caption("pl", "warszawa")[1].contains("Palace of Culture") and PostcardPainter.caption("pl", "warszawa")[0] == "Warsaw", "caption in the player's language")
+	GameData.set_language("pl")
