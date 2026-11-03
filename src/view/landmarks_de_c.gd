@@ -21,6 +21,9 @@ static func draw(kind: String) -> bool:
 		"kraemerbruecke": _kraemerbruecke()
 		"hercules": _hercules()
 		"neuschwanstein": _neuschwanstein()
+		"zollhof": _zollhof()
+		"mainz_dom": _mainz_dom()
+		"printing_press": _printing_press()
 		_: return false
 	return true
 
@@ -518,3 +521,117 @@ static func _neuschwanstein() -> void:
 	# a little flag on the main tower
 	if LandmarkPainter._pm > 1.0:
 		LandmarkPainter._poly([-3.4, 40, -3.4, 39.4, -2.2, 39.7], Color("c0392b"))
+
+## Neuer Zollhof (Frank Gehry): three crooked houses on the Rhine harbour, white plaster, mirror steel and red brick,
+## their walls bulging and leaning, windows sticking out of them like boxes.
+static func _zollhof() -> void:
+	var white := Color("eeeae2")
+	var steel := Color("b9c3cc")
+	var brick := Color("b4553c")
+	var win := Color("2f3d4c")
+	# white: a wavy wall, taller in the middle
+	LandmarkPainter._poly([-15, 0, -15.6, 9, -14.6, 17, -12.6, 21, -9.6, 22.5, -7.2, 19, -6.4, 12, -6.8, 0], white)
+	if LandmarkPainter._pm > 1.2:
+		LandmarkPainter._poly([-9.6, 22.5, -7.2, 19, -6.4, 12, -6.8, 0, -9.0, 0, -9.2, 14], white.darkened(0.08))
+	# steel: the leaning, shining one in the middle
+	LandmarkPainter._poly([-6.0, 0, -6.8, 10, -5.2, 21, -2.0, 26, 2.4, 24.5, 4.4, 15, 3.6, 0], steel)
+	if LandmarkPainter._pm > 1.2:
+		LandmarkPainter._poly([-2.4, 0, -3.4, 12, -1.6, 24, 0.4, 25.3, -0.6, 12, 0.2, 0], Color("e3e9ee"))
+		LandmarkPainter._poly([2.4, 24.5, 4.4, 15, 3.6, 0, 2.2, 0, 2.8, 14], steel.darkened(0.15))
+	# brick: a squat one leaning the other way
+	LandmarkPainter._poly([4.6, 0, 4.0, 12, 5.4, 19, 9.6, 20.5, 13.6, 18, 15.4, 9, 15.0, 0], brick)
+	if LandmarkPainter._pm > 1.2:
+		LandmarkPainter._poly([13.6, 18, 15.4, 9, 15.0, 0, 13.0, 0, 13.4, 10], brick.darkened(0.15))
+	if LandmarkPainter._pm < 1.4:
+		return
+	# windows sticking out: a few uneven rows on each house (left edge, right edge, bottom of each row)
+	var rows := [[-14.2, -8.0, [3.0, 7.5, 12.0, 16.5]], [-5.2, 2.6, [3.0, 7.5, 12.0, 16.5, 21.0]], [5.6, 13.8, [3.0, 7.5, 12.0, 15.8]]]
+	for row in rows:
+		for k in (row[2] as Array).size():
+			var y: float = row[2][k]
+			var n := 3
+			var step: float = (row[1] - row[0]) / n
+			for i in n:
+				var x: float = row[0] + step * i + step * 0.2 + (0.35 if (i + k) % 2 == 0 else -0.2)
+				LandmarkPainter._r(x - 0.25, y - 0.25, x + step * 0.55 + 0.25, y + 2.5, Color(1, 1, 1, 0.55))
+				LandmarkPainter._r(x, y, x + step * 0.55, y + 2.2, win)
+	# the harbour water in front
+	LandmarkPainter._r(-17, -0.01, 17, 0.9, Color("4f7fb0"))
+
+## Mainz Cathedral: a thousand years of red sandstone, a long nave between two towered ends: the great west tower
+## with its stacked baroque crowns, the lower east tower, round stair turrets beside both, round-arched windows.
+static func _mainz_dom() -> void:
+	var red := Color("b25a43")
+	var red_d := Color("8f4433")
+	var roof := Color("6b4a40")
+	var dark := Color("3b2a26")
+	# nave and aisles
+	LandmarkPainter._r(-9, 0, 6, 12, red)
+	LandmarkPainter._poly([-9.4, 12, 6.4, 12, 5, 16.5, -8, 16.5], roof)
+	LandmarkPainter._r(-9, 0, 6, 1.2, red_d)
+	_arched(-8.6, 5.6, 4.0, 10.0, 6, dark)
+	# east tower (left): square, then a pointed roof
+	LandmarkPainter._r(-15, 0, -9, 22, red)
+	LandmarkPainter._r(-15, 13, -9, 13.8, red_d)
+	_arched(-14.4, -9.6, 15.0, 20.0, 2, dark)
+	LandmarkPainter._poly([-15.5, 22, -8.5, 22, -12, 31], roof)
+	for x in [-16.6, -8.4]:
+		LandmarkPainter._r(x - 0.9, 0, x + 0.9, 20, red_d)
+		LandmarkPainter._poly([x - 1.1, 20, x + 1.1, 20, x, 24], roof)
+	# west tower (right): square base, octagonal tiers, a baroque crown with a lantern and cross
+	LandmarkPainter._r(6, 0, 14, 21, red)
+	LandmarkPainter._r(6, 13, 14, 13.8, red_d)
+	_arched(6.6, 13.4, 15.0, 20.0, 3, dark)
+	LandmarkPainter._r(6.8, 21, 13.2, 27, red)
+	LandmarkPainter._poly([6.4, 21, 13.6, 21, 13.2, 22, 6.8, 22], red_d)
+	_arched(7.2, 12.8, 22.8, 26.4, 3, dark)
+	LandmarkPainter._r(7.8, 27, 12.2, 32, red)
+	LandmarkPainter._poly([7.4, 27, 12.6, 27, 12.2, 27.8, 7.8, 27.8], red_d)
+	_arched(8.2, 11.8, 28.4, 31.4, 2, dark)
+	LandmarkPainter._poly([7.6, 32, 12.4, 32, 11.6, 34.5, 10.6, 36.5, 9.4, 36.5, 8.4, 34.5], roof)
+	LandmarkPainter._r(9.5, 36.5, 10.5, 39, red)
+	LandmarkPainter._poly([9.2, 39, 10.8, 39, 10, 41], roof)
+	LandmarkPainter._r(9.88, 41, 10.12, 44, Color("d8b04a"))
+	LandmarkPainter._r(9.3, 42.4, 10.7, 42.7, Color("d8b04a"))
+	for x in [5.2, 14.8]:
+		LandmarkPainter._r(x - 0.9, 0, x + 0.9, 23, red_d)
+		LandmarkPainter._poly([x - 1.1, 23, x + 1.1, 23, x, 27], roof)
+	# the west door
+	LandmarkPainter._r(8.8, 0, 11.2, 4.2, dark)
+	LandmarkPainter._c(10, 4.2, 1.2, dark)
+
+## Gutenberg's printing press: a wooden frame with the big screw and its lever, a freshly printed page on the bed,
+## a stack of printed sheets and the type case beside it.
+static func _printing_press() -> void:
+	var wood := Color("7a5232")
+	var wood_d := Color("5a3b22")
+	var paper := Color("f3ecd8")
+	# posts, top beam, cross beam
+	LandmarkPainter._r(-3.4, 0, -2.6, 8, wood)
+	LandmarkPainter._r(2.6, 0, 3.4, 8, wood)
+	LandmarkPainter._r(-3.8, 7.2, 3.8, 8.2, wood_d)
+	LandmarkPainter._r(-3.4, 5.2, 3.4, 5.9, wood_d)
+	# the screw, the lever, the platen
+	LandmarkPainter._r(-0.3, 4.0, 0.3, 7.2, Color("8d8f92"))
+	if LandmarkPainter._pm > 2.0:
+		for y in [4.4, 5.0, 5.6, 6.2, 6.8]:
+			LandmarkPainter._l(-0.3, y, 0.3, y + 0.25, Color("5f6266"), 0.08)
+	LandmarkPainter._l(0, 4.6, 3.6, 5.6, wood_d, 0.25)
+	LandmarkPainter._c(3.6, 5.6, 0.3, wood_d)
+	LandmarkPainter._r(-1.8, 3.4, 1.8, 4.0, wood_d)
+	# bed with the printed page
+	LandmarkPainter._r(-3.2, 2.2, 3.2, 2.9, wood)
+	LandmarkPainter._r(-1.5, 2.9, 1.5, 3.25, paper)
+	LandmarkPainter._r(-3.0, 0, -2.6, 2.2, wood_d)
+	LandmarkPainter._r(2.6, 0, 3.0, 2.2, wood_d)
+	# printed sheets and the type case
+	for k in 4:
+		LandmarkPainter._r(-5.4 + k * 0.05, k * 0.18, -3.8 + k * 0.05, k * 0.18 + 0.16, paper.darkened(0.03 * k))
+	if LandmarkPainter._pm > 1.5:
+		for row in 3:
+			LandmarkPainter._r(-5.4, 1.0 + row * 0.12 + 0.2, -4.0, 1.0 + row * 0.12 + 0.24, Color("2b2b2b"))
+	LandmarkPainter._r(3.8, 0, 6.2, 2.4, wood)
+	if LandmarkPainter._pm > 1.5:
+		for i in 3:
+			for j in 2:
+				LandmarkPainter._r(4.0 + i * 0.72, 0.3 + j * 1.0, 4.6 + i * 0.72, 1.1 + j * 1.0, wood_d)

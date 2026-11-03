@@ -398,7 +398,10 @@
 		"holstentor": [24, 22],
 		"kraemerbruecke": [36, 14],
 		"hercules": [24, 40],
-		"neuschwanstein": [36, 40]
+		"neuschwanstein": [36, 40],
+		"zollhof": [34, 26],
+		"mainz_dom": [34, 44],
+		"printing_press": [12, 9]
 	},
 	"police": {"escape_chance": 0.2, "escape_kmh": 180, "escape_swerves": [3, 5]},
 	"postcards": {"stamps": [0.05, 0.15, 0.25, 0.35]}

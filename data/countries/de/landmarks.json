@@ -227,6 +227,24 @@
 				"de": "Ein 240 Meter hoher Turm; seine Lichter bilden eine riesige Uhr"
 			},
 			"local": "Rheinturm"
+		},
+		{
+			"kind": "zollhof",
+			"name": {
+				"pl": "Neuer Zollhof",
+				"en": "Neuer Zollhof",
+				"cs": "Neuer Zollhof",
+				"is": "Neuer Zollhof",
+				"de": "Neuer Zollhof"
+			},
+			"desc": {
+				"pl": "Trzy krzywe domy Franka Gehry'ego: biały, srebrny i ceglany",
+				"en": "Three crooked houses by Frank Gehry: white, silver and brick",
+				"cs": "Tři křivé domy Franka Gehryho: bílý, stříbrný a cihlový",
+				"is": "Þrjú skökk hús eftir Frank Gehry: hvítt, silfrað og úr múrsteini",
+				"de": "Drei schiefe Häuser von Frank Gehry: weiß, silbern und aus Backstein"
+			},
+			"local": "Neuer Zollhof"
 		}
 	],
 	"Leipzig": [
@@ -519,7 +537,7 @@
 	],
 	"Mainz": [
 		{
-			"kind": "cathedral",
+			"kind": "mainz_dom",
 			"name": {
 				"pl": "Katedra w Moguncji",
 				"en": "Mainz Cathedral",
@@ -535,6 +553,24 @@
 				"de": "Ein Dom aus rotem Sandstein, über 1000 Jahre alt"
 			},
 			"local": "Mainzer Dom"
+		},
+		{
+			"kind": "printing_press",
+			"name": {
+				"pl": "Prasa Gutenberga",
+				"en": "Gutenberg's press",
+				"cs": "Gutenbergův lis",
+				"is": "Prentvél Gutenbergs",
+				"de": "Gutenberg-Presse"
+			},
+			"desc": {
+				"pl": "Tu Jan Gutenberg wynalazł druk ruchomą czcionką; jego Biblię można zobaczyć w muzeum",
+				"en": "Johannes Gutenberg invented printing with movable type here; his Bible is in the museum",
+				"cs": "Zde Johannes Gutenberg vynalezl knihtisk; jeho Bibli lze vidět v muzeu",
+				"is": "Hér fann Johannes Gutenberg upp prentun með lausaletri; Biblíu hans má sjá á safninu",
+				"de": "Hier erfand Johannes Gutenberg den Buchdruck; seine Bibel liegt im Museum"
+			},
+			"local": "Gutenberg-Museum"
 		}
 	],
 	"Aachen": [
