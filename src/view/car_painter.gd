@@ -40,6 +40,8 @@ static func draw(cv, car_id: String, c: Vector2, s: float, steer: float, braking
 		"octavia": _octavia(cv, c, s, body, dark, light, lean, braking)
 		"bmw530": _bmw530(cv, c, s, body, dark, light, lean, braking)
 		"rangerover": _rangerover(cv, c, s, body, dark, light, lean, braking)
+		"gtcoupe": _gtcoupe(cv, c, s, body, dark, light, lean, braking)
+		"supercar": _supercar(cv, c, s, body, dark, light, lean, braking)
 		_: _yaris(cv, c, s, body, dark, light, lean, braking)
 
 static func _plate(cv, c: Vector2, s: float, y: float) -> void:
@@ -124,6 +126,53 @@ static func _rangerover(cv, c, s, body, dark, light, lean, braking) -> void:
 	_rect(cv, c, s, 70, 70, 112, 80, lc)
 	_rect(cv, c, s, -50, 60, 50, 64, light)
 	_plate(cv, c, s, 40)
+
+## Long, low grand tourer: a fastback roof sloping into a ducktail, blade lights swept up at the corners, a diffuser
+## between two pairs of exhausts.
+static func _gtcoupe(cv, c, s, body, dark, light, lean, braking) -> void:
+	_wheels(cv, c, s, 104)
+	_chamfer(cv, c, s, -112, 16, 112, 60, 16, body)            # wide haunches
+	_chamfer(cv, c, s, -106, 10, 106, 24, 6, BUMPER)
+	_rect(cv, c, s, -46, 10, 46, 22, Color("1b1c1f"))          # diffuser
+	_exhausts(cv, c, s, [-82, -66, 66, 82])
+	_poly(cv, c, s, [[-96, 60], [-88, 66], [88, 66], [96, 60]], dark)  # ducktail lip
+	_poly(cv, c, s, [[-74 + lean, 66], [-50 + lean, 100], [50 + lean, 100], [74 + lean, 66]], body)  # fastback
+	_poly(cv, c, s, [[-60 + lean, 70], [-42 + lean, 94], [42 + lean, 94], [60 + lean, 70]], GLASS)
+	var lc := _light(braking)
+	_poly(cv, c, s, [[-112, 50], [-104, 58], [-62, 54], [-62, 49]], lc)  # blades rising to the outer corners
+	_poly(cv, c, s, [[112, 50], [104, 58], [62, 54], [62, 49]], lc)
+	_rect(cv, c, s, -62, 50, 62, 52, dark)                      # thin line joining them
+	_chamfer(cv, c, s, -8, 42, 8, 50, 2, light)                # winged badge
+	_rect(cv, c, s, -22, 45, 22, 47, light)
+	_plate(cv, c, s, 24)
+
+## Mid-engined V12 supercar: very low and wide, louvred engine cover instead of a rear window, two round lights a
+## side, a small wing and three exhausts in the middle of the diffuser.
+static func _supercar(cv, c, s, body, dark, light, lean, braking) -> void:
+	_wheels(cv, c, s, 108)
+	_chamfer(cv, c, s, -116, 14, 116, 52, 16, body)            # hips over the rear wheels
+	_chamfer(cv, c, s, -110, 8, 110, 22, 4, Color("1b1c1f"))   # full-width diffuser
+	for x in [-60, -36, 36, 60]:
+		_rect(cv, c, s, x - 2, 8, x + 2, 20, Color("2c2d31"))  # diffuser fins
+	for x in [-16, 0, 16]:
+		cv.draw_circle(_p(c, s, x, 15), 6.0 * s, Color("4a4b50"))
+		cv.draw_circle(_p(c, s, x, 15), 3.5 * s, Color("141416"))
+	_poly(cv, c, s, [[-70 + lean, 52], [-48 + lean, 88], [48 + lean, 88], [70 + lean, 52]], body)  # cabin + engine bay
+	_poly(cv, c, s, [[-54 + lean, 58], [-40 + lean, 82], [40 + lean, 82], [54 + lean, 58]], Color("141416"))
+	for k in 4:
+		var y := 62.0 + k * 5.0
+		var hw := 50.0 - k * 3.0
+		_rect(cv, c, s, -hw + lean, y, hw + lean, y + 2, dark)  # louvres
+	_rect(cv, c, s, -36 + lean, 82, 36 + lean, 86, GLASS)      # slim rear screen
+	_rect(cv, c, s, -96, 52, 96, 58, Color("17181a"))          # wing
+	_rect(cv, c, s, -80, 46, -76, 52, Color("17181a"))
+	_rect(cv, c, s, 76, 46, 80, 52, Color("17181a"))
+	var lc := _light(braking)
+	for x in [-98, -78, 78, 98]:
+		cv.draw_circle(_p(c, s, x, 36), 9.0 * s, Color("2a0c0e"))
+		cv.draw_circle(_p(c, s, x, 36), 6.5 * s, lc)
+	_rect(cv, c, s, -6, 42, 6, 50, Color("f2d22a"))           # yellow badge
+	_plate(cv, c, s, 24)
 
 static func _yaris(cv, c, s, body, dark, light, lean, braking) -> void:
 	_wheels(cv, c, s, 90)

@@ -2,12 +2,19 @@
 	"Reykjavík": [
 		{
 			"kind": "hallgrims",
-			"name": {"pl": "Hallgrímskirkja", "en": "Hallgrímskirkja", "cs": "Hallgrímskirkja", "is": "Hallgrímskirkja"},
+			"name": {
+				"pl": "Hallgrímskirkja",
+				"en": "Hallgrímskirkja",
+				"cs": "Hallgrímskirkja",
+				"is": "Hallgrímskirkja",
+				"de": "Hallgrímskirkja"
+			},
 			"desc": {
 				"pl": "Kościół w kształcie bazaltowych kolumn",
 				"en": "A church shaped like basalt columns",
 				"cs": "Kostel ve tvaru čedičových sloupů",
-				"is": "Kirkja sem minnir á stuðlaberg"
+				"is": "Kirkja sem minnir á stuðlaberg",
+				"de": "Eine Kirche in der Form von Basaltsäulen"
 			},
 			"local": "Hallgrímskirkja"
 		}
@@ -19,13 +26,15 @@
 				"pl": "Most między kontynentami",
 				"en": "Bridge Between Continents",
 				"cs": "Most mezi kontinenty",
-				"is": "Brúin milli heimsálfa"
+				"is": "Brúin milli heimsálfa",
+				"de": "Brücke zwischen den Kontinenten"
 			},
 			"desc": {
 				"pl": "Przejdziesz nad szczeliną między płytami Europy i Ameryki",
 				"en": "Walk across the rift between the European and American plates",
 				"cs": "Přejdeš nad trhlinou mezi deskami Evropy a Ameriky",
-				"is": "Gakktu yfir sprunguna milli fleka Evrópu og Ameríku"
+				"is": "Gakktu yfir sprunguna milli fleka Evrópu og Ameríku",
+				"de": "Spaziere über den Spalt zwischen der europäischen und der amerikanischen Platte"
 			},
 			"local": "Brú milli heimsálfa"
 		}
@@ -33,12 +42,19 @@
 	"Selfoss": [
 		{
 			"kind": "geyser",
-			"name": {"pl": "Gorące źródła", "en": "Hot springs", "cs": "Horké prameny", "is": "Heitar lindir"},
+			"name": {
+				"pl": "Gorące źródła",
+				"en": "Hot springs",
+				"cs": "Horké prameny",
+				"is": "Heitar lindir",
+				"de": "Heiße Quellen"
+			},
 			"desc": {
 				"pl": "W okolicy z ziemi bucha para i gorąca woda",
 				"en": "Steam and hot water burst out of the ground around here",
 				"cs": "V okolí ze země tryská pára a horká voda",
-				"is": "Hér í kring stígur gufa og heitt vatn upp úr jörðinni"
+				"is": "Hér í kring stígur gufa og heitt vatn upp úr jörðinni",
+				"de": "Hier brechen Dampf und heißes Wasser aus dem Boden"
 			},
 			"local": "Hverasvæði"
 		}
@@ -46,23 +62,25 @@
 	"Geysir": [
 		{
 			"kind": "geyser",
-			"name": {"pl": "Strokkur", "en": "Strokkur", "cs": "Strokkur", "is": "Strokkur"},
+			"name": {"pl": "Strokkur", "en": "Strokkur", "cs": "Strokkur", "is": "Strokkur", "de": "Strokkur"},
 			"desc": {
 				"pl": "Gejzer wyrzuca wodę co kilka minut",
 				"en": "The geyser shoots out water every few minutes",
 				"cs": "Gejzír vystřikuje vodu každých pár minut",
-				"is": "Goshverinn gýs á nokkurra mínútna fresti"
+				"is": "Goshverinn gýs á nokkurra mínútna fresti",
+				"de": "Der Geysir schleudert alle paar Minuten Wasser in die Luft"
 			},
 			"local": "Strokkur"
 		},
 		{
 			"kind": "waterfall",
-			"name": {"pl": "Gullfoss", "en": "Gullfoss", "cs": "Gullfoss", "is": "Gullfoss"},
+			"name": {"pl": "Gullfoss", "en": "Gullfoss", "cs": "Gullfoss", "is": "Gullfoss", "de": "Gullfoss"},
 			"desc": {
 				"pl": "Złoty wodospad w kanionie",
 				"en": "The Golden Falls in a canyon",
 				"cs": "Zlatý vodopád v kaňonu",
-				"is": "Gullni fossinn í gljúfri"
+				"is": "Gullni fossinn í gljúfri",
+				"de": "Der Goldene Wasserfall in einer Schlucht"
 			},
 			"local": "Gullfoss"
 		}
@@ -70,12 +88,19 @@
 	"Vík í Mýrdal": [
 		{
 			"kind": "sea_stacks",
-			"name": {"pl": "Reynisdrangar", "en": "Reynisdrangar", "cs": "Reynisdrangar", "is": "Reynisdrangar"},
+			"name": {
+				"pl": "Reynisdrangar",
+				"en": "Reynisdrangar",
+				"cs": "Reynisdrangar",
+				"is": "Reynisdrangar",
+				"de": "Reynisdrangar"
+			},
 			"desc": {
 				"pl": "Bazaltowe iglice przy czarnej plaży",
 				"en": "Basalt pinnacles by the black beach",
 				"cs": "Čedičové jehly u černé pláže",
-				"is": "Basaltdrangar við svörtu ströndina"
+				"is": "Basaltdrangar við svörtu ströndina",
+				"de": "Basaltnadeln am schwarzen Strand"
 			},
 			"local": "Reynisdrangar"
 		}
@@ -83,12 +108,19 @@
 	"Höfn": [
 		{
 			"kind": "ship",
-			"name": {"pl": "Port rybacki", "en": "Fishing harbour", "cs": "Rybářský přístav", "is": "Fiskihöfnin"},
+			"name": {
+				"pl": "Port rybacki",
+				"en": "Fishing harbour",
+				"cs": "Rybářský přístav",
+				"is": "Fiskihöfnin",
+				"de": "Fischereihafen"
+			},
 			"desc": {
 				"pl": "Stąd wypływają kutry po homarce",
 				"en": "Boats sail from here to catch langoustines",
 				"cs": "Odtud vyplouvají lodě na humry",
-				"is": "Héðan sigla bátar á humarveiðar"
+				"is": "Héðan sigla bátar á humarveiðar",
+				"de": "Von hier fahren Boote zum Fang von Kaisergranat aus"
 			},
 			"local": "Höfn"
 		}
@@ -100,13 +132,15 @@
 				"pl": "Potwór z Lagarfljót",
 				"en": "Lagarfljót Worm",
 				"cs": "Příšera z Lagarfljótu",
-				"is": "Lagarfljótsormurinn"
+				"is": "Lagarfljótsormurinn",
+				"de": "Lagarfljót-Wurm"
 			},
 			"desc": {
 				"pl": "Legenda mówi, że w jeziorze żyje wielki wąż",
 				"en": "Legend says a giant serpent lives in the lake",
 				"cs": "Podle legendy v jezeře žije velký had",
-				"is": "Sagt er að stór ormur búi í vatninu"
+				"is": "Sagt er að stór ormur búi í vatninu",
+				"de": "Der Sage nach lebt im See eine riesige Schlange"
 			},
 			"local": "Lagarfljótsormurinn"
 		}
@@ -114,12 +148,19 @@
 	"Akureyri": [
 		{
 			"kind": "cathedral",
-			"name": {"pl": "Kościół w Akureyri", "en": "Akureyri Church", "cs": "Kostel v Akureyri", "is": "Akureyrarkirkja"},
+			"name": {
+				"pl": "Kościół w Akureyri",
+				"en": "Akureyri Church",
+				"cs": "Kostel v Akureyri",
+				"is": "Akureyrarkirkja",
+				"de": "Kirche von Akureyri"
+			},
 			"desc": {
 				"pl": "Długie schody prowadzą do kościoła nad fiordem",
 				"en": "A long staircase leads up to the church above the fjord",
 				"cs": "Dlouhé schody vedou ke kostelu nad fjordem",
-				"is": "Langar tröppur liggja upp að kirkjunni ofan við fjörðinn"
+				"is": "Langar tröppur liggja upp að kirkjunni ofan við fjörðinn",
+				"de": "Eine lange Treppe führt zur Kirche über dem Fjord hinauf"
 			},
 			"local": "Akureyrarkirkja"
 		}
@@ -127,12 +168,19 @@
 	"Húsavík": [
 		{
 			"kind": "ship",
-			"name": {"pl": "Rejsy do wielorybów", "en": "Whale watching", "cs": "Plavby za velrybami", "is": "Hvalaskoðun"},
+			"name": {
+				"pl": "Rejsy do wielorybów",
+				"en": "Whale watching",
+				"cs": "Plavby za velrybami",
+				"is": "Hvalaskoðun",
+				"de": "Walbeobachtung"
+			},
 			"desc": {
 				"pl": "W zatoce pływają wieloryby i delfiny",
 				"en": "Whales and dolphins swim in the bay",
 				"cs": "V zálivu plavou velryby a delfíni",
-				"is": "Hvalir og höfrungar synda í flóanum"
+				"is": "Hvalir og höfrungar synda í flóanum",
+				"de": "In der Bucht schwimmen Wale und Delfine"
 			},
 			"local": "Hvalaskoðun"
 		}
@@ -140,12 +188,19 @@
 	"Blönduós": [
 		{
 			"kind": "turf_house",
-			"name": {"pl": "Dawne gospodarstwo", "en": "Old farmstead", "cs": "Starý statek", "is": "Gamall sveitabær"},
+			"name": {
+				"pl": "Dawne gospodarstwo",
+				"en": "Old farmstead",
+				"cs": "Starý statek",
+				"is": "Gamall sveitabær",
+				"de": "Alter Hof"
+			},
 			"desc": {
 				"pl": "Islandczycy mieszkali w domach krytych darnią",
 				"en": "Icelanders used to live in turf-roofed houses",
 				"cs": "Islanďané bydleli v domech krytých drny",
-				"is": "Íslendingar bjuggu áður í torfbæjum"
+				"is": "Íslendingar bjuggu áður í torfbæjum",
+				"de": "Die Isländer wohnten früher in Häusern mit Torfdach"
 			},
 			"local": "Torfbær"
 		}
@@ -153,12 +208,19 @@
 	"Borgarnes": [
 		{
 			"kind": "turf_house",
-			"name": {"pl": "Centrum osadnictwa", "en": "Settlement Centre", "cs": "Centrum osídlení", "is": "Landnámssetrið"},
+			"name": {
+				"pl": "Centrum osadnictwa",
+				"en": "Settlement Centre",
+				"cs": "Centrum osídlení",
+				"is": "Landnámssetrið",
+				"de": "Siedlungszentrum"
+			},
 			"desc": {
 				"pl": "Opowieść o pierwszych osadnikach Islandii",
 				"en": "The story of Iceland's first settlers",
 				"cs": "Příběh prvních osadníků Islandu",
-				"is": "Sagan af fyrstu landnámsmönnum Íslands"
+				"is": "Sagan af fyrstu landnámsmönnum Íslands",
+				"de": "Die Geschichte der ersten Siedler Islands"
 			},
 			"local": "Landnámssetur"
 		}
@@ -166,12 +228,13 @@
 	"Stykkishólmur": [
 		{
 			"kind": "puffin",
-			"name": {"pl": "Maskonury", "en": "Puffins", "cs": "Papuchalkové", "is": "Lundar"},
+			"name": {"pl": "Maskonury", "en": "Puffins", "cs": "Papuchalkové", "is": "Lundar", "de": "Papageitaucher"},
 			"desc": {
 				"pl": "Na wysepkach zatoki gniazdują maskonury",
 				"en": "Puffins nest on the islets of the bay",
 				"cs": "Na ostrůvcích v zálivu hnízdí papuchalkové",
-				"is": "Lundar verpa á eyjum Breiðafjarðar"
+				"is": "Lundar verpa á eyjum Breiðafjarðar",
+				"de": "Papageitaucher nisten auf den Inseln der Bucht"
 			},
 			"local": "Lundar"
 		}
@@ -179,12 +242,19 @@
 	"Ísafjörður": [
 		{
 			"kind": "ship",
-			"name": {"pl": "Port w fiordzie", "en": "Fjord harbour", "cs": "Přístav ve fjordu", "is": "Höfnin í firðinum"},
+			"name": {
+				"pl": "Port w fiordzie",
+				"en": "Fjord harbour",
+				"cs": "Přístav ve fjordu",
+				"is": "Höfnin í firðinum",
+				"de": "Fjordhafen"
+			},
 			"desc": {
 				"pl": "Miasto na mierzei pośrodku fiordu",
 				"en": "A town on a sandspit in the middle of the fjord",
 				"cs": "Město na kose uprostřed fjordu",
-				"is": "Bær á eyri í miðjum firðinum"
+				"is": "Bær á eyri í miðjum firðinum",
+				"de": "Eine Stadt auf einer Sandzunge mitten im Fjord"
 			},
 			"local": "Ísafjarðarhöfn"
 		}
@@ -196,13 +266,15 @@
 				"pl": "Elfy z Hafnarfjörður",
 				"en": "Elves of Hafnarfjörður",
 				"cs": "Elfové z Hafnarfjörðuru",
-				"is": "Álfarnir í Hafnarfirði"
+				"is": "Álfarnir í Hafnarfirði",
+				"de": "Elfen von Hafnarfjörður"
 			},
 			"desc": {
 				"pl": "Mówi się, że w skałach mieszkają elfy",
 				"en": "People say elves live in the rocks",
 				"cs": "Říká se, že ve skalách bydlí elfové",
-				"is": "Sagt er að álfar búi í klettunum"
+				"is": "Sagt er að álfar búi í klettunum",
+				"de": "Man sagt, in den Felsen wohnen Elfen"
 			},
 			"local": "Hellisgerði"
 		}
@@ -210,12 +282,13 @@
 	"Skógar": [
 		{
 			"kind": "waterfall",
-			"name": {"pl": "Skógafoss", "en": "Skógafoss", "cs": "Skógafoss", "is": "Skógafoss"},
+			"name": {"pl": "Skógafoss", "en": "Skógafoss", "cs": "Skógafoss", "is": "Skógafoss", "de": "Skógafoss"},
 			"desc": {
 				"pl": "Wodospad spadający z 60 metrów",
 				"en": "A waterfall dropping 60 metres",
 				"cs": "Vodopád padající z výšky 60 metrů",
-				"is": "Foss sem fellur úr 60 metra hæð"
+				"is": "Foss sem fellur úr 60 metra hæð",
+				"de": "Ein Wasserfall, der 60 Meter tief stürzt"
 			},
 			"local": "Skógafoss"
 		}
@@ -223,12 +296,13 @@
 	"Skaftafell": [
 		{
 			"kind": "waterfall",
-			"name": {"pl": "Svartifoss", "en": "Svartifoss", "cs": "Svartifoss", "is": "Svartifoss"},
+			"name": {"pl": "Svartifoss", "en": "Svartifoss", "cs": "Svartifoss", "is": "Svartifoss", "de": "Svartifoss"},
 			"desc": {
 				"pl": "Wodospad wśród czarnych bazaltowych kolumn",
 				"en": "A waterfall among black basalt columns",
 				"cs": "Vodopád mezi černými čedičovými sloupy",
-				"is": "Foss umkringdur svörtu stuðlabergi"
+				"is": "Foss umkringdur svörtu stuðlabergi",
+				"de": "Ein Wasserfall zwischen schwarzen Basaltsäulen"
 			},
 			"local": "Svartifoss"
 		}
@@ -236,12 +310,19 @@
 	"Jökulsárlón": [
 		{
 			"kind": "iceberg",
-			"name": {"pl": "Laguna lodowcowa", "en": "Glacier lagoon", "cs": "Ledovcová laguna", "is": "Jökullónið"},
+			"name": {
+				"pl": "Laguna lodowcowa",
+				"en": "Glacier lagoon",
+				"cs": "Ledovcová laguna",
+				"is": "Jökullónið",
+				"de": "Gletscherlagune"
+			},
 			"desc": {
 				"pl": "Góry lodowe płyną z lodowca do morza",
 				"en": "Icebergs float from the glacier to the sea",
 				"cs": "Ledovce plují z ledovce do moře",
-				"is": "Ísjakar fljóta frá jöklinum út í sjó"
+				"is": "Ísjakar fljóta frá jöklinum út í sjó",
+				"de": "Eisberge treiben vom Gletscher ins Meer"
 			},
 			"local": "Jökulsárlón"
 		}
@@ -249,12 +330,13 @@
 	"Reykjahlíð": [
 		{
 			"kind": "geyser",
-			"name": {"pl": "Hverir", "en": "Hverir", "cs": "Hverir", "is": "Hverir"},
+			"name": {"pl": "Hverir", "en": "Hverir", "cs": "Hverir", "is": "Hverir", "de": "Hverir"},
 			"desc": {
 				"pl": "Parujące źródła i bulgoczące błoto",
 				"en": "Steaming vents and bubbling mud",
 				"cs": "Kouřící prameny a bublající bahno",
-				"is": "Rjúkandi hverir og bullandi leirhverir"
+				"is": "Rjúkandi hverir og bullandi leirhverir",
+				"de": "Dampfende Spalten und brodelnder Schlamm"
 			},
 			"local": "Hverir"
 		}
@@ -262,12 +344,13 @@
 	"Varmahlíð": [
 		{
 			"kind": "turf_house",
-			"name": {"pl": "Glaumbær", "en": "Glaumbær", "cs": "Glaumbær", "is": "Glaumbær"},
+			"name": {"pl": "Glaumbær", "en": "Glaumbær", "cs": "Glaumbær", "is": "Glaumbær", "de": "Glaumbær"},
 			"desc": {
 				"pl": "Domy kryte darnią sprzed stu lat",
 				"en": "Turf-roofed houses from a hundred years ago",
 				"cs": "Domy kryté drny staré sto let",
-				"is": "Aldargamlir torfbæir"
+				"is": "Aldargamlir torfbæir",
+				"de": "Torfhäuser von vor hundert Jahren"
 			},
 			"local": "Glaumbær"
 		}

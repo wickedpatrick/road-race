@@ -4,7 +4,7 @@ extends RefCounted
 ## time (map, cities, roads, facts, landmarks, traffic rules). Read once and cached. Texts in the files are
 ## {"pl": "...", ...} by language; the loader turns them into plain strings in the game's language.
 const DIR := "res://data/"
-const LANGUAGES := ["pl", "en", "cs", "is"] ## the game's languages; any other player language gets English
+const LANGUAGES := ["pl", "en", "cs", "is", "de"] ## the game's languages; any other player language gets English
 const FALLBACK := "en"
 static var language := "pl" ## the player's language (Session sets it; set_language() reloads the texts)
 static var _rules := {}

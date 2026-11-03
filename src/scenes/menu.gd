@@ -25,6 +25,7 @@ var confirm_reset := false ## "reset progress?" question is shown (car step, R k
 const NEXT_BTN := Rect2(744, 490, 200, 44)
 const BACK_BTN := Rect2(584, 490, 148, 44)
 const RESET_BTN := Rect2(796, 14, 148, 40)
+const CAR_GAP := 8.0 ## pixels between the car cards
 const LANG_BTN := Rect2(736, 124, 196, 36) ## car step: the game's language (L key)
 const ALBUM_CAR_BTN := Rect2(28, 124, 196, 36) ## the postcard album (P key): on the car step
 const ALBUM_MAP_BTN := Rect2(796, 14, 148, 40) ## and on the map steps
@@ -256,7 +257,8 @@ func _tap(p: Vector2) -> bool:
 
 func _card_rect(i: int) -> Rect2:
 	if kind() == "car":
-		return Rect2(28 + i * 183, 172, 172, 302)
+		var w := _car_card_w()
+		return Rect2(28 + i * (w + CAR_GAP), 172, w, 302)
 	return Rect2(48 + i * 218, 180, 198, 290)
 
 func _reset_progress() -> void:
@@ -417,24 +419,34 @@ func _unlock_progress(pos: Vector2) -> void:
 	draw_rect(Rect2(pos + Vector2(190, -12), Vector2(160, 10)), Color(1, 1, 1, 0.2))
 	draw_rect(Rect2(pos + Vector2(190, -12), Vector2(160 * Profile.next_progress(km), 10)), Color("49d36b"))
 
+## The car cards share the menu's 904 px width, however many cars there are.
+func _car_card_w() -> float:
+	var n := CarStats.ids().size()
+	return minf(172.0, (904.0 - CAR_GAP * (n - 1)) / n)
+
 func _draw_cars() -> void:
 	var n := CarStats.ids().size()
-	var w := 172.0
+	var w := _car_card_w()
+	var top := {"max_speed": 0.0, "accel": 0.0, "handling": 0.0}
+	for id in CarStats.ids():
+		for k in top: top[k] = maxf(top[k], CarStats.by_id(id)[k])
+	var cs := minf(0.55, (w - 16.0) / 232.0) # the widest car is ~232 px across at scale 1
+	var bw := w - 16.0 if w < 150.0 else w - 24.0
 	for i in n:
 		var id: String = CarStats.ids()[i]
 		var c := CarStats.by_id(id)
-		var r := Rect2(28 + i * (w + 11), 172, w, 302)
+		var r := _card_rect(i)
 		var on: bool = sel[0] == i
 		var open := Profile.is_unlocked(id, Session.total_km)
 		_card(r, on)
-		CarPainter.draw(self, id, Vector2(r.position.x + w * 0.5, r.position.y + 106), 0.62 if on else 0.55, sin(t * 2.0) * 0.3 if on and open else 0.0, false)
-		draw_multiline_string(font, r.position + Vector2(6, 138), c.name, HORIZONTAL_ALIGNMENT_CENTER, w - 12, 17, 2, Color.WHITE)
+		CarPainter.draw(self, id, Vector2(r.position.x + w * 0.5, r.position.y + 106), cs * 1.13 if on else cs, sin(t * 2.0) * 0.3 if on and open else 0.0, false)
+		draw_multiline_string(font, r.position + Vector2(4, 138), c.name, HORIZONTAL_ALIGNMENT_CENTER, w - 8, 17 if w >= 150.0 else 15, 2, Color.WHITE)
 		_t(r.position + Vector2(0, 180), Lang.t("hp") % c.hp, 13, Color("c8d6e3"), HORIZONTAL_ALIGNMENT_CENTER, w)
-		var bx := r.position.x + 12
-		_bar(Vector2(bx, r.position.y + 200), Lang.t("bar_speed"), c.max_speed / 70.0, w - 24)
-		_bar(Vector2(bx, r.position.y + 224), Lang.t("bar_accel"), c.accel / 12.0, w - 24)
-		_bar(Vector2(bx, r.position.y + 248), Lang.t("bar_handling"), (c.handling - 0.6) / 0.65, w - 24)
-		_bar(Vector2(bx, r.position.y + 272), Lang.t("bar_economy"), 0.3 / c.burn * 0.9, w - 24)
+		var bx := r.position.x + (w - bw) * 0.5
+		_bar(Vector2(bx, r.position.y + 200), Lang.t("bar_speed"), c.max_speed / top.max_speed, bw)
+		_bar(Vector2(bx, r.position.y + 224), Lang.t("bar_accel"), c.accel / top.accel, bw)
+		_bar(Vector2(bx, r.position.y + 248), Lang.t("bar_handling"), (c.handling - 0.6) / (top.handling - 0.55), bw)
+		_bar(Vector2(bx, r.position.y + 272), Lang.t("bar_economy"), 0.3 / c.burn * 0.9, bw)
 		if not open:
 			var sb := StyleBoxFlat.new()
 			sb.bg_color = Color(0.03, 0.05, 0.08, 0.72)

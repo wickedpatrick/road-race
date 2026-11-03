@@ -11,7 +11,7 @@ func run(t) -> void:
 				complete = false; print("  ui.json: %s has no proper %s text" % [key, code])
 	t.check(complete, "every interface text in all %d languages" % GameData.LANGUAGES.size())
 	t.check(GameData.language_for("cs_CZ") == "cs" and GameData.language_for("is-IS") == "is" and GameData.language_for("pl") == "pl", "the device's language when the game has it")
-	t.check(GameData.language_for("de_DE") == "en" and GameData.language_for("") == "en", "English for any other language")
+	t.check(GameData.language_for("de_DE") == "de" and GameData.language_for("fr_FR") == "en" and GameData.language_for("") == "en", "English for any other language")
 	# every text in the data in every language (the brown boards keep the country's language)
 	for code in GameData.LANGUAGES:
 		var missing := []

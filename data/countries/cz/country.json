@@ -1,16 +1,23 @@
 {
 	"code": "cz",
-	"name": {"pl": "Czechy", "en": "Czechia", "cs": "Česko", "is": "Tékkland"},
+	"name": {"pl": "Czechy", "en": "Czechia", "cs": "Česko", "is": "Tékkland", "de": "Tschechien"},
 	"language": "cs",
 	"drive": "right",
-	"title": {"pl": "RAJD PRZEZ CZECHY", "en": "ROAD TRIP ACROSS CZECHIA", "cs": "RALLY ČESKEM", "is": "ÖKUFERÐ UM TÉKKLAND"},
+	"title": {
+		"pl": "RAJD PRZEZ CZECHY",
+		"en": "ROAD TRIP ACROSS CZECHIA",
+		"cs": "RALLY ČESKEM",
+		"is": "ÖKUFERÐ UM TÉKKLAND",
+		"de": "ROADTRIP DURCH TSCHECHIEN"
+	},
 	"subtitle": {
 		"pl": "Edukacyjna podróż po czeskich drogach",
 		"en": "An educational journey along Czech roads",
 		"cs": "Vzdělávací cesta po českých silnicích",
-		"is": "Fræðandi ferðalag um vegi Tékklands"
+		"is": "Fræðandi ferðalag um vegi Tékklands",
+		"de": "Eine lehrreiche Reise über tschechische Straßen"
 	},
-	"region_label": {"pl": "kraj", "en": "region", "cs": "kraj", "is": "hérað"},
+	"region_label": {"pl": "kraj", "en": "region", "cs": "kraj", "is": "hérað", "de": "Region"},
 	"start": ["praha", "plzen"],
 	"express_prefixes": ["D"],
 	"limits": {"express": 130, "road": 90, "city": 50, "town_on_express": 80, "town": 50},

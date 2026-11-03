@@ -3,156 +3,182 @@
 		"pl": "Najbardziej wysunięta na północ stolica państwa na świecie",
 		"en": "The northernmost capital city in the world",
 		"cs": "Nejsevernější hlavní město státu na světě",
-		"is": "Nyrsta höfuðborg sjálfstæðs ríkis í heiminum"
+		"is": "Nyrsta höfuðborg sjálfstæðs ríkis í heiminum",
+		"de": "Die nördlichste Hauptstadt der Welt"
 	},
 	"Reykjanesbær": {
 		"pl": "Tu jest główne lotnisko Islandii, Keflavík",
 		"en": "Iceland's main airport, Keflavík, is here",
 		"cs": "Je tu hlavní letiště Islandu, Keflavík",
-		"is": "Hér er aðalflugvöllur Íslands, Keflavíkurflugvöllur"
+		"is": "Hér er aðalflugvöllur Íslands, Keflavíkurflugvöllur",
+		"de": "Hier liegt Islands wichtigster Flughafen, Keflavík"
 	},
 	"Selfoss": {
 		"pl": "Miasteczko nad Ölfusá, najbardziej obfitą w wodę rzeką Islandii",
 		"en": "A small town on the Ölfusá, Iceland's river with the most water",
 		"cs": "Městečko na řece Ölfusá, nejvodnatější řece Islandu",
-		"is": "Bær við Ölfusá, vatnsmestu á Íslands"
+		"is": "Bær við Ölfusá, vatnsmestu á Íslands",
+		"de": "Eine kleine Stadt an der Ölfusá, Islands wasserreichstem Fluss"
 	},
 	"Geysir": {
 		"pl": "Od tego gejzeru pochodzi słowo gejzer",
 		"en": "The word \"geyser\" comes from this geyser",
 		"cs": "Podle tohoto gejzíru se jmenují všechny gejzíry",
-		"is": "Orðið „geysir“ á mörgum tungumálum kemur frá þessum hver"
+		"is": "Orðið „geysir“ á mörgum tungumálum kemur frá þessum hver",
+		"de": "Das Wort „Geysir“ stammt von diesem Geysir"
 	},
 	"Vík í Mýrdal": {
 		"pl": "Czarna plaża i skalne iglice w morzu",
 		"en": "A black beach and rock pinnacles in the sea",
 		"cs": "Černá pláž a skalní jehly v moři",
-		"is": "Svört strönd og klettadrangar í sjónum"
+		"is": "Svört strönd og klettadrangar í sjónum",
+		"de": "Ein schwarzer Strand und Felsnadeln im Meer"
 	},
 	"Höfn": {
 		"pl": "Port u stóp Vatnajökull, największego lodowca Islandii",
 		"en": "A port at the foot of Vatnajökull, Iceland's largest glacier",
 		"cs": "Přístav na úpatí Vatnajökullu, největšího ledovce Islandu",
-		"is": "Höfn við rætur Vatnajökuls, stærsta jökuls Íslands"
+		"is": "Höfn við rætur Vatnajökuls, stærsta jökuls Íslands",
+		"de": "Ein Hafen am Fuß des Vatnajökull, Islands größtem Gletscher"
 	},
 	"Egilsstaðir": {
 		"pl": "Obok rośnie największy las Islandii, Hallormsstaður",
 		"en": "Iceland's largest forest, Hallormsstaður, grows nearby",
 		"cs": "Vedle roste největší les Islandu, Hallormsstaður",
-		"is": "Rétt hjá vex stærsti skógur Íslands, Hallormsstaðaskógur"
+		"is": "Rétt hjá vex stærsti skógur Íslands, Hallormsstaðaskógur",
+		"de": "In der Nähe wächst Islands größter Wald, Hallormsstaður"
 	},
 	"Akureyri": {
 		"pl": "Stolica północy: światła na skrzyżowaniach mają czerwone serduszka",
 		"en": "Capital of the north: its traffic lights have red hearts",
 		"cs": "Hlavní město severu: semafory tu mají červená srdíčka",
-		"is": "Höfuðstaður Norðurlands: á umferðarljósunum eru rauð hjörtu"
+		"is": "Höfuðstaður Norðurlands: á umferðarljósunum eru rauð hjörtu",
+		"de": "Hauptstadt des Nordens: Ihre Ampeln haben rote Herzen"
 	},
 	"Húsavík": {
 		"pl": "Stolica wielorybów: stąd wypływa się je oglądać",
 		"en": "Whale capital: boats set off from here to watch them",
 		"cs": "Hlavní město velryb: odtud se vyplouvá na jejich pozorování",
-		"is": "Höfuðborg hvalanna: héðan er siglt til að skoða þá"
+		"is": "Höfuðborg hvalanna: héðan er siglt til að skoða þá",
+		"de": "Hauptstadt der Wale: Von hier fahren Boote zur Walbeobachtung los"
 	},
 	"Blönduós": {
 		"pl": "Miasteczko nad lodowcową rzeką Blanda",
 		"en": "A small town on the glacial River Blanda",
 		"cs": "Městečko na ledovcové řece Blanda",
-		"is": "Bær við jökulána Blöndu"
+		"is": "Bær við jökulána Blöndu",
+		"de": "Eine kleine Stadt am Gletscherfluss Blanda"
 	},
 	"Borgarnes": {
 		"pl": "Tu dzieje się akcja wielu islandzkich sag",
 		"en": "Many Icelandic sagas take place here",
 		"cs": "Odehrává se tu děj mnoha islandských ság",
-		"is": "Hér gerast margar Íslendingasögur"
+		"is": "Hér gerast margar Íslendingasögur",
+		"de": "Viele isländische Sagas spielen hier"
 	},
 	"Stykkishólmur": {
 		"pl": "Port z widokiem na setki wysepek zatoki Breiðafjörður",
 		"en": "A port looking out over hundreds of islets in Breiðafjörður bay",
 		"cs": "Přístav s výhledem na stovky ostrůvků zálivu Breiðafjörður",
-		"is": "Höfn með útsýni yfir hundruð eyja á Breiðafirði"
+		"is": "Höfn með útsýni yfir hundruð eyja á Breiðafirði",
+		"de": "Ein Hafen mit Blick auf Hunderte Inseln in der Bucht Breiðafjörður"
 	},
 	"Ísafjörður": {
 		"pl": "Największe miasto Fiordów Zachodnich",
 		"en": "The largest town in the Westfjords",
 		"cs": "Největší město Západních fjordů",
-		"is": "Stærsti bær Vestfjarða"
+		"is": "Stærsti bær Vestfjarða",
+		"de": "Die größte Stadt der Westfjorde"
 	},
 	"Hafnarfjörður": {
 		"pl": "Miasto lawy, w której według legend mieszkają elfy",
 		"en": "A town on lava where, legends say, elves live",
 		"cs": "Město lávy, ve které podle legend bydlí elfové",
-		"is": "Bær í hrauni þar sem álfar búa samkvæmt þjóðsögum"
+		"is": "Bær í hrauni þar sem álfar búa samkvæmt þjóðsögum",
+		"de": "Eine Stadt auf Lava, in der der Sage nach Elfen leben"
 	},
 	"Hveragerði": {
 		"pl": "Miasto gorących źródeł i szklarni",
 		"en": "A town of hot springs and greenhouses",
 		"cs": "Město horkých pramenů a skleníků",
-		"is": "Bær hvera og gróðurhúsa"
+		"is": "Bær hvera og gróðurhúsa",
+		"de": "Eine Stadt der heißen Quellen und Gewächshäuser"
 	},
 	"Hvolsvöllur": {
 		"pl": "Muzeum lawy i wulkanów",
 		"en": "A museum of lava and volcanoes",
 		"cs": "Muzeum lávy a sopek",
-		"is": "Safn um hraun og eldfjöll"
+		"is": "Safn um hraun og eldfjöll",
+		"de": "Ein Museum über Lava und Vulkane"
 	},
 	"Skógar": {
 		"pl": "Wodospad Skógafoss spada z 60 metrów",
 		"en": "The Skógafoss waterfall drops 60 metres",
 		"cs": "Vodopád Skógafoss padá z výšky 60 metrů",
-		"is": "Skógafoss fellur úr 60 metra hæð"
+		"is": "Skógafoss fellur úr 60 metra hæð",
+		"de": "Der Wasserfall Skógafoss stürzt 60 Meter tief"
 	},
 	"Kirkjubæjarklaustur": {
 		"pl": "Obok ogromne pole lawy Eldhraun porośnięte mchem",
 		"en": "Next to the huge moss-covered Eldhraun lava field",
 		"cs": "Vedle obrovské lávové pole Eldhraun porostlé mechem",
-		"is": "Rétt hjá er gríðarstórt mosavaxið hraun, Eldhraun"
+		"is": "Rétt hjá er gríðarstórt mosavaxið hraun, Eldhraun",
+		"de": "Neben dem riesigen, moosbewachsenen Lavafeld Eldhraun"
 	},
 	"Skaftafell": {
 		"pl": "Park narodowy u stóp lodowca",
 		"en": "A national park at the foot of a glacier",
 		"cs": "Národní park na úpatí ledovce",
-		"is": "Þjóðgarður við rætur jökuls"
+		"is": "Þjóðgarður við rætur jökuls",
+		"de": "Ein Nationalpark am Fuß eines Gletschers"
 	},
 	"Jökulsárlón": {
 		"pl": "Laguna, po której pływają góry lodowe",
 		"en": "A lagoon where icebergs float",
 		"cs": "Laguna, po které plují ledovce",
-		"is": "Lón þar sem ísjakar fljóta"
+		"is": "Lón þar sem ísjakar fljóta",
+		"de": "Eine Lagune, in der Eisberge treiben"
 	},
 	"Djúpivogur": {
 		"pl": "Wioska rybacka z kamiennymi jajami nad zatoką",
 		"en": "A fishing village with stone eggs by the bay",
 		"cs": "Rybářská vesnice s kamennými vejci u zálivu",
-		"is": "Fiskiþorp með steinaeggjum við voginn"
+		"is": "Fiskiþorp með steinaeggjum við voginn",
+		"de": "Ein Fischerdorf mit Steineiern an der Bucht"
 	},
 	"Fáskrúðsfjörður": {
 		"pl": "Dawniej przypływali tu francuscy rybacy",
 		"en": "French fishermen used to sail here",
 		"cs": "Dřív sem připlouvali francouzští rybáři",
-		"is": "Áður komu franskir sjómenn hingað"
+		"is": "Áður komu franskir sjómenn hingað",
+		"de": "Früher kamen französische Fischer hierher"
 	},
 	"Reykjahlíð": {
 		"pl": "Nad jeziorem Mývatn, wśród wulkanów i parujących źródeł",
 		"en": "On Lake Mývatn, among volcanoes and steaming springs",
 		"cs": "U jezera Mývatn, mezi sopkami a kouřícími prameny",
-		"is": "Við Mývatn, á milli eldfjalla og rjúkandi hvera"
+		"is": "Við Mývatn, á milli eldfjalla og rjúkandi hvera",
+		"de": "Am See Mývatn, zwischen Vulkanen und dampfenden Quellen"
 	},
 	"Varmahlíð": {
 		"pl": "Obok stare domy kryte darnią w Glaumbær",
 		"en": "Old turf-roofed houses at Glaumbær are nearby",
 		"cs": "Vedle staré domy kryté drny v Glaumbæru",
-		"is": "Rétt hjá eru gamlir torfbæir í Glaumbæ"
+		"is": "Rétt hjá eru gamlir torfbæir í Glaumbæ",
+		"de": "In der Nähe stehen alte Torfhäuser bei Glaumbær"
 	},
 	"Þingeyri": {
 		"pl": "Wioska nad fiordem Dýrafjörður",
 		"en": "A village on the Dýrafjörður fjord",
 		"cs": "Vesnice u fjordu Dýrafjörður",
-		"is": "Þorp við Dýrafjörð"
+		"is": "Þorp við Dýrafjörð",
+		"de": "Ein Dorf am Fjord Dýrafjörður"
 	},
 	"Reykholt": {
 		"pl": "Szklarnie ogrzewane gorącymi źródłami",
 		"en": "Greenhouses heated by hot springs",
 		"cs": "Skleníky vytápěné horkými prameny",
-		"is": "Gróðurhús hituð með vatni úr hverum"
+		"is": "Gróðurhús hituð með vatni úr hverum",
+		"de": "Gewächshäuser, die mit heißen Quellen beheizt werden"
 	}
 }

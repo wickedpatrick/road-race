@@ -2,7 +2,7 @@
 	"cars": [
 		{
 			"id": "yaris",
-			"name": "Toyota Yaris",
+			"name": "Tokai Yarro",
 			"hp": 116,
 			"max_speed": 43,
 			"accel": 6,
@@ -15,7 +15,7 @@
 		},
 		{
 			"id": "octavia",
-			"name": "Škoda Octavia",
+			"name": "Škova Octana",
 			"hp": 150,
 			"max_speed": 50,
 			"accel": 7.5,
@@ -28,7 +28,7 @@
 		},
 		{
 			"id": "xc60",
-			"name": "Volvo XC60",
+			"name": "Volvik XR60",
 			"hp": 250,
 			"max_speed": 55,
 			"accel": 9,
@@ -41,7 +41,7 @@
 		},
 		{
 			"id": "bmw530",
-			"name": "BMW 530i",
+			"name": "Bavaria 530i",
 			"hp": 258,
 			"max_speed": 61,
 			"accel": 10.5,
@@ -54,7 +54,7 @@
 		},
 		{
 			"id": "rangerover",
-			"name": "Range Rover",
+			"name": "Range Royal",
 			"hp": 635,
 			"max_speed": 70,
 			"accel": 12,
@@ -64,6 +64,32 @@
 			"handling": 1.15,
 			"body_color": "#2d4a3b",
 			"halfwidth": 0.2
+		},
+		{
+			"id": "gtcoupe",
+			"name": "Ashworth GT Coupé",
+			"hp": 690,
+			"max_speed": 76,
+			"accel": 13.5,
+			"brake": 32,
+			"tank": 105,
+			"burn": 1.15,
+			"handling": 1.32,
+			"body_color": "#1f5a4c",
+			"halfwidth": 0.2
+		},
+		{
+			"id": "supercar",
+			"name": "Ferrucci Rosso V12",
+			"hp": 830,
+			"max_speed": 83,
+			"accel": 15.5,
+			"brake": 35,
+			"tank": 110,
+			"burn": 1.35,
+			"handling": 1.45,
+			"body_color": "#c8161d",
+			"halfwidth": 0.21
 		}
 	],
 	"biomes": {

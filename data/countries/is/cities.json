@@ -19,7 +19,8 @@
 			"pl": "dolina gejzerów obok wodospadu Gullfoss",
 			"en": "valley of geysers near the Gullfoss waterfall",
 			"cs": "údolí gejzírů vedle vodopádu Gullfoss",
-			"is": "hveradalur rétt hjá Gullfossi"
+			"is": "hveradalur rétt hjá Gullfossi",
+			"de": "Geysirtal in der Nähe des Wasserfalls Gullfoss"
 		}
 	},
 	"vik": {"name": "Vík í Mýrdal", "lat": 63.42, "lon": -19.01, "pop": 1, "region": "Suðurland", "short": "Vík"},

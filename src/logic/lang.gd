@@ -2,7 +2,7 @@ class_name Lang
 extends RefCounted
 ## Interface texts in the player's language (GameData.language), from data/ui.json: key -> {pl, en, cs, is}.
 ## A missing translation falls back to English, a missing key shows the key.
-const NAMES := {"pl": "Polski", "en": "English", "cs": "Čeština", "is": "Íslenska"}
+const NAMES := {"pl": "Polski", "en": "English", "cs": "Čeština", "is": "Íslenska", "de": "Deutsch"}
 static var _ui := {}
 
 static func t(key: String) -> String:

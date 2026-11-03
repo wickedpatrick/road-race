@@ -5,7 +5,7 @@
 		"lon": 21.01,
 		"pop": 1860,
 		"region": "mazowieckie",
-		"exonym": {"en": "Warsaw", "cs": "Varšava", "is": "Varsjá"}
+		"exonym": {"en": "Warsaw", "cs": "Varšava", "is": "Varsjá", "de": "Warschau"}
 	},
 	"krakow": {
 		"name": "Kraków",
@@ -13,7 +13,7 @@
 		"lon": 19.94,
 		"pop": 800,
 		"region": "małopolskie",
-		"exonym": {"en": "Krakow", "cs": "Krakov", "is": "Kraká"}
+		"exonym": {"en": "Krakow", "cs": "Krakov", "is": "Kraká", "de": "Krakau"}
 	},
 	"wroclaw": {
 		"name": "Wrocław",
@@ -21,18 +21,39 @@
 		"lon": 17.03,
 		"pop": 670,
 		"region": "dolnośląskie",
-		"exonym": {"cs": "Vratislav"}
+		"exonym": {"cs": "Vratislav", "de": "Breslau"}
 	},
-	"lodz": {"name": "Łódź", "lat": 51.76, "lon": 19.46, "pop": 650, "region": "łódzkie", "exonym": {"cs": "Lodž"}},
-	"poznan": {"name": "Poznań", "lat": 52.41, "lon": 16.93, "pop": 540, "region": "wielkopolskie", "exonym": {"cs": "Poznaň"}},
-	"gdansk": {"name": "Gdańsk", "lat": 54.35, "lon": 18.65, "pop": 490, "region": "pomorskie", "exonym": {"cs": "Gdaňsk"}},
+	"lodz": {
+		"name": "Łódź",
+		"lat": 51.76,
+		"lon": 19.46,
+		"pop": 650,
+		"region": "łódzkie",
+		"exonym": {"cs": "Lodž", "de": "Lodz"}
+	},
+	"poznan": {
+		"name": "Poznań",
+		"lat": 52.41,
+		"lon": 16.93,
+		"pop": 540,
+		"region": "wielkopolskie",
+		"exonym": {"cs": "Poznaň", "de": "Posen"}
+	},
+	"gdansk": {
+		"name": "Gdańsk",
+		"lat": 54.35,
+		"lon": 18.65,
+		"pop": 490,
+		"region": "pomorskie",
+		"exonym": {"cs": "Gdaňsk", "de": "Danzig"}
+	},
 	"szczecin": {
 		"name": "Szczecin",
 		"lat": 53.43,
 		"lon": 14.55,
 		"pop": 390,
 		"region": "zachodniopomorskie",
-		"exonym": {"cs": "Štětín"}
+		"exonym": {"cs": "Štětín", "de": "Stettin"}
 	},
 	"lublin": {"name": "Lublin", "lat": 51.25, "lon": 22.57, "pop": 330, "region": "lubelskie"},
 	"bydgoszcz": {
@@ -136,7 +157,8 @@
 			"pl": "wieś w Beskidach, przy granicy ze Słowacją",
 			"en": "village in the Beskids, by the Slovak border",
 			"cs": "vesnice v Beskydech, u hranic se Slovenskem",
-			"is": "þorp í Beskid-fjöllum, við landamæri Slóvakíu"
+			"is": "þorp í Beskid-fjöllum, við landamæri Slóvakíu",
+			"de": "Dorf in den Beskiden, an der Grenze zur Slowakei"
 		}
 	}
 }

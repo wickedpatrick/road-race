@@ -5,16 +5,16 @@
 		"lon": 14.43,
 		"pop": 1380,
 		"region": "Praha",
-		"exonym": {"pl": "Praga", "en": "Prague", "is": "Prag"}
+		"exonym": {"pl": "Praga", "en": "Prague", "is": "Prag", "de": "Prag"}
 	},
-	"brno": {"name": "Brno", "lat": 49.2, "lon": 16.61, "pop": 400, "region": "jihomoravský"},
+	"brno": {"name": "Brno", "lat": 49.2, "lon": 16.61, "pop": 400, "region": "jihomoravský", "exonym": {"de": "Brünn"}},
 	"ostrava": {
 		"name": "Ostrava",
 		"lat": 49.83,
 		"lon": 18.29,
 		"pop": 285,
 		"region": "moravskoslezský",
-		"exonym": {"pl": "Ostrawa"}
+		"exonym": {"pl": "Ostrawa", "de": "Ostrau"}
 	},
 	"plzen": {
 		"name": "Plzeň",
@@ -22,10 +22,17 @@
 		"lon": 13.38,
 		"pop": 185,
 		"region": "plzeňský",
-		"exonym": {"pl": "Pilzno", "en": "Pilsen"}
+		"exonym": {"pl": "Pilzno", "en": "Pilsen", "de": "Pilsen"}
 	},
 	"liberec": {"name": "Liberec", "lat": 50.77, "lon": 15.06, "pop": 105, "region": "liberecký"},
-	"olomouc": {"name": "Olomouc", "lat": 49.59, "lon": 17.25, "pop": 102, "region": "olomoucký", "exonym": {"pl": "Ołomuniec"}},
+	"olomouc": {
+		"name": "Olomouc",
+		"lat": 49.59,
+		"lon": 17.25,
+		"pop": 102,
+		"region": "olomoucký",
+		"exonym": {"pl": "Ołomuniec", "de": "Olmütz"}
+	},
 	"ceske_budejovice": {
 		"name": "České Budějovice",
 		"lat": 48.97,
@@ -33,7 +40,7 @@
 		"pop": 97,
 		"region": "jihočeský",
 		"short": "Č. Budějovice",
-		"exonym": {"pl": "Czeskie Budziejowice"},
+		"exonym": {"pl": "Czeskie Budziejowice", "de": "Budweis"},
 		"map_name": {"pl": "Cz. Budziejowice"}
 	},
 	"hradec_kralove": {"name": "Hradec Králové", "lat": 50.21, "lon": 15.83, "pop": 93, "region": "královéhradecký"},
@@ -67,7 +74,7 @@
 		"lon": 12.87,
 		"pop": 47,
 		"region": "karlovarský",
-		"exonym": {"pl": "Karlowe Wary"}
+		"exonym": {"pl": "Karlowe Wary", "de": "Karlsbad"}
 	},
 	"mlada_boleslav": {
 		"name": "Mladá Boleslav",

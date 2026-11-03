@@ -1,311 +1,465 @@
 {
-	"title_home": {"pl": "Skąd jesteś?", "en": "Where are you from?", "cs": "Odkud jsi?", "is": "Hvaðan ertu?"},
-	"title_car": {"pl": "Wybierz auto", "en": "Choose your car", "cs": "Vyber si auto", "is": "Veldu bíl"},
-	"title_dest": {"pl": "Dokąd jedziesz?", "en": "Where are you going?", "cs": "Kam jedeš?", "is": "Hvert ertu að fara?"},
-	"lang_btn": {"pl": "Język: %s", "en": "Language: %s", "cs": "Jazyk: %s", "is": "Tungumál: %s"},
-	"back": {"pl": "Wstecz", "en": "Back", "cs": "Zpět", "is": "Til baka"},
-	"next": {"pl": "Dalej", "en": "Next", "cs": "Dál", "is": "Áfram"},
-	"start": {"pl": "START!", "en": "START!", "cs": "START!", "is": "AF STAÐ!"},
-	"reset_btn": {"pl": "Reset postępu", "en": "Reset progress", "cs": "Smazat postup", "is": "Byrja upp á nýtt"},
+	"title_home": {
+		"pl": "Skąd jesteś?",
+		"en": "Where are you from?",
+		"cs": "Odkud jsi?",
+		"is": "Hvaðan ertu?",
+		"de": "Woher kommst du?"
+	},
+	"title_car": {"pl": "Wybierz auto", "en": "Choose your car", "cs": "Vyber si auto", "is": "Veldu bíl", "de": "Wähle dein Auto"},
+	"title_dest": {
+		"pl": "Dokąd jedziesz?",
+		"en": "Where are you going?",
+		"cs": "Kam jedeš?",
+		"is": "Hvert ertu að fara?",
+		"de": "Wohin fährst du?"
+	},
+	"lang_btn": {"pl": "Język: %s", "en": "Language: %s", "cs": "Jazyk: %s", "is": "Tungumál: %s", "de": "Sprache: %s"},
+	"back": {"pl": "Wstecz", "en": "Back", "cs": "Zpět", "is": "Til baka", "de": "Zurück"},
+	"next": {"pl": "Dalej", "en": "Next", "cs": "Dál", "is": "Áfram", "de": "Weiter"},
+	"start": {"pl": "START!", "en": "START!", "cs": "START!", "is": "AF STAÐ!", "de": "LOS!"},
+	"reset_btn": {
+		"pl": "Reset postępu",
+		"en": "Reset progress",
+		"cs": "Smazat postup",
+		"is": "Byrja upp á nýtt",
+		"de": "Fortschritt löschen"
+	},
 	"hint_select": {
 		"pl": "Strzałki: wybierz      Enter: dalej",
 		"en": "Arrows: choose      Enter: next",
 		"cs": "Šipky: vyber      Enter: dál",
-		"is": "Örvar: velja      Enter: áfram"
+		"is": "Örvar: velja      Enter: áfram",
+		"de": "Pfeile: wählen      Enter: weiter"
 	},
-	"hint_map": {"pl": "Strzałki/myszka   ", "en": "Arrows/mouse   ", "cs": "Šipky/myš   ", "is": "Örvar/mús   "},
-	"hint_enter_start": {"pl": "Enter: START!", "en": "Enter: START!", "cs": "Enter: START!", "is": "Enter: AF STAÐ!"},
-	"hint_enter_next": {"pl": "Enter: dalej", "en": "Enter: next", "cs": "Enter: dál", "is": "Enter: áfram"},
-	"hint_country": {"pl": "   C: kraj", "en": "   C: country", "cs": "   C: země", "is": "   C: land"},
+	"hint_map": {
+		"pl": "Strzałki/myszka   ",
+		"en": "Arrows/mouse   ",
+		"cs": "Šipky/myš   ",
+		"is": "Örvar/mús   ",
+		"de": "Pfeile/Maus   "
+	},
+	"hint_enter_start": {
+		"pl": "Enter: START!",
+		"en": "Enter: START!",
+		"cs": "Enter: START!",
+		"is": "Enter: AF STAÐ!",
+		"de": "Enter: LOS!"
+	},
+	"hint_enter_next": {"pl": "Enter: dalej", "en": "Enter: next", "cs": "Enter: dál", "is": "Enter: áfram", "de": "Enter: weiter"},
+	"hint_country": {"pl": "   C: kraj", "en": "   C: country", "cs": "   C: země", "is": "   C: land", "de": "   C: Land"},
 	"hint_car": {
 		"pl": "Strzałki   Enter: dalej   L: język   R: reset",
 		"en": "Arrows   Enter: next   L: language   R: reset",
 		"cs": "Šipky   Enter: dál   L: jazyk   R: reset",
-		"is": "Örvar   Enter: áfram   L: tungumál   R: endurstilla"
+		"is": "Örvar   Enter: áfram   L: tungumál   R: endurstilla",
+		"de": "Pfeile   Enter: weiter   L: Sprache   R: löschen"
 	},
-	"hint_back": {"pl": "      Esc: wstecz", "en": "      Esc: back", "cs": "      Esc: zpět", "is": "      Esc: til baka"},
-	"hint_sound": {"pl": "      X: dźwięk", "en": "      X: sound", "cs": "      X: zvuk", "is": "      X: hljóð"},
-	"reset_title": {"pl": "Zresetować postęp?", "en": "Reset your progress?", "cs": "Smazat postup?", "is": "Byrja upp á nýtt?"},
+	"hint_back": {
+		"pl": "      Esc: wstecz",
+		"en": "      Esc: back",
+		"cs": "      Esc: zpět",
+		"is": "      Esc: til baka",
+		"de": "      Esc: zurück"
+	},
+	"hint_sound": {
+		"pl": "      X: dźwięk",
+		"en": "      X: sound",
+		"cs": "      X: zvuk",
+		"is": "      X: hljóð",
+		"de": "      X: Ton"
+	},
+	"reset_title": {
+		"pl": "Zresetować postęp?",
+		"en": "Reset your progress?",
+		"cs": "Smazat postup?",
+		"is": "Byrja upp á nýtt?",
+		"de": "Fortschritt löschen?"
+	},
 	"reset_text": {
 		"pl": "Licznik przejechanej drogi (%s) i odblokowane auta zostaną skasowane. Zaczniesz od nowa Yarisem i znów wybierzesz swoje miasto.",
 		"en": "The distance driven (%s) and the unlocked cars will be deleted. You will start again with the Yaris and choose your home city again.",
 		"cs": "Ujetá vzdálenost (%s) a odemčená auta budou smazána. Začneš znovu s Yarisem a znovu si vybereš své město.",
-		"is": "Vegalengdinni sem þú hefur ekið (%s) og opnuðu bílunum verður eytt. Þú byrjar aftur á Yaris og velur heimabæinn þinn aftur."
+		"is": "Vegalengdinni sem þú hefur ekið (%s) og opnuðu bílunum verður eytt. Þú byrjar aftur á Yaris og velur heimabæinn þinn aftur.",
+		"de": "Die gefahrene Strecke (%s) und die freigeschalteten Autos werden gelöscht. Du fängst wieder mit dem Yaris an und wählst deine Heimatstadt neu."
 	},
-	"reset_yes": {"pl": "Tak, resetuj", "en": "Yes, reset", "cs": "Ano, smazat", "is": "Já, byrja upp á nýtt"},
-	"reset_no": {"pl": "Nie", "en": "No", "cs": "Ne", "is": "Nei"},
+	"reset_yes": {"pl": "Tak, resetuj", "en": "Yes, reset", "cs": "Ano, smazat", "is": "Já, byrja upp á nýtt", "de": "Ja, löschen"},
+	"reset_no": {"pl": "Nie", "en": "No", "cs": "Ne", "is": "Nei", "de": "Nein"},
 	"all_cars": {
 		"pl": "Wszystkie auta odblokowane!",
 		"en": "All cars unlocked!",
 		"cs": "Všechna auta odemčena!",
-		"is": "Allir bílar opnaðir!"
+		"is": "Allir bílar opnaðir!",
+		"de": "Alle Autos freigeschaltet!"
 	},
-	"next_car": {"pl": "%s za %s", "en": "%s in %s", "cs": "%s za %s", "is": "%s eftir %s"},
-	"driven": {"pl": "Przejechane: %s", "en": "Driven: %s", "cs": "Ujeto: %s", "is": "Ekið: %s"},
-	"from_dist": {"pl": "od %s", "en": "from %s", "cs": "od %s", "is": "frá %s"},
-	"hp": {"pl": "%d KM", "en": "%d hp", "cs": "%d k", "is": "%d hö"},
-	"bar_speed": {"pl": "Prędkość", "en": "Speed", "cs": "Rychlost", "is": "Hraði"},
-	"bar_accel": {"pl": "Przyspieszenie", "en": "Acceleration", "cs": "Zrychlení", "is": "Hröðun"},
-	"bar_handling": {"pl": "Zwrotność", "en": "Handling", "cs": "Ovladatelnost", "is": "Stýring"},
-	"bar_economy": {"pl": "Oszczędność", "en": "Economy", "cs": "Úspornost", "is": "Sparneytni"},
+	"next_car": {"pl": "%s za %s", "en": "%s in %s", "cs": "%s za %s", "is": "%s eftir %s", "de": "%s in %s"},
+	"driven": {"pl": "Przejechane: %s", "en": "Driven: %s", "cs": "Ujeto: %s", "is": "Ekið: %s", "de": "Gefahren: %s"},
+	"from_dist": {"pl": "od %s", "en": "from %s", "cs": "od %s", "is": "frá %s", "de": "ab %s"},
+	"hp": {"pl": "%d KM", "en": "%d hp", "cs": "%d k", "is": "%d hö", "de": "%d PS"},
+	"bar_speed": {"pl": "Prędkość", "en": "Speed", "cs": "Rychlost", "is": "Hraði", "de": "Tempo"},
+	"bar_accel": {"pl": "Przyspieszenie", "en": "Acceleration", "cs": "Zrychlení", "is": "Hröðun", "de": "Beschleunigung"},
+	"bar_handling": {"pl": "Zwrotność", "en": "Handling", "cs": "Ovladatelnost", "is": "Stýring", "de": "Handling"},
+	"bar_economy": {"pl": "Oszczędność", "en": "Economy", "cs": "Úspornost", "is": "Sparneytni", "de": "Sparsamkeit"},
 	"pick_home": {
 		"pl": "Wybierz swoje miasto: stąd ruszysz w pierwszy rajd",
 		"en": "Pick your home city: your first trip starts here",
 		"cs": "Vyber své město: odtud vyrazíš na první jízdu",
-		"is": "Veldu heimabæinn þinn: þaðan hefst fyrsta ferðin"
+		"is": "Veldu heimabæinn þinn: þaðan hefst fyrsta ferðin",
+		"de": "Wähle deine Heimatstadt: Hier startet deine erste Fahrt"
 	},
-	"you_are_in": {"pl": "Jesteś w: %s", "en": "You are in: %s", "cs": "Jsi v: %s", "is": "Þú ert hér: %s"},
+	"you_are_in": {"pl": "Jesteś w: %s", "en": "You are in: %s", "cs": "Jsi v: %s", "is": "Þú ert hér: %s", "de": "Du bist in: %s"},
 	"tap_city": {
 		"pl": "Dotknij miasta, aby je wybrać",
 		"en": "Tap a city to choose it",
 		"cs": "Klepni na město a vyber ho",
-		"is": "Pikkaðu á borg til að velja hana"
+		"is": "Pikkaðu á borg til að velja hana",
+		"de": "Tippe auf eine Stadt, um sie zu wählen"
 	},
 	"click_city": {
 		"pl": "Kliknij lub naciśnij Enter, aby wybrać",
 		"en": "Click or press Enter to choose",
 		"cs": "Klikni nebo stiskni Enter a vyber",
-		"is": "Smelltu eða ýttu á Enter til að velja"
+		"is": "Smelltu eða ýttu á Enter til að velja",
+		"de": "Klicke oder drücke Enter zum Wählen"
 	},
-	"goal": {"pl": "Cel: %s", "en": "Destination: %s", "cs": "Cíl: %s", "is": "Áfangastaður: %s"},
-	"trip_roads": {"pl": "%s   ·   drogi: %s", "en": "%s   ·   roads: %s", "cs": "%s   ·   silnice: %s", "is": "%s   ·   vegir: %s"},
-	"city_roads": {"pl": "miejskie", "en": "city streets", "cs": "městské", "is": "borgargötur"},
+	"goal": {"pl": "Cel: %s", "en": "Destination: %s", "cs": "Cíl: %s", "is": "Áfangastaður: %s", "de": "Ziel: %s"},
+	"trip_roads": {
+		"pl": "%s   ·   drogi: %s",
+		"en": "%s   ·   roads: %s",
+		"cs": "%s   ·   silnice: %s",
+		"is": "%s   ·   vegir: %s",
+		"de": "%s   ·   Straßen: %s"
+	},
+	"city_roads": {"pl": "miejskie", "en": "city streets", "cs": "městské", "is": "borgargötur", "de": "Stadtstraßen"},
 	"trip_time": {
 		"pl": "Czas: %s   ·   stacje paliw: %d",
 		"en": "Time: %s   ·   fuel stations: %d",
 		"cs": "Čas: %s   ·   čerpací stanice: %d",
-		"is": "Tími: %s   ·   bensínstöðvar: %d"
+		"is": "Tími: %s   ·   bensínstöðvar: %d",
+		"de": "Zeit: %s   ·   Tankstellen: %d"
 	},
-	"via": {"pl": "Po drodze: %s", "en": "On the way: %s", "cs": "Po cestě: %s", "is": "Á leiðinni: %s"},
+	"via": {
+		"pl": "Po drodze: %s",
+		"en": "On the way: %s",
+		"cs": "Po cestě: %s",
+		"is": "Á leiðinni: %s",
+		"de": "Unterwegs: %s"
+	},
 	"via_big": {
 		"pl": "Przez miasta: %s, oraz %d mniejszych miejscowości",
 		"en": "Through: %s, and %d smaller towns",
 		"cs": "Přes města: %s a %d menších obcí",
-		"is": "Um borgirnar: %s og %d minni staði"
+		"is": "Um borgirnar: %s og %d minni staði",
+		"de": "Durch: %s und %d kleinere Orte"
 	},
-	"regions": {"pl": "Krainy: %s", "en": "Regions: %s", "cs": "Regiony: %s", "is": "Svæði: %s"},
-	"and_more": {"pl": " i inne", "en": " and more", "cs": " a další", "is": " og fleiri"},
+	"regions": {"pl": "Krainy: %s", "en": "Regions: %s", "cs": "Regiony: %s", "is": "Svæði: %s", "de": "Regionen: %s"},
+	"and_more": {"pl": " i inne", "en": " and more", "cs": " a další", "is": " og fleiri", "de": " und mehr"},
 	"population": {
 		"pl": "ok. %d tys. mieszkańców",
 		"en": "about %d thousand people",
 		"cs": "asi %d tis. obyvatel",
-		"is": "um %d þúsund íbúar"
+		"is": "um %d þúsund íbúar",
+		"de": "etwa %d Tsd. Einwohner"
 	},
 	"get_ready": {
 		"pl": "Przygotuj się do rajdu!",
 		"en": "Get ready for the trip!",
 		"cs": "Připrav se na jízdu!",
-		"is": "Gerðu þig klár í ferðina!"
+		"is": "Gerðu þig klár í ferðina!",
+		"de": "Mach dich bereit für die Fahrt!"
 	},
-	"hud_time": {"pl": "CZAS", "en": "TIME", "cs": "ČAS", "is": "TÍMI"},
-	"hud_fuel": {"pl": "PALIWO", "en": "FUEL", "cs": "PALIVO", "is": "ELDSNEYTI"},
+	"hud_time": {"pl": "CZAS", "en": "TIME", "cs": "ČAS", "is": "TÍMI", "de": "ZEIT"},
+	"hud_fuel": {"pl": "PALIWO", "en": "FUEL", "cs": "PALIVO", "is": "ELDSNEYTI", "de": "SPRIT"},
 	"fine": {
 		"pl": "MANDAT za przekroczenie prędkości: -%d l paliwa",
 		"en": "SPEEDING FINE: -%d l of fuel",
 		"cs": "POKUTA za překročení rychlosti: -%d l paliva",
-		"is": "SEKT fyrir hraðakstur: -%d l eldsneytis"
+		"is": "SEKT fyrir hraðakstur: -%d l eldsneytis",
+		"de": "STRAFZETTEL fürs Rasen: -%d l Sprit"
 	},
 	"escaped": {
 		"pl": "UCIECZKA! Radiowóz wypadł z drogi",
 		"en": "ESCAPED! The police car went off the road",
 		"cs": "ÚTĚK! Policejní auto vyjelo ze silnice",
-		"is": "SLAPPST! Lögreglubíllinn fór út af veginum"
+		"is": "SLAPPST! Lögreglubíllinn fór út af veginum",
+		"de": "ENTKOMMEN! Das Polizeiauto ist von der Straße abgekommen"
 	},
 	"police": {
 		"pl": "POLICJA! Zatrzymaj się",
 		"en": "POLICE! Pull over",
 		"cs": "POLICIE! Zastav",
-		"is": "LÖGREGLAN! Stöðvaðu bílinn"
+		"is": "LÖGREGLAN! Stöðvaðu bílinn",
+		"de": "POLIZEI! Halt an"
 	},
 	"crash": {
 		"pl": "UDERZENIE W PRZESZKODĘ! -%d l paliwa",
 		"en": "YOU HIT SOMETHING! -%d l of fuel",
 		"cs": "NÁRAZ DO PŘEKÁŽKY! -%d l paliva",
-		"is": "ÞÚ KEYRÐIR Á! -%d l eldsneytis"
+		"is": "ÞÚ KEYRÐIR Á! -%d l eldsneytis",
+		"de": "AUFGEPRALLT! -%d l Sprit"
 	},
-	"head_on": {"pl": "ZDERZENIE CZOŁOWE!", "en": "HEAD-ON COLLISION!", "cs": "ČELNÍ SRÁŽKA!", "is": "HÖFUÐÁREKSTUR!"},
-	"bump": {"pl": "ZDERZENIE!", "en": "COLLISION!", "cs": "SRÁŽKA!", "is": "ÁREKSTUR!"},
+	"head_on": {
+		"pl": "ZDERZENIE CZOŁOWE!",
+		"en": "HEAD-ON COLLISION!",
+		"cs": "ČELNÍ SRÁŽKA!",
+		"is": "HÖFUÐÁREKSTUR!",
+		"de": "FRONTALCRASH!"
+	},
+	"bump": {"pl": "ZDERZENIE!", "en": "COLLISION!", "cs": "SRÁŽKA!", "is": "ÁREKSTUR!", "de": "ZUSAMMENSTOSS!"},
 	"bump_cost": {
 		"pl": "%s -%d s, -%d l paliwa",
 		"en": "%s -%d s, -%d l of fuel",
 		"cs": "%s -%d s, -%d l paliva",
-		"is": "%s -%d s, -%d l eldsneytis"
+		"is": "%s -%d s, -%d l eldsneytis",
+		"de": "%s -%d s, -%d l Sprit"
 	},
 	"slow_down": {
 		"pl": "ZWOLNIJ! Ograniczenie %s   (%d s)",
 		"en": "SLOW DOWN! Limit %s   (%d s)",
 		"cs": "ZPOMAL! Omezení %s   (%d s)",
-		"is": "HÆGÐU Á ÞÉR! Hámark %s   (%d s)"
+		"is": "HÆGÐU Á ÞÉR! Hámark %s   (%d s)",
+		"de": "LANGSAMER! Limit %s   (%d s)"
 	},
 	"refueling": {
 		"pl": "TANKOWANIE...  %d%%",
 		"en": "REFUELLING...  %d%%",
 		"cs": "TANKOVÁNÍ...  %d%%",
-		"is": "TEK ELDSNEYTI...  %d%%"
+		"is": "TEK ELDSNEYTI...  %d%%",
+		"de": "TANKEN...  %d%%"
 	},
 	"station_pull_left": {
 		"pl": "STACJA PALIW: ZJEDŹ W LEWO NA POBOCZE",
 		"en": "FUEL STATION: PULL OVER TO THE LEFT",
 		"cs": "ČERPACÍ STANICE: ZAJEĎ VLEVO NA KRAJNICI",
-		"is": "BENSÍNSTÖÐ: FARÐU ÚT Í VINSTRI KANTINN"
+		"is": "BENSÍNSTÖÐ: FARÐU ÚT Í VINSTRI KANTINN",
+		"de": "TANKSTELLE: LINKS RANDFAHREN"
 	},
 	"station_pull_right": {
 		"pl": "STACJA PALIW: ZJEDŹ W PRAWO NA POBOCZE",
 		"en": "FUEL STATION: PULL OVER TO THE RIGHT",
 		"cs": "ČERPACÍ STANICE: ZAJEĎ VPRAVO NA KRAJNICI",
-		"is": "BENSÍNSTÖÐ: FARÐU ÚT Í HÆGRI KANTINN"
+		"is": "BENSÍNSTÖÐ: FARÐU ÚT Í HÆGRI KANTINN",
+		"de": "TANKSTELLE: RECHTS RANDFAHREN"
 	},
 	"station_stop": {
 		"pl": "STACJA PALIW: ZATRZYMAJ SIĘ (%s), ABY TANKOWAĆ",
 		"en": "FUEL STATION: STOP (%s) TO REFUEL",
 		"cs": "ČERPACÍ STANICE: ZASTAV (%s) A NATANKUJ",
-		"is": "BENSÍNSTÖÐ: STOPPAÐU (%s) TIL AÐ TAKA ELDSNEYTI"
+		"is": "BENSÍNSTÖÐ: STOPPAÐU (%s) TIL AÐ TAKA ELDSNEYTI",
+		"de": "TANKSTELLE: HALTE AN (%s) ZUM TANKEN"
 	},
-	"key_brake": {"pl": "hamulec", "en": "brake", "cs": "brzda", "is": "bremsa"},
-	"key_space": {"pl": "spacja", "en": "space", "cs": "mezerník", "is": "bilslá"},
+	"key_brake": {"pl": "hamulec", "en": "brake", "cs": "brzda", "is": "bremsa", "de": "Bremse"},
+	"key_space": {"pl": "spacja", "en": "space", "cs": "mezerník", "is": "bilslá", "de": "Leertaste"},
 	"station_ahead_left": {
 		"pl": "STACJA PALIW za %s: zjedź na lewe pobocze",
 		"en": "Fuel station in %s: pull over on the left",
 		"cs": "Čerpací stanice za %s: zajeď na levou krajnici",
-		"is": "Bensínstöð eftir %s: farðu út í vinstri kantinn"
+		"is": "Bensínstöð eftir %s: farðu út í vinstri kantinn",
+		"de": "TANKSTELLE in %s: links ranfahren"
 	},
 	"station_ahead_right": {
 		"pl": "STACJA PALIW za %s: zjedź na prawe pobocze",
 		"en": "Fuel station in %s: pull over on the right",
 		"cs": "Čerpací stanice za %s: zajeď na pravou krajnici",
-		"is": "Bensínstöð eftir %s: farðu út í hægri kantinn"
+		"is": "Bensínstöð eftir %s: farðu út í hægri kantinn",
+		"de": "TANKSTELLE in %s: rechts ranfahren"
 	},
 	"low_fuel": {
 		"pl": "MAŁO PALIWA! Szukaj stacji",
 		"en": "LOW FUEL! Find a fuel station",
 		"cs": "MÁLO PALIVA! Hledej stanici",
-		"is": "LÍTIÐ ELDSNEYTI! Finndu bensínstöð"
+		"is": "LÍTIÐ ELDSNEYTI! Finndu bensínstöð",
+		"de": "WENIG SPRIT! Such eine Tankstelle"
 	},
 	"sharp_test": {
 		"pl": "TRYB TESTOWY: same ostre zakręty, ostrość %.0f",
 		"en": "TEST MODE: sharp bends only, sharpness %.0f",
 		"cs": "TESTOVACÍ REŽIM: jen ostré zatáčky, ostrost %.0f",
-		"is": "PRÓFUNARHAMUR: bara krappar beygjur, skerpa %.0f"
+		"is": "PRÓFUNARHAMUR: bara krappar beygjur, skerpa %.0f",
+		"de": "TESTMODUS: nur scharfe Kurven, Schärfe %.0f"
 	},
-	"big_city": {"pl": "Duże miasto", "en": "A big city", "cs": "Velké město", "is": "Stór borg"},
-	"town_on_route": {"pl": "Miejscowość na trasie", "en": "A town on the way", "cs": "Obec na trase", "is": "Bær á leiðinni"},
-	"region_title": {"pl": "Kraina: %s", "en": "Region: %s", "cs": "Region: %s", "is": "Svæði: %s"},
+	"big_city": {"pl": "Duże miasto", "en": "A big city", "cs": "Velké město", "is": "Stór borg", "de": "Eine Großstadt"},
+	"town_on_route": {
+		"pl": "Miejscowość na trasie",
+		"en": "A town on the way",
+		"cs": "Obec na trase",
+		"is": "Bær á leiðinni",
+		"de": "Ein Ort an der Strecke"
+	},
+	"region_title": {"pl": "Kraina: %s", "en": "Region: %s", "cs": "Region: %s", "is": "Svæði: %s", "de": "Region: %s"},
 	"region_body": {
 		"pl": "Wjeżdżasz w nowy region",
 		"en": "You are entering a new region",
 		"cs": "Vjíždíš do nového regionu",
-		"is": "Þú ert að koma inn á nýtt svæði"
+		"is": "Þú ert að koma inn á nýtt svæði",
+		"de": "Du fährst in eine neue Region"
 	},
-	"pad_gas": {"pl": "GAZ", "en": "GAS", "cs": "PLYN", "is": "BENSÍN"},
-	"pad_brake": {"pl": "HAMULEC", "en": "BRAKE", "cs": "BRZDA", "is": "BREMSA"},
-	"finish": {"pl": "META!", "en": "FINISH!", "cs": "CÍL!", "is": "MARK!"},
-	"out_of_time": {"pl": "KONIEC CZASU", "en": "OUT OF TIME", "cs": "DOŠEL ČAS", "is": "TÍMINN ER BÚINN"},
-	"out_of_fuel": {"pl": "KONIEC PALIWA", "en": "OUT OF FUEL", "cs": "DOŠLO PALIVO", "is": "ELDSNEYTIÐ ER BÚIÐ"},
-	"pause": {"pl": "PAUZA", "en": "PAUSED", "cs": "PAUZA", "is": "HLÉ"},
-	"resume": {"pl": "Graj dalej", "en": "Keep playing", "cs": "Hrát dál", "is": "Halda áfram"},
-	"to_map": {"pl": "Wróć do mapy", "en": "Back to the map", "cs": "Zpět na mapu", "is": "Aftur á kortið"},
-	"graphics": {"pl": "Grafika: %s", "en": "Graphics: %s", "cs": "Grafika: %s", "is": "Grafík: %s"},
-	"gfx_low": {"pl": "oszczędna", "en": "low", "cs": "úsporná", "is": "einföld"},
-	"gfx_high": {"pl": "wysoka jakość", "en": "high quality", "cs": "vysoká kvalita", "is": "mikil gæði"},
+	"pad_gas": {"pl": "GAZ", "en": "GAS", "cs": "PLYN", "is": "BENSÍN", "de": "GAS"},
+	"pad_brake": {"pl": "HAMULEC", "en": "BRAKE", "cs": "BRZDA", "is": "BREMSA", "de": "BREMSE"},
+	"finish": {"pl": "META!", "en": "FINISH!", "cs": "CÍL!", "is": "MARK!", "de": "ZIEL!"},
+	"out_of_time": {"pl": "KONIEC CZASU", "en": "OUT OF TIME", "cs": "DOŠEL ČAS", "is": "TÍMINN ER BÚINN", "de": "ZEIT ABGELAUFEN"},
+	"out_of_fuel": {"pl": "KONIEC PALIWA", "en": "OUT OF FUEL", "cs": "DOŠLO PALIVO", "is": "ELDSNEYTIÐ ER BÚIÐ", "de": "SPRIT LEER"},
+	"pause": {"pl": "PAUZA", "en": "PAUSED", "cs": "PAUZA", "is": "HLÉ", "de": "PAUSE"},
+	"resume": {"pl": "Graj dalej", "en": "Keep playing", "cs": "Hrát dál", "is": "Halda áfram", "de": "Weiterspielen"},
+	"to_map": {
+		"pl": "Wróć do mapy",
+		"en": "Back to the map",
+		"cs": "Zpět na mapu",
+		"is": "Aftur á kortið",
+		"de": "Zurück zur Karte"
+	},
+	"graphics": {"pl": "Grafika: %s", "en": "Graphics: %s", "cs": "Grafika: %s", "is": "Grafík: %s", "de": "Grafik: %s"},
+	"gfx_low": {"pl": "oszczędna", "en": "low", "cs": "úsporná", "is": "einföld", "de": "einfach"},
+	"gfx_high": {"pl": "wysoka jakość", "en": "high quality", "cs": "vysoká kvalita", "is": "mikil gæði", "de": "hohe Qualität"},
 	"pause_keys": {
 		"pl": "Esc: wznów     M: mapa     X: dźwięk wł./wył.",
 		"en": "Esc: resume     M: map     X: sound on/off",
 		"cs": "Esc: pokračovat     M: mapa     X: zvuk zap./vyp.",
-		"is": "Esc: halda áfram     M: kort     X: hljóð á/af"
+		"is": "Esc: halda áfram     M: kort     X: hljóð á/af",
+		"de": "Esc: weiter     M: Karte     X: Ton an/aus"
 	},
 	"low_gfx_toast": {
 		"pl": "Włączono oszczędną grafikę (zmienisz w pauzie)",
 		"en": "Switched to low graphics (change it in the pause menu)",
 		"cs": "Zapnuta úsporná grafika (změníš v pauze)",
-		"is": "Skipt yfir í einfalda grafík (breyttu því í hléi)"
+		"is": "Skipt yfir í einfalda grafík (breyttu því í hléi)",
+		"de": "Einfache Grafik aktiviert (änderbar in der Pause)"
 	},
-	"won": {"pl": "DOJECHAŁEŚ!", "en": "YOU MADE IT!", "cs": "DOJEL JSI!", "is": "ÞÚ ERT KOMINN!"},
-	"time_up": {"pl": "Skończył się czas", "en": "Out of time", "cs": "Došel čas", "is": "Tíminn kláraðist"},
-	"fuel_out": {"pl": "Skończyło się paliwo", "en": "Out of fuel", "cs": "Došlo palivo", "is": "Eldsneytið kláraðist"},
+	"won": {"pl": "DOJECHAŁEŚ!", "en": "YOU MADE IT!", "cs": "DOJEL JSI!", "is": "ÞÚ ERT KOMINN!", "de": "ANGEKOMMEN!"},
+	"time_up": {
+		"pl": "Skończył się czas",
+		"en": "Out of time",
+		"cs": "Došel čas",
+		"is": "Tíminn kláraðist",
+		"de": "Die Zeit ist abgelaufen"
+	},
+	"fuel_out": {
+		"pl": "Skończyło się paliwo",
+		"en": "Out of fuel",
+		"cs": "Došlo palivo",
+		"is": "Eldsneytið kláraðist",
+		"de": "Der Sprit ist leer"
+	},
 	"trip_result": {
 		"pl": "Czas przejazdu %s   ·   zostało %s",
 		"en": "Trip time %s   ·   %s left",
 		"cs": "Čas jízdy %s   ·   zbývá %s",
-		"is": "Aksturstími %s   ·   %s eftir"
+		"is": "Aksturstími %s   ·   %s eftir",
+		"de": "Fahrzeit %s   ·   %s übrig"
 	},
 	"tip": {
 		"pl": "Wskazówka: tankuj na stacjach, jedź ok. %s i unikaj zderzeń",
 		"en": "Tip: refuel at the stations, drive at about %s and avoid crashes",
 		"cs": "Tip: tankuj na stanicích, jeď kolem %s a vyhýbej se srážkám",
-		"is": "Ábending: taktu eldsneyti á stöðvunum, keyrðu á um %s og forðastu árekstra"
+		"is": "Ábending: taktu eldsneyti á stöðvunum, keyrðu á um %s og forðastu árekstra",
+		"de": "Tipp: tanke an den Tankstellen, fahre etwa %s und vermeide Zusammenstöße"
 	},
 	"total_driven": {
 		"pl": "+%s   ·   razem przejechane: %s",
 		"en": "+%s   ·   driven in total: %s",
 		"cs": "+%s   ·   celkem ujeto: %s",
-		"is": "+%s   ·   ekið alls: %s"
+		"is": "+%s   ·   ekið alls: %s",
+		"de": "+%s   ·   insgesamt gefahren: %s"
 	},
 	"new_car": {
 		"pl": "Nowe auto odblokowane: %s!",
 		"en": "New car unlocked: %s!",
 		"cs": "Odemčeno nové auto: %s!",
-		"is": "Nýr bíll opnaður: %s!"
+		"is": "Nýr bíll opnaður: %s!",
+		"de": "Neues Auto freigeschaltet: %s!"
 	},
 	"new_city": {
 		"pl": "Nowe miasto na mapie: %s!  (%d / %d)",
 		"en": "New city on the map: %s!  (%d / %d)",
 		"cs": "Nové město na mapě: %s!  (%d / %d)",
-		"is": "Ný borg á kortinu: %s!  (%d / %d)"
+		"is": "Ný borg á kortinu: %s!  (%d / %d)",
+		"de": "Neue Stadt auf der Karte: %s!  (%d / %d)"
 	},
 	"all_cities": {
 		"pl": "Byłeś we wszystkich %d miastach na mapie! Brawo!",
 		"en": "You have been to all %d cities on the map! Well done!",
 		"cs": "Byl jsi ve všech %d městech na mapě! Bravo!",
-		"is": "Þú hefur komið í allar %d borgirnar á kortinu! Vel gert!"
+		"is": "Þú hefur komið í allar %d borgirnar á kortinu! Vel gert!",
+		"de": "Du warst in allen %d Städten auf der Karte! Bravo!"
 	},
 	"fines": {
 		"pl": "Mandaty za prędkość: %d",
 		"en": "Speeding fines: %d",
 		"cs": "Pokuty za rychlost: %d",
-		"is": "Hraðasektir: %d"
+		"is": "Hraðasektir: %d",
+		"de": "Strafzettel fürs Rasen: %d"
 	},
 	"back_touch": {
 		"pl": "Dotknij ekranu, aby wrócić do mapy",
 		"en": "Tap the screen to go back to the map",
 		"cs": "Klepni na obrazovku a vrať se na mapu",
-		"is": "Pikkaðu á skjáinn til að fara aftur á kortið"
+		"is": "Pikkaðu á skjáinn til að fara aftur á kortið",
+		"de": "Tippe auf den Bildschirm, um zur Karte zurückzukehren"
 	},
 	"back_key": {
 		"pl": "Naciśnij dowolny klawisz, aby wrócić do mapy",
 		"en": "Press any key to go back to the map",
 		"cs": "Stiskni libovolnou klávesu a vrať se na mapu",
-		"is": "Ýttu á einhvern takka til að fara aftur á kortið"
+		"is": "Ýttu á einhvern takka til að fara aftur á kortið",
+		"de": "Drücke eine beliebige Taste, um zur Karte zurückzukehren"
 	},
 	"rotate": {
 		"pl": "Obróć telefon poziomo",
 		"en": "Turn your phone sideways",
 		"cs": "Otoč telefon na šířku",
-		"is": "Snúðu símanum á hlið"
+		"is": "Snúðu símanum á hlið",
+		"de": "Dreh dein Handy quer"
 	},
 	"rotate_hint": {
 		"pl": "W Postcard Road Trip gra się w poziomie",
 		"en": "The game is played in landscape",
 		"cs": "Hra se hraje na šířku",
-		"is": "Leikurinn er spilaður með símann á hlið"
+		"is": "Leikurinn er spilaður með símann á hlið",
+		"de": "Postcard Road Trip wird im Querformat gespielt"
 	},
 	"map_motorways": {
 		"pl": "autostrady, ekspresowe",
 		"en": "motorways, expressways",
 		"cs": "dálnice, rychlostní silnice",
-		"is": "hraðbrautir"
+		"is": "hraðbrautir",
+		"de": "Autobahnen, Schnellstraßen"
 	},
-	"map_roads": {"pl": "inne drogi", "en": "other roads", "cs": "ostatní silnice", "is": "aðrir vegir"},
-	"map_visited": {"pl": "odwiedzone: %d / %d", "en": "visited: %d / %d", "cs": "navštíveno: %d / %d", "is": "heimsótt: %d / %d"},
-	"weather_sun": {"pl": "Słonecznie", "en": "Sunny", "cs": "Slunečno", "is": "Sól"},
-	"weather_cloudy": {"pl": "Pochmurno", "en": "Cloudy", "cs": "Zataženo", "is": "Skýjað"},
-	"weather_rain": {"pl": "Deszcz", "en": "Rain", "cs": "Déšť", "is": "Rigning"},
-	"weather_fog": {"pl": "Mgła", "en": "Fog", "cs": "Mlha", "is": "Þoka"},
-	"weather_autumn": {"pl": "Jesień", "en": "Autumn", "cs": "Podzim", "is": "Haust"},
-	"weather_snow": {"pl": "Śnieg", "en": "Snow", "cs": "Sníh", "is": "Snjór"},
-	"album": {"pl": "Pocztówki", "en": "Postcards", "cs": "Pohlednice", "is": "Póstkort"},
-	"album_routes": {"pl": "Po drodze", "en": "On the way", "cs": "Cestou", "is": "Á leiðinni"},
-	"album_btn": {"pl": "Pocztówki", "en": "Postcards", "cs": "Pohlednice", "is": "Póstkort"},
-	"album_stamps": {"pl": "Pieczątki: %d / %d", "en": "Stamps: %d / %d", "cs": "Razítka: %d / %d", "is": "Stimplar: %d / %d"},
-	"album_hint": {"pl": "Strzałki: przewijanie i kraj      Esc: wróć", "en": "Arrows: scroll and country      Esc: back", "cs": "Šipky: posun a země      Esc: zpět", "is": "Örvar: fletta og land      Esc: til baka"},
-	"hint_album": {"pl": "      P: pocztówki", "en": "      P: postcards", "cs": "      P: pohlednice", "is": "      P: póstkort"}
+	"map_roads": {"pl": "inne drogi", "en": "other roads", "cs": "ostatní silnice", "is": "aðrir vegir", "de": "andere Straßen"},
+	"map_visited": {
+		"pl": "odwiedzone: %d / %d",
+		"en": "visited: %d / %d",
+		"cs": "navštíveno: %d / %d",
+		"is": "heimsótt: %d / %d",
+		"de": "besucht: %d / %d"
+	},
+	"weather_sun": {"pl": "Słonecznie", "en": "Sunny", "cs": "Slunečno", "is": "Sól", "de": "Sonnig"},
+	"weather_cloudy": {"pl": "Pochmurno", "en": "Cloudy", "cs": "Zataženo", "is": "Skýjað", "de": "Bewölkt"},
+	"weather_rain": {"pl": "Deszcz", "en": "Rain", "cs": "Déšť", "is": "Rigning", "de": "Regen"},
+	"weather_fog": {"pl": "Mgła", "en": "Fog", "cs": "Mlha", "is": "Þoka", "de": "Nebel"},
+	"weather_autumn": {"pl": "Jesień", "en": "Autumn", "cs": "Podzim", "is": "Haust", "de": "Herbst"},
+	"weather_snow": {"pl": "Śnieg", "en": "Snow", "cs": "Sníh", "is": "Snjór", "de": "Schnee"},
+	"album": {"pl": "Pocztówki", "en": "Postcards", "cs": "Pohlednice", "is": "Póstkort", "de": "Postkarten"},
+	"album_routes": {"pl": "Po drodze", "en": "On the way", "cs": "Cestou", "is": "Á leiðinni", "de": "Unterwegs"},
+	"album_btn": {"pl": "Pocztówki", "en": "Postcards", "cs": "Pohlednice", "is": "Póstkort", "de": "Postkarten"},
+	"album_stamps": {
+		"pl": "Pieczątki: %d / %d",
+		"en": "Stamps: %d / %d",
+		"cs": "Razítka: %d / %d",
+		"is": "Stimplar: %d / %d",
+		"de": "Stempel: %d / %d"
+	},
+	"album_hint": {
+		"pl": "Strzałki: przewijanie i kraj      Esc: wróć",
+		"en": "Arrows: scroll and country      Esc: back",
+		"cs": "Šipky: posun a země      Esc: zpět",
+		"is": "Örvar: fletta og land      Esc: til baka",
+		"de": "Pfeile: scrollen und Land      Esc: zurück"
+	},
+	"hint_album": {
+		"pl": "      P: pocztówki",
+		"en": "      P: postcards",
+		"cs": "      P: pohlednice",
+		"is": "      P: póstkort",
+		"de": "      P: Postkarten"
+	}
 }
