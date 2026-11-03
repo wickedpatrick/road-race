@@ -12,3 +12,7 @@ func _ready() -> void:
 		if i % 3 != 2: Session.postcards[ids[i]] = {"stamps": i % 5 + 1, "year": 2026}
 	var a := OS.get_cmdline_user_args()
 	if a.size() > 0: _scroll_by(float(a[0]))
+
+## Leaving quits: the menu could save this preview's made-up progress into the real profile.
+func _back() -> void:
+	get_tree().quit()

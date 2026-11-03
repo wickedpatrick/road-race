@@ -29,3 +29,7 @@ func run(t) -> void:
 	Postcards.migrate(old, ["krakow", "wieliczka"], Postcards.cities("pl"))
 	t.check(old.keys() == ["krakow"] and old.krakow == {"stamps": 1}, "old profiles: visited map cities get their postcard, without a year")
 	t.check(Postcards.total({"a": {"stamps": 3}, "b": {"stamps": 2}}) == 5, "stamps add up")
+	# old profiles: every country's visited cities get their postcards, not only the country being played
+	var places := {"cz": {"visited": ["praha", "brno"]}, "pl": {"visited": ["krakow"], "postcards": {"krakow": {"stamps": 3}}}}
+	Postcards.migrate_places(places)
+	t.check(places.cz.postcards.keys() == ["praha", "brno"] and places.pl.postcards.krakow.stamps == 3, "old profiles: postcards in every country played")

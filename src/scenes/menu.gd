@@ -171,11 +171,21 @@ func _unhandled_input(event: InputEvent) -> void:
 				hover = dest_city
 				_follow = dest_city
 
+## Keeps the chosen car and destination while the album is open (the menu is built again on the way back);
+## not saved: a trip started makes them the player's choice.
+func _keep_picks() -> void:
+	var car: String = CarStats.ids()[sel[0]]
+	if Profile.is_unlocked(car, Session.total_km):
+		Session.car_id = car
+	if kind() == "dest" and dest_city != "":
+		Session.to_city = dest_city
+
 func _album_btn() -> Rect2:
 	return ALBUM_CAR_BTN if kind() == "car" else ALBUM_MAP_BTN
 
 func _open_album() -> void:
 	Sfx.play("blip", -8.0)
+	_keep_picks()
 	Session.album_back_to_map = _on_map()
 	get_tree().change_scene_to_file("res://src/scenes/album.tscn")
 

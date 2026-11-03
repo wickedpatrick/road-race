@@ -50,6 +50,16 @@ static func migrate(cards: Dictionary, visited: Array, map_ids: Array) -> void:
 		if map_ids.has(id) and not cards.has(id):
 			cards[id] = {"stamps": 1}
 
+## migrate() for every country in a profile's `places` (code -> {visited, postcards, ...}).
+static func migrate_places(places: Dictionary) -> void:
+	for code in places:
+		var p = places[code]
+		if not p is Dictionary or not GameData.country_codes().has(code):
+			continue
+		if not p.get("postcards") is Dictionary:
+			p["postcards"] = {}
+		migrate(p.postcards, p.get("visited", []) if p.get("visited") is Array else [], GameData.country(code).cities.keys())
+
 ## A country's album in numbers: postcards earned of all, stamps of the most there are.
 static func summary(code: String, cards: Dictionary) -> Dictionary:
 	var ids := cities(code)

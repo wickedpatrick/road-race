@@ -78,6 +78,7 @@ func load_profile() -> void:
 		# already somewhere, keep it)
 		places = {"pl": {"home_city": d.get("home_city", d.get("from_city", "")), "from_city": d.get("from_city", ""),
 			"to_city": d.get("to_city", ""), "visited": d.get("visited", [])}}
+	Postcards.migrate_places(places) # profiles from before the postcards, every country played
 	var code: String = d.get("country", "pl")
 	country = code if GameData.country_codes().has(code) else "pl"
 	GameData.current = country

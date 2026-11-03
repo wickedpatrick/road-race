@@ -58,7 +58,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			_dragging = true
 			_scroll_by(-event.relative.y)
 		return
-	if not (event is InputEventKey and event.pressed):
+	if not (event is InputEventKey and event.pressed and not event.echo):
 		return
 	if event.keycode == KEY_ESCAPE or event.keycode == KEY_P or event.keycode == KEY_BACKSPACE:
 		_back()

@@ -13,3 +13,8 @@ func _ready() -> void:
 		"postcard": {"city": city, "before": before, "after": after}}
 	super()
 	if a.size() > 3: age = float(a[3])
+
+## Any key quits: the menu could save this preview's made-up progress into the real profile.
+func _unhandled_input(event: InputEvent) -> void:
+	if (event is InputEventKey or event is InputEventMouseButton) and event.is_pressed():
+		get_tree().quit()

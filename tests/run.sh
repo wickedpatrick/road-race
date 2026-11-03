@@ -16,5 +16,7 @@ for s in menu game results album; do
     echo "scene ok: $s"
   fi
 done
+# the menu keeps the chosen car and destination while the album is open
+if perl -e 'alarm 30; exec @ARGV' $G --headless --path . res://tests/menu_album_check.tscn 2>&1 | grep -q "^PASS"; then echo "menu ok: album keeps the picks"; else echo "FAIL: menu loses the picks around the album"; code=1; fi
 echo "exit=$code"
 exit $code

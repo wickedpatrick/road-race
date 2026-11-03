@@ -112,7 +112,7 @@ func fan(p: PackedVector2Array, col: Color) -> void:
 	var base := _pts.size()
 	_pts.append_array(_xf * p if _xf_on else p)
 	_tmp_cols.resize(n)
-	_tmp_cols.fill(_tone(col))
+	_tmp_cols.fill(col if fog <= 0.0 and gray <= 0.0 else _tone(col))
 	_cols.append_array(_tmp_cols)
 	for k in range(1, n - 1):
 		_idx.append(base)
@@ -169,7 +169,7 @@ func draw_colored_polygon(p: PackedVector2Array, col: Color) -> void:
 	var base := _pts.size()
 	_pts.append_array(_xf * p if _xf_on else p)
 	_tmp_cols.resize(p.size())
-	_tmp_cols.fill(_tone(col))
+	_tmp_cols.fill(col if fog <= 0.0 and gray <= 0.0 else _tone(col)) # the race draws thousands: no call when plain
 	_cols.append_array(_tmp_cols)
 	for i in tri:
 		_idx.append(base + i)
