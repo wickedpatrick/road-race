@@ -111,6 +111,7 @@ static func draw(cv, it: Dictionary, b: Vector2, pm: float) -> void:
 		"angel": _angel()
 		"forth_bridge": _forth_bridge()
 		"nessie": _nessie()
+		"lake_worm": _lake_worm()
 		"roman_wall": _roman_wall()
 		"radio_telescope": _radio_telescope()
 		"viaduct": _viaduct()
@@ -1268,6 +1269,32 @@ static func _nessie() -> void:
 	_c(-5.1, 6.1, 0.75, g)
 	_poly([-5.4, 6.4, -7.2, 6.0, -7.0, 5.6, -5.4, 5.6], g)
 	_c(-5.3, 6.4, 0.15, Color.WHITE)
+
+## The Lagarfljót Worm: a long serpent rising from the lake in a row of coils, smaller and smaller towards its tail,
+## a flat snake's head with a forked tongue (not a dragon: no legs, wings or fire).
+static func _lake_worm() -> void:
+	var g := Color("6f8a5a")
+	var belly := Color("c9cf9a")
+	_r(-10, 0, 10, 0.6, Color("2f4a5c"))
+	for k in 5: # ripples
+		_l(-9 + k * 4.2, 0.25, -7.6 + k * 4.2, 0.25, Color("8fb3c9"), 0.12)
+	var x := -4.0
+	var r := 1.6
+	for k in 5: # the coils, the tail end last
+		_poly(_arc_pts(x, 0.6, r, r * 1.05, 0, PI, 12), g)
+		_poly(_arc_pts(x, 0.6, r * 0.55, r * 0.6, 0, PI, 10), Color("2f4a5c"))
+		x += r * 2.0 + 0.4
+		r *= 0.78
+	_c(x - 0.5, 0.9, 0.35, g) # the tip of the tail
+	# the neck rises from the lake in an S, the head looks left
+	_pl([-6.2, 0.6, -6.6, 1.8, -6.0, 2.9, -6.4, 3.9], g, 1.0)
+	_pl([-6.0, 0.6, -6.35, 1.8, -5.75, 2.9, -6.15, 3.8], belly, 0.3)
+	_poly([-6.0, 4.4, -8.2, 4.2, -8.4, 3.8, -6.0, 3.5], g)
+	_c(-6.2, 3.95, 0.55, g)
+	_c(-6.9, 4.15, 0.13, Color("f2e14a"))
+	_pl([-8.4, 3.95, -9.1, 3.95], Color("d23a3a"), 0.08)
+	_pl([-9.1, 3.95, -9.4, 4.15], Color("d23a3a"), 0.08)
+	_pl([-9.1, 3.95, -9.4, 3.75], Color("d23a3a"), 0.08)
 
 ## Hadrian's Wall running along a grassy ridge, with a milecastle.
 static func _roman_wall() -> void:

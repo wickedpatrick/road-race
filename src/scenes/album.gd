@@ -1,7 +1,7 @@
 extends Node2D
 ## The postcard album, one country at a time: every city on its map, biggest first, then the routes between them
-## (bigger city first) with the postcards of the towns on the way. Postcards not collected yet are grey and do not
-## name their landmarks; collected ones are in colour and postmarked, a city's with its stamps under it.
+## (bigger city first) with the postcards of the towns on the way. Postcards not collected yet are grey, darkened
+## and do not name their landmarks; collected ones are in colour and postmarked, a city's with its stamps under it.
 ## Opened from the car screen and the map; Esc (or the back button) goes back there.
 const COLS := 4
 const CARD := Vector2(210, 140)
@@ -136,6 +136,8 @@ func _draw() -> void:
 			var card: Dictionary = cards.get(it.card, {})
 			var got := not card.is_empty()
 			PostcardPainter.card(self, batch, r, code, it.card, 0.0 if got else 1.0, got)
+			if not got:
+				PostcardPainter.cover(batch, PostcardPainter.picture(r))
 			if got:
 				PostcardPainter.postmark(self, r.position + Vector2(r.size.x - 34, 34), 24.0, PostcardPainter.caption(code, it.card)[0], int(card.get("year", 0)), 1.0)
 				if not it.town:

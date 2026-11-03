@@ -68,7 +68,7 @@ static func card(cv: CanvasItem, batch: DrawBatch, rect: Rect2, code: String, id
 	sb.shadow_offset = Vector2(0, rect.size.y * 0.015)
 	cv.draw_style_box(sb, rect)
 	var m := rect.size.x * 0.03
-	var pic := Rect2(rect.position + Vector2(m, m), Vector2(rect.size.x - 2.0 * m, rect.size.y * 0.74 - m))
+	var pic := picture(rect)
 	art(batch, pic, code, id, gray)
 	var font := ThemeDB.fallback_font
 	var cap := caption(code, id)
@@ -118,6 +118,16 @@ static func stamp_row(cv: CanvasItem, center: Vector2, size: float, earned: int,
 			var a := -PI / 2.0 + k * PI / 5.0
 			star.append(c + Vector2(cos(a), sin(a)) * size * s * (0.3 if k % 2 == 0 else 0.13))
 		cv.draw_colored_polygon(star, col)
+
+## Darkens the picture of a postcard not collected yet (over art(), flushed), so its landmark is not given away.
+static func cover(batch: DrawBatch, rect: Rect2) -> void:
+	batch.draw_rect(rect, Color(0.08, 0.08, 0.1, 0.72))
+	batch.flush()
+
+## Where the picture sits on a card.
+static func picture(rect: Rect2) -> Rect2:
+	var m := rect.size.x * 0.03
+	return Rect2(rect.position + Vector2(m, m), Vector2(rect.size.x - 2.0 * m, rect.size.y * 0.74 - m))
 
 static func _quad(r: Rect2) -> PackedVector2Array:
 	return PackedVector2Array([r.position, Vector2(r.end.x, r.position.y), r.end, Vector2(r.position.x, r.end.y)])
