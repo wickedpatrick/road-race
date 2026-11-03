@@ -306,7 +306,5 @@
 	"album_btn": {"pl": "Pocztówki", "en": "Postcards", "cs": "Pohlednice", "is": "Póstkort"},
 	"album_stamps": {"pl": "Pieczątki: %d / %d", "en": "Stamps: %d / %d", "cs": "Razítka: %d / %d", "is": "Stimplar: %d / %d"},
 	"album_hint": {"pl": "Strzałki: przewijanie i kraj      Esc: wróć", "en": "Arrows: scroll and country      Esc: back", "cs": "Šipky: posun a země      Esc: zpět", "is": "Örvar: fletta og land      Esc: til baka"},
-	"hint_album": {"pl": "      P: pocztówki", "en": "      P: postcards", "cs": "      P: pohlednice", "is": "      P: póstkort"},
-	"new_postcard": {"pl": "Nowa pocztówka!", "en": "A new postcard!", "cs": "Nová pohlednice!", "is": "Nýtt póstkort!"},
-	"more_stamps": {"pl": "Więcej pieczątek!", "en": "More stamps!", "cs": "Víc razítek!", "is": "Fleiri stimplar!"}
+	"hint_album": {"pl": "      P: pocztówki", "en": "      P: postcards", "cs": "      P: pohlednice", "is": "      P: póstkort"}
 }
