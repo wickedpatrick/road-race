@@ -20,8 +20,8 @@
 			"max_speed": 50,
 			"accel": 7.5,
 			"brake": 24,
-			"tank": 50,
-			"burn": 0.38,
+			"tank": 45,
+			"burn": 0.4,
 			"handling": 0.95,
 			"body_color": "#2f5fa8",
 			"halfwidth": 0.17
