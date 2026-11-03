@@ -175,7 +175,12 @@ func _finish() -> void:
 	}
 	Session.last_result.unlocked = Session.add_km(Session.last_result.km_driven)
 	var reached := Route.cities_reached(race.stage, race.z + (1.0 if race.state == "won" else 0.0))
+	var dest := Session.to_city
+	var before: int = Session.postcards.get(dest, {}).get("stamps", 0) # before this trip's visit gives it
 	Session.last_result.new_cities = Session.visit(reached)
+	if race.state == "won":
+		Session.stamp(dest, Postcards.stamps_for(race.time_left, race.stage.duration))
+		Session.last_result.postcard = {"city": dest, "before": before, "after": int(Session.postcards[dest].stamps)}
 	get_tree().change_scene_to_file("res://src/scenes/results.tscn")
 
 func _unhandled_input(event: InputEvent) -> void:

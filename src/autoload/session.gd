@@ -11,6 +11,8 @@ var from_city := "krakow"
 var to_city := "rzeszow"
 var total_km := 0.0
 var visited: Array = [] ## ids of the map cities the player has been to (the goal: all of them)
+var postcards := {} ## the current country's postcards (Postcards): city id -> {stamps, year}
+var album_back_to_map := false ## the album returns to the map (opened there) or to the car screen
 var quality := "high" ## "high": everything at full screen sharpness; "low": the race world is drawn at 960x540
 var home_city := "" ## picked on the first start; "" until then (or after a progress reset)
 var menu_at_map := false ## the menu opens at the destination map (coming back from a race)
@@ -98,7 +100,7 @@ func save_profile() -> void:
 
 ## The current country's progress, as kept in `places`.
 func _place() -> Dictionary:
-	return {"home_city": home_city, "from_city": from_city, "to_city": to_city, "visited": visited}
+	return {"home_city": home_city, "from_city": from_city, "to_city": to_city, "visited": visited, "postcards": postcards}
 
 ## Takes a country's progress (checked against its map; a country never played starts at its default route).
 func _apply_place(p: Dictionary) -> void:
@@ -110,6 +112,8 @@ func _apply_place(p: Dictionary) -> void:
 	visited = (p.get("visited", []) as Array).filter(func(id): return ids.has(id))
 	if visited.is_empty() and has_home():
 		visited = [home_city] if home_city == from_city else [home_city, from_city]
+	postcards = p.get("postcards", {}) if p.get("postcards") is Dictionary else {}
+	Postcards.migrate(postcards, visited, ids.keys())
 
 ## Plays another country from now on: its map, rules and the player's progress there.
 func switch_country(code: String) -> void:
@@ -139,15 +143,32 @@ func reset_profile() -> void:
 	_apply_place({})
 	save_profile()
 
-## Marks cities as visited and saves; returns the ones visited for the first time.
+## Marks cities as visited (each map city's postcard collected) and saves; returns the ones visited for the first time.
 func visit(ids: Array) -> Array:
 	var new := []
 	for id in ids:
 		if not visited.has(id):
 			visited.append(id)
 			new.append(id)
+	Postcards.grant(postcards, ids.filter(func(id): return Geo.cities().has(id)), _year())
 	save_profile()
 	return new
+
+## Arriving at a city: its postcard gets `n` stamps if that beats its best; returns the stamps it had (0: none).
+func stamp(id: String, n: int) -> int:
+	var before := Postcards.stamp(postcards, id, n, _year())
+	save_profile()
+	return before
+
+## A country's postcards (the current one's are live in `postcards`).
+func postcards_of(code: String) -> Dictionary:
+	if code == country:
+		return postcards
+	var p = places.get(code, {})
+	return p.get("postcards", {}) if p is Dictionary and p.get("postcards") is Dictionary else {}
+
+func _year() -> int:
+	return Time.get_date_dict_from_system().year
 
 ## Adds driven kilometres; returns the ids of cars unlocked by them.
 func add_km(km: float) -> Array:
