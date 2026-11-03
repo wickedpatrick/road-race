@@ -8,14 +8,20 @@ func run(t) -> void:
 			if not c.has(k): ok = false
 		t.check(ok, "car %s has all keys" % id)
 	t.check(CarStats.ids() == ["yaris", "octavia", "xc60", "bmw530", "rangerover", "gtcoupe", "supercar"], "seven cars, weakest first")
-	# each car beats the previous one on speed, acceleration and range, and burns more per km at 90 km/h
+	# each car beats the previous one on speed, acceleration, brakes and power (tank and thirst are tuned per car), and
+	# the big three burn more per km at 90 km/h than any of the everyday ones
 	var ranked := true
 	for i in range(1, CarStats.ids().size()):
 		var a: Dictionary = CarStats.by_id(CarStats.ids()[i - 1])
 		var b: Dictionary = CarStats.by_id(CarStats.ids()[i])
-		if b.max_speed <= a.max_speed or b.accel <= a.accel or b.brake <= a.brake or b.tank <= a.tank or b.hp <= a.hp: ranked = false
-		if Fuel.new(b.tank, b.burn, b.max_speed).per_metre(25.0) <= Fuel.new(a.tank, a.burn, a.max_speed).per_metre(25.0): ranked = false
-	t.check(ranked, "cars ranked: better is faster but thirstier")
+		if b.max_speed <= a.max_speed or b.accel <= a.accel or b.brake <= a.brake or b.hp <= a.hp: ranked = false
+	var thirst := func(id: String) -> float:
+		var c: Dictionary = CarStats.by_id(id)
+		return Fuel.new(c.tank, c.burn, c.max_speed).per_metre(25.0)
+	for fast in ["rangerover", "gtcoupe", "supercar"]:
+		for plain in ["yaris", "octavia", "xc60", "bmw530"]:
+			if thirst.call(fast) <= thirst.call(plain): ranked = false
+	t.check(ranked, "cars ranked: better is faster, the fast ones thirstier")
 	var stage_keys := ["name", "duration", "lanes", "length", "traffic_density", "stations", "finish_label", "zones", "towns", "roads", "km"]
 	var ids := Geo.city_ids()
 	var keys_ok := true

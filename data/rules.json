@@ -60,7 +60,7 @@
 			"accel": 12,
 			"brake": 30,
 			"tank": 100,
-			"burn": 1,
+			"burn": 1.5,
 			"handling": 1.15,
 			"body_color": "#2d4a3b",
 			"halfwidth": 0.2
@@ -72,8 +72,8 @@
 			"max_speed": 76,
 			"accel": 13.5,
 			"brake": 32,
-			"tank": 105,
-			"burn": 1.15,
+			"tank": 75,
+			"burn": 1.2,
 			"handling": 1.32,
 			"body_color": "#1f5a4c",
 			"halfwidth": 0.2
@@ -85,8 +85,8 @@
 			"max_speed": 83,
 			"accel": 15.5,
 			"brake": 35,
-			"tank": 110,
-			"burn": 1.35,
+			"tank": 85,
+			"burn": 1.5,
 			"handling": 1.45,
 			"body_color": "#c8161d",
 			"halfwidth": 0.21
