@@ -37,6 +37,7 @@ func run(t) -> void:
 	r.speed = Race.OFFROAD_SPEED
 	var fuel0 := r.fuel.level
 	for i in 60:
+		fuel0 = r.fuel.level # the frame of the crash only, not the litres burnt driving up to the post
 		r.step(1.0 / 60.0, {"accel": true, "brake": false, "steer": 0.0})
 		if r.last_crash > 0.0: break
 	var hit := r.last_crash > 0.0
