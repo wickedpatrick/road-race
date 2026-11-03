@@ -517,9 +517,15 @@ func _countries() -> int:
 	return GameData.countries().size()
 
 ## The tabs share the map's width (five countries: 84 px each).
+## Country tab i: one row up to TABS_ROW countries, two shorter rows beyond that.
+const TABS_ROW := 5
 func _tab_rect(i: int) -> Rect2:
-	var w := minf(102.0, (MAP_RECT.size.x - 8.0) / _countries())
-	return Rect2(28 + i * w, 108, w - 6.0, 28)
+	var n := _countries()
+	var rows := 1 if n <= TABS_ROW else 2
+	var per_row := ceili(float(n) / rows)
+	var w := minf(102.0, (MAP_RECT.size.x - 8.0) / per_row)
+	var h := 28.0 if rows == 1 else 24.0
+	return Rect2(28 + (i % per_row) * w, 108 + (i / per_row) * (h + 4.0), w - 6.0, h)
 
 ## The map and the country tabs over it, on the clipped layer.
 func _draw_map_layer() -> void:
@@ -546,7 +552,7 @@ func _draw_country_tabs(cv: CanvasItem) -> void:
 		var fs := 16 # long names ("Wielka Brytania") shrink to fit the tab
 		while fs > 10 and font.get_string_size(list[i].name, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x > r.size.x - 8:
 			fs -= 1
-		cv.draw_string(font, Vector2(r.position.x, r.position.y + 20), list[i].name, HORIZONTAL_ALIGNMENT_CENTER, r.size.x, fs, Color.WHITE)
+		cv.draw_string(font, Vector2(r.position.x, r.position.y + r.size.y * 0.5 + 6), list[i].name, HORIZONTAL_ALIGNMENT_CENTER, r.size.x, fs, Color.WHITE)
 
 ## Plays another country: its map and the player's progress there (a new country starts by picking a home city).
 func _switch_country(code: String) -> void:
