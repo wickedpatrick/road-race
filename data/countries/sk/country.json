@@ -1,0 +1,44 @@
+{
+	"code": "sk",
+	"name": {"pl": "Słowacja", "en": "Slovakia", "cs": "Slovensko", "is": "Slóvakía", "de": "Slowakei"},
+	"language": "sk",
+	"drive": "right",
+	"units": "metric",
+	"title": {
+		"pl": "RAJD PRZEZ SŁOWACJĘ",
+		"en": "ROAD TRIP ACROSS SLOVAKIA",
+		"cs": "RALLY SLOVENSKEM",
+		"is": "ÖKUFERÐ UM SLÓVAKÍU",
+		"de": "ROADTRIP DURCH DIE SLOWAKEI"
+	},
+	"subtitle": {
+		"pl": "Edukacyjna podróż po słowackich drogach",
+		"en": "An educational journey along Slovak roads",
+		"cs": "Vzdělávací cesta po slovenských silnicích",
+		"is": "Fræðandi ferðalag um vegi Slóvakíu",
+		"de": "Eine lehrreiche Reise über slowakische Straßen"
+	},
+	"region_label": {"pl": "kraj", "en": "region", "cs": "kraj", "is": "hérað", "de": "Region"},
+	"start": ["bratislava", "trnava"],
+	"express_prefixes": ["D", "R"],
+	"limits": {"express": 130, "road": 90, "city": 50, "town_on_express": 80, "town": 50},
+	"signs": {"town": "#ffffff", "town_text": "#111111", "board": "#1d4ea1", "board_motorway": "#0f7a43"},
+	"map": {"lon0": 16.7, "lon1": 22.7, "lat0": 47.65, "lat1": 49.7, "lon_k": 0.66},
+	"outline": [
+		[16.84, 48.37], [16.95, 48.62], [17.2, 48.86], [17.45, 48.84], [17.7, 48.88], [17.9, 49.02], [18.15, 49.27],
+		[18.4, 49.38], [18.57, 49.5], [18.85, 49.52], [19, 49.4], [19.2, 49.42], [19.45, 49.6], [19.8, 49.2],
+		[20.1, 49.2], [20.35, 49.4], [20.6, 49.38], [20.9, 49.3], [21.3, 49.45], [21.6, 49.43], [22, 49.25],
+		[22.4, 49.1], [22.56, 49.08], [22.4, 48.75], [22.15, 48.4], [21.7, 48.35], [21.4, 48.56], [21, 48.5],
+		[20.5, 48.5], [20.25, 48.25], [19.9, 48.15], [19.6, 48.24], [19.25, 48.07], [18.85, 48.05], [18.75, 47.85],
+		[18.3, 47.75], [17.8, 47.75], [17.4, 47.93], [17.15, 48], [17.07, 48.04], [16.97, 48.15]
+	],
+	"outline_lines": [],
+	"station": {
+		"sign": "ČERPACIA STANICA",
+		"board": "PALIVÁ",
+		"prices": [["Natural 95", "1,62"], ["Nafta", "1,55"], ["LPG", "0,79"]],
+		"region_sign": "REGIÓN"
+	},
+	"weather": {"default": "sun", "landscape": true},
+	"palette": {"summer": {"grass_a": "#4fa13c", "grass_b": "#479838"}}
+}

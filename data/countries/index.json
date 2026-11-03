@@ -37,6 +37,12 @@
 			"favorite_neighbour": "at"
 		},
 		{
+			"code": "sk",
+			"name": {"pl": "Słowacja", "en": "Slovakia", "cs": "Slovensko", "is": "Slóvakía", "de": "Slowakei"},
+			"neighbours": ["cz", "pl", "ua", "hu", "at"],
+			"favorite_neighbour": "cz"
+		},
+		{
 			"code": "lt",
 			"name": {"pl": "Litwa", "en": "Lithuania", "cs": "Litva", "is": "Litháen", "de": "Litauen"},
 			"neighbours": ["lv", "by", "pl", "ru"],

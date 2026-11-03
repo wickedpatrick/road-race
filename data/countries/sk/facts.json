@@ -1,0 +1,226 @@
+{
+	"Bratislava": {
+		"pl": "Stolica Słowacji nad Dunajem, blisko granic z Austrią i Węgrami",
+		"en": "Capital of Slovakia on the Danube, close to Austria and Hungary",
+		"cs": "Hlavní město Slovenska na Dunaji, blízko Rakouska a Maďarska",
+		"is": "Höfuðborg Slóvakíu við Dóná, nálægt Austurríki og Ungverjalandi",
+		"de": "Hauptstadt der Slowakei an der Donau, nah an Österreich und Ungarn"
+	},
+	"Košice": {
+		"pl": "Drugie miasto Słowacji, stolica wschodu kraju",
+		"en": "Slovakia's second city, the capital of the east",
+		"cs": "Druhé největší město Slovenska, metropole východu",
+		"is": "Næststærsta borg Slóvakíu, höfuðstaður austursins",
+		"de": "Zweitgrößte Stadt der Slowakei, die Metropole des Ostens"
+	},
+	"Prešov": {
+		"pl": "Stolica krainy Szarysz, w pobliżu dawne kopalnie opalu",
+		"en": "Capital of the Šariš region, with old opal mines nearby",
+		"cs": "Metropole Šariše, nedaleko jsou staré opálové doly",
+		"is": "Höfuðstaður Šariš, með gamlar ópalnámur í grenndinni",
+		"de": "Hauptstadt der Region Šariš, in der Nähe gibt es alte Opalminen"
+	},
+	"Žilina": {
+		"pl": "Miasto nad Wagiem, z placem otoczonym podcieniami",
+		"en": "A town on the Váh with a square ringed by arcades",
+		"cs": "Město na Váhu s náměstím obklopeným podloubím",
+		"is": "Bær við ána Váh með torgi umkringdu súlnagöngum",
+		"de": "Eine Stadt an der Waag mit einem Platz voller Laubengänge"
+	},
+	"Nitra": {
+		"pl": "Jedno z najstarszych miast Słowacji, pod wzgórzem Zobor",
+		"en": "One of Slovakia's oldest towns, under Zobor hill",
+		"cs": "Jedno z nejstarších měst Slovenska, pod vrchem Zobor",
+		"is": "Einn elsti bær Slóvakíu, undir Zobor-hæð",
+		"de": "Eine der ältesten Städte der Slowakei, unter dem Berg Zobor"
+	},
+	"Banská Bystrica": {
+		"pl": "Dawne miasto górników miedzi w sercu Słowacji",
+		"en": "An old copper-mining town in the heart of Slovakia",
+		"cs": "Staré město měděných dolů v srdci Slovenska",
+		"is": "Gamall koparnámubær í hjarta Slóvakíu",
+		"de": "Eine alte Kupferbergbaustadt im Herzen der Slowakei"
+	},
+	"Trnava": {
+		"pl": "Nazywana słowackim Rzymem, bo ma tak wiele kościołów",
+		"en": "Called the Slovak Rome for its many churches",
+		"cs": "Říká se jí slovenský Řím, má tolik kostelů",
+		"is": "Kölluð slóvakíska Róm vegna allra kirknanna",
+		"de": "Wegen ihrer vielen Kirchen das slowakische Rom genannt"
+	},
+	"Trenčín": {
+		"pl": "Na skale pod zamkiem jest napis rzymskich legionistów sprzed 1800 lat",
+		"en": "Roman soldiers carved an inscription on the castle rock 1800 years ago",
+		"cs": "Na hradní skále je nápis římských legionářů starý 1800 let",
+		"is": "Rómverskir hermenn rituðu áletrun á kastalaklettinn fyrir 1800 árum",
+		"de": "Römische Soldaten ritzten vor 1800 Jahren eine Inschrift in den Burgfelsen"
+	},
+	"Martin": {
+		"pl": "Ważne miasto słowackiej kultury, siedziba Macierzy Słowackiej",
+		"en": "A centre of Slovak culture, home of the Matica slovenská",
+		"cs": "Centrum slovenské kultury, sídlo Matice slovenské",
+		"is": "Miðstöð slóvakískrar menningar, aðsetur Matica slovenská",
+		"de": "Ein Zentrum der slowakischen Kultur, Sitz der Matica slovenská"
+	},
+	"Poprad": {
+		"pl": "Brama do Tatr Wysokich, najwyższych gór Słowacji",
+		"en": "The gateway to the High Tatras, Slovakia's highest mountains",
+		"cs": "Brána do Vysokých Tater, nejvyšších hor Slovenska",
+		"is": "Hliðið að Háu-Tatra, hæstu fjöllum Slóvakíu",
+		"de": "Das Tor zur Hohen Tatra, den höchsten Bergen der Slowakei"
+	},
+	"Zvolen": {
+		"pl": "Królewski zamek na wzgórzu nad rzeką Hron",
+		"en": "A royal castle on a hill above the river Hron",
+		"cs": "Královský zámek na kopci nad řekou Hron",
+		"is": "Konunglegur kastali á hæð yfir ánni Hron",
+		"de": "Ein königliches Schloss auf einem Hügel über dem Fluss Hron"
+	},
+	"Michalovce": {
+		"pl": "Obok leży Zemplińska Szirawa, nazywana słowackim morzem",
+		"en": "Next to the Zemplínska šírava lake, the Slovak sea",
+		"cs": "Vedle leží Zemplínská šírava, slovenské moře",
+		"is": "Við Zemplínska šírava-vatnið, slóvakíska hafið",
+		"de": "Daneben liegt der Stausee Zemplínska šírava, das slowakische Meer"
+	},
+	"Komárno": {
+		"pl": "Ogromna twierdza nad Dunajem, po drugiej stronie rzeki Węgry",
+		"en": "A huge fortress on the Danube, Hungary across the river",
+		"cs": "Obrovská pevnost na Dunaji, za řekou je Maďarsko",
+		"is": "Risastórt virki við Dóná, Ungverjaland handan árinnar",
+		"de": "Eine riesige Festung an der Donau, gegenüber liegt Ungarn"
+	},
+	"Liptovský Mikuláš": {
+		"pl": "Tu osądzono legendarnego zbójnika Juraja Jánošíka",
+		"en": "The legendary outlaw Juraj Jánošík was tried here",
+		"cs": "Tady soudili legendárního zbojníka Juraje Jánošíka",
+		"is": "Hér var útlaginn frægi Juraj Jánošík dæmdur",
+		"de": "Hier wurde der legendäre Räuber Juraj Jánošík verurteilt"
+	},
+	"Lučenec": {
+		"pl": "Stolica krainy Novohrad, z odnowioną synagogą",
+		"en": "Capital of the Novohrad region, with a restored synagogue",
+		"cs": "Metropole Novohradu s obnovenou synagogou",
+		"is": "Höfuðstaður Novohrad, með endurgerðu bænahúsi gyðinga",
+		"de": "Hauptstadt der Region Novohrad, mit einer restaurierten Synagoge"
+	},
+	"Piešťany": {
+		"pl": "Uzdrowisko z gorącymi źródłami i leczniczym błotem",
+		"en": "A spa town with hot springs and healing mud",
+		"cs": "Lázně s horkými prameny a léčivým bahnem",
+		"is": "Heilsulindarbær með heitum lindum og græðandi leðju",
+		"de": "Ein Kurort mit heißen Quellen und Heilschlamm"
+	},
+	"Senec": {
+		"pl": "Słoneczne Jeziora, letnie kąpielisko Bratysławy",
+		"en": "The Sunny Lakes, where Bratislava goes swimming in summer",
+		"cs": "Slunečná jezera, kde se Bratislava v létě koupe",
+		"is": "Sólarvötnin, þar sem Bratislava baðar sig á sumrin",
+		"de": "Die Sonnenseen, wo Bratislava im Sommer baden geht"
+	},
+	"Púchov": {
+		"pl": "Tu powstają opony samochodowe",
+		"en": "Car tyres are made here",
+		"cs": "Tady se vyrábějí pneumatiky",
+		"is": "Hér eru framleidd bíldekk",
+		"de": "Hier werden Autoreifen hergestellt"
+	},
+	"Bytča": {
+		"pl": "Pałac ślubny, zbudowany na wesela córek hrabiego",
+		"en": "The Wedding Palace, built for the count's daughters' weddings",
+		"cs": "Svatební palác, postavený pro svatby hraběcích dcer",
+		"is": "Brúðkaupshöllin, byggð fyrir brúðkaup dætra greifans",
+		"de": "Der Hochzeitspalast, gebaut für die Hochzeiten der Grafentöchter"
+	},
+	"Ružomberok": {
+		"pl": "Miasto papieru: tu robi się go bardzo dużo",
+		"en": "A paper town: a lot of paper is made here",
+		"cs": "Město papíru: vyrábí se ho tu hodně",
+		"is": "Pappírsbær: hér er búið til mikið af pappír",
+		"de": "Eine Papierstadt: hier wird viel Papier gemacht"
+	},
+	"Štrba": {
+		"pl": "Nad wioską leży Szczyrbskie Jezioro, wysoko w Tatrach",
+		"en": "Above the village lies Štrbské Pleso, high in the Tatras",
+		"cs": "Nad obcí leží Štrbské Pleso, vysoko v Tatrách",
+		"is": "Ofan við þorpið er Štrbské Pleso, hátt í Tatra",
+		"de": "Über dem Dorf liegt der Tschirmer See hoch in der Tatra"
+	},
+	"Levoča": {
+		"pl": "Tu stoi najwyższy drewniany ołtarz gotycki na świecie",
+		"en": "The world's tallest Gothic wooden altar is here",
+		"cs": "Je tu nejvyšší gotický dřevěný oltář na světě",
+		"is": "Hér er hæsta gotneska tréaltari í heimi",
+		"de": "Hier steht der höchste gotische Holzaltar der Welt"
+	},
+	"Spišské Podhradie": {
+		"pl": "Pod jednym z największych zamków Europy Środkowej",
+		"en": "Below one of Central Europe's largest castles",
+		"cs": "Pod jedním z největších hradů střední Evropy",
+		"is": "Undir einum stærsta kastala Mið-Evrópu",
+		"de": "Unter einer der größten Burgen Mitteleuropas"
+	},
+	"Rožňava": {
+		"pl": "Dawne miasto górników, obok jaskinie Krasu Słowackiego",
+		"en": "An old mining town by the caves of the Slovak Karst",
+		"cs": "Staré hornické město u jeskyní Slovenského krasu",
+		"is": "Gamall námubær við hella Slóvakíska karstsins",
+		"de": "Eine alte Bergbaustadt bei den Höhlen des Slowakischen Karsts"
+	},
+	"Žiar nad Hronom": {
+		"pl": "Miasto hut aluminium",
+		"en": "A town of aluminium works",
+		"cs": "Město hliníkárny",
+		"is": "Bær álvera",
+		"de": "Eine Stadt der Aluminiumhütte"
+	},
+	"Dunajská Streda": {
+		"pl": "Serce Żytniej Wyspy, największej wyspy rzecznej Europy",
+		"en": "Heart of Žitný ostrov, Europe's largest river island",
+		"cs": "Srdce Žitného ostrova, největšího říčního ostrova Evropy",
+		"is": "Hjarta Žitný ostrov, stærstu áreyju Evrópu",
+		"de": "Herz der Großen Schüttinsel, der größten Flussinsel Europas"
+	},
+	"Nové Zámky": {
+		"pl": "Dawna twierdza w kształcie sześcioramiennej gwiazdy",
+		"en": "Once a fortress shaped like a six-pointed star",
+		"cs": "Kdysi pevnost ve tvaru šesticípé hvězdy",
+		"is": "Áður virki í laginu eins og sexarma stjarna",
+		"de": "Einst eine Festung in Form eines sechszackigen Sterns"
+	},
+	"Harmanec": {
+		"pl": "Jaskinia, w której zimują nietoperze",
+		"en": "A cave where bats spend the winter",
+		"cs": "Jeskyně, kde zimují netopýři",
+		"is": "Hellir þar sem leðurblökur hafa vetursetu",
+		"de": "Eine Höhle, in der Fledermäuse überwintern"
+	},
+	"Turčianske Teplice": {
+		"pl": "Uzdrowisko z niebieskim kąpieliskiem",
+		"en": "A spa with a blue bathhouse",
+		"cs": "Lázně s modrými lázněmi",
+		"is": "Heilsulind með bláu baðhúsi",
+		"de": "Ein Kurort mit einem blauen Badehaus"
+	},
+	"Sliač": {
+		"pl": "Uzdrowisko i lotnisko wojskowe",
+		"en": "A spa town and a military airport",
+		"cs": "Lázně a vojenské letiště",
+		"is": "Heilsulindarbær og herflugvöllur",
+		"de": "Ein Kurort und ein Militärflughafen"
+	},
+	"Rimavská Sobota": {
+		"pl": "Stolica Gemeru, krainy żelaza i kamieni",
+		"en": "Capital of Gemer, a land of iron and stone",
+		"cs": "Metropole Gemeru, kraje železa a kamene",
+		"is": "Höfuðstaður Gemer, lands járns og steina",
+		"de": "Hauptstadt von Gemer, einem Land aus Eisen und Stein"
+	},
+	"Svit": {
+		"pl": "Miasto pod samymi Tatrami",
+		"en": "A town right below the Tatras",
+		"cs": "Město přímo pod Tatrami",
+		"is": "Bær beint undir Tatra-fjöllum",
+		"de": "Eine Stadt direkt unter der Tatra"
+	}
+}
