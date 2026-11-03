@@ -139,8 +139,8 @@ static func _gtcoupe(cv, c, s, body, dark, light, lean, braking) -> void:
 	_poly(cv, c, s, [[-74 + lean, 66], [-50 + lean, 100], [50 + lean, 100], [74 + lean, 66]], body)  # fastback
 	_poly(cv, c, s, [[-60 + lean, 70], [-42 + lean, 94], [42 + lean, 94], [60 + lean, 70]], GLASS)
 	var lc := _light(braking)
-	_poly(cv, c, s, [[-112, 50], [-104, 58], [-62, 54], [-62, 49]], lc)  # blades rising to the outer corners
-	_poly(cv, c, s, [[112, 50], [104, 58], [62, 54], [62, 49]], lc)
+	_poly(cv, c, s, [[-106, 48], [-98, 56], [-62, 54], [-62, 49]], lc)  # blades rising to the outer corners
+	_poly(cv, c, s, [[106, 48], [98, 56], [62, 54], [62, 49]], lc)
 	_rect(cv, c, s, -62, 50, 62, 52, dark)                      # thin line joining them
 	_chamfer(cv, c, s, -8, 42, 8, 50, 2, light)                # winged badge
 	_rect(cv, c, s, -22, 45, 22, 47, light)
