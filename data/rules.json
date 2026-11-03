@@ -2,7 +2,7 @@
 	"cars": [
 		{
 			"id": "yaris",
-			"name": "Tokai Yarro",
+			"name": "Micky",
 			"hp": 116,
 			"max_speed": 43,
 			"accel": 6,
@@ -15,7 +15,7 @@
 		},
 		{
 			"id": "octavia",
-			"name": "Škova Octana",
+			"name": "Cardigan",
 			"hp": 150,
 			"max_speed": 50,
 			"accel": 7.5,
@@ -28,7 +28,7 @@
 		},
 		{
 			"id": "xc60",
-			"name": "Volvik XR60",
+			"name": "SUV",
 			"hp": 250,
 			"max_speed": 55,
 			"accel": 9,
@@ -41,7 +41,7 @@
 		},
 		{
 			"id": "bmw530",
-			"name": "Bavaria 530i",
+			"name": "Bavar R6",
 			"hp": 258,
 			"max_speed": 61,
 			"accel": 10.5,
@@ -54,7 +54,7 @@
 		},
 		{
 			"id": "rangerover",
-			"name": "Range Royal",
+			"name": "Lux SUV",
 			"hp": 635,
 			"max_speed": 70,
 			"accel": 12,
@@ -67,7 +67,7 @@
 		},
 		{
 			"id": "gtcoupe",
-			"name": "Ashworth GT Coupé",
+			"name": "Ashworth GT",
 			"hp": 690,
 			"max_speed": 76,
 			"accel": 13.5,
@@ -80,7 +80,7 @@
 		},
 		{
 			"id": "supercar",
-			"name": "Ferrucci Rosso V12",
+			"name": "Rosso V12",
 			"hp": 830,
 			"max_speed": 83,
 			"accel": 15.5,
