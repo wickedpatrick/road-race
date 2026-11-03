@@ -78,9 +78,9 @@ static func card(cv: CanvasItem, batch: DrawBatch, rect: Rect2, code: String, id
 	cv.draw_string(font, Vector2(rect.position.x, y), cap[0], HORIZONTAL_ALIGNMENT_CENTER, rect.size.x, fs, ink)
 	cv.draw_string(font, Vector2(rect.position.x + m, y + fs * 0.95), cap[1] if named else "? ? ?", HORIZONTAL_ALIGNMENT_CENTER, rect.size.x - 2.0 * m, int(fs * 0.72), ink.lerp(PAPER, 0.25))
 
-## [city, landmarks' names joined] in the player's language.
+## [city (or town), landmarks' names joined] in the player's language.
 static func caption(code: String, id: String) -> PackedStringArray:
-	var c: Dictionary = GameData.country(code).cities[id]
+	var c: Dictionary = GameData.country(code).cities.get(id, {"name": id})
 	var names := Postcards.landmarks(code, id).map(func(lm): return lm.name)
 	return PackedStringArray([c.get("exonym", c.name), " · ".join(names)])
 

@@ -33,3 +33,26 @@ func run(t) -> void:
 	var places := {"cz": {"visited": ["praha", "brno"]}, "pl": {"visited": ["krakow"], "postcards": {"krakow": {"stamps": 3}}}}
 	Postcards.migrate_places(places)
 	t.check(places.cz.postcards.keys() == ["praha", "brno"] and places.pl.postcards.krakow.stamps == 3, "old profiles: postcards in every country played")
+	# routes: towns between the map cities that have a landmark, under the pair of cities (bigger first)
+	var counts := {"pl": [38, 62], "cz": [10, 12], "is": [5, 6], "gb": [23, 24]}
+	for code in counts:
+		var rs := Postcards.routes(code)
+		var map: Dictionary = GameData.country(code).cities
+		var uniq := {}
+		var ok := true
+		for rt in rs:
+			if map[rt.a].pop < map[rt.b].pop or rt.towns.is_empty(): ok = false
+			for tn in rt.towns:
+				uniq[tn] = true
+				if Postcards.landmarks(code, tn).is_empty(): ok = false
+		t.check(ok and rs.size() == counts[code][0] and uniq.size() == counts[code][1], "%s: %d routes with %d town postcards, bigger city first" % [code, rs.size(), uniq.size()])
+		t.check(Postcards.summary(code, {}).all == Postcards.cities(code).size() + counts[code][1], "%s: the album counts the towns too" % code)
+	var kr: Array = Postcards.routes("pl").filter(func(rt): return rt.a == "krakow" and rt.b == "rzeszow")
+	t.check(kr.size() == 1 and kr[0].towns == ["Bochnia", "Tarnów"], "Kraków - Rzeszów: its towns in order from Kraków (%s)" % [kr])
+	t.check(Postcards.routes("pl").filter(func(rt): return rt.a == "krakow" and rt.b == "katowice").is_empty(), "a route without landmark towns is left out")
+	t.check(Postcards.routes("pl").filter(func(rt): return rt.towns.has("Włocławek")).size() == 2, "Włocławek under both of its routes")
+	var pl_routes := Postcards.routes("pl")
+	t.check(Postcards.cities("pl").find(pl_routes[0].a) <= Postcards.cities("pl").find(pl_routes[-1].a), "routes from the biggest city")
+	t.check(Postcards.landmarks("pl", "Tarnów").size() > 0 and Postcards.landmarks("pl", "Nowhere").is_empty(), "a town's landmarks by its name")
+	var with_town := {"Tarnów": {"stamps": 1}, "krakow": {"stamps": 2}}
+	t.check(Postcards.summary("pl", with_town).earned == 2 and Postcards.summary("pl", with_town).stamps == 2, "town postcards count as earned, stamps only for cities")

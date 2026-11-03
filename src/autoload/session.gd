@@ -155,6 +155,10 @@ func visit(ids: Array) -> Array:
 	save_profile()
 	return new
 
+## The towns with a landmark driven through: their postcards (saved with the next visit()).
+func collect_towns(names: Array) -> void:
+	Postcards.grant(postcards, names.filter(func(n): return not Postcards.landmarks(country, n).is_empty()), _year())
+
 ## Arriving at a city: its postcard gets `n` stamps if that beats its best; returns the stamps it had (0: none).
 func stamp(id: String, n: int) -> int:
 	var before := Postcards.stamp(postcards, id, n, _year())

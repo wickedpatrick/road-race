@@ -253,5 +253,6 @@ Opis: `docs/superpowers/specs/2026-11-03-postcards-design.md`.
 - [x] Miasta mijane po drodze i miasto domowe: pocztówka z 1 pieczątką (bez pokazywania na koniec trasy).
 - [x] Album per kraj z ekranu auta i mapy (P); stare profile dostają pocztówki odwiedzonych miast.
 - [ ] Jak pokazać pocztówki zebrane po drodze (np. na mapie albo po trasie).
-- [ ] Pocztówki miejscowości między miastami z mapy.
+- [x] Pocztówki miejscowości między miastami z mapy: w albumie pod listą tras (większe - mniejsze miasto), za samo
+      przejechanie, bez pieczątek za czas.
 - [ ] Drugi zabytek dla miast, które mają jeden (66 z 93), a potem przebudowa menu z albumem.

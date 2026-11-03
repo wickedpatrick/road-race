@@ -70,3 +70,8 @@ func run(t) -> void:
 	t.check(mid.has("krakow") and not mid.has("gdansk"), "halfway: start reached, destination not yet")
 	var all := Route.cities_reached(cr, cr.length + 1.0)
 	t.check(all.has("gdansk") and all.size() >= 3, "at the finish: destination and the cities on the way (%s)" % str(all))
+	# town postcards: the towns passed so far (not the map cities)
+	var kr := Route.build("krakow", "rzeszow")
+	var tarnow: Dictionary = kr.towns.filter(func(tw): return tw.name == "Tarnów")[0]
+	var passed := Route.towns_reached(kr, tarnow.z + 1.0)
+	t.check(passed.has("Bochnia") and passed.has("Tarnów") and not passed.has("Dębica") and not passed.has("Kraków"), "towns passed on the way, without the map cities")

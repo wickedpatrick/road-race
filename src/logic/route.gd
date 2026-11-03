@@ -399,6 +399,10 @@ static func cities_reached(stage: Dictionary, z: float) -> Array:
 			out.append(t.id)
 	return out
 
+## The towns between the map cities passed by z (their names), in driving order: their postcards (Postcards).
+static func towns_reached(stage: Dictionary, z: float) -> Array:
+	return stage.towns.filter(func(t): return not t.has("id") and t.z <= z).map(func(t): return t.name)
+
 ## The settlement whose streets contain z, or {} on open road.
 static func town_at(stage: Dictionary, z: float) -> Dictionary:
 	for t in stage.towns:

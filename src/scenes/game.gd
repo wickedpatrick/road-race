@@ -177,6 +177,7 @@ func _finish() -> void:
 	var reached := Route.cities_reached(race.stage, race.z + (1.0 if race.state == "won" else 0.0))
 	var dest := Session.to_city
 	var before: int = Session.postcards.get(dest, {}).get("stamps", 0) # before this trip's visit gives it
+	Session.collect_towns(Route.towns_reached(race.stage, race.z))
 	Session.last_result.new_cities = Session.visit(reached)
 	if race.state == "won":
 		Session.stamp(dest, Postcards.stamps_for(race.time_left, race.stage.duration))

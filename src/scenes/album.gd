@@ -1,10 +1,13 @@
 extends Node2D
-## The postcard album, one country at a time: every city on its map, biggest first. Postcards not collected yet are
-## grey and do not name their landmarks; collected ones are in colour, postmarked, with their stamps under them.
+## The postcard album, one country at a time: every city on its map, biggest first, then the routes between them
+## (bigger city first) with the postcards of the towns on the way. Postcards not collected yet are grey and do not
+## name their landmarks; collected ones are in colour and postmarked, a city's with its stamps under it.
 ## Opened from the car screen and the map; Esc (or the back button) goes back there.
 const COLS := 4
 const CARD := Vector2(210, 140)
 const CELL := Vector2(228, 178)
+const TOWN_CELL_H := 158.0 ## no stamps under a town's postcard
+const HEAD_H := 46.0 ## a section or route title above its row of postcards
 const GRID := Rect2(20, 108, 920, 372) ## the scrolling part of the screen
 const BACK_BTN := Rect2(24, 490, 148, 44)
 var code := ""
@@ -13,18 +16,40 @@ var font: Font
 var batch := DrawBatch.new()
 var _press := Vector2.ZERO
 var _dragging := false
+var _layout: Array = [] ## [{y, card: id, town: bool} or {y, title} or {y, route}], y from the top of the list
+var _height := 0.0
 
 func _ready() -> void:
 	font = ThemeDB.fallback_font
 	code = Session.country
+	_lay_out()
+
+## Where everything of this country's album goes: the cities' grid, then each route's title and its towns' grid.
+func _lay_out() -> void:
+	_layout = []
+	var y := 8.0
+	var ids := Postcards.cities(code)
+	for i in ids.size():
+		_layout.append({"x": i % COLS, "y": y + (i / COLS) * CELL.y, "card": ids[i], "town": false})
+	y += ceili(ids.size() / float(COLS)) * CELL.y
+	var routes := Postcards.routes(code)
+	if not routes.is_empty():
+		_layout.append({"y": y, "title": Lang.t("album_routes")})
+		y += HEAD_H
+	for rt in routes:
+		_layout.append({"y": y, "route": rt})
+		y += HEAD_H - 10.0
+		for i in rt.towns.size():
+			_layout.append({"x": i % COLS, "y": y + (i / COLS) * TOWN_CELL_H, "card": rt.towns[i], "town": true})
+		y += ceili(rt.towns.size() / float(COLS)) * TOWN_CELL_H
+	_height = y
 
 func _tab_rect(i: int) -> Rect2:
 	var w := GRID.size.x / GameData.countries().size()
 	return Rect2(GRID.position.x + i * w, 64, w - 8, 34)
 
 func _max_scroll() -> float:
-	var rows := ceili(Postcards.cities(code).size() / float(COLS))
-	return maxf(0.0, rows * CELL.y - GRID.size.y + 10.0)
+	return maxf(0.0, _height - GRID.size.y + 10.0)
 
 func _scroll_by(d: float) -> void:
 	scroll = clampf(scroll + d, 0.0, _max_scroll())
@@ -34,6 +59,7 @@ func _switch(step: int) -> void:
 	var codes := GameData.country_codes()
 	code = codes[(codes.find(code) + step + codes.size()) % codes.size()]
 	scroll = 0.0
+	_lay_out()
 	Sfx.play("blip", -8.0)
 	queue_redraw()
 
@@ -69,6 +95,15 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif event.keycode == KEY_PAGEDOWN: _scroll_by(GRID.size.y)
 	elif event.keycode == KEY_PAGEUP: _scroll_by(-GRID.size.y)
 
+## "Kraków – Rzeszów": a city's name bright when its postcard is collected.
+func _route_title(rt: Dictionary, cards: Dictionary, pos: Vector2) -> void:
+	var x := pos.x
+	for part in [rt.a, " – ", rt.b]:
+		var text: String = part if part == " – " else PostcardPainter.caption(code, part)[0]
+		var col := Color("c8d6e3") if part == " – " else (Color("ffd24a") if cards.has(part) else Color("8a97a3"))
+		draw_string(font, Vector2(x, pos.y), text, HORIZONTAL_ALIGNMENT_LEFT, -1, 22, col)
+		x += font.get_string_size(text, HORIZONTAL_ALIGNMENT_LEFT, -1, 22).x
+
 func _tap(p: Vector2) -> void:
 	if BACK_BTN.has_point(p):
 		_back()
@@ -85,19 +120,26 @@ func _draw() -> void:
 		PackedColorArray([pal.sky_top, pal.sky_top, pal.sky_bottom, pal.sky_bottom]))
 	draw_rect(GRID.grow(6), Color("2c3e50"))
 	var cards := Session.postcards_of(code)
-	var ids := Postcards.cities(code)
 	batch.begin(self)
-	for i in ids.size():
-		var cell := Vector2(GRID.position.x + (i % COLS) * CELL.x + (CELL.x - CARD.x) * 0.5, GRID.position.y + 8.0 + (i / COLS) * CELL.y - scroll)
-		if cell.y + CELL.y < GRID.position.y - 10.0 or cell.y > GRID.end.y + 10.0:
+	for it in _layout:
+		var y: float = GRID.position.y + it.y - scroll
+		if y + CELL.y < GRID.position.y - 10.0 or y > GRID.end.y + 10.0:
 			continue # off screen
-		var r := Rect2(cell, CARD)
-		var card: Dictionary = cards.get(ids[i], {})
-		var got := not card.is_empty()
-		PostcardPainter.card(self, batch, r, code, ids[i], 0.0 if got else 1.0, got)
-		if got:
-			PostcardPainter.postmark(self, r.position + Vector2(r.size.x - 34, 34), 24.0, PostcardPainter.caption(code, ids[i])[0], int(card.get("year", 0)), 1.0)
-			PostcardPainter.stamp_row(self, Vector2(r.get_center().x, r.end.y + 15), 15.0, int(card.stamps), 5.0)
+		if it.has("title"):
+			batch.flush()
+			draw_string(font, Vector2(GRID.position.x + 10, y + 32), it.title, HORIZONTAL_ALIGNMENT_LEFT, -1, 28, Color.WHITE)
+		elif it.has("route"):
+			batch.flush()
+			_route_title(it.route, cards, Vector2(GRID.position.x + 10, y + 26))
+		else:
+			var r := Rect2(Vector2(GRID.position.x + it.x * CELL.x + (CELL.x - CARD.x) * 0.5, y), CARD)
+			var card: Dictionary = cards.get(it.card, {})
+			var got := not card.is_empty()
+			PostcardPainter.card(self, batch, r, code, it.card, 0.0 if got else 1.0, got)
+			if got:
+				PostcardPainter.postmark(self, r.position + Vector2(r.size.x - 34, 34), 24.0, PostcardPainter.caption(code, it.card)[0], int(card.get("year", 0)), 1.0)
+				if not it.town:
+					PostcardPainter.stamp_row(self, Vector2(r.get_center().x, r.end.y + 15), 15.0, int(card.stamps), 5.0)
 	batch.flush()
 	# the bars above and below the grid cover the cards scrolled out of it
 	draw_polygon(PackedVector2Array([Vector2(0, 0), Vector2(960, 0), Vector2(960, GRID.position.y - 6), Vector2(0, GRID.position.y - 6)]),

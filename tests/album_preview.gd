@@ -10,6 +10,9 @@ func _ready() -> void:
 	var ids := Postcards.cities(Session.country)
 	for i in ids.size():
 		if i % 3 != 2: Session.postcards[ids[i]] = {"stamps": i % 5 + 1, "year": 2026}
+	var towns := Postcards.towns(Session.country)
+	for i in towns.size():
+		if i % 3 != 1: Session.postcards[towns[i]] = {"stamps": 1, "year": 2026}
 	var a := OS.get_cmdline_user_args()
 	if a.size() > 0: _scroll_by(float(a[0]))
 

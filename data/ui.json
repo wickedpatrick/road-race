@@ -303,6 +303,7 @@
 	"weather_autumn": {"pl": "Jesień", "en": "Autumn", "cs": "Podzim", "is": "Haust"},
 	"weather_snow": {"pl": "Śnieg", "en": "Snow", "cs": "Sníh", "is": "Snjór"},
 	"album": {"pl": "Pocztówki", "en": "Postcards", "cs": "Pohlednice", "is": "Póstkort"},
+	"album_routes": {"pl": "Po drodze", "en": "On the way", "cs": "Cestou", "is": "Á leiðinni"},
 	"album_btn": {"pl": "Pocztówki", "en": "Postcards", "cs": "Pohlednice", "is": "Póstkort"},
 	"album_stamps": {"pl": "Pieczątki: %d / %d", "en": "Stamps: %d / %d", "cs": "Razítka: %d / %d", "is": "Stimplar: %d / %d"},
 	"album_hint": {"pl": "Strzałki: przewijanie i kraj      Esc: wróć", "en": "Arrows: scroll and country      Esc: back", "cs": "Šipky: posun a země      Esc: zpět", "is": "Örvar: fletta og land      Esc: til baka"},
