@@ -1,6 +1,22 @@
 extends RefCounted
+## Counts what a painter draws.
+class Pen:
+	var n := 0
+	func draw_line(_a, _b, _c, _w := 1.0) -> void: n += 1
+	func draw_circle(_p, _r, _c) -> void: n += 1
+	func draw_rect(_r, _c) -> void: n += 1
+	func draw_colored_polygon(_p, _c) -> void: n += 1
+	func draw_set_transform(_p, _r := 0.0, _s := Vector2.ONE) -> void: pass
+
 func run(t) -> void:
 	_test_scrolling_map(t)
+	for kind in ["cow", "sheep", "horse"]:
+		var drawn := {}
+		for season in ["summer", "winter"]:
+			var pen := Pen.new()
+			Scenery.draw_item(pen, {"type": kind, "v": 0.3, "c": 1, "w": 2.0, "h": 1.5, "lat": 10.0}, Vector2(400, 400), 6.0, SeasonPalette.by_name(season), season, null)
+			drawn[season] = pen.n
+		t.check(drawn.summer > 0 and drawn.winter == 0, "%s: out to graze in summer, indoors when snow lies (%s)" % [kind, drawn])
 	var keys := ["sky_top", "sky_bottom", "grass_a", "grass_b", "road_a", "road_b", "rumble_a", "rumble_b", "line", "tree", "tree2", "mountain", "particle", "sun"]
 	for s in SeasonPalette.SEASONS:
 		var p: Dictionary = SeasonPalette.by_name(s)

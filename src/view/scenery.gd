@@ -627,7 +627,7 @@ static func draw_item(cv, it: Dictionary, b: Vector2, pm: float, pal: Dictionary
 		"stork": _stork(cv, b, h, pm, season)
 		"cow": _cow(cv, it, b, pm, season)
 		"sheep": _sheep(cv, it, b, pm, season)
-		"horse": _horse(cv, it, b, pm)
+		"horse": _horse(cv, it, b, pm, season)
 		"moss": _moss(cv, it, b, pm, season)
 		"lavarock": _lavarock(cv, it, b, h, pm)
 		"town_sign", "town_end": _town_sign(cv, it, b, pm, font, it.type == "town_end")
@@ -993,9 +993,9 @@ static func _sheep(cv, it: Dictionary, b: Vector2, pm: float, season: String) ->
 	cv.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 	cv.draw_circle(b + Vector2(f * 0.72 * pm, -(0.6 if it.v < 0.3 or it.v > 0.7 else 0.95) * pm), 0.2 * pm, Color("2a2624"))
 
-## Icelandic horse: small and stocky, with a long mane; out in all weathers.
-static func _horse(cv, it: Dictionary, b: Vector2, pm: float) -> void:
-	if pm < 1.0:
+## Icelandic horse: small and stocky, with a long mane. In the stable on a snowy day.
+static func _horse(cv, it: Dictionary, b: Vector2, pm: float, season: String) -> void:
+	if season == "winter" or pm < 1.0:
 		return
 	var f := 1.0 if it.v < 0.5 else -1.0
 	var coat: Color = [Color("8a4b2a"), Color("5a3a24"), Color("e8e2d4"), Color("b8864a"), Color("3a302a")][it.c % 5]
