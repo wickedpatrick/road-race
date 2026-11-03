@@ -340,8 +340,11 @@ func _draw() -> void:
 	draw_rect(Rect2(0, 400, 960, 140), pal.grass_a)
 	draw_primitive(PackedVector2Array([Vector2(430, 400), Vector2(530, 400), Vector2(760, 540), Vector2(200, 540)]), PackedColorArray([pal.road_a, pal.road_a, pal.road_a, pal.road_a]), PackedVector2Array())
 	var cn := GameData.country()
-	_t(Vector2(0, 62), cn.title, 54, Color(0, 0, 0, 0.25), HORIZONTAL_ALIGNMENT_CENTER, 964)
-	_t(Vector2(0, 60), cn.title, 54, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, 960)
+	var ts := 54 # a long title shrinks to stay clear of the postcards button top right
+	while ts > 34 and font.get_string_size(cn.title, HORIZONTAL_ALIGNMENT_LEFT, -1, ts).x > TITLE_MAX_W:
+		ts -= 2
+	_t(Vector2(0, 62), cn.title, ts, Color(0, 0, 0, 0.25), HORIZONTAL_ALIGNMENT_CENTER, 964)
+	_t(Vector2(0, 60), cn.title, ts, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, 960)
 	_t(Vector2(0, 92), cn.subtitle, 24, Color("1d2b38"), HORIZONTAL_ALIGNMENT_CENTER, 960)
 	if not _on_map():
 		_t(Vector2(0, 140), _step_title(), 28, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, 960)
@@ -519,6 +522,7 @@ func _countries() -> int:
 ## The tabs share the map's width (five countries: 84 px each).
 ## Country tab i: one row up to TABS_ROW countries, two shorter rows beyond that.
 const TABS_ROW := 5
+const TITLE_MAX_W := 600.0 ## the menu title, centred, never reaches the postcards button
 func _tab_rect(i: int) -> Rect2:
 	var n := _countries()
 	var rows := 1 if n <= TABS_ROW else 2
