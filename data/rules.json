@@ -341,5 +341,6 @@
 		"radio_telescope": [36, 38],
 		"viaduct": [60, 20]
 	},
-	"police": {"escape_chance": 0.2, "escape_kmh": 180, "escape_swerves": [3, 5]}
+	"police": {"escape_chance": 0.2, "escape_kmh": 180, "escape_swerves": [3, 5]},
+	"postcards": {"stamps": [0.05, 0.15, 0.25, 0.35]}
 }
