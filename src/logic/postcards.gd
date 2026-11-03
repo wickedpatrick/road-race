@@ -50,6 +50,15 @@ static func migrate(cards: Dictionary, visited: Array, map_ids: Array) -> void:
 		if map_ids.has(id) and not cards.has(id):
 			cards[id] = {"stamps": 1}
 
+## A country's album in numbers: postcards earned of all, stamps of the most there are.
+static func summary(code: String, cards: Dictionary) -> Dictionary:
+	var ids := cities(code)
+	var earned := ids.filter(func(id): return cards.has(id))
+	var stamps := 0
+	for id in earned:
+		stamps += int(cards[id].stamps)
+	return {"earned": earned.size(), "all": ids.size(), "stamps": stamps, "max": ids.size() * MAX_STAMPS}
+
 static func total(cards: Dictionary) -> int:
 	var n := 0
 	for id in cards:

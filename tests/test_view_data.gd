@@ -12,6 +12,8 @@ func run(t) -> void:
 	_test_scrolling_map(t)
 	_test_batch_clip(t)
 	_test_postcards(t)
+	t.check(Postcards.summary("is", {}) == {"earned": 0, "all": 13, "stamps": 0, "max": 65}, "album of a country never played: nothing earned yet")
+	t.check(Postcards.summary("is", {"reykjavik": {"stamps": 3}}) == {"earned": 1, "all": 13, "stamps": 3, "max": 65}, "album counts postcards and stamps")
 	for kind in ["cow", "sheep", "horse"]:
 		var drawn := {}
 		for season in ["summer", "winter"]:
