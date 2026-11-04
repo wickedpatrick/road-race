@@ -16,6 +16,19 @@ VIEWS = [
 PLANNED = ["pl", "cz", "is", "gb", "de", "sk", "lt", "us", "ca", "fr", "it", "es", "pt", "nl", "be", "lu", "at", "ch",
 	"dk", "se", "no", "fi", "ie", "ee", "lv", "hu", "si", "hr", "ba", "rs", "me", "xk", "al", "mk", "bg", "ro", "md",
 	"gr", "cy", "mt", "ua", "ru", "by", "tr"]
+# the planned countries' names in Czech and Icelandic (Natural Earth has Polish, English and German)
+CS_IS = {"us": ("USA", "Bandaríkin"), "ca": ("Kanada", "Kanada"), "fr": ("Francie", "Frakkland"), "it": ("Itálie", "Ítalía"),
+	"es": ("Španělsko", "Spánn"), "pt": ("Portugalsko", "Portúgal"), "nl": ("Nizozemsko", "Holland"), "be": ("Belgie", "Belgía"),
+	"lu": ("Lucembursko", "Lúxemborg"), "at": ("Rakousko", "Austurríki"), "ch": ("Švýcarsko", "Sviss"), "dk": ("Dánsko", "Danmörk"),
+	"se": ("Švédsko", "Svíþjóð"), "no": ("Norsko", "Noregur"), "fi": ("Finsko", "Finnland"), "ie": ("Irsko", "Írland"),
+	"ee": ("Estonsko", "Eistland"), "lv": ("Lotyšsko", "Lettland"), "hu": ("Maďarsko", "Ungverjaland"), "si": ("Slovinsko", "Slóvenía"),
+	"hr": ("Chorvatsko", "Króatía"), "ba": ("Bosna a Hercegovina", "Bosnía og Hersegóvína"), "rs": ("Srbsko", "Serbía"),
+	"me": ("Černá Hora", "Svartfjallaland"), "xk": ("Kosovo", "Kósovó"), "al": ("Albánie", "Albanía"),
+	"mk": ("Severní Makedonie", "Norður-Makedónía"), "bg": ("Bulharsko", "Búlgaría"), "ro": ("Rumunsko", "Rúmenía"),
+	"md": ("Moldavsko", "Moldóva"), "gr": ("Řecko", "Grikkland"), "cy": ("Kypr", "Kýpur"), "mt": ("Malta", "Malta"),
+	"ua": ("Ukrajina", "Úkraína"), "ru": ("Rusko", "Rússland"), "by": ("Bělorusko", "Hvíta-Rússland"), "tr": ("Turecko", "Tyrkland"),
+	"pl": ("Polsko", "Pólland"), "cz": ("Česko", "Tékkland"), "is": ("Island", "Ísland"), "gb": ("Velká Británie", "Bretland"),
+	"de": ("Německo", "Þýskaland"), "sk": ("Slovensko", "Slóvakía"), "lt": ("Litva", "Litháen")}
 TOL = 0.6 # px, simplification (less where it would make a ring cross itself)
 LABEL_NUDGE = {"cz": (-6, 3), "sk": (5, 2), "lt": (0, -2)} # px, names that would touch their neighbours' names
 MIN_AREA = 4.0 # px², smaller islands are dropped (1 px² for the planned countries: Malta)
@@ -123,7 +136,9 @@ def main(src):
 				if ring is None or len(ring) < 3 or area(ring) < (1.0 if code in PLANNED else MIN_AREA): continue
 				flat = [v for p in ring for v in p]
 				if code in PLANNED:
-					c = out["countries"].setdefault(code, {"polys": []})
+					pr = f["properties"]
+					c = out["countries"].setdefault(code, {"name": {"pl": pr["NAME_PL"], "en": {"us": "United States"}.get(code, pr["NAME_EN"]),
+						"cs": CS_IS[code][0], "is": CS_IS[code][1], "de": pr["NAME_DE"]}, "polys": []})
 					c["polys"].append(flat)
 				else:
 					out["land"].append(flat)

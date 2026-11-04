@@ -517,7 +517,7 @@ func _weather_line(kind: String, x: float, y: float, w: float) -> void:
 func _countries() -> int:
 	return GameData.countries().size()
 
-const COUNTRY_BTN := Rect2(28, 108, 210, 30) ## over the map: opens the map of Europe to pick the country
+const COUNTRY_BTN := Rect2(26, 108, 232, 50) ## over the map: "Change country" with a tiny world map, opens the picker
 const TITLE_MAX_W := 600.0 ## the menu title, centred, never reaches the postcards button
 
 ## The map and the country button over it, on the clipped layer.
@@ -528,26 +528,32 @@ func _draw_map_layer() -> void:
 	map.draw(_map_layer, font, legs if dest else [], start_city, dest_city if dest else "", hover, t)
 	_draw_country_tabs(_map_layer)
 
-## The country button above the map (only when there is more than one country).
+## The country button above the map (only when there is more than one country): a tiny world map with the
+## country in gold, its name and "Change country", the border glowing a little so it gets noticed.
 func _draw_country_tabs(cv: CanvasItem) -> void:
 	if _countries() < 2:
 		return
 	var sb := StyleBoxFlat.new()
-	sb.set_corner_radius_all(8)
-	sb.bg_color = Color(0.06, 0.09, 0.13, 0.8)
-	sb.border_color = Color("ffd24a")
+	sb.set_corner_radius_all(10)
+	sb.bg_color = Color(0.06, 0.09, 0.13, 0.88)
+	sb.border_color = Color("ffd24a", 0.65 + 0.35 * sin(t * 3.0))
 	sb.set_border_width_all(2)
 	cv.draw_style_box(sb, COUNTRY_BTN)
-	var text := Lang.t("country_btn") % GameData.country().name
-	var fs := 16
-	while fs > 11 and font.get_string_size(text, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x > COUNTRY_BTN.size.x - 34:
+	var thumb := Rect2(COUNTRY_BTN.position + Vector2(6, 6), Vector2(62, COUNTRY_BTN.size.y - 12))
+	WorldThumb.draw(cv, thumb, Session.country, GameData.country_codes())
+	cv.draw_rect(thumb, Color(1, 1, 1, 0.5), false, 1.0)
+	var x := thumb.end.x + 10
+	var w := COUNTRY_BTN.end.x - x - 8
+	var name: String = GameData.country().name
+	var fs := 18
+	while fs > 12 and font.get_string_size(name, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x > w:
 		fs -= 1
-	var g := COUNTRY_BTN.position + Vector2(16, COUNTRY_BTN.size.y * 0.5) # a little globe
-	cv.draw_circle(g, 8.0, Color("2c5d86"))
-	cv.draw_circle(g + Vector2(-2, -1), 4.0, Color("8fd16a"))
-	cv.draw_circle(g + Vector2(3, 3), 2.5, Color("8fd16a"))
-	cv.draw_arc(g, 8.0, 0.0, TAU, 20, Color.WHITE, 1.2)
-	cv.draw_string(font, Vector2(COUNTRY_BTN.position.x + 28, COUNTRY_BTN.get_center().y + fs * 0.36), text, HORIZONTAL_ALIGNMENT_LEFT, COUNTRY_BTN.size.x - 32, fs, Color.WHITE)
+	cv.draw_string(font, Vector2(x, COUNTRY_BTN.position.y + 22), name, HORIZONTAL_ALIGNMENT_LEFT, w, fs, Color("ffd24a"))
+	var cta := Lang.t("change_country") + " ›"
+	var cs := 15
+	while cs > 11 and font.get_string_size(cta, HORIZONTAL_ALIGNMENT_LEFT, -1, cs).x > w:
+		cs -= 1
+	cv.draw_string(font, Vector2(x, COUNTRY_BTN.position.y + 42), cta, HORIZONTAL_ALIGNMENT_LEFT, w, cs, Color.WHITE)
 
 ## The map of Europe (src/scenes/countries.gd); it switches the country and comes back to the map.
 func _open_countries() -> void:

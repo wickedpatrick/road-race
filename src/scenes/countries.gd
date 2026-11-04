@@ -1,7 +1,8 @@
 extends Node2D
 ## Picking the country to play on a map of Europe (with a piece of Asia) and, small across the sea on the left,
 ## North America (data/world.json, made by tools/make_world.py). Countries in the game are green and named; the
-## ones planned but not in the game yet are grey with their borders; any other land has no borders at all.
+## ones planned but not in the game yet are grey, striped and marked "coming soon" (named under the cursor); any
+## other land has no borders at all. A legend in the corner tells the two apart.
 ## Opened from the map in the menu (the country button, C); Esc goes back without a change.
 const SEA := Color("2c5d86")
 const LAND := Color("c4b893") ## land of countries not in the plan, without borders
@@ -10,12 +11,17 @@ const PLANNED_EDGE := Color("7d858c")
 const PLAYABLE := Color("8fd16a")
 const PLAYABLE_EDGE := Color("2f6b2a")
 const CURRENT := Color("ffd24a")
+const STRIPE := Color("969ca1")
+const STRIPE_GAP := 7.0 ## px between the "coming soon" stripes
+const LEGEND := Rect2(16, 404, 214, 70)
 const BACK_BTN := Rect2(24, 490, 148, 44)
 var font: Font
 var world: Dictionary
 var polys := {} ## code -> [PackedVector2Array, ...]
 var land: Array = [] ## PackedVector2Array
 var hover := "" ## the playable country under the mouse or picked with the arrows
+var hover_soon := "" ## a country not in the game yet under the mouse (or last tapped)
+var stripes := PackedVector2Array() ## segment pairs: diagonal stripes over the countries coming soon
 var soon := 0.0 ## seconds left of the "not in the game yet" note
 var t := 0.0
 
@@ -26,6 +32,25 @@ func _ready() -> void:
 		polys[code] = world.countries[code].polys.map(func(f): return _pts(f))
 	land = world.land.map(func(f): return _pts(f))
 	hover = Session.country
+	_make_stripes()
+
+## Diagonal stripes cut to the shapes of the countries not in the game yet (worked out once: the map stands still).
+func _make_stripes() -> void:
+	var play := playable()
+	for code in polys:
+		if play.has(code): continue
+		for pts in polys[code]:
+			var box := Rect2(pts[0], Vector2.ZERO)
+			for v in pts: box = box.expand(v)
+			var c0 := floorf((box.position.x + box.position.y) / STRIPE_GAP) * STRIPE_GAP
+			var c := c0
+			while c < box.end.x + box.end.y: # the line x + y = c, from the box's left edge to its right edge
+				var line := PackedVector2Array([Vector2(box.position.x, c - box.position.x), Vector2(box.end.x, c - box.end.x)])
+				for seg in Geometry2D.intersect_polyline_with_polygon(line, pts):
+					if seg.size() >= 2:
+						stripes.append(seg[0])
+						stripes.append(seg[seg.size() - 1])
+				c += STRIPE_GAP
 
 static func _pts(flat: Array) -> PackedVector2Array:
 	var out := PackedVector2Array()
@@ -65,6 +90,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		var c := country_at(event.position)
 		if playable().has(c): hover = c
+		hover_soon = c if c != "" and not playable().has(c) else ""
 		return
 	var p = Ui.tap(event)
 	if p != null:
@@ -76,7 +102,8 @@ func _unhandled_input(event: InputEvent) -> void:
 			_pick(c)
 		elif c != "":
 			Sfx.play("blip", -14.0)
-			soon = 1.6
+			hover_soon = c
+			soon = 2.0
 		return
 	if not (event is InputEventKey and event.pressed and not event.echo):
 		return
@@ -112,6 +139,29 @@ func _pick(code: String) -> void:
 	Session.menu_at_map = true
 	get_tree().change_scene_to_file("res://src/scenes/menu.tscn")
 
+## A planned country's name in the player's language (data/world.json).
+func _name(code: String) -> String:
+	return GameData.localize(world.countries[code].name)
+
+## Which colour means what: in the game, coming soon.
+func _legend() -> void:
+	draw_rect(LEGEND, Color(0.06, 0.09, 0.13, 0.8))
+	draw_rect(LEGEND, Color(1, 1, 1, 0.5), false, 1.0)
+	var r1 := Rect2(LEGEND.position + Vector2(12, 12), Vector2(30, 18))
+	draw_rect(r1, PLAYABLE)
+	draw_rect(r1, PLAYABLE_EDGE, false, 1.5)
+	draw_string(font, Vector2(r1.end.x + 10, r1.end.y - 3), Lang.t("legend_playable"), HORIZONTAL_ALIGNMENT_LEFT, -1, 16, Color.WHITE)
+	var r2 := Rect2(LEGEND.position + Vector2(12, 40), Vector2(30, 18))
+	draw_rect(r2, PLANNED)
+	for k in range(-2, 7):
+		var a := r2.position + Vector2(k * 7.0, r2.size.y)
+		var b := a + Vector2(r2.size.y, -r2.size.y)
+		var seg := Geometry2D.intersect_polyline_with_polygon(PackedVector2Array([a, b]), PackedVector2Array([r2.position, Vector2(r2.end.x, r2.position.y), r2.end, Vector2(r2.position.x, r2.end.y)]))
+		for sg in seg:
+			draw_line(sg[0], sg[sg.size() - 1], STRIPE, 1.0)
+	draw_rect(r2, PLANNED_EDGE, false, 1.0)
+	draw_string(font, Vector2(r2.end.x + 10, r2.end.y - 3), Lang.t("legend_soon"), HORIZONTAL_ALIGNMENT_LEFT, -1, 16, Color.WHITE)
+
 func _back() -> void:
 	Sfx.play("blip", -8.0)
 	Session.menu_at_map = true
@@ -126,8 +176,11 @@ func _draw() -> void:
 		var on: bool = play.has(code)
 		var fill := PLAYABLE if on else PLANNED
 		if code == hover: fill = fill.lightened(0.25)
+		elif code == hover_soon: fill = fill.lightened(0.15)
 		for pts in polys[code]:
 			draw_colored_polygon(pts, fill)
+	if not stripes.is_empty():
+		draw_multiline(stripes, STRIPE, 1.0)
 	for code in polys: # borders over every fill, so neighbours do not hide them
 		var on: bool = play.has(code)
 		for pts in polys[code]:
@@ -150,10 +203,22 @@ func _draw() -> void:
 		var pos := p + Vector2(-w * 0.5, size * 0.35)
 		draw_string_outline(font, pos, names[code], HORIZONTAL_ALIGNMENT_LEFT, -1, size, 4, Color(0, 0, 0, 0.6))
 		draw_string(font, pos, names[code], HORIZONTAL_ALIGNMENT_LEFT, -1, size, Color.WHITE)
+	if hover_soon != "": # "France · coming soon" by the country under the cursor
+		var text := "%s · %s" % [_name(hover_soon), Lang.t("soon_tag")]
+		var w := font.get_string_size(text, HORIZONTAL_ALIGNMENT_LEFT, -1, 15).x
+		var p := label_pos(hover_soon) + Vector2(-w * 0.5, 5)
+		p.x = clampf(p.x, 8.0, 952.0 - w)
+		var box := Rect2(p + Vector2(-8, -17), Vector2(w + 16, 24))
+		draw_rect(box, Color(0.1, 0.12, 0.15, 0.85))
+		draw_rect(box, CURRENT, false, 1.5)
+		draw_string(font, p, text, HORIZONTAL_ALIGNMENT_LEFT, -1, 15, Color.WHITE)
+	_legend()
 	# header and footer
 	draw_rect(Rect2(0, 0, 960, 58), Color(0, 0, 0, 0.45))
 	draw_string(font, Vector2(24, 42), Lang.t("pick_country"), HORIZONTAL_ALIGNMENT_LEFT, -1, 32, Color.WHITE)
-	if names.has(hover):
+	if hover_soon != "":
+		draw_string(font, Vector2(0, 42), "%s · %s" % [_name(hover_soon), Lang.t("soon_tag")], HORIZONTAL_ALIGNMENT_RIGHT, 936, 24, Color("c8d0d6"))
+	elif names.has(hover):
 		draw_string(font, Vector2(0, 42), names[hover], HORIZONTAL_ALIGNMENT_RIGHT, 936, 28, CURRENT)
 	draw_rect(Rect2(0, 486, 960, 54), Color(0, 0, 0, 0.5))
 	Ui.button(self, font, BACK_BTN, Lang.t("back"), false, 20)
