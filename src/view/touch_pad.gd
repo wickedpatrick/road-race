@@ -1,12 +1,13 @@
 class_name TouchPad
 extends Control
-## On-screen driving buttons for touch screens: steering under the left thumb, gas and brake under the right.
+## On-screen driving buttons for touch screens: steering under the left thumb, gas and under it the brake under the
+## right one (the speed shows just above the gas, see Hud).
 ## Several fingers at once (steer and gas together); sliding a finger from one button to another works too.
 const BUTTONS := {
 	"left": Rect2(16, 400, 108, 124),
 	"right": Rect2(134, 400, 108, 124),
-	"brake": Rect2(718, 440, 104, 84),
-	"accel": Rect2(834, 380, 110, 144),
+	"accel": Rect2(834, 300, 110, 132),
+	"brake": Rect2(834, 444, 110, 82),
 }
 var _fingers := {} ## touch index -> button name
 var enabled := false ## shown and active (touch screens)

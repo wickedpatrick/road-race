@@ -17,7 +17,8 @@ const STATION_NOTICE := 225.0 ## game metres before a station its notice appears
 var _fuel_pos := Vector2(16, 446)
 var _limit_pos := Vector2(312, 486)
 var _mini_rect := Rect2(780, 376, 170, 154)
-var _board_y := 92.0
+var _board_pos := Vector2(784, 92) ## the copy of the direction board (on touch screens on the left, under the limit)
+var _speed_pos := Vector2(794, 14) ## on touch screens just above the gas button, where the eye already is
 var _t := 0.0
 var _landmarks: Array = []
 
@@ -34,7 +35,8 @@ func bind(p_race: Race) -> void:
 		_fuel_pos = Vector2(16, 88)
 		_limit_pos = Vector2(52, 208)
 		_mini_rect = Rect2(794, 88, 150, 132)
-		_board_y = 228.0
+		_board_pos = Vector2(16, 250)
+		_speed_pos = Vector2(794, 228)
 	_mini = CountryMap.new(_mini_rect.grow_individual(-10, -8, -10, -8))
 	_legs = Route.find(race.stage.from, race.stage.to)
 	# town names, facts and regions shown in the HUD, pre-rendered during the countdown (see Scenery.warm_text)
@@ -94,10 +96,11 @@ func _draw() -> void:
 	_text(Vector2(82, 36), Lang.t("hud_time"), 15, Color("9fb3c8"))
 	_text(Vector2(82, 70), format_time(race.time_left), 38, Color("ff5a4d") if blink else (Color("ff8a7a") if low_time else Color.WHITE))
 	# speed + gear
-	draw_style_box(_panel, Rect2(794, 14, 150, 66))
-	_text(Vector2(806, 36), Units.speed_unit().to_upper(), 15, Color("9fb3c8"))
-	_text(Vector2(806, 70), str(Units.speed(race.speed * 3.6)), 38, Color.WHITE)
-	_text(Vector2(840, 70), "D%d" % race.gear, 26, Color("ffd24a"), HORIZONTAL_ALIGNMENT_RIGHT, 92)
+	var sp := _speed_pos
+	draw_style_box(_panel, Rect2(sp, Vector2(150, 66)))
+	_text(sp + Vector2(12, 22), Units.speed_unit().to_upper(), 15, Color("9fb3c8"))
+	_text(sp + Vector2(12, 56), str(Units.speed(race.speed * 3.6)), 38, Color.WHITE)
+	_text(sp + Vector2(46, 56), "D%d" % race.gear, 26, Color("ffd24a"), HORIZONTAL_ALIGNMENT_RIGHT, 92)
 	# progress bar
 	var bx := 200.0
 	var bw := 560.0
@@ -208,7 +211,7 @@ func _board_echo() -> void:
 	for bd in race.stage.boards:
 		if race.z > bd.z - 160.0 and race.z < bd.z + 220.0:
 			var lines: Array = bd.lines
-			var r := Rect2(784, _board_y, 160, 34 + 22 * lines.size())
+			var r := Rect2(_board_pos, Vector2(160, 34 + 22 * lines.size()))
 			draw_rect(r, Scenery.sign_color("board_motorway" if bd.blue else "board"))
 			var ink := Color.WHITE if bd.blue else Scenery.sign_color("board_text")
 			draw_rect(r.grow(-3), ink, false, 2.0)
