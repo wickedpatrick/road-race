@@ -468,5 +468,21 @@
 		"cs": "      P: pohlednice",
 		"is": "      P: póstkort",
 		"de": "      P: Postkarten"
-	}
+	},
+	"pick_country": {"pl": "Wybierz kraj", "en": "Pick a country", "cs": "Vyber zemi", "is": "Veldu land", "de": "Wähle ein Land"},
+	"pick_country_hint": {
+		"pl": "Strzałki: kraj   Enter: graj   Esc: wróć",
+		"en": "Arrows: country   Enter: play   Esc: back",
+		"cs": "Šipky: země   Enter: hrát   Esc: zpět",
+		"is": "Örvar: land   Enter: spila   Esc: til baka",
+		"de": "Pfeile: Land   Enter: spielen   Esc: zurück"
+	},
+	"country_soon": {
+		"pl": "Ten kraj będzie w grze wkrótce!",
+		"en": "This country is coming soon!",
+		"cs": "Tahle země bude ve hře brzy!",
+		"is": "Þetta land kemur bráðum!",
+		"de": "Dieses Land kommt bald!"
+	},
+	"country_btn": {"pl": "Kraj: %s", "en": "Country: %s", "cs": "Země: %s", "is": "Land: %s", "de": "Land: %s"}
 }

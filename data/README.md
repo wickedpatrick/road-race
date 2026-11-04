@@ -37,6 +37,13 @@ Numbers: distances along a road in real kilometres from city `a`; populations in
   left at the finish for the 2nd, 3rd, 4th and 5th stamp (arriving at all gives the 1st); the best result is kept.
   `top_stamp_car`: the 5th stamp only with this car (its place in `cars`, from 1) or a later one.
 
+## `world.json`
+
+The country picker's map, made by `tools/make_world.py` from Natural Earth (do not edit by hand): Europe with a
+piece of Asia, North America small on the left, in screen pixels. `countries`: code -> `{polys, label}` for every
+country in the plan (`planned`, grey with borders until it is in `countries/index.json`); `land`: other land, drawn
+without borders.
+
 ## `countries/index.json`
 
 `countries`: `[{code, name, neighbours: [codes], favorite_neighbour}]`. Each `code` has a folder `countries/<code>/`.
@@ -71,7 +78,8 @@ Numbers: distances along a road in real kilometres from city `a`; populations in
 - `map`: the lat/lon box of the country map: `lon0`, `lon1`, `lat0`, `lat1`, and `lon_k` = cos(middle latitude),
   which keeps the country's shape. Optional `zoom` (> 1) draws the menu map that many times larger than its panel, and it scrolls
   (follows the chosen city, drag or mouse wheel): for tall or crowded countries such as Great Britain.
-- `outline`: the border as `[lon, lat]` points; `outline_lines`: extra lines drawn with it (e.g. the Hel peninsula).
+- `outline`: the border as `[lon, lat]` points; `outline_lines`: extra lines drawn with it (e.g. the Hel peninsula);
+  optional `islands`: more land as `[lon, lat]` polygons (e.g. the Curonian Spit with Nida).
 
 ## `countries/<code>/cities.json`
 
@@ -90,6 +98,8 @@ List of roads between two neighbouring cities `a` and `b` (travelling `b` -> `a`
   as on Polish plates.
 - `towns`: `[[name, km], ...]` passed on the way, in order.
 - `zones`: `[[km where it ends, biome, region name], ...]`; the last one ends at `km`.
+- `via` (optional): `[[km, lon, lat], ...]` points the road bends through on the map (otherwise a straight line
+  between the cities), e.g. Lithuania's A1 bowing north to meet the A12 at Kryžkalnis.
 - `tunnels` (optional): `[{from_km, to_km, name, fact, city}]`; `city: true` for a cut-and-cover tunnel under a
   town district (a grassy embankment instead of a mountain at the entrance).
 

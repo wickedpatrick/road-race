@@ -47,8 +47,8 @@
 		"exonym": {"pl": "Trenczyn"},
 		"label": "left"
 	},
-	"martin": {"name": "Martin", "lat": 49.07, "lon": 18.92, "pop": 52, "region": "Žilinský kraj"},
-	"poprad": {"name": "Poprad", "lat": 49.06, "lon": 20.3, "pop": 49, "region": "Prešovský kraj", "label": "above"},
+	"martin": {"name": "Martin", "lat": 49.07, "lon": 18.92, "pop": 52, "region": "Žilinský kraj", "label": "left"},
+	"poprad": {"name": "Poprad", "lat": 49.06, "lon": 20.3, "pop": 49, "region": "Prešovský kraj"},
 	"zvolen": {
 		"name": "Zvolen",
 		"lat": 48.58,

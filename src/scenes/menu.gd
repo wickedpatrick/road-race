@@ -132,7 +132,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			confirm_reset = false
 		return
 	if _on_map() and event.keycode == KEY_C and _countries() > 1:
-		_next_country()
+		_open_countries()
 		return
 	if event.keycode == KEY_P and (kind() == "car" or kind() == "dest"):
 		_open_album()
@@ -212,11 +212,9 @@ func _confirm() -> void:
 
 ## Clicks and taps on buttons and cards; true when handled.
 func _tap(p: Vector2) -> bool:
-	if _on_map() and not confirm_reset and _countries() > 1:
-		for i in _countries():
-			if _tab_rect(i).has_point(p):
-				_switch_country(GameData.countries()[i].code)
-				return true
+	if _on_map() and not confirm_reset and _countries() > 1 and COUNTRY_BTN.has_point(p):
+		_open_countries()
+		return true
 	if confirm_reset:
 		if YES_BTN.has_point(p):
 			_reset_progress()
@@ -519,19 +517,10 @@ func _weather_line(kind: String, x: float, y: float, w: float) -> void:
 func _countries() -> int:
 	return GameData.countries().size()
 
-## The tabs share the map's width (five countries: 84 px each).
-## Country tab i: one row up to TABS_ROW countries, two shorter rows beyond that.
-const TABS_ROW := 5
+const COUNTRY_BTN := Rect2(28, 108, 210, 30) ## over the map: opens the map of Europe to pick the country
 const TITLE_MAX_W := 600.0 ## the menu title, centred, never reaches the postcards button
-func _tab_rect(i: int) -> Rect2:
-	var n := _countries()
-	var rows := 1 if n <= TABS_ROW else 2
-	var per_row := ceili(float(n) / rows)
-	var w := minf(102.0, (MAP_RECT.size.x - 8.0) / per_row)
-	var h := 28.0 if rows == 1 else 24.0
-	return Rect2(28 + (i % per_row) * w, 108 + (i / per_row) * (h + 4.0), w - 6.0, h)
 
-## The map and the country tabs over it, on the clipped layer.
+## The map and the country button over it, on the clipped layer.
 func _draw_map_layer() -> void:
 	var dest := kind() == "dest"
 	map.visited = Session.visited
@@ -539,41 +528,32 @@ func _draw_map_layer() -> void:
 	map.draw(_map_layer, font, legs if dest else [], start_city, dest_city if dest else "", hover, t)
 	_draw_country_tabs(_map_layer)
 
-## Country switch above the map (only when there is more than one country).
+## The country button above the map (only when there is more than one country).
 func _draw_country_tabs(cv: CanvasItem) -> void:
 	if _countries() < 2:
 		return
-	var list := GameData.countries()
-	for i in list.size():
-		var r := _tab_rect(i)
-		var on: bool = list[i].code == Session.country
-		var sb := StyleBoxFlat.new()
-		sb.set_corner_radius_all(8)
-		sb.bg_color = Color("2e9e4f") if on else Color(0.06, 0.09, 0.13, 0.75)
-		sb.border_color = Color("ffd24a") if on else Color(1, 1, 1, 0.5)
-		sb.set_border_width_all(2)
-		cv.draw_style_box(sb, r)
-		var fs := 16 # long names ("Wielka Brytania") shrink to fit the tab
-		while fs > 10 and font.get_string_size(list[i].name, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x > r.size.x - 8:
-			fs -= 1
-		cv.draw_string(font, Vector2(r.position.x, r.position.y + r.size.y * 0.5 + 6), list[i].name, HORIZONTAL_ALIGNMENT_CENTER, r.size.x, fs, Color.WHITE)
+	var sb := StyleBoxFlat.new()
+	sb.set_corner_radius_all(8)
+	sb.bg_color = Color(0.06, 0.09, 0.13, 0.8)
+	sb.border_color = Color("ffd24a")
+	sb.set_border_width_all(2)
+	cv.draw_style_box(sb, COUNTRY_BTN)
+	var text := Lang.t("country_btn") % GameData.country().name
+	var fs := 16
+	while fs > 11 and font.get_string_size(text, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x > COUNTRY_BTN.size.x - 34:
+		fs -= 1
+	var g := COUNTRY_BTN.position + Vector2(16, COUNTRY_BTN.size.y * 0.5) # a little globe
+	cv.draw_circle(g, 8.0, Color("2c5d86"))
+	cv.draw_circle(g + Vector2(-2, -1), 4.0, Color("8fd16a"))
+	cv.draw_circle(g + Vector2(3, 3), 2.5, Color("8fd16a"))
+	cv.draw_arc(g, 8.0, 0.0, TAU, 20, Color.WHITE, 1.2)
+	cv.draw_string(font, Vector2(COUNTRY_BTN.position.x + 28, COUNTRY_BTN.get_center().y + fs * 0.36), text, HORIZONTAL_ALIGNMENT_LEFT, COUNTRY_BTN.size.x - 32, fs, Color.WHITE)
 
-## Plays another country: its map and the player's progress there (a new country starts by picking a home city).
-func _switch_country(code: String) -> void:
-	if code == Session.country:
-		return
+## The map of Europe (src/scenes/countries.gd); it switches the country and comes back to the map.
+func _open_countries() -> void:
 	Sfx.play("blip", -8.0)
-	Session.switch_country(code)
-	_new_map()
-	start_city = Session.from_city
-	dest_city = Session.to_city
-	_set_steps()
-	step = steps.find("dest") if Session.has_home() else 0
-	_enter_step()
-
-func _next_country() -> void:
-	var codes := GameData.country_codes()
-	_switch_country(codes[(codes.find(Session.country) + 1) % codes.size()])
+	_keep_picks()
+	get_tree().change_scene_to_file("res://src/scenes/countries.tscn")
 
 func _city_info(id: String, pos: Vector2, w: float) -> void:
 	var c := Geo.city(id)

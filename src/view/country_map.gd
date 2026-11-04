@@ -99,15 +99,50 @@ const LOCAL := Color("8f9a8f")
 ## A road that changes type part-way is drawn piece by piece.
 func draw_network(cv: CanvasItem, wide: float, thin: float) -> void:
 	for r in Geo.roads():
-		var a := city_pos(r.a)
-		var b := city_pos(r.b)
 		for part in Route.leg_roads({"road": r, "from": r.a, "to": r.b}):
-			var p0 := a.lerp(b, part[0] / float(r.km))
-			var p1 := a.lerp(b, part[1] / float(r.km))
+			var pts := road_path(r, part[0], part[1])
 			if Route.lanes_for(part[2]) == 3:
-				cv.draw_line(p0, p1, MOTORWAY, wide)
+				cv.draw_polyline(pts, MOTORWAY, wide)
 			else:
-				cv.draw_line(p0, p1, LOCAL, thin)
+				cv.draw_polyline(pts, LOCAL, thin)
+
+## Where a road is `k` real km from its city `a`: on the straight line between the cities, or through the map
+## points it bends through (roads.json "via": [[km, lon, lat], ...], e.g. the A1 bowing north past Tauragė).
+func road_xy(r: Dictionary, k: float) -> Vector2:
+	var prev_k := 0.0
+	var prev := city_pos(r.a)
+	for v in r.get("via", []) + [[float(r.km)]]:
+		var p := city_pos(r.b) if v.size() == 1 else project(v[2], v[1])
+		if k <= v[0]:
+			return prev.lerp(p, clampf((k - prev_k) / maxf(v[0] - prev_k, 0.001), 0.0, 1.0))
+		prev_k = v[0]
+		prev = p
+	return prev
+
+## The road's line from k0 to k1 km (from its city `a`), bends included.
+func road_path(r: Dictionary, k0: float, k1: float) -> PackedVector2Array:
+	var mid := PackedVector2Array()
+	for v in r.get("via", []):
+		if v[0] > minf(k0, k1) and v[0] < maxf(k0, k1):
+			mid.append(project(v[2], v[1]))
+	if k1 < k0: mid.reverse()
+	var pts := PackedVector2Array([road_xy(r, k0)])
+	pts.append_array(mid)
+	pts.append(road_xy(r, k1))
+	return pts
+
+func _poly(lonlat: Array) -> PackedVector2Array:
+	var out := PackedVector2Array()
+	for p in lonlat:
+		out.append(project(p[1], p[0]))
+	return out
+
+## A point of a trip's leg `k` km from where the leg starts.
+func leg_xy(leg: Dictionary, k: float) -> Vector2:
+	return road_xy(leg.road, k if leg.from == leg.road.a else leg.road.km - k)
+
+func leg_path(leg: Dictionary) -> PackedVector2Array:
+	return road_path(leg.road, 0.0, leg.road.km) if leg.from == leg.road.a else road_path(leg.road, leg.road.km, 0.0)
 
 const VISITED := Color("f2b81b")
 
@@ -130,6 +165,11 @@ func draw(cv: CanvasItem, font: Font, legs: Array, start: String, dest: String, 
 	cv.draw_colored_polygon(poly, Color("d7e8bd"))
 	poly.append(poly[0])
 	cv.draw_polyline(poly, Color("6f8f5a"), 2.0)
+	for isl in Geo.islands():
+		var ip := _poly(isl)
+		cv.draw_colored_polygon(ip, Color("d7e8bd"))
+		ip.append(ip[0])
+		cv.draw_polyline(ip, Color("6f8f5a"), 1.5)
 	for line in Geo.outline_lines():
 		var pts := PackedVector2Array()
 		for p in line:
@@ -138,11 +178,9 @@ func draw(cv: CanvasItem, font: Font, legs: Array, start: String, dest: String, 
 	draw_network(cv, 4.0, 1.6)
 	# chosen route with the towns along it
 	for leg in legs:
-		var a := city_pos(leg.from)
-		var b := city_pos(leg.to)
-		cv.draw_line(a, b, Color("e0a21a"), 5.0)
+		cv.draw_polyline(leg_path(leg), Color("e0a21a"), 5.0)
 		for tw in Route._leg_towns(leg):
-			cv.draw_circle(a.lerp(b, tw[1] / float(leg.road.km)), 2.0, Color("7a4d00"))
+			cv.draw_circle(leg_xy(leg, tw[1]), 2.0, Color("7a4d00"))
 	for id in Geo.cities():
 		var c := Geo.city(id)
 		var p := city_pos(id)
@@ -232,7 +270,7 @@ func route_point(legs: Array, km: float) -> Vector2:
 	for leg in legs:
 		var lk := float(leg.road.km)
 		if left <= lk:
-			return city_pos(leg.from).lerp(city_pos(leg.to), clampf(left / lk, 0.0, 1.0))
+			return leg_xy(leg, clampf(left, 0.0, lk))
 		left -= lk
 	return city_pos(legs[-1].to)
 
@@ -242,9 +280,11 @@ func draw_mini(cv: CanvasItem, font: Font, legs: Array, km: float, t: float) -> 
 	for p in Geo.outline():
 		poly.append(project(p[1], p[0]))
 	cv.draw_colored_polygon(poly, Color("d7e8bd", 0.9))
+	for isl in Geo.islands():
+		cv.draw_colored_polygon(_poly(isl), Color("d7e8bd", 0.9))
 	draw_network(cv, 2.0, 1.0)
 	for leg in legs:
-		cv.draw_line(city_pos(leg.from), city_pos(leg.to), Color("e0a21a"), 3.0)
+		cv.draw_polyline(leg_path(leg), Color("e0a21a"), 3.0)
 	for id in Geo.cities():
 		cv.draw_circle(city_pos(id), 1.6, Color("2d3e50"))
 	var a: String = legs[0].from

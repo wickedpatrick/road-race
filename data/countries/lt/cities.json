@@ -69,5 +69,5 @@
 		"region": "Alytaus",
 		"exonym": {"pl": "Druskieniki"}
 	},
-	"nida": {"name": "Nida", "lat": 55.3, "lon": 21, "pop": 2, "region": "Klaipėdos", "label": "left"}
+	"nida": {"name": "Nida", "lat": 55.3, "lon": 21, "pop": 2, "region": "Klaipėdos"}
 }

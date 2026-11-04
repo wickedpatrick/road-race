@@ -12,6 +12,7 @@ func run(t) -> void:
 		_check_country(t, code, rules)
 		_check_trips(t, code)
 	_check_gb(t)
+	_check_world(t)
 	GameData.current = "pl"
 
 ## Great Britain: motorways are M roads and the A roads built as motorways ("A1(M)"); Polish names on the map.
@@ -132,3 +133,18 @@ func _check_country(t, code: String, rules: Dictionary) -> void:
 	for town in c.facts:
 		if not names.has(town) or not c.facts[town] is String: facts_ok = false; print("  %s: fact for unknown town %s" % [code, town])
 	t.check(facts_ok, "%s: facts name known places" % code)
+
+## The country picker's map (data/world.json): every country in the game has its shape there, its name inside it,
+## and is one of the planned ones.
+func _check_world(t) -> void:
+	var w: Dictionary = GameData.load_json(GameData.DIR + "world.json")
+	var ok := true
+	for code in GameData.country_codes():
+		var c: Dictionary = w.countries.get(code, {})
+		var inside := false
+		for f in c.get("polys", []):
+			var pts := PackedVector2Array()
+			for i in range(0, f.size(), 2): pts.append(Vector2(f[i], f[i + 1]))
+			if Geometry2D.is_point_in_polygon(Vector2(c.label[0], c.label[1]), pts): inside = true
+		if not inside or not w.planned.has(code): ok = false; print("  world.json: %s missing or its name outside it" % code)
+	t.check(ok, "every country in the game is on the picker's map, named inside its borders")

@@ -33,6 +33,10 @@ static func outline() -> Array:
 static func outline_lines() -> Array:
 	return GameData.country().outline_lines
 
+## Land apart from the outline, as [lon, lat] polygons (e.g. the Curonian Spit with Nida).
+static func islands() -> Array:
+	return GameData.country().get("islands", [])
+
 ## Speed limits as posted on the signs (km/h, or mph where the country's `units` are imperial): express
 ## (motorway/expressway), road, city (big city), town_on_express, town.
 static func limits() -> Dictionary:
