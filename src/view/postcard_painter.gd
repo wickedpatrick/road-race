@@ -78,6 +78,56 @@ static func card(cv: CanvasItem, batch: DrawBatch, rect: Rect2, code: String, id
 	cv.draw_string(font, Vector2(rect.position.x, y), cap[0], HORIZONTAL_ALIGNMENT_CENTER, rect.size.x, fs, ink)
 	cv.draw_string(font, Vector2(rect.position.x + m, y + fs * 0.95), cap[1] if named else "? ? ?", HORIZONTAL_ALIGNMENT_CENTER, rect.size.x - 2.0 * m, int(fs * 0.72), ink.lerp(PAPER, 0.25))
 
+## Plain paper of a card (its shadow too): what is seen while a card is turning over.
+static func paper(cv: CanvasItem, rect: Rect2) -> void:
+	var sb := StyleBoxFlat.new()
+	sb.bg_color = PAPER
+	sb.set_corner_radius_all(int(rect.size.y * 0.03))
+	sb.shadow_color = Color(0, 0, 0, 0.35)
+	sb.shadow_size = int(maxf(2.0, rect.size.y * 0.04))
+	sb.shadow_offset = Vector2(0, rect.size.y * 0.015)
+	cv.draw_style_box(sb, rect)
+
+## The back of a collected card, as on a real postcard: on the left a few words about each landmark (its name and
+## description, the type shrinking until it all fits), on the right a postage stamp, the postmark and address lines.
+static func back(cv: CanvasItem, rect: Rect2, code: String, id: String, year: int) -> void:
+	paper(cv, rect)
+	var font := ThemeDB.fallback_font
+	var m := rect.size.y * 0.07
+	var split := rect.position.x + rect.size.x * 0.6
+	cv.draw_line(Vector2(split, rect.position.y + m), Vector2(split, rect.end.y - m), Color(INK, 0.35), 1.0)
+	# the words
+	var tw := split - rect.position.x - m * 1.6
+	var lms := Postcards.landmarks(code, id)
+	var fs := int(rect.size.y * 0.075)
+	while fs > 7:
+		var h := 0.0
+		for lm in lms:
+			h += fs * 1.25 + font.get_multiline_string_size(lm.desc, HORIZONTAL_ALIGNMENT_LEFT, tw, fs).y + fs * 0.4
+		if h <= rect.size.y - m * 2.0: break
+		fs -= 1
+	var y := rect.position.y + m + fs
+	for lm in lms:
+		cv.draw_string(font, Vector2(rect.position.x + m, y), lm.name, HORIZONTAL_ALIGNMENT_LEFT, tw, fs + 1, STAMP)
+		y += fs * 0.35
+		cv.draw_multiline_string(font, Vector2(rect.position.x + m, y + fs), lm.desc, HORIZONTAL_ALIGNMENT_LEFT, tw, fs, -1, INK)
+		y += font.get_multiline_string_size(lm.desc, HORIZONTAL_ALIGNMENT_LEFT, tw, fs).y + fs * 1.3
+	# the stamp in the corner: a small framed picture with a toothed edge
+	var sw := rect.size.x * 0.17
+	var st := Rect2(Vector2(rect.end.x - m - sw, rect.position.y + m), Vector2(sw, sw * 1.2))
+	cv.draw_rect(st.grow(1.5), Color.WHITE)
+	for k in range(0, int(st.size.x / 4.0) + 1): # the teeth along the top and bottom
+		cv.draw_circle(Vector2(st.position.x + k * 4.0, st.position.y - 1.5), 1.1, PAPER)
+		cv.draw_circle(Vector2(st.position.x + k * 4.0, st.end.y + 1.5), 1.1, PAPER)
+	cv.draw_rect(st, Color("6d9bc3"))
+	cv.draw_rect(Rect2(st.position.x, st.position.y + st.size.y * 0.62, st.size.x, st.size.y * 0.38), Color("5f9e4a"))
+	cv.draw_circle(st.position + st.size * Vector2(0.7, 0.3), st.size.x * 0.14, Color("ffe27a"))
+	postmark(cv, Vector2(st.position.x - sw * 0.25, st.end.y - sw * 0.1), sw * 0.55, caption(code, id)[0], year, 0.8)
+	# the address lines
+	for k in 3:
+		var ly := rect.position.y + rect.size.y * (0.62 + k * 0.12)
+		cv.draw_line(Vector2(split + m * 0.8, ly), Vector2(rect.end.x - m, ly), Color(INK, 0.3), 1.0)
+
 ## [city (or town), landmarks' names joined] in the player's language.
 static func caption(code: String, id: String) -> PackedStringArray:
 	var c: Dictionary = GameData.country(code).cities.get(id, {"name": id})

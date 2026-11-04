@@ -18,5 +18,7 @@ for s in menu game results album countries; do
 done
 # the menu keeps the chosen car and destination while the album is open
 if perl -e 'alarm 30; exec @ARGV' $G --headless --path . res://tests/menu_album_check.tscn 2>&1 | grep -q "^PASS"; then echo "menu ok: album keeps the picks"; else echo "FAIL: menu loses the picks around the album"; code=1; fi
+# the album's routes start folded and unfold on a click; collected cards turn over
+if perl -e 'alarm 30; exec @ARGV' $G --headless --path . res://tests/album_fold_check.tscn 2>&1 | grep -q "^PASS"; then echo "album ok: routes fold, cards turn"; else echo "FAIL: album folding or turning cards"; code=1; fi
 echo "exit=$code"
 exit $code

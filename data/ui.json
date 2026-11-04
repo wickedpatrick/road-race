@@ -456,11 +456,11 @@
 		"de": "Stempel: %d / %d"
 	},
 	"album_hint": {
-		"pl": "Strzałki: przewijanie i kraj      Esc: wróć",
-		"en": "Arrows: scroll and country      Esc: back",
-		"cs": "Šipky: posun a země      Esc: zpět",
-		"is": "Örvar: fletta og land      Esc: til baka",
-		"de": "Pfeile: scrollen und Land      Esc: zurück"
+		"pl": "Strzałki: przewijanie i kraj   Klik: odwróć pocztówkę   Esc: wróć",
+		"en": "Arrows: scroll and country   Click: turn a postcard   Esc: back",
+		"cs": "Šipky: posun a země   Klik: otočit pohlednici   Esc: zpět",
+		"is": "Örvar: fletta og land   Smella: snúa korti   Esc: til baka",
+		"de": "Pfeile: scrollen und Land   Klick: Karte umdrehen   Esc: zurück"
 	},
 	"hint_album": {
 		"pl": "      P: pocztówki",
