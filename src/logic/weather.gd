@@ -15,6 +15,8 @@ const GRIP := {
 ## steering on a slippery road: the car's sideways movement follows the steering with "inertia" (seconds, the time
 ## constant): it turns in late and, let go, keeps turning a moment; held, it turns as hard as on a dry road (so a
 ## bend is held as well, only the grip limits it). Rain gets its own values once snow is tuned.
+## red desert sand (the "desert" landscape's ground patches) by season; SeasonPalette has no such ground
+const RED_SAND := {"summer": Color("b9704a"), "autumn": Color("a86a4a"), "winter": Color("d8cdc4")}
 const HANDLING := {
 	"snow": {"inertia": 0.4},
 }
@@ -69,6 +71,7 @@ static func season(kind: String) -> String:
 ## "palette": darker British grass), and this weather's sky (and wet road, rain).
 static func palette(kind: String) -> Dictionary:
 	var pal := SeasonPalette.by_name(season(kind)).duplicate()
+	pal.redsand = RED_SAND[season(kind)]
 	pal.merge(_colors(GameData.country().get("palette", {}).get(season(kind), {})), true)
 	pal.merge(SKY.get(kind, {}), true)
 	return pal

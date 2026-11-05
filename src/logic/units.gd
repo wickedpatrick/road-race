@@ -4,6 +4,7 @@ extends RefCounted
 ## miles, mph and mpg in Britain, kilometres elsewhere. The game itself counts in km and km/h.
 const KM_PER_MILE := 1.609344
 const L100_MPG := 282.481 ## litres per 100 km -> miles per (imperial) gallon
+const L100_MPG_US := 235.215 ## the same for the smaller US gallon (a country with "gallon": "us")
 static func imperial() -> bool:
 	return Geo.miles()
 
@@ -31,5 +32,6 @@ static func dist_text(km: float, round_up := false) -> String:
 ## Fuel use: "6,4 l/100 km" / "44 mpg"
 static func consumption_text(l100: float) -> String:
 	if imperial():
-		return "%d mpg" % roundi(L100_MPG / maxf(l100, 0.1))
+		var k := L100_MPG_US if GameData.country().get("gallon", "") == "us" else L100_MPG
+		return "%d mpg" % roundi(k / maxf(l100, 0.1))
 	return Lang.decimal("%.1f l/100 km" % l100)

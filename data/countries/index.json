@@ -53,6 +53,12 @@
 			"name": {"pl": "Austria", "en": "Austria", "cs": "Rakousko", "is": "Austurríki", "de": "Österreich"},
 			"neighbours": ["de", "cz", "sk", "hu", "si", "it", "ch", "li"],
 			"favorite_neighbour": "de"
+		},
+		{
+			"code": "us",
+			"name": {"pl": "Stany Zjednoczone", "en": "United States", "cs": "Spojené státy", "is": "Bandaríkin", "de": "Vereinigte Staaten"},
+			"neighbours": ["ca"],
+			"favorite_neighbour": "ca"
 		}
 	]
 }

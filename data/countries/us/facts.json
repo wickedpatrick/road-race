@@ -1,0 +1,219 @@
+{
+	"New York": {
+		"pl": "Największe miasto USA, z Statuą Wolności i drapaczami chmur",
+		"en": "The biggest US city, with the Statue of Liberty and skyscrapers",
+		"cs": "Největší město USA se Sochou svobody a mrakodrapy",
+		"is": "Stærsta borg Bandaríkjanna með Frelsisstyttuna og skýjakljúfa",
+		"de": "Die größte Stadt der USA mit Freiheitsstatue und Wolkenkratzern"
+	},
+	"Boston": {
+		"pl": "Jedno z najstarszych miast USA, z długim szlakiem po cegle",
+		"en": "One of America's oldest cities, with a red-brick Freedom Trail",
+		"cs": "Jedno z nejstarších měst USA s Stezkou svobody z červených cihel",
+		"is": "Ein elsta borg Bandaríkjanna með Frelsisstíginn úr rauðum múrsteinum",
+		"de": "Eine der ältesten Städte der USA mit dem roten Backsteinpfad Freedom Trail"
+	},
+	"Philadelphia": {
+		"pl": "Tu ogłoszono Deklarację Niepodległości i stoi Dzwon Wolności",
+		"en": "Here the Declaration of Independence was signed, and the Liberty Bell rests",
+		"cs": "Zde byla podepsána Deklarace nezávislosti a stojí Zvon svobody",
+		"is": "Hér var sjálfstæðisyfirlýsingin undirrituð og Frelsisbjallan er geymd",
+		"de": "Hier wurde die Unabhängigkeitserklärung unterzeichnet, hier steht die Freiheitsglocke"
+	},
+	"Washington": {
+		"pl": "Stolica USA, gdzie mieszka prezydent w Białym Domu",
+		"en": "The capital of the USA, where the president lives in the White House",
+		"cs": "Hlavní město USA, kde prezident bydlí v Bílém domě",
+		"is": "Höfuðborg Bandaríkjanna þar sem forsetinn býr í Hvíta húsinu",
+		"de": "Die Hauptstadt der USA, wo der Präsident im Weißen Haus wohnt"
+	},
+	"Buffalo": {
+		"pl": "Miasto nad jeziorem Erie, tuż przy wodospadzie Niagara",
+		"en": "A city on Lake Erie, close to the mighty Niagara Falls",
+		"cs": "Město na jezeře Erie, hned vedle Niagarských vodopádů",
+		"is": "Borg við Erie-vatn, rétt hjá Niagara-fossunum",
+		"de": "Stadt am Eriesee, ganz nah bei den Niagarafällen"
+	},
+	"Pittsburgh": {
+		"pl": "Miasto stu mostów, gdzie spotykają się trzy rzeki",
+		"en": "The city of bridges, where three rivers meet",
+		"cs": "Město mostů, kde se stékají tři řeky",
+		"is": "Borg brúnna þar sem þrjár ár mætast",
+		"de": "Die Stadt der Brücken, wo drei Flüsse zusammenfließen"
+	},
+	"Cleveland": {
+		"pl": "Miasto nad jeziorem Erie, z muzeum sław rock and rolla",
+		"en": "A city on Lake Erie with the Rock and Roll Hall of Fame",
+		"cs": "Město na jezeře Erie se Síní slávy rokenrolu",
+		"is": "Borg við Erie-vatn með Frægðarhöll rokksins",
+		"de": "Stadt am Eriesee mit der Rock and Roll Hall of Fame"
+	},
+	"Detroit": {
+		"pl": "Stolica amerykańskich samochodów, zwana Motor City",
+		"en": "The home of American cars, nicknamed Motor City",
+		"cs": "Město amerických aut přezdívané Motor City",
+		"is": "Heimili bandarískra bíla, kölluð Bílaborgin",
+		"de": "Heimat der amerikanischen Autos, genannt Motor City"
+	},
+	"Chicago": {
+		"pl": "Wietrzne Miasto nad jeziorem Michigan, pełne wysokich wieżowców",
+		"en": "The Windy City on Lake Michigan, full of tall skyscrapers",
+		"cs": "Větrné město na jezeře Michigan plné vysokých mrakodrapů",
+		"is": "Vindaborgin við Michigan-vatn, full af háum skýjakljúfum",
+		"de": "Die Windy City am Michigansee, voller hoher Wolkenkratzer"
+	},
+	"Minneapolis": {
+		"pl": "Miasto jezior i rzeki Missisipi na dalekiej północy",
+		"en": "A city of lakes by the Mississippi River in the far north",
+		"cs": "Město jezer na řece Mississippi daleko na severu",
+		"is": "Borg vatna við Mississippi-fljót langt í norðri",
+		"de": "Stadt der Seen am Mississippi weit im Norden"
+	},
+	"Rapid City": {
+		"pl": "Brama do gór Black Hills i do rzeźb prezydentów na Mount Rushmore",
+		"en": "Gateway to the Black Hills and the presidents carved on Mount Rushmore",
+		"cs": "Brána do Černých hor a k prezidentům vytesaným na Mount Rushmore",
+		"is": "Hlið að Black Hills og forsetunum á Rushmore-fjalli",
+		"de": "Tor zu den Black Hills und zu den Präsidenten am Mount Rushmore"
+	},
+	"St. Louis": {
+		"pl": "Miasto z ogromną stalową Bramą Zachodu nad Missisipi",
+		"en": "A city with the giant steel Gateway Arch above the Mississippi",
+		"cs": "Město s obrovskou ocelovou Bránou na západ nad Mississippi",
+		"is": "Borg með risastóra stálboganum Gateway Arch við Mississippi",
+		"de": "Stadt mit dem riesigen stählernen Gateway Arch am Mississippi"
+	},
+	"Kansas City": {
+		"pl": "Miasto na środku USA, znane z fontann i soczystych żeberek",
+		"en": "A city in the heart of the USA, famous for fountains and barbecue",
+		"cs": "Město uprostřed USA, známé fontánami a grilovaným masem",
+		"is": "Borg í miðjum Bandaríkjunum, fræg fyrir gosbrunna og grillmat",
+		"de": "Stadt mitten in den USA, bekannt für Brunnen und Barbecue"
+	},
+	"Nashville": {
+		"pl": "Stolica muzyki country, gdzie gitary grają na każdej ulicy",
+		"en": "The capital of country music, with guitars playing on every street",
+		"cs": "Hlavní město country hudby, kde na každé ulici hrají kytary",
+		"is": "Höfuðborg sveitatónlistar þar sem gítarar hljóma á hverju götuhorni",
+		"de": "Hauptstadt der Countrymusik, wo auf jeder Straße Gitarren spielen"
+	},
+	"Memphis": {
+		"pl": "Miasto nad Missisipi, gdzie mieszkał Elvis Presley",
+		"en": "A city on the Mississippi where Elvis Presley lived",
+		"cs": "Město na Mississippi, kde žil Elvis Presley",
+		"is": "Borg við Mississippi þar sem Elvis Presley bjó",
+		"de": "Stadt am Mississippi, in der Elvis Presley lebte"
+	},
+	"Atlanta": {
+		"pl": "Stolica stanu Georgia, miasto drzew i fabryki Coca-Coli",
+		"en": "The capital of Georgia, a city of trees and the home of Coca-Cola",
+		"cs": "Hlavní město Georgie, město stromů a domov Coca-Coly",
+		"is": "Höfuðborg Georgíu, borg trjáa og heimili Coca-Cola",
+		"de": "Hauptstadt von Georgia, Stadt der Bäume und Heimat von Coca-Cola"
+	},
+	"Orlando": {
+		"pl": "Miasto parków rozrywki, gdzie mieszka Myszka Miki",
+		"en": "The city of theme parks, where Mickey Mouse has his park",
+		"cs": "Město zábavních parků, kde má svůj park Mickey Mouse",
+		"is": "Borg skemmtigarða þar sem Mikki mús á sinn garð",
+		"de": "Stadt der Freizeitparks, in der Micky Maus seinen Park hat"
+	},
+	"Miami": {
+		"pl": "Słoneczne miasto z plażami i kolorowymi domami Art Deco",
+		"en": "A sunny city with beaches and colorful Art Deco houses",
+		"cs": "Slunečné město s plážemi a barevnými domy v stylu art deco",
+		"is": "Sólrík borg með ströndum og litríkum art deco húsum",
+		"de": "Sonnige Stadt mit Stränden und bunten Art-déco-Häusern"
+	},
+	"New Orleans": {
+		"pl": "Miasto nad Missisipi, kolebka jazzu i wielkich karnawałowych parad",
+		"en": "A city on the Mississippi, the birthplace of jazz and carnival parades",
+		"cs": "Město na Mississippi, kolébka jazzu a karnevalových průvodů",
+		"is": "Borg við Mississippi, vagga djassins og karnivalgangna",
+		"de": "Stadt am Mississippi, Wiege des Jazz und der Karnevalsumzüge"
+	},
+	"Houston": {
+		"pl": "Miasto w Teksasie, skąd steruje się lotami w kosmos",
+		"en": "A Texas city where space flights are guided from Mission Control",
+		"cs": "Texaské město, odkud se řídí lety do vesmíru",
+		"is": "Borg í Texas þar sem geimferðum er stýrt",
+		"de": "Stadt in Texas, von der aus Raumflüge gesteuert werden"
+	},
+	"San Antonio": {
+		"pl": "Miasto z historycznym Alamo i spacerami wzdłuż rzeki",
+		"en": "A city with the historic Alamo and a riverside walk",
+		"cs": "Město s historickou pevností Alamo a procházkou podél řeky",
+		"is": "Borg með sögulega Alamo-virkið og göngu meðfram ánni",
+		"de": "Stadt mit dem historischen Alamo und einem Spaziergang am Fluss"
+	},
+	"Dallas": {
+		"pl": "Wielkie miasto w Teksasie, słynne z kowbojów i wieżowców",
+		"en": "A big Texas city, famous for cowboys and skyscrapers",
+		"cs": "Velké texaské město, slavné kovboji a mrakodrapy",
+		"is": "Stór borg í Texas, fræg fyrir kúreka og skýjakljúfa",
+		"de": "Große Stadt in Texas, berühmt für Cowboys und Wolkenkratzer"
+	},
+	"Denver": {
+		"pl": "Miasto o kilometr nad poziomem morza, pod Górami Skalistymi",
+		"en": "A mile-high city at the foot of the Rocky Mountains",
+		"cs": "Město ve výšce jedné míle u úpatí Skalnatých hor",
+		"is": "Borg í einnar mílu hæð við rætur Klettafjalla",
+		"de": "Die Mile-High-Stadt am Fuß der Rocky Mountains"
+	},
+	"Albuquerque": {
+		"pl": "Miasto na pustyni, gdzie co roku wzlatują setki balonów",
+		"en": "A desert city where hundreds of hot air balloons rise each year",
+		"cs": "Město v poušti, kde každý rok vzlétají stovky balonů",
+		"is": "Eyðimerkurborg þar sem hundruð loftbelgja stíga upp á hverju ári",
+		"de": "Wüstenstadt, in der jedes Jahr hunderte Heißluftballons aufsteigen"
+	},
+	"Salt Lake City": {
+		"pl": "Miasto nad Wielkim Jeziorem Słonym, otoczone wysokimi górami",
+		"en": "A city by the Great Salt Lake, ringed by tall mountains",
+		"cs": "Město u Velkého solného jezera obklopené vysokými horami",
+		"is": "Borg við Stóra saltvatn, umkringd háum fjöllum",
+		"de": "Stadt am Großen Salzsee, umgeben von hohen Bergen"
+	},
+	"Las Vegas": {
+		"pl": "Miasto na pustyni, rozświetlone kolorowymi neonami nawet nocą",
+		"en": "A desert city lit up by colorful neon lights all night",
+		"cs": "Město v poušti ozářené barevnými neony i v noci",
+		"is": "Eyðimerkurborg sem lýsist upp af litríkum neonljósum á nóttunni",
+		"de": "Wüstenstadt, die nachts in bunten Neonlichtern leuchtet"
+	},
+	"Phoenix": {
+		"pl": "Gorące miasto na pustyni, wśród kaktusów saguaro",
+		"en": "A hot desert city surrounded by giant saguaro cacti",
+		"cs": "Horké pouštní město mezi obřími kaktusy saguaro",
+		"is": "Heit eyðimerkurborg meðal risastórra saguaro-kaktusa",
+		"de": "Heiße Wüstenstadt zwischen riesigen Saguaro-Kakteen"
+	},
+	"Los Angeles": {
+		"pl": "Miasto aniołów z gwiazdami kina i słynnym napisem Hollywood",
+		"en": "The City of Angels, with movie stars and the Hollywood sign",
+		"cs": "Město andělů s filmovými hvězdami a nápisem Hollywood",
+		"is": "Borg englanna með kvikmyndastjörnum og Hollywood-skiltinu",
+		"de": "Stadt der Engel mit Filmstars und dem Hollywood-Schriftzug"
+	},
+	"San Francisco": {
+		"pl": "Miasto z czerwonym mostem Golden Gate i zabytkowymi tramwajami",
+		"en": "A city with the red Golden Gate Bridge and old cable cars",
+		"cs": "Město s červeným mostem Golden Gate a starými lanovkami",
+		"is": "Borg með rauðu Golden Gate brúnni og gömlum kláfum",
+		"de": "Stadt mit der roten Golden Gate Bridge und alten Cable Cars"
+	},
+	"Portland": {
+		"pl": "Zielone miasto na północnym zachodzie, pełne róż i mostów",
+		"en": "A green city in the northwest, full of roses and bridges",
+		"cs": "Zelené město na severozápadě plné růží a mostů",
+		"is": "Græn borg í norðvestrinu, full af rósum og brúm",
+		"de": "Grüne Stadt im Nordwesten voller Rosen und Brücken"
+	},
+	"Seattle": {
+		"pl": "Miasto z wieżą Space Needle, otoczone wodą i górami",
+		"en": "A city with the Space Needle, surrounded by water and mountains",
+		"cs": "Město s věží Space Needle obklopené vodou a horami",
+		"is": "Borg með Space Needle turninum, umkringd vatni og fjöllum",
+		"de": "Stadt mit dem Space Needle, umgeben von Wasser und Bergen"
+	}
+}

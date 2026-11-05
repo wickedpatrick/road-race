@@ -1,0 +1,2970 @@
+[
+	{
+		"a": "new_york",
+		"b": "boston",
+		"km": 345,
+		"road": "I-95",
+		"towns": [
+			[
+				"Stamford",
+				55
+			],
+			[
+				"New Haven",
+				120
+			],
+			[
+				"New London",
+				175
+			],
+			[
+				"Providence",
+				265
+			]
+		],
+		"zones": [
+			[
+				35,
+				"industrial",
+				"New York"
+			],
+			[
+				220,
+				"coast",
+				"Connecticut"
+			],
+			[
+				285,
+				"coast",
+				"Rhode Island"
+			],
+			[
+				345,
+				"forest",
+				"Massachusetts"
+			]
+		],
+		"via": [
+			[
+				120,
+				-72.93,
+				41.31
+			],
+			[
+				265,
+				-71.41,
+				41.82
+			]
+		]
+	},
+	{
+		"a": "new_york",
+		"b": "philadelphia",
+		"km": 150,
+		"road": "I-95",
+		"towns": [
+			[
+				"Newark",
+				15
+			],
+			[
+				"New Brunswick",
+				55
+			],
+			[
+				"Trenton",
+				105
+			]
+		],
+		"zones": [
+			[
+				5,
+				"industrial",
+				"New York"
+			],
+			[
+				120,
+				"fields",
+				"New Jersey"
+			],
+			[
+				150,
+				"industrial",
+				"Pennsylvania"
+			]
+		],
+		"via": [
+			[
+				105,
+				-74.76,
+				40.22
+			]
+		]
+	},
+	{
+		"a": "philadelphia",
+		"b": "washington",
+		"km": 225,
+		"road": "I-95",
+		"towns": [
+			[
+				"Wilmington",
+				50
+			],
+			[
+				"Havre de Grace",
+				105
+			],
+			[
+				"Baltimore",
+				165
+			]
+		],
+		"zones": [
+			[
+				30,
+				"industrial",
+				"Pennsylvania"
+			],
+			[
+				65,
+				"fields",
+				"Delaware"
+			],
+			[
+				215,
+				"fields",
+				"Maryland"
+			],
+			[
+				225,
+				"industrial",
+				"District of Columbia"
+			]
+		],
+		"via": [
+			[
+				50,
+				-75.55,
+				39.74
+			],
+			[
+				165,
+				-76.61,
+				39.29
+			]
+		]
+	},
+	{
+		"a": "new_york",
+		"b": "buffalo",
+		"km": 640,
+		"road": [
+			[
+				240,
+				"I-87"
+			],
+			[
+				640,
+				"I-90"
+			]
+		],
+		"towns": [
+			[
+				"Newburgh",
+				95
+			],
+			[
+				"Kingston",
+				145
+			],
+			[
+				"Albany",
+				240
+			],
+			[
+				"Utica",
+				330
+			],
+			[
+				"Syracuse",
+				410
+			],
+			[
+				"Rochester",
+				545
+			]
+		],
+		"zones": [
+			[
+				150,
+				"forest",
+				"New York"
+			],
+			[
+				330,
+				"upland",
+				"New York"
+			],
+			[
+				640,
+				"fields",
+				"New York"
+			]
+		],
+		"via": [
+			[
+				240,
+				-73.76,
+				42.65
+			],
+			[
+				410,
+				-76.15,
+				43.05
+			],
+			[
+				545,
+				-77.61,
+				43.16
+			]
+		]
+	},
+	{
+		"a": "buffalo",
+		"b": "cleveland",
+		"km": 300,
+		"road": "I-90",
+		"towns": [
+			[
+				"Dunkirk",
+				70
+			],
+			[
+				"Erie",
+				150
+			],
+			[
+				"Ashtabula",
+				220
+			]
+		],
+		"zones": [
+			[
+				115,
+				"orchard",
+				"New York"
+			],
+			[
+				185,
+				"lakes",
+				"Pennsylvania"
+			],
+			[
+				300,
+				"fields",
+				"Ohio"
+			]
+		],
+		"via": [
+			[
+				150,
+				-80.09,
+				42.13
+			]
+		]
+	},
+	{
+		"a": "cleveland",
+		"b": "detroit",
+		"km": 275,
+		"road": [
+			[
+				180,
+				"I-80"
+			],
+			[
+				275,
+				"I-75"
+			]
+		],
+		"towns": [
+			[
+				"Sandusky",
+				95
+			],
+			[
+				"Toledo",
+				180
+			],
+			[
+				"Monroe",
+				225
+			]
+		],
+		"zones": [
+			[
+				200,
+				"fields",
+				"Ohio"
+			],
+			[
+				275,
+				"industrial",
+				"Michigan"
+			]
+		],
+		"via": [
+			[
+				95,
+				-82.71,
+				41.45
+			],
+			[
+				180,
+				-83.54,
+				41.66
+			]
+		]
+	},
+	{
+		"a": "cleveland",
+		"b": "pittsburgh",
+		"km": 215,
+		"road": "I-76",
+		"towns": [
+			[
+				"Akron",
+				60
+			],
+			[
+				"Youngstown",
+				120
+			],
+			[
+				"Cranberry",
+				185
+			]
+		],
+		"zones": [
+			[
+				150,
+				"fields",
+				"Ohio"
+			],
+			[
+				215,
+				"upland",
+				"Pennsylvania"
+			]
+		],
+		"via": [
+			[
+				60,
+				-81.52,
+				41.08
+			],
+			[
+				120,
+				-80.65,
+				41.1
+			]
+		]
+	},
+	{
+		"a": "pittsburgh",
+		"b": "washington",
+		"km": 395,
+		"road": [
+			[
+				60,
+				"I-76"
+			],
+			[
+				250,
+				"I-70"
+			],
+			[
+				395,
+				"I-270"
+			]
+		],
+		"towns": [
+			[
+				"New Stanton",
+				50
+			],
+			[
+				"Bedford",
+				150
+			],
+			[
+				"Breezewood",
+				175
+			],
+			[
+				"Hancock",
+				225
+			],
+			[
+				"Hagerstown",
+				260
+			],
+			[
+				"Frederick",
+				310
+			],
+			[
+				"Rockville",
+				375
+			]
+		],
+		"zones": [
+			[
+				215,
+				"forest",
+				"Pennsylvania"
+			],
+			[
+				385,
+				"upland",
+				"Maryland"
+			],
+			[
+				395,
+				"industrial",
+				"District of Columbia"
+			]
+		],
+		"via": [
+			[
+				150,
+				-78.5,
+				40.02
+			],
+			[
+				175,
+				-78.24,
+				40.0
+			],
+			[
+				260,
+				-77.72,
+				39.64
+			],
+			[
+				310,
+				-77.41,
+				39.41
+			]
+		]
+	},
+	{
+		"a": "pittsburgh",
+		"b": "philadelphia",
+		"km": 490,
+		"road": "I-76",
+		"towns": [
+			[
+				"Somerset",
+				110
+			],
+			[
+				"Breezewood",
+				175
+			],
+			[
+				"Harrisburg",
+				330
+			],
+			[
+				"Lancaster",
+				390
+			],
+			[
+				"Valley Forge",
+				470
+			]
+		],
+		"zones": [
+			[
+				150,
+				"forest",
+				"Pennsylvania"
+			],
+			[
+				300,
+				"upland",
+				"Pennsylvania"
+			],
+			[
+				490,
+				"fields",
+				"Pennsylvania"
+			]
+		],
+		"via": [
+			[
+				110,
+				-79.08,
+				40.01
+			],
+			[
+				175,
+				-78.24,
+				40.0
+			],
+			[
+				330,
+				-76.88,
+				40.27
+			]
+		]
+	},
+	{
+		"a": "detroit",
+		"b": "chicago",
+		"km": 455,
+		"road": "I-94",
+		"towns": [
+			[
+				"Ann Arbor",
+				70
+			],
+			[
+				"Jackson",
+				125
+			],
+			[
+				"Kalamazoo",
+				230
+			],
+			[
+				"Benton Harbor",
+				300
+			],
+			[
+				"Gary",
+				430
+			]
+		],
+		"zones": [
+			[
+				340,
+				"fields",
+				"Michigan"
+			],
+			[
+				440,
+				"lakes",
+				"Indiana"
+			],
+			[
+				455,
+				"industrial",
+				"Illinois"
+			]
+		],
+		"via": [
+			[
+				70,
+				-83.74,
+				42.28
+			],
+			[
+				230,
+				-85.59,
+				42.29
+			],
+			[
+				300,
+				-86.45,
+				42.12
+			],
+			[
+				430,
+				-87.35,
+				41.6
+			]
+		]
+	},
+	{
+		"a": "chicago",
+		"b": "minneapolis",
+		"km": 655,
+		"road": [
+			[
+				150,
+				"I-90"
+			],
+			[
+				655,
+				"I-94"
+			]
+		],
+		"towns": [
+			[
+				"Rockford",
+				140
+			],
+			[
+				"Madison",
+				240
+			],
+			[
+				"Wisconsin Dells",
+				320
+			],
+			[
+				"Eau Claire",
+				525
+			]
+		],
+		"zones": [
+			[
+				125,
+				"fields",
+				"Illinois"
+			],
+			[
+				300,
+				"fields",
+				"Wisconsin"
+			],
+			[
+				605,
+				"forest",
+				"Wisconsin"
+			],
+			[
+				655,
+				"lakes",
+				"Minnesota"
+			]
+		],
+		"via": [
+			[
+				140,
+				-89.09,
+				42.27
+			],
+			[
+				240,
+				-89.4,
+				43.07
+			],
+			[
+				320,
+				-89.77,
+				43.63
+			],
+			[
+				525,
+				-91.5,
+				44.81
+			]
+		]
+	},
+	{
+		"a": "minneapolis",
+		"b": "rapid_city",
+		"km": 950,
+		"road": [
+			[
+				150,
+				"I-35"
+			],
+			[
+				950,
+				"I-90"
+			]
+		],
+		"towns": [
+			[
+				"Albert Lea",
+				150
+			],
+			[
+				"Worthington",
+				330
+			],
+			[
+				"Sioux Falls",
+				420
+			],
+			[
+				"Mitchell",
+				530
+			],
+			[
+				"Chamberlain",
+				640
+			],
+			[
+				"Wall",
+				870
+			]
+		],
+		"zones": [
+			[
+				400,
+				"fields",
+				"Minnesota"
+			],
+			[
+				700,
+				"fields",
+				"South Dakota"
+			],
+			[
+				900,
+				"highland",
+				"South Dakota"
+			],
+			[
+				950,
+				"forest",
+				"South Dakota"
+			]
+		],
+		"via": [
+			[
+				150,
+				-93.37,
+				43.65
+			],
+			[
+				420,
+				-96.73,
+				43.55
+			],
+			[
+				530,
+				-98.03,
+				43.71
+			],
+			[
+				640,
+				-99.33,
+				43.81
+			],
+			[
+				870,
+				-102.24,
+				43.99
+			]
+		]
+	},
+	{
+		"a": "chicago",
+		"b": "st_louis",
+		"km": 480,
+		"road": "I-55",
+		"towns": [
+			[
+				"Joliet",
+				65
+			],
+			[
+				"Bloomington",
+				210
+			],
+			[
+				"Springfield",
+				320
+			],
+			[
+				"Litchfield",
+				395
+			]
+		],
+		"zones": [
+			[
+				470,
+				"fields",
+				"Illinois"
+			],
+			[
+				480,
+				"industrial",
+				"Missouri"
+			]
+		],
+		"via": [
+			[
+				210,
+				-88.99,
+				40.48
+			],
+			[
+				320,
+				-89.65,
+				39.8
+			]
+		]
+	},
+	{
+		"a": "st_louis",
+		"b": "kansas_city",
+		"km": 400,
+		"road": "I-70",
+		"towns": [
+			[
+				"St. Charles",
+				35
+			],
+			[
+				"Columbia",
+				200
+			],
+			[
+				"Boonville",
+				240
+			]
+		],
+		"zones": [
+			[
+				150,
+				"upland",
+				"Missouri"
+			],
+			[
+				400,
+				"fields",
+				"Missouri"
+			]
+		],
+		"via": [
+			[
+				200,
+				-92.33,
+				38.95
+			]
+		]
+	},
+	{
+		"a": "kansas_city",
+		"b": "denver",
+		"km": 970,
+		"road": "I-70",
+		"towns": [
+			[
+				"Lawrence",
+				65
+			],
+			[
+				"Topeka",
+				105
+			],
+			[
+				"Salina",
+				280
+			],
+			[
+				"Hays",
+				440
+			],
+			[
+				"Goodland",
+				690
+			],
+			[
+				"Limon",
+				850
+			]
+		],
+		"zones": [
+			[
+				5,
+				"industrial",
+				"Missouri"
+			],
+			[
+				715,
+				"fields",
+				"Kansas"
+			],
+			[
+				970,
+				"highland",
+				"Colorado"
+			]
+		],
+		"via": [
+			[
+				105,
+				-95.68,
+				39.05
+			],
+			[
+				280,
+				-97.61,
+				38.84
+			],
+			[
+				440,
+				-99.33,
+				38.88
+			],
+			[
+				850,
+				-103.69,
+				39.26
+			]
+		]
+	},
+	{
+		"a": "st_louis",
+		"b": "nashville",
+		"km": 495,
+		"road": [
+			[
+				130,
+				"I-64"
+			],
+			[
+				200,
+				"I-57"
+			],
+			[
+				495,
+				"I-24"
+			]
+		],
+		"towns": [
+			[
+				"Mount Vernon",
+				130
+			],
+			[
+				"Paducah",
+				280
+			],
+			[
+				"Clarksville",
+				420
+			]
+		],
+		"zones": [
+			[
+				10,
+				"industrial",
+				"Missouri"
+			],
+			[
+				255,
+				"fields",
+				"Illinois"
+			],
+			[
+				410,
+				"forest",
+				"Kentucky"
+			],
+			[
+				495,
+				"upland",
+				"Tennessee"
+			]
+		],
+		"via": [
+			[
+				130,
+				-88.9,
+				38.32
+			],
+			[
+				280,
+				-88.6,
+				37.08
+			],
+			[
+				420,
+				-87.36,
+				36.53
+			]
+		]
+	},
+	{
+		"a": "nashville",
+		"b": "atlanta",
+		"km": 400,
+		"road": [
+			[
+				215,
+				"I-24"
+			],
+			[
+				400,
+				"I-75"
+			]
+		],
+		"towns": [
+			[
+				"Murfreesboro",
+				55
+			],
+			[
+				"Monteagle",
+				140
+			],
+			[
+				"Chattanooga",
+				215
+			],
+			[
+				"Dalton",
+				260
+			],
+			[
+				"Cartersville",
+				350
+			]
+		],
+		"zones": [
+			[
+				225,
+				"upland",
+				"Tennessee"
+			],
+			[
+				400,
+				"forest",
+				"Georgia"
+			]
+		],
+		"via": [
+			[
+				55,
+				-86.39,
+				35.85
+			],
+			[
+				215,
+				-85.31,
+				35.05
+			]
+		]
+	},
+	{
+		"a": "nashville",
+		"b": "memphis",
+		"km": 340,
+		"road": "I-40",
+		"towns": [
+			[
+				"Dickson",
+				60
+			],
+			[
+				"Jackson",
+				210
+			]
+		],
+		"zones": [
+			[
+				120,
+				"forest",
+				"Tennessee"
+			],
+			[
+				340,
+				"fields",
+				"Tennessee"
+			]
+		],
+		"via": [
+			[
+				210,
+				-88.81,
+				35.61
+			]
+		]
+	},
+	{
+		"a": "memphis",
+		"b": "new_orleans",
+		"km": 630,
+		"road": "I-55",
+		"towns": [
+			[
+				"Grenada",
+				190
+			],
+			[
+				"Jackson",
+				340
+			],
+			[
+				"McComb",
+				470
+			],
+			[
+				"Hammond",
+				560
+			]
+		],
+		"zones": [
+			[
+				10,
+				"industrial",
+				"Tennessee"
+			],
+			[
+				525,
+				"forest",
+				"Mississippi"
+			],
+			[
+				630,
+				"lakes",
+				"Louisiana"
+			]
+		],
+		"via": [
+			[
+				190,
+				-89.81,
+				33.77
+			],
+			[
+				340,
+				-90.18,
+				32.3
+			],
+			[
+				560,
+				-90.46,
+				30.5
+			]
+		]
+	},
+	{
+		"a": "memphis",
+		"b": "dallas",
+		"km": 730,
+		"road": [
+			[
+				220,
+				"I-40"
+			],
+			[
+				730,
+				"I-30"
+			]
+		],
+		"towns": [
+			[
+				"Forrest City",
+				70
+			],
+			[
+				"Little Rock",
+				220
+			],
+			[
+				"Hope",
+				380
+			],
+			[
+				"Texarkana",
+				470
+			],
+			[
+				"Mount Pleasant",
+				580
+			],
+			[
+				"Greenville",
+				680
+			]
+		],
+		"zones": [
+			[
+				5,
+				"industrial",
+				"Tennessee"
+			],
+			[
+				470,
+				"forest",
+				"Arkansas"
+			],
+			[
+				730,
+				"fields",
+				"Texas"
+			]
+		],
+		"via": [
+			[
+				220,
+				-92.29,
+				34.75
+			],
+			[
+				470,
+				-94.05,
+				33.43
+			]
+		]
+	},
+	{
+		"a": "atlanta",
+		"b": "orlando",
+		"km": 710,
+		"road": "I-75",
+		"towns": [
+			[
+				"Macon",
+				135
+			],
+			[
+				"Valdosta",
+				375
+			],
+			[
+				"Lake City",
+				450
+			],
+			[
+				"Gainesville",
+				520
+			],
+			[
+				"Ocala",
+				580
+			]
+		],
+		"zones": [
+			[
+				400,
+				"forest",
+				"Georgia"
+			],
+			[
+				710,
+				"lakes",
+				"Florida"
+			]
+		],
+		"via": [
+			[
+				135,
+				-83.63,
+				32.84
+			],
+			[
+				375,
+				-83.28,
+				30.83
+			],
+			[
+				520,
+				-82.32,
+				29.65
+			]
+		]
+	},
+	{
+		"a": "atlanta",
+		"b": "washington",
+		"km": 1020,
+		"road": [
+			[
+				650,
+				"I-85"
+			],
+			[
+				1020,
+				"I-95"
+			]
+		],
+		"towns": [
+			[
+				"Greenville",
+				230
+			],
+			[
+				"Charlotte",
+				390
+			],
+			[
+				"Greensboro",
+				530
+			],
+			[
+				"Durham",
+				610
+			],
+			[
+				"Petersburg",
+				820
+			],
+			[
+				"Richmond",
+				860
+			],
+			[
+				"Fredericksburg",
+				940
+			]
+		],
+		"zones": [
+			[
+				140,
+				"forest",
+				"Georgia"
+			],
+			[
+				300,
+				"forest",
+				"South Carolina"
+			],
+			[
+				730,
+				"upland",
+				"North Carolina"
+			],
+			[
+				1005,
+				"forest",
+				"Virginia"
+			],
+			[
+				1020,
+				"industrial",
+				"District of Columbia"
+			]
+		],
+		"via": [
+			[
+				230,
+				-82.4,
+				34.85
+			],
+			[
+				390,
+				-80.84,
+				35.23
+			],
+			[
+				530,
+				-79.79,
+				36.07
+			],
+			[
+				860,
+				-77.44,
+				37.54
+			]
+		]
+	},
+	{
+		"a": "orlando",
+		"b": "miami",
+		"km": 380,
+		"road": "I-95",
+		"towns": [
+			[
+				"Titusville",
+				70
+			],
+			[
+				"Melbourne",
+				120
+			],
+			[
+				"Vero Beach",
+				180
+			],
+			[
+				"West Palm Beach",
+				290
+			],
+			[
+				"Fort Lauderdale",
+				350
+			]
+		],
+		"zones": [
+			[
+				380,
+				"coast",
+				"Florida"
+			]
+		],
+		"via": [
+			[
+				70,
+				-80.81,
+				28.61
+			],
+			[
+				120,
+				-80.61,
+				28.08
+			],
+			[
+				180,
+				-80.4,
+				27.64
+			],
+			[
+				290,
+				-80.05,
+				26.71
+			]
+		]
+	},
+	{
+		"a": "new_orleans",
+		"b": "houston",
+		"km": 560,
+		"road": "I-10",
+		"towns": [
+			[
+				"Baton Rouge",
+				130
+			],
+			[
+				"Lafayette",
+				220
+			],
+			[
+				"Lake Charles",
+				340
+			],
+			[
+				"Beaumont",
+				440
+			],
+			[
+				"Baytown",
+				525
+			]
+		],
+		"zones": [
+			[
+				390,
+				"lakes",
+				"Louisiana"
+			],
+			[
+				560,
+				"coast",
+				"Texas"
+			]
+		],
+		"via": [
+			[
+				130,
+				-91.15,
+				30.45
+			],
+			[
+				220,
+				-92.02,
+				30.22
+			],
+			[
+				340,
+				-93.22,
+				30.23
+			],
+			[
+				440,
+				-94.1,
+				30.08
+			]
+		]
+	},
+	{
+		"a": "new_orleans",
+		"b": "atlanta",
+		"km": 750,
+		"road": [
+			[
+				570,
+				"I-59"
+			],
+			[
+				750,
+				"I-20"
+			]
+		],
+		"towns": [
+			[
+				"Slidell",
+				50
+			],
+			[
+				"Hattiesburg",
+				170
+			],
+			[
+				"Meridian",
+				320
+			],
+			[
+				"Tuscaloosa",
+				470
+			],
+			[
+				"Birmingham",
+				560
+			],
+			[
+				"Anniston",
+				650
+			]
+		],
+		"zones": [
+			[
+				50,
+				"lakes",
+				"Louisiana"
+			],
+			[
+				345,
+				"forest",
+				"Mississippi"
+			],
+			[
+				700,
+				"upland",
+				"Alabama"
+			],
+			[
+				750,
+				"forest",
+				"Georgia"
+			]
+		],
+		"via": [
+			[
+				170,
+				-89.29,
+				31.33
+			],
+			[
+				320,
+				-88.7,
+				32.36
+			],
+			[
+				560,
+				-86.8,
+				33.52
+			]
+		]
+	},
+	{
+		"a": "houston",
+		"b": "san_antonio",
+		"km": 320,
+		"road": "I-10",
+		"towns": [
+			[
+				"Katy",
+				50
+			],
+			[
+				"Columbus",
+				120
+			],
+			[
+				"Seguin",
+				280
+			]
+		],
+		"zones": [
+			[
+				320,
+				"fields",
+				"Texas"
+			]
+		],
+		"via": [
+			[
+				120,
+				-96.54,
+				29.71
+			]
+		]
+	},
+	{
+		"a": "houston",
+		"b": "dallas",
+		"km": 385,
+		"road": "I-45",
+		"towns": [
+			[
+				"Conroe",
+				65
+			],
+			[
+				"Huntsville",
+				115
+			],
+			[
+				"Corsicana",
+				300
+			]
+		],
+		"zones": [
+			[
+				150,
+				"forest",
+				"Texas"
+			],
+			[
+				385,
+				"fields",
+				"Texas"
+			]
+		],
+		"via": [
+			[
+				115,
+				-95.55,
+				30.72
+			],
+			[
+				300,
+				-96.47,
+				32.1
+			]
+		]
+	},
+	{
+		"a": "san_antonio",
+		"b": "dallas",
+		"km": 440,
+		"road": "I-35",
+		"towns": [
+			[
+				"New Braunfels",
+				50
+			],
+			[
+				"Austin",
+				130
+			],
+			[
+				"Temple",
+				240
+			],
+			[
+				"Waco",
+				290
+			]
+		],
+		"zones": [
+			[
+				440,
+				"fields",
+				"Texas"
+			]
+		],
+		"via": [
+			[
+				130,
+				-97.74,
+				30.27
+			],
+			[
+				290,
+				-97.15,
+				31.55
+			]
+		]
+	},
+	{
+		"a": "dallas",
+		"b": "albuquerque",
+		"km": 1050,
+		"road": [
+			[
+				60,
+				"I-30"
+			],
+			[
+				580,
+				"US-287"
+			],
+			[
+				1050,
+				"I-40"
+			]
+		],
+		"towns": [
+			[
+				"Fort Worth",
+				50
+			],
+			[
+				"Wichita Falls",
+				220
+			],
+			[
+				"Childress",
+				400
+			],
+			[
+				"Amarillo",
+				580
+			],
+			[
+				"Tucumcari",
+				760
+			],
+			[
+				"Santa Rosa",
+				850
+			]
+		],
+		"zones": [
+			[
+				400,
+				"fields",
+				"Texas"
+			],
+			[
+				700,
+				"highland",
+				"Texas"
+			],
+			[
+				1050,
+				"desert",
+				"New Mexico"
+			]
+		],
+		"via": [
+			[
+				50,
+				-97.33,
+				32.75
+			],
+			[
+				220,
+				-98.49,
+				33.91
+			],
+			[
+				400,
+				-100.2,
+				34.43
+			],
+			[
+				580,
+				-101.83,
+				35.22
+			],
+			[
+				760,
+				-103.72,
+				35.17
+			]
+		]
+	},
+	{
+		"a": "albuquerque",
+		"b": "denver",
+		"km": 720,
+		"road": "I-25",
+		"towns": [
+			[
+				"Santa Fe",
+				100
+			],
+			[
+				"Raton",
+				360
+			],
+			[
+				"Trinidad",
+				395
+			],
+			[
+				"Pueblo",
+				535
+			],
+			[
+				"Colorado Springs",
+				605
+			]
+		],
+		"zones": [
+			[
+				200,
+				"desert",
+				"New Mexico"
+			],
+			[
+				375,
+				"highland",
+				"New Mexico"
+			],
+			[
+				720,
+				"foothills",
+				"Colorado"
+			]
+		],
+		"via": [
+			[
+				100,
+				-105.94,
+				35.69
+			],
+			[
+				360,
+				-104.44,
+				36.9
+			],
+			[
+				535,
+				-104.61,
+				38.25
+			],
+			[
+				605,
+				-104.82,
+				38.83
+			]
+		]
+	},
+	{
+		"a": "albuquerque",
+		"b": "las_vegas",
+		"km": 920,
+		"road": [
+			[
+				780,
+				"I-40"
+			],
+			[
+				920,
+				"US-93"
+			]
+		],
+		"towns": [
+			[
+				"Gallup",
+				220
+			],
+			[
+				"Holbrook",
+				375
+			],
+			[
+				"Flagstaff",
+				520
+			],
+			[
+				"Williams",
+				570
+			],
+			[
+				"Seligman",
+				640
+			],
+			[
+				"Kingman",
+				780
+			]
+		],
+		"zones": [
+			[
+				260,
+				"desert",
+				"New Mexico"
+			],
+			[
+				480,
+				"desert",
+				"Arizona"
+			],
+			[
+				600,
+				"forest",
+				"Arizona"
+			],
+			[
+				880,
+				"desert",
+				"Arizona"
+			],
+			[
+				920,
+				"desert",
+				"Nevada"
+			]
+		],
+		"via": [
+			[
+				220,
+				-108.74,
+				35.53
+			],
+			[
+				375,
+				-110.16,
+				34.9
+			],
+			[
+				520,
+				-111.65,
+				35.2
+			],
+			[
+				570,
+				-112.19,
+				35.25
+			],
+			[
+				640,
+				-112.87,
+				35.33
+			],
+			[
+				780,
+				-114.05,
+				35.19
+			]
+		]
+	},
+	{
+		"a": "albuquerque",
+		"b": "phoenix",
+		"km": 740,
+		"road": [
+			[
+				510,
+				"I-40"
+			],
+			[
+				740,
+				"I-17"
+			]
+		],
+		"towns": [
+			[
+				"Grants",
+				130
+			],
+			[
+				"Gallup",
+				210
+			],
+			[
+				"Holbrook",
+				360
+			],
+			[
+				"Winslow",
+				410
+			],
+			[
+				"Flagstaff",
+				510
+			],
+			[
+				"Camp Verde",
+				600
+			]
+		],
+		"zones": [
+			[
+				260,
+				"desert",
+				"New Mexico"
+			],
+			[
+				440,
+				"desert",
+				"Arizona"
+			],
+			[
+				580,
+				"forest",
+				"Arizona"
+			],
+			[
+				740,
+				"desert",
+				"Arizona"
+			]
+		],
+		"via": [
+			[
+				210,
+				-108.74,
+				35.53
+			],
+			[
+				360,
+				-110.16,
+				34.9
+			],
+			[
+				410,
+				-110.7,
+				35.02
+			],
+			[
+				510,
+				-111.65,
+				35.2
+			],
+			[
+				600,
+				-111.85,
+				34.56
+			]
+		]
+	},
+	{
+		"a": "las_vegas",
+		"b": "phoenix",
+		"km": 480,
+		"road": "US-93",
+		"towns": [
+			[
+				"Boulder City",
+				40
+			],
+			[
+				"Kingman",
+				165
+			],
+			[
+				"Wickenburg",
+				400
+			]
+		],
+		"zones": [
+			[
+				50,
+				"desert",
+				"Nevada"
+			],
+			[
+				480,
+				"desert",
+				"Arizona"
+			]
+		],
+		"via": [
+			[
+				40,
+				-114.83,
+				35.98
+			],
+			[
+				165,
+				-114.05,
+				35.19
+			],
+			[
+				400,
+				-112.73,
+				33.97
+			]
+		]
+	},
+	{
+		"a": "phoenix",
+		"b": "los_angeles",
+		"km": 600,
+		"road": "I-10",
+		"towns": [
+			[
+				"Buckeye",
+				55
+			],
+			[
+				"Quartzsite",
+				205
+			],
+			[
+				"Blythe",
+				245
+			],
+			[
+				"Indio",
+				410
+			],
+			[
+				"Palm Springs",
+				440
+			],
+			[
+				"Ontario",
+				545
+			]
+		],
+		"zones": [
+			[
+				235,
+				"desert",
+				"Arizona"
+			],
+			[
+				560,
+				"desert",
+				"California"
+			],
+			[
+				600,
+				"industrial",
+				"California"
+			]
+		],
+		"via": [
+			[
+				205,
+				-114.23,
+				33.66
+			],
+			[
+				410,
+				-116.22,
+				33.72
+			]
+		]
+	},
+	{
+		"a": "las_vegas",
+		"b": "los_angeles",
+		"km": 435,
+		"road": "I-15",
+		"towns": [
+			[
+				"Primm",
+				65
+			],
+			[
+				"Baker",
+				150
+			],
+			[
+				"Barstow",
+				255
+			],
+			[
+				"Victorville",
+				310
+			],
+			[
+				"San Bernardino",
+				370
+			]
+		],
+		"zones": [
+			[
+				65,
+				"desert",
+				"Nevada"
+			],
+			[
+				400,
+				"desert",
+				"California"
+			],
+			[
+				435,
+				"industrial",
+				"California"
+			]
+		],
+		"via": [
+			[
+				150,
+				-116.07,
+				35.27
+			],
+			[
+				255,
+				-117.02,
+				34.9
+			],
+			[
+				370,
+				-117.29,
+				34.11
+			]
+		]
+	},
+	{
+		"a": "las_vegas",
+		"b": "salt_lake_city",
+		"km": 675,
+		"road": "I-15",
+		"towns": [
+			[
+				"Mesquite",
+				130
+			],
+			[
+				"St. George",
+				190
+			],
+			[
+				"Cedar City",
+				270
+			],
+			[
+				"Beaver",
+				350
+			],
+			[
+				"Fillmore",
+				450
+			],
+			[
+				"Provo",
+				610
+			]
+		],
+		"zones": [
+			[
+				130,
+				"desert",
+				"Nevada"
+			],
+			[
+				175,
+				"desert",
+				"Arizona"
+			],
+			[
+				400,
+				"highland",
+				"Utah"
+			],
+			[
+				675,
+				"foothills",
+				"Utah"
+			]
+		],
+		"via": [
+			[
+				190,
+				-113.58,
+				37.1
+			],
+			[
+				270,
+				-113.06,
+				37.68
+			],
+			[
+				610,
+				-111.66,
+				40.23
+			]
+		]
+	},
+	{
+		"a": "salt_lake_city",
+		"b": "denver",
+		"km": 820,
+		"road": [
+			[
+				720,
+				"I-80"
+			],
+			[
+				820,
+				"I-25"
+			]
+		],
+		"towns": [
+			[
+				"Evanston",
+				130
+			],
+			[
+				"Rock Springs",
+				290
+			],
+			[
+				"Rawlins",
+				460
+			],
+			[
+				"Laramie",
+				650
+			],
+			[
+				"Cheyenne",
+				720
+			],
+			[
+				"Fort Collins",
+				770
+			]
+		],
+		"zones": [
+			[
+				120,
+				"mountains",
+				"Utah"
+			],
+			[
+				735,
+				"highland",
+				"Wyoming"
+			],
+			[
+				820,
+				"fields",
+				"Colorado"
+			]
+		],
+		"via": [
+			[
+				130,
+				-110.96,
+				41.27
+			],
+			[
+				290,
+				-109.2,
+				41.59
+			],
+			[
+				460,
+				-107.24,
+				41.79
+			],
+			[
+				650,
+				-105.59,
+				41.31
+			],
+			[
+				720,
+				-104.82,
+				41.14
+			]
+		]
+	},
+	{
+		"a": "salt_lake_city",
+		"b": "portland",
+		"km": 1230,
+		"road": "I-84",
+		"towns": [
+			[
+				"Ogden",
+				60
+			],
+			[
+				"Twin Falls",
+				350
+			],
+			[
+				"Boise",
+				545
+			],
+			[
+				"Ontario",
+				635
+			],
+			[
+				"Baker City",
+				720
+			],
+			[
+				"Pendleton",
+				930
+			],
+			[
+				"The Dalles",
+				1100
+			],
+			[
+				"Hood River",
+				1135
+			]
+		],
+		"zones": [
+			[
+				165,
+				"foothills",
+				"Utah"
+			],
+			[
+				640,
+				"highland",
+				"Idaho"
+			],
+			[
+				1050,
+				"highland",
+				"Oregon"
+			],
+			[
+				1230,
+				"forest",
+				"Oregon"
+			]
+		],
+		"via": [
+			[
+				60,
+				-111.97,
+				41.22
+			],
+			[
+				350,
+				-114.46,
+				42.56
+			],
+			[
+				545,
+				-116.2,
+				43.62
+			],
+			[
+				930,
+				-118.79,
+				45.67
+			],
+			[
+				1100,
+				-121.18,
+				45.6
+			]
+		]
+	},
+	{
+		"a": "portland",
+		"b": "seattle",
+		"km": 280,
+		"road": "I-5",
+		"towns": [
+			[
+				"Vancouver",
+				15
+			],
+			[
+				"Longview",
+				75
+			],
+			[
+				"Centralia",
+				140
+			],
+			[
+				"Olympia",
+				180
+			],
+			[
+				"Tacoma",
+				230
+			]
+		],
+		"zones": [
+			[
+				10,
+				"industrial",
+				"Oregon"
+			],
+			[
+				280,
+				"forest",
+				"Washington"
+			]
+		],
+		"via": [
+			[
+				180,
+				-122.9,
+				47.04
+			],
+			[
+				230,
+				-122.44,
+				47.25
+			]
+		]
+	},
+	{
+		"a": "san_francisco",
+		"b": "portland",
+		"km": 1020,
+		"road": [
+			[
+				90,
+				"I-80"
+			],
+			[
+				1020,
+				"I-5"
+			]
+		],
+		"towns": [
+			[
+				"Vacaville",
+				80
+			],
+			[
+				"Sacramento",
+				140
+			],
+			[
+				"Redding",
+				400
+			],
+			[
+				"Mount Shasta",
+				495
+			],
+			[
+				"Medford",
+				640
+			],
+			[
+				"Grants Pass",
+				690
+			],
+			[
+				"Roseburg",
+				800
+			],
+			[
+				"Eugene",
+				900
+			],
+			[
+				"Salem",
+				960
+			]
+		],
+		"zones": [
+			[
+				140,
+				"fields",
+				"California"
+			],
+			[
+				340,
+				"orchard",
+				"California"
+			],
+			[
+				580,
+				"mountains",
+				"California"
+			],
+			[
+				1020,
+				"forest",
+				"Oregon"
+			]
+		],
+		"via": [
+			[
+				140,
+				-121.49,
+				38.58
+			],
+			[
+				400,
+				-122.39,
+				40.59
+			],
+			[
+				640,
+				-122.87,
+				42.33
+			],
+			[
+				690,
+				-123.33,
+				42.44
+			],
+			[
+				900,
+				-123.09,
+				44.05
+			]
+		]
+	},
+	{
+		"a": "san_francisco",
+		"b": "los_angeles",
+		"km": 615,
+		"road": [
+			[
+				100,
+				"I-580"
+			],
+			[
+				615,
+				"I-5"
+			]
+		],
+		"towns": [
+			[
+				"Livermore",
+				70
+			],
+			[
+				"Tracy",
+				100
+			],
+			[
+				"Coalinga",
+				300
+			],
+			[
+				"Kettleman City",
+				340
+			],
+			[
+				"Lebec",
+				540
+			],
+			[
+				"Santa Clarita",
+				580
+			]
+		],
+		"zones": [
+			[
+				100,
+				"upland",
+				"California"
+			],
+			[
+				500,
+				"orchard",
+				"California"
+			],
+			[
+				560,
+				"mountains",
+				"California"
+			],
+			[
+				615,
+				"industrial",
+				"California"
+			]
+		],
+		"via": [
+			[
+				100,
+				-121.43,
+				37.74
+			],
+			[
+				340,
+				-119.96,
+				36.01
+			]
+		]
+	},
+	{
+		"a": "san_francisco",
+		"b": "salt_lake_city",
+		"km": 1180,
+		"road": "I-80",
+		"towns": [
+			[
+				"Sacramento",
+				140
+			],
+			[
+				"Truckee",
+				300
+			],
+			[
+				"Reno",
+				350
+			],
+			[
+				"Winnemucca",
+				615
+			],
+			[
+				"Elko",
+				790
+			],
+			[
+				"Wendover",
+				985
+			]
+		],
+		"zones": [
+			[
+				140,
+				"fields",
+				"California"
+			],
+			[
+				320,
+				"mountains",
+				"California"
+			],
+			[
+				985,
+				"highland",
+				"Nevada"
+			],
+			[
+				1180,
+				"highland",
+				"Utah"
+			]
+		],
+		"via": [
+			[
+				140,
+				-121.49,
+				38.58
+			],
+			[
+				300,
+				-120.18,
+				39.33
+			],
+			[
+				350,
+				-119.81,
+				39.53
+			],
+			[
+				615,
+				-117.74,
+				40.97
+			],
+			[
+				790,
+				-115.76,
+				40.83
+			],
+			[
+				985,
+				-114.04,
+				40.74
+			]
+		]
+	},
+	{
+		"a": "denver",
+		"b": "rapid_city",
+		"km": 620,
+		"road": [
+			[
+				160,
+				"I-25"
+			],
+			[
+				620,
+				"US-85"
+			]
+		],
+		"towns": [
+			[
+				"Fort Collins",
+				100
+			],
+			[
+				"Cheyenne",
+				160
+			],
+			[
+				"Lusk",
+				360
+			],
+			[
+				"Hot Springs",
+				520
+			],
+			[
+				"Custer",
+				560
+			]
+		],
+		"zones": [
+			[
+				145,
+				"foothills",
+				"Colorado"
+			],
+			[
+				430,
+				"highland",
+				"Wyoming"
+			],
+			[
+				620,
+				"forest",
+				"South Dakota"
+			]
+		],
+		"via": [
+			[
+				160,
+				-104.82,
+				41.14
+			],
+			[
+				360,
+				-104.45,
+				42.76
+			],
+			[
+				520,
+				-103.47,
+				43.43
+			]
+		]
+	},
+	{
+		"a": "kansas_city",
+		"b": "dallas",
+		"km": 815,
+		"road": "I-35",
+		"towns": [
+			[
+				"Olathe",
+				30
+			],
+			[
+				"Emporia",
+				170
+			],
+			[
+				"Wichita",
+				315
+			],
+			[
+				"Oklahoma City",
+				560
+			],
+			[
+				"Ardmore",
+				710
+			],
+			[
+				"Denton",
+				770
+			]
+		],
+		"zones": [
+			[
+				5,
+				"industrial",
+				"Missouri"
+			],
+			[
+				370,
+				"fields",
+				"Kansas"
+			],
+			[
+				725,
+				"fields",
+				"Oklahoma"
+			],
+			[
+				815,
+				"fields",
+				"Texas"
+			]
+		],
+		"via": [
+			[
+				170,
+				-96.18,
+				38.4
+			],
+			[
+				315,
+				-97.34,
+				37.69
+			],
+			[
+				560,
+				-97.52,
+				35.47
+			],
+			[
+				710,
+				-97.14,
+				34.17
+			]
+		]
+	},
+	{
+		"a": "kansas_city",
+		"b": "minneapolis",
+		"km": 705,
+		"road": "I-35",
+		"towns": [
+			[
+				"Bethany",
+				140
+			],
+			[
+				"Des Moines",
+				310
+			],
+			[
+				"Ames",
+				360
+			],
+			[
+				"Mason City",
+				500
+			],
+			[
+				"Albert Lea",
+				560
+			]
+		],
+		"zones": [
+			[
+				175,
+				"fields",
+				"Missouri"
+			],
+			[
+				545,
+				"fields",
+				"Iowa"
+			],
+			[
+				705,
+				"lakes",
+				"Minnesota"
+			]
+		],
+		"via": [
+			[
+				310,
+				-93.61,
+				41.59
+			],
+			[
+				500,
+				-93.2,
+				43.15
+			],
+			[
+				560,
+				-93.37,
+				43.65
+			]
+		]
+	}
+]

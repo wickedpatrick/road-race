@@ -1,0 +1,866 @@
+{
+	"New York": [
+		{
+			"kind": "statue_of_liberty",
+			"name": {
+				"pl": "Statua Wolności",
+				"en": "The Statue of Liberty",
+				"cs": "Socha Svobody",
+				"is": "Frelsisstyttan",
+				"de": "Freiheitsstatue"
+			},
+			"desc": {
+				"pl": "Zielona pani z pochodnią wita statki płynące do Nowego Jorku",
+				"en": "The green lady with a torch welcomes ships coming to New York",
+				"cs": "Zelená paní s pochodní vítá lodě plující do New Yorku",
+				"is": "Græna konan með kyndilinn heilsar skipum sem sigla til New York",
+				"de": "Die grüne Dame mit der Fackel begrüßt die Schiffe nach New York"
+			},
+			"local": "Statue of Liberty"
+		},
+		{
+			"kind": "empire_state_building",
+			"name": {
+				"pl": "Empire State Building",
+				"en": "The Empire State Building",
+				"cs": "Empire State Building",
+				"is": "Empire State-byggingin",
+				"de": "Empire State Building"
+			},
+			"desc": {
+				"pl": "Ten wieżowiec ma ponad sto pięter i iglicę na samej górze",
+				"en": "This skyscraper has over a hundred floors and a spire on top",
+				"cs": "Tento mrakodrap má přes sto pater a na vrcholu jehlu",
+				"is": "Þessi skýjakljúfur er yfir hundrað hæðir með spíru á toppnum",
+				"de": "Dieser Wolkenkratzer hat über hundert Stockwerke und oben eine Spitze"
+			},
+			"local": "Empire State Building"
+		}
+	],
+	"Boston": [
+		{
+			"kind": "uss_constitution",
+			"name": {
+				"pl": "Fregata USS Constitution",
+				"en": "USS Constitution",
+				"cs": "Fregata USS Constitution",
+				"is": "Freigátan USS Constitution",
+				"de": "Fregatte USS Constitution"
+			},
+			"desc": {
+				"pl": "Ma ponad 200 lat, a wciąż pływa – mówią na nią Stare Żelazne Burty",
+				"en": "Over 200 years old and still afloat, she is called Old Ironsides",
+				"cs": "Je jí přes 200 let a pořád pluje, říkají jí Staré železné boky",
+				"is": "Yfir 200 ára gömul og flýtur enn, kölluð Gömlu járnsíðurnar",
+				"de": "Über 200 Jahre alt und schwimmt noch, man nennt sie Old Ironsides"
+			},
+			"local": "USS Constitution"
+		}
+	],
+	"Philadelphia": [
+		{
+			"kind": "liberty_bell",
+			"name": {
+				"pl": "Dzwon Wolności",
+				"en": "The Liberty Bell",
+				"cs": "Zvon svobody",
+				"is": "Frelsisbjallan",
+				"de": "Freiheitsglocke"
+			},
+			"desc": {
+				"pl": "Stary dzwon ma wielkie pęknięcie, więc już nie dzwoni",
+				"en": "The old bell has a big crack, so it doesn't ring any more",
+				"cs": "Starý zvon má velkou prasklinu, a tak už nezvoní",
+				"is": "Gamla bjallan er með stóra sprungu svo hún hringir ekki lengur",
+				"de": "Die alte Glocke hat einen großen Riss, darum läutet sie nicht mehr"
+			},
+			"local": "Liberty Bell"
+		}
+	],
+	"Washington": [
+		{
+			"kind": "us_capitol",
+			"name": {
+				"pl": "Kapitol",
+				"en": "The United States Capitol",
+				"cs": "Kapitol",
+				"is": "Þinghúsið Capitol",
+				"de": "Kapitol"
+			},
+			"desc": {
+				"pl": "Pod wielką białą kopułą ustala się prawa całej Ameryki",
+				"en": "Under the big white dome the laws of all America are made",
+				"cs": "Pod velkou bílou kupolí vznikají zákony celé Ameriky",
+				"is": "Undir stóru hvítu hvelfingunni eru lög allrar Ameríku sett",
+				"de": "Unter der großen weißen Kuppel werden die Gesetze Amerikas gemacht"
+			},
+			"local": "United States Capitol"
+		},
+		{
+			"kind": "washington_monument",
+			"name": {
+				"pl": "Pomnik Waszyngtona",
+				"en": "The Washington Monument",
+				"cs": "Washingtonův monument",
+				"is": "Washington-minnisvarðinn",
+				"de": "Washington Monument"
+			},
+			"desc": {
+				"pl": "Wysoki biały obelisk, a wokół niego wieniec z 50 flag",
+				"en": "A tall white obelisk with a ring of 50 flags around it",
+				"cs": "Vysoký bílý obelisk a kolem něj kruh z 50 vlajek",
+				"is": "Hár hvítur broddsúla með hring af 50 fánum í kring",
+				"de": "Ein hoher weißer Obelisk mit einem Ring aus 50 Flaggen"
+			},
+			"local": "Washington Monument"
+		}
+	],
+	"Buffalo": [
+		{
+			"kind": "niagara_falls",
+			"name": {
+				"pl": "Wodospad Niagara",
+				"en": "Niagara Falls",
+				"cs": "Niagarské vodopády",
+				"is": "Niagarafossar",
+				"de": "Niagarafälle"
+			},
+			"desc": {
+				"pl": "Woda spada z hukiem, a łódka podpływa pod samą mgłę",
+				"en": "The water roars down and a little boat sails right into the mist",
+				"cs": "Voda padá s hukotem a lodička pluje až do mlhy",
+				"is": "Vatnið steypist niður með drunum og lítill bátur siglir inn í úðann",
+				"de": "Das Wasser donnert hinab und ein Boot fährt mitten in den Nebel"
+			},
+			"local": "Niagara Falls"
+		}
+	],
+	"Pittsburgh": [
+		{
+			"kind": "duquesne_incline",
+			"name": {
+				"pl": "Kolejka Duquesne Incline",
+				"en": "The Duquesne Incline",
+				"cs": "Lanovka Duquesne Incline",
+				"is": "Duquesne-brautin",
+				"de": "Duquesne Incline"
+			},
+			"desc": {
+				"pl": "Czerwony wagonik od ponad stu lat wjeżdża na stromą górę",
+				"en": "A red car has climbed the steep hill for over a hundred years",
+				"cs": "Červený vozík jezdí do prudkého kopce už přes sto let",
+				"is": "Rauður vagn hefur klifið bratta brekkuna í yfir hundrað ár",
+				"de": "Ein roter Wagen fährt seit über hundert Jahren den steilen Hang hinauf"
+			},
+			"local": "Duquesne Incline"
+		}
+	],
+	"Cleveland": [
+		{
+			"kind": "rock_hall",
+			"name": {
+				"pl": "Galeria Sław Rock and Rolla",
+				"en": "The Rock and Roll Hall of Fame",
+				"cs": "Síň slávy rokenrolu",
+				"is": "Frægðarhöll rokksins",
+				"de": "Rock and Roll Hall of Fame"
+			},
+			"desc": {
+				"pl": "W szklanej piramidzie nad jeziorem są gitary sławnych muzyków",
+				"en": "A glass pyramid by the lake, full of famous musicians' guitars",
+				"cs": "Skleněná pyramida u jezera plná kytar slavných hudebníků",
+				"is": "Glerpýramídi við vatnið, full af gíturum frægra tónlistarmanna",
+				"de": "Eine Glaspyramide am See voller Gitarren berühmter Musiker"
+			},
+			"local": "Rock and Roll Hall of Fame"
+		}
+	],
+	"Detroit": [
+		{
+			"kind": "model_t",
+			"name": {
+				"pl": "Ford Model T",
+				"en": "Ford Model T",
+				"cs": "Ford Model T",
+				"is": "Ford Model T",
+				"de": "Ford Model T"
+			},
+			"desc": {
+				"pl": "Pierwsze auto z taśmy: było tanie, więc kupiło je mnóstwo rodzin",
+				"en": "Built on the first moving assembly line, so many families could buy one",
+				"cs": "Stavěl se na prvním pásu, a tak si ho mohlo koupit hodně rodin",
+				"is": "Smíðaður á fyrsta færibandinu, svo margar fjölskyldur gátu keypt hann",
+				"de": "Am ersten Fließband gebaut, so konnten viele Familien ihn kaufen"
+			},
+			"local": "Ford Model T"
+		}
+	],
+	"Chicago": [
+		{
+			"kind": "cloud_gate",
+			"name": {
+				"pl": "Fasola (Cloud Gate)",
+				"en": "Cloud Gate, \"the Bean\"",
+				"cs": "Fazole (Cloud Gate)",
+				"is": "Baunin (Cloud Gate)",
+				"de": "Die Bohne (Cloud Gate)"
+			},
+			"desc": {
+				"pl": "Wielka lustrzana fasola, w której widać niebo, miasto i ciebie",
+				"en": "A giant mirror bean showing the sky, the city and you",
+				"cs": "Obří zrcadlová fazole, ve které vidíš nebe, město i sebe",
+				"is": "Risastór speglabaun sem sýnir himininn, borgina og þig",
+				"de": "Eine riesige Spiegelbohne, in der man Himmel, Stadt und sich selbst sieht"
+			},
+			"local": "Cloud Gate"
+		},
+		{
+			"kind": "willis_tower",
+			"name": {
+				"pl": "Willis Tower",
+				"en": "Willis Tower",
+				"cs": "Willis Tower",
+				"is": "Willis-turninn",
+				"de": "Willis Tower"
+			},
+			"desc": {
+				"pl": "Czarny wieżowiec ze schodkami i szklanym balkonem na samej górze",
+				"en": "A black stepped skyscraper with a glass balcony near the top",
+				"cs": "Černý stupňovitý mrakodrap se skleněným balkonem nahoře",
+				"is": "Svartur stallaður skýjakljúfur með glersvölum efst",
+				"de": "Ein schwarzer Wolkenkratzer mit Stufen und Glasbalkon ganz oben"
+			},
+			"local": "Willis Tower"
+		}
+	],
+	"Minneapolis": [
+		{
+			"kind": "spoonbridge_cherry",
+			"name": {
+				"pl": "Łyżka z wisienką",
+				"en": "Spoonbridge and Cherry",
+				"cs": "Lžíce s třešní",
+				"is": "Skeiðin og kirsuberið",
+				"de": "Löffel mit Kirsche"
+			},
+			"desc": {
+				"pl": "Ogromna łyżka nad stawem, a w niej czerwona wisienka",
+				"en": "A giant spoon over a pond, holding a red cherry",
+				"cs": "Obří lžíce nad rybníčkem a v ní červená třešeň",
+				"is": "Risastór skeið yfir tjörn með rauðu kirsuberi",
+				"de": "Ein riesiger Löffel über einem Teich, darin eine rote Kirsche"
+			},
+			"local": "Spoonbridge and Cherry"
+		}
+	],
+	"Rapid City": [
+		{
+			"kind": "mount_rushmore",
+			"name": {
+				"pl": "Góra Rushmore",
+				"en": "Mount Rushmore",
+				"cs": "Mount Rushmore",
+				"is": "Rushmore-fjall",
+				"de": "Mount Rushmore"
+			},
+			"desc": {
+				"pl": "Cztery twarze prezydentów wykute w skale, każda wysoka jak dom",
+				"en": "Four presidents' faces carved in rock, each as tall as a house",
+				"cs": "Čtyři tváře prezidentů vytesané do skály, každá vysoká jako dům",
+				"is": "Fjögur forsetaandlit höggvin í klett, hvert hátt eins og hús",
+				"de": "Vier Präsidentengesichter im Fels, jedes so hoch wie ein Haus"
+			},
+			"local": "Mount Rushmore"
+		},
+		{
+			"kind": "american_bison",
+			"name": {
+				"pl": "Bizon amerykański",
+				"en": "American bison",
+				"cs": "Bizon americký",
+				"is": "Amerískur vísundur",
+				"de": "Amerikanischer Bison"
+			},
+			"desc": {
+				"pl": "Kudłaty bizon z wielkim garbem pasie się na prerii",
+				"en": "A shaggy bison with a big hump grazes on the prairie",
+				"cs": "Huňatý bizon s velkým hrbem se pase na prérii",
+				"is": "Loðinn vísundur með stóran hnúð bítur gras á sléttunni",
+				"de": "Ein zotteliger Bison mit großem Buckel grast in der Prärie"
+			},
+			"local": "American Bison"
+		}
+	],
+	"St. Louis": [
+		{
+			"kind": "gateway_arch",
+			"name": {
+				"pl": "Łuk Gateway Arch",
+				"en": "Gateway Arch",
+				"cs": "Oblouk Gateway Arch",
+				"is": "Gateway-boginn",
+				"de": "Gateway Arch"
+			},
+			"desc": {
+				"pl": "Lśniący stalowy łuk, a w środku malutkie wagoniki jadą na sam szczyt",
+				"en": "A shiny steel arch with tiny cars inside that ride to the top",
+				"cs": "Lesklý ocelový oblouk, uvnitř jezdí malé kabinky až nahoru",
+				"is": "Glansandi stálbogi og inni í honum fara litlir vagnar upp á topp",
+				"de": "Ein glänzender Stahlbogen, in dem kleine Kabinen bis nach oben fahren"
+			},
+			"local": "Gateway Arch"
+		}
+	],
+	"Kansas City": [
+		{
+			"kind": "kc_shuttlecocks",
+			"name": {
+				"pl": "Wielkie lotki do badmintona",
+				"en": "The giant shuttlecocks",
+				"cs": "Obří badmintonové košíčky",
+				"is": "Risastórir badmintonfjaðraboltar",
+				"de": "Die riesigen Federbälle"
+			},
+			"desc": {
+				"pl": "Lotki większe od ludzi leżą na trawie przed muzeum",
+				"en": "Shuttlecocks taller than people lie on the museum lawn",
+				"cs": "Košíčky větší než lidé leží na trávníku před muzeem",
+				"is": "Fjaðraboltar hærri en fólk liggja á grasinu við safnið",
+				"de": "Federbälle, größer als Menschen, liegen auf dem Museumsrasen"
+			},
+			"local": "Shuttlecocks"
+		}
+	],
+	"Nashville": [
+		{
+			"kind": "nashville_parthenon",
+			"name": {
+				"pl": "Partenon w Nashville",
+				"en": "The Parthenon",
+				"cs": "Parthenón v Nashvillu",
+				"is": "Parþenon í Nashville",
+				"de": "Der Parthenon von Nashville"
+			},
+			"desc": {
+				"pl": "Kopia greckiej świątyni, a w środku stoi wielka złota bogini",
+				"en": "A copy of a Greek temple with a huge golden goddess inside",
+				"cs": "Kopie řeckého chrámu a uvnitř stojí obří zlatá bohyně",
+				"is": "Eftirlíking af grísku hofi með risastórri gullgyðju inni",
+				"de": "Eine Kopie eines griechischen Tempels mit einer riesigen goldenen Göttin"
+			},
+			"local": "The Parthenon"
+		}
+	],
+	"Memphis": [
+		{
+			"kind": "memphis_riverboat",
+			"name": {
+				"pl": "Statek kołowy na Missisipi",
+				"en": "A Mississippi riverboat",
+				"cs": "Kolesový parník na Mississippi",
+				"is": "Spaðahjólabátur á Mississippi",
+				"de": "Raddampfer auf dem Mississippi"
+			},
+			"desc": {
+				"pl": "Biały statek z dwoma kominami płynie dzięki czerwonemu kołu z łopatkami",
+				"en": "A white boat with two stacks, pushed by a red paddle wheel",
+				"cs": "Bílá loď se dvěma komíny, kterou pohání červené kolo",
+				"is": "Hvítur bátur með tvo reykháfa sem rautt spaðahjól knýr áfram",
+				"de": "Ein weißes Schiff mit zwei Schornsteinen und rotem Schaufelrad"
+			},
+			"local": "Memphis Riverboat"
+		}
+	],
+	"Atlanta": [
+		{
+			"kind": "georgia_aquarium",
+			"name": {
+				"pl": "Rekin wielorybi w akwarium",
+				"en": "The whale shark at the aquarium",
+				"cs": "Žralok obrovský v akváriu",
+				"is": "Hvalháfurinn í sædýrasafninu",
+				"de": "Der Walhai im Aquarium"
+			},
+			"desc": {
+				"pl": "Za wielką szybą pływa rekin wielorybi, największa ryba świata",
+				"en": "Behind a huge window swims a whale shark, the biggest fish",
+				"cs": "Za obří sklem plave žralok obrovský, největší ryba na světě",
+				"is": "Bak við risastóran glugga syndir hvalháfur, stærsti fiskur heims",
+				"de": "Hinter einer riesigen Scheibe schwimmt ein Walhai, der größte Fisch"
+			},
+			"local": "Georgia Aquarium"
+		}
+	],
+	"Orlando": [
+		{
+			"kind": "florida_alligator",
+			"name": {
+				"pl": "Aligator na bagnach",
+				"en": "Alligator in the swamp",
+				"cs": "Aligátor v bažině",
+				"is": "Mississippi-krókódíll",
+				"de": "Alligator im Sumpf"
+			},
+			"desc": {
+				"pl": "Aligator wygrzewa się na słońcu wśród cyprysów na bagnach",
+				"en": "An alligator suns itself among the cypress trees of the swamp",
+				"cs": "Aligátor se vyhřívá na slunci mezi cypřiši v bažině",
+				"is": "Krókódíll sólar sig milli sýprustrjánna í mýrinni",
+				"de": "Ein Alligator sonnt sich zwischen den Zypressen im Sumpf"
+			},
+			"local": "American alligator"
+		}
+	],
+	"Miami": [
+		{
+			"kind": "miami_art_deco",
+			"name": {
+				"pl": "Hotele art déco w Miami",
+				"en": "Art Deco hotels of Miami Beach",
+				"cs": "Hotely art deco v Miami",
+				"is": "Art deco-hótel í Miami",
+				"de": "Art-déco-Hotels in Miami Beach"
+			},
+			"desc": {
+				"pl": "Pastelowe hotele jak cukierki stoją przy plaży pod palmami",
+				"en": "Candy-coloured pastel hotels stand by the beach under palm trees",
+				"cs": "Pastelové hotely barvy bonbonů stojí u pláže pod palmami",
+				"is": "Hótel í sælgætislitum standa við ströndina undir pálmatrjám",
+				"de": "Bonbonbunte Pastellhotels stehen unter Palmen am Strand"
+			},
+			"local": "Ocean Drive"
+		},
+		{
+			"kind": "lifeguard_tower",
+			"name": {
+				"pl": "Wieża ratowników",
+				"en": "Lifeguard tower",
+				"cs": "Strážní věž plavčíků",
+				"is": "Strandvarðaturn",
+				"de": "Rettungsschwimmer-Turm"
+			},
+			"desc": {
+				"pl": "Z tej kolorowej budki ratownicy pilnują pływaków na plaży",
+				"en": "From this colourful hut lifeguards watch the swimmers",
+				"cs": "Z této barevné budky hlídají plavčíci plavce",
+				"is": "Úr þessum litríka kofa gæta strandverðir sundfólksins",
+				"de": "Aus dieser bunten Hütte passen Rettungsschwimmer auf die Badenden auf"
+			},
+			"local": "South Beach lifeguard tower"
+		}
+	],
+	"New Orleans": [
+		{
+			"kind": "steamboat_natchez",
+			"name": {
+				"pl": "Parowiec Natchez",
+				"en": "Steamboat Natchez",
+				"cs": "Parník Natchez",
+				"is": "Gufubáturinn Natchez",
+				"de": "Raddampfer Natchez"
+			},
+			"desc": {
+				"pl": "Wielkie czerwone koło łopatkowe pcha statek po Missisipi",
+				"en": "A big red paddle wheel pushes the boat along the Mississippi",
+				"cs": "Velké červené lopatkové kolo pohání loď po Mississippi",
+				"is": "Stórt rautt spaðahjól knýr bátinn eftir Mississippi-fljóti",
+				"de": "Ein großes rotes Schaufelrad schiebt das Schiff über den Mississippi"
+			},
+			"local": "Steamboat Natchez"
+		},
+		{
+			"kind": "st_louis_cathedral",
+			"name": {
+				"pl": "Katedra św. Ludwika",
+				"en": "St. Louis Cathedral",
+				"cs": "Katedrála svatého Ludvíka",
+				"is": "Dómkirkja heilags Lúðvíks",
+				"de": "St.-Louis-Kathedrale"
+			},
+			"desc": {
+				"pl": "Biała katedra z trzema czarnymi wieżami przy placu z ogrodem",
+				"en": "A white cathedral with three black spires by a garden square",
+				"cs": "Bílá katedrála se třemi černými věžemi u náměstí se zahradou",
+				"is": "Hvít dómkirkja með þrjá svarta turna við garðtorg",
+				"de": "Eine weiße Kathedrale mit drei schwarzen Turmspitzen an einem Gartenplatz"
+			},
+			"local": "St. Louis Cathedral"
+		}
+	],
+	"Houston": [
+		{
+			"kind": "shuttle_747",
+			"name": {
+				"pl": "Prom kosmiczny na jumbo jecie",
+				"en": "Space shuttle on a jumbo jet",
+				"cs": "Raketoplán na jumbo jetu",
+				"is": "Geimferja ofan á júmbóþotu",
+				"de": "Space Shuttle auf dem Jumbojet"
+			},
+			"desc": {
+				"pl": "Wielki samolot nosił prom kosmiczny na grzbiecie jak na barana",
+				"en": "A giant plane carried the space shuttle piggyback on its back",
+				"cs": "Obří letadlo neslo raketoplán na svých zádech",
+				"is": "Risaflugvél bar geimferjuna á bakinu á sér",
+				"de": "Ein riesiges Flugzeug trug das Space Shuttle huckepack auf dem Rücken"
+			},
+			"local": "Independence Plaza"
+		}
+	],
+	"San Antonio": [
+		{
+			"kind": "the_alamo",
+			"name": {
+				"pl": "Alamo",
+				"en": "The Alamo",
+				"cs": "Alamo",
+				"is": "Alamo",
+				"de": "Alamo"
+			},
+			"desc": {
+				"pl": "Stara kamienna misja ze słynnym zaokrąglonym szczytem",
+				"en": "An old stone mission with a famous rounded top",
+				"cs": "Stará kamenná misie se slavným zaobleným štítem",
+				"is": "Gamalt trúboðshús úr steini með frægum ávölum toppi",
+				"de": "Eine alte steinerne Mission mit dem berühmten runden Giebel"
+			},
+			"local": "The Alamo"
+		}
+	],
+	"Dallas": [
+		{
+			"kind": "reunion_tower",
+			"name": {
+				"pl": "Reunion Tower",
+				"en": "Reunion Tower",
+				"cs": "Reunion Tower",
+				"is": "Reunion-turninn",
+				"de": "Reunion Tower"
+			},
+			"desc": {
+				"pl": "Wysoka wieża z wielką kulą, która nocą świeci setkami lampek",
+				"en": "A tall tower with a big ball that glows with hundreds of lights",
+				"cs": "Vysoká věž s velkou koulí, která v noci svítí stovkami světýlek",
+				"is": "Hár turn með stórri kúlu sem lýsir með hundruðum ljósa",
+				"de": "Ein hoher Turm mit einer großen Kugel, die nachts mit Hunderten Lichtern leuchtet"
+			},
+			"local": "Reunion Tower"
+		}
+	],
+	"Denver": [
+		{
+			"kind": "red_rocks",
+			"name": {
+				"pl": "Amfiteatr Red Rocks",
+				"en": "Red Rocks Amphitheatre",
+				"cs": "Amfiteátr Red Rocks",
+				"is": "Red Rocks-hringleikahúsið",
+				"de": "Red-Rocks-Amphitheater"
+			},
+			"desc": {
+				"pl": "Koncerty grają tu między dwiema ogromnymi czerwonymi skałami",
+				"en": "Concerts are played here between two giant red rocks",
+				"cs": "Koncerty se tu hrají mezi dvěma obřími červenými skalami",
+				"is": "Hér eru tónleikar haldnir á milli tveggja risastórra rauðra kletta",
+				"de": "Hier gibt es Konzerte zwischen zwei riesigen roten Felsen"
+			},
+			"local": "Red Rocks Amphitheatre"
+		}
+	],
+	"Albuquerque": [
+		{
+			"kind": "balloon_fiesta",
+			"name": {
+				"pl": "Festiwal balonów",
+				"en": "The Balloon Fiesta",
+				"cs": "Balonová fiesta",
+				"is": "Loftbelgjahátíðin",
+				"de": "Ballon-Fiesta"
+			},
+			"desc": {
+				"pl": "Każdej jesieni nad pustynią startują setki kolorowych balonów",
+				"en": "Every autumn hundreds of colourful balloons rise over the desert",
+				"cs": "Každý podzim stoupají nad poušť stovky barevných balonů",
+				"is": "Á hverju hausti svífa hundruð litríkra loftbelgja yfir eyðimörkinni",
+				"de": "Jeden Herbst steigen Hunderte bunte Ballons über der Wüste auf"
+			},
+			"local": "Albuquerque International Balloon Fiesta"
+		}
+	],
+	"Salt Lake City": [
+		{
+			"kind": "utah_capitol",
+			"name": {
+				"pl": "Kapitol stanu Utah",
+				"en": "The Utah State Capitol",
+				"cs": "Kapitol státu Utah",
+				"is": "Þinghús Utah-fylkis",
+				"de": "Kapitol von Utah"
+			},
+			"desc": {
+				"pl": "Granitowy gmach z kopułą pokrytą miedzią, a za nim ośnieżone góry",
+				"en": "A granite building with a copper-covered dome and snowy mountains behind",
+				"cs": "Žulová budova s kopulí pokrytou mědí a za ní zasněžené hory",
+				"is": "Granítbygging með koparhvelfingu og snævi þakin fjöll að baki",
+				"de": "Ein Granitbau mit kupferbedeckter Kuppel, dahinter verschneite Berge"
+			},
+			"local": "Utah State Capitol"
+		}
+	],
+	"Las Vegas": [
+		{
+			"kind": "vegas_sign",
+			"name": {
+				"pl": "Znak „Witamy w Las Vegas”",
+				"en": "The Welcome to Las Vegas sign",
+				"cs": "Uvítací cedule Las Vegas",
+				"is": "Velkomin til Las Vegas-skiltið",
+				"de": "Das Willkommensschild von Las Vegas"
+			},
+			"desc": {
+				"pl": "Wielki znak w kształcie rombu, pełen żarówek, z gwiazdą na czubku",
+				"en": "A big diamond-shaped sign full of light bulbs, with a star on top",
+				"cs": "Velká cedule ve tvaru kosočtverce plná žárovek a s hvězdou nahoře",
+				"is": "Stórt tígullaga skilti fullt af ljósaperum með stjörnu efst",
+				"de": "Ein großes rautenförmiges Schild voller Glühbirnen, oben ein Stern"
+			},
+			"local": "Welcome to Fabulous Las Vegas sign"
+		}
+	],
+	"Phoenix": [
+		{
+			"kind": "camelback_mountain",
+			"name": {
+				"pl": "Góra Camelback",
+				"en": "Camelback Mountain",
+				"cs": "Hora Camelback",
+				"is": "Camelback-fjall",
+				"de": "Camelback Mountain"
+			},
+			"desc": {
+				"pl": "Czerwona góra wygląda jak leżący wielbłąd z garbem i głową",
+				"en": "This red mountain looks like a resting camel with a hump and a head",
+				"cs": "Červená hora vypadá jako ležící velbloud s hrbem a hlavou",
+				"is": "Þetta rauða fjall líkist úlfalda sem liggur, með kryppu og haus",
+				"de": "Dieser rote Berg sieht aus wie ein liegendes Kamel mit Höcker und Kopf"
+			},
+			"local": "Camelback Mountain"
+		}
+	],
+	"Los Angeles": [
+		{
+			"kind": "hollywood_sign",
+			"name": {
+				"pl": "Napis Hollywood",
+				"en": "Hollywood Sign",
+				"cs": "Nápis Hollywood",
+				"is": "Hollywood-skiltið",
+				"de": "Hollywood-Schriftzug"
+			},
+			"desc": {
+				"pl": "Wielkie białe litery na wzgórzu nad miastem, w którym kręci się filmy",
+				"en": "Giant white letters on a hill above the city where films are made",
+				"cs": "Obří bílá písmena na kopci nad městem, kde se točí filmy",
+				"is": "Risastórir hvítir stafir á hæð yfir borginni þar sem kvikmyndir eru gerðar",
+				"de": "Riesige weiße Buchstaben auf einem Hügel über der Stadt der Filme"
+			},
+			"local": "Hollywood Sign"
+		},
+		{
+			"kind": "santa_monica_pier",
+			"name": {
+				"pl": "Molo w Santa Monica",
+				"en": "Santa Monica Pier",
+				"cs": "Molo v Santa Monice",
+				"is": "Bryggjan í Santa Monica",
+				"de": "Santa Monica Pier"
+			},
+			"desc": {
+				"pl": "Molo nad oceanem z diabelskim młynem i kolejką górską",
+				"en": "A pier over the ocean with a big wheel and a roller coaster",
+				"cs": "Molo nad oceánem s ruským kolem a horskou dráhou",
+				"is": "Bryggja út í hafið með parísarhjóli og rússíbana",
+				"de": "Eine Seebrücke über dem Ozean mit Riesenrad und Achterbahn"
+			},
+			"local": "Santa Monica Pier"
+		}
+	],
+	"San Francisco": [
+		{
+			"kind": "golden_gate",
+			"name": {
+				"pl": "Most Golden Gate",
+				"en": "Golden Gate Bridge",
+				"cs": "Most Golden Gate",
+				"is": "Golden Gate-brúin",
+				"de": "Golden Gate Bridge"
+			},
+			"desc": {
+				"pl": "Czerwono-pomarańczowy most wiszący, często schowany we mgle",
+				"en": "A red-orange suspension bridge, often hiding in the fog",
+				"cs": "Červenooranžový visutý most, často schovaný v mlze",
+				"is": "Rauðgul hengibrú sem felur sig oft í þokunni",
+				"de": "Eine rotorange Hängebrücke, die sich oft im Nebel versteckt"
+			},
+			"local": "Golden Gate Bridge"
+		},
+		{
+			"kind": "cable_car",
+			"name": {
+				"pl": "Tramwaj linowy",
+				"en": "Cable Car",
+				"cs": "Lanová tramvaj",
+				"is": "Kláfsporvagn",
+				"de": "Cable Car"
+			},
+			"desc": {
+				"pl": "Stary wagonik ciągnięty liną pod ziemią wjeżdża na strome ulice",
+				"en": "An old car pulled by a cable under the street up steep hills",
+				"cs": "Starý vůz tažený lanem pod ulicí jezdí do strmých kopců",
+				"is": "Gamall vagn sem kapall undir götunni dregur upp brattar brekkur",
+				"de": "Ein alter Wagen, von einem Seil unter der Straße steile Hügel hinaufgezogen"
+			},
+			"local": "San Francisco Cable Car"
+		}
+	],
+	"Portland": [
+		{
+			"kind": "mount_hood",
+			"name": {
+				"pl": "Góra Hood",
+				"en": "Mount Hood",
+				"cs": "Hora Hood",
+				"is": "Hood-fjall",
+				"de": "Mount Hood"
+			},
+			"desc": {
+				"pl": "Ośnieżony wulkan, który widać z Portland, otoczony lasami świerków",
+				"en": "A snowy volcano you can see from Portland, ringed by fir forests",
+				"cs": "Zasněžená sopka, kterou je vidět z Portlandu, obklopená jedlovými lesy",
+				"is": "Snævi þakið eldfjall sem sést frá Portland, umkringt greniskógum",
+				"de": "Ein verschneiter Vulkan, den man von Portland sieht, umgeben von Tannenwäldern"
+			},
+			"local": "Mount Hood"
+		}
+	],
+	"Seattle": [
+		{
+			"kind": "space_needle",
+			"name": {
+				"pl": "Space Needle",
+				"en": "Space Needle",
+				"cs": "Space Needle",
+				"is": "Space Needle",
+				"de": "Space Needle"
+			},
+			"desc": {
+				"pl": "Wieża jak igła z latającym spodkiem na czubku, a za nią góra Rainier",
+				"en": "A needle-thin tower with a flying saucer on top and Mount Rainier behind",
+				"cs": "Věž tenká jako jehla s létajícím talířem nahoře a horou Rainier za ní",
+				"is": "Turn mjór sem nál með fljúgandi disk efst og fjallið Rainier að baki",
+				"de": "Ein nadeldünner Turm mit fliegender Untertasse oben, dahinter Mount Rainier"
+			},
+			"local": "Space Needle"
+		}
+	],
+	"Titusville": [
+		{
+			"kind": "kennedy_rocket",
+			"name": {
+				"pl": "Rakieta w Centrum Kennedy'ego",
+				"en": "Rocket at the Kennedy Space Center",
+				"cs": "Raketa v Kennedyho vesmírném středisku",
+				"is": "Eldflaug í Kennedy-geimferðastöðinni",
+				"de": "Rakete im Kennedy Space Center"
+			},
+			"desc": {
+				"pl": "Stąd startowały rakiety, które zawiozły ludzi na Księżyc",
+				"en": "Rockets that took people to the Moon launched from here",
+				"cs": "Odtud startovaly rakety, které dovezly lidi na Měsíc",
+				"is": "Héðan fóru eldflaugarnar sem fluttu fólk til tunglsins",
+				"de": "Von hier starteten die Raketen, die Menschen zum Mond brachten"
+			},
+			"local": "Kennedy Space Center"
+		}
+	],
+	"Fort Worth": [
+		{
+			"kind": "longhorn",
+			"name": {
+				"pl": "Długorogi wół z Teksasu",
+				"en": "Texas longhorn",
+				"cs": "Texaský dlouhorohý skot",
+				"is": "Langhyrndur nautgripur frá Texas",
+				"de": "Texas-Longhorn"
+			},
+			"desc": {
+				"pl": "Ten wół ma rogi tak długie, że ledwo mieści się w bramie",
+				"en": "This steer has horns so long it barely fits through a gate",
+				"cs": "Tenhle vůl má rohy tak dlouhé, že se sotva vejde do brány",
+				"is": "Þetta naut hefur svo löng horn að það kemst varla um hlið",
+				"de": "Dieser Ochse hat so lange Hörner, dass er kaum durchs Tor passt"
+			},
+			"local": "Fort Worth Stockyards"
+		}
+	],
+	"Boulder City": [
+		{
+			"kind": "hoover_dam",
+			"name": {
+				"pl": "Zapora Hoovera",
+				"en": "The Hoover Dam",
+				"cs": "Hooverova přehrada",
+				"is": "Hoover-stíflan",
+				"de": "Hoover-Staudamm"
+			},
+			"desc": {
+				"pl": "Ogromna betonowa ściana zatrzymuje rzekę Kolorado i robi z niej jezioro",
+				"en": "A huge concrete wall holds back the Colorado River to make a lake",
+				"cs": "Obrovská betonová zeď zadržuje řeku Colorado a dělá z ní jezero",
+				"is": "Risastór steinveggur stíflar Colorado-ána og myndar stöðuvatn",
+				"de": "Eine riesige Betonmauer staut den Colorado zu einem See auf"
+			},
+			"local": "Hoover Dam"
+		}
+	],
+	"Williams": [
+		{
+			"kind": "grand_canyon",
+			"name": {
+				"pl": "Wielki Kanion",
+				"en": "The Grand Canyon",
+				"cs": "Grand Canyon",
+				"is": "Miklagljúfur",
+				"de": "Grand Canyon"
+			},
+			"desc": {
+				"pl": "Rzeka Kolorado przez miliony lat wyżłobiła ten kolorowy, pasiasty kanion",
+				"en": "Over millions of years the Colorado River carved this striped canyon",
+				"cs": "Řeka Colorado tento pruhovaný kaňon vyhloubila za miliony let",
+				"is": "Colorado-áin gróf þetta röndótta gljúfur á milljónum ára",
+				"de": "In Millionen Jahren hat der Colorado diese gestreifte Schlucht gegraben"
+			},
+			"local": "Grand Canyon"
+		}
+	],
+	"Seligman": [
+		{
+			"kind": "route66_seligman",
+			"name": {
+				"pl": "Droga 66 w Seligman",
+				"en": "Route 66 in Seligman",
+				"cs": "Silnice 66 v Seligmanu",
+				"is": "Þjóðvegur 66 í Seligman",
+				"de": "Route 66 in Seligman"
+			},
+			"desc": {
+				"pl": "Stara, słynna droga przez całą Amerykę, z barem i dawną stacją benzynową",
+				"en": "A famous old road across America, with a diner and an old petrol pump",
+				"cs": "Slavná stará silnice napříč Amerikou, s jídelnou a starou benzinovou pumpou",
+				"is": "Fræg gömul leið þvert yfir Ameríku, með matsölu og gamalli bensíndælu",
+				"de": "Eine berühmte alte Straße quer durch Amerika, mit Diner und alter Zapfsäule"
+			},
+			"local": "Historic Route 66"
+		}
+	]
+}

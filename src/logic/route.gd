@@ -206,7 +206,7 @@ static func build(from: String, to: String) -> Dictionary:
 		"name": "%s - %s" % [Geo.display_name(from), Geo.display_name(to)],
 		"from": from, "to": to, "path": path, "km": km, "m_per_km": mpk, "left": Geo.left_hand(), "weather": weather,
 		"length": length, "duration": duration, "lanes": lanes,
-		"traffic_density": 1.0 if lanes == 3 else 0.8,
+		"traffic_density": (1.0 if lanes == 3 else 0.8) * float(GameData.country().get("traffic", 1.0)),
 		"stations": stations, "finish_label": Geo.city(to).name, "finish_display": Geo.display_name(to),
 		"curve_amount": curve / length, "hill_amount": hill / length,
 		"zones": zones, "towns": towns, "roads": roads, "regions": regions, "boards": boards, "tunnels": tunnels,

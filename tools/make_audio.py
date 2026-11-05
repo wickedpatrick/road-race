@@ -138,6 +138,7 @@ def anthems():  # melodies from the scores on Wikipedia/Commons; all of them in 
     anthem("at", [(72, 2), (70, 1), (69, 2), (70, .5), (72, .5), (74, 2), (72, 1), (72, .5), (70, .5), (70, 1)], 0.27, [48, 58, 64, 67], 0.7)  # Land der Berge, Land am Strome
     anthem("is", [(58, 1), (63, 1), (65, 1), (67, 1), (None, .5), (65, .5), (63, 1), (65, 1), (62, 1)], 0.38, [46, 58, 62, 65])  # Ó, guð vors lands! Ó, land vors guðs!
     anthem("lt", [(68, 1.5), (63, .5), (68, 1), (70, 1), (72, 1), (70, 1), (68, 1), (70, 1)], 0.38, [51, 58, 63, 67])  # Lietuva, Tėvyne mūsų
+    anthem("us", [(65, .75), (62, .25), (58, 1), (62, 1), (65, 1), (70, 2), (74, .75), (72, .25), (70, 1), (62, 1), (64, 1), (65, 2)], 0.27, [41, 57, 60, 65], 0.7)  # O say can you see, by the dawn's early light
 def motifs():  # the best-known bars of each country's classical (or folk) tune, on arrival every other time
     motif = lambda code, melody, q, chord, tail=0.8: anthem(code, melody, q, chord, tail, "motif_")
     motif("pl", [(69, .5), (None, .25), (69, .25), (69, .5), (None, .25), (69, .25), (73, .25), (76, .25), (78, .25), (80, .25), (81, 1)], 0.5, [45, 57, 61, 64, 69])  # Chopin, Polonaise in A major "Military" (from memory and the score's opening)
@@ -146,6 +147,8 @@ def motifs():  # the best-known bars of each country's classical (or folk) tune,
     motif("cz", [(65, .75), (68, .25), (68, 1), (65, .75), (63, .25), (61, 1), (63, .75), (65, .25), (68, .75), (65, .25), (63, 2)], 0.4, [44, 56, 60, 63], 0.9)  # Dvořák, New World Symphony, Largo
     motif("gb", [(69, 1), (69, 1), (68, .5), (69, .5), (71, 1), (66, 2), (64, 1)], 0.42, [49, 57, 61, 64], 0.9)  # Elgar, Land of Hope and Glory
     motif("is", [(64, 1), (67, 1), (64, 1), (67, 1), (64, .5), (66, .5), (67, .5), (66, .5), (64, 1), (67, 1), (66, 1)], 0.3, [47, 59, 63, 66], 0.7)  # Kaldalóns, Á Sprengisandi
+    motif("us", [(72, .5), (72, .5), (74, .5), (76, .5), (72, .5), (76, .5), (74, 1), (72, .5), (72, .5), (74, .5), (76, .5), (72, 1), (71, 1),
+        (72, .5), (72, .5), (74, .5), (76, .5), (77, .5), (76, .5), (74, .5), (72, .5), (71, .5), (67, .5), (69, .5), (71, .5), (72, 1), (72, 1)], 0.21, [48, 60, 64, 67], 0.6)  # Yankee Doodle (folk)
 def radar():  # radar detector: a single short high beep (the game repeats it every 0.5 s while speeding)
     out = [0.0] * int(0.3 * SR)
     place(out, 0.0, tone(2400, 0.06, "sq", 0.5, 0.002, 0.02))

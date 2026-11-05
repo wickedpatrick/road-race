@@ -44,8 +44,8 @@ const TOWN_SIGN_W := 6.4
 const BOARD_W := 10.0
 const REGION_W := 8.6
 ## ground strip colour ids, looked up in the season palette
-const GROUND_KEYS := ["crop_a", "crop_b", "crop_c", "water", "sand", "pave", "dark"]
-enum {G_CROP_A, G_CROP_B, G_CROP_C, G_WATER, G_SAND, G_PAVE, G_DARK}
+const GROUND_KEYS := ["crop_a", "crop_b", "crop_c", "water", "sand", "pave", "dark", "redsand"]
+enum {G_CROP_A, G_CROP_B, G_CROP_C, G_WATER, G_SAND, G_PAVE, G_DARK, G_REDSAND}
 
 ## Deterministic 0..1 noise for (a, b).
 static func _h(a: int, b: int) -> float:
@@ -161,7 +161,7 @@ static func _solid(it: Dictionary) -> Array:
 			return [[-3.65, -3.35], [3.35, 3.65]]
 		"region", "poi", "billboard":
 			return [[-3.15, -2.85], [2.85, 3.15]]
-		"tree", "pine", "birch", "spruce", "poplar", "willow", "apple":
+		"tree", "pine", "birch", "spruce", "poplar", "willow", "apple", "cactus":
 			return [[-0.3, 0.3]]
 		"shrine":
 			return [[-0.6, 0.6]]
@@ -169,13 +169,14 @@ static func _solid(it: Dictionary) -> Array:
 			var p := Track.ROAD_HALF_WIDTH + 2.5
 			var m := (1.0 + Track.MEDIAN * 0.5) * Track.ROAD_HALF_WIDTH # the median pillar of a dual carriageway
 			return [[-m - 0.4, -m + 0.4], [p - 0.9, p + 0.9]]
-		"haybale", "lavarock", "building", "house", "woodhouse", "farm", "church", "cerkiew", "block", "castle", "rock", "windmill", \
+		"haybale", "lavarock", "redrock", "mesa", "building", "house", "woodhouse", "farm", "church", "cerkiew", "block", "castle", "rock", "windmill", \
 				"chimney", "headframe", "cooling", "lighthouse", "landmark", "heap", "turbine":
 			return [[-hw, hw]]
 	return []
 
 const CLEARABLE := ["building", "house", "woodhouse", "tree", "church", "cerkiew", "block", "farm", "apple", "pine",
-	"birch", "spruce", "poplar", "cow", "sheep", "horse", "moss", "lavarock"]
+	"birch", "spruce", "poplar", "cow", "sheep", "horse", "moss", "lavarock",
+	"cactus", "bush", "redrock", "mesa"]
 
 ## Makes room for a landmark: removes houses and trees on its spot and on its side of the road before it, like a
 ## square in front of it, so it can be seen while driving up to it.
@@ -266,6 +267,8 @@ static func _nature(items: Dictionary, biome: String, z: float, rng: RandomNumbe
 			return rng.randf_range(9.0, 14.0)
 		"lava", "highland", "glacier", "fjords":
 			return _iceland(items, biome, z, rng)
+		"desert":
+			return _desert(items, z, rng)
 		"jura":
 			for side in [-1, 1]:
 				if rng.randf() < 0.22:
@@ -350,6 +353,23 @@ static func _iceland(items: Dictionary, biome: String, z: float, rng: RandomNumb
 	elif r < 0.11 and biome != "highland": _flock(items, z, rng, "horse", 4)
 	elif r < 0.14 and biome != "highland": _add(items, "house", z, _side(rng) * rng.randf_range(24.0, 45.0), 8.0, 6.5, rng)
 	return rng.randf_range(10.0, 18.0)
+
+## The open desert of the American Southwest: saguaros and low grey-green sagebrush far apart, red rocks, now and
+## then a flat-topped mesa far off the road. Returns the step length.
+static func _desert(items: Dictionary, z: float, rng: RandomNumberGenerator) -> float:
+	for side in [-1, 1]:
+		var r := rng.randf()
+		if r < 0.2:
+			_add(items, "cactus", z + rng.randf_range(-4, 4), side * rng.randf_range(9.0, 38.0), 1.5, rng.randf_range(5.0, 10.0), rng)
+		elif r < 0.55:
+			var w := rng.randf_range(1.6, 3.0)
+			_add(items, "bush", z + rng.randf_range(-4, 4), side * rng.randf_range(7.8, 40.0), w, w * rng.randf_range(0.45, 0.6), rng)
+		if rng.randf() < 0.08:
+			var w := rng.randf_range(1.5, 5.0)
+			_add(items, "redrock", z, side * rng.randf_range(10.0, 45.0), w, w * rng.randf_range(0.5, 0.9), rng)
+	if rng.randf() < 0.03:
+		_add(items, "mesa", z, _side(rng) * rng.randf_range(60.0, 150.0), rng.randf_range(40.0, 90.0), rng.randf_range(16.0, 32.0), rng)
+	return rng.randf_range(12.0, 20.0)
 
 ## A flock of sheep or a few horses beside the road.
 static func _flock(items: Dictionary, z: float, rng: RandomNumberGenerator, kind: String, most: int) -> void:
@@ -566,6 +586,12 @@ static func ground(stage: Dictionary, nseg: int) -> Array:
 					# dark lava and black sand between the moss
 					if _h(int(z / 70.0), side * 13) < 0.5:
 						s.append_array([side * 9.0, side * 60.0, G_DARK])
+				"desert":
+					# patches of redder sand among the tan
+					var blk := int(z / 80.0)
+					if _h(blk, side * 19) < 0.4:
+						var a := 8.5 + 25.0 * _h(blk, side * 23)
+						s.append_array([side * a, side * (a + 25.0 + 90.0 * _h(blk, side * 29)), G_REDSAND])
 				"fjords":
 					if side == -1 and _h(int(z / 300.0), 17) < 0.65:
 						s.append_array([side * 13.0, side * 400.0, G_WATER])
@@ -652,6 +678,10 @@ static func draw_item(cv, it: Dictionary, b: Vector2, pm: float, pal: Dictionary
 		"horse": _horse(cv, it, b, pm, season)
 		"moss": _moss(cv, it, b, pm, season)
 		"lavarock": _lavarock(cv, it, b, h, pm)
+		"cactus": _cactus(cv, it, b, h, pm)
+		"bush": _bush(cv, it, b, h, pm, season)
+		"redrock": _redrock(cv, it, b, h, pm)
+		"mesa": _mesa(cv, it, b, h, pm, season)
 		"town_sign", "town_end": _town_sign(cv, it, b, pm, font, it.type == "town_end")
 		"board": _board(cv, it, b, pm, font)
 		"limit": _limit(cv, it, b, pm, font)
@@ -1053,6 +1083,67 @@ static func _lavarock(cv, it: Dictionary, b: Vector2, h: float, pm: float) -> vo
 		b + Vector2(w * 0.15, -h * 0.65), b + Vector2(w * 0.35, -h * 0.9), b + Vector2(w * 0.5, 0)]), Color("37322f"))
 	cv.draw_colored_polygon(PackedVector2Array([b + Vector2(w * 0.15, 0), b + Vector2(w * 0.15, -h * 0.65), b + Vector2(w * 0.35, -h * 0.9),
 		b + Vector2(w * 0.5, 0)]), Color("27231f"))
+
+## Saguaro: a ribbed green column with one to three arms turned up, rounded at the tops.
+static func _cactus(cv, it: Dictionary, b: Vector2, h: float, pm: float) -> void:
+	var w: float = it.w * pm
+	var tw := maxf(1.0, w * 0.36)
+	var aw := maxf(1.0, tw * 0.72)
+	var col := Color("4f8a3c")
+	var dark := Color("3c6e2e")
+	var arms := 1 + mini(int(it.v * 3.0), 2)
+	var first := 1.0 if fmod(it.v * 7.0, 1.0) < 0.5 else -1.0
+	for k in arms:
+		var s := first if k % 2 == 0 else -first
+		var ya := h * (0.36 + 0.13 * k)
+		var top := ya + h * (0.24 - 0.05 * k)
+		var ax := s * (w * 0.5 - aw * 0.5)
+		cv.draw_line(b + Vector2(0, -ya), b + Vector2(ax, -ya), col, aw)
+		cv.draw_circle(b + Vector2(ax, -ya), aw * 0.5, col)
+		cv.draw_line(b + Vector2(ax, -ya), b + Vector2(ax, -top), col, aw)
+		cv.draw_circle(b + Vector2(ax, -top), aw * 0.5, col)
+		if pm > 4.0:
+			cv.draw_line(b + Vector2(ax + aw * 0.2, -ya), b + Vector2(ax + aw * 0.2, -top), dark, maxf(1.0, aw * 0.2))
+	cv.draw_rect(Rect2(b + Vector2(-tw * 0.5, -h + tw * 0.5), Vector2(tw, h - tw * 0.5)), col)
+	cv.draw_circle(b + Vector2(0, -h + tw * 0.5), tw * 0.5, col)
+	cv.draw_rect(Rect2(b + Vector2(tw * 0.18, -h + tw * 0.5), Vector2(tw * 0.32, h - tw * 0.5)), dark)
+	if pm > 3.0:
+		cv.draw_line(b + Vector2(-tw * 0.12, -h + tw * 0.4), b + Vector2(-tw * 0.12, 0), dark, maxf(1.0, tw * 0.08))
+
+## Sagebrush or creosote: a low grey-green tuft.
+static func _bush(cv, it: Dictionary, b: Vector2, h: float, pm: float, season: String) -> void:
+	var w: float = it.w * pm
+	var col := Color("9aa088") if season == "winter" else Color("8c9a6c")
+	var dark := col.darkened(0.2)
+	var r := maxf(1.0, minf(w * 0.3, h * 0.6))
+	cv.draw_circle(b + Vector2(-w * 0.22, -r * 0.8), r * 0.85, dark)
+	cv.draw_circle(b + Vector2(w * 0.22, -r * 0.8), r * 0.85, dark)
+	cv.draw_circle(b + Vector2(0, -r * 1.05), r, col)
+	cv.draw_rect(Rect2(b + Vector2(-w * 0.4, -r * 0.6), Vector2(w * 0.8, r * 0.6)), dark)
+
+## Red sandstone boulder.
+static func _redrock(cv, it: Dictionary, b: Vector2, h: float, pm: float) -> void:
+	var w: float = it.w * pm
+	cv.draw_colored_polygon(PackedVector2Array([b + Vector2(-w * 0.5, 0), b + Vector2(-w * 0.45, -h * 0.55), b + Vector2(-w * 0.2, -h),
+		b + Vector2(w * 0.2, -h * 0.95), b + Vector2(w * 0.42, -h * 0.6), b + Vector2(w * 0.5, 0)]), Color("c0683f"))
+	cv.draw_colored_polygon(PackedVector2Array([b + Vector2(w * 0.1, 0), b + Vector2(w * 0.2, -h * 0.95), b + Vector2(w * 0.42, -h * 0.6),
+		b + Vector2(w * 0.5, 0)]), Color("98492c"))
+
+## Mesa or butte far off the road: red cliffs under a flat cap rock, a scree slope at the foot, banded rock.
+static func _mesa(cv, it: Dictionary, b: Vector2, h: float, pm: float, season: String) -> void:
+	var w: float = it.w * pm
+	var rock := Color("b4623c")
+	var shade := Color("8f4a2e")
+	var cap := Color("eef1f3") if season == "winter" else Color("c97d50")
+	var base := PackedVector2Array([b + Vector2(-w * 0.5, 0), b + Vector2(-w * 0.36, -h * 0.4), b + Vector2(-w * 0.32, -h),
+		b + Vector2(w * 0.3, -h), b + Vector2(w * 0.35, -h * 0.4), b + Vector2(w * 0.5, 0)])
+	cv.draw_colored_polygon(base, rock)
+	cv.draw_colored_polygon(PackedVector2Array([b + Vector2(w * 0.18, 0), b + Vector2(w * 0.2, -h), b + Vector2(w * 0.3, -h),
+		b + Vector2(w * 0.35, -h * 0.4), b + Vector2(w * 0.5, 0)]), shade)
+	for k in 2:
+		var y := h * (0.55 + 0.17 * k)
+		cv.draw_line(b + Vector2(-w * 0.33, -y), b + Vector2(w * 0.18, -y), rock.darkened(0.12), maxf(1.0, h * 0.03))
+	cv.draw_rect(Rect2(b + Vector2(-w * 0.32, -h), Vector2(w * 0.62, maxf(1.0, h * 0.08))), cap)
 
 static func _stork(cv, b: Vector2, h: float, pm: float, season: String) -> void:
 	cv.draw_line(b, b + Vector2(0, -h), Color("8a8d92"), maxf(1.0, 0.15 * pm))
