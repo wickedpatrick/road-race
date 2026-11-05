@@ -328,6 +328,12 @@ func step(dt: float, input: Dictionary) -> void:
 		# pulled over the player can still steer (and swerve to shake off a weak officer), not drive away
 		input = {"accel": false, "brake": false, "steer": input.steer if police.phase == "pull_over" else 0.0}
 		braking = speed > 0.0
+	# a tunnel's road is dry: full grip and no sliding in it, whatever the weather outside
+	var in_tunnel := not Route.tunnel_at(stage, z).is_empty()
+	var grip_steer := 1.0 if in_tunnel else _grip_steer
+	var grip_brake := 1.0 if in_tunnel else _grip_brake
+	var grip_accel := 1.0 if in_tunnel else _grip_accel
+	var inertia := 0.0 if in_tunnel else _inertia
 	# longitudinal: engine or brakes, plus the slope (uphill slows, downhill speeds up)
 	var v0 := speed
 	var grade := track.grade_at(z)
@@ -337,9 +343,9 @@ func step(dt: float, input: Dictionary) -> void:
 		var easing: bool = police.phase == "pull_over" and speed * 3.6 >= police_rules.escape_kmh
 		speed -= (POLICE_EASE_DECEL if easing else PULL_OVER_DECEL) * dt
 	elif input.brake:
-		speed -= (stats.brake * _grip_brake + slope) * dt
+		speed -= (stats.brake * grip_brake + slope) * dt
 	elif gas:
-		speed += (stats.accel * _grip_accel * (1.15 - speed_ratio()) * gearbox.pull(speed) - slope) * dt
+		speed += (stats.accel * grip_accel * (1.15 - speed_ratio()) * gearbox.pull(speed) - slope) * dt
 	else:
 		speed -= (ROLL_DECEL + slope) * dt
 		if grade < 0.0:
@@ -352,10 +358,10 @@ func step(dt: float, input: Dictionary) -> void:
 	steer_visual = lerpf(steer_visual, steer_screen, minf(1.0, dt * 10.0))
 	var steer := steer_screen * side
 	var sr := speed_ratio()
-	var grip: float = stats.handling * STEER_RATE * _grip_steer # on snow the car holds a bend less and slides wide sooner
+	var grip: float = stats.handling * STEER_RATE * grip_steer # on snow the car holds a bend less and slides wide sooner
 	# on a slippery road the car turns in late and, let go, keeps turning a moment before it settles
 	var want: float = steer * stats.handling * STEER_RATE * clampf(speed / 12.0, 0.0, 1.0)
-	_lat_v = want if _inertia <= 0.0 else lerpf(_lat_v, want, 1.0 - exp(-dt / _inertia))
+	_lat_v = want if inertia <= 0.0 else lerpf(_lat_v, want, 1.0 - exp(-dt / inertia))
 	x += _lat_v * dt
 	var curve: float = track.segment_at(z).curve
 	var excess := absf(curve) * corner_push(speed) - grip
@@ -364,7 +370,7 @@ func step(dt: float, input: Dictionary) -> void:
 	if holding:
 		speed = maxf(0.0, speed - minf(SCRUB_K * excess, stats.brake * SCRUB_MAX) * dt)
 	x = _clamp_x(x, z)
-	if not Route.tunnel_at(stage, z).is_empty():
+	if in_tunnel:
 		var wall: float = (Scenery.TUNNEL_WALL + TUNNEL_SCRAPE) / Track.ROAD_HALF_WIDTH - stats.halfwidth
 		x = clampf(x, -wall, wall)
 	var z_prev := z

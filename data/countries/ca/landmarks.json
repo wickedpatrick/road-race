@@ -1,0 +1,956 @@
+{
+	"Vancouver": [
+		{
+			"kind": "canada_place",
+			"name": {
+				"pl": "Canada Place",
+				"en": "Canada Place",
+				"cs": "Canada Place",
+				"is": "Canada Place",
+				"de": "Canada Place"
+			},
+			"desc": {
+				"pl": "Pięć białych dachów w kształcie żagli nad długim molo, a obok przycumowany wielki statek wycieczkowy",
+				"en": "Five white sail-shaped roofs over a long pier, with a big cruise ship moored beside it",
+				"cs": "Pět bílých střech ve tvaru plachet nad dlouhým molem a vedle zakotvená velká výletní loď",
+				"is": "Fimm hvít þök eins og segl yfir langri bryggju og stórt skemmtiferðaskip bundið við hliðina",
+				"de": "Fünf weiße Dächer wie Segel über einem langen Pier, daneben liegt ein großes Kreuzfahrtschiff"
+			},
+			"local": "Canada Place"
+		},
+		{
+			"kind": "lions_gate_bridge",
+			"name": {
+				"pl": "Most Lions Gate",
+				"en": "Lions Gate Bridge",
+				"cs": "Most Lions Gate",
+				"is": "Lions Gate-brúin",
+				"de": "Lions Gate Bridge"
+			},
+			"desc": {
+				"pl": "Zielony most wiszący na dwóch wysokich pylonach nad wejściem do portu, od parku Stanleya na drugi brzeg",
+				"en": "A green suspension bridge hangs from two tall towers over the harbour entrance, from Stanley Park to the far shore",
+				"cs": "Zelený visutý most na dvou vysokých pylonech nad vjezdem do přístavu, od Stanleyho parku na druhý břeh",
+				"is": "Græn hengibrú hangir í tveimur háum turnum yfir hafnarmynninu, frá Stanley-garðinum yfir á hinn bakkann",
+				"de": "Eine grüne Hängebrücke an zwei hohen Türmen spannt sich über die Hafeneinfahrt, vom Stanley Park zum anderen Ufer"
+			},
+			"local": "Lions Gate Bridge"
+		},
+		{
+			"kind": "totem_pole",
+			"name": {
+				"pl": "Totemy w parku Stanleya",
+				"en": "Totem poles in Stanley Park",
+				"cs": "Totemy ve Stanleyho parku",
+				"is": "Tótemsúlur í Stanley-garðinum",
+				"de": "Totempfähle im Stanley Park"
+			},
+			"desc": {
+				"pl": "Wysokie rzeźbione słupy z cedru, pomalowane na czerwono, czarno i turkusowo: orły, niedźwiedzie i ptaki gromu jeden na drugim",
+				"en": "Tall carved cedar poles painted red, black and turquoise, with eagles, bears and thunderbirds stacked on top of each other",
+				"cs": "Vysoké vyřezávané cedrové sloupy natřené červeně, černě a tyrkysově, s orly, medvědy a hromovými ptáky nad sebou",
+				"is": "Háar útskornar sedrusviðarsúlur, málaðar rauðar, svartar og grænbláar, með erni, birni og þrumufugla hvern ofan á öðrum",
+				"de": "Hohe geschnitzte Zedernpfähle in Rot, Schwarz und Türkis, mit Adlern, Bären und Donnervögeln übereinander"
+			},
+			"local": "Totem Poles"
+		}
+	],
+	"Whistler": [
+		{
+			"kind": "inukshuk",
+			"name": {"pl": "Inukshuk", "en": "The Inukshuk", "cs": "Inukšuk", "is": "Inúksúk", "de": "Inukshuk"},
+			"desc": {
+				"pl": "Postać z ułożonych szarych kamieni z rozpostartymi ramionami, symbol Zimowych Igrzysk Olimpijskich 2010",
+				"en": "A figure of stacked grey stones with outstretched arms, the symbol of the 2010 Winter Olympics",
+				"cs": "Postava z naskládaných šedých kamenů s rozpřaženýma rukama, symbol zimních olympijských her 2010",
+				"is": "Mynd úr grjóti sem er hlaðið saman, með útréttar hendur, tákn vetrarólympíuleikanna 2010",
+				"de": "Eine Figur aus aufgeschichteten grauen Steinen mit ausgestreckten Armen, das Symbol der Winterspiele 2010"
+			},
+			"local": "Inukshuk"
+		},
+		{
+			"kind": "peak2peak_gondola",
+			"name": {
+				"pl": "Kolejka Peak 2 Peak",
+				"en": "The Peak 2 Peak Gondola",
+				"cs": "Lanovka Peak 2 Peak",
+				"is": "Peak 2 Peak-kláfurinn",
+				"de": "Peak 2 Peak Gondel"
+			},
+			"desc": {
+				"pl": "Czerwone wagoniki suną po długiej linie między dwoma ośnieżonymi szczytami, wysoko nad doliną",
+				"en": "Red gondola cabins glide along a long cable between two snowy mountain tops, high above the valley",
+				"cs": "Červené kabinky kloužou po dlouhém laně mezi dvěma zasněženými vrcholy, vysoko nad údolím",
+				"is": "Rauðir klefar renna eftir löngum vír milli tveggja snævi þaktra tinda, hátt yfir dalnum",
+				"de": "Rote Gondeln gleiten an einem langen Seil zwischen zwei verschneiten Gipfeln, hoch über dem Tal"
+			},
+			"local": "Peak 2 Peak Gondola"
+		}
+	],
+	"Kamloops": [
+		{
+			"kind": "bighorn_sheep",
+			"name": {
+				"pl": "Owca kanadyjska",
+				"en": "Bighorn sheep",
+				"cs": "Ovce tlustorohá",
+				"is": "Hjarðkind (stórhyrningur)",
+				"de": "Dickhornschaf"
+			},
+			"desc": {
+				"pl": "Dzika owca z ogromnymi, zakręconymi rogami stoi na suchych, piaszczystych wzgórzach nad rzeką",
+				"en": "A wild sheep with huge curled horns stands on the dry, sandy hills above the river",
+				"cs": "Divoká ovce s obrovskými stočenými rohy stojí na suchých písčitých kopcích nad řekou",
+				"is": "Villt kind með risastór hringuð horn stendur á þurrum sandhæðum fyrir ofan ána",
+				"de": "Ein Wildschaf mit riesigen gedrehten Hörnern steht auf den trockenen, sandigen Hügeln über dem Fluss"
+			},
+			"local": "Bighorn Sheep"
+		}
+	],
+	"Kelowna": [
+		{
+			"kind": "ogopogo",
+			"name": {"pl": "Ogopogo", "en": "Ogopogo", "cs": "Ogopogo", "is": "Ogopogo", "de": "Ogopogo"},
+			"desc": {
+				"pl": "Przyjazny zielony potwór z garbami wynurza się z jeziora Okanagan, jak w starej legendzie",
+				"en": "A friendly green lake monster with humps rises out of Okanagan Lake, as in the old legend",
+				"cs": "Přátelská zelená jezerní příšera s hrby se vynořuje z jezera Okanagan, jako ve staré legendě",
+				"is": "Vinalegt grænt vatnaskrímsli með kryppur rís upp úr Okanagan-vatni, eins og í gömlu þjóðsögunni",
+				"de": "Ein freundliches grünes Seeungeheuer mit Höckern taucht aus dem Okanagan Lake auf, wie in der alten Sage"
+			},
+			"local": "Ogopogo"
+		},
+		{
+			"kind": "okanagan_vineyard",
+			"name": {
+				"pl": "Winnice Okanagan",
+				"en": "Okanagan vineyards",
+				"cs": "Vinice v Okanaganu",
+				"is": "Vínekrur í Okanagan",
+				"de": "Weinberge im Okanagan"
+			},
+			"desc": {
+				"pl": "Rzędy winorośli wspinają się na słoneczne wzgórze nad długim, niebieskim jeziorem",
+				"en": "Rows of grapevines climb a sunny hill above a long blue lake",
+				"cs": "Řady vinné révy šplhají na slunečný kopec nad dlouhým modrým jezerem",
+				"is": "Raðir af vínviði klifra upp sólríka hæð fyrir ofan langt, blátt vatn",
+				"de": "Reihen von Weinreben ziehen sich einen sonnigen Hang über einem langen blauen See hinauf"
+			},
+			"local": "Okanagan Vineyards"
+		}
+	],
+	"Prince George": [
+		{
+			"kind": "mr_pg",
+			"name": {"pl": "Pan PG", "en": "Mr. PG", "cs": "Pan PG", "is": "Herra PG", "de": "Mr. PG"},
+			"desc": {
+				"pl": "Wysoki, uśmiechnięty ludzik zbudowany z kawałków pni, w kasku, drewniana maskotka miasta",
+				"en": "A tall smiling figure built of log pieces, wearing a hard hat: the city's wooden mascot",
+				"cs": "Vysoký usměvavý panáček postavený z kusů kmenů, s přilbou na hlavě: dřevěný maskot města",
+				"is": "Hár, brosandi karl úr trjábolum með öryggishjálm: tréukkur bæjarins",
+				"de": "Eine große lächelnde Figur aus Baumstammstücken mit Schutzhelm: das hölzerne Maskottchen der Stadt"
+			},
+			"local": "Mr. PG"
+		}
+	],
+	"Dawson Creek": [
+		{
+			"kind": "mile_zero_post",
+			"name": {
+				"pl": "Mila zero Alaska Highway",
+				"en": "Mile 0 of the Alaska Highway",
+				"cs": "Míle nula Aljašské dálnice",
+				"is": "Míla núll á Alaska-þjóðveginum",
+				"de": "Meile 0 des Alaska Highway"
+			},
+			"desc": {
+				"pl": "Biały słupek z napisem „Mile 0 Alaska Highway” pokazuje, gdzie zaczyna się długa droga na północ",
+				"en": "A white signpost with the words \"Mile 0 Alaska Highway\" marks where the long road north begins",
+				"cs": "Bílý sloupek s nápisem „Mile 0 Alaska Highway“ ukazuje, kde začíná dlouhá cesta na sever",
+				"is": "Hvítur skiltastaur með orðunum „Mile 0 Alaska Highway“ sýnir hvar langi vegurinn norður byrjar",
+				"de": "Ein weißer Wegweiser mit den Worten „Mile 0 Alaska Highway“ zeigt, wo die lange Straße nach Norden beginnt"
+			},
+			"local": "Mile 0 Post"
+		}
+	],
+	"Whitehorse": [
+		{
+			"kind": "ss_klondike",
+			"name": {
+				"pl": "Parowiec SS Klondike",
+				"en": "The SS Klondike",
+				"cs": "Parník SS Klondike",
+				"is": "Gufuskipið SS Klondike",
+				"de": "Raddampfer SS Klondike"
+			},
+			"desc": {
+				"pl": "Duży biały drewniany parowiec z czerwonym kołem łopatkowym z tyłu, odpoczywa na brzegu rzeki Jukon",
+				"en": "A big white wooden steamboat with a red paddle wheel at the back, resting on the bank of the Yukon River",
+				"cs": "Velký bílý dřevěný parník s červeným lopatkovým kolem vzadu odpočívá na břehu řeky Yukon",
+				"is": "Stórt hvítt gufuskip úr tré með rautt spaðahjól að aftan hvílir á bakka Yukon-fljóts",
+				"de": "Ein großer weißer Holzdampfer mit rotem Schaufelrad am Heck ruht am Ufer des Yukon River"
+			},
+			"local": "SS Klondike"
+		},
+		{
+			"kind": "northern_lights",
+			"name": {
+				"pl": "Zorza polarna",
+				"en": "The northern lights",
+				"cs": "Polární záře",
+				"is": "Norðurljósin",
+				"de": "Nordlichter"
+			},
+			"desc": {
+				"pl": "Zielone i fioletowe zasłony światła falują na nocnym niebie nad ciemnymi świerkami",
+				"en": "Green and purple curtains of light wave across the night sky above dark spruce trees",
+				"cs": "Zelené a fialové závoje světla vlní noční oblohou nad tmavými smrky",
+				"is": "Grænar og fjólubláar ljósaslæður bylgjast um næturhimininn yfir dökkum grenitrjám",
+				"de": "Grüne und violette Lichtvorhänge wogen über den Nachthimmel über dunklen Fichten"
+			},
+			"local": "Northern Lights"
+		}
+	],
+	"Jasper": [
+		{
+			"kind": "spirit_island",
+			"name": {
+				"pl": "Wyspa Duchów",
+				"en": "Spirit Island",
+				"cs": "Ostrov duchů",
+				"is": "Andaeyja",
+				"de": "Spirit Island"
+			},
+			"desc": {
+				"pl": "Malutka wysepka z kilkoma sosnami na turkusowym jeziorze Maligne, a za nią ośnieżone szczyty",
+				"en": "A tiny island with a few pine trees in turquoise Maligne Lake, with snowy peaks behind it",
+				"cs": "Maličký ostrůvek s několika borovicemi v tyrkysovém jezeře Maligne a za ním zasněžené štíty",
+				"is": "Pínulítil eyja með nokkrum furutrjám í grænbláu Maligne-vatni og snævi þaktir tindar fyrir aftan",
+				"de": "Eine winzige Insel mit ein paar Kiefern im türkisen Maligne Lake, dahinter verschneite Gipfel"
+			},
+			"local": "Spirit Island"
+		},
+		{
+			"kind": "athabasca_glacier",
+			"name": {
+				"pl": "Lodowiec Athabasca",
+				"en": "Athabasca Glacier",
+				"cs": "Ledovec Athabasca",
+				"is": "Athabasca-jökull",
+				"de": "Athabasca-Gletscher"
+			},
+			"desc": {
+				"pl": "Szeroki, biało-niebieski jęzor lodu spływa między szarymi górami, a po nim jedzie czerwony śnieżny autobus",
+				"en": "A wide blue-white tongue of ice flows down between grey mountains, with a red snow coach driving on it",
+				"cs": "Široký modrobílý ledový jazyk stéká mezi šedými horami a po něm jede červený sněžný autobus",
+				"is": "Breið bláhvít ístunga skríður niður milli grárra fjalla og rauð snjórúta ekur á henni",
+				"de": "Eine breite blauweiße Eiszunge fließt zwischen grauen Bergen herab, darauf fährt ein roter Schneebus"
+			},
+			"local": "Athabasca Glacier"
+		}
+	],
+	"Banff": [
+		{
+			"kind": "moraine_lake",
+			"name": {
+				"pl": "Jezioro Moraine",
+				"en": "Moraine Lake",
+				"cs": "Jezero Moraine",
+				"is": "Moraine-vatn",
+				"de": "Moraine Lake"
+			},
+			"desc": {
+				"pl": "Jaskrawoturkusowa woda pod rzędem dziesięciu poszarpanych szczytów, a na brzegu czerwone kanu",
+				"en": "Bright turquoise water below a row of ten jagged peaks, with red canoes on the shore",
+				"cs": "Zářivě tyrkysová voda pod řadou deseti zubatých štítů a na břehu červené kánoe",
+				"is": "Skærgrænblátt vatn undir röð tíu hvassra tinda og rauðir kanóar á ströndinni",
+				"de": "Leuchtend türkises Wasser unter einer Reihe von zehn zackigen Gipfeln, am Ufer rote Kanus"
+			},
+			"local": "Moraine Lake"
+		},
+		{
+			"kind": "banff_springs_hotel",
+			"name": {
+				"pl": "Hotel Banff Springs",
+				"en": "Banff Springs Hotel",
+				"cs": "Hotel Banff Springs",
+				"is": "Banff Springs-hótelið",
+				"de": "Banff Springs Hotel"
+			},
+			"desc": {
+				"pl": "Wielki kamienny hotel jak szkocki zamek, z zielonymi miedzianymi dachami i wieżyczkami wśród sosen",
+				"en": "A big stone hotel like a Scottish castle, with green copper roofs and turrets among the pine woods",
+				"cs": "Velký kamenný hotel jako skotský hrad, se zelenými měděnými střechami a věžičkami mezi borovicemi",
+				"is": "Stórt steinhótel eins og skoskur kastali, með græn koparþök og turna innan um furuskóginn",
+				"de": "Ein großes Steinhotel wie ein schottisches Schloss, mit grünen Kupferdächern und Türmchen im Kiefernwald"
+			},
+			"local": "Banff Springs Hotel"
+		}
+	],
+	"Calgary": [
+		{
+			"kind": "calgary_tower",
+			"name": {
+				"pl": "Calgary Tower",
+				"en": "The Calgary Tower",
+				"cs": "Calgary Tower",
+				"is": "Calgary-turninn",
+				"de": "Calgary Tower"
+			},
+			"desc": {
+				"pl": "Smukła betonowa wieża z okrągłą, czerwono-białą salą na szczycie, wysoko nad miastem",
+				"en": "A slim concrete tower with a round red-and-white room at the top, high above the city",
+				"cs": "Štíhlá betonová věž s kulatou červenobílou místností na vrcholu, vysoko nad městem",
+				"is": "Grannur steinsteyputurn með kringlótt, rauðhvítt herbergi efst, hátt yfir borginni",
+				"de": "Ein schlanker Betonturm mit einem runden rot-weißen Raum oben, hoch über der Stadt"
+			},
+			"local": "Calgary Tower"
+		},
+		{
+			"kind": "stampede_rodeo",
+			"name": {
+				"pl": "Rodeo Calgary Stampede",
+				"en": "The Calgary Stampede",
+				"cs": "Rodeo Calgary Stampede",
+				"is": "Calgary Stampede-kúrekahátíðin",
+				"de": "Rodeo Calgary Stampede"
+			},
+			"desc": {
+				"pl": "Kowboj w białym kapeluszu trzyma się brykającego brązowego konia na największym rodeo świata",
+				"en": "A cowboy in a white hat rides a bucking brown horse at the world's biggest rodeo",
+				"cs": "Kovboj v bílém klobouku se drží na vyhazujícím hnědém koni na největším rodeu světa",
+				"is": "Kúreki með hvítan hatt situr á hnykkjandi brúnum hesti á stærstu kúrekasýningu heims",
+				"de": "Ein Cowboy mit weißem Hut reitet ein bockendes braunes Pferd beim größten Rodeo der Welt"
+			},
+			"local": "Calgary Stampede"
+		}
+	],
+	"Edmonton": [
+		{
+			"kind": "alberta_legislature",
+			"name": {
+				"pl": "Parlament Alberty",
+				"en": "The Alberta Legislature",
+				"cs": "Parlament Alberty",
+				"is": "Þinghús Alberta",
+				"de": "Parlament von Alberta"
+			},
+			"desc": {
+				"pl": "Budynek z piaskowego kamienia z kolumnami i wysoką okrągłą kopułą, a przed nim fontanna",
+				"en": "A sand-coloured stone building with columns and a tall round dome, with a fountain in front",
+				"cs": "Budova z pískově zbarveného kamene se sloupy a vysokou kulatou kopulí, před ní fontána",
+				"is": "Sandlitað steinhús með súlum og háu, kringlóttu hvolfþaki og gosbrunnur fyrir framan",
+				"de": "Ein sandfarbenes Steingebäude mit Säulen und einer hohen runden Kuppel, davor ein Springbrunnen"
+			},
+			"local": "Alberta Legislature"
+		},
+		{
+			"kind": "muttart_pyramids",
+			"name": {
+				"pl": "Piramidy Muttart",
+				"en": "The Muttart Conservatory",
+				"cs": "Pyramidy Muttart",
+				"is": "Muttart-pýramídarnir",
+				"de": "Muttart-Pyramiden"
+			},
+			"desc": {
+				"pl": "Cztery szklane piramidy pełne roślin z pustyń i dżungli stoją w dolinie rzeki",
+				"en": "Four glass pyramids full of plants from deserts and jungles stand in the river valley",
+				"cs": "Čtyři skleněné pyramidy plné rostlin z pouští a džunglí stojí v říčním údolí",
+				"is": "Fjórir glerpýramídar fullir af plöntum úr eyðimörkum og frumskógum standa í árdalnum",
+				"de": "Vier Glaspyramiden voller Pflanzen aus Wüsten und Dschungeln stehen im Flusstal"
+			},
+			"local": "Muttart Conservatory"
+		}
+	],
+	"Saskatoon": [
+		{
+			"kind": "grain_elevator",
+			"name": {
+				"pl": "Elewator zbożowy",
+				"en": "A prairie grain elevator",
+				"cs": "Obilní elevátor",
+				"is": "Kornturn á sléttunni",
+				"de": "Getreidesilo der Prärie"
+			},
+			"desc": {
+				"pl": "Wysoka, czerwona drewniana wieża na pszenicę stoi przy torach kolejowych wśród złotych pól",
+				"en": "A tall red wooden tower for storing wheat stands by a railway track among golden fields",
+				"cs": "Vysoká červená dřevěná věž na pšenici stojí u železniční trati mezi zlatými poli",
+				"is": "Hár, rauður turn úr tré til að geyma hveiti stendur við járnbrautarteina innan um gullna akra",
+				"de": "Ein hoher roter Holzturm für Weizen steht an einem Bahngleis zwischen goldenen Feldern"
+			},
+			"local": "Grain Elevator"
+		}
+	],
+	"Regina": [
+		{
+			"kind": "rcmp_mountie",
+			"name": {
+				"pl": "Policjant konny RCMP",
+				"en": "An RCMP Mountie",
+				"cs": "Jízdní policista RCMP",
+				"is": "Riddaralögreglumaður RCMP",
+				"de": "Mountie der RCMP"
+			},
+			"desc": {
+				"pl": "Policjant w czerwonym mundurze i brązowym kapeluszu z szerokim rondem jedzie na czarnym koniu",
+				"en": "A Mountie in a red coat and a brown broad-brimmed hat rides a black horse",
+				"cs": "Policista v červeném kabátě a hnědém klobouku se širokou krempou jede na černém koni",
+				"is": "Lögreglumaður í rauðum jakka með brúnan barðastóran hatt ríður svörtum hesti",
+				"de": "Ein Mountie in roter Jacke und braunem Hut mit breiter Krempe reitet auf einem schwarzen Pferd"
+			},
+			"local": "RCMP Heritage Centre"
+		},
+		{
+			"kind": "saskatchewan_legislature",
+			"name": {
+				"pl": "Parlament Saskatchewan",
+				"en": "The Saskatchewan Legislature",
+				"cs": "Parlament Saskatchewanu",
+				"is": "Þinghús Saskatchewan",
+				"de": "Parlament von Saskatchewan"
+			},
+			"desc": {
+				"pl": "Długi kamienny budynek z zieloną miedzianą kopułą odbija się w jeziorze Wascana",
+				"en": "A long stone building with a green copper dome is reflected in Wascana Lake",
+				"cs": "Dlouhá kamenná budova se zelenou měděnou kopulí se zrcadlí v jezeře Wascana",
+				"is": "Löng steinbygging með grænu koparhvolfþaki speglast í Wascana-vatni",
+				"de": "Ein langes Steingebäude mit grüner Kupferkuppel spiegelt sich im Wascana Lake"
+			},
+			"local": "Saskatchewan Legislature"
+		}
+	],
+	"Winnipeg": [
+		{
+			"kind": "human_rights_museum",
+			"name": {
+				"pl": "Muzeum Praw Człowieka",
+				"en": "The Canadian Museum for Human Rights",
+				"cs": "Muzeum lidských práv",
+				"is": "Mannréttindasafn Kanada",
+				"de": "Museum für Menschenrechte"
+			},
+			"desc": {
+				"pl": "Budynek owinięty zakrzywionymi szklanymi „skrzydłami”, ze szklaną Wieżą Nadziei wskazującą niebo",
+				"en": "A building wrapped in curved glass \"wings\", with a glass Tower of Hope pointing up at the sky",
+				"cs": "Budova obalená zakřivenými skleněnými „křídly“ se skleněnou Věží naděje mířící k nebi",
+				"is": "Bygging sveipuð bognum glervængjum, með glerturninn Von sem bendir upp í himininn",
+				"de": "Ein Gebäude, umhüllt von geschwungenen Glas-„Flügeln“, mit einem gläsernen Turm der Hoffnung, der in den Himmel zeigt"
+			},
+			"local": "Canadian Museum for Human Rights"
+		},
+		{
+			"kind": "winnie_bear",
+			"name": {
+				"pl": "Niedźwiadek Winnie",
+				"en": "Winnie the Bear",
+				"cs": "Medvídek Winnie",
+				"is": "Bangsinn Winnie",
+				"de": "Bärin Winnie"
+			},
+			"desc": {
+				"pl": "Żołnierz i mała czarna niedźwiedzica siedzą razem: od niej, z Winnipeg, wziął imię Kubuś Puchatek",
+				"en": "A soldier and a little black bear cub sit together: Winnie-the-Pooh was named after this bear from Winnipeg",
+				"cs": "Voják a malé černé medvídě sedí spolu: po této medvědici z Winnipegu dostal jméno Medvídek Pú",
+				"is": "Hermaður og lítill svartur húnn sitja saman: Bangsímon var nefndur eftir þessum birni frá Winnipeg",
+				"de": "Ein Soldat und ein kleines schwarzes Bärenjunges sitzen zusammen: nach dieser Bärin aus Winnipeg wurde Winnie Puuh benannt"
+			},
+			"local": "Winnie the Bear"
+		}
+	],
+	"Thunder Bay": [
+		{
+			"kind": "sleeping_giant",
+			"name": {
+				"pl": "Śpiący Olbrzym",
+				"en": "The Sleeping Giant",
+				"cs": "Spící obr",
+				"is": "Sofandi risinn",
+				"de": "Der Schlafende Riese"
+			},
+			"desc": {
+				"pl": "Długi skalisty półwysep na Jeziorze Górnym wygląda jak olbrzym leżący na plecach ze skrzyżowanymi rękami",
+				"en": "A long rocky peninsula across Lake Superior looks like a giant lying on his back with folded arms",
+				"cs": "Dlouhý skalnatý poloostrov na Hořejším jezeře vypadá jako obr ležící na zádech se zkříženýma rukama",
+				"is": "Langur klettóttur skagi úti á Efravatni lítur út eins og risi sem liggur á bakinu með krosslagðar hendur",
+				"de": "Eine lange felsige Halbinsel im Oberen See sieht aus wie ein Riese, der mit verschränkten Armen auf dem Rücken liegt"
+			},
+			"local": "Sleeping Giant"
+		},
+		{
+			"kind": "terry_fox_monument",
+			"name": {
+				"pl": "Pomnik Terry'ego Foxa",
+				"en": "The Terry Fox Monument",
+				"cs": "Pomník Terryho Foxe",
+				"is": "Minnisvarði um Terry Fox",
+				"de": "Terry-Fox-Denkmal"
+			},
+			"desc": {
+				"pl": "Brązowy posąg młodego chłopaka, który biegnie na jednej sztucznej nodze, na granitowym cokole",
+				"en": "A bronze statue of a young man running on one artificial leg, on a granite base",
+				"cs": "Bronzová socha mladíka, který běží s jednou umělou nohou, na žulovém podstavci",
+				"is": "Bronsstytta af ungum manni sem hleypur á gervifæti, á granítstalli",
+				"de": "Eine Bronzestatue eines jungen Mannes, der mit einer Beinprothese läuft, auf einem Granitsockel"
+			},
+			"local": "Terry Fox Monument"
+		}
+	],
+	"Sault Ste. Marie": [
+		{
+			"kind": "soo_locks",
+			"name": {
+				"pl": "Śluzy Sault Ste. Marie",
+				"en": "The Sault Ste. Marie Canal",
+				"cs": "Plavební komora Sault Ste. Marie",
+				"is": "Skipastigarnir í Sault Ste. Marie",
+				"de": "Schleusen von Sault Ste. Marie"
+			},
+			"desc": {
+				"pl": "Długi statek unosi się w śluzie pełnej wody, przy wielkich wrotach między Jeziorem Górnym a Huron",
+				"en": "A long ship rises in a lock filling with water, by the big gates between Lake Superior and Lake Huron",
+				"cs": "Dlouhá loď stoupá v komoře plné vody u velkých vrat mezi Hořejším jezerem a jezerem Huron",
+				"is": "Langt skip lyftist í skipastiga sem fyllist af vatni, við stóru hliðin milli Efravatns og Húronvatns",
+				"de": "Ein langes Schiff steigt in einer Schleuse, die sich mit Wasser füllt, an den großen Toren zwischen Oberem See und Huronsee"
+			},
+			"local": "Sault Ste. Marie Canal"
+		}
+	],
+	"Sudbury": [
+		{
+			"kind": "big_nickel",
+			"name": {
+				"pl": "Wielka Pięciocentówka",
+				"en": "The Big Nickel",
+				"cs": "Velká niklová mince",
+				"is": "Stóri nikkelpeningurinn",
+				"de": "Big Nickel"
+			},
+			"desc": {
+				"pl": "Olbrzymia, lśniąca moneta wysoka na dziewięć metrów, kopia kanadyjskiej pięciocentówki, stoi na krawędzi",
+				"en": "A giant shiny coin nine metres tall, a copy of a Canadian five-cent nickel, standing on its edge",
+				"cs": "Obří lesklá mince vysoká devět metrů, kopie kanadské pěticentovky, stojí na hraně",
+				"is": "Risastór gljáandi mynt, níu metra há, eftirlíking af kanadískum fimm senta peningi, stendur upp á rönd",
+				"de": "Eine riesige glänzende Münze, neun Meter hoch, eine Kopie des kanadischen Fünf-Cent-Stücks, steht auf ihrem Rand"
+			},
+			"local": "Big Nickel"
+		}
+	],
+	"Toronto": [
+		{
+			"kind": "cn_tower",
+			"name": {"pl": "CN Tower", "en": "The CN Tower", "cs": "CN Tower", "is": "CN-turninn", "de": "CN Tower"},
+			"desc": {
+				"pl": "CN Tower z okrągłym szarym koszem i cienką iglicą wznosi się wysoko nad wieżowcami Toronto",
+				"en": "The CN Tower with its round grey pod and thin needle rises high above Toronto's skyscrapers",
+				"cs": "CN Tower s kulatým šedým prstencem a tenkou jehlou se tyčí vysoko nad mrakodrapy Toronta",
+				"is": "CN-turninn með kringlóttri grárri kúlu og mjórri nál gnæfir hátt yfir skýjakljúfa Toronto",
+				"de": "Der CN Tower mit seiner runden grauen Kanzel und der dünnen Nadel ragt hoch über Torontos Wolkenkratzer"
+			},
+			"local": "CN Tower"
+		},
+		{
+			"kind": "casa_loma",
+			"name": {"pl": "Casa Loma", "en": "Casa Loma", "cs": "Casa Loma", "is": "Casa Loma", "de": "Casa Loma"},
+			"desc": {
+				"pl": "Prawdziwy zamek w środku Toronto, z kamiennymi wieżami, blankami i spiczastymi dachami",
+				"en": "A real castle in the middle of Toronto, with stone towers, battlements and pointed roofs",
+				"cs": "Skutečný hrad uprostřed Toronta, s kamennými věžemi, cimbuřím a špičatými střechami",
+				"is": "Alvöru kastali í miðri Toronto, með steinturnum, virkisveggjum og oddhvössum þökum",
+				"de": "Ein echtes Schloss mitten in Toronto, mit Steintürmen, Zinnen und spitzen Dächern"
+			},
+			"local": "Casa Loma"
+		}
+	],
+	"Niagara Falls": [
+		{
+			"kind": "horseshoe_falls",
+			"name": {
+				"pl": "Wodospad Podkowa",
+				"en": "Horseshoe Falls",
+				"cs": "Podkovovitý vodopád",
+				"is": "Skeifufoss",
+				"de": "Hufeisenfälle"
+			},
+			"desc": {
+				"pl": "Ogromna, wygięta w podkowę ściana wody spada w chmurę białej mgiełki, a pod nią płynie niebieski statek",
+				"en": "A huge horseshoe-shaped wall of water crashes into a cloud of white spray, with a blue boat sailing below",
+				"cs": "Obrovská stěna vody ve tvaru podkovy padá do oblaku bílé tříště a pod ní pluje modrá loď",
+				"is": "Risastór skeifulaga vatnsveggur steypist niður í hvítt úðaský og blár bátur siglir fyrir neðan",
+				"de": "Eine riesige hufeisenförmige Wasserwand stürzt in eine weiße Gischtwolke, unten fährt ein blaues Boot"
+			},
+			"local": "Horseshoe Falls"
+		},
+		{
+			"kind": "skylon_tower",
+			"name": {
+				"pl": "Skylon Tower",
+				"en": "The Skylon Tower",
+				"cs": "Skylon Tower",
+				"is": "Skylon-turninn",
+				"de": "Skylon Tower"
+			},
+			"desc": {
+				"pl": "Wysoka wieża z okrągłą głową i żółtymi szklanymi windami, które jadą po niej z zewnątrz jak żuczki",
+				"en": "A tall tower with a round top and yellow glass lifts crawling up its outside like beetles",
+				"cs": "Vysoká věž s kulatým vrcholem a žlutými skleněnými výtahy, které po ní jezdí zvenku jako brouci",
+				"is": "Hár turn með kringlóttan topp og gular glerlyftur sem skríða upp hann að utan eins og bjöllur",
+				"de": "Ein hoher Turm mit rundem Kopf und gelben Glasaufzügen, die außen wie Käfer an ihm hochkrabbeln"
+			},
+			"local": "Skylon Tower"
+		}
+	],
+	"Ottawa": [
+		{
+			"kind": "peace_tower",
+			"name": {
+				"pl": "Wieża Pokoju",
+				"en": "The Peace Tower",
+				"cs": "Věž míru",
+				"is": "Friðarturninn",
+				"de": "Friedensturm"
+			},
+			"desc": {
+				"pl": "Wysoka kamienna wieża z zegarem, zielonym miedzianym dachem i flagą Kanady na szczycie, przed parlamentem",
+				"en": "A tall stone clock tower with a green copper roof and the Canadian flag on top, in front of Parliament",
+				"cs": "Vysoká kamenná věž s hodinami, zelenou měděnou střechou a kanadskou vlajkou na vrcholu, před parlamentem",
+				"is": "Hár klukkuturn úr steini með grænt koparþak og kanadíska fánann efst, fyrir framan þinghúsið",
+				"de": "Ein hoher steinerner Uhrturm mit grünem Kupferdach und der kanadischen Flagge obendrauf, vor dem Parlament"
+			},
+			"local": "Peace Tower"
+		},
+		{
+			"kind": "rideau_skaters",
+			"name": {
+				"pl": "Łyżwiarze na kanale Rideau",
+				"en": "Skating on the Rideau Canal",
+				"cs": "Bruslaři na kanálu Rideau",
+				"is": "Skautað á Rideau-skurðinum",
+				"de": "Schlittschuhlaufen auf dem Rideau-Kanal"
+			},
+			"desc": {
+				"pl": "Ludzie w czapkach i szalikach jeżdżą na łyżwach po zamarzniętym kanale, największym lodowisku świata",
+				"en": "People in hats and scarves skate along the frozen canal, the world's biggest skating rink",
+				"cs": "Lidé v čepicích a šálách bruslí po zamrzlém kanálu, největším kluzišti na světě",
+				"is": "Fólk með húfur og trefla skautar eftir frosnum skurðinum, stærsta skautasvelli heims",
+				"de": "Menschen mit Mützen und Schals laufen Schlittschuh auf dem gefrorenen Kanal, der größten Eisbahn der Welt"
+			},
+			"local": "Rideau Canal Skateway"
+		}
+	],
+	"Kingston": [
+		{
+			"kind": "fort_henry",
+			"name": {
+				"pl": "Fort Henry",
+				"en": "Fort Henry",
+				"cs": "Pevnost Fort Henry",
+				"is": "Fort Henry-virkið",
+				"de": "Fort Henry"
+			},
+			"desc": {
+				"pl": "Szary kamienny fort na wzgórzu, a w nim strażnicy w czerwonych kurtkach i wysokich czarnych czapkach strzelają z armaty",
+				"en": "A grey stone fort on a hill, where guards in red coats and tall black hats fire a cannon",
+				"cs": "Šedá kamenná pevnost na kopci, kde strážci v červených kabátech a vysokých černých čepicích střílejí z děla",
+				"is": "Grátt steinvirki á hæð þar sem verðir í rauðum jökkum með háar svartar húfur skjóta úr fallbyssu",
+				"de": "Ein graues Steinfort auf einem Hügel, wo Wachen in roten Röcken und hohen schwarzen Mützen eine Kanone abfeuern"
+			},
+			"local": "Fort Henry"
+		}
+	],
+	"Montréal": [
+		{
+			"kind": "biosphere_dome",
+			"name": {"pl": "Biosfera", "en": "The Biosphere", "cs": "Biosféra", "is": "Lífhvelið", "de": "Biosphäre"},
+			"desc": {
+				"pl": "Ogromna kula z kratownicy stalowych prętów, jak olbrzymia bańka mydlana, na wyspie na rzece",
+				"en": "A huge ball made of a lattice of steel bars, like a giant soap bubble, on an island in the river",
+				"cs": "Obrovská koule z mřížky ocelových tyčí jako obří mýdlová bublina na ostrově v řece",
+				"is": "Risastór kúla úr grind af stálstöngum, eins og risavaxin sápukúla, á eyju í ánni",
+				"de": "Eine riesige Kugel aus einem Gitter von Stahlstäben, wie eine gigantische Seifenblase, auf einer Insel im Fluss"
+			},
+			"local": "Biosphère"
+		},
+		{
+			"kind": "olympic_stadium_tower",
+			"name": {
+				"pl": "Stadion Olimpijski",
+				"en": "The Olympic Stadium",
+				"cs": "Olympijský stadion",
+				"is": "Ólympíuleikvangurinn",
+				"de": "Olympiastadion"
+			},
+			"desc": {
+				"pl": "Biały owalny stadion, nad którym pochyla się najwyższa krzywa wieża świata",
+				"en": "A white oval stadium with the world's tallest leaning tower bending over it",
+				"cs": "Bílý oválný stadion, nad kterým se sklání nejvyšší šikmá věž světa",
+				"is": "Hvítur sporöskjulaga leikvangur og hæsti skakki turn heims hallar sér yfir hann",
+				"de": "Ein weißes ovales Stadion, über das sich der höchste schiefe Turm der Welt beugt"
+			},
+			"local": "Stade olympique"
+		}
+	],
+	"Québec": [
+		{
+			"kind": "chateau_frontenac",
+			"name": {
+				"pl": "Château Frontenac",
+				"en": "Château Frontenac",
+				"cs": "Château Frontenac",
+				"is": "Château Frontenac",
+				"de": "Château Frontenac"
+			},
+			"desc": {
+				"pl": "Ogromny hotel jak zamek, z zielonymi miedzianymi dachami i wieloma wieżyczkami, na skarpie nad Rzeką Świętego Wawrzyńca",
+				"en": "A huge castle-like hotel with green copper roofs and many turrets on a cliff above the St. Lawrence River",
+				"cs": "Obrovský hotel jako zámek, se zelenými měděnými střechami a mnoha věžičkami na útesu nad řekou svatého Vavřince",
+				"is": "Risastórt hótel eins og kastali, með græn koparþök og marga turna, á kletti yfir Lawrence-fljóti",
+				"de": "Ein riesiges schlossartiges Hotel mit grünen Kupferdächern und vielen Türmchen auf einer Klippe über dem Sankt-Lorenz-Strom"
+			},
+			"local": "Château Frontenac"
+		},
+		{
+			"kind": "montmorency_falls",
+			"name": {
+				"pl": "Wodospad Montmorency",
+				"en": "Montmorency Falls",
+				"cs": "Vodopád Montmorency",
+				"is": "Montmorency-foss",
+				"de": "Montmorency-Fall"
+			},
+			"desc": {
+				"pl": "Biały wodospad, wyższy niż Niagara, spada z urwiska, a nad samą krawędzią wisi most",
+				"en": "A white waterfall, taller than Niagara, drops down a cliff, with a suspension bridge across the top",
+				"cs": "Bílý vodopád, vyšší než Niagara, padá ze skály a nad samým okrajem visí most",
+				"is": "Hvítur foss, hærri en Niagara, fellur niður klett og hengibrú liggur yfir brúnina",
+				"de": "Ein weißer Wasserfall, höher als der Niagara, stürzt eine Klippe hinab, oben spannt sich eine Hängebrücke"
+			},
+			"local": "Chute Montmorency"
+		}
+	],
+	"Moncton": [
+		{
+			"kind": "hopewell_rocks",
+			"name": {
+				"pl": "Skały Hopewell",
+				"en": "Hopewell Rocks",
+				"cs": "Skály Hopewell",
+				"is": "Hopewell-klettarnir",
+				"de": "Hopewell Rocks"
+			},
+			"desc": {
+				"pl": "Wysokie czerwone skalne słupy z drzewami na czubku, jak doniczki, stoją na plaży w czasie odpływu",
+				"en": "Tall red rock pillars with trees on top, shaped like flowerpots, stand on the beach at low tide",
+				"cs": "Vysoké červené skalní sloupy se stromy nahoře, jako květináče, stojí na pláži při odlivu",
+				"is": "Háir rauðir klettadrangar með tré efst, eins og blómapottar, standa á ströndinni á fjöru",
+				"de": "Hohe rote Felssäulen mit Bäumen obendrauf, wie Blumentöpfe, stehen bei Ebbe am Strand"
+			},
+			"local": "Hopewell Rocks"
+		}
+	],
+	"Halifax": [
+		{
+			"kind": "peggys_cove_lighthouse",
+			"name": {
+				"pl": "Latarnia w Peggy's Cove",
+				"en": "Peggy's Cove Lighthouse",
+				"cs": "Maják v Peggy's Cove",
+				"is": "Vitinn í Peggy's Cove",
+				"de": "Leuchtturm von Peggy's Cove"
+			},
+			"desc": {
+				"pl": "Biała latarnia morska z czerwonym szczytem stoi na gładkich szarych skałach nad oceanem",
+				"en": "A white lighthouse with a red top stands on smooth grey granite rocks by the ocean",
+				"cs": "Bílý maják s červeným vrškem stojí na hladkých šedých žulových skalách u oceánu",
+				"is": "Hvítur viti með rauðan topp stendur á sléttum gráum granítklöppum við hafið",
+				"de": "Ein weißer Leuchtturm mit roter Spitze steht auf glatten grauen Granitfelsen am Ozean"
+			},
+			"local": "Peggy's Cove Lighthouse"
+		},
+		{
+			"kind": "bluenose_schooner",
+			"name": {
+				"pl": "Szkuner Bluenose II",
+				"en": "The Bluenose II",
+				"cs": "Škuner Bluenose II",
+				"is": "Skonnortan Bluenose II",
+				"de": "Schoner Bluenose II"
+			},
+			"desc": {
+				"pl": "Czarny żaglowiec z dwoma masztami i wielkimi białymi żaglami: ten statek jest na kanadyjskiej monecie 10 centów",
+				"en": "A black sailing ship with two masts and big white sails: the boat on Canada's ten-cent coin",
+				"cs": "Černá plachetnice se dvěma stěžni a velkými bílými plachtami: loď z kanadské deseticentové mince",
+				"is": "Svart seglskip með tvö möstur og stór hvít segl: báturinn á kanadíska tíu senta peningnum",
+				"de": "Ein schwarzes Segelschiff mit zwei Masten und großen weißen Segeln: das Schiff auf Kanadas Zehn-Cent-Münze"
+			},
+			"local": "Bluenose II"
+		}
+	],
+	"Charlottetown": [
+		{
+			"kind": "confederation_bridge",
+			"name": {
+				"pl": "Most Konfederacji",
+				"en": "The Confederation Bridge",
+				"cs": "Most Konfederace",
+				"is": "Sambandsbrúin",
+				"de": "Confederation Bridge"
+			},
+			"desc": {
+				"pl": "Bardzo długi betonowy most na wielu filarach wygina się nad morzem aż na Wyspę Księcia Edwarda",
+				"en": "A very long concrete bridge on many pillars curves across the sea to Prince Edward Island",
+				"cs": "Velmi dlouhý betonový most na mnoha pilířích se klene přes moře až na Ostrov prince Edwarda",
+				"is": "Mjög löng steinsteypt brú á mörgum stöplum sveigist yfir hafið til Játvarðareyjar",
+				"de": "Eine sehr lange Betonbrücke auf vielen Pfeilern schwingt sich über das Meer zur Prinz-Edward-Insel"
+			},
+			"local": "Confederation Bridge"
+		},
+		{
+			"kind": "green_gables",
+			"name": {
+				"pl": "Zielone Wzgórze",
+				"en": "Green Gables",
+				"cs": "Zelené štíty",
+				"is": "Grænahlíð",
+				"de": "Green Gables"
+			},
+			"desc": {
+				"pl": "Biały dom na farmie z zielonym dachem i okiennicami, dom Ani z Zielonego Wzgórza ze słynnej książki",
+				"en": "A white farmhouse with a green roof and shutters, the home of Anne of Green Gables from the famous book",
+				"cs": "Bílý statek se zelenou střechou a okenicemi, domov Anny ze Zelených štítů ze slavné knihy",
+				"is": "Hvítt bóndabýli með grænt þak og hlera, heimili Önnu í Grænuhlíð úr frægu bókinni",
+				"de": "Ein weißes Farmhaus mit grünem Dach und Fensterläden, das Zuhause von Anne aus dem berühmten Buch"
+			},
+			"local": "Green Gables"
+		}
+	],
+	"Drumheller": [
+		{
+			"kind": "drumheller_dinosaur",
+			"name": {
+				"pl": "Największy dinozaur świata",
+				"en": "The World's Largest Dinosaur",
+				"cs": "Největší dinosaurus světa",
+				"is": "Stærsta risaeðla heims",
+				"de": "Größter Dinosaurier der Welt"
+			},
+			"desc": {
+				"pl": "Olbrzymi zielony tyranozaur wysoki na 26 metrów: można wejść do środka i wyjrzeć przez jego paszczę",
+				"en": "A giant green T. rex 26 metres tall: you can climb up inside it and look out of its open jaws",
+				"cs": "Obří zelený tyranosaurus vysoký 26 metrů: dá se vylézt dovnitř a vyhlížet z jeho tlamy",
+				"is": "Risastór grænn grameðla, 26 metra há: það má klifra upp inni í henni og horfa út um ginið",
+				"de": "Ein riesiger grüner T. rex, 26 Meter hoch: man kann innen hinaufsteigen und aus seinem Maul schauen"
+			},
+			"local": "World's Largest Dinosaur"
+		}
+	],
+	"Wawa": [
+		{
+			"kind": "wawa_goose",
+			"name": {"pl": "Gęś z Wawa", "en": "The Wawa Goose", "cs": "Husa z Wawy", "is": "Wawa-gæsin", "de": "Wawa-Gans"},
+			"desc": {
+				"pl": "Olbrzymia metalowa bernikla kanadyjska z czarną szyją i białą plamą pod brodą, z rozpostartymi skrzydłami",
+				"en": "A giant metal Canada goose with a black neck and a white chin strap, wings spread wide",
+				"cs": "Obří kovová berneška velká s černým krkem a bílou skvrnou pod bradou, s roztaženými křídly",
+				"is": "Risastór kanadagæs úr málmi með svartan háls og hvítan blett undir hökunni, með útbreidda vængi",
+				"de": "Eine riesige Kanadagans aus Metall mit schwarzem Hals und weißem Kinnband, mit weit ausgebreiteten Flügeln"
+			},
+			"local": "Wawa Goose"
+		}
+	],
+	"Vegreville": [
+		{
+			"kind": "pysanka_egg",
+			"name": {
+				"pl": "Pisanka z Vegreville",
+				"en": "The Vegreville Pysanka",
+				"cs": "Kraslice z Vegreville",
+				"is": "Páskaeggið í Vegreville",
+				"de": "Pysanka von Vegreville"
+			},
+			"desc": {
+				"pl": "Olbrzymia ukraińska pisanka w brązowe, złote i srebrne wzory gwiazd, obraca się na wietrze jak wiatrowskaz",
+				"en": "A giant Ukrainian Easter egg covered in bronze, gold and silver star patterns, turning in the wind like a weather vane",
+				"cs": "Obří ukrajinská kraslice s bronzovými, zlatými a stříbrnými hvězdnými vzory se otáčí ve větru jako korouhvička",
+				"is": "Risastórt úkraínskt páskaegg með brons-, gull- og silfurlitum stjörnumynstrum sem snýst í vindinum eins og vindhani",
+				"de": "Ein riesiges ukrainisches Osterei mit bronzenen, goldenen und silbernen Sternmustern, das sich wie eine Wetterfahne im Wind dreht"
+			},
+			"local": "Vegreville Pysanka"
+		}
+	],
+	"Moose Jaw": [
+		{
+			"kind": "mac_the_moose",
+			"name": {"pl": "Łoś Mac", "en": "Mac the Moose", "cs": "Los Mac", "is": "Elgurinn Mac", "de": "Elch Mac"},
+			"desc": {
+				"pl": "Olbrzymi brązowy posąg łosia z wielkim, płaskim porożem, wysoki na prawie dziesięć metrów",
+				"en": "A giant brown moose statue with huge flat antlers, almost ten metres tall",
+				"cs": "Obří hnědá socha losa s velkým plochým parožím, vysoká skoro deset metrů",
+				"is": "Risastór brún elgsstytta með stór, flöt horn, næstum tíu metra há",
+				"de": "Eine riesige braune Elchstatue mit großem flachem Geweih, fast zehn Meter hoch"
+			},
+			"local": "Mac the Moose"
+		}
+	],
+	"Watson Lake": [
+		{
+			"kind": "sign_post_forest",
+			"name": {
+				"pl": "Las Drogowskazów",
+				"en": "The Sign Post Forest",
+				"cs": "Les ukazatelů",
+				"is": "Skiltaskógurinn",
+				"de": "Schilderwald"
+			},
+			"desc": {
+				"pl": "Tysiące tablic z nazwami miast i tablic rejestracyjnych z całego świata przybitych do drewnianych słupów",
+				"en": "Thousands of town signs and number plates from all over the world nailed to wooden posts",
+				"cs": "Tisíce tabulí s názvy měst a poznávacích značek z celého světa přibitých na dřevěné sloupy",
+				"is": "Þúsundir bæjarskilta og bílnúmera frá öllum heiminum negld á tréstaura",
+				"de": "Tausende Ortsschilder und Nummernschilder aus aller Welt, an Holzpfähle genagelt"
+			},
+			"local": "Sign Post Forest"
+		}
+	],
+	"Lake Louise": [
+		{
+			"kind": "lake_louise",
+			"name": {
+				"pl": "Jezioro Louise",
+				"en": "Lake Louise",
+				"cs": "Jezero Louise",
+				"is": "Louise-vatn",
+				"de": "Lake Louise"
+			},
+			"desc": {
+				"pl": "Szmaragdowozielona woda pod wielkim białym lodowcem, a na jeziorze czerwone kanu",
+				"en": "Emerald-green water below a big white glacier, with a red canoe on the lake",
+				"cs": "Smaragdově zelená voda pod velkým bílým ledovcem a na jezeře červená kánoe",
+				"is": "Smaragðsgrænt vatn undir stórum hvítum jökli og rauður kanói á vatninu",
+				"de": "Smaragdgrünes Wasser unter einem großen weißen Gletscher, auf dem See ein rotes Kanu"
+			},
+			"local": "Lake Louise"
+		}
+	],
+	"Gananoque": [
+		{
+			"kind": "thousand_islands",
+			"name": {
+				"pl": "Tysiąc Wysp",
+				"en": "The Thousand Islands",
+				"cs": "Tisíc ostrovů",
+				"is": "Þúsundeyjar",
+				"de": "Tausend Inseln"
+			},
+			"desc": {
+				"pl": "Małe skaliste wysepki porośnięte sosnami, każda z domkiem, na niebieskiej Rzece Świętego Wawrzyńca",
+				"en": "Little rocky islands covered in pine trees, each with a small house, in the blue St. Lawrence River",
+				"cs": "Malé skalnaté ostrůvky porostlé borovicemi, každý s domkem, v modré řece svatého Vavřince",
+				"is": "Litlar klettaeyjar þaktar furutrjám, hver með lítið hús, í bláu Lawrence-fljóti",
+				"de": "Kleine felsige Inseln mit Kiefern, jede mit einem Häuschen, im blauen Sankt-Lorenz-Strom"
+			},
+			"local": "Thousand Islands"
+		}
+	]
+}

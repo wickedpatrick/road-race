@@ -82,21 +82,27 @@ static func _leg_towns(leg: Dictionary) -> Array:
 	out.sort_custom(func(p, q): return p[1] < q[1])
 	return out
 
-## Road numbers along one leg in travel direction: [[start_km, end_km, number], ...].
+## Road numbers along one leg in travel direction: [[start_km, end_km, number, lanes], ...]. `lanes` is the part's
+## own 2 or 3 from roads.json ([km, number, lanes]: e.g. Canada's Hwy 5, a freeway over the Coquihalla but a
+## two-lane road up the Yellowhead), 0 when the number decides (see part_lanes).
 static func leg_roads(leg: Dictionary) -> Array:
 	var r: Dictionary = leg.road
 	var parts: Array = [[r.km, r.road]] if r.road is String else r.road
 	var out := []
 	var start := 0.0
 	for pt in parts:
-		out.append([start, float(pt[0]), pt[1]])
+		out.append([start, float(pt[0]), pt[1], int(pt[2]) if pt.size() > 2 else 0])
 		start = float(pt[0])
 	if leg.from != r.a:
 		var rev := []
 		for pt in out:
-			rev.push_front([float(r.km) - pt[1], float(r.km) - pt[0], pt[2]])
+			rev.push_front([float(r.km) - pt[1], float(r.km) - pt[0], pt[2], pt[3]])
 		out = rev
 	return out
+
+## Lanes of one part from leg_roads: its own from the data, or by its number (lanes_for).
+static func part_lanes(part: Array) -> int:
+	return part[3] if part.size() > 3 and part[3] > 0 else lanes_for(part[2])
 
 ## Motorways and expressways (the country's express_prefixes, e.g. A and S in Poland, D in Czechia) are dual
 ## carriageways ("3"), every other road a single one ("2"). A prefix ending in a digit names whole numbers: Lithuania's
@@ -143,7 +149,7 @@ static func build(from: String, to: String) -> Dictionary:
 		var r: Dictionary = leg.road
 		var leg_km := float(r.km)
 		for rd in leg_roads(leg):
-			var lanes_here := lanes_for(rd[2])
+			var lanes_here := part_lanes(rd)
 			if lanes_here == 3:
 				express_km += int(rd[1] - rd[0])
 			roads.append({"z0": (off + rd[0]) * mpk, "z1": (off + rd[1]) * mpk, "road": rd[2], "lanes": lanes_here})
@@ -232,11 +238,13 @@ static func _boards(towns: Array, mpk: float, roads: Array) -> Array:
 				if lines.any(func(l): return l[0] == o.name): continue
 				lines.append([o.name, maxi(1, Geo.sign_distance((o.z - zb) / mpk))])
 		var road := ""
+		var dual := false
 		for r in roads:
 			if zb < r.z1:
 				road = r.road
+				dual = r.lanes == 3
 				break
-		out.append({"z": zb, "lines": lines, "road": road, "blue": lanes_for(road) == 3})
+		out.append({"z": zb, "lines": lines, "road": road, "blue": dual})
 		last = zb
 	return out
 

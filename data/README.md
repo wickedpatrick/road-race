@@ -97,7 +97,8 @@ List of roads between two neighbouring cities `a` and `b` (travelling `b` -> `a`
 - `km`: real length.
 - `road`: the road number (`"A4"`), or `[[km where it ends, number], ...]` when it changes on the way. Numbers
   starting with A or S are motorways / expressways (dual carriageway, faster limit); `DK`/`DW` prefixes are shown
-  as on Polish plates.
+  as on Polish plates. A part can give its own lanes, `[km, number, 3]` (dual carriageway) or `[km, number, 2]`,
+  where the number alone does not tell: Canada's Hwy 1 is twinned across the prairies but two-lane over Rogers Pass.
 - `towns`: `[[name, km], ...]` passed on the way, in order.
 - `zones`: `[[km where it ends, biome, region name], ...]`; the last one ends at `km`.
 - `via` (optional): `[[km, lon, lat], ...]` points the road bends through on the map (otherwise a straight line

@@ -118,7 +118,7 @@ func draw_network(cv: CanvasItem, wide: float, thin: float) -> void:
 	for r in Geo.roads():
 		for part in Route.leg_roads({"road": r, "from": r.a, "to": r.b}):
 			var pts := road_path(r, part[0], part[1])
-			if Route.lanes_for(part[2]) == 3:
+			if Route.part_lanes(part) == 3:
 				cv.draw_polyline(pts, MOTORWAY, wide)
 			else:
 				cv.draw_polyline(pts, LOCAL, thin)

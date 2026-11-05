@@ -173,6 +173,17 @@ func run(t) -> void:
 		sr.step(1.0 / 60.0, {"accel": true, "brake": false, "steer": 1.0 if sr.x < 0.3 else 0.0})
 		widest = minf(widest, sr.x)
 	t.check(widest > -1.0 and sr.speed < sr.stats.max_speed - 4.0, "on snow, holding a long bend taken too fast: the car slows down and stays on the road (x=%.2f, %.0f km/h)" % [widest, sr.speed * 3.6])
+	# in a tunnel the road is dry: on snow the car answers the steering at once there, outside it turns in late
+	var tw := Route.build("krakow", "rzeszow")
+	tw.weather = "snow"
+	tw.tunnels = [{"z0": 400.0, "z1": 900.0}]
+	var lat := func(zz: float) -> float:
+		var tr := Race.new("yaris", tw, 1)
+		tr.z = zz
+		tr.speed = 20.0
+		tr.step(1.0 / 60.0, {"accel": false, "brake": false, "steer": 1.0})
+		return absf(tr.x)
+	t.check(lat.call(500.0) > lat.call(1500.0) * 3.0, "on snow, the steering bites at once in a tunnel and late outside it")
 	# every bump costs time and fuel
 	r = fresh()
 	r.z = 500.0

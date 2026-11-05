@@ -1,0 +1,42 @@
+{
+	"vancouver": {"name": "Vancouver", "lat": 49.28, "lon": -123.12, "pop": 662, "region": "British Columbia"},
+	"whistler": {"name": "Whistler", "lat": 50.12, "lon": -122.95, "pop": 14, "region": "British Columbia"},
+	"kamloops": {"name": "Kamloops", "lat": 50.67, "lon": -120.33, "pop": 98, "region": "British Columbia"},
+	"kelowna": {"name": "Kelowna", "lat": 49.89, "lon": -119.5, "pop": 145, "region": "British Columbia"},
+	"prince_george": {"name": "Prince George", "lat": 53.92, "lon": -122.75, "pop": 77, "region": "British Columbia"},
+	"dawson_creek": {"name": "Dawson Creek", "lat": 55.76, "lon": -120.24, "pop": 12, "region": "British Columbia"},
+	"whitehorse": {"name": "Whitehorse", "lat": 60.72, "lon": -135.06, "pop": 28, "region": "Yukon"},
+	"jasper": {"name": "Jasper", "lat": 52.88, "lon": -118.08, "pop": 5, "region": "Alberta"},
+	"banff": {"name": "Banff", "lat": 51.18, "lon": -115.57, "pop": 8, "region": "Alberta"},
+	"calgary": {"name": "Calgary", "lat": 51.05, "lon": -114.07, "pop": 1306, "region": "Alberta"},
+	"edmonton": {"name": "Edmonton", "lat": 53.55, "lon": -113.49, "pop": 1010, "region": "Alberta"},
+	"saskatoon": {"name": "Saskatoon", "lat": 52.13, "lon": -106.67, "pop": 266, "region": "Saskatchewan"},
+	"regina": {"name": "Regina", "lat": 50.45, "lon": -104.61, "pop": 227, "region": "Saskatchewan"},
+	"winnipeg": {"name": "Winnipeg", "lat": 49.9, "lon": -97.14, "pop": 749, "region": "Manitoba"},
+	"thunder_bay": {"name": "Thunder Bay", "lat": 48.38, "lon": -89.25, "pop": 108, "region": "Ontario"},
+	"sault_ste_marie": {"name": "Sault Ste. Marie", "lat": 46.52, "lon": -84.33, "pop": 73, "region": "Ontario"},
+	"sudbury": {"name": "Sudbury", "lat": 46.49, "lon": -80.99, "pop": 166, "region": "Ontario"},
+	"toronto": {"name": "Toronto", "lat": 43.65, "lon": -79.38, "pop": 2794, "region": "Ontario"},
+	"niagara_falls": {"name": "Niagara Falls", "lat": 43.09, "lon": -79.08, "pop": 94, "region": "Ontario"},
+	"ottawa": {"name": "Ottawa", "lat": 45.42, "lon": -75.7, "pop": 1017, "region": "Ontario"},
+	"kingston": {"name": "Kingston", "lat": 44.23, "lon": -76.48, "pop": 132, "region": "Ontario"},
+	"montreal": {
+		"name": "Montréal",
+		"lat": 45.5,
+		"lon": -73.57,
+		"pop": 1762,
+		"region": "Quebec",
+		"exonym": {"pl": "Montreal", "en": "Montreal", "de": "Montreal"}
+	},
+	"quebec": {
+		"name": "Québec",
+		"lat": 46.81,
+		"lon": -71.21,
+		"pop": 549,
+		"region": "Quebec",
+		"exonym": {"pl": "Quebec", "en": "Quebec City"}
+	},
+	"moncton": {"name": "Moncton", "lat": 46.09, "lon": -64.78, "pop": 79, "region": "New Brunswick"},
+	"halifax": {"name": "Halifax", "lat": 44.65, "lon": -63.57, "pop": 440, "region": "Nova Scotia"},
+	"charlottetown": {"name": "Charlottetown", "lat": 46.24, "lon": -63.13, "pop": 38, "region": "Prince Edward Island"}
+}

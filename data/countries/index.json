@@ -59,6 +59,12 @@
 			"name": {"pl": "Stany Zjednoczone", "en": "United States", "cs": "Spojené státy", "is": "Bandaríkin", "de": "Vereinigte Staaten"},
 			"neighbours": ["ca"],
 			"favorite_neighbour": "ca"
+		},
+		{
+			"code": "ca",
+			"name": {"pl": "Kanada", "en": "Canada", "cs": "Kanada", "is": "Kanada", "de": "Kanada"},
+			"neighbours": ["us"],
+			"favorite_neighbour": "us"
 		}
 	]
 }

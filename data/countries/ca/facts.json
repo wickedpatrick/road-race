@@ -1,0 +1,184 @@
+{
+	"Vancouver": {
+		"pl": "Miasto między oceanem a górami: rano można jeździć na nartach, a po południu żeglować",
+		"en": "A city between the ocean and the mountains: ski in the morning, sail in the afternoon",
+		"cs": "Město mezi oceánem a horami: ráno lyžovat, odpoledne se plavit na plachetnici",
+		"is": "Borg milli hafs og fjalla: á skíði á morgnana og siglingu síðdegis",
+		"de": "Eine Stadt zwischen Ozean und Bergen: morgens Ski fahren, nachmittags segeln"
+	},
+	"Whistler": {
+		"pl": "Tu odbywały się zawody narciarskie Zimowych Igrzysk Olimpijskich w 2010 roku",
+		"en": "The ski races of the 2010 Winter Olympics were held here",
+		"cs": "Konaly se zde lyžařské závody zimních olympijských her 2010",
+		"is": "Skíðakeppni vetrarólympíuleikanna 2010 fór fram hér",
+		"de": "Hier fanden die Skirennen der Olympischen Winterspiele 2010 statt"
+	},
+	"Kamloops": {
+		"pl": "Jedno z najbardziej suchych i słonecznych miejsc w Kanadzie, z pustynnymi wzgórzami",
+		"en": "One of the driest, sunniest places in Canada, with desert-like hills",
+		"cs": "Jedno z nejsušších a nejslunnějších míst Kanady, s kopci jako v poušti",
+		"is": "Einn þurrasti og sólríkasti staður Kanada, með hæðir eins og í eyðimörk",
+		"de": "Einer der trockensten und sonnigsten Orte Kanadas, mit wüstenartigen Hügeln"
+	},
+	"Kelowna": {
+		"pl": "Nad jeziorem Okanagan rosną brzoskwinie, jabłka i winogrona",
+		"en": "Peaches, apples and grapes grow by Okanagan Lake",
+		"cs": "U jezera Okanagan rostou broskve, jablka a hrozny",
+		"is": "Ferskjur, epli og vínber vaxa við Okanagan-vatn",
+		"de": "Am Okanagan Lake wachsen Pfirsiche, Äpfel und Weintrauben"
+	},
+	"Prince George": {
+		"pl": "Największe miasto północnej Kolumbii Brytyjskiej, gdzie spotykają się dwie rzeki",
+		"en": "The biggest city in northern British Columbia, where two rivers meet",
+		"cs": "Největší město severní Britské Kolumbie, kde se stékají dvě řeky",
+		"is": "Stærsta borg í norðurhluta Bresku Kólumbíu, þar sem tvær ár mætast",
+		"de": "Die größte Stadt im Norden von British Columbia, wo zwei Flüsse zusammenfließen"
+	},
+	"Dawson Creek": {
+		"pl": "Stąd zaczyna się Alaska Highway: 2232 kilometry drogi przez dzikie lasy aż na Alaskę",
+		"en": "The Alaska Highway starts here: 2,232 kilometres of road through the wild forests to Alaska",
+		"cs": "Tady začíná Aljašská dálnice: 2232 kilometrů silnice divokými lesy až na Aljašku",
+		"is": "Hér byrjar Alaska-þjóðvegurinn: 2.232 kílómetrar um villta skóga alla leið til Alaska",
+		"de": "Hier beginnt der Alaska Highway: 2232 Kilometer Straße durch wilde Wälder bis nach Alaska"
+	},
+	"Whitehorse": {
+		"pl": "Stolica Jukonu, dokąd w czasie gorączki złota płynęli poszukiwacze złota",
+		"en": "The capital of the Yukon, where gold seekers came by boat in the Klondike Gold Rush",
+		"cs": "Hlavní město Yukonu, kam za zlaté horečky připlouvali hledači zlata",
+		"is": "Höfuðstaður Yukon, þangað sem gullleitarmenn komu á bátum í gullæðinu",
+		"de": "Die Hauptstadt des Yukon, wohin im Goldrausch die Goldsucher mit Booten kamen"
+	},
+	"Jasper": {
+		"pl": "Największy park narodowy Gór Skalistych w Kanadzie, z łosiami i wapiti na ulicach",
+		"en": "The biggest national park of the Canadian Rockies, with elk walking down the streets",
+		"cs": "Největší národní park kanadských Skalnatých hor, s jeleny wapiti v ulicích",
+		"is": "Stærsti þjóðgarður kanadísku Klettafjallanna, þar sem vapítihirtir rölta um göturnar",
+		"de": "Der größte Nationalpark der kanadischen Rocky Mountains, mit Wapitis auf den Straßen"
+	},
+	"Banff": {
+		"pl": "Pierwszy park narodowy Kanady, założony z powodu gorących źródeł",
+		"en": "Canada's first national park, started because of its hot springs",
+		"cs": "První národní park Kanady, založený kvůli horkým pramenům",
+		"is": "Fyrsti þjóðgarður Kanada, stofnaður vegna heitu lindanna",
+		"de": "Kanadas erster Nationalpark, gegründet wegen seiner heißen Quellen"
+	},
+	"Calgary": {
+		"pl": "Miasto kowbojów: co lato przez dziesięć dni trwa tu wielkie rodeo Stampede",
+		"en": "A cowboy city: every summer the big Stampede rodeo goes on here for ten days",
+		"cs": "Město kovbojů: každé léto se tu deset dní koná velké rodeo Stampede",
+		"is": "Kúrekaborg: á hverju sumri stendur stóra Stampede-hátíðin hér í tíu daga",
+		"de": "Eine Cowboystadt: jeden Sommer findet hier zehn Tage lang das große Stampede-Rodeo statt"
+	},
+	"Edmonton": {
+		"pl": "Stolica Alberty z jednym z największych centrów handlowych świata, w którym jest park wodny",
+		"en": "Alberta's capital, with one of the world's biggest shopping malls, which has a water park inside",
+		"cs": "Hlavní město Alberty s jedním z největších nákupních center světa, ve kterém je aquapark",
+		"is": "Höfuðborg Alberta, með einni stærstu verslunarmiðstöð heims sem er með vatnagarð inni",
+		"de": "Albertas Hauptstadt mit einem der größten Einkaufszentren der Welt, in dem ein Wasserpark ist"
+	},
+	"Saskatoon": {
+		"pl": "Miasto mostów nad rzeką Saskatchewan, otoczone polami pszenicy",
+		"en": "The city of bridges over the Saskatchewan River, surrounded by wheat fields",
+		"cs": "Město mostů přes řeku Saskatchewan, obklopené pšeničnými poli",
+		"is": "Borg brúnna yfir Saskatchewan-fljót, umkringd hveitiökrum",
+		"de": "Die Stadt der Brücken über den Saskatchewan River, umgeben von Weizenfeldern"
+	},
+	"Regina": {
+		"pl": "Tu szkolą się wszyscy kanadyjscy policjanci konni w czerwonych mundurach",
+		"en": "Every Canadian Mountie in a red coat is trained here",
+		"cs": "Tady se cvičí všichni kanadští jízdní policisté v červených kabátech",
+		"is": "Hér eru allir kanadískir riddaralögreglumenn í rauðum jökkum þjálfaðir",
+		"de": "Hier werden alle kanadischen Mounties in roten Jacken ausgebildet"
+	},
+	"Winnipeg": {
+		"pl": "Leży w samym środku Ameryki Północnej, a zimą jest tu mróz jak na Marsie",
+		"en": "It lies right in the middle of North America, and its winters can be as cold as Mars",
+		"cs": "Leží přesně uprostřed Severní Ameriky a v zimě tu mrzne jako na Marsu",
+		"is": "Hún liggur í miðri Norður-Ameríku og veturnir geta verið kaldir eins og á Mars",
+		"de": "Es liegt genau in der Mitte Nordamerikas, und im Winter kann es hier so kalt sein wie auf dem Mars"
+	},
+	"Thunder Bay": {
+		"pl": "Port nad Jeziorem Górnym, największym słodkowodnym jeziorem świata",
+		"en": "A port on Lake Superior, the world's biggest freshwater lake by area",
+		"cs": "Přístav na Hořejším jezeře, největším sladkovodním jezeře světa",
+		"is": "Hafnarborg við Efravatn, stærsta ferskvatn heims að flatarmáli",
+		"de": "Ein Hafen am Oberen See, dem flächenmäßig größten Süßwassersee der Welt"
+	},
+	"Sault Ste. Marie": {
+		"pl": "Tu statki pokonują śluzami próg między Jeziorem Górnym a jeziorem Huron",
+		"en": "Ships climb through locks here between Lake Superior and Lake Huron",
+		"cs": "Tady lodě překonávají plavebními komorami stupeň mezi Hořejším jezerem a Huronem",
+		"is": "Hér lyfta skipastigar skipunum milli Efravatns og Húronvatns",
+		"de": "Hier steigen die Schiffe durch Schleusen zwischen dem Oberen See und dem Huronsee"
+	},
+	"Sudbury": {
+		"pl": "Krater po meteorycie sprzed prawie dwóch miliardów lat dał tu bogate złoża niklu",
+		"en": "A meteorite crater nearly two billion years old gave the city its rich nickel mines",
+		"cs": "Kráter po meteoritu starý skoro dvě miliardy let dal městu bohaté doly na nikl",
+		"is": "Loftsteinsgígur, næstum tveggja milljarða ára gamall, gaf borginni ríkar nikkelnámur",
+		"de": "Ein fast zwei Milliarden Jahre alter Meteoritenkrater schenkte der Stadt reiche Nickelminen"
+	},
+	"Toronto": {
+		"pl": "Największe miasto Kanady, w którym mówi się ponad 180 językami",
+		"en": "Canada's biggest city, where people speak more than 180 languages",
+		"cs": "Největší město Kanady, kde se mluví více než 180 jazyky",
+		"is": "Stærsta borg Kanada, þar sem talað er á yfir 180 tungumálum",
+		"de": "Kanadas größte Stadt, in der mehr als 180 Sprachen gesprochen werden"
+	},
+	"Niagara Falls": {
+		"pl": "Co sekundę spada tu tyle wody, że napełniłaby kilka basenów olimpijskich",
+		"en": "Every second, enough water falls here to fill several Olympic swimming pools",
+		"cs": "Každou sekundu tu spadne tolik vody, že by naplnila několik olympijských bazénů",
+		"is": "Á hverri sekúndu fellur hér nóg vatn til að fylla nokkrar ólympíusundlaugar",
+		"de": "Jede Sekunde stürzt hier so viel Wasser herab, dass es mehrere olympische Schwimmbecken füllen würde"
+	},
+	"Ottawa": {
+		"pl": "Stolica Kanady, gdzie zimą do szkoły i pracy można dojechać na łyżwach",
+		"en": "Canada's capital, where in winter you can skate to school or work along the canal",
+		"cs": "Hlavní město Kanady, kde v zimě můžete do školy dojet na bruslích po kanálu",
+		"is": "Höfuðborg Kanada, þar sem hægt er að skauta í skólann eftir skurðinum á veturna",
+		"de": "Kanadas Hauptstadt, wo man im Winter auf dem Kanal mit Schlittschuhen zur Schule fahren kann"
+	},
+	"Kingston": {
+		"pl": "Pierwsza stolica Kanady, nad brzegiem jeziora Ontario",
+		"en": "Canada's first capital, on the shore of Lake Ontario",
+		"cs": "První hlavní město Kanady, na břehu jezera Ontario",
+		"is": "Fyrsta höfuðborg Kanada, við strönd Ontario-vatns",
+		"de": "Kanadas erste Hauptstadt, am Ufer des Ontariosees"
+	},
+	"Montréal": {
+		"pl": "Największe francuskojęzyczne miasto Ameryki, zbudowane na wyspie",
+		"en": "The biggest French-speaking city in the Americas, built on an island",
+		"cs": "Největší francouzsky mluvící město Ameriky, postavené na ostrově",
+		"is": "Stærsta frönskumælandi borg Ameríku, byggð á eyju",
+		"de": "Die größte französischsprachige Stadt Amerikas, auf einer Insel gebaut"
+	},
+	"Québec": {
+		"pl": "Jedyne miasto na północ od Meksyku, które wciąż ma całe mury obronne",
+		"en": "The only city north of Mexico that still has its old city walls all the way round",
+		"cs": "Jediné město severně od Mexika, které má ještě celé hradby",
+		"is": "Eina borgin norðan Mexíkó sem enn hefur gömlu borgarmúrana allan hringinn",
+		"de": "Die einzige Stadt nördlich von Mexiko, die noch ihre ganze Stadtmauer hat"
+	},
+	"Moncton": {
+		"pl": "Tu na Magnetycznym Wzgórzu samochód z wyłączonym silnikiem zdaje się toczyć pod górę",
+		"en": "At Magnetic Hill here, a car with its engine off seems to roll uphill",
+		"cs": "Na Magnetickém kopci tu auto s vypnutým motorem jako by jelo do kopce",
+		"is": "Á Segulhæðinni hér virðist bíll með slökkt á vélinni renna upp brekkuna",
+		"de": "Am Magnetic Hill scheint ein Auto mit ausgeschaltetem Motor bergauf zu rollen"
+	},
+	"Halifax": {
+		"pl": "Port nad Atlantykiem, skąd statki ratunkowe wypłynęły do Titanica",
+		"en": "An Atlantic port, where ships set out to help after the Titanic sank",
+		"cs": "Přístav u Atlantiku, odkud vypluly lodě na pomoc po potopení Titaniku",
+		"is": "Hafnarborg við Atlantshaf, þaðan sem skip lögðu af stað eftir að Titanic sökk",
+		"de": "Ein Atlantikhafen, von dem Schiffe nach dem Untergang der Titanic zu Hilfe fuhren"
+	},
+	"Charlottetown": {
+		"pl": "Tu w 1864 roku spotkali się ludzie, którzy założyli Kanadę",
+		"en": "In 1864 the people who founded Canada met here",
+		"cs": "Tady se v roce 1864 sešli lidé, kteří založili Kanadu",
+		"is": "Hér hittust árið 1864 mennirnir sem stofnuðu Kanada",
+		"de": "Hier trafen sich 1864 die Gründer Kanadas"
+	}
+}
