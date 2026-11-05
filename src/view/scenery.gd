@@ -756,7 +756,7 @@ static func _board(cv, it: Dictionary, b: Vector2, pm: float, font: Font) -> voi
 		_fit_text(cv, font, Rect2(row.position, Vector2(row.size.x * 0.78, lh)), lines[i][0], ink, 0.85 * pm, HORIZONTAL_ALIGNMENT_LEFT)
 		_fit_text(cv, font, row, str(lines[i][1]), ink, 0.85 * pm, HORIZONTAL_ALIGNMENT_RIGHT)
 
-## Brown tourist board with the name of the region being entered.
+## Brown tourist board with the name of the region being entered, the country's flag in its corner.
 static func _region(cv, it: Dictionary, b: Vector2, pm: float, font: Font) -> void:
 	var post := 2.8 * pm
 	var w := REGION_W * pm
@@ -765,7 +765,10 @@ static func _region(cv, it: Dictionary, b: Vector2, pm: float, font: Font) -> vo
 	var r := Rect2(b + Vector2(-w * 0.5, -post - hh), Vector2(w, hh))
 	cv.draw_rect(r, SIGN_BROWN)
 	cv.draw_rect(r.grow(-0.14 * pm), Color.WHITE, false, maxf(1.0, 0.1 * pm))
-	_fit_text(cv, font, Rect2(r.position + Vector2(0.35 * pm, 0.1 * pm), Vector2(w - 0.7 * pm, hh * 0.42)), Geo.station().region_sign, Color("f1d9b5"), 0.55 * pm)
+	var fl := Vector2(1.05 * pm, 0.7 * pm) # the country's flag before "WELCOME TO"
+	if fl.x >= 3.0:
+		FlagPainter.draw(cv, GameData.current, Rect2(r.position + Vector2(0.35 * pm, 0.18 * pm), fl))
+	_fit_text(cv, font, Rect2(r.position + Vector2(0.55 * pm + fl.x, 0.1 * pm), Vector2(w - 0.9 * pm - fl.x, hh * 0.42)), Geo.station().region_sign, Color("f1d9b5"), 0.55 * pm)
 	_fit_text(cv, font, Rect2(r.position + Vector2(0.35 * pm, hh * 0.42), Vector2(w - 0.7 * pm, hh * 0.52)), it.text, Color.WHITE, 0.8 * pm)
 
 ## Brown tourist board (E-22c style) naming the landmark next to it.

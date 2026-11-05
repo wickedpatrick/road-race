@@ -200,26 +200,32 @@ func _draw() -> void:
 		var size := (17 if code == hover else 14) if polys[code].size() > 0 and _wide(code) else (15 if code == hover else 12)
 		var p := label_pos(code)
 		var w := font.get_string_size(names[code], HORIZONTAL_ALIGNMENT_LEFT, -1, size).x
-		var pos := p + Vector2(-w * 0.5, size * 0.35)
+		var fl := Vector2(size * 1.2, size * 0.8) # the flag before the name
+		var pos := p + Vector2(-(w + fl.x + 4) * 0.5 + fl.x + 4, size * 0.35)
+		FlagPainter.draw(self, code, Rect2(Vector2(pos.x - fl.x - 4, p.y - fl.y * 0.5), fl))
 		draw_string_outline(font, pos, names[code], HORIZONTAL_ALIGNMENT_LEFT, -1, size, 4, Color(0, 0, 0, 0.6))
 		draw_string(font, pos, names[code], HORIZONTAL_ALIGNMENT_LEFT, -1, size, Color.WHITE)
 	if hover_soon != "": # "France · coming soon" by the country under the cursor
 		var text := "%s · %s" % [_name(hover_soon), Lang.t("soon_tag")]
-		var w := font.get_string_size(text, HORIZONTAL_ALIGNMENT_LEFT, -1, 15).x
+		var w := font.get_string_size(text, HORIZONTAL_ALIGNMENT_LEFT, -1, 15).x + 26 # with the flag
 		var p := label_pos(hover_soon) + Vector2(-w * 0.5, 5)
 		p.x = clampf(p.x, 8.0, 952.0 - w)
 		var box := Rect2(p + Vector2(-8, -17), Vector2(w + 16, 24))
 		draw_rect(box, Color(0.1, 0.12, 0.15, 0.85))
 		draw_rect(box, CURRENT, false, 1.5)
-		draw_string(font, p, text, HORIZONTAL_ALIGNMENT_LEFT, -1, 15, Color.WHITE)
+		FlagPainter.draw(self, hover_soon, Rect2(p + Vector2(0, -12), Vector2(21, 14)))
+		draw_string(font, p + Vector2(26, 0), text, HORIZONTAL_ALIGNMENT_LEFT, -1, 15, Color.WHITE)
 	_legend()
 	# header and footer
 	draw_rect(Rect2(0, 0, 960, 58), Color(0, 0, 0, 0.45))
 	draw_string(font, Vector2(24, 42), Lang.t("pick_country"), HORIZONTAL_ALIGNMENT_LEFT, -1, 32, Color.WHITE)
-	if hover_soon != "":
-		draw_string(font, Vector2(0, 42), "%s · %s" % [_name(hover_soon), Lang.t("soon_tag")], HORIZONTAL_ALIGNMENT_RIGHT, 936, 24, Color("c8d0d6"))
-	elif names.has(hover):
-		draw_string(font, Vector2(0, 42), names[hover], HORIZONTAL_ALIGNMENT_RIGHT, 936, 28, CURRENT)
+	var head_code := hover_soon if hover_soon != "" else (hover if names.has(hover) else "")
+	if head_code != "": # the name on the right, its flag before it
+		var head: String = "%s · %s" % [_name(hover_soon), Lang.t("soon_tag")] if hover_soon != "" else names[hover]
+		var hs := 24 if hover_soon != "" else 28
+		draw_string(font, Vector2(0, 42), head, HORIZONTAL_ALIGNMENT_RIGHT, 936, hs, Color("c8d0d6") if hover_soon != "" else CURRENT)
+		var hw := font.get_string_size(head, HORIZONTAL_ALIGNMENT_LEFT, -1, hs).x
+		FlagPainter.draw(self, head_code, Rect2(Vector2(936 - hw - 52, 14), Vector2(42, 28)))
 	draw_rect(Rect2(0, 486, 960, 54), Color(0, 0, 0, 0.5))
 	Ui.button(self, font, BACK_BTN, Lang.t("back"), false, 20)
 	var hint := Lang.t("country_soon") if soon > 0.0 else ("" if Screen.touch else Lang.t("pick_country_hint"))

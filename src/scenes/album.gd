@@ -215,13 +215,24 @@ func _draw() -> void:
 		PackedColorArray([pal.sky_top, pal.sky_top, pal.sky_top.lerp(pal.sky_bottom, 0.2), pal.sky_top.lerp(pal.sky_bottom, 0.2)]))
 	draw_rect(Rect2(0, GRID.end.y + 6, 960, 540 - GRID.end.y - 6), pal.sky_bottom)
 	draw_string(font, Vector2(24, 46), Lang.t("album"), HORIZONTAL_ALIGNMENT_LEFT, -1, 36, Color.WHITE)
+	var aw := font.get_string_size(Lang.t("album"), HORIZONTAL_ALIGNMENT_LEFT, -1, 36).x
+	FlagPainter.draw(self, code, Rect2(Vector2(24 + aw + 14, 20), Vector2(39, 26))) # the country's flag and name
+	draw_string(font, Vector2(24 + aw + 62, 44), GameData.country(code).name, HORIZONTAL_ALIGNMENT_LEFT, 360, 24, Color.WHITE)
 	var sm := Postcards.summary(code, cards)
 	draw_string(font, Vector2(0, 46), Lang.t("album_stamps") % [sm.stamps, sm.max], HORIZONTAL_ALIGNMENT_RIGHT, 936, 24, Color("ffd24a"))
 	var countries := GameData.countries()
 	for i in countries.size():
 		var c: Dictionary = countries[i]
 		var s := Postcards.summary(c.code, Session.postcards_of(c.code))
-		Ui.button(self, font, _tab_rect(i), "%s  %d/%d" % [c.name, s.earned, s.all], c.code == code, 15)
+		var tr := _tab_rect(i) # the flag on the left; the name over the count beside it
+		Ui.button(self, font, tr, "", c.code == code, 15)
+		FlagPainter.draw(self, c.code, Rect2(tr.position + Vector2(9, tr.size.y * 0.5 - 7), Vector2(21, 14)))
+		var lw := tr.size.x - 36
+		var fs := 13
+		while fs > 8 and font.get_string_size(c.name, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x > lw:
+			fs -= 1
+		draw_string(font, Vector2(tr.position.x + 32, tr.position.y + 15), c.name, HORIZONTAL_ALIGNMENT_CENTER, lw, fs, Color.WHITE)
+		draw_string(font, Vector2(tr.position.x + 32, tr.position.y + 29), "%d/%d" % [s.earned, s.all], HORIZONTAL_ALIGNMENT_CENTER, lw, 12, Color("ffd24a"))
 	if _max_scroll() > 0.0: # where in the list we are
 		var h := GRID.size.y * GRID.size.y / (GRID.size.y + _max_scroll())
 		var y := GRID.position.y + (GRID.size.y - h) * scroll / _max_scroll()

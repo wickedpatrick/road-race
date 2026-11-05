@@ -529,7 +529,7 @@ func _draw_map_layer() -> void:
 	_draw_country_tabs(_map_layer)
 
 ## The country button above the map (only when there is more than one country): a tiny world map with the
-## country in gold, its name and "Change country", the border glowing a little so it gets noticed.
+## country in gold, its flag and name and "Change country", the border glowing a little so it gets noticed.
 func _draw_country_tabs(cv: CanvasItem) -> void:
 	if _countries() < 2:
 		return
@@ -545,10 +545,12 @@ func _draw_country_tabs(cv: CanvasItem) -> void:
 	var x := thumb.end.x + 10
 	var w := COUNTRY_BTN.end.x - x - 8
 	var name: String = GameData.country().name
+	FlagPainter.draw(cv, Session.country, Rect2(Vector2(x, COUNTRY_BTN.position.y + 8), Vector2(21, 14)))
+	var nw := w - 26 # the name after the flag
 	var fs := 18
-	while fs > 12 and font.get_string_size(name, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x > w:
+	while fs > 12 and font.get_string_size(name, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x > nw:
 		fs -= 1
-	cv.draw_string(font, Vector2(x, COUNTRY_BTN.position.y + 22), name, HORIZONTAL_ALIGNMENT_LEFT, w, fs, Color("ffd24a"))
+	cv.draw_string(font, Vector2(x + 26, COUNTRY_BTN.position.y + 22), name, HORIZONTAL_ALIGNMENT_LEFT, nw, fs, Color("ffd24a"))
 	var cta := Lang.t("change_country") + " ›"
 	var cs := 15
 	while cs > 11 and font.get_string_size(cta, HORIZONTAL_ALIGNMENT_LEFT, -1, cs).x > w:
