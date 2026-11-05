@@ -1,0 +1,418 @@
+[
+	{
+		"a": "wien",
+		"b": "st_poelten",
+		"km": 62,
+		"road": "A1",
+		"towns": [["Pressbaum", 22], ["Altlengbach", 38]],
+		"zones": [[45, "forest", "Wienerwald"], [62, "upland", "Mostviertel"]]
+	},
+	{
+		"a": "st_poelten",
+		"b": "linz",
+		"km": 130,
+		"road": "A1",
+		"towns": [["Melk", 28], ["Ybbs an der Donau", 50], ["Amstetten", 75], ["Enns", 112]],
+		"zones": [[60, "upland", "Mostviertel"], [100, "orchard", "Mostviertel"], [130, "fields", "Traunviertel"]],
+		"via": [[28, 15.33, 48.23], [75, 14.87, 48.12], [112, 14.47, 48.21]]
+	},
+	{
+		"a": "linz",
+		"b": "wels",
+		"km": 30,
+		"road": "A25",
+		"towns": [["Marchtrenk", 18]],
+		"zones": [[30, "fields", "Welser Heide"]]
+	},
+	{
+		"a": "wels",
+		"b": "salzburg",
+		"km": 110,
+		"road": [[15, "A8"], [110, "A1"]],
+		"towns": [["Vöcklabruck", 45], ["Mondsee", 85], ["Thalgau", 96]],
+		"zones": [[40, "upland", "Hausruckviertel"], [95, "lakes", "Salzkammergut"], [110, "foothills", "Flachgau"]],
+		"via": [[45, 13.65, 48], [85, 13.35, 47.86]]
+	},
+	{
+		"a": "wien",
+		"b": "wiener_neustadt",
+		"km": 50,
+		"road": "A2",
+		"towns": [["Baden", 25]],
+		"zones": [[50, "fields", "Wiener Becken"]]
+	},
+	{
+		"a": "wiener_neustadt",
+		"b": "graz",
+		"km": 147,
+		"road": "A2",
+		"towns": [["Seebenstein", 20], ["Hartberg", 95], ["Gleisdorf", 128]],
+		"zones": [[30, "foothills", "Bucklige Welt"], [70, "mountains", "Wechsel"], [147, "upland", "Oststeiermark"]],
+		"via": [[95, 15.97, 47.28], [128, 15.71, 47.1]]
+	},
+	{
+		"a": "graz",
+		"b": "klagenfurt",
+		"km": 135,
+		"road": "A2",
+		"towns": [["Mooskirchen", 25], ["Wolfsberg", 85], ["Völkermarkt", 110]],
+		"zones": [
+			[30, "upland", "Weststeiermark"], [75, "mountains", "Packalpe"], [100, "foothills", "Lavanttal"],
+			[135, "fields", "Jauntal"]
+		],
+		"via": [[85, 14.84, 46.84], [110, 14.63, 46.66]]
+	},
+	{
+		"a": "klagenfurt",
+		"b": "villach",
+		"km": 40,
+		"road": "A2",
+		"towns": [["Krumpendorf", 8], ["Velden am Wörthersee", 22]],
+		"zones": [[40, "lakes", "Wörthersee"]]
+	},
+	{
+		"a": "wien",
+		"b": "eisenstadt",
+		"km": 50,
+		"road": "A3",
+		"towns": [["Ebreichsdorf", 25], ["Hornstein", 40]],
+		"zones": [[30, "fields", "Wiener Becken"], [50, "orchard", "Leithagebirge"]]
+	},
+	{
+		"a": "eisenstadt",
+		"b": "wiener_neustadt",
+		"km": 32,
+		"road": [[15, "S31"], [32, "S4"]],
+		"towns": [["Mattersburg", 15]],
+		"zones": [[20, "orchard", "Mittelburgenland"], [32, "fields", "Steinfeld"]]
+	},
+	{
+		"a": "st_poelten",
+		"b": "krems",
+		"km": 30,
+		"road": "S33",
+		"towns": [["Herzogenburg", 13]],
+		"zones": [[30, "orchard", "Traisental"]]
+	},
+	{
+		"a": "krems",
+		"b": "wien",
+		"km": 75,
+		"road": [[45, "S5"], [75, "A22"]],
+		"towns": [["Tulln an der Donau", 30], ["Stockerau", 48], ["Korneuburg", 60]],
+		"zones": [[20, "orchard", "Wagram"], [60, "fields", "Tullnerfeld"], [75, "fields", "Weinviertel"]]
+	},
+	{
+		"a": "krems",
+		"b": "linz",
+		"km": 125,
+		"road": "B3",
+		"towns": [["Dürnstein", 8], ["Spitz", 18], ["Persenbeug", 58], ["Grein", 75], ["Mauthausen", 105]],
+		"zones": [[35, "orchard", "Wachau"], [90, "forest", "Strudengau"], [125, "fields", "Machland"]],
+		"via": [[30, 15.35, 48.25], [75, 14.86, 48.23], [105, 14.52, 48.24]]
+	},
+	{
+		"a": "linz",
+		"b": "steyr",
+		"km": 40,
+		"road": [[20, "A1"], [40, "B309"]],
+		"towns": [["Enns", 20]],
+		"zones": [[40, "fields", "Traunviertel"]]
+	},
+	{
+		"a": "steyr",
+		"b": "leoben",
+		"km": 125,
+		"road": "B115",
+		"towns": [["Weyer", 40], ["Hieflau", 75], ["Eisenerz", 90], ["Trofaiach", 113]],
+		"zones": [
+			[40, "foothills", "Ennstal"], [85, "mountains", "Gesäuse"], [113, "mountains", "Eisenerzer Alpen"],
+			[125, "upland", "Murtal"]
+		],
+		"via": [[40, 14.66, 47.86], [75, 14.74, 47.6], [90, 14.88, 47.54]]
+	},
+	{
+		"a": "wels",
+		"b": "leoben",
+		"km": 175,
+		"road": [[15, "A8"], [165, "A9"], [175, "S6"]],
+		"towns": [
+			["Kirchdorf an der Krems", 45], ["Windischgarsten", 72], ["Liezen", 100], ["Trieben", 130],
+			["St. Michael in Obersteiermark", 165]
+		],
+		"zones": [
+			[50, "foothills", "Kremstal"], [95, "mountains", "Pyhrn"], [150, "mountains", "Paltental"],
+			[175, "upland", "Murtal"]
+		],
+		"tunnels": [
+			{
+				"from_km": 80,
+				"to_km": 85.5,
+				"name": {
+					"pl": "Tunel Bosruck",
+					"en": "Bosruck Tunnel",
+					"cs": "Tunel Bosruck",
+					"is": "Bosruck-göngin",
+					"de": "Bosrucktunnel"
+				},
+				"fact": {
+					"pl": "5,5 km pod górą Bosruck, z Górnej Austrii do Styrii",
+					"en": "5.5 km under the Bosruck, from Upper Austria into Styria",
+					"cs": "5,5 km pod horou Bosruck, z Horních Rakous do Štýrska",
+					"is": "5,5 km undir Bosruck, frá Efra-Austurríki til Steiermark",
+					"de": "5,5 km unter dem Bosruck, von Oberösterreich in die Steiermark"
+				}
+			}
+		],
+		"via": [[45, 14.12, 47.91], [100, 14.24, 47.57], [130, 14.49, 47.48], [165, 15, 47.34]]
+	},
+	{
+		"a": "leoben",
+		"b": "graz",
+		"km": 65,
+		"road": [[10, "S6"], [65, "A9"]],
+		"towns": [["St. Michael in Obersteiermark", 10], ["Übelbach", 35], ["Gratkorn", 48]],
+		"zones": [[30, "mountains", "Gleinalpe"], [65, "foothills", "Grazer Bergland"]],
+		"tunnels": [
+			{
+				"from_km": 16,
+				"to_km": 24.3,
+				"name": {
+					"pl": "Tunel Gleinalm",
+					"en": "Gleinalm Tunnel",
+					"cs": "Tunel Gleinalm",
+					"is": "Gleinalm-göngin",
+					"de": "Gleinalmtunnel"
+				},
+				"fact": {
+					"pl": "Ponad 8 km pod Gleinalpe, jeden z najdłuższych tuneli Austrii",
+					"en": "Over 8 km under the Gleinalpe, one of Austria's longest tunnels",
+					"cs": "Přes 8 km pod Gleinalpe, jeden z nejdelších tunelů Rakouska",
+					"is": "Yfir 8 km undir Gleinalpe, ein lengstu göng Austurríkis",
+					"de": "Über 8 km unter der Gleinalpe, einer der längsten Tunnel Österreichs"
+				}
+			},
+			{
+				"from_km": 54,
+				"to_km": 64,
+				"name": {
+					"pl": "Tunel Plabutsch",
+					"en": "Plabutsch Tunnel",
+					"cs": "Tunel Plabutsch",
+					"is": "Plabutsch-göngin",
+					"de": "Plabutschtunnel"
+				},
+				"fact": {
+					"pl": "10 km pod górą Plabutsch: autostrada omija Graz pod ziemią",
+					"en": "10 km under the Plabutsch: the motorway passes Graz underground",
+					"cs": "10 km pod horou Plabutsch: dálnice obchází Graz pod zemí",
+					"is": "10 km undir Plabutsch: hraðbrautin fer fram hjá Graz neðanjarðar",
+					"de": "10 km unter dem Plabutsch: die Autobahn umfährt Graz unter der Erde"
+				}
+			}
+		]
+	},
+	{
+		"a": "leoben",
+		"b": "klagenfurt",
+		"km": 140,
+		"road": [[50, "S36"], [115, "B317"], [140, "S37"]],
+		"towns": [
+			["Knittelfeld", 28], ["Spielberg", 34], ["Judenburg", 46], ["Neumarkt in der Steiermark", 75],
+			["Friesach", 92], ["St. Veit an der Glan", 118]
+		],
+		"zones": [[50, "upland", "Murtal"], [95, "mountains", "Neumarkter Sattel"], [140, "foothills", "Zollfeld"]],
+		"via": [[46, 14.66, 47.17], [92, 14.41, 46.95], [118, 14.36, 46.77]]
+	},
+	{
+		"a": "villach",
+		"b": "salzburg",
+		"km": 185,
+		"road": "A10",
+		"towns": [
+			["Spittal an der Drau", 35], ["Gmünd in Kärnten", 50], ["St. Michael im Lungau", 74], ["Flachau", 108],
+			["Werfen", 140], ["Hallein", 165]
+		],
+		"zones": [
+			[35, "lakes", "Drautal"], [70, "mountains", "Katschberg"], [100, "mountains", "Radstädter Tauern"],
+			[150, "mountains", "Pongau"], [185, "foothills", "Tennengau"]
+		],
+		"weather": "snow",
+		"tunnels": [
+			{
+				"from_km": 59,
+				"to_km": 64.4,
+				"name": {
+					"pl": "Tunel Katschberg",
+					"en": "Katschberg Tunnel",
+					"cs": "Tunel Katschberg",
+					"is": "Katschberg-göngin",
+					"de": "Katschbergtunnel"
+				},
+				"fact": {
+					"pl": "5,4 km pod przełęczą Katschberg, z Karyntii do Salzburga",
+					"en": "5.4 km under the Katschberg pass, from Carinthia into Salzburg",
+					"cs": "5,4 km pod průsmykem Katschberg, z Korutan do Salcburska",
+					"is": "5,4 km undir Katschberg-skarði, frá Kärnten til Salzburg",
+					"de": "5,4 km unter dem Katschbergpass, von Kärnten nach Salzburg"
+				}
+			},
+			{
+				"from_km": 86,
+				"to_km": 92.5,
+				"name": {
+					"pl": "Tunel Taurów",
+					"en": "Tauern Tunnel",
+					"cs": "Tauernský tunel",
+					"is": "Tauern-göngin",
+					"de": "Tauerntunnel"
+				},
+				"fact": {
+					"pl": "6,5 km pod Wysokimi Taurami, w środku Alp",
+					"en": "6.5 km under the Radstädter Tauern, right in the middle of the Alps",
+					"cs": "6,5 km pod Taury, uprostřed Alp",
+					"is": "6,5 km undir Tauern-fjöllum, í miðjum Ölpunum",
+					"de": "6,5 km unter den Radstädter Tauern, mitten in den Alpen"
+				}
+			}
+		],
+		"via": [[35, 13.5, 46.8], [74, 13.64, 47.1], [108, 13.39, 47.34], [140, 13.19, 47.48], [165, 13.1, 47.68]]
+	},
+	{
+		"a": "salzburg",
+		"b": "bad_ischl",
+		"km": 55,
+		"road": "B158",
+		"towns": [["Fuschl am See", 22], ["St. Gilgen", 30], ["Strobl", 42]],
+		"zones": [[55, "lakes", "Salzkammergut"]]
+	},
+	{
+		"a": "bad_ischl",
+		"b": "wels",
+		"km": 85,
+		"road": [[45, "B145"], [70, "A1"], [85, "A8"]],
+		"towns": [["Ebensee", 15], ["Gmunden", 28], ["Regau", 45]],
+		"zones": [[30, "lakes", "Traunsee"], [85, "upland", "Traunviertel"]],
+		"via": [[28, 13.8, 47.92]]
+	},
+	{
+		"a": "bad_ischl",
+		"b": "leoben",
+		"km": 150,
+		"road": [[30, "B145"], [75, "B320"], [140, "A9"], [150, "S6"]],
+		"towns": [["Hallstatt", 18], ["Bad Aussee", 30], ["Bad Mitterndorf", 45], ["Liezen", 75], ["Trieben", 105]],
+		"zones": [
+			[30, "lakes", "Salzkammergut"], [75, "mountains", "Ausseerland"], [140, "mountains", "Paltental"],
+			[150, "upland", "Murtal"]
+		],
+		"via": [[18, 13.65, 47.56], [30, 13.78, 47.61], [75, 14.24, 47.57], [105, 14.49, 47.48]]
+	},
+	{
+		"a": "salzburg",
+		"b": "zell_am_see",
+		"km": 100,
+		"road": [[50, "A10"], [100, "B311"]],
+		"towns": [
+			["Hallein", 15], ["Werfen", 40], ["St. Johann im Pongau", 60], ["Taxenbach", 80],
+			["Bruck an der Großglocknerstraße", 92]
+		],
+		"zones": [[20, "foothills", "Tennengau"], [60, "mountains", "Pongau"], [100, "mountains", "Pinzgau"]],
+		"via": [[40, 13.19, 47.48], [60, 13.2, 47.35], [80, 12.96, 47.29]]
+	},
+	{
+		"a": "zell_am_see",
+		"b": "lienz",
+		"km": 95,
+		"road": "B107",
+		"towns": [["Fusch an der Großglocknerstraße", 15], ["Heiligenblut", 55], ["Winklern", 75]],
+		"zones": [[15, "lakes", "Pinzgau"], [60, "mountains", "Hohe Tauern"], [95, "mountains", "Mölltal"]],
+		"weather": "snow",
+		"tunnels": [
+			{
+				"from_km": 38,
+				"to_km": 38.8,
+				"name": {
+					"pl": "Tunel Hochtor",
+					"en": "Hochtor Tunnel",
+					"cs": "Tunel Hochtor",
+					"is": "Hochtor-göngin",
+					"de": "Hochtortunnel"
+				},
+				"fact": {
+					"pl": "Na wysokości 2500 m, najwyżej na Großglockner-Hochalpenstraße",
+					"en": "At 2,500 m, the highest point of the Grossglockner High Alpine Road",
+					"cs": "Ve výšce 2500 m, nejvyšší bod Großglocknerské silnice",
+					"is": "Í 2.500 m hæð, hæsti punktur Grossglockner-vegarins",
+					"de": "Auf 2.500 m, der höchste Punkt der Großglockner-Hochalpenstraße"
+				}
+			}
+		],
+		"via": [[15, 12.85, 47.25], [55, 12.84, 47.04]]
+	},
+	{
+		"a": "zell_am_see",
+		"b": "kufstein",
+		"km": 105,
+		"road": [[30, "B168"], [70, "B161"], [105, "B178"]],
+		"towns": [["Mittersill", 28], ["Kitzbühel", 62], ["St. Johann in Tirol", 72], ["Söll", 90]],
+		"zones": [[30, "mountains", "Pinzgau"], [75, "mountains", "Kitzbüheler Alpen"], [105, "foothills", "Kaisergebirge"]],
+		"via": [[28, 12.48, 47.28], [62, 12.39, 47.45], [72, 12.42, 47.52]]
+	},
+	{
+		"a": "kufstein",
+		"b": "innsbruck",
+		"km": 75,
+		"road": "A12",
+		"towns": [["Wörgl", 15], ["Rattenberg", 28], ["Schwaz", 45], ["Wattens", 55], ["Hall in Tirol", 66]],
+		"zones": [[75, "mountains", "Inntal"]],
+		"via": [[45, 11.71, 47.35]]
+	},
+	{
+		"a": "innsbruck",
+		"b": "bregenz",
+		"km": 195,
+		"road": [[75, "A12"], [135, "S16"], [195, "A14"]],
+		"towns": [
+			["Telfs", 28], ["Imst", 55], ["Landeck", 75], ["St. Anton am Arlberg", 98], ["Bludenz", 140],
+			["Feldkirch", 160], ["Dornbirn", 182]
+		],
+		"zones": [
+			[75, "mountains", "Oberinntal"], [135, "mountains", "Arlberg"], [160, "foothills", "Walgau"],
+			[195, "fields", "Rheintal"]
+		],
+		"weather": "snow",
+		"tunnels": [
+			{
+				"from_km": 104,
+				"to_km": 118,
+				"name": {
+					"pl": "Tunel Arlberg",
+					"en": "Arlberg Tunnel",
+					"cs": "Arlberský tunel",
+					"is": "Arlberg-göngin",
+					"de": "Arlberg-Straßentunnel"
+				},
+				"fact": {
+					"pl": "14 km, najdłuższy tunel drogowy Austrii, pod przełęczą Arlberg",
+					"en": "14 km, Austria's longest road tunnel, under the Arlberg pass",
+					"cs": "14 km, nejdelší silniční tunel Rakouska, pod průsmykem Arlberg",
+					"is": "14 km, lengstu veggöng Austurríkis, undir Arlberg-skarði",
+					"de": "14 km, der längste Straßentunnel Österreichs, unter dem Arlbergpass"
+				}
+			}
+		],
+		"via": [
+			[55, 10.74, 47.24], [75, 10.57, 47.14], [98, 10.27, 47.13], [140, 9.82, 47.15], [160, 9.6, 47.24],
+			[182, 9.74, 47.41]
+		]
+	},
+	{
+		"a": "villach",
+		"b": "lienz",
+		"km": 80,
+		"road": [[35, "A10"], [80, "B100"]],
+		"towns": [["Spittal an der Drau", 35], ["Greifenburg", 52], ["Oberdrauburg", 65]],
+		"zones": [[35, "lakes", "Drautal"], [80, "mountains", "Oberes Drautal"]],
+		"via": [[35, 13.5, 46.8], [52, 13.18, 46.75], [65, 12.97, 46.75]]
+	}
+]

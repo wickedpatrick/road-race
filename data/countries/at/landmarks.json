@@ -1,0 +1,816 @@
+{
+	"Wien": [
+		{
+			"kind": "stephansdom",
+			"name": {
+				"pl": "Katedra św. Szczepana",
+				"en": "St Stephen's Cathedral",
+				"cs": "Dóm svatého Štěpána",
+				"is": "Dómkirkja heilags Stefáns",
+				"de": "Stephansdom"
+			},
+			"desc": {
+				"pl": "Gotycka wieża i dach w kolorowe zygzaki z dachówek",
+				"en": "A Gothic spire and a roof of colourful zigzag tiles",
+				"cs": "Gotická věž a střecha z barevných klikatých tašek",
+				"is": "Gotneskur turn og þak úr litríkum sikksakk-flísum",
+				"de": "Ein gotischer Turm und ein Dach aus bunten Zickzack-Ziegeln"
+			},
+			"local": "Stephansdom"
+		},
+		{
+			"kind": "riesenrad",
+			"name": {
+				"pl": "Diabelski młyn w Praterze",
+				"en": "The Prater Giant Ferris Wheel",
+				"cs": "Obří kolo v Prateru",
+				"is": "Parísarhjólið í Prater",
+				"de": "Riesenrad im Prater"
+			},
+			"desc": {
+				"pl": "Ma ponad 120 lat, a wagoniki wyglądają jak małe tramwaje",
+				"en": "Over 120 years old, its cabins look like little tram cars",
+				"cs": "Je mu přes 120 let a kabinky vypadají jako malé tramvaje",
+				"is": "Yfir 120 ára gamalt og klefarnir líkjast litlum sporvögnum",
+				"de": "Über 120 Jahre alt, die Waggons sehen aus wie kleine Straßenbahnen"
+			},
+			"local": "Wiener Riesenrad"
+		}
+	],
+	"Graz": [
+		{
+			"kind": "uhrturm",
+			"name": {
+				"pl": "Wieża Zegarowa",
+				"en": "The Clock Tower",
+				"cs": "Hodinová věž",
+				"is": "Klukkuturninn",
+				"de": "Uhrturm"
+			},
+			"desc": {
+				"pl": "Na zegarze duża wskazówka pokazuje godziny, a mała minuty",
+				"en": "On its clock the big hand shows the hours and the small one the minutes",
+				"cs": "Na jejích hodinách ukazuje velká ručička hodiny a malá minuty",
+				"is": "Á klukkunni sýnir stóri vísirinn klukkustundir og sá litli mínútur",
+				"de": "Auf der Uhr zeigt der große Zeiger die Stunden und der kleine die Minuten"
+			},
+			"local": "Grazer Uhrturm"
+		},
+		{
+			"kind": "g_class",
+			"name": {
+				"pl": "Mercedes klasy G",
+				"en": "The Mercedes G-Class",
+				"cs": "Mercedes třídy G",
+				"is": "Mercedes G-Class",
+				"de": "Mercedes G-Klasse"
+			},
+			"desc": {
+				"pl": "Kanciasta terenówka, od 1979 roku budowana właśnie w Grazu",
+				"en": "A boxy off-roader, built right here in Graz since 1979",
+				"cs": "Hranatý teréňák, od roku 1979 se vyrábí právě v Grazu",
+				"is": "Kassalaga torfærujeppinn, smíðaður hér í Graz síðan 1979",
+				"de": "Der kantige Geländewagen, seit 1979 hier in Graz gebaut"
+			},
+			"local": "G-Klasse aus Graz"
+		}
+	],
+	"Linz": [
+		{
+			"kind": "ars_electronica",
+			"name": {
+				"pl": "Ars Electronica Center",
+				"en": "Ars Electronica Center",
+				"cs": "Ars Electronica Center",
+				"is": "Ars Electronica Center",
+				"de": "Ars Electronica Center"
+			},
+			"desc": {
+				"pl": "Muzeum przyszłości, nocą świeci nad Dunajem na różne kolory",
+				"en": "A museum of the future, at night it glows in many colours over the Danube",
+				"cs": "Muzeum budoucnosti, v noci svítí nad Dunajem různými barvami",
+				"is": "Safn framtíðarinnar, á nóttunni lýsir það í mörgum litum við Dóná",
+				"de": "Ein Museum der Zukunft, nachts leuchtet es bunt über der Donau"
+			},
+			"local": "Ars Electronica Center"
+		},
+		{
+			"kind": "linzer_torte",
+			"name": {
+				"pl": "Tort linecki",
+				"en": "Linzer Torte",
+				"cs": "Linecký dort",
+				"is": "Linzer-terta",
+				"de": "Linzer Torte"
+			},
+			"desc": {
+				"pl": "Jeden z najstarszych tortów świata, z kratką z ciasta na dżemie",
+				"en": "One of the oldest cakes in the world, with a pastry lattice over jam",
+				"cs": "Jeden z nejstarších dortů světa, s mřížkou z těsta na marmeládě",
+				"is": "Ein elsta kaka heims, með deiggrind yfir sultu",
+				"de": "Eine der ältesten Torten der Welt, mit einem Teiggitter über Marmelade"
+			},
+			"local": "Linzer Torte"
+		}
+	],
+	"Salzburg": [
+		{
+			"kind": "hohensalzburg",
+			"name": {
+				"pl": "Twierdza Hohensalzburg",
+				"en": "Hohensalzburg Fortress",
+				"cs": "Pevnost Hohensalzburg",
+				"is": "Hohensalzburg-virkið",
+				"de": "Festung Hohensalzburg"
+			},
+			"desc": {
+				"pl": "Jedna z największych zachowanych twierdz w Europie, wjeżdża się kolejką",
+				"en": "One of the largest intact castles in Europe, reached by a funicular",
+				"cs": "Jedna z největších dochovaných pevností v Evropě, jezdí se tam lanovkou",
+				"is": "Eitt stærsta varðveitta virki Evrópu, upp fer kláfur",
+				"de": "Eine der größten erhaltenen Burgen Europas, hinauf geht es mit der Standseilbahn"
+			},
+			"local": "Festung Hohensalzburg"
+		},
+		{
+			"kind": "mozart_house",
+			"name": {
+				"pl": "Dom urodzenia Mozarta",
+				"en": "Mozart's Birthplace",
+				"cs": "Mozartův rodný dům",
+				"is": "Fæðingarhús Mozarts",
+				"de": "Mozarts Geburtshaus"
+			},
+			"desc": {
+				"pl": "Tu w 1756 roku urodził się Mozart, który komponował już jako dziecko",
+				"en": "Mozart was born here in 1756 and wrote music already as a child",
+				"cs": "Tady se roku 1756 narodil Mozart, který skládal už jako dítě",
+				"is": "Hér fæddist Mozart árið 1756 og samdi tónlist strax sem barn",
+				"de": "Hier wurde 1756 Mozart geboren, der schon als Kind komponierte"
+			},
+			"local": "Mozarts Geburtshaus"
+		}
+	],
+	"Innsbruck": [
+		{
+			"kind": "golden_roof",
+			"name": {
+				"pl": "Złoty Dachek",
+				"en": "The Golden Roof",
+				"cs": "Zlatá stříška",
+				"is": "Gullna þakið",
+				"de": "Goldenes Dachl"
+			},
+			"desc": {
+				"pl": "Dach balkonu cesarza z 2657 złoconych miedzianych dachówek",
+				"en": "The emperor's balcony roof of 2,657 gilded copper tiles",
+				"cs": "Střecha císařova balkonu z 2657 pozlacených měděných tašek",
+				"is": "Þak svala keisarans úr 2.657 gylltum koparflísum",
+				"de": "Das Dach des Kaiserbalkons aus 2.657 vergoldeten Kupferschindeln"
+			},
+			"local": "Goldenes Dachl"
+		},
+		{
+			"kind": "bergisel",
+			"name": {
+				"pl": "Skocznia Bergisel",
+				"en": "Bergisel Ski Jump",
+				"cs": "Můstek Bergisel",
+				"is": "Bergisel-skíðastökkpallurinn",
+				"de": "Bergisel-Schanze"
+			},
+			"desc": {
+				"pl": "Skocznia nad miastem, co roku skaczą tu w Turnieju Czterech Skoczni",
+				"en": "A ski jump above the city, part of the Four Hills Tournament every winter",
+				"cs": "Můstek nad městem, každou zimu se tu skáče Turné čtyř můstků",
+				"is": "Stökkpallur yfir borginni, hluti af fjögurra palla mótinu á hverjum vetri",
+				"de": "Eine Schanze über der Stadt, jeden Winter Station der Vierschanzentournee"
+			},
+			"local": "Bergisel"
+		}
+	],
+	"Klagenfurt": [
+		{
+			"kind": "lindwurm",
+			"name": {
+				"pl": "Fontanna ze smokiem Lindwurm",
+				"en": "The Lindwurm Dragon Fountain",
+				"cs": "Kašna s drakem Lindwurm",
+				"is": "Lindwurm-drekabrunnurinn",
+				"de": "Lindwurmbrunnen"
+			},
+			"desc": {
+				"pl": "Według legendy smok mieszkał na bagnach, na których stoi miasto",
+				"en": "Legend says the dragon lived in the marsh where the city stands",
+				"cs": "Podle pověsti žil drak v bažinách, kde stojí město",
+				"is": "Sagan segir að drekinn hafi búið í mýrinni þar sem borgin stendur",
+				"de": "Der Sage nach lebte der Drache im Sumpf, auf dem die Stadt steht"
+			},
+			"local": "Lindwurmbrunnen"
+		},
+		{
+			"kind": "minimundus",
+			"name": {"pl": "Minimundus", "en": "Minimundus", "cs": "Minimundus", "is": "Minimundus", "de": "Minimundus"},
+			"desc": {
+				"pl": "Mały świat: ponad 150 słynnych budowli w miniaturze",
+				"en": "A small world: over 150 famous buildings in miniature",
+				"cs": "Malý svět: přes 150 slavných staveb v miniatuře",
+				"is": "Lítill heimur: yfir 150 frægar byggingar í smækkaðri mynd",
+				"de": "Die kleine Welt: über 150 berühmte Bauwerke in Miniatur"
+			},
+			"local": "Minimundus"
+		}
+	],
+	"Villach": [
+		{
+			"kind": "landskron",
+			"name": {
+				"pl": "Zamek Landskron",
+				"en": "Landskron Castle",
+				"cs": "Hrad Landskron",
+				"is": "Landskron-kastali",
+				"de": "Burg Landskron"
+			},
+			"desc": {
+				"pl": "Orły i sokoły latają nad ruinami zamku",
+				"en": "Eagles and falcons fly over the castle ruins",
+				"cs": "Orli a sokoli létají nad zříceninou hradu",
+				"is": "Ernir og fálkar fljúga yfir rústum kastalans",
+				"de": "Adler und Falken fliegen über der Burgruine"
+			},
+			"local": "Adlerarena Burg Landskron"
+		}
+	],
+	"Wels": [
+		{
+			"kind": "ledererturm",
+			"name": {
+				"pl": "Wieża Ledererturm",
+				"en": "Ledererturm Tower",
+				"cs": "Věž Ledererturm",
+				"is": "Ledererturm-turninn",
+				"de": "Ledererturm"
+			},
+			"desc": {
+				"pl": "Ostatnia brama dawnych murów miejskich",
+				"en": "The last gate of the old town walls",
+				"cs": "Poslední brána starých městských hradeb",
+				"is": "Síðasta hlið gamla borgarmúrsins",
+				"de": "Das letzte Tor der alten Stadtmauer"
+			},
+			"local": "Ledererturm"
+		}
+	],
+	"St. Pölten": [
+		{
+			"kind": "dom_st_poelten",
+			"name": {
+				"pl": "Katedra w St. Pölten",
+				"en": "St. Pölten Cathedral",
+				"cs": "Katedrála v St. Pöltenu",
+				"is": "Dómkirkjan í St. Pölten",
+				"de": "Dom St. Pölten"
+			},
+			"desc": {
+				"pl": "Barokowa katedra stolicy Dolnej Austrii",
+				"en": "The Baroque cathedral of Lower Austria's capital",
+				"cs": "Barokní katedrála hlavního města Dolních Rakous",
+				"is": "Barokkdómkirkja höfuðborgar Neðra-Austurríkis",
+				"de": "Der barocke Dom der niederösterreichischen Landeshauptstadt"
+			},
+			"local": "Dom zu St. Pölten"
+		}
+	],
+	"Wiener Neustadt": [
+		{
+			"kind": "dom_wiener_neustadt",
+			"name": {
+				"pl": "Katedra Mariacka",
+				"en": "The Cathedral of Our Lady",
+				"cs": "Mariánská katedrála",
+				"is": "Maríukirkjan",
+				"de": "Dom Wiener Neustadt"
+			},
+			"desc": {
+				"pl": "Dwie wysokie wieże widać z daleka nad równiną",
+				"en": "Its two tall towers can be seen from far away over the plain",
+				"cs": "Dvě vysoké věže jsou vidět zdaleka nad rovinou",
+				"is": "Tveir háir turnar sjást langt að yfir sléttuna",
+				"de": "Die zwei hohen Türme sieht man weit über die Ebene"
+			},
+			"local": "Dom Wiener Neustadt"
+		}
+	],
+	"Steyr": [
+		{
+			"kind": "steyr_tractor",
+			"name": {
+				"pl": "Traktor Steyr",
+				"en": "Steyr Tractor",
+				"cs": "Traktor Steyr",
+				"is": "Steyr-dráttarvél",
+				"de": "Steyr-Traktor"
+			},
+			"desc": {
+				"pl": "Czerwone traktory Steyr jeżdżą po polach na całym świecie",
+				"en": "Red Steyr tractors work on farms all over the world",
+				"cs": "Červené traktory Steyr jezdí po polích celého světa",
+				"is": "Rauðar Steyr-dráttarvélar vinna á bæjum um allan heim",
+				"de": "Rote Steyr-Traktoren fahren auf Feldern in der ganzen Welt"
+			},
+			"local": "Steyr Traktoren"
+		}
+	],
+	"Bregenz": [
+		{
+			"kind": "seebuehne",
+			"name": {
+				"pl": "Scena na jeziorze",
+				"en": "The Lake Stage",
+				"cs": "Scéna na jezeře",
+				"is": "Vatnasviðið",
+				"de": "Seebühne"
+			},
+			"desc": {
+				"pl": "Opera gra na scenie na Jeziorze Bodeńskim, z ogromnymi dekoracjami",
+				"en": "Opera is played on a stage on Lake Constance, with huge props",
+				"cs": "Opera se hraje na scéně na Bodamském jezeře s obřími kulisami",
+				"is": "Ópera er leikin á sviði á Bodenvatni, með risastórum leikmunum",
+				"de": "Oper auf einer Bühne im Bodensee, mit riesigen Kulissen"
+			},
+			"local": "Seebühne Bregenz"
+		}
+	],
+	"Leoben": [
+		{
+			"kind": "schwammerlturm",
+			"name": {
+				"pl": "Wieża Schwammerlturm",
+				"en": "Schwammerlturm Tower",
+				"cs": "Věž Schwammerlturm",
+				"is": "Schwammerlturm-turninn",
+				"de": "Schwammerlturm"
+			},
+			"desc": {
+				"pl": "Brama miejska z dachem w kształcie grzyba",
+				"en": "A town gate with a mushroom-shaped roof",
+				"cs": "Městská brána se střechou ve tvaru houby",
+				"is": "Borgarhlið með sveppalaga þaki",
+				"de": "Ein Stadttor mit einem Dach in Pilzform"
+			},
+			"local": "Schwammerlturm"
+		}
+	],
+	"Krems an der Donau": [
+		{
+			"kind": "steiner_tor",
+			"name": {
+				"pl": "Brama Steiner Tor",
+				"en": "Steiner Tor Gate",
+				"cs": "Brána Steiner Tor",
+				"is": "Steiner Tor-hliðið",
+				"de": "Steiner Tor"
+			},
+			"desc": {
+				"pl": "Symbol miasta, przy wjeździe do doliny Wachau",
+				"en": "The town's symbol, at the gateway to the Wachau valley",
+				"cs": "Symbol města, u vstupu do údolí Wachau",
+				"is": "Tákn bæjarins, við innganginn að Wachau-dalnum",
+				"de": "Das Wahrzeichen der Stadt, am Tor zur Wachau"
+			},
+			"local": "Steiner Tor"
+		}
+	],
+	"Kufstein": [
+		{
+			"kind": "festung_kufstein",
+			"name": {
+				"pl": "Twierdza Kufstein",
+				"en": "Kufstein Fortress",
+				"cs": "Pevnost Kufstein",
+				"is": "Kufstein-virkið",
+				"de": "Festung Kufstein"
+			},
+			"desc": {
+				"pl": "W południe gra tu wielkie organy, słychać je w całym mieście",
+				"en": "At noon its huge organ plays and the whole town can hear it",
+				"cs": "V poledne tu hrají obří varhany, slyší je celé město",
+				"is": "Á hádegi leikur risastórt orgel og allur bærinn heyrir það",
+				"de": "Mittags spielt hier die Heldenorgel, die ganze Stadt hört sie"
+			},
+			"local": "Festung Kufstein"
+		}
+	],
+	"Eisenstadt": [
+		{
+			"kind": "schloss_esterhazy",
+			"name": {
+				"pl": "Pałac Esterházych",
+				"en": "Esterházy Palace",
+				"cs": "Zámek Esterházy",
+				"is": "Esterházy-höllin",
+				"de": "Schloss Esterházy"
+			},
+			"desc": {
+				"pl": "Żółty pałac książąt, w którym grał Józef Haydn",
+				"en": "The princes' yellow palace where Joseph Haydn played",
+				"cs": "Žlutý zámek knížat, kde hrál Joseph Haydn",
+				"is": "Gula höll prinsanna þar sem Joseph Haydn lék",
+				"de": "Das gelbe Fürstenschloss, in dem Joseph Haydn spielte"
+			},
+			"local": "Schloss Esterházy"
+		},
+		{
+			"kind": "haydn",
+			"name": {
+				"pl": "Muzyka Haydna",
+				"en": "Haydn's music",
+				"cs": "Haydnova hudba",
+				"is": "Tónlist Haydns",
+				"de": "Haydns Musik"
+			},
+			"desc": {
+				"pl": "Haydn napisał ponad 100 symfonii, dlatego zwą go ojcem symfonii",
+				"en": "Haydn wrote over 100 symphonies, so he is called the father of the symphony",
+				"cs": "Haydn napsal přes 100 symfonií, proto mu říkají otec symfonie",
+				"is": "Haydn samdi yfir 100 sinfóníur og er kallaður faðir sinfóníunnar",
+				"de": "Haydn schrieb über 100 Sinfonien und heißt deshalb Vater der Sinfonie"
+			},
+			"local": "Haydnhaus"
+		}
+	],
+	"Bad Ischl": [
+		{
+			"kind": "kaiservilla",
+			"name": {
+				"pl": "Willa cesarska",
+				"en": "The Imperial Villa",
+				"cs": "Císařská vila",
+				"is": "Keisarahöllin",
+				"de": "Kaiservilla"
+			},
+			"desc": {
+				"pl": "Letni dom cesarza Franciszka Józefa i cesarzowej Sisi",
+				"en": "The summer home of Emperor Franz Joseph and Empress Sisi",
+				"cs": "Letní sídlo císaře Františka Josefa a císařovny Sisi",
+				"is": "Sumarhús Frans Jósefs keisara og Sisi keisaraynju",
+				"de": "Die Sommerresidenz von Kaiser Franz Joseph und Kaiserin Sisi"
+			},
+			"local": "Kaiservilla"
+		}
+	],
+	"Lienz": [
+		{
+			"kind": "schloss_bruck",
+			"name": {
+				"pl": "Zamek Bruck",
+				"en": "Bruck Castle",
+				"cs": "Hrad Bruck",
+				"is": "Bruck-kastali",
+				"de": "Schloss Bruck"
+			},
+			"desc": {
+				"pl": "Zamek u stóp Dolomitów Lienzkich",
+				"en": "A castle at the foot of the Lienz Dolomites",
+				"cs": "Hrad pod Lienzskými Dolomity",
+				"is": "Kastali við rætur Lienz-dólómítanna",
+				"de": "Ein Schloss am Fuß der Lienzer Dolomiten"
+			},
+			"local": "Schloss Bruck"
+		}
+	],
+	"Zell am See": [
+		{
+			"kind": "alpine_lake",
+			"name": {
+				"pl": "Jezioro Zell i Kitzsteinhorn",
+				"en": "Lake Zell and the Kitzsteinhorn",
+				"cs": "Jezero Zell a Kitzsteinhorn",
+				"is": "Zell-vatn og Kitzsteinhorn",
+				"de": "Zeller See und Kitzsteinhorn"
+			},
+			"desc": {
+				"pl": "Kolejka wjeżdża na lodowiec, gdzie na nartach jeździ się nawet latem",
+				"en": "A cable car climbs to a glacier where you can ski even in summer",
+				"cs": "Lanovka vyjíždí na ledovec, kde se lyžuje i v létě",
+				"is": "Kláfur fer upp á jökul þar sem má skíða jafnvel á sumrin",
+				"de": "Eine Seilbahn fährt auf den Gletscher, wo man sogar im Sommer Ski fährt"
+			},
+			"local": "Kitzsteinhorn"
+		}
+	],
+	"Melk": [
+		{
+			"kind": "stift_melk",
+			"name": {
+				"pl": "Opactwo w Melku",
+				"en": "Melk Abbey",
+				"cs": "Klášter Melk",
+				"is": "Melk-klaustrið",
+				"de": "Stift Melk"
+			},
+			"desc": {
+				"pl": "Złoto-żółty klasztor na skale nad Dunajem",
+				"en": "A golden-yellow abbey on a rock above the Danube",
+				"cs": "Zlatožlutý klášter na skále nad Dunajem",
+				"is": "Gullgult klaustur á kletti yfir Dóná",
+				"de": "Ein goldgelbes Kloster auf einem Felsen über der Donau"
+			},
+			"local": "Stift Melk"
+		}
+	],
+	"Dürnstein": [
+		{
+			"kind": "duernstein",
+			"name": {
+				"pl": "Ruiny zamku Dürnstein",
+				"en": "Dürnstein Castle Ruins",
+				"cs": "Zřícenina hradu Dürnstein",
+				"is": "Rústir Dürnstein-kastala",
+				"de": "Burgruine Dürnstein"
+			},
+			"desc": {
+				"pl": "Tu więziono króla Anglii Ryszarda Lwie Serce",
+				"en": "King Richard the Lionheart of England was held prisoner here",
+				"cs": "Tady byl vězněn anglický král Richard Lví srdce",
+				"is": "Hér var Ríkharður ljónshjarta Englandskonungur fangi",
+				"de": "Hier wurde der englische König Richard Löwenherz gefangen gehalten"
+			},
+			"local": "Burgruine Dürnstein"
+		}
+	],
+	"Mondsee": [
+		{
+			"kind": "basilika_mondsee",
+			"name": {
+				"pl": "Bazylika w Mondsee",
+				"en": "Mondsee Basilica",
+				"cs": "Bazilika v Mondsee",
+				"is": "Basilíkan í Mondsee",
+				"de": "Basilika Mondsee"
+			},
+			"desc": {
+				"pl": "Kościół ze ślubu w filmie Dźwięki muzyki",
+				"en": "The wedding church from the film The Sound of Music",
+				"cs": "Kostel ze svatby ve filmu Za zvuků hudby",
+				"is": "Brúðkaupskirkjan úr myndinni Söngvaseiður",
+				"de": "Die Hochzeitskirche aus dem Film The Sound of Music"
+			},
+			"local": "Basilika St. Michael"
+		}
+	],
+	"Hallstatt": [
+		{
+			"kind": "hallstatt",
+			"name": {
+				"pl": "Hallstatt nad jeziorem",
+				"en": "Hallstatt by the lake",
+				"cs": "Hallstatt u jezera",
+				"is": "Hallstatt við vatnið",
+				"de": "Hallstatt am See"
+			},
+			"desc": {
+				"pl": "Najstarsza kopalnia soli na świecie, kopią tu od 7000 lat",
+				"en": "The oldest salt mine in the world, dug for 7,000 years",
+				"cs": "Nejstarší solný důl na světě, kope se tu 7000 let",
+				"is": "Elsta saltnáma í heimi, grafin í 7.000 ár",
+				"de": "Das älteste Salzbergwerk der Welt, seit 7.000 Jahren"
+			},
+			"local": "Hallstatt"
+		}
+	],
+	"Eisenerz": [
+		{
+			"kind": "erzberg",
+			"name": {
+				"pl": "Góra Erzberg",
+				"en": "The Erzberg",
+				"cs": "Hora Erzberg",
+				"is": "Erzberg-fjallið",
+				"de": "Erzberg"
+			},
+			"desc": {
+				"pl": "Góra z rudy żelaza pocięta w schody, jeżdżą po niej ogromne wywrotki",
+				"en": "A mountain of iron ore cut into steps, with giant dump trucks",
+				"cs": "Hora železné rudy rozřezaná do schodů, jezdí po ní obří sklápěčky",
+				"is": "Fjall úr járngrýti skorið í þrep, með risastórum trukkum",
+				"de": "Ein Berg aus Eisenerz, in Stufen geschnitten, mit riesigen Muldenkippern"
+			},
+			"local": "Steirischer Erzberg"
+		}
+	],
+	"Spielberg": [
+		{
+			"kind": "red_bull_ring",
+			"name": {
+				"pl": "Tor Red Bull Ring",
+				"en": "Red Bull Ring",
+				"cs": "Okruh Red Bull Ring",
+				"is": "Red Bull Ring-brautin",
+				"de": "Red Bull Ring"
+			},
+			"desc": {
+				"pl": "Tor wyścigowy, na którym ścigają się bolidy Formuły 1",
+				"en": "A racing circuit where Formula 1 cars race",
+				"cs": "Závodní okruh, kde jezdí vozy Formule 1",
+				"is": "Kappakstursbraut þar sem Formúlu 1 bílar keppa",
+				"de": "Eine Rennstrecke, auf der die Formel 1 fährt"
+			},
+			"local": "Red Bull Ring"
+		}
+	],
+	"Heiligenblut": [
+		{
+			"kind": "grossglockner",
+			"name": {
+				"pl": "Großglockner",
+				"en": "Grossglockner",
+				"cs": "Großglockner",
+				"is": "Grossglockner",
+				"de": "Großglockner"
+			},
+			"desc": {
+				"pl": "Najwyższa góra Austrii, 3798 m, z lodowcem Pasterze",
+				"en": "Austria's highest mountain, 3,798 m, with the Pasterze glacier",
+				"cs": "Nejvyšší hora Rakouska, 3798 m, s ledovcem Pasterze",
+				"is": "Hæsta fjall Austurríkis, 3.798 m, með Pasterze-jöklinum",
+				"de": "Österreichs höchster Berg, 3.798 m, mit dem Pasterzengletscher"
+			},
+			"local": "Großglockner"
+		}
+	],
+	"Wattens": [
+		{
+			"kind": "swarovski",
+			"name": {
+				"pl": "Kryształowe Światy Swarovskiego",
+				"en": "Swarovski Crystal Worlds",
+				"cs": "Křišťálové světy Swarovski",
+				"is": "Kristalsheimar Swarovski",
+				"de": "Swarovski Kristallwelten"
+			},
+			"desc": {
+				"pl": "Zielona głowa olbrzyma z kryształowymi oczami, z ust leje się woda",
+				"en": "A green giant's head with crystal eyes and water pouring from its mouth",
+				"cs": "Zelená hlava obra s křišťálovýma očima, z úst teče voda",
+				"is": "Grænt risahöfuð með kristalsaugum og vatn rennur úr munninum",
+				"de": "Ein grüner Riesenkopf mit Kristallaugen, aus dem Mund fließt Wasser"
+			},
+			"local": "Swarovski Kristallwelten"
+		}
+	],
+	"Kitzbühel": [
+		{
+			"kind": "gondola",
+			"name": {
+				"pl": "Kolejka na Hahnenkamm",
+				"en": "Hahnenkamm Cable Car",
+				"cs": "Lanovka na Hahnenkamm",
+				"is": "Hahnenkamm-kláfurinn",
+				"de": "Hahnenkammbahn"
+			},
+			"desc": {
+				"pl": "Tu jest Streif, najsłynniejsza i najstraszniejsza trasa zjazdowa",
+				"en": "Home of the Streif, the most famous and scariest downhill run",
+				"cs": "Tady je Streif, nejslavnější a nejstrašidelnější sjezdovka",
+				"is": "Hér er Streif, frægasta og ógnvænlegasta brunbrautin",
+				"de": "Hier ist die Streif, die berühmteste und gefährlichste Abfahrt"
+			},
+			"local": "Hahnenkamm"
+		}
+	],
+	"Dornbirn": [
+		{
+			"kind": "rolls_royce",
+			"name": {
+				"pl": "Muzeum Rolls-Royce'a",
+				"en": "Rolls-Royce Museum",
+				"cs": "Muzeum Rolls-Royce",
+				"is": "Rolls-Royce-safnið",
+				"de": "Rolls-Royce Museum"
+			},
+			"desc": {
+				"pl": "Największa na świecie kolekcja starych Rolls-Royce'ów",
+				"en": "The world's largest collection of old Rolls-Royce cars",
+				"cs": "Největší sbírka starých Rolls-Royců na světě",
+				"is": "Stærsta safn gamalla Rolls-Royce bíla í heimi",
+				"de": "Die größte Sammlung alter Rolls-Royce der Welt"
+			},
+			"local": "Rolls-Royce Museum"
+		}
+	],
+	"Gmünd in Kärnten": [
+		{
+			"kind": "porsche_356",
+			"name": {
+				"pl": "Muzeum Porsche w Gmünd",
+				"en": "Porsche Museum Gmünd",
+				"cs": "Muzeum Porsche v Gmündu",
+				"is": "Porsche-safnið í Gmünd",
+				"de": "Porsche Museum Gmünd"
+			},
+			"desc": {
+				"pl": "Tu w 1948 roku zbudowano pierwsze Porsche, model 356",
+				"en": "The very first Porsche, the 356, was built here in 1948",
+				"cs": "Tady bylo roku 1948 postaveno první Porsche, model 356",
+				"is": "Fyrsti Porsche-bíllinn, 356, var smíðaður hér árið 1948",
+				"de": "Hier wurde 1948 der erste Porsche gebaut, der 356"
+			},
+			"local": "Porsche Automuseum"
+		}
+	],
+	"Bludenz": [
+		{
+			"kind": "milka_cow",
+			"name": {
+				"pl": "Fioletowa krowa Milki",
+				"en": "The Purple Milka Cow",
+				"cs": "Fialová kráva Milka",
+				"is": "Fjólubláa Milka-kýrin",
+				"de": "Lila Milka-Kuh"
+			},
+			"desc": {
+				"pl": "W Bludenz robi się czekoladę Milka z alpejskiego mleka",
+				"en": "Milka chocolate is made in Bludenz from Alpine milk",
+				"cs": "V Bludenzu se vyrábí čokoláda Milka z alpského mléka",
+				"is": "Milka-súkkulaði er búið til í Bludenz úr alpamjólk",
+				"de": "In Bludenz wird Milka-Schokolade aus Alpenmilch gemacht"
+			},
+			"local": "Milka Schokoladenfabrik"
+		}
+	],
+	"Werfen": [
+		{
+			"kind": "hohenwerfen",
+			"name": {
+				"pl": "Zamek Hohenwerfen",
+				"en": "Hohenwerfen Castle",
+				"cs": "Hrad Hohenwerfen",
+				"is": "Hohenwerfen-kastali",
+				"de": "Burg Hohenwerfen"
+			},
+			"desc": {
+				"pl": "Zamek na skale nad doliną, z pokazami lotów sokołów",
+				"en": "A castle on a rock above the valley, with falcon flying shows",
+				"cs": "Hrad na skále nad údolím, s ukázkami letu sokolů",
+				"is": "Kastali á kletti yfir dalnum, með fálkasýningum",
+				"de": "Eine Burg auf einem Felsen über dem Tal, mit Greifvogelschau"
+			},
+			"local": "Burg Hohenwerfen"
+		}
+	],
+	"Hallein": [
+		{
+			"kind": "salzwelten",
+			"name": {
+				"pl": "Kopalnia soli Salzwelten",
+				"en": "Salzwelten Salt Mine",
+				"cs": "Solný důl Salzwelten",
+				"is": "Salzwelten-saltnáman",
+				"de": "Salzwelten Hallein"
+			},
+			"desc": {
+				"pl": "W kopalni zjeżdża się drewnianymi zjeżdżalniami górników",
+				"en": "Inside the mine you ride down the miners' wooden slides",
+				"cs": "V dole se sjíždí po dřevěných skluzavkách horníků",
+				"is": "Í námunni rennir maður sér niður tréskriðbrautir námumanna",
+				"de": "Im Bergwerk rutscht man über die Holzrutschen der Bergleute"
+			},
+			"local": "Salzwelten Hallein"
+		}
+	],
+	"Gmunden": [
+		{
+			"kind": "schloss_ort",
+			"name": {"pl": "Zamek Ort", "en": "Schloss Ort", "cs": "Zámek Ort", "is": "Ort-kastali", "de": "Seeschloss Ort"},
+			"desc": {
+				"pl": "Zamek na wyspie na jeziorze Traunsee, z drewnianym mostem",
+				"en": "A castle on an island in the Traunsee, with a wooden bridge",
+				"cs": "Zámek na ostrově v jezeře Traunsee s dřevěným mostem",
+				"is": "Kastali á eyju í Traunsee, með trébrú",
+				"de": "Ein Schloss auf einer Insel im Traunsee, mit Holzbrücke"
+			},
+			"local": "Seeschloss Ort"
+		}
+	],
+	"Feldkirch": [
+		{
+			"kind": "schattenburg",
+			"name": {
+				"pl": "Zamek Schattenburg",
+				"en": "Schattenburg Castle",
+				"cs": "Hrad Schattenburg",
+				"is": "Schattenburg-kastali",
+				"de": "Schattenburg"
+			},
+			"desc": {
+				"pl": "Średniowieczny zamek nad starym miastem",
+				"en": "A medieval castle above the old town",
+				"cs": "Středověký hrad nad starým městem",
+				"is": "Miðaldakastali yfir gamla bænum",
+				"de": "Eine mittelalterliche Burg über der Altstadt"
+			},
+			"local": "Schattenburg"
+		}
+	]
+}

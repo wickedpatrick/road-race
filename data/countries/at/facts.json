@@ -1,0 +1,555 @@
+{
+	"Wien": {
+		"pl": "Stolica Austrii nad Dunajem, miasto walca, kawiarni i cesarzy",
+		"en": "Austria's capital on the Danube, city of waltzes, cafés and emperors",
+		"cs": "Hlavní město Rakouska na Dunaji, město valčíku, kaváren a císařů",
+		"is": "Höfuðborg Austurríkis við Dóná, borg valsa, kaffihúsa og keisara",
+		"de": "Österreichs Hauptstadt an der Donau, Stadt des Walzers, der Kaffeehäuser und der Kaiser"
+	},
+	"Graz": {
+		"pl": "Drugie miasto Austrii, stolica Styrii, z czerwonymi dachami starówki",
+		"en": "Austria's second city, capital of Styria, with red old-town roofs",
+		"cs": "Druhé největší město Rakouska, metropole Štýrska s červenými střechami",
+		"is": "Næststærsta borg Austurríkis, höfuðborg Steiermark, með rauðum þökum",
+		"de": "Österreichs zweitgrößte Stadt, Hauptstadt der Steiermark, mit roten Dächern"
+	},
+	"Linz": {
+		"pl": "Miasto nad Dunajem, stolica Górnej Austrii, słynie z hut i tortu",
+		"en": "A Danube city, capital of Upper Austria, known for steel and a famous cake",
+		"cs": "Město na Dunaji, metropole Horních Rakous, známé ocelí a dortem",
+		"is": "Borg við Dóná, höfuðborg Efra-Austurríkis, þekkt fyrir stál og tertu",
+		"de": "Donaustadt, Hauptstadt Oberösterreichs, bekannt für Stahl und eine berühmte Torte"
+	},
+	"Salzburg": {
+		"pl": "Miasto Mozarta, nazwa pochodzi od soli, którą tu kiedyś wożono",
+		"en": "Mozart's city, named after the salt once shipped from here",
+		"cs": "Mozartovo město, jméno má od soli, která se odsud vozila",
+		"is": "Borg Mozarts, nefnd eftir saltinu sem áður var flutt héðan",
+		"de": "Mozarts Stadt, benannt nach dem Salz, das hier einst verschifft wurde"
+	},
+	"Innsbruck": {
+		"pl": "Stolica Tyrolu w dolinie Innu, dwa razy gościła zimowe igrzyska",
+		"en": "Tyrol's capital in the Inn valley, twice host of the Winter Olympics",
+		"cs": "Metropole Tyrolska v údolí Innu, dvakrát hostila zimní olympiádu",
+		"is": "Höfuðborg Týról í Inn-dalnum, hélt vetrarólympíuleikana tvisvar",
+		"de": "Tirols Hauptstadt im Inntal, zweimal Gastgeber der Winterspiele"
+	},
+	"Klagenfurt": {
+		"pl": "Stolica Karyntii nad ciepłym jeziorem Wörthersee",
+		"en": "Capital of Carinthia on the warm Lake Wörthersee",
+		"cs": "Metropole Korutan u teplého jezera Wörthersee",
+		"is": "Höfuðborg Kärnten við hlýja vatnið Wörthersee",
+		"de": "Hauptstadt Kärntens am warmen Wörthersee"
+	},
+	"Villach": {
+		"pl": "Miasto nad Drawą, blisko granic z Włochami i Słowenią",
+		"en": "A town on the Drava, close to Italy and Slovenia",
+		"cs": "Město na Drávě, blízko Itálie a Slovinska",
+		"is": "Bær við Drava, nálægt Ítalíu og Slóveníu",
+		"de": "Stadt an der Drau, nahe Italien und Slowenien"
+	},
+	"Wels": {
+		"pl": "Stare rzymskie miasto, dziś słynie z wielkich targów",
+		"en": "An old Roman town, today known for its big trade fairs",
+		"cs": "Staré římské město, dnes známé velkými veletrhy",
+		"is": "Gamall rómverskur bær, í dag þekktur fyrir stórar sýningar",
+		"de": "Alte Römerstadt, heute bekannt für ihre großen Messen"
+	},
+	"St. Pölten": {
+		"pl": "Najmłodsza stolica kraju związkowego, Dolnej Austrii",
+		"en": "The youngest state capital, of Lower Austria",
+		"cs": "Nejmladší zemské hlavní město, Dolních Rakous",
+		"is": "Yngsta höfuðborg sambandslands, Neðra-Austurríkis",
+		"de": "Die jüngste Landeshauptstadt, die von Niederösterreich"
+	},
+	"Wiener Neustadt": {
+		"pl": "Miasto zbudowane za okup za króla Ryszarda Lwie Serce",
+		"en": "A town built with the ransom paid for King Richard the Lionheart",
+		"cs": "Město postavené z výkupného za krále Richarda Lví srdce",
+		"is": "Bær byggður fyrir lausnargjald Ríkharðs ljónshjarta",
+		"de": "Eine Stadt, gebaut mit dem Lösegeld für Richard Löwenherz"
+	},
+	"Steyr": {
+		"pl": "Miasto żelaza, gdzie robi się traktory i silniki",
+		"en": "A town of iron where tractors and engines are made",
+		"cs": "Město železa, kde se vyrábějí traktory a motory",
+		"is": "Járnbær þar sem dráttarvélar og vélar eru smíðaðar",
+		"de": "Eisenstadt, in der Traktoren und Motoren gebaut werden"
+	},
+	"Bregenz": {
+		"pl": "Stolica Vorarlbergu nad Jeziorem Bodeńskim",
+		"en": "Capital of Vorarlberg on Lake Constance",
+		"cs": "Metropole Vorarlberska u Bodamského jezera",
+		"is": "Höfuðborg Vorarlberg við Bodenvatn",
+		"de": "Hauptstadt Vorarlbergs am Bodensee"
+	},
+	"Leoben": {
+		"pl": "Miasto górników z uczelnią, gdzie uczą się szukać metali",
+		"en": "A miners' town with a university for finding metals",
+		"cs": "Hornické město s univerzitou, kde se učí hledat kovy",
+		"is": "Námubær með háskóla þar sem lært er að finna málma",
+		"de": "Bergbaustadt mit einer Universität für Bergbau und Metalle"
+	},
+	"Krems an der Donau": {
+		"pl": "Wrota doliny Wachau, pełnej winnic i moreli",
+		"en": "The gateway to the Wachau, full of vineyards and apricots",
+		"cs": "Brána do Wachau plné vinic a meruněk",
+		"is": "Hlið að Wachau, fullri af vínekrum og apríkósum",
+		"de": "Das Tor zur Wachau voller Weingärten und Marillen"
+	},
+	"Kufstein": {
+		"pl": "Twierdza na skale strzeże granicy z Bawarią",
+		"en": "A fortress on a rock guards the border with Bavaria",
+		"cs": "Pevnost na skále hlídá hranici s Bavorskem",
+		"is": "Virki á kletti gætir landamæranna að Bæjaralandi",
+		"de": "Eine Festung auf dem Felsen bewacht die Grenze zu Bayern"
+	},
+	"Eisenstadt": {
+		"pl": "Najmniejsza stolica kraju związkowego, Burgenlandu",
+		"en": "The smallest state capital, of Burgenland",
+		"cs": "Nejmenší zemské hlavní město, Burgenlandu",
+		"is": "Minnsta höfuðborg sambandslands, Burgenland",
+		"de": "Die kleinste Landeshauptstadt, die des Burgenlands"
+	},
+	"Bad Ischl": {
+		"pl": "Uzdrowisko, w którym cesarz spędzał każde lato",
+		"en": "A spa town where the emperor spent every summer",
+		"cs": "Lázně, kde císař trávil každé léto",
+		"is": "Heilsulindabær þar sem keisarinn dvaldi hvert sumar",
+		"de": "Kurort, in dem der Kaiser jeden Sommer verbrachte"
+	},
+	"Lienz": {
+		"pl": "Słoneczne miasto Tyrolu Wschodniego pod Dolomitami",
+		"en": "East Tyrol's sunny town below the Dolomites",
+		"cs": "Slunné město Východního Tyrolska pod Dolomity",
+		"is": "Sólríkur bær í Austur-Týról undir Dólómítunum",
+		"de": "Die Sonnenstadt Osttirols unter den Dolomiten"
+	},
+	"Zell am See": {
+		"pl": "Miasteczko nad jeziorem, pod lodowcem Kitzsteinhorn",
+		"en": "A lakeside town below the Kitzsteinhorn glacier",
+		"cs": "Městečko u jezera pod ledovcem Kitzsteinhorn",
+		"is": "Bær við vatn undir Kitzsteinhorn-jöklinum",
+		"de": "Ein Ort am See unter dem Kitzsteinhorn-Gletscher"
+	},
+	"Pressbaum": {
+		"pl": "Miasteczko w Lesie Wiedeńskim",
+		"en": "A small town in the Vienna Woods",
+		"cs": "Městečko ve Vídeňském lese",
+		"is": "Smábær í Vínarskógi",
+		"de": "Ein Ort im Wienerwald"
+	},
+	"Melk": {
+		"pl": "Nad miasteczkiem stoi wielki barokowy klasztor",
+		"en": "A huge Baroque abbey towers over the town",
+		"cs": "Nad městečkem se tyčí obrovský barokní klášter",
+		"is": "Risastórt barokkklaustur gnæfir yfir bænum",
+		"de": "Über dem Ort thront ein riesiges Barockstift"
+	},
+	"Ybbs an der Donau": {
+		"pl": "Tu na Dunaju stoi duża elektrownia wodna",
+		"en": "A big hydroelectric power station stands on the Danube here",
+		"cs": "Tady stojí na Dunaji velká vodní elektrárna",
+		"is": "Hér stendur stór vatnsaflsvirkjun við Dóná",
+		"de": "Hier steht ein großes Donaukraftwerk"
+	},
+	"Amstetten": {
+		"pl": "Stolica Mostviertel, krainy moszczu z gruszek",
+		"en": "Capital of the Mostviertel, land of pear cider",
+		"cs": "Centrum Mostviertelu, kraje hruškového moštu",
+		"is": "Höfuðstaður Mostviertel, lands perusafans",
+		"de": "Hauptort des Mostviertels, des Landes des Birnenmosts"
+	},
+	"Enns": {
+		"pl": "Najstarsze miasto Austrii, z wysoką wieżą na rynku",
+		"en": "Austria's oldest town, with a tall tower on its square",
+		"cs": "Nejstarší město Rakouska s vysokou věží na náměstí",
+		"is": "Elsti bær Austurríkis, með háum turni á torginu",
+		"de": "Österreichs älteste Stadt, mit hohem Turm am Hauptplatz"
+	},
+	"Vöcklabruck": {
+		"pl": "Miasto przy wjeździe do krainy jezior Salzkammergut",
+		"en": "A town at the entrance to the Salzkammergut lake district",
+		"cs": "Město u vjezdu do jezerní oblasti Salzkammergut",
+		"is": "Bær við innganginn að vatnahéraðinu Salzkammergut",
+		"de": "Stadt am Eingang ins Salzkammergut"
+	},
+	"Mondsee": {
+		"pl": "Jezioro w kształcie księżyca, stąd jego nazwa",
+		"en": "A crescent-shaped lake, which is where its name comes from",
+		"cs": "Jezero ve tvaru měsíce, odtud jeho jméno",
+		"is": "Vatn í laginu eins og hálfmáni, þaðan kemur nafnið",
+		"de": "Ein See in Form einer Mondsichel, daher der Name"
+	},
+	"Baden": {
+		"pl": "Uzdrowisko z gorącymi źródłami siarkowymi",
+		"en": "A spa town with hot sulphur springs",
+		"cs": "Lázeňské město s horkými sirnými prameny",
+		"is": "Heilsulindabær með heitum brennisteinslindum",
+		"de": "Kurstadt mit heißen Schwefelquellen"
+	},
+	"Hartberg": {
+		"pl": "Miasteczko w krainie jabłek Oststeiermark",
+		"en": "A town in Eastern Styria, the land of apples",
+		"cs": "Městečko ve východním Štýrsku, kraji jablek",
+		"is": "Bær í Austur-Steiermark, landi eplanna",
+		"de": "Stadt in der Oststeiermark, dem Land der Äpfel"
+	},
+	"Wolfsberg": {
+		"pl": "Główne miasto doliny Lavant w Karyntii",
+		"en": "The main town of the Lavant valley in Carinthia",
+		"cs": "Hlavní město údolí Lavant v Korutanech",
+		"is": "Aðalbær Lavant-dalsins í Kärnten",
+		"de": "Hauptort des Lavanttals in Kärnten"
+	},
+	"Velden am Wörthersee": {
+		"pl": "Kurort z kasynem nad szmaragdowym jeziorem",
+		"en": "A resort with a casino on an emerald lake",
+		"cs": "Lázně s kasinem u smaragdového jezera",
+		"is": "Dvalarstaður með spilavíti við smaragðsgrænt vatn",
+		"de": "Ferienort mit Casino am smaragdgrünen See"
+	},
+	"Mattersburg": {
+		"pl": "Miasteczko w Burgenlandzie, krainie słońca i wina",
+		"en": "A town in Burgenland, land of sunshine and wine",
+		"cs": "Městečko v Burgenlandu, zemi slunce a vína",
+		"is": "Bær í Burgenland, landi sólar og víns",
+		"de": "Stadt im Burgenland, dem Land von Sonne und Wein"
+	},
+	"Tulln an der Donau": {
+		"pl": "Miasto ogrodów, tu urodził się malarz Egon Schiele",
+		"en": "A garden town, birthplace of the painter Egon Schiele",
+		"cs": "Město zahrad, rodiště malíře Egona Schieleho",
+		"is": "Garðabær, fæðingarstaður málarans Egons Schiele",
+		"de": "Gartenstadt, Geburtsort des Malers Egon Schiele"
+	},
+	"Korneuburg": {
+		"pl": "Nad miastem wznosi się bajkowy zamek Kreuzenstein",
+		"en": "The fairy-tale Kreuzenstein Castle rises above the town",
+		"cs": "Nad městem se tyčí pohádkový hrad Kreuzenstein",
+		"is": "Ævintýrakastalinn Kreuzenstein rís yfir bænum",
+		"de": "Über der Stadt erhebt sich die Märchenburg Kreuzenstein"
+	},
+	"Dürnstein": {
+		"pl": "Niebieska wieża kościoła i ruiny zamku nad Dunajem",
+		"en": "A blue church tower and castle ruins above the Danube",
+		"cs": "Modrá kostelní věž a zřícenina hradu nad Dunajem",
+		"is": "Blár kirkjuturn og kastalarústir yfir Dóná",
+		"de": "Ein blauer Kirchturm und eine Burgruine über der Donau"
+	},
+	"Spitz": {
+		"pl": "Wieś winiarzy w sercu doliny Wachau",
+		"en": "A wine village in the heart of the Wachau",
+		"cs": "Vinařská vesnice v srdci Wachau",
+		"is": "Vínþorp í hjarta Wachau",
+		"de": "Ein Weinort im Herzen der Wachau"
+	},
+	"Grein": {
+		"pl": "Ma jeden z najstarszych teatrów w Austrii",
+		"en": "It has one of the oldest theatres in Austria",
+		"cs": "Má jedno z nejstarších divadel v Rakousku",
+		"is": "Hér er eitt elsta leikhús Austurríkis",
+		"de": "Hier steht eines der ältesten Theater Österreichs"
+	},
+	"Weyer": {
+		"pl": "Stary targ żelazny na Drodze Żelaza",
+		"en": "An old iron market town on the Iron Road",
+		"cs": "Staré železářské městečko na Železné silnici",
+		"is": "Gamall járnmarkaðsbær við Járnveginn",
+		"de": "Ein alter Eisenmarkt an der Eisenstraße"
+	},
+	"Hieflau": {
+		"pl": "Przy wąwozie Gesäuse, gdzie rzeka Enns huczy między skałami",
+		"en": "By the Gesäuse gorge, where the Enns roars between the rocks",
+		"cs": "U soutěsky Gesäuse, kde Enns hučí mezi skalami",
+		"is": "Við Gesäuse-gljúfrið, þar sem Enns drynur milli kletta",
+		"de": "Am Gesäuse, wo die Enns zwischen den Felsen rauscht"
+	},
+	"Eisenerz": {
+		"pl": "Od ponad 1300 lat kopie się tu rudę żelaza",
+		"en": "Iron ore has been mined here for over 1,300 years",
+		"cs": "Železná ruda se tu těží přes 1300 let",
+		"is": "Járngrýti hefur verið grafið hér í yfir 1.300 ár",
+		"de": "Hier wird seit über 1.300 Jahren Eisenerz abgebaut"
+	},
+	"Liezen": {
+		"pl": "Miasto w dolinie Enns, między wysokimi górami",
+		"en": "A town in the Enns valley between high mountains",
+		"cs": "Město v údolí Enže mezi vysokými horami",
+		"is": "Bær í Enns-dalnum milli hárra fjalla",
+		"de": "Stadt im Ennstal zwischen hohen Bergen"
+	},
+	"Windischgarsten": {
+		"pl": "Wieś pod przełęczą Pyhrn, zimą pełna narciarzy",
+		"en": "A village below the Pyhrn pass, full of skiers in winter",
+		"cs": "Vesnice pod průsmykem Pyhrn, v zimě plná lyžařů",
+		"is": "Þorp undir Pyhrn-skarði, fullt af skíðafólki á veturna",
+		"de": "Ein Ort unter dem Pyhrnpass, im Winter voller Skifahrer"
+	},
+	"Knittelfeld": {
+		"pl": "Miasto w dolinie Mury, kolejarzy i fabryk",
+		"en": "A town of railways and factories in the Mur valley",
+		"cs": "Město železničářů a továren v údolí Mury",
+		"is": "Bær járnbrauta og verksmiðja í Mur-dalnum",
+		"de": "Eine Eisenbahner- und Industriestadt im Murtal"
+	},
+	"Spielberg": {
+		"pl": "Tu jest tor, na którym ściga się Formuła 1 i MotoGP",
+		"en": "Home of the circuit where Formula 1 and MotoGP race",
+		"cs": "Je tu okruh, kde závodí Formule 1 a MotoGP",
+		"is": "Hér er brautin þar sem Formúla 1 og MotoGP keppa",
+		"de": "Hier liegt die Strecke der Formel 1 und der MotoGP"
+	},
+	"Judenburg": {
+		"pl": "Na rynku stoi Wieża Miejska z planetarium",
+		"en": "The town tower on the square has a planetarium inside",
+		"cs": "Na náměstí stojí městská věž s planetáriem",
+		"is": "Á torginu stendur borgarturn með stjörnuveri",
+		"de": "Am Hauptplatz steht der Stadtturm mit Planetarium"
+	},
+	"Friesach": {
+		"pl": "Najstarsze miasto Karyntii, otoczone fosą z wodą",
+		"en": "Carinthia's oldest town, still ringed by a water-filled moat",
+		"cs": "Nejstarší město Korutan, dodnes obklopené vodním příkopem",
+		"is": "Elsti bær Kärnten, enn umkringdur vatnsfylltri gröf",
+		"de": "Kärntens älteste Stadt, noch immer von einem Wassergraben umgeben"
+	},
+	"St. Veit an der Glan": {
+		"pl": "Dawna stolica Karyntii",
+		"en": "The former capital of Carinthia",
+		"cs": "Bývalé hlavní město Korutan",
+		"is": "Fyrrverandi höfuðborg Kärnten",
+		"de": "Die ehemalige Hauptstadt Kärntens"
+	},
+	"Spittal an der Drau": {
+		"pl": "Miasto z renesansowym pałacem Porcia",
+		"en": "A town with the Renaissance Porcia palace",
+		"cs": "Město s renesančním zámkem Porcia",
+		"is": "Bær með endurreisnarhöllinni Porcia",
+		"de": "Stadt mit dem Renaissanceschloss Porcia"
+	},
+	"Gmünd in Kärnten": {
+		"pl": "Tu w starej tartaczni powstały pierwsze samochody Porsche",
+		"en": "The first Porsche cars were built here in an old sawmill",
+		"cs": "Tady ve staré pile vznikla první auta Porsche",
+		"is": "Fyrstu Porsche-bílarnir voru smíðaðir hér í gamalli sögunarmyllu",
+		"de": "Hier entstanden in einem alten Sägewerk die ersten Porsche"
+	},
+	"St. Michael im Lungau": {
+		"pl": "Lungau to najzimniejsza dolina Austrii",
+		"en": "The Lungau is the coldest valley in Austria",
+		"cs": "Lungau je nejstudenější údolí Rakouska",
+		"is": "Lungau er kaldasti dalur Austurríkis",
+		"de": "Der Lungau ist das kälteste Tal Österreichs"
+	},
+	"Flachau": {
+		"pl": "Ośrodek narciarski, dom mistrza Hermanna Maiera",
+		"en": "A ski resort, home of the champion Hermann Maier",
+		"cs": "Lyžařské středisko, domov šampiona Hermanna Maiera",
+		"is": "Skíðasvæði, heimabær meistarans Hermanns Maier",
+		"de": "Skiort, Heimat des Champions Hermann Maier"
+	},
+	"Werfen": {
+		"pl": "Nad Werfen jest Eisriesenwelt, największa lodowa jaskinia świata",
+		"en": "Above Werfen lies the Eisriesenwelt, the world's largest ice cave",
+		"cs": "Nad Werfenem je Eisriesenwelt, největší ledová jeskyně světa",
+		"is": "Fyrir ofan Werfen er Eisriesenwelt, stærsti íshellir heims",
+		"de": "Über Werfen liegt die Eisriesenwelt, die größte Eishöhle der Welt"
+	},
+	"Hallein": {
+		"pl": "Miasto soli; kolędę Cicha noc zaśpiewano po raz pierwszy niedaleko, w Oberndorfie",
+		"en": "A salt town; Silent Night was first sung nearby, in Oberndorf",
+		"cs": "Solné město; Tichá noc zazněla poprvé nedaleko, v Oberndorfu",
+		"is": "Saltbær; Heims um ból var fyrst sungið í nágrenninu, í Oberndorf",
+		"de": "Salzstadt; Stille Nacht erklang zum ersten Mal ganz in der Nähe, in Oberndorf"
+	},
+	"St. Gilgen": {
+		"pl": "Wieś nad Wolfgangsee, tu urodziła się matka Mozarta",
+		"en": "A village on the Wolfgangsee, where Mozart's mother was born",
+		"cs": "Vesnice u Wolfgangsee, rodiště Mozartovy matky",
+		"is": "Þorp við Wolfgangsee, þar sem móðir Mozarts fæddist",
+		"de": "Ort am Wolfgangsee, Geburtsort von Mozarts Mutter"
+	},
+	"Fuschl am See": {
+		"pl": "Nad jeziorem Fuschl jest siedziba firmy Red Bull",
+		"en": "Red Bull has its headquarters by Lake Fuschl",
+		"cs": "U jezera Fuschl sídlí firma Red Bull",
+		"is": "Red Bull hefur höfuðstöðvar sínar við Fuschl-vatn",
+		"de": "Am Fuschlsee hat Red Bull seinen Sitz"
+	},
+	"Ebensee": {
+		"pl": "Na górę Feuerkogel wjeżdża kolejka nad Traunsee",
+		"en": "A cable car climbs the Feuerkogel above the Traunsee",
+		"cs": "Lanovka vyjíždí na Feuerkogel nad Traunsee",
+		"is": "Kláfur fer upp á Feuerkogel yfir Traunsee",
+		"de": "Eine Seilbahn fährt auf den Feuerkogel über dem Traunsee"
+	},
+	"Gmunden": {
+		"pl": "Słynie z ceramiki w zielone wzory",
+		"en": "Famous for its pottery with green patterns",
+		"cs": "Proslulý keramikou se zelenými vzory",
+		"is": "Frægur fyrir leirmuni með grænum mynstrum",
+		"de": "Berühmt für seine Keramik mit grünen Mustern"
+	},
+	"Hallstatt": {
+		"pl": "Domy tak przyklejone do góry, że na cmentarzu brakowało miejsca",
+		"en": "Houses cling so tightly to the mountain the cemetery ran out of space",
+		"cs": "Domy tak přilepené k hoře, že na hřbitově chybělo místo",
+		"is": "Húsin hanga svo þétt á fjallinu að kirkjugarðinn skorti pláss",
+		"de": "Die Häuser kleben so dicht am Berg, dass der Friedhof zu klein wurde"
+	},
+	"Bad Aussee": {
+		"pl": "Geograficzny środek Austrii",
+		"en": "The geographical centre of Austria",
+		"cs": "Zeměpisný střed Rakouska",
+		"is": "Landfræðileg miðja Austurríkis",
+		"de": "Der geografische Mittelpunkt Österreichs"
+	},
+	"Bad Mitterndorf": {
+		"pl": "Obok jest Kulm, jedna z największych skoczni mamucich",
+		"en": "Next to it is the Kulm, one of the biggest ski-flying hills",
+		"cs": "Vedle je Kulm, jeden z největších mamutích můstků",
+		"is": "Við hliðina er Kulm, einn stærsti skíðaflugpallur heims",
+		"de": "Daneben liegt der Kulm, eine der größten Skiflugschanzen"
+	},
+	"St. Johann im Pongau": {
+		"pl": "Obok jest wąwóz Liechtensteinklamm z szumiącym potokiem",
+		"en": "Next to it is the Liechtensteinklamm gorge with a roaring stream",
+		"cs": "Vedle je soutěska Liechtensteinklamm s hučící bystřinou",
+		"is": "Við hliðina er Liechtensteinklamm-gljúfrið með drynjandi læk",
+		"de": "Daneben liegt die Liechtensteinklamm mit tosendem Bach"
+	},
+	"Heiligenblut": {
+		"pl": "Wieś pod Großglocknerem, ze strzelistą wieżą kościoła",
+		"en": "A village below the Grossglockner with a soaring church spire",
+		"cs": "Vesnice pod Großglocknerem se štíhlou kostelní věží",
+		"is": "Þorp undir Grossglockner með háum kirkjuturni",
+		"de": "Ein Dorf unter dem Großglockner mit spitzem Kirchturm"
+	},
+	"Bruck an der Großglocknerstraße": {
+		"pl": "Stąd zaczyna się droga na Großglockner, otwarta tylko latem",
+		"en": "The road to the Grossglockner starts here, open only in summer",
+		"cs": "Odsud začíná silnice na Großglockner, otevřená jen v létě",
+		"is": "Hér byrjar vegurinn að Grossglockner, aðeins opinn á sumrin",
+		"de": "Hier beginnt die Großglocknerstraße, nur im Sommer offen"
+	},
+	"Mittersill": {
+		"pl": "Brama do Parku Narodowego Wysokie Taury",
+		"en": "The gateway to the Hohe Tauern National Park",
+		"cs": "Brána do Národního parku Vysoké Taury",
+		"is": "Hliðið að Hohe Tauern-þjóðgarðinum",
+		"de": "Das Tor zum Nationalpark Hohe Tauern"
+	},
+	"Kitzbühel": {
+		"pl": "Słynny kurort narciarski z zawodami na trasie Streif",
+		"en": "A famous ski resort with races on the Streif",
+		"cs": "Slavné lyžařské středisko se závody na Streifu",
+		"is": "Frægt skíðasvæði með keppnum á Streif",
+		"de": "Berühmter Skiort mit dem Hahnenkammrennen auf der Streif"
+	},
+	"St. Johann in Tirol": {
+		"pl": "Wieś pod szczytami Wilder Kaiser",
+		"en": "A village below the peaks of the Wilder Kaiser",
+		"cs": "Vesnice pod štíty Wilder Kaiser",
+		"is": "Þorp undir tindum Wilder Kaiser",
+		"de": "Ein Ort unter den Gipfeln des Wilden Kaisers"
+	},
+	"Wörgl": {
+		"pl": "Węzeł kolejowy w dolinie Innu",
+		"en": "A railway junction in the Inn valley",
+		"cs": "Železniční uzel v údolí Innu",
+		"is": "Járnbrautamót í Inn-dalnum",
+		"de": "Ein Bahnknoten im Inntal"
+	},
+	"Rattenberg": {
+		"pl": "Najmniejsze miasto Austrii, słynie z wyrobów ze szkła",
+		"en": "Austria's smallest town, famous for glassware",
+		"cs": "Nejmenší město Rakouska, proslulé sklem",
+		"is": "Minnsti bær Austurríkis, frægur fyrir glervörur",
+		"de": "Österreichs kleinste Stadt, berühmt für Glas"
+	},
+	"Schwaz": {
+		"pl": "Kiedyś miasto srebra, w kopalni jeździ się kolejką",
+		"en": "Once a silver town, you ride a little train into the mine",
+		"cs": "Kdysi stříbrné město, do dolu se jede vláčkem",
+		"is": "Einu sinni silfurbær, lest fer inn í námuna",
+		"de": "Einst Silberstadt, ins Bergwerk fährt man mit der Grubenbahn"
+	},
+	"Wattens": {
+		"pl": "Tu powstają błyszczące kryształy Swarovskiego",
+		"en": "Swarovski's sparkling crystals are made here",
+		"cs": "Tady vznikají třpytivé krystaly Swarovski",
+		"is": "Hér eru glitrandi kristallar Swarovski búnir til",
+		"de": "Hier entstehen die funkelnden Swarovski-Kristalle"
+	},
+	"Hall in Tirol": {
+		"pl": "Tu wybito pierwsze talary, od których pochodzi słowo dolar",
+		"en": "The first thalers were minted here, which gave us the word dollar",
+		"cs": "Tady se razily první tolary, od nich pochází slovo dolar",
+		"is": "Hér voru fyrstu dalirnir slegnir, þaðan kemur orðið dollari",
+		"de": "Hier wurden die ersten Taler geprägt, daher kommt das Wort Dollar"
+	},
+	"Telfs": {
+		"pl": "Co kilka lat odbywa się tu karnawał Schleicherlaufen",
+		"en": "Every few years the Schleicherlaufen carnival parade happens here",
+		"cs": "Každých několik let se tu koná masopust Schleicherlaufen",
+		"is": "Á nokkurra ára fresti er Schleicherlaufen-kjötkveðjuhátíðin haldin hér",
+		"de": "Alle paar Jahre findet hier das Schleicherlaufen statt"
+	},
+	"Imst": {
+		"pl": "Obok jest Alpine Coaster, jedna z najdłuższych zjeżdżalni górskich",
+		"en": "Next to it is the Alpine Coaster, one of the longest mountain coasters",
+		"cs": "Vedle je Alpine Coaster, jedna z nejdelších horských drah",
+		"is": "Við hliðina er Alpine Coaster, ein lengsta fjallarennibrautin",
+		"de": "Daneben liegt der Alpine Coaster, eine der längsten Alpenachterbahnen"
+	},
+	"Landeck": {
+		"pl": "Zamek nad miastem, gdzie rzeka Sanna wpada do Innu",
+		"en": "A castle above the town where the Sanna flows into the Inn",
+		"cs": "Hrad nad městem, kde se Sanna vlévá do Innu",
+		"is": "Kastali yfir bænum þar sem Sanna rennur í Inn",
+		"de": "Eine Burg über der Stadt, wo die Sanna in den Inn mündet"
+	},
+	"St. Anton am Arlberg": {
+		"pl": "Kolebka narciarstwa alpejskiego, tu działała pierwsza szkoła narciarska",
+		"en": "The cradle of Alpine skiing, home of one of the first ski schools",
+		"cs": "Kolébka alpského lyžování, sídlo jedné z prvních lyžařských škol",
+		"is": "Vagga alpaskíðanna, ein fyrsti skíðaskólinn var hér",
+		"de": "Wiege des alpinen Skilaufs mit einer der ersten Skischulen"
+	},
+	"Bludenz": {
+		"pl": "Miasto czekolady w Alpach",
+		"en": "The chocolate town in the Alps",
+		"cs": "Město čokolády v Alpách",
+		"is": "Súkkulaðibærinn í Ölpunum",
+		"de": "Die Schokoladestadt in den Alpen"
+	},
+	"Feldkirch": {
+		"pl": "Średniowieczne miasto blisko Liechtensteinu i Szwajcarii",
+		"en": "A medieval town close to Liechtenstein and Switzerland",
+		"cs": "Středověké město blízko Lichtenštejnska a Švýcarska",
+		"is": "Miðaldabær nálægt Liechtenstein og Sviss",
+		"de": "Mittelalterliche Stadt nahe Liechtenstein und der Schweiz"
+	},
+	"Dornbirn": {
+		"pl": "Największe miasto Vorarlbergu, z muzeum Rolls-Royce'ów",
+		"en": "Vorarlberg's biggest town, with a Rolls-Royce museum",
+		"cs": "Největší město Vorarlberska s muzeem Rolls-Royce",
+		"is": "Stærsti bær Vorarlberg, með Rolls-Royce-safni",
+		"de": "Größte Stadt Vorarlbergs, mit einem Rolls-Royce-Museum"
+	},
+	"Oberdrauburg": {
+		"pl": "Miasteczko na granicy Karyntii i Tyrolu Wschodniego",
+		"en": "A small town on the border of Carinthia and East Tyrol",
+		"cs": "Městečko na hranici Korutan a Východního Tyrolska",
+		"is": "Smábær á mörkum Kärnten og Austur-Týról",
+		"de": "Ein Markt an der Grenze von Kärnten und Osttirol"
+	},
+	"Söll": {
+		"pl": "Wieś pod górą Hohe Salve, zwaną Rigi Tyrolu",
+		"en": "A village below the Hohe Salve, called the Rigi of Tyrol",
+		"cs": "Vesnice pod horou Hohe Salve, zvanou Rigi Tyrolska",
+		"is": "Þorp undir Hohe Salve, kallað Rigi Týróls",
+		"de": "Ein Dorf unter der Hohen Salve, dem Rigi Tirols"
+	}
+}

@@ -117,10 +117,11 @@ static func draw(cv, it: Dictionary, b: Vector2, pm: float) -> void:
 		"viaduct": _viaduct()
 		"kremowka": _kremowka()
 		"narrow_train": _train()
-		_: # Germany's, Slovakia's, Lithuania's
+		_: # Germany's, Slovakia's, Lithuania's, Austria's
 			if not LandmarksDeA.draw(it.kind) and not LandmarksDeB.draw(it.kind) and not LandmarksDeC.draw(it.kind) \
-					and not LandmarksSk.draw(it.kind):
-				LandmarksLt.draw(it.kind)
+					and not LandmarksSk.draw(it.kind) and not LandmarksLt.draw(it.kind) and not LandmarksAtA.draw(it.kind) \
+					and not LandmarksAtB.draw(it.kind) and not LandmarksAtC.draw(it.kind):
+				LandmarksAtD.draw(it.kind)
 
 # --- helpers (metres, y up) ---------------------------------------------------------------------------------
 

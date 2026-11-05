@@ -47,6 +47,12 @@
 			"name": {"pl": "Litwa", "en": "Lithuania", "cs": "Litva", "is": "Litháen", "de": "Litauen"},
 			"neighbours": ["lv", "by", "pl", "ru"],
 			"favorite_neighbour": "lv"
+		},
+		{
+			"code": "at",
+			"name": {"pl": "Austria", "en": "Austria", "cs": "Rakousko", "is": "Austurríki", "de": "Österreich"},
+			"neighbours": ["de", "cz", "sk", "hu", "si", "it", "ch", "li"],
+			"favorite_neighbour": "de"
 		}
 	]
 }

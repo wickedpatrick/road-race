@@ -1,0 +1,60 @@
+{
+	"wien": {
+		"name": "Wien",
+		"lat": 48.21,
+		"lon": 16.37,
+		"pop": 2006,
+		"region": "Wien",
+		"exonym": {"pl": "Wiedeń", "en": "Vienna", "cs": "Vídeň", "is": "Vín"}
+	},
+	"graz": {
+		"name": "Graz",
+		"lat": 47.07,
+		"lon": 15.44,
+		"pop": 298,
+		"region": "Steiermark",
+		"exonym": {"cs": "Štýrský Hradec"},
+		"map_name": {"cs": "Št. Hradec"}
+	},
+	"linz": {
+		"name": "Linz",
+		"lat": 48.31,
+		"lon": 14.29,
+		"pop": 211,
+		"region": "Oberösterreich",
+		"exonym": {"cs": "Linec"},
+		"label": "above"
+	},
+	"salzburg": {"name": "Salzburg", "lat": 47.8, "lon": 13.04, "pop": 157, "region": "Salzburg", "exonym": {"cs": "Salcburk"}},
+	"innsbruck": {"name": "Innsbruck", "lat": 47.27, "lon": 11.39, "pop": 132, "region": "Tirol"},
+	"klagenfurt": {"name": "Klagenfurt", "lat": 46.62, "lon": 14.31, "pop": 104, "region": "Kärnten"},
+	"villach": {"name": "Villach", "lat": 46.61, "lon": 13.85, "pop": 65, "region": "Kärnten", "label": "left"},
+	"wels": {"name": "Wels", "lat": 48.16, "lon": 14.03, "pop": 64, "region": "Oberösterreich", "label": "left"},
+	"st_poelten": {"name": "St. Pölten", "lat": 48.2, "lon": 15.62, "pop": 58, "region": "Niederösterreich"},
+	"wiener_neustadt": {
+		"name": "Wiener Neustadt",
+		"lat": 47.81,
+		"lon": 16.24,
+		"pop": 48,
+		"region": "Niederösterreich",
+		"short": "Wr. Neustadt",
+		"label": "left"
+	},
+	"steyr": {"name": "Steyr", "lat": 48.04, "lon": 14.42, "pop": 38, "region": "Oberösterreich"},
+	"bregenz": {"name": "Bregenz", "lat": 47.5, "lon": 9.75, "pop": 30, "region": "Vorarlberg"},
+	"leoben": {"name": "Leoben", "lat": 47.38, "lon": 15.09, "pop": 25, "region": "Steiermark"},
+	"krems": {
+		"name": "Krems an der Donau",
+		"lat": 48.41,
+		"lon": 15.61,
+		"pop": 25,
+		"region": "Niederösterreich",
+		"short": "Krems",
+		"label": "above"
+	},
+	"kufstein": {"name": "Kufstein", "lat": 47.58, "lon": 12.17, "pop": 20, "region": "Tirol"},
+	"eisenstadt": {"name": "Eisenstadt", "lat": 47.85, "lon": 16.52, "pop": 15, "region": "Burgenland"},
+	"bad_ischl": {"name": "Bad Ischl", "lat": 47.71, "lon": 13.62, "pop": 14, "region": "Oberösterreich"},
+	"lienz": {"name": "Lienz", "lat": 46.83, "lon": 12.77, "pop": 12, "region": "Tirol"},
+	"zell_am_see": {"name": "Zell am See", "lat": 47.32, "lon": 12.8, "pop": 10, "region": "Salzburg"}
+}
