@@ -96,12 +96,12 @@ def refuel_done():
     out = [0.0] * int(0.7 * SR)
     for k, n in enumerate([72, 76, 79, 84]): place(out, k * 0.1, tone(note(n), 0.25, "sq", 0.6, 0.004, 0.15, 0.25))
     write("refuel_done", out, 0.55)
-def brass(freq, dur, vol=1.0):
-    """Saw-ish trumpet tone: bright attack, a little vibrato, soft release."""
+def brass(freq, dur, vol=1.0, vib=0.006):
+    """Saw-ish trumpet tone: bright attack, a little vibrato (`vib`, 0 for a steady tone), soft release."""
     n = int(dur * SR); out = []
     for i in range(n):
         t = i / SR
-        f = freq * (1.0 + 0.006 * math.sin(2 * math.pi * 5.5 * t) * min(1.0, t / 0.15))
+        f = freq * (1.0 + vib * math.sin(2 * math.pi * 5.5 * t) * min(1.0, t / 0.15))
         v = sum(math.sin(2 * math.pi * f * k * t) / k for k in range(1, 7))
         out.append(v * 0.5 * vol * env(i, n, 0.02, min(0.25, dur * 0.4)))
     return out
@@ -114,6 +114,38 @@ def win():  # arrival fanfare: trumpet call, then a held major chord
     for n in [64, 67, 72]: place(out, 1.0, brass(note(n), 1.3, 0.45))
     place(out, 1.0, tone(note(48), 1.3, "tri", 0.8, 0.01, 0.6))
     write("win", out, 0.7)
+def anthem(code, melody, q, chord, tail=0.8, prefix="anthem_"):
+    """The first, best-known phrase of a country's anthem on a steady trumpet (no vibrato: it sounded like a joke) (played on arrival instead of the fanfare):
+    `melody` [(MIDI note or None for a rest, beats)], `q` seconds a beat, `chord` the notes held under the last one."""
+    beats = sum(b for _, b in melody[:-1])
+    out = [0.0] * int((beats * q + tail + 0.15) * SR)
+    t = 0.0
+    for k, (n, b) in enumerate(melody):
+        last = k == len(melody) - 1
+        d = tail if last else b * q
+        if n is not None:
+            place(out, t, brass(note(n), d * (1.0 if last else 0.92), 0.8, 0.0))
+        t += d if not last else 0
+    for n in chord[1:]: place(out, t, brass(note(n), tail, 0.35, 0.0))
+    place(out, t, tone(note(chord[0]), tail, "tri", 0.8, 0.01, tail * 0.5))
+    write(prefix + code, out, 0.7)
+def anthems():  # melodies from the scores on Wikipedia/Commons; all of them in the public domain
+    anthem("pl", [(69, .75), (70, .25), (72, 1), (72, 1), (72, .75), (69, .25), (74, .5), (72, .5), (70, .5), (69, 1)], 0.42, [53, 60, 65, 69])  # Jeszcze Polska nie zginęła
+    anthem("de", [(63, 1.5), (65, .5), (67, 1), (65, 1), (68, 1), (67, 1), (65, .5), (62, .5), (63, 1)], 0.4, [51, 58, 63, 67])  # Einigkeit und Recht und Freiheit
+    anthem("gb", [(67, 1), (67, 1), (69, 1), (66, 1.5), (67, .5), (69, 1), (71, 1), (71, 1), (72, 1), (71, 1.5), (69, .5), (67, 1)], 0.28, [43, 59, 62, 67], 0.7)  # God save our gracious King, long live our noble King
+    anthem("cz", [(71, 2), (73, .5), (71, .5), (66, 1), (69, 2), (68, .5), (66, .5), (64, 1)], 0.36, [52, 59, 64, 68])  # Kde domov můj, kde domov můj
+    anthem("sk", [(67, .5), (69, .5), (70, 1), (70, 1), (70, .5), (70, .5), (69, .5), (70, .5), (72, .5), (70, .5), (69, 1), (67, 1)], 0.38, [43, 58, 62, 67])  # Nad Tatrou sa blýska, hromy divo bijú
+    anthem("at", [(72, 2), (70, 1), (69, 2), (70, .5), (72, .5), (74, 2), (72, 1), (72, .5), (70, .5), (70, 1)], 0.27, [48, 58, 64, 67], 0.7)  # Land der Berge, Land am Strome
+    anthem("is", [(58, 1), (63, 1), (65, 1), (67, 1), (None, .5), (65, .5), (63, 1), (65, 1), (62, 1)], 0.38, [46, 58, 62, 65])  # Ó, guð vors lands! Ó, land vors guðs!
+    anthem("lt", [(68, 1.5), (63, .5), (68, 1), (70, 1), (72, 1), (70, 1), (68, 1), (70, 1)], 0.38, [51, 58, 63, 67])  # Lietuva, Tėvyne mūsų
+def motifs():  # the best-known bars of each country's classical (or folk) tune, on arrival every other time
+    motif = lambda code, melody, q, chord, tail=0.8: anthem(code, melody, q, chord, tail, "motif_")
+    motif("pl", [(69, .5), (None, .25), (69, .25), (69, .5), (None, .25), (69, .25), (73, .25), (76, .25), (78, .25), (80, .25), (81, 1)], 0.5, [45, 57, 61, 64, 69])  # Chopin, Polonaise in A major "Military" (from memory and the score's opening)
+    motif("de", [(71, 1), (71, 1), (72, 1), (74, 1), (74, 1), (72, 1), (71, 1), (69, 1), (67, 1), (67, 1), (69, 1), (71, 1), (71, 1.5), (69, .5), (69, 1)], 0.24, [50, 57, 62, 66], 0.5)  # Beethoven, Ode to Joy
+    motif("at", [(67, 1), (None, .5), (62, .5), (67, 1), (None, .5), (62, .5), (67, .5), (62, .5), (67, .5), (71, .5), (74, 1)], 0.4, [43, 55, 59, 62])  # Mozart, Eine kleine Nachtmusik
+    motif("cz", [(65, .75), (68, .25), (68, 1), (65, .75), (63, .25), (61, 1), (63, .75), (65, .25), (68, .75), (65, .25), (63, 2)], 0.4, [44, 56, 60, 63], 0.9)  # Dvořák, New World Symphony, Largo
+    motif("gb", [(69, 1), (69, 1), (68, .5), (69, .5), (71, 1), (66, 2), (64, 1)], 0.42, [49, 57, 61, 64], 0.9)  # Elgar, Land of Hope and Glory
+    motif("is", [(64, 1), (67, 1), (64, 1), (67, 1), (64, .5), (66, .5), (67, .5), (66, .5), (64, 1), (67, 1), (66, 1)], 0.3, [47, 59, 63, 66], 0.7)  # Kaldalóns, Á Sprengisandi
 def radar():  # radar detector: a single short high beep (the game repeats it every 0.5 s while speeding)
     out = [0.0] * int(0.3 * SR)
     place(out, 0.0, tone(2400, 0.06, "sq", 0.5, 0.002, 0.02))
@@ -131,6 +163,6 @@ def lose():
     for k, n in enumerate([67, 64, 62, 55]): place(out, k * 0.25, tone(note(n), 0.4, "tri", 0.8, 0.01, 0.2))
     write("lose", out, 0.6)
 
-for f in (engine, gravel, pump, hit, beep, go, blip, lowfuel, refuel_done, win, lose, radar, siren):
+for f in (engine, gravel, pump, hit, beep, go, blip, lowfuel, refuel_done, win, lose, radar, siren, anthems, motifs):
     f()
 print("audio written to", os.path.abspath(OUT))
