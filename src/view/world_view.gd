@@ -26,6 +26,13 @@ var items: Dictionary = {}
 var font: Font
 var parallax := 0.0
 var particles: Array = []
+var smoke_on := false ## exhaust smoke drawn (the full graphics; set by the game)
+var smoke := 0.0 ## exhaust smoke, 0..1: up fast while the gas is pressed, dying away slowly once it is let go
+var puffs: Array = [] ## exhaust smoke puffs by the player's car: {x, y (painter units from the car), vx, vy, r, age, life}
+const SMOKE_UP := 7.0 ## per second while the gas is pressed (a full cloud in ~0.15 s)
+const SMOKE_DOWN := 0.8 ## per second once it is let go
+const PUFFS_PER_S := 28.0 ## per exhaust at full smoke
+var _puff_due := 0.0
 var shelter := 0.0 ## 1 under a roof (a tunnel): no snow, leaves or rain falling there
 var rng := RandomNumberGenerator.new()
 # per-frame projected segment data, preallocated
@@ -117,6 +124,7 @@ func _process(delta: float) -> void:
 	var k := minf(1.0, delta * 0.6)
 	for key in _hz:
 		_hz[key] = lerpf(_hz[key], target[key], k)
+	_update_smoke(delta)
 	shelter = move_toward(shelter, 1.0 if _in_tunnel(int(floor((race.z - PLAYER_DZ) / SEG))) else 0.0, delta * 4.0)
 	for p in particles:
 		match pal.particle:
@@ -139,6 +147,30 @@ func _process(delta: float) -> void:
 		elif p.x > W + 5.0: p.x = -5.0
 	position = Vector2(rng.randf_range(-1, 1), rng.randf_range(-1, 1)) * race.hit_flash * 10.0
 	queue_redraw()
+
+## Exhaust smoke (only with the full graphics): puffs leave the tips, swell, drift up and back towards the camera,
+## faster the faster the car goes, and fade.
+func _update_smoke(dt: float) -> void:
+	var on := smoke_on and race.state == "running"
+	smoke = move_toward(smoke, 1.0 if on and race.gas_on else 0.0, dt * (SMOKE_UP if on and race.gas_on else SMOKE_DOWN))
+	var sr := race.speed_ratio()
+	for p in puffs:
+		p.age += dt
+		p.x += p.vx * dt
+		p.y += p.vy * dt
+		p.r += (18.0 + 40.0 * sr) * dt
+	puffs = puffs.filter(func(p): return p.age < p.life)
+	if not on or smoke <= 0.02:
+		return
+	var tips: Array = CarPainter.EXHAUSTS.get(race.car_id, [[-62, 14]])
+	_puff_due += dt * PUFFS_PER_S * smoke * tips.size()
+	while _puff_due >= 1.0:
+		_puff_due -= 1.0
+		var tip: Array = tips[rng.randi() % tips.size()]
+		var out := signf(tip[0]) if tip[0] != 0 else rng.randf_range(-1.0, 1.0)
+		puffs.append({"x": float(tip[0]), "y": float(tip[1]), "vx": out * rng.randf_range(15.0, 55.0) + rng.randf_range(-25.0, 25.0),
+				"vy": rng.randf_range(5.0, 40.0) - 45.0 * sr, "r": rng.randf_range(4.0, 9.0), "age": 0.0,
+				"life": rng.randf_range(0.45, 0.8), "a": smoke})
 
 ## Background wanted for the region ~300 m ahead; a big city's skyline rises as it approaches.
 func _horizon_target() -> Dictionary:
@@ -676,7 +708,11 @@ func _draw_player() -> void:
 	var py := HORIZON - s * (_ground_y(race.z) - cam_y) * HORIZON
 	py += sin(race.z * 0.8) * 1.2 * race.speed_ratio()
 	_b.set_mirror(false) # steer_visual is already the way the player steers on screen
-	CarPainter.draw(_b, race.car_id, Vector2(W * 0.5, py), s * W * 0.5 * CAR_UNIT, race.steer_visual, race.braking)
+	var cs := s * W * 0.5 * CAR_UNIT
+	CarPainter.draw(_b, race.car_id, Vector2(W * 0.5, py), cs, race.steer_visual, race.braking)
+	for p in puffs:
+		var k: float = p.age / p.life
+		_b.draw_circle(Vector2(W * 0.5 + p.x * cs, py - p.y * cs), p.r * cs, Color(0.86, 0.87, 0.88, 0.26 * p.a * (1.0 - k) * minf(1.0, k * 8.0 + 0.3)))
 	_b.set_mirror(_left)
 
 func _draw_particles() -> void:

@@ -5,6 +5,9 @@ const TRAFFIC_COLORS := [Color("c0392b"), Color("2c6fbb"), Color("e5e5e5"), Colo
 const GLASS := Color("1b2a38")
 const TIRE := Color("17171a")
 const BUMPER := Color("26272b")
+## Where each car's exhaust tips are (painter units: x, height above the ground), for the smoke.
+const EXHAUSTS := {"yaris": [[-62, 14]], "octavia": [[-66, 14]], "xc60": [[-74, 16], [74, 16]], "bmw530": [[-66, 16], [66, 16]],
+		"rangerover": [[-76, 16], [76, 16]], "gtcoupe": [[-74, 16], [74, 16]], "supercar": [[-16, 15], [0, 15], [16, 15]]}
 
 static func _p(c: Vector2, s: float, x: float, y: float) -> Vector2:
 	return c + Vector2(x, -y) * s

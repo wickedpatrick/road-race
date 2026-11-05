@@ -256,3 +256,13 @@ Opis: `docs/superpowers/specs/2026-11-03-postcards-design.md`.
 - [x] Pocztówki miejscowości między miastami z mapy: w albumie pod listą tras (większe - mniejsze miasto), za samo
       przejechanie, bez pieczątek za czas.
 - [ ] Drugi zabytek dla miast, które mają jeden (66 z 93), a potem przebudowa menu z albumem.
+
+## 13. Ruch na drogach ekspresowych (`src/logic/traffic.gd`)
+
+- [ ] Auta nie jadą zawsze w tej samej pozycji x pasa: co kilka aut (losowo co 4-7) któreś jedzie bliżej osi
+      jezdni (środkowej linii między pasami), żeby nie dało się bez końca jechać między dwoma pasami bez kolizji.
+
+## 14. Długość tras w grze (`src/logic/route.gd`)
+
+- [ ] Długie trasy (USA, Kanada) jadą się za długo: powyżej pewnego dystansu długość w grze ma rosnąć wolniej
+      niż liniowo (np. pierwiastkowo), patrz wzór w `Route.build`.

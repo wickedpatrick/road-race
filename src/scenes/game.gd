@@ -55,6 +55,7 @@ func _ready() -> void:
 ## Moves the world view into a 960x540 offscreen viewport (light mode) or back onto the full-resolution screen.
 func _apply_quality() -> void:
 	var low := Session.quality == "low"
+	view.smoke_on = not low
 	if low and _world_vp == null:
 		_world_vp = SubViewport.new()
 		_world_vp.size = Vector2i(960, 540)

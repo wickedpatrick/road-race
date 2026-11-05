@@ -74,6 +74,7 @@ var time_left: float
 var elapsed := 0.0
 var gear := 1
 var load := 0.0 ## share of full acceleration used this step (extra fuel)
+var gas_on := false ## the engine is pulling this step (the gas pressed, not braking, fuel left): exhaust smoke
 var state := "running" ## running | won | out_of_time | out_of_fuel
 var refueling := false
 var braking := false
@@ -339,6 +340,7 @@ func step(dt: float, input: Dictionary) -> void:
 	var grade := track.grade_at(z)
 	var slope := GRAVITY * (GRADE_K if grade > 0.0 else DOWNHILL_K) * grade
 	var gas: bool = input.accel and not held and not input.brake and not fuel.is_empty()
+	gas_on = gas
 	if held:
 		var easing: bool = police.phase == "pull_over" and speed * 3.6 >= police_rules.escape_kmh
 		speed -= (POLICE_EASE_DECEL if easing else PULL_OVER_DECEL) * dt
