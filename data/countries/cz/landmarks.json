@@ -620,5 +620,245 @@
 			},
 			"local": "Zámek Jindřichův Hradec"
 		}
+	],
+	"Poděbrady": [
+		{
+			"kind": "podebrady_george",
+			"name": {
+				"pl": "Pomnik króla Jerzego z Podiebradów",
+				"en": "King George of Poděbrady",
+				"cs": "Jezdecká socha Jiřího z Poděbrad",
+				"is": "Riddarastytta Georgs konungs",
+				"de": "Reiterstandbild Georgs von Podiebrad"
+			},
+			"desc": {
+				"pl": "Czeski król jedzie konno przez rynek z berłem w ręce",
+				"en": "A Czech king rides his horse across the square, sceptre raised",
+				"cs": "Český král jede na koni přes náměstí a drží žezlo",
+				"is": "Tékkneskur konungur ríður hesti yfir torgið með veldissprota",
+				"de": "Ein böhmischer König reitet mit erhobenem Zepter über den Platz"
+			},
+			"local": "Jezdecká socha Jiřího z Poděbrad"
+		}
+	],
+	"Chlumec nad Cidlinou": [
+		{
+			"kind": "karlova_koruna",
+			"name": {
+				"pl": "Zamek Karlova Koruna",
+				"en": "Karlova Koruna Chateau",
+				"cs": "Zámek Karlova Koruna",
+				"is": "Karlova Koruna-höllin",
+				"de": "Schloss Karlova Koruna"
+			},
+			"desc": {
+				"pl": "Zamek zbudowany w kształcie korony, z okrągłą salą w środku",
+				"en": "A chateau built in the shape of a crown, with a round hall inside",
+				"cs": "Zámek postavený ve tvaru koruny s kulatým sálem uprostřed",
+				"is": "Höll byggð eins og kóróna, með kringlóttum sal í miðjunni",
+				"de": "Ein Schloss in Form einer Krone, mit einem runden Saal in der Mitte"
+			},
+			"local": "Karlova Koruna"
+		}
+	],
+	"Písek": [
+		{
+			"kind": "pisek_stone_bridge",
+			"name": {
+				"pl": "Kamienny Most w Písku",
+				"en": "The Stone Bridge of Písek",
+				"cs": "Kamenný most v Písku",
+				"is": "Steinbrúin í Písek",
+				"de": "Steinbrücke in Písek"
+			},
+			"desc": {
+				"pl": "Najstarszy most w Czechach, starszy nawet niż Most Karola",
+				"en": "The oldest bridge in Czechia, even older than Charles Bridge",
+				"cs": "Nejstarší most v Česku, starší i než Karlův most",
+				"is": "Elsta brú Tékklands, jafnvel eldri en Karlsbrúin",
+				"de": "Die älteste Brücke Tschechiens, älter noch als die Karlsbrücke"
+			},
+			"local": "Kamenný most"
+		}
+	],
+	"Blatná": [
+		{
+			"kind": "blatna_castle",
+			"name": {
+				"pl": "Zamek na wodzie w Blatnej",
+				"en": "Blatná Water Castle",
+				"cs": "Vodní zámek Blatná",
+				"is": "Vatnshöllin í Blatná",
+				"de": "Wasserschloss Blatná"
+			},
+			"desc": {
+				"pl": "Zamek stoi na skale w stawie, a w parku chodzą daniele",
+				"en": "A castle on a rock in a pond, with fallow deer in its park",
+				"cs": "Zámek stojí na skále v rybníce a v parku se pasou daňci",
+				"is": "Höll á kletti í tjörn, og dádýr á beit í garðinum",
+				"de": "Ein Schloss auf einem Felsen im Teich, im Park grasen Damhirsche"
+			},
+			"local": "Vodní zámek Blatná"
+		}
+	],
+	"Vysoké Mýto": [
+		{
+			"kind": "karosa_bus",
+			"name": {
+				"pl": "Autobus z Vysokiego Mýta",
+				"en": "A bus from Vysoké Mýto",
+				"cs": "Autobus z Vysokého Mýta",
+				"is": "Strætó frá Vysoké Mýto",
+				"de": "Ein Bus aus Vysoké Mýto"
+			},
+			"desc": {
+				"pl": "Tu od lat buduje się autobusy, które jeżdżą po całych Czechach",
+				"en": "Buses that drive all over Czechia have been built here for years",
+				"cs": "Odtud už dlouhá léta vyjíždějí autobusy do celého Česka",
+				"is": "Hér hafa verið smíðaðir strætisvagnar fyrir allt Tékkland í mörg ár",
+				"de": "Hier werden seit Jahren Busse gebaut, die durch ganz Tschechien fahren"
+			},
+			"local": "Autobus Karosa"
+		}
+	],
+	"Chrudim": [
+		{
+			"kind": "chrudim_puppet",
+			"name": {
+				"pl": "Muzeum Lalek w Chrudimiu",
+				"en": "Chrudim Puppet Museum",
+				"cs": "Muzeum loutkářských kultur",
+				"is": "Brúðusafnið í Chrudim",
+				"de": "Puppenmuseum Chrudim"
+			},
+			"desc": {
+				"pl": "Miasto lalek: w muzeum mieszka wesoły Kašpárek",
+				"en": "A town of puppets, where jolly Kašpárek lives in the museum",
+				"cs": "Město loutek, kde v muzeu bydlí veselý Kašpárek",
+				"is": "Bær brúðanna, þar sem kátur Kašpárek býr á safninu",
+				"de": "Eine Stadt der Puppen, im Museum wohnt der lustige Kašpárek"
+			},
+			"local": "Muzeum loutkářských kultur"
+		}
+	],
+	"Nový Bor": [
+		{
+			"kind": "novy_bor_glass",
+			"name": {
+				"pl": "Szkło z Nowego Boru",
+				"en": "Nový Bor Glass",
+				"cs": "Sklo z Nového Boru",
+				"is": "Gler frá Nový Bor",
+				"de": "Glas aus Nový Bor"
+			},
+			"desc": {
+				"pl": "Miasto hutników, którzy dmuchają kolorowe wazony i kielichy",
+				"en": "A town of glassmakers who blow colourful vases and goblets",
+				"cs": "Město sklářů, kteří foukají barevné vázy a poháry",
+				"is": "Bær glerblásara sem blása litríka vasa og bikara",
+				"de": "Eine Stadt der Glasbläser, die bunte Vasen und Pokale blasen"
+			},
+			"local": "Novoborské sklo"
+		}
+	],
+	"Česká Kamenice": [
+		{
+			"kind": "panska_skala",
+			"name": {
+				"pl": "Panská skála",
+				"en": "Panská Rock",
+				"cs": "Panská skála",
+				"is": "Panská-kletturinn",
+				"de": "Herrnhausfelsen"
+			},
+			"desc": {
+				"pl": "Kamienne słupy stoją obok siebie jak piszczałki organów",
+				"en": "Stone columns stand side by side like the pipes of an organ",
+				"cs": "Kamenné sloupy stojí vedle sebe jako píšťaly varhan",
+				"is": "Steinsúlur standa hlið við hlið eins og orgelpípur",
+				"de": "Steinsäulen stehen nebeneinander wie Orgelpfeifen"
+			},
+			"local": "Panská skála"
+		}
+	],
+	"Hranice": [
+		{
+			"kind": "hranice_abyss",
+			"name": {
+				"pl": "Hranicka Przepaść",
+				"en": "Hranice Abyss",
+				"cs": "Hranická propast",
+				"is": "Hranice-gjáin",
+				"de": "Hranice-Abgrund"
+			},
+			"desc": {
+				"pl": "Najgłębsza zalana wodą przepaść na świecie",
+				"en": "The deepest flooded abyss in the whole world",
+				"cs": "Nejhlubší zatopená propast na celém světě",
+				"is": "Dýpsta vatnsfyllta gjá í öllum heiminum",
+				"de": "Der tiefste mit Wasser gefüllte Abgrund der Welt"
+			},
+			"local": "Hranická propast"
+		}
+	],
+	"Hradec nad Moravicí": [
+		{
+			"kind": "cerveny_zamek",
+			"name": {
+				"pl": "Czerwony Zamek",
+				"en": "The Red Castle",
+				"cs": "Červený zámek",
+				"is": "Rauða höllin",
+				"de": "Rotes Schloss"
+			},
+			"desc": {
+				"pl": "Zamek z czerwonej cegły z blankami i wysoką wieżą",
+				"en": "A castle of red brick with battlements and a tall tower",
+				"cs": "Zámek z červených cihel s cimbuřím a vysokou věží",
+				"is": "Höll úr rauðum múrsteini með virkisveggjum og háum turni",
+				"de": "Ein Schloss aus rotem Backstein mit Zinnen und hohem Turm"
+			},
+			"local": "Červený zámek"
+		}
+	],
+	"Kadaň": [
+		{
+			"kind": "kadan_castle",
+			"name": {
+				"pl": "Zamek w Kadaniu",
+				"en": "Kadaň Castle",
+				"cs": "Hrad Kadaň",
+				"is": "Kastalinn í Kadaň",
+				"de": "Burg Kadaň"
+			},
+			"desc": {
+				"pl": "Stary zamek z wieżą nad rzeką Ohrzą i murami miasta",
+				"en": "An old castle with a tower above the river Ohře and the town walls",
+				"cs": "Starý hrad s věží nad řekou Ohří a městskými hradbami",
+				"is": "Gamall kastali með turni yfir ánni Ohře og borgarmúrum",
+				"de": "Eine alte Burg mit Turm über der Eger und der Stadtmauer"
+			},
+			"local": "Hrad Kadaň"
+		}
+	],
+	"Stříbro": [
+		{
+			"kind": "stribro_bridge_gate",
+			"name": {
+				"pl": "Brama Mostowa w Stříbrze",
+				"en": "Stříbro Bridge Gate",
+				"cs": "Mostecká brána ve Stříbře",
+				"is": "Brúarhliðið í Stříbro",
+				"de": "Brückentor in Stříbro"
+			},
+			"desc": {
+				"pl": "Wieża-brama w czarno-białe wzory pilnuje starego mostu",
+				"en": "A gate tower with black-and-white patterns guards the old bridge",
+				"cs": "Věž brány s černobílými vzory hlídá starý most",
+				"is": "Hliðturn með svarthvítum mynstrum gætir gömlu brúarinnar",
+				"de": "Ein Torturm mit schwarz-weißen Mustern bewacht die alte Brücke"
+			},
+			"local": "Mostecká brána"
+		}
 	]
 }

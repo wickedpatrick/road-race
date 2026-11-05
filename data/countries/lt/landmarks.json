@@ -482,5 +482,185 @@
 			},
 			"local": "Elektrėnų elektrinė"
 		}
+	],
+	"Rumšiškės": [
+		{
+			"kind": "rumsiskes_farmstead",
+			"name": {
+				"pl": "Skansen w Rumszyszkach",
+				"en": "Rumšiškės Open-Air Museum",
+				"cs": "Skanzen Rumšiškės",
+				"is": "Byggðasafnið í Rumšiškės",
+				"de": "Freilichtmuseum Rumšiškės"
+			},
+			"desc": {
+				"pl": "Stare chaty pod strzechą, studnia z żurawiem i drewniane krzyże",
+				"en": "Old thatched farmhouses, a well sweep and carved wooden crosses",
+				"cs": "Staré doškové chalupy, studna s vahadlem a vyřezávané kříže",
+				"is": "Gamlir stráþaktir bæir, brunnur með vogarstöng og útskorinn kross",
+				"de": "Alte Strohdachhöfe, ein Ziehbrunnen und geschnitzte Holzkreuze"
+			},
+			"local": "Lietuvos liaudies buities muziejus"
+		}
+	],
+	"Raseiniai": [
+		{
+			"kind": "zemaitis_monument",
+			"name": {
+				"pl": "Pomnik Żmudzina",
+				"en": "The Samogitian Monument",
+				"cs": "Pomník Žemaita",
+				"is": "Minnisvarði Samógítans",
+				"de": "Denkmal „Žemaitis“"
+			},
+			"desc": {
+				"pl": "Silny Żmudzin z niedźwiedziem, symbolem Żmudzi, stoi na cokole",
+				"en": "A strong Samogitian man stands with a bear, Samogitia's symbol",
+				"cs": "Silný Žemait stojí s medvědem, symbolem Žemaitska",
+				"is": "Sterkur Samógíti stendur með birni, tákni héraðsins",
+				"de": "Ein starker Schemaite steht mit einem Bären, dem Wappentier"
+			},
+			"local": "Paminklas „Žemaitis“"
+		}
+	],
+	"Kėdainiai": [
+		{
+			"kind": "kedainiai_minaret",
+			"name": {
+				"pl": "Minaret w Kiejdanach",
+				"en": "The Kėdainiai Minaret",
+				"cs": "Minaret v Kėdainiai",
+				"is": "Bænaturninn í Kėdainiai",
+				"de": "Das Minarett von Kėdainiai"
+			},
+			"desc": {
+				"pl": "Jedyny minaret na Litwie stoi w parku od ponad 140 lat",
+				"en": "The only minaret in Lithuania, standing in a park for 140 years",
+				"cs": "Jediný minaret v Litvě stojí v parku přes 140 let",
+				"is": "Eini bænaturn Litháens hefur staðið í garði í 140 ár",
+				"de": "Das einzige Minarett Litauens steht seit 140 Jahren im Park"
+			},
+			"local": "Kėdainių minaretas"
+		}
+	],
+	"Kretinga": [
+		{
+			"kind": "kretinga_winter_garden",
+			"name": {
+				"pl": "Ogród Zimowy w Kretyndze",
+				"en": "Kretinga Winter Garden",
+				"cs": "Zimní zahrada v Kretinze",
+				"is": "Vetrargarðurinn í Kretinga",
+				"de": "Wintergarten von Kretinga"
+			},
+			"desc": {
+				"pl": "Przy białym pałacu stoi szklany ogród, w którym rosną palmy",
+				"en": "By a white palace stands a glass garden where palm trees grow",
+				"cs": "U bílého zámku stojí skleněná zahrada, kde rostou palmy",
+				"is": "Við hvíta höll stendur glergarður þar sem pálmar vaxa",
+				"de": "Neben einem weißen Schloss steht ein Glasgarten mit Palmen"
+			},
+			"local": "Kretingos dvaro žiemos sodas"
+		}
+	],
+	"Pervalka": [
+		{
+			"kind": "pervalka_lighthouse",
+			"name": {
+				"pl": "Latarnia w Perwałce",
+				"en": "Pervalka Lighthouse",
+				"cs": "Maják v Pervalce",
+				"is": "Vitinn í Pervalka",
+				"de": "Leuchtturm Pervalka"
+			},
+			"desc": {
+				"pl": "Mała latarnia stoi na własnej kamiennej wysepce w zalewie",
+				"en": "A little lighthouse on its own stone island in the lagoon",
+				"cs": "Malý maják stojí na vlastním kamenném ostrůvku v laguně",
+				"is": "Lítill viti á sinni eigin steineyju í lóninu",
+				"de": "Ein kleiner Leuchtturm auf seiner eigenen Steininsel im Haff"
+			},
+			"local": "Pervalkos švyturys"
+		}
+	],
+	"Molėtai": [
+		{
+			"kind": "moletai_observatory",
+			"name": {
+				"pl": "Obserwatorium w Malatach",
+				"en": "Molėtai Observatory",
+				"cs": "Observatoř Molėtai",
+				"is": "Stjörnuathugunarstöðin í Molėtai",
+				"de": "Sternwarte Molėtai"
+			},
+			"desc": {
+				"pl": "Z kopuł na wzgórzu wielkie teleskopy patrzą nocą w gwiazdy",
+				"en": "From the domes on the hill big telescopes watch the stars",
+				"cs": "Z kopulí na kopci se velké dalekohledy dívají na hvězdy",
+				"is": "Úr hvelfingunum á hæðinni horfa stórir sjónaukar á stjörnurnar",
+				"de": "Aus den Kuppeln auf dem Hügel schauen Teleskope zu den Sternen"
+			},
+			"local": "Molėtų astronomijos observatorija"
+		}
+	],
+	"Prienai": [
+		{
+			"kind": "prienai_glider",
+			"name": {
+				"pl": "Szybowiec z Pren",
+				"en": "A Prienai Glider",
+				"cs": "Kluzák z Prienai",
+				"is": "Sviffluga frá Prienai",
+				"de": "Ein Segelflugzeug aus Prienai"
+			},
+			"desc": {
+				"pl": "Tu budują szybowce, które latają bez silnika, na samym wietrze",
+				"en": "Gliders are built here: they fly with no engine, just the wind",
+				"cs": "Staví se tu kluzáky, které létají bez motoru, jen s větrem",
+				"is": "Hér eru smíðaðar svifflugur sem fljúga vélarlausar á vindinum",
+				"de": "Hier baut man Segelflieger, die ohne Motor im Wind fliegen"
+			},
+			"local": "Prienų sklandytuvas"
+		}
+	],
+	"Varėna": [
+		{
+			"kind": "varena_boletus",
+			"name": {
+				"pl": "Grzyby z Oran",
+				"en": "Varėna Mushrooms",
+				"cs": "Houby z Varėny",
+				"is": "Sveppirnir í Varėna",
+				"de": "Pilze aus Varėna"
+			},
+			"desc": {
+				"pl": "Grzybowa stolica Litwy: co roku jest tu wielkie święto grzybów",
+				"en": "Lithuania's mushroom capital, with a big mushroom fair every year",
+				"cs": "Houbové hlavní město Litvy, každý rok s velkou houbovou slavností",
+				"is": "Sveppahöfuðborg Litháens með stórri sveppahátíð á hverju ári",
+				"de": "Litauens Pilzhauptstadt mit einem großen Pilzfest jedes Jahr"
+			},
+			"local": "Varėnos baravykai"
+		}
+	],
+	"Merkinė": [
+		{
+			"kind": "merkine_hillfort",
+			"name": {
+				"pl": "Grodzisko w Mereczu",
+				"en": "Merkinė Hill Fort",
+				"cs": "Hradiště Merkinė",
+				"is": "Virkishæðin í Merkinė",
+				"de": "Burgberg von Merkinė"
+			},
+			"desc": {
+				"pl": "Na stromy zielony kopiec nad Niemnem prowadzą drewniane schody",
+				"en": "Wooden stairs climb a steep green mound above the Nemunas",
+				"cs": "Na strmý zelený kopec nad Němenem vedou dřevěné schody",
+				"is": "Tréstigi liggja upp brattan grænan hól yfir ánni Nemunas",
+				"de": "Holztreppen führen auf einen steilen grünen Hügel an der Memel"
+			},
+			"local": "Merkinės piliakalnis"
+		}
 	]
 }

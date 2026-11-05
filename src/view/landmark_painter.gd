@@ -12,6 +12,11 @@ const BRONZE := Color("6b5a3a")
 const DARK := Color("2e3238")
 const GLASS := Color("3d5a78")
 
+## Painter classes outside this file, asked in turn: static func draw(kind) -> bool.
+static var MORE := [LandmarksDeA, LandmarksDeB, LandmarksDeC, LandmarksSk, LandmarksLt, LandmarksAtA, LandmarksAtB, LandmarksAtC,
+		LandmarksAtD, LandmarksDeT1, LandmarksDeT2, LandmarksDeT3, LandmarksGbT1, LandmarksGbT2, LandmarksGbT3, LandmarksAtT1,
+		LandmarksAtT2, LandmarksCzT1, LandmarksSkT1, LandmarksLtT1, LandmarksIsT1]
+
 static var _cv
 static var _b: Vector2
 static var _pm: float
@@ -117,11 +122,9 @@ static func draw(cv, it: Dictionary, b: Vector2, pm: float) -> void:
 		"viaduct": _viaduct()
 		"kremowka": _kremowka()
 		"narrow_train": _train()
-		_: # Germany's, Slovakia's, Lithuania's, Austria's
-			if not LandmarksDeA.draw(it.kind) and not LandmarksDeB.draw(it.kind) and not LandmarksDeC.draw(it.kind) \
-					and not LandmarksSk.draw(it.kind) and not LandmarksLt.draw(it.kind) and not LandmarksAtA.draw(it.kind) \
-					and not LandmarksAtB.draw(it.kind) and not LandmarksAtC.draw(it.kind):
-				LandmarksAtD.draw(it.kind)
+		_: # the other countries' painters, each class drawing its own kinds
+			for painter in MORE:
+				if painter.draw(it.kind): break
 
 # --- helpers (metres, y up) ---------------------------------------------------------------------------------
 

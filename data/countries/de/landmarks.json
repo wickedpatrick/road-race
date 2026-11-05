@@ -1028,5 +1028,875 @@
 			},
 			"local": "Weinberge am Rhein"
 		}
+	],
+	"Plön": [
+		{
+			"kind": "schloss_ploen",
+			"name": {"pl": "Zamek w Plön", "en": "Plön Castle", "cs": "Zámek Plön", "is": "Plön-höll", "de": "Plöner Schloss"},
+			"desc": {
+				"pl": "Biały zamek na wzgórzu, a pod nim ogromne jezioro",
+				"en": "A white castle on a hill above a huge lake",
+				"cs": "Bílý zámek na kopci nad obrovským jezerem",
+				"is": "Hvít höll á hæð fyrir ofan risastórt vatn",
+				"de": "Ein weißes Schloss auf einem Hügel über einem riesigen See"
+			},
+			"local": "Plöner Schloss"
+		}
+	],
+	"Wismar": [
+		{
+			"kind": "wasserkunst_wismar",
+			"name": {
+				"pl": "Wasserkunst w Wismarze",
+				"en": "The Wismar Wasserkunst",
+				"cs": "Wasserkunst ve Wismaru",
+				"is": "Wasserkunst í Wismar",
+				"de": "Wasserkunst Wismar"
+			},
+			"desc": {
+				"pl": "Altana z zieloną kopułą, która dawniej dawała miastu wodę",
+				"en": "A pavilion with a green roof that once gave the town its water",
+				"cs": "Altán se zelenou střechou, který kdysi dával městu vodu",
+				"is": "Lítið hús með grænu þaki sem gaf bænum vatn í gamla daga",
+				"de": "Ein Pavillon mit grünem Dach, der früher die Stadt mit Wasser versorgte"
+			},
+			"local": "Wasserkunst"
+		}
+	],
+	"Soltau": [
+		{
+			"kind": "colossos",
+			"name": {
+				"pl": "Colossos w Heide Parku",
+				"en": "Colossos at Heide Park",
+				"cs": "Colossos v Heide Parku",
+				"is": "Colossos í Heide Park",
+				"de": "Colossos im Heide Park"
+			},
+			"desc": {
+				"pl": "Ogromna drewniana kolejka górska w parku rozrywki",
+				"en": "A gigantic wooden roller coaster in an amusement park",
+				"cs": "Obrovská dřevěná horská dráha v zábavním parku",
+				"is": "Risastór rússíbani úr timbri í skemmtigarði",
+				"de": "Eine riesige Holzachterbahn in einem Freizeitpark"
+			},
+			"local": "Colossos"
+		}
+	],
+	"Osnabrück": [
+		{
+			"kind": "steckenpferd",
+			"name": {
+				"pl": "Parada na koniach na kiju",
+				"en": "The hobby horse ride",
+				"cs": "Jízda na koníčcích na tyči",
+				"is": "Prikahestareiðin",
+				"de": "Steckenpferdreiten"
+			},
+			"desc": {
+				"pl": "Co roku dzieci jadą na koniach na kiju świętować pokój",
+				"en": "Every year children ride hobby horses to celebrate peace",
+				"cs": "Každý rok jezdí děti na koníčcích na tyči slavit mír",
+				"is": "Á hverju ári ríða börn á prikahestum til að fagna friði",
+				"de": "Jedes Jahr reiten Kinder auf Steckenpferden, um den Frieden zu feiern"
+			},
+			"local": "Steckenpferdreiten"
+		}
+	],
+	"Hamm": [
+		{
+			"kind": "glaselefant",
+			"name": {
+				"pl": "Szklany Słoń",
+				"en": "The Glass Elephant",
+				"cs": "Skleněný slon",
+				"is": "Glerfíllinn",
+				"de": "Glaselefant"
+			},
+			"desc": {
+				"pl": "Stary budynek kopalni zamieniony w wielkiego słonia",
+				"en": "An old mine building turned into a giant elephant",
+				"cs": "Stará budova dolu proměněná v obřího slona",
+				"is": "Gömul námubygging sem varð að risastórum fíl",
+				"de": "Ein altes Zechengebäude, verwandelt in einen riesigen Elefanten"
+			},
+			"local": "Glaselefant"
+		}
+	],
+	"Kerpen": [
+		{
+			"kind": "kerpen_kart",
+			"name": {
+				"pl": "Gokarty w Kerpen",
+				"en": "Go-karts in Kerpen",
+				"cs": "Motokáry v Kerpenu",
+				"is": "Go-kart í Kerpen",
+				"de": "Kartbahn Kerpen"
+			},
+			"desc": {
+				"pl": "Tu na gokartach ścigał się mały Michael Schumacher",
+				"en": "Little Michael Schumacher raced go-karts right here",
+				"cs": "Tady závodil na motokárách malý Michael Schumacher",
+				"is": "Hér keppti litli Michael Schumacher á go-kart bílum",
+				"de": "Hier fuhr der kleine Michael Schumacher Kartrennen"
+			},
+			"local": "Kartbahn Kerpen"
+		}
+	],
+	"Wiesbaden": [
+		{
+			"kind": "nerobergbahn",
+			"name": {
+				"pl": "Kolejka na Neroberg",
+				"en": "The Nerobergbahn",
+				"cs": "Lanovka na Neroberg",
+				"is": "Nerobergbahn-brautin",
+				"de": "Nerobergbahn"
+			},
+			"desc": {
+				"pl": "Wagonik jedzie w górę, bo drugi z wodą zjeżdża w dół",
+				"en": "One car goes up because the other, full of water, comes down",
+				"cs": "Vagónek jede nahoru, protože druhý plný vody jede dolů",
+				"is": "Einn vagn fer upp af því að hinn, fullur af vatni, fer niður",
+				"de": "Ein Wagen fährt hoch, weil der andere voller Wasser herunterfährt"
+			},
+			"local": "Nerobergbahn"
+		}
+	],
+	"Alsfeld": [
+		{
+			"kind": "alsfeld_rathaus",
+			"name": {
+				"pl": "Ratusz w Alsfeld",
+				"en": "Alsfeld Town Hall",
+				"cs": "Radnice v Alsfeldu",
+				"is": "Ráðhúsið í Alsfeld",
+				"de": "Rathaus Alsfeld"
+			},
+			"desc": {
+				"pl": "Ratusz z belek w kratkę i dwiema wieżyczkami jak ołówki",
+				"en": "A half-timbered town hall with two pencil-pointed turrets",
+				"cs": "Hrázděná radnice se dvěma věžičkami špičatými jako tužky",
+				"is": "Bindingsverks-ráðhús með tveimur turnum oddhvössum eins og blýantar",
+				"de": "Ein Fachwerkrathaus mit zwei Türmchen, spitz wie Bleistifte"
+			},
+			"local": "Alsfelder Rathaus"
+		}
+	],
+	"Göttingen": [
+		{
+			"kind": "gaenseliesel",
+			"name": {"pl": "Gęsiareczka", "en": "The Goose Girl", "cs": "Husopaska", "is": "Gæsastelpan", "de": "Gänseliesel"},
+			"desc": {
+				"pl": "Dziewczynka z gęsią, którą całują nowi doktorzy",
+				"en": "A girl with a goose, kissed by every new doctor of the university",
+				"cs": "Dívka s husou, kterou líbá každý nový doktor univerzity",
+				"is": "Stelpa með gæs sem allir nýir doktorar kyssa",
+				"de": "Ein Mädchen mit Gans, das jeder neue Doktor küssen muss"
+			},
+			"local": "Gänseliesel"
+		}
+	],
+	"Coburg": [
+		{
+			"kind": "veste_coburg",
+			"name": {
+				"pl": "Twierdza Coburg",
+				"en": "Veste Coburg",
+				"cs": "Pevnost Coburg",
+				"is": "Coburg-virkið",
+				"de": "Veste Coburg"
+			},
+			"desc": {
+				"pl": "Jeden z największych zamków Niemiec, wysoko na górze",
+				"en": "One of the biggest castles in Germany, high on a hill",
+				"cs": "Jeden z největších hradů v Německu, vysoko na kopci",
+				"is": "Einn stærsti kastali Þýskalands, hátt uppi á hæð",
+				"de": "Eine der größten Burgen Deutschlands, hoch auf einem Berg"
+			},
+			"local": "Veste Coburg"
+		}
+	],
+	"Bernburg": [
+		{
+			"kind": "schloss_bernburg",
+			"name": {
+				"pl": "Zamek w Bernburgu",
+				"en": "Bernburg Castle",
+				"cs": "Zámek Bernburg",
+				"is": "Bernburg-höll",
+				"de": "Schloss Bernburg"
+			},
+			"desc": {
+				"pl": "Zamek nad rzeką, a w jego fosie mieszkają brunatne niedźwiedzie",
+				"en": "A castle over the river, with brown bears living in its moat",
+				"cs": "Zámek nad řekou a v jeho příkopu žijí hnědí medvědi",
+				"is": "Höll yfir ánni og í gröfinni búa brúnbirnir",
+				"de": "Ein Schloss über dem Fluss, im Graben wohnen Braunbären"
+			},
+			"local": "Schloss Bernburg"
+		}
+	],
+	"Lübben": [
+		{
+			"kind": "spreewald_gurken",
+			"name": {
+				"pl": "Ogórki ze Szprewaldu",
+				"en": "Spreewald gherkins",
+				"cs": "Okurky ze Spréwaldu",
+				"is": "Spreewald-gúrkur",
+				"de": "Spreewaldgurken"
+			},
+			"desc": {
+				"pl": "Chrupiące kiszone ogórki z beczki, sławne w całych Niemczech",
+				"en": "Crunchy pickled gherkins from the barrel, famous all over Germany",
+				"cs": "Křupavé nakládané okurky ze sudu, slavné po celém Německu",
+				"is": "Stökkar súrsaðar gúrkur úr tunnu, frægar um allt Þýskaland",
+				"de": "Knackige saure Gurken aus dem Fass, berühmt in ganz Deutschland"
+			},
+			"local": "Spreewaldgurken"
+		}
+	],
+	"Günzburg": [
+		{
+			"kind": "legoland",
+			"name": {"pl": "Legoland", "en": "Legoland", "cs": "Legoland", "is": "Legoland", "de": "Legoland Deutschland"},
+			"desc": {
+				"pl": "Park, w którym domy, smoki i ludziki są z klocków LEGO",
+				"en": "A park where houses, dragons and people are built of LEGO bricks",
+				"cs": "Park, kde jsou domy, draci i lidé postavení z kostek LEGO",
+				"is": "Garður þar sem hús, drekar og fólk eru byggð úr LEGO-kubbum",
+				"de": "Ein Park, in dem Häuser, Drachen und Leute aus LEGO-Steinen sind"
+			},
+			"local": "Legoland Deutschland"
+		}
+	],
+	"Ludwigsburg": [
+		{
+			"kind": "kuerbis_ludwigsburg",
+			"name": {
+				"pl": "Festiwal dyni w Ludwigsburgu",
+				"en": "Ludwigsburg Pumpkin Festival",
+				"cs": "Dýňový festival v Ludwigsburgu",
+				"is": "Graskershátíðin í Ludwigsburg",
+				"de": "Kürbisausstellung Ludwigsburg"
+			},
+			"desc": {
+				"pl": "Największy festiwal dyń na świecie, niektóre ważą jak auto",
+				"en": "The world's biggest pumpkin festival, some weigh as much as a car",
+				"cs": "Největší dýňový festival na světě, některé váží jako auto",
+				"is": "Stærsta graskershátíð í heimi, sum vega jafn mikið og bíll",
+				"de": "Die größte Kürbisausstellung der Welt, manche wiegen so viel wie ein Auto"
+			},
+			"local": "Kürbisausstellung im Blühenden Barock"
+		}
+	],
+	"Baden-Baden": [
+		{
+			"kind": "kurhaus_baden_baden",
+			"name": {
+				"pl": "Kurhaus w Baden-Baden",
+				"en": "The Baden-Baden Kurhaus",
+				"cs": "Kurhaus v Baden-Badenu",
+				"is": "Kurhaus í Baden-Baden",
+				"de": "Kurhaus Baden-Baden"
+			},
+			"desc": {
+				"pl": "Biały pałac z kolumnami, gdzie bawili się królowie i cesarze",
+				"en": "A white palace of columns where kings and emperors had fun",
+				"cs": "Bílý palác se sloupy, kde se bavili králové a císaři",
+				"is": "Hvít súlnahöll þar sem kóngar og keisarar skemmtu sér",
+				"de": "Ein weißer Säulenpalast, in dem Könige und Kaiser feierten"
+			},
+			"local": "Kurhaus Baden-Baden"
+		}
+	],
+	"Porta Westfalica": [
+		{
+			"kind": "kaiser_wilhelm_denkmal",
+			"name": {
+				"pl": "Pomnik Cesarza Wilhelma",
+				"en": "The Emperor William Monument",
+				"cs": "Pomník císaře Viléma",
+				"is": "Minnisvarði Vilhjálms keisara",
+				"de": "Kaiser-Wilhelm-Denkmal"
+			},
+			"desc": {
+				"pl": "Cesarz stoi pod kopułą wysoko na górze, nad doliną rzeki Wezery",
+				"en": "The emperor stands under a dome high on a hill above the river Weser",
+				"cs": "Císař stojí pod kupolí vysoko na hoře nad řekou Vezerou",
+				"is": "Keisarinn stendur undir hvelfingu hátt uppi á fjalli yfir ánni Weser",
+				"de": "Der Kaiser steht unter einer Kuppel hoch auf dem Berg über der Weser"
+			},
+			"local": "Kaiser-Wilhelm-Denkmal"
+		}
+	],
+	"Koblenz": [
+		{
+			"kind": "deutsches_eck",
+			"name": {
+				"pl": "Niemiecki Narożnik",
+				"en": "The German Corner",
+				"cs": "Německý roh",
+				"is": "Þýska hornið",
+				"de": "Deutsches Eck"
+			},
+			"desc": {
+				"pl": "Ogromny cesarz na koniu stoi tam, gdzie Mozela wpada do Renu",
+				"en": "A giant emperor on horseback stands where the Moselle flows into the Rhine",
+				"cs": "Obří císař na koni stojí tam, kde se Mosela vlévá do Rýna",
+				"is": "Risastór keisari á hestbaki stendur þar sem Mósel rennur í Rín",
+				"de": "Ein riesiger Kaiser zu Pferd steht dort, wo die Mosel in den Rhein fließt"
+			},
+			"local": "Deutsches Eck"
+		}
+	],
+	"Andernach": [
+		{
+			"kind": "andernach_geyser",
+			"name": {
+				"pl": "Gejzer w Andernach",
+				"en": "The Andernach Geyser",
+				"cs": "Gejzír v Andernachu",
+				"is": "Goshverinn í Andernach",
+				"de": "Geysir Andernach"
+			},
+			"desc": {
+				"pl": "Najwyższy na świecie gejzer z zimną wodą tryska na 60 metrów",
+				"en": "The world's highest cold-water geyser shoots up to 60 metres high",
+				"cs": "Nejvyšší gejzír se studenou vodou na světě stříká až 60 metrů",
+				"is": "Hæsti kaldavatnshver heims gýs allt að 60 metra hátt",
+				"de": "Der höchste Kaltwasser-Geysir der Welt spritzt bis zu 60 Meter hoch"
+			},
+			"local": "Geysir Andernach"
+		}
+	],
+	"Worms": [
+		{
+			"kind": "wormser_dom",
+			"name": {
+				"pl": "Katedra w Wormacji",
+				"en": "Worms Cathedral",
+				"cs": "Katedrála ve Wormsu",
+				"is": "Dómkirkjan í Worms",
+				"de": "Wormser Dom"
+			},
+			"desc": {
+				"pl": "Czerwona katedra z czterema okrągłymi wieżami, stoi od 900 lat",
+				"en": "A red cathedral with four round towers, standing for 900 years",
+				"cs": "Červená katedrála se čtyřmi kulatými věžemi stojí už 900 let",
+				"is": "Rauð dómkirkja með fjórum hringlaga turnum, 900 ára gömul",
+				"de": "Ein roter Dom mit vier runden Türmen, schon 900 Jahre alt"
+			},
+			"local": "Dom St. Peter"
+		}
+	],
+	"Leverkusen": [
+		{
+			"kind": "bayer_cross",
+			"name": {
+				"pl": "Krzyż Bayera",
+				"en": "The Bayer Cross",
+				"cs": "Bayerův kříž",
+				"is": "Bayer-krossinn",
+				"de": "Bayer-Kreuz"
+			},
+			"desc": {
+				"pl": "Wielkie świecące koło z napisem BAYER w poprzek i z góry na dół",
+				"en": "A huge glowing ring with BAYER written across it and down it",
+				"cs": "Obrovský svítící kruh s nápisem BAYER napříč i shora dolů",
+				"is": "Risastór lýsandi hringur með BAYER skrifað þvert og niður",
+				"de": "Ein riesiger Leuchtring, in dem BAYER quer und von oben nach unten steht"
+			},
+			"local": "Bayer-Kreuz"
+		}
+	],
+	"Hanau": [
+		{
+			"kind": "grimm_monument",
+			"name": {
+				"pl": "Pomnik Braci Grimm",
+				"en": "The Brothers Grimm Monument",
+				"cs": "Pomník bratří Grimmů",
+				"is": "Minnisvarði Grimmsbræðra",
+				"de": "Brüder-Grimm-Nationaldenkmal"
+			},
+			"desc": {
+				"pl": "Tu urodzili się bracia, którzy spisali bajkę o Kopciuszku",
+				"en": "The brothers who wrote down Cinderella and Snow White were born here",
+				"cs": "Narodili se tu bratři, kteří sepsali pohádku o Popelce",
+				"is": "Hér fæddust bræðurnir sem skráðu söguna um Öskubusku",
+				"de": "Hier wurden die Brüder geboren, die Aschenputtel aufgeschrieben haben"
+			},
+			"local": "Brüder-Grimm-Nationaldenkmal"
+		}
+	],
+	"Sinsheim": [
+		{
+			"kind": "technik_museum_sinsheim",
+			"name": {
+				"pl": "Muzeum Techniki w Sinsheim",
+				"en": "Sinsheim Technology Museum",
+				"cs": "Technické muzeum Sinsheim",
+				"is": "Tæknisafnið í Sinsheim",
+				"de": "Auto & Technik Museum Sinsheim"
+			},
+			"desc": {
+				"pl": "Na dachu stoją dwa naddźwiękowe samoloty, Concorde i Tupolew",
+				"en": "Two supersonic jets, Concorde and a Tupolev, stand on the roof",
+				"cs": "Na střeše stojí dvě nadzvuková letadla, Concorde a Tupolev",
+				"is": "Tvær hljóðfráar þotur, Concorde og Túpolev, standa á þakinu",
+				"de": "Auf dem Dach stehen zwei Überschalljets, die Concorde und eine Tupolew"
+			},
+			"local": "Auto & Technik Museum Sinsheim"
+		}
+	],
+	"Rottweil": [
+		{
+			"kind": "rottweil_test_tower",
+			"name": {
+				"pl": "Wieża testowa wind",
+				"en": "The Elevator Test Tower",
+				"cs": "Zkušební věž výtahů",
+				"is": "Prófunarturn lyftna",
+				"de": "Testturm für Aufzüge"
+			},
+			"desc": {
+				"pl": "W tej wysokiej wieży testuje się nowe windy i podziwia widoki",
+				"en": "New lifts are tested in this tall tower, with a viewpoint on top",
+				"cs": "V této vysoké věži se zkoušejí nové výtahy a nahoře je vyhlídka",
+				"is": "Nýjar lyftur eru prófaðar í þessum háa turni, með útsýni efst",
+				"de": "In diesem hohen Turm werden neue Aufzüge getestet, oben ist ein Ausblick"
+			},
+			"local": "TK-Elevator-Testturm"
+		}
+	],
+	"Donaueschingen": [
+		{
+			"kind": "donauquelle",
+			"name": {
+				"pl": "Źródło Dunaju",
+				"en": "The Source of the Danube",
+				"cs": "Pramen Dunaje",
+				"is": "Upptök Dónár",
+				"de": "Donauquelle"
+			},
+			"desc": {
+				"pl": "Tu zaczyna się Dunaj, który płynie aż do Morza Czarnego",
+				"en": "Here the Danube begins its long trip to the Black Sea",
+				"cs": "Tady začíná Dunaj, který teče až do Černého moře",
+				"is": "Hér byrjar Dóná langa ferð sína til Svartahafs",
+				"de": "Hier beginnt die Donau ihre lange Reise bis zum Schwarzen Meer"
+			},
+			"local": "Donauquelle"
+		}
+	],
+	"Steingaden": [
+		{
+			"kind": "wieskirche",
+			"name": {
+				"pl": "Kościół na Łące",
+				"en": "The Church in the Meadow",
+				"cs": "Kostel na louce",
+				"is": "Kirkjan á enginu",
+				"de": "Wieskirche"
+			},
+			"desc": {
+				"pl": "Biały kościół na łące, a w środku pełno złota i kolorowych malowideł",
+				"en": "A white church in a meadow, full of gold and bright paintings inside",
+				"cs": "Bílý kostel na louce, uvnitř plný zlata a barevných maleb",
+				"is": "Hvít kirkja á engi, full af gulli og litríkum málverkum að innan",
+				"de": "Eine weiße Kirche auf der Wiese, innen voller Gold und bunter Bilder"
+			},
+			"local": "Wieskirche"
+		}
+	],
+	"Landsberg am Lech": [
+		{
+			"kind": "bayertor",
+			"name": {
+				"pl": "Brama Bawarska",
+				"en": "The Bavarian Gate",
+				"cs": "Bavorská brána",
+				"is": "Bæjaralandshliðið",
+				"de": "Bayertor"
+			},
+			"desc": {
+				"pl": "Wysoka gotycka brama miejska z czerwonym dachem i wieżyczkami",
+				"en": "A tall Gothic town gate with a steep red roof and little turrets",
+				"cs": "Vysoká gotická městská brána s červenou střechou a věžičkami",
+				"is": "Hátt gotneskt borgarhlið með bröttu rauðu þaki og litlum turnum",
+				"de": "Ein hohes gotisches Stadttor mit spitzem rotem Dach und Türmchen"
+			},
+			"local": "Bayertor"
+		}
+	],
+	"Ludwigslust": [
+		{
+			"kind": "schloss_ludwigslust",
+			"name": {
+				"pl": "Pałac w Ludwigslust",
+				"en": "Ludwigslust Palace",
+				"cs": "Zámek Ludwigslust",
+				"is": "Höllin í Ludwigslust",
+				"de": "Schloss Ludwigslust"
+			},
+			"desc": {
+				"pl": "Na dachu pałacu stoi długi rząd kamiennych posągów",
+				"en": "A long row of stone statues stands all along the palace roof",
+				"cs": "Na střeše zámku stojí dlouhá řada kamenných soch",
+				"is": "Löng röð steinstyttna stendur eftir öllu þaki hallarinnar",
+				"de": "Auf dem Dach des Schlosses steht eine lange Reihe von Steinfiguren"
+			},
+			"local": "Schloss Ludwigslust"
+		}
+	],
+	"Malchow": [
+		{
+			"kind": "malchow_swing_bridge",
+			"name": {
+				"pl": "Most obrotowy w Malchow",
+				"en": "The Malchow Swing Bridge",
+				"cs": "Otočný most v Malchowě",
+				"is": "Snúningsbrúin í Malchow",
+				"de": "Drehbrücke Malchow"
+			},
+			"desc": {
+				"pl": "Most obraca się na bok, żeby przepuścić łódki",
+				"en": "The bridge turns to one side to let the boats through",
+				"cs": "Most se otočí stranou, aby mohly projet lodičky",
+				"is": "Brúin snýst til hliðar til að hleypa bátunum í gegn",
+				"de": "Die Brücke dreht sich zur Seite, damit die Boote durchfahren können"
+			},
+			"local": "Drehbrücke Malchow"
+		}
+	],
+	"Döbeln": [
+		{
+			"kind": "doebeln_horse_tram",
+			"name": {
+				"pl": "Tramwaj konny w Döbeln",
+				"en": "The Döbeln Horse Tram",
+				"cs": "Koňka v Döbelnu",
+				"is": "Hestasporvagninn í Döbeln",
+				"de": "Pferdebahn Döbeln"
+			},
+			"desc": {
+				"pl": "Ten tramwaj nie ma silnika, ciągnie go po szynach koń",
+				"en": "This tram has no engine: a horse pulls it along the rails",
+				"cs": "Tahle tramvaj nemá motor, po kolejích ji táhne kůň",
+				"is": "Þessi sporvagn hefur enga vél, hestur dregur hann eftir teinunum",
+				"de": "Diese Straßenbahn hat keinen Motor, ein Pferd zieht sie über die Schienen"
+			},
+			"local": "Döbelner Pferdebahn"
+		}
+	],
+	"Garching": [
+		{
+			"kind": "atom_ei",
+			"name": {"pl": "Atomowe Jajo", "en": "The Atom Egg", "cs": "Atomové vejce", "is": "Atómeggið", "de": "Atom-Ei"},
+			"desc": {
+				"pl": "Srebrny budynek jak wielkie jajko, pierwszy reaktor badawczy w Niemczech",
+				"en": "A silver building like a giant egg, Germany's first research reactor",
+				"cs": "Stříbrná budova jako obří vejce, první výzkumný reaktor v Německu",
+				"is": "Silfurlituð bygging eins og risaegg, fyrsti rannsóknarkjarnaofn Þýskalands",
+				"de": "Ein silbernes Gebäude wie ein Riesenei, Deutschlands erster Forschungsreaktor"
+			},
+			"local": "Atom-Ei"
+		}
+	],
+	"Ahrensburg": [
+		{
+			"kind": "schloss_ahrensburg",
+			"name": {
+				"pl": "Zamek Ahrensburg",
+				"en": "Ahrensburg Castle",
+				"cs": "Zámek Ahrensburg",
+				"is": "Ahrensburg-kastali",
+				"de": "Schloss Ahrensburg"
+			},
+			"desc": {
+				"pl": "Biały zamek z trzema szczytami i czterema wieżami stoi nad fosą",
+				"en": "A white castle with three gables and four towers stands by its moat",
+				"cs": "Bílý zámek se třemi štíty a čtyřmi věžemi stojí u vodního příkopu",
+				"is": "Hvítur kastali með þremur göflum og fjórum turnum við síki",
+				"de": "Ein weißes Schloss mit drei Giebeln und vier Türmen steht am Wassergraben"
+			},
+			"local": "Schloss Ahrensburg"
+		}
+	],
+	"Walsrode": [
+		{
+			"kind": "vogelpark_flamingos",
+			"name": {
+				"pl": "Flamingi w Parku Ptaków",
+				"en": "Flamingos of the Bird Park",
+				"cs": "Plameňáci v Ptačím parku",
+				"is": "Flamingóar í fuglagarðinum",
+				"de": "Flamingos im Weltvogelpark"
+			},
+			"desc": {
+				"pl": "W Walsrode mieszkają tysiące ptaków, a różowe flamingi śpią na jednej nodze",
+				"en": "Thousands of birds live in Walsrode, and pink flamingos sleep on one leg",
+				"cs": "Ve Walsrode žijí tisíce ptáků a růžoví plameňáci spí na jedné noze",
+				"is": "Þúsundir fugla búa í Walsrode og bleikir flamingóar sofa á öðrum fæti",
+				"de": "In Walsrode leben tausende Vögel, und rosa Flamingos schlafen auf einem Bein"
+			},
+			"local": "Weltvogelpark Walsrode"
+		}
+	],
+	"Gütersloh": [
+		{
+			"kind": "miele_washer",
+			"name": {
+				"pl": "Pralka Miele",
+				"en": "A Miele washing machine",
+				"cs": "Pračka Miele",
+				"is": "Miele-þvottavél",
+				"de": "Miele-Waschmaschine"
+			},
+			"desc": {
+				"pl": "W Gütersloh od ponad stu lat robi się pralki, które kręcą pranie",
+				"en": "Gütersloh has made washing machines that spin the laundry for over 100 years",
+				"cs": "V Güterslohu se už přes sto let vyrábějí pračky, které točí prádlo",
+				"is": "Í Gütersloh hafa þvottavélar verið smíðaðar í meira en hundrað ár",
+				"de": "In Gütersloh baut man seit über 100 Jahren Waschmaschinen, die Wäsche schleudern"
+			},
+			"local": "Miele Gütersloh"
+		}
+	],
+	"Dülmen": [
+		{
+			"kind": "duelmen_wild_horses",
+			"name": {
+				"pl": "Dzikie konie z Dülmen",
+				"en": "The Dülmen wild horses",
+				"cs": "Divocí koně z Dülmenu",
+				"is": "Villihestarnir í Dülmen",
+				"de": "Dülmener Wildpferde"
+			},
+			"desc": {
+				"pl": "Małe koniki żyją tu na wolności, bez stajni, przez cały rok",
+				"en": "Little horses live free here all year round, with no stable at all",
+				"cs": "Malí koníci tu žijí volně celý rok, úplně bez stáje",
+				"is": "Litlir hestar lifa hér frjálsir allt árið, án nokkurs hesthúss",
+				"de": "Kleine Pferde leben hier das ganze Jahr frei, ganz ohne Stall"
+			},
+			"local": "Dülmener Wildpferde im Merfelder Bruch"
+		}
+	],
+	"Bochum": [
+		{
+			"kind": "bergbau_museum",
+			"name": {
+				"pl": "Muzeum Górnictwa",
+				"en": "The German Mining Museum",
+				"cs": "Německé hornické muzeum",
+				"is": "Námusafn Þýskalands",
+				"de": "Deutsches Bergbau-Museum"
+			},
+			"desc": {
+				"pl": "Na dachu stoi zielona wieża szybowa, a pod muzeum jest prawdziwa kopalnia",
+				"en": "A green pit tower stands on the roof, and a real mine lies under the museum",
+				"cs": "Na střeše stojí zelená těžní věž a pod muzeem je opravdový důl",
+				"is": "Grænn námuturn stendur á þakinu og alvöru náma er undir safninu",
+				"de": "Auf dem Dach steht ein grünes Fördergerüst, unter dem Museum ein echtes Bergwerk"
+			},
+			"local": "Deutsches Bergbau-Museum Bochum"
+		}
+	],
+	"Jüchen": [
+		{
+			"kind": "bucket_wheel_excavator",
+			"name": {
+				"pl": "Koparka kołowa",
+				"en": "The bucket-wheel excavator",
+				"cs": "Kolesové rypadlo",
+				"is": "Skóflugröfuhjólið",
+				"de": "Schaufelradbagger"
+			},
+			"desc": {
+				"pl": "W kopalni obok pracują koparki wielkie jak dom, z kołem pełnym czerpaków",
+				"en": "In the mine next door, diggers as big as houses turn a wheel full of buckets",
+				"cs": "Ve vedlejším dole pracují rypadla velká jako dům, s kolem plným korečků",
+				"is": "Í námunni við hliðina snúa risagröfur stóru hjóli fullu af skóflum",
+				"de": "Im Tagebau nebenan drehen Bagger, so groß wie Häuser, ein Rad voller Schaufeln"
+			},
+			"local": "Tagebau Garzweiler"
+		}
+	],
+	"Limburg an der Lahn": [
+		{
+			"kind": "limburger_dom",
+			"name": {
+				"pl": "Katedra w Limburgu",
+				"en": "Limburg Cathedral",
+				"cs": "Limburská katedrála",
+				"is": "Dómkirkjan í Limburg",
+				"de": "Limburger Dom"
+			},
+			"desc": {
+				"pl": "Kolorowa katedra z siedmioma wieżami stoi wysoko na skale nad rzeką",
+				"en": "A colourful cathedral with seven towers stands high on a rock above the river",
+				"cs": "Barevná katedrála se sedmi věžemi stojí vysoko na skále nad řekou",
+				"is": "Litrík dómkirkja með sjö turnum stendur hátt á kletti yfir ánni",
+				"de": "Ein bunter Dom mit sieben Türmen steht hoch auf einem Felsen über dem Fluss"
+			},
+			"local": "Limburger Dom"
+		}
+	],
+	"Darmstadt": [
+		{
+			"kind": "hochzeitsturm",
+			"name": {
+				"pl": "Wieża Weselna",
+				"en": "The Wedding Tower",
+				"cs": "Svatební věž",
+				"is": "Brúðkaupsturninn",
+				"de": "Hochzeitsturm"
+			},
+			"desc": {
+				"pl": "Wysoka wieża ma na czubku pięć zaokrąglonych palców, jak dłoń",
+				"en": "This tall tower has five rounded fingers on top, like a hand",
+				"cs": "Vysoká věž má na vršku pět zaoblených prstů, jako ruka",
+				"is": "Hái turninn er með fimm ávala fingur efst, eins og hönd",
+				"de": "Der hohe Turm hat oben fünf runde Finger, wie eine Hand"
+			},
+			"local": "Hochzeitsturm Darmstadt"
+		}
+	],
+	"Gotha": [
+		{
+			"kind": "schloss_friedenstein",
+			"name": {
+				"pl": "Zamek Friedenstein",
+				"en": "Friedenstein Palace",
+				"cs": "Zámek Friedenstein",
+				"is": "Friedenstein-höllin",
+				"de": "Schloss Friedenstein"
+			},
+			"desc": {
+				"pl": "Ogromny biały zamek z wieżą na każdym końcu, a w środku stary teatr",
+				"en": "A huge white palace with a tower at each end and an old theatre inside",
+				"cs": "Obrovský bílý zámek s věží na každém konci a se starým divadlem uvnitř",
+				"is": "Risastór hvít höll með turni á hvorum enda og gömlu leikhúsi inni",
+				"de": "Ein riesiges weißes Schloss mit einem Turm an jedem Ende und einem alten Theater"
+			},
+			"local": "Schloss Friedenstein"
+		}
+	],
+	"Weimar": [
+		{
+			"kind": "goethe_schiller",
+			"name": {
+				"pl": "Pomnik Goethego i Schillera",
+				"en": "The Goethe and Schiller Monument",
+				"cs": "Pomník Goetha a Schillera",
+				"is": "Minnisvarði Goethes og Schillers",
+				"de": "Goethe-Schiller-Denkmal"
+			},
+			"desc": {
+				"pl": "Dwaj przyjaciele poeci trzymają razem jeden wieniec z liści",
+				"en": "Two poet friends hold one wreath of leaves together",
+				"cs": "Dva přátelé básníci drží společně jeden věnec z listí",
+				"is": "Tveir skáldvinir halda saman á einum laufkransi",
+				"de": "Zwei befreundete Dichter halten zusammen einen Lorbeerkranz"
+			},
+			"local": "Goethe-Schiller-Denkmal"
+		}
+	],
+	"Dessau-Roßlau": [
+		{
+			"kind": "bauhaus_dessau",
+			"name": {"pl": "Bauhaus", "en": "The Bauhaus", "cs": "Bauhaus", "is": "Bauhaus", "de": "Bauhausgebäude"},
+			"desc": {
+				"pl": "Szkoła z wielką szklaną ścianą, gdzie wymyślano nowe domy i meble",
+				"en": "A school with a huge glass wall, where new houses and furniture were invented",
+				"cs": "Škola s obrovskou skleněnou stěnou, kde se vymýšlely nové domy a nábytek",
+				"is": "Skóli með risastóran glervegg þar sem ný hús og húsgögn urðu til",
+				"de": "Eine Schule mit riesiger Glaswand, wo neue Häuser und Möbel erfunden wurden"
+			},
+			"local": "Bauhaus Dessau"
+		}
+	],
+	"Beelitz": [
+		{
+			"kind": "beelitz_asparagus",
+			"name": {
+				"pl": "Szparagi z Beelitz",
+				"en": "Beelitz asparagus",
+				"cs": "Chřest z Beelitz",
+				"is": "Spergill frá Beelitz",
+				"de": "Beelitzer Spargel"
+			},
+			"desc": {
+				"pl": "Białe szparagi rosną tu pod ziemią i wiosną zbiera się je ręcznie",
+				"en": "White asparagus grows under the ground here and is picked by hand in spring",
+				"cs": "Bílý chřest tu roste pod zemí a na jaře se sbírá ručně",
+				"is": "Hvítur spergill vex hér undir jörðinni og er tíndur í höndunum á vorin",
+				"de": "Weißer Spargel wächst hier unter der Erde und wird im Frühling von Hand gestochen"
+			},
+			"local": "Beelitzer Spargel"
+		}
+	],
+	"Haldensleben": [
+		{
+			"kind": "reitender_roland",
+			"name": {
+				"pl": "Roland na koniu",
+				"en": "The Riding Roland",
+				"cs": "Roland na koni",
+				"is": "Ríðandi Roland",
+				"de": "Reitender Roland"
+			},
+			"desc": {
+				"pl": "Rycerz Roland z mieczem w ręku pilnuje rynku, siedząc na koniu",
+				"en": "The knight Roland guards the market square on horseback, sword in hand",
+				"cs": "Rytíř Roland s mečem v ruce hlídá náměstí ze sedla koně",
+				"is": "Riddarinn Roland gætir torgsins á hestbaki með sverð í hendi",
+				"de": "Der Ritter Roland bewacht hoch zu Ross den Marktplatz, das Schwert in der Hand"
+			},
+			"local": "Reitender Roland Haldensleben"
+		}
+	],
+	"Leonberg": [
+		{
+			"kind": "leonberger_dog",
+			"name": {
+				"pl": "Pies leonberger",
+				"en": "The Leonberger dog",
+				"cs": "Leonberger",
+				"is": "Leonberger-hundur",
+				"de": "Leonberger"
+			},
+			"desc": {
+				"pl": "Wielki puszysty pies o wyglądzie lwa, wyhodowany właśnie w Leonbergu",
+				"en": "A big fluffy dog that looks like a lion, first bred right here in Leonberg",
+				"cs": "Velký chlupatý pes, který vypadá jako lev, vyšlechtěný právě v Leonbergu",
+				"is": "Stór loðinn hundur sem líkist ljóni, fyrst ræktaður hér í Leonberg",
+				"de": "Ein großer, flauschiger Hund wie ein Löwe, zuerst hier in Leonberg gezüchtet"
+			},
+			"local": "Leonberger Hund"
+		}
+	],
+	"Bruchsal": [
+		{
+			"kind": "schloss_bruchsal",
+			"name": {
+				"pl": "Pałac w Bruchsal",
+				"en": "Bruchsal Palace",
+				"cs": "Zámek Bruchsal",
+				"is": "Höllin í Bruchsal",
+				"de": "Schloss Bruchsal"
+			},
+			"desc": {
+				"pl": "Barokowy pałac biskupów, a w środku muzeum grających pozytywek",
+				"en": "A bishops' baroque palace with a museum of music machines inside",
+				"cs": "Barokní zámek biskupů a uvnitř muzeum hrajících hracích strojů",
+				"is": "Barokkhöll biskupa með safni af spilandi tónlistarvélum inni",
+				"de": "Ein Barockschloss der Fürstbischöfe mit einem Museum für Musikautomaten"
+			},
+			"local": "Schloss Bruchsal"
+		}
 	]
 }

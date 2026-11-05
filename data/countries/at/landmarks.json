@@ -812,5 +812,365 @@
 			},
 			"local": "Schattenburg"
 		}
+	],
+	"Baden": [
+		{
+			"kind": "beethoventempel",
+			"name": {
+				"pl": "Świątynia Beethovena",
+				"en": "The Beethoven Temple",
+				"cs": "Beethovenův chrám",
+				"is": "Beethoven-hofið",
+				"de": "Beethoventempel"
+			},
+			"desc": {
+				"pl": "Beethoven spędzał tu lata i pisał swoją IX Symfonię",
+				"en": "Beethoven spent his summers here and wrote his Ninth Symphony",
+				"cs": "Beethoven tu trávil léta a psal svou Devátou symfonii",
+				"is": "Beethoven dvaldi hér á sumrin og samdi níundu sinfóníuna",
+				"de": "Beethoven verbrachte hier seine Sommer und schrieb die Neunte"
+			},
+			"local": "Beethoventempel im Kurpark"
+		}
+	],
+	"Herzogenburg": [
+		{
+			"kind": "stift_herzogenburg",
+			"name": {
+				"pl": "Klasztor w Herzogenburgu",
+				"en": "Herzogenburg Abbey",
+				"cs": "Klášter Herzogenburg",
+				"is": "Herzogenburg-klaustrið",
+				"de": "Stift Herzogenburg"
+			},
+			"desc": {
+				"pl": "Wieżę zamiast cebulki zdobi wielki złoty kapelusz księcia",
+				"en": "Instead of an onion dome, its tower wears a big golden duke's hat",
+				"cs": "Místo cibule nosí věž velký zlatý vévodský klobouk",
+				"is": "Í stað lauklaga hvolfs ber turninn stóran gylltan hertogahatt",
+				"de": "Statt einer Zwiebel trägt der Turm einen großen goldenen Herzogshut"
+			},
+			"local": "Stift Herzogenburg"
+		}
+	],
+	"Windischgarsten": [
+		{
+			"kind": "wurbauerkogel",
+			"name": {
+				"pl": "Wurbauerkogel",
+				"en": "The Wurbauerkogel",
+				"cs": "Wurbauerkogel",
+				"is": "Wurbauerkogel",
+				"de": "Wurbauerkogel"
+			},
+			"desc": {
+				"pl": "Na górze wieża widokowa, a w dół zjeżdża się torem saneczkowym",
+				"en": "A lookout tower on top and a summer toboggan run back down",
+				"cs": "Nahoře rozhledna a dolů se jede na letní bobové dráze",
+				"is": "Útsýnisturn á toppnum og sumarsleðabraut niður aftur",
+				"de": "Oben ein Aussichtsturm, hinunter geht es mit der Sommerrodelbahn"
+			},
+			"local": "Wurbauerkogel mit Panoramaturm"
+		}
+	],
+	"Friesach": [
+		{
+			"kind": "burgbau_friesach",
+			"name": {
+				"pl": "Budowa zamku we Friesach",
+				"en": "The Friesach Castle Build",
+				"cs": "Stavba hradu ve Friesachu",
+				"is": "Kastalasmíðin í Friesach",
+				"de": "Burgbau Friesach"
+			},
+			"desc": {
+				"pl": "Tu buduje się zamek tak jak w średniowieczu, bez maszyn",
+				"en": "Here a castle is being built just like in the Middle Ages, without machines",
+				"cs": "Tady se staví hrad jako ve středověku, bez strojů",
+				"is": "Hér er kastali byggður eins og á miðöldum, án véla",
+				"de": "Hier wird eine Burg wie im Mittelalter gebaut, ohne Maschinen"
+			},
+			"local": "Burgbau Friesach"
+		}
+	],
+	"Wolfsberg": [
+		{
+			"kind": "schloss_wolfsberg",
+			"name": {
+				"pl": "Zamek w Wolfsbergu",
+				"en": "Wolfsberg Castle",
+				"cs": "Zámek Wolfsberg",
+				"is": "Wolfsberg-kastali",
+				"de": "Schloss Wolfsberg"
+			},
+			"desc": {
+				"pl": "Biały zamek z wieżyczkami, przebudowany na wzór angielskich",
+				"en": "A white castle with turrets, rebuilt to look like an English one",
+				"cs": "Bílý zámek s věžičkami, přestavěný podle anglických hradů",
+				"is": "Hvítur kastali með turnspírum, endurbyggður að enskri fyrirmynd",
+				"de": "Ein weißes Schloss mit Türmchen, im englischen Stil umgebaut"
+			},
+			"local": "Schloss Wolfsberg"
+		}
+	],
+	"Fuschl am See": [
+		{
+			"kind": "schloss_fuschl",
+			"name": {
+				"pl": "Zamek Fuschl",
+				"en": "Fuschl Castle",
+				"cs": "Zámek Fuschl",
+				"is": "Fuschl-kastali",
+				"de": "Schloss Fuschl"
+			},
+			"desc": {
+				"pl": "Myśliwski zameczek nad jeziorem, tu kręcono filmy o Sissi",
+				"en": "A hunting castle by the lake where the Sissi films were made",
+				"cs": "Lovecký zámeček u jezera, kde se natáčely filmy o Sissi",
+				"is": "Veiðikastali við vatnið þar sem Sissi-myndirnar voru teknar",
+				"de": "Ein Jagdschloss am See, hier wurden die Sissi-Filme gedreht"
+			},
+			"local": "Schloss Fuschl"
+		}
+	],
+	"Bad Aussee": [
+		{
+			"kind": "narzissenfest",
+			"name": {
+				"pl": "Święto Narcyzów",
+				"en": "The Narcissus Festival",
+				"cs": "Slavnost narcisů",
+				"is": "Páskaliljuhátíðin",
+				"de": "Narzissenfest"
+			},
+			"desc": {
+				"pl": "Po jeziorze pływają wielkie figury ułożone z tysięcy narcyzów",
+				"en": "Giant figures made of thousands of narcissi float on the lake",
+				"cs": "Po jezeře plují obří postavy z tisíců narcisů",
+				"is": "Risastórar fígúrur úr þúsundum páskalilja fljóta á vatninu",
+				"de": "Riesige Figuren aus Tausenden Narzissen schwimmen über den See"
+			},
+			"local": "Narzissenfest im Ausseerland"
+		}
+	],
+	"Hall in Tirol": [
+		{
+			"kind": "muenzerturm_hall",
+			"name": {
+				"pl": "Wieża Mennicza w Hall",
+				"en": "The Mint Tower of Hall",
+				"cs": "Mincovní věž v Hallu",
+				"is": "Myntturninn í Hall",
+				"de": "Münzerturm in Hall"
+			},
+			"desc": {
+				"pl": "Tu wybito pierwsze duże srebrne talary, przodków dolara",
+				"en": "The first big silver thalers, the dollar's ancestors, were made here",
+				"cs": "Tady se razily první velké stříbrné tolary, předci dolaru",
+				"is": "Hér voru fyrstu stóru silfurdalirnir slegnir, forfeður dollarans",
+				"de": "Hier wurden die ersten großen Silbertaler geprägt, Urahnen des Dollars"
+			},
+			"local": "Münzerturm der Burg Hasegg"
+		}
+	],
+	"Spitz": [
+		{
+			"kind": "wachauer_marille",
+			"name": {
+				"pl": "Morele z Wachau",
+				"en": "Wachau Apricots",
+				"cs": "Meruňky z Wachau",
+				"is": "Apríkósur frá Wachau",
+				"de": "Wachauer Marille"
+			},
+			"desc": {
+				"pl": "Nad Dunajem rosną słynne morele, na dżem i knedle z morelami",
+				"en": "Famous apricots grow by the Danube, for jam and apricot dumplings",
+				"cs": "U Dunaje rostou slavné meruňky na džem a meruňkové knedlíky",
+				"is": "Frægar apríkósur vaxa við Dóná, í sultu og apríkósubollur",
+				"de": "An der Donau wachsen berühmte Marillen für Marmelade und Knödel"
+			},
+			"local": "Wachauer Marille"
+		}
+	],
+	"Ybbs an der Donau": [
+		{
+			"kind": "kraftwerk_ybbs",
+			"name": {
+				"pl": "Elektrownia Ybbs-Persenbeug",
+				"en": "Ybbs-Persenbeug Power Station",
+				"cs": "Elektrárna Ybbs-Persenbeug",
+				"is": "Virkjunin Ybbs-Persenbeug",
+				"de": "Kraftwerk Ybbs-Persenbeug"
+			},
+			"desc": {
+				"pl": "Pierwsza austriacka elektrownia na Dunaju robi prąd z płynącej rzeki",
+				"en": "Austria's first power station on the Danube makes power from the river",
+				"cs": "První rakouská elektrárna na Dunaji vyrábí proud z tekoucí řeky",
+				"is": "Fyrsta virkjun Austurríkis í Dóná býr til rafmagn úr ánni",
+				"de": "Österreichs erstes Donaukraftwerk macht Strom aus dem Fluss"
+			},
+			"local": "Donaukraftwerk Ybbs-Persenbeug"
+		}
+	],
+	"Enns": [
+		{
+			"kind": "stadtturm_enns",
+			"name": {
+				"pl": "Wieża Miejska w Enns",
+				"en": "Enns City Tower",
+				"cs": "Městská věž v Ennsu",
+				"is": "Borgarturninn í Enns",
+				"de": "Stadtturm Enns"
+			},
+			"desc": {
+				"pl": "Wysoka na 60 metrów wieża stoi na rynku najstarszego miasta Austrii",
+				"en": "A 60-metre tower on the square of Austria's oldest town",
+				"cs": "Šedesátimetrová věž stojí na náměstí nejstaršího města Rakouska",
+				"is": "60 metra hár turn á torgi elsta bæjar Austurríkis",
+				"de": "Ein 60 Meter hoher Turm am Platz der ältesten Stadt Österreichs"
+			},
+			"local": "Stadtturm Enns"
+		}
+	],
+	"Gleisdorf": [
+		{
+			"kind": "solarbaum_gleisdorf",
+			"name": {
+				"pl": "Słoneczne drzewo",
+				"en": "The Solar Tree",
+				"cs": "Solární strom",
+				"is": "Sólartréð",
+				"de": "Solarbaum"
+			},
+			"desc": {
+				"pl": "Stalowe drzewo, które zamiast liści ma panele słoneczne",
+				"en": "A steel tree with solar panels instead of leaves",
+				"cs": "Ocelový strom, který má místo listů solární panely",
+				"is": "Stáltré sem ber sólarsellur í stað laufblaða",
+				"de": "Ein Stahlbaum, der statt Blättern Solarzellen trägt"
+			},
+			"local": "Solarbaum Gleisdorf"
+		}
+	],
+	"Velden am Wörthersee": [
+		{
+			"kind": "schloss_velden",
+			"name": {
+				"pl": "Zamek Velden",
+				"en": "Velden Castle",
+				"cs": "Zámek Velden",
+				"is": "Velden-höllin",
+				"de": "Schloss Velden"
+			},
+			"desc": {
+				"pl": "Renesansowy zamek stoi tuż nad brzegiem jeziora Wörthersee",
+				"en": "A Renaissance castle right on the shore of the Wörthersee",
+				"cs": "Renesanční zámek stojí přímo na břehu jezera Wörthersee",
+				"is": "Endurreisnarhöll alveg við bakka vatnsins Wörthersee",
+				"de": "Ein Renaissanceschloss direkt am Ufer des Wörthersees"
+			},
+			"local": "Schloss Velden"
+		}
+	],
+	"Korneuburg": [
+		{
+			"kind": "burg_kreuzenstein",
+			"name": {
+				"pl": "Zamek Kreuzenstein",
+				"en": "Kreuzenstein Castle",
+				"cs": "Hrad Kreuzenstein",
+				"is": "Kreuzenstein-kastalinn",
+				"de": "Burg Kreuzenstein"
+			},
+			"desc": {
+				"pl": "Pewien hrabia odbudował go z ruin jak zamek z bajki",
+				"en": "A count rebuilt it from ruins like a fairy-tale castle",
+				"cs": "Jeden hrabě ho obnovil z trosek jako hrad z pohádky",
+				"is": "Greifi endurreisti hann úr rústum eins og ævintýrakastala",
+				"de": "Ein Graf baute sie aus Ruinen wie eine Märchenburg wieder auf"
+			},
+			"local": "Burg Kreuzenstein"
+		}
+	],
+	"St. Michael im Lungau": [
+		{
+			"kind": "samson_lungau",
+			"name": {
+				"pl": "Samson z Lungau",
+				"en": "The Lungau Samson",
+				"cs": "Samson z Lungau",
+				"is": "Samson frá Lungau",
+				"de": "Lungauer Samson"
+			},
+			"desc": {
+				"pl": "Olbrzym wysoki na 6 metrów, którego w pochodzie niesie jeden siłacz",
+				"en": "A 6-metre giant carried in parades by one strong man",
+				"cs": "Šestimetrový obr, kterého v průvodu nese jediný silák",
+				"is": "Sex metra risi sem einn sterkur maður ber í skrúðgöngu",
+				"de": "Ein 6 Meter großer Riese, den ein einziger starker Mann trägt"
+			},
+			"local": "Samson von St. Michael"
+		}
+	],
+	"St. Johann im Pongau": [
+		{
+			"kind": "liechtensteinklamm",
+			"name": {
+				"pl": "Wąwóz Liechtensteinklamm",
+				"en": "Liechtenstein Gorge",
+				"cs": "Soutěska Liechtensteinklamm",
+				"is": "Liechtenstein-gljúfrið",
+				"de": "Liechtensteinklamm"
+			},
+			"desc": {
+				"pl": "Woda przez tysiące lat wyżłobiła tu wąski i bardzo głęboki wąwóz",
+				"en": "Over thousands of years water carved a narrow, very deep gorge",
+				"cs": "Voda tu za tisíce let vyhloubila úzkou a hlubokou soutěsku",
+				"is": "Vatn gróf hér mjótt og djúpt gljúfur á þúsundum ára",
+				"de": "Wasser grub hier in Jahrtausenden eine enge, tiefe Schlucht"
+			},
+			"local": "Liechtensteinklamm"
+		}
+	],
+	"Landeck": [
+		{
+			"kind": "trisanna_bridge",
+			"name": {
+				"pl": "Most Trisanna",
+				"en": "Trisanna Bridge",
+				"cs": "Most Trisanna",
+				"is": "Trisanna-brúin",
+				"de": "Trisannabrücke"
+			},
+			"desc": {
+				"pl": "Pociągi jadą po nim 86 metrów nad doliną, obok stoi zamek",
+				"en": "Trains cross it 86 metres above the valley, by a castle",
+				"cs": "Vlaky po něm jezdí 86 metrů nad údolím, vedle stojí hrad",
+				"is": "Lestir aka yfir hana 86 metrum yfir dalnum, hjá kastala",
+				"de": "Züge fahren 86 Meter über dem Tal, daneben steht ein Schloss"
+			},
+			"local": "Trisannabrücke"
+		}
+	],
+	"Ebensee": [
+		{
+			"kind": "gloeckler_ebensee",
+			"name": {
+				"pl": "Glöckler z Ebensee",
+				"en": "The Ebensee Glöckler",
+				"cs": "Glöckleři z Ebensee",
+				"is": "Glöckler-hlaupararnir í Ebensee",
+				"de": "Ebenseer Glöckler"
+			},
+			"desc": {
+				"pl": "W styczniu biegają tu ludzie ze świecącymi lampionami na głowach",
+				"en": "In January people run here with glowing lanterns on their heads",
+				"cs": "V lednu tu běhají lidé se svítícími lampiony na hlavách",
+				"is": "Í janúar hlaupa menn hér með glóandi ljósker á höfðinu",
+				"de": "Im Januar laufen hier Leute mit leuchtenden Kappen auf dem Kopf"
+			},
+			"local": "Ebenseer Glöcklerlauf"
+		}
 	]
 }

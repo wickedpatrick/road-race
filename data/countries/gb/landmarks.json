@@ -1234,5 +1234,779 @@
 			},
 			"local": "Dunnottar Castle"
 		}
+	],
+	"Pyecombe": [
+		{
+			"kind": "jack_and_jill_windmills",
+			"name": {
+				"pl": "Wiatraki Jack i Jill",
+				"en": "The Jack and Jill Windmills",
+				"cs": "Větrné mlýny Jack a Jill",
+				"is": "Vindmyllurnar Jack og Jill",
+				"de": "Die Windmühlen Jack und Jill"
+			},
+			"desc": {
+				"pl": "Dwa wiatraki na wzgórzu: czarny to Jack, a biały to Jill",
+				"en": "Two windmills on the hill: the black one is Jack, the white one is Jill",
+				"cs": "Dva větrné mlýny na kopci: černý je Jack a bílý je Jill",
+				"is": "Tvær vindmyllur á hæðinni: sú svarta er Jack og sú hvíta Jill",
+				"de": "Zwei Windmühlen auf dem Hügel: die schwarze heißt Jack, die weiße Jill"
+			},
+			"local": "Jack and Jill Windmills"
+		}
+	],
+	"Fareham": [
+		{
+			"kind": "portchester_castle",
+			"name": {
+				"pl": "Zamek Portchester",
+				"en": "Portchester Castle",
+				"cs": "Hrad Portchester",
+				"is": "Portchester-kastali",
+				"de": "Portchester Castle"
+			},
+			"desc": {
+				"pl": "Jego mury nad zatoką zbudowali jeszcze starożytni Rzymianie",
+				"en": "The Romans built its walls by the harbour long, long ago",
+				"cs": "Jeho hradby u zátoky postavili už staří Římané",
+				"is": "Rómverjar byggðu múrana við höfnina fyrir löngu, löngu síðan",
+				"de": "Seine Mauern am Hafen haben schon die alten Römer gebaut"
+			},
+			"local": "Portchester Castle"
+		}
+	],
+	"Lyndhurst": [
+		{
+			"kind": "new_forest_ponies",
+			"name": {
+				"pl": "Kucyki z New Forest",
+				"en": "New Forest Ponies",
+				"cs": "Poníci z New Forest",
+				"is": "Smáhestar í New Forest",
+				"de": "New-Forest-Ponys"
+			},
+			"desc": {
+				"pl": "Kucyki chodzą tu swobodnie po lesie, a nawet po ulicach",
+				"en": "Ponies roam freely here through the forest and even the streets",
+				"cs": "Poníci se tu volně toulají lesem, a dokonce i po ulicích",
+				"is": "Smáhestar ganga hér frjálsir um skóginn og jafnvel göturnar",
+				"de": "Ponys laufen hier frei durch den Wald und sogar über die Straßen"
+			},
+			"local": "New Forest ponies"
+		}
+	],
+	"Beaconsfield": [
+		{
+			"kind": "bekonscot_model_village",
+			"name": {
+				"pl": "Miasteczko Bekonscot",
+				"en": "Bekonscot Model Village",
+				"cs": "Modelové městečko Bekonscot",
+				"is": "Smábærinn Bekonscot",
+				"de": "Modelldorf Bekonscot"
+			},
+			"desc": {
+				"pl": "Najstarsze miasteczko miniatur na świecie, z małym pociągiem",
+				"en": "The oldest model village in the world, with a little train",
+				"cs": "Nejstarší modelové městečko na světě, s malým vláčkem",
+				"is": "Elsti smábær í heimi, með lítilli lest",
+				"de": "Das älteste Modelldorf der Welt, mit einer kleinen Eisenbahn"
+			},
+			"local": "Bekonscot Model Village"
+		}
+	],
+	"Banbury": [
+		{
+			"kind": "banbury_cross",
+			"name": {
+				"pl": "Krzyż w Banbury",
+				"en": "Banbury Cross",
+				"cs": "Kříž v Banbury",
+				"is": "Krossinn í Banbury",
+				"de": "Banbury Cross"
+			},
+			"desc": {
+				"pl": "Obok stoi pani na białym koniu z dziecięcej rymowanki",
+				"en": "Beside it rides the fine lady on a white horse from the rhyme",
+				"cs": "Vedle jede paní na bílém koni z dětské říkanky",
+				"is": "Við hliðina ríður fína frúin á hvíta hestinum úr vísunni",
+				"de": "Daneben reitet die feine Dame auf dem weißen Pferd aus dem Kinderreim"
+			},
+			"local": "Banbury Cross"
+		}
+	],
+	"Market Harborough": [
+		{
+			"kind": "harborough_grammar_school",
+			"name": {
+				"pl": "Stara szkoła na palach",
+				"en": "The Old Grammar School",
+				"cs": "Stará škola na sloupech",
+				"is": "Gamli skólinn á stólpum",
+				"de": "Die alte Schule auf Stelzen"
+			},
+			"desc": {
+				"pl": "Szkoła z 1614 roku stoi na drewnianych nogach nad targiem",
+				"en": "A school from 1614 standing on wooden legs over the market",
+				"cs": "Škola z roku 1614 stojí na dřevěných nohách nad tržištěm",
+				"is": "Skóli frá 1614 sem stendur á tréfótum yfir markaðnum",
+				"de": "Eine Schule von 1614, die auf Holzbeinen über dem Markt steht"
+			},
+			"local": "Old Grammar School"
+		}
+	],
+	"Rhayader": [
+		{
+			"kind": "caban_coch_dam",
+			"name": {
+				"pl": "Zapora Caban Coch",
+				"en": "Caban Coch Dam",
+				"cs": "Přehrada Caban Coch",
+				"is": "Caban Coch-stíflan",
+				"de": "Caban-Coch-Staumauer"
+			},
+			"desc": {
+				"pl": "Po kamiennej zaporze woda spływa jak wielki biały welon",
+				"en": "Water spills over the stone dam like a big white curtain",
+				"cs": "Voda přetéká přes kamennou hráz jako velká bílá opona",
+				"is": "Vatnið steypist yfir steinstífluna eins og stórt hvítt tjald",
+				"de": "Das Wasser fließt über die Steinmauer wie ein großer weißer Vorhang"
+			},
+			"local": "Argae Caban Coch"
+		}
+	],
+	"Blaenau Ffestiniog": [
+		{
+			"kind": "double_fairlie",
+			"name": {
+				"pl": "Lokomotywa Double Fairlie",
+				"en": "The Double Fairlie Engine",
+				"cs": "Lokomotiva Double Fairlie",
+				"is": "Double Fairlie-eimreiðin",
+				"de": "Die Double-Fairlie-Lok"
+			},
+			"desc": {
+				"pl": "Mała lokomotywa z dwoma kominami, z przodu i z tyłu",
+				"en": "A little steam engine with two chimneys, one at each end",
+				"cs": "Malá lokomotiva se dvěma komíny, vpředu i vzadu",
+				"is": "Lítil gufueimreið með tvo reykháfa, einn á hvorum enda",
+				"de": "Eine kleine Dampflok mit zwei Schornsteinen, vorne und hinten"
+			},
+			"local": "Rheilffordd Ffestiniog"
+		}
+	],
+	"Lichfield": [
+		{
+			"kind": "lichfield_cathedral",
+			"name": {
+				"pl": "Katedra w Lichfield",
+				"en": "Lichfield Cathedral",
+				"cs": "Katedrála v Lichfieldu",
+				"is": "Dómkirkjan í Lichfield",
+				"de": "Kathedrale von Lichfield"
+			},
+			"desc": {
+				"pl": "Jedyna dawna angielska katedra z aż trzema iglicami",
+				"en": "The only medieval English cathedral with three spires",
+				"cs": "Jediná středověká anglická katedrála se třemi věžemi",
+				"is": "Eina enska miðaldadómkirkjan með þrjá turnspíra",
+				"de": "Die einzige mittelalterliche Kathedrale Englands mit drei Turmspitzen"
+			},
+			"local": "Lichfield Cathedral"
+		}
+	],
+	"Huddersfield": [
+		{
+			"kind": "victoria_tower_castle_hill",
+			"name": {
+				"pl": "Wieża Wiktorii na Castle Hill",
+				"en": "Victoria Tower on Castle Hill",
+				"cs": "Viktoriina věž na Castle Hill",
+				"is": "Viktoríuturninn á Castle Hill",
+				"de": "Victoria Tower auf dem Castle Hill"
+			},
+			"desc": {
+				"pl": "Wieża na wysokim wzgórzu, zbudowana na jubileusz królowej",
+				"en": "A tower on a high hill, built for the Queen's jubilee",
+				"cs": "Věž na vysokém kopci, postavená k jubileu královny",
+				"is": "Turn á háum hól, reistur í tilefni af afmæli drottningar",
+				"de": "Ein Turm auf einem hohen Hügel, gebaut zum Jubiläum der Königin"
+			},
+			"local": "Victoria Tower"
+		}
+	],
+	"Darlington": [
+		{
+			"kind": "locomotion_no1",
+			"name": {
+				"pl": "Lokomotywa Locomotion nr 1",
+				"en": "Locomotion No. 1",
+				"cs": "Lokomotiva Locomotion č. 1",
+				"is": "Locomotion nr. 1",
+				"de": "Locomotion Nr. 1"
+			},
+			"desc": {
+				"pl": "W 1825 roku ciągnęła pierwszy pociąg pasażerski na świecie",
+				"en": "In 1825 it pulled the world's first public passenger steam train",
+				"cs": "Roku 1825 táhla první veřejný osobní parní vlak na světě",
+				"is": "Árið 1825 dró hún fyrstu almennu farþegagufulest heims",
+				"de": "1825 zog sie den ersten öffentlichen Personenzug der Welt"
+			},
+			"local": "Locomotion No. 1"
+		}
+	],
+	"Kinross": [
+		{
+			"kind": "loch_leven_castle",
+			"name": {
+				"pl": "Zamek Loch Leven",
+				"en": "Loch Leven Castle",
+				"cs": "Hrad Loch Leven",
+				"is": "Loch Leven-kastali",
+				"de": "Loch Leven Castle"
+			},
+			"desc": {
+				"pl": "Zamek na wyspie, gdzie więziono Marię, królową Szkotów",
+				"en": "A castle on an island where Mary, Queen of Scots was kept",
+				"cs": "Hrad na ostrově, kde věznili Marii, královnu Skotů",
+				"is": "Kastali á eyju þar sem María Skotadrottning var fangi",
+				"de": "Eine Burg auf einer Insel, wo Maria Stuart gefangen war"
+			},
+			"local": "Loch Leven Castle"
+		}
+	],
+	"Elgin": [
+		{
+			"kind": "elgin_cathedral",
+			"name": {
+				"pl": "Ruiny katedry w Elgin",
+				"en": "Elgin Cathedral",
+				"cs": "Zřícenina katedrály v Elginu",
+				"is": "Dómkirkjurústirnar í Elgin",
+				"de": "Kathedrale von Elgin"
+			},
+			"desc": {
+				"pl": "Nazywano ją Latarnią Północy, dziś zamiast dachu ma niebo",
+				"en": "Once called the Lantern of the North, now it has the sky for a roof",
+				"cs": "Říkalo se jí Lucerna severu, dnes má místo střechy nebe",
+				"is": "Kölluð Lukt norðursins, nú er himinninn þakið hennar",
+				"de": "Einst Laterne des Nordens genannt, heute ist der Himmel ihr Dach"
+			},
+			"local": "Elgin Cathedral"
+		}
+	],
+	"Kingston upon Thames": [
+		{
+			"kind": "out_of_order_phoneboxes",
+			"name": {
+				"pl": "Rzeźba „Out of Order”",
+				"en": "Out of Order",
+				"cs": "Socha „Out of Order“",
+				"is": "Listaverkið „Out of Order“",
+				"de": "Skulptur „Out of Order“"
+			},
+			"desc": {
+				"pl": "Dwanaście czerwonych budek telefonicznych przewraca się jak domino",
+				"en": "Twelve red telephone boxes toppling over like dominoes",
+				"cs": "Dvanáct červených telefonních budek padá jako kostky domina",
+				"is": "Tólf rauðir símaklefar falla hver á annan eins og dómínókubbar",
+				"de": "Zwölf rote Telefonzellen kippen um wie Dominosteine"
+			},
+			"local": "Out of Order"
+		}
+	],
+	"Chichester": [
+		{
+			"kind": "chichester_market_cross",
+			"name": {
+				"pl": "Krzyż targowy w Chichester",
+				"en": "Chichester Cross",
+				"cs": "Tržní kříž v Chichesteru",
+				"is": "Markaðskrossinn í Chichester",
+				"de": "Marktkreuz von Chichester"
+			},
+			"desc": {
+				"pl": "Kamienna altana z zegarem stoi na środku miasta od ponad 500 lat",
+				"en": "A stone shelter with a clock, in the town centre for over 500 years",
+				"cs": "Kamenný altán s hodinami stojí uprostřed města přes 500 let",
+				"is": "Steinskýli með klukku sem hefur staðið í miðbænum í 500 ár",
+				"de": "Ein steinerner Pavillon mit Uhr, seit über 500 Jahren mitten in der Stadt"
+			},
+			"local": "Chichester Cross"
+		}
+	],
+	"Buckfastleigh": [
+		{
+			"kind": "south_devon_steam_train",
+			"name": {
+				"pl": "Parowóz South Devon Railway",
+				"en": "South Devon Railway steam train",
+				"cs": "Parní vlak South Devon Railway",
+				"is": "Gufulestin á South Devon Railway",
+				"de": "Dampfzug der South Devon Railway"
+			},
+			"desc": {
+				"pl": "Zielona lokomotywa parowa wciąż wozi pasażerów wzdłuż rzeki",
+				"en": "A green steam engine still pulls passengers along the river",
+				"cs": "Zelená parní lokomotiva dodnes vozí cestující podél řeky",
+				"is": "Græn gufueimreið dregur enn farþega meðfram ánni",
+				"de": "Eine grüne Dampflok fährt noch heute Fahrgäste am Fluss entlang"
+			},
+			"local": "South Devon Railway"
+		}
+	],
+	"Reading": [
+		{
+			"kind": "forbury_lion",
+			"name": {
+				"pl": "Lew z Forbury",
+				"en": "The Forbury Lion",
+				"cs": "Lev ve Forbury",
+				"is": "Ljónið í Forbury",
+				"de": "Der Forbury-Löwe"
+			},
+			"desc": {
+				"pl": "Ogromny żeliwny lew, jeden z największych posągów lwa na świecie",
+				"en": "A huge cast-iron lion, one of the biggest lion statues in the world",
+				"cs": "Obrovský litinový lev, jedna z největších soch lva na světě",
+				"is": "Risastórt ljón úr steypujárni, ein stærsta ljónastytta í heimi",
+				"de": "Ein riesiger Löwe aus Gusseisen, eine der größten Löwenstatuen der Welt"
+			},
+			"local": "Forbury Lion"
+		}
+	],
+	"Milton Keynes": [
+		{
+			"kind": "concrete_cows",
+			"name": {
+				"pl": "Betonowe krowy",
+				"en": "The Concrete Cows",
+				"cs": "Betonové krávy",
+				"is": "Steinsteypukýrnar",
+				"de": "Die Betonkühe"
+			},
+			"desc": {
+				"pl": "Łaciate krowy z betonu pasą się tu na łące i nigdy nie muczą",
+				"en": "Black-and-white cows made of concrete graze here and never moo",
+				"cs": "Strakaté krávy z betonu se tu pasou na louce a nikdy nebučí",
+				"is": "Svartflekkóttar kýr úr steypu eru hér á beit en baula aldrei",
+				"de": "Gefleckte Kühe aus Beton grasen hier und muhen nie"
+			},
+			"local": "Concrete Cows"
+		}
+	],
+	"Colchester": [
+		{
+			"kind": "colchester_castle",
+			"name": {
+				"pl": "Zamek w Colchester",
+				"en": "Colchester Castle",
+				"cs": "Hrad Colchester",
+				"is": "Colchester-kastali",
+				"de": "Colchester Castle"
+			},
+			"desc": {
+				"pl": "Największa normańska wieża w Europie, zbudowana z rzymskich cegieł",
+				"en": "The biggest Norman keep in Europe, built with Roman bricks",
+				"cs": "Největší normanská věž v Evropě, postavená z římských cihel",
+				"is": "Stærsti normanski kastalaturn í Evrópu, hlaðinn úr rómverskum múrsteini",
+				"de": "Der größte normannische Bergfried Europas, aus römischen Ziegeln gebaut"
+			},
+			"local": "Colchester Castle"
+		}
+	],
+	"Middlesbrough": [
+		{
+			"kind": "tees_transporter_bridge",
+			"name": {
+				"pl": "Most przeładunkowy nad Tees",
+				"en": "Tees Transporter Bridge",
+				"cs": "Transbordér přes Tees",
+				"is": "Ferjubrúin yfir Tees",
+				"de": "Schwebefähre über den Tees"
+			},
+			"desc": {
+				"pl": "Gondola zawieszona na linach przewozi auta i ludzi przez rzekę",
+				"en": "A gondola hanging on cables carries cars and people over the river",
+				"cs": "Gondola zavěšená na lanech převáží auta a lidi přes řeku",
+				"is": "Kláfur sem hangir í vírum flytur bíla og fólk yfir ána",
+				"de": "Eine Gondel an Seilen bringt Autos und Menschen über den Fluss"
+			},
+			"local": "Tees Transporter Bridge"
+		}
+	],
+	"Aberystwyth": [
+		{
+			"kind": "aberystwyth_cliff_railway",
+			"name": {
+				"pl": "Kolejka na klif w Aberystwyth",
+				"en": "Aberystwyth Cliff Railway",
+				"cs": "Lanovka na útes v Aberystwyth",
+				"is": "Klettabrautin í Aberystwyth",
+				"de": "Standseilbahn von Aberystwyth"
+			},
+			"desc": {
+				"pl": "Dwa małe wagoniki wspinają się po stromym zboczu nad morzem",
+				"en": "Two little cars climb a steep hill high above the sea",
+				"cs": "Dva malé vozíky šplhají po strmém svahu nad mořem",
+				"is": "Tveir litlir vagnar klifra upp bratta hlíð hátt yfir sjónum",
+				"de": "Zwei kleine Wagen klettern einen steilen Hang über dem Meer hinauf"
+			},
+			"local": "Aberystwyth Cliff Railway"
+		}
+	],
+	"Gloucester": [
+		{
+			"kind": "gloucester_cathedral",
+			"name": {
+				"pl": "Katedra w Gloucester",
+				"en": "Gloucester Cathedral",
+				"cs": "Katedrála v Gloucesteru",
+				"is": "Dómkirkjan í Gloucester",
+				"de": "Kathedrale von Gloucester"
+			},
+			"desc": {
+				"pl": "W jej krużgankach kręcono sceny z filmów o Harrym Potterze",
+				"en": "Scenes from the Harry Potter films were filmed in its cloisters",
+				"cs": "V jejích ambitech se natáčely scény z filmů o Harrym Potterovi",
+				"is": "Atriði úr Harry Potter-myndunum voru tekin upp í krossgöngum hennar",
+				"de": "In ihrem Kreuzgang wurden Szenen der Harry-Potter-Filme gedreht"
+			},
+			"local": "Gloucester Cathedral"
+		}
+	],
+	"Loughborough": [
+		{
+			"kind": "loughborough_carillon",
+			"name": {
+				"pl": "Wieża z karylionem w Loughborough",
+				"en": "Loughborough Carillon",
+				"cs": "Zvonkohra v Loughborough",
+				"is": "Klukknaspilið í Loughborough",
+				"de": "Glockenspielturm von Loughborough"
+			},
+			"desc": {
+				"pl": "Wysoka ceglana wieża, na szczycie gra 47 dzwonów",
+				"en": "A tall brick tower with 47 bells playing tunes at the top",
+				"cs": "Vysoká cihlová věž, na jejímž vrcholu hraje 47 zvonů",
+				"is": "Hár múrsteinsturn þar sem 47 bjöllur spila lög efst uppi",
+				"de": "Ein hoher Backsteinturm, oben spielen 47 Glocken Melodien"
+			},
+			"local": "Loughborough Carillon"
+		}
+	],
+	"Moffat": [
+		{
+			"kind": "moffat_ram",
+			"name": {
+				"pl": "Baran z Moffat",
+				"en": "The Moffat Ram",
+				"cs": "Beran z Moffatu",
+				"is": "Hrúturinn í Moffat",
+				"de": "Der Widder von Moffat"
+			},
+			"desc": {
+				"pl": "Brązowy baran na fontannie przypomina, że to miasto owczarzy",
+				"en": "A bronze ram on a fountain: this was a town of sheep farmers",
+				"cs": "Bronzový beran na kašně připomíná, že tu žili chovatelé ovcí",
+				"is": "Hrútur úr bronsi á gosbrunni minnir á fjárbændurna í bænum",
+				"de": "Ein Bronzewidder auf einem Brunnen erinnert an die Schafzüchter"
+			},
+			"local": "Moffat Ram"
+		}
+	],
+	"Dunblane": [
+		{
+			"kind": "dunblane_gold_postbox",
+			"name": {
+				"pl": "Złota skrzynka pocztowa",
+				"en": "The Gold Postbox",
+				"cs": "Zlatá poštovní schránka",
+				"is": "Gullni póstkassinn",
+				"de": "Der goldene Briefkasten"
+			},
+			"desc": {
+				"pl": "Pomalowano ją na złoto dla tenisisty Andy'ego Murraya stąd",
+				"en": "Painted gold for Andy Murray, the tennis champion from this town",
+				"cs": "Natřeli ji zlatě pro tenistu Andyho Murrayho, který je odsud",
+				"is": "Málaður gylltur fyrir tennismeistarann Andy Murray héðan úr bænum",
+				"de": "Golden bemalt für Andy Murray, den Tennisstar aus dieser Stadt"
+			},
+			"local": "Gold Postbox"
+		}
+	],
+	"Carrbridge": [
+		{
+			"kind": "carrbridge_packhorse_bridge",
+			"name": {
+				"pl": "Stary most w Carrbridge",
+				"en": "Carrbridge Packhorse Bridge",
+				"cs": "Starý most v Carrbridge",
+				"is": "Gamla brúin í Carrbridge",
+				"de": "Alte Brücke von Carrbridge"
+			},
+			"desc": {
+				"pl": "Wąski kamienny łuk ma ponad 300 lat, jeździły po nim konie juczne",
+				"en": "A thin stone arch over 300 years old, once crossed by packhorses",
+				"cs": "Úzký kamenný oblouk starý přes 300 let, chodili po něm soumaři",
+				"is": "Mjór steinbogi, yfir 300 ára, sem klyfjahestar fóru eitt sinn yfir",
+				"de": "Ein schmaler Steinbogen, über 300 Jahre alt, einst für Packpferde"
+			},
+			"local": "Carrbridge Packhorse Bridge"
+		}
+	],
+	"Fort William": [
+		{
+			"kind": "ben_nevis",
+			"name": {"pl": "Ben Nevis", "en": "Ben Nevis", "cs": "Ben Nevis", "is": "Ben Nevis", "de": "Ben Nevis"},
+			"desc": {
+				"pl": "Najwyższa góra Wielkiej Brytanii, śnieg leży na niej aż do lata",
+				"en": "The highest mountain in Britain, with snow on top until summer",
+				"cs": "Nejvyšší hora Británie, sníh na ní leží až do léta",
+				"is": "Hæsta fjall Bretlands, með snjó á toppnum fram á sumar",
+				"de": "Der höchste Berg Großbritanniens, mit Schnee bis in den Sommer"
+			},
+			"local": "Ben Nevis (Beinn Nibheis)"
+		}
+	],
+	"Spean Bridge": [
+		{
+			"kind": "commando_memorial",
+			"name": {
+				"pl": "Pomnik Komandosów",
+				"en": "The Commando Memorial",
+				"cs": "Památník komand",
+				"is": "Minnisvarði sérsveitarmanna",
+				"de": "Commando Memorial"
+			},
+			"desc": {
+				"pl": "Trzech żołnierzy z brązu patrzy na góry, gdzie kiedyś ćwiczyli",
+				"en": "Three bronze soldiers gaze at the hills where they once trained",
+				"cs": "Tři bronzoví vojáci hledí na hory, kde kdysi cvičili",
+				"is": "Þrír hermenn úr bronsi horfa til fjallanna þar sem þeir æfðu",
+				"de": "Drei Soldaten aus Bronze blicken auf die Berge, wo sie einst übten"
+			},
+			"local": "Commando Memorial"
+		}
+	],
+	"Dumbarton": [
+		{
+			"kind": "dumbarton_castle",
+			"name": {
+				"pl": "Zamek Dumbarton",
+				"en": "Dumbarton Castle",
+				"cs": "Hrad Dumbarton",
+				"is": "Dumbarton-kastali",
+				"de": "Dumbarton Castle"
+			},
+			"desc": {
+				"pl": "Zamek na skale z dawnego wulkanu, która ma dwa czubki",
+				"en": "A castle on the rock of an old volcano with two peaks",
+				"cs": "Hrad na skále ze staré sopky, která má dva vrcholky",
+				"is": "Kastali á kletti úr gömlu eldfjalli með tvo tinda",
+				"de": "Eine Burg auf dem Felsen eines alten Vulkans mit zwei Gipfeln"
+			},
+			"local": "Dumbarton Castle"
+		}
+	],
+	"Berwick-upon-Tweed": [
+		{
+			"kind": "royal_border_bridge",
+			"name": {
+				"pl": "Royal Border Bridge",
+				"en": "The Royal Border Bridge",
+				"cs": "Royal Border Bridge",
+				"is": "Royal Border Bridge",
+				"de": "Royal Border Bridge"
+			},
+			"desc": {
+				"pl": "Pociągi jadą tu po 28 kamiennych łukach wysoko nad rzeką",
+				"en": "Trains cross the river here on 28 tall stone arches",
+				"cs": "Vlaky tu přejíždějí řeku po 28 vysokých kamenných obloucích",
+				"is": "Lestir fara hér yfir ána á 28 háum steinbogum",
+				"de": "Züge fahren hier auf 28 hohen Steinbögen über den Fluss"
+			},
+			"local": "Royal Border Bridge"
+		}
+	],
+	"Forfar": [
+		{
+			"kind": "forfar_bridie",
+			"name": {
+				"pl": "Bridie z Forfar",
+				"en": "The Forfar Bridie",
+				"cs": "Bridie z Forfaru",
+				"is": "Forfar-bridie",
+				"de": "Forfar Bridie"
+			},
+			"desc": {
+				"pl": "Pieróg w kształcie podkowy, nadziany mięsem i cebulką",
+				"en": "A horseshoe-shaped pastry filled with meat and onion",
+				"cs": "Taštička ve tvaru podkovy plněná masem a cibulkou",
+				"is": "Skeifulaga baka fyllt með kjöti og lauk",
+				"de": "Eine Teigtasche in Hufeisenform, gefüllt mit Fleisch und Zwiebeln"
+			},
+			"local": "Forfar Bridie"
+		}
+	],
+	"Ilkley": [
+		{
+			"kind": "cow_and_calf",
+			"name": {
+				"pl": "Krowa i Cielę",
+				"en": "The Cow and Calf",
+				"cs": "Kráva a tele",
+				"is": "Kýrin og kálfurinn",
+				"de": "Cow and Calf"
+			},
+			"desc": {
+				"pl": "Wielka skała Krowa i mniejsza Cielę na wrzosowisku",
+				"en": "A huge rock called the Cow and a smaller Calf on the moor",
+				"cs": "Obří skála zvaná Kráva a menší Tele na vřesovišti",
+				"is": "Risastór klettur sem heitir Kýrin og minni Kálfur á heiðinni",
+				"de": "Ein riesiger Fels namens Kuh und ein kleineres Kalb im Moor"
+			},
+			"local": "Cow and Calf Rocks"
+		}
+	],
+	"Skipton": [
+		{
+			"kind": "skipton_castle",
+			"name": {
+				"pl": "Zamek Skipton",
+				"en": "Skipton Castle",
+				"cs": "Hrad Skipton",
+				"is": "Skipton-kastali",
+				"de": "Skipton Castle"
+			},
+			"desc": {
+				"pl": "Ma ponad 900 lat, a na bramie z kamienia stoi napis DESORMAIS",
+				"en": "Over 900 years old, with DESORMAIS in stone on its gate",
+				"cs": "Je mu přes 900 let a na bráně je kamenný nápis DESORMAIS",
+				"is": "Yfir 900 ára gamall, með DESORMAIS úr steini á hliðinu",
+				"de": "Über 900 Jahre alt, mit DESORMAIS aus Stein über dem Tor"
+			},
+			"local": "Skipton Castle"
+		}
+	],
+	"Goole": [
+		{
+			"kind": "goole_water_towers",
+			"name": {
+				"pl": "Solniczka i Pieprzniczka",
+				"en": "The Salt and Pepper Pots",
+				"cs": "Slánka a pepřenka",
+				"is": "Salt- og piparstaukarnir",
+				"de": "Salz- und Pfefferstreuer"
+			},
+			"desc": {
+				"pl": "Dwie wieże ciśnień: biała jak sól i ceglasta jak pieprz",
+				"en": "Two water towers: a white one like salt and a red one like pepper",
+				"cs": "Dvě vodárenské věže: bílá jako sůl a cihlová jako pepř",
+				"is": "Tveir vatnsturnar: hvítur eins og salt og rauður eins og pipar",
+				"de": "Zwei Wassertürme: ein weißer wie Salz und ein roter wie Pfeffer"
+			},
+			"local": "Goole Water Towers"
+		}
+	],
+	"Newmarket": [
+		{
+			"kind": "newmarket_racehorse",
+			"name": {
+				"pl": "Konie wyścigowe z Newmarket",
+				"en": "Newmarket's Racehorses",
+				"cs": "Dostihoví koně z Newmarketu",
+				"is": "Kappreiðahestar Newmarket",
+				"de": "Rennpferde von Newmarket"
+			},
+			"desc": {
+				"pl": "Stolica wyścigów konnych, co rano galopują tu setki koni",
+				"en": "The home of horse racing, hundreds of horses gallop here every morning",
+				"cs": "Domov dostihů, každé ráno tu cválají stovky koní",
+				"is": "Heimili kappreiða, hundruð hesta stökkva hér á hverjum morgni",
+				"de": "Die Heimat des Pferderennens, jeden Morgen galoppieren hier Hunderte Pferde"
+			},
+			"local": "Newmarket, Home of Horseracing"
+		}
+	],
+	"Bridgwater": [
+		{
+			"kind": "willow_man",
+			"name": {
+				"pl": "Wiklinowy Człowiek",
+				"en": "The Willow Man",
+				"cs": "Vrbový muž",
+				"is": "Víðimaðurinn",
+				"de": "Der Weidenmann"
+			},
+			"desc": {
+				"pl": "Olbrzym upleciony z wikliny kroczy obok autostrady",
+				"en": "A giant woven from willow strides beside the motorway",
+				"cs": "Obr upletený z proutí kráčí vedle dálnice",
+				"is": "Risi fléttaður úr víðigreinum gengur við hraðbrautina",
+				"de": "Ein aus Weidenruten geflochtener Riese schreitet neben der Autobahn"
+			},
+			"local": "The Willow Man"
+		}
+	],
+	"Lutterworth": [
+		{
+			"kind": "gloster_e28",
+			"name": {
+				"pl": "Gloster E.28/39",
+				"en": "The Gloster E.28/39",
+				"cs": "Gloster E.28/39",
+				"is": "Gloster E.28/39",
+				"de": "Gloster E.28/39"
+			},
+			"desc": {
+				"pl": "Pierwszy brytyjski odrzutowiec, jego silnik powstał w Lutterworth",
+				"en": "Britain's first jet plane, its engine was made in Lutterworth",
+				"cs": "První britské proudové letadlo, jeho motor vznikl v Lutterworthu",
+				"is": "Fyrsta breska þotan, hreyfillinn var smíðaður í Lutterworth",
+				"de": "Großbritanniens erstes Düsenflugzeug, sein Triebwerk entstand in Lutterworth"
+			},
+			"local": "Whittle Memorial"
+		}
+	],
+	"Abergele": [
+		{
+			"kind": "gwrych_castle",
+			"name": {
+				"pl": "Zamek Gwrych",
+				"en": "Gwrych Castle",
+				"cs": "Hrad Gwrych",
+				"is": "Gwrych-kastali",
+				"de": "Gwrych Castle"
+			},
+			"desc": {
+				"pl": "Bajkowy zamek z mnóstwem wież, który wspina się po zboczu",
+				"en": "A fairy-tale castle full of towers climbing up the hillside",
+				"cs": "Pohádkový hrad plný věží, který šplhá do svahu",
+				"is": "Ævintýrakastali fullur af turnum sem klifrar upp hlíðina",
+				"de": "Ein Märchenschloss voller Türme, das den Hang hinaufklettert"
+			},
+			"local": "Castell Gwrych"
+		}
+	],
+	"Faringdon": [
+		{
+			"kind": "faringdon_folly",
+			"name": {
+				"pl": "Wieża Faringdon Folly",
+				"en": "Faringdon Folly",
+				"cs": "Věž Faringdon Folly",
+				"is": "Faringdon Folly-turninn",
+				"de": "Faringdon Folly"
+			},
+			"desc": {
+				"pl": "Wieża dla zabawy, a jej budowca farbował gołębie na kolorowo",
+				"en": "A tower built just for fun, its builder dyed his doves in colours",
+				"cs": "Věž postavená jen pro radost, stavitel barvil holuby nabarevno",
+				"is": "Turn byggður bara til gamans, smiðurinn litaði dúfurnar sínar",
+				"de": "Ein Turm nur zum Spaß, sein Erbauer färbte seine Tauben bunt"
+			},
+			"local": "Faringdon Folly Tower"
+		}
 	]
 }

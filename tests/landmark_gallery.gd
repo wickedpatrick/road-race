@@ -1,5 +1,6 @@
 extends Node2D
-## Dev-only: every landmark painter on one screen. Arg: page (0, 1...) or kinds separated by commas.
+## Dev-only: every landmark painter on one screen. Arg: page (0, 1...) or kinds separated by commas; RR_SIZES may
+## name a JSON file of sizes for kinds not in rules.json yet.
 func _draw() -> void:
 	draw_rect(Rect2(0, 0, 960, 540), Color("9fc6e6"))
 	var kinds: Array = GameData.rules().landmark_sizes.keys()
@@ -10,9 +11,12 @@ func _draw() -> void:
 		var page := int(a[0]) if a.size() > 0 else 0
 		kinds = kinds.slice(page * 24, page * 24 + 24)
 	var font := ThemeDB.fallback_font
+	var extra := {} # RR_SIZES: a JSON file {kind: [w, h]} for kinds not in rules.json yet
+	if OS.get_environment("RR_SIZES") != "":
+		extra = GameData.load_json(OS.get_environment("RR_SIZES"))
 	for i in kinds.size():
 		var k: String = kinds[i]
-		var sz: Array = Landmarks.size(k)
+		var sz: Array = extra[k] if extra.has(k) else Landmarks.size(k)
 		var cell := Vector2(160, 135)
 		var o := Vector2((i % 6) * cell.x, (i / 6) * cell.y)
 		draw_rect(Rect2(o + Vector2(0, 100), Vector2(cell.x, 35)), Color("7fae5a"))

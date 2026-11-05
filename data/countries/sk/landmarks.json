@@ -430,5 +430,205 @@
 			},
 			"local": "Hrad Krásna Hôrka"
 		}
+	],
+	"Senec": [
+		{
+			"kind": "senec_sunny_lakes",
+			"name": {
+				"pl": "Słoneczne Jeziora",
+				"en": "The Sunny Lakes",
+				"cs": "Slunečná jezera",
+				"is": "Sólarvötnin",
+				"de": "Sonnenseen"
+			},
+			"desc": {
+				"pl": "Latem są tu plaże, parasole, łódki i kąpiel w ciepłej wodzie",
+				"en": "In summer there are beaches, sun umbrellas, boats and warm water to swim in",
+				"cs": "V létě jsou tu pláže, slunečníky, loďky a koupání v teplé vodě",
+				"is": "Á sumrin eru hér strendur, sólhlífar, bátar og hlýtt vatn til að synda í",
+				"de": "Im Sommer gibt es hier Strände, Sonnenschirme, Boote und warmes Badewasser"
+			},
+			"local": "Slnečné jazerá"
+		}
+	],
+	"Nové Mesto nad Váhom": [
+		{
+			"kind": "beckov_castle",
+			"name": {
+				"pl": "Zamek Beckov",
+				"en": "Beckov Castle",
+				"cs": "Hrad Beckov",
+				"is": "Beckov-kastali",
+				"de": "Burg Beckov"
+			},
+			"desc": {
+				"pl": "Ruiny zamku stoją na stromej białej skale nad rzeką Wag",
+				"en": "The castle ruins stand on a steep white rock above the river Váh",
+				"cs": "Zřícenina hradu stojí na strmé bílé skále nad řekou Váh",
+				"is": "Kastalarústirnar standa á brattri hvítri klöpp yfir ánni Váh",
+				"de": "Die Burgruine steht auf einem steilen weißen Felsen über der Waag"
+			},
+			"local": "Beckovský hrad"
+		}
+	],
+	"Púchov": [
+		{
+			"kind": "puchov_tyres",
+			"name": {
+				"pl": "Opony z Púchova",
+				"en": "Tyres from Púchov",
+				"cs": "Pneumatiky z Púchova",
+				"is": "Dekk frá Púchov",
+				"de": "Reifen aus Púchov"
+			},
+			"desc": {
+				"pl": "W tutejszej fabryce od ponad 70 lat robi się opony do aut",
+				"en": "The factory here has been making car tyres for over 70 years",
+				"cs": "Zdejší továrna vyrábí pneumatiky do aut už přes 70 let",
+				"is": "Verksmiðjan hér hefur búið til bíldekk í meira en 70 ár",
+				"de": "Die Fabrik hier macht seit über 70 Jahren Autoreifen"
+			},
+			"local": "Pneumatiky Matador"
+		}
+	],
+	"Považská Bystrica": [
+		{
+			"kind": "manin_gorge",
+			"name": {
+				"pl": "Wąwóz Manín",
+				"en": "The Manín Gorge",
+				"cs": "Manínská soutěska",
+				"is": "Manín-gljúfrið",
+				"de": "Maniner Klamm"
+			},
+			"desc": {
+				"pl": "Skalne ściany stoją tak blisko, że ledwo mieści się między nimi droga",
+				"en": "The rock walls are so close that a road only just fits between them",
+				"cs": "Skalní stěny jsou tak blízko, že se mezi ně silnice sotva vejde",
+				"is": "Klettaveggirnir eru svo nálægt að vegurinn kemst varla á milli",
+				"de": "Die Felswände stehen so eng, dass die Straße gerade so hindurchpasst"
+			},
+			"local": "Manínska tiesňava"
+		}
+	],
+	"Ružomberok": [
+		{
+			"kind": "vlkolinec_belfry",
+			"name": {
+				"pl": "Dzwonnica w Vlkolíncu",
+				"en": "The Vlkolínec Belfry",
+				"cs": "Zvonice ve Vlkolínci",
+				"is": "Klukknaportið í Vlkolínec",
+				"de": "Glockenturm in Vlkolínec"
+			},
+			"desc": {
+				"pl": "Drewniana dzwonnica w górskiej wiosce z chatkami z bali",
+				"en": "A wooden bell tower in a mountain village of log cottages",
+				"cs": "Dřevěná zvonice v horské vesničce s roubenkami",
+				"is": "Klukknaturn úr tré í fjallaþorpi með bjálkahúsum",
+				"de": "Ein hölzerner Glockenturm in einem Bergdorf aus Blockhäusern"
+			},
+			"local": "Zvonica vo Vlkolínci"
+		}
+	],
+	"Harmanec": [
+		{
+			"kind": "harmanec_bat_cave",
+			"name": {
+				"pl": "Jaskinia Harmanecka",
+				"en": "Harmanec Cave",
+				"cs": "Harmanecká jeskyně",
+				"is": "Harmanec-hellirinn",
+				"de": "Harmanec-Höhle"
+			},
+			"desc": {
+				"pl": "Zimą śpi w niej mnóstwo nietoperzy, wiszących głową w dół",
+				"en": "In winter lots of bats sleep in it, hanging upside down",
+				"cs": "V zimě v ní spí spousta netopýrů, kteří visí hlavou dolů",
+				"is": "Á veturna sofa þar margar leðurblökur og hanga á hvolfi",
+				"de": "Im Winter schlafen hier viele Fledermäuse, kopfüber hängend"
+			},
+			"local": "Harmanecká jaskyňa"
+		}
+	],
+	"Turčianske Teplice": [
+		{
+			"kind": "turcianske_blue_bath",
+			"name": {
+				"pl": "Niebieska Łaźnia",
+				"en": "The Blue Bath",
+				"cs": "Modrá lázeň",
+				"is": "Bláa baðið",
+				"de": "Das Blaue Bad"
+			},
+			"desc": {
+				"pl": "Stary niebieski budynek uzdrowiska z kopułą i ciepłą wodą",
+				"en": "An old blue spa house with a dome and warm spring water",
+				"cs": "Stará modrá lázeňská budova s kupolí a teplou vodou",
+				"is": "Gamalt blátt heilsulindarhús með hvelfingu og heitu vatni",
+				"de": "Ein altes blaues Kurhaus mit Kuppel und warmem Quellwasser"
+			},
+			"local": "Modrý kúpeľ"
+		}
+	],
+	"Sliač": [
+		{
+			"kind": "sliac_f16",
+			"name": {
+				"pl": "Lotnisko wojskowe Sliač",
+				"en": "Sliač Air Base",
+				"cs": "Letecká základna Sliač",
+				"is": "Herflugvöllurinn í Sliač",
+				"de": "Fliegerhorst Sliač"
+			},
+			"desc": {
+				"pl": "Stąd startują szybkie słowackie myśliwce F-16",
+				"en": "Fast Slovak F-16 jets take off from here",
+				"cs": "Odsud startují rychlé slovenské stíhačky F-16",
+				"is": "Hraðfleygar slóvakískar F-16 þotur taka á loft héðan",
+				"de": "Hier starten schnelle slowakische F-16-Jets"
+			},
+			"local": "Letecká základňa Sliač"
+		}
+	],
+	"Slanec": [
+		{
+			"kind": "slanec_castle",
+			"name": {
+				"pl": "Zamek Slanec",
+				"en": "Slanec Castle",
+				"cs": "Hrad Slanec",
+				"is": "Slanec-kastali",
+				"de": "Burg Slanec"
+			},
+			"desc": {
+				"pl": "Ruiny zamku na szczycie starego, dawno wygasłego wulkanu",
+				"en": "Castle ruins on top of an old volcano that went out long ago",
+				"cs": "Zřícenina hradu na vrcholu staré, dávno vyhaslé sopky",
+				"is": "Kastalarústir á toppi gamals eldfjalls sem slokknaði fyrir löngu",
+				"de": "Eine Burgruine auf einem alten, längst erloschenen Vulkan"
+			},
+			"local": "Slanský hrad"
+		}
+	],
+	"Veľký Meder": [
+		{
+			"kind": "velky_meder_slides",
+			"name": {
+				"pl": "Termy Veľký Meder",
+				"en": "Veľký Meder Thermal Baths",
+				"cs": "Termální koupaliště Veľký Meder",
+				"is": "Hveralaugin í Veľký Meder",
+				"de": "Thermalbad Veľký Meder"
+			},
+			"desc": {
+				"pl": "Gorąca woda płynie tu prosto spod ziemi, a do basenu zjeżdża się rurą",
+				"en": "Hot water comes straight from under the ground, and slides splash into the pool",
+				"cs": "Horká voda tu teče přímo zpod země a do bazénu se jezdí po tobogánu",
+				"is": "Heitt vatn kemur beint upp úr jörðinni og rennibrautir enda í lauginni",
+				"de": "Heißes Wasser kommt direkt aus der Erde, und Rutschen platschen ins Becken"
+			},
+			"local": "Termálne kúpalisko Veľký Meder"
+		}
 	]
 }

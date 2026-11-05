@@ -354,5 +354,125 @@
 			},
 			"local": "Glaumbær"
 		}
+	],
+	"Reykholt": [
+		{
+			"kind": "fridheimar_tomato",
+			"name": {
+				"pl": "Szklarnie Friðheimar",
+				"en": "Friðheimar Greenhouses",
+				"cs": "Skleníky Friðheimar",
+				"is": "Gróðurhúsin á Friðheimum",
+				"de": "Gewächshäuser von Friðheimar"
+			},
+			"desc": {
+				"pl": "Pomidory rosną tu pod lampami, a ciepło daje gorąca woda z ziemi",
+				"en": "Tomatoes grow here under lamps, warmed by hot water from the ground",
+				"cs": "Rajčata tu rostou pod lampami a hřeje je horká voda ze země",
+				"is": "Tómatar vaxa hér undir lömpum og heitt vatn úr jörðinni hitar þá",
+				"de": "Tomaten wachsen hier unter Lampen, gewärmt von heißem Wasser aus der Erde"
+			},
+			"local": "Friðheimar"
+		}
+	],
+	"Hella": [
+		{
+			"kind": "icelandic_horse",
+			"name": {
+				"pl": "Konik islandzki",
+				"en": "The Icelandic Horse",
+				"cs": "Islandský kůň",
+				"is": "Íslenski hesturinn",
+				"de": "Islandpferd"
+			},
+			"desc": {
+				"pl": "Mały, ale silny konik z gęstą grzywą, który umie aż pięć chodów",
+				"en": "A small but strong horse with a thick mane that knows five gaits",
+				"cs": "Malý, ale silný kůň s hustou hřívou, který umí hned pět chodů",
+				"is": "Lítill en sterkur hestur með þykkt fax sem kann fimm gangtegundir",
+				"de": "Ein kleines, starkes Pferd mit dicker Mähne, das fünf Gangarten kann"
+			},
+			"local": "Íslenski hesturinn"
+		}
+	],
+	"Kirkjubæjarklaustur": [
+		{
+			"kind": "kirkjugolf",
+			"name": {
+				"pl": "Kościelna Posadzka",
+				"en": "The Church Floor",
+				"cs": "Kostelní podlaha",
+				"is": "Kirkjugólf",
+				"de": "Der Kirchenboden"
+			},
+			"desc": {
+				"pl": "Wygląda jak kafelki w kościele, ale to końce bazaltowych słupów",
+				"en": "It looks like church tiles, but it is the tops of basalt columns",
+				"cs": "Vypadá jako dlaždice v kostele, ale jsou to konce čedičových sloupů",
+				"is": "Það líkist flísum í kirkju en eru endar á stuðlabergssúlum",
+				"de": "Es sieht aus wie Kirchenfliesen, sind aber die Enden von Basaltsäulen"
+			},
+			"local": "Kirkjugólf"
+		}
+	],
+	"Djúpivogur": [
+		{
+			"kind": "eggin_gledivik",
+			"name": {
+				"pl": "Jaja w Gleðivík",
+				"en": "The Eggs of Gleðivík",
+				"cs": "Vejce v Gleðivíku",
+				"is": "Eggin í Gleðivík",
+				"de": "Die Eier von Gleðivík"
+			},
+			"desc": {
+				"pl": "34 wielkie kamienne jaja, każde innego ptaka, który tu gniazduje",
+				"en": "34 big stone eggs, each one of a different bird that nests here",
+				"cs": "34 velkých kamenných vajec, každé od jiného ptáka, který tu hnízdí",
+				"is": "34 stór steinegg, hvert fyrir sinn fugl sem verpir hér",
+				"de": "34 große Steineier, jedes von einem anderen Vogel, der hier brütet"
+			},
+			"local": "Eggin í Gleðivík"
+		}
+	],
+	"Bifröst": [
+		{
+			"kind": "grabrok_crater",
+			"name": {
+				"pl": "Krater Grábrók",
+				"en": "Grábrók Crater",
+				"cs": "Kráter Grábrók",
+				"is": "Grábrók",
+				"de": "Krater Grábrók"
+			},
+			"desc": {
+				"pl": "Po schodkach można wejść na brzeg starego wulkanu i zajrzeć do środka",
+				"en": "Stairs take you up to the rim of an old volcano to peek inside",
+				"cs": "Po schodech vyjdeš na okraj staré sopky a nahlédneš dovnitř",
+				"is": "Stigar liggja upp á gígbarm gamals eldfjalls svo þú getur kíkt ofan í",
+				"de": "Treppen führen auf den Rand eines alten Vulkans, um hineinzuschauen"
+			},
+			"local": "Grábrók"
+		}
+	],
+	"Mosfellsbær": [
+		{
+			"kind": "alafoss_lopapeysa",
+			"name": {
+				"pl": "Islandzki sweter z Álafoss",
+				"en": "The Álafoss Wool Sweater",
+				"cs": "Islandský svetr z Álafossu",
+				"is": "Lopapeysa frá Álafossi",
+				"de": "Islandpullover aus Álafoss"
+			},
+			"desc": {
+				"pl": "W starej przędzalni robi się włóczkę na ciepłe swetry z owczej wełny",
+				"en": "The old mill makes yarn for warm sweaters from sheep's wool",
+				"cs": "Ve staré přádelně se z ovčí vlny dělá příze na teplé svetry",
+				"is": "Í gömlu ullarverksmiðjunni er spunnið band í hlýjar lopapeysur",
+				"de": "Die alte Spinnerei macht aus Schafwolle Garn für warme Pullover"
+			},
+			"local": "Álafoss"
+		}
 	]
 }
