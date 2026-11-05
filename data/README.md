@@ -77,7 +77,9 @@ without borders.
   prefix wins (e.g. blue M and green A roads in Great Britain); without it the Polish ones (red, yellow for DW).
 - `map`: the lat/lon box of the country map: `lon0`, `lon1`, `lat0`, `lat1`, and `lon_k` = cos(middle latitude),
   which keeps the country's shape. Optional `zoom` (> 1) draws the menu map that many times larger than its panel, and it scrolls
-  (follows the chosen city, drag or mouse wheel): for tall or crowded countries such as Great Britain.
+  (follows the chosen city, drag or mouse wheel): for tall or crowded countries such as Great Britain. Every menu map can
+  be dragged 10% of its size past its edges. Optional `labels: "auto"` puts each city name where it covers the fewest
+  roads, dots and names (a city's own `label` still wins); optional `dot_max` caps the city dots' radius (pixels).
 - `outline`: the border as `[lon, lat]` points; `outline_lines`: extra lines drawn with it (e.g. the Hel peninsula);
   optional `islands`: more land as `[lon, lat]` polygons (e.g. the Curonian Spit with Nida).
 

@@ -215,5 +215,19 @@
 		"cs": "Město s věží Space Needle obklopené vodou a horami",
 		"is": "Borg með Space Needle turninum, umkringd vatni og fjöllum",
 		"de": "Stadt mit dem Space Needle, umgeben von Wasser und Bergen"
+	},
+	"Billings": {
+		"pl": "Największe miasto Montany, pod piaskowcowymi klifami, w drodze do Yellowstone",
+		"en": "Montana's biggest city, below sandstone cliffs, on the way to Yellowstone",
+		"cs": "Největší město Montany pod pískovcovými útesy, na cestě do Yellowstonu",
+		"is": "Stærsta borg Montana undir sandsteinsklettum, á leiðinni til Yellowstone",
+		"de": "Montanas größte Stadt unter Sandsteinklippen, auf dem Weg nach Yellowstone"
+	},
+	"Spokane": {
+		"pl": "Miasto z huczącym wodospadem w samym środku centrum",
+		"en": "A city with a roaring waterfall right in the middle of downtown",
+		"cs": "Město s hučícím vodopádem přímo uprostřed centra",
+		"is": "Borg með drynjandi fossi í miðjum miðbænum",
+		"de": "Eine Stadt mit einem tosenden Wasserfall mitten in der Innenstadt"
 	}
 }

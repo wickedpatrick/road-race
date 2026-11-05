@@ -16,7 +16,7 @@ const GLASS := Color("3d5a78")
 static var MORE := [LandmarksDeA, LandmarksDeB, LandmarksDeC, LandmarksSk, LandmarksLt, LandmarksAtA, LandmarksAtB, LandmarksAtC,
 		LandmarksAtD, LandmarksDeT1, LandmarksDeT2, LandmarksDeT3, LandmarksGbT1, LandmarksGbT2, LandmarksGbT3, LandmarksAtT1,
 		LandmarksAtT2, LandmarksCzT1, LandmarksSkT1, LandmarksLtT1, LandmarksIsT1,
-		LandmarksUsA, LandmarksUsB, LandmarksUsC, LandmarksUsD, LandmarksUsE]
+		LandmarksUsA, LandmarksUsB, LandmarksUsC, LandmarksUsD, LandmarksUsE, LandmarksUsF]
 
 static var _cv
 static var _b: Vector2

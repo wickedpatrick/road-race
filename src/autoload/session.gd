@@ -26,11 +26,17 @@ var sharp_amount := 0.0
 var police_test := false
 ## test mode for the weather: every trip in this weather. ?pogoda=snow in the browser, -- --pogoda=fog on the desktop.
 var weather_test := ""
+## test mode for the cars: every car unlocked (the saved kilometres stay). ?auta in the browser, -- --auta on the desktop.
+var cars_test := false
 
 func _ready() -> void:
 	GameData.set_language(GameData.language_for(OS.get_locale())) # the device's language, English if the game lacks it
 	load_profile()
 	_read_test_flags()
+
+## Kilometres the cars are unlocked by: the driven ones, or no limit in the cars' test mode.
+func car_km() -> float:
+	return 1.0e9 if cars_test else total_km
 
 func stage() -> Dictionary:
 	var st := Route.build(from_city, to_city)
@@ -58,6 +64,8 @@ func _read_test_flags() -> void:
 				sharp_amount = kv[1].to_float()
 		elif kv[0] == "policja":
 			police_test = true
+		elif kv[0] == "auta":
+			cars_test = true
 		elif kv[0] == "pogoda" and kv.size() > 1 and Weather.KINDS.has(kv[1]):
 			weather_test = kv[1]
 
@@ -84,7 +92,7 @@ func load_profile() -> void:
 	GameData.current = country
 	_apply_place(places.get(country, {}))
 	var car: String = d.get("car_id", car_id)
-	car_id = car if CarStats.has(car) and Profile.is_unlocked(car, total_km) else CarStats.ids()[0]
+	car_id = car if CarStats.has(car) and Profile.is_unlocked(car, car_km()) else CarStats.ids()[0]
 
 ## The player's choice on the car screen; texts from the data are read again in the new language.
 func set_language(code: String) -> void:

@@ -239,5 +239,19 @@
 		"lon": -122.33,
 		"pop": 737,
 		"region": "Washington"
+	},
+	"billings": {
+		"name": "Billings",
+		"lat": 45.78,
+		"lon": -108.5,
+		"pop": 120,
+		"region": "Montana"
+	},
+	"spokane": {
+		"name": "Spokane",
+		"lat": 47.66,
+		"lon": -117.43,
+		"pop": 230,
+		"region": "Washington"
 	}
 }

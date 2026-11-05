@@ -862,5 +862,81 @@
 			},
 			"local": "Historic Route 66"
 		}
+	],
+	"Billings": [
+		{
+			"kind": "rimrocks",
+			"name": {
+				"pl": "Rimrocks",
+				"en": "The Rimrocks",
+				"cs": "Rimrocks",
+				"is": "Rimrocks",
+				"de": "Rimrocks"
+			},
+			"desc": {
+				"pl": "Wysokie złociste klify z piaskowca ciągną się nad miastem jak mur",
+				"en": "Tall golden sandstone cliffs run along the city like a wall",
+				"cs": "Vysoké zlatavé pískovcové útesy se táhnou nad městem jako zeď",
+				"is": "Háir gullnir sandsteinsklettar liggja meðfram borginni eins og veggur",
+				"de": "Hohe goldene Sandsteinklippen ziehen sich wie eine Mauer an der Stadt entlang"
+			},
+			"local": "The Rimrocks"
+		},
+		{
+			"kind": "old_faithful",
+			"name": {
+				"pl": "Old Faithful",
+				"en": "Old Faithful",
+				"cs": "Old Faithful",
+				"is": "Old Faithful",
+				"de": "Old Faithful"
+			},
+			"desc": {
+				"pl": "Gejzer w Yellowstone, który mniej więcej co półtorej godziny wyrzuca wrzącą wodę wysoko w niebo",
+				"en": "A geyser in Yellowstone that shoots boiling water high into the sky about every hour and a half",
+				"cs": "Gejzír v Yellowstonu, který zhruba každou hodinu a půl vystřelí vařící vodu vysoko k nebi",
+				"is": "Goshver í Yellowstone sem þeytir sjóðandi vatni hátt til himins á um það bil eins og hálfs tíma fresti",
+				"de": "Ein Geysir im Yellowstone, der etwa alle anderthalb Stunden kochendes Wasser hoch in den Himmel schießt"
+			},
+			"local": "Old Faithful"
+		}
+	],
+	"Spokane": [
+		{
+			"kind": "spokane_falls",
+			"name": {
+				"pl": "Wodospady Spokane",
+				"en": "Spokane Falls",
+				"cs": "Vodopády Spokane",
+				"is": "Spokane-fossar",
+				"de": "Spokane Falls"
+			},
+			"desc": {
+				"pl": "Wodospad huczy w centrum miasta, obok wieży zegarowej i pawilonu jak wielki stożek z lin",
+				"en": "A waterfall roars through downtown, by a clock tower and a pavilion like a giant cone of cables",
+				"cs": "Vodopád hučí v centru města vedle hodinové věže a pavilonu jako obří kužel z lan",
+				"is": "Foss drynur í miðbænum hjá klukkuturni og skála eins og risastórri keilu úr köðlum",
+				"de": "Ein Wasserfall tost mitten in der Stadt, neben einem Uhrturm und einem Pavillon wie ein riesiger Seilkegel"
+			},
+			"local": "Spokane Falls"
+		},
+		{
+			"kind": "red_wagon",
+			"name": {
+				"pl": "Czerwony wózek",
+				"en": "The Red Wagon",
+				"cs": "Červený vozík",
+				"is": "Rauði vagninn",
+				"de": "Der Rote Bollerwagen"
+			},
+			"desc": {
+				"pl": "Olbrzymi czerwony wózek-zabawka w parku nad rzeką, a jego dyszel to zjeżdżalnia",
+				"en": "A giant red toy wagon in Riverfront Park, and its handle is a slide",
+				"cs": "Obří červený dětský vozík v parku u řeky a jeho oj je skluzavka",
+				"is": "Risastór rauður leikfangavagn í Riverfront-garðinum og handfangið er rennibraut",
+				"de": "Ein riesiger roter Spielzeug-Bollerwagen im Riverfront Park, sein Griff ist eine Rutsche"
+			},
+			"local": "The Red Wagon"
+		}
 	]
 }

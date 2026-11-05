@@ -60,7 +60,9 @@
 		"lat0": 24.6,
 		"lat1": 49.6,
 		"lon_k": 0.79,
-		"zoom": 1.6
+		"zoom": 1.6,
+		"labels": "auto",
+		"dot_max": 7
 	},
 	"outline": [
 		[

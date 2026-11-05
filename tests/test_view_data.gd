@@ -49,7 +49,7 @@ func _test_scrolling_map(t) -> void:
 	t.check(gb.city_pos("london").distance_to(area.get_center()) < 120.0, "the map centres on the chosen city as far as it can")
 	gb.pan_by(Vector2(0, 100000))
 	var top := gb.project(GameData.country().map.lat1, GameData.country().map.lon0).y
-	t.check(top <= area.position.y + CountryMap.PAN_MARGIN + 0.5, "the map cannot be dragged off its panel")
+	t.check(top <= area.position.y + CountryMap.PAN_MARGIN + gb._content.y * CountryMap.PAN_EXTRA + 0.5, "the map cannot be dragged off its panel")
 	GameData.current = "pl"
 
 ## Area of the triangles a batch sent (keep_sent), and whether every point lies in `r`.

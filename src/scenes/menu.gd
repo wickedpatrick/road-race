@@ -176,7 +176,7 @@ func _unhandled_input(event: InputEvent) -> void:
 ## not saved: a trip started makes them the player's choice.
 func _keep_picks() -> void:
 	var car: String = CarStats.ids()[sel[0]]
-	if Profile.is_unlocked(car, Session.total_km):
+	if Profile.is_unlocked(car, Session.car_km()):
 		Session.car_id = car
 	if kind() == "dest" and dest_city != "":
 		Session.to_city = dest_city
@@ -199,7 +199,7 @@ func _next_language() -> void:
 func _confirm() -> void:
 	match kind():
 		"car":
-			if not Profile.is_unlocked(CarStats.ids()[sel[0]], Session.total_km):
+			if not Profile.is_unlocked(CarStats.ids()[sel[0]], Session.car_km()):
 				return # locked car
 		"home":
 			Session.set_home(start_city)
@@ -273,12 +273,12 @@ func _reset_progress() -> void:
 func _map_mouse(event: InputEventMouse) -> void:
 	var pos := get_global_mouse_position()
 	if event is InputEventMouseButton and event.button_index in [MOUSE_BUTTON_WHEEL_UP, MOUSE_BUTTON_WHEEL_DOWN]:
-		if event.pressed and map.scrolls():
+		if event.pressed and map.pans():
 			map.pan_by(Vector2(0, 40.0 if event.button_index == MOUSE_BUTTON_WHEEL_UP else -40.0))
 			_follow = ""
 		return
 	if event is InputEventMouseMotion:
-		if _press.x >= 0.0 and map.scrolls() and (_dragging or pos.distance_to(_press) > DRAG_START):
+		if _press.x >= 0.0 and map.pans() and (_dragging or pos.distance_to(_press) > DRAG_START):
 			if not _dragging:
 				map.pan_by(pos - _press - event.relative) # the first steps of the drag too
 			_dragging = true
@@ -338,11 +338,12 @@ func _draw() -> void:
 	draw_rect(Rect2(0, 400, 960, 140), pal.grass_a)
 	draw_primitive(PackedVector2Array([Vector2(430, 400), Vector2(530, 400), Vector2(760, 540), Vector2(200, 540)]), PackedColorArray([pal.road_a, pal.road_a, pal.road_a, pal.road_a]), PackedVector2Array())
 	var cn := GameData.country()
+	var title := String(ProjectSettings.get_setting("application/config/name")).to_upper()
 	var ts := 54 # a long title shrinks to stay clear of the postcards button top right
-	while ts > 34 and font.get_string_size(cn.title, HORIZONTAL_ALIGNMENT_LEFT, -1, ts).x > TITLE_MAX_W:
+	while ts > 34 and font.get_string_size(title, HORIZONTAL_ALIGNMENT_LEFT, -1, ts).x > TITLE_MAX_W:
 		ts -= 2
-	_t(Vector2(0, 62), cn.title, ts, Color(0, 0, 0, 0.25), HORIZONTAL_ALIGNMENT_CENTER, 964)
-	_t(Vector2(0, 60), cn.title, ts, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, 960)
+	_t(Vector2(0, 62), title, ts, Color(0, 0, 0, 0.25), HORIZONTAL_ALIGNMENT_CENTER, 964)
+	_t(Vector2(0, 60), title, ts, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, 960)
 	_t(Vector2(0, 92), cn.subtitle, 24, Color("1d2b38"), HORIZONTAL_ALIGNMENT_CENTER, 960)
 	if not _on_map():
 		_t(Vector2(0, 140), _step_title(), 28, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, 960)
@@ -410,7 +411,7 @@ func _bar(pos: Vector2, label: String, v: float, w: float) -> void:
 ## Total kilometres and a bar towards the next car to unlock.
 func _unlock_progress(pos: Vector2) -> void:
 	var km := Session.total_km
-	var n := Profile.unlocked_count(km)
+	var n := Profile.unlocked_count(Session.car_km())
 	_t(pos + Vector2(0, 0), Lang.t("driven") % Units.dist_text(km), 16, Color("ffd24a"))
 	if n >= CarStats.ids().size():
 		_t(pos + Vector2(0, 22), Lang.t("all_cars"), 14, Color.WHITE)
@@ -438,7 +439,7 @@ func _draw_cars() -> void:
 		var c := CarStats.by_id(id)
 		var r := _card_rect(i)
 		var on: bool = sel[0] == i
-		var open := Profile.is_unlocked(id, Session.total_km)
+		var open := Profile.is_unlocked(id, Session.car_km())
 		_card(r, on)
 		CarPainter.draw(self, id, Vector2(r.position.x + w * 0.5, r.position.y + 106), cs * 1.13 if on else cs, sin(t * 2.0) * 0.3 if on and open else 0.0, false)
 		draw_multiline_string(font, r.position + Vector2(4, 138), c.name, HORIZONTAL_ALIGNMENT_CENTER, w - 8, 17 if w >= 150.0 else 15, 2, Color.WHITE)

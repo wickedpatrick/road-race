@@ -655,7 +655,11 @@
 		"golden_gate": [90, 46],
 		"cable_car": [16, 12],
 		"space_needle": [40, 56],
-		"mount_hood": [80, 48]
+		"mount_hood": [80, 48],
+		"rimrocks": [90, 31],
+		"old_faithful": [44, 56],
+		"spokane_falls": [84, 52],
+		"red_wagon": [20, 6]
 	},
 	"police": {"escape_chance": 0.2, "escape_kmh": 180, "escape_swerves": [3, 5]},
 	"postcards": {"stamps": [0.1, 0.25, 0.4, 0.5], "top_stamp_car": 5}
