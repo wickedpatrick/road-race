@@ -8,6 +8,10 @@ const BUMPER := Color("26272b")
 ## Where each car's exhaust tips are (painter units: x, height above the ground), for the smoke.
 const EXHAUSTS := {"yaris": [[-62, 14]], "octavia": [[-66, 14]], "xc60": [[-74, 16], [74, 16]], "bmw530": [[-66, 16], [66, 16]],
 		"rangerover": [[-76, 16], [76, 16]], "gtcoupe": [[-74, 16], [74, 16]], "supercar": [[-16, 15], [0, 15], [16, 15]]}
+## Exhaust smoke unlike the rest: the diesel's thick black cloud (colour, opacity, puffs per second, size and life multipliers,
+## and a burst of puffs each time the gas is pressed).
+const SMOKE_STYLES := {"octavia": {"color": Color(0.07, 0.07, 0.08), "alpha": 0.5, "rate": 1.8, "size": 1.5, "life": 1.4, "kick": 14}}
+const SMOKE_DEFAULT := {"color": Color(0.86, 0.87, 0.88), "alpha": 0.26, "rate": 1.0, "size": 1.0, "life": 1.0, "kick": 0}
 
 static func _p(c: Vector2, s: float, x: float, y: float) -> Vector2:
 	return c + Vector2(x, -y) * s

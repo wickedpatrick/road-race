@@ -2,7 +2,7 @@
 	"cars": [
 		{
 			"id": "yaris",
-			"name": "Micky",
+			"name": "Clioris",
 			"hp": 116,
 			"max_speed": 43,
 			"accel": 6,
@@ -15,20 +15,20 @@
 		},
 		{
 			"id": "octavia",
-			"name": "Cardigan",
+			"name": "Golfsburg TD",
 			"hp": 150,
 			"max_speed": 50,
 			"accel": 7.5,
 			"brake": 24,
 			"tank": 45,
-			"burn": 0.4,
+			"burn": 0.28,
 			"handling": 0.95,
 			"body_color": "#2f5fa8",
 			"halfwidth": 0.17
 		},
 		{
 			"id": "xc60",
-			"name": "SUV",
+			"name": "Geelvo XC",
 			"hp": 250,
 			"max_speed": 55,
 			"accel": 9,
@@ -54,7 +54,7 @@
 		},
 		{
 			"id": "rangerover",
-			"name": "Lux SUV",
+			"name": "Rangexus",
 			"hp": 635,
 			"max_speed": 70,
 			"accel": 12,

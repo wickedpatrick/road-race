@@ -33,6 +33,7 @@ const SMOKE_UP := 7.0 ## per second while the gas is pressed (a full cloud in ~0
 const SMOKE_DOWN := 0.8 ## per second once it is let go
 const PUFFS_PER_S := 28.0 ## per exhaust at full smoke
 var _puff_due := 0.0
+var _gas_was := false
 var shelter := 0.0 ## 1 under a roof (a tunnel): no snow, leaves or rain falling there
 var rng := RandomNumberGenerator.new()
 # per-frame projected segment data, preallocated
@@ -160,17 +161,24 @@ func _update_smoke(dt: float) -> void:
 		p.y += p.vy * dt
 		p.r += (18.0 + 40.0 * sr) * dt
 	puffs = puffs.filter(func(p): return p.age < p.life)
+	var st: Dictionary = CarPainter.SMOKE_STYLES.get(race.car_id, CarPainter.SMOKE_DEFAULT)
+	var pressed := on and race.gas_on and not _gas_was
+	_gas_was = on and race.gas_on
 	if not on or smoke <= 0.02:
 		return
 	var tips: Array = CarPainter.EXHAUSTS.get(race.car_id, [[-62, 14]])
-	_puff_due += dt * PUFFS_PER_S * smoke * tips.size()
+	_puff_due += dt * PUFFS_PER_S * st.rate * smoke * tips.size()
+	var a0 := smoke
+	if pressed and st.kick > 0:
+		_puff_due += st.kick
+		a0 = 1.0 # the burst comes out thick at once
 	while _puff_due >= 1.0:
 		_puff_due -= 1.0
 		var tip: Array = tips[rng.randi() % tips.size()]
 		var out := signf(tip[0]) if tip[0] != 0 else rng.randf_range(-1.0, 1.0)
 		puffs.append({"x": float(tip[0]), "y": float(tip[1]), "vx": out * rng.randf_range(15.0, 55.0) + rng.randf_range(-25.0, 25.0),
-				"vy": rng.randf_range(5.0, 40.0) - 45.0 * sr, "r": rng.randf_range(4.0, 9.0), "age": 0.0,
-				"life": rng.randf_range(0.45, 0.8), "a": smoke})
+				"vy": rng.randf_range(5.0, 40.0) - 45.0 * sr, "r": rng.randf_range(4.0, 9.0) * st.size, "age": 0.0,
+				"life": rng.randf_range(0.45, 0.8) * st.life, "a": a0})
 
 ## Background wanted for the region ~300 m ahead; a big city's skyline rises as it approaches.
 func _horizon_target() -> Dictionary:
@@ -710,9 +718,12 @@ func _draw_player() -> void:
 	_b.set_mirror(false) # steer_visual is already the way the player steers on screen
 	var cs := s * W * 0.5 * CAR_UNIT
 	CarPainter.draw(_b, race.car_id, Vector2(W * 0.5, py), cs, race.steer_visual, race.braking)
+	var st: Dictionary = CarPainter.SMOKE_STYLES.get(race.car_id, CarPainter.SMOKE_DEFAULT)
+	var col: Color = st.color
 	for p in puffs:
 		var k: float = p.age / p.life
-		_b.draw_circle(Vector2(W * 0.5 + p.x * cs, py - p.y * cs), p.r * cs, Color(0.86, 0.87, 0.88, 0.26 * p.a * (1.0 - k) * minf(1.0, k * 8.0 + 0.3)))
+		col.a = st.alpha * p.a * (1.0 - k) * minf(1.0, k * 8.0 + 0.3)
+		_b.draw_circle(Vector2(W * 0.5 + p.x * cs, py - p.y * cs), p.r * cs, col)
 	_b.set_mirror(_left)
 
 func _draw_particles() -> void:

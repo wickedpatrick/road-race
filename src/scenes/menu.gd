@@ -443,7 +443,7 @@ func _draw_cars() -> void:
 		_card(r, on)
 		CarPainter.draw(self, id, Vector2(r.position.x + w * 0.5, r.position.y + 106), cs * 1.13 if on else cs, sin(t * 2.0) * 0.3 if on and open else 0.0, false)
 		draw_multiline_string(font, r.position + Vector2(4, 138), c.name, HORIZONTAL_ALIGNMENT_CENTER, w - 8, 17 if w >= 150.0 else 15, 2, Color.WHITE)
-		_t(r.position + Vector2(0, 180), Lang.t("hp") % c.hp, 13, Color("c8d6e3"), HORIZONTAL_ALIGNMENT_CENTER, w)
+		_power_and_tank(r.position + Vector2(w * 0.5, 180), c)
 		var bx := r.position.x + (w - bw) * 0.5
 		_bar(Vector2(bx, r.position.y + 200), Lang.t("bar_speed"), c.max_speed / top.max_speed, bw)
 		_bar(Vector2(bx, r.position.y + 224), Lang.t("bar_accel"), c.accel / top.accel, bw)
@@ -459,6 +459,21 @@ func _draw_cars() -> void:
 			draw_arc(lc + Vector2(0, -6), 12, PI, TAU, 16, Color("ffd24a"), 5.0)
 			draw_circle(lc + Vector2(0, 6), 4, Color("2b2b2f"))
 			_t(r.position + Vector2(0, 186), Lang.t("from_dist") % Units.dist_text(Profile.unlock_km(i)), 18, Color("ffd24a"), HORIZONTAL_ALIGNMENT_CENTER, w)
+
+## "116 KM  ⛽ 40 l" centred under the car's name: the power, then the tank behind a little yellow pump.
+func _power_and_tank(mid: Vector2, c: Dictionary) -> void:
+	var hp: String = Lang.t("hp") % c.hp
+	var tank := "%d l" % c.tank
+	var hw := font.get_string_size(hp, HORIZONTAL_ALIGNMENT_LEFT, -1, 13).x
+	var tw := font.get_string_size(tank, HORIZONTAL_ALIGNMENT_LEFT, -1, 13).x
+	var x := mid.x - (hw + 8.0 + 11.0 + 4.0 + tw) * 0.5
+	_t(Vector2(x, mid.y), hp, 13, Color("c8d6e3"))
+	var pc := Vector2(x + hw + 8.0 + 4.0, mid.y - 5.0)
+	var dark := Color("1c2733")
+	draw_rect(Rect2(pc + Vector2(-4, -6), Vector2(8, 12)), Color("f2c21b"))
+	draw_rect(Rect2(pc + Vector2(-2.5, -4.5), Vector2(5, 3)), dark)
+	draw_polyline(PackedVector2Array([pc + Vector2(4, -4), pc + Vector2(6.5, -2.5), pc + Vector2(6.5, 3), pc + Vector2(5, 4)]), Color("f2c21b"), 1.5)
+	_t(Vector2(x + hw + 8.0 + 11.0 + 4.0, mid.y), tank, 13, Color("ffd24a"))
 
 func _draw_map() -> void:
 	var bg := StyleBoxFlat.new()

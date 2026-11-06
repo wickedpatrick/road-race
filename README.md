@@ -14,7 +14,7 @@ Kliknij dwukrotnie `graj.command` (otworzy grę w przeglądarce, najlepiej Chrom
 - **Esc**: pauza
 
 ## Zasady
-- Wybierasz auto (siedem fikcyjnych modeli, od miejskiego Micky po supersamochód Rosso V12; kolejne odblokowują się z przejechanymi kilometrami) i porę roku, a potem na mapie Polski miasto startu i cel
+- Wybierasz auto (siedem fikcyjnych modeli, od miejskiego Clioris po supersamochód Rosso V12; kolejne odblokowują się z przejechanymi kilometrami) i porę roku, a potem na mapie Polski miasto startu i cel
   (strzałki lub myszka). Cel to zawsze sąsiednie miasto, jedną drogą dalej (autostrady A, ekspresówki S, drogi krajowe);
   dalsze miasta odwiedzasz kolejnymi etapami. Po dojechaniu mapa podpowiada najbliższe nieodwiedzone miasto.
 - Krajobraz zmienia się z regionem: Beskidy, Jura ze skałkami, Górny Śląsk z kopalniami, Mazury z jeziorami,
