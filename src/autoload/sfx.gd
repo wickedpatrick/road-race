@@ -31,7 +31,9 @@ func _ready() -> void:
 		_players[n] = p
 	for n in ONESHOTS:
 		_players[n] = load(DIR + n + ".wav")
-	for code in GameData.country_codes(): # on arrival: anthem_<code>, the first phrase of the anthem, and motif_<code>,
+	var codes := GameData.country_codes().duplicate()
+	for code in GameData.country_codes(): codes.append_array(GameData.members(code))
+	for code in codes: # on arrival: anthem_<code>, the first phrase of the anthem, and motif_<code>,
 		for kind in ["anthem_", "motif_"]: # the best-known bars of the country's classical (or folk) tune
 			if ResourceLoader.exists(DIR + kind + code + ".wav"):
 				_players[kind + code] = load(DIR + kind + code + ".wav")
@@ -47,11 +49,15 @@ func _unhandled_input(event: InputEvent) -> void:
 
 ## The sound of arriving in the country being played: its anthem's first phrase and its classical tune by turns
 ## (the anthem alone when there is no tune), or the fanfare.
-func arrival() -> String:
+## On a map spanning several countries (the Southern Balkans) it is the country of `city`, the one arrived in.
+func arrival(city := "") -> String:
 	_arrivals += 1
+	var code: String = GameData.current
+	if not GameData.members(code).is_empty() and Geo.city_part(city) != "":
+		code = Geo.city_part(city)
 	for name in (["motif_", "anthem_"] if _arrivals % 2 == 0 else ["anthem_", "motif_"]):
-		if _players.has(name + GameData.current):
-			return name + GameData.current
+		if _players.has(name + code):
+			return name + code
 	return "win"
 
 func play(name: String, db := -6.0, pitch := 1.0) -> void:

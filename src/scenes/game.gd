@@ -165,7 +165,7 @@ func _end_audio() -> void:
 	Sfx.set_loop("engine", -24.0 + 10.0 * race.speed_ratio(), EngineAudio.pitch(race.speed, race.stats.max_speed, false, race.gear))
 	if not _end_sound_played:
 		_end_sound_played = true
-		Sfx.play(Sfx.arrival() if race.state == "won" else "lose", 0.0 if race.state == "won" else -3.0) # the anthem on arrival
+		Sfx.play(Sfx.arrival(Session.to_city) if race.state == "won" else "lose", 0.0 if race.state == "won" else -3.0) # the anthem on arrival
 
 func _finish() -> void:
 	Sfx.silence_all_loops()

@@ -261,6 +261,8 @@ def anthems():  # melodies from the scores on Wikipedia/Commons; all of them in 
     anthem("is", [(58, 1), (63, 1), (65, 1), (67, 1), (None, .5), (65, .5), (63, 1), (65, 1), (62, 1)], 0.38, [46, 58, 62, 65])  # Ó, guð vors lands! Ó, land vors guðs!
     anthem("lt", [(68, 1.5), (63, .5), (68, 1), (70, 1), (72, 1), (70, 1), (68, 1), (70, 1)], 0.38, [51, 58, 63, 67])  # Lietuva, Tėvyne mūsų
     anthem("us", [(65, .75), (62, .25), (58, 1), (62, 1), (65, 1), (70, 2), (74, .75), (72, .25), (70, 1), (62, 1), (64, 1), (65, 2)], 0.27, [41, 57, 60, 65], 0.7)  # O say can you see, by the dawn's early light
+    anthem("al", [(62, 1), (67, 1.5), (62, .5), (59, .5), (62, .5), (67, .75), (69, .25), (71, 1), (67, 1.5), (67, .5), (66, .5), (67, .5),
+        (69, 1.5), (68, .5), (69, 1), (74, 1), (71, 2)], 0.4, [43, 59, 62, 67])  # Rreth flamurit të përbashkuar (Porumbescu; the score on Wikipedia)
     anthem("ca", [(69, 2), (72, 1.5), (72, .5), (65, 3), (67, 1), (69, 1), (70, 1), (72, 1), (74, 1), (67, 2)], 0.24, [48, 60, 64, 67])  # O Canada! Our home and native land!
 def motifs():  # the best-known bars of each country's classical (or folk) tune, on arrival every other time
     motif = lambda code, melody, q, chord, tail=0.8: anthem(code, melody, q, chord, tail, "motif_")
