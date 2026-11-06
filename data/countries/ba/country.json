@@ -1,0 +1,53 @@
+{
+	"code": "ba",
+	"name": {
+		"pl": "Bośnia i Hercegowina",
+		"en": "Bosnia and Herzegovina",
+		"cs": "Bosna a Hercegovina",
+		"is": "Bosnía og Hersegóvína",
+		"de": "Bosnien und Herzegowina"
+	},
+	"language": "bs",
+	"drive": "right",
+	"units": "metric",
+	"title": {
+		"pl": "RAJD PRZEZ BOŚNIĘ I HERCEGOWINĘ",
+		"en": "BOSNIA AND HERZEGOVINA ROAD TRIP",
+		"cs": "RALLY BOSNOU A HERCEGOVINOU",
+		"is": "ÖKUFERÐ UM BOSNÍU OG HERSEGÓVÍNU",
+		"de": "BOSNIEN-HERZEGOWINA-TOUR"
+	},
+	"subtitle": {
+		"pl": "Edukacyjna podróż przez góry, kaniony i stare mosty",
+		"en": "An educational journey through mountains, canyons and old bridges",
+		"cs": "Vzdělávací cesta přes hory, kaňony a staré mosty",
+		"is": "Fræðandi ferðalag um fjöll, gljúfur og gamlar brýr",
+		"de": "Eine lehrreiche Reise durch Berge, Schluchten und alte Brücken"
+	},
+	"region_label": {"pl": "region", "en": "region", "cs": "region", "is": "svæði", "de": "Region"},
+	"start": ["sarajevo", "zenica"],
+	"express_prefixes": ["A"],
+	"limits": {"express": 130, "road": 80, "city": 50, "town_on_express": 80, "town": 50},
+	"signs": {"town": "#ffffff", "town_text": "#111111", "board": "#1d5bbf", "board_motorway": "#1f7a3a"},
+	"map": {"lon0": 15.55, "lon1": 19.85, "lat0": 42.4, "lat1": 45.4, "lon_k": 0.719},
+	"outline": [
+		[15.78, 45.18], [15.98, 45.22], [16.12, 45.12], [16.3, 45], [16.4, 45.08], [16.55, 45.21], [16.75, 45.18],
+		[16.93, 45.27], [17.1, 45.2], [17.27, 45.15], [17.52, 45.11], [17.7, 45.15], [17.87, 45.07], [18.02, 45.15],
+		[18.25, 45.1], [18.47, 45.07], [18.68, 45.06], [18.8, 44.95], [19.03, 44.87], [19.2, 44.9], [19.37, 44.88],
+		[19.3, 44.72], [19.18, 44.55], [19.12, 44.4], [19.25, 44.25], [19.36, 44.18], [19.5, 44.05], [19.6, 43.9],
+		[19.52, 43.78], [19.48, 43.63], [19.25, 43.55], [19.05, 43.5], [18.95, 43.4], [18.84, 43.33], [18.68, 43.2],
+		[18.62, 43], [18.52, 42.8], [18.53, 42.6], [18.45, 42.55], [18.25, 42.6], [18.15, 42.72], [17.97, 42.78],
+		[17.82, 42.87], [17.7, 42.9], [17.65, 42.88], [17.58, 42.93], [17.62, 43.02], [17.5, 43.08], [17.33, 43.2],
+		[17.25, 43.35], [17.1, 43.45], [16.95, 43.55], [16.75, 43.65], [16.55, 43.8], [16.38, 43.98], [16.2, 44.1],
+		[16.05, 44.3], [15.92, 44.5], [15.75, 44.7], [15.72, 44.88], [15.75, 45.05]
+	],
+	"outline_lines": [],
+	"station": {
+		"sign": "BENZINSKA PUMPA",
+		"board": "GORIVO (KM)",
+		"prices": [["Eurosuper 95", "2,59"], ["Eurodizel", "2,49"]],
+		"region_sign": "DOBRODOŠLI U"
+	},
+	"plates": [["A", "#1f7a3a", "#ffffff"], ["M", "#1d5bbf", "#ffffff"]],
+	"weather": {"default": "sun", "landscape": true, "biomes": {"mountains": "sun"}}
+}

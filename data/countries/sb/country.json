@@ -1,0 +1,122 @@
+{
+	"code": "sb",
+	"name": {
+		"pl": "Bałkany Południowe",
+		"en": "Southern Balkans",
+		"cs": "Jižní Balkán",
+		"is": "Suður-Balkanskagi",
+		"de": "Südbalkan"
+	},
+	"language": "sq",
+	"drive": "right",
+	"units": "metric",
+	"title": {
+		"pl": "RAJD PRZEZ BAŁKANY POŁUDNIOWE",
+		"en": "SOUTHERN BALKANS ROAD TRIP",
+		"cs": "RALLY JIŽNÍM BALKÁNEM",
+		"is": "ÖKUFERÐ UM SUÐUR-BALKANSKAGA",
+		"de": "SÜDBALKAN-TOUR"
+	},
+	"subtitle": {
+		"pl": "Edukacyjna podróż przez Czarnogórę, Kosowo, Albanię i Macedonię Północną",
+		"en": "An educational journey through Montenegro, Kosovo, Albania and North Macedonia",
+		"cs": "Vzdělávací cesta Černou Horou, Kosovem, Albánií a Severní Makedonií",
+		"is": "Fræðandi ferðalag um Svartfjallaland, Kósovó, Albaníu og Norður-Makedóníu",
+		"de": "Eine lehrreiche Reise durch Montenegro, Kosovo, Albanien und Nordmazedonien"
+	},
+	"region_label": {"pl": "obwód", "en": "county", "cs": "kraj", "is": "sýsla", "de": "Kreis"},
+	"start": ["tirane", "durres"],
+	"express_prefixes": ["A", "R6", "R7"],
+	"limits": {"express": 110, "road": 80, "city": 40, "town_on_express": 60, "town": 40},
+	"signs": {"town": "#ffffff", "town_text": "#111111", "board": "#1d5bbf", "board_motorway": "#1e8a46"},
+	"station": {
+		"sign": "KARBURANT",
+		"board": "ÇMIMET",
+		"prices": [["Benzinë", "195"], ["Naftë", "185"]],
+		"region_sign": "MIRË SE VINI NË"
+	},
+	"plates": [["A", "#1e8a46", "#ffffff"], ["SH", "#1d5bbf", "#ffffff"]],
+	"parts": {
+		"me": {
+			"name": {"pl": "Czarnogóra", "en": "Montenegro", "cs": "Černá Hora", "is": "Svartfjallaland", "de": "Montenegro"},
+			"language": "sr",
+			"region_label": {"pl": "region", "en": "region", "cs": "region", "is": "hérað", "de": "Region"},
+			"station": {
+				"sign": "BENZINSKA PUMPA",
+				"board": "GORIVO",
+				"prices": [["Eurosuper 95", "1,45"], ["Eurodizel", "1,38"]],
+				"region_sign": "DOBRO DOŠLI U"
+			},
+			"signs": {"town": "#ffffff", "town_text": "#111111", "board": "#1d5bbf", "board_motorway": "#1e8a46"},
+			"plates": [["M", "#1d5bbf", "#ffffff"], ["R", "#f2c200", "#111111"]],
+			"limits": {"express": 130, "road": 80, "city": 50, "town_on_express": 80, "town": 50}
+		},
+		"xk": {
+			"name": {"pl": "Kosowo", "en": "Kosovo", "cs": "Kosovo", "is": "Kósovó", "de": "Kosovo"},
+			"language": "sq",
+			"region_label": {"pl": "okręg", "en": "district", "cs": "okruh", "is": "umdæmi", "de": "Bezirk"},
+			"station": {
+				"sign": "PIKË KARBURANTI",
+				"board": "ÇMIMET",
+				"prices": [["Benzinë 95", "1,35"], ["Naftë", "1,29"]],
+				"region_sign": "MIRË SE VINI NË"
+			},
+			"signs": {"town": "#ffffff", "town_text": "#111111", "board": "#1d5bbf", "board_motorway": "#1e8a46"},
+			"plates": [["R", "#1e8a46", "#ffffff"], ["M", "#1d5bbf", "#ffffff"], ["N", "#1d5bbf", "#ffffff"]],
+			"limits": {"express": 130, "road": 80, "city": 50, "town_on_express": 80, "town": 50}
+		},
+		"al": {
+			"name": {"pl": "Albania", "en": "Albania", "cs": "Albánie", "is": "Albanía", "de": "Albanien"},
+			"language": "sq",
+			"region_label": {"pl": "obwód", "en": "county", "cs": "kraj", "is": "sýsla", "de": "Kreis"},
+			"station": {
+				"sign": "KARBURANT",
+				"board": "ÇMIMET",
+				"prices": [["Benzinë", "195"], ["Naftë", "185"]],
+				"region_sign": "MIRË SE VINI NË"
+			},
+			"signs": {"town": "#ffffff", "town_text": "#111111", "board": "#1d5bbf", "board_motorway": "#1e8a46"},
+			"plates": [["A", "#1e8a46", "#ffffff"], ["SH", "#1d5bbf", "#ffffff"]],
+			"limits": {"express": 110, "road": 80, "city": 40, "town_on_express": 60, "town": 40}
+		},
+		"mk": {
+			"name": {
+				"pl": "Macedonia Północna",
+				"en": "North Macedonia",
+				"cs": "Severní Makedonie",
+				"is": "Norður-Makedónía",
+				"de": "Nordmazedonien"
+			},
+			"language": "mk",
+			"region_label": {"pl": "region", "en": "region", "cs": "region", "is": "hérað", "de": "Region"},
+			"station": {
+				"sign": "БЕНЗИНСКА ПУМПА",
+				"board": "ГОРИВО",
+				"prices": [["Еуросупер 95", "82,5"], ["Еуродизел", "76,0"]],
+				"region_sign": "ДОБРЕДОЈДОВТЕ ВО"
+			},
+			"signs": {"town": "#ffffff", "town_text": "#111111", "board": "#1d5bbf", "board_motorway": "#1e8a46"},
+			"plates": [["A", "#1e8a46", "#ffffff"], ["R", "#1d5bbf", "#ffffff"]],
+			"limits": {"express": 130, "road": 80, "city": 50, "town_on_express": 80, "town": 50}
+		}
+	},
+	"map": {"lon0": 18.2, "lon1": 23.3, "lat0": 39.5, "lat1": 43.7, "lon_k": 0.748, "zoom": 1.5, "labels": "auto"},
+	"outline": [
+		[18.45, 42.48], [18.52, 42.72], [18.68, 43.02], [18.88, 43.32], [19.05, 43.52], [19.22, 43.55], [19.52, 43.22],
+		[19.78, 43.1], [20.02, 43], [20.2, 42.88], [20.35, 42.86], [20.58, 43.12], [20.8, 43.27], [21.05, 43.1],
+		[21.25, 42.95], [21.5, 42.88], [21.77, 42.68], [21.62, 42.42], [21.6, 42.26], [21.92, 42.31], [22.36, 42.32],
+		[22.55, 42.12], [22.85, 42], [22.95, 41.62], [22.93, 41.34], [22.6, 41.13], [22.05, 41.15], [21.6, 40.9],
+		[21.2, 40.86], [20.98, 40.86], [20.95, 40.6], [20.8, 40.43], [20.65, 40.1], [20.3, 39.98], [20.2, 39.67],
+		[20.01, 39.69], [19.98, 39.87], [19.74, 40.1], [19.48, 40.22], [19.3, 40.42], [19.45, 40.5], [19.38, 40.82],
+		[19.45, 41.1], [19.42, 41.32], [19.52, 41.6], [19.57, 41.78], [19.37, 41.85], [19.2, 41.92], [19.09, 42.1],
+		[18.85, 42.27], [18.6, 42.42]
+	],
+	"outline_lines": [
+		[[19.37, 41.85], [19.4, 42.05], [19.3, 42.2], [19.55, 42.35], [19.75, 42.55], [20.07, 42.55]],
+		[[20.07, 42.55], [20.25, 42.67], [20.35, 42.86]],
+		[[20.07, 42.55], [20.35, 42.3], [20.55, 42.2], [20.59, 41.86]],
+		[[20.59, 41.86], [20.8, 42.08], [21.1, 42.2], [21.4, 42.22], [21.6, 42.26]],
+		[[20.59, 41.86], [20.5, 41.55], [20.55, 41.35], [20.73, 41.12], [20.75, 40.98], [20.73, 40.9], [20.98, 40.86]]
+	],
+	"weather": {"default": "sun", "landscape": true, "biomes": {"mountains": "cloudy"}}
+}

@@ -71,6 +71,18 @@
 			"name": {"pl": "Serbia", "en": "Serbia", "cs": "Srbsko", "is": "Serbía", "de": "Serbien"},
 			"neighbours": ["hu", "ro", "bg", "mk", "me", "ba", "hr"],
 			"favorite_neighbour": "hu"
+		},
+		{
+			"code": "ba",
+			"name": {
+				"pl": "Bośnia i Hercegowina",
+				"en": "Bosnia and Herzegovina",
+				"cs": "Bosna a Hercegovina",
+				"is": "Bosnía og Hersegóvína",
+				"de": "Bosnien und Herzegowina"
+			},
+			"neighbours": ["hr", "rs", "me"],
+			"favorite_neighbour": "hr"
 		}
 	]
 }

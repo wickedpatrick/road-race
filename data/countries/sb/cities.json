@@ -1,0 +1,142 @@
+{
+	"podgorica": {"name": "Podgorica", "lat": 42.44, "lon": 19.26, "pop": 190, "region": "Centralni region", "country": "me"},
+	"kotor": {
+		"name": "Kotor",
+		"lat": 42.42,
+		"lon": 18.77,
+		"pop": 13,
+		"region": "Primorski region",
+		"country": "me",
+		"label": "left"
+	},
+	"budva": {
+		"name": "Budva",
+		"lat": 42.29,
+		"lon": 18.84,
+		"pop": 19,
+		"region": "Primorski region",
+		"country": "me",
+		"label": "left"
+	},
+	"bar": {
+		"name": "Bar",
+		"lat": 42.1,
+		"lon": 19.1,
+		"pop": 43,
+		"region": "Primorski region",
+		"country": "me",
+		"label": "left"
+	},
+	"prishtine": {
+		"name": "Prishtinë",
+		"lat": 42.66,
+		"lon": 21.17,
+		"pop": 200,
+		"region": "Rajoni i Prishtinës",
+		"country": "xk",
+		"exonym": {"pl": "Prisztina", "en": "Pristina", "cs": "Priština", "is": "Pristína", "de": "Pristina"}
+	},
+	"prizren": {"name": "Prizren", "lat": 42.21, "lon": 20.74, "pop": 145, "region": "Rajoni i Prizrenit", "country": "xk"},
+	"peje": {
+		"name": "Pejë",
+		"lat": 42.66,
+		"lon": 20.29,
+		"pop": 96,
+		"region": "Rajoni i Pejës",
+		"country": "xk",
+		"exonym": {"pl": "Peja", "en": "Peja", "cs": "Peja", "is": "Peja", "de": "Peja"}
+	},
+	"tirane": {
+		"name": "Tiranë",
+		"lat": 41.33,
+		"lon": 19.82,
+		"pop": 560,
+		"region": "Qarku i Tiranës",
+		"country": "al",
+		"exonym": {"pl": "Tirana", "en": "Tirana", "cs": "Tirana", "is": "Tírana", "de": "Tirana"}
+	},
+	"durres": {
+		"name": "Durrës",
+		"lat": 41.32,
+		"lon": 19.45,
+		"pop": 175,
+		"region": "Qarku i Durrësit",
+		"country": "al",
+		"exonym": {"cs": "Drač"},
+		"label": "left"
+	},
+	"shkoder": {
+		"name": "Shkodër",
+		"lat": 42.07,
+		"lon": 19.51,
+		"pop": 135,
+		"region": "Qarku i Shkodrës",
+		"country": "al",
+		"exonym": {"pl": "Szkodra", "en": "Shkodër", "cs": "Skadar", "is": "Shkodër", "de": "Shkodra"}
+	},
+	"vlore": {
+		"name": "Vlorë",
+		"lat": 40.47,
+		"lon": 19.49,
+		"pop": 130,
+		"region": "Qarku i Vlorës",
+		"country": "al",
+		"exonym": {"pl": "Wlora", "en": "Vlorë", "cs": "Vlora", "is": "Vlorë", "de": "Vlora"},
+		"label": "left"
+	},
+	"elbasan": {"name": "Elbasan", "lat": 41.11, "lon": 20.08, "pop": 140, "region": "Qarku i Elbasanit", "country": "al"},
+	"korce": {
+		"name": "Korçë",
+		"lat": 40.62,
+		"lon": 20.78,
+		"pop": 75,
+		"region": "Qarku i Korçës",
+		"country": "al",
+		"exonym": {"pl": "Korcza", "en": "Korçë", "cs": "Korča", "is": "Korçë", "de": "Korça"}
+	},
+	"gjirokaster": {
+		"name": "Gjirokastër",
+		"lat": 40.08,
+		"lon": 20.14,
+		"pop": 25,
+		"region": "Qarku i Gjirokastrës",
+		"country": "al",
+		"exonym": {"pl": "Gjirokastra", "en": "Gjirokastër", "cs": "Gjirokastër", "is": "Gjirokastër", "de": "Gjirokastra"}
+	},
+	"skopje": {
+		"name": "Скопје",
+		"lat": 42,
+		"lon": 21.43,
+		"pop": 530,
+		"region": "Скопски регион",
+		"country": "mk",
+		"exonym": {"pl": "Skopje", "en": "Skopje", "cs": "Skopje", "is": "Skopje", "de": "Skopje"}
+	},
+	"tetovo": {
+		"name": "Тетово",
+		"lat": 42.01,
+		"lon": 20.97,
+		"pop": 53,
+		"region": "Полошки регион",
+		"country": "mk",
+		"exonym": {"pl": "Tetowo", "en": "Tetovo", "cs": "Tetovo", "is": "Tetovo", "de": "Tetovo"}
+	},
+	"ohrid": {
+		"name": "Охрид",
+		"lat": 41.12,
+		"lon": 20.8,
+		"pop": 40,
+		"region": "Југозападен регион",
+		"country": "mk",
+		"exonym": {"pl": "Ochryda", "en": "Ohrid", "cs": "Ohrid", "is": "Ohrid", "de": "Ohrid"}
+	},
+	"bitola": {
+		"name": "Битола",
+		"lat": 41.03,
+		"lon": 21.33,
+		"pop": 75,
+		"region": "Пелагониски регион",
+		"country": "mk",
+		"exonym": {"pl": "Bitola", "en": "Bitola", "cs": "Bitola", "is": "Bitola", "de": "Bitola"}
+	}
+}

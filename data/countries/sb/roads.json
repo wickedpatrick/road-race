@@ -1,0 +1,285 @@
+[
+	{
+		"a": "podgorica",
+		"b": "bar",
+		"km": 52,
+		"road": "M-2",
+		"towns": [["Golubovci", 12], ["Virpazar", 25], ["Sutomore", 44]],
+		"zones": [[18, "fields", "Zeta"], [30, "lakes", "Skadarsko jezero"], [52, "coast", "Primorje"]],
+		"tunnels": [
+			{
+				"from_km": 30,
+				"to_km": 34.2,
+				"name": {
+					"pl": "Tunel Sozina",
+					"en": "Sozina Tunnel",
+					"cs": "Tunel Sozina",
+					"is": "Sozina-göngin",
+					"de": "Sozina-Tunnel"
+				},
+				"fact": {
+					"pl": "4,2 km pod górą Sozina, od jeziora Szkoderskiego prosto nad morze",
+					"en": "4.2 km under Mount Sozina, from Lake Skadar straight to the sea",
+					"cs": "4,2 km pod horou Sozina, od Skadarského jezera rovnou k moři",
+					"is": "4,2 km undir Sozina-fjalli, frá Skadarvatni beint að sjónum",
+					"de": "4,2 km unter dem Berg Sozina, vom Skutarisee direkt ans Meer"
+				}
+			}
+		],
+		"via": [[25, 19.09, 42.24], [44, 19.05, 42.14]]
+	},
+	{
+		"a": "bar",
+		"b": "budva",
+		"km": 38,
+		"road": "M-1",
+		"towns": [["Sutomore", 8], ["Petrovac", 22], ["Sveti Stefan", 31]],
+		"zones": [[38, "coast", "Budvanska rivijera"]],
+		"via": [[22, 18.94, 42.21], [31, 18.89, 42.26]]
+	},
+	{
+		"a": "budva",
+		"b": "kotor",
+		"km": 23,
+		"road": "M-1",
+		"towns": [["Radanovići", 11]],
+		"zones": [[10, "coast", "Budvanska rivijera"], [23, "mountains", "Boka Kotorska"]],
+		"via": [[11, 18.75, 42.34]]
+	},
+	{
+		"a": "podgorica",
+		"b": "budva",
+		"km": 62,
+		"road": "M-2.3",
+		"towns": [["Cetinje", 31]],
+		"zones": [[20, "foothills", "Centralni region"], [48, "mountains", "Lovćen"], [62, "coast", "Primorje"]],
+		"via": [[31, 18.92, 42.39]]
+	},
+	{
+		"a": "bar",
+		"b": "shkoder",
+		"km": 61,
+		"road": [[44, "M-1"], [61, "SH41"]],
+		"towns": [["Ulcinj", 26], ["Sukobin", 43], ["Muriqan", 45]],
+		"zones": [[30, "coast", "Ulcinjska rivijera"], [44, "orchard", "Anamalit"], [61, "fields", "Fusha e Shkodrës"]],
+		"borders": [[44, "me", "al", "Sukobin / Muriqan"]],
+		"via": [[26, 19.22, 41.93], [44, 19.37, 41.98]]
+	},
+	{
+		"a": "podgorica",
+		"b": "shkoder",
+		"km": 65,
+		"road": [[26, "M-3"], [65, "SH1"]],
+		"towns": [["Tuzi", 12], ["Božaj", 25], ["Hani i Hotit", 27], ["Koplik", 44]],
+		"zones": [[26, "fields", "Zeta"], [50, "lakes", "Malësia e Madhe"], [65, "fields", "Fusha e Shkodrës"]],
+		"borders": [[26, "me", "al", "Božaj / Hani i Hotit"]],
+		"via": [[12, 19.33, 42.37], [26, 19.44, 42.33], [44, 19.49, 42.21]]
+	},
+	{
+		"a": "shkoder",
+		"b": "tirane",
+		"km": 98,
+		"road": "SH1",
+		"towns": [["Lezhë", 40], ["Milot", 58], ["Fushë-Krujë", 80]],
+		"zones": [[35, "fields", "Zadrima"], [60, "foothills", "Lezhë"], [98, "fields", "Fusha e Tiranës"]],
+		"via": [[40, 19.65, 41.78], [58, 19.72, 41.68], [80, 19.72, 41.48]]
+	},
+	{
+		"a": "tirane",
+		"b": "durres",
+		"km": 37,
+		"road": [[37, "SH2", 3]],
+		"towns": [["Vorë", 14]],
+		"zones": [[20, "fields", "Fusha e Tiranës"], [37, "industrial", "Durrës"]]
+	},
+	{
+		"a": "durres",
+		"b": "vlore",
+		"km": 125,
+		"road": [[90, "SH4", 3], [125, "A2"]],
+		"towns": [["Kavajë", 20], ["Rrogozhinë", 35], ["Lushnjë", 58], ["Fier", 90]],
+		"zones": [[35, "fields", "Kavajë"], [90, "fields", "Myzeqe"], [125, "orchard", "Vlorë"]],
+		"via": [[20, 19.56, 41.18], [58, 19.7, 40.94], [90, 19.56, 40.72]]
+	},
+	{
+		"a": "tirane",
+		"b": "elbasan",
+		"km": 40,
+		"road": "A3",
+		"towns": [["Mullet", 10], ["Krrabë", 20]],
+		"zones": [[12, "foothills", "Tiranë"], [30, "mountains", "Krrabë"], [40, "fields", "Lugina e Shkumbinit"]],
+		"tunnels": [
+			{
+				"from_km": 19,
+				"to_km": 21.5,
+				"name": {
+					"pl": "Tunel Krrabë",
+					"en": "Krrabë Tunnel",
+					"cs": "Tunel Krrabë",
+					"is": "Krrabë-göngin",
+					"de": "Krrabë-Tunnel"
+				},
+				"fact": {
+					"pl": "Dwie rury pod przełęczą Krrabë skróciły drogę z Tirany do Elbasanu o pół godziny",
+					"en": "Twin tubes under the Krrabë pass cut half an hour off the drive from Tirana to Elbasan",
+					"cs": "Dva tubusy pod průsmykem Krrabë zkrátily cestu z Tirany do Elbasanu o půl hodiny",
+					"is": "Tvenn göng undir Krrabë-skarði styttu leiðina frá Tírana til Elbasan um hálftíma",
+					"de": "Zwei Röhren unter dem Krrabë-Pass sparen eine halbe Stunde von Tirana nach Elbasan"
+				}
+			}
+		],
+		"via": [[20, 19.93, 41.22]]
+	},
+	{
+		"a": "elbasan",
+		"b": "ohrid",
+		"km": 96,
+		"road": [[70, "SH3"], [96, "A2", 2]],
+		"towns": [["Librazhd", 35], ["Përrenjas", 55], ["Qafë Thanë", 69], ["Струга", 83]],
+		"zones": [[30, "forest", "Lugina e Shkumbinit"], [70, "mountains", "Qafë Thanë"], [96, "lakes", "Охридско Езеро"]],
+		"borders": [[70, "al", "mk", "Qafë Thanë / Ќафасан"]],
+		"via": [[35, 20.32, 41.18], [55, 20.54, 41.07], [70, 20.6, 41.15], [83, 20.68, 41.18]]
+	},
+	{
+		"a": "ohrid",
+		"b": "bitola",
+		"km": 72,
+		"road": [[72, "A3", 2]],
+		"towns": [["Ресен", 37]],
+		"zones": [[25, "mountains", "Галичица"], [50, "orchard", "Преспа"], [72, "fields", "Пелагонија"]],
+		"via": [[37, 21.01, 41.09]]
+	},
+	{
+		"a": "tetovo",
+		"b": "ohrid",
+		"km": 125,
+		"road": [[25, "A2"], [125, "A2", 2]],
+		"towns": [["Гостивар", 25], ["Кичево", 65], ["Требеништа", 115]],
+		"zones": [[30, "fields", "Полог"], [90, "mountains", "Бистра"], [125, "lakes", "Охридско Езеро"]],
+		"via": [[25, 20.91, 41.8], [65, 20.96, 41.51], [100, 20.83, 41.3]]
+	},
+	{
+		"a": "skopje",
+		"b": "tetovo",
+		"km": 42,
+		"road": "A2",
+		"towns": [["Сарај", 12], ["Желино", 28]],
+		"zones": [[15, "fields", "Скопско Поле"], [42, "fields", "Полог"]]
+	},
+	{
+		"a": "skopje",
+		"b": "prishtine",
+		"km": 87,
+		"road": [[20, "A4", 2], [87, "R6"]],
+		"towns": [["Блаце", 19], ["Hani i Elezit", 22], ["Kaçanik", 32], ["Ferizaj", 56], ["Lipjan", 70]],
+		"zones": [
+			[18, "foothills", "Скопска Црна Гора"], [40, "mountains", "Gryka e Kaçanikut"],
+			[87, "fields", "Fusha e Kosovës"]
+		],
+		"borders": [[20, "mk", "xk", "Блаце / Hani i Elezit"]],
+		"via": [[20, 21.29, 42.2], [32, 21.24, 42.23], [56, 21.15, 42.37]]
+	},
+	{
+		"a": "prishtine",
+		"b": "prizren",
+		"km": 80,
+		"road": "R7",
+		"towns": [["Komoran", 22], ["Malishevë", 42], ["Suharekë", 60]],
+		"zones": [[25, "fields", "Fusha e Kosovës"], [55, "upland", "Drenicë"], [80, "orchard", "Dukagjin"]],
+		"via": [[22, 20.93, 42.6], [60, 20.83, 42.36]]
+	},
+	{
+		"a": "durres",
+		"b": "prizren",
+		"km": 205,
+		"road": [[188, "A1"], [205, "R7"]],
+		"towns": [
+			["Thumanë", 25], ["Milot", 48], ["Rrëshen", 68], ["Kalimash", 133], ["Kukës", 163], ["Morinë", 188],
+			["Vërmicë", 190]
+		],
+		"zones": [
+			[50, "fields", "Fusha e Durrësit"], [115, "foothills", "Mirditë"], [165, "mountains", "Kalimash"],
+			[188, "upland", "Kukës"], [205, "upland", "Hasi"]
+		],
+		"borders": [[188, "al", "xk", "Morinë / Vërmicë"]],
+		"tunnels": [
+			{
+				"from_km": 138,
+				"to_km": 143.6,
+				"name": {
+					"pl": "Tunel Kalimash",
+					"en": "Kalimash Tunnel",
+					"cs": "Tunel Kalimash",
+					"is": "Kalimash-göngin",
+					"de": "Kalimash-Tunnel"
+				},
+				"fact": {
+					"pl": "5,6 km, najdłuższy tunel Albanii, na Drodze Narodu z Durrës do Prisztiny",
+					"en": "5.6 km, Albania's longest tunnel, on the Road of the Nation from Durrës to Pristina",
+					"cs": "5,6 km, nejdelší tunel Albánie, na Silnici národa z Durrësu do Prištiny",
+					"is": "5,6 km, lengstu göng Albaníu, á Vegi þjóðarinnar frá Durrës til Pristína",
+					"de": "5,6 km, Albaniens längster Tunnel, an der Straße der Nation von Durrës nach Pristina"
+				}
+			}
+		],
+		"via": [
+			[25, 19.65, 41.53], [48, 19.72, 41.68], [68, 19.88, 41.77], [133, 20.2, 41.95], [163, 20.42, 42.08],
+			[188, 20.55, 42.1]
+		]
+	},
+	{
+		"a": "prishtine",
+		"b": "peje",
+		"km": 85,
+		"road": "M-9",
+		"towns": [["Fushë Kosovë", 8], ["Komoran", 25], ["Klinë", 58]],
+		"zones": [[25, "fields", "Fusha e Kosovës"], [50, "upland", "Drenicë"], [85, "fields", "Rrafshi i Dukagjinit"]],
+		"via": [[25, 20.93, 42.6], [58, 20.58, 42.62]]
+	},
+	{
+		"a": "peje",
+		"b": "prizren",
+		"km": 75,
+		"road": "N9",
+		"towns": [["Deçan", 18], ["Gjakovë", 37]],
+		"zones": [[40, "orchard", "Rrafshi i Dukagjinit"], [75, "fields", "Dukagjin"]],
+		"via": [[18, 20.29, 42.54], [37, 20.43, 42.38]]
+	},
+	{
+		"a": "korce",
+		"b": "ohrid",
+		"km": 78,
+		"road": [[47, "SH3"], [78, "R1301"]],
+		"towns": [["Maliq", 12], ["Pogradec", 40], ["Tushemisht", 45], ["Свети Наум", 49]],
+		"zones": [[25, "fields", "Fusha e Korçës"], [47, "lakes", "Liqeni i Ohrit"], [78, "lakes", "Охридско Езеро"]],
+		"borders": [[47, "al", "mk", "Tushemisht / Свети Наум"]],
+		"via": [[12, 20.7, 40.71], [40, 20.65, 40.9], [49, 20.79, 40.91], [65, 20.75, 41]]
+	},
+	{
+		"a": "vlore",
+		"b": "gjirokaster",
+		"km": 180,
+		"road": [[125, "SH8"], [180, "SH99"]],
+		"towns": [
+			["Orikum", 15], ["Llogara", 40], ["Dhërmi", 52], ["Himarë", 70], ["Borsh", 90], ["Sarandë", 125],
+			["Muzinë", 150]
+		],
+		"zones": [
+			[25, "coast", "Gjiri i Vlorës"], [45, "mountains", "Llogara"], [125, "coast", "Riviera Shqiptare"],
+			[180, "mountains", "Mali i Gjerë"]
+		],
+		"via": [[15, 19.47, 40.32], [40, 19.58, 40.2], [70, 19.74, 40.1], [125, 20, 39.87], [150, 20.13, 39.95]]
+	},
+	{
+		"a": "korce",
+		"b": "gjirokaster",
+		"km": 190,
+		"road": "SH75",
+		"towns": [["Ersekë", 40], ["Leskovik", 80], ["Përmet", 120], ["Këlcyrë", 140], ["Tepelenë", 160]],
+		"zones": [
+			[40, "upland", "Kolonjë"], [100, "mountains", "Gramoz"], [150, "forest", "Lugina e Vjosës"],
+			[190, "fields", "Lugina e Drinos"]
+		],
+		"via": [[40, 20.68, 40.34], [80, 20.6, 40.15], [120, 20.35, 40.24], [160, 20.02, 40.3]]
+	}
+]

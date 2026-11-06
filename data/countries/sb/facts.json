@@ -1,0 +1,261 @@
+{
+	"Podgorica": {
+		"pl": "Stolica Czarnogóry, u zbiegu rzek Morača i Ribnica",
+		"en": "Montenegro's capital, where the Morača and Ribnica rivers meet",
+		"cs": "Hlavní město Černé Hory, na soutoku řek Morača a Ribnica",
+		"is": "Höfuðborg Svartfjallalands, þar sem árnar Morača og Ribnica mætast",
+		"de": "Montenegros Hauptstadt, wo die Flüsse Morača und Ribnica zusammenfließen"
+	},
+	"Kotor": {
+		"pl": "Stare miasto na końcu najgłębszej zatoki Adriatyku, otoczone murami na zboczu",
+		"en": "An old town at the end of the Adriatic's deepest bay, its walls climbing the mountain",
+		"cs": "Staré město na konci nejhlubšího zálivu Jadranu, hradby šplhají do hory",
+		"is": "Gamall bær innst í dýpsta flóa Adríahafsins, borgarmúrar klifra upp fjallið",
+		"de": "Eine Altstadt am Ende der tiefsten Bucht der Adria, die Mauern klettern den Berg hinauf"
+	},
+	"Budva": {
+		"pl": "Jedno z najstarszych miast nad Adriatykiem, z plażami i starówką na cyplu",
+		"en": "One of the oldest towns on the Adriatic, with beaches and an old town on a cape",
+		"cs": "Jedno z nejstarších měst na Jadranu, s plážemi a starým městem na mysu",
+		"is": "Einn elsti bær við Adríahaf, með ströndum og gömlum bæ á nesi",
+		"de": "Eine der ältesten Städte an der Adria, mit Stränden und einer Altstadt auf einer Landzunge"
+	},
+	"Bar": {
+		"pl": "Port Czarnogóry, rośnie tu oliwka, która ma ponad 2000 lat",
+		"en": "Montenegro's port, home to an olive tree over 2000 years old",
+		"cs": "Přístav Černé Hory, roste tu oliva stará přes 2000 let",
+		"is": "Hafnarborg Svartfjallalands, þar vex ólífutré sem er yfir 2000 ára",
+		"de": "Montenegros Hafen, hier wächst ein über 2000 Jahre alter Olivenbaum"
+	},
+	"Prishtinë": {
+		"pl": "Największe miasto Kosowa, z najmłodszymi mieszkańcami w Europie",
+		"en": "Kosovo's largest city, home to some of the youngest people in Europe",
+		"cs": "Největší město Kosova, s jedněmi z nejmladších obyvatel Evropy",
+		"is": "Stærsta borg Kósovó, þar sem býr eitt yngsta fólk Evrópu",
+		"de": "Die größte Stadt des Kosovo, mit einigen der jüngsten Einwohner Europas"
+	},
+	"Prizren": {
+		"pl": "Miasto pod twierdzą nad rzeką Bistrica, z kamiennym mostem i meczetami",
+		"en": "A town below a fortress on the Bistrica, with a stone bridge and mosques",
+		"cs": "Město pod pevností na řece Bistrica, s kamenným mostem a mešitami",
+		"is": "Bær undir virki við ána Bistrica, með steinbrú og moskum",
+		"de": "Eine Stadt unter einer Festung an der Bistrica, mit Steinbrücke und Moscheen"
+	},
+	"Pejë": {
+		"pl": "Miasto u wylotu kanionu Rugova, znane z gór i wspinaczki",
+		"en": "A town at the mouth of the Rugova Gorge, known for mountains and climbing",
+		"cs": "Město u ústí soutěsky Rugova, známé horami a lezením",
+		"is": "Bær við mynni Rugova-gljúfurs, þekktur fyrir fjöll og klifur",
+		"de": "Eine Stadt am Ausgang der Rugova-Schlucht, bekannt für Berge und Klettern"
+	},
+	"Tiranë": {
+		"pl": "Stolica Albanii, kolorowe bloki pomalowano tu na jaskrawe wzory",
+		"en": "Albania's capital, where grey blocks of flats were painted in bright patterns",
+		"cs": "Hlavní město Albánie, šedé paneláky tu natřeli pestrými vzory",
+		"is": "Höfuðborg Albaníu, þar sem gráar blokkir voru málaðar í skærum mynstrum",
+		"de": "Albaniens Hauptstadt, wo graue Wohnblocks in bunten Mustern bemalt wurden"
+	},
+	"Durrës": {
+		"pl": "Największy port Albanii, założony przez Greków ponad 2600 lat temu",
+		"en": "Albania's biggest port, founded by Greeks over 2600 years ago",
+		"cs": "Největší přístav Albánie, založený Řeky před více než 2600 lety",
+		"is": "Stærsta höfn Albaníu, stofnuð af Grikkjum fyrir meira en 2600 árum",
+		"de": "Albaniens größter Hafen, vor über 2600 Jahren von Griechen gegründet"
+	},
+	"Shkodër": {
+		"pl": "Miasto nad największym jeziorem Bałkanów, pełne rowerów",
+		"en": "A town on the largest lake of the Balkans, full of bicycles",
+		"cs": "Město u největšího jezera Balkánu, plné kol",
+		"is": "Bær við stærsta vatn Balkanskaga, fullur af reiðhjólum",
+		"de": "Eine Stadt am größten See des Balkans, voller Fahrräder"
+	},
+	"Vlorë": {
+		"pl": "Tu spotykają się Adriatyk i Morze Jońskie",
+		"en": "Here the Adriatic meets the Ionian Sea",
+		"cs": "Zde se setkává Jaderské moře s Jónským",
+		"is": "Hér mætast Adríahaf og Jónahaf",
+		"de": "Hier treffen Adria und Ionisches Meer aufeinander"
+	},
+	"Elbasan": {
+		"pl": "Miasto w dolinie Shkumbini, z murami twierdzy w samym centrum",
+		"en": "A town in the Shkumbin valley, with fortress walls right in the centre",
+		"cs": "Město v údolí Shkumbinu, s hradbami pevnosti přímo v centru",
+		"is": "Bær í Shkumbin-dalnum, með virkismúra í miðbænum",
+		"de": "Eine Stadt im Shkumbin-Tal, mit Festungsmauern mitten im Zentrum"
+	},
+	"Korçë": {
+		"pl": "Miasto na płaskowyżu, słynie z piwa, serenad i pierwszej albańskiej szkoły",
+		"en": "A town on a plateau, known for its beer, serenades and the first Albanian school",
+		"cs": "Město na náhorní plošině, známé pivem, serenádami a první albánskou školou",
+		"is": "Bær á hásléttu, þekktur fyrir bjór, serenöður og fyrsta albanska skólann",
+		"de": "Eine Stadt auf einer Hochebene, bekannt für Bier, Serenaden und die erste albanische Schule"
+	},
+	"Gjirokastër": {
+		"pl": "Miasto z kamienia: domy kryte kamiennymi płytami, na liście UNESCO",
+		"en": "A town of stone: houses roofed with stone slabs, on the UNESCO list",
+		"cs": "Kamenné město: domy kryté kamennými deskami, na seznamu UNESCO",
+		"is": "Steinbær: hús með þökum úr steinhellum, á lista UNESCO",
+		"de": "Eine Stadt aus Stein: Häuser mit Steinplattendächern, UNESCO-Welterbe"
+	},
+	"Скопје": {
+		"pl": "Stolica Macedonii Północnej nad Wardarem, miasto urodzin Matki Teresy",
+		"en": "North Macedonia's capital on the Vardar, birthplace of Mother Teresa",
+		"cs": "Hlavní město Severní Makedonie na Vardaru, rodiště Matky Terezy",
+		"is": "Höfuðborg Norður-Makedóníu við Vardar, fæðingarstaður móður Teresu",
+		"de": "Nordmazedoniens Hauptstadt am Vardar, Geburtsort von Mutter Teresa"
+	},
+	"Тетово": {
+		"pl": "Miasto pod górami Szar Płanina, znane z malowanego meczetu",
+		"en": "A town below the Šar Mountains, known for its painted mosque",
+		"cs": "Město pod pohořím Šar Planina, známé malovanou mešitou",
+		"is": "Bær undir Šar-fjöllum, þekktur fyrir málaða mosku",
+		"de": "Eine Stadt unter dem Šar-Gebirge, bekannt für ihre bemalte Moschee"
+	},
+	"Охрид": {
+		"pl": "Miasto nad jednym z najstarszych jezior świata, kiedyś miało ponoć 365 cerkwi",
+		"en": "A town on one of the world's oldest lakes, said to have once had 365 churches",
+		"cs": "Město u jednoho z nejstarších jezer světa, prý mělo 365 kostelů",
+		"is": "Bær við eitt elsta vatn heims, sagður hafa átt 365 kirkjur",
+		"de": "Eine Stadt an einem der ältesten Seen der Welt, einst angeblich mit 365 Kirchen"
+	},
+	"Битола": {
+		"pl": "Miasto konsulów, z deptakiem Širok Sokak i ruinami Heraklei",
+		"en": "The city of consuls, with the Širok Sokak promenade and the ruins of Heraclea",
+		"cs": "Město konzulů, s promenádou Širok Sokak a ruinami Herakleie",
+		"is": "Borg ræðismanna, með göngugötunni Širok Sokak og rústum Herakleiu",
+		"de": "Die Stadt der Konsuln, mit der Flaniermeile Širok Sokak und den Ruinen von Heraclea"
+	},
+	"Cetinje": {
+		"pl": "Dawna stolica Czarnogóry pod górą Lovćen, z dawnymi ambasadami",
+		"en": "Montenegro's old royal capital below Mount Lovćen, with old embassies",
+		"cs": "Stará královská metropole Černé Hory pod horou Lovćen, se starými ambasádami",
+		"is": "Gamla konungshöfuðborg Svartfjallalands undir Lovćen, með gömlum sendiráðum",
+		"de": "Montenegros alte Königsstadt unter dem Lovćen, mit alten Botschaften"
+	},
+	"Virpazar": {
+		"pl": "Wioska nad jeziorem Szkoderskim, skąd pływają łodzie wśród lilii wodnych",
+		"en": "A village on Lake Skadar where boats sail among water lilies",
+		"cs": "Vesnice u Skadarského jezera, odkud plují lodě mezi lekníny",
+		"is": "Þorp við Skadarvatn þar sem bátar sigla á milli vatnalilja",
+		"de": "Ein Dorf am Skutarisee, wo Boote zwischen Seerosen fahren"
+	},
+	"Sveti Stefan": {
+		"pl": "Wysepka z kamiennymi domami połączona z lądem wąską groblą",
+		"en": "An islet of stone houses joined to the shore by a narrow causeway",
+		"cs": "Ostrůvek s kamennými domy spojený s pevninou úzkou hrází",
+		"is": "Smáeyja með steinhúsum, tengd landi með mjóum granda",
+		"de": "Ein Inselchen mit Steinhäusern, über einen schmalen Damm mit dem Festland verbunden"
+	},
+	"Ulcinj": {
+		"pl": "Najdalej na południe wysunięte miasto Czarnogóry, z piaszczystą Velika plaža",
+		"en": "Montenegro's southernmost town, with the long sandy Velika plaža",
+		"cs": "Nejjižnější město Černé Hory, s dlouhou písečnou Velikou plažou",
+		"is": "Syðsti bær Svartfjallalands, með langri sandströnd, Velika plaža",
+		"de": "Montenegros südlichste Stadt, mit dem langen Sandstrand Velika plaža"
+	},
+	"Lezhë": {
+		"pl": "Miasto nad rzeką Drin, niedaleko lagun pełnych ptaków",
+		"en": "A town on the Drin, near lagoons full of birds",
+		"cs": "Město na řece Drin, blízko lagun plných ptáků",
+		"is": "Bær við Drin, nálægt lónum fullum af fuglum",
+		"de": "Eine Stadt am Drin, nahe Lagunen voller Vögel"
+	},
+	"Fier": {
+		"pl": "Obok leżą ruiny starożytnej Apollonii",
+		"en": "The ruins of ancient Apollonia lie nearby",
+		"cs": "Nedaleko leží ruiny antické Apollonie",
+		"is": "Rústir hinnar fornu Apolloníu eru skammt frá",
+		"de": "In der Nähe liegen die Ruinen des antiken Apollonia"
+	},
+	"Llogara": {
+		"pl": "Przełęcz ponad 1000 m nad morzem, z widokiem na Riwierę Albańską",
+		"en": "A pass over 1000 m above the sea, looking down on the Albanian Riviera",
+		"cs": "Průsmyk přes 1000 m nad mořem, s výhledem na Albánskou riviéru",
+		"is": "Skarð yfir 1000 m yfir sjó, með útsýni yfir albönsku rívíeruna",
+		"de": "Ein Pass über 1000 m über dem Meer, mit Blick auf die Albanische Riviera"
+	},
+	"Himarë": {
+		"pl": "Miasteczko na Riwierze, z zamkiem na wzgórzu i turkusowymi zatokami",
+		"en": "A Riviera town with a hilltop castle and turquoise coves",
+		"cs": "Městečko na riviéře, s hradem na kopci a tyrkysovými zátokami",
+		"is": "Bær á rívíerunni með kastala á hæð og grænbláum víkum",
+		"de": "Ein Riviera-Städtchen mit Burg auf dem Hügel und türkisen Buchten"
+	},
+	"Sarandë": {
+		"pl": "Kurort naprzeciw greckiej wyspy Korfu, blisko ruin Butrintu",
+		"en": "A resort facing the Greek island of Corfu, near the ruins of Butrint",
+		"cs": "Letovisko naproti řeckému ostrovu Korfu, blízko ruin Butrintu",
+		"is": "Ferðamannabær gegnt grísku eyjunni Korfú, nálægt rústum Butrint",
+		"de": "Ein Badeort gegenüber der griechischen Insel Korfu, nahe den Ruinen von Butrint"
+	},
+	"Pogradec": {
+		"pl": "Miasto nad jeziorem Ochrydzkim po albańskiej stronie",
+		"en": "A town on Lake Ohrid on the Albanian side",
+		"cs": "Město u Ochridského jezera na albánské straně",
+		"is": "Bær við Ohrid-vatn Albaníumegin",
+		"de": "Eine Stadt am Ohridsee auf der albanischen Seite"
+	},
+	"Përmet": {
+		"pl": "Miasto róż nad rzeką Vjosa, jedną z ostatnich dzikich rzek Europy",
+		"en": "A town of roses on the Vjosa, one of Europe's last wild rivers",
+		"cs": "Město růží na řece Vjosa, jedné z posledních divokých řek Evropy",
+		"is": "Rósabær við Vjosa, eina síðustu villtu á Evrópu",
+		"de": "Eine Rosenstadt an der Vjosa, einem der letzten Wildflüsse Europas"
+	},
+	"Kukës": {
+		"pl": "Miasto nad jeziorem zaporowym Fierza, w górach północnej Albanii",
+		"en": "A town on the Fierza reservoir, in the mountains of northern Albania",
+		"cs": "Město u přehradního jezera Fierza, v horách severní Albánie",
+		"is": "Bær við Fierza-lónið, í fjöllum Norður-Albaníu",
+		"de": "Eine Stadt am Fierza-Stausee, in den Bergen Nordalbaniens"
+	},
+	"Gjakovë": {
+		"pl": "Miasto ze starym bazarem, jednym z największych na Bałkanach",
+		"en": "A town with an old bazaar, one of the largest in the Balkans",
+		"cs": "Město se starým bazarem, jedním z největších na Balkáně",
+		"is": "Bær með gömlum basar, einum þeim stærsta á Balkanskaga",
+		"de": "Eine Stadt mit einem alten Basar, einem der größten des Balkans"
+	},
+	"Ferizaj": {
+		"pl": "Meczet i cerkiew stoją tu obok siebie",
+		"en": "A mosque and an Orthodox church stand side by side here",
+		"cs": "Mešita a pravoslavný kostel tu stojí vedle sebe",
+		"is": "Moska og rétttrúnaðarkirkja standa hér hlið við hlið",
+		"de": "Moschee und orthodoxe Kirche stehen hier Seite an Seite"
+	},
+	"Kaçanik": {
+		"pl": "Wąwóz, przez który droga i kolej przeciskają się nad rzeką Lepenc",
+		"en": "A gorge where the road and railway squeeze along the Lepenc river",
+		"cs": "Soutěska, kudy se silnice a železnice tlačí podél řeky Lepenc",
+		"is": "Gljúfur þar sem vegur og járnbraut smeygja sér meðfram ánni Lepenc",
+		"de": "Eine Schlucht, durch die sich Straße und Bahn an der Lepenc entlang zwängen"
+	},
+	"Струга": {
+		"pl": "Miasto nad jeziorem Ochrydzkim, gdzie wypływa z niego Czarny Drin",
+		"en": "A town on Lake Ohrid where the Black Drin flows out of it",
+		"cs": "Město u Ochridského jezera, kde z něj vytéká Černý Drin",
+		"is": "Bær við Ohrid-vatn þar sem Svarti Drin rennur úr því",
+		"de": "Eine Stadt am Ohridsee, wo der Schwarze Drin abfließt"
+	},
+	"Свети Наум": {
+		"pl": "Klasztor nad źródłami, które zasilają jezioro Ochrydzkie, chodzą tu pawie",
+		"en": "A monastery by the springs that feed Lake Ohrid, with peacocks walking about",
+		"cs": "Klášter u pramenů, které napájejí Ochridské jezero, procházejí se tu pávi",
+		"is": "Klaustur við lindirnar sem fæða Ohrid-vatn, þar ganga páfuglar um",
+		"de": "Ein Kloster an den Quellen, die den Ohridsee speisen, mit umherlaufenden Pfauen"
+	},
+	"Ресен": {
+		"pl": "Miasteczko nad jeziorem Prespa, słynie z jabłek",
+		"en": "A small town by Lake Prespa, known for its apples",
+		"cs": "Městečko u jezera Prespa, známé jablky",
+		"is": "Smábær við Prespa-vatn, þekktur fyrir epli",
+		"de": "Ein Städtchen am Prespasee, bekannt für seine Äpfel"
+	},
+	"Гостивар": {
+		"pl": "Miasto w dolinie Polog, u źródeł Wardaru",
+		"en": "A town in the Polog valley, near the source of the Vardar",
+		"cs": "Město v údolí Polog, u pramene Vardaru",
+		"is": "Bær í Polog-dalnum, nálægt upptökum Vardar",
+		"de": "Eine Stadt im Polog-Tal, nahe der Quelle des Vardar"
+	}
+}

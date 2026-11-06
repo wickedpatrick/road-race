@@ -1,0 +1,362 @@
+{
+	"Podgorica": [
+		{
+			"kind": "millennium_bridge_pg",
+			"name": {
+				"pl": "Most Milenijny",
+				"en": "Millennium Bridge",
+				"cs": "Most tisíciletí",
+				"is": "Árþúsundabrúin",
+				"de": "Millenniumsbrücke"
+			},
+			"desc": {
+				"pl": "Most podwieszony na linach do jednego wysokiego pylonu nad rzeką Morača",
+				"en": "A bridge hung on cables from one tall pylon over the Morača river",
+				"cs": "Most zavěšený na lanech z jednoho vysokého pylonu nad řekou Morača",
+				"is": "Brú sem hangir í köplum frá einum háum turni yfir ánni Morača",
+				"de": "Eine Brücke an Seilen von einem hohen Pylon über die Morača"
+			},
+			"local": "Milenijumski most"
+		}
+	],
+	"Kotor": [
+		{
+			"kind": "kotor_walls",
+			"name": {
+				"pl": "Mury Kotoru",
+				"en": "The Walls of Kotor",
+				"cs": "Hradby Kotoru",
+				"is": "Borgarmúrar Kotor",
+				"de": "Stadtmauern von Kotor"
+			},
+			"desc": {
+				"pl": "Mury wspinają się zygzakiem na górę, a na dole stoi katedra św. Tryfona z dwiema wieżami",
+				"en": "The walls zigzag up the mountain above the twin-towered Cathedral of St Tryphon",
+				"cs": "Hradby šplhají klikatě do hory nad katedrálou sv. Tryfona se dvěma věžemi",
+				"is": "Múrarnir liggja í sikksakk upp fjallið yfir dómkirkju heilags Tryfons með tveimur turnum",
+				"de": "Die Mauern ziehen sich im Zickzack den Berg hinauf über der zweitürmigen Kathedrale St. Tryphon"
+			},
+			"local": "Kotorske zidine"
+		}
+	],
+	"Budva": [
+		{
+			"kind": "sveti_stefan",
+			"name": {
+				"pl": "Sveti Stefan",
+				"en": "Sveti Stefan",
+				"cs": "Sveti Stefan",
+				"is": "Sveti Stefan",
+				"de": "Sveti Stefan"
+			},
+			"desc": {
+				"pl": "Dawna wioska rybacka na wysepce, cała z kamienia i czerwonych dachówek",
+				"en": "An old fishing village on an islet, all stone walls and red roof tiles",
+				"cs": "Bývalá rybářská vesnice na ostrůvku, celá z kamene a červených tašek",
+				"is": "Gamalt fiskiþorp á smáeyju, allt úr steini og rauðum þakflísum",
+				"de": "Ein altes Fischerdorf auf einer Insel, ganz aus Stein und roten Ziegeln"
+			},
+			"local": "Sveti Stefan"
+		}
+	],
+	"Bar": [
+		{
+			"kind": "old_olive",
+			"name": {
+				"pl": "Stara oliwka",
+				"en": "The Old Olive Tree",
+				"cs": "Stará oliva",
+				"is": "Gamla ólífutréð",
+				"de": "Der alte Olivenbaum"
+			},
+			"desc": {
+				"pl": "Ma ponad 2000 lat i wciąż rodzi oliwki, a jej pień jest pusty w środku",
+				"en": "Over 2000 years old and still bearing olives, its trunk hollow inside",
+				"cs": "Je jí přes 2000 let a stále rodí olivy, kmen má uvnitř dutý",
+				"is": "Yfir 2000 ára og ber enn ólífur, stofninn er holur að innan",
+				"de": "Über 2000 Jahre alt und trägt noch Oliven, der Stamm ist innen hohl"
+			},
+			"local": "Stara maslina"
+		}
+	],
+	"Prishtinë": [
+		{
+			"kind": "kosovo_library",
+			"name": {
+				"pl": "Biblioteka Narodowa",
+				"en": "The National Library",
+				"cs": "Národní knihovna",
+				"is": "Þjóðarbókasafnið",
+				"de": "Nationalbibliothek"
+			},
+			"desc": {
+				"pl": "Budynek z 99 białymi kopułami okrytymi metalową siatką",
+				"en": "A building of 99 white domes wrapped in a metal lattice",
+				"cs": "Budova s 99 bílými kopulemi zahalenými kovovou mříží",
+				"is": "Bygging með 99 hvítum hvolfþökum vöfðum í málmgrind",
+				"de": "Ein Gebäude mit 99 weißen Kuppeln in einem Metallgitter"
+			},
+			"local": "Biblioteka Kombëtare"
+		}
+	],
+	"Prizren": [
+		{
+			"kind": "sinan_pasha",
+			"name": {
+				"pl": "Meczet Sinana Paszy i Kamienny Most",
+				"en": "Sinan Pasha Mosque and the Stone Bridge",
+				"cs": "Mešita Sinana Paši a Kamenný most",
+				"is": "Moska Sinans pasja og steinbrúin",
+				"de": "Sinan-Pascha-Moschee und Steinbrücke"
+			},
+			"desc": {
+				"pl": "Wysoki minaret i kopuła nad łukowym mostem przez rzekę Bistrica",
+				"en": "A tall minaret and dome above an arched bridge over the Bistrica",
+				"cs": "Vysoký minaret a kupole nad obloukovým mostem přes Bistricu",
+				"is": "Hár mínaretta og hvolfþak yfir bogabrú yfir Bistrica",
+				"de": "Ein hohes Minarett und eine Kuppel über einer Bogenbrücke über die Bistrica"
+			},
+			"local": "Xhamia e Sinan Pashës"
+		}
+	],
+	"Pejë": [
+		{
+			"kind": "rugova_canyon",
+			"name": {
+				"pl": "Kanion Rugova",
+				"en": "The Rugova Gorge",
+				"cs": "Soutěska Rugova",
+				"is": "Rugova-gljúfur",
+				"de": "Rugova-Schlucht"
+			},
+			"desc": {
+				"pl": "Strome skały, rwąca rzeka i tyrolka zawieszona wysoko nad wąwozem",
+				"en": "Steep cliffs, a rushing river and a zipline strung high above the gorge",
+				"cs": "Strmé skály, divoká řeka a lanovka zavěšená vysoko nad soutěskou",
+				"is": "Brött klettabelti, straumhörð á og svifbraut hátt yfir gljúfrinu",
+				"de": "Steile Felsen, ein reißender Fluss und eine Seilrutsche hoch über der Schlucht"
+			},
+			"local": "Gryka e Rugovës"
+		}
+	],
+	"Tiranë": [
+		{
+			"kind": "skanderbeg_square",
+			"name": {
+				"pl": "Plac Skanderbega",
+				"en": "Skanderbeg Square",
+				"cs": "Skanderbegovo náměstí",
+				"is": "Skanderbeg-torg",
+				"de": "Skanderbeg-Platz"
+			},
+			"desc": {
+				"pl": "Pomnik jeźdźca na koniu, a za nim meczet Et'hem Beja i wieża zegarowa",
+				"en": "A horseman's statue with the Et'hem Bey Mosque and the Clock Tower behind",
+				"cs": "Jezdecká socha a za ní mešita Et'hem Beje a hodinová věž",
+				"is": "Riddarastytta og á bak við hana moska Et'hem Bey og klukkuturninn",
+				"de": "Ein Reiterstandbild, dahinter die Et'hem-Bey-Moschee und der Uhrturm"
+			},
+			"local": "Sheshi Skënderbej"
+		}
+	],
+	"Durrës": [
+		{
+			"kind": "durres_amphitheatre",
+			"name": {
+				"pl": "Amfiteatr rzymski",
+				"en": "The Roman Amphitheatre",
+				"cs": "Římský amfiteátr",
+				"is": "Rómverska hringleikahúsið",
+				"de": "Römisches Amphitheater"
+			},
+			"desc": {
+				"pl": "Jeden z największych na Bałkanach, długo ukryty pod domami starego miasta",
+				"en": "One of the largest in the Balkans, long hidden under the houses of the old town",
+				"cs": "Jeden z největších na Balkáně, dlouho ukrytý pod domy starého města",
+				"is": "Eitt það stærsta á Balkanskaga, lengi falið undir húsum gamla bæjarins",
+				"de": "Eines der größten des Balkans, lange unter den Häusern der Altstadt verborgen"
+			},
+			"local": "Amfiteatri i Durrësit"
+		}
+	],
+	"Shkodër": [
+		{
+			"kind": "rozafa",
+			"name": {
+				"pl": "Twierdza Rozafa",
+				"en": "Rozafa Castle",
+				"cs": "Pevnost Rozafa",
+				"is": "Rozafa-kastali",
+				"de": "Burg Rozafa"
+			},
+			"desc": {
+				"pl": "Mury na skalistym wzgórzu, skąd widać jezioro i trzy rzeki",
+				"en": "Walls on a rocky hill with a view of the lake and three rivers",
+				"cs": "Hradby na skalnatém kopci s výhledem na jezero a tři řeky",
+				"is": "Múrar á klettahæð með útsýni yfir vatnið og þrjár ár",
+				"de": "Mauern auf einem Felshügel mit Blick auf den See und drei Flüsse"
+			},
+			"local": "Kalaja e Rozafës"
+		}
+	],
+	"Vlorë": [
+		{
+			"kind": "zvernec",
+			"name": {
+				"pl": "Klasztor Zvërnec",
+				"en": "Zvërnec Monastery",
+				"cs": "Klášter Zvërnec",
+				"is": "Zvërnec-klaustrið",
+				"de": "Kloster Zvërnec"
+			},
+			"desc": {
+				"pl": "Mała cerkiew na wysepce w lagunie, prowadzi do niej długa drewniana kładka",
+				"en": "A small church on an islet in a lagoon, reached by a long wooden footbridge",
+				"cs": "Malý kostel na ostrůvku v laguně, vede k němu dlouhá dřevěná lávka",
+				"is": "Lítil kirkja á smáeyju í lóni, þangað liggur löng trébrú",
+				"de": "Eine kleine Kirche auf einer Insel in einer Lagune, über einen langen Holzsteg erreichbar"
+			},
+			"local": "Manastiri i Zvërnecit"
+		}
+	],
+	"Elbasan": [
+		{
+			"kind": "elbasan_castle",
+			"name": {
+				"pl": "Twierdza Elbasan",
+				"en": "Elbasan Castle",
+				"cs": "Pevnost Elbasan",
+				"is": "Elbasan-virkið",
+				"de": "Festung Elbasan"
+			},
+			"desc": {
+				"pl": "Brama w grubym murze i wieża zegarowa, a w środku wciąż mieszkają ludzie",
+				"en": "A gate in a thick wall and a clock tower, and people still live inside",
+				"cs": "Brána v silné hradbě a hodinová věž, a uvnitř stále bydlí lidé",
+				"is": "Hlið í þykkum múr og klukkuturn, og enn býr fólk inni",
+				"de": "Ein Tor in der dicken Mauer und ein Uhrturm, und drinnen wohnen noch Menschen"
+			},
+			"local": "Kalaja e Elbasanit"
+		}
+	],
+	"Korçë": [
+		{
+			"kind": "korce_cathedral",
+			"name": {
+				"pl": "Katedra Zmartwychwstania",
+				"en": "Resurrection Cathedral",
+				"cs": "Katedrála Vzkříšení",
+				"is": "Upprisudómkirkjan",
+				"de": "Auferstehungskathedrale"
+			},
+			"desc": {
+				"pl": "Duża cerkiew z dzwonnicą i kopułami nad głównym bulwarem miasta",
+				"en": "A large church with a bell tower and domes over the town's main boulevard",
+				"cs": "Velký chrám se zvonicí a kopulemi nad hlavním bulvárem",
+				"is": "Stór kirkja með klukkuturni og hvolfþökum við aðalgötu bæjarins",
+				"de": "Eine große Kirche mit Glockenturm und Kuppeln am Hauptboulevard"
+			},
+			"local": "Katedralja Ngjallja e Krishtit"
+		}
+	],
+	"Gjirokastër": [
+		{
+			"kind": "gjirokaster_houses",
+			"name": {
+				"pl": "Kamienne domy Gjirokastry",
+				"en": "The Stone Houses of Gjirokastër",
+				"cs": "Kamenné domy Gjirokastëru",
+				"is": "Steinhúsin í Gjirokastër",
+				"de": "Die Steinhäuser von Gjirokastra"
+			},
+			"desc": {
+				"pl": "Wysokie domy-wieże z dachami z szarych kamiennych płyt pod wielkim zamkiem",
+				"en": "Tall tower-houses with roofs of grey stone slabs below a huge castle",
+				"cs": "Vysoké věžové domy se střechami z šedých kamenných desek pod velkým hradem",
+				"is": "Há turnhús með þökum úr gráum steinhellum undir stórum kastala",
+				"de": "Hohe Turmhäuser mit Dächern aus grauen Steinplatten unter einer großen Burg"
+			},
+			"local": "Shtëpitë e gurta"
+		}
+	],
+	"Скопје": [
+		{
+			"kind": "skopje_stone_bridge",
+			"name": {
+				"pl": "Kamienny Most",
+				"en": "The Stone Bridge",
+				"cs": "Kamenný most",
+				"is": "Steinbrúin",
+				"de": "Steinerne Brücke"
+			},
+			"desc": {
+				"pl": "Dwanaście łuków nad Wardarem, symbol miasta na jego herbie",
+				"en": "Twelve arches over the Vardar, the bridge on the city's coat of arms",
+				"cs": "Dvanáct oblouků přes Vardar, most z městského znaku",
+				"is": "Tólf bogar yfir Vardar, brúin í skjaldarmerki borgarinnar",
+				"de": "Zwölf Bögen über den Vardar, die Brücke im Stadtwappen"
+			},
+			"local": "Камен мост"
+		}
+	],
+	"Тетово": [
+		{
+			"kind": "painted_mosque",
+			"name": {
+				"pl": "Malowany Meczet",
+				"en": "The Painted Mosque",
+				"cs": "Malovaná mešita",
+				"is": "Málaða moskan",
+				"de": "Bunte Moschee"
+			},
+			"desc": {
+				"pl": "Ściany pokryte kolorowymi wzorami kwiatów, jak talia kart",
+				"en": "Walls covered in colourful patterns of flowers, like a deck of cards",
+				"cs": "Stěny pokryté barevnými květinovými vzory jako balíček karet",
+				"is": "Veggir þaktir litríkum blómamynstrum, eins og spilastokkur",
+				"de": "Wände voller bunter Blumenmuster, wie ein Kartenspiel"
+			},
+			"local": "Шарена џамија"
+		}
+	],
+	"Охрид": [
+		{
+			"kind": "kaneo",
+			"name": {
+				"pl": "Cerkiew św. Jana w Kaneo",
+				"en": "Church of St John at Kaneo",
+				"cs": "Kostel sv. Jana v Kaneu",
+				"is": "Kirkja heilags Jóhannesar í Kaneo",
+				"de": "Kirche des hl. Johannes in Kaneo"
+			},
+			"desc": {
+				"pl": "Mała cerkiew z czerwonej cegły na skale tuż nad wodą jeziora",
+				"en": "A small red-brick church on a cliff right above the lake",
+				"cs": "Malý kostel z červených cihel na skále přímo nad jezerem",
+				"is": "Lítil kirkja úr rauðum múrsteini á kletti beint yfir vatninu",
+				"de": "Eine kleine Backsteinkirche auf einem Felsen direkt über dem See"
+			},
+			"local": "Св. Јован Канео"
+		}
+	],
+	"Битола": [
+		{
+			"kind": "bitola_clock",
+			"name": {
+				"pl": "Wieża zegarowa",
+				"en": "The Clock Tower",
+				"cs": "Hodinová věž",
+				"is": "Klukkuturninn",
+				"de": "Uhrturm"
+			},
+			"desc": {
+				"pl": "Kamienna wieża z zegarem na cztery strony w centrum miasta",
+				"en": "A stone tower with a four-sided clock in the town centre",
+				"cs": "Kamenná věž s hodinami na čtyři strany v centru města",
+				"is": "Steinturn með klukku á fjórum hliðum í miðbænum",
+				"de": "Ein Steinturm mit Uhr auf allen vier Seiten im Stadtzentrum"
+			},
+			"local": "Саат кула"
+		}
+	]
+}
