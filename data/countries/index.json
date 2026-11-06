@@ -65,6 +65,12 @@
 			"name": {"pl": "Kanada", "en": "Canada", "cs": "Kanada", "is": "Kanada", "de": "Kanada"},
 			"neighbours": ["us"],
 			"favorite_neighbour": "us"
+		},
+		{
+			"code": "rs",
+			"name": {"pl": "Serbia", "en": "Serbia", "cs": "Srbsko", "is": "Serbía", "de": "Serbien"},
+			"neighbours": ["hu", "ro", "bg", "mk", "me", "ba", "hr"],
+			"favorite_neighbour": "hu"
 		}
 	]
 }

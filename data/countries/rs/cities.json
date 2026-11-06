@@ -1,0 +1,28 @@
+{
+	"beograd": {
+		"name": "Beograd",
+		"lat": 44.82,
+		"lon": 20.46,
+		"pop": 1198,
+		"region": "Beograd",
+		"exonym": {"pl": "Belgrad", "en": "Belgrade", "cs": "Bělehrad", "is": "Belgrad", "de": "Belgrad"}
+	},
+	"novi_sad": {"name": "Novi Sad", "lat": 45.25, "lon": 19.84, "pop": 307, "region": "Vojvodina"},
+	"nis": {"name": "Niš", "lat": 43.32, "lon": 21.9, "pop": 249, "region": "Južna i Istočna Srbija"},
+	"kragujevac": {"name": "Kragujevac", "lat": 44.01, "lon": 20.92, "pop": 172, "region": "Šumadija i Zapadna Srbija"},
+	"subotica": {"name": "Subotica", "lat": 46.1, "lon": 19.67, "pop": 105, "region": "Vojvodina"},
+	"pancevo": {"name": "Pančevo", "lat": 44.87, "lon": 20.64, "pop": 76, "region": "Vojvodina"},
+	"zrenjanin": {"name": "Zrenjanin", "lat": 45.38, "lon": 20.39, "pop": 74, "region": "Vojvodina"},
+	"cacak": {"name": "Čačak", "lat": 43.89, "lon": 20.35, "pop": 72, "region": "Šumadija i Zapadna Srbija"},
+	"novi_pazar": {"name": "Novi Pazar", "lat": 43.14, "lon": 20.51, "pop": 71, "region": "Šumadija i Zapadna Srbija"},
+	"kraljevo": {"name": "Kraljevo", "lat": 43.72, "lon": 20.69, "pop": 64, "region": "Šumadija i Zapadna Srbija"},
+	"smederevo": {"name": "Smederevo", "lat": 44.66, "lon": 20.93, "pop": 61, "region": "Šumadija i Zapadna Srbija"},
+	"leskovac": {"name": "Leskovac", "lat": 43, "lon": 21.95, "pop": 58, "region": "Južna i Istočna Srbija"},
+	"valjevo": {"name": "Valjevo", "lat": 44.27, "lon": 19.89, "pop": 57, "region": "Šumadija i Zapadna Srbija"},
+	"uzice": {"name": "Užice", "lat": 43.86, "lon": 19.84, "pop": 55, "region": "Šumadija i Zapadna Srbija"},
+	"vranje": {"name": "Vranje", "lat": 42.55, "lon": 21.9, "pop": 54, "region": "Južna i Istočna Srbija"},
+	"sabac": {"name": "Šabac", "lat": 44.75, "lon": 19.69, "pop": 51, "region": "Šumadija i Zapadna Srbija"},
+	"zajecar": {"name": "Zaječar", "lat": 43.9, "lon": 22.27, "pop": 34, "region": "Južna i Istočna Srbija"},
+	"pirot": {"name": "Pirot", "lat": 43.15, "lon": 22.59, "pop": 34, "region": "Južna i Istočna Srbija"},
+	"kladovo": {"name": "Kladovo", "lat": 44.61, "lon": 22.61, "pop": 8, "region": "Južna i Istočna Srbija"}
+}

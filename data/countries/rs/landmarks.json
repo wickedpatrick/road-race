@@ -1,0 +1,370 @@
+{
+	"Beograd": [
+		{
+			"kind": "pobednik",
+			"name": {
+				"pl": "Pomnik Zwycięzcy",
+				"en": "The Victor monument",
+				"cs": "Socha Vítěze",
+				"is": "Sigurvegarinn",
+				"de": "Der Sieger"
+			},
+			"desc": {
+				"pl": "Brązowy wojownik na wysokiej kolumnie nad Kalemegdanem",
+				"en": "A bronze warrior on a tall column above Kalemegdan",
+				"cs": "Bronzový bojovník na vysokém sloupu nad Kalemegdanem",
+				"is": "Bronsstríðsmaður á hárri súlu yfir Kalemegdan",
+				"de": "Ein bronzener Krieger auf einer hohen Säule über dem Kalemegdan"
+			},
+			"local": "Pobednik"
+		}
+	],
+	"Novi Sad": [
+		{
+			"kind": "petrovaradin_clock",
+			"name": {
+				"pl": "Twierdza Petrovaradin",
+				"en": "Petrovaradin Fortress",
+				"cs": "Pevnost Petrovaradin",
+				"is": "Petrovaradin-virkið",
+				"de": "Festung Peterwardein"
+			},
+			"desc": {
+				"pl": "Zegar na wieży ma zamienione wskazówki: duża pokazuje godziny",
+				"en": "The tower clock's hands are swapped: the big one shows the hours",
+				"cs": "Hodiny na věži mají prohozené ručičky: velká ukazuje hodiny",
+				"is": "Vísar turnklukkunnar eru öfugir: stóri vísirinn sýnir klukkustundir",
+				"de": "Die Turmuhr hat vertauschte Zeiger: der große zeigt die Stunden"
+			},
+			"local": "Petrovaradinska tvrđava"
+		}
+	],
+	"Niš": [
+		{
+			"kind": "nis_fortress",
+			"name": {
+				"pl": "Twierdza w Niszu",
+				"en": "Niš Fortress",
+				"cs": "Pevnost Niš",
+				"is": "Niš-virkið",
+				"de": "Festung Niš"
+			},
+			"desc": {
+				"pl": "Kamienna Brama Stambulska nad rzeką Nišavą",
+				"en": "The stone Istanbul Gate on the Nišava river",
+				"cs": "Kamenná Istanbulská brána na řece Nišavě",
+				"is": "Steinhliðið Istanbúlhlið við ána Nišava",
+				"de": "Das steinerne Istanbul-Tor am Fluss Nišava"
+			},
+			"local": "Niška tvrđava"
+		}
+	],
+	"Kragujevac": [
+		{
+			"kind": "yugo",
+			"name": {
+				"pl": "Samochód Yugo",
+				"en": "The Yugo car",
+				"cs": "Automobil Yugo",
+				"is": "Yugo-bíllinn",
+				"de": "Das Auto Yugo"
+			},
+			"desc": {
+				"pl": "Mały hatchback z fabryki Zastava, jeździł nawet w Ameryce",
+				"en": "A little hatchback from the Zastava works, sold as far as America",
+				"cs": "Malý hatchback z továrny Zastava, jezdil až v Americe",
+				"is": "Lítill hlaðbakur frá Zastava-verksmiðjunni, seldur alla leið til Ameríku",
+				"de": "Ein kleiner Kompaktwagen aus dem Zastava-Werk, verkauft bis nach Amerika"
+			},
+			"local": "Jugo"
+		}
+	],
+	"Subotica": [
+		{
+			"kind": "subotica_hall",
+			"name": {
+				"pl": "Ratusz w Suboticy",
+				"en": "Subotica Town Hall",
+				"cs": "Radnice v Subotici",
+				"is": "Ráðhúsið í Subotica",
+				"de": "Rathaus von Subotica"
+			},
+			"desc": {
+				"pl": "Secesyjny pałac z kolorowymi dachówkami i wysoką wieżą",
+				"en": "An Art Nouveau palace with colourful tiles and a tall tower",
+				"cs": "Secesní palác s barevnými taškami a vysokou věží",
+				"is": "Jugendstílshöll með litríkum flísum og háum turni",
+				"de": "Ein Jugendstilpalast mit bunten Ziegeln und hohem Turm"
+			},
+			"local": "Gradska kuća"
+		}
+	],
+	"Pančevo": [
+		{
+			"kind": "weifert_brewery",
+			"name": {
+				"pl": "Browar Weiferta",
+				"en": "Weifert Brewery",
+				"cs": "Weifertův pivovar",
+				"is": "Weifert-brugghúsið",
+				"de": "Weifert-Brauerei"
+			},
+			"desc": {
+				"pl": "Ceglany browar z kominem, warzy piwo od XVIII wieku",
+				"en": "A brick brewery with a chimney, brewing since the 18th century",
+				"cs": "Cihlový pivovar s komínem, vaří pivo od 18. století",
+				"is": "Múrsteinsbrugghús með reykháf, bruggar síðan á 18. öld",
+				"de": "Eine Backsteinbrauerei mit Schornstein, braut seit dem 18. Jahrhundert"
+			},
+			"local": "Vajfertova pivara"
+		}
+	],
+	"Zrenjanin": [
+		{
+			"kind": "begej_bridge",
+			"name": {
+				"pl": "Mały most na Begeju",
+				"en": "The little bridge on the Begej",
+				"cs": "Malý most přes Begej",
+				"is": "Litla brúin yfir Begej",
+				"de": "Die kleine Brücke über die Bega"
+			},
+			"desc": {
+				"pl": "Żelazny łukowy mostek nad starym korytem rzeki",
+				"en": "An iron arched footbridge over the old riverbed",
+				"cs": "Železný obloukový můstek přes staré koryto řeky",
+				"is": "Járnbogabrú yfir gamla árfarveginum",
+				"de": "Eine eiserne Bogenbrücke über das alte Flussbett"
+			},
+			"local": "Mali most"
+		}
+	],
+	"Čačak": [
+		{
+			"kind": "kablar_meanders",
+			"name": {
+				"pl": "Meandry Ovčar-Kablar",
+				"en": "The Ovčar-Kablar meanders",
+				"cs": "Meandry Ovčar-Kablar",
+				"is": "Bugðurnar í Ovčar-Kablar",
+				"de": "Die Mäander von Ovčar-Kablar"
+			},
+			"desc": {
+				"pl": "Zachodnia Morawa zawija się w pętle między dwiema górami",
+				"en": "The West Morava loops between two mountains",
+				"cs": "Západní Morava se kroutí ve smyčkách mezi dvěma horami",
+				"is": "Vestur-Morava hlykkjast milli tveggja fjalla",
+				"de": "Die Westliche Morava windet sich in Schleifen zwischen zwei Bergen"
+			},
+			"local": "Ovčarsko-kablarska klisura"
+		}
+	],
+	"Novi Pazar": [
+		{
+			"kind": "petrova_crkva",
+			"name": {
+				"pl": "Cerkiew św. Piotra",
+				"en": "St Peter's Church",
+				"cs": "Kostel svatého Petra",
+				"is": "Kirkja heilags Péturs",
+				"de": "Peterskirche"
+			},
+			"desc": {
+				"pl": "Mały kamienny kościół z kopułą, jeden z najstarszych w Serbii (UNESCO)",
+				"en": "A small domed stone church, one of the oldest in Serbia (UNESCO)",
+				"cs": "Malý kamenný kostel s kopulí, jeden z nejstarších v Srbsku (UNESCO)",
+				"is": "Lítil hvelfd steinkirkja, ein sú elsta í Serbíu (UNESCO)",
+				"de": "Eine kleine steinerne Kuppelkirche, eine der ältesten Serbiens (UNESCO)"
+			},
+			"local": "Petrova crkva"
+		}
+	],
+	"Kraljevo": [
+		{
+			"kind": "zica",
+			"name": {
+				"pl": "Monaster Žiča",
+				"en": "Žiča Monastery",
+				"cs": "Klášter Žiča",
+				"is": "Žiča-klaustrið",
+				"de": "Kloster Žiča"
+			},
+			"desc": {
+				"pl": "Czerwony klasztor, w którym koronowano średniowiecznych królów",
+				"en": "A red monastery where medieval kings were crowned",
+				"cs": "Červený klášter, kde byli korunováni středověcí králové",
+				"is": "Rautt klaustur þar sem miðaldakonungar voru krýndir",
+				"de": "Ein rotes Kloster, in dem mittelalterliche Könige gekrönt wurden"
+			},
+			"local": "Manastir Žiča"
+		}
+	],
+	"Smederevo": [
+		{
+			"kind": "smederevo_fortress",
+			"name": {
+				"pl": "Twierdza Smederevo",
+				"en": "Smederevo Fortress",
+				"cs": "Pevnost Smederevo",
+				"is": "Smederevo-virkið",
+				"de": "Festung Smederevo"
+			},
+			"desc": {
+				"pl": "Trójkątne mury z 25 kwadratowymi wieżami nad Dunajem",
+				"en": "Triangular walls with 25 square towers on the Danube",
+				"cs": "Trojúhelníkové hradby s 25 hranatými věžemi na Dunaji",
+				"is": "Þríhyrndir veggir með 25 ferhyrndum turnum við Dóná",
+				"de": "Dreieckige Mauern mit 25 viereckigen Türmen an der Donau"
+			},
+			"local": "Smederevska tvrđava"
+		}
+	],
+	"Leskovac": [
+		{
+			"kind": "pljeskavica",
+			"name": {"pl": "Pljeskavica", "en": "Pljeskavica", "cs": "Pljeskavica", "is": "Pljeskavica", "de": "Pljeskavica"},
+			"desc": {
+				"pl": "Wielki grillowany kotlet w chlebku, duma Leskovaca",
+				"en": "A big grilled patty in flatbread, Leskovac's pride",
+				"cs": "Velký grilovaný karbanátek v placce, chlouba Leskovace",
+				"is": "Stórt grillað buff í flatbrauði, stolt Leskovac",
+				"de": "Ein großes gegrilltes Laibchen im Fladenbrot, der Stolz von Leskovac"
+			},
+			"local": "Leskovačka pljeskavica"
+		}
+	],
+	"Valjevo": [
+		{
+			"kind": "tesnjar",
+			"name": {"pl": "Tešnjar", "en": "Tešnjar", "cs": "Tešnjar", "is": "Tešnjar", "de": "Tešnjar"},
+			"desc": {
+				"pl": "Stara uliczka z drewnianymi sklepikami i okiennicami",
+				"en": "An old street of wooden shops with shutters",
+				"cs": "Stará ulička s dřevěnými krámky a okenicemi",
+				"is": "Gömul gata með trébúðum og hlerum",
+				"de": "Eine alte Gasse mit hölzernen Läden und Fensterläden"
+			},
+			"local": "Tešnjar"
+		}
+	],
+	"Užice": [
+		{
+			"kind": "sargan_eight",
+			"name": {
+				"pl": "Szargańska ósemka",
+				"en": "The Šargan Eight",
+				"cs": "Šarganská osmička",
+				"is": "Šargan-áttan",
+				"de": "Šargan-Acht"
+			},
+			"desc": {
+				"pl": "Wąskotorowa kolejka wspina się po torze w kształcie ósemki",
+				"en": "A narrow-gauge train climbs on a track shaped like an 8",
+				"cs": "Úzkokolejný vláček stoupá po trati ve tvaru osmičky",
+				"is": "Mjóspora lest klifrar eftir spori í laginu eins og 8",
+				"de": "Eine Schmalspurbahn klettert auf einer Strecke in Form einer Acht"
+			},
+			"local": "Šarganska osmica"
+		}
+	],
+	"Vranje": [
+		{
+			"kind": "beli_most",
+			"name": {
+				"pl": "Biały Most",
+				"en": "The White Bridge",
+				"cs": "Bílý most",
+				"is": "Hvíta brúin",
+				"de": "Weiße Brücke"
+			},
+			"desc": {
+				"pl": "Biały kamienny łuk, zwany też mostem miłości",
+				"en": "A white stone arch, also called the bridge of love",
+				"cs": "Bílý kamenný oblouk, nazývaný také most lásky",
+				"is": "Hvítur steinbogi, líka kallaður brú ástarinnar",
+				"de": "Ein weißer Steinbogen, auch Brücke der Liebe genannt"
+			},
+			"local": "Beli most"
+		}
+	],
+	"Šabac": [
+		{
+			"kind": "sabac_tower",
+			"name": {
+				"pl": "Twierdza w Szabacu",
+				"en": "Šabac Fortress",
+				"cs": "Pevnost Šabac",
+				"is": "Šabac-virkið",
+				"de": "Festung Šabac"
+			},
+			"desc": {
+				"pl": "Okrągła baszta starej twierdzy na brzegu Sawy",
+				"en": "A round tower of the old fortress on the bank of the Sava",
+				"cs": "Kulatá bašta staré pevnosti na břehu Sávy",
+				"is": "Hringturn gamla virkisins á bakka Sava",
+				"de": "Ein runder Turm der alten Festung am Ufer der Save"
+			},
+			"local": "Šabačka tvrđava"
+		}
+	],
+	"Zaječar": [
+		{
+			"kind": "romuliana",
+			"name": {
+				"pl": "Felix Romuliana",
+				"en": "Felix Romuliana",
+				"cs": "Felix Romuliana",
+				"is": "Felix Romuliana",
+				"de": "Felix Romuliana"
+			},
+			"desc": {
+				"pl": "Mury i baszty pałacu rzymskiego cesarza Galeriusza",
+				"en": "Walls and towers of the Roman emperor Galerius's palace",
+				"cs": "Hradby a věže paláce římského císaře Galeria",
+				"is": "Veggir og turnar hallar Galeríusar Rómarkeisara",
+				"de": "Mauern und Türme des Palasts des römischen Kaisers Galerius"
+			},
+			"local": "Feliks Romulijana"
+		}
+	],
+	"Pirot": [
+		{
+			"kind": "pirot_kilim",
+			"name": {
+				"pl": "Kilim z Pirotu",
+				"en": "Pirot kilim",
+				"cs": "Pirotský kilim",
+				"is": "Pirot-kilim",
+				"de": "Pirot-Kelim"
+			},
+			"desc": {
+				"pl": "Tkany ręcznie dywan w czerwone i niebieskie romby",
+				"en": "A hand-woven rug of red and blue diamonds",
+				"cs": "Ručně tkaný koberec s červenými a modrými kosočtverci",
+				"is": "Handofið teppi með rauðum og bláum tíglum",
+				"de": "Ein handgewebter Teppich mit roten und blauen Rauten"
+			},
+			"local": "Pirotski ćilim"
+		}
+	],
+	"Kladovo": [
+		{
+			"kind": "djerdap_dam",
+			"name": {
+				"pl": "Zapora Żelazna Brama",
+				"en": "The Iron Gate dam",
+				"cs": "Přehrada Železná vrata",
+				"is": "Járnhliðsstíflan",
+				"de": "Staudamm Eisernes Tor"
+			},
+			"desc": {
+				"pl": "Ogromna elektrownia wodna na Dunaju, wspólna z Rumunią",
+				"en": "A huge hydro power plant on the Danube, shared with Romania",
+				"cs": "Obří vodní elektrárna na Dunaji, společná s Rumunskem",
+				"is": "Risastór vatnsaflsvirkjun í Dóná, sameiginleg með Rúmeníu",
+				"de": "Ein riesiges Wasserkraftwerk an der Donau, gemeinsam mit Rumänien"
+			},
+			"local": "HE Đerdap"
+		}
+	]
+}

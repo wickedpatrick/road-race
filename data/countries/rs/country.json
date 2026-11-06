@@ -1,0 +1,48 @@
+{
+	"code": "rs",
+	"name": {"pl": "Serbia", "en": "Serbia", "cs": "Srbsko", "is": "Serbía", "de": "Serbien"},
+	"language": "sr",
+	"drive": "right",
+	"units": "metric",
+	"title": {
+		"pl": "RAJD PRZEZ SERBIĘ",
+		"en": "SERBIA ROAD TRIP",
+		"cs": "RALLY SRBSKEM",
+		"is": "ÖKUFERÐ UM SERBÍU",
+		"de": "SERBIEN-TOUR"
+	},
+	"subtitle": {
+		"pl": "Edukacyjna podróż przez równiny Wojwodiny, Szumadię i wąwozy Dunaju",
+		"en": "An educational journey across the Vojvodina plain, Šumadija and the Danube gorges",
+		"cs": "Vzdělávací cesta přes vojvodinskou rovinu, Šumadii a soutěsky Dunaje",
+		"is": "Fræðandi ferðalag um sléttur Vojvodina, Šumadija og gljúfur Dónár",
+		"de": "Eine lehrreiche Reise durch die Ebene der Vojvodina, die Šumadija und die Donauschluchten"
+	},
+	"region_label": {"pl": "region", "en": "region", "cs": "region", "is": "landshluti", "de": "Region"},
+	"start": ["beograd", "novi_sad"],
+	"express_prefixes": ["A"],
+	"limits": {"express": 130, "road": 80, "city": 50, "town_on_express": 80, "town": 50},
+	"signs": {"town": "#ffffff", "town_text": "#111111", "board": "#1d5bbf", "board_motorway": "#1f7a3a"},
+	"map": {"lon0": 18.6, "lon1": 23.2, "lat0": 42.1, "lat1": 46.35, "lon_k": 0.717, "zoom": 1.3, "labels": "auto"},
+	"outline": [
+		[18.82, 45.91], [19.08, 45.98], [19.42, 46.06], [19.7, 46.18], [20, 46.17], [20.26, 46.11], [20.5, 45.92],
+		[20.66, 45.79], [20.8, 45.6], [20.85, 45.47], [21, 45.4], [21.35, 45.24], [21.5, 45.18], [21.43, 45.05],
+		[21.36, 44.87], [21.55, 44.78], [21.66, 44.67], [22, 44.6], [22.15, 44.48], [22.3, 44.66], [22.47, 44.71],
+		[22.7, 44.53], [22.6, 44.38], [22.68, 44.22], [22.55, 44.05], [22.42, 43.95], [22.36, 43.8], [22.52, 43.62],
+		[22.75, 43.4], [22.85, 43.27], [22.99, 43.11], [22.7, 42.88], [22.45, 42.8], [22.47, 42.55], [22.36, 42.31],
+		[22, 42.3], [21.85, 42.32], [21.58, 42.24], [21.75, 42.5], [21.75, 42.68], [21.62, 42.95], [21.4, 42.87],
+		[21.2, 43.1], [20.95, 43.15], [20.85, 43.27], [20.6, 43.2], [20.4, 42.95], [20.33, 42.84], [20.06, 43],
+		[19.88, 43.1], [19.65, 43.2], [19.52, 43.32], [19.24, 43.53], [19.5, 43.72], [19.52, 44], [19.35, 44.2],
+		[19.12, 44.4], [19.2, 44.6], [19.36, 44.88], [19, 44.88], [19.1, 45.13], [19.02, 45.2], [19.42, 45.22],
+		[19, 45.35], [18.92, 45.55], [18.85, 45.9]
+	],
+	"outline_lines": [],
+	"station": {
+		"sign": "BENZINSKA PUMPA",
+		"board": "GORIVO",
+		"prices": [["BMB 95", "189"], ["Evro dizel", "199"]],
+		"region_sign": "REGION"
+	},
+	"plates": [["A", "#1f7a3a", "#ffffff"], ["I", "#1d5bbf", "#ffffff"]],
+	"weather": {"default": "sun", "landscape": true}
+}

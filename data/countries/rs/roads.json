@@ -1,0 +1,208 @@
+[
+	{
+		"a": "subotica",
+		"b": "novi_sad",
+		"km": 100,
+		"road": "A1",
+		"towns": [["Bačka Topola", 35], ["Vrbas", 65]],
+		"zones": [[100, "fields", "Bačka"]]
+	},
+	{
+		"a": "novi_sad",
+		"b": "beograd",
+		"km": 94,
+		"road": "A1",
+		"towns": [["Inđija", 45], ["Stara Pazova", 58]],
+		"zones": [[25, "upland", "Fruška gora"], [94, "fields", "Srem"]]
+	},
+	{
+		"a": "novi_sad",
+		"b": "zrenjanin",
+		"km": 51,
+		"road": "IB 12",
+		"towns": [["Kać", 10], ["Žabalj", 28]],
+		"zones": [[51, "fields", "Bačka i Banat"]]
+	},
+	{
+		"a": "zrenjanin",
+		"b": "beograd",
+		"km": 75,
+		"road": "IB 13",
+		"towns": [["Ečka", 8], ["Orlovat", 25], ["Padinska Skela", 60]],
+		"zones": [[75, "fields", "Banat"]]
+	},
+	{"a": "beograd", "b": "pancevo", "km": 18, "road": "IB 10", "towns": [], "zones": [[18, "fields", "Banat"]]},
+	{
+		"a": "beograd",
+		"b": "sabac",
+		"km": 90,
+		"road": [[61, "A3"], [90, "IB 21"]],
+		"towns": [["Surčin", 15], ["Pećinci", 35], ["Ruma", 61]],
+		"zones": [[90, "fields", "Srem"]],
+		"via": [[61, 19.82, 45]]
+	},
+	{
+		"a": "sabac",
+		"b": "valjevo",
+		"km": 65,
+		"road": "IB 21",
+		"towns": [["Koceljeva", 35]],
+		"zones": [[30, "fields", "Mačva"], [65, "upland", "Kolubara"]]
+	},
+	{
+		"a": "valjevo",
+		"b": "uzice",
+		"km": 90,
+		"road": "IB 21",
+		"towns": [["Kosjerić", 50], ["Požega", 70]],
+		"zones": [[60, "foothills", "Maljen"], [90, "upland", "Zlatibor"]]
+	},
+	{
+		"a": "beograd",
+		"b": "cacak",
+		"km": 145,
+		"road": "A2",
+		"towns": [["Obrenovac", 30], ["Lajkovac", 70], ["Ljig", 95], ["Preljina", 135]],
+		"zones": [[60, "fields", "Posavina"], [120, "foothills", "Šumadija"], [145, "upland", "Morava"]],
+		"via": [[30, 20.2, 44.66], [70, 20.17, 44.37], [95, 20.24, 44.22]]
+	},
+	{
+		"a": "cacak",
+		"b": "uzice",
+		"km": 60,
+		"road": "IB 23",
+		"towns": [["Požega", 35]],
+		"zones": [[60, "upland", "Zapadna Morava"]]
+	},
+	{
+		"a": "cacak",
+		"b": "kraljevo",
+		"km": 38,
+		"road": "IB 23",
+		"towns": [["Mrčajevci", 15]],
+		"zones": [[38, "orchard", "Zapadna Morava"]]
+	},
+	{
+		"a": "kraljevo",
+		"b": "novi_pazar",
+		"km": 105,
+		"road": "IB 22",
+		"towns": [["Ušće", 40], ["Raška", 75]],
+		"zones": [[80, "mountains", "Ibarska klisura"], [105, "upland", "Raška"]],
+		"via": [[40, 20.62, 43.47], [75, 20.61, 43.29]]
+	},
+	{
+		"a": "beograd",
+		"b": "smederevo",
+		"km": 48,
+		"road": [[35, "A1"], [48, "IB 14"]],
+		"towns": [["Vrčin", 22]],
+		"zones": [[48, "orchard", "Podunavlje"]]
+	},
+	{
+		"a": "beograd",
+		"b": "kragujevac",
+		"km": 135,
+		"road": [[108, "A1"], [135, "IB 24"]],
+		"towns": [["Mali Požarevac", 40], ["Velika Plana", 85], ["Batočina", 112]],
+		"zones": [[60, "foothills", "Šumadija"], [110, "fields", "Velika Morava"], [135, "foothills", "Šumadija"]],
+		"via": [[85, 21.07, 44.33], [112, 21.08, 44.15]]
+	},
+	{
+		"a": "kragujevac",
+		"b": "kraljevo",
+		"km": 55,
+		"road": "IB 23",
+		"towns": [["Knić", 25]],
+		"zones": [[55, "foothills", "Gruža"]]
+	},
+	{
+		"a": "kragujevac",
+		"b": "nis",
+		"km": 150,
+		"road": [[25, "IB 24"], [150, "A1"]],
+		"towns": [["Batočina", 22], ["Jagodina", 55], ["Ćuprija", 68], ["Paraćin", 78], ["Ražanj", 105], ["Aleksinac", 125]],
+		"zones": [[25, "foothills", "Šumadija"], [150, "fields", "Pomoravlje"]],
+		"via": [[22, 21.08, 44.15], [55, 21.26, 43.98], [78, 21.41, 43.86], [125, 21.7, 43.54]]
+	},
+	{
+		"a": "beograd",
+		"b": "nis",
+		"km": 237,
+		"road": "A1",
+		"towns": [["Velika Plana", 88], ["Jagodina", 135], ["Ćuprija", 148], ["Paraćin", 158], ["Aleksinac", 205]],
+		"zones": [[60, "foothills", "Šumadija"], [237, "fields", "Pomoravlje"]],
+		"via": [[88, 21.07, 44.33], [135, 21.26, 43.98], [158, 21.41, 43.86], [205, 21.7, 43.54]]
+	},
+	{
+		"a": "nis",
+		"b": "leskovac",
+		"km": 45,
+		"road": "A1",
+		"towns": [["Doljevac", 20]],
+		"zones": [[45, "fields", "Južna Morava"]]
+	},
+	{
+		"a": "leskovac",
+		"b": "vranje",
+		"km": 70,
+		"road": "A1",
+		"towns": [["Grdelica", 30], ["Vladičin Han", 45]],
+		"zones": [[20, "fields", "Južna Morava"], [55, "mountains", "Grdelička klisura"], [70, "upland", "Pčinja"]]
+	},
+	{
+		"a": "nis",
+		"b": "pirot",
+		"km": 72,
+		"road": "A4",
+		"towns": [["Niška Banja", 12], ["Bela Palanka", 42]],
+		"zones": [[35, "mountains", "Sićevačka klisura"], [72, "upland", "Ponišavlje"]]
+	},
+	{
+		"a": "nis",
+		"b": "zajecar",
+		"km": 95,
+		"road": "IB 35",
+		"towns": [["Svrljig", 35], ["Knjaževac", 62]],
+		"zones": [[45, "upland", "Svrljiške planine"], [95, "foothills", "Timok"]],
+		"via": [[35, 22.12, 43.41], [62, 22.26, 43.57]]
+	},
+	{
+		"a": "smederevo",
+		"b": "kladovo",
+		"km": 200,
+		"road": [[35, "IB 33"], [200, "IB 34"]],
+		"towns": [["Požarevac", 32], ["Veliko Gradište", 72], ["Golubac", 95], ["Donji Milanovac", 150]],
+		"zones": [[90, "fields", "Braničevo"], [200, "mountains", "Đerdap"]],
+		"via": [[32, 21.19, 44.62], [72, 21.52, 44.76], [95, 21.63, 44.65], [150, 22.15, 44.46]],
+		"tunnels": [
+			{
+				"from_km": 112,
+				"to_km": 112.4,
+				"name": {
+					"pl": "Tunel w Đerdapie",
+					"en": "Đerdap Tunnel",
+					"cs": "Tunel v Đerdapu",
+					"is": "Đerdap-göngin",
+					"de": "Đerdap-Tunnel"
+				},
+				"fact": {
+					"pl": "Droga przez Żelazną Bramę ma ponad 20 krótkich tuneli wykutych w skale",
+					"en": "The road through the Iron Gates has over 20 short tunnels cut into the rock",
+					"cs": "Silnice Železnými vraty má přes 20 krátkých tunelů vytesaných ve skále",
+					"is": "Vegurinn um Járnhliðið hefur yfir 20 stutt göng höggvin í bergið",
+					"de": "Die Straße durch das Eiserne Tor hat über 20 kurze, in den Fels gehauene Tunnel"
+				}
+			}
+		]
+	},
+	{
+		"a": "kladovo",
+		"b": "zajecar",
+		"km": 115,
+		"road": "IB 35",
+		"towns": [["Brza Palanka", 30], ["Negotin", 62]],
+		"zones": [[40, "foothills", "Ključ"], [80, "orchard", "Krajina"], [115, "upland", "Timok"]],
+		"via": [[30, 22.45, 44.47], [62, 22.53, 44.23]]
+	}
+]

@@ -1,0 +1,163 @@
+{
+	"Beograd": {
+		"pl": "Stolica Serbii u miejscu, gdzie Sawa wpada do Dunaju",
+		"en": "Serbia's capital, where the Sava flows into the Danube",
+		"cs": "Hlavní město Srbska, kde se Sáva vlévá do Dunaje",
+		"is": "Höfuðborg Serbíu, þar sem Sava rennur í Dóná",
+		"de": "Serbiens Hauptstadt, wo die Save in die Donau mündet"
+	},
+	"Novi Sad": {
+		"pl": "Stolica Wojwodiny nad Dunajem, słynie z festiwalu muzycznego EXIT",
+		"en": "Capital of Vojvodina on the Danube, home of the EXIT music festival",
+		"cs": "Metropole Vojvodiny na Dunaji, známá hudebním festivalem EXIT",
+		"is": "Höfuðborg Vojvodina við Dóná, þar sem EXIT-tónlistarhátíðin er haldin",
+		"de": "Hauptstadt der Vojvodina an der Donau, Heimat des Musikfestivals EXIT"
+	},
+	"Niš": {
+		"pl": "Tu urodził się rzymski cesarz Konstantyn Wielki",
+		"en": "Birthplace of the Roman emperor Constantine the Great",
+		"cs": "Rodiště římského císaře Konstantina Velikého",
+		"is": "Fæðingarstaður Konstantínusar mikla Rómarkeisara",
+		"de": "Geburtsort des römischen Kaisers Konstantin des Großen"
+	},
+	"Kragujevac": {
+		"pl": "Pierwsza stolica nowożytnej Serbii, tu robiono samochody Zastava i Yugo",
+		"en": "The first capital of modern Serbia, where Zastava and Yugo cars were made",
+		"cs": "První hlavní město novodobého Srbska, vyráběla se tu auta Zastava a Yugo",
+		"is": "Fyrsta höfuðborg nútíma Serbíu, þar sem Zastava- og Yugo-bílar voru smíðaðir",
+		"de": "Erste Hauptstadt des modernen Serbien, hier wurden Zastava- und Yugo-Autos gebaut"
+	},
+	"Subotica": {
+		"pl": "Miasto secesji tuż przy granicy z Węgrami, z kolorowym ratuszem",
+		"en": "An Art Nouveau town by the Hungarian border, with a colourful town hall",
+		"cs": "Secesní město u maďarských hranic s barevnou radnicí",
+		"is": "Jugendstílsbær við ungversku landamærin, með litríku ráðhúsi",
+		"de": "Jugendstilstadt an der ungarischen Grenze mit einem bunten Rathaus"
+	},
+	"Pančevo": {
+		"pl": "Miasto nad Tamiszem, ma jeden z najstarszych browarów na Bałkanach",
+		"en": "A town on the Tamiš with one of the oldest breweries in the Balkans",
+		"cs": "Město na řece Tamiš s jedním z nejstarších pivovarů na Balkáně",
+		"is": "Bær við ána Tamiš með einu elsta brugghúsi Balkanskaga",
+		"de": "Stadt an der Temesch mit einer der ältesten Brauereien des Balkans"
+	},
+	"Zrenjanin": {
+		"pl": "Największe miasto Banatu, nad rzeką Begej z wieloma mostkami",
+		"en": "The largest town of Banat, on the Begej river with many little bridges",
+		"cs": "Největší město Banátu na řece Begej s mnoha můstky",
+		"is": "Stærsti bær Banat, við ána Begej með mörgum litlum brúm",
+		"de": "Größte Stadt des Banats, an der Bega mit vielen kleinen Brücken"
+	},
+	"Čačak": {
+		"pl": "Brama do wąwozu Ovčar-Kablar, gdzie Morawa wije się w pętle",
+		"en": "Gateway to the Ovčar-Kablar gorge, where the Morava winds in loops",
+		"cs": "Brána do soutěsky Ovčar-Kablar, kde se Morava vine ve smyčkách",
+		"is": "Hliðið að Ovčar-Kablar-gljúfrinu þar sem Morava hlykkjast í lykkjum",
+		"de": "Tor zur Ovčar-Kablar-Schlucht, wo sich die Morava in Schleifen windet"
+	},
+	"Novi Pazar": {
+		"pl": "Stare miasto handlowe w regionie Raška, z meczetami i kościołami",
+		"en": "An old market town in the Raška region, with mosques and churches",
+		"cs": "Staré obchodní město v kraji Raška s mešitami i kostely",
+		"is": "Gamall verslunarbær í Raška-héraði, með moskum og kirkjum",
+		"de": "Alte Handelsstadt in der Region Raška, mit Moscheen und Kirchen"
+	},
+	"Kraljevo": {
+		"pl": "Miasto królów, w którym koronowano średniowiecznych władców",
+		"en": "The city of kings, near where medieval rulers were crowned",
+		"cs": "Město králů, nedaleko se korunovali středověcí panovníci",
+		"is": "Borg konunganna, nærri þar sem miðaldakonungar voru krýndir",
+		"de": "Stadt der Könige, in deren Nähe mittelalterliche Herrscher gekrönt wurden"
+	},
+	"Smederevo": {
+		"pl": "Ma jedną z największych twierdz nizinnych w Europie, nad Dunajem",
+		"en": "Home to one of Europe's largest lowland fortresses, on the Danube",
+		"cs": "Má jednu z největších nížinných pevností v Evropě, na Dunaji",
+		"is": "Hér stendur eitt stærsta láglendisvirki Evrópu, við Dóná",
+		"de": "Hier steht eine der größten Tieflandfestungen Europas, an der Donau"
+	},
+	"Leskovac": {
+		"pl": "Stolica grilla, co roku odbywa się tu wielki festiwal pljeskavicy",
+		"en": "The barbecue capital, with a big grill festival every year",
+		"cs": "Hlavní město grilování, každý rok tu bývá velký festival grilu",
+		"is": "Höfuðborg grillsins, með stórri grillhátíð á hverju ári",
+		"de": "Hauptstadt des Grillens, mit einem großen Grillfest jedes Jahr"
+	},
+	"Valjevo": {
+		"pl": "Stare miasto z bazarem Tešnjar nad rzeką Kolubarą",
+		"en": "An old town with the Tešnjar bazaar on the Kolubara river",
+		"cs": "Staré město s bazarem Tešnjar na řece Kolubara",
+		"is": "Gamall bær með Tešnjar-markaðnum við ána Kolubara",
+		"de": "Alte Stadt mit dem Tešnjar-Basar am Fluss Kolubara"
+	},
+	"Užice": {
+		"pl": "Miasto w górach, blisko kolejki Šarganska osmica i Zlatiboru",
+		"en": "A mountain town near the Šargan Eight railway and Zlatibor",
+		"cs": "Horské město blízko železnice Šarganská osmička a Zlatiboru",
+		"is": "Fjallabær nálægt Šargan-áttu járnbrautinni og Zlatibor",
+		"de": "Bergstadt nahe der Šargan-Acht-Bahn und dem Zlatibor"
+	},
+	"Vranje": {
+		"pl": "Miasto na południu Serbii, słynie z pieśni i Białego Mostu",
+		"en": "A southern Serbian town known for its songs and the White Bridge",
+		"cs": "Město na jihu Srbska, známé písněmi a Bílým mostem",
+		"is": "Bær í suðurhluta Serbíu, þekktur fyrir söngva og Hvítu brúna",
+		"de": "Stadt im Süden Serbiens, bekannt für ihre Lieder und die Weiße Brücke"
+	},
+	"Šabac": {
+		"pl": "Miasto nad Sawą w żyznej Mačvie, krainie śliwek i papryki",
+		"en": "A town on the Sava in fertile Mačva, land of plums and peppers",
+		"cs": "Město na Sávě v úrodné Mačvě, kraji švestek a paprik",
+		"is": "Bær við Sava í frjósömu Mačva, landi plóma og paprikna",
+		"de": "Stadt an der Save in der fruchtbaren Mačva, Land der Pflaumen und Paprika"
+	},
+	"Zaječar": {
+		"pl": "Obok są ruiny rzymskiego pałacu Felix Romuliana (UNESCO)",
+		"en": "Next to it lie the ruins of the Roman palace Felix Romuliana (UNESCO)",
+		"cs": "Vedle leží zříceniny římského paláce Felix Romuliana (UNESCO)",
+		"is": "Þar hjá eru rústir rómversku hallarinnar Felix Romuliana (UNESCO)",
+		"de": "Daneben liegen die Ruinen des römischen Palasts Felix Romuliana (UNESCO)"
+	},
+	"Pirot": {
+		"pl": "Słynie z ręcznie tkanych kilimów i dojrzewającego sera",
+		"en": "Famous for hand-woven kilim rugs and aged cheese",
+		"cs": "Proslulý ručně tkanými koberci kilim a zralým sýrem",
+		"is": "Frægur fyrir handofin kilim-teppi og þroskaðan ost",
+		"de": "Berühmt für handgewebte Kelim-Teppiche und gereiften Käse"
+	},
+	"Kladovo": {
+		"pl": "Nad Dunajem tuż za Żelazną Bramą, obok wielkiej zapory",
+		"en": "On the Danube just below the Iron Gates, next to a huge dam",
+		"cs": "Na Dunaji hned pod Železnými vraty, vedle obří přehrady",
+		"is": "Við Dóná rétt neðan við Járnhliðið, hjá risastórri stíflu",
+		"de": "An der Donau direkt unterhalb des Eisernen Tors, neben einem riesigen Staudamm"
+	},
+	"Golubac": {
+		"pl": "Średniowieczna twierdza przy wejściu do wąwozu Đerdap",
+		"en": "A medieval fortress at the entrance to the Đerdap gorge",
+		"cs": "Středověká pevnost u vstupu do soutěsky Đerdap",
+		"is": "Miðaldavirki við inngang Đerdap-gljúfursins",
+		"de": "Eine mittelalterliche Festung am Eingang der Đerdap-Schlucht"
+	},
+	"Donji Milanovac": {
+		"pl": "Niedaleko jest Lepenski Vir, osada sprzed ponad 8000 lat",
+		"en": "Near Lepenski Vir, a settlement over 8,000 years old",
+		"cs": "Nedaleko leží Lepenski Vir, osada stará přes 8000 let",
+		"is": "Nálægt Lepenski Vir, byggð sem er yfir 8000 ára gömul",
+		"de": "Nahe Lepenski Vir, einer über 8000 Jahre alten Siedlung"
+	},
+	"Jagodina": {
+		"pl": "Leży w dolinie Wielkiej Morawy, w samym środku Serbii",
+		"en": "Lies in the Great Morava valley, right in the middle of Serbia",
+		"cs": "Leží v údolí Velké Moravy, přímo uprostřed Srbska",
+		"is": "Liggur í dal Stóru-Morava, í miðri Serbíu",
+		"de": "Liegt im Tal der Großen Morava, mitten in Serbien"
+	},
+	"Požarevac": {
+		"pl": "Obok jest Viminacium, rzymskie miasto i obóz legionu",
+		"en": "Next to Viminacium, a Roman city and legion camp",
+		"cs": "Vedle leží Viminacium, římské město a tábor legie",
+		"is": "Hjá Viminacium, rómverskri borg og herbúðum",
+		"de": "Neben Viminacium, einer römischen Stadt mit Legionslager"
+	}
+}
