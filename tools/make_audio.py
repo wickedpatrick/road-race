@@ -23,6 +23,9 @@ def tone(freq, dur, shape="sq", vol=1.0, a=0.004, r=0.08, duty=0.5):
     for i in range(n):
         ph = (freq * i / SR) % 1.0
         if shape == "sq": v = 1.0 if ph < duty else -1.0
+        elif shape == "pulse": # a clean square (or pulse of `duty`) from its harmonics up to ~6 kHz only: a raw
+            # square at this sample rate folds its overtones back down and sounds distorted
+            v = sum(math.sin(math.pi * k * duty) / k * math.sin(2 * math.pi * k * ph) for k in range(1, int(6000 / freq) + 1)) * 4 / math.pi * 0.7
         elif shape == "tri": v = 4 * abs(ph - 0.5) - 1
         elif shape == "saw": v = 2 * ph - 1
         else: v = math.sin(2 * math.pi * ph)
@@ -64,6 +67,115 @@ def engine():
         out.append(math.tanh(1.6 * v * 0.35))
     write("engine", out, 0.7)
 
+# ---- one engine per car: 1 s loops built from firing pulses --------------------------------------
+# A four-stroke engine fires `cyl` times per cycle (two crank turns). The crank turns at `crank` Hz at pitch 1, a
+# whole number of cycles a second, and pulses that run past the end wrap round to the start, so the loop is seamless.
+# What tells the engines apart: how many pulses and how evenly they come (a lumpy pattern repeating every cycle is
+# the V8's burble, the three-cylinder's off-beat thrum), the exhaust's resonance and the bark of each pulse
+# (bright and short for the V12, a low thump for the V8) and the diesel's hard clatter on top.
+def engine_loop(name, cyl, crank, pattern, reso, decay, bright, clatter=0.0, whine=0, jitter=0.02, drive=1.6,
+        lp=0.35, sub=0.0, loud=1.0, seed=1, dur=1, lope=0.0, hp=0.0, tail=0.09, out_name=None):
+    r = random.Random(seed)
+    n = SR * dur; buf = [0.0] * n
+    cycle = crank / 2.0
+    klen = int(tail * SR)
+    def kernel(amp):
+        # one firing: a decaying exhaust resonance with its overtone, a short burst of noise for the bark,
+        # and for the diesel a sharp knock
+        out = []; y = 0.0
+        for i in range(klen):
+            t = i / SR
+            e = math.exp(-t * decay)
+            v = math.sin(2 * math.pi * reso * t) * e + bright * math.sin(2 * math.pi * reso * 2.7 * t) * math.exp(-t * decay * 2.2)
+            y += 0.5 * (r.uniform(-1, 1) - y)
+            v += bright * 0.8 * y * math.exp(-t * decay * 1.6)
+            if clatter: # the knock: a ring at ~1.3 kHz cut off in a few milliseconds
+                v += clatter * math.sin(2 * math.pi * 1300 * t + r.uniform(0, 6.28)) * math.exp(-t * 700.0)
+            out.append(v * amp)
+        return out
+    cycles = int(round(cycle * dur))
+    starts = [c / cycle for c in range(cycles)]; lens = [1.0 / cycle] * cycles; amps = [1.0] * cycles
+    if lope:
+        # a lopey cam: the revs wander (slow swells that never line up, so the loop has no beat of its own), whole
+        # cycles come out fatter or thinner, and now and then one stumbles: weak and late
+        ph = [r.uniform(0, 6.28) for _ in range(3)]
+        for c in range(cycles):
+            u = c / cycles
+            wander = 0.45 * math.sin(2 * math.pi * u + ph[0]) + 0.3 * math.sin(2 * math.pi * 3 * u + ph[1]) + 0.2 * math.sin(2 * math.pi * 5 * u + ph[2])
+            stumble = r.random() < 0.14
+            lens[c] = (1.0 + 0.1 * wander + r.uniform(-0.08, 0.08) + (0.18 if stumble else 0.0)) / cycle
+            # never a hole: even a stumble only sags, so the loop runs on without a gap of quiet
+            amps[c] = max(0.65, 1.0 + lope * (0.35 * wander + r.uniform(-0.3, 0.3)) - (0.25 if stumble else 0.0))
+        k_fit = dur / sum(lens) # the cycles still fill the loop exactly
+        lens = [l * k_fit for l in lens]
+        t = 0.0
+        for c in range(cycles):
+            starts[c] = t; t += lens[c]
+    for c in range(cycles):
+        cyc_amp = amps[c]
+        for k in range(cyl):
+            t0 = starts[c] + (k + pattern[k % len(pattern)][1]) / cyl * lens[c]
+            t0 += r.uniform(-jitter, jitter) / (cycle * cyl)
+            amp = pattern[k % len(pattern)][0] * r.uniform(0.9, 1.1) * max(0.15, cyc_amp)
+            s0 = int(t0 * SR)
+            for i, v in enumerate(kernel(amp)):
+                buf[(s0 + i) % n] += v
+    if sub: # the rumble of the crank itself, felt more than heard
+        for i in range(n):
+            buf[i] += sub * math.sin(2 * math.pi * cycle * i / SR) + sub * 0.6 * math.sin(2 * math.pi * crank * i / SR)
+    if whine: # the turbo's whistle, faint
+        for i in range(n):
+            buf[i] += 0.035 * math.sin(2 * math.pi * whine * i / SR)
+    # soft clip, then a one-pole low-pass run round the loop twice so its end meets its start
+    m = max(abs(v) for v in buf)
+    buf = [math.tanh(drive * v / m) for v in buf]
+    for _ in range(2): # two poles: the exhaust note without the fizz
+        y = 0.0; out = [0.0] * n
+        for rep in range(2):
+            for i in range(n):
+                y += lp * (buf[i] - y)
+                out[i] = y
+        buf = out
+    if hp: # thin out the bass: take away a slow-following copy
+        y = 0.0
+        for rep in range(2):
+            low = []
+            for i in range(n):
+                y += hp * (buf[i] - y)
+                low.append(y)
+        buf = [v - l for v, l in zip(buf, low)]
+    dc = sum(buf) / n
+    rms = math.sqrt(sum((v - dc) ** 2 for v in buf) / n)
+    k = loud * 0.3 / rms # every engine as loud as the others, whatever its tone
+    out = [max(-0.97, min(0.97, (v - dc) * k)) for v in buf]
+    write(out_name or "engine_" + name, out, max(abs(v) for v in out)) # already at its level: no further normalising
+
+def engines():
+    even = [(1.0, 0.0)]
+    # Clioris has no loop of its own: it drives with the game's first engine, engine.wav
+    # Golfsburg TD: a four-cylinder turbo diesel, low and gruff with a hard clatter and the turbo's whistle
+    engine_loop("octavia", 4, 30, [(1.0, 0.0), (0.9, 0.02), (0.95, -0.01), (0.85, 0.01)], reso=85, decay=48, bright=0.35,
+            clatter=0.9, whine=1900, drive=2.0, lp=0.2, sub=0.2, seed=4)
+    # Geelvo XC: a petrol four, even and plain, with a little edge on top
+    engine_loop("xc60", 4, 36, [(1.0, 0.0), (0.92, 0.0), (0.97, 0.0), (0.9, 0.0)], reso=130, decay=60, bright=0.45, drive=1.7, lp=0.2, seed=5)
+    # Bavar R6: raspy and bright, nearly even (so no V8 lump at idle), its bass thinned out
+    engine_loop("bmw530", 3, 44, [(1.0, 0.0), (0.9, 0.015), (0.95, -0.01)], reso=230, decay=60, bright=0.75, jitter=0.008,
+            drive=1.9, lp=0.34, hp=0.035, loud=0.8, seed=3)
+    # Rangexus: a supercharged cross-plane V8, the lumpy burble of two banks firing unevenly and the blower's whine
+    engine_loop("rangerover", 8, 26, [(1.0, 0.0), (0.55, 0.1), (0.85, -0.05), (0.5, 0.08), (0.95, 0.0), (0.6, -0.1), (0.8, 0.05), (0.45, 0.0)],
+            reso=75, decay=34, bright=0.3, jitter=0.03, whine=1400, drive=2.4, lp=0.1, sub=0.1, loud=1.1, seed=8)
+    # Stallion Hemi: a big-block V8 Hemi for the muscle-car fans: slow, deep, a heavy lope and a loud bark on every
+    # lumpy beat
+    hemi = [(1.0, 0.0), (0.4, 0.16), (0.9, -0.08), (0.35, 0.14), (1.1, 0.0), (0.45, -0.15), (0.75, 0.08), (0.3, 0.0)]
+    engine_loop("gtcoupe", 8, 20, hemi, reso=58, decay=26, bright=0.45, jitter=0.05, drive=2.8, lp=0.1, sub=0.22, loud=1.15, seed=9)
+    # ... and its idle on its own: a 6 s loop at ~800 rpm with the big cam's lope, the "potato-potato" chug that
+    # swells, sags and stumbles at no regular beat (played at idle instead of the pitched-down driving loop)
+    engine_loop("gtcoupe", 8, 13, [(1.2, 0.0), (0.3, 0.2), (0.85, -0.1), (0.25, 0.18), (1.25, 0.0), (0.35, -0.2), (0.7, 0.1), (0.2, 0.0)],
+            reso=55, decay=18, bright=0.55, jitter=0.08, drive=3.0, lp=0.11, sub=0.15, loud=1.1, seed=10, dur=6, lope=0.6, tail=0.25,
+            out_name="engine_idle_gtcoupe")
+    # Rosso V12: the Italian V12, bright on top but with a deep chest under it
+    engine_loop("supercar", 12, 32, even, reso=300, decay=85, bright=0.45, jitter=0.008, drive=2.1, lp=0.2, sub=0.15, seed=13)
+
 def gravel():
     n = SR; out = []; y = 0.0
     for i in range(n):
@@ -85,16 +197,26 @@ def hit():
     out = mix([noise(0.45, 1.0, 7.0, 0.5), tone(70, 0.4, "sin", 1.2, 0.001, 0.35), tone(140, 0.2, "sq", 0.4, 0.001, 0.15)])
     write("hit", out, 0.9)
 
-def beep(): write("beep", tone(880, 0.13, "sq", 0.6, 0.003, 0.05), 0.5)
-def go(): write("go", tone(1320, 0.5, "sq", 0.6, 0.003, 0.2), 0.55)
-def blip(): write("blip", tone(660, 0.05, "sq", 0.6, 0.002, 0.02, 0.25), 0.4)
+def beep(): write("beep", tone(880, 0.13, "pulse", 0.6, 0.003, 0.05), 0.5)
+def go(): write("go", tone(1320, 0.5, "pulse", 0.6, 0.003, 0.2), 0.55)
+def blip():
+    # a clean click of a beep: a pulse built from its harmonics only up to ~6 kHz (a raw square at this sample rate
+    # folds its overtones back down and sounds distorted), with a soft start and a quick fall
+    n = int(0.06 * SR); out = []
+    for i in range(n):
+        t = i / SR; v = 0.0
+        for k in range(1, 10):
+            if 660 * k > 6000: break
+            v += math.sin(math.pi * k * 0.25) / k * math.sin(2 * math.pi * 660 * k * t) # a 25% pulse
+        out.append(v * min(1.0, t / 0.003) * math.exp(-t * 45.0))
+    write("blip", out, 0.4)
 def lowfuel():
     out = [0.0] * int(0.5 * SR)
-    place(out, 0.0, tone(1000, 0.1, "sq", 0.6)); place(out, 0.18, tone(800, 0.1, "sq", 0.6))
+    place(out, 0.0, tone(1000, 0.1, "pulse", 0.6, 0.004, 0.03)); place(out, 0.18, tone(800, 0.1, "pulse", 0.6, 0.004, 0.03))
     write("lowfuel", out, 0.5)
 def refuel_done():
     out = [0.0] * int(0.7 * SR)
-    for k, n in enumerate([72, 76, 79, 84]): place(out, k * 0.1, tone(note(n), 0.25, "sq", 0.6, 0.004, 0.15, 0.25))
+    for k, n in enumerate([72, 76, 79, 84]): place(out, k * 0.1, tone(note(n), 0.25, "pulse", 0.6, 0.004, 0.15, 0.25))
     write("refuel_done", out, 0.55)
 def brass(freq, dur, vol=1.0, vib=0.006):
     """Saw-ish trumpet tone: bright attack, a little vibrato (`vib`, 0 for a steady tone), soft release."""
@@ -169,6 +291,6 @@ def lose():
     for k, n in enumerate([67, 64, 62, 55]): place(out, k * 0.25, tone(note(n), 0.4, "tri", 0.8, 0.01, 0.2))
     write("lose", out, 0.6)
 
-for f in (engine, gravel, pump, hit, beep, go, blip, lowfuel, refuel_done, win, lose, radar, siren, anthems, motifs):
+for f in (engine, engines, gravel, pump, hit, beep, go, blip, lowfuel, refuel_done, win, lose, radar, siren, anthems, motifs):
     f()
 print("audio written to", os.path.abspath(OUT))

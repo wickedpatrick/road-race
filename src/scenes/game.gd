@@ -29,13 +29,14 @@ var _radar_timer := 0.0
 func _ready() -> void:
 	font = ThemeDB.fallback_font
 	race = Race.new(Session.car_id, Session.stage(), randi())
+	Sfx.set_engine(Session.car_id)
 	view = WorldView.new()
 	add_child(view)
 	view.bind(race)
 	_apply_quality()
 	race.collided.connect(func(_i): Sfx.play("hit", -2.0))
 	race.crashed.connect(func(): Sfx.play("hit", 0.0))
-	race.fined.connect(func(): Sfx.play("lowfuel", -4.0))
+	race.fined.connect(func(): Sfx.play("lowfuel", -10.0))
 	race.police_crashed.connect(func(): Sfx.play("hit", -4.0))
 	var layer := CanvasLayer.new()
 	add_child(layer)
@@ -111,8 +112,8 @@ func _physics_process(dt: float) -> void:
 		var n := int(ceil(countdown))
 		if n != _last_count:
 			_last_count = n
-			if n > 0: Sfx.play("beep", -12.0)
-			else: Sfx.play("go", -11.0)
+			if n > 0: Sfx.play("beep", -18.0)
+			else: Sfx.play("go", -17.0)
 		Sfx.set_loop("engine", -22.0, EngineAudio.IDLE)
 		return
 	if race.state == "running":
@@ -143,7 +144,7 @@ func _update_audio(dt: float, inp: Dictionary) -> void:
 	else:
 		Sfx.set_loop("pump", Sfx.SILENT)
 		if _was_refueling and race.fuel.ratio() >= 0.99:
-			Sfx.play("refuel_done", -6.0)
+			Sfx.play("refuel_done", -12.0)
 	_was_refueling = race.refueling
 	# radar detector beeps while speeding; the siren wails while the police chase and stop the car
 	_radar_timer -= dt
@@ -154,7 +155,7 @@ func _update_audio(dt: float, inp: Dictionary) -> void:
 	Sfx.set_loop("siren", -14.0 if phase in ["chase", "pull_over"] else Sfx.SILENT)
 	_low_fuel_timer -= dt
 	if race.fuel.ratio() < 0.15 and _low_fuel_timer <= 0.0:
-		Sfx.play("lowfuel", -8.0)
+		Sfx.play("lowfuel", -14.0)
 		_low_fuel_timer = 2.5
 
 func _end_audio() -> void:

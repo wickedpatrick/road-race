@@ -7,7 +7,7 @@ const TIRE := Color("17171a")
 const BUMPER := Color("26272b")
 ## Where each car's exhaust tips are (painter units: x, height above the ground), for the smoke.
 const EXHAUSTS := {"yaris": [[-62, 14]], "octavia": [[-66, 14]], "xc60": [[-74, 16], [74, 16]], "bmw530": [[-66, 16], [66, 16]],
-		"rangerover": [[-76, 16], [76, 16]], "gtcoupe": [[-74, 16], [74, 16]], "supercar": [[-16, 15], [0, 15], [16, 15]]}
+		"rangerover": [[-76, 16], [76, 16]], "gtcoupe": [[-82, 17], [82, 17]], "supercar": [[-16, 15], [0, 15], [16, 15]]}
 ## Exhaust smoke unlike the rest: the diesel's thick black cloud (colour, opacity, puffs per second, size and life multipliers,
 ## and a burst of puffs each time the gas is pressed).
 const SMOKE_STYLES := {"octavia": {"color": Color(0.07, 0.07, 0.08), "alpha": 0.5, "rate": 1.8, "size": 1.5, "life": 1.4, "kick": 14}}
@@ -134,23 +134,30 @@ static func _rangerover(cv, c, s, body, dark, light, lean, braking) -> void:
 	_rect(cv, c, s, -50, 60, 50, 64, light)
 	_plate(cv, c, s, 40)
 
-## Long, low grand tourer: a fastback roof sloping into a ducktail, blade lights swept up at the corners, a diffuser
-## between two pairs of exhausts.
+## American muscle car: a wide, square tail with a flat boot lid and a little lip of a spoiler, an upright rear
+## window between broad sail panels, one red light bar across the whole tail, a chrome bumper, fat tyres, twin
+## racing stripes from the bumper over the roof and a big round exhaust at each corner.
 static func _gtcoupe(cv, c, s, body, dark, light, lean, braking) -> void:
-	_wheels(cv, c, s, 104)
-	_chamfer(cv, c, s, -112, 16, 112, 60, 16, body)            # wide haunches
-	_chamfer(cv, c, s, -106, 10, 106, 24, 6, BUMPER)
-	_rect(cv, c, s, -46, 10, 46, 22, Color("1b1c1f"))          # diffuser
-	_exhausts(cv, c, s, [-82, -66, 66, 82])
-	_poly(cv, c, s, [[-96, 60], [-88, 66], [88, 66], [96, 60]], dark)  # ducktail lip
-	_poly(cv, c, s, [[-74 + lean, 66], [-50 + lean, 100], [50 + lean, 100], [74 + lean, 66]], body)  # fastback
-	_poly(cv, c, s, [[-60 + lean, 70], [-42 + lean, 94], [42 + lean, 94], [60 + lean, 70]], GLASS)
+	for x in [-118, 80]:
+		_chamfer(cv, c, s, x, 0, x + 38, 32, 6, TIRE)            # fat rear tyres
+	_chamfer(cv, c, s, -112, 16, 112, 66, 6, body)             # square tail
+	_chamfer(cv, c, s, -110, 8, 110, 24, 4, Color("c9ccd1"))   # chrome bumper
+	_rect(cv, c, s, -110, 8, 110, 12, Color("8d9097"))
+	var stripe := Color("17181b")
+	_poly(cv, c, s, [[-84 + lean, 66], [-62 + lean, 108], [62 + lean, 108], [84 + lean, 66]], body)  # sail panels + roof
+	_poly(cv, c, s, [[-56 + lean, 72], [-48 + lean, 100], [48 + lean, 100], [56 + lean, 72]], GLASS) # upright window
+	for x in [-20, 6]: # the stripes: on the bumper's top edge, the tail, the boot lid and the roof
+		_rect(cv, c, s, x, 24, x + 14, 66, stripe)
+		_rect(cv, c, s, x + lean, 100, x + 14 + lean, 108, stripe)
+	_rect(cv, c, s, -96, 66, 96, 70, dark)                     # spoiler lip on the boot lid
+	_rect(cv, c, s, -104, 38, 104, 56, Color("1b1b1d"))        # tail panel
 	var lc := _light(braking)
-	_poly(cv, c, s, [[-106, 48], [-98, 56], [-62, 54], [-62, 49]], lc)  # blades rising to the outer corners
-	_poly(cv, c, s, [[106, 48], [98, 56], [62, 54], [62, 49]], lc)
-	_rect(cv, c, s, -62, 50, 62, 52, dark)                      # thin line joining them
-	_chamfer(cv, c, s, -8, 42, 8, 50, 2, light)                # winged badge
-	_rect(cv, c, s, -22, 45, 22, 47, light)
+	_rect(cv, c, s, -100, 42, -14, 52, lc)                     # one light bar, split by the badge
+	_rect(cv, c, s, 14, 42, 100, 52, lc)
+	_chamfer(cv, c, s, -9, 41, 9, 53, 2, Color("c9ccd1"))      # chrome badge
+	for x in [-82, 82]:
+		cv.draw_circle(_p(c, s, x, 17), 8.5 * s, Color("8d9097"))
+		cv.draw_circle(_p(c, s, x, 17), 5.5 * s, Color("141416"))
 	_plate(cv, c, s, 24)
 
 ## Mid-engined V12 supercar: very low and wide, louvred engine cover instead of a rear window, two round lights a
