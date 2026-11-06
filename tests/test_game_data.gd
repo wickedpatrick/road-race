@@ -139,7 +139,12 @@ func _check_country(t, code: String, rules: Dictionary) -> void:
 func _check_world(t) -> void:
 	var w: Dictionary = GameData.load_json(GameData.DIR + "world.json")
 	var ok := true
+	var codes := []
 	for code in GameData.country_codes():
+		# a map spanning several countries is checked through its members' shapes
+		var ms: Array = GameData.members(code)
+		codes.append_array(ms if not ms.is_empty() else [code])
+	for code in codes:
 		var c: Dictionary = w.countries.get(code, {})
 		var inside := false
 		for f in c.get("polys", []):

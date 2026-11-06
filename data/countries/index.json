@@ -95,6 +95,13 @@
 			"name": {"pl": "Chorwacja", "en": "Croatia", "cs": "Chorvatsko", "is": "Króatía", "de": "Kroatien"},
 			"neighbours": ["si", "hu", "rs", "ba", "me"],
 			"favorite_neighbour": "si"
+		},
+		{
+			"code": "sb",
+			"name": {"pl": "Bałkany Południowe", "en": "Southern Balkans", "cs": "Jižní Balkán", "is": "Suður-Balkanskagi", "de": "Südbalkan"},
+			"members": ["me", "xk", "al", "mk"],
+			"neighbours": ["hr", "ba", "rs", "gr", "bg"],
+			"favorite_neighbour": "gr"
 		}
 	]
 }
