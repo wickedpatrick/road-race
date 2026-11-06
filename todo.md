@@ -179,8 +179,9 @@ trasy sensowne), miejscowości po drodze, krainy, ciekawostki po polsku, kontur 
 - [ ] Partia 2: Francja (30), Włochy (30), Hiszpania (30), Portugalia, Holandia, Belgia, Luksemburg,
       Austria, Szwajcaria (z Liechtensteinem).
 - [ ] Partia 3: Dania, Szwecja, Norwegia, Finlandia, Islandia, Irlandia, Estonia, Łotwa.
-- [ ] Partia 4: Węgry, Słowenia, Chorwacja, Bośnia i Hercegowina, Serbia, Czarnogóra, Kosowo, Albania,
-      Macedonia Północna, Bułgaria, Rumunia, Mołdawia, Grecja, Cypr, Malta.
+- [ ] Partia 4: Węgry, Słowenia, Chorwacja, Bośnia i Hercegowina, Serbia, mapa „Bałkany Południowe”
+      (Czarnogóra, Kosowo, Albania, Macedonia Północna), Bułgaria, Rumunia, Mołdawia, Grecja, Cypr, Malta.
+      Szczegóły w decyzjach z 2026-11-06 niżej.
 - [ ] Partia 5: Ukraina (30), Rosja (30, europejska i azjatycka część: Moskwa, Petersburg, ale też Syberia),
       Białoruś, Turcja (30).
 
@@ -193,6 +194,33 @@ trasy sensowne), miejscowości po drodze, krainy, ciekawostki po polsku, kontur 
 - Nazwy miast po polsku (Monachium, Mediolan, Nowy Jork). Lokalne nazwy przyjdą razem z tłumaczeniami gry
   na inne języki (osobny etap, poza tym planem); dane miast od razu przygotować tak, żeby nazwa była
   tłumaczalna (np. `name` jako klucz/słownik per język zamiast jednego stringa).
+
+### Decyzje (2026-11-06): Bałkany
+
+- **Słowenia** osobno (mała, ale ma swoje trasy: Lublana, Bled, Postojna, Piran; winiety). Nie doklejać
+  do Bałkanów.
+- **Chorwacja** osobno (56 tys. km², jak Litwa; A1 Zagrzeb - Split - Dubrownik).
+- **Bośnia i Hercegowina** osobno (51 tys. km², jak Słowacja). To jeden kraj, Hercegowina to region (Mostar).
+- **Serbia** osobno, i nie w tym samym wydaniu co mapa z Kosowem.
+- **Mapa „Bałkany Południowe”:** Czarnogóra, Kosowo, Albania i Macedonia Północna na jednej mapie (razem
+  ~79 tys. km², jak Austria; każdy z osobna za mały na sensowną sieć tras). Spójny ląd, bo wszystkie graniczą
+  z Albanią. Trasy np. Podgorica - Szkodra - Tirana - Ochryda - Skopje - Prisztina, autostrada Durrës - Prisztina
+  („Rruga e Kombit”), wybrzeże Czarnogóry, Jezioro Ochrydzkie.
+  - Wyjątek od zasady „każdy kraj osobno, bez tras między krajami”: na tej mapie trasy przekraczają granice.
+  - **Przejścia graniczne** na granicy na trasie: otwarte szlabany (podniesione, biało-czerwone) po obu stronach
+    jezdni, stróżówki (budki strażników) z daszkiem nad pasami, tablica z nazwą i flagą kraju, do którego
+    wjeżdżamy. Bez zatrzymywania i kontroli; przed przejściem znaki ograniczenia (np. 40, potem 20).
+    Od przejścia zmieniają się tablice, waluta na stacjach i język napisów.
+  - **Radar przed granicą (zawsze):** tuż przed szlabanem stoi radar (jak obecne radary/policja, ta sama kara),
+    łapie każdego, kto wpada na granicę za szybko. Antyradar ostrzega jak zwykle.
+  - **Każdy kraj z własną flagą, tablicami, walutą na stacji, językiem napisów i pieczątkami** pocztówek;
+    w danych mapa wspólna, ale miasto zna swój kraj (rozszerzyć format `data/countries/`).
+  - Nazwa mapy geograficzna i neutralna („Bałkany Południowe” albo „Adriatyk i Ochryda”), nigdy „Jugosławia”
+    ani nic w stylu „Albania+”, żeby nie czytało się jak „Wielka Albania”.
+  - Pisać **Macedonia Północna** (od 2019), nie samo „Macedonia”.
+  - Wrażliwe: Serbia nie uznaje Kosowa (podobnie 5 krajów UE, w tym Słowacja, która już jest w grze);
+    w Macedonii Północnej ~1/4 mniejszości albańskiej. Odblokowywanie (pkt 10): mapa jako jedna całość,
+    sąsiedzi liczeni od wszystkich czterech krajów.
 
 ## 10. Odblokowywanie krajów
 
