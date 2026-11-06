@@ -411,11 +411,11 @@
 		"de": "Dreh dein Handy quer"
 	},
 	"stamp_faster_car": {
-		"pl": "Tak szybko! Piąty znaczek dostaniesz autem %s lub lepszym",
-		"en": "So fast! The fifth stamp needs the %s or a better car",
-		"cs": "Tak rychle! Pátou známku dostaneš s autem %s nebo lepším",
-		"is": "Svo hratt! Fimmta frímerkið fæst á %s eða betri bíl",
-		"de": "So schnell! Die fünfte Marke gibt es mit dem %s oder einem besseren Auto"
+		"pl": "Tak szybko! Więcej znaczków dostaniesz autem %s lub lepszym",
+		"en": "So fast! More stamps need the %s or a better car",
+		"cs": "Tak rychle! Víc známek dostaneš s autem %s nebo lepším",
+		"is": "Svo hratt! Fleiri frímerki fást á %s eða betri bíl",
+		"de": "So schnell! Mehr Marken gibt es mit dem %s oder einem besseren Auto"
 	},
 	"rotate_hint": {
 		"pl": "W Postcard Road Trip gra się w poziomie",

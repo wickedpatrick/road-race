@@ -184,7 +184,8 @@ func _finish() -> void:
 		var n := Postcards.stamps_for(race.time_left, race.stage.duration, Session.car_id)
 		Session.stamp(dest, n)
 		Session.last_result.postcard = {"city": dest, "before": before, "after": int(Session.postcards[dest].stamps),
-			"faster_car": n < Postcards.stamps_for(race.time_left, race.stage.duration)} # fast enough, the car was not
+			"faster_car": Postcards.car_for_stamps(n + 1) if n < Postcards.stamps_for(race.time_left, race.stage.duration) else ""}
+			# fast enough for more stamps, the car was not: the slowest car that would have got the next one
 	get_tree().change_scene_to_file("res://src/scenes/results.tscn")
 
 func _unhandled_input(event: InputEvent) -> void:

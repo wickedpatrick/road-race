@@ -7,7 +7,9 @@ const M_PER_KM := 14.0
 ## is SHORT_BASE + SHORT_PER_KM per km (the shortest trips take about a minute and a half), above it M_PER_KM.
 const SHORT_BASE := 800.0
 const SHORT_PER_KM := 9.0
-const MAX_LENGTH := 12500.0
+## Long trips grow slower: beyond LONG_FROM real km the track grows with the square root of the distance (1000 km
+## is ~7.7 km of track instead of 14), so a trip across the USA or Canada stays a few minutes long.
+const LONG_FROM := 300.0
 const STATION_EVERY := 3200.0
 const CITY_HALF := 260.0 ## half-length of a big city passed on the way (game metres)
 const TOWN_HALF := 90.0
@@ -128,11 +130,17 @@ static func _leg_zones(leg: Dictionary) -> Array:
 		out = rev
 	return out
 
+## Track metres for a trip of `km` real kilometres.
+static func track_length(km: float) -> float:
+	if km > LONG_FROM:
+		return M_PER_KM * LONG_FROM * sqrt(km / LONG_FROM)
+	return maxf(km * M_PER_KM, SHORT_BASE + km * SHORT_PER_KM)
+
 static func build(from: String, to: String) -> Dictionary:
 	var legs := find(from, to)
 	assert(not legs.is_empty(), "no route %s -> %s" % [from, to])
 	var km := total_km(legs)
-	var length := minf(maxf(km * M_PER_KM, SHORT_BASE + km * SHORT_PER_KM), MAX_LENGTH)
+	var length := track_length(km)
 	var mpk := length / km
 	var zones := []
 	var towns := []
@@ -191,9 +199,12 @@ static func build(from: String, to: String) -> Dictionary:
 		for after in [STATION_AFTER_TOWN, 150.0, 80.0]:
 			# the nearer of the free spots after and before the towns around the ideal place
 			for c in [_clear_spot(z0, towns, tunnels, after), _clear_spot_back(z0, towns, tunnels)]:
-				if c <= length - 450.0 and c > prev + 400.0 and (zs < 0.0 or absf(c - z0) < absf(zs - z0)):
+				if c <= length - 450.0 and c > prev + 400.0 and absf(c - z0) < length / (n_st + 1) * 0.5 \
+						and (zs < 0.0 or absf(c - z0) < absf(zs - z0)):
 					zs = c
 			if zs >= 0.0: break
+		if zs < 0.0: # towns crowd a squeezed long track: the nearest spot out of any town, signs or not
+			zs = _free_spot(z0, towns, tunnels, prev + 400.0, length - 450.0)
 		if zs < 0.0:
 			zs = minf(_clear_spot(z0, towns, tunnels, 80.0), length - 450.0)
 		if zs > prev + 50.0:
@@ -328,6 +339,19 @@ static func _clear_spot(z: float, towns: Array, tunnels: Array = [], after := ST
 				z = tn.z1 + 130.0
 		if not hit: break
 	return z
+
+## The spot nearest z (between lo and hi) at least 40 m out of every town and clear of tunnels, or -1.
+static func _free_spot(z: float, towns: Array, tunnels: Array, lo: float, hi: float) -> float:
+	for k in 200:
+		for c in [z + k * 20.0, z - k * 20.0]:
+			if c < lo or c > hi: continue
+			var ok := true
+			for t in towns:
+				if c > t.z - t.half - 40.0 and c < t.z + t.half + 40.0: ok = false
+			for tn in tunnels:
+				if c > tn.z0 - 250.0 and c < tn.z1 + 120.0: ok = false
+			if ok: return c
+	return -1.0
 
 ## Like _clear_spot, but moving back: the station goes before the town (when the road past it is taken).
 static func _clear_spot_back(z: float, towns: Array, tunnels: Array) -> float:

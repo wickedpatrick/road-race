@@ -55,8 +55,10 @@ func run(t) -> void:
 	# sharp bends: only on ordinary roads in open country, sharp enough, with signs placed before them
 	var sharp_total := 0
 	var sharp_ok := true
-	for rt in [["krakow", "bielsko"], ["szczecin", "lublin"], ["krakow", "zakopane"]]:
-		var sst := Route.build(rt[0], rt[1])
+	var was := GameData.current
+	for rt in [["pl", "krakow", "bielsko"], ["pl", "szczecin", "lublin"], ["pl", "krakow", "zakopane"], ["ca", "kamloops", "jasper"]]:
+		GameData.current = rt[0]
+		var sst := Route.build(rt[1], rt[2])
 		for sd in 8:
 			var str_: Track = Track.build(sst, sd)
 			for b in str_.sharp:
@@ -67,7 +69,8 @@ func run(t) -> void:
 					zz += 10.0
 				if absf(str_.segment_at(b.z_hold + 10.0).curve) < Track.SHARP_AMOUNT * 0.8: sharp_ok = false
 				if signf(str_.segment_at(b.z_hold + 10.0).curve) != b.dir: sharp_ok = false
-	t.check(sharp_total >= 10, "sharp bends turn up on mountain and long routes (%d on 24 tracks)" % sharp_total)
+	GameData.current = was
+	t.check(sharp_total >= 10, "sharp bends turn up on mountain and long routes (%d on 32 tracks)" % sharp_total)
 	t.check(sharp_ok, "sharp bends: open country, ordinary road, sharp, turning the stated way")
 	var flat_sharp := 0
 	for sd in 8: flat_sharp += Track.build(Route.build("warszawa", "lodz"), sd).sharp.size()

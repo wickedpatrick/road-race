@@ -51,26 +51,27 @@ static func towns(code: String) -> Array:
 	return out
 
 ## Stamps for arriving with `time_left` of `duration`: 1, and one more for each threshold of the share left reached.
-## The last stamp needs a fast car too (rules.json postcards "top_stamp_car", its place in the car list from 1):
-## with a slower one the result stops a stamp short (`car` "" counts as fast enough).
+## Each car can earn only so many (rules.json postcards "stamp_caps", in the car list's order): the weakest two, the
+## fast ones all five (`car` "" counts as fast enough).
 static func stamps_for(time_left: float, duration: float, car := "") -> int:
 	var share := time_left / duration if duration > 0.0 else 0.0
 	var n := 1
 	for th in GameData.rules().postcards.stamps:
 		if share >= th: n += 1
 	n = mini(n, MAX_STAMPS)
-	if n == MAX_STAMPS and car != "" and not top_stamp_car(car):
-		n -= 1
-	return n
+	return n if car == "" else mini(n, stamp_cap(car))
 
-## The car can earn the last stamp: it is the "top_stamp_car" in the car list or a later (faster) one.
-static func top_stamp_car(car: String) -> bool:
-	return CarStats.ids().find(car) + 1 >= int(GameData.rules().postcards.get("top_stamp_car", 1))
+## The most stamps the car can earn on a postcard.
+static func stamp_cap(car: String) -> int:
+	var caps: Array = GameData.rules().postcards.get("stamp_caps", [])
+	var i := CarStats.ids().find(car)
+	return MAX_STAMPS if i < 0 or i >= caps.size() else int(caps[i])
 
-## The slowest car that can earn the last stamp.
-static func first_top_stamp_car() -> String:
-	var ids := CarStats.ids()
-	return ids[clampi(int(GameData.rules().postcards.get("top_stamp_car", 1)) - 1, 0, ids.size() - 1)]
+## The slowest car that can earn `n` stamps.
+static func car_for_stamps(n: int) -> String:
+	for id in CarStats.ids():
+		if stamp_cap(id) >= n: return id
+	return CarStats.ids()[-1]
 
 ## Gives the postcards of the cities among `ids` not collected yet (one stamp); returns those ids.
 static func grant(cards: Dictionary, ids: Array, year: int) -> Array:

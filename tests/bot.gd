@@ -5,6 +5,11 @@ var cruise := 0.9
 var refuel_below := 0.55
 var obey_limits := true
 var limit_factor := 1.0 ## keeps to the limits times this (1.2: 20% over them)
+## "legal": keeps to the limits (obey_limits); "dodge": flat out, but back to the limit while the radar detector
+## beeps or the police are around; "flat": flat out always, and swerving to shake off the patrol car pulling it over
+var strategy := "legal"
+var _swerve := 1.0
+var _swerve_t := 0.0
 var _stopping := false
 var _overtaking := false
 const SHOULDER_X := 1.12 ## right shoulder, where the stations stand
@@ -76,7 +81,10 @@ func decide(r: Race) -> Dictionary:
 			brake = r.speed > 9.0
 	if sr > cruise:
 		accel = false
-	if obey_limits:
+	var obey := obey_limits
+	if strategy == "dodge": obey = r.speeding > 0.0 or not r.police.is_empty()
+	elif strategy == "flat": obey = false
+	if obey:
 		# slow down in time for a lower limit ahead (towns), stay just under the limit
 		var look: float = 40.0 + r.speed * r.speed / (2.0 * r.stats.brake * 0.5)
 		var lim: float = minf(_limit(r.stage, r.z), _limit(r.stage, r.z + look)) * limit_factor / 3.6 - 1.0
@@ -95,6 +103,12 @@ func decide(r: Race) -> Dictionary:
 			brake = brake or r.speed > safe + 1.5
 	var curve: float = r.track.segment_at(r.z + 20.0).curve
 	var steer := clampf((target_x - r.x) * 2.5 + curve * Race.corner_push(r.speed) / (r.stats.handling * Race.STEER_RATE), -1.0, 1.0)
+	if strategy == "flat" and r.police.get("phase", "") == "pull_over" and r.speed * 3.6 >= r.police_rules.escape_kmh:
+		# sharp changes of direction, quicker than Race.SWERVE_GAP, kept on the carriageway
+		if r.elapsed - _swerve_t > 0.3 or absf(r.x - 0.2) > 0.5 and signf(_swerve) == signf(r.x - 0.2):
+			_swerve = -signf(r.x - 0.2) if absf(r.x - 0.2) > 0.5 else -_swerve
+			_swerve_t = r.elapsed
+		steer = _swerve
 	return {"accel": accel, "brake": brake, "steer": steer * r.side} # the steering is mirrored with left-hand traffic
 
 ## A slower car in the right lane just ahead (or alongside, while overtaking it), or {}.

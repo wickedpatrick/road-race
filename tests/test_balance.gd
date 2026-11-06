@@ -17,6 +17,7 @@ func run(t) -> void:
 	var b := Bot.new()
 	b.refuel_below = -1.0
 	var r2 := Race.new("yaris", Route.build("szczecin", "lublin"), 11)
+	r2.fuel.level = r2.fuel.capacity * 0.6 # a squeezed long trip is within a full tank's reach, not a part-filled one's
 	var n := 0
 	while r2.state == "running" and n < 60 * 600:
 		r2.step(1.0 / 60.0, b.decide(r2))

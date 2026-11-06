@@ -714,5 +714,5 @@
 		"thousand_islands": [70, 19]
 	},
 	"police": {"escape_chance": 0.2, "escape_kmh": 180, "escape_swerves": [3, 5]},
-	"postcards": {"stamps": [0.1, 0.25, 0.4, 0.5], "top_stamp_car": 5}
+	"postcards": {"stamps": [0.15, 0.3, 0.45, 0.6], "stamp_caps": [2, 3, 3, 4, 5, 5, 5]}
 }
