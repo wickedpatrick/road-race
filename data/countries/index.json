@@ -65,6 +65,12 @@
 			"name": {"pl": "Kanada", "en": "Canada", "cs": "Kanada", "is": "Kanada", "de": "Kanada"},
 			"neighbours": ["us"],
 			"favorite_neighbour": "us"
+		},
+		{
+			"code": "hr",
+			"name": {"pl": "Chorwacja", "en": "Croatia", "cs": "Chorvatsko", "is": "Króatía", "de": "Kroatien"},
+			"neighbours": ["si", "hu", "rs", "ba", "me"],
+			"favorite_neighbour": "si"
 		}
 	]
 }

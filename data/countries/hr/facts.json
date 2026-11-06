@@ -1,0 +1,156 @@
+{
+	"Zagreb": {
+		"pl": "Stolica Chorwacji pod górą Medvednica, z Górnym Miastem i najdłuższą ulicą Ilica",
+		"en": "Croatia's capital below Mount Medvednica, with its Upper Town and the long Ilica street",
+		"cs": "Hlavní město Chorvatska pod horou Medvednica, s Horním městem a dlouhou ulicí Ilica",
+		"is": "Höfuðborg Króatíu undir Medvednica-fjalli, með efri bænum og hinni löngu Ilica-götu",
+		"de": "Kroatiens Hauptstadt unter dem Medvednica, mit der Oberstadt und der langen Ilica"
+	},
+	"Split": {
+		"pl": "Miasto wyrosło wewnątrz pałacu rzymskiego cesarza Dioklecjana",
+		"en": "A city that grew up inside the palace of the Roman emperor Diocletian",
+		"cs": "Město vyrostlo uvnitř paláce římského císaře Diokleciána",
+		"is": "Borg sem óx upp inni í höll rómverska keisarans Díókletíanusar",
+		"de": "Eine Stadt, die im Palast des römischen Kaisers Diokletian gewachsen ist"
+	},
+	"Rijeka": {
+		"pl": "Największy port Chorwacji; nazwa znaczy po prostu „rzeka”",
+		"en": "Croatia's biggest port; its name simply means 'river'",
+		"cs": "Největší přístav Chorvatska; jméno znamená prostě „řeka“",
+		"is": "Stærsta höfn Króatíu; nafnið þýðir einfaldlega „á“",
+		"de": "Kroatiens größter Hafen; der Name bedeutet einfach „Fluss“"
+	},
+	"Osijek": {
+		"pl": "Stolica Slawonii nad Drawą, z twierdzą Tvrđa z czasów habsburskich",
+		"en": "Slavonia's capital on the Drava, with the Habsburg fortress town Tvrđa",
+		"cs": "Metropole Slavonie na Drávě, s habsburskou pevností Tvrđa",
+		"is": "Höfuðborg Slavóníu við Drava, með Habsborgara-virkisbænum Tvrđa",
+		"de": "Slawoniens Hauptstadt an der Drau, mit der habsburgischen Festungsstadt Tvrđa"
+	},
+	"Zadar": {
+		"pl": "Tu morze gra na organach: fale wtłaczają powietrze w rury pod nabrzeżem",
+		"en": "Here the sea plays an organ: waves push air through pipes under the quay",
+		"cs": "Tady hraje moře na varhany: vlny ženou vzduch píšťalami pod nábřežím",
+		"is": "Hér leikur hafið á orgel: öldurnar þrýsta lofti í pípur undir hafnarbakkanum",
+		"de": "Hier spielt das Meer Orgel: Wellen drücken Luft durch Pfeifen unter dem Kai"
+	},
+	"Pula": {
+		"pl": "Na końcu Istrii stoi jeden z najlepiej zachowanych rzymskich amfiteatrów",
+		"en": "At the tip of Istria stands one of the best-kept Roman amphitheatres",
+		"cs": "Na cípu Istrie stojí jeden z nejzachovalejších římských amfiteátrů",
+		"is": "Á odda Istríu stendur eitt best varðveitta hringleikahús Rómverja",
+		"de": "An der Spitze Istriens steht eines der besterhaltenen römischen Amphitheater"
+	},
+	"Slavonski Brod": {
+		"pl": "Miasto nad Sawą; na drugim brzegu jest już Bośnia",
+		"en": "A town on the Sava; across the river is already Bosnia",
+		"cs": "Město na Sávě; na druhém břehu už je Bosna",
+		"is": "Bær við Sava; handan árinnar er Bosnía",
+		"de": "Eine Stadt an der Save; am anderen Ufer liegt schon Bosnien"
+	},
+	"Karlovac": {
+		"pl": "Twierdza w kształcie sześcioramiennej gwiazdy na styku czterech rzek",
+		"en": "A six-pointed star fortress where four rivers meet",
+		"cs": "Pevnost ve tvaru šesticípé hvězdy na soutoku čtyř řek",
+		"is": "Sexarma stjörnuvirki þar sem fjórar ár mætast",
+		"de": "Eine sechszackige Sternfestung, wo vier Flüsse zusammenfließen"
+	},
+	"Varaždin": {
+		"pl": "Barokowe miasto, przez kilka lat w XVIII wieku stolica Chorwacji",
+		"en": "A Baroque town, for a few years in the 18th century the capital of Croatia",
+		"cs": "Barokní město, v 18. století několik let hlavní město Chorvatska",
+		"is": "Barokkbær, nokkur ár á 18. öld höfuðborg Króatíu",
+		"de": "Eine Barockstadt, im 18. Jahrhundert einige Jahre Hauptstadt Kroatiens"
+	},
+	"Šibenik": {
+		"pl": "Najstarsze miasto założone przez Chorwatów nad morzem; obok wodospady Krki",
+		"en": "The oldest town founded by Croats on the sea; the Krka waterfalls are close by",
+		"cs": "Nejstarší město založené Chorvaty u moře; nedaleko vodopády Krky",
+		"is": "Elsti bær sem Króatar stofnuðu við sjóinn; Krka-fossarnir eru skammt frá",
+		"de": "Die älteste von Kroaten gegründete Stadt am Meer; nahebei die Krka-Wasserfälle"
+	},
+	"Dubrovnik": {
+		"pl": "„Perła Adriatyku” otoczona prawie 2 km murów obronnych",
+		"en": "The 'Pearl of the Adriatic', ringed by almost 2 km of city walls",
+		"cs": "„Perla Jadranu“ obehnaná téměř 2 km hradeb",
+		"is": "„Perla Adríahafsins“, umlukt nærri 2 km af borgarmúrum",
+		"de": "Die „Perle der Adria“, umgeben von fast 2 km Stadtmauer"
+	},
+	"Sisak": {
+		"pl": "Rzymska Siscia u zbiegu Kupy i Sawy; w 1593 r. bitwa, która zatrzymała Turków",
+		"en": "Roman Siscia where the Kupa meets the Sava; in 1593 a battle here stopped the Ottomans",
+		"cs": "Římská Siscia na soutoku Kupy a Sávy; v roce 1593 tu bitva zastavila Turky",
+		"is": "Rómverska Siscia þar sem Kupa mætir Sava; árið 1593 stöðvaði orrusta hér Tyrki",
+		"de": "Das römische Siscia, wo die Kupa in die Save fließt; 1593 stoppte hier eine Schlacht die Osmanen"
+	},
+	"Bjelovar": {
+		"pl": "Miasto zbudowane od linijki jako twierdza na granicy wojskowej",
+		"en": "A town laid out with a ruler as a fortress of the Military Frontier",
+		"cs": "Město postavené jako podle pravítka, pevnost Vojenské hranice",
+		"is": "Bær skipulagður eftir reglustiku sem virki á herlandamærunum",
+		"de": "Eine wie mit dem Lineal angelegte Festungsstadt der Militärgrenze"
+	},
+	"Čakovec": {
+		"pl": "Stolica Međimurja, najdalej na północ wysuniętej części Chorwacji",
+		"en": "Capital of Međimurje, Croatia's northernmost corner",
+		"cs": "Metropole Mezimuří, nejsevernějšího cípu Chorvatska",
+		"is": "Höfuðstaður Međimurje, nyrsta horns Króatíu",
+		"de": "Hauptstadt des Međimurje, Kroatiens nördlichster Ecke"
+	},
+	"Vukovar": {
+		"pl": "Miasto nad Dunajem, symbol obrony z 1991 roku",
+		"en": "A town on the Danube, a symbol of the 1991 defence",
+		"cs": "Město na Dunaji, symbol obrany z roku 1991",
+		"is": "Bær við Dóná, tákn varnarinnar 1991",
+		"de": "Eine Stadt an der Donau, Symbol der Verteidigung von 1991"
+	},
+	"Požega": {
+		"pl": "Złota dolina: winnice i sady w kotlinie otoczonej górami",
+		"en": "The 'golden valley': vineyards and orchards in a basin ringed by hills",
+		"cs": "„Zlaté údolí“: vinice a sady v kotlině obklopené horami",
+		"is": "„Gullni dalurinn“: vínekrur og aldingarðar í dal umluktum hæðum",
+		"de": "Das „goldene Tal“: Weinberge und Obstgärten in einem Kessel voller Hügel"
+	},
+	"Makarska": {
+		"pl": "Plaże pod ścianą masywu Biokovo, który wznosi się na 1762 m",
+		"en": "Beaches below the wall of Biokovo, rising to 1762 m",
+		"cs": "Pláže pod stěnou masivu Biokovo, vysokého 1762 m",
+		"is": "Strendur undir hamravegg Biokovo, sem rís í 1762 m",
+		"de": "Strände unter der Wand des Biokovo, der bis 1762 m aufragt"
+	},
+	"Gospić": {
+		"pl": "W pobliskim Smiljanie urodził się wynalazca Nikola Tesla",
+		"en": "The inventor Nikola Tesla was born in nearby Smiljan",
+		"cs": "V nedalekém Smiljanu se narodil vynálezce Nikola Tesla",
+		"is": "Uppfinningamaðurinn Nikola Tesla fæddist í Smiljan skammt frá",
+		"de": "Im nahen Smiljan wurde der Erfinder Nikola Tesla geboren"
+	},
+	"Komarna": {
+		"pl": "Most Pelješac (2,4 km) omija wąski pas Bośni w Neum: do Dubrownika bez granicy",
+		"en": "The 2.4 km Pelješac Bridge skips Bosnia's narrow strip at Neum: to Dubrovnik with no border",
+		"cs": "Pelješacký most (2,4 km) obchází úzký pruh Bosny u Neumu: do Dubrovníku bez hranice",
+		"is": "Pelješac-brúin (2,4 km) sneiðir hjá mjórri ræmu Bosníu við Neum: til Dubrovnik án landamæra",
+		"de": "Die 2,4 km lange Pelješac-Brücke umgeht Bosniens schmalen Streifen bei Neum: nach Dubrovnik ohne Grenze"
+	},
+	"Ston": {
+		"pl": "Mury Stonu ciągną się 5,5 km przez wzgórza; tu też sól i ostrygi",
+		"en": "Ston's walls run 5.5 km over the hills; salt pans and oysters too",
+		"cs": "Stonské hradby se táhnou 5,5 km přes kopce; také solné pánve a ústřice",
+		"is": "Múrar Ston liggja 5,5 km yfir hæðirnar; líka saltpönnur og ostrur",
+		"de": "Die Mauern von Ston ziehen sich 5,5 km über die Hügel; dazu Salinen und Austern"
+	},
+	"Sveti Rok": {
+		"pl": "Tu wieje bura: zimny wiatr z gór potrafi zamknąć autostradę",
+		"en": "Bura country: the cold wind off the mountains can close the motorway",
+		"cs": "Kraj bóry: studený vítr z hor dokáže dálnici uzavřít",
+		"is": "Hér blæs búran: kaldur vindurinn af fjöllunum getur lokað hraðbrautinni",
+		"de": "Bora-Land: der kalte Fallwind von den Bergen kann die Autobahn sperren"
+	},
+	"Đakovo": {
+		"pl": "Katedra z dwiema wieżami i stadnina białych lipicanów",
+		"en": "A twin-towered cathedral and a stud of white Lipizzaner horses",
+		"cs": "Katedrála se dvěma věžemi a hřebčín bílých lipicánů",
+		"is": "Dómkirkja með tvo turna og hrossabú hvítra lipizzaner-hesta",
+		"de": "Ein Dom mit zwei Türmen und ein Gestüt weißer Lipizzaner"
+	}
+}

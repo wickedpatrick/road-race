@@ -1,0 +1,254 @@
+[
+	{
+		"a": "zagreb",
+		"b": "karlovac",
+		"km": 50,
+		"road": "A1",
+		"towns": [["Lučko", 8], ["Jastrebarsko", 30]],
+		"zones": [[20, "fields", "Turopolje"], [50, "upland", "Pokuplje"]],
+		"via": [[30, 15.65, 45.67]]
+	},
+	{
+		"a": "karlovac",
+		"b": "rijeka",
+		"km": 130,
+		"road": [[20, "A1"], [130, "A6"]],
+		"towns": [["Bosiljevo", 20], ["Vrbovsko", 50], ["Delnice", 75], ["Kikovica", 118]],
+		"zones": [[30, "upland", "Pokuplje"], [100, "mountains", "Gorski kotar"], [130, "coast", "Kvarner"]],
+		"via": [[20, 15.29, 45.41], [75, 14.8, 45.4]],
+		"tunnels": [
+			{
+				"from_km": 105,
+				"to_km": 107.1,
+				"name": {
+					"pl": "Tunel Tuhobić",
+					"en": "Tuhobić Tunnel",
+					"cs": "Tunel Tuhobić",
+					"is": "Tuhobić-göngin",
+					"de": "Tuhobić-Tunnel"
+				},
+				"fact": {
+					"pl": "2 km pod górą Tuhobić, z lasów Gorskiego kotaru nad morze",
+					"en": "2 km under Mount Tuhobić, from the forests of Gorski kotar down to the sea",
+					"cs": "2 km pod horou Tuhobić, z lesů Gorského kotaru k moři",
+					"is": "2 km undir Tuhobić-fjalli, úr skógum Gorski kotar niður að sjó",
+					"de": "2 km unter dem Tuhobić, aus den Wäldern des Gorski kotar hinunter ans Meer"
+				}
+			}
+		]
+	},
+	{
+		"a": "karlovac",
+		"b": "gospic",
+		"km": 145,
+		"road": "A1",
+		"towns": [["Ogulin", 40], ["Brinje", 85], ["Otočac", 105], ["Perušić", 130]],
+		"zones": [[40, "forest", "Ogulinski kraj"], [90, "mountains", "Kapela"], [145, "karst", "Lika"]],
+		"via": [[40, 15.23, 45.26], [85, 15.13, 45], [105, 15.24, 44.87]],
+		"tunnels": [
+			{
+				"from_km": 62,
+				"to_km": 67.8,
+				"name": {
+					"pl": "Tunel Mala Kapela",
+					"en": "Mala Kapela Tunnel",
+					"cs": "Tunel Mala Kapela",
+					"is": "Mala Kapela-göngin",
+					"de": "Tunnel Mala Kapela"
+				},
+				"fact": {
+					"pl": "5,8 km pod pasmem Kapela, najdłuższy tunel w Chorwacji",
+					"en": "5.8 km under the Kapela range, the longest tunnel in Croatia",
+					"cs": "5,8 km pod pohořím Kapela, nejdelší tunel v Chorvatsku",
+					"is": "5,8 km undir Kapela-fjöllunum, lengstu göng Króatíu",
+					"de": "5,8 km unter dem Kapela-Gebirge, der längste Tunnel Kroatiens"
+				}
+			}
+		]
+	},
+	{
+		"a": "gospic",
+		"b": "zadar",
+		"km": 90,
+		"road": "A1",
+		"towns": [["Sveti Rok", 25], ["Posedarje", 65]],
+		"zones": [[25, "karst", "Lika"], [45, "mountains", "Velebit"], [90, "coast", "Ravni kotari"]],
+		"via": [[25, 15.67, 44.37], [65, 15.48, 44.2]],
+		"tunnels": [
+			{
+				"from_km": 30,
+				"to_km": 35.7,
+				"name": {
+					"pl": "Tunel Sveti Rok",
+					"en": "Sveti Rok Tunnel",
+					"cs": "Tunel Sveti Rok",
+					"is": "Sveti Rok-göngin",
+					"de": "Tunnel Sveti Rok"
+				},
+				"fact": {
+					"pl": "5,7 km pod Welebitem: wjeżdża się w zieloną Likę, wyjeżdża w skalistą Dalmację, często prosto w burę",
+					"en": "5.7 km under the Velebit: in from green Lika, out into rocky Dalmatia, often straight into the bura wind",
+					"cs": "5,7 km pod Velebitem: dovnitř ze zelené Liky, ven do skalnaté Dalmácie, často rovnou do bóry",
+					"is": "5,7 km undir Velebit: inn úr grænni Liku, út í grýtta Dalmatíu, oft beint í búruvindinn",
+					"de": "5,7 km unter dem Velebit: hinein aus der grünen Lika, hinaus ins felsige Dalmatien, oft direkt in die Bora"
+				}
+			}
+		]
+	},
+	{
+		"a": "zadar",
+		"b": "sibenik",
+		"km": 80,
+		"road": "A1",
+		"towns": [["Benkovac", 30], ["Skradin", 65]],
+		"zones": [[45, "karst", "Ravni kotari"], [80, "coast", "Šibensko primorje"]],
+		"via": [[30, 15.61, 44.03], [65, 15.92, 43.82]]
+	},
+	{
+		"a": "sibenik",
+		"b": "split",
+		"km": 85,
+		"road": [[70, "A1"], [85, "D1"]],
+		"towns": [["Vrpolje", 15], ["Prgomet", 45], ["Dugopolje", 70], ["Solin", 80]],
+		"zones": [[60, "karst", "Zagora"], [85, "coast", "Kaštela"]],
+		"via": [[45, 16.18, 43.6], [70, 16.58, 43.58]]
+	},
+	{
+		"a": "split",
+		"b": "makarska",
+		"km": 60,
+		"road": "D8",
+		"towns": [["Omiš", 25], ["Brela", 48]],
+		"zones": [[60, "coast", "Makarska rivijera"]],
+		"via": [[25, 16.69, 43.44]]
+	},
+	{
+		"a": "makarska",
+		"b": "dubrovnik",
+		"km": 160,
+		"road": [[72, "D8"], [108, "D414"], [160, "D8"]],
+		"towns": [["Gradac", 30], ["Ploče", 45], ["Opuzen", 58], ["Komarna", 70], ["Ston", 105], ["Slano", 120]],
+		"zones": [
+			[45, "coast", "Makarska rivijera"], [70, "lakes", "Delta Neretve"], [108, "coast", "Pelješac"],
+			[160, "coast", "Dubrovačko primorje"]
+		],
+		"via": [[45, 17.43, 43.05], [70, 17.6, 42.96], [90, 17.45, 42.88], [105, 17.7, 42.84], [120, 17.89, 42.79]]
+	},
+	{
+		"a": "rijeka",
+		"b": "pula",
+		"km": 105,
+		"road": [[10, "A7"], [75, "A8"], [105, "A9"]],
+		"towns": [["Matulji", 10], ["Pazin", 50], ["Žminj", 68], ["Vodnjan", 95]],
+		"zones": [[30, "mountains", "Učka"], [75, "upland", "Središnja Istra"], [105, "coast", "Južna Istra"]],
+		"via": [[10, 14.32, 45.36], [50, 13.94, 45.24], [75, 13.85, 45.12]],
+		"tunnels": [
+			{
+				"from_km": 20,
+				"to_km": 25.1,
+				"name": {
+					"pl": "Tunel Učka",
+					"en": "Učka Tunnel",
+					"cs": "Tunel Učka",
+					"is": "Učka-göngin",
+					"de": "Učka-Tunnel"
+				},
+				"fact": {
+					"pl": "5 km pod górą Učka, z Kvarneru do serca Istrii",
+					"en": "5 km under Mount Učka, from the Kvarner bay into the heart of Istria",
+					"cs": "5 km pod horou Učka, z Kvarneru do srdce Istrie",
+					"is": "5 km undir Učka-fjalli, frá Kvarner-flóa inn í hjarta Istríu",
+					"de": "5 km unter dem Učka, von der Kvarner Bucht ins Herz Istriens"
+				}
+			}
+		]
+	},
+	{
+		"a": "zagreb",
+		"b": "varazdin",
+		"km": 80,
+		"road": "A4",
+		"towns": [["Sveti Ivan Zelina", 30], ["Novi Marof", 55]],
+		"zones": [[25, "fields", "Prigorje"], [80, "upland", "Zagorje"]],
+		"via": [[30, 16.24, 45.96], [55, 16.33, 46.16]]
+	},
+	{
+		"a": "varazdin",
+		"b": "cakovec",
+		"km": 14,
+		"road": "D3",
+		"towns": [["Nedelišće", 10]],
+		"zones": [[14, "fields", "Međimurje"]]
+	},
+	{
+		"a": "zagreb",
+		"b": "sisak",
+		"km": 57,
+		"road": [[35, "A11"], [57, "D30"]],
+		"towns": [["Velika Gorica", 15], ["Lekenik", 38]],
+		"zones": [[57, "fields", "Turopolje"]],
+		"via": [[15, 16.07, 45.71], [38, 16.21, 45.58]]
+	},
+	{
+		"a": "zagreb",
+		"b": "slavonski_brod",
+		"km": 190,
+		"road": "A3",
+		"towns": [["Ivanić-Grad", 35], ["Kutina", 75], ["Novska", 110], ["Okučani", 135], ["Nova Gradiška", 155]],
+		"zones": [[60, "fields", "Posavina"], [110, "forest", "Lonjsko polje"], [190, "fields", "Slavonija"]],
+		"via": [[35, 16.4, 45.71], [75, 16.78, 45.48], [110, 16.98, 45.34], [155, 17.38, 45.25]]
+	},
+	{
+		"a": "slavonski_brod",
+		"b": "osijek",
+		"km": 85,
+		"road": [[22, "A3"], [85, "A5"]],
+		"towns": [["Sredanci", 22], ["Đakovo", 50]],
+		"zones": [[85, "fields", "Slavonija"]],
+		"via": [[22, 18.3, 45.17], [50, 18.41, 45.31]]
+	},
+	{
+		"a": "osijek",
+		"b": "vukovar",
+		"km": 36,
+		"road": "D2",
+		"towns": [["Tenja", 6], ["Trpinja", 25]],
+		"zones": [[36, "fields", "Istočna Slavonija"]]
+	},
+	{
+		"a": "slavonski_brod",
+		"b": "vukovar",
+		"km": 95,
+		"road": [[50, "A3"], [95, "D55"]],
+		"towns": [["Velika Kopanica", 25], ["Vinkovci", 75]],
+		"zones": [[50, "fields", "Posavina"], [95, "fields", "Srijem"]],
+		"via": [[50, 18.7, 45.08], [75, 18.8, 45.29]]
+	},
+	{
+		"a": "slavonski_brod",
+		"b": "pozega",
+		"km": 50,
+		"road": "D53",
+		"towns": [["Podcrkavlje", 12], ["Pleternica", 38]],
+		"zones": [[20, "fields", "Posavina"], [50, "orchard", "Požeška kotlina"]],
+		"via": [[38, 17.8, 45.29]]
+	},
+	{
+		"a": "zagreb",
+		"b": "bjelovar",
+		"km": 80,
+		"road": [[45, "A12"], [80, "D28"]],
+		"towns": [["Sveta Helena", 20], ["Vrbovec", 40], ["Gradec", 55]],
+		"zones": [[40, "fields", "Prigorje"], [80, "upland", "Bilogora"]],
+		"via": [[40, 16.42, 45.88], [55, 16.53, 45.92]]
+	},
+	{
+		"a": "bjelovar",
+		"b": "pozega",
+		"km": 95,
+		"road": [[40, "D28"], [95, "D38"]],
+		"towns": [["Daruvar", 40], ["Pakrac", 60]],
+		"zones": [[40, "upland", "Bilogora"], [75, "forest", "Papuk"], [95, "orchard", "Požeška kotlina"]],
+		"via": [[40, 17.22, 45.59], [60, 17.19, 45.44]]
+	}
+]
