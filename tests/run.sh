@@ -1,17 +1,18 @@
 #!/bin/bash
 # Logic tests (headless script mode) + scene smoke tests (scenes must load and run a few frames without errors).
 cd "$(dirname "$0")/.."
+T=$(mktemp -d) # own logs: several checkouts may run the tests at once
 G=${GODOT:-$(ls /Applications/Godot*.app/Contents/MacOS/Godot 2>/dev/null | head -1)}
 [ -x "$G" ] || { echo "Godot not found (set GODOT=/path/to/Godot)"; exit 1; }
-perl -e 'alarm 120; exec @ARGV' $G --headless --path . --import > /tmp/rr_import.log 2>&1 # class cache: new class_name scripts, fresh clones
-perl -e 'alarm 400; exec @ARGV' $G --headless --path . --script tests/run_tests.gd > /tmp/rr_test.log 2>&1
+perl -e 'alarm 120; exec @ARGV' $G --headless --path . --import > $T/rr_import.log 2>&1 # class cache: new class_name scripts, fresh clones
+perl -e 'alarm 400; exec @ARGV' $G --headless --path . --script tests/run_tests.gd > $T/rr_test.log 2>&1
 code=$?
-grep -E "ERROR|SCRIPT ERROR|FAIL|RESULT|Parse" /tmp/rr_test.log | head -20
-grep -q "SCRIPT ERROR" /tmp/rr_test.log && { echo "FAIL: a test stopped on a script error"; code=1; }
+grep -E "ERROR|SCRIPT ERROR|FAIL|RESULT|Parse" $T/rr_test.log | head -20
+grep -q "SCRIPT ERROR" $T/rr_test.log && { echo "FAIL: a test stopped on a script error"; code=1; }
 for s in menu game results album countries; do
-  perl -e 'alarm 30; exec @ARGV' $G --headless --path . --quit-after 40 res://src/scenes/$s.tscn > /tmp/rr_scene_$s.log 2>&1
-  if grep -E "ERROR|SCRIPT ERROR" /tmp/rr_scene_$s.log | grep -v "still in use at exit" | grep -q .; then
-    echo "SCENE FAIL: $s"; grep -E "ERROR" /tmp/rr_scene_$s.log | grep -v "still in use" | head -3; code=1
+  perl -e 'alarm 30; exec @ARGV' $G --headless --path . --quit-after 40 res://src/scenes/$s.tscn > $T/rr_scene_$s.log 2>&1
+  if grep -E "ERROR|SCRIPT ERROR" $T/rr_scene_$s.log | grep -v "still in use at exit" | grep -q .; then
+    echo "SCENE FAIL: $s"; grep -E "ERROR" $T/rr_scene_$s.log | grep -v "still in use" | head -3; code=1
   else
     echo "scene ok: $s"
   fi

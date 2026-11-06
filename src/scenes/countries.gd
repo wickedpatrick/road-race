@@ -30,7 +30,19 @@ func _ready() -> void:
 	world = GameData.load_json(GameData.DIR + "world.json")
 	for code in world.countries:
 		polys[code] = world.countries[code].polys.map(func(f): return _pts(f))
-	land = world.land.map(func(f): return _pts(f))
+	# a map spanning several countries (index.json `members`) is one shape made of theirs, labelled in their middle
+	for c in GameData.countries():
+		var members: Array = c.get("members", []).filter(func(m): return polys.has(m))
+		if members.is_empty(): continue
+		var shape := []
+		var mid := Vector2.ZERO
+		for m in members:
+			shape.append_array(polys[m])
+			mid += label_pos(m) / members.size()
+			polys.erase(m)
+		polys[c.code] = shape
+		world.countries[c.code] = {"name": c.name, "label": [mid.x, mid.y]}
+	land =world.land.map(func(f): return _pts(f))
 	hover = Session.country
 	_make_stripes()
 

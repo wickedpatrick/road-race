@@ -32,6 +32,13 @@ static func countries() -> Array:
 static func country_codes() -> Array:
 	return countries().map(func(c): return c.code)
 
+## The real countries one map spans (index.json `members`, e.g. the Southern Balkans: me, xk, al, mk), [] for a map
+## of one country (or a code not in the game).
+static func members(code: String) -> Array:
+	for c in countries():
+		if c.code == code: return c.get("members", [])
+	return []
+
 ## Everything about one country (the current one by default): country.json plus "cities", "roads", "facts" and
 ## "landmarks" from the files next to it.
 static func country(code := "") -> Dictionary:

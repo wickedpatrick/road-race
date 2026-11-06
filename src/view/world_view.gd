@@ -657,6 +657,9 @@ func _draw_item(it: Dictionary, n: int, cam_x: float, cam_y: float, cam_z: float
 	if it.type == "finish":
 		_draw_finish(b, pm)
 		return
+	if it.type == "border_canopy":
+		_draw_border_canopy(b, pm, Route.dual_f(race.stage, it.z))
+		return
 	# left-hand traffic: drawn unmirrored at the mirrored point, so lettering and shapes stay the right way round
 	_b.set_mirror(false)
 	Scenery.draw_item(_b, it, Vector2(W - b.x, b.y) if _left else b, pm, pal, season, font)
@@ -674,6 +677,18 @@ func _draw_bridge(b: Vector2, pm: float, d: float) -> void:
 		_b.draw_rect(Rect2(b + Vector2(px - 0.9 * pm, -top), Vector2(1.8 * pm, top)), col.darkened(0.1))
 	_b.draw_rect(Rect2(b + Vector2(-left - 2.0 * pm, -top - 1.6 * pm), Vector2(left + right + 4.0 * pm, 1.7 * pm)), col)
 	_b.draw_rect(Rect2(b + Vector2(-left - 2.0 * pm, -top - 0.3 * pm), Vector2(left + right + 4.0 * pm, 0.3 * pm)), col.darkened(0.3))
+
+## Border crossing canopy over all lanes: slim white pillars past both edges, a flat roof with a blue band.
+func _draw_border_canopy(b: Vector2, pm: float, d: float) -> void:
+	var right := (Track.ROAD_HALF_WIDTH + 1.6) * pm
+	var left := (Track.ROAD_HALF_WIDTH + 1.6) * pm + Track.left_shift(d) * pm
+	var top := 5.6 * pm
+	for px in [-left, right]:
+		_b.draw_rect(Rect2(b + Vector2(px - 0.3 * pm, -top), Vector2(0.6 * pm, top)), Color("d6d9dd"))
+	var r := Rect2(b + Vector2(-left - 1.5 * pm, -top - 1.3 * pm), Vector2(left + right + 3.0 * pm, 1.3 * pm))
+	_b.draw_rect(r, Color("f4f5f6"))
+	_b.draw_rect(Rect2(r.position + Vector2(0, 0.45 * pm), Vector2(r.size.x, 0.4 * pm)), Scenery.SIGN_BLUE)
+	_b.draw_rect(Rect2(r.position + Vector2(0, 1.3 * pm), Vector2(r.size.x, 0.12 * pm)), Color("fff6c8"))
 
 func _draw_finish(b: Vector2, pm: float) -> void:
 	var half := (Track.ROAD_HALF_WIDTH + 1.2) * pm
