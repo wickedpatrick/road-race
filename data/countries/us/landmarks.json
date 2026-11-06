@@ -938,5 +938,845 @@
 			},
 			"local": "The Red Wagon"
 		}
+	],
+	"Baltimore": [
+		{
+			"kind": "fort_mchenry",
+			"name": {
+				"pl": "Fort McHenry",
+				"en": "Fort McHenry",
+				"cs": "Pevnost McHenry",
+				"is": "McHenry-virki",
+				"de": "Fort McHenry"
+			},
+			"desc": {
+				"pl": "Gdy po nocnej bitwie nad tym fortem w kształcie gwiazdy wciąż powiewała wielka flaga, poeta napisał hymn USA",
+				"en": "When the huge flag was still flying over this star-shaped fort after a night of battle, a poet wrote the US national anthem",
+				"cs": "Když nad touto hvězdicovou pevností po noční bitvě stále vlála obří vlajka, básník napsal americkou hymnu",
+				"is": "Þegar risastóri fáninn blakti enn yfir þessu stjörnulaga virki eftir orrustu um nótt orti skáld þjóðsöng Bandaríkjanna",
+				"de": "Als über dieser sternförmigen Festung nach einer Nacht voller Kämpfe noch immer die riesige Flagge wehte, schrieb ein Dichter die US-Hymne"
+			},
+			"local": "Fort McHenry"
+		}
+	],
+	"Erie": [
+		{
+			"kind": "presque_isle_lighthouse",
+			"name": {
+				"pl": "Latarnia Presque Isle",
+				"en": "Presque Isle Lighthouse",
+				"cs": "Maják Presque Isle",
+				"is": "Presque Isle-viti",
+				"de": "Leuchtturm Presque Isle"
+			},
+			"desc": {
+				"pl": "Stoi na piaszczystym półwyspie, który wygina się w głąb jeziora Erie, jednego z pięciu Wielkich Jezior",
+				"en": "It stands on a sandy peninsula that curls out into Lake Erie, one of the five Great Lakes",
+				"cs": "Stojí na písečném poloostrově, který se stáčí do Erijského jezera, jednoho z pěti Velkých jezer",
+				"is": "Hann stendur á sendnum skaga sem sveigist út í Erie-vatn, eitt af Vötnunum miklu fimm",
+				"de": "Er steht auf einer sandigen Halbinsel, die sich in den Eriesee krümmt, einen der fünf Großen Seen"
+			},
+			"local": "Presque Isle Lighthouse"
+		}
+	],
+	"Sandusky": [
+		{
+			"kind": "cedar_point_coaster",
+			"name": {
+				"pl": "Kolejki górskie Cedar Point",
+				"en": "Cedar Point roller coasters",
+				"cs": "Horské dráhy Cedar Point",
+				"is": "Rússíbanarnir í Cedar Point",
+				"de": "Achterbahnen von Cedar Point"
+			},
+			"desc": {
+				"pl": "Ten park rozrywki nad jeziorem Erie ma tyle wielkich kolejek górskich, że nazywa się go światową stolicą rollercoasterów",
+				"en": "This amusement park on Lake Erie has so many giant roller coasters that it is called the roller coaster capital of the world",
+				"cs": "Tento zábavní park u Erijského jezera má tolik obřích horských drah, že se mu říká světové hlavní město horských drah",
+				"is": "Í þessum skemmtigarði við Erie-vatn eru svo margir risarússíbanar að hann er kallaður rússíbanahöfuðborg heimsins",
+				"de": "Dieser Freizeitpark am Eriesee hat so viele riesige Achterbahnen, dass man ihn die Achterbahn-Hauptstadt der Welt nennt"
+			},
+			"local": "Cedar Point"
+		}
+	],
+	"Akron": [
+		{
+			"kind": "goodyear_blimp",
+			"name": {
+				"pl": "Sterowiec Goodyear",
+				"en": "Goodyear Blimp",
+				"cs": "Vzducholoď Goodyear",
+				"is": "Goodyear-loftskipið",
+				"de": "Goodyear-Luftschiff"
+			},
+			"desc": {
+				"pl": "Akron to dom słynnego producenta opon, którego sterowce, wypełnione gazem lżejszym od powietrza, filmują z nieba wielkie mecze",
+				"en": "Akron is the home of a famous tire maker whose airships, filled with a gas lighter than air, film big games from the sky",
+				"cs": "Akron je domovem slavného výrobce pneumatik, jehož vzducholodě plněné plynem lehčím než vzduch natáčejí velké zápasy z nebe",
+				"is": "Í Akron er heimili frægs dekkjaframleiðanda en loftskip hans, full af gasi sem er léttara en loft, mynda stóra leiki af himni",
+				"de": "Akron ist die Heimat eines berühmten Reifenherstellers, dessen Luftschiffe voller Gas, das leichter als Luft ist, große Spiele vom Himmel aus filmen"
+			},
+			"local": "Goodyear Blimp"
+		}
+	],
+	"Lancaster": [
+		{
+			"kind": "amish_buggy",
+			"name": {
+				"pl": "Bryczka amiszów",
+				"en": "Amish horse and buggy",
+				"cs": "Amišská bryčka",
+				"is": "Hestvagn Amish-fólksins",
+				"de": "Pferdekutsche der Amischen"
+			},
+			"desc": {
+				"pl": "Mieszkający tu amisze żyją skromnie, bez samochodów i prawie bez prądu, i do miasta wciąż jeżdżą bryczkami zaprzężonymi w konie",
+				"en": "The Amish here live simply, without cars and almost without electricity, and still drive to town in horse-drawn buggies",
+				"cs": "Amišové tu žijí skromně, bez aut a skoro bez elektřiny, a do města dodnes jezdí bryčkami taženými koňmi",
+				"is": "Amish-fólkið hér lifir einföldu lífi, án bíla og nánast án rafmagns, og ekur enn í bæinn í hestvögnum",
+				"de": "Die Amischen leben hier einfach, ohne Autos und fast ohne Strom, und fahren noch immer mit Pferdekutschen in die Stadt"
+			},
+			"local": "Amish buggy"
+		}
+	],
+	"Valley Forge": [
+		{
+			"kind": "valley_forge_huts",
+			"name": {
+				"pl": "Chaty w Valley Forge",
+				"en": "Valley Forge log huts",
+				"cs": "Sruby ve Valley Forge",
+				"is": "Bjálkakofarnir í Valley Forge",
+				"de": "Blockhütten von Valley Forge"
+			},
+			"desc": {
+				"pl": "Armia Jerzego Waszyngtona przetrwała tu ciężką, mroźną zimę w drewnianych chatach, które sama zbudowała, i wyszła z niej silniejsza",
+				"en": "George Washington's army lived through a hard, freezing winter here in log huts it built itself, and came out stronger",
+				"cs": "Armáda George Washingtona tu přečkala tvrdou, mrazivou zimu ve srubech, které si sama postavila, a vyšla z ní silnější",
+				"is": "Her George Washington þraukaði hér harðan og ískaldan vetur í bjálkakofum sem hermennirnir smíðuðu sjálfir og kom sterkari út",
+				"de": "Die Armee von George Washington überstand hier einen harten, eisigen Winter in selbst gebauten Blockhütten und ging gestärkt daraus hervor"
+			},
+			"local": "Valley Forge"
+		}
+	],
+	"Wisconsin Dells": [
+		{
+			"kind": "dells_rocks",
+			"name": {
+				"pl": "Skały Wisconsin Dells",
+				"en": "Rocks of the Wisconsin Dells",
+				"cs": "Skály Wisconsin Dells",
+				"is": "Klettarnir í Wisconsin Dells",
+				"de": "Felsen der Wisconsin Dells"
+			},
+			"desc": {
+				"pl": "Rzeka Wisconsin wyrzeźbiła te piaskowcowe klify, a wzdłuż nich wożą turystów amfibie, które jeżdżą po lądzie i pływają po wodzie",
+				"en": "The Wisconsin River carved these sandstone cliffs, and duck boats that drive on land and float on water carry visitors past them",
+				"cs": "Řeka Wisconsin vyhloubila tyto pískovcové útesy a kolem nich vozí návštěvníky obojživelné lodě, které jezdí po souši i plují po vodě",
+				"is": "Wisconsin-áin mótaði þessa sandsteinskletta og meðfram þeim sigla froskabátar sem geta bæði ekið á landi og flotið á vatni",
+				"de": "Der Wisconsin River hat diese Sandsteinfelsen geformt, und Amphibienboote, die an Land fahren und im Wasser schwimmen, bringen Besucher daran vorbei"
+			},
+			"local": "Wisconsin Dells"
+		}
+	],
+	"Springfield": [
+		{
+			"kind": "lincoln_home",
+			"name": {
+				"pl": "Dom Abrahama Lincolna",
+				"en": "Lincoln Home",
+				"cs": "Dům Abrahama Lincolna",
+				"is": "Heimili Abrahams Lincoln",
+				"de": "Abraham Lincolns Wohnhaus"
+			},
+			"desc": {
+				"pl": "Abraham Lincoln, wysoki prezydent w wysokim kapeluszu, mieszkał w tym domu z rodziną, zanim przeprowadził się do Białego Domu",
+				"en": "Abraham Lincoln, the tall president in the tall hat, lived in this house with his family before he moved to the White House",
+				"cs": "Abraham Lincoln, vysoký prezident ve vysokém klobouku, bydlel v tomto domě s rodinou, než se přestěhoval do Bílého domu",
+				"is": "Abraham Lincoln, hávaxni forsetinn með háa hattinn, bjó í þessu húsi með fjölskyldu sinni áður en hann flutti í Hvíta húsið",
+				"de": "Abraham Lincoln, der große Präsident mit dem hohen Hut, wohnte mit seiner Familie in diesem Haus, bevor er ins Weiße Haus zog"
+			},
+			"local": "Lincoln Home"
+		}
+	],
+	"Des Moines": [
+		{
+			"kind": "butter_cow",
+			"name": {
+				"pl": "Krowa z masła",
+				"en": "Butter Cow",
+				"cs": "Máslová kráva",
+				"is": "Smjörkýrin",
+				"de": "Butterkuh"
+			},
+			"desc": {
+				"pl": "Co lato na targach stanowych Iowa powstaje krowa naturalnej wielkości wyrzeźbiona z około 270 kilogramów masła",
+				"en": "Every summer at the Iowa State Fair, a life-size cow is sculpted from about 270 kilograms of butter",
+				"cs": "Každé léto na státním veletrhu v Iowě vzniká kráva v životní velikosti vymodelovaná z asi 270 kilogramů másla",
+				"is": "Á hverju sumri á fylkissýningunni í Iowa er kýr í fullri stærð mótuð úr um 270 kílóum af smjöri",
+				"de": "Jeden Sommer wird auf der Iowa State Fair eine lebensgroße Kuh aus etwa 270 Kilogramm Butter geformt"
+			},
+			"local": "Butter Cow"
+		}
+	],
+	"Charlotte": [
+		{
+			"kind": "nascar_car",
+			"name": {
+				"pl": "Wyścigi NASCAR",
+				"en": "NASCAR race car",
+				"cs": "Závodní auto NASCAR",
+				"is": "NASCAR-kappakstursbíll",
+				"de": "NASCAR-Rennwagen"
+			},
+			"desc": {
+				"pl": "Charlotte to dom wyścigów NASCAR, w których samochody pędzą po mocno pochylonych torach z prędkością blisko 300 km/h",
+				"en": "Charlotte is the home of NASCAR racing, where cars roar around steeply tilted tracks at nearly 300 km/h",
+				"cs": "Charlotte je domovem závodů NASCAR, ve kterých auta uhánějí po prudce klopených tratích rychlostí skoro 300 km/h",
+				"is": "Charlotte er heimili NASCAR-kappakstursins þar sem bílar þjóta um brautir með bröttum hallandi beygjum á næstum 300 km hraða",
+				"de": "Charlotte ist die Heimat der NASCAR-Rennen, bei denen Autos mit fast 300 km/h durch stark geneigte Steilkurven donnern"
+			},
+			"local": "NASCAR"
+		}
+	],
+	"Chattanooga": [
+		{
+			"kind": "incline_railway",
+			"name": {
+				"pl": "Kolej na Lookout Mountain",
+				"en": "Lookout Mountain Incline Railway",
+				"cs": "Pozemní lanovka na Lookout Mountain",
+				"is": "Brekkubrautin á Lookout Mountain",
+				"de": "Standseilbahn am Lookout Mountain"
+			},
+			"desc": {
+				"pl": "To jedna z najbardziej stromych kolei pasażerskich na świecie: wspina się na górę prawie tak stromo jak schody",
+				"en": "It is one of the steepest passenger railways in the world: it climbs the mountain almost as steeply as a staircase",
+				"cs": "Je to jedna z nejstrmějších osobních drah na světě: šplhá na horu skoro tak příkře jako schody",
+				"is": "Þetta er ein brattasta farþegabraut heims: hún klifrar upp fjallið næstum jafnbratt og stigi",
+				"de": "Sie ist eine der steilsten Personenbahnen der Welt: Sie klettert fast so steil wie eine Treppe den Berg hinauf"
+			},
+			"local": "Lookout Mountain Incline Railway"
+		}
+	],
+	"Sioux Falls": [
+		{
+			"kind": "sioux_falls",
+			"name": {
+				"pl": "Wodospady Big Sioux",
+				"en": "Falls of the Big Sioux",
+				"cs": "Vodopády Big Sioux",
+				"is": "Fossar Big Sioux-árinnar",
+				"de": "Wasserfälle des Big Sioux"
+			},
+			"desc": {
+				"pl": "Rzeka spada tu po różowym kwarcycie, z którego zbudowano pół miasta",
+				"en": "The river tumbles over pink quartzite, the stone half the city is built of",
+				"cs": "Řeka padá přes růžový křemenec, ze kterého je postavena půlka města",
+				"is": "Áin fellur yfir bleikt kvarsít, steininn sem hálfur bærinn er byggður úr",
+				"de": "Der Fluss stürzt über rosa Quarzit, aus dem die halbe Stadt gebaut ist"
+			},
+			"local": "Falls Park"
+		}
+	],
+	"Mitchell": [
+		{
+			"kind": "corn_palace",
+			"name": {
+				"pl": "Pałac Kukurydzy",
+				"en": "The Corn Palace",
+				"cs": "Kukuřičný palác",
+				"is": "Maíshöllin",
+				"de": "Maispalast"
+			},
+			"desc": {
+				"pl": "Obrazy na jego ścianach są ułożone z kolb kukurydzy, co roku nowe",
+				"en": "The pictures on its walls are made of corn cobs, new ones every year",
+				"cs": "Obrazy na jeho zdech jsou z kukuřičných klasů, každý rok nové",
+				"is": "Myndirnar á veggjunum eru úr maískólfum, nýjar á hverju ári",
+				"de": "Die Bilder an seinen Wänden sind aus Maiskolben, jedes Jahr neue"
+			},
+			"local": "Corn Palace"
+		}
+	],
+	"Wall": [
+		{
+			"kind": "wall_drug_badlands",
+			"name": {
+				"pl": "Wall Drug i Badlands",
+				"en": "Wall Drug and the Badlands",
+				"cs": "Wall Drug a Badlands",
+				"is": "Wall Drug og Badlands",
+				"de": "Wall Drug und die Badlands"
+			},
+			"desc": {
+				"pl": "Sklep słynie z darmowej wody z lodem, a obok wznoszą się pasiaste skały",
+				"en": "The shop is famous for free ice water, next to the striped Badlands rocks",
+				"cs": "Obchod je známý vodou s ledem zdarma, hned u pruhovaných skal",
+				"is": "Búðin er fræg fyrir ókeypis ísvatn, rétt hjá röndóttu klettunum",
+				"de": "Der Laden ist berühmt für Gratis-Eiswasser, gleich bei den gestreiften Felsen"
+			},
+			"local": "Wall Drug and the Badlands"
+		}
+	],
+	"Sturgis": [
+		{
+			"kind": "sturgis_motorcycles",
+			"name": {
+				"pl": "Zlot motocyklowy w Sturgis",
+				"en": "Sturgis Motorcycle Rally",
+				"cs": "Motocyklový sraz ve Sturgisu",
+				"is": "Mótorhjólamótið í Sturgis",
+				"de": "Motorradtreffen in Sturgis"
+			},
+			"desc": {
+				"pl": "Co sierpień przyjeżdżają tu setki tysięcy motocyklistów",
+				"en": "Every August, hundreds of thousands of bikers ride into town",
+				"cs": "Každý srpen sem přijedou statisíce motorkářů",
+				"is": "Í hverjum ágúst koma hingað hundruð þúsunda mótorhjólamanna",
+				"de": "Jeden August kommen Hunderttausende Motorradfahrer hierher"
+			},
+			"local": "Sturgis Motorcycle Rally"
+		}
+	],
+	"Moorcroft": [
+		{
+			"kind": "devils_tower",
+			"name": {
+				"pl": "Devils Tower – Mato Tipila",
+				"en": "Devils Tower – Mato Tipila",
+				"cs": "Devils Tower – Mato Tipila",
+				"is": "Devils Tower – Mato Tipila",
+				"de": "Devils Tower – Mato Tipila"
+			},
+			"desc": {
+				"pl": "Święte miejsce Lakotów i innych narodów, zbudowane z olbrzymich kolumn skały",
+				"en": "A sacred place of the Lakota and other nations, made of giant rock columns",
+				"cs": "Posvátné místo Lakotů a dalších národů, z obřích skalních sloupů",
+				"is": "Helgur staður Lakota og annarra þjóða, úr risastórum bergsúlum",
+				"de": "Ein heiliger Ort der Lakota und anderer Nationen, aus riesigen Felssäulen"
+			},
+			"local": "Devils Tower (Mato Tipila)"
+		}
+	],
+	"Crow Agency": [
+		{
+			"kind": "crow_fair_teepees",
+			"name": {
+				"pl": "Crow Fair – miasteczko tipi",
+				"en": "Crow Fair teepee camp",
+				"cs": "Crow Fair – tábor týpí",
+				"is": "Tjaldbúðir Crow Fair",
+				"de": "Tipi-Lager der Crow Fair"
+			},
+			"desc": {
+				"pl": "Co sierpień w rezerwacie Narodu Crow staje ponad tysiąc tipi",
+				"en": "Every August over a thousand teepees go up on the Crow Nation's reservation",
+				"cs": "Každý srpen stojí v rezervaci národa Crow přes tisíc týpí",
+				"is": "Í hverjum ágúst rísa yfir þúsund tipi á landi Crow-þjóðarinnar",
+				"de": "Jeden August stehen über tausend Tipis im Reservat der Crow Nation"
+			},
+			"local": "Crow Fair"
+		}
+	],
+	"Goodland": [
+		{
+			"kind": "van_gogh_sunflowers",
+			"name": {
+				"pl": "Olbrzymie „Słoneczniki” Van Gogha",
+				"en": "Giant Van Gogh \"Sunflowers\"",
+				"cs": "Obří Van Goghovy „Slunečnice“",
+				"is": "Risastóru „Sólblóm“ Van Goghs",
+				"de": "Riesige „Sonnenblumen“ von Van Gogh"
+			},
+			"desc": {
+				"pl": "Sztaluga jest wysoka jak ośmiopiętrowy dom, a wokół rosną słoneczniki",
+				"en": "The easel is as tall as an eight-storey house, with sunflowers all around",
+				"cs": "Stojan je vysoký jako osmipatrový dům a kolem rostou slunečnice",
+				"is": "Trönurnar eru á hæð við átta hæða hús og sólblóm allt í kring",
+				"de": "Die Staffelei ist so hoch wie ein Haus mit acht Stockwerken, ringsum Sonnenblumen"
+			},
+			"local": "Giant Van Gogh Painting"
+		}
+	],
+	"Wichita": [
+		{
+			"kind": "keeper_of_the_plains",
+			"name": {
+				"pl": "Strażnik Prerii",
+				"en": "The Keeper of the Plains",
+				"cs": "Strážce prérie",
+				"is": "Vörður sléttunnar",
+				"de": "Hüter der Prärie"
+			},
+			"desc": {
+				"pl": "Stalowy wódz z rękami wzniesionymi ku niebu stoi tam, gdzie łączą się dwie rzeki",
+				"en": "A steel chief with arms raised to the sky stands where two rivers meet",
+				"cs": "Ocelový náčelník s rukama k nebi stojí tam, kde se stékají dvě řeky",
+				"is": "Stálhöfðingi með hendur til himins stendur þar sem tvær ár mætast",
+				"de": "Ein Häuptling aus Stahl mit erhobenen Armen steht dort, wo zwei Flüsse sich treffen"
+			},
+			"local": "The Keeper of the Plains"
+		}
+	],
+	"Oklahoma City": [
+		{
+			"kind": "first_americans_museum",
+			"name": {
+				"pl": "Muzeum Pierwszych Amerykanów",
+				"en": "First Americans Museum",
+				"cs": "Muzeum prvních Američanů",
+				"is": "Safn fyrstu Ameríkumannanna",
+				"de": "First Americans Museum"
+			},
+			"desc": {
+				"pl": "Opowiada o 39 narodach Oklahomy, wśród nich o Czirokezach",
+				"en": "It tells the stories of Oklahoma's 39 nations, among them the Cherokee",
+				"cs": "Vypráví o 39 národech Oklahomy, mezi nimi o Čerokízích",
+				"is": "Það segir frá 39 þjóðum Oklahoma, meðal annars Cherokee-þjóðinni",
+				"de": "Es erzählt von den 39 Nationen Oklahomas, darunter den Cherokee"
+			},
+			"local": "First Americans Museum"
+		}
+	],
+	"Gallup": [
+		{
+			"kind": "navajo_hogan",
+			"name": {
+				"pl": "Hogan i tkaczka Navajo",
+				"en": "Navajo hogan and weaver",
+				"cs": "Navažský hogan a tkadlena",
+				"is": "Navajo-hogan og vefari",
+				"de": "Navajo-Hogan und Weberin"
+			},
+			"desc": {
+				"pl": "Naród Navajo to największy rezerwat USA, słynący z hoganów i tkanych dywanów",
+				"en": "The Navajo Nation is the largest US reservation, known for hogans and woven rugs",
+				"cs": "Národ Navajo je největší rezervace USA, známá hogany a tkanými koberci",
+				"is": "Navajo-þjóðin er stærsta verndarsvæði Bandaríkjanna, þekkt fyrir hogan og ofin teppi",
+				"de": "Die Navajo Nation ist das größte Reservat der USA, bekannt für Hogans und Webteppiche"
+			},
+			"local": "Navajo hogan and weaver"
+		}
+	],
+	"Pendleton": [
+		{
+			"kind": "pendleton_umatilla",
+			"name": {
+				"pl": "Tamástslikt i koce z Pendleton",
+				"en": "Tamástslikt and Pendleton blankets",
+				"cs": "Tamástslikt a deky z Pendletonu",
+				"is": "Tamástslikt og Pendleton-teppi",
+				"de": "Tamástslikt und Pendleton-Decken"
+			},
+			"desc": {
+				"pl": "W rezerwacie Umatilla Kajusowie, Umatilla i Walla Walla opowiadają swoją historię",
+				"en": "On the Umatilla Reservation, the Cayuse, Umatilla and Walla Walla tell their story",
+				"cs": "V rezervaci Umatilla vyprávějí svůj příběh Kajusové, Umatillové a Walla Walla",
+				"is": "Á Umatilla-verndarsvæðinu segja Cayuse, Umatilla og Walla Walla sögu sína",
+				"de": "Im Umatilla-Reservat erzählen die Cayuse, Umatilla und Walla Walla ihre Geschichte"
+			},
+			"local": "Tamástslikt Cultural Institute"
+		}
+	],
+	"Lafayette": [
+		{
+			"kind": "cajun_swamp",
+			"name": {
+				"pl": "Bagna bayou w Luizjanie",
+				"en": "Cajun bayou",
+				"cs": "Bažina bayou v Louisianě",
+				"is": "Bayou-fen í Louisiana",
+				"de": "Bayou-Sumpf in Louisiana"
+			},
+			"desc": {
+				"pl": "Aligatory pływają tu między cyprysami obwieszonymi szarą oplątwą, w największym rzecznym bagnie USA",
+				"en": "Alligators swim here among cypress trees hung with grey Spanish moss, in America's biggest river swamp",
+				"cs": "Aligátoři tu plavou mezi cypřiši ověšenými šedou tilandsií, v největší říční bažině USA",
+				"is": "Alligatorar synda hér milli sýprustrjáa sem grár spænskur mosi hangir af, í stærsta árfeni Bandaríkjanna",
+				"de": "Alligatoren schwimmen hier zwischen Zypressen voller grauem Louisianamoos, im größten Flusssumpf der USA"
+			},
+			"local": "Atchafalaya Basin"
+		}
+	],
+	"Birmingham": [
+		{
+			"kind": "vulcan_statue",
+			"name": {
+				"pl": "Posąg Wulkana",
+				"en": "Vulcan statue",
+				"cs": "Socha Vulkána",
+				"is": "Vúlkan-styttan",
+				"de": "Vulcan-Statue"
+			},
+			"desc": {
+				"pl": "Największy na świecie posąg z żeliwa przedstawia rzymskiego boga kowali, bo Birmingham słynęło z żelaza",
+				"en": "The world's biggest cast-iron statue shows the Roman god of blacksmiths, because Birmingham was a city of iron",
+				"cs": "Největší litinová socha na světě zobrazuje římského boha kovářů, protože Birmingham proslul železem",
+				"is": "Stærsta steypujárnsstytta heims sýnir rómverska guð járnsmiða, því Birmingham var járnborg",
+				"de": "Die größte gusseiserne Statue der Welt zeigt den römischen Gott der Schmiede, denn Birmingham war eine Eisenstadt"
+			},
+			"local": "Vulcan Statue"
+		}
+	],
+	"Austin": [
+		{
+			"kind": "texas_capitol_bats",
+			"name": {
+				"pl": "Nietoperze z mostu Congress Avenue",
+				"en": "Congress Avenue Bridge bats",
+				"cs": "Netopýři z mostu Congress Avenue",
+				"is": "Leðurblökurnar undir Congress Avenue-brúnni",
+				"de": "Fledermäuse der Congress Avenue Bridge"
+			},
+			"desc": {
+				"pl": "W letnie wieczory spod mostu wylatuje ponad milion nietoperzy: to największa miejska kolonia w Ameryce Północnej",
+				"en": "On summer evenings over a million bats pour out from under the bridge: the biggest city bat colony in North America",
+				"cs": "Za letních večerů vylétá zpod mostu přes milion netopýrů: největší městská kolonie v Severní Americe",
+				"is": "Á sumarkvöldum fljúga yfir milljón leðurblökur undan brúnni: stærsta leðurblökubyggð í borg í Norður-Ameríku",
+				"de": "An Sommerabenden fliegen über eine Million Fledermäuse unter der Brücke hervor: die größte Stadtkolonie Nordamerikas"
+			},
+			"local": "Congress Avenue Bridge"
+		}
+	],
+	"Huntsville": [
+		{
+			"kind": "sam_houston_statue",
+			"name": {
+				"pl": "Posąg Sama Houstona",
+				"en": "Sam Houston statue",
+				"cs": "Socha Sama Houstona",
+				"is": "Stytta af Sam Houston",
+				"de": "Sam-Houston-Statue"
+			},
+			"desc": {
+				"pl": "Ten 20-metrowy posąg upamiętnia Sama Houstona, pierwszego prezydenta Republiki Teksasu, który mieszkał w Huntsville",
+				"en": "This 20-metre statue honours Sam Houston, the first president of the Republic of Texas, who lived in Huntsville",
+				"cs": "Tato 20 metrů vysoká socha připomíná Sama Houstona, prvního prezidenta Republiky Texas, který žil v Huntsvillu",
+				"is": "Þessi 20 metra háa stytta heiðrar Sam Houston, fyrsta forseta Lýðveldisins Texas, sem bjó í Huntsville",
+				"de": "Die 20 Meter hohe Statue ehrt Sam Houston, den ersten Präsidenten der Republik Texas, der in Huntsville lebte"
+			},
+			"local": "A Tribute to Courage"
+		}
+	],
+	"Amarillo": [
+		{
+			"kind": "cadillac_ranch",
+			"name": {
+				"pl": "Cadillac Ranch",
+				"en": "Cadillac Ranch",
+				"cs": "Cadillac Ranch",
+				"is": "Cadillac Ranch",
+				"de": "Cadillac Ranch"
+			},
+			"desc": {
+				"pl": "Dziesięć starych cadillaców stoi zakopanych maską w ziemi, a każdy może je pomalować sprayem",
+				"en": "Ten old Cadillacs stand nose-down in the ground, and anyone may bring a spray can and paint them",
+				"cs": "Deset starých cadillaků trčí kapotou v zemi a každý je smí pomalovat sprejem",
+				"is": "Tíu gamlir Cadillac-bílar standa á nefinu ofan í jörðinni og hver sem er má spreyja á þá",
+				"de": "Zehn alte Cadillacs stecken mit der Nase im Boden, und jeder darf sie mit der Spraydose bemalen"
+			},
+			"local": "Cadillac Ranch"
+		}
+	],
+	"Santa Fe": [
+		{
+			"kind": "santa_fe_adobe",
+			"name": {
+				"pl": "Domy z adobe w Santa Fe",
+				"en": "Santa Fe adobe houses",
+				"cs": "Adobe domy v Santa Fe",
+				"is": "Adobe-hús í Santa Fe",
+				"de": "Adobe-Häuser in Santa Fe"
+			},
+			"desc": {
+				"pl": "Domy są z suszonej na słońcu gliny, w stylu wiosek ludów Pueblo, a przy drzwiach wiszą wianki czerwonych papryczek chili",
+				"en": "The houses are made of sun-dried mud bricks in the style of the Pueblo peoples' villages, with strings of red chili peppers by the doors",
+				"cs": "Domy jsou z cihel z hlíny sušené na slunci, ve stylu vesnic národů Pueblo, a u dveří visí věnce červených chilli papriček",
+				"is": "Húsin eru úr sólþurrkuðum leirsteinum í stíl þorpa Pueblo-þjóðanna og við dyrnar hanga kippur af rauðum chili-pipar",
+				"de": "Die Häuser sind aus sonnengetrockneten Lehmziegeln im Stil der Dörfer der Pueblo-Völker, und an den Türen hängen Ketten roter Chilischoten"
+			},
+			"local": "Pueblo-style adobe"
+		}
+	],
+	"Colorado Springs": [
+		{
+			"kind": "garden_of_the_gods",
+			"name": {
+				"pl": "Ogród Bogów",
+				"en": "Garden of the Gods",
+				"cs": "Zahrada bohů",
+				"is": "Garður guðanna",
+				"de": "Garten der Götter"
+			},
+			"desc": {
+				"pl": "Te czerwone skały z piaskowca były kiedyś płaskimi warstwami, aż rosnące Góry Skaliste postawiły je na sztorc",
+				"en": "These red sandstone rocks were once flat layers, until the rising Rocky Mountains tipped them up on end",
+				"cs": "Tyto červené pískovcové skály byly kdysi ploché vrstvy, dokud je rostoucí Skalisté hory nepostavily na výšku",
+				"is": "Þessir rauðu sandsteinsklettar voru eitt sinn flöt jarðlög þar til Klettafjöllin risu og reistu þá upp á rönd",
+				"de": "Diese roten Sandsteinfelsen waren einst flache Schichten, bis die wachsenden Rocky Mountains sie senkrecht aufstellten"
+			},
+			"local": "Garden of the Gods"
+		}
+	],
+	"Holbrook": [
+		{
+			"kind": "wigwam_motel",
+			"name": {
+				"pl": "Motel Wigwam",
+				"en": "Wigwam Motel",
+				"cs": "Motel Wigwam",
+				"is": "Wigwam-mótelið",
+				"de": "Wigwam Motel"
+			},
+			"desc": {
+				"pl": "Przy starej Route 66 można spać w betonowym pokoju w kształcie tipi, a przed nim stoją zabytkowe auta",
+				"en": "On old Route 66 you can sleep in a concrete room shaped like a teepee, with vintage cars parked outside",
+				"cs": "U staré Route 66 se dá spát v betonovém pokoji ve tvaru týpí a před ním parkují veteráni",
+				"is": "Við gömlu Route 66 má sofa í steyptu herbergi sem er eins og tipi-tjald í laginu, með fornbíla fyrir utan",
+				"de": "An der alten Route 66 schläft man in einem Betonzimmer in Form eines Tipis, davor parken Oldtimer"
+			},
+			"local": "Wigwam Motel"
+		}
+	],
+	"Flagstaff": [
+		{
+			"kind": "lowell_observatory",
+			"name": {
+				"pl": "Obserwatorium Lowella",
+				"en": "Lowell Observatory",
+				"cs": "Lowellova observatoř",
+				"is": "Lowell-stjörnuathugunarstöðin",
+				"de": "Lowell-Observatorium"
+			},
+			"desc": {
+				"pl": "Tutaj w 1930 roku młody astronom Clyde Tombaugh odkrył planetę karłowatą Pluton",
+				"en": "Here in 1930 a young astronomer, Clyde Tombaugh, discovered the dwarf planet Pluto",
+				"cs": "Tady v roce 1930 objevil mladý astronom Clyde Tombaugh trpasličí planetu Pluto",
+				"is": "Hér uppgötvaði ungur stjörnufræðingur, Clyde Tombaugh, dvergreikistjörnuna Plútó árið 1930",
+				"de": "Hier entdeckte der junge Astronom Clyde Tombaugh 1930 den Zwergplaneten Pluto"
+			},
+			"local": "Lowell Observatory"
+		}
+	],
+	"Camp Verde": [
+		{
+			"kind": "montezuma_castle",
+			"name": {
+				"pl": "Zamek Montezumy",
+				"en": "Montezuma Castle",
+				"cs": "Montezumův hrad",
+				"is": "Montezuma-kastalinn",
+				"de": "Montezuma Castle"
+			},
+			"desc": {
+				"pl": "Lud Sinagua zbudował ten pięciopiętrowy dom w skale ponad 800 lat temu, a Hopi i Yavapai czczą go dziś jako miejsce swoich przodków",
+				"en": "The Sinagua people built this five-storey home in the cliff over 800 years ago, and Hopi and Yavapai people honour it today as a place of their ancestors",
+				"cs": "Národ Sinagua postavil tento pětipatrový dům ve skále před více než 800 lety a Hopiové a Yavapaiové si ho dnes ctí jako místo svých předků",
+				"is": "Sinagua-fólkið byggði þetta fimm hæða hús í klettinum fyrir meira en 800 árum og Hopi- og Yavapai-fólk heiðrar það í dag sem stað forfeðra sinna",
+				"de": "Das Volk der Sinagua baute dieses fünfstöckige Haus im Fels vor über 800 Jahren, und die Hopi und Yavapai ehren es heute als Ort ihrer Vorfahren"
+			},
+			"local": "Montezuma Castle"
+		}
+	],
+	"Palm Springs": [
+		{
+			"kind": "wind_farm",
+			"name": {
+				"pl": "Farma wiatrowa w przełęczy San Gorgonio",
+				"en": "San Gorgonio Pass Wind Farm",
+				"cs": "Větrná farma v průsmyku San Gorgonio",
+				"is": "Vindorkuver í San Gorgonio-skarði",
+				"de": "Windpark am San-Gorgonio-Pass"
+			},
+			"desc": {
+				"pl": "Tysiące wiatraków łapią tu wiatr, który dmucha przez przełęcz z pustyni, i robią z niego prąd",
+				"en": "Thousands of wind turbines catch the wind blowing through the desert pass and turn it into electricity",
+				"cs": "Tisíce větrných turbín tu chytají vítr, který fouká pouštním průsmykem, a mění ho na elektřinu",
+				"is": "Þúsundir vindmylla grípa vindinn sem blæs um eyðimerkurskarðið og breyta honum í rafmagn",
+				"de": "Tausende Windräder fangen hier den Wind ein, der durch den Wüstenpass weht, und machen daraus Strom"
+			},
+			"local": "San Gorgonio Pass Wind Farm"
+		}
+	],
+	"Baker": [
+		{
+			"kind": "giant_thermometer",
+			"name": {
+				"pl": "Największy termometr świata",
+				"en": "World's Tallest Thermometer",
+				"cs": "Nejvyšší teploměr světa",
+				"is": "Hæsti hitamælir heims",
+				"de": "Höchstes Thermometer der Welt"
+			},
+			"desc": {
+				"pl": "Ma 134 stopy wysokości – tyle, ile stopni Fahrenheita zmierzono w pobliskiej Dolinie Śmierci w najgorętszy dzień w historii",
+				"en": "It is 134 feet tall, one foot for each degree Fahrenheit of the hottest day ever measured, in nearby Death Valley",
+				"cs": "Je vysoký 134 stop – právě tolik stupňů Fahrenheita naměřili v nedalekém Údolí smrti v nejteplejší den v historii",
+				"is": "Hann er 134 fet á hæð, eitt fet fyrir hverja Fahrenheit-gráðu heitasta dags sem mælst hefur, í Dauðadal skammt frá",
+				"de": "Es ist 134 Fuß hoch – so viele Grad Fahrenheit wurden am heißesten je gemessenen Tag im nahen Death Valley gemessen"
+			},
+			"local": "World's Tallest Thermometer"
+		}
+	],
+	"St. George": [
+		{
+			"kind": "zion_canyon",
+			"name": {
+				"pl": "Kanion Zion",
+				"en": "Zion Canyon",
+				"cs": "Kaňon Zion",
+				"is": "Zion-gljúfur",
+				"de": "Zion Canyon"
+			},
+			"desc": {
+				"pl": "Mała rzeka Virgin przez miliony lat wycięła w czerwonych i kremowych skałach kanion głęboki na pół kilometra",
+				"en": "Over millions of years the little Virgin River carved this canyon half a kilometre deep into red and cream rock",
+				"cs": "Malá řeka Virgin za miliony let vyhloubila v červených a krémových skalách kaňon hluboký půl kilometru",
+				"is": "Á milljónum ára gróf litla Virgin-áin þetta hálfs kílómetra djúpa gljúfur í rauðan og ljósan stein",
+				"de": "Der kleine Virgin River hat in Millionen Jahren diese einen halben Kilometer tiefe Schlucht in roten und cremefarbenen Fels gegraben"
+			},
+			"local": "Zion Canyon"
+		}
+	],
+	"Cheyenne": [
+		{
+			"kind": "cheyenne_frontier_boots",
+			"name": {
+				"pl": "Wielkie buty i rodeo Frontier Days",
+				"en": "Big Boots and Frontier Days Rodeo",
+				"cs": "Velké boty a rodeo Frontier Days",
+				"is": "Risastígvél og Frontier Days-ródeó",
+				"de": "Große Stiefel und Frontier-Days-Rodeo"
+			},
+			"desc": {
+				"pl": "Co lato kowboje z całego świata przyjeżdżają tu na największe rodeo na świeżym powietrzu, a po mieście stoją kolorowo pomalowane olbrzymie kowbojki",
+				"en": "Every summer cowboys come from all over the world for the biggest outdoor rodeo, and giant painted cowboy boots stand all around town",
+				"cs": "Každé léto sem přijíždějí kovbojové z celého světa na největší rodeo pod širým nebem a po městě stojí obří pomalované kovbojské boty",
+				"is": "Á hverju sumri koma kúrekar alls staðar að á stærsta útiródeó heims, og risastór máluð kúrekastígvél standa um allan bæ",
+				"de": "Jeden Sommer kommen Cowboys aus aller Welt zum größten Freiluft-Rodeo, und überall in der Stadt stehen riesige bemalte Cowboystiefel"
+			},
+			"local": "Cheyenne Frontier Days and the Big Boots"
+		}
+	],
+	"Reno": [
+		{
+			"kind": "reno_arch",
+			"name": {
+				"pl": "Łuk Reno",
+				"en": "Reno Arch",
+				"cs": "Oblouk Reno",
+				"is": "Reno-boginn",
+				"de": "Reno Arch"
+			},
+			"desc": {
+				"pl": "Świecący łuk nad ulicą Virginia Street woła: „Największe małe miasto na świecie”",
+				"en": "The glowing arch over Virginia Street calls it \"The Biggest Little City in the World\"",
+				"cs": "Zářící oblouk nad ulicí Virginia Street hlásá: „Největší malé město na světě“",
+				"is": "Lýsandi boginn yfir Virginia Street kallar hana „stærstu litlu borg í heimi“",
+				"de": "Der leuchtende Bogen über der Virginia Street nennt Reno „die größte kleine Stadt der Welt“"
+			},
+			"local": "Reno Arch"
+		}
+	],
+	"Wendover": [
+		{
+			"kind": "salt_flats_racer",
+			"name": {
+				"pl": "Wyścigówka na Bonneville Salt Flats",
+				"en": "Racer on the Bonneville Salt Flats",
+				"cs": "Závodní auto na solné pláni Bonneville",
+				"is": "Kappakstursbíll á Bonneville-saltsléttunni",
+				"de": "Rennwagen auf den Bonneville Salt Flats"
+			},
+			"desc": {
+				"pl": "Ta biała solna równina jest tak płaska, że auta pędzą po niej szybciej niż 600 km/h, bijąc rekordy prędkości",
+				"en": "This white salt plain is so flat that cars race across it at over 600 km/h to set speed records",
+				"cs": "Tahle bílá solná pláň je tak rovná, že po ní auta při honbě za rekordy jezdí přes 600 km/h",
+				"is": "Þessi hvíta saltslétta er svo flöt að bílar þjóta yfir hana á meira en 600 km/klst til að setja hraðamet",
+				"de": "Diese weiße Salzebene ist so flach, dass Autos hier mit über 600 km/h um Geschwindigkeitsrekorde rasen"
+			},
+			"local": "Bonneville Salt Flats"
+		}
+	],
+	"Mount Shasta": [
+		{
+			"kind": "mount_shasta",
+			"name": {
+				"pl": "Góra Shasta",
+				"en": "Mount Shasta",
+				"cs": "Hora Shasta",
+				"is": "Shasta-fjall",
+				"de": "Mount Shasta"
+			},
+			"desc": {
+				"pl": "Ten ośnieżony wulkan ma ponad 4300 metrów i lodowce, a dla Indian z plemion Winnemem Wintu i Karuk to święta góra",
+				"en": "This snowy volcano is over 4,300 metres tall with glaciers, and it is a sacred mountain for the Winnemem Wintu and Karuk peoples",
+				"cs": "Tahle zasněžená sopka s ledovci měří přes 4300 metrů a pro indiánské národy Winnemem Wintu a Karuk je posvátnou horou",
+				"is": "Þetta snævi þakta eldfjall er yfir 4.300 metrar með jöklum og er heilagt fjall Winnemem Wintu- og Karuk-þjóðanna",
+				"de": "Dieser verschneite Vulkan ist über 4300 Meter hoch, trägt Gletscher und ist ein heiliger Berg der Winnemem Wintu und der Karuk"
+			},
+			"local": "Mount Shasta"
+		}
+	],
+	"Twin Falls": [
+		{
+			"kind": "shoshone_falls",
+			"name": {
+				"pl": "Wodospad Shoshone",
+				"en": "Shoshone Falls",
+				"cs": "Vodopád Shoshone",
+				"is": "Shoshone-foss",
+				"de": "Shoshone Falls"
+			},
+			"desc": {
+				"pl": "Ten „Niagara Zachodu” spada z czarnych skał bazaltowych z wysokości większej niż prawdziwa Niagara",
+				"en": "The \"Niagara of the West\" drops over black basalt cliffs from even higher than the real Niagara Falls",
+				"cs": "Tahle „Niagara Západu“ padá přes černé čedičové skály z větší výšky než skutečné Niagarské vodopády",
+				"is": "„Niagara vestursins“ fellur fram af svörtum basaltklettum, enn hærra en sjálfur Niagarafoss",
+				"de": "Die „Niagara des Westens“ stürzt über schwarze Basaltklippen sogar tiefer hinab als die echten Niagarafälle"
+			},
+			"local": "Shoshone Falls"
+		}
+	],
+	"Troutdale": [
+		{
+			"kind": "multnomah_falls",
+			"name": {
+				"pl": "Wodospad Multnomah",
+				"en": "Multnomah Falls",
+				"cs": "Vodopád Multnomah",
+				"is": "Multnomah-foss",
+				"de": "Multnomah Falls"
+			},
+			"desc": {
+				"pl": "Woda spada tu dwoma skokami z wysokości 189 metrów, a między nimi przechodzi się po małym kamiennym moście",
+				"en": "The water drops 189 metres in two leaps, and you can walk across a little stone bridge between them",
+				"cs": "Voda tu padá ve dvou stupních z výšky 189 metrů a mezi nimi vede malý kamenný most",
+				"is": "Vatnið fellur 189 metra í tveimur stökkum og maður getur gengið yfir litla steinbrú á milli þeirra",
+				"de": "Das Wasser stürzt in zwei Stufen 189 Meter tief, und zwischen ihnen führt eine kleine Steinbrücke hinüber"
+			},
+			"local": "Multnomah Falls"
+		}
+	],
+	"North Bend": [
+		{
+			"kind": "snoqualmie_falls",
+			"name": {
+				"pl": "Wodospad Snoqualmie",
+				"en": "Snoqualmie Falls",
+				"cs": "Vodopád Snoqualmie",
+				"is": "Snoqualmie-foss",
+				"de": "Snoqualmie Falls"
+			},
+			"desc": {
+				"pl": "Dla plemienia Snoqualmie to święte miejsce, gdzie mgła wodospadu łączy ziemię z niebem",
+				"en": "For the Snoqualmie Tribe this is a sacred place, where the mist of the falls joins the earth and the sky",
+				"cs": "Pro kmen Snoqualmie je to posvátné místo, kde mlha z vodopádu spojuje zemi s nebem",
+				"is": "Fyrir Snoqualmie-þjóðina er þetta heilagur staður þar sem úði fossins tengir jörð og himin",
+				"de": "Für den Stamm der Snoqualmie ist dies ein heiliger Ort, an dem der Nebel des Wasserfalls Erde und Himmel verbindet"
+			},
+			"local": "Snoqualmie Falls"
+		}
 	]
 }

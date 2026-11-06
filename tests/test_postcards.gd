@@ -38,7 +38,7 @@ func run(t) -> void:
 	t.check(places.cz.postcards.keys() == ["praha", "brno"] and places.pl.postcards.krakow.stamps == 3, "old profiles: postcards in every country played")
 	# routes: towns between the map cities that have a landmark, under the pair of cities (bigger first)
 	var counts := {"pl": [38, 62], "cz": [16, 24], "is": [9, 12], "gb": [42, 63], "de": [44, 58], "at": [22, 34], "sk": [11, 15],
-		"lt": [11, 16], "us": [4, 5], "ca": [8, 7]}
+		"lt": [11, 16], "us": [34, 47], "ca": [8, 7]}
 	for code in counts:
 		var rs := Postcards.routes(code)
 		var map: Dictionary = GameData.country(code).cities
