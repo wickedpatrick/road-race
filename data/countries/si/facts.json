@@ -1,0 +1,128 @@
+{
+	"Ljubljana": {
+		"pl": "Stolica Słowenii, na herbie ma zielonego smoka",
+		"en": "Slovenia's capital, with a green dragon on its coat of arms",
+		"cs": "Hlavní město Slovinska se zeleným drakem ve znaku",
+		"is": "Höfuðborg Slóveníu, með grænan dreka í skjaldarmerkinu",
+		"de": "Sloweniens Hauptstadt, mit einem grünen Drachen im Wappen"
+	},
+	"Maribor": {
+		"pl": "Drugie miasto Słowenii nad Drawą, rośnie tu najstarsza winorośl świata",
+		"en": "Slovenia's second city on the Drava, home of the world's oldest vine",
+		"cs": "Druhé největší město Slovinska na Drávě, roste tu nejstarší vinná réva světa",
+		"is": "Næststærsta borg Slóveníu við Drava, þar vex elsti vínviður heims",
+		"de": "Sloweniens zweitgrößte Stadt an der Drau, mit dem ältesten Weinstock der Welt"
+	},
+	"Celje": {
+		"pl": "Dawne miasto potężnych hrabiów celjskich, ich trzy złote gwiazdy są na fladze Słowenii",
+		"en": "Old seat of the mighty Counts of Celje, whose three gold stars are on Slovenia's flag",
+		"cs": "Staré sídlo mocných hrabat Celjských, jejichž tři zlaté hvězdy má slovinská vlajka",
+		"is": "Gamalt setur greifanna af Celje, en þrjár gullstjörnur þeirra eru á fána Slóveníu",
+		"de": "Alter Sitz der mächtigen Grafen von Cilli, deren drei goldene Sterne auf Sloweniens Flagge stehen"
+	},
+	"Kranj": {
+		"pl": "Miasto na skale nad kanionem rzeki Kokry, tu zmarł poeta Prešeren",
+		"en": "A town on a rock above the Kokra canyon, where the poet Prešeren died",
+		"cs": "Město na skále nad kaňonem Kokry, zde zemřel básník Prešeren",
+		"is": "Bær á kletti yfir gljúfri Kokra, þar dó skáldið Prešeren",
+		"de": "Stadt auf einem Felsen über der Kokra-Schlucht, hier starb der Dichter Prešeren"
+	},
+	"Velenje": {
+		"pl": "Młode miasto górników węgla brunatnego, z jeziorami po kopalni",
+		"en": "A young town of lignite miners, with lakes left by the mine",
+		"cs": "Mladé město horníků hnědého uhlí, s jezery po dolech",
+		"is": "Ungur bær brúnkolanámumanna, með vötnum sem námurnar skildu eftir",
+		"de": "Junge Stadt der Braunkohlebergleute, mit Seen aus dem Bergbau"
+	},
+	"Koper": {
+		"pl": "Największy port Słowenii, na jedynych 47 km wybrzeża kraju",
+		"en": "Slovenia's biggest port, on the country's only 47 km of coast",
+		"cs": "Největší přístav Slovinska na jediných 47 km pobřeží",
+		"is": "Stærsta höfn Slóveníu, á einu 47 km strandlengju landsins",
+		"de": "Sloweniens größter Hafen, an den einzigen 47 km Küste des Landes"
+	},
+	"Novo mesto": {
+		"pl": "Stolica Dolenjskiej nad zakolem rzeki Krki, słynie z brązowych situl",
+		"en": "Capital of Lower Carniola on a bend of the Krka, famous for bronze situlae",
+		"cs": "Metropole Dolenjska v ohybu řeky Krky, proslulá bronzovými situlami",
+		"is": "Höfuðstaður Dolenjska í bugðu Krka-árinnar, frægur fyrir bronsfötur",
+		"de": "Hauptort Unterkrains an einer Schleife der Krka, berühmt für bronzene Situlen"
+	},
+	"Murska Sobota": {
+		"pl": "Stolica Prekmurja, płaskiej krainy nad Murą pełnej bocianów",
+		"en": "Capital of Prekmurje, a flat land by the Mura full of storks",
+		"cs": "Metropole Zámuří, ploché krajiny u Mury plné čápů",
+		"is": "Höfuðstaður Prekmurje, flatlendis við Mura fullt af storkum",
+		"de": "Hauptort des Übermurgebiets, eines flachen Landes an der Mur voller Störche"
+	},
+	"Ptuj": {
+		"pl": "Najstarsze miasto Słowenii, zimą biegają tu kudłate kurenty",
+		"en": "Slovenia's oldest town, where shaggy Kurents run in winter",
+		"cs": "Nejstarší město Slovinska, kde v zimě běhají chlupatí kurenti",
+		"is": "Elsti bær Slóveníu, þar sem loðnir Kurentar hlaupa á veturna",
+		"de": "Sloweniens älteste Stadt, wo im Winter zottelige Kurenten laufen"
+	},
+	"Nova Gorica": {
+		"pl": "Miasto zbudowane po 1947 roku tuż przy włoskiej Gorycji",
+		"en": "A town built after 1947 right next to Italian Gorizia",
+		"cs": "Město postavené po roce 1947 hned vedle italské Gorizie",
+		"is": "Bær byggður eftir 1947 rétt við ítölsku Gorizia",
+		"de": "Nach 1947 erbaute Stadt direkt neben dem italienischen Görz"
+	},
+	"Postojna": {
+		"pl": "Tu jest jaskinia, przez którą jeździ się kolejką",
+		"en": "Home of a cave you ride through on a little train",
+		"cs": "Je tu jeskyně, kterou se projíždí vláčkem",
+		"is": "Hér er hellir sem farið er um í lítilli lest",
+		"de": "Hier liegt eine Höhle, durch die man mit einer kleinen Bahn fährt"
+	},
+	"Bled": {
+		"pl": "Jezioro z wysepką i kościołem, pod zamkiem na skale",
+		"en": "A lake with an island church below a castle on a cliff",
+		"cs": "Jezero s ostrůvkem a kostelem pod hradem na skále",
+		"is": "Vatn með eyju og kirkju undir kastala á kletti",
+		"de": "Ein See mit Inselkirche unter einer Burg auf dem Felsen"
+	},
+	"Piran": {
+		"pl": "Weneckie miasteczko na cyplu, z placem skrzypka Tartiniego",
+		"en": "A Venetian little town on a cape, with the square of the violinist Tartini",
+		"cs": "Benátské městečko na mysu s náměstím houslisty Tartiniho",
+		"is": "Feneyskur smábær á nesi, með torgi fiðluleikarans Tartini",
+		"de": "Venezianisches Städtchen auf einem Kap, mit dem Platz des Geigers Tartini"
+	},
+	"Trojane": {
+		"pl": "Przydrożna wioska słynąca z wielkich pączków",
+		"en": "A roadside village famous for its huge doughnuts",
+		"cs": "Silniční vesnice proslulá velkými koblihami",
+		"is": "Þorp við veginn, frægt fyrir risastóra kleinuhringi",
+		"de": "Ein Dorf an der Straße, berühmt für seine riesigen Krapfen"
+	},
+	"Vrhnika": {
+		"pl": "Tu wypływa rzeka Ljubljanica",
+		"en": "Where the Ljubljanica river springs out",
+		"cs": "Zde vyvěrá řeka Lublaňka",
+		"is": "Hér sprettur Ljubljanica-áin fram",
+		"de": "Hier entspringt die Ljubljanica"
+	},
+	"Radovljica": {
+		"pl": "Miasteczko pszczelarzy, z muzeum malowanych uli",
+		"en": "A beekeepers' town with a museum of painted hives",
+		"cs": "Městečko včelařů s muzeem malovaných úlů",
+		"is": "Bær býflugnabænda með safni málaðra búa",
+		"de": "Städtchen der Imker mit einem Museum bemalter Bienenstöcke"
+	},
+	"Izola": {
+		"pl": "Dawna wyspa rybaków, dziś połączona z lądem",
+		"en": "A fishermen's former island, now joined to the land",
+		"cs": "Bývalý rybářský ostrov, dnes spojený s pevninou",
+		"is": "Fyrrum eyja sjómanna, nú tengd landi",
+		"de": "Ehemalige Fischerinsel, heute mit dem Land verbunden"
+	},
+	"Ajdovščina": {
+		"pl": "Tu wieje silny wiatr bora",
+		"en": "Where the strong bora wind blows",
+		"cs": "Zde fouká silný vítr bóra",
+		"is": "Hér blæs sterki bóruvindurinn",
+		"de": "Hier weht die starke Bora"
+	}
+}

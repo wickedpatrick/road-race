@@ -1,0 +1,46 @@
+{
+	"code": "si",
+	"name": {"pl": "Słowenia", "en": "Slovenia", "cs": "Slovinsko", "is": "Slóvenía", "de": "Slowenien"},
+	"language": "sl",
+	"drive": "right",
+	"units": "metric",
+	"title": {
+		"pl": "RAJD PRZEZ SŁOWENIĘ",
+		"en": "SLOVENIA ROAD TRIP",
+		"cs": "RALLY SLOVINSKEM",
+		"is": "ÖKUFERÐ UM SLÓVENÍU",
+		"de": "SLOWENIEN-TOUR"
+	},
+	"subtitle": {
+		"pl": "Edukacyjna podróż od Alp Julijskich po Adriatyk",
+		"en": "An educational journey from the Julian Alps to the Adriatic",
+		"cs": "Vzdělávací cesta od Julských Alp k Jadranu",
+		"is": "Fræðandi ferðalag frá Júlísku Ölpunum að Adríahafi",
+		"de": "Eine lehrreiche Reise von den Julischen Alpen bis zur Adria"
+	},
+	"region_label": {"pl": "region", "en": "region", "cs": "region", "is": "hérað", "de": "Region"},
+	"start": ["ljubljana", "kranj"],
+	"express_prefixes": ["A", "H"],
+	"limits": {"express": 130, "road": 90, "city": 50, "town_on_express": 80, "town": 50},
+	"signs": {"town": "#ffffff", "town_text": "#111111", "board": "#1d5bbf", "board_motorway": "#00843d"},
+	"map": {"lon0": 13.25, "lon1": 16.75, "lat0": 45.3, "lat1": 47, "lon_k": 0.693, "labels": "auto"},
+	"outline": [
+		[13.59, 45.48], [13.56, 45.52], [13.6, 45.54], [13.66, 45.54], [13.73, 45.56], [13.71, 45.6], [13.78, 45.61],
+		[13.88, 45.63], [13.83, 45.7], [13.72, 45.75], [13.58, 45.82], [13.6, 45.9], [13.63, 45.98], [13.52, 46.05],
+		[13.65, 46.15], [13.48, 46.22], [13.38, 46.3], [13.43, 46.36], [13.68, 46.44], [13.71, 46.52], [14, 46.48],
+		[14.3, 46.43], [14.55, 46.38], [14.8, 46.48], [14.9, 46.6], [15.06, 46.65], [15.42, 46.65], [15.65, 46.71],
+		[15.98, 46.69], [16, 46.8], [16.11, 46.87], [16.34, 46.84], [16.42, 46.66], [16.52, 46.5], [16.6, 46.47],
+		[16.4, 46.5], [16.28, 46.52], [16.3, 46.39], [16, 46.3], [15.78, 46.22], [15.65, 46.2], [15.6, 46],
+		[15.72, 45.85], [15.5, 45.82], [15.3, 45.72], [15.4, 45.65], [15.28, 45.47], [15, 45.5], [14.8, 45.48],
+		[14.6, 45.6], [14.4, 45.5], [14.12, 45.48], [13.98, 45.5], [13.85, 45.46], [13.62, 45.47]
+	],
+	"outline_lines": [],
+	"station": {
+		"sign": "BENCINSKI SERVIS",
+		"board": "GORIVO",
+		"prices": [["95", "1,48"], ["Dizel", "1,52"]],
+		"region_sign": "REGIJA"
+	},
+	"plates": [["A", "#00843d", "#ffffff"], ["H", "#00843d", "#ffffff"], ["", "#1d5bbf", "#ffffff"]],
+	"weather": {"default": "sun", "landscape": true, "biomes": {"mountains": "sun"}}
+}

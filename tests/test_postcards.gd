@@ -2,7 +2,8 @@ extends RefCounted
 ## Postcards: one per map city, its landmarks, stamps for a result, the best result kept.
 
 func run(t) -> void:
-	var sizes := {"pl": 30, "cz": 20, "is": 13, "gb": 30, "de": 32, "sk": 16, "lt": 13, "at": 19, "rs": 19, "ba": 16}
+	var sizes := {"pl": 30, "cz": 20, "is": 13, "gb": 30, "de": 32, "sk": 16, "lt": 13, "at": 19, "rs": 19, "ba": 16,
+		"si": 13}
 	for code in sizes:
 		var ids := Postcards.cities(code)
 		var map: Dictionary = GameData.country(code).cities

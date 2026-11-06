@@ -1,0 +1,169 @@
+[
+	{
+		"a": "ljubljana",
+		"b": "kranj",
+		"km": 27,
+		"road": "A2",
+		"towns": [["Vodice", 13]],
+		"zones": [[14, "fields", "Ljubljansko polje"], [27, "fields", "Kranjsko polje"]]
+	},
+	{
+		"a": "kranj",
+		"b": "bled",
+		"km": 28,
+		"road": [[23, "A2"], [28, "209"]],
+		"towns": [["Podtabor", 10], ["Radovljica", 19], ["Lesce", 23]],
+		"zones": [[12, "foothills", "Gorenjska"], [28, "mountains", "Julijske Alpe"]],
+		"via": [[19, 14.17, 46.34]]
+	},
+	{
+		"a": "ljubljana",
+		"b": "postojna",
+		"km": 50,
+		"road": "A1",
+		"towns": [["Vrhnika", 20], ["Logatec", 32]],
+		"zones": [[18, "fields", "Ljubljansko barje"], [50, "forest", "Notranjska"]],
+		"via": [[20, 14.29, 45.96], [32, 14.22, 45.92]]
+	},
+	{
+		"a": "postojna",
+		"b": "koper",
+		"km": 55,
+		"road": "A1",
+		"towns": [["Senožeče", 20], ["Divača", 30], ["Kozina", 38], ["Črni Kal", 46]],
+		"zones": [[38, "upland", "Kras"], [55, "coast", "Slovenska Istra"]],
+		"via": [[30, 13.97, 45.68], [38, 13.93, 45.6]]
+	},
+	{
+		"a": "koper",
+		"b": "piran",
+		"km": 17,
+		"road": [[11, "H6"], [17, "111"]],
+		"towns": [["Izola", 7], ["Lucija", 12], ["Portorož", 14]],
+		"zones": [[17, "coast", "Slovenska Istra"]],
+		"tunnels": [
+			{
+				"from_km": 1.5,
+				"to_km": 3.7,
+				"name": {
+					"pl": "Tunel Markovec",
+					"en": "Markovec Tunnel",
+					"cs": "Tunel Markovec",
+					"is": "Markovec-göngin",
+					"de": "Markovec-Tunnel"
+				},
+				"fact": {
+					"pl": "Ponad 2 km pod wzgórzem Markovec, otwarty w 2015 roku",
+					"en": "Over 2 km under the Markovec hill, opened in 2015",
+					"cs": "Přes 2 km pod kopcem Markovec, otevřen v roce 2015",
+					"is": "Yfir 2 km undir Markovec-hæðinni, opnuð árið 2015",
+					"de": "Über 2 km unter dem Hügel Markovec, eröffnet 2015"
+				}
+			}
+		]
+	},
+	{
+		"a": "postojna",
+		"b": "nova_gorica",
+		"km": 60,
+		"road": [[12, "A1"], [60, "H4"]],
+		"towns": [["Razdrto", 12], ["Vipava", 25], ["Ajdovščina", 35]],
+		"zones": [[14, "forest", "Notranjska"], [45, "orchard", "Vipavska dolina"], [60, "fields", "Goriška"]],
+		"via": [[12, 14.06, 45.76], [25, 13.96, 45.85], [35, 13.91, 45.89]]
+	},
+	{
+		"a": "ljubljana",
+		"b": "celje",
+		"km": 75,
+		"road": "A1",
+		"towns": [["Domžale", 15], ["Lukovica", 28], ["Trojane", 42], ["Vransko", 52], ["Žalec", 66]],
+		"zones": [
+			[22, "fields", "Ljubljanska kotlina"],
+			[56, "mountains", "Posavsko hribovje"],
+			[75, "fields", "Spodnja Savinjska dolina"]
+		],
+		"via": [[15, 14.59, 46.14], [42, 14.88, 46.19], [66, 15.16, 46.25]],
+		"tunnels": [
+			{
+				"from_km": 43,
+				"to_km": 45.9,
+				"name": {
+					"pl": "Tunel Trojane",
+					"en": "Trojane Tunnel",
+					"cs": "Tunel Trojane",
+					"is": "Trojane-göngin",
+					"de": "Trojane-Tunnel"
+				},
+				"fact": {
+					"pl": "Prawie 3 km, najdłuższy tunel autostrady A1 w Słowenii",
+					"en": "Almost 3 km, the longest tunnel on Slovenia's A1",
+					"cs": "Téměř 3 km, nejdelší tunel slovinské A1",
+					"is": "Næstum 3 km, lengstu göngin á A1 í Slóveníu",
+					"de": "Fast 3 km, der längste Tunnel der slowenischen A1"
+				}
+			}
+		]
+	},
+	{
+		"a": "celje",
+		"b": "maribor",
+		"km": 55,
+		"road": "A1",
+		"towns": [["Slovenske Konjice", 25], ["Slovenska Bistrica", 37], ["Hoče", 50]],
+		"zones": [[30, "upland", "Pohorje"], [55, "fields", "Dravsko polje"]],
+		"via": [[25, 15.42, 46.34], [37, 15.57, 46.39]]
+	},
+	{
+		"a": "maribor",
+		"b": "murska_sobota",
+		"km": 60,
+		"road": "A5",
+		"towns": [["Lenart", 20], ["Vučja vas", 45], ["Rakičan", 57]],
+		"zones": [[40, "orchard", "Slovenske gorice"], [60, "fields", "Pomurje"]],
+		"via": [[20, 15.83, 46.58], [45, 16.08, 46.6]]
+	},
+	{
+		"a": "maribor",
+		"b": "ptuj",
+		"km": 27,
+		"road": [[6, "A1"], [27, "A4"]],
+		"towns": [["Hajdina", 24]],
+		"zones": [[27, "fields", "Dravsko polje"]]
+	},
+	{
+		"a": "celje",
+		"b": "velenje",
+		"km": 25,
+		"road": [[9, "A1"], [25, "4"]],
+		"towns": [["Arja vas", 9], ["Šmartno ob Paki", 18]],
+		"zones": [[10, "fields", "Spodnja Savinjska dolina"], [25, "upland", "Šaleška dolina"]],
+		"via": [[9, 15.13, 46.25]]
+	},
+	{
+		"a": "ljubljana",
+		"b": "novo_mesto",
+		"km": 67,
+		"road": "A2",
+		"towns": [["Grosuplje", 18], ["Ivančna Gorica", 30], ["Trebnje", 47]],
+		"zones": [[30, "upland", "Dolenjska"], [55, "forest", "Dolenjska"], [67, "upland", "Dolenjska"]],
+		"via": [[18, 14.66, 45.96], [30, 14.8, 45.94], [47, 15.01, 45.9]]
+	},
+	{
+		"a": "ptuj",
+		"b": "murska_sobota",
+		"km": 50,
+		"road": "3",
+		"towns": [["Ormož", 25], ["Ljutomer", 37], ["Bakovci", 46]],
+		"zones": [[22, "orchard", "Haloze"], [50, "fields", "Prlekija"]],
+		"via": [[25, 16.15, 46.41], [37, 16.2, 46.52]]
+	},
+	{
+		"a": "velenje",
+		"b": "maribor",
+		"km": 60,
+		"road": "4",
+		"towns": [["Slovenj Gradec", 22], ["Ruše", 50]],
+		"zones": [[20, "upland", "Koroška"], [50, "forest", "Pohorje"], [60, "fields", "Dravsko polje"]],
+		"via": [[22, 15.08, 46.51], [36, 15.25, 46.6], [50, 15.51, 46.54]]
+	}
+]

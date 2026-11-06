@@ -83,6 +83,12 @@
 			},
 			"neighbours": ["hr", "rs", "me"],
 			"favorite_neighbour": "hr"
+		},
+		{
+			"code": "si",
+			"name": {"pl": "Słowenia", "en": "Slovenia", "cs": "Slovinsko", "is": "Slóvenía", "de": "Slowenien"},
+			"neighbours": ["at", "it", "hu", "hr"],
+			"favorite_neighbour": "hr"
 		}
 	]
 }

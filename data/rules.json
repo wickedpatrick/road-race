@@ -791,7 +791,20 @@
 		"livno_horses": [30, 12],
 		"pliva_falls": [40, 38],
 		"sopotnica": [30, 24],
-		"visegrad_bridge": [80, 17]
+		"visegrad_bridge": [80, 17],
+		"tromostovje": [60, 16],
+		"stara_trta": [36, 18],
+		"celje_castle": [70, 34],
+		"kranj_church": [30, 42],
+		"velenje_headframe": [34, 34],
+		"praetorian_palace": [50, 24],
+		"situla": [10, 12],
+		"mura_mill": [36, 16],
+		"kurent": [6, 6],
+		"solkan_bridge": [90, 40],
+		"postojna_cave": [50, 22],
+		"bled_island": [70, 36],
+		"piran_tower": [36, 48]
 	},
 	"police": {"escape_chance": 0.2, "escape_kmh": 180, "escape_swerves": [3, 5]},
 	"postcards": {"stamps": [0.15, 0.3, 0.45, 0.6], "stamp_caps": [2, 3, 3, 4, 5, 5, 5]}
