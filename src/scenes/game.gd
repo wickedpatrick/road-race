@@ -111,8 +111,8 @@ func _physics_process(dt: float) -> void:
 		var n := int(ceil(countdown))
 		if n != _last_count:
 			_last_count = n
-			if n > 0: Sfx.play("beep", -6.0)
-			else: Sfx.play("go", -5.0)
+			if n > 0: Sfx.play("beep", -12.0)
+			else: Sfx.play("go", -11.0)
 		Sfx.set_loop("engine", -22.0, EngineAudio.IDLE)
 		return
 	if race.state == "running":
@@ -148,10 +148,10 @@ func _update_audio(dt: float, inp: Dictionary) -> void:
 	# radar detector beeps while speeding; the siren wails while the police chase and stop the car
 	_radar_timer -= dt
 	if race.speeding > 0.0 and _radar_timer <= 0.0:
-		Sfx.play("radar", -26.0) # kept quiet: a single beep every 0.5 s (each -6 dB halves the amplitude)
+		Sfx.play("radar", -29.0) # kept quiet: a single beep every 0.5 s (each -6 dB halves the amplitude)
 		_radar_timer = 0.5
 	var phase: String = race.police.get("phase", "")
-	Sfx.set_loop("siren", -12.0 if phase in ["chase", "pull_over"] else Sfx.SILENT)
+	Sfx.set_loop("siren", -14.0 if phase in ["chase", "pull_over"] else Sfx.SILENT)
 	_low_fuel_timer -= dt
 	if race.fuel.ratio() < 0.15 and _low_fuel_timer <= 0.0:
 		Sfx.play("lowfuel", -8.0)
