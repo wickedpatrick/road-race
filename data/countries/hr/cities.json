@@ -1,0 +1,34 @@
+{
+	"zagreb": {
+		"name": "Zagreb",
+		"lat": 45.81,
+		"lon": 15.98,
+		"pop": 767,
+		"region": "Grad Zagreb",
+		"exonym": {"pl": "Zagrzeb", "cs": "Záhřeb"}
+	},
+	"split": {"name": "Split", "lat": 43.51, "lon": 16.44, "pop": 161, "region": "Splitsko-dalmatinska"},
+	"rijeka": {"name": "Rijeka", "lat": 45.33, "lon": 14.44, "pop": 108, "region": "Primorsko-goranska"},
+	"osijek": {"name": "Osijek", "lat": 45.55, "lon": 18.69, "pop": 96, "region": "Osječko-baranjska"},
+	"zadar": {"name": "Zadar", "lat": 44.12, "lon": 15.23, "pop": 70, "region": "Zadarska"},
+	"pula": {"name": "Pula", "lat": 44.87, "lon": 13.85, "pop": 52, "region": "Istarska"},
+	"slavonski_brod": {
+		"name": "Slavonski Brod",
+		"lat": 45.16,
+		"lon": 18.02,
+		"pop": 50,
+		"region": "Brodsko-posavska",
+		"short": "Sl. Brod"
+	},
+	"karlovac": {"name": "Karlovac", "lat": 45.49, "lon": 15.55, "pop": 49, "region": "Karlovačka"},
+	"varazdin": {"name": "Varaždin", "lat": 46.31, "lon": 16.34, "pop": 43, "region": "Varaždinska", "label": "left"},
+	"sibenik": {"name": "Šibenik", "lat": 43.73, "lon": 15.89, "pop": 42, "region": "Šibensko-kninska"},
+	"dubrovnik": {"name": "Dubrovnik", "lat": 42.65, "lon": 18.09, "pop": 41, "region": "Dubrovačko-neretvanska"},
+	"sisak": {"name": "Sisak", "lat": 45.47, "lon": 16.37, "pop": 40, "region": "Sisačko-moslavačka"},
+	"bjelovar": {"name": "Bjelovar", "lat": 45.9, "lon": 16.84, "pop": 36, "region": "Bjelovarsko-bilogorska"},
+	"cakovec": {"name": "Čakovec", "lat": 46.38, "lon": 16.43, "pop": 27, "region": "Međimurska"},
+	"vukovar": {"name": "Vukovar", "lat": 45.35, "lon": 19, "pop": 23, "region": "Vukovarsko-srijemska"},
+	"pozega": {"name": "Požega", "lat": 45.34, "lon": 17.68, "pop": 22, "region": "Požeško-slavonska"},
+	"makarska": {"name": "Makarska", "lat": 43.3, "lon": 17.02, "pop": 13, "region": "Splitsko-dalmatinska"},
+	"gospic": {"name": "Gospić", "lat": 44.55, "lon": 15.37, "pop": 11, "region": "Ličko-senjska"}
+}

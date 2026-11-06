@@ -278,6 +278,17 @@
 			"industry": 0,
 			"weather": "sun",
 			"grass": {"summer": ["#c9a46a", "#c19c62"], "autumn": ["#bf9a66", "#b7925e"], "winter": ["#d6c4a0", "#cebc98"]}
+		},
+		"karst": {
+			"wood": 0.2,
+			"curve": 1.1,
+			"hill": 0.9,
+			"hills": 0.8,
+			"mountains": 0.5,
+			"sea": 0,
+			"industry": 0,
+			"weather": "sun",
+			"grass": {"summer": ["#9aa266", "#90985e"], "autumn": ["#a59a62", "#9b905a"], "winter": ["#a8a68a", "#9e9c80"]}
 		}
 	},
 	"landmark_sizes": {
@@ -804,7 +815,25 @@
 		"solkan_bridge": [90, 40],
 		"postojna_cave": [50, 22],
 		"bled_island": [70, 36],
-		"piran_tower": [36, 48]
+		"piran_tower": [36, 48],
+		"st_mark_zagreb": [26, 30],
+		"diocletian_peristyle": [40, 52],
+		"rijeka_tower": [16, 32],
+		"osijek_cathedral": [30, 90],
+		"sea_organ": [48, 10],
+		"pula_arena": [70, 32],
+		"brod_fortress": [60, 16],
+		"dubovac": [34, 30],
+		"varazdin_castle": [44, 28],
+		"st_james_sibenik": [30, 36],
+		"dubrovnik_walls": [60, 30],
+		"sisak_fortress": [46, 20],
+		"bjelovar_church": [24, 44],
+		"zrinski_castle": [44, 26],
+		"vukovar_water_tower": [18, 50],
+		"pozega_trinity": [12, 18],
+		"biokovo_skywalk": [50, 30],
+		"tesla_smiljan": [36, 22]
 	},
 	"police": {"escape_chance": 0.2, "escape_kmh": 180, "escape_swerves": [3, 5]},
 	"postcards": {"stamps": [0.15, 0.3, 0.45, 0.6], "stamp_caps": [2, 3, 3, 4, 5, 5, 5]}

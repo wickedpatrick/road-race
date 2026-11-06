@@ -1,0 +1,362 @@
+{
+	"Zagreb": [
+		{
+			"kind": "st_mark_zagreb",
+			"name": {
+				"pl": "Kościół św. Marka",
+				"en": "St Mark's Church",
+				"cs": "Kostel sv. Marka",
+				"is": "Kirkja heilags Markúsar",
+				"de": "Markuskirche"
+			},
+			"desc": {
+				"pl": "Dach z kolorowych dachówek układa się w herby Chorwacji i Zagrzebia",
+				"en": "Its coloured roof tiles form the coats of arms of Croatia and Zagreb",
+				"cs": "Barevné tašky na střeše tvoří znaky Chorvatska a Záhřebu",
+				"is": "Lituðu þakflísarnar mynda skjaldarmerki Króatíu og Zagreb",
+				"de": "Die bunten Dachziegel bilden die Wappen Kroatiens und Zagrebs"
+			},
+			"local": "Crkva sv. Marka"
+		}
+	],
+	"Split": [
+		{
+			"kind": "diocletian_peristyle",
+			"name": {
+				"pl": "Pałac Dioklecjana",
+				"en": "Diocletian's Palace",
+				"cs": "Diokleciánův palác",
+				"is": "Höll Díókletíanusar",
+				"de": "Diokletianpalast"
+			},
+			"desc": {
+				"pl": "Kolumnada perystylu i dzwonnica katedry św. Duje",
+				"en": "The colonnade of the Peristyle and the bell tower of St Domnius",
+				"cs": "Kolonáda peristylu a zvonice katedrály sv. Dujma",
+				"is": "Súlnagöng hallargarðsins og klukkuturn heilags Domníusar",
+				"de": "Die Säulen des Peristyls und der Glockenturm von St. Domnius"
+			},
+			"local": "Dioklecijanova palača"
+		}
+	],
+	"Rijeka": [
+		{
+			"kind": "rijeka_tower",
+			"name": {
+				"pl": "Wieża Miejska",
+				"en": "The City Tower",
+				"cs": "Městská věž",
+				"is": "Borgarturninn",
+				"de": "Stadtturm"
+			},
+			"desc": {
+				"pl": "Brama z zegarem nad Korzem, główną ulicą miasta",
+				"en": "A clock-tower gate over the Korzo, the city's main street",
+				"cs": "Brána s hodinami nad Korzem, hlavní ulicí města",
+				"is": "Hlið með klukku yfir Korzo, aðalgötu borgarinnar",
+				"de": "Ein Uhrturmtor über dem Korzo, der Hauptstraße"
+			},
+			"local": "Gradski toranj"
+		}
+	],
+	"Osijek": [
+		{
+			"kind": "osijek_cathedral",
+			"name": {
+				"pl": "Konkatedra św. Piotra i Pawła",
+				"en": "Co-Cathedral of Sts Peter and Paul",
+				"cs": "Konkatedrála sv. Petra a Pavla",
+				"is": "Dómkirkja Péturs og Páls",
+				"de": "Konkathedrale St. Peter und Paul"
+			},
+			"desc": {
+				"pl": "Neogotycka katedra z czerwonej cegły z wieżą wysoką na 90 m",
+				"en": "A red-brick neo-Gothic church with a 90 m spire",
+				"cs": "Novogotický chrám z červených cihel s 90m věží",
+				"is": "Nýgotnesk kirkja úr rauðum múrsteini með 90 m turni",
+				"de": "Eine neugotische Backsteinkirche mit 90 m hohem Turm"
+			},
+			"local": "Konkatedrala sv. Petra i Pavla"
+		}
+	],
+	"Zadar": [
+		{
+			"kind": "sea_organ",
+			"name": {
+				"pl": "Organy morskie i Pozdrowienie Słońca",
+				"en": "The Sea Organ and the Greeting to the Sun",
+				"cs": "Mořské varhany a Pozdrav Slunci",
+				"is": "Sjávarorgelið og Kveðja til sólarinnar",
+				"de": "Meeresorgel und Gruß an die Sonne"
+			},
+			"desc": {
+				"pl": "Schody nad morzem grają, a krąg ogniw świeci nocą",
+				"en": "Steps by the sea that play, and a ring of solar panels that glows at night",
+				"cs": "Schody u moře hrají a kruh panelů v noci svítí",
+				"is": "Tröppur við sjóinn sem spila og hringur sólarsella sem lýsir á nóttunni",
+				"de": "Stufen am Meer, die spielen, und ein Kreis aus Solarzellen, der nachts leuchtet"
+			},
+			"local": "Morske orgulje i Pozdrav Suncu"
+		}
+	],
+	"Pula": [
+		{
+			"kind": "pula_arena",
+			"name": {
+				"pl": "Arena w Puli",
+				"en": "Pula Arena",
+				"cs": "Aréna v Pule",
+				"is": "Hringleikahúsið í Pula",
+				"de": "Arena von Pula"
+			},
+			"desc": {
+				"pl": "Rzymski amfiteatr z I wieku z trzema kondygnacjami łuków",
+				"en": "A 1st-century Roman amphitheatre with three tiers of arches",
+				"cs": "Římský amfiteátr z 1. století se třemi patry oblouků",
+				"is": "Rómverskt hringleikahús frá 1. öld með þremur hæðum boga",
+				"de": "Ein römisches Amphitheater aus dem 1. Jahrhundert mit drei Bogenreihen"
+			},
+			"local": "Arena"
+		}
+	],
+	"Slavonski Brod": [
+		{
+			"kind": "brod_fortress",
+			"name": {
+				"pl": "Twierdza Brod",
+				"en": "Brod Fortress",
+				"cs": "Pevnost Brod",
+				"is": "Brod-virkið",
+				"de": "Festung Brod"
+			},
+			"desc": {
+				"pl": "Gwiaździsta twierdza z XVIII wieku strzegąca granicy na Sawie",
+				"en": "An 18th-century star fortress guarding the Sava border",
+				"cs": "Hvězdicová pevnost z 18. století hlídající hranici na Sávě",
+				"is": "Stjörnuvirki frá 18. öld sem gætti landamæranna við Sava",
+				"de": "Eine Sternfestung aus dem 18. Jahrhundert an der Savegrenze"
+			},
+			"local": "Tvrđava Brod"
+		}
+	],
+	"Karlovac": [
+		{
+			"kind": "dubovac",
+			"name": {
+				"pl": "Zamek Dubovac",
+				"en": "Dubovac Castle",
+				"cs": "Hrad Dubovac",
+				"is": "Dubovac-kastali",
+				"de": "Burg Dubovac"
+			},
+			"desc": {
+				"pl": "Średniowieczny zamek na wzgórzu nad miastem czterech rzek",
+				"en": "A medieval castle on a hill above the town of four rivers",
+				"cs": "Středověký hrad na kopci nad městem čtyř řek",
+				"is": "Miðaldakastali á hæð yfir bæ ánna fjögurra",
+				"de": "Eine mittelalterliche Burg auf einem Hügel über der Stadt der vier Flüsse"
+			},
+			"local": "Stari grad Dubovac"
+		}
+	],
+	"Varaždin": [
+		{
+			"kind": "varazdin_castle",
+			"name": {
+				"pl": "Stary Zamek w Varaždinie",
+				"en": "Varaždin Old Castle",
+				"cs": "Starý hrad Varaždín",
+				"is": "Gamli kastalinn í Varaždin",
+				"de": "Altes Schloss Varaždin"
+			},
+			"desc": {
+				"pl": "Biała twierdza z czerwonymi dachami za wałami i fosą",
+				"en": "A white fortress with red roofs behind earth walls and a moat",
+				"cs": "Bílá pevnost s červenými střechami za valy a příkopem",
+				"is": "Hvítt virki með rauðum þökum bak við jarðveggi og síki",
+				"de": "Eine weiße Festung mit roten Dächern hinter Wällen und Graben"
+			},
+			"local": "Stari grad Varaždin"
+		}
+	],
+	"Šibenik": [
+		{
+			"kind": "st_james_sibenik",
+			"name": {
+				"pl": "Katedra św. Jakuba",
+				"en": "Cathedral of St James",
+				"cs": "Katedrála sv. Jakuba",
+				"is": "Dómkirkja heilags Jakobs",
+				"de": "Kathedrale des hl. Jakob"
+			},
+			"desc": {
+				"pl": "Cała z kamienia, nawet sklepienie; wokół 71 wyrzeźbionych głów",
+				"en": "All stone, even the roof; ringed by 71 carved heads",
+				"cs": "Celá z kamene, i klenba; kolem 71 vytesaných hlav",
+				"is": "Öll úr steini, líka þakið; umhverfis 71 höggvið höfuð",
+				"de": "Ganz aus Stein, sogar das Dach; ringsum 71 gemeißelte Köpfe"
+			},
+			"local": "Katedrala sv. Jakova"
+		}
+	],
+	"Dubrovnik": [
+		{
+			"kind": "dubrovnik_walls",
+			"name": {
+				"pl": "Mury miejskie i wieża Minčeta",
+				"en": "City walls and Minčeta Tower",
+				"cs": "Hradby a věž Minčeta",
+				"is": "Borgarmúrarnir og Minčeta-turninn",
+				"de": "Stadtmauer und Minčeta-Turm"
+			},
+			"desc": {
+				"pl": "Okrągła wieża nad pomarańczowymi dachami Starego Miasta",
+				"en": "A round tower over the orange roofs of the Old Town",
+				"cs": "Kulatá věž nad oranžovými střechami Starého města",
+				"is": "Hringturn yfir appelsínugulum þökum gamla bæjarins",
+				"de": "Ein runder Turm über den orangen Dächern der Altstadt"
+			},
+			"local": "Gradske zidine i Minčeta"
+		}
+	],
+	"Sisak": [
+		{
+			"kind": "sisak_fortress",
+			"name": {
+				"pl": "Twierdza w Sisaku",
+				"en": "Sisak Fortress",
+				"cs": "Pevnost Sisak",
+				"is": "Sisak-virkið",
+				"de": "Festung Sisak"
+			},
+			"desc": {
+				"pl": "Trójkątna twierdza z trzema okrągłymi basztami nad Kupą",
+				"en": "A triangular fortress with three round towers on the Kupa",
+				"cs": "Trojúhelníková pevnost se třemi kulatými baštami na Kupě",
+				"is": "Þríhyrnt virki með þremur hringturnum við Kupa",
+				"de": "Eine dreieckige Festung mit drei runden Türmen an der Kupa"
+			},
+			"local": "Stari grad Sisak"
+		}
+	],
+	"Bjelovar": [
+		{
+			"kind": "bjelovar_church",
+			"name": {
+				"pl": "Katedra św. Teresy",
+				"en": "Cathedral of St Teresa",
+				"cs": "Katedrála sv. Terezie",
+				"is": "Dómkirkja heilagrar Teresu",
+				"de": "Kathedrale der hl. Theresia"
+			},
+			"desc": {
+				"pl": "Barokowy kościół z jedną wieżą przy głównym placu",
+				"en": "A Baroque church with a single tower on the main square",
+				"cs": "Barokní kostel s jednou věží na hlavním náměstí",
+				"is": "Barokkkirkja með einum turni við aðaltorgið",
+				"de": "Eine Barockkirche mit einem Turm am Hauptplatz"
+			},
+			"local": "Katedrala sv. Terezije"
+		}
+	],
+	"Čakovec": [
+		{
+			"kind": "zrinski_castle",
+			"name": {
+				"pl": "Zamek Zrinskich",
+				"en": "Zrinski Castle",
+				"cs": "Hrad Zrinských",
+				"is": "Kastali Zrinski-ættarinnar",
+				"de": "Burg der Zrinski"
+			},
+			"desc": {
+				"pl": "Czworoboczny pałac rodu Zrinskich z wieżą i dziedzińcem",
+				"en": "The square palace of the Zrinski family with its tower",
+				"cs": "Čtyřkřídlý palác rodu Zrinských s věží",
+				"is": "Ferhyrnd höll Zrinski-ættarinnar með turni",
+				"de": "Das vierflügelige Schloss der Zrinski mit Turm"
+			},
+			"local": "Stari grad Zrinskih"
+		}
+	],
+	"Vukovar": [
+		{
+			"kind": "vukovar_water_tower",
+			"name": {
+				"pl": "Wieża ciśnień",
+				"en": "The Water Tower",
+				"cs": "Vodárenská věž",
+				"is": "Vatnsturninn",
+				"de": "Wasserturm"
+			},
+			"desc": {
+				"pl": "Podziurawiona pociskami, ze szczytem w chorwackiej fladze: pomnik",
+				"en": "Riddled with shell holes, the flag on top: a memorial",
+				"cs": "Prostřílená, s vlajkou nahoře: památník",
+				"is": "Götótt eftir sprengjur, með fánanum efst: minnisvarði",
+				"de": "Von Granaten durchlöchert, oben die Flagge: ein Mahnmal"
+			},
+			"local": "Vodotoranj"
+		}
+	],
+	"Požega": [
+		{
+			"kind": "pozega_trinity",
+			"name": {
+				"pl": "Kolumna Trójcy Świętej",
+				"en": "Holy Trinity Column",
+				"cs": "Morový sloup Nejsvětější Trojice",
+				"is": "Þrenningarsúlan",
+				"de": "Dreifaltigkeitssäule"
+			},
+			"desc": {
+				"pl": "Barokowa kolumna dziękczynna za koniec zarazy na rynku",
+				"en": "A Baroque column on the square, thanks for the end of the plague",
+				"cs": "Barokní sloup na náměstí jako díky za konec moru",
+				"is": "Barokksúla á torginu, þakkir fyrir lok plágunnar",
+				"de": "Eine barocke Säule auf dem Platz, Dank für das Ende der Pest"
+			},
+			"local": "Kužni pil Presvetog Trojstva"
+		}
+	],
+	"Makarska": [
+		{
+			"kind": "biokovo_skywalk",
+			"name": {
+				"pl": "Szklana kładka Biokovo",
+				"en": "Biokovo Skywalk",
+				"cs": "Vyhlídka Skywalk Biokovo",
+				"is": "Glergöngubrúin á Biokovo",
+				"de": "Skywalk Biokovo"
+			},
+			"desc": {
+				"pl": "Szklany półokrąg nad przepaścią, 1228 m nad morzem",
+				"en": "A glass horseshoe over the drop, 1228 m above the sea",
+				"cs": "Skleněná podkova nad srázem, 1228 m nad mořem",
+				"is": "Glerskeifa yfir hengifluginu, 1228 m yfir sjó",
+				"de": "Ein gläsernes Hufeisen über dem Abgrund, 1228 m über dem Meer"
+			},
+			"local": "Skywalk Biokovo"
+		}
+	],
+	"Gospić": [
+		{
+			"kind": "tesla_smiljan",
+			"name": {
+				"pl": "Centrum pamięci Nikoli Tesli",
+				"en": "Nikola Tesla Memorial Centre",
+				"cs": "Památník Nikoly Tesly",
+				"is": "Minningarsetur Nikola Tesla",
+				"de": "Gedenkzentrum Nikola Tesla"
+			},
+			"desc": {
+				"pl": "Rodzinny dom Tesli w Smiljanie i cewka, która strzela iskrami",
+				"en": "Tesla's family home in Smiljan and a coil throwing sparks",
+				"cs": "Teslův rodný dům ve Smiljanu a cívka, která jiskří",
+				"is": "Æskuheimili Tesla í Smiljan og spóla sem skýtur neistum",
+				"de": "Teslas Elternhaus in Smiljan und eine Funken sprühende Spule"
+			},
+			"local": "Memorijalni centar Nikola Tesla"
+		}
+	]
+}

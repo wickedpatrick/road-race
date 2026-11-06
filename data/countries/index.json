@@ -89,6 +89,12 @@
 			"name": {"pl": "Słowenia", "en": "Slovenia", "cs": "Slovinsko", "is": "Slóvenía", "de": "Slowenien"},
 			"neighbours": ["at", "it", "hu", "hr"],
 			"favorite_neighbour": "hr"
+		},
+		{
+			"code": "hr",
+			"name": {"pl": "Chorwacja", "en": "Croatia", "cs": "Chorvatsko", "is": "Króatía", "de": "Kroatien"},
+			"neighbours": ["si", "hu", "rs", "ba", "me"],
+			"favorite_neighbour": "si"
 		}
 	]
 }
