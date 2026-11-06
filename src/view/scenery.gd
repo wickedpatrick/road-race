@@ -12,11 +12,12 @@ static var _sign_cols := {} ## country code -> {town, board, board_motorway} col
 ## Colour of a road sign in the current country: "town" / "town_text" (place-name signs and their lettering),
 ## "board" / "board_motorway" (direction boards with distances), "board_text" (lettering on the ordinary boards,
 ## white unless given, e.g. black on Germany's yellow ones).
-static func sign_color(kind: String) -> Color:
-	var code := GameData.current
+## `p`: the part of a multi-country map (Geo.part), "" for the map's own.
+static func sign_color(kind: String, p := "") -> Color:
+	var code := GameData.current + "/" + p
 	if not _sign_cols.has(code):
 		var cols := {}
-		var signs: Dictionary = GameData.country().signs
+		var signs: Dictionary = Geo.part(p).signs
 		for k in signs:
 			cols[k] = Color(signs[k])
 		_sign_cols[code] = cols
@@ -28,8 +29,8 @@ const SIGN_YELLOW := Color("f2c21b")
 ## Road number plate (E-15): red with white for A, S and national roads (DK shows just the number),
 ## yellow with black for regional roads (DW). Returns [label, plate colour, text colour].
 ## A country can give its own plates in data ("plates": [[prefix, plate colour, text colour], ...], first match).
-static func plate(road: String) -> Array:
-	for pl in GameData.country().get("plates", []):
+static func plate(road: String, p := "") -> Array:
+	for pl in Geo.part(p).get("plates", []):
 		if road.begins_with(pl[0]):
 			return [road, Color(pl[1]), Color(pl[2])]
 	if road.begins_with("DW"):
@@ -85,7 +86,14 @@ static func build(stage: Dictionary, seed_value: int) -> Dictionary:
 		_clear_range(items, tn.z0 - 6.0, tn.z1 + 6.0, -1000.0, 1000.0)
 	for s in stage.stations:
 		_station_items(items, s, rng)
+	for bd in stage.get("borders", []):
+		_crossing(items, stage, bd, rng)
 	_add(items, "finish", length, 0.0, 0.0, 7.0, rng)
+	# on a map spanning several countries the signs and stations follow the part of the map they stand in
+	if not stage.get("borders", []).is_empty() or stage.get("part0", "") != "":
+		for idx in items:
+			for it in items[idx]:
+				if it.type in PART_ITEMS: it.p = Geo.part_at(stage, it.z)
 	# on a dual carriageway the left roadside stands beyond the median and the oncoming carriageway
 	for idx in items:
 		for it in items[idx]:
@@ -106,6 +114,74 @@ static func _station_items(items: Dictionary, s: float, rng: RandomNumberGenerat
 		for lat in [PUMP_LAT, PUMP_LAT + 4.6]:
 			_add(items, "pump", s + dz, lat, 1.0, 2.0, rng)
 	_add(items, "canopy", s - 14.0, PUMP_LAT + 2.3, 12.0, 6.8, rng)
+
+const PART_ITEMS := ["town_sign", "town_end", "board", "region", "pylon", "canopy"]
+
+## A border crossing (Route borders): limit signs (40, then 20) and a radar before it, open red-white barriers on both
+## sides of the road, a guard booth beside it, a canopy over the lanes, and the board with the name and flag of the
+## country entered.
+static func _crossing(items: Dictionary, stage: Dictionary, bd: Dictionary, rng: RandomNumberGenerator) -> void:
+	var z: float = bd.z
+	_clear_range(items, z - Route.CROSS_40 - 8.0, z + Route.CROSS_AFTER + 12.0, -1000.0, 1000.0)
+	_limit_sign(items, z - Route.CROSS_40 + 2.0, Route.CROSS_LIMITS[0], rng)
+	_limit_sign(items, z - Route.CROSS_20 + 2.0, Route.CROSS_LIMITS[1], rng)
+	_limit_sign(items, z + Route.CROSS_AFTER + 4.0, Route.sign_limit_at(stage, z + Route.CROSS_AFTER + 6.0), rng)
+	_add(items, "radar", z - Route.RADAR_BEFORE, SIGN_EDGE + 0.6, 1.0, 3.6, rng)
+	var bb := _add(items, "border_board", z - 70.0, SIGN_EDGE + REGION_W * 0.5, REGION_W, 5.0, rng)
+	bb.text = bd.name
+	bb.flag = bd.to
+	bb.country = Geo.part(bd.to).name
+	_add(items, "border_canopy", z + 8.0, 0.0, 0.0, 6.5, rng)
+	for sd in [1.0, -1.0]:
+		_add(items, "barrier", z, sd * (Track.ROAD_HALF_WIDTH + 0.9), 1.0, 5.0, rng).dir = sd
+	_add(items, "booth", z + 10.0, Track.ROAD_HALF_WIDTH + 4.5, 3.0, 3.2, rng)
+	_add(items, "booth", z + 6.0, -(Track.ROAD_HALF_WIDTH + 4.5), 3.0, 3.2, rng)
+
+## Open barrier: a striped post, the red-white arm raised almost upright.
+static func _barrier(cv, it: Dictionary, b: Vector2, pm: float) -> void:
+	var post := 1.1 * pm
+	cv.draw_rect(Rect2(b + Vector2(-0.25 * pm, -post), Vector2(0.5 * pm, post)), Color("e9e9e9"))
+	cv.draw_rect(Rect2(b + Vector2(-0.35 * pm, -post - 0.4 * pm), Vector2(0.7 * pm, 0.5 * pm)), SIGN_RED)
+	var base := b + Vector2(0, -post - 0.15 * pm)
+	var d: float = -it.dir * flip * 0.18 # leans over the road a little
+	var tip := base + Vector2(d * 4.0 * pm, -4.0 * pm)
+	var n := 6
+	for k in n:
+		var a := base.lerp(tip, float(k) / n)
+		var c := base.lerp(tip, float(k + 1) / n)
+		cv.draw_line(a, c, SIGN_RED if k % 2 == 0 else Color.WHITE, maxf(1.0, 0.28 * pm))
+
+## The guards' booth: a small white hut with a window and a flat roof.
+static func _booth(cv, it: Dictionary, b: Vector2, pm: float) -> void:
+	var w: float = it.w * pm
+	var h: float = it.h * pm
+	cv.draw_rect(Rect2(b + Vector2(-w * 0.5, -h), Vector2(w, h)), Color("eef0f2"))
+	cv.draw_rect(Rect2(b + Vector2(-w * 0.38, -h * 0.75), Vector2(w * 0.76, h * 0.35)), Color("7fa3bf"))
+	cv.draw_rect(Rect2(b + Vector2(-w * 0.6, -h - 0.35 * pm), Vector2(w * 1.2, 0.4 * pm)), Color("4a4f57"))
+
+## Fixed speed camera: a grey box on a post.
+static func _radar(cv, b: Vector2, pm: float) -> void:
+	var top := 2.4 * pm
+	_posts(cv, b, pm, top, [0.0])
+	cv.draw_rect(Rect2(b + Vector2(-0.45 * pm, -top - 1.1 * pm), Vector2(0.9 * pm, 1.2 * pm)), Color("6d737b"))
+	cv.draw_rect(Rect2(b + Vector2(-0.45 * pm, -top - 1.1 * pm), Vector2(0.9 * pm, 0.3 * pm)), SIGN_YELLOW)
+	if pm > 2.0:
+		cv.draw_circle(b + Vector2(0, -top - 0.45 * pm), 0.22 * pm, Color("1d1d1f"))
+
+## The board before a crossing: the flag and the name of the country entered, the crossing's name under them.
+static func _border_board(cv, it: Dictionary, b: Vector2, pm: float, font: Font) -> void:
+	var post := 2.8 * pm
+	var w := REGION_W * pm
+	var hh := 2.4 * pm
+	_posts(cv, b, pm, post, [-3.0, 3.0])
+	var r := Rect2(b + Vector2(-w * 0.5, -post - hh), Vector2(w, hh))
+	cv.draw_rect(r, SIGN_BLUE)
+	cv.draw_rect(r.grow(-0.14 * pm), Color.WHITE, false, maxf(1.0, 0.1 * pm))
+	var fl := Vector2(1.5 * pm, 1.0 * pm)
+	if fl.x >= 3.0:
+		FlagPainter.draw(cv, it.flag, Rect2(r.position + Vector2(0.35 * pm, 0.25 * pm), fl))
+	_fit_text(cv, font, Rect2(r.position + Vector2(0.55 * pm + fl.x, 0.15 * pm), Vector2(w - 0.9 * pm - fl.x, hh * 0.5)), it.country, Color.WHITE, 0.8 * pm)
+	_fit_text(cv, font, Rect2(r.position + Vector2(0.35 * pm, hh * 0.55), Vector2(w - 0.7 * pm, hh * 0.4)), it.text, Color("dfe8f5"), 0.6 * pm)
 
 static func _clear_range(items: Dictionary, z0: float, z1: float, lat0: float, lat1: float) -> void:
 	for idx in range(int(z0 / Track.SEG_LEN), int(z1 / Track.SEG_LEN) + 1):
@@ -153,13 +229,13 @@ static func _obstacle(out: Dictionary, z: float, a: float, b: float) -> void:
 static func _solid(it: Dictionary) -> Array:
 	var hw: float = it.w * 0.5
 	match it.type:
-		"limit", "bend", "chevron", "station_sign", "lamp", "stork", "cow", "sheep", "horse":
+		"limit", "bend", "chevron", "station_sign", "lamp", "stork", "cow", "sheep", "horse", "radar", "barrier":
 			return [[-0.15, 0.15]]
 		"town_sign", "town_end":
 			return [[-1.75, -1.45], [1.45, 1.75]]
 		"board":
 			return [[-3.65, -3.35], [3.35, 3.65]]
-		"region", "poi", "billboard":
+		"region", "poi", "billboard", "border_board":
 			return [[-3.15, -2.85], [2.85, 3.15]]
 		"tree", "pine", "birch", "spruce", "poplar", "willow", "apple", "cactus":
 			return [[-0.3, 0.3]]
@@ -170,7 +246,7 @@ static func _solid(it: Dictionary) -> Array:
 			var m := (1.0 + Track.MEDIAN * 0.5) * Track.ROAD_HALF_WIDTH # the median pillar of a dual carriageway
 			return [[-m - 0.4, -m + 0.4], [p - 0.9, p + 0.9]]
 		"haybale", "lavarock", "redrock", "mesa", "building", "house", "woodhouse", "farm", "church", "cerkiew", "block", "castle", "rock", "windmill", \
-				"chimney", "headframe", "cooling", "lighthouse", "landmark", "heap", "turbine":
+				"chimney", "headframe", "cooling", "lighthouse", "landmark", "heap", "turbine", "booth":
 			return [[-hw, hw]]
 	return []
 
@@ -691,9 +767,14 @@ static func draw_item(cv, it: Dictionary, b: Vector2, pm: float, pal: Dictionary
 		"landmark": LandmarkPainter.draw(cv, it, b, pm)
 		"poi": _poi(cv, it, b, pm, font)
 		"station_sign": _station_sign(cv, b, pm)
-		"pylon": _pylon(cv, b, pm, font)
+		"pylon": _pylon(cv, it, b, pm, font)
 		"pump": _pump(cv, b, pm)
-		"canopy": _canopy(cv, b, pm, font)
+		"canopy": _canopy(cv, it, b, pm, font)
+		"barrier": _barrier(cv, it, b, pm)
+		"booth": _booth(cv, it, b, pm)
+		"radar": _radar(cv, b, pm)
+		"border_board": _border_board(cv, it, b, pm, font)
+		"border_canopy": pass # drawn across the road by WorldView
 		"shop": _shop(cv, it, b, pm)
 		"finish": pass # drawn across the road by WorldView
 		"bridge": pass # drawn across the road by WorldView
@@ -725,10 +806,17 @@ static func _fit_text(cv, font: Font, r: Rect2, text: String, col: Color, size: 
 
 ## Every text the signs of this stage can show, for warming the font cache.
 static func sign_texts(stage: Dictionary) -> Array:
-	var stn := Geo.station()
-	var out := [stn.region_sign, stn.board, stn.sign, "0123456789"]
-	out.append_array(price_rows())
-	for k in Geo.limits(): out.append(str(Geo.limits()[k]))
+	var out := ["0123456789"]
+	var parts := [stage.get("part0", "")]
+	for bd in stage.get("borders", []):
+		if not parts.has(bd.to): parts.append(bd.to)
+		out.append(bd.name)
+		out.append(Geo.part(bd.to).name)
+	for p in parts:
+		var stn := Geo.station(p)
+		out.append_array([stn.region_sign, stn.board, stn.sign])
+		out.append_array(price_rows(p))
+		for k in Geo.limits(p): out.append(str(Geo.limits(p)[k]))
 	for t in stage.towns: out.append(t.name)
 	for zn in stage.zones:
 		if not out.has(zn.region): out.append(zn.region)
@@ -755,8 +843,9 @@ static func _town_sign(cv, it: Dictionary, b: Vector2, pm: float, font: Font, en
 	var hh := 1.8 * pm
 	_posts(cv, b, pm, post, [-1.6, 1.6])
 	var r := Rect2(b + Vector2(-w * 0.5, -post - hh), Vector2(w, hh))
-	var ink := sign_color("town_text")
-	cv.draw_rect(r, sign_color("town"))
+	var p: String = it.get("p", "")
+	var ink := sign_color("town_text", p)
+	cv.draw_rect(r, sign_color("town", p))
 	cv.draw_rect(r.grow(-0.14 * pm), ink, false, maxf(1.0, 0.1 * pm))
 	_fit_text(cv, font, r.grow_individual(-0.35 * pm, 0, -0.35 * pm, 0), it.text, ink, 0.95 * pm)
 	if ending:
@@ -773,11 +862,12 @@ static func _board(cv, it: Dictionary, b: Vector2, pm: float, font: Font) -> voi
 	var post := 3.0 * pm
 	_posts(cv, b, pm, post, [-3.5, 3.5])
 	var r := Rect2(b + Vector2(-w * 0.5, -post - hh), Vector2(w, hh))
-	cv.draw_rect(r, sign_color("board_motorway" if it.blue else "board"))
-	var ink := Color.WHITE if it.blue else sign_color("board_text")
+	var p: String = it.get("p", "")
+	cv.draw_rect(r, sign_color("board_motorway" if it.blue else "board", p))
+	var ink := Color.WHITE if it.blue else sign_color("board_text", p)
 	cv.draw_rect(r.grow(-0.14 * pm), ink, false, maxf(1.0, 0.1 * pm))
 	if it.road != "":
-		var pl := plate(it.road)
+		var pl := plate(it.road, p)
 		var pr := Rect2(r.position + Vector2(w * 0.5 - 1.2 * pm, 0.3 * pm), Vector2(2.4 * pm, 1.0 * pm))
 		cv.draw_rect(pr, pl[1])
 		_fit_text(cv, font, pr, pl[0], pl[2], 0.8 * pm)
@@ -797,8 +887,9 @@ static func _region(cv, it: Dictionary, b: Vector2, pm: float, font: Font) -> vo
 	cv.draw_rect(r.grow(-0.14 * pm), Color.WHITE, false, maxf(1.0, 0.1 * pm))
 	var fl := Vector2(1.05 * pm, 0.7 * pm) # the country's flag before "WELCOME TO"
 	if fl.x >= 3.0:
-		FlagPainter.draw(cv, GameData.current, Rect2(r.position + Vector2(0.35 * pm, 0.18 * pm), fl))
-	_fit_text(cv, font, Rect2(r.position + Vector2(0.55 * pm + fl.x, 0.1 * pm), Vector2(w - 0.9 * pm - fl.x, hh * 0.42)), Geo.station().region_sign, Color("f1d9b5"), 0.55 * pm)
+		var code: String = it.get("p", "")
+		FlagPainter.draw(cv, code if code != "" else GameData.current, Rect2(r.position + Vector2(0.35 * pm, 0.18 * pm), fl))
+	_fit_text(cv, font, Rect2(r.position + Vector2(0.55 * pm + fl.x, 0.1 * pm), Vector2(w - 0.9 * pm - fl.x, hh * 0.42)), Geo.station(it.get("p", "")).region_sign, Color("f1d9b5"), 0.55 * pm)
 	_fit_text(cv, font, Rect2(r.position + Vector2(0.35 * pm, hh * 0.42), Vector2(w - 0.7 * pm, hh * 0.52)), it.text, Color.WHITE, 0.8 * pm)
 
 ## Brown tourist board (E-22c style) naming the landmark next to it.
@@ -1237,23 +1328,23 @@ static func _station_sign(cv, b: Vector2, pm: float) -> void:
 	cv.draw_line(c + Vector2(pw * 0.75, -ph * 0.1), c + Vector2(pw * 0.75, ph * 0.3), Color.BLACK, lw)
 
 ## Tall price pylon, seen from far away.
-static func _pylon(cv, b: Vector2, pm: float, font: Font) -> void:
+static func _pylon(cv, it: Dictionary, b: Vector2, pm: float, font: Font) -> void:
 	var h := 13.0 * pm
 	var w := 3.2 * pm
 	cv.draw_rect(Rect2(b + Vector2(-0.3 * pm, -h), Vector2(0.6 * pm, h)), Color("55595f"))
 	var r := Rect2(b + Vector2(-w * 0.5, -h - 4.2 * pm), Vector2(w, 5.4 * pm))
 	cv.draw_rect(r, STATION_COLOR)
 	cv.draw_rect(Rect2(r.position + Vector2(0.2 * pm, 0.2 * pm), Vector2(w - 0.4 * pm, 1.4 * pm)), SIGN_YELLOW)
-	_fit_text(cv, font, Rect2(r.position + Vector2(0.25 * pm, 0.2 * pm), Vector2(w - 0.5 * pm, 1.4 * pm)), Geo.station().board, Color("1d1d1f"), 0.75 * pm)
-	var prices: Array = price_rows()
+	_fit_text(cv, font, Rect2(r.position + Vector2(0.25 * pm, 0.2 * pm), Vector2(w - 0.5 * pm, 1.4 * pm)), Geo.station(it.get("p", "")).board, Color("1d1d1f"), 0.75 * pm)
+	var prices: Array = price_rows(it.get("p", ""))
 	for k in mini(prices.size(), 3):
 		var row := Rect2(r.position + Vector2(0.25 * pm, (1.95 + k * 1.1) * pm), Vector2(w - 0.5 * pm, 0.85 * pm))
 		cv.draw_rect(row, Color("10161c"))
 		_fit_text(cv, font, row, prices[k], Color("ffd24a"), 0.6 * pm)
 
 ## The station's price list rows, "95  6,49".
-static func price_rows() -> Array:
-	return Geo.station().prices.map(func(p): return "%s  %s" % [p[0], p[1]])
+static func price_rows(p := "") -> Array:
+	return Geo.station(p).prices.map(func(p): return "%s  %s" % [p[0], p[1]])
 
 ## Fuel dispenser on its island.
 static func _pump(cv, b: Vector2, pm: float) -> void:
@@ -1267,7 +1358,7 @@ static func _pump(cv, b: Vector2, pm: float) -> void:
 		cv.draw_line(b + Vector2(-w * 0.5, -h * 0.45), b + Vector2(-w * 0.85, -h * 0.2), Color("1d1d1f"), maxf(1.0, 0.08 * pm))
 
 ## Canopy over the pumps: a white roof with the brand stripe and lights underneath, on two pillars.
-static func _canopy(cv, b: Vector2, pm: float, font: Font) -> void:
+static func _canopy(cv, it: Dictionary, b: Vector2, pm: float, font: Font) -> void:
 	var w := 12.0 * pm
 	var top := 6.8 * pm
 	var th := 1.5 * pm
@@ -1277,7 +1368,7 @@ static func _canopy(cv, b: Vector2, pm: float, font: Font) -> void:
 	cv.draw_rect(r, Color("f7f8f9"))
 	cv.draw_rect(Rect2(r.position + Vector2(0, th * 0.55), Vector2(w, th * 0.3)), STATION_COLOR)
 	cv.draw_rect(Rect2(r.position + Vector2(0, th), Vector2(w, 0.12 * pm)), Color("fff6c8"))
-	_fit_text(cv, font, Rect2(r.position, Vector2(w, th * 0.55)), Geo.station().sign, STATION_COLOR, 0.7 * pm)
+	_fit_text(cv, font, Rect2(r.position, Vector2(w, th * 0.55)), Geo.station(it.get("p", "")).sign, STATION_COLOR, 0.7 * pm)
 
 ## Station shop behind the pumps.
 static func _shop(cv, it: Dictionary, b: Vector2, pm: float) -> void:

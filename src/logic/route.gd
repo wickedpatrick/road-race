@@ -24,6 +24,14 @@ const DUAL_TAPER := 60.0 ## a road widens into a dual carriageway (and narrows b
 const TUNNEL_MIN := 300.0 ## a tunnel is never shorter than this in the game (real ones would flash by)
 const TUNNEL_GAP := 40.0 ## open road kept between a tunnel and a town (name and speed limit signs)
 const STATION_AFTER_TOWN := 230.0 ## a station stands this far past a town's end (after its signs and boards)
+## Border crossings (a map spanning several countries, roads.json `borders`): the barriers stand at the crossing's z,
+## the limit drops to CROSS_LIMITS[0] CROSS_40 metres before them and to CROSS_LIMITS[1] CROSS_20 metres before them,
+## up to CROSS_AFTER metres past them; a radar stands RADAR_BEFORE metres before the barriers.
+const CROSS_40 := 220.0
+const CROSS_20 := 110.0
+const CROSS_AFTER := 40.0
+const CROSS_LIMITS := [40, 20] ## posted, in the map's units
+const RADAR_BEFORE := 14.0
 
 ## Cities one road away from `id` (the only places a trip from it can go to).
 static func neighbours(id: String) -> Array:
@@ -148,6 +156,7 @@ static func build(from: String, to: String) -> Dictionary:
 	var roads := []
 	var path := [from]
 	var regions := []
+	var borders := []
 	var express_km := 0
 	var off := 0.0
 	towns.append({"z": 0.0, "name": Geo.city(from).name, "display": Geo.display_name(from), "id": from, "big": _end_big(from),
@@ -169,6 +178,11 @@ static func build(from: String, to: String) -> Dictionary:
 			var b := float(tn.to_km) if leg.from == r.a else leg_km - float(tn.from_km)
 			tunnels.append({"z0": (off + a) * mpk, "z1": (off + b) * mpk, "name": tn.name, "fact": tn.fact,
 				"city": tn.get("city", false)})
+		for bd in r.get("borders", []):
+			var fwd: bool = leg.from == r.a
+			var k := float(bd[0]) if fwd else leg_km - float(bd[0])
+			borders.append({"z": (off + k) * mpk, "from": bd[1] if fwd else bd[2], "to": bd[2] if fwd else bd[1],
+				"name": bd[3] if bd.size() > 3 else ""})
 		for t in _leg_towns(leg):
 			# a town shared by two consecutive legs (e.g. Stryków) appears once
 			if towns.size() > 0 and towns[-1].name == t[0]: continue
@@ -182,12 +196,16 @@ static func build(from: String, to: String) -> Dictionary:
 		"half": _end_half(to), "finish": true})
 	_separate(towns)
 	_fit_tunnels(tunnels, towns, length)
+	borders.sort_custom(func(p, q): return p.z < q.z)
+	_place_crossings(borders, towns, tunnels, length)
+	# stations and boards keep clear of the crossings as of tunnels
+	var avoid: Array = tunnels + borders.map(func(bd): return {"z0": bd.z - CROSS_40, "z1": bd.z + CROSS_AFTER})
 	# the last zone runs on past the finish line (the track has a tail)
 	zones[-1].z1 = length + Track.TAIL + 200.0
 	roads[-1].z1 = length + Track.TAIL + 200.0
 	for t in towns:
 		t["fact"] = Geo.fact(t.name)
-	var boards := _boards(towns, mpk, roads).filter(func(bd): return not tunnels.any(func(tn): return bd.z > tn.z0 - 20.0 and bd.z < tn.z1 + 20.0))
+	var boards := _boards(towns, mpk, roads).filter(func(bd): return not avoid.any(func(tn): return bd.z > tn.z0 - 20.0 and bd.z < tn.z1 + 20.0))
 	var lanes := 3 if express_km * 2 > km else 2
 	var n_st := maxi(1, roundi(length / STATION_EVERY))
 	var stations := []
@@ -198,15 +216,15 @@ static func build(from: String, to: String) -> Dictionary:
 		var zs := -1.0
 		for after in [STATION_AFTER_TOWN, 150.0, 80.0]:
 			# the nearer of the free spots after and before the towns around the ideal place
-			for c in [_clear_spot(z0, towns, tunnels, after), _clear_spot_back(z0, towns, tunnels)]:
+			for c in [_clear_spot(z0, towns, avoid, after), _clear_spot_back(z0, towns, avoid)]:
 				if c <= length - 450.0 and c > prev + 400.0 and absf(c - z0) < length / (n_st + 1) * 0.5 \
 						and (zs < 0.0 or absf(c - z0) < absf(zs - z0)):
 					zs = c
 			if zs >= 0.0: break
 		if zs < 0.0: # towns crowd a squeezed long track: the nearest spot out of any town, signs or not
-			zs = _free_spot(z0, towns, tunnels, prev + 400.0, length - 450.0)
+			zs = _free_spot(z0, towns, avoid, prev + 400.0, length - 450.0)
 		if zs < 0.0:
-			zs = minf(_clear_spot(z0, towns, tunnels, 80.0), length - 450.0)
+			zs = minf(_clear_spot(z0, towns, avoid, 80.0), length - 450.0)
 		if zs > prev + 50.0:
 			stations.append(zs)
 	var curve := 0.0
@@ -216,7 +234,8 @@ static func build(from: String, to: String) -> Dictionary:
 		curve += Biome.get_data(zn.biome).curve * w
 		hill += Biome.get_data(zn.biome).hill * w
 	# climbs slow every car down a little: hillier routes get more time
-	var legal := _legal_time(towns, roads, length, mpk) * (1.0 + HILL_TIME * hill / length)
+	var part0 := Geo.city_part(from)
+	var legal := _legal_time(towns, roads, length, mpk, borders, part0) * (1.0 + HILL_TIME * hill / length)
 	var weather := Weather.for_legs(legs)
 	var duration := ceilf((legal * 1.09 * Weather.time_factor(weather) + 6.0 * n_st + 12.0) / 5.0) * 5.0
 	var stage := {
@@ -227,6 +246,7 @@ static func build(from: String, to: String) -> Dictionary:
 		"stations": stations, "finish_label": Geo.city(to).name, "finish_display": Geo.display_name(to),
 		"curve_amount": curve / length, "hill_amount": hill / length,
 		"zones": zones, "towns": towns, "roads": roads, "regions": regions, "boards": boards, "tunnels": tunnels,
+		"borders": borders, "part0": part0, "radars": borders.map(func(bd): return bd.z - RADAR_BEFORE),
 	}
 	stage["dual"] = _dual_profile(stage)
 	return stage
@@ -261,15 +281,15 @@ static func _boards(towns: Array, mpk: float, roads: Array) -> Array:
 
 ## Seconds needed to drive the track keeping to the speed limits (capped at a typical cruising speed), plus
 ## time to slow down for and speed up after every town.
-static func _legal_time(towns: Array, roads: Array, length: float, mpk: float) -> float:
-	var probe := {"towns": towns, "roads": roads, "length": length, "m_per_km": mpk}
+static func _legal_time(towns: Array, roads: Array, length: float, mpk: float, borders := [], part0 := "") -> float:
+	var probe := {"towns": towns, "roads": roads, "length": length, "m_per_km": mpk, "borders": borders, "part0": part0}
 	var t := 0.0
 	var z := 0.0
 	while z < length:
 		# no limit counts as the posted motorway limit: the time stays fair in heavy Autobahn traffic, and the open
 		# stretches are a gain for whoever drives faster
 		var lim := speed_limit_at(probe, z)
-		if lim == NO_LIMIT: lim = Geo.limit_kmh(int(Geo.limits().express))
+		if lim == NO_LIMIT: lim = Geo.limit_kmh(int(Geo.limits(Geo.part_at(probe, z)).express))
 		t += 10.0 / (minf(lim, 135.0) / 3.6 * 0.95)
 		z += 10.0
 	return t + 1.5 * towns.size()
@@ -394,7 +414,10 @@ static func cruise_kmh(stage: Dictionary, z: float) -> int:
 ## roads; 70 through a big city and through a small town on an expressway, 50 through a small town on an ordinary road;
 ## Great Britain in mph).
 static func sign_limit_at(stage: Dictionary, z: float) -> int:
-	var lim := Geo.limits()
+	var cross := crossing_limit_at(stage, z)
+	if cross > 0:
+		return cross
+	var lim := Geo.limits(Geo.part_at(stage, z))
 	var t := town_at(stage, z)
 	var express := lanes_at(stage, z) == 3
 	if not t.is_empty():
@@ -404,6 +427,38 @@ static func sign_limit_at(stage: Dictionary, z: float) -> int:
 		if z > edge and z < stage.length - edge:
 			return NO_LIMIT
 	return int(lim.express if express else lim.road)
+
+## The posted limit at a border crossing (CROSS_LIMITS before and at the barriers), 0 away from one.
+static func crossing_limit_at(stage: Dictionary, z: float) -> int:
+	var b := crossing_at(stage, z)
+	if b.is_empty():
+		return 0
+	return CROSS_LIMITS[1] if z >= b.z - CROSS_20 else CROSS_LIMITS[0]
+
+## The border crossing whose approach or barriers contain z, or {}.
+static func crossing_at(stage: Dictionary, z: float) -> Dictionary:
+	for b in stage.get("borders", []):
+		if z >= b.z - CROSS_40 and z < b.z + CROSS_AFTER: return b
+	return {}
+
+## Moves border crossings (with their approach) off town streets and tunnels, forward or back, whichever is nearer.
+static func _place_crossings(borders: Array, towns: Array, tunnels: Array, length: float) -> void:
+	for b in borders:
+		var best := -1.0
+		for k in 300:
+			for c in [b.z + k * 10.0, b.z - k * 10.0]:
+				if c < CROSS_40 + 60.0 or c > length - CROSS_AFTER - 100.0: continue
+				var ok := true
+				for t in towns:
+					if c + CROSS_AFTER + 30.0 > t.z - t.half and c - CROSS_40 - 30.0 < t.z + t.half: ok = false
+				for tn in tunnels:
+					if c + CROSS_AFTER + 30.0 > tn.z0 and c - CROSS_40 - 30.0 < tn.z1: ok = false
+				if ok:
+					best = c
+					break
+			if best >= 0.0: break
+		if best >= 0.0:
+			b.z = best
 
 ## Dual carriageway here (two lanes each way with a green median): motorways, expressways and big city streets.
 ## Every other road has one lane each way, with oncoming traffic in the left lane.

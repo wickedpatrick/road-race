@@ -7,6 +7,12 @@ static var _cv
 static var _r: Rect2
 
 static func draw(cv, code: String, r: Rect2) -> void:
+	var members := GameData.members(code)
+	if not members.is_empty(): # a map of several countries (the Southern Balkans): their flags side by side
+		var w := r.size.x / members.size()
+		for i in members.size():
+			draw(cv, members[i], Rect2(r.position + Vector2(w * i, 0), Vector2(w, r.size.y)))
+		return
 	_cv = cv
 	_r = r
 	match code:

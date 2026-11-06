@@ -9,6 +9,8 @@ func _ready() -> void:
 	DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_NO_FOCUS, true)
 	var args := OS.get_cmdline_user_args()
 	if OS.get_environment("RR_COUNTRY") != "": GameData.current = OS.get_environment("RR_COUNTRY") # e.g. RR_COUNTRY=cz
+	if OS.get_environment("RR_COUNTRY") == "zz_test": # the border fixture of tests/test_borders.gd (aa -> bb)
+		GameData._countries["zz_test"] = load("res://tests/test_borders.gd").fixture()
 	var stage := Route.build(args[0] if args.size() > 0 else "krakow", args[1] if args.size() > 1 else "rzeszow")
 	if Session.sharp_test: # -- ... --zakrety[=N]: same test mode as the game
 		stage["sharp_test"] = true

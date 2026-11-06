@@ -47,6 +47,10 @@ without borders.
 ## `countries/index.json`
 
 `countries`: `[{code, name, neighbours: [codes], favorite_neighbour}]`. Each `code` has a folder `countries/<code>/`.
+A map spanning several countries (the Southern Balkans, `sb`) lists them in `members` (`["me", "xk", "al", "mk"]`,
+codes of `world.json`): the country picker joins their shapes into one, labelled in their middle, and its flag is
+theirs side by side (`FlagPainter`, `GameData.members`). Such a map has `parts` in country.json, `country` on its
+cities and `borders` on its roads (below).
 
 ## `countries/<code>/country.json`
 
@@ -82,6 +86,12 @@ without borders.
   roads, dots and names (a city's own `label` still wins); optional `dot_max` caps the city dots' radius (pixels).
 - `outline`: the border as `[lon, lat]` points; `outline_lines`: extra lines drawn with it (e.g. the Hel peninsula);
   optional `islands`: more land as `[lon, lat]` polygons (e.g. the Curonian Spit with Nida).
+- `parts` (a map of several countries): member code -> its own settings over the map's: `name` (texts by
+  language: the board at a border crossing), `language`, `station`, `signs`, `plates`, `limits`. Dictionaries
+  (`station`, `signs`, `limits`) are merged key by key over the map's, anything else replaced (`Geo.part(code)`).
+  Along a trip the part is the start city's, changed at every border passed (`Geo.part_at(stage, z)`): place-name
+  signs, direction boards and road plates, fuel stations (texts, prices, currency), region boards (with the part's
+  flag) and speed limits follow it.
 
 ## `countries/<code>/cities.json`
 
@@ -89,6 +99,7 @@ City id -> `{name, lat, lon, pop, region}`; optional `exonym` (name in the playe
 `map_name` (shorter map label by language), `short` (shorter local name on the map), `label` (`"left"` /
 `"above"`: where the name goes when neighbours would collide), `note` (text shown instead of the population).
 Cities are the start and finish points; a trip goes from a city to a neighbouring one along one road.
+On a map of several countries every city has `country`: the member it lies in (`"me"`, `"xk"`, `"al"`, `"mk"`).
 
 ## `countries/<code>/roads.json`
 
@@ -105,6 +116,13 @@ List of roads between two neighbouring cities `a` and `b` (travelling `b` -> `a`
   between the cities), e.g. Lithuania's A1 bowing north to meet the A12 at Kryžkalnis.
 - `tunnels` (optional): `[{from_km, to_km, name, fact, city}]`; `city: true` for a cut-and-cover tunnel under a
   town district (a grassy embankment instead of a mountain at the entrance).
+- `borders` (optional, a map of several countries): `[[km, from_code, to_code, crossing name], ...]` in the `a` ->
+  `b` direction (`b` -> `a` mirrors the km and swaps the codes). A border crossing stands there: limit signs 40 then
+  20 (`Route.CROSS_LIMITS`, from `CROSS_40` / `CROSS_20` track metres before the barriers to `CROSS_AFTER` past
+  them), a radar right before the barriers (passing it over the limit + 10 brings the police at once), open
+  red-white barriers on both sides, guard booths, a canopy over the lanes, and a board with the name and flag of the
+  country entered. Nothing stops the car. The crossing is moved off town streets and tunnels if it falls on them;
+  stations and direction boards keep clear of it.
 
 ## `countries/<code>/facts.json`
 

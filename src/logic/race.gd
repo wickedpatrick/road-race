@@ -171,16 +171,29 @@ func _update_speeding(dt: float) -> void:
 	if kmh > speed_limit() + TOLERANCE or (speeding > 0.0 and kmh > reset_kmh):
 		speeding += dt
 		if speeding >= speeding_grace():
-			speeding = 0.0
-			# the patrol car comes from behind in the next lane
-			var side := 0.6 if x < 0.4 else -0.6
-			# who is driving it: a weak officer can be shaken off by a few sharp changes of direction, a sharp one not
-			var need: Array = police_rules.escape_swerves
-			police = {"z": z - 45.0, "x": clampf(x + side, -0.9, 0.9), "speed": speed + 10.0, "phase": "chase", "t": 0.0,
-				"weak": police_rng.randf() < stage.get("police_escape", police_rules.escape_chance),
-				"need": police_rng.randi_range(need[0], need[1]), "swerves": 0, "dir": 0.0, "swerve_t": -100.0}
+			_call_police()
 	else:
 		speeding = 0.0
+
+## A fixed radar (right before every border crossing's barriers, Route.RADAR_BEFORE): passing it over the limit
+## plus TOLERANCE brings the police at once, without the grace time.
+func _check_radar(z_prev: float) -> void:
+	if not police.is_empty():
+		return
+	for rz in stage.get("radars", []):
+		if z_prev < rz and z >= rz and speed * 3.6 > speed_limit() + TOLERANCE:
+			_call_police()
+			return
+
+func _call_police() -> void:
+	speeding = 0.0
+	# the patrol car comes from behind in the next lane
+	var side := 0.6 if x < 0.4 else -0.6
+	# who is driving it: a weak officer can be shaken off by a few sharp changes of direction, a sharp one not
+	var need: Array = police_rules.escape_swerves
+	police = {"z": z - 45.0, "x": clampf(x + side, -0.9, 0.9), "speed": speed + 10.0, "phase": "chase", "t": 0.0,
+		"weak": police_rng.randf() < stage.get("police_escape", police_rules.escape_chance),
+		"need": police_rng.randi_range(need[0], need[1]), "swerves": 0, "dir": 0.0, "swerve_t": -100.0}
 
 func _update_police(dt: float, steer: float) -> void:
 	if police.is_empty():
@@ -390,6 +403,7 @@ func step(dt: float, input: Dictionary) -> void:
 	if refueling:
 		fuel.refuel(dt, fuel.capacity / 6.0)
 	_update_speeding(dt)
+	_check_radar(z_prev)
 	_update_police(dt, steer)
 	# traffic
 	traffic.update(dt, z, x, speed)

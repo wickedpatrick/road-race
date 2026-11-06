@@ -182,7 +182,7 @@ func _pump_icon(c: Vector2) -> void:
 
 ## Road-number plate (E-15), see Scenery.plate().
 func _shield(pos: Vector2, road: String) -> void:
-	var pl := Scenery.plate(road)
+	var pl := Scenery.plate(road, Geo.part_at(race.stage, race.z))
 	draw_rect(Rect2(pos, Vector2(44, 22)), pl[1])
 	draw_rect(Rect2(pos + Vector2(2, 2), Vector2(40, 18)), pl[2], false, 1.0)
 	draw_string(font, pos + Vector2(0, 17), pl[0], HORIZONTAL_ALIGNMENT_CENTER, 44, 15, pl[2])
@@ -212,8 +212,8 @@ func _board_echo() -> void:
 		if race.z > bd.z - 160.0 and race.z < bd.z + 220.0:
 			var lines: Array = bd.lines
 			var r := Rect2(_board_pos, Vector2(160, 34 + 22 * lines.size()))
-			draw_rect(r, Scenery.sign_color("board_motorway" if bd.blue else "board"))
-			var ink := Color.WHITE if bd.blue else Scenery.sign_color("board_text")
+			draw_rect(r, Scenery.sign_color("board_motorway" if bd.blue else "board", Geo.part_at(race.stage, bd.z)))
+			var ink := Color.WHITE if bd.blue else Scenery.sign_color("board_text", Geo.part_at(race.stage, bd.z))
 			draw_rect(r.grow(-3), ink, false, 2.0)
 			if bd.road != "":
 				_shield(Vector2(r.position.x + 58, r.position.y + 7), bd.road)
