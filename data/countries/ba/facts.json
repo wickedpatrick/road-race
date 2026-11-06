@@ -1,0 +1,149 @@
+{
+	"Sarajevo": {
+		"pl": "Stolica w dolinie rzeki Miljacki, w 1984 gościła zimowe igrzyska olimpijskie",
+		"en": "The capital in the Miljacka valley, host of the 1984 Winter Olympics",
+		"cs": "Hlavní město v údolí Miljacky, v roce 1984 hostilo zimní olympiádu",
+		"is": "Höfuðborgin í Miljacka-dalnum, hélt vetrarólympíuleikana 1984",
+		"de": "Die Hauptstadt im Tal der Miljacka, 1984 Gastgeber der Olympischen Winterspiele"
+	},
+	"Banja Luka": {
+		"pl": "Drugie miasto kraju, zielone, z alejami kasztanowców nad rzeką Vrbas",
+		"en": "The second city, green, with chestnut avenues along the Vrbas river",
+		"cs": "Druhé největší město, zelené, s kaštanovými alejemi u řeky Vrbas",
+		"is": "Næststærsta borgin, græn, með kastaníutrjám meðfram ánni Vrbas",
+		"de": "Die zweitgrößte Stadt, grün, mit Kastanienalleen am Fluss Vrbas"
+	},
+	"Tuzla": {
+		"pl": "Miasto soli: jej nazwa pochodzi od tureckiego słowa tuz, czyli sól",
+		"en": "The salt city: its name comes from the Turkish word tuz, salt",
+		"cs": "Město soli: jméno pochází z tureckého slova tuz, sůl",
+		"is": "Saltborgin: nafnið kemur af tyrkneska orðinu tuz, salt",
+		"de": "Die Salzstadt: Ihr Name kommt vom türkischen Wort tuz, Salz"
+	},
+	"Zenica": {
+		"pl": "Miasto hutników nad rzeką Bosną, z dużą stalownią",
+		"en": "A steelmaking city on the Bosna river",
+		"cs": "Hutnické město na řece Bosně s velkou ocelárnou",
+		"is": "Stálborg við ána Bosnu",
+		"de": "Eine Stahlstadt am Fluss Bosna"
+	},
+	"Bijeljina": {
+		"pl": "Główne miasto żyznej równiny Semberija, pełnej pól kukurydzy",
+		"en": "The main town of the fertile Semberija plain, full of maize fields",
+		"cs": "Hlavní město úrodné roviny Semberija plné kukuřičných polí",
+		"is": "Aðalbær frjósömu Semberija-sléttunnar, fullrar af maísökrum",
+		"de": "Hauptort der fruchtbaren Semberija-Ebene voller Maisfelder"
+	},
+	"Mostar": {
+		"pl": "Stolica Hercegowiny nad turkusową Neretwą, nazwana od strażników mostu",
+		"en": "Herzegovina's capital on the turquoise Neretva, named after the bridge keepers",
+		"cs": "Metropole Hercegoviny na tyrkysové Neretvě, pojmenovaná po strážcích mostu",
+		"is": "Höfuðborg Hersegóvínu við grænbláa Neretva, nefnd eftir brúarvörðunum",
+		"de": "Hauptstadt der Herzegowina an der türkisfarbenen Neretva, benannt nach den Brückenwächtern"
+	},
+	"Prijedor": {
+		"pl": "Miasto nad rzeką Saną, u stóp gór Kozara",
+		"en": "A town on the Sana river at the foot of the Kozara hills",
+		"cs": "Město na řece Saně pod pohořím Kozara",
+		"is": "Bær við ána Sana við rætur Kozara-hæðanna",
+		"de": "Stadt am Fluss Sana am Fuß des Kozara-Gebirges"
+	},
+	"Brčko": {
+		"pl": "Port nad Sawą, osobny dystrykt należący do całego kraju",
+		"en": "A port on the Sava, a separate district shared by the whole country",
+		"cs": "Přístav na Sávě, samostatný distrikt patřící celé zemi",
+		"is": "Hafnarbær við Sava, sérstakt umdæmi sem allt landið á saman",
+		"de": "Ein Hafen an der Save, ein eigener Bezirk, der dem ganzen Land gehört"
+	},
+	"Doboj": {
+		"pl": "Węzeł kolejowy z twierdzą na wzgórzu nad rzeką Bosną",
+		"en": "A railway junction with a fortress on a hill above the Bosna",
+		"cs": "Železniční uzel s pevností na kopci nad Bosnou",
+		"is": "Járnbrautarmót með virki á hæð yfir Bosnu",
+		"de": "Ein Eisenbahnknoten mit einer Festung auf dem Hügel über der Bosna"
+	},
+	"Travnik": {
+		"pl": "Dawna siedziba wezyrów, tu urodził się noblista Ivo Andrić",
+		"en": "Once the seat of the viziers, birthplace of Nobel laureate Ivo Andrić",
+		"cs": "Někdejší sídlo vezírů, rodiště nobelisty Iva Andriće",
+		"is": "Áður aðsetur vesíranna, fæðingarstaður Nóbelsskáldsins Ivo Andrić",
+		"de": "Einst Sitz der Wesire, Geburtsort des Nobelpreisträgers Ivo Andrić"
+	},
+	"Bihać": {
+		"pl": "Miasto nad szmaragdową Uną, z wodospadami i spływami kajakowymi",
+		"en": "A town on the emerald Una, with waterfalls and rafting",
+		"cs": "Město na smaragdové Uně s vodopády a raftingem",
+		"is": "Bær við smaragðgrænu Una, með fossum og flúðasiglingum",
+		"de": "Stadt an der smaragdgrünen Una, mit Wasserfällen und Rafting"
+	},
+	"Trebinje": {
+		"pl": "Najbardziej słoneczne miasto kraju, z platanami i winnicami",
+		"en": "The sunniest town in the country, with plane trees and vineyards",
+		"cs": "Nejslunečnější město země s platany a vinicemi",
+		"is": "Sólríkasti bær landsins, með platantrjám og vínekrum",
+		"de": "Die sonnigste Stadt des Landes, mit Platanen und Weinbergen"
+	},
+	"Livno": {
+		"pl": "Miasto sera livanjskiego i dzikich koni na pobliskich wzgórzach",
+		"en": "Home of Livno cheese and of wild horses on the nearby hills",
+		"cs": "Domov livanjského sýra a divokých koní na okolních kopcích",
+		"is": "Heimkynni Livno-ostsins og villtra hesta á hæðunum í kring",
+		"de": "Heimat des Livno-Käses und der Wildpferde auf den Hügeln"
+	},
+	"Jajce": {
+		"pl": "Dawna stolica królów Bośni, z wodospadem w samym centrum",
+		"en": "Once the seat of Bosnia's kings, with a waterfall right in the centre",
+		"cs": "Někdejší sídlo bosenských králů s vodopádem přímo v centru",
+		"is": "Áður aðsetur Bosníukonunga, með foss í miðbænum",
+		"de": "Einst Sitz der bosnischen Könige, mit einem Wasserfall mitten in der Stadt"
+	},
+	"Goražde": {
+		"pl": "Miasto nad Driną, otoczone stromymi zielonymi górami",
+		"en": "A town on the Drina, ringed by steep green mountains",
+		"cs": "Město na Drině obklopené strmými zelenými horami",
+		"is": "Bær við Drina, umkringdur bröttum grænum fjöllum",
+		"de": "Stadt an der Drina, umgeben von steilen grünen Bergen"
+	},
+	"Višegrad": {
+		"pl": "Miasto mostu na Drinie z powieści Ivo Andricia",
+		"en": "The town of the bridge on the Drina from Ivo Andrić's novel",
+		"cs": "Město mostu na Drině z románu Iva Andriće",
+		"is": "Bær brúarinnar á Drina úr skáldsögu Ivo Andrić",
+		"de": "Die Stadt der Brücke über die Drina aus dem Roman von Ivo Andrić"
+	},
+	"Visoko": {
+		"pl": "Stare miasto garbarzy, znane z wyrobów skórzanych",
+		"en": "An old tanners' town, known for leather goods",
+		"cs": "Staré město koželuhů, známé koženými výrobky",
+		"is": "Gamall sútarabær, þekktur fyrir leðurvörur",
+		"de": "Eine alte Gerberstadt, bekannt für Lederwaren"
+	},
+	"Konjic": {
+		"pl": "Miasto nad Neretwą ze starym kamiennym mostem i rzeźbiarzami w drewnie",
+		"en": "A Neretva town with an old stone bridge and woodcarvers",
+		"cs": "Město na Neretvě se starým kamenným mostem a řezbáři",
+		"is": "Bær við Neretva með gamla steinbrú og tréskurðarmenn",
+		"de": "Eine Stadt an der Neretva mit alter Steinbrücke und Holzschnitzern"
+	},
+	"Kupres": {
+		"pl": "Wysoki płaskowyż: zimą narty, latem łąki pełne kwiatów",
+		"en": "A high plateau: skiing in winter, meadows of flowers in summer",
+		"cs": "Vysoká planina: v zimě lyže, v létě rozkvetlé louky",
+		"is": "Há háslétta: skíði á veturna, blómaengi á sumrin",
+		"de": "Eine Hochebene: im Winter Skifahren, im Sommer Blumenwiesen"
+	},
+	"Foča": {
+		"pl": "Brama do Parku Narodowego Sutjeska i spływów Tarą",
+		"en": "Gateway to Sutjeska National Park and rafting on the Tara",
+		"cs": "Brána do národního parku Sutjeska a k raftingu na Taře",
+		"is": "Hliðið að Sutjeska-þjóðgarðinum og flúðasiglingum á Tara",
+		"de": "Tor zum Nationalpark Sutjeska und zum Rafting auf der Tara"
+	},
+	"Stolac": {
+		"pl": "Jedno z najstarszych miast kraju, z kamiennymi domami nad Bregavą",
+		"en": "One of the oldest towns in the country, stone houses on the Bregava",
+		"cs": "Jedno z nejstarších měst země, kamenné domy na řece Bregavě",
+		"is": "Einn elsti bær landsins, steinhús við ána Bregava",
+		"de": "Eine der ältesten Städte des Landes, Steinhäuser an der Bregava"
+	}
+}

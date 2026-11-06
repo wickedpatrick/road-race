@@ -1,0 +1,18 @@
+{
+	"sarajevo": {"name": "Sarajevo", "lat": 43.86, "lon": 18.41, "pop": 275, "region": "Sarajevo", "exonym": {"pl": "Sarajewo"}},
+	"banja_luka": {"name": "Banja Luka", "lat": 44.77, "lon": 17.19, "pop": 185, "region": "Bosanska Krajina"},
+	"tuzla": {"name": "Tuzla", "lat": 44.54, "lon": 18.68, "pop": 111, "region": "Sjeveroistočna Bosna"},
+	"zenica": {"name": "Zenica", "lat": 44.2, "lon": 17.91, "pop": 110, "region": "Srednja Bosna"},
+	"bijeljina": {"name": "Bijeljina", "lat": 44.76, "lon": 19.21, "pop": 107, "region": "Semberija"},
+	"mostar": {"name": "Mostar", "lat": 43.34, "lon": 17.81, "pop": 105, "region": "Hercegovina"},
+	"prijedor": {"name": "Prijedor", "lat": 44.98, "lon": 16.71, "pop": 89, "region": "Bosanska Krajina"},
+	"brcko": {"name": "Brčko", "lat": 44.87, "lon": 18.81, "pop": 83, "region": "Posavina"},
+	"doboj": {"name": "Doboj", "lat": 44.73, "lon": 18.09, "pop": 71, "region": "Sjeverna Bosna"},
+	"travnik": {"name": "Travnik", "lat": 44.23, "lon": 17.66, "pop": 57, "region": "Srednja Bosna", "label": "left"},
+	"bihac": {"name": "Bihać", "lat": 44.82, "lon": 15.87, "pop": 56, "region": "Bosanska Krajina"},
+	"trebinje": {"name": "Trebinje", "lat": 42.71, "lon": 18.34, "pop": 31, "region": "Hercegovina"},
+	"livno": {"name": "Livno", "lat": 43.83, "lon": 17.01, "pop": 30, "region": "Zapadna Bosna"},
+	"jajce": {"name": "Jajce", "lat": 44.34, "lon": 17.27, "pop": 27, "region": "Srednja Bosna"},
+	"gorazde": {"name": "Goražde", "lat": 43.67, "lon": 18.98, "pop": 20, "region": "Podrinje"},
+	"visegrad": {"name": "Višegrad", "lat": 43.78, "lon": 19.29, "pop": 10, "region": "Podrinje"}
+}

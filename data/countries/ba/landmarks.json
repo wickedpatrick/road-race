@@ -1,0 +1,322 @@
+{
+	"Sarajevo": [
+		{
+			"kind": "sebilj",
+			"name": {
+				"pl": "Sebilj na Baščaršiji",
+				"en": "The Sebilj on Baščaršija",
+				"cs": "Sebilj na Baščaršiji",
+				"is": "Sebilj á Baščaršija",
+				"de": "Der Sebilj auf der Baščaršija"
+			},
+			"desc": {
+				"pl": "Drewniana fontanna w kształcie kiosku, wokół niej gołębie",
+				"en": "A wooden kiosk-shaped fountain, ringed by pigeons",
+				"cs": "Dřevěná kašna ve tvaru kiosku, kolem holubi",
+				"is": "Gosbrunnur úr tré í laginu eins og söluturn, umkringdur dúfum",
+				"de": "Ein Holzbrunnen in Form eines Kiosks, umringt von Tauben"
+			},
+			"local": "Sebilj"
+		}
+	],
+	"Banja Luka": [
+		{
+			"kind": "kastel_bl",
+			"name": {
+				"pl": "Twierdza Kastel",
+				"en": "Kastel Fortress",
+				"cs": "Pevnost Kastel",
+				"is": "Kastel-virkið",
+				"de": "Festung Kastel"
+			},
+			"desc": {
+				"pl": "Kamienne mury nad rzeką Vrbas, w środku letnie koncerty",
+				"en": "Stone walls on the Vrbas, with summer concerts inside",
+				"cs": "Kamenné hradby nad Vrbasem, uvnitř letní koncerty",
+				"is": "Steinveggir við Vrbas, sumartónleikar innan þeirra",
+				"de": "Steinmauern am Vrbas, drinnen Sommerkonzerte"
+			},
+			"local": "Tvrđava Kastel"
+		}
+	],
+	"Tuzla": [
+		{
+			"kind": "panonica",
+			"name": {
+				"pl": "Jeziora Panońskie",
+				"en": "The Pannonian Lakes",
+				"cs": "Panonská jezera",
+				"is": "Pannónsku vötnin",
+				"de": "Die Pannonischen Seen"
+			},
+			"desc": {
+				"pl": "Słone jeziora z plażą w środku miasta, jak morze sprzed milionów lat",
+				"en": "Salt lakes with a beach in the city centre, like a sea from millions of years ago",
+				"cs": "Slaná jezera s pláží uprostřed města, jako moře před miliony let",
+				"is": "Saltvötn með strönd í miðbænum, eins og haf frá fyrir milljónum ára",
+				"de": "Salzseen mit Strand mitten in der Stadt, wie ein Meer von vor Jahrmillionen"
+			},
+			"local": "Panonska jezera"
+		}
+	],
+	"Zenica": [
+		{
+			"kind": "vranduk",
+			"name": {
+				"pl": "Twierdza Vranduk",
+				"en": "Vranduk Fortress",
+				"cs": "Pevnost Vranduk",
+				"is": "Vranduk-virkið",
+				"de": "Festung Vranduk"
+			},
+			"desc": {
+				"pl": "Średniowieczna wieża na skale nad wąwozem Bosny",
+				"en": "A medieval tower on a rock above the Bosna gorge",
+				"cs": "Středověká věž na skále nad soutěskou Bosny",
+				"is": "Miðaldaturn á kletti yfir Bosnu-gljúfrinu",
+				"de": "Ein mittelalterlicher Turm auf einem Felsen über der Bosna-Schlucht"
+			},
+			"local": "Tvrđava Vranduk"
+		}
+	],
+	"Bijeljina": [
+		{
+			"kind": "stanisici",
+			"name": {
+				"pl": "Wioska etnograficzna Stanišići",
+				"en": "Stanišići Ethno Village",
+				"cs": "Etnovesnice Stanišići",
+				"is": "Stanišići-þorpssafnið",
+				"de": "Ethnodorf Stanišići"
+			},
+			"desc": {
+				"pl": "Stare drewniane domy, młyn wodny i staw jak dawniej na wsi",
+				"en": "Old wooden houses, a watermill and a pond, like a village of long ago",
+				"cs": "Staré dřevěné domy, vodní mlýn a rybník jako na dávné vesnici",
+				"is": "Gömul timburhús, vatnsmylla og tjörn, eins og þorp frá fyrri tíð",
+				"de": "Alte Holzhäuser, eine Wassermühle und ein Teich, wie ein Dorf von früher"
+			},
+			"local": "Etno selo Stanišići"
+		}
+	],
+	"Mostar": [
+		{
+			"kind": "stari_most",
+			"name": {
+				"pl": "Stary Most",
+				"en": "The Old Bridge",
+				"cs": "Starý most",
+				"is": "Gamla brúin",
+				"de": "Die Alte Brücke"
+			},
+			"desc": {
+				"pl": "Kamienny łuk z 1566 roku, odbudowany w 2004; skoczkowie skaczą z niego do Neretwy",
+				"en": "A stone arch from 1566, rebuilt in 2004; divers leap from it into the Neretva",
+				"cs": "Kamenný oblouk z roku 1566, obnovený v roce 2004; skokani z něj skáčou do Neretvy",
+				"is": "Steinbogi frá 1566, endurbyggður 2004; dýfingamenn stökkva af honum í Neretva",
+				"de": "Ein Steinbogen von 1566, 2004 wieder aufgebaut; Springer stürzen sich von ihm in die Neretva"
+			},
+			"local": "Stari most"
+		}
+	],
+	"Prijedor": [
+		{
+			"kind": "kozara_deer",
+			"name": {
+				"pl": "Park Narodowy Kozara",
+				"en": "Kozara National Park",
+				"cs": "Národní park Kozara",
+				"is": "Kozara-þjóðgarðurinn",
+				"de": "Nationalpark Kozara"
+			},
+			"desc": {
+				"pl": "Bukowe i jodłowe lasy na wzgórzach, w których żyją jelenie",
+				"en": "Beech and fir woods on the hills, home to deer",
+				"cs": "Bukové a jedlové lesy na kopcích, domov jelenů",
+				"is": "Beyki- og þinskógar á hæðunum, heimkynni hjarta",
+				"de": "Buchen- und Tannenwälder auf den Hügeln, Heimat der Hirsche"
+			},
+			"local": "Nacionalni park Kozara"
+		}
+	],
+	"Brčko": [
+		{
+			"kind": "brcko_hall",
+			"name": {
+				"pl": "Ratusz w Brčku",
+				"en": "Brčko City Hall",
+				"cs": "Radnice v Brčku",
+				"is": "Ráðhúsið í Brčko",
+				"de": "Rathaus von Brčko"
+			},
+			"desc": {
+				"pl": "Budynek z 1892 roku w paski, z łukami w stylu mauretańskim",
+				"en": "A striped building from 1892 with Moorish-style arches",
+				"cs": "Pruhovaná budova z roku 1892 s maurskými oblouky",
+				"is": "Röndótt bygging frá 1892 með márískum bogum",
+				"de": "Ein gestreiftes Gebäude von 1892 mit maurischen Bögen"
+			},
+			"local": "Gradska vijećnica"
+		}
+	],
+	"Doboj": [
+		{
+			"kind": "doboj_fortress",
+			"name": {
+				"pl": "Twierdza Gradina",
+				"en": "Gradina Fortress",
+				"cs": "Pevnost Gradina",
+				"is": "Gradina-virkið",
+				"de": "Festung Gradina"
+			},
+			"desc": {
+				"pl": "Kamienna twierdza z basztami na wzgórzu nad miastem",
+				"en": "A stone fortress with towers on the hill above the town",
+				"cs": "Kamenná pevnost s věžemi na kopci nad městem",
+				"is": "Steinvirki með turnum á hæðinni yfir bænum",
+				"de": "Eine Steinfestung mit Türmen auf dem Hügel über der Stadt"
+			},
+			"local": "Dobojska tvrđava"
+		}
+	],
+	"Travnik": [
+		{
+			"kind": "plava_voda",
+			"name": {
+				"pl": "Plava Voda",
+				"en": "Plava Voda (Blue Water)",
+				"cs": "Plava Voda (Modrá voda)",
+				"is": "Plava Voda (Bláa vatnið)",
+				"de": "Plava Voda (Blaues Wasser)"
+			},
+			"desc": {
+				"pl": "Lodowate źródło pod twierdzą, z mostkami i drewnianymi młynami",
+				"en": "An icy spring below the fortress, with little bridges and wooden mills",
+				"cs": "Ledový pramen pod pevností s můstky a dřevěnými mlýny",
+				"is": "Ísköld lind undir virkinu, með litlum brúm og trémyllum",
+				"de": "Eine eiskalte Quelle unter der Festung, mit Brückchen und Holzmühlen"
+			},
+			"local": "Plava voda"
+		}
+	],
+	"Bihać": [
+		{
+			"kind": "strbacki_buk",
+			"name": {
+				"pl": "Wodospad Štrbački buk",
+				"en": "Štrbački Buk Waterfall",
+				"cs": "Vodopád Štrbački buk",
+				"is": "Štrbački buk-fossinn",
+				"de": "Wasserfall Štrbački buk"
+			},
+			"desc": {
+				"pl": "Największy wodospad na Unie, w Parku Narodowym Una",
+				"en": "The largest waterfall on the Una, in Una National Park",
+				"cs": "Největší vodopád na Uně, v Národním parku Una",
+				"is": "Stærsti fossinn í Una, í Una-þjóðgarðinum",
+				"de": "Der größte Wasserfall der Una, im Nationalpark Una"
+			},
+			"local": "Štrbački buk"
+		}
+	],
+	"Trebinje": [
+		{
+			"kind": "arslanagic_bridge",
+			"name": {
+				"pl": "Most Arslanagicia",
+				"en": "Arslanagić Bridge",
+				"cs": "Arslanagićův most",
+				"is": "Arslanagić-brúin",
+				"de": "Arslanagić-Brücke"
+			},
+			"desc": {
+				"pl": "Kamienny most z XVI wieku, przeniesiony kamień po kamieniu w nowe miejsce",
+				"en": "A 16th-century stone bridge, moved stone by stone to a new place",
+				"cs": "Kamenný most ze 16. století, přenesený kámen po kameni na nové místo",
+				"is": "Steinbrú frá 16. öld, flutt stein fyrir stein á nýjan stað",
+				"de": "Eine Steinbrücke aus dem 16. Jahrhundert, Stein für Stein an einen neuen Ort versetzt"
+			},
+			"local": "Arslanagića most"
+		}
+	],
+	"Livno": [
+		{
+			"kind": "livno_horses",
+			"name": {
+				"pl": "Dzikie konie z Livna",
+				"en": "The Wild Horses of Livno",
+				"cs": "Divocí koně z Livna",
+				"is": "Villtu hestarnir í Livno",
+				"de": "Die Wildpferde von Livno"
+			},
+			"desc": {
+				"pl": "Setki wolnych koni pasą się na wzgórzach Cincar",
+				"en": "Hundreds of free horses graze on the Cincar hills",
+				"cs": "Stovky volných koní se pasou na kopcích Cincar",
+				"is": "Hundruð frjálsra hesta á beit á Cincar-hæðunum",
+				"de": "Hunderte freie Pferde grasen auf den Hügeln des Cincar"
+			},
+			"local": "Divlji konji"
+		}
+	],
+	"Jajce": [
+		{
+			"kind": "pliva_falls",
+			"name": {
+				"pl": "Wodospad Plivy",
+				"en": "The Pliva Waterfall",
+				"cs": "Vodopád Plivy",
+				"is": "Pliva-fossinn",
+				"de": "Der Pliva-Wasserfall"
+			},
+			"desc": {
+				"pl": "Rzeka Pliva spada 22 metry do Vrbasu, tuż pod starym miastem",
+				"en": "The Pliva drops 22 metres into the Vrbas, right below the old town",
+				"cs": "Pliva padá 22 metrů do Vrbasu, hned pod starým městem",
+				"is": "Pliva fellur 22 metra í Vrbas, rétt neðan við gamla bæinn",
+				"de": "Die Pliva stürzt 22 Meter in den Vrbas, direkt unter der Altstadt"
+			},
+			"local": "Vodopad Plive"
+		}
+	],
+	"Goražde": [
+		{
+			"kind": "sopotnica",
+			"name": {
+				"pl": "Wodospady Sopotnica",
+				"en": "Sopotnica Waterfalls",
+				"cs": "Vodopády Sopotnica",
+				"is": "Sopotnica-fossarnir",
+				"de": "Sopotnica-Wasserfälle"
+			},
+			"desc": {
+				"pl": "Kaskady wody spływające po mchu, z drewnianym młynem obok",
+				"en": "Cascades of water over moss, with a wooden mill beside them",
+				"cs": "Kaskády vody po mechu s dřevěným mlýnem vedle",
+				"is": "Vatn sem fossar yfir mosa, með trémyllu við hliðina",
+				"de": "Wasserkaskaden über Moos, daneben eine Holzmühle"
+			},
+			"local": "Vodopadi Sopotnica"
+		}
+	],
+	"Višegrad": [
+		{
+			"kind": "visegrad_bridge",
+			"name": {
+				"pl": "Most Mehmeda Paszy Sokolovicia",
+				"en": "Mehmed Paša Sokolović Bridge",
+				"cs": "Most Mehmeda paši Sokoloviće",
+				"is": "Brú Mehmed Paša Sokolović",
+				"de": "Mehmed-Paša-Sokolović-Brücke"
+			},
+			"desc": {
+				"pl": "Most na Drinie z 11 łukami z 1577 roku, bohater powieści Ivo Andricia",
+				"en": "The 11-arch bridge on the Drina from 1577, the hero of Ivo Andrić's novel",
+				"cs": "Most na Drině s 11 oblouky z roku 1577, hrdina románu Iva Andriće",
+				"is": "Brúin á Drina með 11 boga frá 1577, aðalpersóna skáldsögu Ivo Andrić",
+				"de": "Die Brücke über die Drina mit 11 Bögen von 1577, Heldin des Romans von Ivo Andrić"
+			},
+			"local": "Most Mehmed-paše Sokolovića"
+		}
+	]
+}

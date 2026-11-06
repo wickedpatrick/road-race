@@ -1,0 +1,212 @@
+[
+	{
+		"a": "sarajevo",
+		"b": "zenica",
+		"km": 70,
+		"road": "A1",
+		"towns": [["Ilijaš", 18], ["Visoko", 30], ["Kakanj", 47]],
+		"zones": [[25, "upland", "Sarajevsko polje"], [70, "foothills", "Dolina Bosne"]],
+		"via": [[30, 18.18, 43.99], [47, 18.12, 44.13]]
+	},
+	{
+		"a": "zenica",
+		"b": "doboj",
+		"km": 72,
+		"road": [[15, "A1"], [72, "M17"]],
+		"towns": [["Žepče", 40], ["Maglaj", 52]],
+		"zones": [[30, "mountains", "Vranduk"], [72, "foothills", "Dolina Bosne"]],
+		"via": [[40, 18.04, 44.43], [52, 18.1, 44.55]]
+	},
+	{
+		"a": "doboj",
+		"b": "tuzla",
+		"km": 62,
+		"road": "M4",
+		"towns": [["Gračanica", 30], ["Lukavac", 48]],
+		"zones": [[35, "foothills", "Spreča"], [62, "industrial", "Tuzlanski bazen"]],
+		"via": [[30, 18.3, 44.7], [48, 18.53, 44.54]]
+	},
+	{
+		"a": "tuzla",
+		"b": "brcko",
+		"km": 70,
+		"road": "M18",
+		"towns": [["Srebrenik", 32]],
+		"zones": [[40, "foothills", "Majevica"], [70, "fields", "Posavina"]],
+		"via": [[32, 18.49, 44.71]]
+	},
+	{
+		"a": "brcko",
+		"b": "bijeljina",
+		"km": 45,
+		"road": "M14.1",
+		"towns": [["Brezovo Polje", 18]],
+		"zones": [[45, "fields", "Semberija"]]
+	},
+	{
+		"a": "tuzla",
+		"b": "bijeljina",
+		"km": 75,
+		"road": "M18",
+		"towns": [["Lopare", 35], ["Ugljevik", 50]],
+		"zones": [[45, "foothills", "Majevica"], [75, "fields", "Semberija"]],
+		"via": [[35, 18.84, 44.64], [50, 18.99, 44.69]]
+	},
+	{
+		"a": "sarajevo",
+		"b": "tuzla",
+		"km": 120,
+		"road": "M18",
+		"towns": [["Olovo", 55], ["Kladanj", 75], ["Živinice", 105]],
+		"zones": [[35, "mountains", "Ozren"], [90, "forest", "Konjuh"], [120, "foothills", "Tuzlanski bazen"]],
+		"via": [[55, 18.58, 44.13], [75, 18.69, 44.23], [105, 18.65, 44.45]]
+	},
+	{
+		"a": "sarajevo",
+		"b": "mostar",
+		"km": 128,
+		"road": [[25, "A1"], [128, "M17"]],
+		"towns": [["Tarčin", 27], ["Konjic", 60], ["Jablanica", 82]],
+		"zones": [
+			[30, "upland", "Sarajevsko polje"], [55, "mountains", "Ivan sedlo"], [90, "lakes", "Jablaničko jezero"],
+			[128, "mountains", "Kanjon Neretve"]
+		],
+		"via": [[27, 18.1, 43.79], [60, 17.96, 43.65], [82, 17.76, 43.66]],
+		"tunnels": [
+			{
+				"from_km": 41,
+				"to_km": 41.7,
+				"name": {
+					"pl": "Tunel Ivan",
+					"en": "Ivan Tunnel",
+					"cs": "Tunel Ivan",
+					"is": "Ivan-göngin",
+					"de": "Ivan-Tunnel"
+				},
+				"fact": {
+					"pl": "Pod przełęczą Ivan, gdzie Bośnia spotyka się z Hercegowiną",
+					"en": "Under the Ivan saddle, where Bosnia meets Herzegovina",
+					"cs": "Pod sedlem Ivan, kde se Bosna potkává s Hercegovinou",
+					"is": "Undir Ivan-skarði, þar sem Bosnía mætir Hersegóvínu",
+					"de": "Unter dem Ivan-Sattel, wo Bosnien auf die Herzegowina trifft"
+				}
+			}
+		]
+	},
+	{
+		"a": "mostar",
+		"b": "trebinje",
+		"km": 115,
+		"road": [[12, "M17"], [40, "M6.1"], [115, "M6"]],
+		"towns": [["Buna", 12], ["Stolac", 40], ["Ljubinje", 75]],
+		"zones": [[40, "orchard", "Hercegovina"], [115, "highland", "Popovo polje"]],
+		"via": [[40, 17.96, 43.08], [75, 18.09, 42.95]]
+	},
+	{
+		"a": "sarajevo",
+		"b": "visegrad",
+		"km": 115,
+		"road": "M5",
+		"towns": [["Pale", 16], ["Sokolac", 40], ["Rogatica", 70]],
+		"zones": [[20, "mountains", "Jahorina"], [60, "upland", "Romanija"], [115, "mountains", "Kanjon Drine"]],
+		"via": [[16, 18.57, 43.82], [40, 18.8, 43.94], [70, 19, 43.8]]
+	},
+	{
+		"a": "visegrad",
+		"b": "gorazde",
+		"km": 50,
+		"road": [[20, "M5"], [50, "M20"]],
+		"towns": [["Ustiprača", 20]],
+		"zones": [[50, "mountains", "Podrinje"]],
+		"via": [[20, 19.09, 43.69]]
+	},
+	{
+		"a": "gorazde",
+		"b": "trebinje",
+		"km": 175,
+		"road": [[30, "M20"], [175, "M18"]],
+		"towns": [["Foča", 30], ["Gacko", 105], ["Bileća", 150]],
+		"zones": [
+			[30, "mountains", "Podrinje"],
+			[80, "mountains", "Sutjeska"],
+			[140, "highland", "Gatačko polje"],
+			[175, "highland", "Istočna Hercegovina"]
+		],
+		"via": [[30, 18.78, 43.51], [80, 18.62, 43.3], [105, 18.53, 43.17], [150, 18.43, 42.87]]
+	},
+	{
+		"a": "zenica",
+		"b": "travnik",
+		"km": 37,
+		"road": [[10, "M17"], [37, "M5"]],
+		"towns": [["Vitez", 22], ["Nova Bila", 28]],
+		"zones": [[37, "foothills", "Lašvanska dolina"]],
+		"via": [[10, 17.88, 44.1], [22, 17.79, 44.16]]
+	},
+	{
+		"a": "travnik",
+		"b": "jajce",
+		"km": 68,
+		"road": "M5",
+		"towns": [["Turbe", 8], ["Donji Vakuf", 38]],
+		"zones": [[30, "mountains", "Komar"], [68, "foothills", "Dolina Vrbasa"]],
+		"via": [[8, 17.58, 44.24], [38, 17.4, 44.14]]
+	},
+	{
+		"a": "jajce",
+		"b": "banja_luka",
+		"km": 72,
+		"road": "M16",
+		"towns": [["Krupa na Vrbasu", 45], ["Karanovac", 60]],
+		"zones": [[55, "mountains", "Kanjon Vrbasa"], [72, "foothills", "Bosanska Krajina"]],
+		"via": [[25, 17.2, 44.5], [45, 17.15, 44.62]]
+	},
+	{
+		"a": "jajce",
+		"b": "bihac",
+		"km": 155,
+		"road": "M5",
+		"towns": [["Mrkonjić Grad", 25], ["Ključ", 75], ["Bosanski Petrovac", 110]],
+		"zones": [[60, "mountains", "Čemernica"], [110, "forest", "Grmeč"], [155, "lakes", "Pounje"]],
+		"via": [[25, 17.08, 44.42], [75, 16.78, 44.53], [110, 16.37, 44.55]]
+	},
+	{
+		"a": "banja_luka",
+		"b": "prijedor",
+		"km": 55,
+		"road": "M4",
+		"towns": [["Omarska", 33]],
+		"zones": [[55, "fields", "Bosanska Krajina"]],
+		"via": [[33, 16.9, 44.89]]
+	},
+	{
+		"a": "prijedor",
+		"b": "bihac",
+		"km": 100,
+		"road": [[40, "M4"], [100, "M14"]],
+		"towns": [["Novi Grad", 40], ["Bosanska Krupa", 70]],
+		"zones": [[40, "forest", "Kozara"], [100, "lakes", "Pounje"]],
+		"via": [[40, 16.38, 45.05], [70, 16.15, 44.88]]
+	},
+	{
+		"a": "banja_luka",
+		"b": "doboj",
+		"km": 100,
+		"road": "M16.1",
+		"towns": [["Laktaši", 20], ["Prnjavor", 52]],
+		"zones": [[60, "fields", "Lijevče polje"], [100, "foothills", "Sjeverna Bosna"]],
+		"via": [[20, 17.3, 44.91], [52, 17.66, 44.87]]
+	},
+	{
+		"a": "jajce",
+		"b": "livno",
+		"km": 125,
+		"road": [[30, "M5"], [125, "M16"]],
+		"towns": [["Donji Vakuf", 30], ["Bugojno", 45], ["Kupres", 85]],
+		"zones": [
+			[50, "foothills", "Skopaljska dolina"], [95, "highland", "Kupreško polje"],
+			[125, "highland", "Livanjsko polje"]
+		],
+		"via": [[30, 17.4, 44.14], [45, 17.45, 44.06], [85, 17.28, 43.99]]
+	}
+]

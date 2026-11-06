@@ -65,6 +65,18 @@
 			"name": {"pl": "Kanada", "en": "Canada", "cs": "Kanada", "is": "Kanada", "de": "Kanada"},
 			"neighbours": ["us"],
 			"favorite_neighbour": "us"
+		},
+		{
+			"code": "ba",
+			"name": {
+				"pl": "Bośnia i Hercegowina",
+				"en": "Bosnia and Herzegovina",
+				"cs": "Bosna a Hercegovina",
+				"is": "Bosnía og Hersegóvína",
+				"de": "Bosnien und Herzegowina"
+			},
+			"neighbours": ["hr", "rs", "me"],
+			"favorite_neighbour": "hr"
 		}
 	]
 }
