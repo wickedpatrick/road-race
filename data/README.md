@@ -58,7 +58,7 @@ without borders.
   expressways: dual carriageways with the faster limit, e.g. `["A", "S"]` in Poland, `["D"]` in Czechia).
 - `limits` as posted on the signs (km/h, or mph with imperial `units`; the game converts to km/h): `express`
   (motorways, expressways), `road`, `city` (through a big city), `town_on_express`, `town`. Optional
-  `unlimited_beyond_km` (Germany): motorway stretches farther than that (and than `Route.LIMITED_NEAR_CITY` track metres) from both ends of a trip have no limit
+  `unlimited_beyond_km` (Germany): motorway stretches farther than that (and than the city streets plus `Route.LIMITED_AFTER_CITY` track metres) from both ends of a trip have no limit
   (an end-of-restrictions sign, no radar, no police; traffic keeps `Route.UNLIMITED_CRUISE`), `express` near them.
 - `station`: texts in the country's language on the fuel station and region boards: `sign` (over the pumps),
   `board` (over the price list), `prices` (`[[fuel, price], ...]`, two or three, as on the pylon, e.g.

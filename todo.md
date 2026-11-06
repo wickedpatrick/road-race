@@ -259,10 +259,10 @@ Opis: `docs/superpowers/specs/2026-11-03-postcards-design.md`.
 
 ## 13. Ruch na drogach ekspresowych (`src/logic/traffic.gd`)
 
-- [ ] Auta nie jadą zawsze w tej samej pozycji x pasa: co kilka aut (losowo co 4-7) któreś jedzie bliżej osi
+- [x] Auta nie jadą zawsze w tej samej pozycji x pasa: co kilka aut (losowo co 4-7) któreś jedzie bliżej osi
       jezdni (środkowej linii między pasami), żeby nie dało się bez końca jechać między dwoma pasami bez kolizji.
 
 ## 14. Długość tras w grze (`src/logic/route.gd`)
 
-- [ ] Długie trasy (USA, Kanada) jadą się za długo: powyżej pewnego dystansu długość w grze ma rosnąć wolniej
+- [x] Długie trasy (USA, Kanada) jadą się za długo: powyżej pewnego dystansu długość w grze ma rosnąć wolniej
       niż liniowo (np. pierwiastkowo), patrz wzór w `Route.build`.

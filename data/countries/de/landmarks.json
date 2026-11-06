@@ -1898,5 +1898,43 @@
 			},
 			"local": "Schloss Bruchsal"
 		}
+	],
+	"Regensburg": [
+		{
+			"kind": "porta_praetoria",
+			"name": {"pl": "Porta Praetoria", "en": "Porta Praetoria", "cs": "Porta Praetoria", "is": "Porta Praetoria", "de": "Porta Praetoria"},
+			"desc": {
+				"pl": "Rzymska brama obozu Castra Regina z 179 roku, z wielkich kamiennych bloków, wbudowana w późniejsze domy",
+				"en": "The Roman gate of the Castra Regina fortress from AD 179, of huge stone blocks, built into later houses",
+				"cs": "Římská brána tábora Castra Regina z roku 179 z obrovských kamenných kvádrů, zazděná do pozdějších domů",
+				"is": "Rómverskt hlið herbúðanna Castra Regina frá árinu 179, úr risastórum steinblokkum, byggt inn í yngri hús",
+				"de": "Das römische Tor des Lagers Castra Regina aus dem Jahr 179, aus riesigen Steinblöcken, in spätere Häuser eingebaut"
+			},
+			"local": "Porta Praetoria"
+		},
+		{
+			"kind": "steinerne_bruecke",
+			"name": {"pl": "Kamienny Most", "en": "Stone Bridge", "cs": "Kamenný most", "is": "Steinbrúin", "de": "Steinerne Brücke"},
+			"desc": {
+				"pl": "Średniowieczny most na Dunaju z 16 łukami, a nad dachami starego miasta dwie wieże katedry",
+				"en": "A medieval bridge over the Danube on 16 arches, with the cathedral's two spires above the old town roofs",
+				"cs": "Středověký most přes Dunaj o 16 obloucích a nad střechami starého města dvě věže katedrály",
+				"is": "Brú frá miðöldum yfir Dóná á 16 bogum, og tveir turnar dómkirkjunnar yfir þökum gamla bæjarins",
+				"de": "Eine mittelalterliche Brücke über die Donau auf 16 Bögen, über den Dächern der Altstadt die zwei Domtürme"
+			},
+			"local": "Steinerne Brücke"
+		},
+		{
+			"kind": "regensburg_dom",
+			"name": {"pl": "Katedra św. Piotra", "en": "St. Peter's Cathedral", "cs": "Katedrála svatého Petra", "is": "Dómkirkja heilags Péturs", "de": "Dom St. Peter"},
+			"desc": {
+				"pl": "Gotycka katedra z dwiema ażurowymi wieżami; śpiewa tu jeden z najstarszych chórów chłopięcych na świecie",
+				"en": "A Gothic cathedral with two openwork spires; one of the oldest boys' choirs in the world sings here",
+				"cs": "Gotická katedrála se dvěma prolamovanými věžemi; zpívá tu jeden z nejstarších chlapeckých sborů na světě",
+				"is": "Gotnesk dómkirkja með tveimur götóttum turnspírum; einn elsti drengjakór heims syngur hér",
+				"de": "Ein gotischer Dom mit zwei durchbrochenen Türmen; hier singt einer der ältesten Knabenchöre der Welt"
+			},
+			"local": "Regensburger Dom"
+		}
 	]
 }

@@ -14,7 +14,7 @@ var visited: Array = [] ## ids of the map cities the player has been to (the goa
 var postcards := {} ## the current country's postcards (Postcards): city id -> {stamps, year}
 var album_back_to_map := false ## the album returns to the map (opened there) or to the car screen
 var quality := "high" ## "high": everything at full screen sharpness; "low": the race world is drawn at 960x540
-var home_city := "" ## picked on the first start; "" until then (or after a progress reset)
+var home_city := "" ## picked on the first start; "" until then
 var menu_at_map := false ## the menu opens at the destination map (coming back from a race)
 var last_result := {}
 ## test mode for tuning the sharp bends: every bend sharp, optionally with a given sharpness. In the browser add
@@ -143,14 +143,6 @@ func set_home(id: String) -> void:
 	from_city = id
 	if to_city == id: to_city = ""
 	visit([id])
-
-## Back to a new player: no kilometres, only the first car, no home city in any country.
-func reset_profile() -> void:
-	car_id = CarStats.ids()[0]
-	total_km = 0.0
-	places = {}
-	_apply_place({})
-	save_profile()
 
 ## Marks cities as visited (each map city's postcard collected) and saves; returns the ones visited for the first time.
 func visit(ids: Array) -> Array:

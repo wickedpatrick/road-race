@@ -18,13 +18,7 @@
 	"back": {"pl": "Wstecz", "en": "Back", "cs": "Zpět", "is": "Til baka", "de": "Zurück"},
 	"next": {"pl": "Dalej", "en": "Next", "cs": "Dál", "is": "Áfram", "de": "Weiter"},
 	"start": {"pl": "START!", "en": "START!", "cs": "START!", "is": "AF STAÐ!", "de": "LOS!"},
-	"reset_btn": {
-		"pl": "Reset postępu",
-		"en": "Reset progress",
-		"cs": "Smazat postup",
-		"is": "Byrja upp á nýtt",
-		"de": "Fortschritt löschen"
-	},
+
 	"hint_select": {
 		"pl": "Strzałki: wybierz      Enter: dalej",
 		"en": "Arrows: choose      Enter: next",
@@ -49,11 +43,11 @@
 	"hint_enter_next": {"pl": "Enter: dalej", "en": "Enter: next", "cs": "Enter: dál", "is": "Enter: áfram", "de": "Enter: weiter"},
 	"hint_country": {"pl": "   C: kraj", "en": "   C: country", "cs": "   C: země", "is": "   C: land", "de": "   C: Land"},
 	"hint_car": {
-		"pl": "Strzałki   Enter: dalej   L: język   R: reset",
-		"en": "Arrows   Enter: next   L: language   R: reset",
-		"cs": "Šipky   Enter: dál   L: jazyk   R: reset",
-		"is": "Örvar   Enter: áfram   L: tungumál   R: endurstilla",
-		"de": "Pfeile   Enter: weiter   L: Sprache   R: löschen"
+		"pl": "Strzałki   Enter: dalej   L: język",
+		"en": "Arrows   Enter: next   L: language",
+		"cs": "Šipky   Enter: dál   L: jazyk",
+		"is": "Örvar   Enter: áfram   L: tungumál",
+		"de": "Pfeile   Enter: weiter   L: Sprache"
 	},
 	"hint_back": {
 		"pl": "      Esc: wstecz",
@@ -69,22 +63,8 @@
 		"is": "      X: hljóð",
 		"de": "      X: Ton"
 	},
-	"reset_title": {
-		"pl": "Zresetować postęp?",
-		"en": "Reset your progress?",
-		"cs": "Smazat postup?",
-		"is": "Byrja upp á nýtt?",
-		"de": "Fortschritt löschen?"
-	},
-	"reset_text": {
-		"pl": "Licznik przejechanej drogi (%s) i odblokowane auta zostaną skasowane. Zaczniesz od nowa Yarisem i znów wybierzesz swoje miasto.",
-		"en": "The distance driven (%s) and the unlocked cars will be deleted. You will start again with the Yaris and choose your home city again.",
-		"cs": "Ujetá vzdálenost (%s) a odemčená auta budou smazána. Začneš znovu s Yarisem a znovu si vybereš své město.",
-		"is": "Vegalengdinni sem þú hefur ekið (%s) og opnuðu bílunum verður eytt. Þú byrjar aftur á Yaris og velur heimabæinn þinn aftur.",
-		"de": "Die gefahrene Strecke (%s) und die freigeschalteten Autos werden gelöscht. Du fängst wieder mit dem Yaris an und wählst deine Heimatstadt neu."
-	},
-	"reset_yes": {"pl": "Tak, resetuj", "en": "Yes, reset", "cs": "Ano, smazat", "is": "Já, byrja upp á nýtt", "de": "Ja, löschen"},
-	"reset_no": {"pl": "Nie", "en": "No", "cs": "Ne", "is": "Nei", "de": "Nein"},
+
+
 	"all_cars": {
 		"pl": "Wszystkie auta odblokowane!",
 		"en": "All cars unlocked!",

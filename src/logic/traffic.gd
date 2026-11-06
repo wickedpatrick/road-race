@@ -28,6 +28,14 @@ const SPEED_CHANGE := 3.0 ## m/s² when the limit changes
 const FOLLOW_GAP := 30.0 ## a car looks this far ahead for a slower car in its lane
 const FAR := 1500.0 ## only cars this close to the player react to each other and to the limits
 const SIDE_GAP := 25.0 ## and drops back when it would drive alongside a car in the next lane
+## every few cars (EDGE_EVERY, random) one drives off its lane centre (by EDGE_OFF, breathing in and out): on a dual
+## carriageway towards the line between the lanes, so the gap between them is not a free way through the traffic; an
+## oncoming car on a single road towards the centre line, never over it. Every car also wanders a little (WANDER).
+const EDGE_EVERY := [2, 5]
+const EDGE_OFF := [0.18, 0.28]
+const WANDER := 0.06
+const CENTRE_LINE_GAP := 0.03 ## an oncoming car's side stays this far from the centre line
+var _t := 0.0 ## seconds since the start (the cars' wandering)
 var _target := PackedFloat32Array() ## speed limit (m/s) per 5 m track segment
 var cars: Array = []
 var end_z := 0.0
@@ -67,27 +75,55 @@ static func build(stage: Dictionary, seed_value: int) -> Traffic:
 	# the player's way
 	var z := 160.0
 	var last_in_lane := {}
+	var to_edge := rng.randi_range(EDGE_EVERY[0], EDGE_EVERY[1])
 	while z < stage.length - 150.0:
 		var in_town := not Route.town_at(stage, z).is_empty()
 		var lanes := own_lanes(tf.dual_at(z))
 		var lane: float = lanes[rng.randi() % lanes.size()]
 		if not last_in_lane.has(lane) or z - last_in_lane[lane] > (16.0 if in_town else 30.0):
-			tf.cars.append(tf._new_car(rng, z, lane, 1, in_town))
+			var car := tf._new_car(rng, z, lane, 1, in_town)
+			to_edge -= 1
+			if to_edge <= 0:
+				to_edge = rng.randi_range(EDGE_EVERY[0], EDGE_EVERY[1])
+				car["edge"] = rng.randf_range(EDGE_OFF[0], EDGE_OFF[1])
+			car.lane_x = _lane_x(car, lane, tf.dual_at(z), 0.0)
+			tf.cars.append(car)
 			last_in_lane[lane] = z
 		var gap := GAP_TOWN if in_town else (GAP_ROAD if tf.dual_at(z) >= 0.5 else GAP_SINGLE)
 		z += rng.randf_range(0.5, 1.5) * gap / density
 	# oncoming
 	z = 60.0
 	last_in_lane = {}
+	to_edge = rng.randi_range(EDGE_EVERY[0], EDGE_EVERY[1])
 	while z < tf.end_z:
 		var in_town := not Route.town_at(stage, z).is_empty()
 		var lanes := oncoming_lanes(tf.dual_at(z))
 		var lane: float = lanes[rng.randi() % lanes.size()]
 		if not last_in_lane.has(lane) or z - last_in_lane[lane] > 30.0:
-			tf.cars.append(tf._new_car(rng, z, lane, -1, in_town))
+			var car := tf._new_car(rng, z, lane, -1, in_town)
+			to_edge -= 1
+			if to_edge <= 0:
+				to_edge = rng.randi_range(EDGE_EVERY[0], EDGE_EVERY[1])
+				car["edge"] = rng.randf_range(EDGE_OFF[0], EDGE_OFF[1])
+			car.lane_x = _lane_x(car, lane, tf.dual_at(z), 0.0)
+			tf.cars.append(car)
 			last_in_lane[lane] = z
 		z += tf._oncoming_gap(rng, in_town) / density
 	return tf
+
+## Where in lane `centre` the car drives at time t, the road `d` dual: a little wandering, and for an "edge" car its
+## breathing offset towards the line between the lanes (dual carriageway) or the centre line (oncoming, single road).
+static func _lane_x(c: Dictionary, centre: float, d: float, t: float) -> float:
+	if not c.has("pace"):
+		return centre # a car set up by hand (tests) keeps to its lane centre
+	var ph: float = c.pace * 37.0 + c.get("color_idx", 0)
+	var x := centre + WANDER * sin(ph + t * (0.3 + 0.5 * fposmod(c.pace * 13.0, 1.0)))
+	var oncoming_single: bool = c.get("dir", 1) < 0 and d < 0.5
+	if c.has("edge") and ((c.get("dir", 1) > 0 and d >= 0.5) or oncoming_single):
+		x -= signf(centre) * float(c.edge) * (0.7 + 0.3 * sin(ph * 1.7 + t * 0.5))
+	if oncoming_single: # never over the centre line
+		x = minf(x, -float(KINDS[c.get("kind", "car")].half) - CENTRE_LINE_GAP)
+	return x
 
 func _oncoming_gap(rng: RandomNumberGenerator, in_town: bool) -> float:
 	if in_town:
@@ -126,6 +162,7 @@ func target_at(z: float) -> float:
 
 ## player_* describe the player's car: traffic behind it in its lane queues up instead of running into it.
 func update(dt: float, player_z := -INF, player_x := 0.0, player_speed := 0.0) -> void:
+	_t += dt
 	_sort_by_z()
 	var n := cars.size()
 	for i in n:
@@ -151,7 +188,7 @@ func update(dt: float, player_z := -INF, player_x := 0.0, player_speed := 0.0) -
 				if absf(lx - c.lane_x) < best_d:
 					best_d = absf(lx - c.lane_x)
 					best = lx
-			c.lane_x = move_toward(c.lane_x, best, LANE_CHANGE * dt)
+			c.lane_x = move_toward(c.lane_x, _lane_x(c, best, d, _t), LANE_CHANGE * dt)
 		if not c.has("pace") or _target.is_empty(): continue
 		var want := _want(c, c.z + 20.0 * dir)
 		if dir < 0:

@@ -162,5 +162,6 @@
 	"erfurt": {"name": "Erfurt", "lat": 50.98, "lon": 11.03, "pop": 215, "region": "Thüringen"},
 	"rostock": {"name": "Rostock", "lat": 54.09, "lon": 12.14, "pop": 209, "region": "Mecklenburg-Vorpommern"},
 	"kassel": {"name": "Kassel", "lat": 51.32, "lon": 9.5, "pop": 201, "region": "Hessen"},
-	"fussen": {"name": "Füssen", "lat": 47.57, "lon": 10.7, "pop": 15, "region": "Bayern"}
+	"fussen": {"name": "Füssen", "lat": 47.57, "lon": 10.7, "pop": 15, "region": "Bayern"},
+	"regensburg": {"name": "Regensburg", "lat": 49.02, "lon": 12.1, "pop": 153, "region": "Bayern", "exonym": {"pl": "Ratyzbona", "cs": "Řezno", "is": "Regensburg", "en": "Regensburg"}}
 }

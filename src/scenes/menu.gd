@@ -1,6 +1,6 @@
 extends Node2D
 ## Selection: car -> destination on the country map (each trip's weather shown on the card beside it) (tabs above the map, or C, switch the country). The race always starts where the last one ended;
-## the very first time (or after a progress reset) the player first picks a home city on the map.
+## the very first time the player first picks a home city on the map.
 ## Arrow keys / WASD move, Enter or Space confirms, Esc goes back; on the map cities can also be clicked.
 
 var font: Font
@@ -21,16 +21,12 @@ var _follow := "" ## city the scrolling map glides to ("" while the player drags
 var _press := Vector2(-1, -1) ## where the left button went down on the map (-1: not pressed)
 var _dragging := false
 const DRAG_START := 8.0 ## pixels moved before a press becomes a drag (not a click on a city)
-var confirm_reset := false ## "reset progress?" question is shown (car step, R key)
 const NEXT_BTN := Rect2(744, 490, 200, 44)
 const BACK_BTN := Rect2(584, 490, 148, 44)
-const RESET_BTN := Rect2(796, 14, 148, 40)
 const CAR_GAP := 8.0 ## pixels between the car cards
 const LANG_BTN := Rect2(736, 124, 196, 36) ## car step: the game's language (L key)
 const ALBUM_CAR_BTN := Rect2(28, 124, 196, 36) ## the postcard album (P key): on the car step
 const ALBUM_MAP_BTN := Rect2(796, 14, 148, 40) ## and on the map steps
-const YES_BTN := Rect2(250, 330, 220, 54)
-const NO_BTN := Rect2(490, 330, 220, 54)
 var loading := false ## start chosen: the "get ready" card is shown while the race scene loads
 var t := 0.0
 
@@ -104,7 +100,7 @@ func _pick_dest(id: String) -> void:
 
 func _process(dt: float) -> void:
 	t += dt
-	_map_clip.visible = _on_map() and not loading and not confirm_reset
+	_map_clip.visible = _on_map() and not loading
 	if _map_clip.visible:
 		if _follow != "" and not _dragging:
 			map.follow(_follow, dt)
@@ -117,19 +113,10 @@ func _unhandled_input(event: InputEvent) -> void:
 	var tp = Ui.tap(event)
 	if tp != null and _tap(tp):
 		return
-	if confirm_reset:
-		pass
-	elif _on_map() and event is InputEventMouse:
+	if _on_map() and event is InputEventMouse:
 		_map_mouse(event)
 		return
 	if not (event is InputEventKey and event.pressed and not event.echo):
-		return
-	if confirm_reset:
-		if event.keycode in [KEY_ENTER, KEY_KP_ENTER, KEY_T]:
-			_reset_progress()
-		elif event.keycode in [KEY_ESCAPE, KEY_N]:
-			Sfx.play("blip", -8.0)
-			confirm_reset = false
 		return
 	if _on_map() and event.keycode == KEY_C and _countries() > 1:
 		_open_countries()
@@ -140,10 +127,6 @@ func _unhandled_input(event: InputEvent) -> void:
 	if kind() == "car" and event.keycode == KEY_L:
 		_next_language()
 		return
-	if kind() == "car" and event.keycode == KEY_R:
-		Sfx.play("blip", -8.0)
-		confirm_reset = true
-		return
 	var confirm: bool = event.keycode == KEY_ENTER or event.keycode == KEY_KP_ENTER or event.keycode == KEY_SPACE
 	var back: bool = event.keycode == KEY_ESCAPE and step > 0
 	var dir := Vector2.ZERO
@@ -152,7 +135,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif event.keycode == KEY_UP or event.keycode == KEY_W: dir = Vector2.UP
 	elif event.keycode == KEY_DOWN or event.keycode == KEY_S: dir = Vector2.DOWN
 	if dir != Vector2.ZERO or confirm or back:
-		Sfx.play("blip", -8.0)
+		Sfx.play("blip", -15.0)
 	if back:
 		step -= 1
 		_enter_step()
@@ -185,13 +168,13 @@ func _album_btn() -> Rect2:
 	return ALBUM_CAR_BTN if kind() == "car" else ALBUM_MAP_BTN
 
 func _open_album() -> void:
-	Sfx.play("blip", -8.0)
+	Sfx.play("blip", -15.0)
 	_keep_picks()
 	Session.album_back_to_map = _on_map()
 	get_tree().change_scene_to_file("res://src/scenes/album.tscn")
 
 func _next_language() -> void:
-	Sfx.play("blip", -8.0)
+	Sfx.play("blip", -15.0)
 	var langs := GameData.LANGUAGES
 	Session.set_language(langs[(langs.find(GameData.language) + 1) % langs.size()])
 	_new_map() # city names on the map follow the language
@@ -212,15 +195,8 @@ func _confirm() -> void:
 
 ## Clicks and taps on buttons and cards; true when handled.
 func _tap(p: Vector2) -> bool:
-	if _on_map() and not confirm_reset and _countries() > 1 and COUNTRY_BTN.has_point(p):
+	if _on_map() and _countries() > 1 and COUNTRY_BTN.has_point(p):
 		_open_countries()
-		return true
-	if confirm_reset:
-		if YES_BTN.has_point(p):
-			_reset_progress()
-		elif NO_BTN.has_point(p):
-			Sfx.play("blip", -8.0)
-			confirm_reset = false
 		return true
 	if kind() == "car" and LANG_BTN.has_point(p):
 		_next_language()
@@ -230,22 +206,18 @@ func _tap(p: Vector2) -> bool:
 		return true
 	if Screen.touch:
 		if NEXT_BTN.has_point(p):
-			Sfx.play("blip", -8.0)
+			Sfx.play("blip", -15.0)
 			_confirm()
 			return true
 		if BACK_BTN.has_point(p) and step > 0:
-			Sfx.play("blip", -8.0)
+			Sfx.play("blip", -15.0)
 			step -= 1
 			_enter_step()
-			return true
-		if kind() == "car" and RESET_BTN.has_point(p):
-			Sfx.play("blip", -8.0)
-			confirm_reset = true
 			return true
 	if kind() == "car":
 		for i in _count():
 			if _card_rect(i).has_point(p):
-				Sfx.play("blip", -8.0)
+				Sfx.play("blip", -15.0)
 				if sel[_sel_idx()] == i:
 					_confirm() # tapping the chosen card again goes on
 				else:
@@ -258,16 +230,6 @@ func _card_rect(i: int) -> Rect2:
 		var w := _car_card_w()
 		return Rect2(28 + i * (w + CAR_GAP), 172, w, 302)
 	return Rect2(48 + i * 218, 180, 198, 290)
-
-func _reset_progress() -> void:
-	Session.reset_profile()
-	sel = [0, 0]
-	start_city = Session.from_city
-	dest_city = Session.to_city
-	confirm_reset = false
-	_set_steps()
-	_enter_step()
-	Sfx.play("hit", -6.0)
 
 ## Mouse or finger on the map: hover, drag to scroll a big map, a click (a press released without dragging) picks a city.
 func _map_mouse(event: InputEventMouse) -> void:
@@ -302,7 +264,7 @@ func _map_mouse(event: InputEventMouse) -> void:
 	var id := map.city_at(pos)
 	if was_drag or not pressed_here or id == "":
 		return
-	Sfx.play("blip", -8.0)
+	Sfx.play("blip", -15.0)
 	if kind() == "home":
 		start_city = id
 		_confirm()
@@ -364,8 +326,6 @@ func _draw() -> void:
 		if step > 0:
 			Ui.button(self, font, BACK_BTN, Lang.t("back"), false, 20)
 		Ui.button(self, font, NEXT_BTN, Lang.t("start") if kind() == "dest" else Lang.t("next"), true, 22)
-		if kind() == "car":
-			Ui.button(self, font, RESET_BTN, Lang.t("reset_btn"), false, 16)
 	var hint := Lang.t("hint_select")
 	if _on_map():
 		hint = Lang.t("hint_map") + Lang.t("hint_enter_start" if kind() == "dest" else "hint_enter_next") + (Lang.t("hint_country") if _countries() > 1 else "")
@@ -378,21 +338,10 @@ func _draw() -> void:
 	hint += Lang.t("hint_sound")
 	if not Screen.touch:
 		_t(Vector2(0, 518), hint, 20, Color.WHITE, HORIZONTAL_ALIGNMENT_RIGHT, 936)
-	if confirm_reset:
-		_draw_reset_question()
 	if loading:
 		draw_rect(Rect2(0, 0, 960, 540), Color(0.03, 0.05, 0.08, 0.82))
 		_t(Vector2(0, 250), Lang.t("get_ready"), 48, Color("ffd24a"), HORIZONTAL_ALIGNMENT_CENTER, 960)
 		_t(Vector2(0, 300), "%s - %s" % [Geo.display_name(start_city), Geo.display_name(dest_city)], 26, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, 960)
-
-func _draw_reset_question() -> void:
-	draw_rect(Rect2(0, 0, 960, 540), Color(0.03, 0.05, 0.08, 0.75))
-	var r := Rect2(200, 150, 560, 256)
-	_card(r, true)
-	_t(Vector2(0, 205), Lang.t("reset_title"), 40, Color("ffd24a"), HORIZONTAL_ALIGNMENT_CENTER, 960)
-	draw_multiline_string(font, Vector2(240, 245), Lang.t("reset_text") % Units.dist_text(Session.total_km), HORIZONTAL_ALIGNMENT_CENTER, 480, 18, 3, Color.WHITE)
-	Ui.button(self, font, YES_BTN, Lang.t("reset_yes"), false, 20)
-	Ui.button(self, font, NO_BTN, Lang.t("reset_no"), true, 20)
 
 func _card(rect: Rect2, selected: bool) -> void:
 	var sb := StyleBoxFlat.new()
@@ -575,7 +524,7 @@ func _draw_country_tabs(cv: CanvasItem) -> void:
 
 ## The map of Europe (src/scenes/countries.gd); it switches the country and comes back to the map.
 func _open_countries() -> void:
-	Sfx.play("blip", -8.0)
+	Sfx.play("blip", -15.0)
 	_keep_picks()
 	get_tree().change_scene_to_file("res://src/scenes/countries.tscn")
 

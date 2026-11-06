@@ -573,5 +573,23 @@
 			[30, "mountains", "Hochschwarzwald"], [65, "forest", "Schwarzwald"], [100, "fields", "Baar"],
 			[150, "upland", "Oberer Neckar"], [175, "forest", "Schönbuch"], [195, "industrial", "Stuttgart"]
 		]
+	},
+	{
+		"a": "nurnberg",
+		"b": "regensburg",
+		"km": 110,
+		"road": "A3",
+		"towns": [["Feucht", 15], ["Neumarkt in der Oberpfalz", 40], ["Velburg", 60], ["Parsberg", 70], ["Beratzhausen", 85]],
+		"zones": [[15, "industrial", "Nürnberg"], [50, "forest", "Nürnberger Reichswald"], [95, "jura", "Oberpfälzer Jura"], [110, "fields", "Regensburg"]],
+		"via": [[40, 11.46, 49.28], [70, 11.72, 49.15]]
+	},
+	{
+		"a": "regensburg",
+		"b": "munchen",
+		"km": 125,
+		"road": [[70, "A93"], [125, "A9"]],
+		"towns": [["Saalhaupt", 20], ["Mainburg", 50], ["Wolnzach", 68], ["Pfaffenhofen", 80], ["Garching", 110]],
+		"zones": [[25, "fields", "Donautal"], [75, "fields", "Hallertau"], [110, "fields", "Oberbayern"], [125, "industrial", "München"]],
+		"via": [[50, 11.78, 48.64], [68, 11.6, 48.6]]
 	}
 ]

@@ -14,7 +14,7 @@ const STATION_EVERY := 3200.0
 const CITY_HALF := 260.0 ## half-length of a big city passed on the way (game metres)
 const TOWN_HALF := 90.0
 const NO_LIMIT := 0 ## speed_limit_at() on an Autobahn stretch without a limit
-const LIMITED_NEAR_CITY := 900.0 ## track metres from each end of a trip where the Autobahn still has its limit
+const LIMITED_AFTER_CITY := 200.0 ## track metres past the city streets at each end where the Autobahn keeps its limit
 const UNLIMITED_CRUISE := 130 ## km/h traffic keeps there (the German advisory speed)
 const HILL_TIME := 0.1 ## extra share of the time limit per unit of average Biome.hill
 const END_CITY := 380.0 ## city streets at the start and the finish
@@ -400,7 +400,7 @@ static func sign_limit_at(stage: Dictionary, z: float) -> int:
 	if not t.is_empty():
 		return int(lim.city if t.big else (lim.town_on_express if express else lim.town))
 	if express and lim.has("unlimited_beyond_km"): # Germany: no limit on the Autobahn away from the cities
-		var edge: float = maxf(lim.unlimited_beyond_km * stage.m_per_km, LIMITED_NEAR_CITY)
+		var edge: float = maxf(lim.unlimited_beyond_km * stage.m_per_km, END_CITY + LIMITED_AFTER_CITY)
 		if z > edge and z < stage.length - edge:
 			return NO_LIMIT
 	return int(lim.express if express else lim.road)

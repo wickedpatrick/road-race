@@ -9,18 +9,25 @@ func run(t) -> void:
 		var ok_start := true
 		var lane_ok := true
 		var oncoming := 0
+		var edged := 0
+		var centre_ok := true
 		for c in tf.cars:
 			if c.speed >= 47.0 * 0.6: ok_speed = false
 			var d := Route.dual_f(s, c.z)
+			if c.has("edge"): edged += 1
 			if c.dir > 0:
 				if c.z < 100.0: ok_start = false
-				if not Traffic.own_lanes(d).has(c.lane_x): lane_ok = false
+				if not Traffic.own_lanes(d).any(func(lx): return absf(lx - c.lane_x) <= Traffic.EDGE_OFF[1] + Traffic.WANDER + 0.001): lane_ok = false
 			else:
 				oncoming += 1
-				if not Traffic.oncoming_lanes(d).has(c.lane_x): lane_ok = false
+				if not Traffic.oncoming_lanes(d).any(func(lx): return absf(lx - c.lane_x) <= Traffic.EDGE_OFF[1] + Traffic.WANDER + 0.001): lane_ok = false
+				if d < 0.5 and c.lane_x + Traffic.KINDS[c.kind].half > 0.0: centre_ok = false
 		t.check(ok_speed, "stage %d traffic slower than slowest player" % i)
 		t.check(ok_start, "stage %d no traffic near start going the player's way" % i)
 		t.check(lane_ok, "stage %d traffic keeps to its lanes (oncoming on the left / far carriageway)" % i)
+		t.check(centre_ok, "stage %d oncoming cars on a single road never cross the centre line" % i)
+		var own := tf.cars.size()
+		t.check(edged * 6 >= own and edged * 2 <= own, "stage %d every few cars one drives off its lane centre (%d of %d)" % [i, edged, own])
 		t.check(oncoming > 3, "stage %d has oncoming traffic" % i)
 		for k in 4000:
 			tf.update(0.1)
