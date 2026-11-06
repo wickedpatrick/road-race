@@ -282,7 +282,8 @@ static func _si() -> void:
 	_shield(u0, 0.12, u1, 0.5, "ed1c24")
 	_shield(u0 + _u(0.02), 0.14, u1 - _u(0.02), 0.48, "005da4")
 	_shape(0.25, 0.42, [-0.09, 0.0, -0.04, -0.12, 0.0, -0.06, 0.04, -0.12, 0.09, 0.0], "ffffff")
-	_circle(0.25, 0.2, 0.018, "ffdd00")
+	for st in [[-0.04, 0.18], [0.04, 0.18], [0.0, 0.25]]: # the three gold stars of the Counts of Celje
+		_star(0.25 + _u(st[0]), st[1], 0.022, "ffdd00")
 
 static func _rs() -> void:
 	_h(["c6363c", "0c4076", "ffffff"])

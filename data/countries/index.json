@@ -65,6 +65,12 @@
 			"name": {"pl": "Kanada", "en": "Canada", "cs": "Kanada", "is": "Kanada", "de": "Kanada"},
 			"neighbours": ["us"],
 			"favorite_neighbour": "us"
+		},
+		{
+			"code": "si",
+			"name": {"pl": "Słowenia", "en": "Slovenia", "cs": "Slovinsko", "is": "Slóvenía", "de": "Slowenien"},
+			"neighbours": ["at", "it", "hu", "hr"],
+			"favorite_neighbour": "hr"
 		}
 	]
 }

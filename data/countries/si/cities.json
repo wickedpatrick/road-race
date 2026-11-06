@@ -1,0 +1,22 @@
+{
+	"ljubljana": {
+		"name": "Ljubljana",
+		"lat": 46.05,
+		"lon": 14.51,
+		"pop": 295,
+		"region": "Osrednjeslovenska",
+		"exonym": {"pl": "Lublana", "cs": "Lublaň", "is": "Ljúblíana"}
+	},
+	"maribor": {"name": "Maribor", "lat": 46.56, "lon": 15.65, "pop": 97, "region": "Podravska"},
+	"celje": {"name": "Celje", "lat": 46.23, "lon": 15.26, "pop": 49, "region": "Savinjska"},
+	"kranj": {"name": "Kranj", "lat": 46.24, "lon": 14.36, "pop": 38, "region": "Gorenjska"},
+	"velenje": {"name": "Velenje", "lat": 46.36, "lon": 15.11, "pop": 33, "region": "Savinjska"},
+	"koper": {"name": "Koper", "lat": 45.55, "lon": 13.73, "pop": 26, "region": "Obalno-kraška"},
+	"novo_mesto": {"name": "Novo mesto", "lat": 45.8, "lon": 15.17, "pop": 24, "region": "Jugovzhodna Slovenija"},
+	"murska_sobota": {"name": "Murska Sobota", "lat": 46.66, "lon": 16.17, "pop": 18, "region": "Pomurska"},
+	"ptuj": {"name": "Ptuj", "lat": 46.42, "lon": 15.87, "pop": 17, "region": "Podravska"},
+	"nova_gorica": {"name": "Nova Gorica", "lat": 45.96, "lon": 13.65, "pop": 13, "region": "Goriška"},
+	"postojna": {"name": "Postojna", "lat": 45.78, "lon": 14.21, "pop": 9, "region": "Primorsko-notranjska"},
+	"bled": {"name": "Bled", "lat": 46.37, "lon": 14.11, "pop": 5, "region": "Gorenjska"},
+	"piran": {"name": "Piran", "lat": 45.53, "lon": 13.57, "pop": 4, "region": "Obalno-kraška"}
+}

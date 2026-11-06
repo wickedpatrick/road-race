@@ -1,0 +1,256 @@
+{
+	"Ljubljana": [
+		{
+			"kind": "tromostovje",
+			"name": {
+				"pl": "Potrójny Most",
+				"en": "The Triple Bridge",
+				"cs": "Trojmostí",
+				"is": "Þríbrúin",
+				"de": "Dreibrücke"
+			},
+			"desc": {
+				"pl": "Trzy mosty obok siebie nad Ljubljanicą, dzieło architekta Plečnika",
+				"en": "Three bridges side by side over the Ljubljanica, by the architect Plečnik",
+				"cs": "Tři mosty vedle sebe přes Lublaňku od architekta Plečnika",
+				"is": "Þrjár brýr hlið við hlið yfir Ljubljanica, eftir arkitektinn Plečnik",
+				"de": "Drei Brücken nebeneinander über die Ljubljanica, vom Architekten Plečnik"
+			},
+			"local": "Tromostovje"
+		}
+	],
+	"Maribor": [
+		{
+			"kind": "stara_trta",
+			"name": {
+				"pl": "Stara Winorośl",
+				"en": "The Old Vine",
+				"cs": "Stará réva",
+				"is": "Gamli vínviðurinn",
+				"de": "Die Alte Rebe"
+			},
+			"desc": {
+				"pl": "Ma ponad 400 lat i wciąż rodzi winogrona",
+				"en": "Over 400 years old and still bearing grapes",
+				"cs": "Je jí přes 400 let a stále rodí hrozny",
+				"is": "Yfir 400 ára og ber enn vínber",
+				"de": "Über 400 Jahre alt und trägt noch immer Trauben"
+			},
+			"local": "Stara trta"
+		}
+	],
+	"Celje": [
+		{
+			"kind": "celje_castle",
+			"name": {
+				"pl": "Stary Zamek Celje",
+				"en": "Celje Old Castle",
+				"cs": "Starý hrad Celje",
+				"is": "Gamli kastalinn í Celje",
+				"de": "Alte Burg Cilli"
+			},
+			"desc": {
+				"pl": "Największy zamek Słowenii, na wzgórzu nad Sawinją",
+				"en": "Slovenia's biggest castle, on a hill above the Savinja",
+				"cs": "Největší hrad Slovinska na kopci nad Savinjou",
+				"is": "Stærsti kastali Slóveníu, á hæð yfir Savinja",
+				"de": "Sloweniens größte Burg, auf einem Hügel über der Sann"
+			},
+			"local": "Stari grad Celje"
+		}
+	],
+	"Kranj": [
+		{
+			"kind": "kranj_church",
+			"name": {
+				"pl": "Kościół św. Kancjana",
+				"en": "St Cantius Church",
+				"cs": "Kostel sv. Kanciána",
+				"is": "Kirkja heilags Cantiusar",
+				"de": "Kirche St. Kanzian"
+			},
+			"desc": {
+				"pl": "Gotycki kościół z wysoką dzwonnicą w środku starówki",
+				"en": "A Gothic church with a tall bell tower in the old town",
+				"cs": "Gotický kostel s vysokou zvonicí uprostřed starého města",
+				"is": "Gotnesk kirkja með háum klukkuturni í gamla bænum",
+				"de": "Eine gotische Kirche mit hohem Glockenturm in der Altstadt"
+			},
+			"local": "Cerkev sv. Kancijana"
+		}
+	],
+	"Velenje": [
+		{
+			"kind": "velenje_headframe",
+			"name": {
+				"pl": "Kopalnia węgla w Velenju",
+				"en": "The Velenje Coal Mine",
+				"cs": "Uhelný důl Velenje",
+				"is": "Kolanáman í Velenje",
+				"de": "Kohlebergwerk Velenje"
+			},
+			"desc": {
+				"pl": "Wieża wyciągowa nad szybem, a w środku muzeum górnictwa",
+				"en": "A winding tower over the shaft, with a mining museum inside",
+				"cs": "Těžní věž nad šachtou a uvnitř hornické muzeum",
+				"is": "Lyftuturn yfir námuopinu, með námusafni inni",
+				"de": "Ein Förderturm über dem Schacht, darin ein Bergbaumuseum"
+			},
+			"local": "Premogovnik Velenje"
+		}
+	],
+	"Koper": [
+		{
+			"kind": "praetorian_palace",
+			"name": {
+				"pl": "Pałac Pretorów",
+				"en": "The Praetorian Palace",
+				"cs": "Praetorský palác",
+				"is": "Höll landstjórans",
+				"de": "Prätorenpalast"
+			},
+			"desc": {
+				"pl": "Wenecki pałac z blankami i loggią na głównym placu",
+				"en": "A Venetian palace with battlements and a loggia on the main square",
+				"cs": "Benátský palác s cimbuřím a lodžií na hlavním náměstí",
+				"is": "Feneysk höll með skotraufum og súlnagöngum á aðaltorginu",
+				"de": "Ein venezianischer Palast mit Zinnen und Loggia am Hauptplatz"
+			},
+			"local": "Pretorska palača"
+		}
+	],
+	"Novo mesto": [
+		{
+			"kind": "situla",
+			"name": {
+				"pl": "Situla z Novego Mesta",
+				"en": "The Novo Mesto Situla",
+				"cs": "Situla z Nového Mesta",
+				"is": "Bronsfatan frá Novo mesto",
+				"de": "Situla von Novo mesto"
+			},
+			"desc": {
+				"pl": "Brązowe wiadro sprzed 2500 lat z wytłoczonymi ludźmi i zwierzętami",
+				"en": "A 2,500-year-old bronze bucket with people and animals pressed into it",
+				"cs": "Bronzové vědro staré 2500 let s vytepanými lidmi a zvířaty",
+				"is": "2500 ára bronsfata með mönnum og dýrum þrykktum í",
+				"de": "Ein 2500 Jahre alter Bronzeeimer mit getriebenen Menschen und Tieren"
+			},
+			"local": "Situla"
+		}
+	],
+	"Murska Sobota": [
+		{
+			"kind": "mura_mill",
+			"name": {
+				"pl": "Pływający młyn na Murze",
+				"en": "A Floating Mill on the Mura",
+				"cs": "Plovoucí mlýn na Muře",
+				"is": "Fljótandi mylla á Mura",
+				"de": "Schiffmühle an der Mur"
+			},
+			"desc": {
+				"pl": "Drewniany młyn na łodziach, koło kręci sam nurt rzeki",
+				"en": "A wooden mill on boats, its wheel turned by the river's current",
+				"cs": "Dřevěný mlýn na lodích, kolo točí proud řeky",
+				"is": "Tréamylla á bátum, straumurinn snýr hjólinu",
+				"de": "Eine Holzmühle auf Booten, die Strömung dreht das Rad"
+			},
+			"local": "Plavajoči mlin"
+		}
+	],
+	"Ptuj": [
+		{
+			"kind": "kurent",
+			"name": {"pl": "Kurent", "en": "The Kurent", "cs": "Kurent", "is": "Kurent", "de": "Kurent"},
+			"desc": {
+				"pl": "Kudłaty stwór z rogami i dzwonkami, który przegania zimę",
+				"en": "A shaggy creature with horns and bells who chases winter away",
+				"cs": "Chlupatá bytost s rohy a zvonci, která zahání zimu",
+				"is": "Loðin vera með horn og bjöllur sem rekur veturinn burt",
+				"de": "Ein zotteliges Wesen mit Hörnern und Glocken, das den Winter vertreibt"
+			},
+			"local": "Kurent"
+		}
+	],
+	"Nova Gorica": [
+		{
+			"kind": "solkan_bridge",
+			"name": {
+				"pl": "Most w Solkanie",
+				"en": "The Solkan Bridge",
+				"cs": "Solkanský most",
+				"is": "Solkan-brúin",
+				"de": "Brücke von Solkan"
+			},
+			"desc": {
+				"pl": "Kamienny most kolejowy nad Soczą, o największym łuku na świecie",
+				"en": "A stone railway bridge over the Soča with the world's widest stone arch",
+				"cs": "Kamenný železniční most přes Soču s největším kamenným obloukem světa",
+				"is": "Steinbrú fyrir lestir yfir Soča með breiðasta steinboga heims",
+				"de": "Eine steinerne Bahnbrücke über die Soča mit dem weitesten Steinbogen der Welt"
+			},
+			"local": "Solkanski most"
+		}
+	],
+	"Postojna": [
+		{
+			"kind": "postojna_cave",
+			"name": {
+				"pl": "Jaskinia Postojna",
+				"en": "Postojna Cave",
+				"cs": "Postojnská jeskyně",
+				"is": "Postojna-hellirinn",
+				"de": "Grotte von Postojna"
+			},
+			"desc": {
+				"pl": "Kolejka wjeżdża między stalaktyty, żyje tu odmieniec jaskiniowy",
+				"en": "A little train rides among stalactites, home of the cave olm",
+				"cs": "Vláček projíždí mezi krápníky, žije tu macarát jeskynní",
+				"is": "Lítil lest ekur á milli dropasteina, heimili hellasalamöndrunnar",
+				"de": "Eine kleine Bahn fährt zwischen Tropfsteinen, Heimat des Grottenolms"
+			},
+			"local": "Postojnska jama"
+		}
+	],
+	"Bled": [
+		{
+			"kind": "bled_island",
+			"name": {
+				"pl": "Wyspa na Jeziorze Bled",
+				"en": "Bled Island",
+				"cs": "Ostrov na Bledském jezeře",
+				"is": "Eyjan í Bled-vatni",
+				"de": "Insel im Bleder See"
+			},
+			"desc": {
+				"pl": "Kościół na wysepce, do którego płynie się łodzią pletną",
+				"en": "A church on an islet, reached by a pletna boat",
+				"cs": "Kostel na ostrůvku, kam se pluje lodí pletnou",
+				"is": "Kirkja á eyju sem siglt er til á pletna-bát",
+				"de": "Eine Kirche auf der Insel, zu der man mit dem Pletna-Boot fährt"
+			},
+			"local": "Blejski otok"
+		}
+	],
+	"Piran": [
+		{
+			"kind": "piran_tower",
+			"name": {
+				"pl": "Plac Tartiniego i dzwonnica",
+				"en": "Tartini Square and the Bell Tower",
+				"cs": "Tartiniho náměstí a zvonice",
+				"is": "Tartini-torg og klukkuturninn",
+				"de": "Tartiniplatz und Glockenturm"
+			},
+			"desc": {
+				"pl": "Pomnik skrzypka na placu, a nad nim dzwonnica jak w Wenecji",
+				"en": "The violinist's statue on the square, a Venetian-style bell tower above",
+				"cs": "Socha houslisty na náměstí a nad ní zvonice jako v Benátkách",
+				"is": "Stytta fiðluleikarans á torginu og klukkuturn eins og í Feneyjum",
+				"de": "Die Statue des Geigers auf dem Platz, darüber ein Glockenturm wie in Venedig"
+			},
+			"local": "Tartinijev trg"
+		}
+	]
+}
