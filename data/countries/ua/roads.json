@@ -139,7 +139,7 @@
 		"towns": [["Znamianka", 41], ["Oleksandriia", 77], ["Piatykhatky", 134]],
 		"zones": [
 			[95, "fields", "Kirovohradshchyna"],
-			[220, "fields", "Prydniprovska vysochyna"],
+			[220, "steppe", "Prydniprovska vysochyna"],
 			[245, "industrial", "Prydniprovia"]
 		],
 		"via": [[41, 32.67, 48.72], [77, 33.12, 48.67], [134, 33.71, 48.41], [171, 34.16, 48.34], [208, 34.61, 48.36]]
@@ -255,7 +255,7 @@
 		"km": 270,
 		"road": [[270, "M-05", 3]],
 		"towns": [["Blahovishchenske", 49], ["Kryve Ozero", 92], ["Liubashivka", 107], ["Stari Maiaky", 160], ["Dachne", 250]],
-		"zones": [[110, "fields", "Pobuzhzhia"], [230, "fields", "Prychornomorska nyzovyna"], [270, "fields", "Odeshchyna"]],
+		"zones": [[110, "fields", "Pobuzhzhia"], [230, "steppe", "Prychornomorska nyzovyna"], [270, "steppe", "Odeshchyna"]],
 		"via": [
 			[49, 30.23, 48.33], [92, 30.34, 47.95], [107, 30.26, 47.83], [148, 30.32, 47.46], [160, 30.31, 47.35],
 			[205, 30.36, 46.95], [250, 30.55, 46.58]
@@ -267,7 +267,7 @@
 		"km": 133,
 		"road": "M-14",
 		"towns": [["Pivdenne", 47], ["Berezanka", 81]],
-		"zones": [[35, "coast", "Prychornomoria"], [133, "fields", "Mykolaivshchyna"]],
+		"zones": [[35, "coast", "Prychornomoria"], [133, "steppe", "Mykolaivshchyna"]],
 		"via": [[47, 31.1, 46.62], [81, 31.39, 46.85]]
 	},
 	{
@@ -277,7 +277,7 @@
 		"road": [[82, "H-33"], [110, "P-72"], [278, "M-15"]],
 		"towns": [["Ovidiopol", 40], ["Zatoka", 62], ["Bilhorod-Dnistrovskyi", 82], ["Sarata", 159], ["Tatarbunary", 183]],
 		"zones": [
-			[70, "coast", "Prychornomoria"], [95, "orchard", "Dnistrovskyi lyman"], [230, "fields", "Budzhak"],
+			[70, "coast", "Prychornomoria"], [95, "orchard", "Dnistrovskyi lyman"], [230, "steppe", "Budzhak"],
 			[278, "lakes", "Prydunaiski ozera"]
 		],
 		"via": [
@@ -291,7 +291,7 @@
 		"km": 188,
 		"road": [[8, "M-14"], [82, "H-14"], [116, "P-55"], [188, "H-11"]],
 		"towns": [["Novyi Buh", 114], ["Kazanka", 142]],
-		"zones": [[100, "fields", "Mykolaivshchyna"], [172, "fields", "Kryvbas"], [188, "industrial", "Kryvbas"]],
+		"zones": [[100, "steppe", "Mykolaivshchyna"], [172, "steppe", "Kryvbas"], [188, "industrial", "Kryvbas"]],
 		"via": [[38, 32.12, 47.29], [76, 32.1, 47.62], [114, 32.51, 47.69], [142, 32.82, 47.84]]
 	},
 	{
@@ -302,7 +302,7 @@
 		"towns": [["Sofiivka", 39], ["Krynychky", 98]],
 		"zones": [
 			[18, "industrial", "Kryvbas"],
-			[125, "fields", "Prydniprovska vysochyna"],
+			[125, "steppe", "Prydniprovska vysochyna"],
 			[146, "industrial", "Prydniprovia"]
 		],
 		"via": [[39, 33.87, 48.05], [98, 34.46, 48.37]]
@@ -322,7 +322,7 @@
 		"km": 84,
 		"road": "H-08",
 		"towns": [],
-		"zones": [[18, "industrial", "Prydniprovia"], [72, "fields", "Prydniprovia"], [84, "industrial", "Zaporizhzhia"]],
+		"zones": [[18, "industrial", "Prydniprovia"], [72, "steppe", "Prydniprovia"], [84, "industrial", "Zaporizhzhia"]],
 		"via": [[42, 34.94, 48.13]]
 	},
 	{
@@ -354,8 +354,8 @@
 		"towns": [["Nova Vodolaha", 48], ["Berestyn", 104], ["Pereshchepyne", 148], ["Samar", 192]],
 		"zones": [
 			[70, "upland", "Slobozhanshchyna"],
-			[170, "fields", "Prydniprovska nyzovyna"],
-			[217, "fields", "Prydniprovia"]
+			[170, "steppe", "Prydniprovska nyzovyna"],
+			[217, "steppe", "Prydniprovia"]
 		],
 		"via": [[48, 35.86, 49.72], [104, 35.45, 49.37], [148, 35.36, 49.02], [192, 35.22, 48.63]]
 	},
