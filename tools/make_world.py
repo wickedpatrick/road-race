@@ -32,6 +32,7 @@ CS_IS = {"us": ("USA", "Bandaríkin"), "ca": ("Kanada", "Kanada"), "fr": ("Franc
 TOL = 0.6 # px, simplification (less where it would make a ring cross itself)
 LABEL_NUDGE = {"cz": (-6, 3), "sk": (5, 2), "lt": (0, -2)} # px, names that would touch their neighbours' names
 MIN_AREA = 4.0 # px², smaller islands are dropped (1 px² for the planned countries: Malta)
+SIMFEROPOL = (34.10, 44.95) # lon, lat: a point in Crimea
 
 def clip(poly, x0, y0, x1, y1):
 	"""Sutherland-Hodgman against a rectangle (lon/lat)."""
@@ -137,6 +138,17 @@ def main(src):
 	cyp, cyn = by_adm["CYP"], by_adm["CYN"]
 	cyp["geometry"] = {"type": "Polygon", "coordinates": [merge_rings(cyp["geometry"]["coordinates"][0], cyn["geometry"]["coordinates"][0])]}
 	feats = [f for f in feats if f is not cyn]
+	# Crimea is Ukraine's, as the EU and the UN see it (batch 5 spec); Natural Earth draws it inside Russia, as a ring of
+	# its own that shares the Perekop and Chonhar border with Ukraine's mainland: moved over and merged, no line across
+	rus, ukr = by_adm["RUS"], by_adm["UKR"]
+	ring_of = lambda poly: [tuple(p) for p in poly[0]]
+	crimea = [poly for poly in rus["geometry"]["coordinates"] if inside(SIMFEROPOL, ring_of(poly))]
+	if crimea:
+		rus["geometry"]["coordinates"].remove(crimea[0])
+		mainland = max(ukr["geometry"]["coordinates"], key=lambda poly: len(set(ring_of(poly)) & set(ring_of(crimea[0]))))
+		mainland[0] = [list(p) for p in merge_rings(mainland[0], crimea[0][0])]
+	assert any(inside(SIMFEROPOL, ring_of(poly)) for poly in ukr["geometry"]["coordinates"]), "Crimea not in Ukraine"
+	assert not any(inside(SIMFEROPOL, ring_of(poly)) for poly in rus["geometry"]["coordinates"]), "Crimea still in Russia"
 	out = {"_": "made by tools/make_world.py from Natural Earth; screen pixels on 960x540", "planned": PLANNED,
 		"views": [], "countries": {}, "land": []}
 	for name, lon0, lon1, lat0, lat1, rect, skip in VIEWS:
@@ -145,7 +157,7 @@ def main(src):
 		s = min(rect[2] / w, rect[3] / h)
 		ox = rect[0] + (rect[2] - w * s) / 2
 		oy = rect[1] + (rect[3] - h * s) / 2
-		out["views"].append({"name": name, "rect": [round(ox), round(oy), round(w * s), round(h * s)]})
+		out["views"].append({"name": name, "rect": [round(ox), round(oy), round(w * s), round(h * s)], "lonlat": [lon0, lon1, lat0, lat1]})
 		proj = lambda p: (round(ox + (p[0] - lon0) * k * s, 1), round(oy + (lat1 - p[1]) * s, 1))
 		for f in feats:
 			code = f["properties"]["ISO_A2_EH"].lower()

@@ -62,6 +62,10 @@ func _check_trips(t, code: String) -> void:
 				ok = false; print("  %s: trip %s-%s broken" % [code, a, b])
 			for zz in [10.0, s.length * 0.5, s.length - 10.0]:
 				if Route.speed_limit_at(s, zz) <= 0 and not (Route.lanes_at(s, zz) == 3 and Geo.limits().has("unlimited_beyond_km")): ok = false
+			for br in s.bridges:
+				if br.z1 - br.z0 < Route.BRIDGE_MIN - 0.5: ok = false; print("  %s: trip %s-%s: %s squeezed (%.0f m)" % [code, a, b, br.name, br.z1 - br.z0])
+			if Geo.roads().any(func(r): return r.has("bridge") and ((r.a == a and r.b == b) or (r.a == b and r.b == a))) and s.bridges.is_empty():
+				ok = false; print("  %s: trip %s-%s lost its bridge" % [code, a, b])
 			for tn in s.tunnels:
 				for tw in s.towns:
 					if tw.z + tw.half > tn.z0 and tw.z - tw.half < tn.z1: ok = false; print("  %s: %s-%s tunnel in a town" % [code, a, b])
@@ -133,6 +137,11 @@ func _check_country(t, code: String, rules: Dictionary) -> void:
 		for tn in r.get("tunnels", []):
 			if not (tn.from_km > 0.0 and tn.from_km < tn.to_km and tn.to_km < r.km) or not (tn.name is String and tn.fact is String):
 				roads_ok = false; print("  %s: road %s: bad tunnel" % [code, tag])
+		if r.has("bridge"):
+			var br: Dictionary = r.bridge
+			if not (br.from_km >= 0.0 and br.from_km < br.to_km and br.to_km <= r.km) or not br.get("name") is String \
+					or not (br.get("color", "") == "" or (br.color is String and Color.html_is_valid(br.color))):
+				roads_ok = false; print("  %s: road %s: bad bridge" % [code, tag])
 	t.check(roads_ok, "%s: roads consistent" % code)
 	# every city reachable from every other one
 	var seen := {}
@@ -177,3 +186,23 @@ func _check_world(t) -> void:
 			if Geometry2D.is_point_in_polygon(Vector2(c.label[0], c.label[1]), pts): inside = true
 		if not inside or not w.planned.has(code): ok = false; print("  world.json: %s missing or its name outside it" % code)
 	t.check(ok, "every country in the game is on the picker's map, named inside its borders")
+	# Crimea is Ukraine's on the picker (Simferopol's point in Europe's view), never Russia's
+	var simferopol := _world_point(w.views[0], 34.10, 44.95)
+	t.check(_in_country(w, "ua", simferopol) and not _in_country(w, "ru", simferopol), "Crimea is Ukraine's on the picker (%s)" % simferopol)
+	t.check(_in_country(w, "ru", _world_point(w.views[0], 37.62, 55.75)) and _in_country(w, "ua", _world_point(w.views[0], 30.52, 50.45)),
+		"Moscow in Russia, Kyiv in Ukraine")
+
+## A lon/lat point on the picker's screen in one of world.json's views (as tools/make_world.py projects it).
+static func _world_point(view: Dictionary, lon: float, lat: float) -> Vector2:
+	var ll: Array = view.lonlat
+	var r: Array = view.rect
+	var k := cos(deg_to_rad((ll[2] + ll[3]) * 0.5))
+	var s: float = r[3] / (ll[3] - ll[2])
+	return Vector2(r[0] + (lon - ll[0]) * k * s, r[1] + (ll[3] - lat) * s)
+
+static func _in_country(w: Dictionary, code: String, p: Vector2) -> bool:
+	for f in w.countries.get(code, {}).get("polys", []):
+		var pts := PackedVector2Array()
+		for i in range(0, f.size(), 2): pts.append(Vector2(f[i], f[i + 1]))
+		if Geometry2D.is_point_in_polygon(p, pts): return true
+	return false
