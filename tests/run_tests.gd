@@ -12,7 +12,7 @@ func _init() -> void:
 	var files := DirAccess.get_files_at("res://tests")
 	files.sort()
 	for f in files:
-		if f.begins_with("test_") and f.ends_with(".gd"):
+		if f.begins_with("test_") and f.ends_with(".gd") and (OS.get_environment("RR_ONLY") == "" or f.contains(OS.get_environment("RR_ONLY"))): # RR_ONLY=ferry: one file
 			var script = load("res://tests/" + f)
 			if script == null or not script.can_instantiate(): # a test file that does not compile is a failure too
 				check(false, "%s does not compile" % f)

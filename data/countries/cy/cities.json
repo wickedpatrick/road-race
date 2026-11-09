@@ -1,0 +1,51 @@
+{
+	"lefkosia": {
+		"name": "Lefkosia",
+		"lat": 35.165,
+		"lon": 33.36,
+		"pop": 245,
+		"region": "Lefkosia",
+		"exonym": {"pl": "Nikozja", "en": "Nicosia", "cs": "Nikósie", "is": "Nikósía", "de": "Nikosia"}
+	},
+	"lemesos": {
+		"name": "Lemesos",
+		"lat": 34.68,
+		"lon": 33.04,
+		"pop": 195,
+		"region": "Lemesos",
+		"exonym": {"pl": "Limassol", "en": "Limassol", "cs": "Limassol", "is": "Limassol", "de": "Limassol"}
+	},
+	"larnaka": {"name": "Larnaka", "lat": 34.92, "lon": 33.63, "pop": 90, "region": "Larnaka", "exonym": {"en": "Larnaca"}},
+	"pafos": {
+		"name": "Pafos",
+		"lat": 34.775,
+		"lon": 32.43,
+		"pop": 70,
+		"region": "Pafos",
+		"exonym": {"en": "Paphos", "de": "Paphos"}
+	},
+	"paralimni": {"name": "Paralimni", "lat": 35.035, "lon": 33.98, "pop": 16, "region": "Kokkinochoria"},
+	"agia_napa": {
+		"name": "Agia Napa",
+		"lat": 34.99,
+		"lon": 34,
+		"pop": 4,
+		"region": "Kokkinochoria",
+		"exonym": {"pl": "Ayia Napa", "en": "Ayia Napa", "cs": "Ayia Napa", "is": "Ayia Napa", "de": "Ayia Napa"}
+	},
+	"polis": {"name": "Polis", "lat": 35.035, "lon": 32.425, "pop": 2, "region": "Pafos"},
+	"platres": {
+		"name": "Platres",
+		"lat": 34.89,
+		"lon": 32.86,
+		"pop": 0,
+		"region": "Lemesos",
+		"note": {
+			"pl": "letnisko w sosnowych lasach gór Troodos",
+			"en": "a summer resort in the pine forests of the Troodos",
+			"cs": "letovisko v borových lesích pohoří Troodos",
+			"is": "sumardvalarstaður í furuskógum Troodos-fjalla",
+			"de": "Sommerfrische in den Kiefernwäldern des Troodos"
+		}
+	}
+}

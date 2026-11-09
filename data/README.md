@@ -26,7 +26,9 @@ Numbers: distances along a road in real kilometres from city `a`; populations in
   (0..1) shape the horizon, optional `ice` (0..1) keeps snow caps on the far mountains all year (glaciers),
   `weather` is the usual weather there (`sun`, `cloudy`, `rain`, `fog`, `autumn`, `snow`; see `Weather`).
   What grows beside the road per landscape is in `Scenery._nature` (`lava`, `highland`, `glacier`, `fjords`: the
-  treeless north in `Scenery._iceland`).
+  treeless north in `Scenery._iceland`; `desert`: `Scenery._desert`; `mediterranean`: olives, cypresses, maquis, dry-stone
+  walls (`stonewall`, kept clear of the shoulder) and white houses in the settlements, `Scenery._mediterranean`; the
+  stone and the house walls take the palette's `stone` and `wall`).
 - `biomes` may also give their `grass`: `{season: ["#rrggbb", "#rrggbb"]}` (the two bands, e.g. moorland brown);
   the grass turns from one landscape's into the next one's over 150 m.
 - `landmark_sizes`: landmark painter kind -> `[width, height]` in metres (see `LandmarkPainter`).
@@ -71,7 +73,8 @@ cities and `borders` on its roads (below).
   boards (`board`, `board_motorway`); optional `board_text` for the lettering on the ordinary boards (white by
   default, black on Germany's yellow ones).
 - `palette` (optional): the country's own colours by season, over the default ones (`src/view/season_palette.gd`
-  keys: `grass_a`, `grass_b`, `tree`, `crop_a`, ...), e.g. Britain's dark green grass; `biomes`: landscape ->
+  keys: `grass_a`, `grass_b`, `tree`, `crop_a`, ..., `stone` for dry-stone walls and `wall` for the Mediterranean
+  houses), e.g. Britain's dark green grass, Malta's honey-coloured limestone; `biomes`: landscape ->
   `{season: [grass_a, grass_b]}`, over the landscape's `grass` in rules.json.
 - `weather`: how the country's roads get their weather (shown on the map, it sets the look and the grip):
   `default`, `landscape` (false: the default everywhere, e.g. snow in Iceland; true: from the road's longest
@@ -123,6 +126,32 @@ List of roads between two neighbouring cities `a` and `b` (travelling `b` -> `a`
   red-white barriers on both sides, guard booths, a canopy over the lanes, and a board with the name and flag of the
   country entered. Nothing stops the car. The crossing is moved off town streets and tunnels if it falls on them;
   stations and direction boards keep clear of it.
+- `ferry` (optional): `{from_km, to_km, name, fact}`, the sea between two quays in the `a` -> `b` direction (`b` ->
+  `a` mirrors the km); `name` is plain, `fact` texts by language. The driven road ends at `from_km` and goes on from
+  `to_km`: the sea is not driven (the track is the driven km's, plus `Route.FERRY_GAP` from the barrier to the far
+  quay's ramp), towns, zones, tunnels and borders out at sea are dropped. The quay runs `Route.FERRY_QUAY` track
+  metres up to a barrier across the road (driving into it is a crash); stopped on the quay the car boards, a chase
+  ends, and the crossing takes `Race.FERRY_TIME` seconds off the clock (no time limit, no fuel), then the car comes
+  off the ramp on the far quay. Stations, boards, crossings and tunnels keep clear of the quays and the far pier (`Route.FAR_PIER` past the ramp; a short ferry trip with no free spot has no station), traffic too; the
+  time limit gets `Route.FERRY_STOP_TIME` per ferry. The trip's `km` stays the real total (the map), and the sea
+  counts in full in every real distance (boards, HUD, mini-map, km driven). A port city's streets end at its quay:
+  when `from_km` (or `km - to_km`) would put the quay (or the far ramp) inside a city's or town's streets, open road
+  is put in between, at least `Route.FERRY_CLEAR` metres past them (so `from_km: 0` / `to_km: km` are fine, a road
+  may even be all sea); the track is never scaled by fewer than `Route.MIN_DRIVEN` km. Pulled over by the police
+  the car boards only once the ticket is written. Not handled: tunnels on a quay, borders out at sea (dropped).
+  Drawn: a blue ferry sign with `name` before the quay, a flat straight concrete pier over the water (bollards,
+  lamps, terminal, containers, crane), closed barriers and the ship with its stern ramp down; past the barrier only
+  the sea until the crossing, a ~3 s ferry screen (the ship crossing with the car on deck, `name`, the sea km and
+  `fact`), and on the maps the sea part of the road dashed. Traffic rolls up the quay slowly into the ship.
+
+## `countries/<code>/native.json` (optional)
+
+`{"Latin name": "native spelling", ...}` for cities, towns and regions of a country whose signs are bilingual (Greek,
+Cyrillic), e.g. `"Thessaloníki": "Θεσσαλονίκη"`; missing file = `{}` (`Geo.native(name)` gives `""`). A place-name
+sign, a distance board row and the region board then show the native spelling on top (larger) and the Latin one
+below it (~70%), in the same colour; boards with a native name have taller rows. Names without an entry stay one
+line. The font has Greek and Cyrillic; `Scenery.sign_texts` warms the native texts too. Preview: `RR_NATIVE=1` in
+`tests/game_preview.gd` (the fixture of `tests/test_native.gd`).
 
 ## `countries/<code>/facts.json`
 

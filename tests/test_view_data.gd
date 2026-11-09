@@ -4,14 +4,20 @@ class Pen:
 	var n := 0
 	func draw_line(_a, _b, _c, _w := 1.0) -> void: n += 1
 	func draw_circle(_p, _r, _c) -> void: n += 1
-	func draw_rect(_r, _c) -> void: n += 1
-	func draw_colored_polygon(_p, _c) -> void: n += 1
+	var cols := []
+	func draw_rect(_r, c) -> void:
+		n += 1
+		cols.append(c)
+	func draw_colored_polygon(_p, c) -> void:
+		n += 1
+		cols.append(c)
 	func draw_set_transform(_p, _r := 0.0, _s := Vector2.ONE) -> void: pass
 
 func run(t) -> void:
 	_test_scrolling_map(t)
 	_test_batch_clip(t)
 	_test_postcards(t)
+	_test_mediterranean(t)
 	t.check(Postcards.summary("is", {}) == {"earned": 0, "all": 25, "stamps": 0, "max": 65}, "album of a country never played: nothing earned yet")
 	t.check(Postcards.summary("is", {"reykjavik": {"stamps": 3}}) == {"earned": 1, "all": 25, "stamps": 3, "max": 65}, "album counts postcards and stamps")
 	for kind in ["cow", "sheep", "horse"]:
@@ -115,3 +121,35 @@ func _test_postcards(t) -> void:
 	GameData.set_language("en")
 	t.check(PostcardPainter.caption("pl", "warszawa")[1].contains("Palace of Culture") and PostcardPainter.caption("pl", "warszawa")[0] == "Warsaw", "caption in the player's language")
 	GameData.set_language("pl")
+
+## The Mediterranean landscape: olives and cypresses, no northern trees, white houses in the towns, all painted.
+func _test_mediterranean(t) -> void:
+	t.check(Biome.all().has("mediterranean") and Biome.get_data("mediterranean").weather == "sun", "the mediterranean biome exists, in sun")
+	var st := Route.build("krakow", "warszawa")
+	st["zones"] = [{"z0": 0.0, "z1": st.length + 1000.0, "biome": "mediterranean", "region": "Test"}]
+	var items := Scenery.build(st, 1)
+	var count := {}
+	for idx in items:
+		for it in items[idx]: count[it.type] = count.get(it.type, 0) + 1
+	t.check(count.get("olive", 0) > 0 and count.get("cypress", 0) > 0 and count.get("maquis", 0) > 0 and count.get("stonewall", 0) > 0, "olives, cypresses, maquis and dry-stone walls by the road (%s)" % [count])
+	t.check(count.get("spruce", 0) == 0 and count.get("birch", 0) == 0 and count.get("pine", 0) == 0, "no spruce, birch or pine")
+	t.check(count.get("whitehouse", 0) > 0 and count.get("house", 0) == 0, "white houses in the settlements (%s)" % [count])
+	for kind in ["olive", "cypress", "maquis", "stonewall", "whitehouse"]:
+		var pen := Pen.new()
+		Scenery.draw_item(pen, {"type": kind, "v": 0.3, "c": 1, "w": 4.0, "h": 5.0, "lat": 10.0}, Vector2(400, 400), 6.0, SeasonPalette.by_name("summer"), "summer", null)
+		t.check(pen.n > 0, "%s is drawn" % kind)
+	# dry-stone walls stand clear of the shoulder like the other solid things (their near end at least 7.8 m out)
+	var walls := []
+	for idx in items:
+		for it in items[idx]:
+			if it.type == "stonewall": walls.append(absf(it.lat) - it.w * 0.5)
+	t.check(not walls.is_empty() and walls.all(func(d): return d >= 7.8), "dry-stone walls clear of the shoulder (nearest %.1f m)" % (walls.min() if not walls.is_empty() else -1.0))
+	# the stone and the house walls take the country's palette (Malta's honey limestone)
+	var honey := Color("d8b878")
+	for kind in ["stonewall", "whitehouse"]:
+		var pal: Dictionary = SeasonPalette.by_name("summer").duplicate()
+		pal["stone"] = honey
+		pal["wall"] = honey
+		var pen := Pen.new()
+		Scenery.draw_item(pen, {"type": kind, "v": 0.3, "c": 1, "w": 4.0, "h": 5.0, "lat": 10.0}, Vector2(400, 400), 6.0, pal, "summer", null)
+		t.check(pen.cols.has(honey), "%s in the palette's stone colour" % kind)

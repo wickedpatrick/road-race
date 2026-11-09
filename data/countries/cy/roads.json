@@ -1,0 +1,84 @@
+[
+	{
+		"a": "lefkosia",
+		"b": "lemesos",
+		"km": 80,
+		"road": "A1",
+		"towns": [["Latsia", 6], ["Pera Chorio", 15], ["Kornos", 29], ["Kofinou", 43], ["Choirokoitia", 49], ["Moni", 64]],
+		"zones": [[26, "fields", "Lefkosia"], [56, "mediterranean", "Larnaka"], [80, "coast", "Lemesos"]],
+		"via": [[15, 33.39, 35.02], [29, 33.4, 34.92], [43, 33.39, 34.82], [49, 33.34, 34.8], [64, 33.2, 34.72]]
+	},
+	{
+		"a": "lefkosia",
+		"b": "larnaka",
+		"km": 48,
+		"road": [[14, "A1"], [48, "A2"]],
+		"towns": [["Latsia", 6], ["Aradippou", 41]],
+		"zones": [[20, "fields", "Lefkosia"], [48, "mediterranean", "Larnaka"]],
+		"via": [[14, 33.39, 35.03], [26, 33.47, 34.975], [41, 33.59, 34.95]]
+	},
+	{
+		"a": "larnaka",
+		"b": "lemesos",
+		"km": 65,
+		"road": [[28, "A5"], [65, "A1"]],
+		"towns": [["Dromolaxia", 7], ["Anglisides", 18], ["Kofinou", 28], ["Choirokoitia", 34], ["Moni", 49]],
+		"zones": [[36, "mediterranean", "Larnaka"], [65, "coast", "Lemesos"]],
+		"via": [[7, 33.585, 34.875], [18, 33.47, 34.85], [28, 33.39, 34.82], [34, 33.34, 34.8], [49, 33.2, 34.72]]
+	},
+	{
+		"a": "lemesos",
+		"b": "pafos",
+		"km": 68,
+		"road": "A6",
+		"towns": [["Kolossi", 11], ["Pissouri", 34], ["Kouklia", 52], ["Geroskipou", 63]],
+		"zones": [[18, "mediterranean", "Lemesos"], [40, "coast", "Lemesos"], [68, "coast", "Pafos"]],
+		"via": [[11, 32.93, 34.67], [34, 32.7, 34.67], [52, 32.57, 34.71], [63, 32.45, 34.76]]
+	},
+	{
+		"a": "pafos",
+		"b": "polis",
+		"km": 36,
+		"road": "B7",
+		"towns": [["Tsada", 10], ["Stroumpi", 17], ["Skoulli", 29]],
+		"zones": [[12, "mediterranean", "Pafos"], [28, "upland", "Pafos"], [36, "mediterranean", "Chrysochou"]],
+		"via": [[10, 32.47, 34.84], [17, 32.48, 34.89], [29, 32.46, 34.99]]
+	},
+	{
+		"a": "lemesos",
+		"b": "platres",
+		"km": 37,
+		"road": "B8",
+		"towns": [["Palodeia", 9], ["Trimiklini", 22], ["Saittas", 27], ["Moniatis", 31]],
+		"zones": [[14, "mediterranean", "Lemesos"], [37, "mountains", "Troodos"]],
+		"via": [[9, 33, 34.73], [22, 32.93, 34.85], [27, 32.92, 34.87], [31, 32.9, 34.88]]
+	},
+	{
+		"a": "lefkosia",
+		"b": "platres",
+		"km": 80,
+		"road": [[30, "A9"], [71, "B9"], [80, "B8"]],
+		"towns": [["Kokkinotrimithia", 15], ["Astromeritis", 30], ["Evrychou", 45], ["Kakopetria", 56], ["Troodos", 71]],
+		"zones": [[32, "fields", "Lefkosia"], [52, "mediterranean", "Solea"], [80, "mountains", "Troodos"]],
+		"via": [[15, 33.2, 35.145], [30, 33.04, 35.125], [45, 32.9, 35.04], [56, 32.9, 34.99], [71, 32.88, 34.92]],
+		"weather": "snow"
+	},
+	{
+		"a": "larnaka",
+		"b": "agia_napa",
+		"km": 42,
+		"road": "A3",
+		"towns": [["Oroklini", 9], ["Xylofagou", 24], ["Liopetri", 31]],
+		"zones": [[12, "coast", "Larnaka"], [26, "mediterranean", "Larnaka"], [42, "fields", "Kokkinochoria"]],
+		"via": [[9, 33.65, 34.98], [24, 33.85, 34.975], [31, 33.89, 35]]
+	},
+	{
+		"a": "agia_napa",
+		"b": "paralimni",
+		"km": 14,
+		"road": "E306",
+		"towns": [["Protaras", 9]],
+		"zones": [[14, "coast", "Kokkinochoria"]],
+		"via": [[9, 34.055, 35.01]]
+	}
+]

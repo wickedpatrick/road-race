@@ -148,6 +148,9 @@ dostają tyle, ile ma sens.
       (trójkąt w Europie, żółty romb w USA/Kanadzie).
 - [ ] Nowe krainy w `Biome`, gdy potrzebne (np. Alpy wysokogórskie, fiordy, pustynia/prerie w USA,
       tajga w Kanadzie, wybrzeże śródziemnomorskie z gajami oliwnymi).
+- [x] **Prom** (`ferry`): droga z odcinkiem morskim (nabrzeże, zamknięte szlabany, statek z opuszczoną rampą, ekran
+      promu z rejsem w czasie `Race.FERRY_TIME`, dystans morski wliczany do kilometrów, przerywana linia drogi na mapach).
+      Używany na trasach Grecja - Kreta i Malta - Gozo.
 - [ ] Skala trasy: przy dużych odległościach (USA, Kanada) sprawdzić `m_per_km`, długość odcinków,
       stacje i limit czasu, żeby trasy nie były za długie.
 - [ ] Policja/radar per kraj (limity, tolerancja), opcjonalnie lokalny wygląd radiowozu.
@@ -174,14 +177,16 @@ Dla każdego kraju: lista miast z populacją i lat/lon, sieć dróg łącząca s
 trasy sensowne), miejscowości po drodze, krainy, ciekawostki po polsku, kontur granicy. Weryfikacja: test,
 że graf jest spójny, każda droga ma kraje/strefy w zakresie km, a `tests/sign_positions.gd` daje sensowne trasy.
 
-- [ ] Partia 1 (priorytet): **Wielka Brytania (Anglia obowiązkowo, 30)**, **USA (30)**, **Kanada (30)**,
+- [x] Partia 1 (priorytet): **Wielka Brytania (Anglia obowiązkowo, 30)**, **USA (30)**, **Kanada (30)**,
       Niemcy (30), Czechy, Słowacja, Litwa.
 - [ ] Partia 2: Francja (30), Włochy (30), Hiszpania (30), Portugalia, Holandia, Belgia, Luksemburg,
       Austria, Szwajcaria (z Liechtensteinem).
 - [ ] Partia 3: Dania, Szwecja, Norwegia, Finlandia, Islandia, Irlandia, Estonia, Łotwa.
-- [ ] Partia 4: Węgry, Słowenia, Chorwacja, Bośnia i Hercegowina, Serbia, mapa „Bałkany Południowe”
-      (Czarnogóra, Kosowo, Albania, Macedonia Północna), Bułgaria, Rumunia, Mołdawia, Grecja, Cypr, Malta.
-      Szczegóły w decyzjach z 2026-11-06 niżej.
+- [x] Partia 4: Słowenia, Chorwacja, Bośnia i Hercegowina, Serbia, mapa „Bałkany Południowe” (Czarnogóra, Kosowo,
+      Albania, Macedonia Północna), Węgry, Rumunia, Bułgaria, Mołdawia z Naddniestrzem (jako zwykła Mołdawia),
+      Grecja z Kretą (promem z Pireusu do Heraklionu), Cypr (tylko część południowa pod kontrolą Republiki; na
+      wyborze kraju cała wyspa jako Cypr), Malta z Gozo (promem). Nowy krajobraz śródziemnomorski (oliwki,
+      cyprysy, makia, białe domy, kamienne murki). Szczegóły w decyzjach z 2026-11-06 niżej.
 - [ ] Partia 5: Ukraina (30), Rosja (30, europejska i azjatycka część: Moskwa, Petersburg, ale też Syberia),
       Białoruś, Turcja (30).
 

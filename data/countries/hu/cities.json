@@ -1,0 +1,36 @@
+{
+	"budapest": {
+		"name": "Budapest",
+		"lat": 47.5,
+		"lon": 19.04,
+		"pop": 1686,
+		"region": "Budapest",
+		"exonym": {"pl": "Budapeszt", "cs": "Budapešť", "is": "Búdapest"}
+	},
+	"debrecen": {"name": "Debrecen", "lat": 47.53, "lon": 21.63, "pop": 199, "region": "Hajdú-Bihar"},
+	"szeged": {"name": "Szeged", "lat": 46.25, "lon": 20.15, "pop": 159, "region": "Csongrád-Csanád"},
+	"miskolc": {"name": "Miskolc", "lat": 48.1, "lon": 20.78, "pop": 150, "region": "Borsod-Abaúj-Zemplén"},
+	"pecs": {"name": "Pécs", "lat": 46.07, "lon": 18.23, "pop": 139, "region": "Baranya", "exonym": {"pl": "Pecz"}},
+	"gyor": {"name": "Győr", "lat": 47.69, "lon": 17.63, "pop": 129, "region": "Győr-Moson-Sopron"},
+	"nyiregyhaza": {"name": "Nyíregyháza", "lat": 47.96, "lon": 21.72, "pop": 116, "region": "Szabolcs-Szatmár-Bereg"},
+	"kecskemet": {"name": "Kecskemét", "lat": 46.91, "lon": 19.69, "pop": 108, "region": "Bács-Kiskun"},
+	"szekesfehervar": {"name": "Székesfehérvár", "lat": 47.19, "lon": 18.41, "pop": 95, "region": "Fejér"},
+	"szombathely": {"name": "Szombathely", "lat": 47.23, "lon": 16.62, "pop": 78, "region": "Vas"},
+	"szolnok": {"name": "Szolnok", "lat": 47.17, "lon": 20.18, "pop": 70, "region": "Jász-Nagykun-Szolnok"},
+	"sopron": {"name": "Sopron", "lat": 47.68, "lon": 16.59, "pop": 62, "region": "Győr-Moson-Sopron"},
+	"kaposvar": {"name": "Kaposvár", "lat": 46.36, "lon": 17.8, "pop": 59, "region": "Somogy"},
+	"bekescsaba": {"name": "Békéscsaba", "lat": 46.68, "lon": 21.09, "pop": 57, "region": "Békés"},
+	"veszprem": {"name": "Veszprém", "lat": 47.09, "lon": 17.91, "pop": 56, "region": "Veszprém"},
+	"zalaegerszeg": {"name": "Zalaegerszeg", "lat": 46.84, "lon": 16.84, "pop": 55, "region": "Zala"},
+	"eger": {"name": "Eger", "lat": 47.9, "lon": 20.37, "pop": 52, "region": "Heves"},
+	"esztergom": {
+		"name": "Esztergom",
+		"lat": 47.79,
+		"lon": 18.74,
+		"pop": 27,
+		"region": "Komárom-Esztergom",
+		"exonym": {"pl": "Ostrzyhom", "cs": "Ostřihom"}
+	},
+	"siofok": {"name": "Siófok", "lat": 46.9, "lon": 18.05, "pop": 25, "region": "Somogy"},
+	"tokaj": {"name": "Tokaj", "lat": 48.12, "lon": 21.41, "pop": 4, "region": "Borsod-Abaúj-Zemplén"}
+}

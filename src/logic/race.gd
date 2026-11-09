@@ -5,6 +5,8 @@ signal collided(car_index: int)
 signal crashed ## hit a sign, a tree, a lamp post or a tunnel wall
 signal fined
 signal police_crashed ## a patrol car shaken off: it went off the road or into another car
+signal ferry_started(ferry: Dictionary) ## stopped on a quay: the car is aboard (Route ferries)
+signal ferry_ended ## off the ramp on the far quay
 const STATION_HALF_LEN := 40.0
 const STOP_SPEED := 3.0
 const SHOULDER_MIN := 0.5 ## fraction of the car that must be off the road to refuel
@@ -54,6 +56,8 @@ const SWERVE_STEER := 0.9 ## steering this hard counts as a sharp turn
 const SWERVE_GAP := 1.5 ## seconds: a slower next change of direction starts the count again
 const POLICE_OFF_X := 1.7 ## the crashed patrol car ends up this far out (or against the median barrier)
 const POLICE_CRASH_DECEL := 22.0
+const FERRY_TIME := 3.0 ## seconds of the crossing, off the clock: no time limit, no fuel
+const FERRY_LANE := 0.5 ## x where the car comes off the ramp (the driving lane)
 const POLICE_EASE_DECEL := 3.0 ## m/s^2: pulled over above the escape speed the car first only rolls off, which leaves
 ## a few seconds for the swerves (a faster car longer); below it the usual PULL_OVER_DECEL
 
@@ -99,6 +103,8 @@ var _grip_brake := 1.0
 var _grip_accel := 1.0
 var _inertia := 0.0 ## Weather.inertia: how late the sideways movement follows the steering
 var _lat_v := 0.0 ## the steering's sideways speed now (road half-widths per second)
+var ferry_left := 0.0 ## seconds of the crossing left, > 0 while on board
+var _ferry := {} ## the ferry the car is on
 var police_rng := RandomNumberGenerator.new() ## a separate stream: the officers do not reshuffle anything else
 
 func _init(p_car_id: String, p_stage: Dictionary, seed_value: int) -> void:
@@ -310,6 +316,50 @@ func _check_obstacles(z_prev: float) -> void:
 			crashed.emit()
 			return
 
+## The barrier at the end of a ferry quay spans the whole road: driving into it is a crash like a roadside obstacle's.
+func _check_ferry_barrier(z_prev: float) -> void:
+	for f in stage.get("ferries", []):
+		if z_prev + CRASH_FRONT <= f.z and z + CRASH_FRONT > f.z:
+			speed = 0.0
+			z = f.z - CRASH_FRONT - 0.3
+			fuel.level = maxf(0.0, fuel.level - CRASH_FUEL)
+			hit_cooldown = 1.0
+			hit_flash = 0.6
+			last_crash = elapsed
+			crashed.emit()
+			return
+
+## Stopped on a quay (Route.FERRY_QUAY before the barrier): the car boards, a police chase ends there. Pulled over,
+## it boards only once the ticket is written.
+func _check_boarding() -> void:
+	if speed >= STOP_SPEED or held_by_police():
+		return
+	for f in stage.get("ferries", []):
+		if z >= f.z - Route.FERRY_QUAY and z <= f.z:
+			_ferry = f
+			ferry_left = FERRY_TIME
+			speed = 0.0
+			police = {}
+			speeding = 0.0
+			ferry_started.emit(f)
+			return
+
+## The crossing only counts down; at its end the car stands on the far quay, in the driving lane.
+func _ride_ferry(dt: float) -> void:
+	ferry_left -= dt
+	if ferry_left > 0.0:
+		return
+	ferry_left = 0.0
+	z = _ferry.z_out
+	speed = 0.0
+	x = FERRY_LANE
+	_lat_v = 0.0
+	hit_cooldown = 0.0 # the roadside past the ramp counts at once
+	last_crash = -100.0 # the barrier's (or a quay bump's) banner does not come back on the far quay
+	last_hit = -100.0
+	_ferry = {}
+	ferry_ended.emit()
+
 ## Share of the car's width beyond the right road edge (x = 1.0 is the edge, the stations stand on that side).
 func shoulder_fraction() -> float:
 	var hw: float = stats.halfwidth
@@ -330,6 +380,9 @@ func _station_near(zz: float) -> bool:
 
 func step(dt: float, input: Dictionary) -> void:
 	if state != "running":
+		return
+	if ferry_left > 0.0:
+		_ride_ferry(dt)
 		return
 	elapsed += dt
 	time_left -= dt
@@ -392,6 +445,7 @@ func step(dt: float, input: Dictionary) -> void:
 	z += speed * dt
 	if hit_cooldown <= 0.0 and z < stage.length:
 		_check_obstacles(z_prev)
+	_check_ferry_barrier(z_prev)
 	# gearbox and fuel: accelerating and climbing burn a lot, cruising in a high gear saves, rolling downhill
 	# off the gas almost nothing
 	var accelerating: bool = gas and speed < vmax * 0.98
@@ -424,6 +478,7 @@ func step(dt: float, input: Dictionary) -> void:
 			# after a head-on crash the car is put back towards its own lane
 			x = clampf(car.lane_x + (clear if head_on or x >= car.lane_x else -clear), -1.8, 1.8)
 			collided.emit(idx)
+	_check_boarding()
 	# end of race
 	if z >= stage.length:
 		state = "won"

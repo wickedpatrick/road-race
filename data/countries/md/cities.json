@@ -1,0 +1,28 @@
+{
+	"chisinau": {
+		"name": "Chișinău",
+		"lat": 47.02,
+		"lon": 28.83,
+		"pop": 567,
+		"region": "Chișinău",
+		"exonym": {"pl": "Kiszyniów", "cs": "Kišiněv", "is": "Kisínev"}
+	},
+	"tiraspol": {"name": "Tiraspol", "lat": 46.84, "lon": 29.63, "pop": 133, "region": "Stînga Nistrului"},
+	"balti": {"name": "Bălți", "lat": 47.76, "lon": 27.93, "pop": 97, "region": "Bălți", "exonym": {"pl": "Bielce"}},
+	"bender": {
+		"name": "Bender",
+		"lat": 46.83,
+		"lon": 29.48,
+		"pop": 91,
+		"region": "Bender",
+		"exonym": {"pl": "Bendery", "cs": "Bendery"}
+	},
+	"ungheni": {"name": "Ungheni", "lat": 47.21, "lon": 27.8, "pop": 30, "region": "Ungheni"},
+	"cahul": {"name": "Cahul", "lat": 45.9, "lon": 28.19, "pop": 28, "region": "Cahul"},
+	"soroca": {"name": "Soroca", "lat": 48.16, "lon": 28.3, "pop": 22, "region": "Soroca"},
+	"orhei": {"name": "Orhei", "lat": 47.38, "lon": 28.82, "pop": 21, "region": "Orhei"},
+	"comrat": {"name": "Comrat", "lat": 46.3, "lon": 28.66, "pop": 20, "region": "Găgăuzia"},
+	"straseni": {"name": "Strășeni", "lat": 47.14, "lon": 28.61, "pop": 18, "region": "Strășeni"},
+	"causeni": {"name": "Căușeni", "lat": 46.64, "lon": 29.41, "pop": 16, "region": "Căușeni"},
+	"hincesti": {"name": "Hîncești", "lat": 46.83, "lon": 28.59, "pop": 12, "region": "Hîncești"}
+}

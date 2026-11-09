@@ -1,0 +1,78 @@
+[
+	{
+		"a": "valletta",
+		"b": "sliema",
+		"km": 6,
+		"road": [[2, "6"], [4, "22"], [6, "1"]],
+		"towns": [["Pietà", 2.5], ["Gżira", 4.5]],
+		"zones": [[2, "mediterranean", "Nofsinhar"], [6, "mediterranean", "Ċentrali"]],
+		"via": [[2.5, 14.497, 35.894], [4.5, 14.492, 35.905]]
+	},
+	{
+		"a": "sliema",
+		"b": "mosta",
+		"km": 9,
+		"road": [[2, "1"], [9, "5"]],
+		"towns": [["Birkirkara", 4], ["Lija", 6]],
+		"zones": [[6, "mediterranean", "Ċentrali"], [9, "mediterranean", "Tramuntana"]],
+		"via": [[4, 14.461, 35.896], [6, 14.446, 35.9]]
+	},
+	{
+		"a": "valletta",
+		"b": "marsaxlokk",
+		"km": 11,
+		"road": [[2, "6"], [5, "8"], [8, "9"], [11, "29"]],
+		"towns": [["Paola", 5], ["Żejtun", 8.5]],
+		"zones": [[4, "mediterranean", "Nofsinhar"], [11, "mediterranean", "Xlokk"]],
+		"via": [[5, 14.507, 35.873], [8.5, 14.533, 35.856]]
+	},
+	{
+		"a": "valletta",
+		"b": "mdina",
+		"km": 13,
+		"road": [[3, "22"], [13, "7"]],
+		"towns": [["Ħamrun", 3.5], ["Attard", 8.5]],
+		"zones": [[4, "mediterranean", "Nofsinhar"], [10, "mediterranean", "Ċentrali"], [13, "mediterranean", "Tramuntana"]],
+		"via": [[3.5, 14.489, 35.885], [8.5, 14.442, 35.89]]
+	},
+	{"a": "mdina", "b": "mosta", "km": 6, "road": "16", "towns": [], "zones": [[6, "mediterranean", "Tramuntana"]]},
+	{
+		"a": "mosta",
+		"b": "mellieha",
+		"km": 13,
+		"road": [[9, "16"], [13, "1"]],
+		"towns": [["Burmarrad", 5], ["Xemxija", 9.5]],
+		"zones": [[13, "mediterranean", "Tramuntana"]],
+		"via": [[5, 14.415, 35.935], [9.5, 14.38, 35.95]]
+	},
+	{
+		"a": "sliema",
+		"b": "mellieha",
+		"km": 18,
+		"road": "1",
+		"towns": [["San Ġiljan", 2.5], ["San Pawl il-Baħar", 12]],
+		"zones": [[3, "mediterranean", "Ċentrali"], [10, "coast", "Tramuntana"], [18, "mediterranean", "Tramuntana"]],
+		"via": [[2.5, 14.489, 35.918], [7, 14.45, 35.935], [12, 14.4, 35.948]]
+	},
+	{
+		"a": "mellieha",
+		"b": "victoria",
+		"km": 20,
+		"road": [[14, "1"], [20, "2"]],
+		"towns": [["Għadira", 2.5], ["Għajnsielem", 15], ["Xewkija", 17.5]],
+		"zones": [[6, "mediterranean", "Tramuntana"], [20, "mediterranean", "Għawdex"]],
+		"via": [[2.5, 14.348, 35.97], [6, 14.329, 35.988], [14, 14.296, 36.024], [15, 14.29, 36.03], [17.5, 14.262, 36.033]],
+		"ferry": {
+			"from_km": 6,
+			"to_km": 14,
+			"name": "Ċirkewwa – Mġarr",
+			"fact": {
+				"pl": "Promy Gozo Channel kursują dzień i noc, rejs przez cieśninę obok Comino trwa ok. 25 minut",
+				"en": "Gozo Channel ferries sail day and night; the crossing past Comino takes about 25 minutes",
+				"cs": "Trajekty Gozo Channel jezdí ve dne i v noci, plavba kolem Comina trvá asi 25 minut",
+				"is": "Ferjur Gozo Channel sigla dag og nótt, siglingin fram hjá Comino tekur um 25 mínútur",
+				"de": "Die Gozo-Channel-Fähren fahren Tag und Nacht, an Comino vorbei in etwa 25 Minuten"
+			}
+		}
+	}
+]

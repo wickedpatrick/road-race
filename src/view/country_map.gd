@@ -117,11 +117,31 @@ const LOCAL := Color("8f9a8f")
 func draw_network(cv: CanvasItem, wide: float, thin: float) -> void:
 	for r in Geo.roads():
 		for part in Route.leg_roads({"road": r, "from": r.a, "to": r.b}):
-			var pts := road_path(r, part[0], part[1])
 			if Route.part_lanes(part) == 3:
-				cv.draw_polyline(pts, MOTORWAY, wide)
+				draw_road(cv, r, part[0], part[1], MOTORWAY, wide)
 			else:
-				cv.draw_polyline(pts, LOCAL, thin)
+				draw_road(cv, r, part[0], part[1], LOCAL, thin)
+
+const SEA_DASH := 7.0 ## one dash length for every width, so the route's dashes cover the network's under them
+## A road's line from k0 to k1 km (from its city `a`), its sea crossing (roads.json "ferry") dashed over the water.
+func draw_road(cv: CanvasItem, r: Dictionary, k0: float, k1: float, col: Color, w: float) -> void:
+	var lo := minf(k0, k1)
+	var hi := maxf(k0, k1)
+	var fr: Dictionary = r.get("ferry", {})
+	if fr.is_empty() or float(fr.to_km) <= lo or float(fr.from_km) >= hi:
+		cv.draw_polyline(road_path(r, lo, hi), col, w)
+		return
+	var a := maxf(lo, float(fr.from_km))
+	var b := minf(hi, float(fr.to_km))
+	if a > lo: cv.draw_polyline(road_path(r, lo, a), col, w)
+	if hi > b: cv.draw_polyline(road_path(r, b, hi), col, w)
+	var sea := road_path(r, a, b)
+	for i in sea.size() - 1:
+		cv.draw_dashed_line(sea[i], sea[i + 1], col, w, SEA_DASH)
+
+## A trip's leg drawn as draw_road does.
+func draw_leg(cv: CanvasItem, leg: Dictionary, col: Color, w: float) -> void:
+	draw_road(cv, leg.road, 0.0, float(leg.road.km), col, w)
 
 ## Where a road is `k` real km from its city `a`: on the straight line between the cities, or through the map
 ## points it bends through (roads.json "via": [[km, lon, lat], ...], e.g. the A1 bowing north past Tauragė).
@@ -307,7 +327,7 @@ func draw(cv: CanvasItem, font: Font, legs: Array, start: String, dest: String, 
 	draw_network(cv, 4.0, 1.6)
 	# chosen route with the towns along it
 	for leg in legs:
-		cv.draw_polyline(leg_path(leg), Color("e0a21a"), 5.0)
+		draw_leg(cv, leg, Color("e0a21a"), 5.0)
 		for tw in Route._leg_towns(leg):
 			cv.draw_circle(leg_xy(leg, tw[1]), 2.0, Color("7a4d00"))
 	for leg in legs:
@@ -416,7 +436,7 @@ func draw_mini(cv: CanvasItem, font: Font, legs: Array, km: float, t: float) -> 
 		cv.draw_colored_polygon(_poly(isl), Color("d7e8bd", 0.9))
 	draw_network(cv, 2.0, 1.0)
 	for leg in legs:
-		cv.draw_polyline(leg_path(leg), Color("e0a21a"), 3.0)
+		draw_leg(cv, leg, Color("e0a21a"), 3.0)
 	for id in Geo.cities():
 		cv.draw_circle(city_pos(id), 1.6, Color("2d3e50"))
 	var a: String = legs[0].from

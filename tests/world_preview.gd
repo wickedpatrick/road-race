@@ -15,6 +15,8 @@ func _ready() -> void:
 	if Session.sharp_test: # -- ... --zakrety[=N]: same test mode as the game
 		stage["sharp_test"] = true
 		if Session.sharp_amount > 0.0: stage["sharp_amount"] = Session.sharp_amount
+	if OS.get_environment("RR_BIOME") != "": # e.g. RR_BIOME=mediterranean: the whole road in that landscape
+		for zn in stage.zones: zn["biome"] = OS.get_environment("RR_BIOME")
 	if OS.get_environment("RR_LEFT") == "1": stage["left"] = true # try left-hand traffic on any country's road
 	# the weather, or a season name as before (summer -> sun, winter -> snow)
 	var weather: String = {"summer": "sun", "spring": "sun", "winter": "snow"}.get(args[2], args[2]) if args.size() > 2 else ""

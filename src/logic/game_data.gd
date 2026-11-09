@@ -39,8 +39,8 @@ static func members(code: String) -> Array:
 		if c.code == code: return c.get("members", [])
 	return []
 
-## Everything about one country (the current one by default): country.json plus "cities", "roads", "facts" and
-## "landmarks" from the files next to it.
+## Everything about one country (the current one by default): country.json plus "cities", "roads", "facts",
+## "landmarks" and "native" (optional native.json) from the files next to it.
 static func country(code := "") -> Dictionary:
 	if code == "":
 		code = current
@@ -54,6 +54,7 @@ static func country(code := "") -> Dictionary:
 					for lm in raw[town]:
 						if not lm.has("local"): lm["local"] = lm.name.get(c.language, lm.name.values()[0])
 			c[part] = localize(raw)
+		c["native"] = load_json(dir + "native.json") if FileAccess.file_exists(dir + "native.json") else {} # optional: native spellings for bilingual signs
 		_countries[code] = c
 	return _countries[code]
 

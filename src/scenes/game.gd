@@ -25,6 +25,9 @@ var _was_refueling := false
 var _low_fuel_timer := 0.0
 var _end_sound_played := false
 var _radar_timer := 0.0
+var _ferry_screen: Control ## the crossing (Race.ferry_left > 0), drawn over the world and under the HUD
+var _ferry := {} ## the ferry the car is on (Race.ferry_started)
+var _sea_t := 0.0 ## seconds of waves on the ferry screen
 
 func _ready() -> void:
 	font = ThemeDB.fallback_font
@@ -38,8 +41,14 @@ func _ready() -> void:
 	race.crashed.connect(func(): Sfx.play("hit", 0.0))
 	race.fined.connect(func(): Sfx.play("lowfuel", -10.0))
 	race.police_crashed.connect(func(): Sfx.play("hit", -4.0))
+	race.ferry_started.connect(func(f): _ferry = f)
 	var layer := CanvasLayer.new()
 	add_child(layer)
+	_ferry_screen = Control.new()
+	_ferry_screen.set_anchors_preset(Control.PRESET_FULL_RECT)
+	_ferry_screen.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_ferry_screen.draw.connect(_draw_ferry)
+	layer.add_child(_ferry_screen)
 	hud = Hud.new()
 	hud.touch = Screen.touch
 	layer.add_child(hud)
@@ -102,8 +111,14 @@ func _read_input() -> Dictionary:
 		"steer": clampf(Input.get_axis("left", "right") + pad.steer(), -1.0, 1.0),
 	}
 
-func _physics_process(dt: float) -> void:
+## Per frame: the overlay and the ferry screen redrawn, its waves rolling on.
+func _tick_screens(dt: float) -> void:
 	overlay.queue_redraw()
+	_ferry_screen.queue_redraw()
+	_sea_t += dt
+
+func _physics_process(dt: float) -> void:
+	_tick_screens(dt)
 	if paused:
 		Sfx.silence_all_loops()
 		return
@@ -129,7 +144,7 @@ func _physics_process(dt: float) -> void:
 
 func _update_audio(dt: float, inp: Dictionary) -> void:
 	var has_fuel := not race.fuel.is_empty()
-	var throttle: bool = inp.accel and has_fuel
+	var throttle: bool = inp.accel and has_fuel and race.ferry_left <= 0.0 # on board the engine just idles
 	if has_fuel or race.speed > 1.0:
 		var db := -17.0 + (5.0 if throttle else 0.0) + 4.0 * race.speed_ratio()
 		Sfx.set_loop("engine", db, EngineAudio.pitch(race.speed, race.stats.max_speed, throttle, race.gear))
@@ -229,7 +244,7 @@ func _draw_overlay() -> void:
 		o.draw_string(font, Vector2(0, 300), str(n), HORIZONTAL_ALIGNMENT_CENTER, 960, 140, Color(0, 0, 0, 0.5))
 		o.draw_string(font, Vector2(0, 296), str(n), HORIZONTAL_ALIGNMENT_CENTER, 960, 140, Color("ffd24a"))
 		o.draw_string(font, Vector2(0, 340), "%s  ·  %s" % [race.stage.name, Units.dist_text(race.stage.km)], HORIZONTAL_ALIGNMENT_CENTER, 960, 24, Color.WHITE)
-	elif race.elapsed < 0.9 and race.state == "running":
+	elif race.elapsed < 0.9 and race.state == "running" and race.ferry_left <= 0.0:
 		o.draw_string(font, Vector2(0, 300), Lang.t("start"), HORIZONTAL_ALIGNMENT_CENTER, 960, 110, Color(0, 0, 0, 0.5))
 		o.draw_string(font, Vector2(0, 296), Lang.t("start"), HORIZONTAL_ALIGNMENT_CENTER, 960, 110, Color("49d36b"))
 	elif race.state != "running":
@@ -248,3 +263,96 @@ func _draw_overlay() -> void:
 	elif _toast > 0.0:
 		o.draw_rect(Rect2(230, 214, 500, 40), Color(0, 0, 0, 0.55))
 		o.draw_string(font, Vector2(0, 241), Lang.t("low_gfx_toast"), HORIZONTAL_ALIGNMENT_CENTER, 960, 18, Color.WHITE)
+
+const FERRY_SKY := [Color("4f9fdc"), Color("cde8f6")]
+const FERRY_SEA := Color("2f6f9e")
+const HORIZON_Y := 300.0
+
+## The crossing: the ferry sails over the waves from left to right in Race.FERRY_TIME, the player's car on its open
+## deck, the coast left behind sinking and the one ahead rising; the ferry's name (and its fact) above. The HUD stays
+## over it, its clock standing still.
+func _draw_ferry() -> void:
+	if race.ferry_left <= 0.0:
+		return
+	var o := _ferry_screen
+	var t := clampf(1.0 - race.ferry_left / Race.FERRY_TIME, 0.0, 1.0)
+	o.draw_polygon(PackedVector2Array([Vector2(0, 0), Vector2(960, 0), Vector2(960, HORIZON_Y), Vector2(0, HORIZON_Y)]),
+		PackedColorArray([FERRY_SKY[0], FERRY_SKY[0], FERRY_SKY[1], FERRY_SKY[1]]))
+	o.draw_circle(Vector2(760, 190), 34.0, Color(1, 0.96, 0.8, 0.5))
+	o.draw_circle(Vector2(760, 190), 22.0, Color("fff3c4"))
+	# the coasts: the one left behind sinks away on the left, the one ahead rises on the right
+	for side in [[0.0, 1.0 - t], [1.0, t]]:
+		var k: float = 0.25 + 0.75 * side[1]
+		var x0: float = -20.0 if side[0] == 0.0 else 980.0
+		var x1: float = x0 + (320.0 if side[0] == 0.0 else -320.0) * k
+		var pts := PackedVector2Array([Vector2(x0, HORIZON_Y)])
+		for j in 9:
+			var x := lerpf(x0, x1, j / 8.0)
+			pts.append(Vector2(x, HORIZON_Y - k * (26.0 + 14.0 * sin(j * 1.3 + side[0] * 2.0)) * (1.0 - pow(j / 8.0, 3.0))))
+		pts.append(Vector2(x1, HORIZON_Y))
+		o.draw_colored_polygon(pts, Color("6f8f6a").lerp(FERRY_SKY[1], 0.45))
+	o.draw_rect(Rect2(0, HORIZON_Y, 960, 540 - HORIZON_Y), FERRY_SEA)
+	_waves(o, 0, 5)
+	var c := Vector2(lerpf(170.0, 790.0, t), 392.0 + 4.0 * sin(_sea_t * 2.2))
+	_ferry_side(o, c, sin(_sea_t * 1.7) * 0.015)
+	_waves(o, 5, 8)
+	# the ferry's name over the sea, its fact under it
+	var title: String = _ferry.get("name", "")
+	o.draw_string(font, Vector2(2, 202), title, HORIZONTAL_ALIGNMENT_CENTER, 960, 34, Color(0, 0, 0, 0.35))
+	o.draw_string(font, Vector2(0, 200), title, HORIZONTAL_ALIGNMENT_CENTER, 960, 34, Color.WHITE)
+	var fact: String = _ferry.get("fact", "")
+	var sub := Units.dist_text(_ferry.get("sea_km", 0.0)) + ("  ·  " + fact if fact != "" else "")
+	o.draw_string(font, Vector2(1, 235), sub, HORIZONTAL_ALIGNMENT_CENTER, 960, 18, Color(0, 0, 0, 0.35))
+	o.draw_string(font, Vector2(0, 234), sub, HORIZONTAL_ALIGNMENT_CENTER, 960, 18, Color("f3f8fc"))
+
+## Rows `r0`..`r1` of waves, further rows smaller and closer together, rolling with the time.
+func _waves(o: Control, r0: int, r1: int) -> void:
+	for r in range(r0, r1):
+		var y := HORIZON_Y + 8.0 + pow(r, 1.55) * 13.0
+		var amp := 1.5 + r * 0.9
+		var wl := 40.0 + r * 18.0
+		var ph := _sea_t * (1.0 + r * 0.25) + r * 1.7
+		var pts := PackedVector2Array()
+		var x := -20.0
+		while x <= 980.0:
+			pts.append(Vector2(x, y + amp * sin(x / wl * TAU * 0.5 + ph)))
+			x += 8.0
+		o.draw_polyline(pts, Color(1, 1, 1, 0.22 + r * 0.04), 1.0 + r * 0.35)
+
+## A car ferry from the side, bow to the right, `c` at the middle of its waterline, rolling by `tilt` radians: the
+## hull, the open car deck aft with the player's car, the white superstructure, the funnel.
+func _ferry_side(o: Control, c: Vector2, tilt: float) -> void:
+	o.draw_set_transform(c, tilt, Vector2.ONE)
+	var hull := PackedVector2Array([Vector2(-160, -40), Vector2(130, -40), Vector2(172, -48), Vector2(146, 12), Vector2(-150, 12)])
+	o.draw_colored_polygon(hull, Color("1f3f73"))
+	o.draw_rect(Rect2(-152, 0, 300, 7), Color("b8322a"))
+	o.draw_rect(Rect2(-160, -46, 200, 6), Color("f3f4f2"))
+	# the superstructure and the bridge, rows of windows
+	o.draw_rect(Rect2(-40, -80, 160, 34), Color("f3f4f2"))
+	o.draw_rect(Rect2(-20, -102, 120, 22), Color("f3f4f2"))
+	for k in 12:
+		o.draw_rect(Rect2(-34 + k * 13, -72, 8, 7), Color("2a3a4a"))
+		o.draw_rect(Rect2(-34 + k * 13, -59, 8, 7), Color("2a3a4a"))
+	o.draw_rect(Rect2(-12, -96, 104, 8), Color("2a3a4a"))
+	for k in 3:
+		o.draw_rect(Rect2(-30 + k * 50, -86, 22, 7), Color("f08a1c")) # lifeboats
+	o.draw_rect(Rect2(20, -128, 22, 26), Color("f3f4f2"))
+	o.draw_rect(Rect2(20, -122, 22, 6), Scenery.SIGN_BLUE)
+	o.draw_rect(Rect2(20, -128, 22, 3), Color("26272b"))
+	o.draw_line(Vector2(70, -102), Vector2(70, -126), Color("3b3f45"), 2.0)
+	# the player's car on the open deck aft, a rail along the deck's edge
+	_car_side(o, Vector2(-100, -46), Color(CarStats.by_id(race.car_id).body_color))
+	o.draw_line(Vector2(-160, -56), Vector2(-50, -56), Color("e9e9ec"), 1.5)
+	for k in 8:
+		o.draw_line(Vector2(-158 + k * 15, -56), Vector2(-158 + k * 15, -46), Color("e9e9ec"), 1.2)
+	Scenery.ship_icon(o, Vector2(80, -18), 6.0, Color(1, 1, 1, 0.85))
+	o.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+
+## A car seen from the side, facing right, standing on `b` (the middle of its wheels' line).
+func _car_side(o: Control, b: Vector2, body: Color) -> void:
+	o.draw_colored_polygon(PackedVector2Array([b + Vector2(-34, -6), b + Vector2(-32, -18), b + Vector2(-18, -20), b + Vector2(-10, -31),
+		b + Vector2(14, -31), b + Vector2(24, -20), b + Vector2(34, -17), b + Vector2(36, -6)]), body)
+	o.draw_colored_polygon(PackedVector2Array([b + Vector2(-8, -28), b + Vector2(12, -28), b + Vector2(20, -20), b + Vector2(-15, -20)]), Color("1b2a38"))
+	for x in [-20.0, 22.0]:
+		o.draw_circle(b + Vector2(x, -5), 7.0, Color("17171a"))
+		o.draw_circle(b + Vector2(x, -5), 3.0, Color("9a9ea4"))

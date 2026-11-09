@@ -102,6 +102,42 @@
 			"members": ["me", "xk", "al", "mk"],
 			"neighbours": ["hr", "ba", "rs", "gr", "bg"],
 			"favorite_neighbour": "gr"
+		},
+		{
+			"code": "mt",
+			"name": {"pl": "Malta", "en": "Malta", "cs": "Malta", "is": "Malta", "de": "Malta"},
+			"neighbours": ["it"],
+			"favorite_neighbour": "it"
+		},
+		{
+			"code": "cy",
+			"name": {"pl": "Cypr", "en": "Cyprus", "cs": "Kypr", "is": "Kýpur", "de": "Zypern"},
+			"neighbours": ["gr"],
+			"favorite_neighbour": "gr"
+		},
+		{
+			"code": "md",
+			"name": {"pl": "Mołdawia", "en": "Moldova", "cs": "Moldavsko", "is": "Moldóva", "de": "Moldau"},
+			"neighbours": ["ro", "ua"],
+			"favorite_neighbour": "ro"
+		},
+		{
+			"code": "gr",
+			"name": {"pl": "Grecja", "en": "Greece", "cs": "Řecko", "is": "Grikkland", "de": "Griechenland"},
+			"neighbours": ["al", "mk", "bg", "tr", "cy"],
+			"favorite_neighbour": "cy"
+		},
+		{
+			"code": "bg",
+			"name": {"pl": "Bułgaria", "en": "Bulgaria", "cs": "Bulharsko", "is": "Búlgaría", "de": "Bulgarien"},
+			"neighbours": ["ro", "rs", "mk", "gr", "tr"],
+			"favorite_neighbour": "gr"
+		},
+		{
+			"code": "hu",
+			"name": {"pl": "Węgry", "en": "Hungary", "cs": "Maďarsko", "is": "Ungverjaland", "de": "Ungarn"},
+			"neighbours": ["at", "sk", "ua", "ro", "rs", "hr", "si"],
+			"favorite_neighbour": "pl"
 		}
 	]
 }
