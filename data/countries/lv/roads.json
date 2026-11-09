@@ -11,7 +11,7 @@
 		"a": "jurmala",
 		"b": "talsi",
 		"km": 88,
-		"road": "A10",
+		"road": [[76, "A10"], [88, "P120"]],
 		"towns": [["Ķemeri", 12], ["Tukums", 37], ["Kandava", 63]],
 		"zones": [
 			[25, "forest", "Ķemeru nacionālais parks"],
@@ -25,13 +25,13 @@
 		"a": "talsi",
 		"b": "ventspils",
 		"km": 75,
-		"road": "A10",
-		"towns": [["Spāre", 15], ["Ugāle", 37], ["Pope", 52]],
+		"road": [[12, "P120"], [75, "A10"]],
+		"towns": [["Spāre", 24], ["Ugāle", 37]],
 		"zones": [
 			[25, "forest", "Kurzeme"], [40, "lakes", "Usmas ezers"], [66, "forest", "Ventas lejtece"],
 			[75, "coast", "Piejūras zemiene"]
 		],
-		"via": [[15, 22.35, 57.19], [37, 22.03, 57.27], [52, 21.86, 57.39]]
+		"via": [[12, 22.5, 57.15], [24, 22.35, 57.19], [37, 22.03, 57.27]]
 	},
 	{
 		"a": "talsi",
