@@ -187,8 +187,9 @@ trasy sensowne), miejscowości po drodze, krainy, ciekawostki po polsku, kontur 
       Grecja z Kretą (promem z Pireusu do Heraklionu), Cypr (tylko część południowa pod kontrolą Republiki; na
       wyborze kraju cała wyspa jako Cypr), Malta z Gozo (promem). Nowy krajobraz śródziemnomorski (oliwki,
       cyprysy, makia, białe domy, kamienne murki). Szczegóły w decyzjach z 2026-11-06 niżej.
-- [ ] Partia 5: Ukraina (30), Rosja (30, europejska i azjatycka część: Moskwa, Petersburg, ale też Syberia),
-      Białoruś, Turcja (30).
+- [x] Partia 5: Ukraina (30, tylko teren kontrolowany przez rząd Ukrainy; Krym w granicach Ukrainy na mapie wyboru),
+      Rosja (30, od Kaliningradu promem z Ust-Ługi po Władywostok), Białoruś (20), Turcja (30, mosty przez Bosfor
+      i Dardanele). Nowe: most wiszący (`bridge` w roads.json), krajobrazy stepu i tajgi.
 
 ### Decyzje (2026-10-10)
 
