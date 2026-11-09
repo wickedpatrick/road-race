@@ -1,0 +1,408 @@
+{
+	"Kyiv": {
+		"pl": "Stolica Ukrainy nad Dnieprem; Sobór Mądrości Bożej stoi tu od ponad tysiąca lat",
+		"en": "Ukraine's capital on the Dnieper; St Sophia's Cathedral has stood here for over a thousand years",
+		"cs": "Hlavní město Ukrajiny na Dněpru; chrám svaté Sofie tu stojí přes tisíc let",
+		"is": "Höfuðborg Úkraínu við Dnjepr; Soffíukirkjan hefur staðið hér í meira en þúsund ár",
+		"de": "Die Hauptstadt der Ukraine am Dnipro; die Sophienkathedrale steht hier seit über tausend Jahren"
+	},
+	"Kharkiv": {
+		"pl": "Pierwsza stolica Ukrainy radzieckiej (1919–1934) i wielkie miasto uniwersyteckie; Plac Wolności to jeden z największych placów Europy",
+		"en": "The first capital of Soviet Ukraine (1919–1934) and a big university city; Freedom Square is one of the largest squares in Europe",
+		"cs": "První hlavní město sovětské Ukrajiny (1919–1934) a velké univerzitní město; náměstí Svobody patří k největším v Evropě",
+		"is": "Fyrsta höfuðborg sovésku Úkraínu (1919–1934) og stór háskólaborg; Frelsistorgið er eitt stærsta torg Evrópu",
+		"de": "Die erste Hauptstadt der Sowjetukraine (1919–1934) und eine große Universitätsstadt; der Freiheitsplatz ist einer der größten Plätze Europas"
+	},
+	"Odesa": {
+		"pl": "Port nad Morzem Czarnym założony w 1794 roku; Schody Potiomkinowskie prowadzą z miasta do portu",
+		"en": "A Black Sea port founded in 1794; the Potemkin Stairs lead from the city down to the harbour",
+		"cs": "Černomořský přístav založený roku 1794; Potěmkinovy schody vedou z města dolů do přístavu",
+		"is": "Hafnarborg við Svartahaf, stofnuð 1794; Potjomkín-tröppurnar liggja frá borginni niður að höfninni",
+		"de": "Ein Schwarzmeerhafen, 1794 gegründet; die Potemkinsche Treppe führt von der Stadt hinunter zum Hafen"
+	},
+	"Dnipro": {
+		"pl": "Miasto na obu brzegach Dniepru z jednym z najdłuższych bulwarów nad rzeką w Europie; budowano tu rakiety kosmiczne i satelity",
+		"en": "A city on both banks of the Dnieper with one of the longest river embankments in Europe; space rockets and satellites were built here",
+		"cs": "Město na obou březích Dněpru s jedním z nejdelších nábřeží v Evropě; stavěly se tu kosmické rakety a družice",
+		"is": "Borg á báðum bökkum Dnjepr með einu lengsta árbakkastræti Evrópu; hér voru smíðaðar geimflaugar og gervitungl",
+		"de": "Eine Stadt an beiden Ufern des Dnipro mit einer der längsten Uferpromenaden Europas; hier wurden Weltraumraketen und Satelliten gebaut"
+	},
+	"Lviv": {
+		"pl": "Stare miasto na liście UNESCO, słynne z kawiarni, czekolady i kamienic wokół Rynku",
+		"en": "An old town on the UNESCO list, famous for its coffee houses, chocolate and the houses around the Market Square",
+		"cs": "Staré město na seznamu UNESCO, proslulé kavárnami, čokoládou a domy kolem náměstí Rynok",
+		"is": "Gamli bærinn er á heimsminjaskrá UNESCO, frægur fyrir kaffihús, súkkulaði og húsin við Markaðstorgið",
+		"de": "Die Altstadt ist UNESCO-Welterbe, berühmt für Kaffeehäuser, Schokolade und die Häuser am Marktplatz"
+	},
+	"Zaporizhzhia": {
+		"pl": "Nad Dnieprem przy Chortycy, największej wyspie na rzece, kolebce Kozaków zaporoskich",
+		"en": "On the Dnieper by Khortytsia, the largest island on the river and the cradle of the Zaporozhian Cossacks",
+		"cs": "Na Dněpru u Chortyci, největšího ostrova na řece a kolébky záporožských kozáků",
+		"is": "Við Dnjepr hjá Khortytsja, stærstu eyju árinnar og vöggu Saporoskí-kósakkanna",
+		"de": "Am Dnipro bei Chortyzja, der größten Insel des Flusses und Wiege der Saporoger Kosaken"
+	},
+	"Kryvyi Rih": {
+		"pl": "Jedno z najdłuższych miast Europy: ciągnie się ponad 100 km wzdłuż kopalń rudy żelaza",
+		"en": "One of the longest cities in Europe, stretching over 100 km along its iron ore mines",
+		"cs": "Jedno z nejdelších měst Evropy, táhne se přes 100 km podél dolů na železnou rudu",
+		"is": "Ein lengsta borg Evrópu, teygir sig yfir 100 km meðfram járnnámunum",
+		"de": "Eine der längsten Städte Europas, über 100 km lang entlang ihrer Eisenerzgruben"
+	},
+	"Mykolaiv": {
+		"pl": "Miasto stoczni u ujścia Ingułu do Bohu, założone w 1789 roku jako stocznia",
+		"en": "A shipbuilding city where the Inhul meets the Southern Bug, founded as a shipyard in 1789",
+		"cs": "Město loděnic na soutoku Inhulu a Jižního Bugu, založené roku 1789 jako loděnice",
+		"is": "Skipasmíðaborg þar sem Inhul rennur í Suður-Bug, stofnuð sem skipasmíðastöð 1789",
+		"de": "Eine Werftstadt an der Mündung des Inhul in den Südlichen Bug, 1789 als Werft gegründet"
+	},
+	"Vinnytsia": {
+		"pl": "Fontanna Roshen na Bohu to jedna z największych pływających fontann w Europie, z pokazami światła i muzyki",
+		"en": "The Roshen fountain on the Southern Bug is one of the largest floating fountains in Europe, with light and music shows",
+		"cs": "Fontána Roshen na Jižním Bugu patří k největším plovoucím fontánám v Evropě, se světelnou a hudební show",
+		"is": "Roshen-gosbrunnurinn á Suður-Bug er einn stærsti fljótandi gosbrunnur Evrópu, með ljósa- og tónlistarsýningum",
+		"de": "Der Roshen-Brunnen auf dem Südlichen Bug ist einer der größten schwimmenden Springbrunnen Europas, mit Licht- und Musikshows"
+	},
+	"Chernihiv": {
+		"pl": "Jedno z najstarszych miast Rusi Kijowskiej; Sobór Przemienienia Pańskiego pochodzi z XI wieku",
+		"en": "One of the oldest cities of Kyivan Rus'; the Transfiguration Cathedral dates from the 11th century",
+		"cs": "Jedno z nejstarších měst Kyjevské Rusi; katedrála Proměnění Páně pochází z 11. století",
+		"is": "Ein elsta borg Garðaríkis; Ummyndunarkirkjan er frá 11. öld",
+		"de": "Eine der ältesten Städte der Kiewer Rus; die Verklärungskathedrale stammt aus dem 11. Jahrhundert"
+	},
+	"Poltava": {
+		"pl": "Tu w 1709 roku pokonano armię szwedzkiego króla Karola XII; miasto słynie z klusek hałuszek",
+		"en": "Here the army of King Charles XII of Sweden was defeated in 1709; the city is famous for halushky dumplings",
+		"cs": "Zde byla roku 1709 poražena armáda švédského krále Karla XII.; město je proslulé knedlíčky halušky",
+		"is": "Hér var her Karls XII Svíakonungs sigraður árið 1709; borgin er fræg fyrir halúskí-bollur",
+		"de": "Hier wurde 1709 das Heer des schwedischen Königs Karl XII. geschlagen; die Stadt ist berühmt für Haluschky-Klößchen"
+	},
+	"Khmelnytskyi": {
+		"pl": "Dawny Płoskirów, od 1954 roku nosi imię hetmana Bohdana Chmielnickiego",
+		"en": "Formerly Proskuriv, named after the hetman Bohdan Khmelnytsky in 1954",
+		"cs": "Dříve Proskuriv, od roku 1954 nese jméno hejtmana Bohdana Chmelnického",
+		"is": "Hét áður Proskuriv en ber síðan 1954 nafn hetmansins Bohdans Khmelnytskyj",
+		"de": "Früher Proskuriw, seit 1954 nach dem Hetman Bohdan Chmelnyzkyj benannt"
+	},
+	"Cherkasy": {
+		"pl": "Nad Zalewem Krzemieńczuckim, największym zbiornikiem na Dnieprze; w okolicy urodził się poeta Taras Szewczenko",
+		"en": "On the Kremenchuk Reservoir, the largest lake on the Dnieper; the poet Taras Shevchenko was born in this region",
+		"cs": "Na Kremenčuckém jezeře, největší nádrži na Dněpru; v kraji se narodil básník Taras Ševčenko",
+		"is": "Við Kremenchuk-lónið, stærsta stöðuvatnið á Dnjepr; skáldið Taras Sjevtsjenko fæddist í héraðinu",
+		"de": "Am Krementschuker Stausee, dem größten See am Dnipro; in der Gegend wurde der Dichter Taras Schewtschenko geboren"
+	},
+	"Chernivtsi": {
+		"pl": "Stolica Bukowiny; dawna rezydencja metropolitów jest dziś uniwersytetem na liście UNESCO",
+		"en": "The capital of Bukovyna; the former residence of the metropolitans is now a university on the UNESCO list",
+		"cs": "Hlavní město Bukoviny; bývalá rezidence metropolitů je dnes univerzitou na seznamu UNESCO",
+		"is": "Höfuðborg Búkóvínu; fyrrum bústaður erkibiskupanna er nú háskóli á heimsminjaskrá UNESCO",
+		"de": "Die Hauptstadt der Bukowina; die frühere Residenz der Metropoliten ist heute eine Universität und UNESCO-Welterbe"
+	},
+	"Zhytomyr": {
+		"pl": "Tu urodził się Siergiej Korolow, konstruktor pierwszych rakiet kosmicznych; jest tu muzeum kosmonautyki",
+		"en": "Birthplace of Serhiy Korolyov, designer of the first space rockets; the city has a museum of cosmonautics",
+		"cs": "Rodiště Serhije Koroljova, konstruktéra prvních kosmických raket; je tu muzeum kosmonautiky",
+		"is": "Fæðingarstaður Serhíjs Koroljov, hönnuðar fyrstu geimflauganna; í borginni er geimferðasafn",
+		"de": "Geburtsort von Serhij Koroljow, dem Konstrukteur der ersten Weltraumraketen; die Stadt hat ein Raumfahrtmuseum"
+	},
+	"Sumy": {
+		"pl": "Zielone miasto nad Psłem, w XIX wieku stolica cukrowni; sobór ufundowali cukrownicy Charytonenkowie",
+		"en": "A green city on the Psel, a sugar capital in the 19th century; its cathedral was paid for by the Kharytonenko sugar family",
+		"cs": "Zelené město na řece Psel, v 19. století centrum cukrovarnictví; katedrálu postavili cukrovarníci Charytonenkovi",
+		"is": "Græn borg við ána Psel, sykurhöfuðborg á 19. öld; dómkirkjan var kostuð af sykurfjölskyldunni Kharytonenko",
+		"de": "Eine grüne Stadt am Psel, im 19. Jahrhundert eine Zuckerhauptstadt; die Kathedrale stiftete die Zuckerfamilie Charytonenko"
+	},
+	"Rivne": {
+		"pl": "Na północ od miasta, na Polesiu, wydobywa się bursztyn",
+		"en": "Amber is dug up in Polissia, north of the city",
+		"cs": "Severně od města, v Polesí, se těží jantar",
+		"is": "Raf er grafið upp í Polissja, norðan við borgina",
+		"de": "Nördlich der Stadt, in Polesien, wird Bernstein gefunden"
+	},
+	"Ivano-Frankivsk": {
+		"pl": "Założony w 1662 roku przez Potockich jako twierdza Stanisławów; w 1962 roku nazwany imieniem pisarza Iwana Franki",
+		"en": "Founded in 1662 by the Potocki family as the fortress town of Stanisławów; renamed after the writer Ivan Franko in 1962",
+		"cs": "Založen roku 1662 Potockými jako pevnost Stanislavov; roku 1962 přejmenován po spisovateli Ivanu Frankovi",
+		"is": "Stofnaður 1662 af Potocki-ættinni sem virkisbærinn Stanisławów; nefndur eftir rithöfundinum Ivan Franko 1962",
+		"de": "1662 von den Potocki als Festungsstadt Stanisławów gegründet; 1962 nach dem Schriftsteller Iwan Franko benannt"
+	},
+	"Ternopil": {
+		"pl": "Tarnopol założył hetman Jan Tarnowski w 1540 roku; stare miasto leży nad dużym stawem",
+		"en": "Founded by the hetman Jan Tarnowski in 1540; the old town lies by a large pond",
+		"cs": "Založil ho hejtman Jan Tarnowski roku 1540; staré město leží u velkého rybníka",
+		"is": "Stofnaður af hetmaninum Jan Tarnowski árið 1540; gamli bærinn liggur við stóra tjörn",
+		"de": "1540 vom Hetman Jan Tarnowski gegründet; die Altstadt liegt an einem großen Teich"
+	},
+	"Kropyvnytskyi": {
+		"pl": "Wyrósł wokół twierdzy św. Elżbiety z 1754 roku; kolebka ukraińskiego teatru zawodowego",
+		"en": "It grew around the Fortress of St Elizabeth of 1754; the cradle of Ukrainian professional theatre",
+		"cs": "Vyrostl kolem pevnosti sv. Alžběty z roku 1754; kolébka ukrajinského profesionálního divadla",
+		"is": "Óx upp í kringum virki heilagrar Elísabetar frá 1754; vagga úkraínsks atvinnuleikhúss",
+		"de": "Um die Festung der heiligen Elisabeth von 1754 gewachsen; die Wiege des ukrainischen Berufstheaters"
+	},
+	"Kremenchuk": {
+		"pl": "Przemysłowe miasto nad Dnieprem, gdzie powstają ciężarówki KrAZ",
+		"en": "An industrial city on the Dnieper where KrAZ trucks are made",
+		"cs": "Průmyslové město na Dněpru, kde se vyrábějí nákladní auta KrAZ",
+		"is": "Iðnaðarborg við Dnjepr þar sem KrAZ-vörubílar eru smíðaðir",
+		"de": "Eine Industriestadt am Dnipro, in der KrAZ-Lastwagen gebaut werden"
+	},
+	"Lutsk": {
+		"pl": "Stolica Wołynia; Zamek Lubarta z XIV wieku jest na banknocie 200 hrywien",
+		"en": "The capital of Volyn; the 14th-century Lubart's Castle is on the 200-hryvnia banknote",
+		"cs": "Hlavní město Volyně; Lubartův hrad ze 14. století je na bankovce 200 hřiven",
+		"is": "Höfuðborg Volyn; kastali Lubarts frá 14. öld er á 200 hrívna seðlinum",
+		"de": "Die Hauptstadt Wolhyniens; die Lubart-Burg aus dem 14. Jahrhundert ist auf dem 200-Hrywnja-Schein"
+	},
+	"Bila Tserkva": {
+		"pl": "Park Aleksandria Branickich z 1793 roku to jeden z największych parków krajobrazowych Ukrainy",
+		"en": "The Branicki family's Oleksandriia Park of 1793 is one of the largest landscape parks in Ukraine",
+		"cs": "Park Oleksandrija Branických z roku 1793 je jedním z největších krajinářských parků Ukrajiny",
+		"is": "Oleksandríja-garður Branicki-fjölskyldunnar frá 1793 er einn stærsti landslagsgarður Úkraínu",
+		"de": "Der Park Oleksandrija der Familie Branicki von 1793 ist einer der größten Landschaftsparks der Ukraine"
+	},
+	"Uzhhorod": {
+		"pl": "Ma najdłuższą aleję lipową w Europie nad rzeką Uż; wiosną kwitną tu japońskie wiśnie",
+		"en": "It has the longest linden avenue in Europe along the Uzh; Japanese cherry trees blossom here every spring",
+		"cs": "Má nejdelší lipovou alej v Evropě podél řeky Uh; na jaře tu kvetou japonské sakury",
+		"is": "Hér eru lengstu linditrjágöng Evrópu meðfram ánni Uzh; japönsk kirsuberjatré blómstra hér á hverju vori",
+		"de": "Hier gibt es die längste Lindenallee Europas am Fluss Usch; jedes Frühjahr blühen japanische Kirschbäume"
+	},
+	"Kamianets-Podilskyi": {
+		"pl": "Stare miasto leży na skalnej wyspie w pętli kanionu Smotrycza; twierdza była przez wieki przedmurzem Rzeczypospolitej",
+		"en": "The old town sits on a rocky island in a loop of the Smotrych canyon; the fortress guarded Poland's south-eastern border for centuries",
+		"cs": "Staré město leží na skalním ostrově v kličce kaňonu Smotryče; pevnost po staletí chránila jihovýchodní hranici Polska",
+		"is": "Gamli bærinn stendur á klettaeyju í lykkju Smotrytsj-gljúfursins; virkið gætti suðausturlandamæra Póllands um aldir",
+		"de": "Die Altstadt liegt auf einer Felseninsel in einer Schleife des Smotrytsch-Canyons; die Festung schützte jahrhundertelang Polens Südostgrenze"
+	},
+	"Mukachevo": {
+		"pl": "Nad miastem na wulkanicznym wzgórzu stoi zamek Palanok",
+		"en": "Palanok Castle stands above the town on a volcanic hill",
+		"cs": "Nad městem stojí na sopečném kopci hrad Palanok",
+		"is": "Palanok-kastalinn stendur yfir bænum á eldfjallahæð",
+		"de": "Über der Stadt steht auf einem Vulkanhügel die Burg Palanok"
+	},
+	"Uman": {
+		"pl": "Słynie z parku Zofiówka; co roku pielgrzymi przybywają do grobu cadyka Nachmana z Bracławia",
+		"en": "Famous for Sofiyivka Park; every year pilgrims come to the grave of Rabbi Nachman of Breslov",
+		"cs": "Proslulý parkem Sofijivka; každý rok sem přijíždějí poutníci ke hrobu rabína Nachmana z Braclavi",
+		"is": "Frægur fyrir Sofíjivka-garðinn; á hverju ári koma pílagrímar að gröf rabbína Nachmans frá Breslov",
+		"de": "Berühmt für den Park Sofijiwka; jedes Jahr kommen Pilger zum Grab von Rabbi Nachman von Breslow"
+	},
+	"Izmail": {
+		"pl": "Port na Dunaju u wrót delty; po drugiej stronie rzeki leży Rumunia",
+		"en": "A Danube port at the gate of the delta; Romania lies on the other bank of the river",
+		"cs": "Přístav na Dunaji u brány delty; na druhém břehu řeky leží Rumunsko",
+		"is": "Hafnarborg við Dóná í hliði óshólmanna; Rúmenía er á hinum bakka árinnar",
+		"de": "Ein Donauhafen am Tor zum Delta; am anderen Ufer des Flusses liegt Rumänien"
+	},
+	"Truskavets": {
+		"pl": "Uzdrowisko słynące z wody mineralnej Naftusia, która lekko pachnie ropą",
+		"en": "A spa town famous for its Naftusya mineral water, which smells faintly of oil",
+		"cs": "Lázně proslulé minerální vodou Naftusja, která slabě voní po ropě",
+		"is": "Heilsulindarbær frægur fyrir Naftusja-ölkelduvatnið sem lyktar örlítið af olíu",
+		"de": "Ein Kurort, berühmt für das Mineralwasser Naftussja, das leicht nach Erdöl riecht"
+	},
+	"Yaremche": {
+		"pl": "Karpackie letnisko nad Prutem z wodospadem Probij i huculskim targiem pamiątek",
+		"en": "A Carpathian resort on the Prut with the Probiy waterfall and a Hutsul souvenir market",
+		"cs": "Karpatské letovisko na Prutu s vodopádem Probij a huculským trhem se suvenýry",
+		"is": "Karpatískur ferðamannastaður við Prut með Probíj-fossinum og húsúlskum minjagripamarkaði",
+		"de": "Ein Karpatenkurort am Pruth mit dem Wasserfall Probij und einem huzulischen Souvenirmarkt"
+	},
+	"Klevan": {
+		"pl": "Tu tor kolejowy biegnie przez zielony Tunel Miłości z drzew",
+		"en": "Here a railway line runs through the green Tunnel of Love made of trees",
+		"cs": "Zde vede železniční trať zeleným Tunelem lásky ze stromů",
+		"is": "Hér liggur járnbraut um græn Ástargöng úr trjám",
+		"de": "Hier führt eine Bahnstrecke durch den grünen Tunnel der Liebe aus Bäumen"
+	},
+	"Zviahel": {
+		"pl": "Do 2022 roku Nowogród Wołyński; urodziła się tu poetka Łesia Ukrainka",
+		"en": "Called Novohrad-Volynskyi until 2022; the poet Lesya Ukrainka was born here",
+		"cs": "Do roku 2022 Novohrad-Volynskyj; narodila se tu básnířka Lesja Ukrajinka",
+		"is": "Hét Novohrad-Volynskyj til 2022; skáldkonan Lesja Úkraínka fæddist hér",
+		"de": "Bis 2022 Nowohrad-Wolynskyj; hier wurde die Dichterin Lessja Ukrajinka geboren"
+	},
+	"Dubno": {
+		"pl": "Zamek Ostrogskich; w „Tarasie Bulbie” Gogola Kozacy oblegają Dubno",
+		"en": "The castle of the Ostrozhsky princes; in Gogol's Taras Bulba the Cossacks besiege Dubno",
+		"cs": "Hrad knížat Ostrožských; v Gogolově Tarasu Bulbovi kozáci obléhají Dubno",
+		"is": "Kastali Ostrozkíj-furstanna; í Taras Búlba eftir Gogol sitja kósakkarnir um Dubno",
+		"de": "Die Burg der Fürsten Ostroschskyj; in Gogols Taras Bulba belagern die Kosaken Dubno"
+	},
+	"Brody": {
+		"pl": "Tu urodził się pisarz Joseph Roth",
+		"en": "The writer Joseph Roth was born here",
+		"cs": "Narodil se tu spisovatel Joseph Roth",
+		"is": "Rithöfundurinn Joseph Roth fæddist hér",
+		"de": "Hier wurde der Schriftsteller Joseph Roth geboren"
+	},
+	"Skole": {
+		"pl": "Brama do Parku Narodowego Bieszczady Skolskie",
+		"en": "The gateway to the Skole Beskids National Park",
+		"cs": "Brána do Národního parku Skolivské Beskydy",
+		"is": "Hliðið að Skole-Beskídí-þjóðgarðinum",
+		"de": "Das Tor zum Nationalpark Skoler Beskiden"
+	},
+	"Svaliava": {
+		"pl": "Słynie ze źródeł wód mineralnych",
+		"en": "Known for its mineral water springs",
+		"cs": "Proslulá prameny minerálních vod",
+		"is": "Þekkt fyrir ölkeldulindir sínar",
+		"de": "Bekannt für seine Mineralwasserquellen"
+	},
+	"Kremenets": {
+		"pl": "Liceum Krzemienieckie zwano „Atenami Wołyńskimi”; nad miastem wznosi się Góra Królowej Bony",
+		"en": "Its lyceum was called 'the Athens of Volhynia'; Queen Bona's castle hill rises above the town",
+		"cs": "Zdejší lyceum se nazývalo „Athény Volyně“; nad městem se zvedá hradní vrch královny Bony",
+		"is": "Menntaskólinn hér var kallaður „Aþena Volyn“; kastalahæð Bónu drottningar rís yfir bænum",
+		"de": "Das Lyzeum hieß „Athen Wolhyniens“; über der Stadt erhebt sich der Burgberg der Königin Bona"
+	},
+	"Zolochiv": {
+		"pl": "Zamek w Złoczowie należy do „Złotej Podkowy” lwowskich zamków; w ogrodzie stoi Pałac Chiński",
+		"en": "Zolochiv Castle is part of Lviv's 'Golden Horseshoe' of castles; a Chinese Palace stands in its garden",
+		"cs": "Zámek Zoločiv patří do „Zlaté podkovy“ lvovských zámků; v zahradě stojí Čínský palác",
+		"is": "Zolotsjív-kastali er hluti af „Gullnu skeifunni“, kastölunum kringum Lvív; í garðinum stendur Kínverska höllin",
+		"de": "Das Schloss Solotschiw gehört zum „Goldenen Hufeisen“ der Schlösser um Lwiw; im Garten steht ein Chinesisches Palais"
+	},
+	"Zalishchyky": {
+		"pl": "W głębokiej pętli Dniestru, z ciepłym mikroklimatem; między wojnami modne letnisko",
+		"en": "In a deep loop of the Dniester with a warm microclimate; a fashionable resort between the wars",
+		"cs": "V hluboké kličce Dněstru s teplým mikroklimatem; mezi válkami módní letovisko",
+		"is": "Í djúpri lykkju Dnjestr með hlýju nærloftslagi; vinsæll sumardvalarstaður milli stríða",
+		"de": "In einer tiefen Schleife des Dnister mit warmem Kleinklima; zwischen den Kriegen ein beliebter Kurort"
+	},
+	"Rohatyn": {
+		"pl": "Według tradycji tu urodziła się Roksolana, żona sułtana Sulejmana Wspaniałego",
+		"en": "By tradition the birthplace of Roxelana, wife of the Ottoman sultan Suleiman the Magnificent",
+		"cs": "Podle tradice rodiště Roxolany, manželky osmanského sultána Sulejmana Nádherného",
+		"is": "Samkvæmt hefðinni fæðingarstaður Roxelönu, eiginkonu Súleimans mikla Tyrkjasoldáns",
+		"de": "Der Überlieferung nach der Geburtsort Roxelanas, der Frau des osmanischen Sultans Süleyman des Prächtigen"
+	},
+	"Halych": {
+		"pl": "Od Halicza wzięła nazwę Galicja; był stolicą Księstwa Halickiego",
+		"en": "Galicia took its name from Halych, once the capital of the Principality of Halych",
+		"cs": "Halič (Galicie) dostala jméno podle města Halyč, hlavního města Haličského knížectví",
+		"is": "Galisía dregur nafn sitt af Halytsj, sem var höfuðborg furstadæmisins Halytsj",
+		"de": "Galizien hat seinen Namen von Halytsch, einst Hauptstadt des Fürstentums Halytsch"
+	},
+	"Kolomyia": {
+		"pl": "Muzeum pisanek mieści się w budynku w kształcie wielkiej malowanej pisanki",
+		"en": "Its Pysanka Museum is housed in a giant painted Easter egg",
+		"cs": "Muzeum kraslic sídlí v budově ve tvaru obří malované kraslice",
+		"is": "Páskaeggjasafnið er í risastóru máluðu páskaeggi",
+		"de": "Das Pysanka-Museum steht in einem riesigen bemalten Osterei"
+	},
+	"Yasinia": {
+		"pl": "Drewniana cerkiew Wniebowstąpienia (Strukiwska) jest na liście UNESCO",
+		"en": "The wooden Church of the Ascension (Strukivska) is on the UNESCO list",
+		"cs": "Dřevěný chrám Nanebevstoupení (Strukivský) je na seznamu UNESCO",
+		"is": "Timburkirkja uppstigningarinnar (Strukívska) er á heimsminjaskrá UNESCO",
+		"de": "Die hölzerne Himmelfahrtskirche (Strukiwska) ist UNESCO-Welterbe"
+	},
+	"Rakhiv": {
+		"pl": "Niedaleko stoi znak geograficznego środka Europy, wyznaczonego w 1887 roku",
+		"en": "Nearby stands a marker of the geographical centre of Europe, set in 1887",
+		"cs": "Nedaleko stojí znak zeměpisného středu Evropy, určeného roku 1887",
+		"is": "Skammt frá stendur merki um landfræðilega miðju Evrópu, sett 1887",
+		"de": "In der Nähe steht ein Zeichen für den geografischen Mittelpunkt Europas, 1887 bestimmt"
+	},
+	"Khust": {
+		"pl": "Ruiny zamku na wzgórzu; wiosną nieopodal kwitnie Dolina Narcyzów",
+		"en": "Castle ruins on a hill; every spring the Valley of Narcissi blooms nearby",
+		"cs": "Zřícenina hradu na kopci; na jaře nedaleko kvete Údolí narcisů",
+		"is": "Kastalarústir á hæð; á hverju vori blómstrar Páskaliljudalurinn í grenndinni",
+		"de": "Burgruine auf einem Hügel; jedes Frühjahr blüht in der Nähe das Narzissental"
+	},
+	"Khotyn": {
+		"pl": "Twierdza nad Dniestrem, pod którą wojska Rzeczypospolitej walczyły z Turkami w 1621 i 1673 roku",
+		"en": "A fortress on the Dniester where the Polish-Lithuanian army fought the Ottomans in 1621 and 1673",
+		"cs": "Pevnost na Dněstru, u níž polsko-litevské vojsko bojovalo s Turky v letech 1621 a 1673",
+		"is": "Virki við Dnjestr þar sem pólsk-litháíski herinn barðist við Tyrki 1621 og 1673",
+		"de": "Eine Festung am Dnister, bei der das polnisch-litauische Heer 1621 und 1673 gegen die Osmanen kämpfte"
+	},
+	"Berdychiv": {
+		"pl": "Tu w 1850 roku Balzac poślubił Ewelinę Hańską, a w 1857 roku urodził się Joseph Conrad",
+		"en": "Balzac married Ewelina Hańska here in 1850, and Joseph Conrad was born here in 1857",
+		"cs": "Zde se roku 1850 Balzac oženil s Evelínou Hańskou a roku 1857 se tu narodil Joseph Conrad",
+		"is": "Hér kvæntist Balzac Ewelinu Hańska árið 1850 og hér fæddist Joseph Conrad árið 1857",
+		"de": "Hier heiratete Balzac 1850 Ewelina Hańska, und 1857 wurde hier Joseph Conrad geboren"
+	},
+	"Boryspil": {
+		"pl": "Największe lotnisko Ukrainy",
+		"en": "Ukraine's largest airport",
+		"cs": "Největší letiště Ukrajiny",
+		"is": "Stærsti flugvöllur Úkraínu",
+		"de": "Der größte Flughafen der Ukraine"
+	},
+	"Reshetylivka": {
+		"pl": "Słynie z białego haftu i tkanych dywanów",
+		"en": "Famous for its white embroidery and woven carpets",
+		"cs": "Proslulá bílou výšivkou a tkanými koberci",
+		"is": "Fræg fyrir hvítan útsaum og ofin teppi",
+		"de": "Berühmt für ihre weiße Stickerei und gewebte Teppiche"
+	},
+	"Berestyn": {
+		"pl": "Do 2024 roku nazywał się Krasnohrad",
+		"en": "Called Krasnohrad until 2024",
+		"cs": "Do roku 2024 se jmenoval Krasnohrad",
+		"is": "Hét Krasnohrad til 2024",
+		"de": "Bis 2024 hieß die Stadt Krasnohrad"
+	},
+	"Samar": {
+		"pl": "Do 2024 roku Nowomoskowsk; drewniany Sobór Trójcy Świętej zbudowano podobno bez jednego gwoździa",
+		"en": "Called Novomoskovsk until 2024; its wooden Trinity Cathedral is said to have been built without a single nail",
+		"cs": "Do roku 2024 Novomoskovsk; dřevěná katedrála Nejsvětější Trojice prý byla postavena bez jediného hřebíku",
+		"is": "Hét Novomoskovsk til 2024; sagt er að Þrenningarkirkjan úr timbri hafi verið byggð án eins einasta nagla",
+		"de": "Bis 2024 Nowomoskowsk; die hölzerne Dreifaltigkeitskathedrale soll ohne einen einzigen Nagel gebaut worden sein"
+	},
+	"Svitlovodsk": {
+		"pl": "Miasto zbudowane razem z elektrownią wodną na Zalewie Krzemieńczuckim",
+		"en": "A town built together with the hydroelectric dam on the Kremenchuk Reservoir",
+		"cs": "Město postavené spolu s vodní elektrárnou na Kremenčuckém jezeře",
+		"is": "Bær byggður um leið og vatnsaflsvirkjunin við Kremenchuk-lónið",
+		"de": "Eine Stadt, die zusammen mit dem Wasserkraftwerk am Krementschuker Stausee gebaut wurde"
+	},
+	"Chyhyryn": {
+		"pl": "W XVII wieku rezydencja hetmana Bohdana Chmielnickiego",
+		"en": "The seat of the hetman Bohdan Khmelnytsky in the 17th century",
+		"cs": "V 17. století sídlo hejtmana Bohdana Chmelnického",
+		"is": "Aðsetur hetmansins Bohdans Khmelnytskyj á 17. öld",
+		"de": "Im 17. Jahrhundert die Residenz des Hetmans Bohdan Chmelnyzkyj"
+	},
+	"Pereiaslav": {
+		"pl": "Duży skansen architektury ludowej; tu urodził się pisarz Szolem Alejchem",
+		"en": "A large open-air museum of folk architecture; the writer Sholem Aleichem was born here",
+		"cs": "Velký skanzen lidové architektury; narodil se tu spisovatel Šolem Alejchem",
+		"is": "Stórt byggðasafn alþýðubygginga; rithöfundurinn Sholem Aleichem fæddist hér",
+		"de": "Ein großes Freilichtmuseum der Volksarchitektur; hier wurde der Schriftsteller Scholem Alejchem geboren"
+	},
+	"Trostianets": {
+		"pl": "Okrągły Dziedziniec z 1749 roku zbudowano podobno jako salę koncertową pod gołym niebem",
+		"en": "Its Round Courtyard of 1749 is said to have been built as an open-air concert hall",
+		"cs": "Kulatý dvůr z roku 1749 byl prý postaven jako koncertní síň pod širým nebem",
+		"is": "Sagt er að Hringgarðurinn frá 1749 hafi verið byggður sem tónleikasalur undir berum himni",
+		"de": "Der Runde Hof von 1749 soll als Konzertsaal unter freiem Himmel gebaut worden sein"
+	},
+	"Bilhorod-Dnistrovskyi": {
+		"pl": "Jedno z najstarszych miast Europy, grecka Tyras; Twierdza Akerman stoi nad Limanem Dniestrowym",
+		"en": "One of the oldest cities in Europe, the Greek Tyras; Akkerman Fortress stands over the Dniester estuary",
+		"cs": "Jedno z nejstarších měst Evropy, řecký Tyras; pevnost Akkerman stojí nad Dněsterským limanem",
+		"is": "Ein elsta borg Evrópu, gríska Tyras; Akkerman-virkið stendur yfir ósi Dnjestr",
+		"de": "Eine der ältesten Städte Europas, das griechische Tyras; die Festung Akkerman steht über dem Dnister-Liman"
+	},
+	"Zatoka": {
+		"pl": "Kąpielisko na piaszczystej mierzei między Limanem Dniestrowym a morzem, z mostem zwodzonym",
+		"en": "A beach resort on a sandy spit between the Dniester estuary and the sea, with a drawbridge",
+		"cs": "Letovisko na písčité kose mezi Dněsterským limanem a mořem, se zvedacím mostem",
+		"is": "Baðstaður á sandrifi milli Dnjestr-óssins og sjávar, með vindubrú",
+		"de": "Ein Badeort auf einer Sandnehrung zwischen Dnister-Liman und Meer, mit einer Klappbrücke"
+	},
+	"Sarata": {
+		"pl": "Założona w 1822 roku przez niemieckich osadników",
+		"en": "Founded by German settlers in 1822",
+		"cs": "Založena německými osadníky roku 1822",
+		"is": "Stofnuð af þýskum landnemum árið 1822",
+		"de": "1822 von deutschen Siedlern gegründet"
+	}
+}

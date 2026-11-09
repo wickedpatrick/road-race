@@ -150,6 +150,12 @@
 			"name": {"pl": "Rosja", "en": "Russia", "cs": "Rusko", "is": "Rússland", "de": "Russland"},
 			"neighbours": ["by", "ua", "pl", "lt", "ee", "lv", "fi", "no"],
 			"favorite_neighbour": "by"
+		},
+		{
+			"code": "ua",
+			"name": {"pl": "Ukraina", "en": "Ukraine", "cs": "Ukrajina", "is": "Úkraína", "de": "Ukraine"},
+			"neighbours": ["pl", "sk", "hu", "ro", "md", "by", "ru"],
+			"favorite_neighbour": "pl"
 		}
 	]
 }

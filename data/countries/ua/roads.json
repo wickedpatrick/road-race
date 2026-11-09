@@ -1,0 +1,440 @@
+[
+	{
+		"a": "kyiv",
+		"b": "chernihiv",
+		"km": 151,
+		"road": "M-01",
+		"towns": [["Brovary", 24], ["Velyka Dymerka", 42], ["Kozelets", 82]],
+		"zones": [[35, "fields", "Kyivshchyna"], [115, "forest", "Polissia"], [151, "fields", "Chernihivshchyna"]],
+		"via": [[24, 30.79, 50.51], [42, 30.9, 50.59], [82, 31.12, 50.92], [116, 31.23, 51.23]]
+	},
+	{
+		"a": "kyiv",
+		"b": "zhytomyr",
+		"km": 140,
+		"road": [[140, "M-06", 3]],
+		"towns": [["Korostyshiv", 106]],
+		"zones": [[30, "fields", "Kyivshchyna"], [100, "forest", "Polissia"], [140, "upland", "Zhytomyrshchyna"]],
+		"via": [[35, 30.04, 50.43], [71, 29.55, 50.4], [106, 29.06, 50.32]]
+	},
+	{
+		"a": "zhytomyr",
+		"b": "rivne",
+		"km": 190,
+		"road": [[190, "M-06", 3]],
+		"towns": [["Zviahel", 93], ["Korets", 124], ["Hoshcha", 158]],
+		"zones": [[75, "forest", "Polissia"], [140, "podlasie", "Volyn"], [190, "upland", "Volynska vysochyna"]],
+		"via": [[46, 28.13, 50.45], [93, 27.61, 50.59], [124, 27.16, 50.62], [158, 26.68, 50.6]]
+	},
+	{
+		"a": "rivne",
+		"b": "lviv",
+		"km": 211,
+		"road": "M-06",
+		"towns": [["Dubno", 44], ["Radyvyliv", 100], ["Brody", 107], ["Busk", 159]],
+		"zones": [
+			[65, "upland", "Volynska vysochyna"], [125, "fields", "Mala Polissia"], [180, "forest", "Mala Polissia"],
+			[211, "upland", "Roztochchia"]
+		],
+		"via": [[44, 25.75, 50.42], [100, 25.25, 50.13], [107, 25.14, 50.08], [159, 24.61, 49.97]]
+	},
+	{
+		"a": "lviv",
+		"b": "mukachevo",
+		"km": 230,
+		"road": "M-06",
+		"towns": [["Stryi", 72], ["Skole", 109], ["Svaliava", 201]],
+		"zones": [
+			[45, "upland", "Opillia"], [95, "foothills", "Prykarpattia"], [195, "mountains", "Skolivski Beskydy"],
+			[230, "foothills", "Zakarpattia"]
+		],
+		"via": [[36, 23.97, 49.55], [72, 23.85, 49.26], [109, 23.51, 49.04], [155, 23.13, 48.88], [201, 22.99, 48.55]]
+	},
+	{
+		"a": "mukachevo",
+		"b": "uzhhorod",
+		"km": 42,
+		"road": "M-06",
+		"towns": [["Serednie", 21]],
+		"zones": [[42, "orchard", "Zakarpattia"]],
+		"via": [[21, 22.5, 48.54]]
+	},
+	{
+		"a": "rivne",
+		"b": "lutsk",
+		"km": 73,
+		"road": "H-22",
+		"towns": [["Klevan", 23]],
+		"zones": [[73, "podlasie", "Volyn"]],
+		"via": [[23, 26.01, 50.75]]
+	},
+	{
+		"a": "lutsk",
+		"b": "lviv",
+		"km": 150,
+		"road": [[135, "H-17"], [150, "M-06"]],
+		"towns": [["Horokhiv", 51], ["Radekhiv", 79], ["Kamianka-Buzka", 109]],
+		"zones": [[60, "fields", "Volyn"], [120, "forest", "Mala Polissia"], [150, "upland", "Roztochchia"]],
+		"via": [[51, 24.76, 50.5], [79, 24.64, 50.28], [109, 24.35, 50.1]]
+	},
+	{
+		"a": "lutsk",
+		"b": "ternopil",
+		"km": 163,
+		"road": "M-19",
+		"towns": [["Dubno", 54], ["Kremenets", 95], ["Vyshnivets", 119]],
+		"zones": [[55, "fields", "Volyn"], [115, "upland", "Kremenetski hory"], [163, "fields", "Podillia"]],
+		"via": [[54, 25.75, 50.42], [95, 25.73, 50.1], [119, 25.75, 49.9]]
+	},
+	{
+		"a": "lviv",
+		"b": "ternopil",
+		"km": 128,
+		"road": "M-09",
+		"towns": [["Zolochiv", 67], ["Zboriv", 92]],
+		"zones": [[45, "upland", "Opillia"], [95, "upland", "Holohory"], [128, "fields", "Podillia"]],
+		"via": [[34, 24.45, 49.76], [67, 24.9, 49.81], [92, 25.14, 49.66]]
+	},
+	{
+		"a": "ternopil",
+		"b": "khmelnytskyi",
+		"km": 112,
+		"road": "M-30",
+		"towns": [["Volochysk", 48]],
+		"zones": [[112, "fields", "Podillia"]],
+		"via": [[48, 26.21, 49.54], [80, 26.6, 49.42]]
+	},
+	{
+		"a": "khmelnytskyi",
+		"b": "vinnytsia",
+		"km": 121,
+		"road": "M-30",
+		"towns": [["Letychiv", 53], ["Lityn", 89]],
+		"zones": [[60, "fields", "Podillia"], [121, "upland", "Vinnychchyna"]],
+		"via": [[53, 27.62, 49.38], [89, 28.07, 49.33]]
+	},
+	{
+		"a": "vinnytsia",
+		"b": "uman",
+		"km": 162,
+		"road": "M-30",
+		"towns": [["Voronovytsia", 25], ["Nemyriv", 49], ["Haisyn", 97]],
+		"zones": [[65, "upland", "Vinnychchyna"], [125, "fields", "Pobuzhzhia"], [162, "orchard", "Cherkashchyna"]],
+		"via": [[25, 28.69, 49.11], [49, 28.84, 48.97], [97, 29.39, 48.81], [130, 29.83, 48.79]]
+	},
+	{
+		"a": "uman",
+		"b": "kropyvnytskyi",
+		"km": 167,
+		"road": "M-30",
+		"towns": [["Babanka", 20], ["Novoarkhanhelsk", 51], ["Velyka Vyska", 134]],
+		"zones": [[65, "fields", "Cherkashchyna"], [167, "fields", "Kirovohradshchyna"]],
+		"via": [[20, 30.45, 48.71], [51, 30.81, 48.66], [92, 31.34, 48.57], [134, 31.86, 48.57]]
+	},
+	{
+		"a": "kropyvnytskyi",
+		"b": "dnipro",
+		"km": 245,
+		"road": "M-30",
+		"towns": [["Znamianka", 41], ["Oleksandriia", 77], ["Piatykhatky", 134]],
+		"zones": [
+			[95, "fields", "Kirovohradshchyna"],
+			[220, "steppe", "Prydniprovska vysochyna"],
+			[245, "industrial", "Prydniprovia"]
+		],
+		"via": [[41, 32.67, 48.72], [77, 33.12, 48.67], [134, 33.71, 48.41], [171, 34.16, 48.34], [208, 34.61, 48.36]]
+	},
+	{
+		"a": "ternopil",
+		"b": "chernivtsi",
+		"km": 169,
+		"road": "M-19",
+		"towns": [["Terebovlia", 35], ["Chortkiv", 77], ["Zalishchyky", 121]],
+		"zones": [[65, "fields", "Podillia"], [125, "upland", "Dnistrovskyi kanion"], [169, "foothills", "Bukovyna"]],
+		"via": [[35, 25.69, 49.3], [77, 25.79, 49.02], [121, 25.73, 48.65]]
+	},
+	{
+		"a": "lviv",
+		"b": "ivano_frankivsk",
+		"km": 134,
+		"road": "H-09",
+		"towns": [["Bibrka", 33], ["Rohatyn", 74], ["Burshtyn", 90], ["Halych", 109]],
+		"zones": [[80, "upland", "Opillia"], [134, "foothills", "Prykarpattia"]],
+		"via": [[33, 24.3, 49.64], [74, 24.61, 49.41], [90, 24.62, 49.26], [109, 24.73, 49.12]]
+	},
+	{
+		"a": "ivano_frankivsk",
+		"b": "chernivtsi",
+		"km": 136,
+		"road": "H-10",
+		"towns": [["Otyniia", 31], ["Kolomyia", 59], ["Sniatyn", 100]],
+		"zones": [[65, "foothills", "Prykarpattia"], [105, "fields", "Pokuttia"], [136, "foothills", "Bukovyna"]],
+		"via": [[31, 24.86, 48.73], [59, 25.04, 48.53], [100, 25.55, 48.45]]
+	},
+	{
+		"a": "ivano_frankivsk",
+		"b": "yaremche",
+		"km": 61,
+		"road": "H-09",
+		"towns": [["Nadvirna", 36], ["Deliatyn", 50]],
+		"zones": [[35, "foothills", "Prykarpattia"], [61, "mountains", "Horhany"]],
+		"via": [[36, 24.57, 48.63], [50, 24.63, 48.53]]
+	},
+	{
+		"a": "yaremche",
+		"b": "mukachevo",
+		"km": 239,
+		"road": "H-09",
+		"towns": [["Yasinia", 43], ["Rakhiv", 74], ["Tiachiv", 145], ["Khust", 175]],
+		"zones": [
+			[50, "mountains", "Hutsulshchyna"], [110, "mountains", "Marmarosh"], [185, "orchard", "Dolyna Tysy"],
+			[239, "foothills", "Zakarpattia"]
+		],
+		"via": [
+			[43, 24.36, 48.27], [74, 24.21, 48.06], [110, 24.01, 47.97], [145, 23.58, 48.01], [175, 23.29, 48.18],
+			[207, 22.98, 48.28]
+		]
+	},
+	{
+		"a": "lviv",
+		"b": "truskavets",
+		"km": 97,
+		"road": [[39, "M-06"], [51, "P-84"], [67, "T-14-16"], [97, "T-14-02"]],
+		"towns": [["Medenychi", 67], ["Stebnyk", 88]],
+		"zones": [[40, "upland", "Opillia"], [97, "foothills", "Prykarpattia"]],
+		"via": [[34, 23.99, 49.56], [67, 23.75, 49.43], [88, 23.56, 49.29]]
+	},
+	{
+		"a": "chernivtsi",
+		"b": "kamianets",
+		"km": 89,
+		"road": [[22, "H-10"], [89, "H-03"]],
+		"towns": [["Khotyn", 61]],
+		"zones": [[35, "foothills", "Bukovyna"], [89, "upland", "Dnistrovskyi kanion"]],
+		"via": [[30, 26.27, 48.29], [61, 26.49, 48.51]]
+	},
+	{
+		"a": "kamianets",
+		"b": "khmelnytskyi",
+		"km": 101,
+		"road": "H-03",
+		"towns": [["Dunaivtsi", 31], ["Yarmolyntsi", 71]],
+		"zones": [[45, "upland", "Tovtry"], [101, "fields", "Podillia"]],
+		"via": [[31, 26.85, 48.89], [71, 26.83, 49.19]]
+	},
+	{
+		"a": "zhytomyr",
+		"b": "vinnytsia",
+		"km": 128,
+		"road": "M-21",
+		"towns": [["Berdychiv", 49], ["Kalynivka", 98]],
+		"zones": [[65, "fields", "Zhytomyrshchyna"], [128, "fields", "Vinnychchyna"]],
+		"via": [[49, 28.58, 49.89], [98, 28.53, 49.46]]
+	},
+	{
+		"a": "kyiv",
+		"b": "bila_tserkva",
+		"km": 86,
+		"road": [[86, "M-05", 3]],
+		"towns": [["Vasylkiv", 36], ["Hrebinky", 67]],
+		"zones": [[86, "fields", "Kyivshchyna"]],
+		"via": [[36, 30.32, 50.18], [67, 30.18, 49.95]]
+	},
+	{
+		"a": "bila_tserkva",
+		"b": "uman",
+		"km": 128,
+		"road": [[128, "M-05", 3]],
+		"towns": [["Zhashkiv", 65]],
+		"zones": [[55, "fields", "Kyivshchyna"], [128, "fields", "Cherkashchyna"]],
+		"via": [[32, 30.17, 49.52], [65, 30.11, 49.25], [96, 30.16, 48.99]]
+	},
+	{
+		"a": "uman",
+		"b": "odesa",
+		"km": 270,
+		"road": [[270, "M-05", 3]],
+		"towns": [["Blahovishchenske", 49], ["Kryve Ozero", 92], ["Liubashivka", 107], ["Stari Maiaky", 160], ["Dachne", 250]],
+		"zones": [[110, "fields", "Pobuzhzhia"], [230, "steppe", "Prychornomorska nyzovyna"], [270, "steppe", "Odeshchyna"]],
+		"via": [
+			[49, 30.23, 48.33], [92, 30.34, 47.95], [107, 30.26, 47.83], [148, 30.32, 47.46], [160, 30.31, 47.35],
+			[205, 30.36, 46.95], [250, 30.55, 46.58]
+		]
+	},
+	{
+		"a": "odesa",
+		"b": "mykolaiv",
+		"km": 133,
+		"road": "M-14",
+		"towns": [["Pivdenne", 47], ["Berezanka", 81]],
+		"zones": [[35, "coast", "Prychornomoria"], [133, "steppe", "Mykolaivshchyna"]],
+		"via": [[47, 31.1, 46.62], [81, 31.39, 46.85]]
+	},
+	{
+		"a": "odesa",
+		"b": "izmail",
+		"km": 278,
+		"road": [[82, "H-33"], [110, "P-72"], [278, "M-15"]],
+		"towns": [["Ovidiopol", 40], ["Zatoka", 62], ["Bilhorod-Dnistrovskyi", 82], ["Sarata", 159], ["Tatarbunary", 183]],
+		"zones": [
+			[70, "coast", "Prychornomoria"], [95, "orchard", "Dnistrovskyi lyman"], [230, "steppe", "Budzhak"],
+			[278, "lakes", "Prydunaiski ozera"]
+		],
+		"via": [
+			[40, 30.44, 46.25], [62, 30.45, 46.06], [82, 30.35, 46.19], [120, 30, 46.1], [159, 29.66, 46.02],
+			[183, 29.62, 45.84], [235, 29, 45.58]
+		]
+	},
+	{
+		"a": "mykolaiv",
+		"b": "kryvyi_rih",
+		"km": 188,
+		"road": [[8, "M-14"], [82, "H-14"], [116, "P-55"], [188, "H-11"]],
+		"towns": [["Novyi Buh", 114], ["Kazanka", 142]],
+		"zones": [[100, "steppe", "Mykolaivshchyna"], [172, "steppe", "Kryvbas"], [188, "industrial", "Kryvbas"]],
+		"via": [[38, 32.12, 47.29], [76, 32.1, 47.62], [114, 32.51, 47.69], [142, 32.82, 47.84]]
+	},
+	{
+		"a": "kryvyi_rih",
+		"b": "dnipro",
+		"km": 146,
+		"road": "H-11",
+		"towns": [["Sofiivka", 39], ["Krynychky", 98]],
+		"zones": [
+			[18, "industrial", "Kryvbas"],
+			[125, "steppe", "Prydniprovska vysochyna"],
+			[146, "industrial", "Prydniprovia"]
+		],
+		"via": [[39, 33.87, 48.05], [98, 34.46, 48.37]]
+	},
+	{
+		"a": "kryvyi_rih",
+		"b": "kropyvnytskyi",
+		"km": 120,
+		"road": "H-23",
+		"towns": [],
+		"zones": [[18, "industrial", "Kryvbas"], [120, "fields", "Kirovohradshchyna"]],
+		"via": [[40, 33.08, 48.12], [80, 32.7, 48.36]]
+	},
+	{
+		"a": "dnipro",
+		"b": "zaporizhzhia",
+		"km": 84,
+		"road": "H-08",
+		"towns": [],
+		"zones": [[18, "industrial", "Prydniprovia"], [72, "steppe", "Prydniprovia"], [84, "industrial", "Zaporizhzhia"]],
+		"via": [[42, 34.94, 48.13]]
+	},
+	{
+		"a": "kyiv",
+		"b": "poltava",
+		"km": 343,
+		"road": [[205, "M-03", 3], [343, "M-03"]],
+		"towns": [["Boryspil", 37], ["Berezan", 74], ["Pyriatyn", 153], ["Lubny", 202], ["Khorol", 237], ["Reshetylivka", 305]],
+		"zones": [[45, "fields", "Kyivshchyna"], [160, "fields", "Prydniprovska nyzovyna"], [343, "fields", "Poltavshchyna"]],
+		"via": [
+			[37, 30.95, 50.35], [74, 31.47, 50.31], [114, 31.95, 50.23], [153, 32.5, 50.24], [202, 33, 50.01],
+			[237, 33.27, 49.78], [271, 33.68, 49.67], [305, 34.08, 49.56]
+		]
+	},
+	{
+		"a": "poltava",
+		"b": "kharkiv",
+		"km": 145,
+		"road": "M-03",
+		"towns": [["Chutove", 55], ["Valky", 90]],
+		"zones": [[75, "fields", "Poltavshchyna"], [145, "upland", "Slobozhanshchyna"]],
+		"via": [[55, 35.17, 49.72], [90, 35.61, 49.83]]
+	},
+	{
+		"a": "kharkiv",
+		"b": "dnipro",
+		"km": 217,
+		"road": [[19, "M-03"], [200, "M-29"], [217, "M-30"]],
+		"towns": [["Nova Vodolaha", 48], ["Berestyn", 104], ["Pereshchepyne", 148], ["Samar", 192]],
+		"zones": [
+			[70, "upland", "Slobozhanshchyna"],
+			[170, "steppe", "Prydniprovska nyzovyna"],
+			[217, "steppe", "Prydniprovia"]
+		],
+		"via": [[48, 35.86, 49.72], [104, 35.45, 49.37], [148, 35.36, 49.02], [192, 35.22, 48.63]]
+	},
+	{
+		"a": "poltava",
+		"b": "kremenchuk",
+		"km": 114,
+		"road": "M-22",
+		"towns": [["Novi Sanzhary", 34], ["Kozelshchyna", 76]],
+		"zones": [[114, "fields", "Poltavshchyna"]],
+		"via": [[34, 34.31, 49.33], [76, 33.84, 49.21]]
+	},
+	{
+		"a": "kremenchuk",
+		"b": "kropyvnytskyi",
+		"km": 133,
+		"road": [[27, "P-10"], [89, "T-12-11"], [133, "M-30"]],
+		"towns": [["Svitlovodsk", 27], ["Znamianka", 91]],
+		"zones": [[40, "lakes", "Nadniprianshchyna"], [133, "fields", "Kirovohradshchyna"]],
+		"via": [[27, 33.21, 49.05], [59, 32.9, 48.93], [91, 32.67, 48.72]]
+	},
+	{
+		"a": "kremenchuk",
+		"b": "dnipro",
+		"km": 161,
+		"road": [[140, "H-08"], [161, "M-30"]],
+		"towns": [["Verkhnodniprovsk", 90], ["Kamianske", 119]],
+		"zones": [[85, "fields", "Nadniprianshchyna"], [161, "industrial", "Prydniprovia"]],
+		"via": [[45, 33.87, 48.85], [90, 34.33, 48.65], [119, 34.61, 48.52]]
+	},
+	{
+		"a": "kremenchuk",
+		"b": "cherkasy",
+		"km": 133,
+		"road": "P-10",
+		"towns": [["Svitlovodsk", 27], ["Chyhyryn", 70]],
+		"zones": [[50, "lakes", "Nadniprianshchyna"], [95, "forest", "Kholodnyi Yar"], [133, "fields", "Cherkashchyna"]],
+		"via": [[27, 33.21, 49.05], [70, 32.67, 49.08], [102, 32.33, 49.24]]
+	},
+	{
+		"a": "cherkasy",
+		"b": "kyiv",
+		"km": 188,
+		"road": [[29, "H-16"], [150, "H-08"], [188, "M-03", 3]],
+		"towns": [["Zolotonosha", 35], ["Pereiaslav", 103], ["Boryspil", 152]],
+		"zones": [[30, "lakes", "Nadniprianshchyna"], [120, "fields", "Pereiaslavshchyna"], [188, "fields", "Kyivshchyna"]],
+		"via": [[35, 32.04, 49.67], [69, 31.73, 49.87], [103, 31.44, 50.06], [152, 30.95, 50.35]]
+	},
+	{
+		"a": "cherkasy",
+		"b": "uman",
+		"km": 186,
+		"road": "H-16",
+		"towns": [["Smila", 29], ["Shpola", 76], ["Talne", 142]],
+		"zones": [[40, "forest", "Cherkaskyi bir"], [186, "fields", "Cherkashchyna"]],
+		"via": [[29, 31.88, 49.23], [76, 31.39, 49.01], [109, 30.98, 49.06], [142, 30.7, 48.89]]
+	},
+	{
+		"a": "poltava",
+		"b": "sumy",
+		"km": 180,
+		"road": "H-12",
+		"towns": [["Kotelva", 68], ["Okhtyrka", 102], ["Trostianets", 124]],
+		"zones": [[80, "fields", "Poltavshchyna"], [180, "forest", "Slobozhanshchyna"]],
+		"via": [[34, 34.57, 49.87], [68, 34.76, 50.07], [102, 34.89, 50.31], [124, 34.96, 50.48]]
+	},
+	{
+		"a": "kyiv",
+		"b": "sumy",
+		"km": 336,
+		"road": [[33, "M-01"], [336, "H-07"]],
+		"towns": [["Brovary", 24], ["Pryluky", 150], ["Sribne", 188], ["Romny", 232], ["Nedryhailiv", 263]],
+		"zones": [
+			[60, "fields", "Kyivshchyna"], [205, "fields", "Chernihivshchyna"], [280, "fields", "Sumshchyna"],
+			[336, "forest", "Sumshchyna"]
+		],
+		"via": [
+			[24, 30.79, 50.51], [66, 31.32, 50.5], [108, 31.87, 50.61], [150, 32.39, 50.6], [188, 32.92, 50.66],
+			[232, 33.49, 50.74], [263, 33.88, 50.84], [300, 34.37, 50.81]
+		]
+	}
+]

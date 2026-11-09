@@ -1,0 +1,229 @@
+{
+	"kyiv": {
+		"name": "Kyiv",
+		"lat": 50.45,
+		"lon": 30.52,
+		"pop": 2952,
+		"region": "Kyiv",
+		"exonym": {"pl": "Kijów", "cs": "Kyjev", "is": "Kænugarður", "de": "Kiew"}
+	},
+	"kharkiv": {
+		"name": "Kharkiv",
+		"lat": 49.99,
+		"lon": 36.23,
+		"pop": 1421,
+		"region": "Kharkiv",
+		"exonym": {"pl": "Charków", "cs": "Charkov", "is": "Kharkív", "de": "Charkiw"}
+	},
+	"odesa": {
+		"name": "Odesa",
+		"lat": 46.48,
+		"lon": 30.73,
+		"pop": 1010,
+		"region": "Odesa",
+		"exonym": {"pl": "Odessa", "cs": "Oděsa", "de": "Odessa"}
+	},
+	"dnipro": {
+		"name": "Dnipro",
+		"lat": 48.47,
+		"lon": 35.04,
+		"pop": 969,
+		"region": "Dnipropetrovsk",
+		"exonym": {"pl": "Dniepr", "is": "Dnípró"}
+	},
+	"lviv": {
+		"name": "Lviv",
+		"lat": 49.84,
+		"lon": 24.03,
+		"pop": 717,
+		"region": "Lviv",
+		"exonym": {"pl": "Lwów", "cs": "Lvov", "is": "Lvív", "de": "Lwiw"}
+	},
+	"zaporizhzhia": {
+		"name": "Zaporizhzhia",
+		"lat": 47.85,
+		"lon": 35.12,
+		"pop": 711,
+		"region": "Zaporizhzhia",
+		"exonym": {"pl": "Zaporoże", "cs": "Záporoží", "de": "Saporischschja"}
+	},
+	"kryvyi_rih": {
+		"name": "Kryvyi Rih",
+		"lat": 47.91,
+		"lon": 33.39,
+		"pop": 603,
+		"region": "Dnipropetrovsk",
+		"exonym": {"pl": "Krzywy Róg", "cs": "Kryvyj Rih", "de": "Krywyj Rih"}
+	},
+	"mykolaiv": {
+		"name": "Mykolaiv",
+		"lat": 46.98,
+		"lon": 31.99,
+		"pop": 470,
+		"region": "Mykolaiv",
+		"exonym": {"pl": "Mikołajów", "cs": "Mykolajiv", "de": "Mykolajiw"}
+	},
+	"vinnytsia": {
+		"name": "Vinnytsia",
+		"lat": 49.23,
+		"lon": 28.47,
+		"pop": 367,
+		"region": "Vinnytsia",
+		"exonym": {"pl": "Winnica", "cs": "Vinnycja", "de": "Winnyzja"}
+	},
+	"chernihiv": {
+		"name": "Chernihiv",
+		"lat": 51.49,
+		"lon": 31.29,
+		"pop": 282,
+		"region": "Chernihiv",
+		"exonym": {"pl": "Czernihów", "cs": "Černihiv", "de": "Tschernihiw"}
+	},
+	"poltava": {
+		"name": "Poltava",
+		"lat": 49.59,
+		"lon": 34.55,
+		"pop": 280,
+		"region": "Poltava",
+		"exonym": {"pl": "Połtawa", "de": "Poltawa"}
+	},
+	"khmelnytskyi": {
+		"name": "Khmelnytskyi",
+		"lat": 49.42,
+		"lon": 26.98,
+		"pop": 275,
+		"region": "Khmelnytskyi",
+		"exonym": {"pl": "Chmielnicki", "cs": "Chmelnyckyj", "de": "Chmelnyzkyj"}
+	},
+	"cherkasy": {
+		"name": "Cherkasy",
+		"lat": 49.45,
+		"lon": 32.06,
+		"pop": 272,
+		"region": "Cherkasy",
+		"exonym": {"pl": "Czerkasy", "cs": "Čerkasy", "de": "Tscherkassy"}
+	},
+	"chernivtsi": {
+		"name": "Chernivtsi",
+		"lat": 48.29,
+		"lon": 25.94,
+		"pop": 264,
+		"region": "Chernivtsi",
+		"exonym": {"pl": "Czerniowce", "cs": "Černovice", "de": "Czernowitz"}
+	},
+	"zhytomyr": {
+		"name": "Zhytomyr",
+		"lat": 50.26,
+		"lon": 28.67,
+		"pop": 261,
+		"region": "Zhytomyr",
+		"exonym": {"pl": "Żytomierz", "cs": "Žitomír", "de": "Schytomyr"}
+	},
+	"sumy": {"name": "Sumy", "lat": 50.91, "lon": 34.8, "pop": 256, "region": "Sumy"},
+	"rivne": {
+		"name": "Rivne",
+		"lat": 50.62,
+		"lon": 26.25,
+		"pop": 244,
+		"region": "Rivne",
+		"exonym": {"pl": "Równe", "de": "Riwne"}
+	},
+	"ivano_frankivsk": {
+		"name": "Ivano-Frankivsk",
+		"lat": 48.92,
+		"lon": 24.71,
+		"pop": 238,
+		"region": "Ivano-Frankivsk",
+		"exonym": {"pl": "Iwano-Frankiwsk", "de": "Iwano-Frankiwsk"}
+	},
+	"ternopil": {"name": "Ternopil", "lat": 49.56, "lon": 25.59, "pop": 225, "region": "Ternopil", "exonym": {"pl": "Tarnopol"}},
+	"kropyvnytskyi": {
+		"name": "Kropyvnytskyi",
+		"lat": 48.51,
+		"lon": 32.27,
+		"pop": 222,
+		"region": "Kirovohrad",
+		"exonym": {"pl": "Kropywnycki", "cs": "Kropyvnyckyj", "de": "Kropywnyzkyj"}
+	},
+	"kremenchuk": {
+		"name": "Kremenchuk",
+		"lat": 49.06,
+		"lon": 33.4,
+		"pop": 216,
+		"region": "Poltava",
+		"exonym": {"pl": "Krzemieńczuk", "cs": "Kremenčuk", "de": "Krementschuk"}
+	},
+	"lutsk": {
+		"name": "Lutsk",
+		"lat": 50.74,
+		"lon": 25.32,
+		"pop": 213,
+		"region": "Volyn",
+		"exonym": {"pl": "Łuck", "cs": "Luck", "de": "Luzk"}
+	},
+	"bila_tserkva": {
+		"name": "Bila Tserkva",
+		"lat": 49.8,
+		"lon": 30.12,
+		"pop": 207,
+		"region": "Kyiv",
+		"exonym": {"pl": "Biała Cerkiew", "cs": "Bílá Cerekev", "de": "Bila Zerkwa"}
+	},
+	"uzhhorod": {
+		"name": "Uzhhorod",
+		"lat": 48.62,
+		"lon": 22.3,
+		"pop": 115,
+		"region": "Zakarpattia",
+		"exonym": {"pl": "Użhorod", "cs": "Užhorod", "de": "Uschhorod"}
+	},
+	"kamianets": {
+		"name": "Kamianets-Podilskyi",
+		"lat": 48.68,
+		"lon": 26.59,
+		"pop": 98,
+		"region": "Khmelnytskyi",
+		"exonym": {"pl": "Kamieniec Podolski", "cs": "Kamenec Podolský", "de": "Kamjanez-Podilskyj"},
+		"short": "Kamianets"
+	},
+	"mukachevo": {
+		"name": "Mukachevo",
+		"lat": 48.44,
+		"lon": 22.72,
+		"pop": 85,
+		"region": "Zakarpattia",
+		"exonym": {"pl": "Mukaczewo", "cs": "Mukačevo", "de": "Mukatschewo"}
+	},
+	"uman": {
+		"name": "Uman",
+		"lat": 48.75,
+		"lon": 30.22,
+		"pop": 81,
+		"region": "Cherkasy",
+		"exonym": {"pl": "Humań", "cs": "Umaň"}
+	},
+	"izmail": {
+		"name": "Izmail",
+		"lat": 45.35,
+		"lon": 28.84,
+		"pop": 69,
+		"region": "Odesa",
+		"exonym": {"pl": "Izmaił", "cs": "Izmajil", "de": "Ismajil"}
+	},
+	"truskavets": {
+		"name": "Truskavets",
+		"lat": 49.28,
+		"lon": 23.51,
+		"pop": 29,
+		"region": "Lviv",
+		"exonym": {"pl": "Truskawiec", "cs": "Truskavec", "de": "Truskawez"}
+	},
+	"yaremche": {
+		"name": "Yaremche",
+		"lat": 48.45,
+		"lon": 24.55,
+		"pop": 8,
+		"region": "Ivano-Frankivsk",
+		"exonym": {"pl": "Jaremcze", "cs": "Jaremče", "de": "Jaremtsche"}
+	}
+}
