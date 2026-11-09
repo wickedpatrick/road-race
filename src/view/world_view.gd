@@ -55,6 +55,7 @@ var _tunnel_road: Array = [] ## road colours under cover (no snow or rain in a t
 var _grass := PackedColorArray() ## per track segment: the two grass bands of its landscape (Weather.grass)
 const GRASS_BLEND := 150.0 ## metres over which the grass turns into the next landscape's
 var _tun := PackedByteArray() ## per track segment: 1 inside a tunnel
+var _brg := PackedByteArray() ## per track segment: 1 on a suspension bridge's deck (water below, cables above)
 var _dualf := PackedFloat32Array() ## per track segment: Route.dual_f (0 single road .. 1 dual carriageway)
 var _portals := {} ## segment index where a tunnel starts -> the tunnel
 var _left := false ## left-hand traffic: the batch mirrors the world; signs, cars and landmarks are drawn unmirrored
@@ -99,6 +100,9 @@ func bind(p_race: Race, p_weather := "") -> void:
 				_tun[k] = 1
 				if first < 0: first = k
 		if first >= 0: _portals[first] = tn
+	_brg.resize(race.track.segments.size())
+	for k in _brg.size():
+		_brg[k] = 1 if Scenery.on_bridge(race.stage, k * SEG + SEG * 0.5) else 0
 	_gcol.clear()
 	for key in Scenery.GROUND_KEYS:
 		var cols := PackedColorArray()
@@ -194,7 +198,8 @@ func _horizon_target() -> Dictionary:
 	for t in race.stage.towns:
 		if t.big and t.z + t.half > race.z and t.z - t.half - 500.0 < race.z:
 			sky = 1.0
-	return {"hills": bd.hills, "mountains": bd.mountains, "sea": bd.sea, "industry": bd.industry, "wood": bd.wood, "skyline": sky, "ice": bd.get("ice", 0.0)}
+	var strait := 1.0 if Scenery.on_bridge(race.stage, race.z + 150.0) else 0.0 # the sea opens up from a bridge
+	return {"hills": bd.hills, "mountains": bd.mountains, "sea": maxf(bd.sea, strait), "industry": bd.industry, "wood": bd.wood, "skyline": sky, "ice": bd.get("ice", 0.0)}
 
 func _quad(a: Vector2, b: Vector2, c: Vector2, d: Vector2, col: Color) -> void:
 	_b.fan(PackedVector2Array([a, b, c, d]), col)
@@ -458,7 +463,8 @@ func _draw_segment(n: int, i: int) -> void:
 	var x1 := _x1[n]
 	var w0 := Track.ROAD_HALF_WIDTH * _s0[n] * W * 0.5
 	var w1 := Track.ROAD_HALF_WIDTH * _s1[n] * W * 0.5
-	var grass: Color = _fog(_grass[clampi(i, 0, _grass.size() / 2 - 1) * 2 + band], n)
+	var on_deck := i >= 0 and i < _brg.size() and _brg[i] == 1
+	var grass: Color = _fog(_sea_color((i / 2) % 2) if on_deck else _grass[clampi(i, 0, _grass.size() / 2 - 1) * 2 + band], n)
 	_b.draw_rect(Rect2(-20, y1, W + 40, y0 - y1 + 1.0), grass)
 	# fields, lakes, canals, pavements beside the road
 	var gs: PackedFloat32Array = _ground[clampi(i, 0, _ground.size() - 1)]
@@ -507,6 +513,8 @@ func _draw_segment(n: int, i: int) -> void:
 		var ex0: float = x0 + sgn * w0 * 0.94
 		var ex1: float = x1 + sgn * w1 * 0.94
 		_quad(Vector2(ex0 - lw0, y0), Vector2(ex0 + lw0, y0), Vector2(ex1 + lw1, y1), Vector2(ex1 - lw1, y1), lc)
+	if on_deck:
+		_draw_deck(n, i)
 	if i == _sea_i - 1:
 		# the quay's edge over the water: a dark concrete kerb along the end of the pier
 		var p1 := _s1[n] * W * 0.5
@@ -704,6 +712,9 @@ func _draw_item(it: Dictionary, n: int, cam_x: float, cam_y: float, cam_z: float
 	if it.type == "bridge":
 		_draw_bridge(b, pm, Route.dual_f(race.stage, it.z))
 		return
+	if it.type == "bridge_tower":
+		_draw_tower(b, pm, Route.dual_f(race.stage, it.z), it.get("color", ""))
+		return
 	if it.type == "finish":
 		_draw_finish(b, pm)
 		return
@@ -728,6 +739,64 @@ func _draw_bridge(b: Vector2, pm: float, d: float) -> void:
 		_b.draw_rect(Rect2(b + Vector2(px - 0.9 * pm, -top), Vector2(1.8 * pm, top)), col.darkened(0.1))
 	_b.draw_rect(Rect2(b + Vector2(-left - 2.0 * pm, -top - 1.6 * pm), Vector2(left + right + 4.0 * pm, 1.7 * pm)), col)
 	_b.draw_rect(Rect2(b + Vector2(-left - 2.0 * pm, -top - 0.3 * pm), Vector2(left + right + 4.0 * pm, 0.3 * pm)), col.darkened(0.3))
+
+## A suspension bridge's pylon astride the deck: two tapering legs at the main cables (beyond the far carriageway
+## too), two cross beams high over the road, red warning lights on top. Grey, or the bridge's own `color` (red for
+## the Dardanelles).
+func _draw_tower(b: Vector2, pm: float, d: float, color: String) -> void:
+	var col := Color(color) if color != "" else Color("c9ced4")
+	var right := Scenery.BRIDGE_CABLE * pm
+	var left := (Scenery.BRIDGE_CABLE + Track.left_shift(d)) * pm
+	var top := Scenery.BRIDGE_TOWER_H * pm
+	for px in [-left, right]:
+		_b.draw_colored_polygon(PackedVector2Array([b + Vector2(px - 1.3 * pm, 0), b + Vector2(px + 1.3 * pm, 0),
+			b + Vector2(px + 0.8 * pm, -top), b + Vector2(px - 0.8 * pm, -top)]), col)
+		var inner := -signf(px) # the side facing the road, in shade
+		_b.draw_colored_polygon(PackedVector2Array([b + Vector2(px, 0), b + Vector2(px + inner * 1.3 * pm, 0),
+			b + Vector2(px + inner * 0.8 * pm, -top), b + Vector2(px, -top)]), col.darkened(0.18))
+	for beam in [[top, 2.2 * pm], [top * 0.62, 1.6 * pm]]:
+		_b.draw_rect(Rect2(b + Vector2(-left - 0.8 * pm, -beam[0]), Vector2(left + right + 1.6 * pm, beam[1])), col.darkened(0.06))
+		_b.draw_rect(Rect2(b + Vector2(-left - 0.8 * pm, -beam[0] + beam[1] - 0.3 * pm), Vector2(left + right + 1.6 * pm, 0.3 * pm)), col.darkened(0.3))
+	if pm > 0.5:
+		for px in [-left, right]:
+			_b.draw_circle(b + Vector2(px, -top - 0.4 * pm), maxf(1.0, 0.4 * pm), Color("e23b2e"))
+
+## A suspension bridge's deck segment over the water: railings along both edges (two rails on posts), and the main
+## cables above them (Scenery.cable_h) with a hanger down to the deck on every other segment.
+func _draw_deck(n: int, i: int) -> void:
+	var br := Route.bridge_at(race.stage, i * SEG + SEG * 0.5)
+	if br.is_empty():
+		return
+	var za := maxf(i * SEG, race.z - PLAYER_DZ + NEAR) # the near end as projected (clipped at the camera)
+	var zb := (i + 1) * SEG
+	var x0 := _x0[n]
+	var x1 := _x1[n]
+	var y0 := _y0[n]
+	var y1 := _y1[n]
+	var p0 := _s0[n] * W * 0.5
+	var p1 := _s1[n] * W * 0.5
+	var ls := Track.left_shift(_dualf[clampi(i, 0, _dualf.size() - 1)])
+	var steel := _fog(Color("d5d9de"), n)
+	var cable := _fog(Color("8c949c"), n)
+	var ha := Scenery.cable_h(br, za)
+	var hb := Scenery.cable_h(br, zb)
+	for sgn in [-1.0, 1.0]:
+		var shift := ls if sgn < 0.0 else 0.0
+		var rail: float = sgn * Scenery.BRIDGE_RAIL - shift
+		for hr in [0.55, 1.1]:
+			var t0 := maxf(1.0, 0.13 * p0)
+			var t1 := maxf(1.0, 0.13 * p1)
+			_quad(Vector2(x0 + rail * p0, y0 - hr * p0), Vector2(x1 + rail * p1, y1 - hr * p1),
+				Vector2(x1 + rail * p1, y1 - hr * p1 - t1), Vector2(x0 + rail * p0, y0 - hr * p0 - t0), steel)
+		if n <= FAR_DETAIL:
+			_b.draw_line(Vector2(x0 + rail * p0, y0), Vector2(x0 + rail * p0, y0 - 1.24 * p0), steel, maxf(1.0, 0.1 * p0))
+		var cab: float = sgn * Scenery.BRIDGE_CABLE - shift
+		var c0 := maxf(1.0, 0.32 * p0)
+		var c1 := maxf(1.0, 0.32 * p1)
+		_quad(Vector2(x0 + cab * p0, y0 - ha * p0), Vector2(x1 + cab * p1, y1 - hb * p1),
+			Vector2(x1 + cab * p1, y1 - hb * p1 - c1), Vector2(x0 + cab * p0, y0 - ha * p0 - c0), cable)
+		if i % 2 == 0 and n <= FAR_DETAIL:
+			_b.draw_line(Vector2(x0 + cab * p0, y0), Vector2(x0 + cab * p0, y0 - ha * p0), cable, maxf(1.0, 0.07 * p0))
 
 ## Border crossing canopy over all lanes: slim white pillars past both edges, a flat roof with a blue band.
 func _draw_border_canopy(b: Vector2, pm: float, d: float) -> void:

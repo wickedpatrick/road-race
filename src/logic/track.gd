@@ -147,12 +147,15 @@ static func _tunnel_flat(stage: Dictionary, z: float) -> float:
 	return f
 
 ## Ferry quays (Route ferries) are flat and straight, the road easing into them over QUAY_EASE: 0 from the quay's
-## start to a little past the far ramp, 1 further away.
+## start to a little past the far ramp, 1 further away. Suspension bridges (Route bridges) the same, end to end.
 const QUAY_EASE := 120.0
 static func _quay_flat(stage: Dictionary, z: float) -> float:
 	var f := 1.0
 	for fr in stage.get("ferries", []):
 		var d: float = maxf(fr.z - Route.FERRY_QUAY - 20.0 - z, z - fr.z_out - 40.0)
+		f = minf(f, _ease(clampf(d / QUAY_EASE, 0.0, 1.0)))
+	for b in stage.get("bridges", []):
+		var d: float = maxf(b.z0 - 20.0 - z, z - b.z1 - 20.0)
 		f = minf(f, _ease(clampf(d / QUAY_EASE, 0.0, 1.0)))
 	return f
 
@@ -172,6 +175,9 @@ static func _sharp_allowed(stage: Dictionary, z0: float, z1: float) -> bool:
 			return false
 	for fr in stage.get("ferries", []):
 		if fr.z_out > z0 - 150.0 - QUAY_EASE and fr.z - Route.FERRY_QUAY < z1 + 150.0 + QUAY_EASE:
+			return false
+	for b in stage.get("bridges", []):
+		if b.z1 > z0 - 150.0 - QUAY_EASE and b.z0 < z1 + 150.0 + QUAY_EASE:
 			return false
 	var z := z0 - 60.0
 	while true:
