@@ -1,0 +1,156 @@
+{
+	"Chișinău": {
+		"pl": "Stolica Republiki Mołdawii, zielone miasto parków i szerokich bulwarów",
+		"en": "Capital of the Republic of Moldova, a green city of parks and wide boulevards",
+		"cs": "Hlavní město Moldavské republiky, zelené město parků a širokých bulvárů",
+		"is": "Höfuðborg Lýðveldisins Moldóvu, græn borg með görðum og breiðum breiðgötum",
+		"de": "Hauptstadt der Republik Moldau, eine grüne Stadt der Parks und breiten Boulevards"
+	},
+	"Tiraspol": {
+		"pl": "Miasto na lewym brzegu Dniestru; od 1992 roku poza kontrolą władz w Kiszyniowie, wciąż z pomnikiem Lenina i radzieckimi gmachami",
+		"en": "A city on the left bank of the Dniester; outside the control of the government in Chișinău since 1992, still with a Lenin statue and Soviet-era buildings",
+		"cs": "Město na levém břehu Dněstru; od roku 1992 mimo kontrolu vlády v Kišiněvě, stále s Leninovou sochou a sovětskými budovami",
+		"is": "Borg á vinstri bakka Dnjestr; utan stjórnar ríkisstjórnarinnar í Kisínev síðan 1992, enn með styttu af Lenín og sovéskum byggingum",
+		"de": "Stadt am linken Ufer des Dnister; seit 1992 außerhalb der Kontrolle der Regierung in Chișinău, noch mit Lenin-Statue und Bauten aus Sowjetzeiten"
+	},
+	"Bălți": {
+		"pl": "Największe miasto północy, nazywane „północną stolicą”, wśród pól Stepu Bielckiego",
+		"en": "The biggest city of the north, called the 'northern capital', amid the fields of the Bălți steppe",
+		"cs": "Největší město severu, přezdívané „severní metropole“, uprostřed polí Bělecké stepi",
+		"is": "Stærsta borg norðursins, kölluð „höfuðborg norðursins“, umkringd ökrum Bălți-steppunnar",
+		"de": "Die größte Stadt des Nordens, „Hauptstadt des Nordens“ genannt, inmitten der Felder der Bălți-Steppe"
+	},
+	"Bender": {
+		"pl": "Miasto nad Dniestrem z turecką twierdzą, po rumuńsku Tighina",
+		"en": "A city on the Dniester with an Ottoman fortress, Tighina in Romanian",
+		"cs": "Město na Dněstru s tureckou pevností, rumunsky Tighina",
+		"is": "Borg við Dnjestr með tyrknesku virki, Tighina á rúmensku",
+		"de": "Stadt am Dnister mit einer osmanischen Festung, rumänisch Tighina"
+	},
+	"Ungheni": {
+		"pl": "Miasto nad Prutem przy granicy z Rumunią; tu pociągi zmieniają szerokie tory na normalne",
+		"en": "A town on the Prut at the Romanian border, where trains change from broad to standard gauge",
+		"cs": "Město na Prutu u hranice s Rumunskem, kde vlaky přecházejí ze širokého rozchodu na normální",
+		"is": "Bær við Prut á landamærum Rúmeníu, þar sem lestir skipta úr breiðu spori yfir á venjulegt",
+		"de": "Stadt am Pruth an der Grenze zu Rumänien, wo die Züge von Breit- auf Normalspur wechseln"
+	},
+	"Cahul": {
+		"pl": "Najdalej na południe wysunięte miasto kraju, z uzdrowiskiem wód mineralnych",
+		"en": "The country's southernmost town, with a mineral-water spa",
+		"cs": "Nejjižnější město země s lázněmi minerálních vod",
+		"is": "Syðsti bær landsins, með heilsulind við ölkeldu",
+		"de": "Die südlichste Stadt des Landes, mit einem Mineralwasser-Kurort"
+	},
+	"Soroca": {
+		"pl": "Miasto nad Dniestrem z okrągłą twierdzą; na wzgórzu stoją bogato zdobione domy romskich rodzin",
+		"en": "A town on the Dniester with a round fortress; on its hill stand the lavish houses of Roma families",
+		"cs": "Město na Dněstru s kulatou pevností; na kopci stojí bohatě zdobené domy romských rodin",
+		"is": "Bær við Dnjestr með hringlaga virki; á hæðinni standa skrautleg hús rómafjölskyldna",
+		"de": "Stadt am Dnister mit runder Festung; auf ihrem Hügel stehen die prächtigen Häuser von Roma-Familien"
+	},
+	"Orhei": {
+		"pl": "Miasto nad rzeką Răut; obok, w zakolu rzeki, leży Stary Orhei ze skalnym monasterem",
+		"en": "A town on the Răut river; nearby, in a bend of the river, lies Old Orhei with its cave monastery",
+		"cs": "Město na řece Răut; nedaleko v meandru řeky leží Starý Orhei se skalním klášterem",
+		"is": "Bær við ána Răut; skammt frá, í bugðu árinnar, er Gamla Orhei með hellaklaustri",
+		"de": "Stadt am Fluss Răut; in der Nähe, in einer Flussschleife, liegt Alt-Orhei mit seinem Höhlenkloster"
+	},
+	"Comrat": {
+		"pl": "Stolica autonomicznej Gagauzji; Gagauzi to prawosławny lud mówiący językiem tureckim",
+		"en": "Capital of autonomous Gagauzia; the Gagauz are an Orthodox people speaking a Turkic language",
+		"cs": "Hlavní město autonomní Gagauzie; Gagauzové jsou pravoslavný národ mluvící turkickým jazykem",
+		"is": "Höfuðstaður sjálfstjórnarsvæðisins Gagásíu; Gagásar eru rétttrúnaðarþjóð sem talar tyrkískt mál",
+		"de": "Hauptstadt des autonomen Gagausien; die Gagausen sind ein orthodoxes Volk mit einer Turksprache"
+	},
+	"Strășeni": {
+		"pl": "Miasto w lasach Codrii; w pobliżu monaster Căpriana, jeden z najstarszych w kraju",
+		"en": "A town in the Codri forests; nearby is Căpriana, one of the country's oldest monasteries",
+		"cs": "Město v lesích Codri; nedaleko je Căpriana, jeden z nejstarších klášterů v zemi",
+		"is": "Bær í Codri-skógunum; skammt frá er Căpriana, eitt elsta klaustur landsins",
+		"de": "Stadt in den Codri-Wäldern; in der Nähe liegt Căpriana, eines der ältesten Klöster des Landes"
+	},
+	"Căușeni": {
+		"pl": "Ma cerkiew wkopaną do połowy w ziemię: Turcy nie pozwalali stawiać wysokich świątyń",
+		"en": "Its church is half sunk into the ground: the Ottomans did not allow tall churches",
+		"cs": "Její kostel je napůl zapuštěný do země: Osmané nedovolovali vysoké kostely",
+		"is": "Kirkjan er hálfniðurgrafin: Ósmanar leyfðu ekki háar kirkjur",
+		"de": "Seine Kirche ist halb in die Erde gesenkt: die Osmanen erlaubten keine hohen Kirchen"
+	},
+	"Hîncești": {
+		"pl": "Tu stoi pałac Manuka Beja, ormiańskiego kupca i dyplomaty z XIX wieku",
+		"en": "Home of the palace of Manuc Bey, a 19th-century Armenian merchant and diplomat",
+		"cs": "Stojí tu palác Manuka Beje, arménského obchodníka a diplomata z 19. století",
+		"is": "Hér stendur höll Manuc Bey, armensks kaupmanns og erindreka á 19. öld",
+		"de": "Hier steht der Palast von Manuc Bei, einem armenischen Kaufmann und Diplomaten des 19. Jahrhunderts"
+	},
+	"Cricova": {
+		"pl": "Podziemne miasto wina: ponad 120 km korytarzy w dawnej kopalni wapienia, z ulicami nazwanymi od win",
+		"en": "An underground city of wine: over 120 km of tunnels in an old limestone mine, with streets named after wines",
+		"cs": "Podzemní město vína: přes 120 km chodeb ve starém vápencovém lomu, s ulicemi pojmenovanými po vínech",
+		"is": "Neðanjarðarborg vínsins: yfir 120 km af göngum í gamalli kalksteinsnámu, með götum nefndum eftir vínum",
+		"de": "Eine unterirdische Weinstadt: über 120 km Gänge in einem alten Kalksteinbruch, mit Straßen nach Weinen benannt"
+	},
+	"Ialoveni": {
+		"pl": "Obok, w Mileștii Mici, leży największa kolekcja win na świecie według Księgi Guinnessa",
+		"en": "Next door, at Mileștii Mici, is the world's largest wine collection according to Guinness World Records",
+		"cs": "Hned vedle, v Mileștii Mici, je podle Guinnessovy knihy největší sbírka vín na světě",
+		"is": "Rétt hjá, í Mileștii Mici, er stærsta vínsafn heims samkvæmt Heimsmetabók Guinness",
+		"de": "Nebenan, in Mileștii Mici, liegt laut Guinness-Buch die größte Weinsammlung der Welt"
+	},
+	"Călărași": {
+		"pl": "Miasto w sercu Codrii, słynące z gorzelni brandy",
+		"en": "A town in the heart of the Codri, known for its brandy distillery",
+		"cs": "Město v srdci Codri, proslulé lihovarem na brandy",
+		"is": "Bær í hjarta Codri, þekktur fyrir brennivínsgerð sína",
+		"de": "Stadt im Herzen der Codri, bekannt für ihre Weinbrandbrennerei"
+	},
+	"Cantemir": {
+		"pl": "Nazwane na cześć Dymitra Kantemira, hospodara mołdawskiego i uczonego",
+		"en": "Named after Dimitrie Cantemir, Prince of Moldavia and scholar",
+		"cs": "Pojmenované po Dimitriji Kantemirovi, moldavském knížeti a učenci",
+		"is": "Nefndur eftir Dimitrie Cantemir, fursta í Moldavíu og fræðimanni",
+		"de": "Benannt nach Dimitrie Cantemir, Fürst der Moldau und Gelehrter"
+	},
+	"Congaz": {
+		"pl": "Jedna z największych wsi w kraju, ponad 10 tysięcy Gagauzów",
+		"en": "One of the country's largest villages, home to over 10,000 Gagauz",
+		"cs": "Jedna z největších vesnic v zemi, žije tu přes 10 tisíc Gagauzů",
+		"is": "Eitt stærsta þorp landsins, þar búa yfir 10.000 Gagásar",
+		"de": "Eines der größten Dörfer des Landes, mit über 10.000 Gagausen"
+	},
+	"Gura Bîcului": {
+		"pl": "Most przez Dniestr wysadzony w 1992 roku, otwarty ponownie w 2017",
+		"en": "The bridge over the Dniester, blown up in 1992, reopened in 2017",
+		"cs": "Most přes Dněstr, vyhozený do povětří v roce 1992, znovu otevřen v roce 2017",
+		"is": "Brúin yfir Dnjestr, sprengd 1992, opnuð aftur 2017",
+		"de": "Die Brücke über den Dnister, 1992 gesprengt, 2017 wieder eröffnet"
+	},
+	"Varnița": {
+		"pl": "Tu po klęsce pod Połtawą przez kilka lat obozował szwedzki król Karol XII",
+		"en": "Here the Swedish King Charles XII camped for several years after his defeat at Poltava",
+		"cs": "Zde po porážce u Poltavy několik let tábořil švédský král Karel XII.",
+		"is": "Hér hafðist Karl 12. Svíakonungur við í nokkur ár eftir ósigurinn við Poltava",
+		"de": "Hier lagerte der schwedische König Karl XII. nach seiner Niederlage bei Poltawa mehrere Jahre"
+	},
+	"Drochia": {
+		"pl": "Miasto na Stepie Bielckim, otoczone polami buraka cukrowego i słonecznika",
+		"en": "A town on the Bălți steppe, surrounded by fields of sugar beet and sunflowers",
+		"cs": "Město v Bělecké stepi, obklopené poli cukrovky a slunečnic",
+		"is": "Bær á Bălți-steppunni, umkringdur sykurrófu- og sólblómaökrum",
+		"de": "Stadt in der Bălți-Steppe, umgeben von Zuckerrüben- und Sonnenblumenfeldern"
+	},
+	"Cimișlia": {
+		"pl": "Brama Budziaku, suchego stepu na południu kraju",
+		"en": "Gateway to the Bugeac, the dry steppe of the country's south",
+		"cs": "Brána do Budžaku, suché stepi na jihu země",
+		"is": "Hliðið að Bugeac, þurru steppunni í suðri landsins",
+		"de": "Tor zum Budschak, der trockenen Steppe im Süden des Landes"
+	},
+	"Leova": {
+		"pl": "Miasteczko nad Prutem, wśród łąk i starorzeczy",
+		"en": "A small town on the Prut, among meadows and oxbow lakes",
+		"cs": "Městečko na Prutu, mezi loukami a slepými rameny",
+		"is": "Smábær við Prut, innan um engi og sigðvötn",
+		"de": "Kleinstadt am Pruth, zwischen Wiesen und Altarmen"
+	}
+}
