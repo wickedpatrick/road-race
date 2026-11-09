@@ -883,7 +883,7 @@
 		"gocsej_skanzen": [32, 9],
 		"eger_minaret": [14, 43],
 		"esztergom_basilica": [76, 74],
-		"siofok_water_tower": [16, 46],
+		"siofok_water_tower": [18, 46],
 		"tokaj_wine_cellar": [32, 23]
 	},
 	"police": {"escape_chance": 0.2, "escape_kmh": 180, "escape_swerves": [3, 5]},

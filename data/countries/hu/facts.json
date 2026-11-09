@@ -1,6 +1,6 @@
 {
 	"Budapest": {
-		"pl": "Stolica Węgier, w 1873 roku połączona z Budy, Óbudy i Pesztu; pod miastem jest ponad sto gorących źródeł",
+		"pl": "Stolica Węgier, powstała w 1873 roku z połączenia Budy, Óbudy i Pesztu; pod miastem jest ponad sto gorących źródeł",
 		"en": "Hungary's capital, joined from Buda, Óbuda and Pest in 1873, with over a hundred hot springs below it",
 		"cs": "Hlavní město Maďarska, roku 1873 spojené z Budína, Óbudy a Pešti, pod městem je přes sto horkých pramenů",
 		"is": "Höfuðborg Ungverjalands, sameinuð úr Búda, Óbúda og Pest árið 1873, með yfir hundrað heitum lindum",
@@ -28,7 +28,7 @@
 		"de": "Alte Stahlstadt am Fuß des Bükk-Gebirges, mit einem Höhlenbad in Miskolctapolca"
 	},
 	"Pécs": {
-		"pl": "Słoneczne miasto pod Meczekiem, z wczesnochrześcijańskimi grobowcami i porcelaną Zsolnay",
+		"pl": "Słoneczne miasto pod górami Mecsek, z wczesnochrześcijańskimi grobowcami i porcelaną Zsolnay",
 		"en": "A sunny city under the Mecsek hills, with early Christian tombs and Zsolnay porcelain",
 		"cs": "Slunečné město pod pohořím Mecsek, s raně křesťanskými hrobkami a porcelánem Zsolnay",
 		"is": "Sólrík borg undir Mecsek-hæðum, með frumkristnum grafhýsum og Zsolnay-postulíni",
@@ -91,18 +91,18 @@
 		"de": "Stadt des Malers József Rippl-Rónai, im Hügelland von Somogy"
 	},
 	"Békéscsaba": {
-		"pl": "Stolica Viharsarok, „Burzowego Kąta”, gdzie mieszka wielu Słowaków",
+		"pl": "Stolica Viharsaroku, „Burzowego Kąta”, gdzie mieszka wielu Słowaków",
 		"en": "Capital of the Viharsarok, the 'Stormy Corner', home to many Slovaks",
 		"cs": "Centrum Viharsaroku, „Bouřlivého kouta“, kde žije mnoho Slováků",
 		"is": "Höfuðstaður Viharsarok, „Stormahornsins“, þar sem margir Slóvakar búa",
 		"de": "Hauptort des Viharsarok, des „Sturmwinkels“, wo viele Slowaken leben"
 	},
 	"Veszprém": {
-		"pl": "„Miasto królowych”, gdzie koronowano węgierskie królowe; Europejska Stolica Kultury 2023",
-		"en": "'The town of queens', where Hungary's queens were crowned; European Capital of Culture 2023",
-		"cs": "„Město královen“, kde byly korunovány uherské královny; Evropské hlavní město kultury 2023",
-		"is": "„Bær drottninganna“, þar sem drottningar Ungverjalands voru krýndar; menningarborg Evrópu 2023",
-		"de": "„Stadt der Königinnen“, in der Ungarns Königinnen gekrönt wurden; Kulturhauptstadt Europas 2023"
+		"pl": "„Miasto królowych”: jego biskupi koronowali królowe Węgier; Europejska Stolica Kultury 2023",
+		"en": "'The town of queens', whose bishops crowned Hungary's queens; European Capital of Culture 2023",
+		"cs": "„Město královen“, jehož biskupové korunovali uherské královny; Evropské hlavní město kultury 2023",
+		"is": "„Bær drottninganna“, þar sem biskupar krýndu drottningar Ungverjalands; menningarborg Evrópu 2023",
+		"de": "„Stadt der Königinnen“, deren Bischöfe Ungarns Königinnen krönten; Kulturhauptstadt Europas 2023"
 	},
 	"Zalaegerszeg": {
 		"pl": "Stolica Zali, wśród winnic i lasów Göcseju",
@@ -343,11 +343,11 @@
 		"de": "Stadt der Heiducken, freier Hirtenkrieger, die Fürst Bocskai hier ansiedelte"
 	},
 	"Polgár": {
-		"pl": "Most nad Cisą prowadzi stąd w Hortobágy, największy step Europy Środkowej",
-		"en": "From here a bridge over the Tisza leads into Hortobágy, Central Europe's largest steppe",
-		"cs": "Odtud vede most přes Tisu do Hortobágy, největší stepi střední Evropy",
-		"is": "Héðan liggur brú yfir Tisza inn í Hortobágy, stærstu gresju Mið-Evrópu",
-		"de": "Von hier führt eine Brücke über die Theiß in die Hortobágy, die größte Steppe Mitteleuropas"
+		"pl": "Most nad Cisą, a stąd zaczyna się Hortobágy, największy step Europy Środkowej",
+		"en": "A bridge over the Tisza, and from here the Hortobágy begins, Central Europe's largest steppe",
+		"cs": "Most přes Tisu a odtud začíná Hortobágy, největší step střední Evropy",
+		"is": "Brú yfir Tisza, og héðan hefst Hortobágy, stærsta gresja Mið-Evrópu",
+		"de": "Eine Brücke über die Theiß, und hier beginnt die Hortobágy, die größte Steppe Mitteleuropas"
 	},
 	"Szerencs": {
 		"pl": "Miasto czekolady, z fabryką i muzeum słodyczy",

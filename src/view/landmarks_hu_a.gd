@@ -427,8 +427,8 @@ static func _elephant(x: float, s: float, d: float) -> void:
 	var gd := g.darkened(0.2)
 	for lx in [-1.5, -0.6, 0.6, 1.4]:
 		_r(x + (lx - 0.3) * s * d, 0, x + (lx + 0.3) * s * d, 1.6 * s, gd if lx < 0.0 else g)
-	_c(x - 0.9 * s * d, 2.5, 1.35 * s, g)
-	_c(x + 0.7 * s * d, 2.6, 1.45 * s, g)
+	_c(x - 0.9 * s * d, 2.5 * s, 1.35 * s, g)
+	_c(x + 0.7 * s * d, 2.6 * s, 1.45 * s, g)
 	_r(x - 1.0 * s, 1.3 * s, x + 1.0 * s, 3.6 * s, g)
 	_c(x + 2.2 * s * d, 3.0 * s, 1.0 * s, g)
 	_c(x + 1.9 * s * d, 2.9 * s, 0.8 * s, gd)

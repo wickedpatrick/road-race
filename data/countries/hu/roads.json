@@ -54,8 +54,8 @@
 		"a": "szombathely",
 		"b": "zalaegerszeg",
 		"km": 58,
-		"road": "74",
-		"towns": [["Táplánszentkereszt", 9], ["Vasvár", 27], ["Nagykutas", 45]],
+		"road": [[18, "87"], [27, "8"], [58, "74"]],
+		"towns": [["Táplánszentkereszt", 9], ["Vasvár", 27], ["Győrvár", 33], ["Egervár", 44]],
 		"zones": [[28, "fields", "Vasi-Hegyhát"], [58, "forest", "Zalai-dombság"]],
 		"via": [[27, 16.8, 47.05]]
 	},

@@ -459,5 +459,5 @@ static func _wine_cellar() -> void:
 	_barrel(9.4, 3.7, 1.3)
 	var gr := Color("d8c25a")
 	for k in 6:
-		_c(13.6 + (k % 2) * 0.45 - (1 if k > 3 else 0) * 0.2, 2.8 - (k / 2) * 0.45, 0.3, gr if k % 2 else gr.darkened(0.1))
+		_c(13.6 + (k % 2) * 0.45 - (1 if k > 3 else 0) * 0.2, 2.8 - (k >> 1) * 0.45, 0.3, gr if k % 2 else gr.darkened(0.1))
 	_l(13.8, 3.1, 14.2, 3.6, Color("4f7f3a"), 0.1)

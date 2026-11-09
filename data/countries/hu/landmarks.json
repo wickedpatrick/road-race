@@ -133,14 +133,14 @@
 		{
 			"kind": "gyor_town_hall",
 			"name": {
-				"pl": "Ratusz w Győr",
+				"pl": "Ratusz w Győrze",
 				"en": "Győr Town Hall",
 				"cs": "Radnice v Győru",
 				"is": "Ráðhúsið í Győr",
 				"de": "Rathaus von Győr"
 			},
 			"desc": {
-				"pl": "Okazały neobarokowy ratusz z 59-metrową wieżą, miasto trzech rzek",
+				"pl": "Okazały neobarokowy ratusz z 59-metrową wieżą, w mieście trzech rzek",
 				"en": "A grand Neo-Baroque town hall with a 59-metre tower, in the city of three rivers",
 				"cs": "Okázalá novobarokní radnice s 59metrovou věží, ve městě tří řek",
 				"is": "Glæsilegt nýbarokkráðhús með 59 metra turni, í borg þriggja áa",
@@ -287,7 +287,7 @@
 		{
 			"kind": "csabai_kolbasz",
 			"name": {
-				"pl": "Kiełbasa csabajska",
+				"pl": "Kiełbasa z Csaby",
 				"en": "Csaba Sausage",
 				"cs": "Čabajská klobása",
 				"is": "Csaba-pylsa",
@@ -387,7 +387,7 @@
 		{
 			"kind": "siofok_water_tower",
 			"name": {
-				"pl": "Wieża ciśnień w Siófok",
+				"pl": "Wieża ciśnień w Siófoku",
 				"en": "Siófok Water Tower",
 				"cs": "Vodárenská věž v Siófoku",
 				"is": "Vatnsturninn í Siófok",
