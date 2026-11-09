@@ -1,0 +1,584 @@
+{
+	"Moskva": [
+		{
+			"kind": "ru_st_basils",
+			"name": {
+				"pl": "Sobór Wasyla Błogosławionego",
+				"en": "Saint Basil's Cathedral",
+				"cs": "Chrám Vasila Blaženého",
+				"is": "Dómkirkja heilags Basils",
+				"de": "Basilius-Kathedrale"
+			},
+			"desc": {
+				"pl": "Dziewięć kopuł w paski i kratkę na Placu Czerwonym, z 1561 roku",
+				"en": "Nine striped and chequered domes on Red Square, from 1561",
+				"cs": "Devět pruhovaných a kostkovaných kopulí na Rudém náměstí z roku 1561",
+				"is": "Níu röndótt og köflótt hvolfþök á Rauða torginu, frá 1561",
+				"de": "Neun gestreifte und karierte Kuppeln am Roten Platz, von 1561"
+			},
+			"local": "Храм Василия Блаженного"
+		}
+	],
+	"Sankt-Peterburg": [
+		{
+			"kind": "ru_peter_paul_cathedral",
+			"name": {
+				"pl": "Sobór Pietropawłowski",
+				"en": "Peter and Paul Cathedral",
+				"cs": "Petropavlovský chrám",
+				"is": "Dómkirkja Péturs og Páls",
+				"de": "Peter-und-Paul-Kathedrale"
+			},
+			"desc": {
+				"pl": "Złota iglica z aniołem nad twierdzą na Wyspie Zajęczej, 122 m wysokości",
+				"en": "A golden spire with an angel above the fortress on Hare Island, 122 m high",
+				"cs": "Zlatá věž s andělem nad pevností na Zaječím ostrově, vysoká 122 m",
+				"is": "Gullin spíra með engli yfir virkinu á Hérey, 122 m há",
+				"de": "Ein goldener Turm mit Engel über der Festung auf der Haseninsel, 122 m hoch"
+			},
+			"local": "Петропавловский собор"
+		}
+	],
+	"Novosibirsk": [
+		{
+			"kind": "ru_novosibirsk_opera",
+			"name": {
+				"pl": "Teatr Opery i Baletu",
+				"en": "Opera and Ballet Theatre",
+				"cs": "Divadlo opery a baletu",
+				"is": "Óperu- og ballettleikhúsið",
+				"de": "Opern- und Balletttheater"
+			},
+			"desc": {
+				"pl": "Największy teatr w Rosji, pod srebrną kopułą na placu Lenina",
+				"en": "Russia's largest theatre, under a silver dome on Lenin Square",
+				"cs": "Největší divadlo v Rusku pod stříbrnou kupolí na Leninově náměstí",
+				"is": "Stærsta leikhús Rússlands, undir silfruðu hvolfþaki við Lenín-torg",
+				"de": "Russlands größtes Theater, unter einer silbernen Kuppel am Leninplatz"
+			},
+			"local": "Новосибирский театр оперы и балета"
+		}
+	],
+	"Yekaterinburg": [
+		{
+			"kind": "ru_europe_asia_obelisk",
+			"name": {
+				"pl": "Obelisk Europa–Azja",
+				"en": "Europe–Asia Obelisk",
+				"cs": "Obelisk Evropa–Asie",
+				"is": "Evrópu–Asíu-súlan",
+				"de": "Obelisk Europa–Asien"
+			},
+			"desc": {
+				"pl": "Słup na grzbiecie Uralu: jedną nogą w Europie, drugą w Azji",
+				"en": "A post on the ridge of the Urals: one foot in Europe, the other in Asia",
+				"cs": "Sloup na hřebeni Uralu: jednou nohou v Evropě, druhou v Asii",
+				"is": "Súla á hrygg Úralfjalla: annar fóturinn í Evrópu, hinn í Asíu",
+				"de": "Ein Grenzstein auf dem Uralkamm: ein Fuß in Europa, der andere in Asien"
+			},
+			"local": "Обелиск «Европа — Азия»"
+		}
+	],
+	"Kazan": [
+		{
+			"kind": "ru_kul_sharif",
+			"name": {
+				"pl": "Meczet Kul Szarif",
+				"en": "Kul Sharif Mosque",
+				"cs": "Mešita Kul Šarif",
+				"is": "Kul Sharif-moskan",
+				"de": "Kul-Scharif-Moschee"
+			},
+			"desc": {
+				"pl": "Niebieskie kopuły i cztery minarety na kazańskim kremlu",
+				"en": "Blue domes and four minarets in the Kazan kremlin",
+				"cs": "Modré kopule a čtyři minarety v kazaňském kremlu",
+				"is": "Blá hvolfþök og fjórar mínarettur í Kreml í Kazan",
+				"de": "Blaue Kuppeln und vier Minarette im Kasaner Kreml"
+			},
+			"local": "Мечеть Кул-Шариф"
+		}
+	],
+	"Krasnoyarsk": [
+		{
+			"kind": "ru_paraskeva_chapel",
+			"name": {
+				"pl": "Kaplica Paraskewy Piatnicy",
+				"en": "Chapel of St Paraskeva",
+				"cs": "Kaple svaté Paraskevy",
+				"is": "Kapella heilagrar Paraskevu",
+				"de": "Kapelle der heiligen Paraskewa"
+			},
+			"desc": {
+				"pl": "Mała kaplica na Wzgórzu Strażniczym, widoczna na banknocie 10 rubli",
+				"en": "A small chapel on Karaulnaya Hill, shown on the 10-rouble note",
+				"cs": "Malá kaple na Strážném vrchu, zobrazená na bankovce 10 rublů",
+				"is": "Lítil kapella á Varðhæð, á 10 rúblna seðlinum",
+				"de": "Eine kleine Kapelle auf dem Wachhügel, abgebildet auf dem 10-Rubel-Schein"
+			},
+			"local": "Часовня Параскевы Пятницы"
+		}
+	],
+	"Nizhny Novgorod": [
+		{
+			"kind": "ru_nn_kremlin",
+			"name": {
+				"pl": "Kreml w Niżnym Nowogrodzie",
+				"en": "Nizhny Novgorod Kremlin",
+				"cs": "Nižněnovgorodský kreml",
+				"is": "Kreml í Nízhní Novgorod",
+				"de": "Kreml von Nischni Nowgorod"
+			},
+			"desc": {
+				"pl": "Czerwone mury i wieże schodzą zboczem ku Wołdze",
+				"en": "Red walls and towers climbing down the slope to the Volga",
+				"cs": "Červené hradby a věže sestupují svahem k Volze",
+				"is": "Rauðir múrar og turnar teygja sig niður hlíðina að Volgu",
+				"de": "Rote Mauern und Türme ziehen sich den Hang zur Wolga hinab"
+			},
+			"local": "Нижегородский кремль"
+		}
+	],
+	"Chelyabinsk": [
+		{
+			"kind": "ru_chelyabinsk_meteor",
+			"name": {
+				"pl": "Meteor czelabiński",
+				"en": "Chelyabinsk meteor",
+				"cs": "Čeljabinský meteor",
+				"is": "Loftsteinninn í Tsjeljabínsk",
+				"de": "Meteor von Tscheljabinsk"
+			},
+			"desc": {
+				"pl": "Ognisty ślad na porannym niebie 15 lutego 2013 roku; odłamek leży w muzeum",
+				"en": "A fiery trail in the morning sky on 15 February 2013; a fragment lies in the museum",
+				"cs": "Ohnivá stopa na ranní obloze 15. února 2013; úlomek leží v muzeu",
+				"is": "Eldrák á morgunhimni 15. febrúar 2013; brot úr honum er á safninu",
+				"de": "Eine Feuerspur am Morgenhimmel am 15. Februar 2013; ein Bruchstück liegt im Museum"
+			},
+			"local": "Челябинский метеорит"
+		}
+	],
+	"Ufa": [
+		{
+			"kind": "ru_salawat_yulayev",
+			"name": {
+				"pl": "Pomnik Saławata Jułajewa",
+				"en": "Salawat Yulayev Monument",
+				"cs": "Pomník Salavata Julajeva",
+				"is": "Minnisvarði Salavats Júlajev",
+				"de": "Salawat-Julajew-Denkmal"
+			},
+			"desc": {
+				"pl": "Konny posąg baszkirskiego bohatera i poety nad urwiskiem nad Biełą",
+				"en": "A horseman statue of the Bashkir hero and poet on the cliff above the Belaya",
+				"cs": "Jezdecká socha baškirského hrdiny a básníka na útesu nad Bělou",
+				"is": "Riddarastytta af basjkírsku hetjunni og skáldinu á klettinum yfir Belaju",
+				"de": "Das Reiterstandbild des baschkirischen Helden und Dichters auf der Klippe über der Belaja"
+			},
+			"local": "Памятник Салавату Юлаеву"
+		}
+	],
+	"Samara": [
+		{
+			"kind": "ru_samara_drama_theatre",
+			"name": {
+				"pl": "Teatr Dramatyczny w Samarze",
+				"en": "Samara Drama Theatre",
+				"cs": "Samarské činoherní divadlo",
+				"is": "Leiklistarleikhúsið í Samara",
+				"de": "Schauspielhaus Samara"
+			},
+			"desc": {
+				"pl": "Ceglany teatr z wieżyczkami jak z bajki, z 1888 roku",
+				"en": "A red-brick theatre with fairy-tale turrets, from 1888",
+				"cs": "Cihlové divadlo s pohádkovými věžičkami z roku 1888",
+				"is": "Leikhús úr rauðum múrsteini með ævintýraturnum, frá 1888",
+				"de": "Ein Backsteintheater mit Märchentürmchen, von 1888"
+			},
+			"local": "Самарский академический театр драмы"
+		}
+	],
+	"Krasnodar": [
+		{
+			"kind": "ru_krasnodar_arch",
+			"name": {"pl": "Brama Carska", "en": "Tsar's Gate", "cs": "Carská brána", "is": "Keisarahliðið", "de": "Zarentor"},
+			"desc": {
+				"pl": "Ceglany łuk triumfalny z 1888 roku, odbudowany w 2008 roku",
+				"en": "A brick triumphal arch of 1888, rebuilt in 2008",
+				"cs": "Cihlový vítězný oblouk z roku 1888, obnovený roku 2008",
+				"is": "Sigurbogi úr múrsteini frá 1888, endurreistur 2008",
+				"de": "Ein Triumphbogen aus Backstein von 1888, 2008 neu errichtet"
+			},
+			"local": "Александровская триумфальная арка"
+		}
+	],
+	"Rostov-na-Donu": [
+		{
+			"kind": "ru_rostov_tractor_theatre",
+			"name": {
+				"pl": "Teatr „Traktor”",
+				"en": "The “Tractor” Theatre",
+				"cs": "Divadlo „Traktor“",
+				"is": "„Dráttarvéla“-leikhúsið",
+				"de": "Das „Traktor“-Theater"
+			},
+			"desc": {
+				"pl": "Teatr z lat 30. XX wieku, który z lotu ptaka przypomina traktor",
+				"en": "A 1930s theatre that looks like a tractor from above",
+				"cs": "Divadlo ze 30. let 20. století, které shora připomíná traktor",
+				"is": "Leikhús frá fjórða áratug 20. aldar sem líkist dráttarvél séð ofan frá",
+				"de": "Ein Theater aus den 1930er-Jahren, das von oben wie ein Traktor aussieht"
+			},
+			"local": "Ростовский театр драмы им. Горького"
+		}
+	],
+	"Omsk": [
+		{
+			"kind": "ru_omsk_tara_gate",
+			"name": {"pl": "Brama Tarska", "en": "Tara Gate", "cs": "Tarská brána", "is": "Tara-hliðið", "de": "Tarsker Tor"},
+			"desc": {
+				"pl": "Biała brama dawnej twierdzy omskiej z 1792 roku",
+				"en": "The white gate of the old Omsk fortress, from 1792",
+				"cs": "Bílá brána staré omské pevnosti z roku 1792",
+				"is": "Hvíta hliðið í gamla virkinu í Omsk, frá 1792",
+				"de": "Das weiße Tor der alten Omsker Festung, von 1792"
+			},
+			"local": "Тарские ворота"
+		}
+	],
+	"Voronezh": [
+		{
+			"kind": "ru_goto_predestinatsiya",
+			"name": {
+				"pl": "Okręt „Goto Predestinacja”",
+				"en": "The ship Goto Predestinatsiya",
+				"cs": "Loď Goto Predestinacija",
+				"is": "Skipið Goto Predestinatsíja",
+				"de": "Das Schiff Goto Predestinazija"
+			},
+			"desc": {
+				"pl": "Kopia pierwszego liniowca Piotra I z 1700 roku, zacumowana na rzece",
+				"en": "A copy of Peter the Great's first ship of the line of 1700, moored on the river",
+				"cs": "Kopie první řadové lodi Petra Velikého z roku 1700, kotvící na řece",
+				"is": "Eftirlíking af fyrsta orrustuskipi Péturs mikla frá 1700, við festar á ánni",
+				"de": "Ein Nachbau von Peters des Großen erstem Linienschiff von 1700, auf dem Fluss vertäut"
+			},
+			"local": "Корабль-музей «Гото Предестинация»"
+		}
+	],
+	"Volgograd": [
+		{
+			"kind": "ru_volga_don_arch",
+			"name": {
+				"pl": "Łuk Kanału Wołga–Don",
+				"en": "Volga–Don Canal Arch",
+				"cs": "Oblouk Volžsko-donského průplavu",
+				"is": "Bogi Volgu-Don-skurðarins",
+				"de": "Bogen des Wolga-Don-Kanals"
+			},
+			"desc": {
+				"pl": "Biały łuk nad pierwszą śluzą kanału łączącego Wołgę z Donem",
+				"en": "A white arch over the first lock of the canal joining the Volga and the Don",
+				"cs": "Bílý oblouk nad první komorou průplavu spojujícího Volhu s Donem",
+				"is": "Hvítur bogi yfir fyrsta skipastiga skurðarins milli Volgu og Don",
+				"de": "Ein weißer Bogen über der ersten Schleuse des Kanals zwischen Wolga und Don"
+			},
+			"local": "Арка шлюза № 1 Волго-Донского канала"
+		}
+	],
+	"Saratov": [
+		{
+			"kind": "ru_saratov_conservatory",
+			"name": {
+				"pl": "Konserwatorium w Saratowie",
+				"en": "Saratov Conservatory",
+				"cs": "Saratovská konzervatoř",
+				"is": "Tónlistarháskólinn í Saratov",
+				"de": "Konservatorium Saratow"
+			},
+			"desc": {
+				"pl": "Trzecie konserwatorium Rosji, z 1912 roku, w gmachu jak gotycki zamek",
+				"en": "Russia's third conservatory, from 1912, in a building like a Gothic castle",
+				"cs": "Třetí konzervatoř Ruska z roku 1912, v budově jako gotický hrad",
+				"is": "Þriðji tónlistarháskóli Rússlands, frá 1912, í byggingu eins og gotneskur kastali",
+				"de": "Russlands drittes Konservatorium, von 1912, in einem Bau wie eine gotische Burg"
+			},
+			"local": "Саратовская консерватория"
+		}
+	],
+	"Tyumen": [
+		{
+			"kind": "ru_tyumen_lovers_bridge",
+			"name": {
+				"pl": "Most Zakochanych",
+				"en": "Lovers' Bridge",
+				"cs": "Most zamilovaných",
+				"is": "Brú elskendanna",
+				"de": "Brücke der Verliebten"
+			},
+			"desc": {
+				"pl": "Most dla pieszych nad Turą z 1987 roku, obwieszony kłódkami zakochanych",
+				"en": "A footbridge over the Tura from 1987, hung with lovers' padlocks",
+				"cs": "Lávka pro pěší přes Turu z roku 1987, ověšená zámky zamilovaných",
+				"is": "Göngubrú yfir Túra frá 1987, alsett hengilásum elskenda",
+				"de": "Eine Fußgängerbrücke über die Tura von 1987, behängt mit Liebesschlössern"
+			},
+			"local": "Мост Влюблённых"
+		}
+	],
+	"Irkutsk": [
+		{
+			"kind": "ru_irkutsk_wooden_house",
+			"name": {
+				"pl": "Drewniane domy 130. kwartału",
+				"en": "Wooden houses of the 130th Quarter",
+				"cs": "Dřevěné domy 130. čtvrti",
+				"is": "Timburhús 130. hverfis",
+				"de": "Holzhäuser des 130. Quartals"
+			},
+			"desc": {
+				"pl": "Syberyjskie domy z bali z rzeźbionymi okiennicami i obramowaniami",
+				"en": "Siberian log houses with carved shutters and window frames",
+				"cs": "Sibiřské roubené domy s vyřezávanými okenicemi a rámy",
+				"is": "Síberísk bjálkahús með útskornum hlerum og gluggakörmum",
+				"de": "Sibirische Blockhäuser mit geschnitzten Fensterläden und Rahmen"
+			},
+			"local": "130-й квартал"
+		}
+	],
+	"Khabarovsk": [
+		{
+			"kind": "ru_muravyov_amursky",
+			"name": {
+				"pl": "Pomnik Murawjowa-Amurskiego",
+				"en": "Muravyov-Amursky Monument",
+				"cs": "Pomník Muravjova-Amurského",
+				"is": "Minnisvarði Múravjov-Amúrskí",
+				"de": "Murawjow-Amurski-Denkmal"
+			},
+			"desc": {
+				"pl": "Posąg gubernatora na urwisku nad Amurem, znany z banknotu 5000 rubli",
+				"en": "A statue of the governor on the cliff above the Amur, known from the 5000-rouble note",
+				"cs": "Socha gubernátora na útesu nad Amurem, známá z bankovky 5000 rublů",
+				"is": "Stytta af landstjóranum á klettinum yfir Amúr, þekkt af 5000 rúblna seðlinum",
+				"de": "Das Standbild des Gouverneurs auf der Klippe über dem Amur, bekannt vom 5000-Rubel-Schein"
+			},
+			"local": "Памятник Муравьёву-Амурскому"
+		}
+	],
+	"Vladivostok": [
+		{
+			"kind": "ru_golden_bridge",
+			"name": {"pl": "Złoty Most", "en": "Golden Bridge", "cs": "Zlatý most", "is": "Gullbrúin", "de": "Goldene Brücke"},
+			"desc": {
+				"pl": "Most wantowy nad zatoką Złoty Róg, otwarty w 2012 roku",
+				"en": "A cable-stayed bridge over the Golden Horn bay, opened in 2012",
+				"cs": "Zavěšený most přes záliv Zlatý roh, otevřený roku 2012",
+				"is": "Stagbrú yfir Gullhornsflóa, opnuð 2012",
+				"de": "Eine Schrägseilbrücke über die Bucht Goldenes Horn, 2012 eröffnet"
+			},
+			"local": "Золотой мост"
+		}
+	],
+	"Yaroslavl": [
+		{
+			"kind": "ru_elijah_church",
+			"name": {
+				"pl": "Cerkiew Eliasza Proroka",
+				"en": "Church of Elijah the Prophet",
+				"cs": "Kostel proroka Eliáše",
+				"is": "Kirkja Elía spámanns",
+				"de": "Kirche des Propheten Elija"
+			},
+			"desc": {
+				"pl": "Zielone kopuły kupieckiej cerkwi z 1650 roku, pełnej fresków",
+				"en": "The green domes of a merchants' church of 1650, full of frescoes",
+				"cs": "Zelené kopule kupeckého chrámu z roku 1650, plného fresek",
+				"is": "Græn hvolfþök kaupmannakirkju frá 1650, fullrar af freskum",
+				"de": "Die grünen Kuppeln einer Kaufmannskirche von 1650 voller Fresken"
+			},
+			"local": "Церковь Ильи Пророка"
+		}
+	],
+	"Kaliningrad": [
+		{
+			"kind": "ru_konigsberg_cathedral",
+			"name": {
+				"pl": "Katedra w Kaliningradzie",
+				"en": "Kaliningrad Cathedral",
+				"cs": "Kaliningradská katedrála",
+				"is": "Dómkirkjan í Kalíníngrad",
+				"de": "Königsberger Dom"
+			},
+			"desc": {
+				"pl": "Gotycka ceglana katedra na wyspie Kneiphof, przy niej grób Kanta",
+				"en": "A Gothic brick cathedral on Kneiphof island, with Kant's tomb beside it",
+				"cs": "Gotická cihlová katedrála na ostrově Kneiphof, vedle ní Kantův hrob",
+				"is": "Gotnesk múrsteinsdómkirkja á Kneiphof-eyju, með gröf Kants við hliðina",
+				"de": "Ein gotischer Backsteindom auf der Kneiphofinsel, daneben Kants Grab"
+			},
+			"local": "Кафедральный собор"
+		}
+	],
+	"Sochi": [
+		{
+			"kind": "ru_sochi_seaport",
+			"name": {
+				"pl": "Dworzec morski w Soczi",
+				"en": "Sochi Sea Terminal",
+				"cs": "Námořní nádraží v Soči",
+				"is": "Hafnarstöðin í Sotsjí",
+				"de": "Seebahnhof Sotschi"
+			},
+			"desc": {
+				"pl": "Biały dworzec z iglicą wśród palm, z 1955 roku",
+				"en": "A white terminal with a spire among palm trees, from 1955",
+				"cs": "Bílé nádraží s věžičkou mezi palmami z roku 1955",
+				"is": "Hvít hafnarstöð með spíru milli pálmatrjáa, frá 1955",
+				"de": "Ein weißer Bahnhof mit Turmspitze zwischen Palmen, von 1955"
+			},
+			"local": "Морской вокзал Сочи"
+		}
+	],
+	"Ulan-Ude": [
+		{
+			"kind": "ru_rinpoche_bagsha",
+			"name": {
+				"pl": "Dacan Rinpocze Bagsza",
+				"en": "Rinpoche Bagsha Datsan",
+				"cs": "Dacan Rinpočhe Bagša",
+				"is": "Rinpoche Bagsha-klaustrið",
+				"de": "Datsan Rinpoche Bagscha"
+			},
+			"desc": {
+				"pl": "Buddyjska świątynia ze złotymi dachami na wzgórzu nad miastem",
+				"en": "A Buddhist temple with golden roofs on a hill above the city",
+				"cs": "Buddhistický chrám se zlatými střechami na kopci nad městem",
+				"is": "Búddahof með gylltum þökum á hæð ofan við borgina",
+				"de": "Ein buddhistischer Tempel mit goldenen Dächern auf einem Hügel über der Stadt"
+			},
+			"local": "Дацан Ринпоче Багша"
+		}
+	],
+	"Vladimir": [
+		{
+			"kind": "ru_vladimir_golden_gate",
+			"name": {
+				"pl": "Złota Brama",
+				"en": "Golden Gate",
+				"cs": "Zlatá brána",
+				"is": "Gullna hliðið",
+				"de": "Goldenes Tor"
+			},
+			"desc": {
+				"pl": "Biała kamienna brama miejska z 1164 roku ze złotą kopułą",
+				"en": "A white stone city gate of 1164 with a golden dome",
+				"cs": "Bílá kamenná městská brána z roku 1164 se zlatou kopulí",
+				"is": "Hvítt borgarhlið úr steini frá 1164 með gylltu hvolfþaki",
+				"de": "Ein weißes steinernes Stadttor von 1164 mit goldener Kuppel"
+			},
+			"local": "Золотые ворота"
+		}
+	],
+	"Chita": [
+		{
+			"kind": "ru_chita_decembrist_church",
+			"name": {
+				"pl": "Cerkiew dekabrystów",
+				"en": "Decembrists' Church",
+				"cs": "Kostel děkabristů",
+				"is": "Kirkja desembristanna",
+				"de": "Dekabristenkirche"
+			},
+			"desc": {
+				"pl": "Drewniana cerkiew Michała Archanioła, w której brali śluby dekabryści",
+				"en": "The wooden church of St Michael where Decembrists were married",
+				"cs": "Dřevěný kostel archanděla Michaela, kde se ženili děkabristé",
+				"is": "Timburkirkja Mikaels erkiengils þar sem desembristar gengu í hjónaband",
+				"de": "Die hölzerne Michaelskirche, in der Dekabristen getraut wurden"
+			},
+			"local": "Церковь Михаила Архангела"
+		}
+	],
+	"Veliky Novgorod": [
+		{
+			"kind": "ru_novgorod_st_sophia",
+			"name": {
+				"pl": "Sobór Mądrości Bożej",
+				"en": "St Sophia Cathedral",
+				"cs": "Chrám svaté Sofie",
+				"is": "Soffíudómkirkjan",
+				"de": "Sophienkathedrale"
+			},
+			"desc": {
+				"pl": "Najstarsza cerkiew Rosji, z lat 1045–1050, ze złotą kopułą wśród srebrnych",
+				"en": "Russia's oldest church, of 1045–1050, with a golden dome among silver ones",
+				"cs": "Nejstarší chrám Ruska z let 1045–1050, se zlatou kopulí mezi stříbrnými",
+				"is": "Elsta kirkja Rússlands, frá 1045–1050, með gylltu hvolfþaki meðal silfraðra",
+				"de": "Russlands älteste Kirche, von 1045–1050, mit einer goldenen Kuppel zwischen silbernen"
+			},
+			"local": "Софийский собор"
+		}
+	],
+	"Pskov": [
+		{
+			"kind": "ru_pskov_krom",
+			"name": {
+				"pl": "Krom w Pskowie",
+				"en": "Pskov Krom",
+				"cs": "Pskovský Krom",
+				"is": "Krom-virkið í Pskov",
+				"de": "Pskower Krom"
+			},
+			"desc": {
+				"pl": "Kamienne mury i biały sobór Trójcy nad zbiegiem rzek",
+				"en": "Stone walls and the white Trinity Cathedral above the meeting of the rivers",
+				"cs": "Kamenné hradby a bílý chrám Nejsvětější Trojice nad soutokem řek",
+				"is": "Steinmúrar og hvíta Þrenningardómkirkjan yfir ármótunum",
+				"de": "Steinmauern und die weiße Dreifaltigkeitskathedrale über dem Zusammenfluss"
+			},
+			"local": "Псковский кремль"
+		}
+	],
+	"Svobodny": [
+		{
+			"kind": "ru_vostochny_launch",
+			"name": {
+				"pl": "Kosmodrom Wostocznyj",
+				"en": "Vostochny Cosmodrome",
+				"cs": "Kosmodrom Vostočnyj",
+				"is": "Vostotsjní-geimstöðin",
+				"de": "Kosmodrom Wostotschny"
+			},
+			"desc": {
+				"pl": "Rakieta Sojuz na stanowisku startowym; pierwszy start w kwietniu 2016 roku",
+				"en": "A Soyuz rocket on the launch pad; the first launch was in April 2016",
+				"cs": "Raketa Sojuz na rampě; první start byl v dubnu 2016",
+				"is": "Sojús-eldflaug á skotpallinum; fyrsta skotið var í apríl 2016",
+				"de": "Eine Sojus-Rakete auf der Startrampe; der erste Start war im April 2016"
+			},
+			"local": "Космодром Восточный"
+		}
+	],
+	"Ust-Luga": [
+		{
+			"kind": "ru_ust_luga_port",
+			"name": {
+				"pl": "Port Ust-Ługa",
+				"en": "Port of Ust-Luga",
+				"cs": "Přístav Usť-Luga",
+				"is": "Höfnin í Ust-Lúga",
+				"de": "Hafen Ust-Luga"
+			},
+			"desc": {
+				"pl": "Dźwigi i prom kolejowy, który zabiera wagony i auta do Bałtijska",
+				"en": "Cranes and the rail ferry that takes wagons and cars to Baltiysk",
+				"cs": "Jeřáby a železniční trajekt, který veze vagony a auta do Baltijsku",
+				"is": "Kranar og járnbrautarferjan sem flytur vagna og bíla til Baltíjsk",
+				"de": "Kräne und die Eisenbahnfähre, die Waggons und Autos nach Baltijsk bringt"
+			},
+			"local": "Морской порт Усть-Луга"
+		}
+	]
+}
