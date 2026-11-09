@@ -227,17 +227,8 @@ def brass(freq, dur, vol=1.0, vib=0.006):
         v = sum(math.sin(2 * math.pi * f * k * t) / k for k in range(1, 7))
         out.append(v * 0.5 * vol * env(i, n, 0.02, min(0.25, dur * 0.4)))
     return out
-def win():  # arrival fanfare: trumpet call, then a held major chord
-    out = [0.0] * int(2.4 * SR)
-    for k, (n, d) in enumerate([(67, 0.14), (67, 0.14), (72, 0.14), (76, 0.3)]):
-        place(out, [0, 0.16, 0.32, 0.48][k], brass(note(n), d, 0.8))
-    place(out, 0.82, brass(note(72), 0.16, 0.8))
-    place(out, 1.0, brass(note(79), 1.3, 0.8))
-    for n in [64, 67, 72]: place(out, 1.0, brass(note(n), 1.3, 0.45))
-    place(out, 1.0, tone(note(48), 1.3, "tri", 0.8, 0.01, 0.6))
-    write("win", out, 0.7)
 def anthem(code, melody, q, chord, tail=0.8, prefix="anthem_"):
-    """The first, best-known phrase of a country's anthem on a steady trumpet (no vibrato: it sounded like a joke) (played on arrival instead of the fanfare):
+    """The first, best-known phrase of a country's anthem on a steady trumpet (no vibrato: it sounded like a joke) (played on arrival):
     `melody` [(MIDI note or None for a rest, beats)], `q` seconds a beat, `chord` the notes held under the last one."""
     beats = sum(b for _, b in melody[:-1])
     out = [0.0] * int((beats * q + tail + 0.15) * SR)
@@ -264,6 +255,38 @@ def anthems():  # melodies from the scores on Wikipedia/Commons; all of them in 
     anthem("al", [(62, 1), (67, 1.5), (62, .5), (59, .5), (62, .5), (67, .75), (69, .25), (71, 1), (67, 1.5), (67, .5), (66, .5), (67, .5),
         (69, 1.5), (68, .5), (69, 1), (74, 1), (71, 2)], 0.4, [43, 59, 62, 67])  # Rreth flamurit të përbashkuar (Porumbescu; the score on Wikipedia)
     anthem("ca", [(69, 2), (72, 1.5), (72, .5), (65, 3), (67, 1), (69, 1), (70, 1), (72, 1), (74, 1), (67, 2)], 0.24, [48, 60, 64, 67])  # O Canada! Our home and native land!
+    # Every source is named; the scores were read note by note (MIDI and abc parsed, images read bar by bar).
+    # A country whose anthem's music is still under copyright (si, ba, xk, mk, tr) or has no reliable published
+    # score (md) has two tunes of its own instead (motifs(): motif_ and motif2_).
+    anthem("hr", [(74, 1), (74, 1), (74, 1.5), (72, .5), (72, .5), (70, .5), (70, 1), (65, 2), (63, .5), (62, .5), (63, .5), (65, .5), (67, 2),
+        (65, .5), (63, .5), (62, .5), (63, .5), (65, 2)], 0.3, [46, 58, 62, 65])  # Lijepa naša domovino (Runjanin, d. 1878): Commons "Lijepa naša domovino.mid"
+    anthem("rs", [(76, 1), (74, .5), (71, .5), (72, 1), (74, .5), (76, .5), (77, 1), (76, .5), (74, .5), (72, .5), (71, .5), (69, 1),
+        (72, 1), (74, .5), (76, .5), (79, 1), (77, 1), (76, 1), (74, .5), (72, .5), (74, 1)], 0.28, [43, 55, 59, 62])  # Bože pravde (Jenko, d. 1914): Commons "Bože pravde za klavir.jpg", bars 3-6
+    anthem("mt", [(65, 2), (65, 1), (65, 1), (65, 1), (65, 2), (65, .5), (67, .5), (69, 2), (70, .5), (69, .5), (67, .5), (65, .5), (67, 1), (67, 3)], 0.3,
+        [48, 60, 64, 67])  # L-Innu Malti (Samut, d. 1934): Commons "Lil din l-Art Ħelwa.mid"
+    liberty = [(69, .75), (70, .25), (72, 1.75), (70, .25), (69, .75), (70, .25), (72, 1), (69, 1), (70, .75), (72, .25), (74, 1.75), (74, .25), (76, .75), (76, .25), (77, 2)]
+    anthem("gr", liberty, 0.4, [41, 57, 60, 65])  # Hymn to Liberty (Mantzaros, d. 1872): the score on it.wikipedia "Inno alla libertà"
+    anthem("cy", liberty, 0.4, [41, 57, 60, 65])  # ... Cyprus' anthem too
+    anthem("bg", [(64, 1), (69, 1), (69, .5), (71, .5), (72, .75), (71, .25), (69, 2), (64, 1), (69, 1), (69, .5), (71, .5), (72, .75), (71, .25), (69, 2)], 0.4,
+        [45, 57, 60, 64])  # Mila Rodino (Radoslavov, d. 1931): Commons "Bulgarian Anthem Music Sheet.InstrumentalSimple.svg"
+    anthem("hu", [(67, 1.5), (68, .5), (70, 1), (75, 1), (70, 1), (68, 1), (67, 2), (72, 1), (70, 1), (68, 1), (67, 1), (65, 1), (67, 1), (68, 2)], 0.36,
+        [41, 56, 60, 65])  # Himnusz (Erkel, d. 1893): the score on en.wikipedia "Himnusz" (from IMSLP)
+    anthem("ro", [(59, 1), (64, 1.5), (66, .5), (67, 1), (69, 1), (71, 2), (64, 1), (64, 1), (72, 1.5), (71, .5), (69, 1), (69, 1), (74, 1.5), (72, .5), (71, 1)], 0.3,
+        [40, 52, 55, 59])  # Deșteaptă-te, române! (Pann, d. 1854): Monitorul Oficial nr. 237, Commons "National Anthem of Romania (page 3).png"
+    anthem("ru", [(67, .5), (72, 1), (67, .75), (69, .25), (71, 1), (64, .5), (64, .5), (69, 1), (67, .75), (65, .25), (67, 1), (60, .75), (60, .25),
+        (62, 1), (62, .75), (64, .25), (65, 1), (65, .5), (67, .5), (69, 1), (71, .75), (72, .25), (74, 1.5)], 0.3, [43, 55, 59, 62])  # Alexandrov (d. 1946): Commons "RussischeHymneVer1.mid"
+    anthem("ua", [(69, 1.5), (69, .5), (69, .5), (67, .5), (69, .5), (70, .5), (72, 1.5), (70, .5), (69, 1), (67, 1), (65, 1), (69, 1), (64, 1), (69, 1), (62, 2)], 0.32,
+        [50, 57, 62, 65])  # Shche ne vmerla (Verbytsky, d. 1870): trillian.mit.edu abc/anthem/NA_Ukraine.abc (after 8notes), Commons "Shche ne vmerla Ukraina (pg).mid"
+    anthem("by", [(69, 1), (69, .75), (70, .25), (72, 1), (72, 1), (69, 1), (69, .75), (70, .25), (72, 1), (72, 1), (70, 1), (70, .5), (69, .5), (67, 1), (67, 1),
+        (69, .5), (67, .5), (69, .5), (70, .5), (72, 2)], 0.32, [41, 57, 60, 65])  # My, Belarusy (Sakalouski, d. 1950): Commons "My Belarusy instr.jpg"
+    anthem("lv", [(72, 2), (72, 1), (72, 1), (76, 1.5), (74, .5), (72, 2), (74, 2), (74, 1), (74, 1), (77, 1.5), (76, .5), (74, 2)], 0.3,
+        [43, 55, 59, 62])  # Dievs, svētī Latviju (Baumanis, d. 1905): his manuscript, Commons "Dievs. svētī Latviju Original.jpg"
+    anthem("ee", [(64, .5), (61, .5), (62, .5), (64, 1.5), (69, .5), (71, .75), (64, .25), (73, 2), (69, 1), (66, .75), (71, .25), (69, 1), (68, 1), (69, 1.5)], 0.45,
+        [45, 57, 61, 64])  # Mu isamaa (Pacius, d. 1891; Finland's Maamme): trillian.mit.edu abc/anthem/NA_Finland.abc
+    anthem("ie", [(70, 1.5), (72, .5), (74, 1), (70, 1), (65, 3), (65, 1), (67, 1.5), (67, .5), (63, 1), (67, 1), (65, 2), (65, 2)], 0.3,
+        [46, 58, 62, 65])  # Amhrán na bhFiann, the refrain (Heeney, d. 1911, Kearney, d. 1942): trillian.mit.edu abc/anthem/Soldiers_Song_S.abc
+    anthem("me", [(70, 1.5), (68, .5), (68, 1), (70, 1), (72, 1), (72, .5), (70, .5), (68, 1), (67, 1), (75, 1.5), (72, .5), (70, .5), (72, .5), (68, .5), (70, .5),
+        (67, 1.5), (68, .5), (70, 1)], 0.33, [39, 55, 58, 63])  # Ubavoj nam Crnoj Gori (Ivanišević, d. 1889), the Kingdom's anthem: Commons "Sheet music - Ubavoj nam Crnoj Gori.jpg"
 def motifs():  # the best-known bars of each country's classical (or folk) tune, on arrival every other time
     motif = lambda code, melody, q, chord, tail=0.8: anthem(code, melody, q, chord, tail, "motif_")
     motif("pl", [(69, .5), (None, .25), (69, .25), (69, .5), (None, .25), (69, .25), (73, .25), (76, .25), (78, .25), (80, .25), (81, 1)], 0.5, [45, 57, 61, 64, 69])  # Chopin, Polonaise in A major "Military" (from memory and the score's opening)
@@ -276,6 +299,75 @@ def motifs():  # the best-known bars of each country's classical (or folk) tune,
         (72, .5), (72, .5), (74, .5), (76, .5), (77, .5), (76, .5), (74, .5), (72, .5), (71, .5), (67, .5), (69, .5), (71, .5), (72, 1), (72, 1)], 0.21, [48, 60, 64, 67], 0.6)  # Yankee Doodle (folk)
     motif("ca", [(72, .5), (74, .5), (76, 1), (76, 1), (74, .5), (72, .5), (74, .5), (76, .5), (72, 1), (67, 1),
         (72, .5), (74, .5), (76, 1), (76, 1), (74, .5), (72, .5), (74, .5), (76, .5), (72, 1)], 0.22, [48, 60, 64, 67], 0.7)  # Alouette, gentille alouette (folk)
+    motif2 = lambda code, melody, q, chord, tail=0.8: anthem(code, melody, q, chord, tail, "motif2_")
+    # "trillian" is John Chambers' abc collection (trillian.mit.edu/~jc/music/abc/), parsed note by note
+    motif("lt", [(64, .5), (64, .25), (62, .25), (64, .5), (64, .25), (62, .25), (64, .5), (65, .5), (67, 1), (69, .5), (69, .25), (67, .25), (65, 1), (67, .5), (67, .25), (65, .25), (64, 1),
+        (64, .5), (64, .25), (62, .25), (64, .5), (64, .25), (62, .25), (64, .5), (65, .5), (67, 1), (69, .5), (69, .25), (67, .25), (65, .5), (64, .25), (62, .25), (60, 1)], 0.3,
+        [48, 60, 64, 67])  # Klumpakojis (folk dance): trillian session/CFO/Klumpakojis
+    motif("sk", [(67, 1), (65, 1), (64, 1), (65, 1), (67, 1), (65, 1), (64, 1), (65, 1), (67, 2), (69, 2), (67, 2)], 0.28,
+        [48, 60, 64, 67])  # Čerešničky (folk): ifdo.ca/~seymour/runabc/balk1.abc
+    motif("al", [(60, .5), (64, .5), (64, .5), (64, .5), (60, .5), (64, .5), (67, .5), (65, .5), (64, .25), (65, .25), (62, .5), (64, 1), (64, .5), (None, .5),
+        (72, .5), (71, .5), (74, .5), (72, .5), (70, .5), (69, .25), (70, .25), (67, .5), (65, .5), (67, .5), (69, .5), (65, .5), (64, .5), (62, .25), (64, .25), (60, .5),
+        (64, 1), (67, .5), (65, .5), (64, .5), (63, .5), (62, 2.5)], 0.28, [50, 57, 62, 65])  # Gonxhet qelin drandofillet (folk): campin.me.uk Chalumeau (after Blagojević 1989)
+    motif("hr", [(72, 1.5), (74, .5), (72, 1.5), (70, .5), (69, .5), (67, .5), (69, 1), (69, 1), (72, 1), (74, 1.5), (72, .5), (72, 1), (70, 3)], 0.32,
+        [43, 55, 58, 62])  # Marjane, Marjane (Dalmatian folk): Commons "Marjane, Marjane.mid"
+    motif("rs", [(65, 1), (64, .5), (62, .5), (64, .5), (65, 1), (65, 1), (64, .5), (64, 1), (62, 1), (62, .5), (64, .5), (62, .5), (60, 2)], 0.33,
+        [48, 60, 64, 67])  # Ajde Jano (folk): trillian Serbia/AjdeJano.abc
+    motif("me", [(68, 1.5), (67, .5), (65, 1), (65, 1), (70, 1.5), (68, .5), (67, 1), (67, 1), (72, 1), (74, 1), (75, 1), (72, 1), (70, 2)], 0.33,
+        [39, 55, 58, 63])  # Ubavoj nam Crnoj Gori, its refrain (bars 9-12; no score of a Montenegrin folk tune found)
+    motif("mt", [(76, .5), (74, .5), (73, .5), (71, 1), (69, .5), (71, .375), (73, .125), (74, .5), (73, .375), (74, .125), (76, 1), (74, .5), (73, .5),
+        (71, 1), (69, .5), (71, .375), (73, .125), (74, .5), (76, .375), (74, .125), (73, 2)], 0.32, [45, 57, 61, 64])  # a żaqq (bagpipe) tune: Pullicino & Camilleri, Maltese Oral Poetry and Folk Music, via campin.me.uk
+    motif("gr", [(62, 1), (67, 1), (66, .5), (67, 1), (69, 1), (71, 1), (69, .5), (67, 2), (72, .5), (72, .5), (72, .5), (72, .5), (71, .5), (69, .5), (67, .5), (71, 1.5)], 0.3,
+        [43, 55, 59, 62])  # Samiotissa (folk): trillian Greece/Kal_Samiotissa.abc, the sung (lower) line
+    motif("cy", [(71, .5), (72, .5), (78, .75), (76, .25), (75, .5), (72, .5), (71, .5), (69, .5), (71, 1.5), (69, .5), (71, .5), (72, .5), (76, .75), (75, .25), (72, .5),
+        (71, .5), (69, .5), (68, .5), (69, 1)], 0.38, [45, 57, 60, 64])  # Maria Pentagiotissa (Cypriot folk): trillian Greece/tune/MariaPentayiotissa_Am.abc
+    motif("bg", [(69, 1), (69, .25), (71, 1.875), (74, .75), (73, .125), (72, .125), (71, 2), (69, .125), (71, .125), (69, .125), (67, .25), (69, .5), (64, 3)], 0.4,
+        [40, 52, 59, 64])  # Izlel e Delyo Haydutin (folk): Commons "Izlel je Delyo Haydutin.mid"
+    motif("hu", [(73, 1.5), (78, .5), (81, 1.5), (78, .5), (77, 1.5), (78, .25), (80, .25), (78, 2), (74, 1.5), (76, .25), (78, .25), (73, 2), (71, .25), (69, .25),
+        (69, .25), (68, .25), (68, .75), (73, .25), (66, 2)], 0.3, [42, 57, 61, 66])  # Brahms, Hungarian Dance No. 5: the score on ja.wikipedia "ハンガリー舞曲"
+    motif("ro", [(69, 1 / 3), (70, 1 / 3), (71, 1 / 3), (72, .75), (71, .25), (72, .75), (74, .25), (72, .75), (70, .25), (69, .75), (67, .25), (65, 1), (67, 1), (69, 1),
+        (69, 1 / 3), (70, 1 / 3), (71, 1 / 3), (72, .75), (71, .25), (72, .75), (74, .25), (72, .75), (70, .25), (69, .75), (67, .25), (65, 1), (64, 1), (62, 2)], 0.28,
+        [50, 57, 62, 65])  # Alunelul (folk): trillian Romania/Alunelul.abc
+    motif("ru", [(69, 1), (67, 1), (64, .5), (65, .5), (67, 1), (64, .5), (65, .5), (67, 1), (65, .5), (64, .5), (62, 1), (69, .5), (69, .5), (67, .75), (65, .25), (64, .5),
+        (65, .5), (67, 1), (64, .5), (65, .5), (67, 1), (65, .5), (64, .5), (62, 1)], 0.25, [50, 57, 62, 65])  # Kalinka (Larionov, d. 1889): trillian Russia/Kalinka.abc
+    motif("ua", [(70, 1), (69, .5), (70, .5), (67, 1), (70, 1), (69, .5), (70, .5), (67, 1), (74, 1), (72, .5), (74, .5), (70, 1), (74, 1), (72, .5), (74, .5), (70, 1)], 0.3,
+        [43, 55, 58, 62])  # Leontovych, Shchedryk (d. 1921): the score on en.wikipedia "Shchedryk (song)"
+    motif("by", [(67, .5), (64, .5), (62, 1), (64, .5), (64, .5), (64, .5), (66, .5), (67, .5), (64, .5), (62, 1), (64, .5), (64, .5), (64, .5), (66, .5),
+        (71, 1.5), (74, .5), (72, .5), (72, .5), (71, .5), (71, .5), (69, .5), (69, .5), (67, .5), (69, .5), (71, 1), (64, .5), (64, .5), (64, .5), (64, .5)], 0.25,
+        [40, 52, 55, 59])  # Kasiŭ Jaś kaniušynu (folk): Commons "Касіў Ясь канюшыну - ноты.jpg"
+    motif("lv", [(62, .5), (64, .5), (65, .5), (64, .5), (65, 1), (62, 1), (65, .5), (67, .5), (69, .5), (67, .5), (69, 2), (69, .5), (67, .5), (65, .5), (64, .5),
+        (65, 1), (62, 1), (67, .5), (65, .5), (64, .5), (65, .5), (62, 2)], 0.3, [50, 57, 62, 65])  # a Latvian folk lullaby: musicaviva.com, trillian mirror/musicaviva.com/latvia
+    motif("ee", [(67, .25), (67, .25), (67, .5), (72, .5), (71, .5), (74, .5), (72, .5), (71, .5), (69, .5), (67, .25), (67, .25), (67, .5), (72, .5), (71, .5), (74, .5), (72, 1),
+        (76, 1), (76, .75), (74, .25), (72, .5), (71, .5), (69, 1), (74, 1), (74, .75), (72, .25), (71, .5), (69, .5), (67, 1)], 0.28,
+        [43, 55, 59, 62])  # Õige ja vasemba (folk dance): trillian Estonia/OigeJaVasemba.abc
+    motif("ie", [(62, 1), (67, 1.5), (67, .5), (67, 1), (67, .5), (71, 1.5), (67, 1), (69, 1.5), (69, .5), (69, 1), (69, .5), (72, 1.5), (69, .5), (69, .5),
+        (71, .5), (74, 1.5), (72, 1), (71, .5), (74, 1.5), (72, 1), (71, 1.5), (67, .5), (69, 1), (67, 2)], 0.2, [43, 55, 59, 62])  # Molly Malone, the refrain (trad.): trillian Ireland/song
+    # the countries with two tunes instead of the anthem
+    motif("si", [(66, .5), (69, .5), (69, .5), (69, .5), (66, .5), (69, .5), (69, .5), (69, .5), (66, .5), (66, .5), (64, .5), (64, .5), (62, 1), (62, 1),
+        (62, 1), (64, 1), (66, .5), (69, .5), (69, .5), (None, .5), (66, .5), (66, .5), (64, .5), (64, .5), (62, 1)], 0.28, [50, 57, 62, 66])  # Marko skače (folk): trillian Slovenia/MarkoSkace.abc
+    motif2("si", [(74, .75), (74, .25), (76, .75), (78, .25), (78, .75), (79, .25), (76, .75), (74, .25), (76, .75), (78, .25), (76, .75), (76, .25), (74, .75), (73, .25), (74, 2)],
+        0.32, [50, 57, 62, 66])  # Rezijanka (folk of the Resia Slovenes): trillian Balkan/Rezijanka.abc
+    motif("ba", [(72, 1), (71, 1), (69, 2), (71, 2), (72, 1), (71, 1), (69, 2), (67, 2)], 0.36, [43, 55, 59, 62])  # Kad ja pođoh na Bembašu (sevdalinka): trillian Serbia/KadJaPodjohNaBembashu.abc
+    motif2("ba", [(68, .5), (69, .5), (71, .5), (72, 1 / 6), (71, 1 / 6), (69, 1 / 6), (69, .5), (71, 3.5), (69, .5), (71, .25), (72, .25), (74, 1), (72, 1), (71, .5),
+        (72, .25), (71, .25), (69, 4)], 0.3, [45, 57, 60, 64])  # Čudna jada od Mostara grada (sevdalinka): campin.me.uk Chalumeau (after M. Zero, Sevdah Bošnjaka)
+    motif("xk", [(68, .5), (69, .5), (68, .5), (65, .5), (68, .5), (65, .5), (68, .5), (69, .5), (71, .5), (69, .5), (68, .5), (65, .5), (64, .5), (62, .5), (64, .5), (65, .5),
+        (68, .5), (69, .5), (68, .5), (65, .5), (68, .5), (65, .5), (68, .5), (69, .5), (71, .5), (69, .5), (68, .5), (65, .5), (64, 2)], 0.22,
+        [40, 52, 56, 59])  # Vallja e tri motrave (Kosovo folk, after Hajdar Dushi): campin.me.uk Chalumeau
+    motif2("xk", [(65, 1.5), (60, .5), (65, .5), (67, .5), (68, .5), (70, .5), (68, 1.5), (67, .5), (68, .5), (67, .5), (65, 1), (65, 1.5), (63, .5), (65, 1), (65, 1),
+        (65, 1.5), (65, .5), (65, 2)], 0.28, [41, 53, 56, 60])  # Valle Kcim (Kosovo folk): ifdo.ca/~seymour/runabc/balk2.abc
+    motif("mk", [(74, 1), (74, .5), (74, 1), (74, 1), (74, .5), (72, .5), (74, .5), (75, 1), (75, .5), (74, .5), (72, 1), (72, .5), (72, 1), (72, 1),
+        (72, .5), (70, .5), (72, .5), (74, 1)], 0.34, [46, 58, 62, 65])  # Jovano, Jovanke (folk): trillian Balkan/JovanoJovanke_Gm.abc
+    motif2("mk", [(62, .5), (61, .5), (62, .5), (64, 1), (64, 1), (57, .5), (64, 1), (64, 1), (64, 1), (66, 1.5), (64, 1), (62, 1), (66, 1), (67, .5), (69, 2)], 0.3,
+        [50, 57, 62, 66])  # Što mi e milo (folk): ifdo.ca/~seymour/runabc/balk2.abc
+    motif("tr", [(64, 1.5), (71, .5), (71, 1), (71, 1), (72, .5), (71, .5), (72, .5), (74, .5), (71, 1), (71, 1), (69, 1), (69, .5), (69, .5), (67, 1), (69, 1), (71, 4)], 0.3,
+        [40, 52, 55, 59])  # Üsküdar'a gider iken (folk): tousauxbalkans.net abc
+    motif2("tr", [(71, .5), (72, .5), (74, .5), (74, .5), (74, 1), (74, 1), (74, 1), (74, 1), (69, 1.5), (67, .5), (71, .5), (72, .5), (74, .5), (74, .5), (74, 1), (74, .5),
+        (71, .5), (72, .5), (74, .5), (74, 1), (69, 1)], 0.25, [45, 57, 60, 64])  # Yaylalar (folk): ifdo.ca/~seymour/runabc/balk2.abc
+    motif("md", [(60, .5), (60, .5), (62, .5), (64, .5), (65, .5), (64, .5), (62, .5), (60, .5), (65, .5), (64, .5), (62, .5), (60, .5), (62, .5), (64, .5), (65, 1), (60, 1),
+        (60, .5), (60, .5), (62, .5), (64, .5), (65, 1), (67, 1), (69, 2), (72, 2), (67, .5), (69, .5), (67, .5), (65, .5), (64, 1), (62, 1), (60, 2)], 0.22,
+        [48, 60, 64, 67])  # Trandafir de la Moldova (folk): trillian Romania/tune/Trandafir_de_la_Moldova-C-42-3.abc
+    motif2("md", [(74, 1), (72, 1), (72, .5), (70, .5), (69, .5), (70, .5), (72, .5), (70, .5), (69, .5), (70, .5), (72, .5), (70, .5), (69, .5), (70, .5), (74, 1), (72, 1),
+        (72, .5), (70, .5), (69, .5), (70, .5), (74, .5), (77, .5), (76, .5), (77, .5), (79, 1), (77, 1)], 0.2, [41, 53, 57, 60])  # Tropotica de la Bălți (folk): ifdo.ca/~seymour/runabc/balk2.abc
 def radar():  # radar detector: a single short high beep (the game repeats it every 0.5 s while speeding)
     out = [0.0] * int(0.3 * SR)
     place(out, 0.0, tone(2400, 0.06, "sq", 0.5, 0.002, 0.02))
@@ -293,6 +385,6 @@ def lose():
     for k, n in enumerate([67, 64, 62, 55]): place(out, k * 0.25, tone(note(n), 0.4, "tri", 0.8, 0.01, 0.2))
     write("lose", out, 0.6)
 
-for f in (engine, engines, gravel, pump, hit, beep, go, blip, lowfuel, refuel_done, win, lose, radar, siren, anthems, motifs):
+for f in (engine, engines, gravel, pump, hit, beep, go, blip, lowfuel, refuel_done, lose, radar, siren, anthems, motifs):
     f()
 print("audio written to", os.path.abspath(OUT))
