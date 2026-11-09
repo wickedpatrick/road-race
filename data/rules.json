@@ -1132,7 +1132,22 @@
 		"lv_sigulda_turaida": [40, 42],
 		"lv_talsi_hills": [60, 30],
 		"lv_bauska_rundale": [80, 25],
-		"lv_salacgriva_weir": [40, 10]
+		"lv_salacgriva_weir": [40, 10],
+		"ee_tallinn_townhall": [34, 64],
+		"ee_tartu_university": [64, 23],
+		"ee_narva_castle": [46, 52],
+		"ee_parnu_gate": [36, 14],
+		"ee_kohtla_ash_hills": [96, 34],
+		"ee_viljandi_bridge": [52, 22],
+		"ee_rakvere_tarvas": [9, 6],
+		"ee_kuressaare_castle": [60, 32],
+		"ee_valga_church": [28, 38],
+		"ee_voru_munamagi": [40, 34],
+		"ee_haapsalu_castle": [58, 32],
+		"ee_paide_tower": [24, 30],
+		"ee_rapla_church": [30, 46],
+		"ee_polva_taevaskoja": [60, 29],
+		"ee_kardla_kopu": [18, 38]
 	},
 	"police": {"escape_chance": 0.2, "escape_kmh": 180, "escape_swerves": [3, 5]},
 	"postcards": {"stamps": [0.15, 0.3, 0.45, 0.6], "stamp_caps": [2, 3, 3, 4, 5, 5, 5]}

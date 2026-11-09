@@ -1,0 +1,254 @@
+{
+	"Tallinn": {
+		"pl": "Stolica Estonii; jej średniowieczne Stare Miasto z murami i basztami jest na liście UNESCO od 1997 roku",
+		"en": "The capital of Estonia; its medieval Old Town with walls and towers has been on the UNESCO list since 1997",
+		"cs": "Hlavní město Estonska; jeho středověké Staré Město s hradbami a věžemi je od roku 1997 na seznamu UNESCO",
+		"is": "Höfuðborg Eistlands; gamli miðaldabærinn með borgarmúrum og turnum hefur verið á heimsminjaskrá UNESCO síðan 1997",
+		"de": "Die Hauptstadt Estlands; ihre mittelalterliche Altstadt mit Mauern und Türmen steht seit 1997 auf der UNESCO-Liste"
+	},
+	"Tartu": {
+		"pl": "Miasto uniwersyteckie; Uniwersytet w Tartu założył w 1632 roku szwedzki król Gustaw II Adolf",
+		"en": "A university town; the University of Tartu was founded in 1632 by the Swedish king Gustavus Adolphus",
+		"cs": "Univerzitní město; Tartuskou univerzitu založil roku 1632 švédský král Gustav II. Adolf",
+		"is": "Háskólabær; Tartu-háskóli var stofnaður árið 1632 af Gústaf 2. Adólf Svíakonungi",
+		"de": "Eine Universitätsstadt; die Universität Tartu gründete 1632 der schwedische König Gustav II. Adolf"
+	},
+	"Narva": {
+		"pl": "Najdalej na wschód wysunięte miasto Estonii; nad rzeką Narwą zamek Hermanna stoi naprzeciw twierdzy w Iwangorodzie",
+		"en": "Estonia's easternmost city; on the Narva River Hermann Castle faces the Ivangorod fortress across the water",
+		"cs": "Nejvýchodnější město Estonska; na řece Narvě stojí Hermannův hrad naproti pevnosti Ivangorod",
+		"is": "Austasta borg Eistlands; við Narva-fljót stendur Hermannskastali andspænis virkinu í Ivangorod hinum megin við ána",
+		"de": "Estlands östlichste Stadt; an der Narva steht die Hermannsfeste der Festung Iwangorod gegenüber"
+	},
+	"Pärnu": {
+		"pl": "„Letnia stolica” Estonii: kurort z długą piaszczystą plażą, w którym pierwszy zakład kąpielowy otwarto w 1838 roku",
+		"en": "Estonia's 'summer capital', a resort with a long sandy beach whose first bathing establishment opened in 1838",
+		"cs": "„Letní hlavní město“ Estonska: lázně s dlouhou písečnou pláží, kde první lázeňský dům otevřeli roku 1838",
+		"is": "„Sumarhöfuðborg“ Eistlands, baðstaður með langri sandströnd þar sem fyrsta baðhúsið var opnað árið 1838",
+		"de": "Estlands „Sommerhauptstadt“, ein Badeort mit langem Sandstrand, dessen erste Badeanstalt 1838 öffnete"
+	},
+	"Kohtla-Järve": {
+		"pl": "Miasto wyrosłe na wydobyciu łupków bitumicznych; jego dzielnice leżą rozrzucone wśród lasów i kopalń",
+		"en": "A town that grew up on oil shale mining; its districts lie scattered among forests and mines",
+		"cs": "Město, které vyrostlo na těžbě ropných břidlic; jeho čtvrti leží roztroušené mezi lesy a doly",
+		"is": "Bær sem óx upp í kringum olíuleirsteinsnám; hverfin liggja dreifð milli skóga og náma",
+		"de": "Eine Stadt, die mit dem Ölschieferbergbau wuchs; ihre Stadtteile liegen verstreut zwischen Wäldern und Gruben"
+	},
+	"Viljandi": {
+		"pl": "Co roku w lipcu w parku zamkowym odbywa się tu Festiwal Muzyki Folkowej",
+		"en": "Every July the castle park hosts the Viljandi Folk Music Festival",
+		"cs": "Každý červenec se v hradním parku koná festival folkové hudby",
+		"is": "Í júlí ár hvert er þjóðlagahátíðin í Viljandi haldin í kastalagarðinum",
+		"de": "Jeden Juli findet im Burgpark das Folkmusikfestival von Viljandi statt"
+	},
+	"Rakvere": {
+		"pl": "Na wzgórzu zamkowym stoi Tarvas, ogromny tur z brązu, symbol miasta postawiony w 2002 roku",
+		"en": "On the castle hill stands Tarvas, a giant bronze aurochs and the town's symbol, put up in 2002",
+		"cs": "Na hradním vrchu stojí Tarvas, obrovský bronzový pratur a symbol města, postavený roku 2002",
+		"is": "Á kastalahæðinni stendur Tarvas, risastór úruxi úr bronsi og tákn bæjarins, reistur árið 2002",
+		"de": "Auf dem Burgberg steht Tarvas, ein riesiger Auerochse aus Bronze und Wahrzeichen der Stadt, aufgestellt 2002"
+	},
+	"Kuressaare": {
+		"pl": "Stolica Saremy, największej wyspy Estonii; tutejszy zamek biskupi to najlepiej zachowany średniowieczny zamek w krajach bałtyckich",
+		"en": "The capital of Saaremaa, Estonia's largest island; its episcopal castle is the best-preserved medieval castle in the Baltic states",
+		"cs": "Hlavní město Saaremaa, největšího estonského ostrova; zdejší biskupský hrad je nejzachovalejším středověkým hradem v Pobaltí",
+		"is": "Höfuðstaður Saaremaa, stærstu eyjar Eistlands; biskupskastalinn er best varðveitti miðaldakastali Eystrasaltslandanna",
+		"de": "Der Hauptort von Saaremaa, Estlands größter Insel; seine Bischofsburg ist die am besten erhaltene mittelalterliche Burg des Baltikums"
+	},
+	"Valga": {
+		"pl": "Valga i łotewska Valka tworzą jedno miasto przecięte granicą: „jedno miasto, dwa państwa”",
+		"en": "Valga and Latvia's Valka form one town cut by the border: 'one town, two countries'",
+		"cs": "Valga a lotyšská Valka tvoří jedno město rozdělené hranicí: „jedno město, dva státy“",
+		"is": "Valga og Valka í Lettlandi eru einn bær sem landamærin skipta: „einn bær, tvö lönd“",
+		"de": "Valga und das lettische Valka bilden eine von der Grenze geteilte Stadt: „eine Stadt, zwei Länder“"
+	},
+	"Võru": {
+		"pl": "Tu przez ponad 40 lat był lekarzem Friedrich Reinhold Kreutzwald, autor eposu narodowego „Kalevipoeg”",
+		"en": "Friedrich Reinhold Kreutzwald, author of the national epic Kalevipoeg, was the town doctor here for over 40 years",
+		"cs": "Více než 40 let tu působil jako lékař Friedrich Reinhold Kreutzwald, autor národního eposu Kalevipoeg",
+		"is": "Friedrich Reinhold Kreutzwald, höfundur þjóðarkvæðisins Kalevipoeg, var læknir bæjarins í meira en 40 ár",
+		"de": "Friedrich Reinhold Kreutzwald, Verfasser des Nationalepos Kalevipoeg, war hier über 40 Jahre lang Stadtarzt"
+	},
+	"Haapsalu": {
+		"pl": "Nadmorskie uzdrowisko; według legendy w sierpniowe noce przy pełni w oknie kaplicy zamkowej ukazuje się Biała Dama",
+		"en": "A seaside spa town; legend says that on August full-moon nights the White Lady appears in a window of the castle chapel",
+		"cs": "Přímořské lázně; podle legendy se za srpnových úplňkových nocí v okně hradní kaple zjevuje Bílá paní",
+		"is": "Heilsubær við sjóinn; sagan segir að á fullu tungli í ágúst birtist Hvíta konan í glugga kastalakapellunnar",
+		"de": "Ein Kurort am Meer; der Sage nach erscheint in Augustnächten bei Vollmond die Weiße Dame im Fenster der Burgkapelle"
+	},
+	"Paide": {
+		"pl": "Miasto w samym środku Estonii; co roku w sierpniu odbywa się tu Festiwal Opinii, wielkie spotkanie dyskusyjne",
+		"en": "A town in the very middle of Estonia; every August it hosts the Opinion Festival, a big gathering for debates",
+		"cs": "Město v samém středu Estonska; každý srpen se tu koná Festival názorů, velké setkání plné diskusí",
+		"is": "Bær í miðju Eistlandi; í ágúst ár hvert er þar haldin Skoðanahátíðin, stór samkoma með umræðum",
+		"de": "Eine Stadt mitten in Estland; jeden August findet hier das Meinungsfestival statt, ein großes Treffen zum Diskutieren"
+	},
+	"Rapla": {
+		"pl": "Miasto znane z kościoła o dwóch wieżach i z festiwalu muzyki kościelnej",
+		"en": "A town known for its twin-spired church and its church music festival",
+		"cs": "Město známé kostelem se dvěma věžemi a festivalem duchovní hudby",
+		"is": "Bær þekktur fyrir kirkjuna með turnunum tveimur og kirkjutónlistarhátíðina",
+		"de": "Eine Stadt, bekannt für ihre Kirche mit zwei Türmen und ihr Kirchenmusikfestival"
+	},
+	"Põlva": {
+		"pl": "W pobliżu, w dolinie rzeki Ahja, wznoszą się czerwone skały z piaskowca Taevaskoja",
+		"en": "Nearby, in the valley of the Ahja river, rise the red sandstone cliffs of Taevaskoja",
+		"cs": "Nedaleko, v údolí řeky Ahja, se zvedají červené pískovcové skály Taevaskoja",
+		"is": "Skammt frá, í dal árinnar Ahja, rísa rauðir sandsteinshamrar Taevaskoja",
+		"de": "In der Nähe, im Tal der Ahja, erheben sich die roten Sandsteinfelsen von Taevaskoja"
+	},
+	"Kärdla": {
+		"pl": "Stolica wyspy Hiumy leży w kraterze po meteorycie, który uderzył tu około 455 milionów lat temu",
+		"en": "The capital of Hiiumaa lies in a crater left by a meteorite that struck about 455 million years ago",
+		"cs": "Hlavní město ostrova Hiiumaa leží v kráteru po meteoritu, který sem dopadl asi před 455 miliony let",
+		"is": "Höfuðstaður Hiiumaa liggur í gíg eftir loftstein sem féll hér fyrir um 455 milljónum ára",
+		"de": "Der Hauptort von Hiiumaa liegt in einem Krater, den ein Meteorit vor etwa 455 Millionen Jahren schlug"
+	},
+	"Jõhvi": {
+		"pl": "Kościół św. Michała w Jõhvi zbudowano w średniowieczu jako kościół obronny",
+		"en": "St Michael's Church in Jõhvi was built in the Middle Ages as a fortified church",
+		"cs": "Kostel sv. Michaela v Jõhvi byl postaven ve středověku jako opevněný kostel",
+		"is": "Mikaelskirkjan í Jõhvi var reist á miðöldum sem víggirt kirkja",
+		"de": "Die Michaeliskirche in Jõhvi wurde im Mittelalter als Wehrkirche gebaut"
+	},
+	"Sillamäe": {
+		"pl": "Centrum miasta zbudowano w latach 50. w stylu socrealizmu; szerokie schody schodzą z niego do nadmorskiej promenady",
+		"en": "The town centre was built in the 1950s in the Socialist Classicism style; broad stairs lead down to the seaside promenade",
+		"cs": "Centrum města vzniklo v 50. letech ve stylu socialistického klasicismu; široké schodiště vede dolů k přímořské promenádě",
+		"is": "Miðbærinn var reistur á sjötta áratugnum í sósíalískum klassískum stíl; breiðar tröppur liggja niður að strandgötunni",
+		"de": "Das Zentrum entstand in den 1950er-Jahren im Stil des sozialistischen Klassizismus; breite Treppen führen hinunter zur Strandpromenade"
+	},
+	"Kuusalu": {
+		"pl": "Brama do Parku Narodowego Lahemaa, pierwszego parku narodowego Estonii, założonego w 1971 roku",
+		"en": "The gateway to Lahemaa, Estonia's first national park, founded in 1971",
+		"cs": "Brána do Národního parku Lahemaa, prvního národního parku Estonska, založeného roku 1971",
+		"is": "Hliðið að Lahemaa, fyrsta þjóðgarði Eistlands, stofnuðum árið 1971",
+		"de": "Das Tor zum Lahemaa, Estlands erstem Nationalpark, gegründet 1971"
+	},
+	"Kolga": {
+		"pl": "Dwór w Kolga przez wieki należał do szwedzkiego rodu Stenbocków",
+		"en": "Kolga manor belonged for centuries to the Swedish Stenbock family",
+		"cs": "Panské sídlo Kolga patřilo po staletí švédskému rodu Stenbocků",
+		"is": "Kolga-setrið var í eigu sænsku Stenbock-ættarinnar öldum saman",
+		"de": "Das Gut Kolga gehörte jahrhundertelang der schwedischen Familie Stenbock"
+	},
+	"Viitna": {
+		"pl": "Karczma w Viitna przy dawnym trakcie pocztowym z Tallina do Narwy pamięta XVIII wiek",
+		"en": "The Viitna tavern on the old Tallinn–Narva post road dates from the 18th century",
+		"cs": "Hostinec ve Viitně na staré poštovní silnici z Tallinnu do Narvy pochází z 18. století",
+		"is": "Kráin í Viitna við gamla póstveginn frá Tallinn til Narva er frá 18. öld",
+		"de": "Die Schenke von Viitna an der alten Poststraße von Tallinn nach Narva stammt aus dem 18. Jahrhundert"
+	},
+	"Purtse": {
+		"pl": "Zamek w Purtse to szesnastowieczny obronny dwór wasala, dziś odnowiony",
+		"en": "Purtse castle is a 16th-century vassal's fortified manor, now restored",
+		"cs": "Hrad Purtse je opevněné vazalské sídlo ze 16. století, dnes obnovené",
+		"is": "Purtse-kastali er víggirt lénsmannssetur frá 16. öld, nú endurgert",
+		"de": "Die Burg Purtse ist ein befestigter Vasallensitz aus dem 16. Jahrhundert, heute restauriert"
+	},
+	"Tapa": {
+		"pl": "Miasto kolejarzy: tu rozdzielają się linie z Tallina do Tartu i do Narwy",
+		"en": "A railway town: here the lines from Tallinn to Tartu and to Narva part ways",
+		"cs": "Železničářské město: zde se rozdělují tratě z Tallinnu do Tartu a do Narvy",
+		"is": "Járnbrautarbær: hér skiljast leiðirnar frá Tallinn til Tartu og til Narva",
+		"de": "Eine Eisenbahnerstadt: hier trennen sich die Strecken von Tallinn nach Tartu und nach Narva"
+	},
+	"Türi": {
+		"pl": "„Wiosenna stolica” Estonii; co roku w maju odbywa się tu wielki targ kwiatowy",
+		"en": "Estonia's 'spring capital'; every May it holds a big flower fair",
+		"cs": "„Jarní hlavní město“ Estonska; každý květen se tu koná velký květinový trh",
+		"is": "„Vorhöfuðborg“ Eistlands; í maí ár hvert er þar haldinn stór blómamarkaður",
+		"de": "Estlands „Frühlingshauptstadt“; jeden Mai findet hier ein großer Blumenmarkt statt"
+	},
+	"Tori": {
+		"pl": "W stadninie w Tori, założonej w 1856 roku, wyhodowano estońską rasę koni tori",
+		"en": "The Tori stud farm, founded in 1856, bred the Estonian Tori horse",
+		"cs": "V hřebčíně Tori, založeném roku 1856, vyšlechtili estonské koně plemene tori",
+		"is": "Í Tori-hrossaræktarbúinu, sem stofnað var árið 1856, var eistneska Tori-hestakynið ræktað",
+		"de": "Im 1856 gegründeten Gestüt Tori wurde das estnische Tori-Pferd gezüchtet"
+	},
+	"Vändra": {
+		"pl": "W 1843 roku urodziła się tu poetka Lydia Koidula",
+		"en": "The poet Lydia Koidula was born here in 1843",
+		"cs": "Roku 1843 se zde narodila básnířka Lydia Koidula",
+		"is": "Skáldkonan Lydia Koidula fæddist hér árið 1843",
+		"de": "Hier wurde 1843 die Dichterin Lydia Koidula geboren"
+	},
+	"Imavere": {
+		"pl": "W Imavere mieści się Estońskie Muzeum Mleczarstwa",
+		"en": "Imavere is home to the Estonian Dairy Museum",
+		"cs": "V Imavere sídlí Estonské muzeum mlékárenství",
+		"is": "Í Imavere er eistneska mjólkuriðnaðarsafnið",
+		"de": "In Imavere befindet sich das Estnische Molkereimuseum"
+	},
+	"Põltsamaa": {
+		"pl": "W XVI wieku zamek w Põltsamaa był siedzibą Magnusa, ogłoszonego królem Inflant",
+		"en": "In the 16th century Põltsamaa castle was the seat of Magnus, proclaimed King of Livonia",
+		"cs": "V 16. století byl hrad Põltsamaa sídlem Magnuse, prohlášeného livonským králem",
+		"is": "Á 16. öld var kastalinn í Põltsamaa aðsetur Magnúsar sem var útnefndur konungur Lívóníu",
+		"de": "Im 16. Jahrhundert war die Burg Põltsamaa Sitz von Magnus, der zum König von Livland ausgerufen wurde"
+	},
+	"Puurmani": {
+		"pl": "Neorenesansowy dwór w Puurmani mieści dziś szkołę",
+		"en": "The Neo-Renaissance manor house of Puurmani is now a school",
+		"cs": "V novorenesančním zámečku v Puurmani dnes sídlí škola",
+		"is": "Í nýendurreisnarsetrinu í Puurmani er nú skóli",
+		"de": "Im Neorenaissance-Herrenhaus von Puurmani ist heute eine Schule"
+	},
+	"Ülenurme": {
+		"pl": "W dworze w Ülenurme mieści się Estońskie Muzeum Rolnictwa",
+		"en": "The manor at Ülenurme houses the Estonian Agricultural Museum",
+		"cs": "V zámečku v Ülenurme sídlí Estonské zemědělské muzeum",
+		"is": "Í setrinu í Ülenurme er eistneska landbúnaðarsafnið",
+		"de": "Im Gutshaus von Ülenurme befindet sich das Estnische Landwirtschaftsmuseum"
+	},
+	"Elva": {
+		"pl": "Miasteczko wśród sosnowych lasów i jezior, ulubione przez turystów pieszych i narciarzy",
+		"en": "A small town among pine forests and lakes, loved by hikers and skiers",
+		"cs": "Městečko mezi borovými lesy a jezery, oblíbené u turistů a lyžařů",
+		"is": "Smábær meðal furuskóga og vatna, vinsæll meðal göngufólks og skíðafólks",
+		"de": "Ein Städtchen zwischen Kiefernwäldern und Seen, beliebt bei Wanderern und Skiläufern"
+	},
+	"Mustvee": {
+		"pl": "Miasteczko nad jeziorem Pejpus; na tym brzegu od wieków mieszkają staroobrzędowcy, słynący z uprawy cebuli",
+		"en": "A small town on Lake Peipus; Old Believers have lived on this shore for centuries, known for growing onions",
+		"cs": "Městečko u Čudského jezera; na tomto břehu žijí po staletí starověrci, proslulí pěstováním cibule",
+		"is": "Smábær við Peipus-vatn; á þessari strönd hafa gamaltrúaðir búið öldum saman og eru þekktir fyrir laukrækt",
+		"de": "Ein Städtchen am Peipussee; an diesem Ufer leben seit Jahrhunderten Altgläubige, bekannt für ihren Zwiebelanbau"
+	},
+	"Iisaku": {
+		"pl": "Miejscowość w pobliżu północnego brzegu jeziora Pejpus, jednego z największych jezior Europy",
+		"en": "A village near the northern shore of Lake Peipus, one of the largest lakes in Europe",
+		"cs": "Obec nedaleko severního břehu Čudského jezera, jednoho z největších jezer Evropy",
+		"is": "Þorp nálægt norðurströnd Peipus-vatns, eins stærsta stöðuvatns Evrópu",
+		"de": "Ein Ort nahe dem Nordufer des Peipussees, eines der größten Seen Europas"
+	},
+	"Karksi-Nuia": {
+		"pl": "Nad doliną stoją ruiny zamku zakonnego w Karksi",
+		"en": "Above the valley stand the ruins of the Order's castle of Karksi",
+		"cs": "Nad údolím stojí zřícenina řádového hradu Karksi",
+		"is": "Fyrir ofan dalinn standa rústir riddarakastalans í Karksi",
+		"de": "Über dem Tal stehen die Ruinen der Ordensburg Karksi"
+	},
+	"Virtsu": {
+		"pl": "Z portu w Virtsu promy płyną przez cieśninę Suur väin na wyspę Muhu",
+		"en": "From the port of Virtsu ferries sail across the Suur väin strait to the island of Muhu",
+		"cs": "Z přístavu Virtsu plují trajekty přes průliv Suur väin na ostrov Muhu",
+		"is": "Frá höfninni í Virtsu sigla ferjur yfir Suur väin-sundið til eyjarinnar Muhu",
+		"de": "Vom Hafen Virtsu fahren Fähren über den Suur väin zur Insel Muhu"
+	},
+	"Liiva": {
+		"pl": "Wyspa Muhu słynie z barwnych haftów i wzorzystych strojów ludowych",
+		"en": "The island of Muhu is famous for its colourful embroidery and patterned folk costumes",
+		"cs": "Ostrov Muhu je proslulý pestrými výšivkami a vzorovanými lidovými kroji",
+		"is": "Eyjan Muhu er fræg fyrir litríkan útsaum og mynstraða þjóðbúninga",
+		"de": "Die Insel Muhu ist berühmt für ihre farbenfrohen Stickereien und gemusterten Trachten"
+	},
+	"Suuremõisa": {
+		"pl": "Barokowy dwór w Suuremõisa, jeden z najokazalszych w Estonii, mieści dziś szkołę",
+		"en": "The Baroque manor of Suuremõisa, one of the grandest in Estonia, now houses a school",
+		"cs": "V barokním zámku Suuremõisa, jednom z nejokázalejších v Estonsku, dnes sídlí škola",
+		"is": "Í barokksetrinu í Suuremõisa, einu því glæsilegasta í Eistlandi, er nú skóli",
+		"de": "Im barocken Gutshaus Suuremõisa, einem der prächtigsten Estlands, ist heute eine Schule"
+	}
+}
