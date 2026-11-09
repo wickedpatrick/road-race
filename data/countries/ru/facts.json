@@ -1,0 +1,373 @@
+{
+	"Moskva": {
+		"pl": "Stolica Rosji nad rzeką Moskwą, z Kremlem i Placem Czerwonym w samym sercu",
+		"en": "Russia's capital on the Moskva river, with the Kremlin and Red Square at its heart",
+		"cs": "Hlavní město Ruska na řece Moskvě, s Kremlem a Rudým náměstím v samém srdci",
+		"is": "Höfuðborg Rússlands við Moskvufljót, með Kreml og Rauða torgið í hjarta borgarinnar",
+		"de": "Russlands Hauptstadt an der Moskwa, mit dem Kreml und dem Roten Platz im Herzen"
+	},
+	"Sankt-Peterburg": {
+		"pl": "Miasto założone przez Piotra I w 1703 roku na wyspach delty Newy, przez dwa stulecia stolica Rosji",
+		"en": "Founded by Peter the Great in 1703 on the islands of the Neva delta, Russia's capital for two centuries",
+		"cs": "Město založené Petrem Velikým roku 1703 na ostrovech delty Něvy, dvě století hlavní město Ruska",
+		"is": "Pétur mikli stofnaði borgina árið 1703 á eyjum í ósum Nevu; hún var höfuðborg Rússlands í tvær aldir",
+		"de": "1703 von Peter dem Großen auf den Inseln des Newadeltas gegründet, zwei Jahrhunderte lang Russlands Hauptstadt"
+	},
+	"Novosibirsk": {
+		"pl": "Największe miasto Syberii, wyrosło od 1893 roku przy moście Kolei Transsyberyjskiej na Obie",
+		"en": "Siberia's largest city, grown since 1893 by the Trans-Siberian Railway's bridge over the Ob",
+		"cs": "Největší město Sibiře, vyrostlo od roku 1893 u mostu Transsibiřské magistrály přes Ob",
+		"is": "Stærsta borg Síberíu, sem hefur vaxið frá 1893 við brú Síberíujárnbrautarinnar yfir Ob",
+		"de": "Sibiriens größte Stadt, seit 1893 an der Brücke der Transsibirischen Eisenbahn über den Ob gewachsen"
+	},
+	"Yekaterinburg": {
+		"pl": "Założony w 1723 roku jako huta żelaza nad Isetią, tuż za granicą Europy i Azji",
+		"en": "Founded in 1723 as an ironworks on the Iset, just past the border between Europe and Asia",
+		"cs": "Založen roku 1723 jako železárny na řece Iseť, kousek za hranicí Evropy a Asie",
+		"is": "Stofnuð árið 1723 sem járnbræðsla við ána Iset, rétt handan marka Evrópu og Asíu",
+		"de": "1723 als Eisenhütte am Isset gegründet, gleich hinter der Grenze zwischen Europa und Asien"
+	},
+	"Kazan": {
+		"pl": "Stolica Tatarstanu; na jej kremlu z listy UNESCO meczet i sobór stoją obok siebie",
+		"en": "The capital of Tatarstan; in its UNESCO-listed kremlin a mosque and a cathedral stand side by side",
+		"cs": "Hlavní město Tatarstánu; v jeho kremlu na seznamu UNESCO stojí mešita a chrám vedle sebe",
+		"is": "Höfuðborg Tatarstans; í Kreml borgarinnar, sem er á heimsminjaskrá UNESCO, standa moska og dómkirkja hlið við hlið",
+		"de": "Die Hauptstadt Tatarstans; in ihrem Kreml, einem UNESCO-Welterbe, stehen Moschee und Kathedrale nebeneinander"
+	},
+	"Krasnoyarsk": {
+		"pl": "Miasto nad Jenisejem przy rezerwacie Stołby, gdzie z tajgi sterczą granitowe skały",
+		"en": "A city on the Yenisei by the Stolby reserve, where granite pillars rise out of the taiga",
+		"cs": "Město na Jeniseji u rezervace Stolby, kde z tajgy vystupují žulové skály",
+		"is": "Borg við Jenisej hjá Stolby-friðlandinu, þar sem granítdrangar rísa upp úr barrskóginum",
+		"de": "Eine Stadt am Jenissei beim Naturschutzgebiet Stolby, wo Granitfelsen aus der Taiga ragen"
+	},
+	"Nizhny Novgorod": {
+		"pl": "Tu Oka wpada do Wołgi; nad zbiegiem rzek stoi ceglany kreml z XVI wieku",
+		"en": "Here the Oka flows into the Volga; a 16th-century brick kremlin stands above the meeting of the rivers",
+		"cs": "Zde se Oka vlévá do Volhy; nad soutokem stojí cihlový kreml ze 16. století",
+		"is": "Hér rennur Oka í Volgu; yfir ármótunum stendur Kreml úr múrsteini frá 16. öld",
+		"de": "Hier mündet die Oka in die Wolga; über dem Zusammenfluss steht ein Backsteinkreml aus dem 16. Jahrhundert"
+	},
+	"Chelyabinsk": {
+		"pl": "W lutym 2013 roku nad miastem rozbłysnął meteor jaśniejszy od Słońca",
+		"en": "In February 2013 a meteor brighter than the Sun flared up over the city",
+		"cs": "V únoru 2013 nad městem vzplál meteor jasnější než Slunce",
+		"is": "Í febrúar 2013 blossaði loftsteinn, bjartari en sólin, upp yfir borginni",
+		"de": "Im Februar 2013 leuchtete über der Stadt ein Meteor auf, heller als die Sonne"
+	},
+	"Ufa": {
+		"pl": "Stolica Baszkortostanu na wysokim brzegu Biełej, tam gdzie wpada do niej rzeka Ufa",
+		"en": "The capital of Bashkortostan on the high bank of the Belaya, where the Ufa river joins it",
+		"cs": "Hlavní město Baškortostánu na vysokém břehu Bělé, kde se do ní vlévá řeka Ufa",
+		"is": "Höfuðborg Basjkortostans á háum bakka Belaju, þar sem áin Úfa rennur í hana",
+		"de": "Die Hauptstadt Baschkortostans am hohen Ufer der Belaja, wo der Fluss Ufa in sie mündet"
+	},
+	"Samara": {
+		"pl": "Tu buduje się rakiety Sojuz; bulwar nad Wołgą ciągnie się przez kilka kilometrów",
+		"en": "Soyuz rockets are built here; the Volga embankment runs on for several kilometres",
+		"cs": "Staví se tu rakety Sojuz; nábřeží Volhy se táhne několik kilometrů",
+		"is": "Hér eru Sojús-eldflaugar smíðaðar; árbakkinn við Volgu teygir sig kílómetrum saman",
+		"de": "Hier werden Sojus-Raketen gebaut; die Wolgauferpromenade zieht sich über mehrere Kilometer"
+	},
+	"Krasnodar": {
+		"pl": "Stolica Kubania, założona w 1793 roku przez Kozaków czarnomorskich jako Jekaterynodar",
+		"en": "The capital of the Kuban, founded in 1793 by the Black Sea Cossacks as Yekaterinodar",
+		"cs": "Hlavní město Kubáně, založené roku 1793 černomořskými kozáky jako Jekatěrinodar",
+		"is": "Höfuðborg Kúban-héraðs, stofnuð árið 1793 af Svartahafskósökkum undir nafninu Jekaterínodar",
+		"de": "Die Hauptstadt des Kubangebiets, 1793 von den Schwarzmeerkosaken als Jekaterinodar gegründet"
+	},
+	"Rostov-na-Donu": {
+		"pl": "„Brama Kaukazu” nad Donem, niedaleko jego ujścia do Morza Azowskiego",
+		"en": "The “Gateway to the Caucasus” on the Don, near where it flows into the Sea of Azov",
+		"cs": "„Brána Kavkazu“ na Donu, nedaleko jeho ústí do Azovského moře",
+		"is": "„Hlið Kákasus“ við Don, nálægt ósum árinnar í Asovshaf",
+		"de": "Das „Tor zum Kaukasus“ am Don, nahe seiner Mündung ins Asowsche Meer"
+	},
+	"Omsk": {
+		"pl": "Twierdza z 1716 roku u ujścia Omu do Irtyszu; tu Dostojewski odbywał katorgę",
+		"en": "A fortress of 1716 where the Om meets the Irtysh; Dostoevsky served his penal labour here",
+		"cs": "Pevnost z roku 1716 u soutoku Omu s Irtyšem; Dostojevskij si tu odpykal nucené práce",
+		"is": "Virki frá 1716 þar sem Om rennur í Irtysj; Dostojevskí afplánaði hér þrælkunarvinnu",
+		"de": "Eine Festung von 1716 an der Mündung des Om in den Irtysch; Dostojewski leistete hier Zwangsarbeit"
+	},
+	"Voronezh": {
+		"pl": "Kolebka rosyjskiej floty: w 1696 roku Piotr I budował tu okręty wojenne floty azowskiej",
+		"en": "The cradle of the Russian navy: in 1696 Peter the Great had the warships of his Azov fleet built here",
+		"cs": "Kolébka ruského loďstva: Petr Veliký tu roku 1696 stavěl válečné lodě své azovské flotily",
+		"is": "Vagga rússneska flotans: árið 1696 lét Pétur mikli smíða hér herskip Asovflotans",
+		"de": "Die Wiege der russischen Flotte: Peter der Große ließ hier 1696 die Kriegsschiffe seiner Asowschen Flotte bauen"
+	},
+	"Volgograd": {
+		"pl": "Miasto ciągnie się ponad 60 km wzdłuż Wołgi; tu zaczyna się Kanał Wołga–Don",
+		"en": "The city stretches over 60 km along the Volga; the Volga–Don Canal begins here",
+		"cs": "Město se táhne přes 60 km podél Volhy; začíná tu Volžsko-donský průplav",
+		"is": "Borgin teygir sig yfir 60 km meðfram Volgu; hér hefst Volgu-Don-skurðurinn",
+		"de": "Die Stadt zieht sich über 60 km an der Wolga entlang; hier beginnt der Wolga-Don-Kanal"
+	},
+	"Saratov": {
+		"pl": "Gagarin uczył się tu w technikum, a w 1961 roku wylądował z kosmosu niedaleko miasta",
+		"en": "Gagarin studied at a technical college here, and in 1961 he came down from space not far from the city",
+		"cs": "Gagarin tu studoval průmyslovku a roku 1961 přistál z vesmíru nedaleko města",
+		"is": "Gagarín stundaði hér iðnnám og árið 1961 lenti hann úr geimnum skammt frá borginni",
+		"de": "Gagarin besuchte hier die Technikerschule und landete 1961 aus dem All nicht weit von der Stadt"
+	},
+	"Tyumen": {
+		"pl": "Pierwsze rosyjskie miasto na Syberii, założone w 1586 roku nad rzeką Turą",
+		"en": "The first Russian town in Siberia, founded in 1586 on the Tura river",
+		"cs": "První ruské město na Sibiři, založené roku 1586 na řece Tuře",
+		"is": "Fyrsti rússneski bærinn í Síberíu, stofnaður árið 1586 við ána Túra",
+		"de": "Die erste russische Stadt in Sibirien, 1586 am Fluss Tura gegründet"
+	},
+	"Irkutsk": {
+		"pl": "„Paryż Syberii” nad Angarą, 70 km od Bajkału, z drewnianymi domami w rzeźbionych ozdobach",
+		"en": "The “Paris of Siberia” on the Angara, 70 km from Baikal, with wooden houses in carved lace",
+		"cs": "„Paříž Sibiře“ na Angaře, 70 km od Bajkalu, s dřevěnými domy zdobenými řezbami",
+		"is": "„París Síberíu“ við Angöru, 70 km frá Bajkal, með timburhúsum skreyttum útskurði",
+		"de": "Das „Paris Sibiriens“ an der Angara, 70 km vom Baikal, mit Holzhäusern voller Schnitzereien"
+	},
+	"Khabarovsk": {
+		"pl": "Miasto na wysokim brzegu Amuru, nazwane od XVII-wiecznego podróżnika Jerofieja Chabarowa",
+		"en": "A city on the high bank of the Amur, named after the 17th-century explorer Yerofey Khabarov",
+		"cs": "Město na vysokém břehu Amuru, pojmenované po cestovateli ze 17. století Jerofeji Chabarovovi",
+		"is": "Borg á háum bakka Amúr, nefnd eftir landkönnuðinum Jerofej Khabarov frá 17. öld",
+		"de": "Eine Stadt am hohen Ufer des Amur, benannt nach dem Entdecker Jerofei Chabarow aus dem 17. Jahrhundert"
+	},
+	"Vladivostok": {
+		"pl": "Port nad Pacyfikiem, gdzie po 9288 km kończy się Kolej Transsyberyjska",
+		"en": "A Pacific port where the Trans-Siberian Railway ends after 9,288 km",
+		"cs": "Přístav u Tichého oceánu, kde po 9288 km končí Transsibiřská magistrála",
+		"is": "Hafnarborg við Kyrrahaf þar sem Síberíujárnbrautin endar eftir 9288 km",
+		"de": "Ein Pazifikhafen, an dem die Transsibirische Eisenbahn nach 9288 km endet"
+	},
+	"Yaroslavl": {
+		"pl": "Miasto założone przez Jarosława Mądrego około 1010 roku; jego stare centrum jest na liście UNESCO",
+		"en": "A city founded by Yaroslav the Wise around 1010; its old centre is on the UNESCO list",
+		"cs": "Město založené Jaroslavem Moudrým kolem roku 1010; jeho staré centrum je na seznamu UNESCO",
+		"is": "Borg sem Jaroslav vitri stofnaði um árið 1010; gamli miðbærinn er á heimsminjaskrá UNESCO",
+		"de": "Eine Stadt, um 1010 von Jaroslaw dem Weisen gegründet; ihre Altstadt ist UNESCO-Welterbe"
+	},
+	"Kaliningrad": {
+		"pl": "Dawny Królewiec, miasto Immanuela Kanta; w okolicy wydobywa się większość bursztynu świata",
+		"en": "The former Königsberg, Immanuel Kant's city; most of the world's amber is mined nearby",
+		"cs": "Bývalý Královec, město Immanuela Kanta; v okolí se těží většina jantaru na světě",
+		"is": "Fyrrum Königsberg, borg Immanuels Kant; mest allt raf heimsins er grafið úr jörð í grenndinni",
+		"de": "Das frühere Königsberg, die Stadt Immanuel Kants; in der Nähe wird der meiste Bernstein der Welt gefördert"
+	},
+	"Sochi": {
+		"pl": "Subtropikalny kurort między Morzem Czarnym a Kaukazem, gospodarz zimowych igrzysk w 2014 roku",
+		"en": "A subtropical resort between the Black Sea and the Caucasus, host of the 2014 Winter Olympics",
+		"cs": "Subtropické letovisko mezi Černým mořem a Kavkazem, hostitel zimních olympijských her 2014",
+		"is": "Heittempruð heilsulind milli Svartahafs og Kákasusfjalla, gestgjafi vetrarólympíuleikanna 2014",
+		"de": "Ein subtropischer Kurort zwischen Schwarzem Meer und Kaukasus, Gastgeber der Winterspiele 2014"
+	},
+	"Ulan-Ude": {
+		"pl": "Stolica Buriacji i ośrodek rosyjskiego buddyzmu, u zbiegu Selengi i Udy",
+		"en": "The capital of Buryatia and the centre of Russian Buddhism, where the Uda meets the Selenga",
+		"cs": "Hlavní město Burjatska a centrum ruského buddhismu, u soutoku Udy se Selengou",
+		"is": "Höfuðborg Búrjatíu og miðstöð búddisma í Rússlandi, þar sem Uda rennur í Selengu",
+		"de": "Die Hauptstadt Burjatiens und das Zentrum des russischen Buddhismus, wo die Uda in die Selenga mündet"
+	},
+	"Vladimir": {
+		"pl": "Dawna stolica księstwa włodzimiersko-suzdalskiego, z białymi kamiennymi świątyniami z XII wieku",
+		"en": "The old capital of the Vladimir-Suzdal principality, with white stone churches of the 12th century",
+		"cs": "Bývalé hlavní město vladimirsko-suzdalského knížectví s bílými kamennými chrámy z 12. století",
+		"is": "Fyrrum höfuðborg furstadæmisins Vladímír-Súzdal, með hvítum steinkirkjum frá 12. öld",
+		"de": "Die alte Hauptstadt des Fürstentums Wladimir-Susdal, mit weißen Steinkirchen aus dem 12. Jahrhundert"
+	},
+	"Chita": {
+		"pl": "Stolica Zabajkala, gdzie w latach 1827–1830 więziono dekabrystów",
+		"en": "The capital of Transbaikalia, where the Decembrists were held in 1827–1830",
+		"cs": "Hlavní město Zabajkalska, kde byli v letech 1827–1830 vězněni děkabristé",
+		"is": "Höfuðborg Transbajkal, þar sem desembristarnir voru í haldi árin 1827–1830",
+		"de": "Die Hauptstadt Transbaikaliens, wo die Dekabristen 1827–1830 gefangen saßen"
+	},
+	"Veliky Novgorod": {
+		"pl": "Jedno z najstarszych miast Rosji; w jego ziemi znaleziono ponad tysiąc listów pisanych na korze brzozowej",
+		"en": "One of Russia's oldest cities; over a thousand letters written on birch bark have been dug up here",
+		"cs": "Jedno z nejstarších ruských měst; v jeho zemi našli přes tisíc dopisů psaných na březové kůře",
+		"is": "Ein elsta borg Rússlands; yfir þúsund bréf rituð á birkibörk hafa verið grafin hér upp",
+		"de": "Eine der ältesten Städte Russlands; über tausend auf Birkenrinde geschriebene Briefe wurden hier ausgegraben"
+	},
+	"Pskov": {
+		"pl": "Miasto wspomniane po raz pierwszy w 903 roku, z kamiennym Kromem nad zbiegiem Wielikiej i Pskowy",
+		"en": "First mentioned in 903, with its stone Krom where the Pskova meets the Velikaya",
+		"cs": "Poprvé zmíněno roku 903, s kamenným Kromem nad soutokem Pskovy a Velikaje",
+		"is": "Fyrst getið árið 903, með Krom-virkinu úr steini þar sem Pskova rennur í Velikaja",
+		"de": "Erstmals 903 erwähnt, mit dem steinernen Krom, wo die Pskowa in die Welikaja mündet"
+	},
+	"Svobodny": {
+		"pl": "Miasto nad Zeją, niedaleko którego w tajdze zbudowano kosmodrom Wostocznyj",
+		"en": "A town on the Zeya, near which the Vostochny cosmodrome was built in the taiga",
+		"cs": "Město na řece Zeji, nedaleko kterého v tajze postavili kosmodrom Vostočnyj",
+		"is": "Bær við ána Zeju; skammt frá honum var Vostotsjní-geimstöðin reist í barrskóginum",
+		"de": "Eine Stadt an der Seja, in deren Nähe das Kosmodrom Wostotschny in der Taiga gebaut wurde"
+	},
+	"Ust-Luga": {
+		"pl": "Wieś przy ujściu Ługi, obok której wyrósł jeden z największych portów Bałtyku",
+		"en": "A village at the mouth of the Luga, beside which one of the Baltic's largest ports has grown",
+		"cs": "Vesnice u ústí Lugy, vedle níž vyrostl jeden z největších přístavů Baltu",
+		"is": "Þorp við ósa Lúgu, þar sem ein stærsta höfn Eystrasalts hefur risið",
+		"de": "Ein Dorf an der Mündung der Luga, neben dem einer der größten Häfen der Ostsee gewachsen ist"
+	},
+	"Tver": {
+		"pl": "Miasto nad Wołgą, z którego Afanasij Nikitin wyruszył w XV wieku do Indii",
+		"en": "A city on the Volga from which Afanasy Nikitin set off for India in the 15th century",
+		"cs": "Město na Volze, odkud se v 15. století vydal Afanasij Nikitin do Indie",
+		"is": "Borg við Volgu þaðan sem Afanasí Níkítín lagði af stað til Indlands á 15. öld",
+		"de": "Eine Stadt an der Wolga, von der Afanassi Nikitin im 15. Jahrhundert nach Indien aufbrach"
+	},
+	"Torzhok": {
+		"pl": "Słynie z haftu złotą nicią i z kotletów pożarskich, podawanych tu dawnym podróżnym",
+		"en": "Famous for gold-thread embroidery and the Pozharsky cutlets once served to travellers here",
+		"cs": "Proslulý vyšíváním zlatou nití a požarskými karbanátky, které se tu podávaly cestujícím",
+		"is": "Frægur fyrir útsaum með gullþræði og Pozharskí-buffin sem ferðalangar fengu hér forðum",
+		"de": "Berühmt für Goldstickerei und die Poscharski-Frikadellen, die hier einst Reisenden serviert wurden"
+	},
+	"Valday": {
+		"pl": "Miasteczko nad jeziorem na Wyżynie Wałdajskiej, znane z odlewanych tu dzwonków",
+		"en": "A small town on a lake in the Valdai Hills, known for the little bells once cast here",
+		"cs": "Městečko u jezera na Valdajské vrchovině, známé zvonečky, které se tu odlévaly",
+		"is": "Smábær við vatn í Valdaí-hæðum, þekktur fyrir litlar bjöllur sem hér voru steyptar",
+		"de": "Ein Städtchen an einem See in den Waldaihöhen, bekannt für die hier gegossenen Glöckchen"
+	},
+	"Gatchina": {
+		"pl": "Miasto z carskim pałacem i parkiem, w których mieszkał cesarz Paweł I",
+		"en": "A town with an imperial palace and park, the home of Emperor Paul I",
+		"cs": "Město s carským palácem a parkem, kde sídlil císař Pavel I.",
+		"is": "Bær með keisarahöll og garði, heimili Páls I. keisara",
+		"de": "Eine Stadt mit Zarenpalast und Park, dem Wohnsitz Kaiser Pauls I."
+	},
+	"Sergiyev Posad": {
+		"pl": "Miasto wokół Ławry Troicko-Siergijewskiej z XIV wieku, słynące z rzeźbionych tu matrioszek",
+		"en": "Built round the 14th-century Trinity Lavra of St Sergius; famous for the matryoshka dolls carved here",
+		"cs": "Vyrostl kolem Trojicko-sergijevské lávry ze 14. století; proslulý matrjoškami, které se tu vyřezávají",
+		"is": "Byggðist kringum Þrenningarklaustur heilags Sergíusar frá 14. öld; frægur fyrir matrjoskurnar sem eru skornar hér",
+		"de": "Um das Dreifaltigkeitskloster des heiligen Sergius aus dem 14. Jahrhundert gewachsen; berühmt für die hier geschnitzten Matrjoschkas"
+	},
+	"Pereslavl-Zalessky": {
+		"pl": "Na Jeziorze Pleszczejewskim młody Piotr I zbudował swoją pierwszą flotyllę",
+		"en": "On Lake Pleshcheyevo the young Peter the Great built his first little fleet",
+		"cs": "Na Pleščejevském jezeře postavil mladý Petr Veliký svou první flotilu",
+		"is": "Á Plesjtsjejevo-vatni smíðaði hinn ungi Pétur mikli fyrsta litla flota sinn",
+		"de": "Auf dem Pleschtschejewo-See baute der junge Peter der Große seine erste kleine Flotte"
+	},
+	"Rostov": {
+		"pl": "Rostów Wielki nad jeziorem Nero, z kremlem i malowaną emalią finift",
+		"en": "Rostov the Great on Lake Nero, with its kremlin and finift painted enamel",
+		"cs": "Rostov Veliký u jezera Nero, s kremlem a malovaným smaltem finift",
+		"is": "Rostov mikla við Nero-vatn, með Kreml og málaða finift-glerunga",
+		"de": "Rostow der Große am Nero-See, mit Kreml und bemaltem Finift-Email"
+	},
+	"Gorokhovets": {
+		"pl": "Miasteczko z kamiennymi domami kupców z XVII wieku na zboczu nad Klaźmą",
+		"en": "A small town with 17th-century merchants' stone houses on a slope above the Klyazma",
+		"cs": "Městečko s kamennými kupeckými domy ze 17. století na svahu nad Kljazmou",
+		"is": "Smábær með steinhúsum kaupmanna frá 17. öld í hlíð ofan við Kljazma",
+		"de": "Ein Städtchen mit steinernen Kaufmannshäusern aus dem 17. Jahrhundert am Hang über der Kljasma"
+	},
+	"Cheboksary": {
+		"pl": "Stolica Czuwaszji na wysokim brzegu Wołgi",
+		"en": "The capital of Chuvashia on the high bank of the Volga",
+		"cs": "Hlavní město Čuvašska na vysokém břehu Volhy",
+		"is": "Höfuðborg Tsjúvasíu á háum bakka Volgu",
+		"de": "Die Hauptstadt Tschuwaschiens am hohen Ufer der Wolga"
+	},
+	"Yelabuga": {
+		"pl": "Rodzinne miasto malarza Iwana Szyszkina, który malował rosyjskie lasy",
+		"en": "The home town of Ivan Shishkin, the painter of Russian forests",
+		"cs": "Rodné město Ivana Šiškina, malíře ruských lesů",
+		"is": "Heimabær Ívans Sjisjkín, sem málaði rússneska skóga",
+		"de": "Die Heimatstadt Iwan Schischkins, des Malers der russischen Wälder"
+	},
+	"Naberezhnye Chelny": {
+		"pl": "Nad Kamą powstaje tu KAMAZ, ciężarówka znana z rajdu Dakar",
+		"en": "On the Kama, home of KAMAZ, the truck known from the Dakar Rally",
+		"cs": "Na Kamě se tu vyrábí KAMAZ, nákladní auto známé z Rallye Dakar",
+		"is": "Við Kama er KAMAZ smíðaður, vörubíllinn sem er þekktur úr Dakar-rallinu",
+		"de": "An der Kama wird hier der KAMAZ gebaut, der Lastwagen aus der Rallye Dakar"
+	},
+	"Zlatoust": {
+		"pl": "Miasto w Uralu słynące z grawerowanej stali i ozdobnych kling",
+		"en": "A town in the Urals famous for its engraved steel and decorated blades",
+		"cs": "Město na Uralu proslulé rytou ocelí a zdobenými čepelemi",
+		"is": "Bær í Úralfjöllum, frægur fyrir grafið stál og skreytt blöð",
+		"de": "Eine Stadt im Ural, berühmt für gravierten Stahl und verzierte Klingen"
+	},
+	"Miass": {
+		"pl": "Obok leży rezerwat Iłmeński, w którym znaleziono setki rodzajów minerałów",
+		"en": "Next to it lies the Ilmen reserve, where hundreds of kinds of minerals have been found",
+		"cs": "Vedle leží Ilmenská rezervace, kde našli stovky druhů nerostů",
+		"is": "Við hliðina er Ilmen-friðlandið, þar sem hundruð tegunda steinda hafa fundist",
+		"de": "Daneben liegt das Ilmen-Schutzgebiet, in dem Hunderte Mineralarten gefunden wurden"
+	},
+	"Tolyatti": {
+		"pl": "Miasto Łady: od 1970 roku zjechały stąd z taśmy miliony samochodów",
+		"en": "The Lada city: millions of cars have rolled off its lines since 1970",
+		"cs": "Město Lady: od roku 1970 tu sjely z linky miliony aut",
+		"is": "Lada-borgin: milljónir bíla hafa komið af færiböndunum hér frá 1970",
+		"de": "Die Lada-Stadt: seit 1970 sind hier Millionen Autos vom Band gelaufen"
+	},
+	"Kamyshin": {
+		"pl": "Miasto arbuzów nad Wołgą; co roku urządza się tu ich święto",
+		"en": "The watermelon town on the Volga, which holds a watermelon festival every year",
+		"cs": "Město melounů na Volze, které každý rok pořádá melounovou slavnost",
+		"is": "Vatnsmelónubærinn við Volgu, þar sem melónuhátíð er haldin á hverju ári",
+		"de": "Die Wassermelonenstadt an der Wolga, mit einem Melonenfest jedes Jahr"
+	},
+	"Tayshet": {
+		"pl": "Tu zaczyna się Magistrala Bajkalsko-Amurska, kolej biegnąca na północ od Bajkału",
+		"en": "The Baikal–Amur Mainline, the railway north of Lake Baikal, begins here",
+		"cs": "Začíná tu Bajkalsko-amurská magistrála, železnice severně od Bajkalu",
+		"is": "Hér hefst Bajkal-Amúr-brautin, járnbrautin norðan við Bajkalvatn",
+		"de": "Hier beginnt die Baikal-Amur-Magistrale, die Bahn nördlich des Baikalsees"
+	},
+	"Slyudyanka": {
+		"pl": "Miasteczko nad Bajkałem z dworcem kolejowym zbudowanym z marmuru",
+		"en": "A small town on Lake Baikal with a railway station built of marble",
+		"cs": "Městečko u Bajkalu s nádražím postaveným z mramoru",
+		"is": "Smábær við Bajkalvatn með járnbrautarstöð úr marmara",
+		"de": "Ein Städtchen am Baikalsee mit einem Bahnhof aus Marmor"
+	},
+	"Kemerovo": {
+		"pl": "Stolica Kuzbasu, jednego z największych zagłębi węglowych świata",
+		"en": "The capital of the Kuzbass, one of the world's largest coal basins",
+		"cs": "Hlavní město Kuzbasu, jedné z největších uhelných pánví světa",
+		"is": "Höfuðborg Kúzbass, eins stærsta kolasvæðis heims",
+		"de": "Die Hauptstadt des Kusbass, eines der größten Kohlereviere der Welt"
+	},
+	"Mogocha": {
+		"pl": "Miasteczko w tajdze, gdzie zimą mróz schodzi poniżej −50 °C",
+		"en": "A small taiga town where the winter frost drops below −50 °C",
+		"cs": "Městečko v tajze, kde v zimě mráz klesá pod −50 °C",
+		"is": "Smábær í barrskóginum þar sem frostið fer niður fyrir −50 °C á veturna",
+		"de": "Ein Taigastädtchen, in dem der Winterfrost unter −50 °C fällt"
+	},
+	"Birobidzhan": {
+		"pl": "Stolica Żydowskiego Obwodu Autonomicznego, z napisami także w jidysz",
+		"en": "The capital of the Jewish Autonomous Oblast, with signs in Yiddish too",
+		"cs": "Hlavní město Židovské autonomní oblasti, s nápisy i v jidiš",
+		"is": "Höfuðborg sjálfstjórnarsvæðis gyðinga, með skiltum líka á jiddísku",
+		"de": "Die Hauptstadt der Jüdischen Autonomen Oblast, mit Schildern auch auf Jiddisch"
+	},
+	"Yelets": {
+		"pl": "Starodawne miasto nad Sosną, słynne z ręcznie tkanych koronek",
+		"en": "An old town on the Sosna, famous for its hand-made lace",
+		"cs": "Starobylé město na řece Sosně, proslulé ručně paličkovanou krajkou",
+		"is": "Gamall bær við ána Sosna, frægur fyrir handgerðar knipplingar",
+		"de": "Eine alte Stadt an der Sosna, berühmt für ihre handgeklöppelten Spitzen"
+	},
+	"Tuapse": {
+		"pl": "Port nad Morzem Czarnym u stóp Kaukazu, gdzie droga wychodzi nad brzeg",
+		"en": "A Black Sea port at the foot of the Caucasus, where the road comes down to the shore",
+		"cs": "Černomořský přístav na úpatí Kavkazu, kde silnice sestupuje k pobřeží",
+		"is": "Hafnarbær við Svartahaf við rætur Kákasus, þar sem vegurinn kemur niður að strönd",
+		"de": "Ein Schwarzmeerhafen am Fuß des Kaukasus, wo die Straße an die Küste kommt"
+	},
+	"Baltiysk": {
+		"pl": "Najdalej na zachód wysunięte miasto Rosji, dawna Piława, z latarnią morską z 1816 roku",
+		"en": "Russia's westernmost town, the former Pillau, with a lighthouse of 1816",
+		"cs": "Nejzápadnější město Ruska, bývalá Pillau, s majákem z roku 1816",
+		"is": "Vestasti bær Rússlands, fyrrum Pillau, með vita frá 1816",
+		"de": "Russlands westlichste Stadt, das frühere Pillau, mit einem Leuchtturm von 1816"
+	}
+}

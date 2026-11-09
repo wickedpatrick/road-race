@@ -1,0 +1,219 @@
+{
+	"moskva": {
+		"name": "Moskva",
+		"lat": 55.756,
+		"lon": 37.617,
+		"pop": 13150,
+		"region": "Moskva",
+		"exonym": {"pl": "Moskwa", "en": "Moscow", "cs": "Moskva", "de": "Moskau"}
+	},
+	"sankt_peterburg": {
+		"name": "Sankt-Peterburg",
+		"lat": 59.939,
+		"lon": 30.316,
+		"pop": 5600,
+		"region": "Sankt-Peterburg",
+		"exonym": {
+			"pl": "Petersburg",
+			"en": "Saint Petersburg",
+			"cs": "Petrohrad",
+			"is": "Sankti Pétursborg",
+			"de": "Sankt Petersburg"
+		}
+	},
+	"novosibirsk": {
+		"name": "Novosibirsk",
+		"lat": 55.03,
+		"lon": 82.92,
+		"pop": 1630,
+		"region": "Novosibirskaya oblast",
+		"exonym": {"pl": "Nowosybirsk", "de": "Nowosibirsk"}
+	},
+	"yekaterinburg": {
+		"name": "Yekaterinburg",
+		"lat": 56.838,
+		"lon": 60.605,
+		"pop": 1540,
+		"region": "Sverdlovskaya oblast",
+		"exonym": {"pl": "Jekaterynburg", "cs": "Jekatěrinburg", "is": "Jekaterínbúrg", "de": "Jekaterinburg"}
+	},
+	"kazan": {
+		"name": "Kazan",
+		"lat": 55.79,
+		"lon": 49.12,
+		"pop": 1320,
+		"region": "Tatarstan",
+		"exonym": {"pl": "Kazań", "cs": "Kazaň", "de": "Kasan"}
+	},
+	"krasnoyarsk": {
+		"name": "Krasnoyarsk",
+		"lat": 56.01,
+		"lon": 92.87,
+		"pop": 1210,
+		"region": "Krasnoyarsky kray",
+		"exonym": {"pl": "Krasnojarsk", "cs": "Krasnojarsk", "de": "Krasnojarsk"}
+	},
+	"nizhny_novgorod": {
+		"name": "Nizhny Novgorod",
+		"lat": 56.327,
+		"lon": 44.006,
+		"pop": 1200,
+		"region": "Nizhegorodskaya oblast",
+		"exonym": {"pl": "Niżny Nowogród", "cs": "Nižnij Novgorod", "de": "Nischni Nowgorod"}
+	},
+	"chelyabinsk": {
+		"name": "Chelyabinsk",
+		"lat": 55.16,
+		"lon": 61.4,
+		"pop": 1180,
+		"region": "Chelyabinskaya oblast",
+		"exonym": {"pl": "Czelabińsk", "cs": "Čeljabinsk", "is": "Tsjeljabínsk", "de": "Tscheljabinsk"}
+	},
+	"ufa": {"name": "Ufa", "lat": 54.735, "lon": 55.958, "pop": 1160, "region": "Bashkortostan"},
+	"samara": {"name": "Samara", "lat": 53.195, "lon": 50.1, "pop": 1155, "region": "Samarskaya oblast"},
+	"krasnodar": {"name": "Krasnodar", "lat": 45.035, "lon": 38.975, "pop": 1150, "region": "Krasnodarsky kray"},
+	"rostov_na_donu": {
+		"name": "Rostov-na-Donu",
+		"lat": 47.235,
+		"lon": 39.715,
+		"pop": 1140,
+		"region": "Rostovskaya oblast",
+		"exonym": {
+			"pl": "Rostów nad Donem",
+			"en": "Rostov-on-Don",
+			"cs": "Rostov na Donu",
+			"is": "Rostov við Don",
+			"de": "Rostow am Don"
+		}
+	},
+	"omsk": {"name": "Omsk", "lat": 54.98, "lon": 73.37, "pop": 1100, "region": "Omskaya oblast"},
+	"voronezh": {
+		"name": "Voronezh",
+		"lat": 51.67,
+		"lon": 39.18,
+		"pop": 1040,
+		"region": "Voronezhskaya oblast",
+		"exonym": {"pl": "Woroneż", "cs": "Voroněž", "is": "Voronezh", "de": "Woronesch"}
+	},
+	"volgograd": {
+		"name": "Volgograd",
+		"lat": 48.708,
+		"lon": 44.513,
+		"pop": 1020,
+		"region": "Volgogradskaya oblast",
+		"exonym": {"pl": "Wołgograd", "de": "Wolgograd"}
+	},
+	"saratov": {
+		"name": "Saratov",
+		"lat": 51.533,
+		"lon": 46.034,
+		"pop": 890,
+		"region": "Saratovskaya oblast",
+		"exonym": {"pl": "Saratów", "de": "Saratow"}
+	},
+	"tyumen": {
+		"name": "Tyumen",
+		"lat": 57.153,
+		"lon": 65.534,
+		"pop": 860,
+		"region": "Tyumenskaya oblast",
+		"exonym": {"pl": "Tiumeń", "cs": "Ťumeň", "is": "Tjúmen", "de": "Tjumen"}
+	},
+	"irkutsk": {
+		"name": "Irkutsk",
+		"lat": 52.287,
+		"lon": 104.28,
+		"pop": 610,
+		"region": "Irkutskaya oblast",
+		"exonym": {"pl": "Irkuck"}
+	},
+	"khabarovsk": {
+		"name": "Khabarovsk",
+		"lat": 48.48,
+		"lon": 135.07,
+		"pop": 610,
+		"region": "Khabarovsky kray",
+		"exonym": {"pl": "Chabarowsk", "cs": "Chabarovsk", "is": "Khabarovsk", "de": "Chabarowsk"}
+	},
+	"vladivostok": {
+		"name": "Vladivostok",
+		"lat": 43.116,
+		"lon": 131.885,
+		"pop": 600,
+		"region": "Primorsky kray",
+		"exonym": {"pl": "Władywostok", "de": "Wladiwostok"}
+	},
+	"yaroslavl": {
+		"name": "Yaroslavl",
+		"lat": 57.626,
+		"lon": 39.884,
+		"pop": 570,
+		"region": "Yaroslavskaya oblast",
+		"exonym": {"pl": "Jarosław", "cs": "Jaroslavl", "is": "Jaroslavl", "de": "Jaroslawl"}
+	},
+	"kaliningrad": {"name": "Kaliningrad", "lat": 54.71, "lon": 20.51, "pop": 490, "region": "Kaliningradskaya oblast"},
+	"sochi": {
+		"name": "Sochi",
+		"lat": 43.585,
+		"lon": 39.723,
+		"pop": 470,
+		"region": "Krasnodarsky kray",
+		"exonym": {"pl": "Soczi", "cs": "Soči", "is": "Sotsjí", "de": "Sotschi"}
+	},
+	"ulan_ude": {
+		"name": "Ulan-Ude",
+		"lat": 51.834,
+		"lon": 107.584,
+		"pop": 435,
+		"region": "Buryatiya",
+		"exonym": {"pl": "Ułan Ude"}
+	},
+	"vladimir": {
+		"name": "Vladimir",
+		"lat": 56.129,
+		"lon": 40.407,
+		"pop": 340,
+		"region": "Vladimirskaya oblast",
+		"exonym": {"pl": "Włodzimierz", "de": "Wladimir"}
+	},
+	"chita": {
+		"name": "Chita",
+		"lat": 52.033,
+		"lon": 113.5,
+		"pop": 330,
+		"region": "Zabaykalsky kray",
+		"exonym": {"pl": "Czyta", "cs": "Čita", "is": "Tsjíta", "de": "Tschita"}
+	},
+	"veliky_novgorod": {
+		"name": "Veliky Novgorod",
+		"lat": 58.522,
+		"lon": 31.27,
+		"pop": 225,
+		"region": "Novgorodskaya oblast",
+		"exonym": {"pl": "Nowogród Wielki", "cs": "Velký Novgorod", "is": "Novgorod", "de": "Weliki Nowgorod"}
+	},
+	"pskov": {
+		"name": "Pskov",
+		"lat": 57.819,
+		"lon": 28.332,
+		"pop": 190,
+		"region": "Pskovskaya oblast",
+		"exonym": {"pl": "Psków", "de": "Pskow"}
+	},
+	"svobodny": {
+		"name": "Svobodny",
+		"lat": 51.38,
+		"lon": 128.13,
+		"pop": 52,
+		"region": "Amurskaya oblast",
+		"exonym": {"pl": "Swobodny", "cs": "Svobodnyj", "de": "Swobodny"}
+	},
+	"ust_luga": {
+		"name": "Ust-Luga",
+		"lat": 59.66,
+		"lon": 28.3,
+		"pop": 2,
+		"region": "Leningradskaya oblast",
+		"exonym": {"pl": "Ust-Ługa", "cs": "Usť-Luga"}
+	}
+}
