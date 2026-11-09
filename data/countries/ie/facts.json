@@ -1,0 +1,401 @@
+{
+	"Dublin": {
+		"pl": "Stolica Irlandii nad rzeką Liffey; w Trinity College przechowuje się Księgę z Kells, rękopis z około 800 roku",
+		"en": "Ireland's capital on the River Liffey; the Book of Kells, a manuscript from around 800, is kept at Trinity College",
+		"cs": "Hlavní město Irska na řece Liffey; v Trinity College je uložena Kniha z Kellsu, rukopis z doby kolem roku 800",
+		"is": "Höfuðborg Írlands við ána Liffey; í Trinity College er varðveitt Kells-bókin, handrit frá því um árið 800",
+		"de": "Die Hauptstadt Irlands am Liffey; im Trinity College wird das Book of Kells aufbewahrt, eine Handschrift aus der Zeit um 800"
+	},
+	"Cork": {
+		"pl": "Drugie co do wielkości miasto Irlandii, zbudowane na wyspach rzeki Lee; w hali English Market sprzedaje się żywność od 1788 roku",
+		"en": "Ireland's second city, built on islands in the River Lee; the English Market has sold food under one roof since 1788",
+		"cs": "Druhé největší město Irska, postavené na ostrovech řeky Lee; v tržnici English Market se prodávají potraviny od roku 1788",
+		"is": "Næststærsta borg Írlands, byggð á eyjum í ánni Lee; á English Market hefur matur verið seldur undir einu þaki síðan 1788",
+		"de": "Irlands zweitgrößte Stadt, auf Inseln im Fluss Lee erbaut; im English Market werden seit 1788 Lebensmittel unter einem Dach verkauft"
+	},
+	"Limerick": {
+		"pl": "Miasto nad Shannon, najdłuższą rzeką Irlandii; od jego nazwy pochodzi żartobliwy pięciowiersz – limeryk",
+		"en": "A city on the Shannon, Ireland's longest river; the five-line comic poem, the limerick, is named after it",
+		"cs": "Město na Shannonu, nejdelší irské řece; podle něj se jmenuje žertovná pětiveršová básnička limerick",
+		"is": "Borg við Shannon, lengstu á Írlands; fimm lína gamanvísur, limrur, heita á ensku eftir henni",
+		"de": "Eine Stadt am Shannon, dem längsten Fluss Irlands; nach ihr ist der fünfzeilige Scherzvers Limerick benannt"
+	},
+	"Galway": {
+		"pl": "Gwarne portowe miasto nad zatoką Galway; na ulicach często słychać język irlandzki, a stąd pochodzi pierścień Claddagh",
+		"en": "A lively harbour city on Galway Bay; Irish is often heard in its streets, and the Claddagh ring comes from here",
+		"cs": "Živé přístavní město u zálivu Galway; v ulicích je často slyšet irštinu a pochází odtud prsten Claddagh",
+		"is": "Lífleg hafnarborg við Galway-flóa; á götunum heyrist oft írska og Claddagh-hringurinn er þaðan",
+		"de": "Eine lebhafte Hafenstadt an der Galway Bay; auf den Straßen hört man oft Irisch, und der Claddagh-Ring stammt von hier"
+	},
+	"Waterford": {
+		"pl": "Najstarsze miasto Irlandii, założone przez wikingów w 914 roku; słynie z rżniętego kryształu",
+		"en": "Ireland's oldest city, founded by the Vikings in 914; it is known for its cut crystal",
+		"cs": "Nejstarší město Irska, založené Vikingy roku 914; je známé broušeným křišťálem",
+		"is": "Elsta borg Írlands, stofnuð af víkingum árið 914; hún er þekkt fyrir slípaðan kristal",
+		"de": "Irlands älteste Stadt, 914 von den Wikingern gegründet; sie ist für ihr geschliffenes Kristallglas bekannt"
+	},
+	"Drogheda": {
+		"pl": "Miasto nad rzeką Boyne; niedaleko stoi Newgrange, grobowiec korytarzowy starszy niż piramidy w Gizie",
+		"en": "A town on the Boyne; nearby stands Newgrange, a passage tomb older than the pyramids of Giza",
+		"cs": "Město na řece Boyne; nedaleko stojí Newgrange, chodbový hrob starší než pyramidy v Gíze",
+		"is": "Bær við ána Boyne; skammt frá er Newgrange, gangagröf sem er eldri en pýramídarnir í Giza",
+		"de": "Eine Stadt am Boyne; in der Nähe liegt Newgrange, ein Ganggrab, älter als die Pyramiden von Gizeh"
+	},
+	"Dundalk": {
+		"pl": "Miasto w połowie drogi między Dublinem a Belfastem; na pobliskim półwyspie Cooley rozgrywa się dawny epos Táin Bó Cúailnge",
+		"en": "A town halfway between Dublin and Belfast; the old epic Táin Bó Cúailnge is set on the Cooley Peninsula nearby",
+		"cs": "Město na půl cesty mezi Dublinem a Belfastem; na nedalekém poloostrově Cooley se odehrává starý epos Táin Bó Cúailnge",
+		"is": "Bær miðja vegu milli Dublin og Belfast; forna sagan Táin Bó Cúailnge gerist á Cooley-skaga skammt frá",
+		"de": "Eine Stadt auf halbem Weg zwischen Dublin und Belfast; auf der nahen Halbinsel Cooley spielt das alte Epos Táin Bó Cúailnge"
+	},
+	"Kilkenny": {
+		"pl": "Średniowieczne miasto z zamkiem i katedrą St Canice's; na stojącą obok okrągłą wieżę wciąż można wejść",
+		"en": "A medieval city with a castle and St Canice's Cathedral; the round tower beside it can still be climbed",
+		"cs": "Středověké město s hradem a katedrálou St Canice's; na kulatou věž vedle ní se dá dodnes vystoupat",
+		"is": "Miðaldaborg með kastala og St Canice's-dómkirkju; enn má klifra upp í hringturninn við hlið hennar",
+		"de": "Eine mittelalterliche Stadt mit Burg und St Canice's Cathedral; den Rundturm daneben kann man noch heute besteigen"
+	},
+	"Sligo": {
+		"pl": "Miasto między górami Benbulben i Knocknarea; poeta W. B. Yeats spędzał tu wakacje w dzieciństwie",
+		"en": "A town between the mountains Benbulben and Knocknarea; the poet W. B. Yeats spent his childhood summers here",
+		"cs": "Město mezi horami Benbulben a Knocknarea; básník W. B. Yeats sem jezdil v dětství na léto",
+		"is": "Bær milli fjallanna Benbulben og Knocknarea; skáldið W. B. Yeats dvaldi hér á sumrin í æsku",
+		"de": "Eine Stadt zwischen den Bergen Benbulben und Knocknarea; der Dichter W. B. Yeats verbrachte hier als Kind die Sommer"
+	},
+	"Athlone": {
+		"pl": "Miasto w samym środku Irlandii, przy przeprawie przez Shannon; Sean's Bar uchodzi za najstarszy pub w Irlandii",
+		"en": "A town in the heart of Ireland where the Shannon is crossed; Sean's Bar claims to be the oldest pub in Ireland",
+		"cs": "Město v samém srdci Irska u přechodu přes Shannon; Sean's Bar se pokládá za nejstarší hospodu v Irsku",
+		"is": "Bær í hjarta Írlands þar sem farið er yfir Shannon; Sean's Bar er sagður elsta krá Írlands",
+		"de": "Eine Stadt im Herzen Irlands am Übergang über den Shannon; Sean's Bar gilt als ältester Pub Irlands"
+	},
+	"Killarney": {
+		"pl": "Brama do Parku Narodowego Killarney, pierwszego w Irlandii, z jeziorami, dębowymi lasami i jeleniami szlachetnymi",
+		"en": "The gateway to Killarney National Park, Ireland's first national park, with lakes, oak woods and red deer",
+		"cs": "Brána do národního parku Killarney, prvního v Irsku, s jezery, dubovými lesy a jeleny lesními",
+		"is": "Hliðið að Killarney-þjóðgarðinum, fyrsta þjóðgarði Írlands, með vötnum, eikarskógum og krónhjörtum",
+		"de": "Das Tor zum Killarney-Nationalpark, dem ersten Irlands, mit Seen, Eichenwäldern und Rothirschen"
+	},
+	"Tralee": {
+		"pl": "Stolica hrabstwa Kerry; co lato odbywa się tu festiwal Rose of Tralee",
+		"en": "The county town of Kerry; every summer it hosts the Rose of Tralee festival",
+		"cs": "Hlavní město hrabství Kerry; každé léto se tu koná festival Rose of Tralee",
+		"is": "Höfuðstaður Kerry-sýslu; á hverju sumri er hér haldin hátíðin Rose of Tralee",
+		"de": "Die Hauptstadt der Grafschaft Kerry; jeden Sommer findet hier das Festival Rose of Tralee statt"
+	},
+	"Ennis": {
+		"pl": "Stolica hrabstwa Clare o wąskich średniowiecznych uliczkach; słynie z tradycyjnej muzyki irlandzkiej",
+		"en": "The county town of Clare, with narrow medieval lanes; it is known for traditional Irish music",
+		"cs": "Hlavní město hrabství Clare s úzkými středověkými uličkami; je známé tradiční irskou hudbou",
+		"is": "Höfuðstaður Clare-sýslu með þröngum miðaldastrætum; bærinn er þekktur fyrir hefðbundna írska tónlist",
+		"de": "Die Hauptstadt der Grafschaft Clare mit engen mittelalterlichen Gassen; sie ist für traditionelle irische Musik bekannt"
+	},
+	"Wexford": {
+		"pl": "Portowe miasto założone przez wikingów; od 1951 roku co jesień odbywa się tu festiwal operowy",
+		"en": "A harbour town founded by the Vikings; its opera festival has been held every autumn since 1951",
+		"cs": "Přístavní město založené Vikingy; od roku 1951 se tu každý podzim koná operní festival",
+		"is": "Hafnarbær stofnaður af víkingum; óperuhátíð hefur verið haldin hér á hverju hausti síðan 1951",
+		"de": "Eine von Wikingern gegründete Hafenstadt; seit 1951 findet hier jeden Herbst ein Opernfestival statt"
+	},
+	"Westport": {
+		"pl": "Miasteczko rozplanowane w XVIII wieku, z obsadzoną drzewami promenadą nad rzeczką Carrowbeg, u stóp Croagh Patrick",
+		"en": "A town laid out in the 18th century, with a tree-lined mall along the Carrowbeg river below Croagh Patrick",
+		"cs": "Městečko vyměřené v 18. století se stromořadím podél říčky Carrowbeg pod horou Croagh Patrick",
+		"is": "Bær skipulagður á 18. öld, með trjágöngum meðfram ánni Carrowbeg, undir fjallinu Croagh Patrick",
+		"de": "Eine im 18. Jahrhundert angelegte Stadt mit einer Allee am Fluss Carrowbeg unterhalb des Croagh Patrick"
+	},
+	"Donegal": {
+		"pl": "Miasteczko nad zatoką o tej samej nazwie, z zamkiem wodzów rodu O'Donnell nad rzeką Eske",
+		"en": "A small town on the bay of the same name, with the castle of the O'Donnell chieftains on the River Eske",
+		"cs": "Městečko u stejnojmenného zálivu s hradem náčelníků rodu O'Donnell na řece Eske",
+		"is": "Smábær við samnefndan flóa með kastala O'Donnell-höfðingjanna við ána Eske",
+		"de": "Ein Städtchen an der gleichnamigen Bucht mit der Burg der O'Donnell-Häuptlinge am Fluss Eske"
+	},
+	"Letterkenny": {
+		"pl": "Największe miasto hrabstwa Donegal, nad rzeką Swilly; ze wzgórza spogląda na nie katedra św. Eunana",
+		"en": "The largest town in County Donegal, on the River Swilly; St Eunan's Cathedral looks down from the hill",
+		"cs": "Největší město hrabství Donegal na řece Swilly; z kopce na něj shlíží katedrála sv. Eunana",
+		"is": "Stærsti bær Donegal-sýslu, við ána Swilly; dómkirkja heilags Eunans gnæfir yfir honum á hæðinni",
+		"de": "Die größte Stadt der Grafschaft Donegal am Fluss Swilly; vom Hügel blickt die St.-Eunan-Kathedrale herab"
+	},
+	"Clifden": {
+		"pl": "Stolica Connemary, założona w 1812 roku przez Johna D'Arcy'ego u stóp gór Twelve Bens",
+		"en": "The capital of Connemara, founded in 1812 by John D'Arcy below the Twelve Bens mountains",
+		"cs": "Hlavní městečko Connemary, založené roku 1812 Johnem D'Arcym pod pohořím Twelve Bens",
+		"is": "Höfuðstaður Connemara, stofnaður árið 1812 af John D'Arcy undir fjöllunum Twelve Bens",
+		"de": "Der Hauptort von Connemara, 1812 von John D'Arcy unterhalb der Berge Twelve Bens gegründet"
+	},
+	"Dingle": {
+		"pl": "Rybackie miasteczko w irlandzkojęzycznym Gaeltachcie, niedaleko końca półwyspu Dingle",
+		"en": "A fishing town in the Irish-speaking Gaeltacht, near the far end of the Dingle Peninsula",
+		"cs": "Rybářské městečko v irsky mluvící oblasti Gaeltacht, nedaleko konce poloostrova Dingle",
+		"is": "Fiskibær á írskumælandi svæðinu Gaeltacht, utarlega á Dingle-skaga",
+		"de": "Ein Fischerstädtchen in der irischsprachigen Gaeltacht, nahe dem Ende der Dingle-Halbinsel"
+	},
+	"Kenmare": {
+		"pl": "Urokliwe miasteczko, w którym spotykają się Ring of Kerry i Ring of Beara; jego irlandzka nazwa Neidín znaczy „gniazdko”",
+		"en": "A pretty town where the Ring of Kerry meets the Ring of Beara; its Irish name, Neidín, means 'little nest'",
+		"cs": "Půvabné městečko, kde se potkává Ring of Kerry s Ring of Beara; jeho irský název Neidín znamená „hnízdečko“",
+		"is": "Fallegur bær þar sem Ring of Kerry og Ring of Beara mætast; írska nafnið Neidín þýðir „litla hreiðrið“",
+		"de": "Ein hübsches Städtchen, wo der Ring of Kerry auf den Ring of Beara trifft; sein irischer Name Neidín bedeutet „kleines Nest“"
+	},
+	"Cashel": {
+		"pl": "Miasteczko u stóp Skały Cashel, dawnej siedziby królów Munsteru",
+		"en": "A town below the Rock of Cashel, once the seat of the kings of Munster",
+		"cs": "Městečko pod skálou Rock of Cashel, kdysi sídlem králů Munsteru",
+		"is": "Bær undir Rock of Cashel, fyrrum aðsetri konunganna í Munster",
+		"de": "Eine Stadt unterhalb des Rock of Cashel, einst Sitz der Könige von Munster"
+	},
+	"Cahersiveen": {
+		"pl": "Miasteczko targowe na trasie Ring of Kerry, z widokiem na wyspę Valentia po drugiej stronie wody",
+		"en": "A market town on the Ring of Kerry, looking across the water to Valentia Island",
+		"cs": "Trhové městečko na okruhu Ring of Kerry s výhledem přes vodu na ostrov Valentia",
+		"is": "Markaðsbær á Ring of Kerry með útsýni yfir sundið til Valentia-eyjar",
+		"de": "Ein Marktstädtchen am Ring of Kerry mit Blick über das Wasser auf Valentia Island"
+	},
+	"Maynooth": {
+		"pl": "Siedziba założonego w 1795 roku St Patrick's College, dziś także miasto uniwersyteckie",
+		"en": "Home of St Patrick's College, founded in 1795, today also a university town",
+		"cs": "Sídlo koleje St Patrick's College založené roku 1795, dnes také univerzitní město",
+		"is": "Hér er St Patrick's College, stofnaður 1795, og nú er bærinn einnig háskólabær",
+		"de": "Sitz des 1795 gegründeten St Patrick's College, heute auch eine Universitätsstadt"
+	},
+	"Kilbeggan": {
+		"pl": "Tutejsza destylarnia whiskey, założona w 1757 roku, należy do najstarszych w Irlandii",
+		"en": "Its whiskey distillery, founded in 1757, is one of the oldest in Ireland",
+		"cs": "Zdejší palírna whiskey, založená roku 1757, patří k nejstarším v Irsku",
+		"is": "Viskíeimingarhúsið hér, stofnað 1757, er eitt hið elsta á Írlandi",
+		"de": "Die hiesige Whiskeybrennerei, 1757 gegründet, gehört zu den ältesten Irlands"
+	},
+	"Ballinasloe": {
+		"pl": "Tutejszy październikowy jarmark koński należy do najstarszych w Europie",
+		"en": "Its horse fair every October is one of the oldest in Europe",
+		"cs": "Zdejší říjnový koňský trh patří k nejstarším v Evropě",
+		"is": "Hrossamarkaðurinn hér í október er einn sá elsti í Evrópu",
+		"de": "Sein Pferdemarkt im Oktober gehört zu den ältesten Europas"
+	},
+	"Carlow": {
+		"pl": "Tuż za miastem stoi dolmen Brownshill z jednym z najcięższych kamieni nakrywowych w Europie",
+		"en": "Just outside the town stands the Brownshill Dolmen, with one of the heaviest capstones in Europe",
+		"cs": "Hned za městem stojí dolmen Brownshill s jedním z nejtěžších krycích kamenů v Evropě",
+		"is": "Rétt utan við bæinn stendur Brownshill-steinborðið með einum þyngsta þaksteini í Evrópu",
+		"de": "Gleich vor der Stadt steht der Brownshill-Dolmen mit einem der schwersten Decksteine Europas"
+	},
+	"Kildare": {
+		"pl": "Na pobliskiej równinie Curragh mieści się centrum irlandzkich wyścigów konnych, a Irlandzka Stadnina Narodowa hoduje tu konie wyścigowe",
+		"en": "The Curragh nearby is the home of Irish flat racing, and the Irish National Stud breeds racehorses here",
+		"cs": "Na nedaleké pláni Curragh je domov irských rovinových dostihů a Irský národní hřebčín tu chová dostihové koně",
+		"is": "Á Curragh-sléttunni skammt frá er miðstöð írskra kappreiða og írska þjóðarstóðið elur hér veðhlaupahesta",
+		"de": "Auf dem nahen Curragh ist der irische Flachrennsport zu Hause, und das Irish National Stud züchtet hier Rennpferde"
+	},
+	"Bray": {
+		"pl": "Nadmorski kurort u stóp przylądka Bray Head, gdzie Góry Wicklow schodzą do morza",
+		"en": "A seaside resort at the foot of Bray Head, where the Wicklow Mountains meet the sea",
+		"cs": "Přímořské letovisko pod mysem Bray Head, kde Wicklowské hory sestupují k moři",
+		"is": "Strandbær undir Bray Head þar sem Wicklow-fjöll mæta sjónum",
+		"de": "Ein Seebad am Fuß von Bray Head, wo die Wicklow Mountains ans Meer reichen"
+	},
+	"Enniscorthy": {
+		"pl": "Miasto nad rzeką Slaney z normańskim zamkiem i katedrą projektu Augustusa Pugina",
+		"en": "A town on the Slaney with a Norman castle and a cathedral by Augustus Pugin",
+		"cs": "Město na řece Slaney s normanským hradem a katedrálou podle návrhu Augusta Pugina",
+		"is": "Bær við ána Slaney með normönnskum kastala og dómkirkju eftir Augustus Pugin",
+		"de": "Eine Stadt am Slaney mit normannischer Burg und einer Kathedrale von Augustus Pugin"
+	},
+	"New Ross": {
+		"pl": "Port rzeczny nad Barrow; przy nabrzeżu cumuje Dunbrody, replika XIX-wiecznego statku emigrantów",
+		"en": "A river port on the Barrow; the Dunbrody, a replica of a 19th-century emigrant ship, is moored at the quay",
+		"cs": "Říční přístav na řece Barrow; u nábřeží kotví Dunbrody, replika vystěhovalecké lodi z 19. století",
+		"is": "Árhöfn við Barrow; við bryggjuna liggur Dunbrody, eftirlíking af vesturfaraskipi frá 19. öld",
+		"de": "Ein Flusshafen am Barrow; am Kai liegt die Dunbrody, der Nachbau eines Auswandererschiffs aus dem 19. Jahrhundert"
+	},
+	"Dungarvan": {
+		"pl": "Portowe miasto na końcu Waterford Greenway, trasy rowerowej na dawnej linii kolejowej",
+		"en": "A harbour town at the end of the Waterford Greenway, a cycle path on an old railway line",
+		"cs": "Přístavní město na konci Waterford Greenway, cyklostezky na staré železniční trati",
+		"is": "Hafnarbær við enda Waterford Greenway, hjólastígs á gamalli járnbrautarlínu",
+		"de": "Eine Hafenstadt am Ende des Waterford Greenway, eines Radwegs auf einer alten Bahnstrecke"
+	},
+	"Youghal": {
+		"pl": "Otoczone murami miasto u ujścia rzeki Blackwater; jego burmistrzem był niegdyś sir Walter Raleigh",
+		"en": "A walled town at the mouth of the Blackwater; Sir Walter Raleigh was once its mayor",
+		"cs": "Opevněné město u ústí řeky Blackwater; jeho starostou byl kdysi sir Walter Raleigh",
+		"is": "Bær innan borgarmúra við ósa Blackwater; Sir Walter Raleigh var eitt sinn bæjarstjóri þar",
+		"de": "Eine ummauerte Stadt an der Mündung des Blackwater; Sir Walter Raleigh war einst ihr Bürgermeister"
+	},
+	"Midleton": {
+		"pl": "Tutaj, w destylarni Midleton, powstaje whiskey Jameson",
+		"en": "Jameson whiskey is made here, at the Midleton distillery",
+		"cs": "Zde v palírně Midleton se vyrábí whiskey Jameson",
+		"is": "Hér, í Midleton-eimingarhúsinu, er Jameson-viskí framleitt",
+		"de": "Hier, in der Brennerei Midleton, wird der Jameson-Whiskey hergestellt"
+	},
+	"Clonmel": {
+		"pl": "Miasto nad rzeką Suir; od 1935 roku wyrabia się tu cydr Bulmers",
+		"en": "A town on the Suir; Bulmers cider has been made here since 1935",
+		"cs": "Město na řece Suir; od roku 1935 se tu vyrábí cidr Bulmers",
+		"is": "Bær við ána Suir; Bulmers-eplasíder hefur verið framleitt hér síðan 1935",
+		"de": "Eine Stadt am Suir; seit 1935 wird hier der Cider Bulmers hergestellt"
+	},
+	"Cahir": {
+		"pl": "Zamek Cahir na skalistej wyspie na rzece Suir należy do najlepiej zachowanych w Irlandii",
+		"en": "Cahir Castle, on a rocky island in the Suir, is one of the best-preserved castles in Ireland",
+		"cs": "Hrad Cahir na skalnatém ostrově na řece Suir patří k nejzachovalejším v Irsku",
+		"is": "Cahir-kastali á klettaeyju í ánni Suir er einn best varðveitti kastali Írlands",
+		"de": "Die Burg Cahir auf einer Felsinsel im Suir ist eine der besterhaltenen Irlands"
+	},
+	"Tipperary": {
+		"pl": "Miasto z piosenki „It's a Long Way to Tipperary”, śpiewanej przez żołnierzy w czasie I wojny światowej",
+		"en": "The town of the song 'It's a Long Way to Tipperary', sung by soldiers in the First World War",
+		"cs": "Město z písně „It's a Long Way to Tipperary“, kterou zpívali vojáci za první světové války",
+		"is": "Bærinn úr laginu „It's a Long Way to Tipperary“ sem hermenn sungu í fyrri heimsstyrjöldinni",
+		"de": "Die Stadt aus dem Lied „It's a Long Way to Tipperary“, das Soldaten im Ersten Weltkrieg sangen"
+	},
+	"Bunratty": {
+		"pl": "W XV-wiecznym zamku Bunratty urządza się średniowieczne uczty",
+		"en": "Medieval banquets are held at Bunratty Castle, a 15th-century tower house",
+		"cs": "Na hradě Bunratty z 15. století se pořádají středověké hostiny",
+		"is": "Í Bunratty-kastala frá 15. öld eru haldnar miðaldaveislur",
+		"de": "Auf Bunratty Castle aus dem 15. Jahrhundert werden mittelalterliche Bankette gegeben"
+	},
+	"Liscannor": {
+		"pl": "Tuż na północ od wioski klify Moher wznoszą się do 214 m nad Atlantykiem",
+		"en": "Just north of the village the Cliffs of Moher rise up to 214 m above the Atlantic",
+		"cs": "Kousek na sever od vesnice se nad Atlantikem zvedají až 214 m vysoké útesy Moher",
+		"is": "Rétt norðan við þorpið rísa Moher-björgin allt að 214 m yfir Atlantshafið",
+		"de": "Gleich nördlich des Dorfes ragen die Cliffs of Moher bis zu 214 m über den Atlantik"
+	},
+	"Doolin": {
+		"pl": "Wioska słynąca z tradycyjnej muzyki w pubach; stąd odpływają łodzie na Wyspy Aran",
+		"en": "A village known for traditional music in its pubs; boats sail from here to the Aran Islands",
+		"cs": "Vesnice proslulá tradiční hudbou v hospodách; odtud plují lodě na Aranské ostrovy",
+		"is": "Þorp þekkt fyrir hefðbundna tónlist á kránum; héðan sigla bátar til Aran-eyja",
+		"de": "Ein Dorf, bekannt für traditionelle Musik in den Pubs; von hier fahren Boote zu den Aran-Inseln"
+	},
+	"Lisdoonvarna": {
+		"pl": "Uzdrowisko słynące z wrześniowego festiwalu swatów",
+		"en": "A spa town famous for its matchmaking festival every September",
+		"cs": "Lázeňské městečko proslulé zářijovým festivalem dohazovačů",
+		"is": "Heilsulindabær, frægur fyrir hjónabandsmiðlunarhátíð sína í september",
+		"de": "Ein Kurort, berühmt für sein Heiratsvermittlungsfest jeden September"
+	},
+	"Ballyvaughan": {
+		"pl": "Wioska na skraju Burren, krainy nagiego wapienia, gdzie obok siebie rosną kwiaty arktyczne i śródziemnomorskie",
+		"en": "A village on the edge of the Burren, bare limestone where Arctic and Mediterranean flowers grow side by side",
+		"cs": "Vesnice na okraji Burrenu, krajiny holého vápence, kde vedle sebe rostou arktické a středomořské květiny",
+		"is": "Þorp í jaðri Burren, berrar kalksteinsauðnar þar sem heimskauta- og Miðjarðarhafsblóm vaxa hlið við hlið",
+		"de": "Ein Dorf am Rand des Burren, einer Landschaft aus nacktem Kalkstein, wo arktische und mediterrane Blumen nebeneinander wachsen"
+	},
+	"Kinvara": {
+		"pl": "Na brzegu zatoki stoi XVI-wieczny zamek Dunguaire",
+		"en": "Dunguaire Castle, a 16th-century tower house, stands on the shore of the bay",
+		"cs": "Na břehu zálivu stojí hrad Dunguaire ze 16. století",
+		"is": "Dunguaire-kastali frá 16. öld stendur á strönd flóans",
+		"de": "Am Ufer der Bucht steht Dunguaire Castle aus dem 16. Jahrhundert"
+	},
+	"Listowel": {
+		"pl": "Miasto pisarzy; odbywa się tu Writers' Week, jeden z najstarszych festiwali literackich w Irlandii",
+		"en": "A town of writers; it hosts Writers' Week, one of Ireland's oldest literary festivals",
+		"cs": "Město spisovatelů; koná se tu Writers' Week, jeden z nejstarších literárních festivalů v Irsku",
+		"is": "Bær rithöfunda; hér er haldin Writers' Week, ein elsta bókmenntahátíð Írlands",
+		"de": "Eine Stadt der Schriftsteller; hier findet die Writers' Week statt, eines der ältesten Literaturfestivals Irlands"
+	},
+	"Adare": {
+		"pl": "Często nazywana najładniejszą wioską Irlandii, z domkami krytymi strzechą wzdłuż głównej ulicy",
+		"en": "Often called Ireland's prettiest village, with thatched cottages along its main street",
+		"cs": "Často nazývaná nejhezčí vesnicí Irska, s doškovými chaloupkami podél hlavní ulice",
+		"is": "Oft kallað fallegasta þorp Írlands, með stráþökuðum húsum við aðalgötuna",
+		"de": "Oft das hübscheste Dorf Irlands genannt, mit strohgedeckten Häuschen an der Hauptstraße"
+	},
+	"Annascaul": {
+		"pl": "Miejsce urodzenia polarnika Toma Creana, który otworzył tu potem pub South Pole Inn",
+		"en": "Birthplace of the Antarctic explorer Tom Crean, who later opened the South Pole Inn here",
+		"cs": "Rodiště polárníka Toma Creana, který tu později otevřel hostinec South Pole Inn",
+		"is": "Fæðingarstaður suðurskautsfarans Toms Crean sem opnaði síðar krána South Pole Inn hér",
+		"de": "Geburtsort des Antarktisforschers Tom Crean, der hier später den Pub South Pole Inn eröffnete"
+	},
+	"Ballyvourney": {
+		"pl": "Wioska w Gaeltachcie Muskerry, gdzie mówi się po irlandzku",
+		"en": "A village in the Muskerry Gaeltacht, where Irish is spoken",
+		"cs": "Vesnice v Gaeltachtu Muskerry, kde se mluví irsky",
+		"is": "Þorp á Gaeltacht-svæðinu Muskerry þar sem töluð er írska",
+		"de": "Ein Dorf in der Gaeltacht von Muskerry, wo Irisch gesprochen wird"
+	},
+	"Waterville": {
+		"pl": "Charlie Chaplin spędzał tu wakacje z rodziną; nad morzem stoi jego posąg z brązu",
+		"en": "Charlie Chaplin spent holidays here with his family; a bronze statue of him stands on the seafront",
+		"cs": "Charlie Chaplin sem jezdil s rodinou na prázdniny; na nábřeží stojí jeho bronzová socha",
+		"is": "Charlie Chaplin dvaldi hér í fríum með fjölskyldu sinni; bronsstytta af honum stendur við sjávarsíðuna",
+		"de": "Charlie Chaplin verbrachte hier mit seiner Familie die Ferien; an der Uferpromenade steht seine Bronzestatue"
+	},
+	"Killorglin": {
+		"pl": "Co roku w sierpniu na jarmarku Puck Fair, jednym z najstarszych w Irlandii, miasto koronuje dzikiego kozła na króla",
+		"en": "Every August, at Puck Fair, one of Ireland's oldest fairs, the town crowns a wild goat as king",
+		"cs": "Každý srpen na trhu Puck Fair, jednom z nejstarších v Irsku, město korunuje divokého kozla na krále",
+		"is": "Í ágúst ár hvert er villtur geithafur krýndur konungur á Puck Fair, einum elsta markaði Írlands",
+		"de": "Jeden August krönt die Stadt auf der Puck Fair, einem der ältesten Märkte Irlands, einen wilden Ziegenbock zum König"
+	},
+	"Oughterard": {
+		"pl": "Brama do Connemary nad Lough Corrib, największym jeziorem Republiki Irlandii",
+		"en": "The gateway to Connemara, on the shore of Lough Corrib, the largest lake in the Republic of Ireland",
+		"cs": "Brána do Connemary na břehu Lough Corrib, největšího jezera Irské republiky",
+		"is": "Hliðið að Connemara við Lough Corrib, stærsta stöðuvatn Írska lýðveldisins",
+		"de": "Das Tor nach Connemara am Lough Corrib, dem größten See der Republik Irland"
+	},
+	"Letterfrack": {
+		"pl": "Tu mieści się centrum Parku Narodowego Connemara, u stóp wzgórza Diamond Hill",
+		"en": "Home of the Connemara National Park visitor centre, below Diamond Hill",
+		"cs": "Sídlí tu návštěvnické centrum národního parku Connemara pod kopcem Diamond Hill",
+		"is": "Hér er gestastofa Connemara-þjóðgarðsins undir Diamond Hill",
+		"de": "Hier liegt das Besucherzentrum des Connemara-Nationalparks unterhalb des Diamond Hill"
+	},
+	"Leenaun": {
+		"pl": "Wioska nad Killary Harbour, długą wąską zatoką nazywaną często jedynym fiordem Irlandii",
+		"en": "A village on Killary Harbour, a long narrow inlet often called Ireland's only fjord",
+		"cs": "Vesnice u Killary Harbour, dlouhé úzké zátoky, které se často říká jediný irský fjord",
+		"is": "Þorp við Killary Harbour, langan og mjóan fjörð sem oft er sagður eini fjörður Írlands",
+		"de": "Ein Dorf am Killary Harbour, einer langen schmalen Meeresbucht, die oft Irlands einziger Fjord genannt wird"
+	},
+	"Knock": {
+		"pl": "Sanktuarium maryjne odwiedzane przez pielgrzymów; w 1979 roku przybył tu papież Jan Paweł II",
+		"en": "A Marian shrine visited by pilgrims; Pope John Paul II came here in 1979",
+		"cs": "Mariánské poutní místo; roku 1979 sem zavítal papež Jan Pavel II.",
+		"is": "Maríuhelgistaður sem pílagrímar sækja; Jóhannes Páll páfi II kom hingað árið 1979",
+		"de": "Ein Marienwallfahrtsort; 1979 kam Papst Johannes Paul II. hierher"
+	},
+	"Ballina": {
+		"pl": "Miasto nad rzeką Moy, słynącą z połowu łososi",
+		"en": "A town on the River Moy, famous for its salmon fishing",
+		"cs": "Město na řece Moy, proslulé lovem lososů",
+		"is": "Bær við ána Moy sem er fræg fyrir laxveiði",
+		"de": "Eine Stadt am Fluss Moy, berühmt für den Lachsfang"
+	},
+	"Drumcliff": {
+		"pl": "Na tutejszym przykościelnym cmentarzu, u stóp Benbulben, pochowany jest poeta W. B. Yeats",
+		"en": "The poet W. B. Yeats is buried in the churchyard here, below Benbulben",
+		"cs": "Na zdejším hřbitově u kostela pod horou Benbulben je pohřben básník W. B. Yeats",
+		"is": "Skáldið W. B. Yeats er grafið í kirkjugarðinum hér, undir Benbulben",
+		"de": "Auf dem Kirchhof hier, unterhalb des Benbulben, ist der Dichter W. B. Yeats begraben"
+	},
+	"Bundoran": {
+		"pl": "Nadmorskie miasteczko słynące z atlantyckich fal dla surferów",
+		"en": "A seaside town known for its Atlantic surfing waves",
+		"cs": "Přímořské městečko známé atlantskými vlnami pro surfaře",
+		"is": "Strandbær þekktur fyrir brimbrettaöldur Atlantshafsins",
+		"de": "Ein Badeort, bekannt für seine Surfwellen am Atlantik"
+	},
+	"Ballyshannon": {
+		"pl": "Jedno z najstarszych miast Irlandii, u ujścia rzeki Erne; urodził się tu gitarzysta Rory Gallagher",
+		"en": "One of the oldest towns in Ireland, at the mouth of the Erne; the guitarist Rory Gallagher was born here",
+		"cs": "Jedno z nejstarších měst Irska u ústí řeky Erne; narodil se tu kytarista Rory Gallagher",
+		"is": "Einn elsti bær Írlands, við ósa Erne; gítarleikarinn Rory Gallagher fæddist hér",
+		"de": "Eine der ältesten Städte Irlands an der Mündung des Erne; hier wurde der Gitarrist Rory Gallagher geboren"
+	},
+	"Boyle": {
+		"pl": "W mieście stoi opactwo cystersów Boyle Abbey, założone w XII wieku",
+		"en": "Boyle Abbey, a Cistercian abbey founded in the 12th century, stands in the town",
+		"cs": "Ve městě stojí cisterciácké opatství Boyle Abbey založené ve 12. století",
+		"is": "Í bænum stendur Boyle Abbey, klaustur sistersíana sem stofnað var á 12. öld",
+		"de": "In der Stadt steht Boyle Abbey, eine im 12. Jahrhundert gegründete Zisterzienserabtei"
+	}
+}

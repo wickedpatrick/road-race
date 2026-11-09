@@ -1,0 +1,430 @@
+{
+	"Dublin": [
+		{
+			"kind": "ie_dublin_hapenny",
+			"name": {
+				"pl": "Most Ha'penny",
+				"en": "Ha'penny Bridge",
+				"cs": "Most Ha'penny",
+				"is": "Ha'penny-brúin",
+				"de": "Ha'penny Bridge"
+			},
+			"desc": {
+				"pl": "Żeliwna kładka nad Liffey z 1816 roku; przejście kosztowało kiedyś pół pensa",
+				"en": "A cast-iron footbridge over the Liffey from 1816; crossing it once cost half a penny",
+				"cs": "Litinová lávka přes Liffey z roku 1816; přechod po ní kdysi stál půl pence",
+				"is": "Göngubrú úr steypujárni yfir Liffey frá 1816; einu sinni kostaði hálft penní að ganga yfir hana",
+				"de": "Eine gusseiserne Fußgängerbrücke über den Liffey von 1816; der Übergang kostete einst einen halben Penny"
+			},
+			"local": "Ha'penny Bridge"
+		}
+	],
+	"Cork": [
+		{
+			"kind": "ie_cork_finbarre",
+			"name": {
+				"pl": "Katedra św. Finbarra",
+				"en": "St Fin Barre's Cathedral",
+				"cs": "Katedrála sv. Finbarra",
+				"is": "Dómkirkja heilags Finbarrs",
+				"de": "St.-Fin-Barre's-Kathedrale"
+			},
+			"desc": {
+				"pl": "Neogotycka katedra z trzema iglicami projektu Williama Burgesa, ukończona w 1879 roku",
+				"en": "A Gothic Revival cathedral with three spires by William Burges, finished in 1879",
+				"cs": "Novogotická katedrála se třemi věžemi od Williama Burgese, dokončená roku 1879",
+				"is": "Nýgotnesk dómkirkja með þremur turnspírum eftir William Burges, fullgerð 1879",
+				"de": "Eine neugotische Kathedrale mit drei Turmspitzen von William Burges, 1879 vollendet"
+			},
+			"local": "St Fin Barre's Cathedral"
+		}
+	],
+	"Limerick": [
+		{
+			"kind": "ie_limerick_castle",
+			"name": {
+				"pl": "Zamek króla Jana",
+				"en": "King John's Castle",
+				"cs": "Hrad krále Jana",
+				"is": "Kastali Jóhanns konungs",
+				"de": "King John's Castle"
+			},
+			"desc": {
+				"pl": "XIII-wieczny normański zamek z okrągłymi basztami na Wyspie Królewskiej na Shannon",
+				"en": "A 13th-century Norman castle with round towers on King's Island in the Shannon",
+				"cs": "Normanský hrad ze 13. století s kulatými věžemi na Královském ostrově na Shannonu",
+				"is": "Normannskur kastali frá 13. öld með hringturnum á Konungseyju í Shannon",
+				"de": "Eine normannische Burg aus dem 13. Jahrhundert mit Rundtürmen auf King's Island im Shannon"
+			},
+			"local": "King John's Castle"
+		}
+	],
+	"Galway": [
+		{
+			"kind": "ie_galway_arch",
+			"name": {
+				"pl": "Łuk Hiszpański",
+				"en": "Spanish Arch",
+				"cs": "Španělský oblouk",
+				"is": "Spænski boginn",
+				"de": "Spanischer Bogen"
+			},
+			"desc": {
+				"pl": "Łuki dawnych murów miejskich z 1584 roku przy ujściu Corrib, gdzie niegdyś rozładowywano statki",
+				"en": "Arches of the old town wall from 1584 by the mouth of the Corrib, where ships once unloaded",
+				"cs": "Oblouky starých městských hradeb z roku 1584 u ústí Corribu, kde se kdysi vykládaly lodě",
+				"is": "Bogar gamla borgarmúrsins frá 1584 við ósa Corrib þar sem skip voru áður affermd",
+				"de": "Bögen der alten Stadtmauer von 1584 an der Mündung des Corrib, wo früher Schiffe entladen wurden"
+			},
+			"local": "Spanish Arch"
+		}
+	],
+	"Waterford": [
+		{
+			"kind": "ie_waterford_reginald",
+			"name": {
+				"pl": "Wieża Reginalda",
+				"en": "Reginald's Tower",
+				"cs": "Reginaldova věž",
+				"is": "Turn Reginalds",
+				"de": "Reginald's Tower"
+			},
+			"desc": {
+				"pl": "Najstarszy miejski budynek Irlandii, okrągła kamienna wieża na nabrzeżu nazwana od wikińskiego władcy",
+				"en": "Ireland's oldest civic building, a round stone tower on the quay named after a Viking ruler",
+				"cs": "Nejstarší městská stavba Irska, kulatá kamenná věž na nábřeží pojmenovaná po vikingském vládci",
+				"is": "Elsta bæjarbygging Írlands, sívalur steinturn við höfnina, nefndur eftir víkingahöfðingja",
+				"de": "Irlands ältestes städtisches Bauwerk, ein runder Steinturm am Kai, nach einem Wikingerherrscher benannt"
+			},
+			"local": "Reginald's Tower"
+		}
+	],
+	"Drogheda": [
+		{
+			"kind": "ie_drogheda_gate",
+			"name": {
+				"pl": "Brama św. Wawrzyńca",
+				"en": "St Laurence's Gate",
+				"cs": "Brána sv. Vavřince",
+				"is": "Lárentíusarhliðið",
+				"de": "St.-Laurence-Tor"
+			},
+			"desc": {
+				"pl": "XIII-wieczny barbakan z dwiema wysokimi basztami, najlepiej zachowana brama dawnych murów",
+				"en": "A 13th-century barbican with two tall drum towers, the finest surviving gate of the town walls",
+				"cs": "Barbakán ze 13. století se dvěma vysokými válcovými věžemi, nejzachovalejší brána městských hradeb",
+				"is": "Hliðvirki frá 13. öld með tveimur háum sívölum turnum, best varðveitta hlið borgarmúranna",
+				"de": "Eine Barbakane aus dem 13. Jahrhundert mit zwei hohen Rundtürmen, das besterhaltene Tor der Stadtmauer"
+			},
+			"local": "St Laurence's Gate"
+		}
+	],
+	"Dundalk": [
+		{
+			"kind": "ie_dundalk_dolmen",
+			"name": {
+				"pl": "Dolmen Proleek",
+				"en": "Proleek Dolmen",
+				"cs": "Dolmen Proleek",
+				"is": "Proleek-steinborðið",
+				"de": "Dolmen von Proleek"
+			},
+			"desc": {
+				"pl": "Grobowiec portalowy sprzed ponad 5000 lat, którego około 35-tonowy kamień nakrywowy spoczywa na trzech głazach",
+				"en": "A portal tomb over 5,000 years old whose capstone of some 35 tonnes rests on three stones",
+				"cs": "Portálový hrob starý přes 5000 let, jehož asi 35tunový krycí kámen spočívá na třech kamenech",
+				"is": "Gáttargröf, yfir 5000 ára gömul, þar sem um 35 tonna þaksteinn hvílir á þremur steinum",
+				"de": "Ein über 5000 Jahre altes Portalgrab, dessen etwa 35 Tonnen schwerer Deckstein auf drei Steinen ruht"
+			},
+			"local": "Proleek Dolmen"
+		}
+	],
+	"Kilkenny": [
+		{
+			"kind": "ie_kilkenny_castle",
+			"name": {
+				"pl": "Zamek Kilkenny",
+				"en": "Kilkenny Castle",
+				"cs": "Hrad Kilkenny",
+				"is": "Kilkenny-kastali",
+				"de": "Kilkenny Castle"
+			},
+			"desc": {
+				"pl": "Normański zamek przebudowany w czasach wiktoriańskich, przez prawie sześć wieków siedziba rodu Butlerów",
+				"en": "A Norman castle rebuilt in Victorian times, the seat of the Butler family for nearly six centuries",
+				"cs": "Normanský hrad přestavěný ve viktoriánské době, téměř šest století sídlo rodu Butlerů",
+				"is": "Normannskur kastali, endurbyggður á Viktoríutímanum, aðsetur Butler-ættarinnar í nær sex aldir",
+				"de": "Eine normannische Burg, in viktorianischer Zeit umgebaut, fast sechs Jahrhunderte lang Sitz der Familie Butler"
+			},
+			"local": "Kilkenny Castle"
+		}
+	],
+	"Sligo": [
+		{
+			"kind": "ie_sligo_benbulben",
+			"name": {"pl": "Benbulben", "en": "Benbulben", "cs": "Benbulben", "is": "Benbulben", "de": "Benbulben"},
+			"desc": {
+				"pl": "Wapienna góra o płaskim szczycie i stromym, żebrowanym zboczu, wysoka na 526 m",
+				"en": "A flat-topped limestone mountain with a steep, ribbed face, 526 m high",
+				"cs": "Vápencová hora s plochým vrcholem a strmou žebrovanou stěnou, vysoká 526 m",
+				"is": "Flatt kalksteinsfjall með brattri, rifjóttri hlíð, 526 m hátt",
+				"de": "Ein Kalksteinberg mit flachem Gipfel und steiler, gerippter Wand, 526 m hoch"
+			},
+			"local": "Benbulben"
+		}
+	],
+	"Athlone": [
+		{
+			"kind": "ie_athlone_castle",
+			"name": {
+				"pl": "Zamek w Athlone",
+				"en": "Athlone Castle",
+				"cs": "Hrad Athlone",
+				"is": "Athlone-kastali",
+				"de": "Burg Athlone"
+			},
+			"desc": {
+				"pl": "XIII-wieczny zamek z wielobocznym donżonem, strzegący przeprawy przez Shannon",
+				"en": "A 13th-century castle with a many-sided keep, guarding the crossing of the Shannon",
+				"cs": "Hrad ze 13. století s mnohoúhelníkovým donjonem, který střežil přechod přes Shannon",
+				"is": "Kastali frá 13. öld með marghyrndum varðturni sem gætti vaðsins yfir Shannon",
+				"de": "Eine Burg aus dem 13. Jahrhundert mit vieleckigem Bergfried, die den Übergang über den Shannon bewachte"
+			},
+			"local": "Athlone Castle"
+		}
+	],
+	"Killarney": [
+		{
+			"kind": "ie_killarney_ross",
+			"name": {"pl": "Zamek Ross", "en": "Ross Castle", "cs": "Hrad Ross", "is": "Ross-kastali", "de": "Ross Castle"},
+			"desc": {
+				"pl": "XV-wieczna wieża mieszkalna wodzów rodu O'Donoghue nad brzegiem jeziora Lough Leane",
+				"en": "A 15th-century tower house of the O'Donoghue chieftains on the shore of Lough Leane",
+				"cs": "Obytná věž náčelníků rodu O'Donoghue z 15. století na břehu jezera Lough Leane",
+				"is": "Turnhús O'Donoghue-höfðingjanna frá 15. öld á bakka Lough Leane",
+				"de": "Ein Turmhaus der O'Donoghue-Häuptlinge aus dem 15. Jahrhundert am Ufer des Lough Leane"
+			},
+			"local": "Ross Castle"
+		}
+	],
+	"Tralee": [
+		{
+			"kind": "ie_tralee_windmill",
+			"name": {
+				"pl": "Wiatrak w Blennerville",
+				"en": "Blennerville Windmill",
+				"cs": "Větrný mlýn v Blennerville",
+				"is": "Vindmyllan í Blennerville",
+				"de": "Windmühle von Blennerville"
+			},
+			"desc": {
+				"pl": "Biały wiatrak wieżowy z około 1800 roku, odnowiony i znów obracający się nad zatoką Tralee",
+				"en": "A white tower windmill from around 1800, restored and turning again by Tralee Bay",
+				"cs": "Bílý věžový větrný mlýn z doby kolem roku 1800, obnovený a znovu se točící u zálivu Tralee",
+				"is": "Hvít turnvindmylla frá því um 1800, endurgerð og snýst aftur við Tralee-flóa",
+				"de": "Eine weiße Turmwindmühle von etwa 1800, restauriert und wieder in Betrieb an der Bucht von Tralee"
+			},
+			"local": "Blennerville Windmill"
+		}
+	],
+	"Ennis": [
+		{
+			"kind": "ie_ennis_friary",
+			"name": {
+				"pl": "Klasztor franciszkanów w Ennis",
+				"en": "Ennis Friary",
+				"cs": "Františkánský klášter v Ennisu",
+				"is": "Fransiskusarklaustrið í Ennis",
+				"de": "Franziskanerkloster Ennis"
+			},
+			"desc": {
+				"pl": "Ruiny XIII-wiecznego klasztoru franciszkanów ze smukłą dzwonnicą i kamiennymi rzeźbami",
+				"en": "The ruins of a 13th-century Franciscan friary with a slender bell tower and stone carvings",
+				"cs": "Zřícenina františkánského kláštera ze 13. století se štíhlou zvonicí a kamennými reliéfy",
+				"is": "Rústir fransiskusarklausturs frá 13. öld með grönnum klukkuturni og steinristum",
+				"de": "Die Ruine eines Franziskanerklosters aus dem 13. Jahrhundert mit schlankem Glockenturm und Steinfiguren"
+			},
+			"local": "Ennis Friary"
+		}
+	],
+	"Wexford": [
+		{
+			"kind": "ie_wexford_hook",
+			"name": {
+				"pl": "Latarnia Hook",
+				"en": "Hook Lighthouse",
+				"cs": "Maják Hook",
+				"is": "Hook-vitinn",
+				"de": "Leuchtturm Hook"
+			},
+			"desc": {
+				"pl": "Jedna z najstarszych działających latarni morskich świata, średniowieczna wieża w czarne pasy",
+				"en": "One of the oldest working lighthouses in the world, a medieval tower painted with black bands",
+				"cs": "Jeden z nejstarších fungujících majáků na světě, středověká věž s černými pruhy",
+				"is": "Einn elsti viti heims sem enn er í notkun, miðaldaturn málaður svörtum röndum",
+				"de": "Einer der ältesten noch betriebenen Leuchttürme der Welt, ein mittelalterlicher Turm mit schwarzen Streifen"
+			},
+			"local": "Hook Lighthouse"
+		}
+	],
+	"Westport": [
+		{
+			"kind": "ie_westport_croagh",
+			"name": {
+				"pl": "Croagh Patrick",
+				"en": "Croagh Patrick",
+				"cs": "Croagh Patrick",
+				"is": "Croagh Patrick",
+				"de": "Croagh Patrick"
+			},
+			"desc": {
+				"pl": "Stożkowa góra wysoka na 764 m z kaplicą na szczycie, na którą co roku w lipcu wspinają się pielgrzymi",
+				"en": "A cone-shaped mountain of 764 m with a chapel on the top, climbed by pilgrims every July",
+				"cs": "Kuželovitá hora vysoká 764 m s kaplí na vrcholu, na kterou každý červenec stoupají poutníci",
+				"is": "Keilulaga fjall, 764 m hátt, með kapellu á tindinum sem pílagrímar klífa í júlí ár hvert",
+				"de": "Ein kegelförmiger Berg von 764 m mit einer Kapelle auf dem Gipfel, den jeden Juli Pilger besteigen"
+			},
+			"local": "Croagh Patrick"
+		}
+	],
+	"Donegal": [
+		{
+			"kind": "ie_donegal_castle",
+			"name": {
+				"pl": "Zamek Donegal",
+				"en": "Donegal Castle",
+				"cs": "Hrad Donegal",
+				"is": "Donegal-kastali",
+				"de": "Burg Donegal"
+			},
+			"desc": {
+				"pl": "XV-wieczna wieża mieszkalna rodu O'Donnell z dobudowanym w XVII wieku dworem",
+				"en": "The 15th-century tower house of the O'Donnells, with a manor house added in the 17th century",
+				"cs": "Obytná věž rodu O'Donnell z 15. století se zámečkem přistavěným v 17. století",
+				"is": "Turnhús O'Donnell-ættarinnar frá 15. öld með herragarði sem bætt var við á 17. öld",
+				"de": "Das Turmhaus der O'Donnells aus dem 15. Jahrhundert mit einem im 17. Jahrhundert angebauten Herrenhaus"
+			},
+			"local": "Donegal Castle"
+		}
+	],
+	"Letterkenny": [
+		{
+			"kind": "ie_letterkenny_eunan",
+			"name": {
+				"pl": "Katedra św. Eunana",
+				"en": "St Eunan's Cathedral",
+				"cs": "Katedrála sv. Eunana",
+				"is": "Dómkirkja heilags Eunans",
+				"de": "St.-Eunan-Kathedrale"
+			},
+			"desc": {
+				"pl": "Neogotycka katedra z donegalskiego piaskowca z wysoką iglicą, ukończona w 1901 roku",
+				"en": "A neo-Gothic cathedral of Donegal sandstone with a tall spire, finished in 1901",
+				"cs": "Novogotická katedrála z donegalského pískovce s vysokou věží, dokončená roku 1901",
+				"is": "Nýgotnesk dómkirkja úr sandsteini frá Donegal með háum turnspíru, fullgerð 1901",
+				"de": "Eine neugotische Kathedrale aus Donegal-Sandstein mit hoher Turmspitze, 1901 vollendet"
+			},
+			"local": "St Eunan's Cathedral"
+		}
+	],
+	"Clifden": [
+		{
+			"kind": "ie_clifden_vimy",
+			"name": {
+				"pl": "Vimy Alcocka i Browna",
+				"en": "Alcock and Brown's Vimy",
+				"cs": "Vimy Alcocka a Browna",
+				"is": "Vimy-vél Alcocks og Browns",
+				"de": "Die Vimy von Alcock und Brown"
+			},
+			"desc": {
+				"pl": "Dwupłatowiec Vickers Vimy, który w 1919 roku wylądował na torfowisku Derrygimlagh pod Clifden po pierwszym przelocie przez Atlantyk bez międzylądowania",
+				"en": "The Vickers Vimy biplane that landed in the Derrygimlagh bog near Clifden in 1919 after the first non-stop flight across the Atlantic",
+				"cs": "Dvouplošník Vickers Vimy, který roku 1919 přistál v rašeliništi Derrygimlagh u Clifdenu po prvním přeletu Atlantiku bez mezipřistání",
+				"is": "Tvíþekjan Vickers Vimy sem lenti í Derrygimlagh-mýrinni við Clifden árið 1919 eftir fyrsta flugið yfir Atlantshaf án millilendingar",
+				"de": "Der Doppeldecker Vickers Vimy, der 1919 nach dem ersten Nonstop-Flug über den Atlantik im Moor von Derrygimlagh bei Clifden landete"
+			},
+			"local": "Alcock and Brown Landing Site"
+		}
+	],
+	"Dingle": [
+		{
+			"kind": "ie_dingle_gallarus",
+			"name": {
+				"pl": "Oratorium Gallarus",
+				"en": "Gallarus Oratory",
+				"cs": "Oratorium Gallarus",
+				"is": "Gallarus-bænhúsið",
+				"de": "Gallarus-Oratorium"
+			},
+			"desc": {
+				"pl": "Kaplica z kamienia układanego bez zaprawy, w kształcie odwróconej łodzi, licząca być może tysiąc lat",
+				"en": "A chapel of stone laid without mortar, shaped like an upturned boat, perhaps a thousand years old",
+				"cs": "Kaple z kamene skládaného bez malty ve tvaru převrácené lodi, stará možná tisíc let",
+				"is": "Bænhús hlaðið úr steini án steinlíms, í laginu eins og bátur á hvolfi, ef til vill þúsund ára gamalt",
+				"de": "Eine ohne Mörtel aus Stein gebaute Kapelle in Form eines umgedrehten Bootes, vielleicht tausend Jahre alt"
+			},
+			"local": "Gallarus Oratory"
+		}
+	],
+	"Kenmare": [
+		{
+			"kind": "ie_kenmare_circle",
+			"name": {
+				"pl": "Krąg kamienny w Kenmare",
+				"en": "Kenmare Stone Circle",
+				"cs": "Kamenný kruh v Kenmare",
+				"is": "Steinhringurinn í Kenmare",
+				"de": "Steinkreis von Kenmare"
+			},
+			"desc": {
+				"pl": "Krąg z epoki brązu z 15 kamieni wokół grobowca pod głazem, jeden z największych w południowo-zachodniej Irlandii",
+				"en": "A Bronze Age ring of 15 stones around a boulder burial, one of the largest in south-west Ireland",
+				"cs": "Kruh z doby bronzové z 15 kamenů kolem hrobu pod balvanem, jeden z největších v jihozápadním Irsku",
+				"is": "Hringur 15 steina frá bronsöld umhverfis gröf undir stórum steini, einn sá stærsti á Suðvestur-Írlandi",
+				"de": "Ein bronzezeitlicher Kreis aus 15 Steinen um ein Felsblockgrab, einer der größten im Südwesten Irlands"
+			},
+			"local": "Kenmare Stone Circle"
+		}
+	],
+	"Cahersiveen": [
+		{
+			"kind": "ie_cahersiveen_ballycarbery",
+			"name": {
+				"pl": "Zamek Ballycarbery",
+				"en": "Ballycarbery Castle",
+				"cs": "Hrad Ballycarbery",
+				"is": "Ballycarbery-kastali",
+				"de": "Burg Ballycarbery"
+			},
+			"desc": {
+				"pl": "Porośnięte bluszczem ruiny XVI-wiecznej wieży mieszkalnej nad zatoką Valentia",
+				"en": "The ivy-covered ruins of a 16th-century tower house by Valentia Harbour",
+				"cs": "Břečťanem porostlá zřícenina obytné věže z 16. století u zátoky Valentia",
+				"is": "Bergfléttuvaxnar rústir turnhúss frá 16. öld við Valentia-höfn",
+				"de": "Die efeubewachsene Ruine eines Turmhauses aus dem 16. Jahrhundert am Hafen von Valentia"
+			},
+			"local": "Ballycarbery Castle"
+		}
+	],
+	"Cashel": [
+		{
+			"kind": "ie_cashel_rock",
+			"name": {
+				"pl": "Skała Cashel",
+				"en": "Rock of Cashel",
+				"cs": "Skála Cashel",
+				"is": "Cashel-kletturinn",
+				"de": "Rock of Cashel"
+			},
+			"desc": {
+				"pl": "Wapienne wzgórze zwieńczone okrągłą wieżą, kaplicą Cormaca i gotycką katedrą bez dachu",
+				"en": "A limestone hill crowned by a round tower, Cormac's Chapel and a roofless Gothic cathedral",
+				"cs": "Vápencový kopec s kulatou věží, Cormacovou kaplí a gotickou katedrálou bez střechy",
+				"is": "Kalksteinshæð sem á standa hringturn, kapella Cormacs og þaklaus gotnesk dómkirkja",
+				"de": "Ein Kalksteinhügel mit Rundturm, Cormac's Chapel und einer dachlosen gotischen Kathedrale"
+			},
+			"local": "Rock of Cashel"
+		}
+	]
+}

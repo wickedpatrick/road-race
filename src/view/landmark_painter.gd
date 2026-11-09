@@ -27,7 +27,8 @@ static var MORE := [LandmarksDeA, LandmarksDeB, LandmarksDeC, LandmarksSk, Landm
 		LandmarksMtA, LandmarksCyA, LandmarksMdA, LandmarksGrA, LandmarksGrB, LandmarksBgA, LandmarksBgB, LandmarksBgC, LandmarksHuA, LandmarksHuB, LandmarksRoA, LandmarksRoB, LandmarksRuA, LandmarksRuB, LandmarksRuC,
 		LandmarksUaA, LandmarksUaB, LandmarksUaC,
 		LandmarksByA, LandmarksByB,
-		LandmarksTrA, LandmarksTrB, LandmarksTrC]
+		LandmarksTrA, LandmarksTrB, LandmarksTrC,
+		LandmarksIeA, LandmarksIeB]
 
 static var _cv
 static var _b: Vector2
