@@ -1,0 +1,52 @@
+{
+	"code": "by",
+	"name": {"pl": "Białoruś", "en": "Belarus", "cs": "Bělorusko", "is": "Hvíta-Rússland", "de": "Belarus"},
+	"language": "be",
+	"drive": "right",
+	"units": "metric",
+	"title": {
+		"pl": "RAJD PRZEZ BIAŁORUŚ",
+		"en": "BELARUS ROAD TRIP",
+		"cs": "RALLY BĚLORUSKEM",
+		"is": "ÖKUFERÐ UM HVÍTA-RÚSSLAND",
+		"de": "BELARUS-TOUR"
+	},
+	"subtitle": {
+		"pl": "Edukacyjna podróż od Puszczy Białowieskiej przez zamki w Mirze i Nieświeżu po Jeziora Brasławskie",
+		"en": "An educational journey from the Białowieża Forest past the castles of Mir and Nesvizh to the Braslaw Lakes",
+		"cs": "Vzdělávací cesta od Bělověžského pralesa kolem hradů Mir a Nesviž k Braslavským jezerům",
+		"is": "Fræðandi ferðalag frá Białowieża-skógi framhjá köstulunum í Mir og Nesvizh að Braslaw-vötnum",
+		"de": "Eine lehrreiche Reise vom Białowieża-Urwald an den Schlössern von Mir und Neswisch vorbei zu den Braslauer Seen"
+	},
+	"region_label": {"pl": "obwód", "en": "region", "cs": "oblast", "is": "hérað", "de": "Gebiet"},
+	"start": ["minsk", "maladziecna"],
+	"express_prefixes": ["M"],
+	"limits": {"express": 120, "road": 90, "city": 60, "town_on_express": 90, "town": 60},
+	"signs": {"town": "#ffffff", "town_text": "#111111", "board": "#1d4f9c", "board_motorway": "#1a7a3e"},
+	"map": {"lon0": 23, "lon1": 32.9, "lat0": 51.15, "lat1": 56.3, "lon_k": 0.592, "zoom": 1.2, "labels": "auto"},
+	"outline": [
+		[31.76, 52.1], [31.08, 52.08], [30.76, 51.9], [30.53, 51.6], [30.63, 51.36], [30.54, 51.27], [30.33, 51.33],
+		[30.16, 51.48], [29.35, 51.38], [29.1, 51.63], [28.73, 51.43], [28.6, 51.54], [28.18, 51.61], [27.86, 51.59],
+		[27.7, 51.48], [27.69, 51.57], [27.3, 51.6], [27.14, 51.75], [25.79, 51.92], [24.36, 51.87], [23.98, 51.59],
+		[23.71, 51.64], [23.61, 51.61], [23.61, 51.52], [23.54, 51.71], [23.63, 51.81], [23.65, 52.04], [23.18, 52.29],
+		[23.41, 52.52], [23.84, 52.66], [23.92, 52.77], [23.86, 53.11], [23.48, 53.94], [24.19, 53.95], [24.32, 53.89],
+		[24.77, 53.97], [24.87, 54.15], [25.05, 54.13], [25.46, 54.29], [25.51, 54.16], [25.75, 54.16], [25.75, 54.26],
+		[25.55, 54.33], [25.62, 54.46], [25.72, 54.56], [25.72, 54.72], [25.86, 54.92], [26.18, 55], [26.29, 55.14],
+		[26.6, 55.13], [26.78, 55.27], [26.46, 55.34], [26.59, 55.67], [27.05, 55.83], [27.58, 55.8], [27.64, 55.91],
+		[28.03, 56.13], [28.15, 56.14], [28.32, 56.05], [28.56, 56.09], [28.79, 55.94], [29.03, 56.02], [29.28, 55.97],
+		[29.4, 55.91], [29.35, 55.78], [29.48, 55.68], [29.94, 55.85], [30.46, 55.79], [30.91, 55.57], [30.9, 55.4],
+		[30.81, 55.31], [30.98, 55.05], [30.79, 54.81], [31.15, 54.63], [31.07, 54.49], [31.18, 54.45], [31.4, 54.2],
+		[31.83, 54.03], [31.75, 53.81], [32.2, 53.78], [32.45, 53.69], [32.47, 53.55], [32.71, 53.42], [32.7, 53.34],
+		[32.14, 53.09], [31.85, 53.11], [31.67, 53.2], [31.42, 53.2], [31.26, 53.02], [31.56, 52.76], [31.52, 52.7],
+		[31.62, 52.55], [31.58, 52.31]
+	],
+	"outline_lines": [],
+	"station": {
+		"sign": "АЗС",
+		"board": "ПАЛІВА",
+		"prices": [["АІ-92", "2,41"], ["АІ-95", "2,57"], ["ДТ", "2,57"]],
+		"region_sign": "ЛАСКАВА ПРОСІМ"
+	},
+	"plates": [["", "#c8102e", "#ffffff"]],
+	"weather": {"default": "cloudy", "landscape": true}
+}

@@ -1,0 +1,344 @@
+[
+	{
+		"a": "brest",
+		"b": "baranavicy",
+		"km": 200,
+		"road": "M1",
+		"towns": [["Kobryn", 47], ["Biaroza", 100], ["Ivacevičy", 140]],
+		"zones": [
+			[30, "podlasie", "Bresckaje Paliessie"],
+			[120, "zulawy", "Zaharoddzie"],
+			[170, "forest", "Ivacevickija liasy"],
+			[200, "fields", "Baranavickaja raŭnina"]
+		],
+		"via": [[47, 24.36, 52.21], [100, 24.98, 52.53], [140, 25.34, 52.71]]
+	},
+	{
+		"a": "baranavicy",
+		"b": "mir",
+		"km": 58,
+		"road": [[53, "M1"], [58, "R11"]],
+		"towns": [],
+		"zones": [[30, "fields", "Baranavickaja raŭnina"], [58, "upland", "Navahrudskaje ŭzvyšša"]]
+	},
+	{
+		"a": "mir",
+		"b": "minsk",
+		"km": 92,
+		"road": [[5, "R11"], [92, "M1"]],
+		"towns": [["Stoŭbcy", 25], ["Dziaržynsk", 52]],
+		"zones": [
+			[20, "fields", "Paniamonnie"], [40, "forest", "Nalibockaja pušča"], [75, "upland", "Minskaje ŭzvyšša"],
+			[92, "fields", "Minskaje ŭzvyšša"]
+		],
+		"via": [[25, 26.74, 53.48], [52, 27.13, 53.68]]
+	},
+	{
+		"a": "minsk",
+		"b": "niasviz",
+		"km": 117,
+		"road": [[87, "M1"], [117, "R11"]],
+		"towns": [["Dziaržynsk", 40], ["Stoŭbcy", 67], ["Haradzieja", 103]],
+		"zones": [
+			[20, "fields", "Minskaje ŭzvyšša"], [55, "upland", "Minskaje ŭzvyšša"],
+			[80, "forest", "Nalibockaja pušča"], [117, "fields", "Niasvižčyna"]
+		],
+		"via": [[40, 27.13, 53.68], [67, 26.74, 53.48], [103, 26.53, 53.31]]
+	},
+	{
+		"a": "mir",
+		"b": "niasviz",
+		"km": 32,
+		"road": "R11",
+		"towns": [["Haradzieja", 16]],
+		"zones": [[12, "fields", "Paniamonnie"], [32, "podlasie", "Niasvižčyna"]],
+		"via": [[16, 26.53, 53.31]]
+	},
+	{
+		"a": "minsk",
+		"b": "barysau",
+		"km": 75,
+		"road": "M1",
+		"towns": [["Smaliavičy", 35], ["Žodzina", 52]],
+		"zones": [
+			[25, "fields", "Minskaje ŭzvyšša"],
+			[60, "forest", "Centraĺnabiarezinskaja raŭnina"],
+			[75, "fields", "Biarezina"]
+		],
+		"via": [[35, 28.08, 54.03], [52, 28.33, 54.1]]
+	},
+	{
+		"a": "barysau",
+		"b": "orsa",
+		"km": 138,
+		"road": "M1",
+		"towns": [["Krupki", 48], ["Talačyn", 92]],
+		"zones": [
+			[30, "forest", "Biarezina"], [80, "fields", "Aršanskaje ŭzvyšša"], [115, "upland", "Aršanskaje ŭzvyšša"],
+			[138, "fields", "Dniapro"]
+		],
+		"via": [[48, 29.14, 54.32], [92, 29.7, 54.41]]
+	},
+	{
+		"a": "minsk",
+		"b": "viciebsk",
+		"km": 255,
+		"road": [[255, "M3", 2]],
+		"towns": [["Lahojsk", 35], ["Plieščanicy", 62], ["Liepieĺ", 150], ["Biešankovičy", 205]],
+		"zones": [
+			[45, "upland", "Minskaje ŭzvyšša"],
+			[110, "forest", "Biarezinski zapaviednik"],
+			[175, "lakes", "Paazierje"],
+			[230, "fields", "Dzvina"],
+			[255, "upland", "Viciebskaje ŭzvyšša"]
+		],
+		"via": [[35, 27.85, 54.2], [62, 27.83, 54.42], [150, 28.7, 54.88], [205, 29.46, 55.05]]
+	},
+	{
+		"a": "minsk",
+		"b": "mahiliou",
+		"km": 182,
+		"road": [[182, "M4", 2]],
+		"towns": [["Smilavičy", 35], ["Červień", 62], ["Bierazino", 102], ["Bialyničy", 150]],
+		"zones": [
+			[30, "fields", "Minskaje ŭzvyšša"],
+			[90, "forest", "Centraĺnabiarezinskaja raŭnina"],
+			[115, "forest", "Biarezina"],
+			[165, "fields", "Padniaproŭje"],
+			[182, "fields", "Dniapro"]
+		],
+		"via": [[35, 28.02, 53.75], [62, 28.43, 53.71], [102, 28.99, 53.84], [150, 29.71, 53.99]]
+	},
+	{
+		"a": "minsk",
+		"b": "babrujsk",
+		"km": 145,
+		"road": [[145, "M5", 2]],
+		"towns": [["Rudziensk", 40], ["Asipovičy", 95]],
+		"zones": [
+			[30, "fields", "Minskaje ŭzvyšša"],
+			[110, "forest", "Centraĺnabiarezinskaja raŭnina"],
+			[145, "fields", "Biarezina"]
+		],
+		"via": [[40, 27.87, 53.6], [70, 28.25, 53.42], [95, 28.64, 53.3]]
+	},
+	{
+		"a": "babrujsk",
+		"b": "homiel",
+		"km": 150,
+		"road": [[150, "M5", 2]],
+		"towns": [["Žlobin", 75], ["Buda-Kašaliova", 110]],
+		"zones": [[40, "forest", "Biarezina"], [95, "fields", "Dniapro"], [150, "forest", "Homieĺskaje Paliessie"]],
+		"via": [[75, 30.02, 52.89], [110, 30.57, 52.72]]
+	},
+	{
+		"a": "minsk",
+		"b": "lida",
+		"km": 157,
+		"road": [[157, "M6", 2]],
+		"towns": [["Ivianiec", 58], ["Juraciški", 112]],
+		"zones": [
+			[30, "upland", "Minskaje ŭzvyšša"], [95, "forest", "Nalibockaja pušča"], [130, "podlasie", "Paniamonnie"],
+			[157, "fields", "Lidskaja raŭnina"]
+		],
+		"via": [[58, 26.74, 53.89], [112, 25.93, 54.04]]
+	},
+	{
+		"a": "lida",
+		"b": "hrodna",
+		"km": 105,
+		"road": [[105, "M6", 2]],
+		"towns": [["Ščučyn", 38], ["Skidzieĺ", 72]],
+		"zones": [
+			[25, "fields", "Lidskaja raŭnina"],
+			[60, "forest", "Paniamonnie"],
+			[105, "podlasie", "Hrodzienskaje ŭzvyšša"]
+		],
+		"via": [[38, 24.74, 53.6], [72, 24.25, 53.59]]
+	},
+	{
+		"a": "hrodna",
+		"b": "baranavicy",
+		"km": 192,
+		"road": [[192, "R99", 2]],
+		"towns": [["Vaŭkavysk", 85], ["Zeĺva", 110], ["Slonim", 140]],
+		"zones": [
+			[30, "podlasie", "Hrodzienskaje ŭzvyšša"],
+			[100, "fields", "Vaŭkavyskaje ŭzvyšša"],
+			[125, "lakes", "Zeĺvienskaje vadaschovišča"],
+			[165, "podlasie", "Ščara"],
+			[192, "fields", "Baranavickaja raŭnina"]
+		],
+		"via": [[85, 24.45, 53.16], [110, 24.82, 53.15], [140, 25.32, 53.09]]
+	},
+	{
+		"a": "lida",
+		"b": "navahrudak",
+		"km": 52,
+		"road": [[12, "M6", 2], [52, "R11"]],
+		"towns": [["Biarozaŭka", 25]],
+		"zones": [[15, "fields", "Lidskaja raŭnina"], [35, "forest", "Nioman"], [52, "upland", "Navahrudskaje ŭzvyšša"]],
+		"via": [[25, 25.5, 53.72]]
+	},
+	{
+		"a": "navahrudak",
+		"b": "mir",
+		"km": 47,
+		"road": "R11",
+		"towns": [["Kareličy", 23]],
+		"zones": [[15, "upland", "Navahrudskaje ŭzvyšša"], [47, "fields", "Paniamonnie"]],
+		"via": [[23, 26.14, 53.57]]
+	},
+	{
+		"a": "navahrudak",
+		"b": "baranavicy",
+		"km": 56,
+		"road": "R5",
+		"towns": [],
+		"zones": [[25, "upland", "Navahrudskaje ŭzvyšša"], [56, "fields", "Baranavickaja raŭnina"]],
+		"via": [[28, 25.92, 53.37]]
+	},
+	{
+		"a": "brest",
+		"b": "kamianiec",
+		"km": 40,
+		"road": "R83",
+		"towns": [],
+		"zones": [[12, "fields", "Bresckaje Paliessie"], [28, "podlasie", "Liasnaja"], [40, "forest", "Bielaviežskaja pušča"]],
+		"via": [[20, 23.72, 52.27]]
+	},
+	{
+		"a": "brest",
+		"b": "pinsk",
+		"km": 180,
+		"road": [[47, "M1"], [180, "M10", 2]],
+		"towns": [["Kobryn", 47], ["Drahičyn", 103], ["Ivanava", 130]],
+		"zones": [
+			[30, "podlasie", "Bresckaje Paliessie"], [90, "zulawy", "Zaharoddzie"], [150, "podlasie", "Zaharoddzie"],
+			[180, "zulawy", "Pina"]
+		],
+		"via": [[47, 24.36, 52.21], [103, 25.15, 52.19], [130, 25.53, 52.14]]
+	},
+	{
+		"a": "pinsk",
+		"b": "mazyr",
+		"km": 240,
+		"road": [[228, "M10", 2], [240, "R31"]],
+		"towns": [["Luniniec", 50], ["Žytkavičy", 123], ["Pietrykaŭ", 168], ["Kalinkavičy", 228]],
+		"zones": [
+			[30, "zulawy", "Pina"], [95, "forest", "Paliessie"], [140, "lakes", "Prypiać"],
+			[185, "forest", "Paliessie"], [215, "fields", "Paliessie"], [240, "upland", "Mazyrskaja hrada"]
+		],
+		"via": [[50, 26.8, 52.25], [123, 27.86, 52.23], [168, 28.49, 52.13], [228, 29.33, 52.13]]
+	},
+	{
+		"a": "mazyr",
+		"b": "homiel",
+		"km": 135,
+		"road": [[12, "R31"], [135, "M10", 2]],
+		"towns": [["Kalinkavičy", 12], ["Rečyca", 90]],
+		"zones": [
+			[20, "upland", "Mazyrskaja hrada"], [70, "forest", "Homieĺskaje Paliessie"], [100, "lakes", "Dniapro"],
+			[135, "fields", "Sož"]
+		],
+		"via": [[12, 29.33, 52.13], [90, 30.39, 52.36]]
+	},
+	{
+		"a": "babrujsk",
+		"b": "mazyr",
+		"km": 137,
+		"road": [[137, "R31", 2]],
+		"towns": [["Kalinkavičy", 125]],
+		"zones": [
+			[30, "forest", "Biarezina"], [80, "forest", "Paliessie"], [115, "zulawy", "Paliessie"],
+			[137, "upland", "Mazyrskaja hrada"]
+		],
+		"via": [[70, 29.3, 52.68], [125, 29.33, 52.13]]
+	},
+	{
+		"a": "babrujsk",
+		"b": "mahiliou",
+		"km": 105,
+		"road": [[105, "R93", 2]],
+		"towns": [],
+		"zones": [[40, "forest", "Biarezina"], [80, "fields", "Padniaproŭje"], [105, "fields", "Dniapro"]],
+		"via": [[50, 29.75, 53.5]]
+	},
+	{
+		"a": "mahiliou",
+		"b": "homiel",
+		"km": 175,
+		"road": [[175, "M8", 2]],
+		"towns": [["Bychaŭ", 47]],
+		"zones": [
+			[30, "fields", "Dniapro"],
+			[90, "forest", "Padniaproŭje"],
+			[140, "fields", "Sož"],
+			[175, "forest", "Homieĺskaje Paliessie"]
+		],
+		"via": [[47, 30.25, 53.52], [110, 30.52, 52.95]]
+	},
+	{
+		"a": "orsa",
+		"b": "mahiliou",
+		"km": 80,
+		"road": [[80, "M8", 2]],
+		"towns": [["Škloŭ", 40]],
+		"zones": [[20, "fields", "Dniapro"], [60, "upland", "Aršanskaje ŭzvyšša"], [80, "fields", "Dniapro"]],
+		"via": [[40, 30.29, 54.21]]
+	},
+	{
+		"a": "viciebsk",
+		"b": "orsa",
+		"km": 85,
+		"road": [[85, "M8", 2]],
+		"towns": [],
+		"zones": [[25, "upland", "Viciebskaje ŭzvyšša"], [60, "forest", "Lučosa"], [85, "fields", "Aršanskaje ŭzvyšša"]],
+		"via": [[42, 30.25, 54.85]]
+	},
+	{
+		"a": "viciebsk",
+		"b": "polack",
+		"km": 105,
+		"road": [[105, "R20", 2]],
+		"towns": [],
+		"zones": [[30, "fields", "Dzvina"], [70, "forest", "Paazierje"], [105, "fields", "Dzvina"]],
+		"via": [[55, 29.45, 55.32]]
+	},
+	{
+		"a": "polack",
+		"b": "braslau",
+		"km": 128,
+		"road": [[128, "R14", 2]],
+		"towns": [["Dzisna", 55], ["Miory", 88]],
+		"zones": [
+			[25, "forest", "Dzvina"], [70, "lakes", "Paazierje"], [100, "fields", "Dzvina"],
+			[128, "lakes", "Braslaŭskija aziory"]
+		],
+		"via": [[55, 28.21, 55.57], [88, 27.63, 55.62]]
+	},
+	{
+		"a": "braslau",
+		"b": "maladziecna",
+		"km": 180,
+		"road": [[68, "R27", 2], [180, "R28", 2]],
+		"towns": [["Vidzy", 30], ["Pastavy", 68], ["Miadziel", 105]],
+		"zones": [
+			[25, "lakes", "Braslaŭskija aziory"],
+			[80, "podlasie", "Paazierje"],
+			[125, "lakes", "Narač"],
+			[160, "forest", "Viliejskaje vadaschovišča"],
+			[180, "fields", "Vilija"]
+		],
+		"via": [[30, 26.63, 55.4], [68, 26.83, 55.12], [105, 26.94, 54.88], [150, 26.92, 54.49]]
+	},
+	{
+		"a": "minsk",
+		"b": "maladziecna",
+		"km": 72,
+		"road": [[72, "R28", 2]],
+		"towns": [["Radaškovičy", 32]],
+		"zones": [[30, "upland", "Minskaje ŭzvyšša"], [55, "forest", "Vilija"], [72, "fields", "Vilija"]],
+		"via": [[32, 27.24, 54.15]]
+	}
+]

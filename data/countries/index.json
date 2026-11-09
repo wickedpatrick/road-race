@@ -156,6 +156,12 @@
 			"name": {"pl": "Ukraina", "en": "Ukraine", "cs": "Ukrajina", "is": "Úkraína", "de": "Ukraine"},
 			"neighbours": ["pl", "sk", "hu", "ro", "md", "by", "ru"],
 			"favorite_neighbour": "pl"
+		},
+		{
+			"code": "by",
+			"name": {"pl": "Białoruś", "en": "Belarus", "cs": "Bělorusko", "is": "Hvíta-Rússland", "de": "Belarus"},
+			"neighbours": ["pl", "lt", "lv", "ua", "ru"],
+			"favorite_neighbour": "ru"
 		}
 	]
 }
