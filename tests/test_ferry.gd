@@ -13,6 +13,13 @@ static func fixture() -> Dictionary:
 		"dd": {"name": "Delta", "lat": 38.0, "lon": 24.0, "pop": 150, "region": "R3"},
 		"ee": {"name": "Epsilon", "lat": 37.8, "lon": 24.3, "pop": 10, "region": "R3"},
 		"ff": {"name": "Zeta", "lat": 37.6, "lon": 24.6, "pop": 150, "region": "R3"},
+		# a long sea (Ust-Luga - Baltiysk): a city 700 km inland, a port, and a city across ~950 km of water; and a
+		# plain road of the same driven 150 km to compare with
+		"gg": {"name": "Eta", "lat": 55.7, "lon": 37.6, "pop": 150, "region": "R4"},
+		"hh": {"name": "Theta", "lat": 59.6, "lon": 28.4, "pop": 150, "region": "R4"},
+		"ii": {"name": "Iota", "lat": 54.7, "lon": 20.5, "pop": 150, "region": "R5"},
+		"jj": {"name": "Kappa", "lat": 50.0, "lon": 30.0, "pop": 150, "region": "R4"},
+		"kk": {"name": "Lambda", "lat": 50.0, "lon": 31.0, "pop": 150, "region": "R4"},
 	}
 	c["roads"] = [
 		{"a": "aa", "b": "bb", "km": 400, "road": "A1", "towns": [["Port", 60], ["Isle", 390]],
@@ -24,6 +31,11 @@ static func fixture() -> Dictionary:
 			"ferry": {"from_km": 0.5, "to_km": 29.5, "name": "Delta – Epsilon", "fact": ""}},
 		{"a": "ee", "b": "ff", "km": 20, "road": "A4", "towns": [], "zones": [[20, "fields", "R3"]],
 			"ferry": {"from_km": 0, "to_km": 20, "name": "Epsilon – Zeta", "fact": ""}},
+		{"a": "gg", "b": "hh", "km": 700, "road": "A5", "towns": [["Midway", 350]], "zones": [[700, "fields", "R4"]]},
+		{"a": "hh", "b": "ii", "km": 1100, "road": "A6", "towns": [["Quay", 20], ["Shore", 1040]],
+			"zones": [[500, "fields", "R4"], [1100, "fields", "R5"]],
+			"ferry": {"from_km": 50, "to_km": 1000, "name": "Theta – Iota", "fact": ""}},
+		{"a": "jj", "b": "kk", "km": 150, "road": "A6", "towns": [["Quay", 20], ["Shore", 90]], "zones": [[150, "fields", "R4"]]},
 	]
 	c["facts"] = {}
 	c["landmarks"] = {}
@@ -85,6 +97,7 @@ func run(t) -> void:
 		var rp := Race.new("xc60", p, 1)
 		rp.step(0.1, {"accel": false, "brake": false, "steer": 0.0})
 		t.check(rp.ferry_left == 0.0 and rp.state == "running", "%s: no boarding at the start" % name)
+	_long_sea(t)
 	# the race: stopped on the quay, the ferry takes the car over; time and fuel do not move meanwhile
 	var r := Race.new("xc60", s, 1)
 	var started := []
@@ -217,3 +230,39 @@ func run(t) -> void:
 					if not tn.get("start", false):
 						t.check(signs.has(tn.name), "%s: %s's entry sign" % [name, tn.name])
 	GameData.current = was
+
+## A ~950 km sea (Ust-Luga - Baltiysk) adds no driven length and no time but FERRY_STOP_TIME: the trip is a 150 km
+## road's, while every board and the km count the sea in full.
+func _long_sea(t) -> void:
+	var s := Route.build("hh", "ii")
+	var plain := Route.build("jj", "kk")
+	var f: Dictionary = s.ferries[0]
+	t.check(s.km == 1100 and s.ferries.size() == 1 and is_equal_approx(f.sea_km, 950.0), "long sea: 1100 km, 950 at sea")
+	t.check(is_equal_approx(s.m_per_km, plain.m_per_km) and is_equal_approx(f.pad0, f.z) and is_equal_approx(f.pad1, f.z_out),
+		"long sea: scaled as the driven 150 km, no open road put in (%.2f / %.2f)" % [s.m_per_km, plain.m_per_km])
+	t.check(absf(s.length - plain.length - Route.FERRY_GAP) < 1.0,
+		"long sea: the track of a 150 km road plus FERRY_GAP (%.0f, %.0f)" % [s.length, plain.length])
+	var legal := Route._legal_time(s.towns, s.roads, s.length, s.m_per_km, s.borders, s.part0, s.ferries)
+	var legal0 := Route._legal_time(plain.towns, plain.roads, plain.length, plain.m_per_km, plain.borders, plain.part0)
+	t.check(absf(legal - legal0 - Route.FERRY_STOP_TIME) < 0.5, "long sea: FERRY_STOP_TIME on top of the 150 km road's time (%.1f, %.1f)" % [legal, legal0])
+	t.check(s.duration <= plain.duration + Route.FERRY_STOP_TIME * 1.2 + 5.0, "long sea: the time limit of a short trip (%.0f, %.0f)" % [s.duration, plain.duration])
+	t.check(absf(Route.km_between(s, 0.0, s.length) - 1100.0) < 0.5 and absf(Route.km_between(s, 0.0, f.z_out) - 1000.0) < 0.5,
+		"long sea: real km across")
+	var before: Array = s.boards.filter(func(bd): return bd.z < f.z)
+	var after: Array = s.boards.filter(func(bd): return bd.z > f.z_out)
+	t.check(not before.is_empty() and before[0].lines.any(func(l): return l[0] == "Iota" and l[1] >= 1070),
+		"long sea: a board before the quay counts the sea %s" % str(before.map(func(bd): return bd.lines)))
+	t.check(not after.is_empty() and after[-1].lines.any(func(l): return l[0] == "Iota" and l[1] >= 50 and l[1] <= 60),
+		"long sea: past the far quay the real km left %s" % str(after.map(func(bd): return bd.lines)))
+	var back := Route.build("ii", "hh")
+	var bf: Dictionary = back.ferries[0]
+	t.check(absf(back.length - s.length) < 1.0 and is_equal_approx(bf.km0, 100.0) and is_equal_approx(bf.km1, 1050.0),
+		"long sea b->a: mirrored (%.0f..%.0f)" % [bf.km0, bf.km1])
+	# from 700 km inland over the sea: 850 km driven
+	var far := Route.build("gg", "ii")
+	var ff: Dictionary = far.ferries[0]
+	t.check(far.km == 1800 and absf(far.length - Route.track_length(850.0) - (ff.pad1 - ff.pad0)) < 1.0,
+		"inland city over the sea: the track of 850 driven km (%.0f)" % far.length)
+	t.check(absf(Route.km_between(far, 0.0, far.length) - 1800.0) < 0.5 and is_finite(far.duration), "inland city over the sea: 1800 real km")
+	var r := Race.new("xc60", far, 1)
+	t.check(r.fuel.level > 0.0, "inland city over the sea: a fuel tank")

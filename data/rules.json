@@ -300,6 +300,28 @@
 			"industry": 0,
 			"weather": "sun",
 			"grass": {"summer": ["#b3a966", "#a99f5e"], "autumn": ["#a3a45e", "#999a56"], "winter": ["#92a45e", "#889a56"]}
+		},
+		"steppe": {
+			"wood": 0.05,
+			"curve": 0.35,
+			"hill": 0.2,
+			"hills": 0.12,
+			"mountains": 0,
+			"sea": 0,
+			"industry": 0,
+			"weather": "sun",
+			"grass": {"summer": ["#a7b25e", "#9ea957"], "autumn": ["#b59d5c", "#ac9455"]}
+		},
+		"taiga": {
+			"wood": 1,
+			"curve": 0.9,
+			"hill": 0.6,
+			"hills": 0.5,
+			"mountains": 0,
+			"sea": 0,
+			"industry": 0,
+			"weather": "cloudy",
+			"grass": {"summer": ["#3d7d3a", "#377336"], "autumn": ["#6f7f3f", "#67773a"]}
 		}
 	},
 	"landmark_sizes": {
