@@ -1,0 +1,170 @@
+[
+	{
+		"a": "chisinau",
+		"b": "orhei",
+		"km": 46,
+		"road": "M2",
+		"towns": [["Stăuceni", 8], ["Cricova", 12], ["Măgdăcești", 17], ["Peresecina", 28], ["Pohorniceni", 40]],
+		"zones": [[10, "fields", "Valea Bîcului"], [22, "orchard", "Codru"], [46, "upland", "Podișul Codrilor"]],
+		"via": [[8, 28.86, 47.08], [17, 28.82, 47.13], [28, 28.77, 47.22]]
+	},
+	{
+		"a": "chisinau",
+		"b": "straseni",
+		"km": 24,
+		"road": "R1",
+		"towns": [["Trușeni", 8], ["Cojușna", 16]],
+		"zones": [[10, "fields", "Valea Bîcului"], [24, "orchard", "Codru"]],
+		"via": [[8, 28.76, 47.06], [16, 28.69, 47.11]]
+	},
+	{
+		"a": "straseni",
+		"b": "ungheni",
+		"km": 83,
+		"road": "R1",
+		"towns": [["Vorniceni", 16], ["Călărași", 28], ["Sipoteni", 40], ["Bahmut", 48], ["Cornești", 56], ["Pîrlița", 66]],
+		"zones": [
+			[20, "forest", "Codrii"], [45, "forest", "Podișul Codrilor"], [60, "upland", "Podișul Codrilor"],
+			[83, "fields", "Valea Prutului"]
+		],
+		"via": [[16, 28.44, 47.19], [28, 28.31, 47.25], [40, 28.18, 47.29], [56, 28, 47.36], [66, 27.9, 47.33]]
+	},
+	{
+		"a": "chisinau",
+		"b": "balti",
+		"km": 133,
+		"road": "M5",
+		"towns": [
+			["Stăuceni", 8], ["Măgdăcești", 16], ["Bravicea", 58], ["Hirova", 72], ["Rădeni", 80], ["Coșcodeni", 96],
+			["Bilicenii Vechi", 108]
+		],
+		"zones": [
+			[18, "orchard", "Codru"], [50, "upland", "Podișul Codrilor"], [85, "forest", "Codrii"],
+			[133, "fields", "Câmpia Bălților"]
+		],
+		"via": [
+			[16, 28.82, 47.12], [32, 28.64, 47.18], [58, 28.46, 47.35], [80, 28.22, 47.41], [96, 28.08, 47.5],
+			[120, 28.04, 47.67]
+		]
+	},
+	{
+		"a": "orhei",
+		"b": "soroca",
+		"km": 107,
+		"road": "M2",
+		"towns": [["Zahareuca", 24], ["Codrul Nou", 32], ["Ordășei", 48], ["Domulgeni", 56], ["Stoicani", 88], ["Racovăț", 96]],
+		"zones": [[30, "upland", "Podișul Codrilor"], [60, "fields", "Câmpia Bălților"], [107, "upland", "Podișul Nistrului"]],
+		"via": [[16, 28.67, 47.47], [32, 28.55, 47.58], [56, 28.46, 47.78], [72, 28.36, 47.89], [96, 28.34, 48.08]]
+	},
+	{
+		"a": "balti",
+		"b": "soroca",
+		"km": 86,
+		"road": [[43, "R12"], [73, "R7"], [86, "R14"]],
+		"towns": [
+			["Pelinia", 16], ["Sofia", 32], ["Drochia", 40], ["Chetrosu", 48], ["Zgurița", 56], ["Băxani", 64],
+			["Zastînca", 80]
+		],
+		"zones": [[45, "fields", "Câmpia Bălților"], [86, "upland", "Podișul Moldovei de Nord"]],
+		"via": [[16, 27.88, 47.85], [40, 27.81, 48.03], [56, 27.95, 48.11], [72, 28.13, 48.18]]
+	},
+	{
+		"a": "ungheni",
+		"b": "balti",
+		"km": 82,
+		"road": [[15, "R1"], [51, "R17"], [66, "R16"], [82, "M5"]],
+		"towns": [
+			["Mănoilești", 8], ["Pîrlița", 15], ["Bușila", 24], ["Șoltoaia", 32], ["Sărata Veche", 40],
+			["Fălești", 48], ["Egorovca", 56], ["Mărăndeni", 64]
+		],
+		"zones": [
+			[30, "fields", "Valea Prutului"],
+			[60, "upland", "Dealurile Ciulucurilor"],
+			[82, "fields", "Câmpia Bălților"]
+		],
+		"via": [[15, 27.88, 47.33], [32, 27.8, 47.45], [48, 27.71, 47.57], [64, 27.8, 47.69]]
+	},
+	{
+		"a": "chisinau",
+		"b": "hincesti",
+		"km": 33,
+		"road": "R3",
+		"towns": [["Ialoveni", 9]],
+		"zones": [[14, "orchard", "Codru"], [33, "forest", "Codrii"]],
+		"via": [[9, 28.76, 46.97], [20, 28.68, 46.9]]
+	},
+	{
+		"a": "hincesti",
+		"b": "cahul",
+		"km": 145,
+		"road": "R34",
+		"towns": [["Cărpineni", 22], ["Leova", 60], ["Cantemir", 93], ["Cîietu", 103]],
+		"zones": [
+			[30, "forest", "Codrii"], [70, "fields", "Valea Prutului"], [110, "forest", "Colinele Tigheciului"],
+			[145, "fields", "Valea Prutului"]
+		],
+		"via": [[22, 28.35, 46.77], [60, 28.25, 46.51], [93, 28.2, 46.28], [120, 28.25, 46.08]]
+	},
+	{
+		"a": "chisinau",
+		"b": "comrat",
+		"km": 98,
+		"road": "M3",
+		"towns": [["Băcioi", 10], ["Porumbrei", 42], ["Cimișlia", 70], ["Ciucur-Mingir", 80]],
+		"zones": [[22, "orchard", "Codru"], [60, "fields", "Câmpia Moldovei de Sud"], [98, "fields", "Bugeac"]],
+		"via": [[10, 28.87, 46.95], [30, 28.91, 46.78], [50, 28.86, 46.71], [70, 28.77, 46.53]]
+	},
+	{
+		"a": "comrat",
+		"b": "cahul",
+		"km": 77,
+		"road": [[43, "M3"], [77, "R32"]],
+		"towns": [["Chirsova", 8], ["Beșalma", 16], ["Congaz", 24], ["Balabanu", 40], ["Lopățica", 56]],
+		"zones": [[40, "fields", "Bugeac"], [62, "orchard", "Valul lui Traian"], [77, "fields", "Valea Prutului"]],
+		"via": [[16, 28.62, 46.15], [32, 28.56, 46.03], [48, 28.52, 45.95]]
+	},
+	{
+		"a": "chisinau",
+		"b": "bender",
+		"km": 67,
+		"road": [[50, "M5"], [67, "R2"]],
+		"towns": [["Budești", 16], ["Roșcani", 48], ["Calfa", 56], ["Varnița", 62]],
+		"zones": [[24, "orchard", "Codru"], [48, "fields", "Câmpia Nistrului de Jos"], [67, "orchard", "Valea Nistrului"]],
+		"via": [[16, 29, 47.07], [32, 29.18, 47.01], [48, 29.32, 46.92], [56, 29.39, 46.88]]
+	},
+	{
+		"a": "chisinau",
+		"b": "tiraspol",
+		"km": 77,
+		"road": "M5",
+		"towns": [["Budești", 16], ["Roșcani", 48], ["Gura Bîcului", 56], ["Bîcioc", 64]],
+		"zones": [[24, "orchard", "Codru"], [56, "fields", "Câmpia Nistrului de Jos"], [77, "fields", "Valea Nistrului"]],
+		"via": [[16, 29, 47.07], [32, 29.18, 47.01], [48, 29.32, 46.92], [64, 29.53, 46.92]]
+	},
+	{
+		"a": "bender",
+		"b": "tiraspol",
+		"km": 12,
+		"road": "R2",
+		"towns": [],
+		"zones": [[12, "orchard", "Valea Nistrului"]]
+	},
+	{
+		"a": "bender",
+		"b": "causeni",
+		"km": 26,
+		"road": "R26",
+		"towns": [["Hagimus", 8], ["Ursoaia", 16]],
+		"zones": [[26, "orchard", "Valea Nistrului"]],
+		"via": [[8, 29.46, 46.77], [16, 29.46, 46.7]]
+	},
+	{
+		"a": "causeni",
+		"b": "comrat",
+		"km": 94,
+		"road": [[62, "R26"], [94, "M3"]],
+		"towns": [["Zaim", 8], ["Sălcuța", 20], ["Taraclia", 32], ["Mihailovca", 50], ["Cimișlia", 63], ["Ciucur-Mingir", 72]],
+		"zones": [[30, "orchard", "Ștefan Vodă"], [94, "fields", "Bugeac"]],
+		"via": [[8, 29.34, 46.61], [32, 29.11, 46.56], [50, 28.9, 46.54], [63, 28.77, 46.51]]
+	}
+]

@@ -1,0 +1,248 @@
+{
+	"Chișinău": [
+		{
+			"kind": "chisinau_arch",
+			"name": {
+				"pl": "Łuk Triumfalny",
+				"en": "Triumphal Arch",
+				"cs": "Vítězný oblouk",
+				"is": "Sigurboginn",
+				"de": "Triumphbogen"
+			},
+			"desc": {
+				"pl": "Łuk z 1840 roku przed katedrą Narodzenia Pańskiego i jej dzwonnicą",
+				"en": "An arch of 1840 before the Cathedral of the Nativity and its bell tower",
+				"cs": "Oblouk z roku 1840 před katedrálou Narození Páně a její zvonicí",
+				"is": "Bogi frá 1840 fyrir framan Fæðingardómkirkjuna og klukkuturn hennar",
+				"de": "Ein Bogen von 1840 vor der Christi-Geburt-Kathedrale und ihrem Glockenturm"
+			},
+			"local": "Arcul de Triumf"
+		},
+		{
+			"kind": "cricova_cellars",
+			"name": {
+				"pl": "Piwnice Cricova",
+				"en": "Cricova cellars",
+				"cs": "Sklepy Cricova",
+				"is": "Vínkjallarar Cricova",
+				"de": "Weinkeller Cricova"
+			},
+			"desc": {
+				"pl": "Podziemne ulice wina, po których jeździ się samochodem między beczkami",
+				"en": "Underground wine streets you drive along between the barrels",
+				"cs": "Podzemní vinné ulice, po kterých se jezdí autem mezi sudy",
+				"is": "Neðanjarðargötur vínsins sem ekið er um milli tunnanna",
+				"de": "Unterirdische Weinstraßen, durch die man zwischen den Fässern fährt"
+			},
+			"local": "Cricova"
+		}
+	],
+	"Tiraspol": [
+		{
+			"kind": "kvint_distillery",
+			"name": {
+				"pl": "Gorzelnia Kvint",
+				"en": "Kvint distillery",
+				"cs": "Lihovar Kvint",
+				"is": "Kvint-brennslan",
+				"de": "Brennerei Kvint"
+			},
+			"desc": {
+				"pl": "Od 1897 roku produkuje się tu brandy z winogron znad Dniestru",
+				"en": "Making brandy from Dniester grapes since 1897",
+				"cs": "Od roku 1897 tu vyrábějí brandy z hroznů od Dněstru",
+				"is": "Hér hefur verið gert brandí úr þrúgum frá Dnjestr síðan 1897",
+				"de": "Seit 1897 wird hier Weinbrand aus Trauben vom Dnister gebrannt"
+			},
+			"local": "Fabrica Kvint"
+		}
+	],
+	"Bălți": [
+		{
+			"kind": "balti_cathedral",
+			"name": {
+				"pl": "Sobór świętych Konstantyna i Heleny",
+				"en": "Cathedral of Saints Constantine and Helena",
+				"cs": "Katedrála sv. Konstantina a Heleny",
+				"is": "Dómkirkja heilagra Konstantínusar og Helenu",
+				"de": "Kathedrale der Heiligen Konstantin und Helena"
+			},
+			"desc": {
+				"pl": "Biały sobór z niebieskimi kopułami w centrum miasta",
+				"en": "A white cathedral with blue domes in the city centre",
+				"cs": "Bílá katedrála s modrými kopulemi v centru města",
+				"is": "Hvít dómkirkja með bláum hvelfingum í miðborginni",
+				"de": "Eine weiße Kathedrale mit blauen Kuppeln im Stadtzentrum"
+			},
+			"local": "Catedrala Sfinții Constantin și Elena"
+		}
+	],
+	"Bender": [
+		{
+			"kind": "tighina_fortress",
+			"name": {
+				"pl": "Twierdza Tighina",
+				"en": "Tighina Fortress",
+				"cs": "Pevnost Tighina",
+				"is": "Tighina-virkið",
+				"de": "Festung Tighina"
+			},
+			"desc": {
+				"pl": "Turecka twierdza z XVI wieku nad Dniestrem, z wieżami i głęboką fosą",
+				"en": "A 16th-century Ottoman fortress on the Dniester, with towers and a deep moat",
+				"cs": "Turecká pevnost ze 16. století na Dněstru, s věžemi a hlubokým příkopem",
+				"is": "Tyrkneskt virki frá 16. öld við Dnjestr, með turnum og djúpri gröf",
+				"de": "Eine osmanische Festung aus dem 16. Jahrhundert am Dnister, mit Türmen und tiefem Graben"
+			},
+			"local": "Cetatea Tighina"
+		}
+	],
+	"Ungheni": [
+		{
+			"kind": "ungheni_eiffel_bridge",
+			"name": {
+				"pl": "Most Eiffla",
+				"en": "Eiffel Bridge",
+				"cs": "Eiffelův most",
+				"is": "Eiffel-brúin",
+				"de": "Eiffel-Brücke"
+			},
+			"desc": {
+				"pl": "Kolejowy most kratownicowy przez Prut z 1877 roku, z warsztatów Eiffla",
+				"en": "An 1877 lattice railway bridge over the Prut from Eiffel's works",
+				"cs": "Příhradový železniční most přes Prut z roku 1877 z Eiffelových dílen",
+				"is": "Grindarjárnbrautarbrú yfir Prut frá 1877, úr smiðjum Eiffels",
+				"de": "Eine Fachwerk-Eisenbahnbrücke über den Pruth von 1877 aus Eiffels Werkstätten"
+			},
+			"local": "Podul Eiffel"
+		}
+	],
+	"Cahul": [
+		{
+			"kind": "beleu_lake",
+			"name": {"pl": "Jezioro Beleu", "en": "Lake Beleu", "cs": "Jezero Beleu", "is": "Beleu-vatn", "de": "Beleu-See"},
+			"desc": {
+				"pl": "Rozlewisko Prutu w rezerwacie Dolny Prut, pełne pelikanów i czapli",
+				"en": "A Prut backwater in the Lower Prut reserve, full of pelicans and herons",
+				"cs": "Rameno Prutu v rezervaci Dolní Prut, plné pelikánů a volavek",
+				"is": "Lón í Prut í friðlandinu Neðri-Prut, fullt af pelíkönum og hegrum",
+				"de": "Ein Altwasser des Pruth im Reservat Unterer Pruth, voller Pelikane und Reiher"
+			},
+			"local": "Lacul Beleu"
+		}
+	],
+	"Soroca": [
+		{
+			"kind": "soroca_fortress",
+			"name": {
+				"pl": "Twierdza Soroca",
+				"en": "Soroca Fortress",
+				"cs": "Pevnost Soroca",
+				"is": "Soroca-virkið",
+				"de": "Festung Soroca"
+			},
+			"desc": {
+				"pl": "Okrągła kamienna twierdza nad Dniestrem z pięcioma basztami, z XVI wieku, na miejscu drewnianego grodu Stefana Wielkiego",
+				"en": "A round stone fortress on the Dniester with five towers, from the 16th century, on the site of Stephen the Great's wooden fort",
+				"cs": "Kruhová kamenná pevnost na Dněstru s pěti baštami ze 16. století, na místě dřevěného hradiště Štěpána Velikého",
+				"is": "Hringlaga steinvirki við Dnjestr með fimm turnum, frá 16. öld, þar sem trévirki Stefáns mikla stóð áður",
+				"de": "Eine runde Steinfestung am Dnister mit fünf Türmen aus dem 16. Jahrhundert, an der Stelle der hölzernen Burg Stefans des Großen"
+			},
+			"local": "Cetatea Soroca"
+		}
+	],
+	"Orhei": [
+		{
+			"kind": "orheiul_vechi",
+			"name": {"pl": "Stary Orhei", "en": "Old Orhei", "cs": "Starý Orhei", "is": "Gamla Orhei", "de": "Alt-Orhei"},
+			"desc": {
+				"pl": "Monaster wykuty w wapiennej skale nad zakolem rzeki Răut, z cerkwią na szczycie",
+				"en": "A monastery carved into a limestone cliff above a bend of the Răut, with a church on top",
+				"cs": "Klášter vytesaný do vápencové skály nad meandrem Răutu, s kostelem na vrcholu",
+				"is": "Klaustur höggvið í kalksteinskletta yfir bugðu á Răut, með kirkju efst",
+				"de": "Ein Kloster im Kalkfelsen über einer Schleife des Răut, mit einer Kirche obenauf"
+			},
+			"local": "Orheiul Vechi"
+		}
+	],
+	"Comrat": [
+		{
+			"kind": "comrat_cathedral",
+			"name": {
+				"pl": "Sobór św. Jana Chrzciciela",
+				"en": "Cathedral of St John the Baptist",
+				"cs": "Katedrála sv. Jana Křtitele",
+				"is": "Dómkirkja Jóhannesar skírara",
+				"de": "Kathedrale Johannes des Täufers"
+			},
+			"desc": {
+				"pl": "Prawosławny sobór Gagauzów ze złotymi kopułami",
+				"en": "The Gagauz Orthodox cathedral with golden domes",
+				"cs": "Pravoslavná katedrála Gagauzů se zlatými kopulemi",
+				"is": "Rétttrúnaðardómkirkja Gagása með gullnum hvelfingum",
+				"de": "Die orthodoxe Kathedrale der Gagausen mit goldenen Kuppeln"
+			},
+			"local": "Catedrala Sf. Ioan Botezătorul"
+		}
+	],
+	"Strășeni": [
+		{
+			"kind": "capriana_monastery",
+			"name": {
+				"pl": "Monaster Căpriana",
+				"en": "Căpriana Monastery",
+				"cs": "Klášter Căpriana",
+				"is": "Căpriana-klaustrið",
+				"de": "Kloster Căpriana"
+			},
+			"desc": {
+				"pl": "Monaster w lasach Codrii, ufundowany w XV wieku",
+				"en": "A monastery in the Codri forests, founded in the 15th century",
+				"cs": "Klášter v lesích Codri, založený v 15. století",
+				"is": "Klaustur í Codri-skógunum, stofnað á 15. öld",
+				"de": "Ein Kloster in den Codri-Wäldern, im 15. Jahrhundert gegründet"
+			},
+			"local": "Mănăstirea Căpriana"
+		}
+	],
+	"Căușeni": [
+		{
+			"kind": "causeni_dormition",
+			"name": {
+				"pl": "Cerkiew Zaśnięcia Matki Bożej",
+				"en": "Church of the Dormition",
+				"cs": "Kostel Zesnutí Bohorodice",
+				"is": "Kirkja himnafarar Maríu",
+				"de": "Mariä-Entschlafens-Kirche"
+			},
+			"desc": {
+				"pl": "Niska cerkiew wpuszczona w ziemię, w środku freski z XVIII wieku",
+				"en": "A low church sunk into the ground, with 18th-century frescoes inside",
+				"cs": "Nízký kostel zapuštěný do země, uvnitř fresky z 18. století",
+				"is": "Lág kirkja niðurgrafin, með freskum frá 18. öld",
+				"de": "Eine niedrige, in die Erde gesenkte Kirche mit Fresken aus dem 18. Jahrhundert"
+			},
+			"local": "Biserica Adormirea Maicii Domnului"
+		}
+	],
+	"Hîncești": [
+		{
+			"kind": "manuc_bey_palace",
+			"name": {
+				"pl": "Pałac Manuka Beja",
+				"en": "Manuc Bey's Palace",
+				"cs": "Palác Manuka Beje",
+				"is": "Höll Manuc Bey",
+				"de": "Palast von Manuc Bei"
+			},
+			"desc": {
+				"pl": "Pałacyk myśliwski z wieżyczkami z XIX wieku, w parku nad stawem",
+				"en": "A 19th-century hunting manor with turrets, in a park by a pond",
+				"cs": "Lovecký zámeček s věžičkami z 19. století v parku u rybníka",
+				"is": "Veiðihöll með turnum frá 19. öld, í garði við tjörn",
+				"de": "Ein Jagdschlösschen mit Türmchen aus dem 19. Jahrhundert, in einem Park am Teich"
+			},
+			"local": "Conacul Manuc Bei"
+		}
+	]
+}

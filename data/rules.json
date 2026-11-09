@@ -878,7 +878,20 @@
 		"kamara_tou_koraka": [50, 15],
 		"profitis_ilias_chapel": [30, 29],
 		"aphrodite_baths": [36, 19],
-		"caledonia_falls": [34, 24]
+		"caledonia_falls": [34, 24],
+		"chisinau_arch": [40, 40],
+		"cricova_cellars": [40, 16],
+		"kvint_distillery": [52, 22],
+		"balti_cathedral": [30, 28],
+		"tighina_fortress": [60, 26],
+		"ungheni_eiffel_bridge": [80, 15],
+		"beleu_lake": [50, 12],
+		"soroca_fortress": [44, 22],
+		"orheiul_vechi": [70, 39],
+		"comrat_cathedral": [32, 28],
+		"capriana_monastery": [40, 24],
+		"causeni_dormition": [30, 12],
+		"manuc_bey_palace": [44, 18]
 	},
 	"police": {"escape_chance": 0.2, "escape_kmh": 180, "escape_swerves": [3, 5]},
 	"postcards": {"stamps": [0.15, 0.3, 0.45, 0.6], "stamp_caps": [2, 3, 3, 4, 5, 5, 5]}

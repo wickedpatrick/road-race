@@ -114,6 +114,12 @@
 			"name": {"pl": "Cypr", "en": "Cyprus", "cs": "Kypr", "is": "Kýpur", "de": "Zypern"},
 			"neighbours": ["gr"],
 			"favorite_neighbour": "gr"
+		},
+		{
+			"code": "md",
+			"name": {"pl": "Mołdawia", "en": "Moldova", "cs": "Moldavsko", "is": "Moldóva", "de": "Moldau"},
+			"neighbours": ["ro", "ua"],
+			"favorite_neighbour": "ro"
 		}
 	]
 }
