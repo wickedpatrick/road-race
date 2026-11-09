@@ -36,16 +36,19 @@ func run(t) -> void:
 	var s := Route.build("aa", "bb")
 	t.check(s.ferries.size() == 1, "one ferry on the way")
 	var f: Dictionary = s.ferries[0]
-	# the sea is not driven: the track is the driven km's, plus FERRY_GAP from the barrier to the far ramp (and here no
-	# open road put around the quays: Alfa's streets and Isle are far enough)
-	t.check(is_equal_approx(f.pad0, f.z) and is_equal_approx(f.pad1, f.z_out), "no padding needed")
-	t.check(absf(s.length - Route.track_length(400 - 280) - Route.FERRY_GAP) < 1.0, "track of the driven 120 km (%.0f)" % s.length)
+	# the sea is not driven: the track is the driven km's, plus FERRY_GAP from the barrier to the far ramp (no open road
+	# put in before the quay, Alfa's streets are far enough; after the ramp Isle is kept past the far pier)
+	var post: float = f.pad1 - f.z_out
+	t.check(is_equal_approx(f.pad0, f.z), "no padding needed before the quay")
+	t.check(post > 0.0 and absf(s.towns.filter(func(tn): return tn.name == "Isle")[0].z - Route.TOWN_HALF - f.z_out - Route.FAR_PIER - Route.FERRY_CLEAR) < 1.0,
+		"Isle's streets begin FERRY_CLEAR past the far pier (post %.0f)" % post)
+	t.check(absf(s.length - Route.track_length(400 - 280) - Route.FERRY_GAP - post) < 1.0, "track of the driven 120 km (%.0f)" % s.length)
 	t.check(s.km == 400, "the real total stays in km")
 	t.check(absf(f.z - 100.0 * s.m_per_km) < 1.0, "barrier at km 100 (%.0f)" % f.z)
 	t.check(is_equal_approx(f.z_out - f.z, Route.FERRY_GAP) and f.name == "Alfa – Beta" and f.fact == "Prom"
 		and is_equal_approx(f.sea_km, 280.0), "the far quay, name, fact, sea km")
 	var isle: Dictionary = s.towns.filter(func(tn): return tn.name == "Isle")[0]
-	t.check(absf(isle.z - (110.0 * s.m_per_km + Route.FERRY_GAP)) < 1.0, "a town past the sea moved back by its km")
+	t.check(absf(isle.z - (110.0 * s.m_per_km + Route.FERRY_GAP + post)) < 1.0, "a town past the sea moved back by its km")
 	t.check(Route.ferry_at(s, f.z - 100.0) == f and Route.ferry_at(s, f.z_out) == f and Route.ferry_at(s, f.z - Route.FERRY_QUAY - 5.0).is_empty(),
 		"ferry_at covers the quay and the crossing")
 	t.check(not s.stations.any(func(z): return z > f.z - Route.FERRY_QUAY - 40.0 and z < f.z_out + 40.0), "no station on the quay")
@@ -190,4 +193,27 @@ func run(t) -> void:
 			t.check(absf(tr.segment_at(lf.z - 60.0).curve) < 0.001 and absf(tr.segment_at(lf.z - 60.0).grade) < 0.001,
 				"%s: the quay is flat and straight" % name)
 	GameData._countries.erase(CODE)
+	# every real road with a ferry, both ways: no station on or near a quay or the far pier, every town's entry sign
+	# kept, no station to pull into on the far ramp
+	for code in GameData.country_codes():
+		GameData.current = code
+		for rd in Geo.roads():
+			if not rd.has("ferry"): continue
+			for pair in [[rd.a, rd.b], [rd.b, rd.a]]:
+				var rs := Route.build(pair[0], pair[1])
+				var name: String = "%s %s->%s" % [code, pair[0], pair[1]]
+				for rf in rs.ferries:
+					t.check(not rs.stations.any(func(z): return z > rf.z - Route.FERRY_QUAY - 40.0 and z < rf.z_out + Route.FAR_PIER + 40.0),
+						"%s: no station on the quays %s" % [name, str(rs.stations)])
+					var rr := Race.new("xc60", rs, 1)
+					rr.z = rf.z_out
+					t.check(not rr.station_in_range(), "%s: no station at the far ramp" % name)
+				var sc := Scenery.build(rs, 1)
+				var signs := []
+				for idx in sc:
+					for it in sc[idx]:
+						if it.type == "town_sign": signs.append(it.text)
+				for tn in rs.towns:
+					if not tn.get("start", false):
+						t.check(signs.has(tn.name), "%s: %s's entry sign" % [name, tn.name])
 	GameData.current = was

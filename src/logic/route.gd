@@ -41,6 +41,7 @@ const FERRY_STOP_TIME := 10.0 ## seconds of the time limit for braking and board
 ## A port city's streets end where its quay begins: when a ferry starts (ends) so near a settlement that the quay (the
 ## far ramp) would lie in its streets, open road is put in between, at least FERRY_CLEAR metres beyond the streets.
 const FERRY_CLEAR := 50.0
+const FAR_PIER := 70.0 ## the far quay's pier runs on this far past the ramp (Scenery), no town or station on it
 const MIN_DRIVEN := 1.0 ## km: the least driven distance the track is scaled by (a trip almost all at sea)
 
 ## Cities one road away from `id` (the only places a trip from it can go to).
@@ -190,7 +191,7 @@ static func build(from: String, to: String) -> Dictionary:
 		var fz := _sea_z(sea.k0, seas, mpk, -1)
 		sea.pre = maxf(0.0, _sea_z(before[0], seas, mpk) + before[1] + FERRY_QUAY + FERRY_CLEAR - fz)
 		fz += sea.pre
-		sea.post = maxf(0.0, fz + FERRY_GAP + FERRY_CLEAR + after[1] - _sea_z(after[0], seas, mpk))
+		sea.post = maxf(0.0, fz + FERRY_GAP + FAR_PIER + FERRY_CLEAR + after[1] - _sea_z(after[0], seas, mpk))
 		padded += sea.pre + FERRY_GAP + sea.post
 		ferries.append({"z": fz, "z_out": fz + FERRY_GAP, "name": sea.fr.get("name", ""), "fact": sea.fr.get("fact", ""),
 			"sea_km": sea.k1 - sea.k0, "km0": sea.k0, "km1": sea.k1, "pad0": fz - sea.pre, "pad1": fz + FERRY_GAP + sea.post})
@@ -249,7 +250,7 @@ static func build(from: String, to: String) -> Dictionary:
 		"half": _end_half(to), "finish": true})
 	_separate(towns)
 	# the quays and the crossing, with a little open road around them
-	var quays: Array = ferries.map(func(f): return {"z0": f.z - FERRY_QUAY - 40.0, "z1": f.z_out + 40.0})
+	var quays: Array = ferries.map(func(f): return {"z0": f.z - FERRY_QUAY - 40.0, "z1": f.z_out + FAR_PIER + 40.0})
 	_fit_tunnels(tunnels, towns, length, quays)
 	borders.sort_custom(func(p, q): return p.z < q.z)
 	_place_crossings(borders, towns, tunnels + quays, length)
@@ -280,6 +281,9 @@ static func build(from: String, to: String) -> Dictionary:
 			zs = _free_spot(z0, towns, avoid, prev + 400.0, length - 450.0)
 		if zs < 0.0:
 			zs = minf(_clear_spot(z0, towns, avoid, 80.0), length - 450.0)
+		if quays.any(func(q): return zs > q.z0 and zs < q.z1) \
+				or (not ferries.is_empty() and towns.any(func(tn): return zs > tn.z - tn.half - 40.0 and zs < tn.z + tn.half + 40.0)):
+			zs = -1.0 # never on a quay or a pier, nor over a town's signs: a short ferry trip may go without a station
 		if zs > prev + 50.0:
 			stations.append(zs)
 	var curve := 0.0

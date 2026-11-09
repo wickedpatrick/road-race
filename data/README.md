@@ -132,7 +132,7 @@ List of roads between two neighbouring cities `a` and `b` (travelling `b` -> `a`
   quay's ramp), towns, zones, tunnels and borders out at sea are dropped. The quay runs `Route.FERRY_QUAY` track
   metres up to a barrier across the road (driving into it is a crash); stopped on the quay the car boards, a chase
   ends, and the crossing takes `Race.FERRY_TIME` seconds off the clock (no time limit, no fuel), then the car comes
-  off the ramp on the far quay. Stations, boards, crossings and tunnels keep clear of the quays, traffic too; the
+  off the ramp on the far quay. Stations, boards, crossings and tunnels keep clear of the quays and the far pier (`Route.FAR_PIER` past the ramp; a short ferry trip with no free spot has no station), traffic too; the
   time limit gets `Route.FERRY_STOP_TIME` per ferry. The trip's `km` stays the real total (the map), and the sea
   counts in full in every real distance (boards, HUD, mini-map, km driven). A port city's streets end at its quay:
   when `from_km` (or `km - to_km`) would put the quay (or the far ramp) inside a city's or town's streets, open road

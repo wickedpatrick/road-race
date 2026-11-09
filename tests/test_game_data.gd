@@ -48,7 +48,8 @@ func _check_gr(t) -> void:
 	t.check(Geo.city("athina").name == "Athína" and Geo.native("Athína") == "Αθήνα", "gr: Athína on the signs, Αθήνα above it")
 	GameData.current = "pl"
 
-## Every trip between neighbouring cities builds a playable stage (stations, limits, a track, scenery).
+## Every trip between neighbouring cities builds a playable stage (stations, limits, a track, scenery); a short trip
+## over a ferry may go without a station.
 func _check_trips(t, code: String) -> void:
 	GameData.current = code
 	var ok := true
@@ -57,7 +58,7 @@ func _check_trips(t, code: String) -> void:
 		for b in Route.neighbours(a):
 			var s := Route.build(a, b)
 			trips += 1
-			if s.stations.is_empty() or s.duration <= 0.0 or s.towns[0].id != a or s.towns[-1].id != b:
+			if (s.stations.is_empty() and s.ferries.is_empty()) or s.duration <= 0.0 or s.towns[0].id != a or s.towns[-1].id != b:
 				ok = false; print("  %s: trip %s-%s broken" % [code, a, b])
 			for zz in [10.0, s.length * 0.5, s.length - 10.0]:
 				if Route.speed_limit_at(s, zz) <= 0 and not (Route.lanes_at(s, zz) == 3 and Geo.limits().has("unlimited_beyond_km")): ok = false

@@ -35,7 +35,7 @@ func run(t) -> void:
 			for k in stage_keys:
 				if not s.has(k): keys_ok = false
 			var prev := 0.0
-			if s.stations.size() < 1: st_ok = false
+			if s.stations.size() < 1 and s.ferries.is_empty(): st_ok = false # a short ferry trip may have none
 			for z in s.stations:
 				if z <= prev or z >= s.length - 300.0: st_ok = false
 				prev = z

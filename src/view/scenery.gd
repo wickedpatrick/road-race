@@ -146,9 +146,9 @@ const QUAY_EDGE := 30.0 ## the pier's edges, metres from the road centre (water 
 const FERRY_SIGN_BEFORE := 30.0 ## the ferry sign stands this far before the quay
 static func _port(items: Dictionary, f: Dictionary, rng: RandomNumberGenerator) -> void:
 	var q0: float = f.z - Route.FERRY_QUAY
-	_clear_range(items, q0 - FERRY_SIGN_BEFORE - 8.0, f.z_out + 70.0, -1000.0, 1000.0)
+	_clear_range(items, q0 - FERRY_SIGN_BEFORE - 8.0, f.z_out + Route.FAR_PIER, -1000.0, 1000.0)
 	_add(items, "ferry_sign", q0 - FERRY_SIGN_BEFORE, SIGN_EDGE + REGION_W * 0.5, REGION_W, 5.0, rng).text = f.name
-	for side in [[q0, f.z - 2.0], [f.z_out - 30.0, f.z_out + 64.0]]:
+	for side in [[q0, f.z - 2.0], [f.z_out - 30.0, f.z_out + Route.FAR_PIER - 6.0]]:
 		var z: float = side[0] + 6.0
 		while z < side[1]:
 			for sd in [-1.0, 1.0]:
@@ -843,7 +843,7 @@ static func ground(stage: Dictionary, nseg: int) -> Array:
 ## True on a ferry port's pier: the quay up to the barrier, and the far quay around the ramp.
 static func on_pier(stage: Dictionary, z: float) -> bool:
 	for f in stage.get("ferries", []):
-		if (z >= f.z - Route.FERRY_QUAY and z < f.z) or (z >= f.z_out - 30.0 and z < f.z_out + 70.0):
+		if (z >= f.z - Route.FERRY_QUAY and z < f.z) or (z >= f.z_out - 30.0 and z < f.z_out + Route.FAR_PIER):
 			return true
 	return false
 
