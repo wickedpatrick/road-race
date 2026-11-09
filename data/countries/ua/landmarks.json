@@ -208,7 +208,7 @@
 				"en": "A classical rotunda on the bluff above the Vorskla valley, a favourite walk",
 				"cs": "Klasicistní rotunda na srázu nad údolím Vorskly, oblíbené místo procházek",
 				"is": "Klassískur hringskáli á brekkubrún yfir Vorskla-dalnum, vinsæll gönguáfangastaður",
-				"de": "Eine klassizistische Rotunde am Hang über dem Tal der Worskla, ein beliebter Spazierweg"
+				"de": "Eine klassizistische Rotunde am Hang über dem Tal der Worskla, ein beliebtes Ausflugsziel"
 			},
 			"local": "Біла альтанка"
 		}
@@ -327,7 +327,7 @@
 				"pl": "Pod Klewaniem tor kolejowy biegnie przez zielony tunel z drzew; pociąg wozi tu drewno",
 				"en": "Near Klevan a railway line runs through a green tunnel of trees; a train carries timber along it",
 				"cs": "U Klevaně vede železniční trať zeleným tunelem ze stromů; jezdí tu vlak se dřevem",
-				"is": "Við Klevan liggur járnbraut um grænan trjágöng; lest flytur þar timbur",
+				"is": "Við Klevan liggur járnbraut um græn trjágöng; lest flytur þar timbur",
 				"de": "Bei Klewan führt eine Bahnstrecke durch einen grünen Tunnel aus Bäumen; ein Zug bringt dort Holz"
 			},
 			"local": "Тунель кохання"
@@ -340,7 +340,7 @@
 			"desc": {
 				"pl": "Stanisławowski ratusz w stylu konstruktywizmu z lat 30. XX wieku, z wieżą zwieńczoną iglicą",
 				"en": "Stanisławów's constructivist town hall from the 1930s, its tower topped with a spire",
-				"cs": "Konstruktivistická radnice Stanislavova z 30. let 20. století s věží zakončenou jehlanem",
+				"cs": "Konstruktivistická radnice Stanislavova z 30. let 20. století s věží zakončenou štíhlou špičkou",
 				"is": "Ráðhús Stanisławów í konstrúktívískum stíl frá fjórða áratugnum, turninn með spíru",
 				"de": "Das konstruktivistische Rathaus von Stanisławów aus den 1930er Jahren, sein Turm mit einer Spitze"
 			},
@@ -398,11 +398,11 @@
 				"de": "KrAZ-Lastwagen"
 			},
 			"desc": {
-				"pl": "W Krzemieńczuku od 1958 roku powstają ciężkie ciężarówki KrAZ, w tym wywrotki do kopalń",
-				"en": "Heavy KrAZ trucks, including tipper lorries for the mines, have been made in Kremenchuk since 1958",
-				"cs": "V Kremenčuku se od roku 1958 vyrábějí těžká nákladní auta KrAZ, také sklápěče pro doly",
-				"is": "Þungir KrAZ-vörubílar, þar á meðal sturtubílar fyrir námur, hafa verið smíðaðir í Kremenchuk síðan 1958",
-				"de": "In Krementschuk werden seit 1958 schwere KrAZ-Lastwagen gebaut, auch Kipper für die Gruben"
+				"pl": "W Krzemieńczuku od 1959 roku powstają ciężkie ciężarówki KrAZ, w tym wywrotki do kopalń",
+				"en": "Heavy KrAZ trucks, including tipper lorries for the mines, have been made in Kremenchuk since 1959",
+				"cs": "V Kremenčuku se od roku 1959 vyrábějí těžká nákladní auta KrAZ, také sklápěče pro doly",
+				"is": "Þungir KrAZ-vörubílar, þar á meðal sturtubílar fyrir námur, hafa verið smíðaðir í Kremenchuk síðan 1959",
+				"de": "In Krementschuk werden seit 1959 schwere KrAZ-Lastwagen gebaut, auch Kipper für die Gruben"
 			},
 			"local": "Автомобіль КрАЗ"
 		}
@@ -473,7 +473,7 @@
 			"name": {
 				"pl": "Twierdza w Kamieńcu",
 				"en": "Kamianets Fortress",
-				"cs": "Pevnost Kameněc",
+				"cs": "Pevnost Kamenec",
 				"is": "Kamjanets-virkið",
 				"de": "Festung Kamjanez"
 			},

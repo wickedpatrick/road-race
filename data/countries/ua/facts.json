@@ -1,10 +1,10 @@
 {
 	"Kyiv": {
-		"pl": "Stolica Ukrainy nad Dnieprem; Sobór Mądrości Bożej stoi tu od prawie tysiąca lat",
-		"en": "Ukraine's capital on the Dnieper; St Sophia's Cathedral has stood here for almost a thousand years",
-		"cs": "Hlavní město Ukrajiny na Dněpru; chrám svaté Sofie tu stojí téměř tisíc let",
-		"is": "Höfuðborg Úkraínu við Dnjepr; Soffíukirkjan hefur staðið hér í nær þúsund ár",
-		"de": "Die Hauptstadt der Ukraine am Dnipro; die Sophienkathedrale steht hier seit fast tausend Jahren"
+		"pl": "Stolica Ukrainy nad Dnieprem; Sobór Mądrości Bożej stoi tu od ponad tysiąca lat",
+		"en": "Ukraine's capital on the Dnieper; St Sophia's Cathedral has stood here for over a thousand years",
+		"cs": "Hlavní město Ukrajiny na Dněpru; chrám svaté Sofie tu stojí přes tisíc let",
+		"is": "Höfuðborg Úkraínu við Dnjepr; Soffíukirkjan hefur staðið hér í meira en þúsund ár",
+		"de": "Die Hauptstadt der Ukraine am Dnipro; die Sophienkathedrale steht hier seit über tausend Jahren"
 	},
 	"Kharkiv": {
 		"pl": "Pierwsza stolica Ukrainy radzieckiej (1919–1934) i wielkie miasto uniwersyteckie; Plac Wolności to jeden z największych placów Europy",
@@ -70,7 +70,7 @@
 		"de": "Eine der ältesten Städte der Kiewer Rus; die Verklärungskathedrale stammt aus dem 11. Jahrhundert"
 	},
 	"Poltava": {
-		"pl": "Tu w 1709 roku pokonano armię szwedzkiego króla Karola XII; miasto słynie z pierogów hałuszki",
+		"pl": "Tu w 1709 roku pokonano armię szwedzkiego króla Karola XII; miasto słynie z klusek hałuszek",
 		"en": "Here the army of King Charles XII of Sweden was defeated in 1709; the city is famous for halushky dumplings",
 		"cs": "Zde byla roku 1709 poražena armáda švédského krále Karla XII.; město je proslulé knedlíčky halušky",
 		"is": "Hér var her Karls XII Svíakonungs sigraður árið 1709; borgin er fræg fyrir halúskí-bollur",
@@ -164,7 +164,7 @@
 		"pl": "Ma najdłuższą aleję lipową w Europie nad rzeką Uż; wiosną kwitną tu japońskie wiśnie",
 		"en": "It has the longest linden avenue in Europe along the Uzh; Japanese cherry trees blossom here every spring",
 		"cs": "Má nejdelší lipovou alej v Evropě podél řeky Uh; na jaře tu kvetou japonské sakury",
-		"is": "Hér er lengsta linditrjágöng Evrópu meðfram ánni Uzh; japönsk kirsuberjatré blómstra hér á hverju vori",
+		"is": "Hér eru lengstu linditrjágöng Evrópu meðfram ánni Uzh; japönsk kirsuberjatré blómstra hér á hverju vori",
 		"de": "Hier gibt es die längste Lindenallee Europas am Fluss Usch; jedes Frühjahr blühen japanische Kirschbäume"
 	},
 	"Kamianets-Podilskyi": {
@@ -227,7 +227,7 @@
 		"pl": "Zamek Ostrogskich; w „Tarasie Bulbie” Gogola Kozacy oblegają Dubno",
 		"en": "The castle of the Ostrozhsky princes; in Gogol's Taras Bulba the Cossacks besiege Dubno",
 		"cs": "Hrad knížat Ostrožských; v Gogolově Tarasu Bulbovi kozáci obléhají Dubno",
-		"is": "Kastali Ostrozkíj-fursta; í Taras Búlba eftir Gogol sitja kósakkarnir um Dubno",
+		"is": "Kastali Ostrozkíj-furstanna; í Taras Búlba eftir Gogol sitja kósakkarnir um Dubno",
 		"de": "Die Burg der Fürsten Ostroschskyj; in Gogols Taras Bulba belagern die Kosaken Dubno"
 	},
 	"Brody": {
@@ -263,7 +263,7 @@
 		"en": "Zolochiv Castle is part of Lviv's 'Golden Horseshoe' of castles; a Chinese Palace stands in its garden",
 		"cs": "Zámek Zoločiv patří do „Zlaté podkovy“ lvovských zámků; v zahradě stojí Čínský palác",
 		"is": "Zolotsjív-kastali er hluti af „Gullnu skeifunni“, kastölunum kringum Lvív; í garðinum stendur Kínverska höllin",
-		"de": "Das Schloss Solotschiw gehört zum „Goldenen Hufeisen“ der Lemberger Schlösser; im Garten steht ein Chinesisches Palais"
+		"de": "Das Schloss Solotschiw gehört zum „Goldenen Hufeisen“ der Schlösser um Lwiw; im Garten steht ein Chinesisches Palais"
 	},
 	"Zalishchyky": {
 		"pl": "W głębokiej pętli Dniestru, z ciepłym mikroklimatem; między wojnami modne letnisko",
@@ -282,7 +282,7 @@
 	"Halych": {
 		"pl": "Od Halicza wzięła nazwę Galicja; był stolicą Księstwa Halickiego",
 		"en": "Galicia took its name from Halych, once the capital of the Principality of Halych",
-		"cs": "Od Haliče dostala jméno Halič; byl hlavním městem Haličského knížectví",
+		"cs": "Halič (Galicie) dostala jméno podle města Halyč, hlavního města Haličského knížectví",
 		"is": "Galisía dregur nafn sitt af Halytsj, sem var höfuðborg furstadæmisins Halytsj",
 		"de": "Galizien hat seinen Namen von Halytsch, einst Hauptstadt des Fürstentums Halytsch"
 	},
