@@ -862,7 +862,14 @@
 		"skopje_stone_bridge": [96, 18],
 		"painted_mosque": [42, 31],
 		"kaneo": [80, 38],
-		"bitola_clock": [24, 48]
+		"bitola_clock": [24, 48],
+		"st_johns_cocathedral": [40, 34],
+		"sliema_fortizza": [36, 20],
+		"mosta_rotunda": [46, 40],
+		"mdina_gate": [36, 26],
+		"marsaxlokk_luzzu": [30, 14],
+		"mellieha_red_tower": [24, 26],
+		"gozo_cittadella": [60, 34]
 	},
 	"police": {"escape_chance": 0.2, "escape_kmh": 180, "escape_swerves": [3, 5]},
 	"postcards": {"stamps": [0.15, 0.3, 0.45, 0.6], "stamp_caps": [2, 3, 3, 4, 5, 5, 5]}

@@ -102,6 +102,12 @@
 			"members": ["me", "xk", "al", "mk"],
 			"neighbours": ["hr", "ba", "rs", "gr", "bg"],
 			"favorite_neighbour": "gr"
+		},
+		{
+			"code": "mt",
+			"name": {"pl": "Malta", "en": "Malta", "cs": "Malta", "is": "Malta", "de": "Malta"},
+			"neighbours": ["it"],
+			"favorite_neighbour": "it"
 		}
 	]
 }

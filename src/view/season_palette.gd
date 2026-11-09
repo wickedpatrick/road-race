@@ -1,17 +1,18 @@
 class_name SeasonPalette
 extends RefCounted
-## The ground and trees by season; the weather (Weather) picks one and adds its sky.
+## The ground and trees by season; the weather (Weather) picks one and adds its sky. `stone` (dry-stone walls) and
+## `wall` (Mediterranean houses) a country may tint (Malta's limestone, country.json `palette`).
 const SEASONS := ["summer", "autumn", "winter"]
 const DATA := {
 	"summer": {"crop_a": Color("d9b54a"), "crop_b": Color("78b84a"), "crop_c": Color("c4a050"), "water": Color("3f86c8"), "sand": Color("e8d7a6"), "pave": Color("a5a7ac"), "dark": Color("5d5a4d"), "sky_top": Color("2a7fd6"), "sky_bottom": Color("c4e6f8"), "grass_a": Color("4fa93b"), "grass_b": Color("45a036"),
 		"road_a": Color("6b6e73"), "road_b": Color("686b70"), "rumble_a": Color("e6e6e6"), "rumble_b": Color("c9392c"), "line": Color("f4f4f4"),
-		"tree": Color("2f8b2f"), "tree2": Color("267326"), "mountain": Color("7aa0b8"), "particle": "none", "sun": true},
+		"tree": Color("2f8b2f"), "tree2": Color("267326"), "mountain": Color("7aa0b8"), "stone": Color("b9ad93"), "wall": Color("f4f1ea"), "particle": "none", "sun": true},
 	"autumn": {"crop_a": Color("7a5a3a"), "crop_b": Color("c8a85a"), "crop_c": Color("8aa04a"), "water": Color("4b7ea8"), "sand": Color("d8c79a"), "pave": Color("a0a0a2"), "dark": Color("5f574a"), "sky_top": Color("86a9c4"), "sky_bottom": Color("f3e1bf"), "grass_a": Color("a9a04a"), "grass_b": Color("9d9443"),
 		"road_a": Color("6a6b6e"), "road_b": Color("67686b"), "rumble_a": Color("e2ddd2"), "rumble_b": Color("b8402b"), "line": Color("eee9dc"),
-		"tree": Color("dc7a2b"), "tree2": Color("b83a2a"), "mountain": Color("a89a86"), "particle": "leaves", "sun": false},
+		"tree": Color("dc7a2b"), "tree2": Color("b83a2a"), "mountain": Color("a89a86"), "stone": Color("b9ad93"), "wall": Color("f4f1ea"), "particle": "leaves", "sun": false},
 	"winter": {"crop_a": Color("e6ecf0"), "crop_b": Color("dbe3e9"), "crop_c": Color("cfd9e0"), "water": Color("b9d3e3"), "sand": Color("e6ebee"), "pave": Color("b5b8bc"), "dark": Color("9a9fa5"), "sky_top": Color("95aec2"), "sky_bottom": Color("eaf0f5"), "grass_a": Color("f3f7f9"), "grass_b": Color("e4ebef"),
 		"road_a": Color("6f7378"), "road_b": Color("6c7075"), "rumble_a": Color("eef0f2"), "rumble_b": Color("b9423a"), "line": Color("fafafa"),
-		"tree": Color("2f5c46"), "tree2": Color("ffffff"), "mountain": Color("c3d0da"), "particle": "snow", "sun": false},
+		"tree": Color("2f5c46"), "tree2": Color("ffffff"), "mountain": Color("c3d0da"), "stone": Color("b9ad93"), "wall": Color("f4f1ea"), "particle": "snow", "sun": false},
 }
 static func by_name(season: String) -> Dictionary:
 	return DATA[season]

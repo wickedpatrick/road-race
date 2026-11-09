@@ -1,0 +1,22 @@
+{
+	"mosta": {"name": "Mosta", "lat": 35.91, "lon": 14.426, "pop": 25, "region": "Tramuntana"},
+	"sliema": {"name": "Sliema", "lat": 35.912, "lon": 14.502, "pop": 23, "region": "Ċentrali"},
+	"mellieha": {"name": "Mellieħa", "lat": 35.957, "lon": 14.362, "pop": 12, "region": "Tramuntana"},
+	"victoria": {"name": "Victoria", "lat": 36.044, "lon": 14.239, "pop": 7, "region": "Għawdex"},
+	"valletta": {"name": "Valletta", "lat": 35.899, "lon": 14.514, "pop": 6, "region": "Nofsinhar"},
+	"marsaxlokk": {"name": "Marsaxlokk", "lat": 35.842, "lon": 14.543, "pop": 4, "region": "Xlokk"},
+	"mdina": {
+		"name": "Mdina",
+		"lat": 35.886,
+		"lon": 14.403,
+		"pop": 0,
+		"region": "Tramuntana",
+		"note": {
+			"pl": "dawna stolica, „Ciche Miasto” na wzgórzu",
+			"en": "the old capital, the “Silent City” on a hill",
+			"cs": "stará metropole, „Tiché město“ na kopci",
+			"is": "gamla höfuðborgin, „þögla borgin“ á hæð",
+			"de": "die alte Hauptstadt, die „stille Stadt“ auf dem Hügel"
+		}
+	}
+}

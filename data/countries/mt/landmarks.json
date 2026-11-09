@@ -1,0 +1,130 @@
+{
+	"Valletta": [
+		{
+			"kind": "st_johns_cocathedral",
+			"name": {
+				"pl": "Konkatedra św. Jana",
+				"en": "St John's Co-Cathedral",
+				"cs": "Konkatedrála sv. Jana",
+				"is": "Samdómkirkja heilags Jóhannesar",
+				"de": "St.-Johannes-Co-Kathedrale"
+			},
+			"desc": {
+				"pl": "Surowa fasada joannitów, w środku złoto i dwa obrazy Caravaggia",
+				"en": "A plain facade, and inside gold and two paintings by Caravaggio",
+				"cs": "Strohé průčelí, uvnitř zlato a dva obrazy od Caravaggia",
+				"is": "Látlaus framhlið, inni gull og tvö málverk eftir Caravaggio",
+				"de": "Schlichte Fassade, innen Gold und zwei Gemälde von Caravaggio"
+			},
+			"local": "Kon-Katidral ta' San Ġwann"
+		}
+	],
+	"Sliema": [
+		{
+			"kind": "sliema_fortizza",
+			"name": {"pl": "Il-Fortizza", "en": "Il-Fortizza", "cs": "Il-Fortizza", "is": "Il-Fortizza", "de": "Il-Fortizza"},
+			"desc": {
+				"pl": "Brytyjska bateria z blankami na skałach, dziś restauracja",
+				"en": "A battlemented British battery on the rocks, now a restaurant",
+				"cs": "Britská baterie s cimbuřím na skalách, dnes restaurace",
+				"is": "Breskt fallbyssuvirki á klettunum, nú veitingastaður",
+				"de": "Britische Batterie mit Zinnen auf den Felsen, heute ein Restaurant"
+			},
+			"local": "Il-Fortizza"
+		}
+	],
+	"Mosta": [
+		{
+			"kind": "mosta_rotunda",
+			"name": {
+				"pl": "Rotunda w Moście",
+				"en": "The Mosta Rotunda",
+				"cs": "Rotunda v Mostě",
+				"is": "Rotunda í Mosta",
+				"de": "Die Rotunde von Mosta"
+			},
+			"desc": {
+				"pl": "Kościół z jedną z największych kopuł Europy, jak rzymski Panteon",
+				"en": "A church with one of Europe's biggest domes, like the Pantheon",
+				"cs": "Kostel s jednou z největších kupolí Evropy, jako římský Pantheon",
+				"is": "Kirkja með einni stærstu hvelfingu Evrópu, eins og Pantheon",
+				"de": "Eine Kirche mit einer der größten Kuppeln Europas, wie das Pantheon"
+			},
+			"local": "Ir-Rotunda tal-Mosta"
+		}
+	],
+	"Mdina": [
+		{
+			"kind": "mdina_gate",
+			"name": {
+				"pl": "Brama Mdiny",
+				"en": "Mdina Gate",
+				"cs": "Brána Mdiny",
+				"is": "Borgarhlið Mdina",
+				"de": "Das Stadttor von Mdina"
+			},
+			"desc": {
+				"pl": "Barokowa brama z 1724 roku z kamiennym mostem nad suchą fosą",
+				"en": "A Baroque gate of 1724, with a stone bridge over the dry moat",
+				"cs": "Barokní brána z roku 1724 s kamenným mostem přes suchý příkop",
+				"is": "Barokkhlið frá 1724 með steinbrú yfir þurra síkið",
+				"de": "Barockes Tor von 1724 mit Steinbrücke über den trockenen Graben"
+			},
+			"local": "Il-Bieb tal-Imdina"
+		}
+	],
+	"Marsaxlokk": [
+		{
+			"kind": "marsaxlokk_luzzu",
+			"name": {"pl": "Łodzie luzzu", "en": "Luzzu Boats", "cs": "Lodě luzzu", "is": "Luzzu-bátar", "de": "Luzzu-Boote"},
+			"desc": {
+				"pl": "Kolorowe łodzie rybackie z okiem Ozyrysa na dziobie",
+				"en": "Colourful fishing boats with the Eye of Osiris on the bow",
+				"cs": "Barevné rybářské lodě s Usirovým okem na přídi",
+				"is": "Litríkir fiskibátar með auga Ósírisar á stefninu",
+				"de": "Bunte Fischerboote mit dem Auge des Osiris am Bug"
+			},
+			"local": "Il-Luzzu"
+		}
+	],
+	"Mellieħa": [
+		{
+			"kind": "mellieha_red_tower",
+			"name": {
+				"pl": "Czerwona Wieża",
+				"en": "The Red Tower",
+				"cs": "Červená věž",
+				"is": "Rauði turninn",
+				"de": "Der Rote Turm"
+			},
+			"desc": {
+				"pl": "Czerwona wieża strażnicza joannitów z 1649 roku nad zatoką",
+				"en": "The Knights' red watchtower of 1649 above the bay",
+				"cs": "Červená strážní věž johanitů z roku 1649 nad zátokou",
+				"is": "Rauður varðturn riddaranna frá 1649 yfir flóanum",
+				"de": "Der rote Wachturm der Johanniter von 1649 über der Bucht"
+			},
+			"local": "It-Torri l-Aħmar"
+		}
+	],
+	"Victoria": [
+		{
+			"kind": "gozo_cittadella",
+			"name": {
+				"pl": "Cytadela na Gozo",
+				"en": "The Gozo Citadel",
+				"cs": "Citadela na Gozu",
+				"is": "Kastalinn á Gozo",
+				"de": "Die Zitadelle von Gozo"
+			},
+			"desc": {
+				"pl": "Mury z katedrą na wzgórzu, z których widać całą wyspę",
+				"en": "Walls and a cathedral on a hill, with a view of the whole island",
+				"cs": "Hradby s katedrálou na kopci, odkud je vidět celý ostrov",
+				"is": "Múrar og dómkirkja á hæð, með útsýni yfir alla eyjuna",
+				"de": "Mauern und Kathedrale auf einem Hügel, mit Blick über die Insel"
+			},
+			"local": "Iċ-Ċittadella"
+		}
+	]
+}

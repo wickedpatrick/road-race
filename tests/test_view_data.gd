@@ -4,8 +4,13 @@ class Pen:
 	var n := 0
 	func draw_line(_a, _b, _c, _w := 1.0) -> void: n += 1
 	func draw_circle(_p, _r, _c) -> void: n += 1
-	func draw_rect(_r, _c) -> void: n += 1
-	func draw_colored_polygon(_p, _c) -> void: n += 1
+	var cols := []
+	func draw_rect(_r, c) -> void:
+		n += 1
+		cols.append(c)
+	func draw_colored_polygon(_p, c) -> void:
+		n += 1
+		cols.append(c)
 	func draw_set_transform(_p, _r := 0.0, _s := Vector2.ONE) -> void: pass
 
 func run(t) -> void:
@@ -133,3 +138,18 @@ func _test_mediterranean(t) -> void:
 		var pen := Pen.new()
 		Scenery.draw_item(pen, {"type": kind, "v": 0.3, "c": 1, "w": 4.0, "h": 5.0, "lat": 10.0}, Vector2(400, 400), 6.0, SeasonPalette.by_name("summer"), "summer", null)
 		t.check(pen.n > 0, "%s is drawn" % kind)
+	# dry-stone walls stand clear of the shoulder like the other solid things (their near end at least 7.8 m out)
+	var walls := []
+	for idx in items:
+		for it in items[idx]:
+			if it.type == "stonewall": walls.append(absf(it.lat) - it.w * 0.5)
+	t.check(not walls.is_empty() and walls.all(func(d): return d >= 7.8), "dry-stone walls clear of the shoulder (nearest %.1f m)" % (walls.min() if not walls.is_empty() else -1.0))
+	# the stone and the house walls take the country's palette (Malta's honey limestone)
+	var honey := Color("d8b878")
+	for kind in ["stonewall", "whitehouse"]:
+		var pal: Dictionary = SeasonPalette.by_name("summer").duplicate()
+		pal["stone"] = honey
+		pal["wall"] = honey
+		var pen := Pen.new()
+		Scenery.draw_item(pen, {"type": kind, "v": 0.3, "c": 1, "w": 4.0, "h": 5.0, "lat": 10.0}, Vector2(400, 400), 6.0, pal, "summer", null)
+		t.check(pen.cols.has(honey), "%s in the palette's stone colour" % kind)

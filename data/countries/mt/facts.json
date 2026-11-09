@@ -1,0 +1,156 @@
+{
+	"Valletta": {
+		"pl": "Stolica zbudowana przez joannitów po Wielkim Oblężeniu z 1565 roku",
+		"en": "Capital built by the Knights after the Great Siege of 1565",
+		"cs": "Metropole postavená johanity po Velkém obléhání roku 1565",
+		"is": "Höfuðborg reist af riddurunum eftir umsátrið mikla 1565",
+		"de": "Hauptstadt, von den Johannitern nach der Belagerung von 1565 erbaut"
+	},
+	"Sliema": {
+		"pl": "Nadmorskie miasto hoteli i kawiarni z promenadą nad skałami",
+		"en": "A seaside town of hotels and cafés, with a promenade on the rocks",
+		"cs": "Přímořské město hotelů a kaváren s promenádou nad skalami",
+		"is": "Strandbær hótela og kaffihúsa með göngustíg við klettana",
+		"de": "Küstenstadt voller Hotels und Cafés, mit Promenade an den Felsen"
+	},
+	"Mosta": {
+		"pl": "W 1942 roku bomba przebiła kopułę Rotundy w czasie mszy i nie wybuchła",
+		"en": "In 1942 a bomb pierced the Rotunda's dome during Mass and didn't explode",
+		"cs": "Roku 1942 prorazila bomba kupoli Rotundy během mše a nevybuchla",
+		"is": "Árið 1942 fór sprengja gegnum hvelfingu Rotunda í messu en sprakk ekki",
+		"de": "1942 fiel eine Bombe in der Messe durch die Kuppel und explodierte nicht"
+	},
+	"Mdina": {
+		"pl": "Dawna stolica w murach na wzgórzu, bez samochodów i prawie bez hałasu",
+		"en": "The walled old capital on a hill, with no cars and hardly a sound",
+		"cs": "Opevněná stará metropole na kopci, bez aut a skoro bez hluku",
+		"is": "Gamla höfuðborgin innan múra á hæð, án bíla og nær hljóðlaus",
+		"de": "Ummauerte alte Hauptstadt auf einem Hügel, ohne Autos und fast still"
+	},
+	"Marsaxlokk": {
+		"pl": "Wioska rybacka pełna kolorowych łodzi luzzu, w niedzielę targ rybny",
+		"en": "A fishing village of colourful luzzu boats, a fish market on Sundays",
+		"cs": "Rybářská vesnice plná barevných lodí luzzu, v neděli rybí trh",
+		"is": "Fiskiþorp fullt af litríkum luzzu-bátum, fiskmarkaður á sunnudögum",
+		"de": "Fischerdorf voller bunter Luzzu-Boote, sonntags mit Fischmarkt"
+	},
+	"Mellieħa": {
+		"pl": "Sanktuarium Matki Bożej w grocie, z freskiem przypisywanym św. Łukaszowi",
+		"en": "A cave shrine of Our Lady, with a fresco said to be by St Luke",
+		"cs": "Svatyně Panny Marie v jeskyni s freskou připisovanou sv. Lukášovi",
+		"is": "Helgidómur Maríu í helli, með freskó sem sögð er eftir heilagan Lúkas",
+		"de": "Marienheiligtum in einer Grotte, mit einem Fresko, angeblich von Lukas"
+	},
+	"Victoria": {
+		"pl": "Stolica Gozo, po maltańsku Rabat, od 1887 roku nosi imię królowej",
+		"en": "The capital of Gozo, Rabat in Maltese, named after the Queen in 1887",
+		"cs": "Metropole Goza, maltsky Rabat, od roku 1887 nese jméno královny",
+		"is": "Höfuðstaður Gozo, Rabat á maltnesku, nefndur eftir drottningu 1887",
+		"de": "Hauptort von Gozo, maltesisch Rabat, seit 1887 nach der Königin benannt"
+	},
+	"Pietà": {
+		"pl": "W I wojnie światowej leczono tu tysiące rannych żołnierzy",
+		"en": "Thousands of wounded soldiers were cared for here in the First World War",
+		"cs": "Za první světové války se tu léčily tisíce raněných vojáků",
+		"is": "Hér var hlúð að þúsundum særðra hermanna í fyrri heimsstyrjöld",
+		"de": "Im Ersten Weltkrieg wurden hier Tausende Verwundete gepflegt"
+	},
+	"Gżira": {
+		"pl": "Z nabrzeża widać wysepkę Manoel z fortem joannitów",
+		"en": "From the waterfront you see Manoel Island with its Knights' fort",
+		"cs": "Z nábřeží je vidět ostrůvek Manoel s pevností johanitů",
+		"is": "Frá bakkanum sést Manoel-eyja með virki riddaranna",
+		"de": "Vom Ufer sieht man Manoel Island mit seiner Johanniterfestung"
+	},
+	"Birkirkara": {
+		"pl": "Jedna z największych miejscowości Malty, jeździł tędy kiedyś pociąg",
+		"en": "One of Malta's biggest towns, once on the railway to Mdina",
+		"cs": "Jedna z největších obcí Malty, kdysi tudy jezdil vlak do Mdiny",
+		"is": "Einn stærsti bær Möltu, lestin til Mdina fór áður hér um",
+		"de": "Einer der größten Orte Maltas, einst an der Bahn nach Mdina"
+	},
+	"Lija": {
+		"pl": "Słynie z fajerwerków na święto Przemienienia Pańskiego w sierpniu",
+		"en": "Famous for its fireworks at the feast of the Transfiguration in August",
+		"cs": "Proslulá ohňostroji o svátku Proměnění Páně v srpnu",
+		"is": "Fræg fyrir flugelda á ummyndunarhátíðinni í ágúst",
+		"de": "Berühmt für sein Feuerwerk zum Fest der Verklärung im August"
+	},
+	"Paola": {
+		"pl": "Pod miastem leży Hypogeum, podziemne sanktuarium sprzed 5000 lat",
+		"en": "Under the town lies the Hypogeum, a 5000-year-old underground temple",
+		"cs": "Pod městem leží Hypogeum, podzemní svatyně stará 5000 let",
+		"is": "Undir bænum er Hypogeum, 5000 ára neðanjarðarhof",
+		"de": "Unter der Stadt liegt das Hypogäum, ein 5000 Jahre altes Felsheiligtum"
+	},
+	"Żejtun": {
+		"pl": "Nazwa pochodzi od oliwek, rosły tu gaje oliwne już w czasach rzymskich",
+		"en": "Its name comes from olives: olive groves grew here in Roman times",
+		"cs": "Jméno má po olivách, olivové háje tu rostly už za Římanů",
+		"is": "Nafnið kemur af ólífum, ólífulundir uxu hér á tímum Rómverja",
+		"de": "Der Name kommt von Oliven: Olivenhaine wuchsen hier schon zur Römerzeit"
+	},
+	"Ħamrun": {
+		"pl": "Sklepy i pastizzi: francuskie ciastka z ricottą lub groszkiem",
+		"en": "A busy town of shops and pastizzi, pastries with ricotta or peas",
+		"cs": "Rušné město obchodů a pastizzi, taštiček s ricottou nebo hráškem",
+		"is": "Iðandi bær verslana og pastizzi, bita með ricotta eða baunum",
+		"de": "Lebhafte Stadt der Läden und Pastizzi, Teigtaschen mit Ricotta"
+	},
+	"Attard": {
+		"pl": "Tu stoi Pałac San Anton, siedziba prezydenta, z otwartym ogrodem",
+		"en": "Home of San Anton Palace, the President's seat, with gardens open to all",
+		"cs": "Stojí tu palác San Anton, sídlo prezidenta, s otevřenou zahradou",
+		"is": "Hér er San Anton-höllin, bústaður forsetans, með opinn garð",
+		"de": "Hier steht der San-Anton-Palast des Präsidenten, mit offenem Garten"
+	},
+	"Burmarrad": {
+		"pl": "Płaska dolina pól i szklarni, w której rosną truskawki",
+		"en": "A flat valley of fields and greenhouses where strawberries grow",
+		"cs": "Plochá dolina polí a skleníků, kde rostou jahody",
+		"is": "Flatur dalur akra og gróðurhúsa þar sem jarðarber vaxa",
+		"de": "Flaches Tal voller Felder und Gewächshäuser, hier wachsen Erdbeeren"
+	},
+	"Xemxija": {
+		"pl": "Nazwa znaczy „słoneczna”, w skale są koleiny sprzed tysięcy lat",
+		"en": "Its name means “sunny”; cart ruts thousands of years old are in the rock",
+		"cs": "Jméno znamená „slunná“, ve skále jsou tisíce let staré koleje",
+		"is": "Nafnið þýðir „sólrík“, í klettinum eru þúsund ára gömul hjólför",
+		"de": "Der Name heißt „sonnig“, im Fels sind uralte Karrenspuren"
+	},
+	"San Ġiljan": {
+		"pl": "Po angielsku St Julian's: zatoka Spinola i nocne życie Paceville",
+		"en": "St Julian's: Spinola Bay with its boats and the nightlife of Paceville",
+		"cs": "Anglicky St Julian's: zátoka Spinola a noční život Paceville",
+		"is": "St Julian's á ensku: Spinola-flói og næturlíf Paceville",
+		"de": "Auf Englisch St Julian's: Spinola-Bucht und das Nachtleben von Paceville"
+	},
+	"San Pawl il-Baħar": {
+		"pl": "Zatoka św. Pawła: według tradycji tu rozbił się statek apostoła",
+		"en": "St Paul's Bay: by tradition the apostle was shipwrecked here in AD 60",
+		"cs": "Záliv svatého Pavla: podle tradice tu roku 60 ztroskotal apoštol",
+		"is": "Páls-flói: samkvæmt hefð strandaði skip postulans hér árið 60",
+		"de": "St Paul's Bay: hier erlitt der Überlieferung nach Paulus Schiffbruch"
+	},
+	"Għadira": {
+		"pl": "Najdłuższa piaszczysta plaża Malty, a za nią rezerwat ptaków",
+		"en": "Malta's longest sandy beach, with a bird reserve behind it",
+		"cs": "Nejdelší písečná pláž Malty a za ní ptačí rezervace",
+		"is": "Lengsta sandströnd Möltu, með fuglafriðland fyrir aftan",
+		"de": "Maltas längster Sandstrand, dahinter ein Vogelschutzgebiet"
+	},
+	"Għajnsielem": {
+		"pl": "Miejscowość nad portem Mġarr, pierwsza, którą widać po zejściu z promu",
+		"en": "The village above Mġarr harbour, the first one seen off the ferry",
+		"cs": "Obec nad přístavem Mġarr, první, kterou uvidíte po vylodění z trajektu",
+		"is": "Þorpið ofan við Mġarr-höfn, það fyrsta sem sést af ferjunni",
+		"de": "Der Ort über dem Hafen Mġarr, der erste, den man von der Fähre aus sieht"
+	},
+	"Xewkija": {
+		"pl": "Rotunda św. Jana ma tu kopułę jeszcze większą niż ta w Moście",
+		"en": "Its Rotunda of St John has a dome even bigger than Mosta's",
+		"cs": "Rotunda sv. Jana tu má kupoli ještě větší než ta v Mostě",
+		"is": "Rotunda heilags Jóhannesar hér hefur hvelfingu stærri en í Mosta",
+		"de": "Die Rotunde des hl. Johannes hat eine noch größere Kuppel als Mosta"
+	}
+}
