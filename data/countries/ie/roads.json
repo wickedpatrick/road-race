@@ -1,0 +1,377 @@
+[
+	{
+		"a": "dublin",
+		"b": "drogheda",
+		"km": 48,
+		"road": [[6, "N1"], [48, "M1"]],
+		"towns": [["Swords", 14], ["Balbriggan", 33]],
+		"zones": [
+			[16, "industrial", "County Dublin"], [36, "fields", "County Dublin"], [42, "fields", "County Meath"],
+			[48, "fields", "County Louth"]
+		],
+		"via": [[14, -6.22, 53.46], [33, -6.18, 53.61]]
+	},
+	{
+		"a": "drogheda",
+		"b": "dundalk",
+		"km": 36,
+		"road": "M1",
+		"towns": [["Dunleer", 17], ["Castlebellingham", 27]],
+		"zones": [[36, "fields", "County Louth"]],
+		"via": [[17, -6.39, 53.83], [27, -6.39, 53.9]]
+	},
+	{
+		"a": "dublin",
+		"b": "athlone",
+		"km": 125,
+		"road": [[12, "N4"], [60, "M4"], [125, "M6"]],
+		"towns": [["Lucan", 13], ["Maynooth", 24], ["Kinnegad", 60], ["Kilbeggan", 85], ["Moate", 106]],
+		"zones": [
+			[14, "industrial", "County Dublin"], [34, "fields", "County Kildare"], [56, "fields", "County Meath"],
+			[80, "fields", "County Westmeath"], [95, "zulawy", "County Westmeath"], [125, "lakes", "County Westmeath"]
+		],
+		"via": [[13, -6.45, 53.36], [24, -6.59, 53.38], [60, -7.1, 53.46], [85, -7.5, 53.37], [106, -7.72, 53.4]]
+	},
+	{
+		"a": "athlone",
+		"b": "galway",
+		"km": 92,
+		"road": [[85, "M6"], [92, "N6"]],
+		"towns": [["Ballinasloe", 25], ["Loughrea", 57]],
+		"zones": [
+			[8, "lakes", "County Roscommon"], [40, "fields", "County Galway"], [70, "upland", "County Galway"],
+			[92, "fields", "County Galway"]
+		],
+		"via": [[25, -8.22, 53.33], [57, -8.57, 53.2]]
+	},
+	{
+		"a": "dublin",
+		"b": "kilkenny",
+		"km": 120,
+		"road": [[8, "N7"], [35, "M7"], [112, "M9"], [120, "N10"]],
+		"towns": [["Naas", 30], ["Kilcullen", 42], ["Castledermot", 69], ["Carlow", 84], ["Leighlinbridge", 96]],
+		"zones": [
+			[12, "industrial", "County Dublin"], [40, "upland", "County Kildare"], [75, "fields", "County Kildare"],
+			[100, "fields", "County Carlow"], [120, "fields", "County Kilkenny"]
+		],
+		"via": [[30, -6.67, 53.22], [42, -6.75, 53.13], [69, -6.84, 52.91], [84, -6.93, 52.84], [96, -6.98, 52.74]]
+	},
+	{
+		"a": "kilkenny",
+		"b": "waterford",
+		"km": 50,
+		"road": [[10, "N10"], [50, "M9"]],
+		"towns": [["Knocktopher", 24], ["Mullinavat", 38]],
+		"zones": [[20, "fields", "County Kilkenny"], [45, "upland", "County Kilkenny"], [50, "fields", "County Waterford"]],
+		"via": [[24, -7.22, 52.48], [38, -7.17, 52.37]]
+	},
+	{
+		"a": "dublin",
+		"b": "wexford",
+		"km": 135,
+		"road": [[15, "N11"], [118, "M11"], [135, "N11"]],
+		"towns": [["Bray", 20], ["Ashford", 43], ["Arklow", 66], ["Gorey", 86], ["Enniscorthy", 112]],
+		"zones": [
+			[16, "industrial", "County Dublin"], [40, "upland", "County Wicklow"], [55, "forest", "County Wicklow"],
+			[72, "upland", "County Wicklow"], [128, "fields", "County Wexford"], [135, "coast", "County Wexford"]
+		],
+		"via": [[20, -6.1, 53.2], [43, -6.11, 53.01], [66, -6.16, 52.8], [86, -6.29, 52.67], [112, -6.56, 52.5]]
+	},
+	{
+		"a": "wexford",
+		"b": "waterford",
+		"km": 58,
+		"road": "N25",
+		"towns": [["New Ross", 37], ["Glenmore", 44]],
+		"zones": [[38, "fields", "County Wexford"], [50, "upland", "County Kilkenny"], [58, "fields", "County Waterford"]],
+		"via": [[37, -6.94, 52.4], [44, -7.02, 52.35]]
+	},
+	{
+		"a": "waterford",
+		"b": "cork",
+		"km": 122,
+		"road": "N25",
+		"towns": [["Dungarvan", 45], ["Youghal", 76], ["Castlemartyr", 90], ["Midleton", 98]],
+		"zones": [
+			[30, "fields", "County Waterford"], [50, "coast", "County Waterford"], [70, "upland", "County Waterford"],
+			[110, "fields", "County Cork"], [122, "industrial", "County Cork"]
+		],
+		"via": [[45, -7.62, 52.09], [76, -7.85, 51.95], [90, -8.05, 51.91], [98, -8.17, 51.92]]
+	},
+	{
+		"a": "dublin",
+		"b": "limerick",
+		"km": 197,
+		"road": [[8, "N7"], [197, "M7"]],
+		"towns": [["Naas", 30], ["Kildare", 52], ["Monasterevin", 63], ["Portlaoise", 87], ["Roscrea", 125], ["Nenagh", 160]],
+		"zones": [
+			[12, "industrial", "County Dublin"], [60, "fields", "County Kildare"], [100, "fields", "County Laois"],
+			[115, "upland", "County Laois"], [122, "zulawy", "County Offaly"], [180, "fields", "County Tipperary"],
+			[190, "upland", "County Tipperary"], [197, "industrial", "County Limerick"]
+		],
+		"via": [
+			[30, -6.67, 53.22], [52, -6.91, 53.16], [63, -7.06, 53.14], [87, -7.3, 53.03], [125, -7.8, 52.95],
+			[160, -8.2, 52.86]
+		]
+	},
+	{
+		"a": "waterford",
+		"b": "cashel",
+		"km": 72,
+		"road": [[48, "N24"], [72, "R688"]],
+		"towns": [["Carrick-on-Suir", 27], ["Clonmel", 48]],
+		"zones": [
+			[15, "fields", "County Waterford"], [40, "foothills", "County Tipperary"],
+			[72, "fields", "County Tipperary"]
+		],
+		"via": [[27, -7.41, 52.35], [48, -7.7, 52.36]]
+	},
+	{
+		"a": "cashel",
+		"b": "cork",
+		"km": 98,
+		"road": "M8",
+		"towns": [["Cahir", 18], ["Mitchelstown", 41], ["Fermoy", 60]],
+		"zones": [
+			[15, "fields", "County Tipperary"], [35, "foothills", "County Tipperary"], [80, "fields", "County Cork"],
+			[98, "upland", "County Cork"]
+		],
+		"via": [[18, -7.92, 52.37], [41, -8.27, 52.27], [60, -8.28, 52.14]]
+	},
+	{
+		"a": "cashel",
+		"b": "limerick",
+		"km": 61,
+		"road": [[21, "N74"], [61, "N24"]],
+		"towns": [["Tipperary", 21], ["Oola", 34]],
+		"zones": [[38, "fields", "County Tipperary"], [61, "fields", "County Limerick"]],
+		"via": [[21, -8.16, 52.47], [34, -8.26, 52.53]]
+	},
+	{
+		"a": "limerick",
+		"b": "ennis",
+		"km": 37,
+		"road": [[18, "N18"], [37, "M18"]],
+		"towns": [["Bunratty", 13], ["Newmarket-on-Fergus", 22]],
+		"zones": [[5, "industrial", "County Limerick"], [37, "fields", "County Clare"]],
+		"via": [[13, -8.81, 52.7], [22, -8.89, 52.76]]
+	},
+	{
+		"a": "ennis",
+		"b": "galway",
+		"km": 113,
+		"road": [[25, "N85"], [29, "N67"], [53, "R478"], [95, "N67"], [104, "N18"], [113, "N6"]],
+		"towns": [
+			["Ennistymon", 25], ["Lahinch", 29], ["Liscannor", 33], ["Doolin", 46], ["Lisdoonvarna", 53],
+			["Ballyvaughan", 69], ["Kinvara", 87], ["Kilcolgan", 95], ["Oranmore", 104]
+		],
+		"zones": [
+			[22, "fields", "County Clare"], [32, "coast", "County Clare"], [44, "coast", "County Clare"],
+			[78, "karst", "County Clare"], [95, "coast", "County Galway"], [113, "fields", "County Galway"]
+		],
+		"via": [
+			[25, -9.29, 52.94], [29, -9.34, 52.93], [33, -9.39, 52.94], [46, -9.38, 53.02], [53, -9.29, 53.03],
+			[69, -9.15, 53.12], [87, -8.94, 53.14], [95, -8.87, 53.21], [104, -8.93, 53.27]
+		]
+	},
+	{
+		"a": "ennis",
+		"b": "tralee",
+		"km": 105,
+		"road": [[47, "N68"], [51, "N67"], [105, "N69"]],
+		"towns": [["Kilrush", 43], ["Tarbert", 58], ["Listowel", 78]],
+		"zones": [
+			[30, "fields", "County Clare"], [51, "coast", "County Clare"], [66, "coast", "County Kerry"],
+			[90, "fields", "County Kerry"], [105, "upland", "County Kerry"]
+		],
+		"via": [[43, -9.48, 52.64], [58, -9.37, 52.57], [78, -9.49, 52.45]],
+		"ferry": {
+			"from_km": 51,
+			"to_km": 54,
+			"name": "Shannon Ferry",
+			"fact": {
+				"pl": "Od 1969 roku prom przepływa ujście Shannon z Killimer do Tarbert w około 20 minut, oszczędzając 137 km jazdy przez Limerick",
+				"en": "Since 1969 the ferry has crossed the Shannon estuary from Killimer to Tarbert in about 20 minutes, saving 137 km of road via Limerick",
+				"cs": "Od roku 1969 přeplouvá trajekt ústí Shannonu z Killimeru do Tarbertu asi za 20 minut a ušetří 137 km cesty přes Limerick",
+				"is": "Síðan 1969 hefur ferjan siglt yfir Shannon-ósinn frá Killimer til Tarbert á um 20 mínútum og sparað 137 km akstur um Limerick",
+				"de": "Seit 1969 überquert die Fähre die Shannon-Mündung von Killimer nach Tarbert in etwa 20 Minuten und erspart 137 km Fahrt über Limerick"
+			}
+		}
+	},
+	{
+		"a": "limerick",
+		"b": "tralee",
+		"km": 103,
+		"road": [[12, "M20"], [103, "N21"]],
+		"towns": [["Adare", 17], ["Rathkeale", 29], ["Newcastle West", 42], ["Abbeyfeale", 61], ["Castleisland", 82]],
+		"zones": [
+			[6, "industrial", "County Limerick"], [50, "fields", "County Limerick"], [70, "upland", "County Limerick"],
+			[90, "upland", "County Kerry"], [103, "fields", "County Kerry"]
+		],
+		"via": [[17, -8.79, 52.56], [29, -8.94, 52.52], [42, -9.06, 52.45], [61, -9.3, 52.39], [82, -9.46, 52.23]]
+	},
+	{
+		"a": "limerick",
+		"b": "cork",
+		"km": 103,
+		"road": [[12, "M20"], [103, "N20"]],
+		"towns": [["Croom", 20], ["Charleville", 40], ["Buttevant", 56], ["Mallow", 67]],
+		"zones": [
+			[6, "industrial", "County Limerick"], [38, "fields", "County Limerick"], [60, "fields", "County Cork"],
+			[85, "upland", "County Cork"], [103, "fields", "County Cork"]
+		],
+		"via": [[20, -8.72, 52.52], [40, -8.68, 52.36], [56, -8.67, 52.23], [67, -8.64, 52.13]]
+	},
+	{
+		"a": "tralee",
+		"b": "dingle",
+		"km": 49,
+		"road": "N86",
+		"towns": [["Camp", 16], ["Annascaul", 28], ["Lispole", 40]],
+		"zones": [
+			[10, "coast", "County Kerry"], [30, "mountains", "County Kerry"], [42, "highland", "County Kerry"],
+			[49, "coast", "County Kerry"]
+		],
+		"via": [[16, -9.92, 52.22], [28, -10.05, 52.15], [40, -10.15, 52.14]]
+	},
+	{
+		"a": "tralee",
+		"b": "killarney",
+		"km": 32,
+		"road": "N22",
+		"towns": [["Farranfore", 17]],
+		"zones": [[25, "fields", "County Kerry"], [32, "lakes", "County Kerry"]],
+		"via": [[17, -9.55, 52.17]]
+	},
+	{
+		"a": "killarney",
+		"b": "cork",
+		"km": 87,
+		"road": "N22",
+		"towns": [["Ballyvourney", 33], ["Macroom", 48], ["Ballincollig", 75]],
+		"zones": [
+			[12, "forest", "County Kerry"], [25, "highland", "County Kerry"], [40, "upland", "County Cork"],
+			[70, "fields", "County Cork"], [87, "industrial", "County Cork"]
+		],
+		"via": [[33, -9.17, 51.94], [48, -8.96, 51.9], [75, -8.59, 51.89]]
+	},
+	{
+		"a": "killarney",
+		"b": "kenmare",
+		"km": 33,
+		"road": "N71",
+		"towns": [],
+		"zones": [
+			[8, "lakes", "County Kerry"], [16, "forest", "County Kerry"], [28, "mountains", "County Kerry"],
+			[33, "forest", "County Kerry"]
+		]
+	},
+	{
+		"a": "kenmare",
+		"b": "cahersiveen",
+		"km": 79,
+		"road": "N70",
+		"towns": [["Sneem", 27], ["Caherdaniel", 48], ["Waterville", 62]],
+		"zones": [[20, "coast", "County Kerry"], [45, "mountains", "County Kerry"], [79, "coast", "County Kerry"]],
+		"via": [[27, -9.9, 51.84], [48, -10.1, 51.77], [62, -10.17, 51.83]]
+	},
+	{
+		"a": "cahersiveen",
+		"b": "tralee",
+		"km": 70,
+		"road": "N70",
+		"towns": [["Glenbeigh", 27], ["Killorglin", 41], ["Castlemaine", 51]],
+		"zones": [[18, "highland", "County Kerry"], [32, "coast", "County Kerry"], [70, "fields", "County Kerry"]],
+		"via": [[27, -9.94, 52.06], [41, -9.78, 52.1], [51, -9.7, 52.17]]
+	},
+	{
+		"a": "galway",
+		"b": "clifden",
+		"km": 79,
+		"road": "N59",
+		"towns": [["Moycullen", 12], ["Oughterard", 27], ["Maam Cross", 42], ["Recess", 57]],
+		"zones": [
+			[8, "industrial", "County Galway"], [32, "lakes", "County Galway"], [60, "highland", "County Galway"],
+			[72, "mountains", "County Galway"], [79, "highland", "County Galway"]
+		],
+		"via": [[12, -9.18, 53.34], [27, -9.32, 53.43], [42, -9.54, 53.46], [57, -9.75, 53.47]]
+	},
+	{
+		"a": "clifden",
+		"b": "westport",
+		"km": 67,
+		"road": "N59",
+		"towns": [["Letterfrack", 14], ["Leenaun", 35]],
+		"zones": [
+			[10, "coast", "County Galway"], [36, "mountains", "County Galway"], [52, "highland", "County Mayo"],
+			[67, "upland", "County Mayo"]
+		],
+		"via": [[14, -9.94, 53.55], [35, -9.7, 53.6]]
+	},
+	{
+		"a": "galway",
+		"b": "sligo",
+		"km": 136,
+		"road": [[8, "N6"], [16, "M6"], [44, "M17"], [136, "N17"]],
+		"towns": [
+			["Tuam", 40], ["Claremorris", 62], ["Knock", 71], ["Charlestown", 90], ["Tubbercurry", 104],
+			["Collooney", 125]
+		],
+		"zones": [
+			[8, "industrial", "County Galway"], [52, "fields", "County Galway"], [85, "fields", "County Mayo"],
+			[100, "highland", "County Mayo"], [120, "upland", "County Sligo"], [136, "fields", "County Sligo"]
+		],
+		"via": [
+			[40, -8.85, 53.51], [62, -9, 53.72], [71, -8.92, 53.79], [90, -8.79, 53.96], [104, -8.73, 54.06],
+			[125, -8.49, 54.19]
+		]
+	},
+	{
+		"a": "westport",
+		"b": "sligo",
+		"km": 117,
+		"road": [[24, "N5"], [35, "N58"], [52, "N26"], [117, "N59"]],
+		"towns": [["Castlebar", 17], ["Foxford", 35], ["Ballina", 52], ["Dromore West", 76], ["Ballisodare", 109]],
+		"zones": [
+			[25, "fields", "County Mayo"], [45, "lakes", "County Mayo"], [60, "fields", "County Mayo"],
+			[100, "coast", "County Sligo"], [117, "fields", "County Sligo"]
+		],
+		"via": [[17, -9.3, 53.86], [35, -9.12, 53.98], [52, -9.15, 54.12], [76, -8.89, 54.25], [109, -8.51, 54.21]]
+	},
+	{
+		"a": "sligo",
+		"b": "donegal",
+		"km": 64,
+		"road": "N15",
+		"towns": [["Drumcliff", 8], ["Grange", 17], ["Bundoran", 37], ["Ballyshannon", 43], ["Ballintra", 54]],
+		"zones": [
+			[28, "upland", "County Sligo"], [33, "coast", "County Leitrim"], [50, "coast", "County Donegal"],
+			[64, "fields", "County Donegal"]
+		],
+		"via": [[8, -8.5, 54.33], [17, -8.52, 54.4], [37, -8.28, 54.48], [43, -8.19, 54.5], [54, -8.12, 54.58]]
+	},
+	{
+		"a": "donegal",
+		"b": "letterkenny",
+		"km": 50,
+		"road": [[29, "N15"], [50, "N13"]],
+		"towns": [["Ballybofey", 28]],
+		"zones": [
+			[6, "fields", "County Donegal"], [22, "mountains", "County Donegal"], [40, "highland", "County Donegal"],
+			[50, "fields", "County Donegal"]
+		],
+		"via": [[28, -7.79, 54.8]]
+	},
+	{
+		"a": "sligo",
+		"b": "athlone",
+		"km": 112,
+		"road": [[40, "N4"], [112, "N61"]],
+		"towns": [["Collooney", 11], ["Boyle", 40], ["Roscommon", 80], ["Knockcroghery", 92]],
+		"zones": [
+			[25, "upland", "County Sligo"], [55, "lakes", "County Roscommon"], [100, "fields", "County Roscommon"],
+			[112, "lakes", "County Westmeath"]
+		],
+		"via": [[11, -8.49, 54.19], [40, -8.3, 53.97], [80, -8.19, 53.63], [92, -8.09, 53.57]]
+	}
+]
