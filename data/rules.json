@@ -1117,7 +1117,22 @@
 		"tr_kars_castle": [60, 36],
 		"tr_safranbolu_houses": [44, 16],
 		"tr_celsus_library": [22, 17],
-		"tr_fairy_chimneys": [44, 30]
+		"tr_fairy_chimneys": [44, 30],
+		"lv_riga_freedom": [14, 44],
+		"lv_daugavpils_fortress": [60, 22],
+		"lv_liepaja_amber": [56, 30],
+		"lv_jelgava_petrina": [44, 30],
+		"lv_jurmala_villa": [24, 18],
+		"lv_ventspils_castle": [36, 24],
+		"lv_rezekne_mara": [8, 16],
+		"lv_valmiera_simon": [28, 52],
+		"lv_jekabpils_krustpils": [44, 26],
+		"lv_cesis_castle": [50, 26],
+		"lv_kuldiga_rumba": [70, 16],
+		"lv_sigulda_turaida": [40, 42],
+		"lv_talsi_hills": [60, 30],
+		"lv_bauska_rundale": [80, 25],
+		"lv_salacgriva_weir": [40, 10]
 	},
 	"police": {"escape_chance": 0.2, "escape_kmh": 180, "escape_swerves": [3, 5]},
 	"postcards": {"stamps": [0.15, 0.3, 0.45, 0.6], "stamp_caps": [2, 3, 3, 4, 5, 5, 5]}
