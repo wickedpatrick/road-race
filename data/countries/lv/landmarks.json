@@ -1,0 +1,302 @@
+{
+	"Rīga": [
+		{
+			"kind": "lv_riga_freedom",
+			"name": {
+				"pl": "Pomnik Wolności",
+				"en": "Freedom Monument",
+				"cs": "Pomník svobody",
+				"is": "Frelsisminnismerkið",
+				"de": "Freiheitsdenkmal"
+			},
+			"desc": {
+				"pl": "42-metrowa kolumna z 1935 roku, na szczycie miedziana kobieta zwana Mildą trzyma trzy złote gwiazdy",
+				"en": "A 42-metre column of 1935 topped by a copper woman, nicknamed Milda, holding up three golden stars",
+				"cs": "Dvaačtyřicetimetrový sloup z roku 1935, na jehož vrcholu měděná žena přezdívaná Milda drží tři zlaté hvězdy",
+				"is": "42 metra há súla frá 1935; efst heldur koparkona, kölluð Milda, á þremur gylltum stjörnum",
+				"de": "Eine 42 Meter hohe Säule von 1935, oben hält eine Kupferfrau, genannt Milda, drei goldene Sterne"
+			},
+			"local": "Brīvības piemineklis"
+		}
+	],
+	"Daugavpils": [
+		{
+			"kind": "lv_daugavpils_fortress",
+			"name": {
+				"pl": "Twierdza Daugavpils",
+				"en": "Daugavpils Fortress",
+				"cs": "Pevnost Daugavpils",
+				"is": "Virkið í Daugavpils",
+				"de": "Festung Daugavpils"
+			},
+			"desc": {
+				"pl": "XIX-wieczna twierdza z wałami i bastionami, zachowana niemal bez zmian; w jej arsenale działa centrum Rothki",
+				"en": "A 19th-century fortress of ramparts and bastions, kept almost unchanged; the Rothko centre is in its arsenal",
+				"cs": "Pevnost z 19. století s valy a bastiony, zachovaná téměř beze změn; v jejím arzenálu sídlí Rothkovo centrum",
+				"is": "Virki frá 19. öld með virkisgörðum og múrhornum, nánast óbreytt; Rothko-miðstöðin er í vopnabúri þess",
+				"de": "Eine Festung aus dem 19. Jahrhundert mit Wällen und Bastionen, fast unverändert erhalten; im Arsenal ist das Rothko-Zentrum"
+			},
+			"local": "Daugavpils cietoksnis"
+		}
+	],
+	"Liepāja": [
+		{
+			"kind": "lv_liepaja_amber",
+			"name": {
+				"pl": "Sala koncertowa „Wielki Bursztyn”",
+				"en": "Great Amber Concert Hall",
+				"cs": "Koncertní síň Velký jantar",
+				"is": "Tónleikahúsið Stóra raf",
+				"de": "Konzerthaus Großer Bernstein"
+			},
+			"desc": {
+				"pl": "Sala koncertowa z 2015 roku w szkle koloru bursztynu, wieczorem świecąca od środka",
+				"en": "A concert hall of 2015 clad in amber-coloured glass that glows from within in the evening",
+				"cs": "Koncertní síň z roku 2015 v jantarově zbarveném skle, která večer září zevnitř",
+				"is": "Tónleikahús frá 2015 klætt rafgulu gleri sem lýsir innan frá á kvöldin",
+				"de": "Ein Konzerthaus von 2015 in bernsteinfarbenem Glas, das abends von innen leuchtet"
+			},
+			"local": "Koncertzāle „Lielais dzintars”"
+		}
+	],
+	"Jelgava": [
+		{
+			"kind": "lv_jelgava_petrina",
+			"name": {
+				"pl": "Academia Petrina",
+				"en": "Academia Petrina",
+				"cs": "Academia Petrina",
+				"is": "Academia Petrina",
+				"de": "Academia Petrina"
+			},
+			"desc": {
+				"pl": "Szkoła wyższa założona w 1775 roku przez księcia Kurlandii Piotra, biały gmach z wieżą; dziś muzeum",
+				"en": "A college founded in 1775 by Duke Peter of Courland, a white building with a tower; now a museum",
+				"cs": "Vysoká škola založená roku 1775 kuronským vévodou Petrem, bílá budova s věží; dnes muzeum",
+				"is": "Æðri skóli sem Pétur hertogi af Kúrlandi stofnaði árið 1775, hvít bygging með turni; nú safn",
+				"de": "Eine 1775 von Herzog Peter von Kurland gegründete Hochschule, ein weißer Bau mit Turm; heute ein Museum"
+			},
+			"local": "Academia Petrina"
+		}
+	],
+	"Jūrmala": [
+		{
+			"kind": "lv_jurmala_villa",
+			"name": {
+				"pl": "Drewniane wille",
+				"en": "Wooden villas",
+				"cs": "Dřevěné vily",
+				"is": "Timburvillur",
+				"de": "Holzvillen"
+			},
+			"desc": {
+				"pl": "Zdobione drewniane domy letniskowe z werandami i wieżyczkami wśród sosen",
+				"en": "Ornate wooden summer houses with verandas and turrets among the pines",
+				"cs": "Zdobené dřevěné letní domy s verandami a věžičkami mezi borovicemi",
+				"is": "Skrautleg sumarhús úr timbri með svölum og turnum innan um furutrén",
+				"de": "Verzierte hölzerne Sommerhäuser mit Veranden und Türmchen zwischen den Kiefern"
+			},
+			"local": "Jūrmalas koka vasarnīcas"
+		}
+	],
+	"Ventspils": [
+		{
+			"kind": "lv_ventspils_castle",
+			"name": {
+				"pl": "Zamek w Ventspils",
+				"en": "Ventspils Castle",
+				"cs": "Hrad Ventspils",
+				"is": "Kastalinn í Ventspils",
+				"de": "Burg Ventspils"
+			},
+			"desc": {
+				"pl": "Czworoboczny zamek zakonu inflanckiego z końca XIII wieku, dziś muzeum",
+				"en": "A square castle of the Livonian Order from the late 13th century, now a museum",
+				"cs": "Čtyřboký hrad Livonského řádu z konce 13. století, dnes muzeum",
+				"is": "Ferhyrndur kastali Líflandsreglunnar frá lokum 13. aldar, nú safn",
+				"de": "Eine viereckige Burg des Livländischen Ordens aus dem späten 13. Jahrhundert, heute ein Museum"
+			},
+			"local": "Ventspils pils"
+		}
+	],
+	"Rēzekne": [
+		{
+			"kind": "lv_rezekne_mara",
+			"name": {
+				"pl": "Łatgalska Mara",
+				"en": "Latgale Māra",
+				"cs": "Latgalská Māra",
+				"is": "Latgales Māra",
+				"de": "Lettgallische Māra"
+			},
+			"desc": {
+				"pl": "Pomnik „Zjednoczeni dla Łotwy” z 1939 roku: kobieta wznosząca krzyż; odnowiony w 1992 roku",
+				"en": "The 1939 monument 'United for Latvia': a woman raising a cross; restored in 1992",
+				"cs": "Pomník „Sjednoceni pro Lotyšsko“ z roku 1939: žena zvedající kříž; obnovený roku 1992",
+				"is": "Minnismerkið „Sameinuð fyrir Lettland“ frá 1939: kona sem lyftir krossi; endurgert árið 1992",
+				"de": "Das Denkmal „Vereint für Lettland“ von 1939: eine Frau, die ein Kreuz erhebt; 1992 wiederhergestellt"
+			},
+			"local": "Latgales Māra"
+		}
+	],
+	"Valmiera": [
+		{
+			"kind": "lv_valmiera_simon",
+			"name": {
+				"pl": "Kościół św. Szymona",
+				"en": "St Simon's Church",
+				"cs": "Kostel sv. Šimona",
+				"is": "Kirkja heilags Símonar",
+				"de": "Simonskirche"
+			},
+			"desc": {
+				"pl": "Średniowieczny kamienny kościół z 1283 roku z wysoką wieżą nad Gaują",
+				"en": "A medieval stone church of 1283 with a tall tower above the Gauja",
+				"cs": "Středověký kamenný kostel z roku 1283 s vysokou věží nad Gaujou",
+				"is": "Steinkirkja frá miðöldum, frá 1283, með háum turni ofan við Gauja",
+				"de": "Eine mittelalterliche Steinkirche von 1283 mit hohem Turm über der Gauja"
+			},
+			"local": "Svētā Sīmaņa baznīca"
+		}
+	],
+	"Jēkabpils": [
+		{
+			"kind": "lv_jekabpils_krustpils",
+			"name": {
+				"pl": "Zamek Krustpils",
+				"en": "Krustpils Castle",
+				"cs": "Hrad Krustpils",
+				"is": "Krustpils-kastali",
+				"de": "Schloss Krustpils"
+			},
+			"desc": {
+				"pl": "Zamek na prawym brzegu Dźwiny, sięgający XIII wieku i wielokrotnie przebudowywany; dziś muzeum",
+				"en": "A castle on the right bank of the Daugava, going back to the 13th century and rebuilt many times; now a museum",
+				"cs": "Hrad na pravém břehu Daugavy z 13. století, mnohokrát přestavěný; dnes muzeum",
+				"is": "Kastali á hægri bakka Daugava, frá 13. öld og margoft endurbyggður; nú safn",
+				"de": "Eine Burg am rechten Ufer der Daugava, aus dem 13. Jahrhundert und oft umgebaut; heute ein Museum"
+			},
+			"local": "Krustpils pils"
+		}
+	],
+	"Cēsis": [
+		{
+			"kind": "lv_cesis_castle",
+			"name": {
+				"pl": "Zamek w Cēsis",
+				"en": "Cēsis Castle",
+				"cs": "Hrad Cēsis",
+				"is": "Kastalinn í Cēsis",
+				"de": "Burg Cēsis"
+			},
+			"desc": {
+				"pl": "Ruiny średniowiecznego zamku z dwiema wieżami, obok Nowy Zamek",
+				"en": "The ruins of the medieval castle with two towers, beside the New Castle",
+				"cs": "Zřícenina středověkého hradu se dvěma věžemi, vedle Nový zámek",
+				"is": "Rústir miðaldakastalans með tveimur turnum, við hlið Nýja kastalans",
+				"de": "Die Ruine der mittelalterlichen Burg mit zwei Türmen, daneben das Neue Schloss"
+			},
+			"local": "Cēsu pils"
+		}
+	],
+	"Kuldīga": [
+		{
+			"kind": "lv_kuldiga_rumba",
+			"name": {
+				"pl": "Wodospad Ventas rumba",
+				"en": "Venta Rapid",
+				"cs": "Peřej Venty",
+				"is": "Venta-flúðirnar",
+				"de": "Venta-Wasserfall"
+			},
+			"desc": {
+				"pl": "Najszerszy wodospad Europy, około 250 m szerokości i około 2 m wysokości, obok ceglanego mostu z 1874 roku",
+				"en": "Europe's widest waterfall, about 250 m wide and about 2 m high, beside a brick bridge of 1874",
+				"cs": "Nejširší vodopád Evropy, asi 250 m široký a asi 2 m vysoký, vedle cihlového mostu z roku 1874",
+				"is": "Breiðasti foss Evrópu, um 250 m breiður og um 2 m hár, við múrsteinsbrú frá 1874",
+				"de": "Europas breitester Wasserfall, etwa 250 m breit und etwa 2 m hoch, neben einer Ziegelbrücke von 1874"
+			},
+			"local": "Ventas rumba"
+		}
+	],
+	"Sigulda": [
+		{
+			"kind": "lv_sigulda_turaida",
+			"name": {
+				"pl": "Zamek Turaida",
+				"en": "Turaida Castle",
+				"cs": "Hrad Turaida",
+				"is": "Turaida-kastali",
+				"de": "Burg Turaida"
+			},
+			"desc": {
+				"pl": "Zamek z czerwonej cegły, zakładany od 1214 roku, z okrągłą wieżą główną nad doliną Gauji",
+				"en": "A red-brick castle begun in 1214, with a round main tower above the Gauja valley",
+				"cs": "Hrad z červených cihel založený roku 1214 s kruhovou hlavní věží nad údolím Gauji",
+				"is": "Kastali úr rauðum múrsteini, reistur frá 1214, með hringlaga höfuðturni yfir Gauja-dalnum",
+				"de": "Eine Backsteinburg, ab 1214 erbaut, mit rundem Hauptturm über dem Gauja-Tal"
+			},
+			"local": "Turaidas pils"
+		}
+	],
+	"Talsi": [
+		{
+			"kind": "lv_talsi_hills",
+			"name": {
+				"pl": "Wzgórza Talsi",
+				"en": "The hills of Talsi",
+				"cs": "Pahorky Talsi",
+				"is": "Hæðirnar í Talsi",
+				"de": "Die Hügel von Talsi"
+			},
+			"desc": {
+				"pl": "Kościół na Wzgórzu Kościelnym nad jeziorem i czerwone dachy na stokach",
+				"en": "The church on Church Hill above the lake and red roofs on the slopes",
+				"cs": "Kostel na Kostelním vrchu nad jezerem a červené střechy na svazích",
+				"is": "Kirkjan á Kirkjuhæð ofan við vatnið og rauð þök í hlíðunum",
+				"de": "Die Kirche auf dem Kirchberg über dem See und rote Dächer an den Hängen"
+			},
+			"local": "Talsu pauguri"
+		}
+	],
+	"Bauska": [
+		{
+			"kind": "lv_bauska_rundale",
+			"name": {
+				"pl": "Pałac w Rundāle",
+				"en": "Rundāle Palace",
+				"cs": "Zámek Rundāle",
+				"is": "Rundāle-höllin",
+				"de": "Schloss Rundāle"
+			},
+			"desc": {
+				"pl": "Barokowy pałac Rastrellego zbudowany dla księcia Ernesta Jana Birona, z ogrodem francuskim",
+				"en": "A Baroque palace by Rastrelli built for Duke Ernst Johann von Biron, with a French garden",
+				"cs": "Barokní zámek od Rastrelliho postavený pro vévodu Ernsta Johanna Birona, s francouzskou zahradou",
+				"is": "Barokkhöll eftir Rastrelli, reist fyrir Ernst Johann von Biron hertoga, með frönskum garði",
+				"de": "Ein Barockschloss von Rastrelli, erbaut für Herzog Ernst Johann von Biron, mit französischem Garten"
+			},
+			"local": "Rundāles pils"
+		}
+	],
+	"Salacgrīva": [
+		{
+			"kind": "lv_salacgriva_weir",
+			"name": {
+				"pl": "Jaz na minogi",
+				"en": "Lamprey weir",
+				"cs": "Jez na mihule",
+				"is": "Steinsugugildra",
+				"de": "Neunaugenwehr"
+			},
+			"desc": {
+				"pl": "Drewniany jaz w poprzek Salacy z pułapkami, w które od wieków łowi się minogi",
+				"en": "A wooden weir across the Salaca with traps in which lampreys have been caught for centuries",
+				"cs": "Dřevěný jez napříč Salacou s pastmi, do kterých se po staletí loví mihule",
+				"is": "Trégildra þvert yfir Salaca með gildrum sem steinsugur hafa verið veiddar í öldum saman",
+				"de": "Ein hölzernes Wehr quer über die Salaca mit Reusen, in denen seit Jahrhunderten Neunaugen gefangen werden"
+			},
+			"local": "Nēģu tacis"
+		}
+	]
+}

@@ -1,9 +1,14 @@
 extends Node
-## All game audio: engine/gravel/pump loops and one-shot effects (no music but the anthems' first phrases on
-## arrival). X toggles mute.
+## All game audio: engine/gravel/pump loops and one-shot effects (no music but the anthems' first phrases and the
+## countries' tunes on arrival). X toggles mute.
 const DIR := "res://assets/audio/"
 const LOOPS := ["engine", "engine_idle", "gravel", "pump", "siren"] ## looped whole-file by their import settings
-const ONESHOTS := ["hit", "beep", "go", "blip", "lowfuel", "refuel_done", "win", "lose", "radar"]
+const ONESHOTS := ["hit", "beep", "go", "blip", "lowfuel", "refuel_done", "lose", "radar"]
+## The tunes of arriving in a country, taking turns: anthem_<code>, the first phrase of its anthem, and motif_<code>,
+## the best-known bars of its classical (or folk) tune; a country whose anthem's music is still under copyright has
+## a second tune, motif2_<code>, instead of the anthem (so has one without a reliable published score of its anthem).
+## Every country has two of them (test_arrival_audio.gd).
+const ARRIVAL_KINDS := ["anthem_", "motif_", "motif2_"]
 const SILENT := -80.0
 const IDLE_FADE_FROM := 0.74 ## engine pitch where an idle loop starts handing over to the driving loop
 const IDLE_FADE_SPAN := 0.18 ## ... and has handed over completely
@@ -33,8 +38,8 @@ func _ready() -> void:
 		_players[n] = load(DIR + n + ".wav")
 	var codes := GameData.country_codes().duplicate()
 	for code in GameData.country_codes(): codes.append_array(GameData.members(code))
-	for code in codes: # on arrival: anthem_<code>, the first phrase of the anthem, and motif_<code>,
-		for kind in ["anthem_", "motif_"]: # the best-known bars of the country's classical (or folk) tune
+	for code in codes:
+		for kind in ARRIVAL_KINDS:
 			if ResourceLoader.exists(DIR + kind + code + ".wav"):
 				_players[kind + code] = load(DIR + kind + code + ".wav")
 	for i in 6:
@@ -47,20 +52,21 @@ func _unhandled_input(event: InputEvent) -> void:
 		muted = not muted
 		AudioServer.set_bus_mute(0, muted)
 
-## The sound of arriving in the country being played: its anthem's first phrase and its classical tune by turns
-## (the anthem alone when there is no tune), or the fanfare.
+## The sound of arriving in the country being played: its tunes (ARRIVAL_KINDS) by turns, the anthem first.
 ## On a map spanning several countries (the Southern Balkans) it is the country of `city`, the one arrived in.
+## "" (which play() skips) only for a country without any tune, which the tests do not let through.
 func arrival(city := "") -> String:
 	_arrivals += 1
 	var code: String = GameData.current
 	if not GameData.members(code).is_empty() and Geo.city_part(city) != "":
 		code = Geo.city_part(city)
-	for name in (["motif_", "anthem_"] if _arrivals % 2 == 0 else ["anthem_", "motif_"]):
-		if _players.has(name + code):
-			return name + code
-	return "win"
+	var names := []
+	for kind in ARRIVAL_KINDS:
+		if _players.has(kind + code): names.append(kind + code)
+	return names[(_arrivals - 1) % names.size()] if not names.is_empty() else ""
 
 func play(name: String, db := -6.0, pitch := 1.0) -> void:
+	if not _players.has(name): return
 	for p in _oneshot_pool:
 		if not p.playing:
 			p.stream = _players[name]
