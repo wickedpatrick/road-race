@@ -17,6 +17,9 @@ const GRIP := {
 ## bend is held as well, only the grip limits it). Rain gets its own values once snow is tuned.
 ## red desert sand (the "desert" landscape's ground patches) by season; SeasonPalette has no such ground
 const RED_SAND := {"summer": Color("b9704a"), "autumn": Color("a86a4a"), "winter": Color("d8cdc4")}
+## feather grass bent by the wind (the "steppe" landscape's pale streaks) by season: silvery in summer, golden in
+## autumn, wind-blown snow in winter
+const FEATHER := {"summer": Color("c3c48c"), "autumn": Color("cdb06c"), "winter": Color("e2e8ec")}
 const HANDLING := {
 	"snow": {"inertia": 0.4},
 }
@@ -72,6 +75,7 @@ static func season(kind: String) -> String:
 static func palette(kind: String) -> Dictionary:
 	var pal := SeasonPalette.by_name(season(kind)).duplicate()
 	pal.redsand = RED_SAND[season(kind)]
+	pal.feather = FEATHER[season(kind)]
 	pal.merge(_colors(GameData.country().get("palette", {}).get(season(kind), {})), true)
 	pal.merge(SKY.get(kind, {}), true)
 	return pal
