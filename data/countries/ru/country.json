@@ -84,6 +84,7 @@
 		"region_sign": "ДОБРО ПОЖАЛОВАТЬ"
 	},
 	"plates": [["", "#d4202a", "#ffffff"]],
+	"traffic": 0.25,
 	"weather": {
 		"default": "cloudy",
 		"landscape": true,
