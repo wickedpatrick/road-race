@@ -45,8 +45,8 @@ const TOWN_SIGN_W := 6.4
 const BOARD_W := 10.0
 const REGION_W := 8.6
 ## ground strip colour ids, looked up in the season palette
-const GROUND_KEYS := ["crop_a", "crop_b", "crop_c", "water", "sand", "pave", "dark", "redsand"]
-enum {G_CROP_A, G_CROP_B, G_CROP_C, G_WATER, G_SAND, G_PAVE, G_DARK, G_REDSAND}
+const GROUND_KEYS := ["crop_a", "crop_b", "crop_c", "water", "sand", "pave", "dark", "redsand", "feather"]
+enum {G_CROP_A, G_CROP_B, G_CROP_C, G_WATER, G_SAND, G_PAVE, G_DARK, G_REDSAND, G_FEATHER}
 
 ## Deterministic 0..1 noise for (a, b).
 static func _h(a: int, b: int) -> float:
@@ -439,7 +439,7 @@ static func _solid(it: Dictionary) -> Array:
 			return [[-3.65, -3.35], [3.35, 3.65]]
 		"region", "poi", "billboard", "border_board":
 			return [[-3.15, -2.85], [2.85, 3.15]]
-		"tree", "pine", "birch", "spruce", "poplar", "willow", "apple", "cactus", "olive", "cypress":
+		"tree", "pine", "birch", "spruce", "poplar", "willow", "apple", "cactus", "olive", "cypress", "larch":
 			return [[-0.3, 0.3]]
 		"shrine":
 			return [[-0.6, 0.6]]
@@ -447,13 +447,13 @@ static func _solid(it: Dictionary) -> Array:
 			var p := Track.ROAD_HALF_WIDTH + 2.5
 			var m := (1.0 + Track.MEDIAN * 0.5) * Track.ROAD_HALF_WIDTH # the median pillar of a dual carriageway
 			return [[-m - 0.4, -m + 0.4], [p - 0.9, p + 0.9]]
-		"haybale", "lavarock", "redrock", "mesa", "stonewall", "whitehouse", "building", "house", "woodhouse", "farm", "church", "cerkiew", "block", "castle", "rock", "windmill", \
+		"haybale", "haystack", "kurgan", "lavarock", "redrock", "mesa", "stonewall", "whitehouse", "building", "house", "woodhouse", "farm", "church", "cerkiew", "block", "castle", "rock", "windmill", \
 				"chimney", "headframe", "cooling", "lighthouse", "landmark", "heap", "turbine", "booth", "quay":
 			return [[-hw, hw]]
 	return []
 
 const CLEARABLE := ["building", "house", "woodhouse", "tree", "church", "cerkiew", "block", "farm", "apple", "pine",
-	"birch", "spruce", "poplar", "cow", "sheep", "horse", "moss", "lavarock",
+	"birch", "spruce", "larch", "poplar", "haystack", "cow", "sheep", "horse", "moss", "lavarock",
 	"cactus", "bush", "redrock", "mesa", "olive", "cypress", "maquis", "stonewall", "whitehouse"]
 
 ## Makes room for a landmark: removes houses and trees on its spot and on its side of the road before it, like a
@@ -487,7 +487,7 @@ static func _settlement(items: Dictionary, t: Dictionary, biome: String, z: floa
 		st.lamp = z + (45.0 if t.big else 40.0)
 	if not st.churches.has(t.name) and z > t.z - 30.0:
 		st.churches[t.name] = true
-		var ct := "cerkiew" if biome == "podlasie" and rng.randf() < 0.5 else "church"
+		var ct := "cerkiew" if biome in ["podlasie", "taiga"] and rng.randf() < 0.5 else "church"
 		_add(items, ct, z, _side(rng) * rng.randf_range(20.0, 26.0), 10.0, 22.0 if t.big else 18.0, rng)
 	if t.big:
 		for side in [-1, 1]:
@@ -496,7 +496,7 @@ static func _settlement(items: Dictionary, t: Dictionary, biome: String, z: floa
 		if rng.randf() < 0.4:
 			_add(items, "tree", z, _side(rng) * 8.0, 3.0, 5.0, rng)
 		return rng.randf_range(16.0, 26.0)
-	var wooden := biome == "podlasie" or biome == "mountains"
+	var wooden := biome in ["podlasie", "mountains", "taiga"]
 	for side in [-1, 1]:
 		if rng.randf() < 0.8:
 			var w := rng.randf_range(7.0, 10.0)
@@ -549,6 +549,10 @@ static func _nature(items: Dictionary, biome: String, z: float, rng: RandomNumbe
 			return _desert(items, z, rng)
 		"mediterranean":
 			return _mediterranean(items, z, rng)
+		"steppe":
+			return _steppe(items, z, rng)
+		"taiga":
+			return _taiga(items, z, rng)
 		"jura":
 			for side in [-1, 1]:
 				if rng.randf() < 0.22:
@@ -673,6 +677,54 @@ static func _mediterranean(items: Dictionary, z: float, rng: RandomNumberGenerat
 	if rng.randf() < 0.04:
 		_add(items, "whitehouse", z, _side(rng) * rng.randf_range(18.0, 40.0), rng.randf_range(6.0, 8.0), rng.randf_range(5.0, 6.5), rng)
 	return rng.randf_range(11.0, 18.0)
+
+## The steppe: open grass to the horizon (with streaks of feather grass, Scenery.ground), poplar shelter belts along
+## the road now and then, haystacks, a lone tree, sheep or cows, and low grassy kurgans far off. Returns the step.
+static func _steppe(items: Dictionary, z: float, rng: RandomNumberGenerator) -> float:
+	if _h(int(z / 400.0), 51) < 0.22:
+		for side in [-1, 1]:
+			_add(items, "poplar", z + rng.randf_range(-1, 1), side * rng.randf_range(8.5, 9.5), 3.0, rng.randf_range(10.0, 13.0), rng)
+		return rng.randf_range(10.0, 13.0)
+	var r := rng.randf()
+	var side := _side(rng)
+	if r < 0.06:
+		_add(items, "kurgan", z, side * rng.randf_range(45.0, 140.0), rng.randf_range(26.0, 48.0), rng.randf_range(4.0, 8.0), rng)
+	elif r < 0.12:
+		var lat := rng.randf_range(16.0, 55.0)
+		for k in rng.randi_range(1, 3):
+			_add(items, "haystack", z + k * rng.randf_range(4.0, 7.0), side * (lat + k * rng.randf_range(2.0, 5.0)), 3.2, rng.randf_range(3.2, 4.4), rng)
+	elif r < 0.16:
+		_add(items, "tree", z, side * rng.randf_range(14.0, 70.0), 3.5, rng.randf_range(5.0, 7.0), rng)
+	elif r < 0.19:
+		_flock(items, z, rng, "sheep", 7)
+	elif r < 0.21:
+		_herd(items, z, rng, 4)
+	elif r < 0.225:
+		_add(items, "farm", z, side * rng.randf_range(30.0, 60.0), 9.0, 7.0, rng)
+	return rng.randf_range(18.0, 28.0)
+
+## The taiga: dense spruce, pine and larch right to the road, birches at the forest's edge, a clearing with a log
+## house now and then; no fields. Returns the step.
+static func _taiga(items: Dictionary, z: float, rng: RandomNumberGenerator) -> float:
+	if _h(int(z / 350.0), 53) < 0.08:
+		for side in [-1, 1]:
+			if rng.randf() < 0.5:
+				_add(items, "birch", z + rng.randf_range(-3, 3), side * rng.randf_range(7.8, 11.0), 3.0, rng.randf_range(8.0, 12.0), rng)
+		if rng.randf() < 0.06:
+			_add(items, "woodhouse", z, _side(rng) * rng.randf_range(16.0, 26.0), 8.0, 6.5, rng)
+		return rng.randf_range(10.0, 14.0)
+	for side in [-1, 1]:
+		var edge := "birch" if rng.randf() < 0.4 else _taiga_tree(rng)
+		_add(items, edge, z + rng.randf_range(-3, 3), side * rng.randf_range(7.6, 11.0), 3.5, rng.randf_range(9.0, 15.0), rng)
+		_add(items, _taiga_tree(rng), z + rng.randf_range(-4, 4), side * rng.randf_range(12.0, 22.0), 4.0, rng.randf_range(12.0, 19.0), rng)
+		if rng.randf() < 0.7:
+			_add(items, _taiga_tree(rng), z + rng.randf_range(-4, 4), side * rng.randf_range(22.0, 40.0), 4.0, rng.randf_range(13.0, 20.0), rng)
+	return rng.randf_range(7.0, 11.0)
+
+## A tree deep in the taiga: spruce, pine or larch.
+static func _taiga_tree(rng: RandomNumberGenerator) -> String:
+	var r := rng.randf()
+	return "spruce" if r < 0.45 else ("larch" if r < 0.75 else "pine")
 
 ## A flock of sheep or a few horses beside the road.
 static func _flock(items: Dictionary, z: float, rng: RandomNumberGenerator, kind: String, most: int) -> void:
@@ -908,6 +960,12 @@ static func ground(stage: Dictionary, nseg: int) -> Array:
 				"fjords":
 					if side == -1 and _h(int(z / 300.0), 17) < 0.65:
 						s.append_array([side * 13.0, side * 400.0, G_WATER])
+				"steppe":
+					# long streaks of feather grass bent by the wind, paler than the rest
+					var blk := int(z / 45.0)
+					if _h(blk, side * 37) < 0.45:
+						var a := 8.5 + 40.0 * _h(blk, side * 41)
+						s.append_array([side * a, side * (a + 20.0 + 100.0 * _h(blk, side * 43)), G_FEATHER])
 		if ls > 0.0:
 			for g in range(0, s.size(), 3):
 				if s[g] < 0.0:
@@ -948,6 +1006,9 @@ static func draw_item(cv, it: Dictionary, b: Vector2, pm: float, pal: Dictionary
 		"spruce": _spruce(cv, it, b, pm, pal, season)
 		"pine": _pine(cv, b, h, pm, season)
 		"birch": _birch(cv, b, h, pm, season)
+		"larch": _larch(cv, b, h, pm, season)
+		"haystack": _haystack(cv, it, b, h, pm, season)
+		"kurgan": _kurgan(cv, it, b, h, pm, season)
 		"poplar": _poplar(cv, b, h, pm, pal, season)
 		"willow": _willow(cv, b, h, pm, season)
 		"apple": _apple(cv, it, b, h, pm, pal, season)
@@ -1218,6 +1279,60 @@ static func _birch(cv, b: Vector2, h: float, pm: float, season: String) -> void:
 	cv.draw_circle(b + Vector2(0, -h * 0.78), h * 0.2, col)
 	cv.draw_circle(b + Vector2(-h * 0.1, -h * 0.65), h * 0.14, col.darkened(0.08))
 	cv.draw_circle(b + Vector2(h * 0.1, -h * 0.68), h * 0.15, col.lightened(0.06))
+
+## Larch: a slim straight trunk under a narrow, airy cone of soft light-green tiers, golden in autumn, bare in winter
+## (the only conifer that loses its needles).
+static func _larch(cv, b: Vector2, h: float, pm: float, season: String) -> void:
+	var tw := maxf(1.0, 0.3 * pm)
+	var bark := Color("7a5a44")
+	if season == "winter":
+		cv.draw_rect(Rect2(b + Vector2(-tw * 0.5, -h), Vector2(tw, h)), bark)
+		for k in 5:
+			var y := -h * (0.35 + k * 0.13)
+			var reach := h * 0.17 * (1.0 - k * 0.15)
+			cv.draw_line(b + Vector2(0, y), b + Vector2(-reach, y + h * 0.05), Color("8a7560"), maxf(1.0, tw * 0.4))
+			cv.draw_line(b + Vector2(0, y - h * 0.04), b + Vector2(reach, y + h * 0.01), Color("8a7560"), maxf(1.0, tw * 0.4))
+		return
+	cv.draw_rect(Rect2(b + Vector2(-tw * 0.5, -h * 0.3), Vector2(tw, h * 0.3)), bark)
+	var col := Color("d9a937") if season == "autumn" else Color("7fae4a")
+	for k in 4:
+		var y0 := -h * (0.22 + k * 0.18)
+		var ww := h * 0.17 * (1.0 - k * 0.2)
+		cv.draw_colored_polygon(PackedVector2Array([b + Vector2(-ww, y0), b + Vector2(ww, y0), b + Vector2(0, y0 - h * 0.3)]),
+			col.darkened(0.08) if k % 2 == 0 else col)
+
+## A haystack of the steppe: a tall rounded stack with a pole through its top, weathered darker in autumn, snow on it
+## in winter.
+static func _haystack(cv, it: Dictionary, b: Vector2, h: float, pm: float, season: String) -> void:
+	var w: float = it.w * pm * 0.5
+	var col := Color("a88a45") if season == "autumn" else (Color("8f7a4a") if season == "winter" else Color("c9a24e"))
+	cv.draw_line(b + Vector2(0, -h * 0.9), b + Vector2(0, -h * 1.12), Color("5b4630"), maxf(1.0, 0.12 * pm))
+	cv.draw_colored_polygon(PackedVector2Array([b + Vector2(-w, 0), b + Vector2(-w * 1.05, -h * 0.45), b + Vector2(-w * 0.75, -h * 0.8),
+		b + Vector2(0, -h), b + Vector2(w * 0.75, -h * 0.8), b + Vector2(w * 1.05, -h * 0.45), b + Vector2(w, 0)]), col)
+	cv.draw_colored_polygon(PackedVector2Array([b + Vector2(w * 0.25, 0), b + Vector2(w * 0.3, -h * 0.85), b + Vector2(w * 0.75, -h * 0.8),
+		b + Vector2(w * 1.05, -h * 0.45), b + Vector2(w, 0)]), col.darkened(0.15))
+	if season == "winter":
+		cv.draw_colored_polygon(PackedVector2Array([b + Vector2(-w * 0.8, -h * 0.72), b + Vector2(0, -h * 1.02), b + Vector2(w * 0.8, -h * 0.72), b + Vector2(0, -h * 0.8)]), Color("f4f7f9"))
+
+## A kurgan: an ancient burial mound, a low wide grassy hill far off the road, now and then with a grey stone figure
+## on top.
+static func _kurgan(cv, it: Dictionary, b: Vector2, h: float, pm: float, season: String) -> void:
+	var w: float = it.w * pm * 0.5
+	var col: Color = {"summer": Color("98a656"), "autumn": Color("a98f55"), "winter": Color("eef2f4")}.get(season, Color("98a656"))
+	var pts := PackedVector2Array()
+	for k in 13:
+		var a := PI * k / 12.0
+		pts.append(b + Vector2(-cos(a) * w, -sin(a) * h * (0.75 + 0.25 * sin(a))))
+	cv.draw_colored_polygon(pts, col)
+	var shade := PackedVector2Array()
+	for k in range(6, 13):
+		var a := PI * k / 12.0
+		shade.append(b + Vector2(-cos(a) * w, -sin(a) * h * (0.75 + 0.25 * sin(a))))
+	shade.append(b + Vector2(w * 0.25, 0))
+	cv.draw_colored_polygon(shade, col.darkened(0.08))
+	if it.get("v", 1.0) < 0.3 and pm * h > 3.0:
+		cv.draw_rect(Rect2(b + Vector2(-0.35 * pm, -h - 1.8 * pm), Vector2(0.7 * pm, 1.8 * pm)), Color("8d8a82"))
+		cv.draw_circle(b + Vector2(0, -h - 2.0 * pm), 0.35 * pm, Color("8d8a82"))
 
 static func _poplar(cv, b: Vector2, h: float, pm: float, pal: Dictionary, season: String) -> void:
 	cv.draw_rect(Rect2(b + Vector2(-maxf(1.0, 0.3 * pm) * 0.5, -h * 0.2), Vector2(maxf(1.0, 0.3 * pm), h * 0.2)), Color("5b3d27"))

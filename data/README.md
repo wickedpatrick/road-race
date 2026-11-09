@@ -28,7 +28,10 @@ Numbers: distances along a road in real kilometres from city `a`; populations in
   What grows beside the road per landscape is in `Scenery._nature` (`lava`, `highland`, `glacier`, `fjords`: the
   treeless north in `Scenery._iceland`; `desert`: `Scenery._desert`; `mediterranean`: olives, cypresses, maquis, dry-stone
   walls (`stonewall`, kept clear of the shoulder) and white houses in the settlements, `Scenery._mediterranean`; the
-  stone and the house walls take the palette's `stone` and `wall`).
+  stone and the house walls take the palette's `stone` and `wall`; `steppe`: open dry grass with wind-swept streaks
+  of feather grass (`Weather.FEATHER` by season), poplar shelter belts, haystacks, a lone tree, sheep, low kurgans
+  far off, `Scenery._steppe`; `taiga`: dense spruce, pine and larch, birches at the edge, clearings, log houses and
+  wooden churches in the settlements, no fields, `Scenery._taiga`).
 - `biomes` may also give their `grass`: `{season: ["#rrggbb", "#rrggbb"]}` (the two bands, e.g. moorland brown);
   the grass turns from one landscape's into the next one's over 150 m.
 - `landmark_sizes`: landmark painter kind -> `[width, height]` in metres (see `LandmarkPainter`).
