@@ -49,7 +49,7 @@
 		"de": "1877 belagerten Russen und Rumänen hier fünf Monate lang das osmanische Heer"
 	},
 	"Sliven": {
-		"pl": "Miasto stu wojewodów i silnego wiatru, pod skałami Sinite kamani",
+		"pl": "Miasto stu hajduckich wojewodów i silnego wiatru, pod skałami Sinite kamani",
 		"en": "The town of a hundred voivodes and strong winds, below the Blue Rocks",
 		"cs": "Město sta vojvodů a silného větru pod Modrými skalami",
 		"is": "Bær hundrað uppreisnarforingja og sterkra vinda undir Bláu klettunum",
@@ -84,11 +84,11 @@
 		"de": "Hauptstadt des mittelalterlichen Zarenreichs, die Häuser klettern über die Jantra"
 	},
 	"Haskovo": {
-		"pl": "Nad miastem stoi największy na świecie posąg Matki Boskiej z Dzieciątkiem",
-		"en": "Above the town stands the world's tallest statue of the Virgin and Child",
-		"cs": "Nad městem stojí nejvyšší socha Panny Marie s Ježíškem na světě",
-		"is": "Fyrir ofan bæinn stendur hæsta stytta heims af Maríu mey með Jesúbarnið",
-		"de": "Über der Stadt steht die höchste Statue der Muttergottes mit Kind der Welt"
+		"pl": "Nad miastem stoi jeden z najwyższych na świecie posągów Matki Boskiej z Dzieciątkiem",
+		"en": "Above the town stands one of the tallest statues of the Virgin and Child in the world",
+		"cs": "Nad městem stojí jedna z nejvyšších soch Panny Marie s Ježíškem na světě",
+		"is": "Fyrir ofan bæinn stendur ein hæsta stytta heims af Maríu mey með Jesúbarnið",
+		"de": "Über der Stadt steht eine der höchsten Statuen der Muttergottes mit Kind der Welt"
 	},
 	"Blagoevgrad": {
 		"pl": "Studenckie miasto nad Strumą, między Riłą a Pirinem",
@@ -133,7 +133,7 @@
 		"de": "Das Herz des Rosentals, woher das meiste Rosenöl der Welt stammt"
 	},
 	"Bansko": {
-		"pl": "Narciarski kurort pod Pirinem z kamiennymi domami odrodzenia",
+		"pl": "Narciarski kurort pod Pirinem z kamiennymi domami z czasów odrodzenia narodowego",
 		"en": "A ski resort below Pirin, with stone houses from the National Revival",
 		"cs": "Lyžařské středisko pod Pirinem s kamennými domy z dob národního obrození",
 		"is": "Skíðabær undir Pirin með steinhúsum frá endurreisnartímanum",

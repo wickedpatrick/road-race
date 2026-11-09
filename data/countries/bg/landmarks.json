@@ -13,7 +13,7 @@
 				"pl": "Złote i zielone kopuły wzniesione w podzięce za wyzwolenie w 1878 roku",
 				"en": "Gold and green domes raised in thanks for the liberation of 1878",
 				"cs": "Zlaté a zelené kopule postavené jako díky za osvobození roku 1878",
-				"is": "Gylltir og grænir hvolfþök reist í þakklæti fyrir frelsunina 1878",
+				"is": "Gyllt og græn hvolfþök reist í þakklæti fyrir frelsunina 1878",
 				"de": "Goldene und grüne Kuppeln, errichtet zum Dank für die Befreiung 1878"
 			},
 			"local": "Храм-паметник „Св. Александър Невски“"
@@ -168,11 +168,11 @@
 				"de": "Felsring Halkata"
 			},
 			"desc": {
-				"pl": "Skalne okno na grani Niebieskich Skał; przejście przez nie podobno zmienia płeć",
-				"en": "A rock window on the Blue Rocks' ridge; walking through is said to change your sex",
-				"cs": "Skalní okno na hřebeni Modrých skal; průchod prý mění pohlaví",
-				"is": "Klettagluggi á hrygg Bláu klettanna; sagt er að sá sem gengur í gegn skipti um kyn",
-				"de": "Ein Felsfenster am Grat der Blauen Felsen; wer hindurchgeht, wechselt angeblich das Geschlecht"
+				"pl": "Skalne okno na grani Niebieskich Skał; przejście przez nie podobno spełnia życzenia",
+				"en": "A rock window on the Blue Rocks' ridge; walking through it is said to grant wishes",
+				"cs": "Skalní okno na hřebeni Modrých skal; průchod jím prý plní přání",
+				"is": "Klettagluggi á hrygg Bláu klettanna; sagt er að sá sem gengur í gegn fái ósk sína uppfyllta",
+				"de": "Ein Felsfenster am Grat der Blauen Felsen; wer hindurchgeht, dem sollen sich Wünsche erfüllen"
 			},
 			"local": "Халката"
 		}
@@ -286,11 +286,11 @@
 				"de": "Statue der Gottesmutter"
 			},
 			"desc": {
-				"pl": "Najwyższy na świecie posąg Matki Boskiej z Dzieciątkiem, na kaplicy na wzgórzu",
-				"en": "The world's tallest statue of the Virgin and Child, on a chapel on the hill",
-				"cs": "Nejvyšší socha Panny Marie s Ježíškem na světě, na kapli na kopci",
-				"is": "Hæsta stytta heims af Maríu mey með barnið, á kapellu á hæðinni",
-				"de": "Die höchste Statue der Muttergottes mit Kind der Welt, auf einer Kapelle am Hügel"
+				"pl": "Jeden z najwyższych na świecie posągów Matki Boskiej z Dzieciątkiem, na kaplicy na wzgórzu",
+				"en": "One of the tallest statues of the Virgin and Child in the world, on a chapel on the hill",
+				"cs": "Jedna z nejvyšších soch Panny Marie s Ježíškem na světě, na kapli na kopci",
+				"is": "Ein hæsta stytta heims af Maríu mey með barnið, á kapellu á hæðinni",
+				"de": "Eine der höchsten Statuen der Muttergottes mit Kind der Welt, auf einer Kapelle am Hügel"
 			},
 			"local": "Паметник „Света Богородица“"
 		}

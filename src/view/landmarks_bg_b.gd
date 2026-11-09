@@ -163,20 +163,23 @@ static func _tsarevets() -> void:
 	_arch_win(5.0, 31, 1.2, 3, WIN)
 
 ## The Monument to the Asen Dynasty in Veliko Tarnovo: a tall sword in the middle and the four bronze tsars on
-## horseback around it, on a stone platform in the Yantra's bend.
+## horseback around it, the inner two on plinths, on a stone platform in the Yantra's bend.
 static func _asenevtsi() -> void:
 	_r(-12, 0, 12, 2, STONE_D)
 	_r(-10, 2, 10, 3, STONE)
 	# the sword
 	_poly([-0.9, 3, 0.9, 3, 0.7, 20, 0, 23.5, -0.7, 20], Color("b0b4b8"))
 	_l(0, 4, 0, 20, Color("8a8f94"), 0.15)
-	_r(-3.2, 6, 3.2, 7, Color("8a8f94"))
+	_r(-2.8, 6, 2.8, 7, Color("8a8f94"))
 	_r(-0.6, 3, 0.6, 6, BRONZE)
 	# four riders on their horses, rearing outwards
-	for x in [-8.0, -4.0, 4.0, 8.0]:
+	for x in [-8.5, -4.5, 4.5, 8.5]:
 		var s := 1.0 if x > 0.0 else -1.0
 		var y := 3.0 if absf(x) > 6.0 else 7.0
 		var hx: float = x + 0.6 * s
+		if y > 3.0: # the inner riders stand higher, on stone plinths
+			_r(hx - 2.0, 3, hx + 2.0, y, STONE)
+			_r(hx - 2.2, y - 0.4, hx + 2.2, y, STONE_D)
 		_poly([hx - 1.9 * s, y + 1.6, hx + 1.3 * s, y + 2.4, hx + 1.1 * s, y + 3.6, hx - 1.9 * s, y + 2.8], BRONZE)
 		_poly([hx + 0.9 * s, y + 2.6, hx + 1.7 * s, y + 4.6, hx + 2.6 * s, y + 4.9, hx + 2.5 * s, y + 4.2, hx + 1.8 * s, y + 3.3], BRONZE)
 		_l(hx - 1.6 * s, y + 1.8, hx - 1.8 * s, y, BRONZE, 0.45)

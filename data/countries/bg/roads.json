@@ -29,7 +29,7 @@
 		"a": "pazardzhik",
 		"b": "bansko",
 		"km": 128,
-		"road": [[42, "II-37"], [128, "II-84"]],
+		"road": "II-84",
 		"towns": [["Velingrad", 42], ["Yundola", 62], ["Yakoruda", 86], ["Razlog", 118]],
 		"zones": [
 			[15, "fields", "Trakiyska nizina"], [38, "mountains", "Rodopi"], [55, "upland", "Chepino"],
@@ -79,9 +79,9 @@
 		"b": "stara_zagora",
 		"km": 104,
 		"road": "A1",
-		"towns": [["Popovitsa", 26], ["Chirpan", 62]],
+		"towns": [["Popovitsa", 26], ["Chirpan", 58]],
 		"zones": [[60, "fields", "Trakiyska nizina"], [104, "orchard", "Trakiyska nizina"]],
-		"via": [[62, 25.33, 42.22]]
+		"via": [[58, 25.33, 42.22]]
 	},
 	{
 		"a": "stara_zagora",
@@ -97,9 +97,9 @@
 		"b": "burgas",
 		"km": 96,
 		"road": "A1",
-		"towns": [["Straldzha", 22], ["Karnobat", 50]],
+		"towns": [["Zimnitsa", 22], ["Karnobat", 50]],
 		"zones": [[40, "fields", "Tundzha"], [82, "fields", "Karnobatsko pole"], [96, "lakes", "Burgaski ezera"]],
-		"via": [[22, 26.69, 42.6], [50, 26.98, 42.62]]
+		"via": [[22, 26.62, 42.57], [50, 26.98, 42.62]]
 	},
 	{
 		"a": "stara_zagora",
@@ -292,9 +292,9 @@
 		"a": "plovdiv",
 		"b": "haskovo",
 		"km": 92,
-		"road": [[55, "A1"], [85, "A4"], [92, "I-5"]],
-		"towns": [["Popovitsa", 26], ["Chirpan", 55], ["Dimitrovgrad", 76]],
+		"road": [[58, "A1"], [85, "A4"], [92, "I-5"]],
+		"towns": [["Popovitsa", 26], ["Chirpan", 58], ["Dimitrovgrad", 76]],
 		"zones": [[92, "fields", "Trakiyska nizina"]],
-		"via": [[55, 25.33, 42.22], [76, 25.6, 42.06]]
+		"via": [[58, 25.33, 42.22], [76, 25.6, 42.06]]
 	}
 ]
