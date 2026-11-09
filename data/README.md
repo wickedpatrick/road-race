@@ -47,7 +47,8 @@ Numbers: distances along a road in real kilometres from city `a`; populations in
 The country picker's map, made by `tools/make_world.py` from Natural Earth (do not edit by hand): Europe with a
 piece of Asia, North America small on the left, in screen pixels. `countries`: code -> `{polys, label}` for every
 country in the plan (`planned`, grey with borders until it is in `countries/index.json`); `land`: other land, drawn
-without borders.
+without borders; `views`: `{name, rect, lonlat: [lon0, lon1, lat0, lat1]}`. Cyprus is one island (the north merged
+in) and Crimea is Ukraine's (moved out of Russia), as the EU sees them.
 
 ## `countries/index.json`
 
