@@ -132,6 +132,12 @@
 			"name": {"pl": "Bułgaria", "en": "Bulgaria", "cs": "Bulharsko", "is": "Búlgaría", "de": "Bulgarien"},
 			"neighbours": ["ro", "rs", "mk", "gr", "tr"],
 			"favorite_neighbour": "gr"
+		},
+		{
+			"code": "hu",
+			"name": {"pl": "Węgry", "en": "Hungary", "cs": "Maďarsko", "is": "Ungverjaland", "de": "Ungarn"},
+			"neighbours": ["at", "sk", "ua", "ro", "rs", "hr", "si"],
+			"favorite_neighbour": "pl"
 		}
 	]
 }

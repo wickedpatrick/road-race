@@ -1,0 +1,401 @@
+{
+	"Budapest": {
+		"pl": "Stolica Węgier, powstała w 1873 roku z połączenia Budy, Óbudy i Pesztu; pod miastem jest ponad sto gorących źródeł",
+		"en": "Hungary's capital, joined from Buda, Óbuda and Pest in 1873, with over a hundred hot springs below it",
+		"cs": "Hlavní město Maďarska, roku 1873 spojené z Budína, Óbudy a Pešti, pod městem je přes sto horkých pramenů",
+		"is": "Höfuðborg Ungverjalands, sameinuð úr Búda, Óbúda og Pest árið 1873, með yfir hundrað heitum lindum",
+		"de": "Ungarns Hauptstadt, 1873 aus Buda, Óbuda und Pest vereint, mit über hundert heißen Quellen"
+	},
+	"Debrecen": {
+		"pl": "Drugie miasto Węgier, „kalwiński Rzym”, słynie z pikantnej kiełbasy debreczyńskiej",
+		"en": "Hungary's second city, the 'Calvinist Rome', famous for its spicy Debrecener sausage",
+		"cs": "Druhé největší město Maďarska, „kalvínský Řím“, proslulé pikantní debrecínkou",
+		"is": "Næststærsta borg Ungverjalands, „Róm kalvínista“, fræg fyrir krydduðu Debrecen-pylsuna",
+		"de": "Ungarns zweitgrößte Stadt, das „calvinistische Rom“, berühmt für die würzige Debrecziner"
+	},
+	"Szeged": {
+		"pl": "Miasto nad Cisą, stolica papryki i salami; tutejszy naukowiec Szent-Györgyi odkrył witaminę C",
+		"en": "A city on the Tisza, capital of paprika and salami; here Szent-Györgyi discovered vitamin C",
+		"cs": "Město na Tise, hlavní město papriky a salámu; zdejší vědec Szent-Györgyi objevil vitamin C",
+		"is": "Borg við Tisza, höfuðborg papriku og salamí; hér uppgötvaði Szent-Györgyi C-vítamín",
+		"de": "Stadt an der Theiß, Hauptstadt von Paprika und Salami; hier entdeckte Szent-Györgyi das Vitamin C"
+	},
+	"Miskolc": {
+		"pl": "Stare miasto hutnicze u stóp gór Bükk, z kąpieliskiem w jaskini w Miskolctapolca",
+		"en": "An old steel town at the foot of the Bükk hills, with a bath inside a cave at Miskolctapolca",
+		"cs": "Staré hutnické město pod pohořím Bükk, s lázněmi v jeskyni v Miskolctapolce",
+		"is": "Gamall stálbær við rætur Bükk-fjalla, með baði inni í helli í Miskolctapolca",
+		"de": "Alte Stahlstadt am Fuß des Bükk-Gebirges, mit einem Höhlenbad in Miskolctapolca"
+	},
+	"Pécs": {
+		"pl": "Słoneczne miasto pod górami Mecsek, z wczesnochrześcijańskimi grobowcami i porcelaną Zsolnay",
+		"en": "A sunny city under the Mecsek hills, with early Christian tombs and Zsolnay porcelain",
+		"cs": "Slunečné město pod pohořím Mecsek, s raně křesťanskými hrobkami a porcelánem Zsolnay",
+		"is": "Sólrík borg undir Mecsek-hæðum, með frumkristnum grafhýsum og Zsolnay-postulíni",
+		"de": "Sonnige Stadt unter dem Mecsek, mit frühchristlichen Grabkammern und Zsolnay-Porzellan"
+	},
+	"Győr": {
+		"pl": "Miasto trzech rzek: Dunaju, Raby i Rábcy, z barokową starówką i fabryką silników Audi",
+		"en": "The city of three rivers, the Danube, Rába and Rábca, with a Baroque old town and an Audi engine plant",
+		"cs": "Město tří řek, Dunaje, Ráby a Rábce, s barokním centrem a továrnou na motory Audi",
+		"is": "Borg þriggja áa, Dónár, Rába og Rábca, með barokkmiðbæ og vélaverksmiðju Audi",
+		"de": "Stadt der drei Flüsse Donau, Raab und Rabnitz, mit barocker Altstadt und Audi-Motorenwerk"
+	},
+	"Nyíregyháza": {
+		"pl": "Stolica Nyírségu, krainy piaszczystych wzgórz, jabłek i tytoniu",
+		"en": "Capital of the Nyírség, a land of sandy hills, apples and tobacco",
+		"cs": "Hlavní město kraje Nyírség, země písečných kopců, jablek a tabáku",
+		"is": "Höfuðstaður Nyírség, lands sandhæða, epla og tóbaks",
+		"de": "Hauptstadt der Nyírség, eines Landes aus Sandhügeln, Äpfeln und Tabak"
+	},
+	"Kecskemét": {
+		"pl": "Miasto moreli i pálinki, rodzinne miasto Zoltána Kodálya",
+		"en": "A town of apricots and pálinka, the birthplace of Zoltán Kodály",
+		"cs": "Město meruněk a pálenky, rodiště Zoltána Kodálye",
+		"is": "Bær apríkósa og pálinka, fæðingarstaður Zoltáns Kodály",
+		"de": "Stadt der Aprikosen und des Pálinka, Geburtsort von Zoltán Kodály"
+	},
+	"Székesfehérvár": {
+		"pl": "Dawna stolica, gdzie przez wieki koronowano i chowano królów Węgier",
+		"en": "The old royal seat where Hungary's kings were crowned and buried for centuries",
+		"cs": "Staré sídlo, kde se po staletí korunovali a pohřbívali uherští králové",
+		"is": "Gamla konungssetrið þar sem konungar Ungverjalands voru krýndir og grafnir öldum saman",
+		"de": "Alte Königsstadt, in der Ungarns Könige jahrhundertelang gekrönt und begraben wurden"
+	},
+	"Szombathely": {
+		"pl": "Rzymska Savaria, najstarsze miasto Węgier, gdzie urodził się św. Marcin z Tours",
+		"en": "Roman Savaria, Hungary's oldest town and birthplace of St Martin of Tours",
+		"cs": "Římská Savaria, nejstarší město Maďarska a rodiště svatého Martina z Tours",
+		"is": "Rómverska Savaria, elsti bær Ungverjalands og fæðingarstaður heilags Marteins frá Tours",
+		"de": "Das römische Savaria, Ungarns älteste Stadt und Geburtsort des heiligen Martin von Tours"
+	},
+	"Szolnok": {
+		"pl": "Miasto u ujścia Zagyvy do Cisy, z kolonią artystów i muzeum lotnictwa",
+		"en": "A town where the Zagyva meets the Tisza, with an artists' colony and an aviation museum",
+		"cs": "Město na soutoku Zagyvy a Tisy, s uměleckou kolonií a leteckým muzeem",
+		"is": "Bær þar sem Zagyva rennur í Tisza, með listamannanýlendu og flugsafni",
+		"de": "Stadt an der Mündung der Zagyva in die Theiß, mit Künstlerkolonie und Luftfahrtmuseum"
+	},
+	"Sopron": {
+		"pl": "„Najwierniejsze miasto”: w plebiscycie w 1921 roku wybrało Węgry zamiast Austrii",
+		"en": "'The most loyal town': in a 1921 vote it chose Hungary over Austria",
+		"cs": "„Nejvěrnější město“: v hlasování roku 1921 si zvolilo Maďarsko místo Rakouska",
+		"is": "„Tryggasti bærinn“: í kosningu árið 1921 valdi hann Ungverjaland fram yfir Austurríki",
+		"de": "„Die treueste Stadt“: 1921 stimmte sie für Ungarn statt Österreich"
+	},
+	"Kaposvár": {
+		"pl": "Miasto malarza Józsefa Rippl-Rónaiego, na wzgórzach Somogy",
+		"en": "The town of the painter József Rippl-Rónai, in the Somogy hills",
+		"cs": "Město malíře Józsefa Rippl-Rónaie v pahorkatině Somogy",
+		"is": "Bær listmálarans Józsefs Rippl-Rónai, í Somogy-hæðunum",
+		"de": "Stadt des Malers József Rippl-Rónai, im Hügelland von Somogy"
+	},
+	"Békéscsaba": {
+		"pl": "Stolica Viharsaroku, „Burzowego Kąta”, gdzie mieszka wielu Słowaków",
+		"en": "Capital of the Viharsarok, the 'Stormy Corner', home to many Slovaks",
+		"cs": "Centrum Viharsaroku, „Bouřlivého kouta“, kde žije mnoho Slováků",
+		"is": "Höfuðstaður Viharsarok, „Stormahornsins“, þar sem margir Slóvakar búa",
+		"de": "Hauptort des Viharsarok, des „Sturmwinkels“, wo viele Slowaken leben"
+	},
+	"Veszprém": {
+		"pl": "„Miasto królowych”: jego biskupi koronowali królowe Węgier; Europejska Stolica Kultury 2023",
+		"en": "'The town of queens', whose bishops crowned Hungary's queens; European Capital of Culture 2023",
+		"cs": "„Město královen“, jehož biskupové korunovali uherské královny; Evropské hlavní město kultury 2023",
+		"is": "„Bær drottninganna“, þar sem biskupar krýndu drottningar Ungverjalands; menningarborg Evrópu 2023",
+		"de": "„Stadt der Königinnen“, deren Bischöfe Ungarns Königinnen krönten; Kulturhauptstadt Europas 2023"
+	},
+	"Zalaegerszeg": {
+		"pl": "Stolica Zali, wśród winnic i lasów Göcseju",
+		"en": "Capital of Zala, among the vineyards and woods of Göcsej",
+		"cs": "Hlavní město Zaly, mezi vinicemi a lesy Göcseje",
+		"is": "Höfuðstaður Zala, innan um vínekrur og skóga Göcsej",
+		"de": "Hauptstadt des Komitats Zala, zwischen den Weinbergen und Wäldern von Göcsej"
+	},
+	"Eger": {
+		"pl": "W 1552 roku obrońcy zamku pod wodzą Dobó odparli tu Turków; słynie z wina Egri Bikavér",
+		"en": "In 1552 the castle's defenders under Dobó held off the Turks here; famous for Egri Bikavér wine",
+		"cs": "Roku 1552 tu obránci hradu pod Dobóem odrazili Turky; proslulé vínem Egri Bikavér",
+		"is": "Árið 1552 hrundu verjendur kastalans undir stjórn Dobó Tyrkjum hér frá; frægt fyrir Egri Bikavér-vín",
+		"de": "1552 hielten die Verteidiger der Burg unter Dobó hier die Türken auf; berühmt für den Erlauer Stierblut"
+	},
+	"Esztergom": {
+		"pl": "Pierwsza stolica Węgier, tu ochrzczono i koronowano św. Stefana; most Marii Waleri prowadzi na Słowację",
+		"en": "Hungary's first capital, where St Stephen was baptised and crowned; the Mária Valéria Bridge leads to Slovakia",
+		"cs": "První hlavní město Uher, kde byl pokřtěn a korunován svatý Štěpán; most Marie Valérie vede na Slovensko",
+		"is": "Fyrsta höfuðborg Ungverjalands, þar sem heilagur Stefán var skírður og krýndur; brú Maríu Valeríu liggur til Slóvakíu",
+		"de": "Ungarns erste Hauptstadt, wo der heilige Stephan getauft und gekrönt wurde; die Maria-Valeria-Brücke führt in die Slowakei"
+	},
+	"Siófok": {
+		"pl": "Letnia stolica Balatonu, „węgierskiego morza”, największego jeziora Europy Środkowej",
+		"en": "The summer capital of Balaton, the 'Hungarian sea', Central Europe's largest lake",
+		"cs": "Letní metropole Balatonu, „maďarského moře“, největšího jezera střední Evropy",
+		"is": "Sumarhöfuðborg Balaton, „ungverska hafsins“, stærsta stöðuvatns Mið-Evrópu",
+		"de": "Sommerhauptstadt des Balaton, des „ungarischen Meeres“, des größten Sees Mitteleuropas"
+	},
+	"Tokaj": {
+		"pl": "Miasteczko u zbiegu Bodrogu i Cisy; jego słodkie wino aszú chwalił król Francji Ludwik XIV",
+		"en": "A small town where the Bodrog meets the Tisza; its sweet aszú wine was praised by Louis XIV of France",
+		"cs": "Městečko na soutoku Bodrogu a Tisy; jeho sladké víno aszú chválil francouzský král Ludvík XIV.",
+		"is": "Smábær þar sem Bodrog rennur í Tisza; Loðvík XIV Frakkakonungur lofaði sæta aszú-vínið",
+		"de": "Städtchen an der Mündung des Bodrog in die Theiß; sein süßer Aszú wurde von Ludwig XIV. gepriesen"
+	},
+	"Szentendre": {
+		"pl": "Barwne miasteczko artystów nad Dunajem, z cerkwiami dawnych serbskich osadników",
+		"en": "A colourful artists' town on the Danube, with the churches of old Serbian settlers",
+		"cs": "Barevné městečko umělců na Dunaji, s kostely dávných srbských osadníků",
+		"is": "Litríkur listamannabær við Dóná, með kirkjum gamalla serbneskra landnema",
+		"de": "Buntes Künstlerstädtchen an der Donau, mit Kirchen alter serbischer Siedler"
+	},
+	"Visegrád": {
+		"pl": "Tu w 1335 roku królowie Węgier, Polski i Czech zawarli sojusz; w 1991 urodziła się tu Grupa Wyszehradzka",
+		"en": "Here in 1335 the kings of Hungary, Poland and Bohemia made an alliance; the Visegrád Group was born here in 1991",
+		"cs": "Zde se roku 1335 spojili králové Uher, Polska a Čech; v roce 1991 tu vznikla Visegrádská skupina",
+		"is": "Hér gerðu konungar Ungverjalands, Póllands og Bæheims bandalag árið 1335; Visegrád-hópurinn varð til hér 1991",
+		"de": "Hier schlossen 1335 die Könige von Ungarn, Polen und Böhmen ein Bündnis; 1991 entstand hier die Visegrád-Gruppe"
+	},
+	"Komárom": {
+		"pl": "Miasto podzielone Dunajem: druga połowa, Komárno, leży na Słowacji",
+		"en": "A town split by the Danube: its other half, Komárno, is in Slovakia",
+		"cs": "Město rozdělené Dunajem: jeho druhá polovina, Komárno, leží na Slovensku",
+		"is": "Bær sem Dóná skiptir: hinn helmingurinn, Komárno, er í Slóvakíu",
+		"de": "Eine von der Donau geteilte Stadt: die andere Hälfte, Komárno, liegt in der Slowakei"
+	},
+	"Tata": {
+		"pl": "„Miasto wód” ze starym zamkiem nad jeziorem, gdzie zimują dzikie gęsi",
+		"en": "The 'town of waters', with an old castle on a lake where wild geese spend the winter",
+		"cs": "„Město vod“ se starým hradem u jezera, kde zimují divoké husy",
+		"is": "„Bær vatnanna“, með gömlum kastala við vatn þar sem villigæsir hafa vetursetu",
+		"de": "Die „Stadt der Gewässer“, mit alter Burg am See, wo Wildgänse überwintern"
+	},
+	"Tatabánya": {
+		"pl": "Górnicze miasto pod skałą z wielkim brązowym turulem, mitycznym ptakiem Węgrów",
+		"en": "A mining town under a cliff with a huge bronze turul, the Hungarians' mythical bird",
+		"cs": "Hornické město pod skálou s obrovským bronzovým turulem, bájným ptákem Maďarů",
+		"is": "Námabær undir kletti með risastórum bronsturul, goðsagnafugli Ungverja",
+		"de": "Bergbaustadt unter einem Felsen mit einem riesigen Bronze-Turul, dem Sagenvogel der Ungarn"
+	},
+	"Nagycenk": {
+		"pl": "Majątek hrabiego Istvána Széchenyiego, „największego z Węgrów”, budowniczego Mostu Łańcuchowego",
+		"en": "The estate of Count István Széchenyi, 'the greatest Hungarian', who built the Chain Bridge",
+		"cs": "Statek hraběte Istvána Széchenyiho, „největšího Maďara“, stavitele Řetězového mostu",
+		"is": "Óðal Istváns Széchenyi greifa, „mesta Ungverjans“, sem byggði Keðjubrúna",
+		"de": "Gut des Grafen István Széchenyi, des „größten Ungarn“, der die Kettenbrücke bauen ließ"
+	},
+	"Csorna": {
+		"pl": "Stolica Rábaköz, płaskiej krainy między Rabą a Rábcą",
+		"en": "Capital of the Rábaköz, the flat land between the Rába and the Rábca",
+		"cs": "Centrum Rábaköze, roviny mezi Rábou a Rábcou",
+		"is": "Höfuðstaður Rábaköz, flatlendisins milli Rába og Rábca",
+		"de": "Hauptort des Rábaköz, des flachen Landes zwischen Raab und Rabnitz"
+	},
+	"Vasvár": {
+		"pl": "Tu w 1664 roku zawarto pokój z Turkami, z którego Węgrzy byli bardzo niezadowoleni",
+		"en": "Here in 1664 a peace was made with the Turks that left the Hungarians very unhappy",
+		"cs": "Zde byl roku 1664 uzavřen mír s Turky, se kterým byli Maďaři velmi nespokojeni",
+		"is": "Hér var friður saminn við Tyrki árið 1664 sem Ungverjar voru afar ósáttir við",
+		"de": "Hier wurde 1664 ein Frieden mit den Türken geschlossen, mit dem die Ungarn sehr unzufrieden waren"
+	},
+	"Fonyód": {
+		"pl": "Kurort pod dwoma wzgórzami wulkanicznymi, z widokiem na całe jezioro",
+		"en": "A resort under two volcanic hills, with a view over the whole lake",
+		"cs": "Letovisko pod dvěma sopečnými kopci, s výhledem na celé jezero",
+		"is": "Sumardvalarstaður undir tveimur eldfjallahæðum, með útsýni yfir allt vatnið",
+		"de": "Ferienort unter zwei Vulkanhügeln, mit Blick über den ganzen See"
+	},
+	"Zamárdi": {
+		"pl": "Plaże Balatonu, gdzie woda jest tak płytka, że można iść setki metrów w głąb jeziora",
+		"en": "Balaton beaches where the water is so shallow you can wade out hundreds of metres",
+		"cs": "Pláže Balatonu, kde je voda tak mělká, že se dá jít stovky metrů do jezera",
+		"is": "Strendur Balaton þar sem vatnið er svo grunnt að vaða má hundruð metra út",
+		"de": "Balaton-Strände, an denen das Wasser so flach ist, dass man Hunderte Meter hinauswaten kann"
+	},
+	"Martonvásár": {
+		"pl": "W pałacu Brunszvików bywał Beethoven; tu podobno powstała „Dla Elizy”",
+		"en": "Beethoven stayed at the Brunszvik palace here; some say 'Für Elise' was written for this place",
+		"cs": "V paláci Brunszviků pobýval Beethoven; prý tu vznikla skladba „Pro Elišku“",
+		"is": "Beethoven dvaldi í Brunszvik-höllinni hér; sumir segja að „Für Elise“ hafi orðið til hér",
+		"de": "Im Schloss der Brunszviks weilte Beethoven; manche sagen, „Für Elise“ sei hier entstanden"
+	},
+	"Velence": {
+		"pl": "Nad płytkim Jeziorem Weleckim, porośniętym trzciną i pełnym ptaków",
+		"en": "On the shallow Lake Velence, full of reeds and birds",
+		"cs": "U mělkého jezera Velence, zarostlého rákosím a plného ptáků",
+		"is": "Við grunna Velence-vatnið, fullt af reyr og fuglum",
+		"de": "Am flachen Velencer See, voller Schilf und Vögel"
+	},
+	"Zirc": {
+		"pl": "Opactwo cystersów w sercu lasów Bakonyu, ze słynną barokową biblioteką",
+		"en": "A Cistercian abbey in the heart of the Bakony woods, with a famous Baroque library",
+		"cs": "Cisterciácké opatství v srdci bakoňských lesů, se slavnou barokní knihovnou",
+		"is": "Sistersíensaklaustur í hjarta Bakony-skóganna, með frægu barokkbókasafni",
+		"de": "Zisterzienserabtei im Herzen der Bakonywälder, mit berühmter Barockbibliothek"
+	},
+	"Ravazd": {
+		"pl": "Obok na wzgórzu stoi tysiącletnie opactwo benedyktynów w Pannonhalmie",
+		"en": "On the hill nearby stands the thousand-year-old Benedictine abbey of Pannonhalma",
+		"cs": "Na kopci nedaleko stojí tisíciletý benediktinský klášter Pannonhalma",
+		"is": "Á hæðinni í grenndinni stendur þúsund ára gamla Benediktsklaustrið í Pannonhalma",
+		"de": "Auf dem Hügel nebenan steht die tausendjährige Benediktinerabtei Pannonhalma"
+	},
+	"Dunaújváros": {
+		"pl": "Socjalistyczne miasto zbudowane od zera w latach 50. przy hucie, najpierw jako Sztálinváros",
+		"en": "A socialist town built from scratch in the 1950s around a steelworks, first named Sztálinváros",
+		"cs": "Socialistické město postavené v 50. letech na zelené louce u hutí, nejprve jako Sztálinváros",
+		"is": "Sósíalískur bær byggður frá grunni á sjötta áratugnum við stálver, fyrst nefndur Sztálinváros",
+		"de": "Sozialistische Stadt, in den 1950ern um ein Stahlwerk neu gebaut, zuerst Sztálinváros genannt"
+	},
+	"Paks": {
+		"pl": "Jedyna węgierska elektrownia jądrowa, daje około połowy prądu kraju",
+		"en": "Hungary's only nuclear power plant, making about half of the country's electricity",
+		"cs": "Jediná maďarská jaderná elektrárna, vyrábí asi polovinu elektřiny země",
+		"is": "Eina kjarnorkuver Ungverjalands, framleiðir um helming rafmagns landsins",
+		"de": "Ungarns einziges Kernkraftwerk, liefert etwa die Hälfte des Stroms im Land"
+	},
+	"Szekszárd": {
+		"pl": "Miasto czerwonego wina, zwłaszcza Szekszárdi Bikavér",
+		"en": "A town of red wine, above all Szekszárdi Bikavér",
+		"cs": "Město červeného vína, především Szekszárdi Bikavér",
+		"is": "Bær rauðvínsins, einkum Szekszárdi Bikavér",
+		"de": "Stadt des Rotweins, vor allem des Szekszárder Stierbluts"
+	},
+	"Bóly": {
+		"pl": "Dawna wieś Szwabów dunajskich, którzy przybyli tu po wojnach z Turkami",
+		"en": "An old village of the Danube Swabians, who came here after the Turkish wars",
+		"cs": "Stará vesnice podunajských Švábů, kteří sem přišli po válkách s Turky",
+		"is": "Gamalt þorp Dónár-Svaba, sem komu hingað eftir Tyrkjastríðin",
+		"de": "Altes Dorf der Donauschwaben, die nach den Türkenkriegen hierherkamen"
+	},
+	"Ócsa": {
+		"pl": "Średniowieczny kościół w środku dawnych mokradeł, dziś parku krajobrazowego",
+		"en": "A medieval church amid old marshes, now a protected landscape",
+		"cs": "Středověký kostel uprostřed dávných mokřadů, dnes chráněné krajinné oblasti",
+		"is": "Miðaldakirkja innan um gamlar mýrar, nú friðlýst landslag",
+		"de": "Mittelalterliche Kirche inmitten alter Sümpfe, heute ein Landschaftsschutzgebiet"
+	},
+	"Kiskunfélegyháza": {
+		"pl": "Tu dorastał Sándor Petőfi, poeta rewolucji 1848 roku",
+		"en": "Sándor Petőfi, the poet of the 1848 revolution, grew up here",
+		"cs": "Zde vyrůstal Sándor Petőfi, básník revoluce roku 1848",
+		"is": "Hér ólst Sándor Petőfi upp, skáld byltingarinnar 1848",
+		"de": "Hier wuchs Sándor Petőfi auf, der Dichter der Revolution von 1848"
+	},
+	"Hódmezővásárhely": {
+		"pl": "Miasto garncarzy z wielkimi polami wokół, jedno z największych obszarowo na Węgrzech",
+		"en": "A potters' town with wide fields around, one of the largest in area in Hungary",
+		"cs": "Město hrnčířů obklopené širými poli, rozlohou jedno z největších v Maďarsku",
+		"is": "Leirkerasmiðabær umkringdur víðum ökrum, einn sá stærsti að flatarmáli í Ungverjalandi",
+		"de": "Töpferstadt inmitten weiter Felder, flächenmäßig eine der größten Ungarns"
+	},
+	"Szarvas": {
+		"pl": "Arboretum z drzewami z całego świata, a niegdyś środek historycznych Węgier",
+		"en": "An arboretum with trees from all over the world, and once the centre of historic Hungary",
+		"cs": "Arboretum se stromy z celého světa, kdysi střed historických Uher",
+		"is": "Trjásafn með trjám alls staðar að úr heiminum, og eitt sinn miðja hins sögulega Ungverjalands",
+		"de": "Arboretum mit Bäumen aus aller Welt, einst der Mittelpunkt des historischen Ungarns"
+	},
+	"Gödöllő": {
+		"pl": "Barokowy pałac, w którym najchętniej mieszkała cesarzowa Elżbieta, Sisi",
+		"en": "A Baroque palace where Empress Elisabeth, Sisi, liked to stay most",
+		"cs": "Barokní zámek, kde nejraději pobývala císařovna Alžběta, Sisi",
+		"is": "Barokkhöll þar sem Elísabet keisaraynja, Sisi, dvaldi helst",
+		"de": "Barockschloss, in dem Kaiserin Elisabeth, Sisi, am liebsten weilte"
+	},
+	"Gyöngyös": {
+		"pl": "Brama do gór Mátra, gdzie stoi Kékes, najwyższy szczyt Węgier (1014 m)",
+		"en": "The gateway to the Mátra, home of Kékes, Hungary's highest peak (1,014 m)",
+		"cs": "Brána do pohoří Mátra s Kékesem, nejvyšším vrcholem Maďarska (1014 m)",
+		"is": "Hliðið að Mátra-fjöllum, þar sem Kékes, hæsti tindur Ungverjalands (1.014 m), er",
+		"de": "Tor zum Mátra-Gebirge mit dem Kékes, Ungarns höchstem Gipfel (1014 m)"
+	},
+	"Mezőkövesd": {
+		"pl": "Ojczyzna haftu matyó, z kolorowymi różami na czarnych strojach",
+		"en": "Home of Matyó embroidery, colourful roses on black costumes",
+		"cs": "Domov výšivky matyó, barevných růží na černých krojích",
+		"is": "Heimkynni Matyó-útsaumsins, litríkar rósir á svörtum búningum",
+		"de": "Heimat der Matyó-Stickerei, bunte Rosen auf schwarzen Trachten"
+	},
+	"Cegléd": {
+		"pl": "Tu w 1848 roku Lajos Kossuth porwał tłum do walki o wolność",
+		"en": "Here in 1848 Lajos Kossuth rallied the crowd to fight for freedom",
+		"cs": "Zde roku 1848 Lajos Kossuth strhl dav k boji za svobodu",
+		"is": "Hér hvatti Lajos Kossuth mannfjöldann til baráttu fyrir frelsi árið 1848",
+		"de": "Hier rief Lajos Kossuth 1848 die Menge zum Freiheitskampf auf"
+	},
+	"Karcag": {
+		"pl": "Stolica Wielkiej Kumanii, ziem potomków stepowych Kumanów",
+		"en": "Capital of Greater Cumania, the land of the descendants of the steppe Cumans",
+		"cs": "Centrum Velké Kumánie, země potomků stepních Kumánů",
+		"is": "Höfuðstaður Stóra-Kúmaníu, lands afkomenda Kúmana af gresjunni",
+		"de": "Hauptort Großkumaniens, des Landes der Nachfahren der Steppen-Kumanen"
+	},
+	"Hajdúszoboszló": {
+		"pl": "Uzdrowisko z gorącymi źródłami solankowymi i jednym z największych kąpielisk Europy",
+		"en": "A spa town with hot saline springs and one of Europe's largest bath complexes",
+		"cs": "Lázeňské město s horkými solnými prameny a jedním z největších koupališť Evropy",
+		"is": "Heilsulindabær með heitum saltlindum og einni stærstu baðstöð Evrópu",
+		"de": "Kurort mit heißen Salzquellen und einem der größten Bäder Europas"
+	},
+	"Hajdúböszörmény": {
+		"pl": "Miasto hajduków, wolnych pasterzy-wojowników, osiedlonych tu przez księcia Bocskaia",
+		"en": "A town of the hajdús, free herdsmen-soldiers settled here by Prince Bocskai",
+		"cs": "Město hajduků, svobodných pastevců-vojáků, které tu usadil kníže Bocskai",
+		"is": "Bær hajdúanna, frjálsra hirða og hermanna sem Bocskai fursti settist hér að",
+		"de": "Stadt der Heiducken, freier Hirtenkrieger, die Fürst Bocskai hier ansiedelte"
+	},
+	"Polgár": {
+		"pl": "Most nad Cisą, a stąd zaczyna się Hortobágy, największy step Europy Środkowej",
+		"en": "A bridge over the Tisza, and from here the Hortobágy begins, Central Europe's largest steppe",
+		"cs": "Most přes Tisu a odtud začíná Hortobágy, největší step střední Evropy",
+		"is": "Brú yfir Tisza, og héðan hefst Hortobágy, stærsta gresja Mið-Evrópu",
+		"de": "Eine Brücke über die Theiß, und hier beginnt die Hortobágy, die größte Steppe Mitteleuropas"
+	},
+	"Szerencs": {
+		"pl": "Miasto czekolady, z fabryką i muzeum słodyczy",
+		"en": "A chocolate town, with a factory and a museum of sweets",
+		"cs": "Město čokolády, s továrnou a muzeem sladkostí",
+		"is": "Súkkulaðibær, með verksmiðju og sælgætissafni",
+		"de": "Schokoladenstadt, mit Fabrik und Süßwarenmuseum"
+	},
+	"Tarcal": {
+		"pl": "Wieś pod wzgórzem Kopasz, gdzie na zboczach rośnie winorośl furmint",
+		"en": "A village under the Kopasz hill, whose slopes grow Furmint vines",
+		"cs": "Vesnice pod vrchem Kopasz, na jehož svazích roste réva furmint",
+		"is": "Þorp undir Kopasz-hæð, þar sem Furmint-vínviður vex í hlíðunum",
+		"de": "Dorf unter dem Kopasz-Berg, an dessen Hängen Furmint-Reben wachsen"
+	},
+	"Hatvan": {
+		"pl": "Barokowy pałac Grassalkovichów mieści dziś muzeum łowiectwa",
+		"en": "The Baroque Grassalkovich palace now houses a hunting museum",
+		"cs": "V barokním zámku Grassalkovichů je dnes muzeum myslivosti",
+		"is": "Barokkhöll Grassalkovich-ættarinnar hýsir nú veiðisafn",
+		"de": "Im barocken Grassalkovich-Schloss ist heute ein Jagdmuseum"
+	},
+	"Lajosmizse": {
+		"pl": "Dookoła puszta Kiskunság: piaszczysty step z żurawiami studziennymi, owcami i pasterzami na koniach",
+		"en": "The Kiskunság puszta all around: a sandy steppe of sweep wells, sheep and herdsmen on horseback",
+		"cs": "Všude kolem pusta Kiskunság: písečná step se studnami s vahadlem, ovcemi a pastevci na koních",
+		"is": "Kiskunság-púsztan allt um kring: sandgresja með vogarbrunnum, kindum og hirðum á hestbaki",
+		"de": "Ringsum die Puszta der Kiskunság: eine Sandsteppe mit Ziehbrunnen, Schafen und berittenen Hirten"
+	},
+	"Görbeháza": {
+		"pl": "Na południe stąd ciągnie się Hortobágy, największy step Europy Środkowej i pierwszy park narodowy Węgier, z szarym bydłem i końmi",
+		"en": "To the south lies Hortobágy, Central Europe's largest steppe and Hungary's first national park, with grey cattle and horses",
+		"cs": "Na jih se táhne Hortobágy, největší step střední Evropy a první národní park Maďarska, se šedým skotem a koňmi",
+		"is": "Í suðri liggur Hortobágy, stærsta gresja Mið-Evrópu og fyrsti þjóðgarður Ungverjalands, með gráum nautgripum og hestum",
+		"de": "Im Süden liegt die Hortobágy, die größte Steppe Mitteleuropas und Ungarns erster Nationalpark, mit Graurindern und Pferden"
+	},
+	"Balatonboglár": {
+		"pl": "Nad Balatonem, największym jeziorem Europy Środkowej: ma 77 km długości i średnio tylko ok. 3 m głębokości",
+		"en": "On Balaton, Central Europe's largest lake, 77 km long and on average only about 3 m deep",
+		"cs": "U Balatonu, největšího jezera střední Evropy, 77 km dlouhé a v průměru jen asi 3 m hluboké",
+		"is": "Við Balaton, stærsta stöðuvatn Mið-Evrópu, 77 km langt og að meðaltali aðeins um 3 m djúpt",
+		"de": "Am Balaton, dem größten See Mitteleuropas, 77 km lang und im Schnitt nur etwa 3 m tief"
+	},
+	"Dömös": {
+		"pl": "Zakole Dunaju: rzeka skręca tu na południe między wzgórzami Börzsöny i Pilis",
+		"en": "The Danube Bend: the river turns south here between the Börzsöny and Pilis hills",
+		"cs": "Dunajské koleno: řeka se tu stáčí na jih mezi pohořími Börzsöny a Pilis",
+		"is": "Dónárbugðan: áin beygir hér til suðurs milli Börzsöny- og Pilis-hæðanna",
+		"de": "Das Donauknie: der Fluss wendet sich hier zwischen Börzsöny und Pilis nach Süden"
+	}
+}

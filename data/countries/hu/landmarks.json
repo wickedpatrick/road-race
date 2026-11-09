@@ -1,0 +1,426 @@
+{
+	"Budapest": [
+		{
+			"kind": "hungarian_parliament",
+			"name": {"pl": "Parlament", "en": "The Parliament", "cs": "Parlament", "is": "Þinghúsið", "de": "Das Parlament"},
+			"desc": {
+				"pl": "Neogotycki gmach nad Dunajem, z 691 salami, największy budynek Węgier",
+				"en": "A Neo-Gothic palace on the Danube with 691 rooms, Hungary's largest building",
+				"cs": "Novogotický palác na Dunaji se 691 místnostmi, největší budova Maďarska",
+				"is": "Nýgotnesk höll við Dóná með 691 herbergi, stærsta bygging Ungverjalands",
+				"de": "Neugotischer Palast an der Donau mit 691 Räumen, Ungarns größtes Gebäude"
+			},
+			"local": "Országház"
+		},
+		{
+			"kind": "szechenyi_chain_bridge",
+			"name": {
+				"pl": "Most Łańcuchowy",
+				"en": "The Chain Bridge",
+				"cs": "Řetězový most",
+				"is": "Keðjubrúin",
+				"de": "Kettenbrücke"
+			},
+			"desc": {
+				"pl": "Pierwszy stały most między Budą a Pesztem (1849), strzeżony przez kamienne lwy",
+				"en": "The first permanent bridge between Buda and Pest (1849), guarded by stone lions",
+				"cs": "První stálý most mezi Budínem a Peští (1849), hlídaný kamennými lvy",
+				"is": "Fyrsta varanlega brúin milli Búda og Pest (1849), vöktuð af steinljónum",
+				"de": "Die erste feste Brücke zwischen Buda und Pest (1849), von Steinlöwen bewacht"
+			},
+			"local": "Széchenyi lánchíd"
+		}
+	],
+	"Debrecen": [
+		{
+			"kind": "debrecen_great_church",
+			"name": {
+				"pl": "Wielki Kościół Reformowany",
+				"en": "The Reformed Great Church",
+				"cs": "Velký reformovaný kostel",
+				"is": "Stóra siðbótarkirkjan",
+				"de": "Reformierte Große Kirche"
+			},
+			"desc": {
+				"pl": "Żółta świątynia z dwiema wieżami, tu w 1849 roku ogłoszono niepodległość Węgier",
+				"en": "The yellow two-towered church where Hungary's independence was declared in 1849",
+				"cs": "Žlutý dvouvěžový kostel, kde byla roku 1849 vyhlášena nezávislost Maďarska",
+				"is": "Gula tveggja turna kirkjan þar sem sjálfstæði Ungverjalands var lýst yfir 1849",
+				"de": "Die gelbe Kirche mit zwei Türmen, in der 1849 Ungarns Unabhängigkeit verkündet wurde"
+			},
+			"local": "Református Nagytemplom"
+		},
+		{
+			"kind": "hortobagy_bridge",
+			"name": {
+				"pl": "Most Dziewięcioprzęsłowy w Hortobágy",
+				"en": "The Nine-Hole Bridge of Hortobágy",
+				"cs": "Devítiobloukový most v Hortobágy",
+				"is": "Níu boga brúin í Hortobágy",
+				"de": "Neunlochbrücke in Hortobágy"
+			},
+			"desc": {
+				"pl": "Najdłuższy kamienny most Węgier na puszcie, obok żurawie studzienne i szare bydło",
+				"en": "Hungary's longest stone bridge, out on the puszta with sweep wells and grey cattle",
+				"cs": "Nejdelší kamenný most Maďarska na pustě, kolem studny s vahadlem a šedý skot",
+				"is": "Lengsta steinbrú Ungverjalands, á púsztunni með vogarbrunnum og gráum nautgripum",
+				"de": "Ungarns längste Steinbrücke, draußen in der Puszta mit Ziehbrunnen und Graurindern"
+			},
+			"local": "Kilenclyukú híd"
+		}
+	],
+	"Szeged": [
+		{
+			"kind": "szeged_votive_church",
+			"name": {
+				"pl": "Kościół Wotywny",
+				"en": "The Votive Church",
+				"cs": "Votivní kostel",
+				"is": "Heitkirkjan",
+				"de": "Votivkirche"
+			},
+			"desc": {
+				"pl": "Ceglana świątynia z dwiema wieżami, ślubowana po wielkiej powodzi Cisy w 1879 roku",
+				"en": "A brick church with twin towers, vowed after the great Tisza flood of 1879",
+				"cs": "Cihlový kostel se dvěma věžemi, zaslíbený po velké povodni na Tise v roce 1879",
+				"is": "Múrsteinskirkja með tvo turna, heitin eftir stóra Tisza-flóðið 1879",
+				"de": "Backsteinkirche mit zwei Türmen, gelobt nach der großen Theiß-Flut von 1879"
+			},
+			"local": "Fogadalmi templom"
+		}
+	],
+	"Miskolc": [
+		{
+			"kind": "diosgyor_castle",
+			"name": {
+				"pl": "Zamek Diósgyőr",
+				"en": "Diósgyőr Castle",
+				"cs": "Hrad Diósgyőr",
+				"is": "Diósgyőr-kastalinn",
+				"de": "Burg Diósgyőr"
+			},
+			"desc": {
+				"pl": "Gotycki zamek królewski z czterema narożnymi wieżami, ulubiony przez Ludwika Węgierskiego",
+				"en": "A Gothic royal castle with four corner towers, beloved of King Louis the Great",
+				"cs": "Gotický královský hrad se čtyřmi nárožními věžemi, oblíbený Ludvíkem Velikým",
+				"is": "Gotneskur konungskastali með fjórum hornturnum, eftirlæti Lajosar mikla",
+				"de": "Gotische Königsburg mit vier Ecktürmen, Lieblingsburg Ludwigs des Großen"
+			},
+			"local": "Diósgyőri vár"
+		}
+	],
+	"Pécs": [
+		{
+			"kind": "pecs_qasim_mosque",
+			"name": {
+				"pl": "Meczet paszy Kasima",
+				"en": "The Mosque of Pasha Qasim",
+				"cs": "Mešita paši Kásima",
+				"is": "Moska Qasims pasja",
+				"de": "Moschee des Paschas Gazi Kasim"
+			},
+			"desc": {
+				"pl": "Turecki meczet z zieloną kopułą, dziś kościół z krzyżem nad półksiężycem",
+				"en": "An Ottoman mosque with a green dome, now a church with a cross over the crescent",
+				"cs": "Turecká mešita se zelenou kupolí, dnes kostel s křížem nad půlměsícem",
+				"is": "Tyrknesk moska með grænni hvelfingu, nú kirkja með krossi yfir hálfmánanum",
+				"de": "Osmanische Moschee mit grüner Kuppel, heute eine Kirche mit Kreuz über dem Halbmond"
+			},
+			"local": "Gázi Kászim pasa dzsámija"
+		}
+	],
+	"Győr": [
+		{
+			"kind": "gyor_town_hall",
+			"name": {
+				"pl": "Ratusz w Győrze",
+				"en": "Győr Town Hall",
+				"cs": "Radnice v Győru",
+				"is": "Ráðhúsið í Győr",
+				"de": "Rathaus von Győr"
+			},
+			"desc": {
+				"pl": "Okazały neobarokowy ratusz z 59-metrową wieżą, w mieście trzech rzek",
+				"en": "A grand Neo-Baroque town hall with a 59-metre tower, in the city of three rivers",
+				"cs": "Okázalá novobarokní radnice s 59metrovou věží, ve městě tří řek",
+				"is": "Glæsilegt nýbarokkráðhús með 59 metra turni, í borg þriggja áa",
+				"de": "Prächtiges neobarockes Rathaus mit 59 Meter hohem Turm, in der Stadt der drei Flüsse"
+			},
+			"local": "Városháza"
+		}
+	],
+	"Nyíregyháza": [
+		{
+			"kind": "nyiregyhaza_zoo",
+			"name": {
+				"pl": "Zoo w Sóstó",
+				"en": "Sóstó Zoo",
+				"cs": "Zoo Sóstó",
+				"is": "Dýragarðurinn í Sóstó",
+				"de": "Tierpark Sóstó"
+			},
+			"desc": {
+				"pl": "Jeden z najlepszych ogrodów zoologicznych Europy, słonie wśród lasu nad Słonym Jeziorem",
+				"en": "One of Europe's best zoos, elephants in the woods by the Salt Lake",
+				"cs": "Jedna z nejlepších zoo Evropy, sloni v lese u Slaného jezera",
+				"is": "Einn besti dýragarður Evrópu, fílar í skóginum við Saltvatn",
+				"de": "Einer der besten Zoos Europas, Elefanten im Wald am Salzsee"
+			},
+			"local": "Nyíregyházi Állatpark"
+		}
+	],
+	"Kecskemét": [
+		{
+			"kind": "kecskemet_cifrapalota",
+			"name": {
+				"pl": "Cifrapalota",
+				"en": "The Ornamental Palace",
+				"cs": "Cifrapalota",
+				"is": "Skrauthöllin",
+				"de": "Cifrapalota"
+			},
+			"desc": {
+				"pl": "Secesyjny pałacyk o falistym dachu z kolorowych płytek Zsolnay",
+				"en": "An Art Nouveau palace with a wavy roof of colourful Zsolnay tiles",
+				"cs": "Secesní palác s vlnitou střechou z barevných dlaždic Zsolnay",
+				"is": "Höll í Art Nouveau-stíl með bylgjuðu þaki úr litríkum Zsolnay-flísum",
+				"de": "Jugendstilpalast mit welligem Dach aus bunten Zsolnay-Fliesen"
+			},
+			"local": "Cifrapalota"
+		}
+	],
+	"Székesfehérvár": [
+		{
+			"kind": "bory_castle",
+			"name": {"pl": "Zamek Bory", "en": "Bory Castle", "cs": "Hrad Bory", "is": "Bory-kastalinn", "de": "Bory-Burg"},
+			"desc": {
+				"pl": "Baśniowy zamek, który architekt Jenő Bory sam budował przez 40 lat dla ukochanej żony",
+				"en": "A fairy-tale castle the architect Jenő Bory built by hand for 40 years for his beloved wife",
+				"cs": "Pohádkový hrad, který architekt Jenő Bory sám stavěl 40 let pro milovanou ženu",
+				"is": "Ævintýrakastali sem arkitektinn Jenő Bory byggði sjálfur í 40 ár handa ástkærri konu sinni",
+				"de": "Märchenburg, die der Architekt Jenő Bory 40 Jahre lang für seine geliebte Frau selbst baute"
+			},
+			"local": "Bory-vár"
+		}
+	],
+	"Szombathely": [
+		{
+			"kind": "iseum_savariense",
+			"name": {
+				"pl": "Świątynia Izydy",
+				"en": "The Temple of Isis",
+				"cs": "Chrám Isidin",
+				"is": "Hof Ísisar",
+				"de": "Isis-Tempel"
+			},
+			"desc": {
+				"pl": "Rzymska świątynia egipskiej bogini w Savarii, najstarszym mieście Węgier",
+				"en": "A Roman temple of the Egyptian goddess in Savaria, Hungary's oldest town",
+				"cs": "Římský chrám egyptské bohyně v Savarii, nejstarším městě Maďarska",
+				"is": "Rómverskt hof egypsku gyðjunnar í Savaria, elsta bæ Ungverjalands",
+				"de": "Römischer Tempel der ägyptischen Göttin in Savaria, Ungarns ältester Stadt"
+			},
+			"local": "Iseum Savariense"
+		}
+	],
+	"Szolnok": [
+		{
+			"kind": "tiszavirag_bridge",
+			"name": {
+				"pl": "Most Jętki",
+				"en": "The Mayfly Bridge",
+				"cs": "Most jepice",
+				"is": "Dægurflugubrúin",
+				"de": "Eintagsfliegenbrücke"
+			},
+			"desc": {
+				"pl": "Kładka nad Cisą nazwana na cześć jętek, które co czerwiec tańczą nad rzeką",
+				"en": "A footbridge over the Tisza named after the mayflies that dance over the river every June",
+				"cs": "Lávka přes Tisu pojmenovaná po jepicích, které každý červen tančí nad řekou",
+				"is": "Göngubrú yfir Tisza nefnd eftir dægurflugunum sem dansa yfir ánni hvern júní",
+				"de": "Fußgängerbrücke über die Theiß, benannt nach den Eintagsfliegen, die jeden Juni über dem Fluss tanzen"
+			},
+			"local": "Tiszavirág híd"
+		}
+	],
+	"Sopron": [
+		{
+			"kind": "sopron_firewatch_tower",
+			"name": {
+				"pl": "Wieża Ogniowa",
+				"en": "The Firewatch Tower",
+				"cs": "Požární věž",
+				"is": "Brunavarðturninn",
+				"de": "Feuerturm"
+			},
+			"desc": {
+				"pl": "Strażnicy wypatrywali z niej pożarów, Brama Wierności pod nią pamięta plebiscyt z 1921 roku",
+				"en": "Watchmen looked out for fires from it; the Gate of Loyalty below recalls the 1921 vote",
+				"cs": "Strážní z ní vyhlíželi požáry, Brána věrnosti pod ní připomíná hlasování z roku 1921",
+				"is": "Varðmenn gættu að eldum úr honum; Tryggðarhliðið undir honum minnir á kosninguna 1921",
+				"de": "Wächter hielten von ihm nach Bränden Ausschau; das Tor der Treue erinnert an die Abstimmung von 1921"
+			},
+			"local": "Tűztorony"
+		}
+	],
+	"Kaposvár": [
+		{
+			"kind": "kaposvar_csiky_theatre",
+			"name": {
+				"pl": "Teatr Csiky Gergely",
+				"en": "The Csiky Gergely Theatre",
+				"cs": "Divadlo Csiky Gergelye",
+				"is": "Csiky Gergely-leikhúsið",
+				"de": "Csiky-Gergely-Theater"
+			},
+			"desc": {
+				"pl": "Secesyjny teatr z 1911 roku, z kolorową fasadą i pozłacanymi zdobieniami",
+				"en": "An Art Nouveau theatre of 1911 with a colourful front and gilded ornaments",
+				"cs": "Secesní divadlo z roku 1911 s barevným průčelím a zlacenými ozdobami",
+				"is": "Leikhús í Art Nouveau-stíl frá 1911 með litríkri framhlið og gylltu skrauti",
+				"de": "Jugendstiltheater von 1911 mit bunter Fassade und vergoldetem Schmuck"
+			},
+			"local": "Csiky Gergely Színház"
+		}
+	],
+	"Békéscsaba": [
+		{
+			"kind": "csabai_kolbasz",
+			"name": {
+				"pl": "Kiełbasa z Csaby",
+				"en": "Csaba Sausage",
+				"cs": "Čabajská klobása",
+				"is": "Csaba-pylsa",
+				"de": "Csabaer Wurst"
+			},
+			"desc": {
+				"pl": "Ostra kiełbasa z papryką, co roku na festiwalu robi się tu rekordowo długą",
+				"en": "A spicy paprika sausage; every year the festival makes a record-long one",
+				"cs": "Pikantní klobása s paprikou, každý rok se na festivalu dělá rekordně dlouhá",
+				"is": "Sterk paprikupylsa; á hverju ári er gerð metlöng pylsa á hátíðinni",
+				"de": "Scharfe Paprikawurst; jedes Jahr wird beim Festival eine Rekordwurst gemacht"
+			},
+			"local": "Csabai kolbász"
+		}
+	],
+	"Veszprém": [
+		{
+			"kind": "veszprem_viaduct",
+			"name": {
+				"pl": "Wiadukt św. Stefana",
+				"en": "St Stephen's Viaduct",
+				"cs": "Viadukt svatého Štěpána",
+				"is": "Viðbrú heilags Stefáns",
+				"de": "St.-Stephans-Viadukt"
+			},
+			"desc": {
+				"pl": "Smukły betonowy most nad doliną, a za nim wzgórze zamkowe miasta królowych",
+				"en": "A slender concrete arch over the valley, the castle hill of the queens' town behind",
+				"cs": "Štíhlý betonový oblouk nad údolím, za ním hradní vrch města královen",
+				"is": "Grannur steinsteypuboginn yfir dalinn, kastalahæð drottningabæjarins að baki",
+				"de": "Schlanker Betonbogen über dem Tal, dahinter der Burgberg der Stadt der Königinnen"
+			},
+			"local": "Szent István völgyhíd"
+		}
+	],
+	"Zalaegerszeg": [
+		{
+			"kind": "gocsej_skanzen",
+			"name": {
+				"pl": "Skansen Göcsej",
+				"en": "Göcsej Village Museum",
+				"cs": "Skanzen Göcsej",
+				"is": "Göcsej-byggðasafnið",
+				"de": "Freilichtmuseum Göcsej"
+			},
+			"desc": {
+				"pl": "Pierwszy skansen na Węgrzech: kryte strzechą chaty i młyn wodny nad Zalą",
+				"en": "Hungary's first open-air museum: thatched cottages and a water mill on the Zala",
+				"cs": "První skanzen v Maďarsku: doškové chalupy a vodní mlýn na Zale",
+				"is": "Fyrsta útisafn Ungverjalands: stráþakin hús og vatnsmylla við Zala",
+				"de": "Ungarns erstes Freilichtmuseum: strohgedeckte Häuser und eine Wassermühle an der Zala"
+			},
+			"local": "Göcseji Falumúzeum"
+		}
+	],
+	"Eger": [
+		{
+			"kind": "eger_minaret",
+			"name": {
+				"pl": "Minaret w Egerze",
+				"en": "The Eger Minaret",
+				"cs": "Minaret v Egeru",
+				"is": "Mínarettan í Eger",
+				"de": "Minarett von Eger"
+			},
+			"desc": {
+				"pl": "Najdalej na północ wysunięty turecki minaret w Europie, 40 metrów i 97 stopni",
+				"en": "The northernmost Ottoman minaret in Europe, 40 metres high with 97 steps",
+				"cs": "Nejsevernější turecký minaret v Evropě, 40 metrů a 97 schodů",
+				"is": "Nyrsta tyrkneska mínaretta Evrópu, 40 metra há með 97 þrepum",
+				"de": "Das nördlichste osmanische Minarett Europas, 40 Meter hoch mit 97 Stufen"
+			},
+			"local": "Minaret"
+		}
+	],
+	"Esztergom": [
+		{
+			"kind": "esztergom_basilica",
+			"name": {
+				"pl": "Bazylika w Ostrzyhomiu",
+				"en": "Esztergom Basilica",
+				"cs": "Bazilika v Ostřihomi",
+				"is": "Basilíkan í Esztergom",
+				"de": "Basilika von Esztergom"
+			},
+			"desc": {
+				"pl": "Największy kościół Węgier z kopułą nad Dunajem, naprzeciw Słowacji",
+				"en": "Hungary's largest church, its dome high over the Danube facing Slovakia",
+				"cs": "Největší kostel Maďarska s kupolí nad Dunajem naproti Slovensku",
+				"is": "Stærsta kirkja Ungverjalands, hvelfingin hátt yfir Dóná gegnt Slóvakíu",
+				"de": "Ungarns größte Kirche, ihre Kuppel hoch über der Donau gegenüber der Slowakei"
+			},
+			"local": "Esztergomi Bazilika"
+		}
+	],
+	"Siófok": [
+		{
+			"kind": "siofok_water_tower",
+			"name": {
+				"pl": "Wieża ciśnień w Siófoku",
+				"en": "Siófok Water Tower",
+				"cs": "Vodárenská věž v Siófoku",
+				"is": "Vatnsturninn í Siófok",
+				"de": "Wasserturm von Siófok"
+			},
+			"desc": {
+				"pl": "Symbol stolicy Balatonu z 1912 roku, z tarasem widokowym nad jeziorem",
+				"en": "The 1912 symbol of Balaton's summer capital, with a lookout over the lake",
+				"cs": "Symbol letní metropole Balatonu z roku 1912, s vyhlídkou na jezero",
+				"is": "Tákn sumarhöfuðborgar Balaton frá 1912, með útsýni yfir vatnið",
+				"de": "Das Wahrzeichen der Sommerhauptstadt des Balaton von 1912, mit Blick über den See"
+			},
+			"local": "Víztorony"
+		}
+	],
+	"Tokaj": [
+		{
+			"kind": "tokaj_wine_cellar",
+			"name": {
+				"pl": "Piwnica Rakoczego",
+				"en": "The Rákóczi Cellar",
+				"cs": "Rákócziho sklep",
+				"is": "Rákóczi-kjallarinn",
+				"de": "Rákóczi-Keller"
+			},
+			"desc": {
+				"pl": "Wykute w skale korytarze pełne beczek wina tokajskiego, wina królów i króla win",
+				"en": "Rock-cut tunnels full of casks of Tokaji, the wine of kings and king of wines",
+				"cs": "Ve skále vytesané chodby plné sudů tokajského, vína králů a krále vín",
+				"is": "Klappargöng full af tunnum af Tokaji, víni konunga og konungi vínanna",
+				"de": "In den Fels gehauene Gänge voller Fässer Tokajer, Wein der Könige und König der Weine"
+			},
+			"local": "Rákóczi-pince"
+		}
+	]
+}
