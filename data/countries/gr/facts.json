@@ -16,9 +16,9 @@
 	"Thessaloníki": {
 		"pl": "Drugie miasto Grecji nad Zatoką Termajską, założone przez Kassandra i nazwane imieniem siostry Aleksandra Wielkiego",
 		"en": "Greece's second city on the Thermaic Gulf, founded by Cassander and named after Alexander the Great's sister",
-		"cs": "Druhé největší město Řecka u Thermajského zálivu, pojmenované po sestře Alexandra Velikého",
-		"is": "Næststærsta borg Grikklands við Þermaíska flóann, nefnd eftir systur Alexanders mikla",
-		"de": "Griechenlands zweitgrößte Stadt am Thermaischen Golf, benannt nach der Schwester Alexanders des Großen"
+		"cs": "Druhé největší město Řecka u Thermajského zálivu, založené Kassandrem a pojmenované po sestře Alexandra Velikého",
+		"is": "Næststærsta borg Grikklands við Þermaíska flóann, stofnuð af Kassandros og nefnd eftir systur Alexanders mikla",
+		"de": "Griechenlands zweitgrößte Stadt am Thermaischen Golf, von Kassander gegründet und nach der Schwester Alexanders des Großen benannt"
 	},
 	"Pátra": {
 		"pl": "Port nad Zatoką Patrajską, słynie z karnawału, największego w Grecji",
@@ -70,7 +70,7 @@
 		"de": "Hauptstadt Messeniens, nach der die berühmten dunklen Oliven benannt sind"
 	},
 	"Alexandroúpoli": {
-		"pl": "Ostatnie duże miasto przed Turcją, z latarnią morską nad nadbrzeżem",
+		"pl": "Ostatnie duże miasto przed Turcją, z latarnią morską na nabrzeżu",
 		"en": "The last big town before Turkey, with a lighthouse on its seafront",
 		"cs": "Poslední velké město před Tureckem, s majákem na nábřeží",
 		"is": "Síðasti stóri bærinn fyrir Tyrkland, með vita við strandgötuna",
@@ -112,11 +112,11 @@
 		"de": "Hauptstadt von Elis, 20 km von Olympia, wo die antiken Spiele stattfanden"
 	},
 	"Náfplio": {
-		"pl": "Pierwsza stolica wolnej Grecji, z twierdzą Palamidi na 999 schodach",
-		"en": "The first capital of free Greece, with the Palamidi fortress up 999 steps",
-		"cs": "První hlavní město svobodného Řecka, s pevností Palamidi nahoře po 999 schodech",
-		"is": "Fyrsta höfuðborg frjáls Grikklands, með Palamidi-virkið efst í 999 tröppum",
-		"de": "Erste Hauptstadt des freien Griechenlands, mit der Festung Palamidi über 999 Stufen"
+		"pl": "Pierwsza stolica wolnej Grecji, do twierdzy Palamidi prowadzi podobno 999 schodów",
+		"en": "The first capital of free Greece; legend says 999 steps lead up to the Palamidi fortress",
+		"cs": "První hlavní město svobodného Řecka, k pevnosti Palamidi vede podle pověsti 999 schodů",
+		"is": "Fyrsta höfuðborg frjáls Grikklands; sagt er að 999 tröppur liggi upp í Palamidi-virkið",
+		"de": "Erste Hauptstadt des freien Griechenlands; der Sage nach führen 999 Stufen zur Festung Palamidi hinauf"
 	},
 	"Spárti": {
 		"pl": "Miasto dawnych Spartan w dolinie Eurotasu, nad nim ruiny bizantyjskiej Mistry",
@@ -245,11 +245,11 @@
 		"de": "Kleinstadt am Fuß des Olymp, 2918 m, Griechenlands höchster Berg und Sitz der Götter"
 	},
 	"Platamónas": {
-		"pl": "Bizantyjski zamek nad morzem, u wylotu doliny Tempe",
-		"en": "A Byzantine castle above the sea, at the mouth of the Vale of Tempe",
-		"cs": "Byzantský hrad nad mořem, u ústí údolí Tempé",
-		"is": "Býsanskur kastali yfir sjónum, við mynni Tempe-dalsins",
-		"de": "Eine byzantinische Burg über dem Meer, am Ausgang des Tempetals"
+		"pl": "Średniowieczny zamek krzyżowców z początku XIII wieku nad morzem, u wylotu doliny Tempe",
+		"en": "A medieval Crusader castle from the early 13th century above the sea, at the mouth of the Vale of Tempe",
+		"cs": "Středověký křižácký hrad z počátku 13. století nad mořem, u ústí údolí Tempé",
+		"is": "Krossfarakastali frá byrjun 13. aldar yfir sjónum, við mynni Tempe-dalsins",
+		"de": "Eine mittelalterliche Kreuzfahrerburg aus dem frühen 13. Jahrhundert über dem Meer, am Ausgang des Tempetals"
 	},
 	"Kateríni": {
 		"pl": "Stolica Pierii, krainy Muz, pod Olimpem",

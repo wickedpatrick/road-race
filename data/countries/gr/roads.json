@@ -29,7 +29,7 @@
 		"a": "patra",
 		"b": "pyrgos",
 		"km": 96,
-		"road": [[96, "EO9", 3]],
+		"road": "A8",
 		"towns": [["Vrachnaíika", 12], ["Láppas", 35], ["Lechainá", 62], ["Gastoúni", 73], ["Amaliáda", 80]],
 		"zones": [[40, "coast", "Achaia"], [96, "fields", "Ileía"]],
 		"via": [[12, 21.67, 38.17], [35, 21.46, 38.08], [62, 21.27, 37.94], [80, 21.35, 37.8]]
@@ -244,7 +244,7 @@
 			[55, "mountains", "Ípeiros"],
 			[85, "orchard", "Amvrakikós"],
 			[150, "mediterranean", "Aitoloakarnanía"],
-			[187, "coast", "Korinthiakós"],
+			[187, "coast", "Patraïkós"],
 			[196, "mediterranean", "Achaia"]
 		],
 		"via": [
@@ -318,7 +318,7 @@
 		"a": "peiraias",
 		"b": "irakleio",
 		"km": 322,
-		"road": [[161, "EO1"], [322, "EO90"]],
+		"road": [[1, "EO1"], [322, "EO90"]],
 		"towns": [],
 		"zones": [[1, "industrial", "Attikí"], [321, "coast", "Kritikó pélagos"], [322, "mediterranean", "Krítí"]],
 		"via": [[40, 23.75, 37.6], [160, 24.3, 36.6], [280, 24.95, 35.65]],
