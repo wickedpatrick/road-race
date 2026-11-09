@@ -89,7 +89,7 @@
 		"lon": 28.78,
 		"pop": 82,
 		"region": "Viciebsk",
-		"exonym": {"pl": "Połock", "en": "Polotsk", "is": "Polotsk", "de": "Polazk"}
+		"exonym": {"pl": "Połock", "en": "Polotsk", "cs": "Polock", "is": "Polotsk", "de": "Polazk"}
 	},
 	"navahrudak": {
 		"name": "Navahrudak",

@@ -1,10 +1,10 @@
 {
 	"Minsk": {
-		"pl": "Stolica Białorusi nad Świsłoczą; nad rzeką zachowało się Przedmieście Trockie z XIX-wiecznymi kamieniczkami",
-		"en": "The capital of Belarus on the Svislach; by the river the Trinity Suburb keeps its 19th-century houses",
-		"cs": "Hlavní město Běloruska na Svislači; u řeky se zachovalo Trojické předměstí s domky z 19. století",
-		"is": "Höfuðborg Hvíta-Rússlands við ána Svislač; við ána standa enn hús frá 19. öld í Þrenningarhverfinu",
-		"de": "Die Hauptstadt von Belarus an der Swislatsch; am Fluss steht noch die Dreifaltigkeitsvorstadt mit Häusern des 19. Jahrhunderts"
+		"pl": "Stolica Białorusi nad Świsłoczą; nad rzeką Przedmieście Trockie odbudowano w dawnym, XIX-wiecznym kształcie",
+		"en": "The capital of Belarus on the Svislach; by the river the Trinity Suburb was rebuilt in its 19th-century look",
+		"cs": "Hlavní město Běloruska na Svislači; u řeky bylo Trojické předměstí obnoveno v podobě z 19. století",
+		"is": "Höfuðborg Hvíta-Rússlands við ána Svislač; við ána var Þrenningarhverfið endurbyggt í útliti 19. aldar",
+		"de": "Die Hauptstadt von Belarus an der Swislatsch; am Fluss wurde die Dreifaltigkeitsvorstadt im Aussehen des 19. Jahrhunderts wiederaufgebaut"
 	},
 	"Homieĺ": {
 		"pl": "Drugie co do wielkości miasto kraju, nad rzeką Soż; pałac Rumiancewów i Paskiewiczów stoi w parku nad brzegiem",
@@ -126,11 +126,11 @@
 		"de": "Ein kleiner Ort mit einer großen Burg von etwa 1500, seit 2000 UNESCO-Welterbe"
 	},
 	"Kamianiec": {
-		"pl": "Brama do Puszczy Białowieskiej, najstarszego lasu nizinnego Europy, gdzie żyją żubry",
-		"en": "The gateway to the Białowieża Forest, Europe's oldest lowland forest, home of the wisent",
-		"cs": "Brána do Bělověžského pralesa, nejstaršího nížinného lesa Evropy, kde žijí zubři",
-		"is": "Hliðið að Białowieża-skógi, elsta láglendisskógi Evrópu, þar sem vísundar lifa",
-		"de": "Das Tor zum Białowieża-Urwald, Europas ältestem Tieflandwald, in dem Wisente leben"
+		"pl": "Brama do Puszczy Białowieskiej, ostatniego pierwotnego lasu nizinnego Europy, gdzie żyją żubry",
+		"en": "The gateway to the Białowieża Forest, Europe's last primeval lowland forest, home of the wisent",
+		"cs": "Brána do Bělověžského pralesa, posledního nížinného pralesa Evropy, kde žijí zubři",
+		"is": "Hliðið að Białowieża-skógi, síðasta frumskógi á láglendi Evrópu, þar sem vísundar lifa",
+		"de": "Das Tor zum Białowieża-Urwald, Europas letztem Tiefland-Urwald, in dem Wisente leben"
 	},
 	"Braslaŭ": {
 		"pl": "Miasteczko wśród ponad trzydziestu Jezior Brasławskich; największe z nich to Dryświaty",
@@ -188,12 +188,12 @@
 		"is": "Fyrsta hvítrússneska olían fannst nálægt bænum árið 1964",
 		"de": "Nahe der Stadt wurde 1964 das erste belarussische Erdöl gefunden"
 	},
-	"Valožyn": {
-		"pl": "W XIX wieku działała tu słynna jesziwa, jedna z najważniejszych szkół talmudycznych Europy",
-		"en": "In the 19th century the famous Volozhin yeshiva here was one of Europe's leading Talmudic schools",
-		"cs": "V 19. století zde působila slavná ješiva, jedna z předních talmudských škol Evropy",
-		"is": "Á 19. öld starfaði hér hinn frægi jeshíva-skóli, einn helsti talmúdskóli Evrópu",
-		"de": "Im 19. Jahrhundert wirkte hier die berühmte Jeschiwa, eine der führenden Talmudschulen Europas"
+	"Ivianiec": {
+		"pl": "Miasteczko garncarzy, znane z ceramiki i z barokowego kościoła franciszkanów z XVIII wieku",
+		"en": "A town of potters, known for its ceramics and its 18th-century Baroque Franciscan church",
+		"cs": "Městečko hrnčířů, známé keramikou a barokním františkánským kostelem z 18. století",
+		"is": "Leirkerasmiðabær, þekktur fyrir keramík og barokkkirkju fransiskana frá 18. öld",
+		"de": "Ein Töpferstädtchen, bekannt für seine Keramik und die barocke Franziskanerkirche aus dem 18. Jahrhundert"
 	},
 	"Biarozaŭka": {
 		"pl": "Huta szkła Niemen wytwarza tu kolorowe szkło od ponad stu lat",

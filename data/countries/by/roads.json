@@ -136,12 +136,12 @@
 		"b": "lida",
 		"km": 157,
 		"road": [[157, "M6", 2]],
-		"towns": [["Valožyn", 70], ["Juraciški", 112]],
+		"towns": [["Ivianiec", 58], ["Juraciški", 112]],
 		"zones": [
 			[30, "upland", "Minskaje ŭzvyšša"], [95, "forest", "Nalibockaja pušča"], [130, "podlasie", "Paniamonnie"],
 			[157, "fields", "Lidskaja raŭnina"]
 		],
-		"via": [[70, 26.53, 54.09], [112, 25.93, 54.04]]
+		"via": [[58, 26.74, 53.89], [112, 25.93, 54.04]]
 	},
 	{
 		"a": "lida",
@@ -283,9 +283,9 @@
 		"b": "mahiliou",
 		"km": 80,
 		"road": [[80, "M8", 2]],
-		"towns": [["Kopyś", 22], ["Škloŭ", 40]],
+		"towns": [["Škloŭ", 40]],
 		"zones": [[20, "fields", "Dniapro"], [60, "upland", "Aršanskaje ŭzvyšša"], [80, "fields", "Dniapro"]],
-		"via": [[22, 30.29, 54.32], [40, 30.29, 54.21]]
+		"via": [[40, 30.29, 54.21]]
 	},
 	{
 		"a": "viciebsk",
@@ -302,7 +302,7 @@
 		"km": 105,
 		"road": [[105, "R20", 2]],
 		"towns": [],
-		"zones": [[30, "fields", "Dzvina"], [70, "forest", "Paazierje"], [105, "industrial", "Navapolack"]],
+		"zones": [[30, "fields", "Dzvina"], [70, "forest", "Paazierje"], [105, "fields", "Dzvina"]],
 		"via": [[55, 29.45, 55.32]]
 	},
 	{

@@ -286,7 +286,7 @@
 			"desc": {
 				"pl": "Biały barokowy sobór z dwiema wieżami na skarpie nad Dźwiną",
 				"en": "A white Baroque cathedral with two towers on the bank above the Dvina",
-				"cs": "Bílý barokní chrám se dvěma věžemi na svahu nad Daugavou",
+				"cs": "Bílý barokní chrám se dvěma věžemi na svahu nad Západní Dvinou",
 				"is": "Hvít barokkdómkirkja með tveimur turnum á bakkanum ofan við Dvínu",
 				"de": "Eine weiße Barockkathedrale mit zwei Türmen am Hang über der Düna"
 			},
@@ -370,11 +370,11 @@
 			"kind": "by_bialowieza_wisent",
 			"name": {"pl": "Żubr", "en": "Wisent", "cs": "Zubr", "is": "Vísundur", "de": "Wisent"},
 			"desc": {
-				"pl": "Największy ssak Europy żyje na wolności w Puszczy Białowieskiej",
-				"en": "Europe's largest mammal lives in the wild in the Białowieża Forest",
-				"cs": "Největší savec Evropy žije volně v Bělověžském pralese",
-				"is": "Stærsta spendýr Evrópu lifir villt í Białowieża-skógi",
-				"de": "Europas größtes Säugetier lebt frei im Białowieża-Urwald"
+				"pl": "Największy lądowy ssak Europy żyje na wolności w Puszczy Białowieskiej",
+				"en": "Europe's largest land mammal lives in the wild in the Białowieża Forest",
+				"cs": "Největší suchozemský savec Evropy žije volně v Bělověžském pralese",
+				"is": "Stærsta landspendýr Evrópu lifir villt í Białowieża-skógi",
+				"de": "Europas größtes Landsäugetier lebt frei im Białowieża-Urwald"
 			},
 			"local": "Зубр"
 		}
