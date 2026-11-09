@@ -12,6 +12,11 @@ func _ready() -> void:
 		if OS.get_environment("RR_FERRY") == "left": fx["drive"] = "left"
 		GameData._countries[fx.code] = fx
 		GameData.current = fx.code
+	if OS.get_environment("RR_NATIVE") != "": # the bilingual fixture (tests/test_native.gd): Greek on the signs, "Lamía" Cyrillic
+		var nx: Dictionary = load("res://tests/test_native.gd").fixture()
+		nx.native["Lamía"] = "Ламия"
+		GameData._countries[nx.code] = nx
+		GameData.current = nx.code
 	super()
 	if a.size() > 4:
 		race.z = float(a[4]); race.speed = 35.0

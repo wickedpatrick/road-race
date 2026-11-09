@@ -968,6 +968,8 @@ static func sign_texts(stage: Dictionary) -> Array:
 	for zn in stage.zones:
 		if not out.has(zn.region): out.append(zn.region)
 	for r in stage.roads: out.append(plate(r.road)[0])
+	for n in out.duplicate():
+		if n is String and Geo.native(n) != "": out.append(Geo.native(n)) # bilingual signs: the native spelling beside each name
 	for lm in Landmarks.place(stage): out.append(lm.local)
 	return out
 
@@ -983,6 +985,16 @@ static func _posts(cv, b: Vector2, pm: float, top: float, xs: Array) -> void:
 	for x in xs:
 		cv.draw_line(b + Vector2(x * pm, 0), b + Vector2(x * pm, -top), Color("8a8d92"), maxf(1.0, 0.14 * pm))
 
+## A name in a rectangle: with a native spelling (Geo.native) that on top and the Latin one below it, smaller (~70%),
+## the same colour; without one the Latin name alone.
+static func _name_lines(cv, font: Font, r: Rect2, text: String, col: Color, size: float, align := HORIZONTAL_ALIGNMENT_CENTER) -> void:
+	var nat := Geo.native(text)
+	if nat == "":
+		_fit_text(cv, font, r, text, col, size, align)
+		return
+	_fit_text(cv, font, Rect2(r.position, Vector2(r.size.x, r.size.y * 0.55)), nat, col, size * 0.8, align)
+	_fit_text(cv, font, Rect2(r.position + Vector2(0, r.size.y * 0.52), Vector2(r.size.x, r.size.y * 0.46)), text, col, size * 0.56, align)
+
 ## E-17a (entering) and E-18a (leaving, red diagonal bar): green board, white border and name.
 static func _town_sign(cv, it: Dictionary, b: Vector2, pm: float, font: Font, ending: bool) -> void:
 	var post := 3.0 * pm
@@ -994,7 +1006,7 @@ static func _town_sign(cv, it: Dictionary, b: Vector2, pm: float, font: Font, en
 	var ink := sign_color("town_text", p)
 	cv.draw_rect(r, sign_color("town", p))
 	cv.draw_rect(r.grow(-0.14 * pm), ink, false, maxf(1.0, 0.1 * pm))
-	_fit_text(cv, font, r.grow_individual(-0.35 * pm, 0, -0.35 * pm, 0), it.text, ink, 0.95 * pm)
+	_name_lines(cv, font, r.grow_individual(-0.35 * pm, 0, -0.35 * pm, 0), it.text, ink, 0.95 * pm)
 	if ending:
 		cv.draw_line(r.position + Vector2(w * 0.08, hh * 0.85), r.position + Vector2(w * 0.92, hh * 0.15), SIGN_RED, maxf(1.0, 0.24 * pm))
 
@@ -1002,7 +1014,10 @@ static func _town_sign(cv, it: Dictionary, b: Vector2, pm: float, font: Font, en
 ## Colours from the country (in Poland blue on motorways, green on other roads).
 static func _board(cv, it: Dictionary, b: Vector2, pm: float, font: Font) -> void:
 	var lines: Array = it.lines
-	var lh := 1.45 * pm
+	var two := false # a native name on the board: taller rows, the native name over the Latin one
+	for l in lines:
+		if Geo.native(l[0]) != "": two = true
+	var lh := (2.1 if two else 1.45) * pm
 	var w := BOARD_W * pm
 	var head := 1.5 * pm if it.road != "" else 0.25 * pm
 	var hh := head + lh * lines.size() + 0.3 * pm
@@ -1020,7 +1035,12 @@ static func _board(cv, it: Dictionary, b: Vector2, pm: float, font: Font) -> voi
 		_fit_text(cv, font, pr, pl[0], pl[2], 0.8 * pm)
 	for i in lines.size():
 		var row := Rect2(r.position + Vector2(0.5 * pm, head + lh * i), Vector2(w - 1.0 * pm, lh))
-		_fit_text(cv, font, Rect2(row.position, Vector2(row.size.x * 0.78, lh)), lines[i][0], ink, 0.85 * pm, HORIZONTAL_ALIGNMENT_LEFT)
+		if two and Geo.native(lines[i][0]) != "":
+			var nat := Geo.native(lines[i][0])
+			_fit_text(cv, font, Rect2(row.position, Vector2(row.size.x * 0.78, lh * 0.55)), nat, ink, 0.72 * pm, HORIZONTAL_ALIGNMENT_LEFT)
+			_fit_text(cv, font, Rect2(row.position + Vector2(0, lh * 0.52), Vector2(row.size.x * 0.78, lh * 0.46)), lines[i][0], ink, 0.52 * pm, HORIZONTAL_ALIGNMENT_LEFT)
+		else:
+			_fit_text(cv, font, Rect2(row.position, Vector2(row.size.x * 0.78, lh)), lines[i][0], ink, 0.85 * pm, HORIZONTAL_ALIGNMENT_LEFT)
 		_fit_text(cv, font, row, str(lines[i][1]), ink, 0.85 * pm, HORIZONTAL_ALIGNMENT_RIGHT)
 
 ## Brown tourist board with the name of the region being entered, the country's flag in its corner.
@@ -1037,7 +1057,7 @@ static func _region(cv, it: Dictionary, b: Vector2, pm: float, font: Font) -> vo
 		var code: String = it.get("p", "")
 		FlagPainter.draw(cv, code if code != "" else GameData.current, Rect2(r.position + Vector2(0.35 * pm, 0.18 * pm), fl))
 	_fit_text(cv, font, Rect2(r.position + Vector2(0.55 * pm + fl.x, 0.1 * pm), Vector2(w - 0.9 * pm - fl.x, hh * 0.42)), Geo.station(it.get("p", "")).region_sign, Color("f1d9b5"), 0.55 * pm)
-	_fit_text(cv, font, Rect2(r.position + Vector2(0.35 * pm, hh * 0.42), Vector2(w - 0.7 * pm, hh * 0.52)), it.text, Color.WHITE, 0.8 * pm)
+	_name_lines(cv, font, Rect2(r.position + Vector2(0.35 * pm, hh * 0.42), Vector2(w - 0.7 * pm, hh * 0.52)), it.text, Color.WHITE, 0.8 * pm)
 
 ## Brown tourist board (E-22c style) naming the landmark next to it.
 static func _poi(cv, it: Dictionary, b: Vector2, pm: float, font: Font) -> void:

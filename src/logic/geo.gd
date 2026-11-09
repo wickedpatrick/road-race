@@ -23,6 +23,11 @@ static func display_name(id: String) -> String:
 static func city_ids() -> Array:
 	return cities().keys()
 
+## The native spelling of a name for a bilingual sign (Greek, Cyrillic), "" when there is none or it is the same.
+static func native(name: String) -> String:
+	var n: String = GameData.country().get("native", {}).get(name, "")
+	return "" if n == name else n
+
 static func fact(name: String) -> String:
 	return GameData.country().facts.get(name, "")
 

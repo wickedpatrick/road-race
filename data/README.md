@@ -141,6 +141,15 @@ List of roads between two neighbouring cities `a` and `b` (travelling `b` -> `a`
   the sea until the crossing, a ~3 s ferry screen (the ship crossing with the car on deck, `name`, the sea km and
   `fact`), and on the maps the sea part of the road dashed. Traffic rolls up the quay slowly into the ship.
 
+## `countries/<code>/native.json` (optional)
+
+`{"Latin name": "native spelling", ...}` for cities, towns and regions of a country whose signs are bilingual (Greek,
+Cyrillic), e.g. `"Thessaloníki": "Θεσσαλονίκη"`; missing file = `{}` (`Geo.native(name)` gives `""`). A place-name
+sign, a distance board row and the region board then show the native spelling on top (larger) and the Latin one
+below it (~70%), in the same colour; boards with a native name have taller rows. Names without an entry stay one
+line. The font has Greek and Cyrillic; `Scenery.sign_texts` warms the native texts too. Preview: `RR_NATIVE=1` in
+`tests/game_preview.gd` (the fixture of `tests/test_native.gd`).
+
 ## `countries/<code>/facts.json`
 
 Town or city name -> short fact shown while driving through it.
