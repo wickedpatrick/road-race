@@ -143,6 +143,16 @@ List of roads between two neighbouring cities `a` and `b` (travelling `b` -> `a`
   lamps, terminal, containers, crane), closed barriers and the ship with its stern ramp down; past the barrier only
   the sea until the crossing, a ~3 s ferry screen (the ship crossing with the car on deck, `name`, the sea km and
   `fact`), and on the maps the sea part of the road dashed. Traffic rolls up the quay slowly into the ship.
+- `bridge` (optional): `{from_km, to_km, name}` (one per road; split the road at a town for two), a suspension
+  bridge over the water in the `a` -> `b` direction (`b` -> `a` mirrors the km), e.g. the 1915 Çanakkale Bridge
+  over the Dardanelles; `name` plain or texts by language; optional `color` (`"#c8322b"`) for the pylons, grey by
+  default. The stretch is driven as it is (real km, no time added); it is never shorter than `Route.BRIDGE_MIN`
+  track metres and is moved off town streets with `Route.BRIDGE_GAP` of open road to them (like tunnels), so a
+  bridge starting at a city's edge is fine. Stations stand at least `Route.STATION_BEFORE_BRIDGE` before and
+  `Route.STATION_PAST_BRIDGE` past it, boards and crossings keep clear of it; flat and straight. Drawn: a blue sign
+  with `name` before it, then water on both sides of the deck, railings (solid, like tunnel walls), two tall pylons
+  astride the road `Scenery.BRIDGE_SIDE` of the way in from each end, the main cables sagging between them with
+  hangers, the sea on the horizon; on the maps a normal road.
 
 ## `countries/<code>/native.json` (optional)
 

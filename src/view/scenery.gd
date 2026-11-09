@@ -86,6 +86,8 @@ static func build(stage: Dictionary, seed_value: int) -> Dictionary:
 		_clear_range(items, tn.z0 - 6.0, tn.z1 + 6.0, -1000.0, 1000.0)
 	for s in stage.stations:
 		_station_items(items, s, rng)
+	for br in stage.get("bridges", []):
+		_bridge(items, br, rng)
 	for bd in stage.get("borders", []):
 		_crossing(items, stage, bd, rng)
 	for f in stage.get("ferries", []):
@@ -167,6 +169,68 @@ static func _port(items: Dictionary, f: Dictionary, rng: RandomNumberGenerator) 
 		var bar := _add(items, "barrier", f.z - 1.5, sd * (Track.ROAD_HALF_WIDTH + 0.9), 1.0, 2.0, rng)
 		bar.dir = sd
 		bar.closed = true
+
+## A suspension bridge (Route bridges): the blue sign with its name before it, then only the deck over the water
+## (Scenery.ground), railings (solid, see obstacles), two tall pylons a BRIDGE_SIDE share of the way in from each end
+## and the cables between them (WorldView draws the pylons, cables and railings). Whatever grew there is cleared away.
+const BRIDGE_RAIL := 7.2 ## the railings, metres from the road centre
+const BRIDGE_DECK := 7.8 ## the deck's edge (water beyond)
+const BRIDGE_CABLE := 8.4 ## the main cables and the pylons' legs, metres from the road centre
+const BRIDGE_TOWER_H := 46.0
+const BRIDGE_SIDE := 0.2 ## the side spans' share of the bridge, from each end to its pylon
+const BRIDGE_SIGN_BEFORE := 50.0
+static func _bridge(items: Dictionary, br: Dictionary, rng: RandomNumberGenerator) -> void:
+	_clear_range(items, br.z0 - 6.0, br.z1 + 6.0, -1000.0, 1000.0)
+	var zs: float = br.z0 - BRIDGE_SIGN_BEFORE
+	_clear_range(items, zs - 6.0, zs + 6.0, 0.0, SIGN_EDGE + REGION_W + 1.0)
+	_add(items, "bridge_sign", zs, SIGN_EDGE + REGION_W * 0.5, REGION_W, 5.0, rng).text = br.name
+	var span: float = br.z1 - br.z0
+	for z in [br.z0 + span * BRIDGE_SIDE, br.z1 - span * BRIDGE_SIDE]:
+		_add(items, "bridge_tower", z, 0.0, 0.0, BRIDGE_TOWER_H, rng).color = br.get("color", "")
+
+## True on a suspension bridge's deck.
+static func on_bridge(stage: Dictionary, z: float) -> bool:
+	return not Route.bridge_at(stage, z).is_empty()
+
+## Height of a bridge's main cable above the deck at z: from the deck at the ends up to the pylons' tops, sagging
+## between them to just over the railings at mid-span.
+static func cable_h(br: Dictionary, z: float) -> float:
+	var span: float = br.z1 - br.z0
+	var t0: float = br.z0 + span * BRIDGE_SIDE
+	var t1: float = br.z1 - span * BRIDGE_SIDE
+	var top := BRIDGE_TOWER_H - 2.0
+	if z < t0:
+		return lerpf(1.2, top, pow(clampf((z - br.z0) / (t0 - br.z0), 0.0, 1.0), 1.6))
+	if z > t1:
+		return lerpf(1.2, top, pow(clampf((br.z1 - z) / (br.z1 - t1), 0.0, 1.0), 1.6))
+	var u: float = (z - (t0 + t1) * 0.5) / ((t1 - t0) * 0.5)
+	return lerpf(3.0, top, u * u)
+
+## The sign before a suspension bridge: a blue board with a white bridge and its name.
+static func _bridge_sign(cv, it: Dictionary, b: Vector2, pm: float, font: Font) -> void:
+	var post := 2.8 * pm
+	var w := REGION_W * pm
+	var hh := 2.4 * pm
+	_posts(cv, b, pm, post, [-3.0, 3.0])
+	var r := Rect2(b + Vector2(-w * 0.5, -post - hh), Vector2(w, hh))
+	cv.draw_rect(r, SIGN_BLUE)
+	cv.draw_rect(r.grow(-0.14 * pm), Color.WHITE, false, maxf(1.0, 0.1 * pm))
+	bridge_icon(cv, r.position + Vector2(1.25 * pm, hh * 0.78), 0.5 * pm, Color.WHITE)
+	_fit_text(cv, font, Rect2(r.position + Vector2(2.5 * pm, 0.2 * pm), Vector2(w - 2.8 * pm, hh - 0.4 * pm)), it.text, Color.WHITE, 0.75 * pm)
+
+## A suspension bridge pictogram: the deck, two pylons and the sagging cable, centred at c on the deck, `s` pixels
+## per unit (about 3.6 units long, 2.6 high).
+static func bridge_icon(cv, c: Vector2, s: float, col: Color) -> void:
+	var lw := maxf(1.0, 0.18 * s)
+	cv.draw_line(c + Vector2(-1.8, 0) * s, c + Vector2(1.8, 0) * s, col, lw * 1.4)
+	for x in [-1.0, 1.0]:
+		cv.draw_line(c + Vector2(x, 0.3) * s, c + Vector2(x, -2.3) * s, col, lw * 1.2)
+	for k in 8:
+		var xa := lerpf(-1.0, 1.0, k / 8.0)
+		var xb := lerpf(-1.0, 1.0, (k + 1) / 8.0)
+		cv.draw_line(c + Vector2(xa, -2.2 + 1.9 * (1.0 - xa * xa)) * s, c + Vector2(xb, -2.2 + 1.9 * (1.0 - xb * xb)) * s, col, lw)
+	cv.draw_line(c + Vector2(-1.8, 0) * s, c + Vector2(-1.0, -2.2) * s, col, lw)
+	cv.draw_line(c + Vector2(1.8, 0) * s, c + Vector2(1.0, -2.2) * s, col, lw)
 
 static func _quay(items: Dictionary, kind: String, z: float, lat: float, w: float, h: float, rng: RandomNumberGenerator) -> void:
 	_add(items, "quay", z, lat, w, h, rng).kind = kind
@@ -322,7 +386,7 @@ static func _clear_range(items: Dictionary, z0: float, z1: float, lat0: float, l
 
 ## Solid parts of the roadside objects the car can reach: segment -> [[z, lat0, lat1], ...]. Sign boards stand high
 ## on their posts (the car would pass under), so only the posts count; trees by their trunk, houses by their width.
-## Fuel stations are a safe zone; tunnel walls are solid all along.
+## Fuel stations are a safe zone; tunnel walls and bridge railings are solid all along.
 static func obstacles(items: Dictionary, stage: Dictionary) -> Dictionary:
 	var out := {}
 	var reach := 9.0 ## metres from the road centre: the car's edge never gets further
@@ -348,6 +412,12 @@ static func obstacles(items: Dictionary, stage: Dictionary) -> Dictionary:
 		while z <= tn.z1:
 			_obstacle(out, z, -40.0, -TUNNEL_WALL)
 			_obstacle(out, z, TUNNEL_WALL, 40.0)
+			z += 2.0
+	for br in stage.get("bridges", []):
+		var z: float = br.z0
+		while z <= br.z1:
+			_obstacle(out, z, -40.0, -BRIDGE_RAIL - Track.left_shift(Route.dual_f(stage, z)))
+			_obstacle(out, z, BRIDGE_RAIL, 40.0)
 			z += 2.0
 	return out
 
@@ -686,9 +756,11 @@ static func _signs(items: Dictionary, stage: Dictionary, rng: RandomNumberGenera
 		prev = zn.region
 		var z: float = zn.z0 + 40.0
 		var t := Route.town_at(stage, z)
-		while not t.is_empty():
-			z = t.z + t.half + 140.0
+		var br := Route.bridge_at(stage, z + 10.0)
+		while not t.is_empty() or not br.is_empty():
+			z = t.z + t.half + 140.0 if not t.is_empty() else br.z1 + 60.0 # past a town's streets or off a bridge
 			t = Route.town_at(stage, z)
+			br = Route.bridge_at(stage, z + 10.0)
 		if z > zn.z1 - 150.0 or z - last_region < 300.0:
 			continue # the region is crossed inside a town, or right after another region board
 		last_region = z
@@ -795,6 +867,10 @@ static func ground(stage: Dictionary, nseg: int) -> Array:
 		var ls := Track.left_shift(Route.dual_f(stage, z))
 		if on_pier(stage, z):
 			s.append_array([-400.0 - ls, -QUAY_EDGE - ls, G_WATER, -QUAY_EDGE - ls, -4.8 - ls, G_PAVE, 4.8, QUAY_EDGE, G_PAVE, QUAY_EDGE, 400.0, G_WATER])
+			out[i] = s
+			continue
+		if on_bridge(stage, z):
+			s.append_array([-400.0 - ls, -BRIDGE_DECK - ls, G_WATER, -BRIDGE_DECK - ls, BRIDGE_DECK, G_PAVE, BRIDGE_DECK, 400.0, G_WATER])
 			out[i] = s
 			continue
 		if not Route.town_at(stage, z).is_empty():
@@ -953,7 +1029,8 @@ static func draw_item(cv, it: Dictionary, b: Vector2, pm: float, pal: Dictionary
 		"border_canopy": pass # drawn across the road by WorldView
 		"shop": _shop(cv, it, b, pm)
 		"finish": pass # drawn across the road by WorldView
-		"bridge": pass # drawn across the road by WorldView
+		"bridge", "bridge_tower": pass # drawn across the road by WorldView
+		"bridge_sign": _bridge_sign(cv, it, b, pm, font)
 
 ## Text centred in a rectangle, shrunk to fit; a pale bar stands in for text too small to read.
 ## Text sizes used on signs. A sign's text grows as it approaches; snapping to these few sizes means each glyph is
@@ -995,6 +1072,7 @@ static func sign_texts(stage: Dictionary) -> Array:
 		for k in Geo.limits(p): out.append(str(Geo.limits(p)[k]))
 	for t in stage.towns: out.append(t.name)
 	for f in stage.get("ferries", []): out.append(f.name)
+	for br in stage.get("bridges", []): out.append(br.name)
 	for zn in stage.zones:
 		if not out.has(zn.region): out.append(zn.region)
 	for r in stage.roads: out.append(plate(r.road)[0])
