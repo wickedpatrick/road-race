@@ -143,7 +143,7 @@ func _test_mediterranean(t) -> void:
 	for idx in items:
 		for it in items[idx]:
 			if it.type == "stonewall": walls.append(absf(it.lat) - it.w * 0.5)
-	t.check(walls.all(func(d): return d >= 7.8), "dry-stone walls clear of the shoulder (nearest %.1f m)" % walls.min())
+	t.check(not walls.is_empty() and walls.all(func(d): return d >= 7.8), "dry-stone walls clear of the shoulder (nearest %.1f m)" % (walls.min() if not walls.is_empty() else -1.0))
 	# the stone and the house walls take the country's palette (Malta's honey limestone)
 	var honey := Color("d8b878")
 	for kind in ["stonewall", "whitehouse"]:

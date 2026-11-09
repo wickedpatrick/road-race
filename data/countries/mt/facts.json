@@ -35,11 +35,11 @@
 		"de": "Fischerdorf voller bunter Luzzu-Boote, sonntags mit Fischmarkt"
 	},
 	"Mellieħa": {
-		"pl": "Miasteczko na grzbiecie nad największą piaszczystą plażą Malty",
-		"en": "A town on a ridge above Malta's biggest sandy beach",
-		"cs": "Městečko na hřbetu nad největší písečnou pláží Malty",
-		"is": "Bær á hrygg yfir stærstu sandströnd Möltu",
-		"de": "Städtchen auf einem Höhenrücken über Maltas größtem Sandstrand"
+		"pl": "Sanktuarium Matki Bożej w grocie, z freskiem przypisywanym św. Łukaszowi",
+		"en": "A cave shrine of Our Lady, with a fresco said to be by St Luke",
+		"cs": "Svatyně Panny Marie v jeskyni s freskou připisovanou sv. Lukášovi",
+		"is": "Helgidómur Maríu í helli, með freskó sem sögð er eftir heilagan Lúkas",
+		"de": "Marienheiligtum in einer Grotte, mit einem Fresko, angeblich von Lukas"
 	},
 	"Victoria": {
 		"pl": "Stolica Gozo, po maltańsku Rabat, od 1887 roku nosi imię królowej",
@@ -91,7 +91,7 @@
 		"de": "Der Name kommt von Oliven: Olivenhaine wuchsen hier schon zur Römerzeit"
 	},
 	"Ħamrun": {
-		"pl": "Gwarne miasto sklepów i pastizzi, pierożków z ricottą lub groszkiem",
+		"pl": "Sklepy i pastizzi: francuskie ciastka z ricottą lub groszkiem",
 		"en": "A busy town of shops and pastizzi, pastries with ricotta or peas",
 		"cs": "Rušné město obchodů a pastizzi, taštiček s ricottou nebo hráškem",
 		"is": "Iðandi bær verslana og pastizzi, bita með ricotta eða baunum",
