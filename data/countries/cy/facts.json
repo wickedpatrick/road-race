@@ -7,7 +7,7 @@
 		"de": "Die Hauptstadt Zyperns, ihre Altstadt umgeben von sternförmigen venezianischen Mauern"
 	},
 	"Lemesos": {
-		"pl": "Drugie miasto i największy port Cypru, co roku świętuje tu festiwal wina",
+		"pl": "Drugie co do wielkości miasto i największy port Cypru, z festiwalem wina",
 		"en": "Cyprus's second city and busiest port, with a wine festival every year",
 		"cs": "Druhé největší město a největší přístav Kypru, každý rok tu slaví vinobraní",
 		"is": "Næststærsta borg og stærsta höfn Kýpur, með vínhátíð á hverju ári",
@@ -77,7 +77,7 @@
 		"de": "Eine Burg der Johanniter, die hier den süßen Commandaria-Wein kelterten"
 	},
 	"Pissouri": {
-		"pl": "Wieś na wzgórzu nad zatoką, w winnicach i gajach chleba świętojańskiego",
+		"pl": "Wieś na wzgórzu nad zatoką, wśród winnic i gajów chleba świętojańskiego",
 		"en": "A hilltop village above its bay, among vineyards and carob groves",
 		"cs": "Vesnice na kopci nad zátokou, mezi vinicemi a háji svatojánského chleba",
 		"is": "Þorp á hæð ofan við flóann, innan um vínekrur og jóhannesarbrauðstré",
@@ -133,9 +133,9 @@
 		"de": "Ein Badeort an der Feigenbaumbucht, mit einer Kapelle auf einem Felsen über dem Meer"
 	},
 	"Evrychou": {
-		"pl": "Wieś w dolinie Solea, dawniej stacja górskiej kolejki z Lefkosii",
-		"en": "A village in the Solea valley, once the end of the railway from Lefkosia",
-		"cs": "Vesnice v údolí Solea, kdysi konečná železnice z Lefkosie",
+		"pl": "Wieś w dolinie Solea, dawniej końcowa stacja kolei z Lefkosii",
+		"en": "A village in the Solea valley, once the terminus of the railway from Lefkosia",
+		"cs": "Vesnice v údolí Solea, kdysi konečná stanice železnice z Lefkosie",
 		"is": "Þorp í Solea-dalnum, áður endastöð járnbrautarinnar frá Lefkosia",
 		"de": "Ein Dorf im Solea-Tal, einst Endstation der Eisenbahn aus Lefkosia"
 	}
