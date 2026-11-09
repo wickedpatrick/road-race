@@ -289,6 +289,17 @@
 			"industry": 0,
 			"weather": "sun",
 			"grass": {"summer": ["#9aa266", "#90985e"], "autumn": ["#a59a62", "#9b905a"], "winter": ["#a8a68a", "#9e9c80"]}
+		},
+		"mediterranean": {
+			"wood": 0.15,
+			"curve": 0.9,
+			"hill": 0.6,
+			"hills": 0.5,
+			"mountains": 0.3,
+			"sea": 0,
+			"industry": 0,
+			"weather": "sun",
+			"grass": {"summer": ["#b3a966", "#a99f5e"], "autumn": ["#a3a45e", "#999a56"], "winter": ["#92a45e", "#889a56"]}
 		}
 	},
 	"landmark_sizes": {

@@ -12,6 +12,7 @@ func run(t) -> void:
 	_test_scrolling_map(t)
 	_test_batch_clip(t)
 	_test_postcards(t)
+	_test_mediterranean(t)
 	t.check(Postcards.summary("is", {}) == {"earned": 0, "all": 25, "stamps": 0, "max": 65}, "album of a country never played: nothing earned yet")
 	t.check(Postcards.summary("is", {"reykjavik": {"stamps": 3}}) == {"earned": 1, "all": 25, "stamps": 3, "max": 65}, "album counts postcards and stamps")
 	for kind in ["cow", "sheep", "horse"]:
@@ -115,3 +116,20 @@ func _test_postcards(t) -> void:
 	GameData.set_language("en")
 	t.check(PostcardPainter.caption("pl", "warszawa")[1].contains("Palace of Culture") and PostcardPainter.caption("pl", "warszawa")[0] == "Warsaw", "caption in the player's language")
 	GameData.set_language("pl")
+
+## The Mediterranean landscape: olives and cypresses, no northern trees, white houses in the towns, all painted.
+func _test_mediterranean(t) -> void:
+	t.check(Biome.all().has("mediterranean") and Biome.get_data("mediterranean").weather == "sun", "the mediterranean biome exists, in sun")
+	var st := Route.build("krakow", "warszawa")
+	st["zones"] = [{"z0": 0.0, "z1": st.length + 1000.0, "biome": "mediterranean", "region": "Test"}]
+	var items := Scenery.build(st, 1)
+	var count := {}
+	for idx in items:
+		for it in items[idx]: count[it.type] = count.get(it.type, 0) + 1
+	t.check(count.get("olive", 0) > 0 and count.get("cypress", 0) > 0 and count.get("maquis", 0) > 0 and count.get("stonewall", 0) > 0, "olives, cypresses, maquis and dry-stone walls by the road (%s)" % [count])
+	t.check(count.get("spruce", 0) == 0 and count.get("birch", 0) == 0 and count.get("pine", 0) == 0, "no spruce, birch or pine")
+	t.check(count.get("whitehouse", 0) > 0 and count.get("house", 0) == 0, "white houses in the settlements (%s)" % [count])
+	for kind in ["olive", "cypress", "maquis", "stonewall", "whitehouse"]:
+		var pen := Pen.new()
+		Scenery.draw_item(pen, {"type": kind, "v": 0.3, "c": 1, "w": 4.0, "h": 5.0, "lat": 10.0}, Vector2(400, 400), 6.0, SeasonPalette.by_name("summer"), "summer", null)
+		t.check(pen.n > 0, "%s is drawn" % kind)

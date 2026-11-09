@@ -112,8 +112,31 @@ def centroid(pts):
 		a += c; cx += (x0 + x1) * c; cy += (y0 + y1) * c
 	return (cx / (3 * a), cy / (3 * a)) if a else pts[0]
 
+def merge_rings(a, b):
+	"""One ring of two rings that share a border: the edges both have are dropped and the rest chained."""
+	edges = {}
+	for ring in (a, b):
+		for i in range(len(ring)):
+			p, q = tuple(ring[i - 1]), tuple(ring[i])
+			if p != q: edges.setdefault(frozenset((p, q)), []).append((p, q))
+	left = [e[0] for e in edges.values() if len(e) == 1]
+	nxt = {}
+	for p, q in left: nxt.setdefault(p, []).append(q)
+	out = [left[0][0]]
+	while True:
+		cand = [q for q in nxt.get(out[-1], []) if q != (out[-2] if len(out) > 1 else None)]
+		if not cand or cand[0] == out[0]: break
+		out.append(cand[0])
+	return out
+
 def main(src):
 	feats = json.load(open(src))["features"]
+	# Northern Cyprus is its own feature in Natural Earth; on the picker the whole island is Cyprus, with no line across
+	# it (in the game only the Republic-controlled south is driven, see the spec)
+	by_adm = {f["properties"]["ADM0_A3"]: f for f in feats}
+	cyp, cyn = by_adm["CYP"], by_adm["CYN"]
+	cyp["geometry"] = {"type": "Polygon", "coordinates": [merge_rings(cyp["geometry"]["coordinates"][0], cyn["geometry"]["coordinates"][0])]}
+	feats = [f for f in feats if f is not cyn]
 	out = {"_": "made by tools/make_world.py from Natural Earth; screen pixels on 960x540", "planned": PLANNED,
 		"views": [], "countries": {}, "land": []}
 	for name, lon0, lon1, lat0, lat1, rect, skip in VIEWS:

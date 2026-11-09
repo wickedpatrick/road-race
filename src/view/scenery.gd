@@ -369,7 +369,7 @@ static func _solid(it: Dictionary) -> Array:
 			return [[-3.65, -3.35], [3.35, 3.65]]
 		"region", "poi", "billboard", "border_board":
 			return [[-3.15, -2.85], [2.85, 3.15]]
-		"tree", "pine", "birch", "spruce", "poplar", "willow", "apple", "cactus":
+		"tree", "pine", "birch", "spruce", "poplar", "willow", "apple", "cactus", "olive", "cypress":
 			return [[-0.3, 0.3]]
 		"shrine":
 			return [[-0.6, 0.6]]
@@ -377,14 +377,14 @@ static func _solid(it: Dictionary) -> Array:
 			var p := Track.ROAD_HALF_WIDTH + 2.5
 			var m := (1.0 + Track.MEDIAN * 0.5) * Track.ROAD_HALF_WIDTH # the median pillar of a dual carriageway
 			return [[-m - 0.4, -m + 0.4], [p - 0.9, p + 0.9]]
-		"haybale", "lavarock", "redrock", "mesa", "building", "house", "woodhouse", "farm", "church", "cerkiew", "block", "castle", "rock", "windmill", \
+		"haybale", "lavarock", "redrock", "mesa", "stonewall", "whitehouse", "building", "house", "woodhouse", "farm", "church", "cerkiew", "block", "castle", "rock", "windmill", \
 				"chimney", "headframe", "cooling", "lighthouse", "landmark", "heap", "turbine", "booth", "quay":
 			return [[-hw, hw]]
 	return []
 
 const CLEARABLE := ["building", "house", "woodhouse", "tree", "church", "cerkiew", "block", "farm", "apple", "pine",
 	"birch", "spruce", "poplar", "cow", "sheep", "horse", "moss", "lavarock",
-	"cactus", "bush", "redrock", "mesa"]
+	"cactus", "bush", "redrock", "mesa", "olive", "cypress", "maquis", "stonewall", "whitehouse"]
 
 ## Makes room for a landmark: removes houses and trees on its spot and on its side of the road before it, like a
 ## square in front of it, so it can be seen while driving up to it.
@@ -430,7 +430,7 @@ static func _settlement(items: Dictionary, t: Dictionary, biome: String, z: floa
 	for side in [-1, 1]:
 		if rng.randf() < 0.8:
 			var w := rng.randf_range(7.0, 10.0)
-			var type := "woodhouse" if wooden and rng.randf() < 0.7 else "house"
+			var type := "woodhouse" if wooden and rng.randf() < 0.7 else ("whitehouse" if biome == "mediterranean" else "house")
 			_add(items, type, z + rng.randf_range(-3, 3), side * (8.2 + w * 0.5 + rng.randf_range(0.0, 3.0)), w, rng.randf_range(6.0, 8.0), rng)
 		elif rng.randf() < 0.6:
 			_add(items, "tree", z, side * rng.randf_range(8.0, 11.0), 3.0, 5.5, rng)
@@ -477,6 +477,8 @@ static func _nature(items: Dictionary, biome: String, z: float, rng: RandomNumbe
 			return _iceland(items, biome, z, rng)
 		"desert":
 			return _desert(items, z, rng)
+		"mediterranean":
+			return _mediterranean(items, z, rng)
 		"jura":
 			for side in [-1, 1]:
 				if rng.randf() < 0.22:
@@ -578,6 +580,28 @@ static func _desert(items: Dictionary, z: float, rng: RandomNumberGenerator) -> 
 	if rng.randf() < 0.03:
 		_add(items, "mesa", z, _side(rng) * rng.randf_range(60.0, 150.0), rng.randf_range(40.0, 90.0), rng.randf_range(16.0, 32.0), rng)
 	return rng.randf_range(12.0, 20.0)
+
+## The Mediterranean: olive groves, dark cypresses, low maquis, dry-stone walls along the fields, now and then a
+## white house with a flat or tiled roof and some rock. Returns the step length.
+static func _mediterranean(items: Dictionary, z: float, rng: RandomNumberGenerator) -> float:
+	var grove := _h(int(z / 260.0), 41) < 0.4
+	for side in [-1, 1]:
+		var r := rng.randf()
+		if r < (0.75 if grove else 0.32):
+			_add(items, "olive", z + rng.randf_range(-4, 4), side * rng.randf_range(8.5, 26.0), 3.6, rng.randf_range(4.0, 5.6), rng)
+		elif r < (0.83 if grove else 0.5):
+			_add(items, "cypress", z + rng.randf_range(-3, 3), side * rng.randf_range(7.8, 22.0), 1.6, rng.randf_range(8.0, 13.0), rng)
+		elif r < 0.7:
+			var w := rng.randf_range(1.8, 3.4)
+			_add(items, "maquis", z + rng.randf_range(-4, 4), side * rng.randf_range(7.8, 34.0), w, w * rng.randf_range(0.45, 0.7), rng)
+		if rng.randf() < 0.12:
+			_add(items, "stonewall", z, side * rng.randf_range(10.5, 13.0), rng.randf_range(4.0, 8.0), 1.0, rng)
+		if rng.randf() < 0.05:
+			var w := rng.randf_range(1.5, 4.0)
+			_add(items, "rock", z, side * rng.randf_range(10.0, 35.0), w, w * rng.randf_range(0.5, 0.9), rng)
+	if rng.randf() < 0.04:
+		_add(items, "whitehouse", z, _side(rng) * rng.randf_range(18.0, 40.0), rng.randf_range(6.0, 8.0), rng.randf_range(5.0, 6.5), rng)
+	return rng.randf_range(11.0, 18.0)
 
 ## A flock of sheep or a few horses beside the road.
 static func _flock(items: Dictionary, z: float, rng: RandomNumberGenerator, kind: String, most: int) -> void:
@@ -901,6 +925,11 @@ static func draw_item(cv, it: Dictionary, b: Vector2, pm: float, pal: Dictionary
 		"bush": _bush(cv, it, b, h, pm, season)
 		"redrock": _redrock(cv, it, b, h, pm)
 		"mesa": _mesa(cv, it, b, h, pm, season)
+		"olive": _olive(cv, it, b, h, pm)
+		"cypress": _cypress(cv, it, b, h, pm)
+		"maquis": _maquis(cv, it, b, h, pm)
+		"stonewall": _stonewall(cv, it, b, h, pm)
+		"whitehouse": _whitehouse(cv, it, b, pm)
 		"town_sign", "town_end": _town_sign(cv, it, b, pm, font, it.type == "town_end")
 		"board": _board(cv, it, b, pm, font)
 		"limit": _limit(cv, it, b, pm, font)
@@ -1405,6 +1434,70 @@ static func _mesa(cv, it: Dictionary, b: Vector2, h: float, pm: float, season: S
 		var y := h * (0.55 + 0.17 * k)
 		cv.draw_line(b + Vector2(-w * 0.33, -y), b + Vector2(w * 0.18, -y), rock.darkened(0.12), maxf(1.0, h * 0.03))
 	cv.draw_rect(Rect2(b + Vector2(-w * 0.32, -h), Vector2(w * 0.62, maxf(1.0, h * 0.08))), cap)
+
+## Olive tree: a short gnarled trunk under a wide, silvery grey-green crown (evergreen, in every season).
+static func _olive(cv, it: Dictionary, b: Vector2, h: float, pm: float) -> void:
+	var w: float = it.w * pm
+	var tw := maxf(1.0, w * 0.1)
+	var bark := Color("6b5a48")
+	cv.draw_line(b, b + Vector2(-tw * 0.4, -h * 0.5), bark, tw)
+	cv.draw_line(b + Vector2(-tw * 0.2, -h * 0.35), b + Vector2(w * 0.12, -h * 0.62), bark, maxf(1.0, tw * 0.7))
+	var col := Color("7f9170")
+	var r := minf(w * 0.3, h * 0.36)
+	cv.draw_circle(b + Vector2(-w * 0.2, -h * 0.66), r * 0.85, col.darkened(0.15))
+	cv.draw_circle(b + Vector2(w * 0.22, -h * 0.64), r * 0.85, col.darkened(0.08))
+	cv.draw_circle(b + Vector2(0, -h * 0.8), r, col)
+	cv.draw_circle(b + Vector2(w * 0.05, -h * 0.86), r * 0.55, col.lightened(0.18))
+
+## Cypress: a tall, narrow, dark flame.
+static func _cypress(cv, it: Dictionary, b: Vector2, h: float, pm: float) -> void:
+	var w: float = it.w * pm
+	var col := Color("2f4a34")
+	cv.draw_rect(Rect2(b + Vector2(-w * 0.04, -h * 0.1), Vector2(w * 0.08, h * 0.1)), Color("4f3a2a"))
+	cv.draw_colored_polygon(PackedVector2Array([b + Vector2(-w * 0.3, -h * 0.1), b + Vector2(-w * 0.5, -h * 0.4), b + Vector2(-w * 0.32, -h * 0.75),
+		b + Vector2(0, -h), b + Vector2(w * 0.32, -h * 0.75), b + Vector2(w * 0.5, -h * 0.4), b + Vector2(w * 0.3, -h * 0.1)]), col)
+	cv.draw_colored_polygon(PackedVector2Array([b + Vector2(w * 0.05, -h * 0.12), b + Vector2(w * 0.3, -h * 0.4), b + Vector2(w * 0.2, -h * 0.75),
+		b + Vector2(0, -h), b + Vector2(w * 0.32, -h * 0.75), b + Vector2(w * 0.5, -h * 0.4), b + Vector2(w * 0.3, -h * 0.1)]), col.lightened(0.1))
+
+## Maquis: a low dark-green tangle of shrubs.
+static func _maquis(cv, it: Dictionary, b: Vector2, h: float, pm: float) -> void:
+	var w: float = it.w * pm
+	var col := Color("55703f")
+	var r := maxf(1.0, minf(w * 0.3, h * 0.65))
+	cv.draw_circle(b + Vector2(-w * 0.24, -r * 0.7), r * 0.8, col.darkened(0.2))
+	cv.draw_circle(b + Vector2(w * 0.24, -r * 0.7), r * 0.8, col.darkened(0.1))
+	cv.draw_circle(b + Vector2(0, -r), r, col)
+	cv.draw_circle(b + Vector2(w * 0.08, -r * 1.2), r * 0.45, Color("a58aa0") if it.v < 0.25 else col.lightened(0.15))
+	cv.draw_rect(Rect2(b + Vector2(-w * 0.42, -r * 0.5), Vector2(w * 0.84, r * 0.5)), col.darkened(0.2))
+
+## Dry-stone wall: a low run of loose pale stones, seen side-on.
+static func _stonewall(cv, it: Dictionary, b: Vector2, h: float, pm: float) -> void:
+	var w: float = it.w * pm
+	var hh := maxf(1.0, h * 0.9)
+	var stone := Color("b9ad93")
+	cv.draw_rect(Rect2(b + Vector2(-w * 0.5, -hh), Vector2(w, hh)), stone)
+	cv.draw_rect(Rect2(b + Vector2(-w * 0.5, -hh), Vector2(w, maxf(1.0, hh * 0.18))), stone.lightened(0.15))
+	if pm > 3.0:
+		var n := int(w / (pm * 0.9))
+		for k in n:
+			var x := -w * 0.5 + (k + 0.5) * w / n
+			cv.draw_line(b + Vector2(x, -hh * 0.82), b + Vector2(x, -hh * 0.5), stone.darkened(0.25), maxf(1.0, pm * 0.06))
+			cv.draw_line(b + Vector2(x + w / n * 0.5, -hh * 0.5), b + Vector2(x + w / n * 0.5, 0), stone.darkened(0.25), maxf(1.0, pm * 0.06))
+		cv.draw_line(b + Vector2(-w * 0.5, -hh * 0.5), b + Vector2(w * 0.5, -hh * 0.5), stone.darkened(0.25), maxf(1.0, pm * 0.06))
+
+## White house: whitewashed walls, a low terracotta roof or a flat one with a parapet, blue shutters.
+static func _whitehouse(cv, it: Dictionary, b: Vector2, pm: float) -> void:
+	var w: float = it.w * pm
+	var h: float = it.h * pm
+	var wall := Color("f4f1ea")
+	cv.draw_rect(Rect2(b + Vector2(-w * 0.5, -h * 0.7), Vector2(w, h * 0.7)), wall)
+	cv.draw_rect(Rect2(b + Vector2(w * 0.2, -h * 0.7), Vector2(w * 0.3, h * 0.7)), wall.darkened(0.1))
+	if it.v < 0.5:
+		cv.draw_colored_polygon(PackedVector2Array([b + Vector2(-w * 0.58, -h * 0.7), b + Vector2(w * 0.58, -h * 0.7), b + Vector2(w * 0.3, -h * 0.95), b + Vector2(-w * 0.3, -h * 0.95)]), Color("b8553a"))
+	else:
+		cv.draw_rect(Rect2(b + Vector2(-w * 0.54, -h * 0.78), Vector2(w * 1.08, h * 0.08)), wall.darkened(0.04))
+	cv.draw_rect(Rect2(b + Vector2(-w * 0.34, -h * 0.5), Vector2(w * 0.2, h * 0.24)), Color("3f6fa0"))
+	cv.draw_rect(Rect2(b + Vector2(-w * 0.08, -h * 0.34), Vector2(w * 0.2, h * 0.34)), Color("3f6fa0"))
 
 static func _stork(cv, b: Vector2, h: float, pm: float, season: String) -> void:
 	cv.draw_line(b, b + Vector2(0, -h), Color("8a8d92"), maxf(1.0, 0.15 * pm))

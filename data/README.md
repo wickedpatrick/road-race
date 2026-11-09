@@ -26,7 +26,8 @@ Numbers: distances along a road in real kilometres from city `a`; populations in
   (0..1) shape the horizon, optional `ice` (0..1) keeps snow caps on the far mountains all year (glaciers),
   `weather` is the usual weather there (`sun`, `cloudy`, `rain`, `fog`, `autumn`, `snow`; see `Weather`).
   What grows beside the road per landscape is in `Scenery._nature` (`lava`, `highland`, `glacier`, `fjords`: the
-  treeless north in `Scenery._iceland`).
+  treeless north in `Scenery._iceland`; `desert`: `Scenery._desert`; `mediterranean`: olives, cypresses, maquis, dry-stone
+  walls (`stonewall`) and white houses in the settlements, `Scenery._mediterranean`).
 - `biomes` may also give their `grass`: `{season: ["#rrggbb", "#rrggbb"]}` (the two bands, e.g. moorland brown);
   the grass turns from one landscape's into the next one's over 150 m.
 - `landmark_sizes`: landmark painter kind -> `[width, height]` in metres (see `LandmarkPainter`).
