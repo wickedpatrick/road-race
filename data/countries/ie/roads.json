@@ -160,7 +160,7 @@
 		"a": "ennis",
 		"b": "galway",
 		"km": 113,
-		"road": [[25, "N85"], [29, "N67"], [53, "R478"], [104, "N67"], [113, "N6"]],
+		"road": [[25, "N85"], [29, "N67"], [53, "R478"], [95, "N67"], [104, "N18"], [113, "N6"]],
 		"towns": [
 			["Ennistymon", 25], ["Lahinch", 29], ["Liscannor", 33], ["Doolin", 46], ["Lisdoonvarna", 53],
 			["Ballyvaughan", 69], ["Kinvara", 87], ["Kilcolgan", 95], ["Oranmore", 104]
@@ -330,7 +330,7 @@
 		"a": "westport",
 		"b": "sligo",
 		"km": 117,
-		"road": [[17, "N5"], [52, "N26"], [117, "N59"]],
+		"road": [[24, "N5"], [35, "N58"], [52, "N26"], [117, "N59"]],
 		"towns": [["Castlebar", 17], ["Foxford", 35], ["Ballina", 52], ["Dromore West", 76], ["Ballisodare", 109]],
 		"zones": [
 			[25, "fields", "County Mayo"], [45, "lakes", "County Mayo"], [60, "fields", "County Mayo"],

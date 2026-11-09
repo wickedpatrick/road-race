@@ -27,7 +27,7 @@
 				"is": "Bretland",
 				"de": "Großbritannien"
 			},
-			"neighbours": [],
+			"neighbours": ["ie"],
 			"favorite_neighbour": "ie"
 		},
 		{
