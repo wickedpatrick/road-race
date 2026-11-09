@@ -188,6 +188,12 @@ static func _bridge(items: Dictionary, br: Dictionary, rng: RandomNumberGenerato
 	for z in [br.z0 + span * BRIDGE_SIDE, br.z1 - span * BRIDGE_SIDE]:
 		_add(items, "bridge_tower", z, 0.0, 0.0, BRIDGE_TOWER_H, rng).color = br.get("color", "")
 
+## The bridge whose deck or sign (BRIDGE_SIGN_BEFORE ahead of it) a roadside board at z would stand on, or {}.
+static func _near_bridge(stage: Dictionary, z: float) -> Dictionary:
+	for br in stage.get("bridges", []):
+		if z >= br.z0 - BRIDGE_SIGN_BEFORE - 10.0 and z <= br.z1 + 10.0: return br
+	return {}
+
 ## True on a suspension bridge's deck.
 static func on_bridge(stage: Dictionary, z: float) -> bool:
 	return not Route.bridge_at(stage, z).is_empty()
@@ -808,11 +814,11 @@ static func _signs(items: Dictionary, stage: Dictionary, rng: RandomNumberGenera
 		prev = zn.region
 		var z: float = zn.z0 + 40.0
 		var t := Route.town_at(stage, z)
-		var br := Route.bridge_at(stage, z + 10.0)
+		var br := _near_bridge(stage, z)
 		while not t.is_empty() or not br.is_empty():
 			z = t.z + t.half + 140.0 if not t.is_empty() else br.z1 + 60.0 # past a town's streets or off a bridge
 			t = Route.town_at(stage, z)
-			br = Route.bridge_at(stage, z + 10.0)
+			br = _near_bridge(stage, z)
 		if z > zn.z1 - 150.0 or z - last_region < 300.0:
 			continue # the region is crossed inside a town, or right after another region board
 		last_region = z

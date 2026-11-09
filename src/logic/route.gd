@@ -47,6 +47,7 @@ const MIN_DRIVEN := 1.0 ## km: the least driven distance the track is scaled by 
 ## flash by), with BRIDGE_GAP of open road kept to the towns around them; stations and boards keep clear of them.
 const BRIDGE_MIN := 360.0
 const BRIDGE_GAP := 60.0
+const BRIDGE_DROP := 120.0 ## a bridge the towns squeeze shorter than this is left out (plain road there)
 const STATION_PAST_BRIDGE := 200.0 ## a station stands at least this far past a bridge (its sign is off the deck)
 const STATION_BEFORE_BRIDGE := 100.0 ## and at least this far before one
 
@@ -267,6 +268,7 @@ static func build(from: String, to: String) -> Dictionary:
 	var quays: Array = ferries.map(func(f): return {"z0": f.z - FERRY_QUAY - 40.0, "z1": f.z_out + FAR_PIER + 40.0})
 	_fit_tunnels(tunnels, towns, length, quays)
 	_fit_tunnels(bridges, towns, length, quays + tunnels, BRIDGE_MIN, BRIDGE_GAP)
+	bridges = bridges.filter(func(b): return b.z1 - b.z0 >= BRIDGE_DROP) # squeezed by the towns: no bridge at all
 	borders.sort_custom(func(p, q): return p.z < q.z)
 	_place_crossings(borders, towns, tunnels + quays + bridges, length)
 	# stations and boards keep clear of the crossings as of tunnels, quays and bridges (with the bridge's sign before it)
@@ -302,7 +304,7 @@ static func build(from: String, to: String) -> Dictionary:
 		if zs < 0.0:
 			zs = minf(_clear_spot(z0, towns, st_avoid, 80.0), length - 450.0)
 		if bridges.any(func(b): return zs > b.z0 - STATION_BEFORE_BRIDGE and zs < b.z1 + STATION_PAST_BRIDGE): # pushed onto a bridge
-			zs = _free_spot(z0, towns, st_avoid, prev + 50.0, length - 300.0)
+			zs = _free_spot(z0, towns, st_avoid, prev + 400.0, length - 450.0)
 		if quays.any(func(q): return zs > q.z0 and zs < q.z1) \
 				or (not ferries.is_empty() and towns.any(func(tn): return zs > tn.z - tn.half - 40.0 and zs < tn.z + tn.half + 40.0)):
 			zs = -1.0 # never on a quay or a pier, nor over a town's signs: a short ferry trip may go without a station

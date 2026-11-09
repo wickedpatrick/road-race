@@ -62,6 +62,10 @@ func _check_trips(t, code: String) -> void:
 				ok = false; print("  %s: trip %s-%s broken" % [code, a, b])
 			for zz in [10.0, s.length * 0.5, s.length - 10.0]:
 				if Route.speed_limit_at(s, zz) <= 0 and not (Route.lanes_at(s, zz) == 3 and Geo.limits().has("unlimited_beyond_km")): ok = false
+			for br in s.bridges:
+				if br.z1 - br.z0 < Route.BRIDGE_MIN - 0.5: ok = false; print("  %s: trip %s-%s: %s squeezed (%.0f m)" % [code, a, b, br.name, br.z1 - br.z0])
+			if Geo.roads().any(func(r): return r.has("bridge") and ((r.a == a and r.b == b) or (r.a == b and r.b == a))) and s.bridges.is_empty():
+				ok = false; print("  %s: trip %s-%s lost its bridge" % [code, a, b])
 			for tn in s.tunnels:
 				for tw in s.towns:
 					if tw.z + tw.half > tn.z0 and tw.z - tw.half < tn.z1: ok = false; print("  %s: %s-%s tunnel in a town" % [code, a, b])
@@ -135,7 +139,8 @@ func _check_country(t, code: String, rules: Dictionary) -> void:
 				roads_ok = false; print("  %s: road %s: bad tunnel" % [code, tag])
 		if r.has("bridge"):
 			var br: Dictionary = r.bridge
-			if not (br.from_km >= 0.0 and br.from_km < br.to_km and br.to_km <= r.km) or not br.get("name") is String:
+			if not (br.from_km >= 0.0 and br.from_km < br.to_km and br.to_km <= r.km) or not br.get("name") is String \
+					or not (br.get("color", "") == "" or (br.color is String and Color.html_is_valid(br.color))):
 				roads_ok = false; print("  %s: road %s: bad bridge" % [code, tag])
 	t.check(roads_ok, "%s: roads consistent" % code)
 	# every city reachable from every other one

@@ -19,6 +19,7 @@ static func fixture() -> Dictionary:
 		"aa": {"name": "Alfa", "lat": 40.0, "lon": 26.0, "pop": 150, "region": "R1"},
 		"bb": {"name": "Beta", "lat": 40.4, "lon": 27.0, "pop": 150, "region": "R2"},
 		"cc": {"name": "Gamma", "lat": 40.6, "lon": 27.3, "pop": 150, "region": "R2"},
+		"dd": {"name": "Delta", "lat": 40.7, "lon": 27.5, "pop": 150, "region": "R2"},
 	}
 	c["roads"] = [
 		{"a": "aa", "b": "bb", "km": 100, "road": "O5", "towns": [["Westtown", 20], ["Easttown", 70]],
@@ -27,6 +28,9 @@ static func fixture() -> Dictionary:
 		# the bridge begins at the city's edge: it is moved out past the streets
 		{"a": "bb", "b": "cc", "km": 80, "road": "D100", "towns": [], "zones": [[80, "fields", "R2"]],
 			"bridge": {"from_km": 0.5, "to_km": 2, "name": "Short"}},
+		# towns crowd the bridge: too short to draw, it is left out
+		{"a": "cc", "b": "dd", "km": 20, "road": "D110", "towns": [["Left", 8], ["Right", 12]], "zones": [[20, "fields", "R2"]],
+			"bridge": {"from_km": 9.5, "to_km": 10.5, "name": "Squeezed"}},
 	]
 	c["facts"] = {}
 	c["landmarks"] = {}
@@ -69,6 +73,8 @@ func run(t) -> void:
 				"%s: a pylon at both ends of %s" % [name, b.name])
 			var stray := all.filter(func(it): return inside.call(it.z) and it.type in ["town_sign", "town_end", "board", "radar", "pylon", "station_sign"])
 			t.check(stray.is_empty(), "%s: no sign or station by %s %s" % [name, b.name, str(stray.map(func(it): return [it.type, it.z]))])
+			t.check(not all.any(func(it): return it.type == "region" and it.z > b.z0 - Scenery.BRIDGE_SIGN_BEFORE - 10.0 and it.z < b.z1),
+				"%s: no region board by %s's sign or on it" % [name, b.name])
 			var on_deck := all.filter(func(it): return it.z > b.z0 and it.z < b.z1 and not it.type in ["bridge_tower"])
 			t.check(on_deck.is_empty(), "%s: nothing else on %s %s" % [name, b.name, str(on_deck.map(func(it): return it.type))])
 			var sign := all.filter(func(it): return it.type == "bridge_sign" and it.text == b.name)
@@ -102,6 +108,12 @@ func run(t) -> void:
 		and Scenery.cable_h(br, mid_z) < 4.0 and Scenery.cable_h(br, br.z1) < 2.0, "the cable's sag")
 	var r: Race = Bot.run_race("xc60", s, 11, 0.9)
 	t.check(r.state == "won" and r.fines == 0, "the autopilot drives over the bridge (%s, %.0f s left)" % [r.state, r.time_left])
+	for pair in [["cc", "dd"], ["dd", "cc"]]:
+		var q := Route.build(pair[0], pair[1])
+		var qs := Scenery.build(q, 1)
+		var towers := 0
+		for idx in qs: towers += qs[idx].filter(func(it): return it.type == "bridge_tower").size()
+		t.check(q.bridges.is_empty() and towers == 0, "%s->%s: a bridge squeezed by the towns is left out" % pair)
 	# right after a city: the bridge starts past the start's streets
 	var short := Route.build("bb", "cc")
 	t.check(short.bridges[0].z0 - 40.0 >= short.towns[0].z + short.towns[0].half, "the bridge past the start city's streets")

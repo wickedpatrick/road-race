@@ -152,7 +152,8 @@ List of roads between two neighbouring cities `a` and `b` (travelling `b` -> `a`
   over the Dardanelles; `name` plain or texts by language; optional `color` (`"#c8322b"`) for the pylons, grey by
   default. The stretch is driven as it is (real km, no time added); it is never shorter than `Route.BRIDGE_MIN`
   track metres and is moved off town streets with `Route.BRIDGE_GAP` of open road to them (like tunnels), so a
-  bridge starting at a city's edge is fine. Stations stand at least `Route.STATION_BEFORE_BRIDGE` before and
+  bridge starting at a city's edge is fine; one the towns squeeze under `Route.BRIDGE_DROP` metres is left out (keep
+  ~30 km of road around it; test_game_data checks every real bridge keeps `BRIDGE_MIN`). Stations stand at least `Route.STATION_BEFORE_BRIDGE` before and
   `Route.STATION_PAST_BRIDGE` past it, boards and crossings keep clear of it; flat and straight. Drawn: a blue sign
   with `name` before it, then water on both sides of the deck, railings (solid, like tunnel walls), two tall pylons
   astride the road `Scenery.BRIDGE_SIDE` of the way in from each end, the main cables sagging between them with
