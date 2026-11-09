@@ -1,0 +1,24 @@
+{
+	"riga": {
+		"name": "Rīga",
+		"lat": 56.95,
+		"lon": 24.11,
+		"pop": 605,
+		"region": "Vidzeme",
+		"exonym": {"pl": "Ryga", "en": "Riga", "cs": "Riga", "is": "Ríga", "de": "Riga"}
+	},
+	"daugavpils": {"name": "Daugavpils", "lat": 55.87, "lon": 26.53, "pop": 78, "region": "Latgale"},
+	"liepaja": {"name": "Liepāja", "lat": 56.51, "lon": 21.01, "pop": 67, "region": "Kurzeme"},
+	"jelgava": {"name": "Jelgava", "lat": 56.65, "lon": 23.72, "pop": 54, "region": "Zemgale"},
+	"jurmala": {"name": "Jūrmala", "lat": 56.97, "lon": 23.77, "pop": 50, "region": "Kurzeme"},
+	"ventspils": {"name": "Ventspils", "lat": 57.39, "lon": 21.56, "pop": 33, "region": "Kurzeme"},
+	"rezekne": {"name": "Rēzekne", "lat": 56.51, "lon": 27.33, "pop": 27, "region": "Latgale"},
+	"valmiera": {"name": "Valmiera", "lat": 57.54, "lon": 25.42, "pop": 23, "region": "Vidzeme"},
+	"jekabpils": {"name": "Jēkabpils", "lat": 56.5, "lon": 25.86, "pop": 21, "region": "Sēlija"},
+	"sigulda": {"name": "Sigulda", "lat": 57.15, "lon": 24.86, "pop": 16, "region": "Vidzeme"},
+	"cesis": {"name": "Cēsis", "lat": 57.31, "lon": 25.27, "pop": 15, "region": "Vidzeme"},
+	"kuldiga": {"name": "Kuldīga", "lat": 56.97, "lon": 21.97, "pop": 10, "region": "Kurzeme"},
+	"talsi": {"name": "Talsi", "lat": 57.25, "lon": 22.59, "pop": 9, "region": "Kurzeme"},
+	"bauska": {"name": "Bauska", "lat": 56.41, "lon": 24.19, "pop": 8, "region": "Zemgale"},
+	"salacgriva": {"name": "Salacgrīva", "lat": 57.75, "lon": 24.36, "pop": 3, "region": "Vidzeme"}
+}
