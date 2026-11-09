@@ -27,7 +27,8 @@ Numbers: distances along a road in real kilometres from city `a`; populations in
   `weather` is the usual weather there (`sun`, `cloudy`, `rain`, `fog`, `autumn`, `snow`; see `Weather`).
   What grows beside the road per landscape is in `Scenery._nature` (`lava`, `highland`, `glacier`, `fjords`: the
   treeless north in `Scenery._iceland`; `desert`: `Scenery._desert`; `mediterranean`: olives, cypresses, maquis, dry-stone
-  walls (`stonewall`) and white houses in the settlements, `Scenery._mediterranean`).
+  walls (`stonewall`, kept clear of the shoulder) and white houses in the settlements, `Scenery._mediterranean`; the
+  stone and the house walls take the palette's `stone` and `wall`).
 - `biomes` may also give their `grass`: `{season: ["#rrggbb", "#rrggbb"]}` (the two bands, e.g. moorland brown);
   the grass turns from one landscape's into the next one's over 150 m.
 - `landmark_sizes`: landmark painter kind -> `[width, height]` in metres (see `LandmarkPainter`).
@@ -72,7 +73,8 @@ cities and `borders` on its roads (below).
   boards (`board`, `board_motorway`); optional `board_text` for the lettering on the ordinary boards (white by
   default, black on Germany's yellow ones).
 - `palette` (optional): the country's own colours by season, over the default ones (`src/view/season_palette.gd`
-  keys: `grass_a`, `grass_b`, `tree`, `crop_a`, ...), e.g. Britain's dark green grass; `biomes`: landscape ->
+  keys: `grass_a`, `grass_b`, `tree`, `crop_a`, ..., `stone` for dry-stone walls and `wall` for the Mediterranean
+  houses), e.g. Britain's dark green grass, Malta's honey-coloured limestone; `biomes`: landscape ->
   `{season: [grass_a, grass_b]}`, over the landscape's `grass` in rules.json.
 - `weather`: how the country's roads get their weather (shown on the map, it sets the look and the grip):
   `default`, `landscape` (false: the default everywhere, e.g. snow in Iceland; true: from the road's longest

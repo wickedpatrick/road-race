@@ -595,7 +595,8 @@ static func _mediterranean(items: Dictionary, z: float, rng: RandomNumberGenerat
 			var w := rng.randf_range(1.8, 3.4)
 			_add(items, "maquis", z + rng.randf_range(-4, 4), side * rng.randf_range(7.8, 34.0), w, w * rng.randf_range(0.45, 0.7), rng)
 		if rng.randf() < 0.12:
-			_add(items, "stonewall", z, side * rng.randf_range(10.5, 13.0), rng.randf_range(4.0, 8.0), 1.0, rng)
+			var w := rng.randf_range(4.0, 8.0)
+			_add(items, "stonewall", z, side * (7.8 + w * 0.5 + rng.randf_range(0.5, 3.0)), w, 1.0, rng) # clear of the shoulder
 		if rng.randf() < 0.05:
 			var w := rng.randf_range(1.5, 4.0)
 			_add(items, "rock", z, side * rng.randf_range(10.0, 35.0), w, w * rng.randf_range(0.5, 0.9), rng)
@@ -928,8 +929,8 @@ static func draw_item(cv, it: Dictionary, b: Vector2, pm: float, pal: Dictionary
 		"olive": _olive(cv, it, b, h, pm)
 		"cypress": _cypress(cv, it, b, h, pm)
 		"maquis": _maquis(cv, it, b, h, pm)
-		"stonewall": _stonewall(cv, it, b, h, pm)
-		"whitehouse": _whitehouse(cv, it, b, pm)
+		"stonewall": _stonewall(cv, it, b, h, pm, pal)
+		"whitehouse": _whitehouse(cv, it, b, pm, pal)
 		"town_sign", "town_end": _town_sign(cv, it, b, pm, font, it.type == "town_end")
 		"board": _board(cv, it, b, pm, font)
 		"limit": _limit(cv, it, b, pm, font)
@@ -1470,11 +1471,11 @@ static func _maquis(cv, it: Dictionary, b: Vector2, h: float, pm: float) -> void
 	cv.draw_circle(b + Vector2(w * 0.08, -r * 1.2), r * 0.45, Color("a58aa0") if it.v < 0.25 else col.lightened(0.15))
 	cv.draw_rect(Rect2(b + Vector2(-w * 0.42, -r * 0.5), Vector2(w * 0.84, r * 0.5)), col.darkened(0.2))
 
-## Dry-stone wall: a low run of loose pale stones, seen side-on.
-static func _stonewall(cv, it: Dictionary, b: Vector2, h: float, pm: float) -> void:
+## Dry-stone wall: a low run of loose pale stones, seen side-on (the palette's `stone`: honey limestone in Malta).
+static func _stonewall(cv, it: Dictionary, b: Vector2, h: float, pm: float, pal: Dictionary) -> void:
 	var w: float = it.w * pm
 	var hh := maxf(1.0, h * 0.9)
-	var stone := Color("b9ad93")
+	var stone: Color = pal.get("stone", Color("b9ad93"))
 	cv.draw_rect(Rect2(b + Vector2(-w * 0.5, -hh), Vector2(w, hh)), stone)
 	cv.draw_rect(Rect2(b + Vector2(-w * 0.5, -hh), Vector2(w, maxf(1.0, hh * 0.18))), stone.lightened(0.15))
 	if pm > 3.0:
@@ -1485,11 +1486,12 @@ static func _stonewall(cv, it: Dictionary, b: Vector2, h: float, pm: float) -> v
 			cv.draw_line(b + Vector2(x + w / n * 0.5, -hh * 0.5), b + Vector2(x + w / n * 0.5, 0), stone.darkened(0.25), maxf(1.0, pm * 0.06))
 		cv.draw_line(b + Vector2(-w * 0.5, -hh * 0.5), b + Vector2(w * 0.5, -hh * 0.5), stone.darkened(0.25), maxf(1.0, pm * 0.06))
 
-## White house: whitewashed walls, a low terracotta roof or a flat one with a parapet, blue shutters.
-static func _whitehouse(cv, it: Dictionary, b: Vector2, pm: float) -> void:
+## White house: whitewashed walls (the palette's `wall`: Malta's limestone), a low terracotta roof or a flat one with
+## a parapet, blue shutters.
+static func _whitehouse(cv, it: Dictionary, b: Vector2, pm: float, pal: Dictionary) -> void:
 	var w: float = it.w * pm
 	var h: float = it.h * pm
-	var wall := Color("f4f1ea")
+	var wall: Color = pal.get("wall", Color("f4f1ea"))
 	cv.draw_rect(Rect2(b + Vector2(-w * 0.5, -h * 0.7), Vector2(w, h * 0.7)), wall)
 	cv.draw_rect(Rect2(b + Vector2(w * 0.2, -h * 0.7), Vector2(w * 0.3, h * 0.7)), wall.darkened(0.1))
 	if it.v < 0.5:
