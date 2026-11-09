@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://bd8m18skknhxl"
-path="res://.godot/imported/win.wav-ed9b591a574a24bf30e29686ed78ad6a.sample"
+uid="uid://ctqrmcotoqi6d"
+path="res://.godot/imported/anthem_ro.wav-77b4b40354781156fa7a777c1fc4965f.sample"
 
 [deps]
 
-source_file="res://assets/audio/win.wav"
-dest_files=["res://.godot/imported/win.wav-ed9b591a574a24bf30e29686ed78ad6a.sample"]
+source_file="res://assets/audio/anthem_ro.wav"
+dest_files=["res://.godot/imported/anthem_ro.wav-77b4b40354781156fa7a777c1fc4965f.sample"]
 
 [params]
 
