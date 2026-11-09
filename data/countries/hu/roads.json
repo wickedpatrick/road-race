@@ -1,0 +1,297 @@
+[
+	{
+		"a": "budapest",
+		"b": "esztergom",
+		"km": 64,
+		"road": "11",
+		"towns": [
+			["Budakalász", 13], ["Szentendre", 20], ["Leányfalu", 27], ["Dunabogdány", 35], ["Visegrád", 43],
+			["Dömös", 50], ["Pilismarót", 55]
+		],
+		"zones": [[20, "foothills", "Pilis"], [64, "foothills", "Dunakanyar"]],
+		"via": [[20, 19.07, 47.67], [35, 19.04, 47.79], [43, 18.97, 47.78]]
+	},
+	{
+		"a": "esztergom",
+		"b": "gyor",
+		"km": 95,
+		"road": [[8, "11"], [42, "10"], [95, "1"]],
+		"towns": [
+			["Tát", 8], ["Nyergesújfalu", 14], ["Lábatlan", 20], ["Süttő", 26], ["Neszmély", 32], ["Almásfüzitő", 42],
+			["Komárom", 50], ["Ács", 60], ["Nagyszentjános", 75]
+		],
+		"zones": [[42, "foothills", "Gerecse"], [95, "fields", "Kisalföld"]],
+		"via": [[20, 18.5, 47.74], [50, 18.12, 47.74]]
+	},
+	{
+		"a": "budapest",
+		"b": "gyor",
+		"km": 121,
+		"road": "M1",
+		"towns": [["Budaörs", 12], ["Biatorbágy", 22], ["Bicske", 37], ["Tatabánya", 57], ["Tata", 68]],
+		"zones": [[30, "fields", "Zsámbéki-medence"], [75, "upland", "Gerecse"], [121, "fields", "Kisalföld"]],
+		"via": [[37, 18.63, 47.49], [57, 18.4, 47.58], [68, 18.32, 47.65]]
+	},
+	{
+		"a": "gyor",
+		"b": "sopron",
+		"km": 87,
+		"road": "M85",
+		"towns": [["Enese", 15], ["Csorna", 31], ["Kapuvár", 46], ["Fertőszentmiklós", 64], ["Nagycenk", 74]],
+		"zones": [[50, "fields", "Rábaköz"], [87, "foothills", "Fertő mente"]],
+		"via": [[31, 17.25, 47.61], [46, 17.03, 47.59], [64, 16.87, 47.59]]
+	},
+	{
+		"a": "gyor",
+		"b": "szombathely",
+		"km": 110,
+		"road": [[31, "M85"], [110, "M86"]],
+		"towns": [["Enese", 15], ["Csorna", 31], ["Szany", 45], ["Répcelak", 60], ["Vát", 92]],
+		"zones": [[31, "fields", "Rábaköz"], [80, "fields", "Rába-völgy"], [110, "fields", "Vasi-síkság"]],
+		"via": [[31, 17.25, 47.61], [60, 17.02, 47.42], [92, 16.78, 47.28]]
+	},
+	{
+		"a": "szombathely",
+		"b": "zalaegerszeg",
+		"km": 58,
+		"road": "74",
+		"towns": [["Táplánszentkereszt", 9], ["Vasvár", 27], ["Nagykutas", 45]],
+		"zones": [[28, "fields", "Vasi-Hegyhát"], [58, "forest", "Zalai-dombság"]],
+		"via": [[27, 16.8, 47.05]]
+	},
+	{
+		"a": "zalaegerszeg",
+		"b": "siofok",
+		"km": 120,
+		"road": [[45, "76"], [120, "M7"]],
+		"towns": [
+			["Pacsa", 20], ["Zalaapáti", 30], ["Balatonszentgyörgy", 45], ["Balatonkeresztúr", 52], ["Fonyód", 70],
+			["Balatonboglár", 80], ["Balatonlelle", 85], ["Balatonszárszó", 96], ["Zamárdi", 108]
+		],
+		"zones": [[30, "foothills", "Zalai-dombság"], [45, "lakes", "Kis-Balaton"], [120, "lakes", "Balaton"]],
+		"via": [[30, 17.1, 46.73], [45, 17.3, 46.69], [70, 17.55, 46.72], [85, 17.7, 46.77], [108, 17.95, 46.87]]
+	},
+	{
+		"a": "budapest",
+		"b": "szekesfehervar",
+		"km": 64,
+		"road": "M7",
+		"towns": [["Budaörs", 12], ["Érd", 19], ["Martonvásár", 31], ["Kápolnásnyék", 42], ["Velence", 47]],
+		"zones": [[25, "fields", "Érdi-fennsík"], [52, "lakes", "Velencei-tó"], [64, "fields", "Mezőföld"]],
+		"via": [[19, 18.92, 47.38], [42, 18.68, 47.24]]
+	},
+	{
+		"a": "szekesfehervar",
+		"b": "siofok",
+		"km": 47,
+		"road": "M7",
+		"towns": [["Szabadbattyán", 11], ["Polgárdi", 19], ["Lepsény", 29], ["Balatonvilágos", 39]],
+		"zones": [[33, "fields", "Mezőföld"], [47, "lakes", "Balaton"]],
+		"via": [[19, 18.3, 47.06], [29, 18.24, 46.99]]
+	},
+	{
+		"a": "szekesfehervar",
+		"b": "veszprem",
+		"km": 45,
+		"road": "8",
+		"towns": [["Várpalota", 22], ["Pétfürdő", 29], ["Hajmáskér", 35]],
+		"zones": [[18, "fields", "Mezőföld"], [45, "upland", "Bakony"]],
+		"via": [[22, 18.14, 47.2]]
+	},
+	{
+		"a": "gyor",
+		"b": "veszprem",
+		"km": 80,
+		"road": "82",
+		"towns": [["Nyúl", 11], ["Écs", 15], ["Ravazd", 22], ["Bakonyszentlászló", 42], ["Zirc", 58], ["Eplény", 66]],
+		"zones": [[25, "fields", "Kisalföld"], [40, "foothills", "Sokoró"], [80, "forest", "Bakony"]],
+		"via": [[22, 17.75, 47.52], [58, 17.87, 47.26]]
+	},
+	{
+		"a": "kaposvar",
+		"b": "siofok",
+		"km": 78,
+		"road": [[50, "67"], [78, "M7"]],
+		"towns": [["Juta", 8], ["Mernye", 24], ["Látrány", 40], ["Balatonlelle", 50], ["Balatonszárszó", 60], ["Zamárdi", 70]],
+		"zones": [[45, "foothills", "Külső-Somogy"], [78, "lakes", "Balaton"]],
+		"via": [[24, 17.83, 46.5], [50, 17.69, 46.76], [70, 17.95, 46.87]]
+	},
+	{
+		"a": "kaposvar",
+		"b": "pecs",
+		"km": 66,
+		"road": "66",
+		"towns": [["Sásd", 34], ["Magyarszék", 50]],
+		"zones": [[30, "foothills", "Baranyai-Hegyhát"], [66, "foothills", "Mecsek"]],
+		"via": [[34, 18.11, 46.25]]
+	},
+	{
+		"a": "budapest",
+		"b": "pecs",
+		"km": 205,
+		"road": [[16, "M0"], [180, "M6"], [205, "M60"]],
+		"towns": [
+			["Érd", 18], ["Ercsi", 33], ["Adony", 50], ["Dunaújváros", 68], ["Dunaföldvár", 88], ["Paks", 112],
+			["Szekszárd", 140], ["Bátaszék", 158], ["Bóly", 180]
+		],
+		"zones": [
+			[65, "fields", "Mezőföld"], [130, "fields", "Duna mente"], [150, "orchard", "Szekszárdi-dombság"],
+			[178, "foothills", "Geresdi-dombság"], [205, "foothills", "Baranya"]
+		],
+		"via": [
+			[33, 18.95, 47.25], [68, 18.93, 46.96], [112, 18.86, 46.62], [140, 18.71, 46.35], [158, 18.72, 46.19],
+			[180, 18.52, 45.97]
+		],
+		"tunnels": [
+			{
+				"from_km": 166,
+				"to_km": 167.3,
+				"name": {"pl": "Tunele M6", "en": "M6 Tunnels", "cs": "Tunely M6", "is": "M6-göngin", "de": "M6-Tunnel"},
+				"fact": {
+					"pl": "Pierwsze tunele autostradowe na Węgrzech, pod wzgórzami Geresdi, otwarte w 2010 roku",
+					"en": "Hungary's first motorway tunnels, under the Geresd hills, opened in 2010",
+					"cs": "První dálniční tunely v Maďarsku, pod pahorkatinou Geresd, otevřené v roce 2010",
+					"is": "Fyrstu hraðbrautargöng Ungverjalands, undir Geresd-hæðunum, opnuð árið 2010",
+					"de": "Ungarns erste Autobahntunnel, unter dem Geresder Hügelland, eröffnet 2010"
+				}
+			}
+		]
+	},
+	{
+		"a": "budapest",
+		"b": "kecskemet",
+		"km": 86,
+		"road": "M5",
+		"towns": [["Gyál", 14], ["Ócsa", 26], ["Újhartyán", 40], ["Örkény", 52], ["Lajosmizse", 63]],
+		"zones": [[35, "fields", "Pesti-síkság"], [86, "fields", "Kiskunság"]],
+		"via": [[40, 19.39, 47.22]]
+	},
+	{
+		"a": "kecskemet",
+		"b": "szeged",
+		"km": 87,
+		"road": "M5",
+		"towns": [["Kiskunfélegyháza", 28], ["Kistelek", 58], ["Szatymaz", 72]],
+		"zones": [[50, "fields", "Kiskunság"], [87, "fields", "Dél-Alföld"]],
+		"via": [[28, 19.85, 46.71], [58, 19.98, 46.47]]
+	},
+	{
+		"a": "kecskemet",
+		"b": "bekescsaba",
+		"km": 125,
+		"road": "44",
+		"towns": [
+			["Lakitelek", 20], ["Tiszakürt", 34], ["Kunszentmárton", 46], ["Öcsöd", 58], ["Békésszentandrás", 66],
+			["Szarvas", 74], ["Csabacsűd", 84], ["Kondoros", 98]
+		],
+		"zones": [[30, "fields", "Kiskunság"], [66, "fields", "Tiszazug"], [125, "fields", "Viharsarok"]],
+		"via": [[20, 19.99, 46.88], [46, 20.29, 46.84], [74, 20.55, 46.86], [98, 20.8, 46.76]]
+	},
+	{
+		"a": "szeged",
+		"b": "bekescsaba",
+		"km": 90,
+		"road": "47",
+		"towns": [
+			["Algyő", 12], ["Hódmezővásárhely", 25], ["Székkutas", 45], ["Orosháza", 60], ["Csorvás", 72],
+			["Telekgerendás", 80]
+		],
+		"zones": [[30, "fields", "Tisza mente"], [90, "fields", "Viharsarok"]],
+		"via": [[25, 20.33, 46.42], [60, 20.67, 46.56]]
+	},
+	{
+		"a": "bekescsaba",
+		"b": "debrecen",
+		"km": 125,
+		"road": [[88, "47"], [125, "M35"]],
+		"towns": [
+			["Mezőberény", 15], ["Köröstarcsa", 22], ["Körösladány", 30], ["Szeghalom", 42], ["Darvas", 60],
+			["Berettyóújfalu", 88]
+		],
+		"zones": [[40, "fields", "Viharsarok"], [88, "fields", "Sárrét"], [125, "fields", "Hajdúság"]],
+		"via": [[15, 21.03, 46.83], [42, 21.17, 47.03], [88, 21.54, 47.22]]
+	},
+	{
+		"a": "budapest",
+		"b": "szolnok",
+		"km": 100,
+		"road": [[80, "M4"], [100, "4"]],
+		"towns": [["Vecsés", 18], ["Üllő", 25], ["Monor", 37], ["Pilis", 48], ["Cegléd", 65], ["Abony", 80]],
+		"zones": [[40, "fields", "Pesti-síkság"], [100, "fields", "Közép-Tisza"]],
+		"via": [[25, 19.35, 47.39], [65, 19.8, 47.17]]
+	},
+	{
+		"a": "szolnok",
+		"b": "debrecen",
+		"km": 125,
+		"road": "4",
+		"towns": [
+			["Törökszentmiklós", 20], ["Fegyvernek", 30], ["Kenderes", 40], ["Kisújszállás", 48], ["Karcag", 64],
+			["Püspökladány", 85], ["Kaba", 95], ["Hajdúszoboszló", 105]
+		],
+		"zones": [[48, "fields", "Nagykunság"], [90, "fields", "Sárrét"], [125, "fields", "Hajdúság"]],
+		"via": [[48, 20.76, 47.22], [85, 21.12, 47.32], [105, 21.4, 47.45]]
+	},
+	{
+		"a": "budapest",
+		"b": "eger",
+		"km": 130,
+		"road": [[115, "M3"], [130, "25"]],
+		"towns": [
+			["Gödöllő", 28], ["Aszód", 42], ["Hatvan", 58], ["Gyöngyös", 80], ["Kápolna", 100], ["Kerecsend", 116],
+			["Andornaktálya", 123]
+		],
+		"zones": [
+			[40, "foothills", "Gödöllői-dombság"], [65, "fields", "Zagyva-völgy"], [105, "foothills", "Mátraalja"],
+			[130, "orchard", "Egri borvidék"]
+		],
+		"via": [[28, 19.36, 47.6], [58, 19.68, 47.67], [80, 19.93, 47.78], [116, 20.24, 47.8]]
+	},
+	{
+		"a": "eger",
+		"b": "miskolc",
+		"km": 72,
+		"road": [[14, "25"], [52, "M3"], [72, "M30"]],
+		"towns": [["Andornaktálya", 7], ["Kerecsend", 14], ["Mezőkövesd", 32], ["Emőd", 55], ["Nyékládháza", 61]],
+		"zones": [[14, "orchard", "Egri borvidék"], [52, "fields", "Borsodi-Mezőség"], [72, "foothills", "Bükkalja"]],
+		"via": [[14, 20.24, 47.8], [32, 20.57, 47.81], [55, 20.81, 47.94]]
+	},
+	{
+		"a": "miskolc",
+		"b": "tokaj",
+		"km": 55,
+		"road": [[45, "37"], [55, "38"]],
+		"towns": [["Felsőzsolca", 6], ["Onga", 12], ["Szerencs", 33], ["Mezőzombor", 40], ["Tarcal", 45]],
+		"zones": [[30, "fields", "Hernád-völgy"], [55, "orchard", "Tokaj-Hegyalja"]],
+		"via": [[33, 21.2, 48.16], [45, 21.35, 48.13]]
+	},
+	{
+		"a": "tokaj",
+		"b": "nyiregyhaza",
+		"km": 34,
+		"road": "38",
+		"towns": [["Rakamaz", 4], ["Nyírtelek", 22]],
+		"zones": [[6, "orchard", "Tokaj-Hegyalja"], [34, "fields", "Nyírség"]],
+		"via": [[4, 21.46, 48.12]]
+	},
+	{
+		"a": "debrecen",
+		"b": "nyiregyhaza",
+		"km": 50,
+		"road": "4",
+		"towns": [["Hajdúhadház", 18], ["Téglás", 22], ["Újfehértó", 32]],
+		"zones": [[20, "forest", "Nagyerdő"], [50, "fields", "Nyírség"]]
+	},
+	{
+		"a": "miskolc",
+		"b": "debrecen",
+		"km": 100,
+		"road": [[25, "M30"], [52, "M3"], [100, "M35"]],
+		"towns": [["Nyékládháza", 10], ["Polgár", 48], ["Görbeháza", 52], ["Hajdúböszörmény", 78]],
+		"zones": [
+			[25, "foothills", "Bükkalja"], [45, "fields", "Borsodi-Mezőség"], [75, "fields", "Hortobágy"],
+			[100, "fields", "Hajdúság"]
+		],
+		"via": [[25, 20.81, 47.94], [48, 21.12, 47.87], [52, 21.24, 47.83], [78, 21.42, 47.67]]
+	}
+]
