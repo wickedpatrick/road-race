@@ -160,7 +160,7 @@ func _draw() -> void:
 	elif race.station_in_range():
 		_banner(Lang.t("station_stop") % Lang.t("key_brake" if touch else "key_space"), Color("f2c21b"))
 	elif race.next_station_distance() > 0.0 and race.next_station_distance() < STATION_NOTICE and fr < 0.85:
-		var km := maxf(Units.KM_PER_MILE if Units.imperial() else 1.0, Route.km_between(race.stage, 0.0, race.next_station_distance()))
+		var km := maxf(Units.KM_PER_MILE if Units.imperial() else 1.0, Route.km_between(race.stage, race.z, race.z + race.next_station_distance()))
 		_banner(Lang.t("station_ahead_left" if race.side < 0.0 else "station_ahead_right") % Units.dist_text(km, true), Color("f2c21b"))
 	elif low_fuel and int(race.elapsed * 2.0) % 2 == 0:
 		_banner(Lang.t("low_fuel"), Color("ff6a5a"))

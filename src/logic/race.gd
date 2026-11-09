@@ -329,9 +329,10 @@ func _check_ferry_barrier(z_prev: float) -> void:
 			crashed.emit()
 			return
 
-## Stopped on a quay (Route.FERRY_QUAY before the barrier): the car boards, a police chase ends there.
+## Stopped on a quay (Route.FERRY_QUAY before the barrier): the car boards, a police chase ends there. Pulled over,
+## it boards only once the ticket is written.
 func _check_boarding() -> void:
-	if speed >= STOP_SPEED:
+	if speed >= STOP_SPEED or held_by_police():
 		return
 	for f in stage.get("ferries", []):
 		if z >= f.z - Route.FERRY_QUAY and z <= f.z:
@@ -353,6 +354,7 @@ func _ride_ferry(dt: float) -> void:
 	speed = 0.0
 	x = FERRY_LANE
 	_lat_v = 0.0
+	hit_cooldown = 0.0 # the roadside past the ramp counts at once
 	_ferry = {}
 	ferry_ended.emit()
 

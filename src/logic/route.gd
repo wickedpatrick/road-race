@@ -37,6 +37,10 @@ const RADAR_BEFORE := 14.0
 const FERRY_QUAY := 160.0
 const FERRY_GAP := 60.0
 const FERRY_STOP_TIME := 10.0 ## seconds of the time limit for braking and boarding, per ferry
+## A port city's streets end where its quay begins: when a ferry starts (ends) so near a settlement that the quay (the
+## far ramp) would lie in its streets, open road is put in between, at least FERRY_CLEAR metres beyond the streets.
+const FERRY_CLEAR := 50.0
+const MIN_DRIVEN := 1.0 ## km: the least driven distance the track is scaled by (a trip almost all at sea)
 
 ## Cities one road away from `id` (the only places a trip from it can go to).
 static func neighbours(id: String) -> Array:
@@ -153,28 +157,43 @@ static func build(from: String, to: String) -> Dictionary:
 	var legs := find(from, to)
 	assert(not legs.is_empty(), "no route %s -> %s" % [from, to])
 	var km := total_km(legs)
-	# the seas crossed by ferry, in trip km: [start, end, ferry data]
+	# the seas crossed by ferry, in trip km (k0..k1), and the settlements with their streets' half-length (marks)
 	var seas := []
+	var marks := [[0.0, _end_half(from)]]
 	var sea_km := 0.0
 	var leg_off := 0.0
-	for leg in legs:
+	for li in legs.size():
+		var leg: Dictionary = legs[li]
+		var leg_km := float(leg.road.km)
 		var fr: Dictionary = leg.road.get("ferry", {})
 		if not fr.is_empty():
-			var leg_km := float(leg.road.km)
 			var fwd: bool = leg.from == leg.road.a
 			var a := float(fr.from_km) if fwd else leg_km - float(fr.to_km)
 			var b := float(fr.to_km) if fwd else leg_km - float(fr.from_km)
-			seas.append([leg_off + a, leg_off + b, fr])
+			seas.append({"k0": leg_off + a, "k1": leg_off + b, "fr": fr, "pre": 0.0, "post": 0.0})
 			sea_km += b - a
-		leg_off += float(leg.road.km)
-	var driven := km - sea_km
+		for t in _leg_towns(leg):
+			marks.append([leg_off + t[1], TOWN_HALF])
+		leg_off += leg_km
+		if li < legs.size() - 1:
+			marks.append([leg_off, CITY_HALF])
+	marks.append([float(km), _end_half(to)])
+	var driven := maxf(km - sea_km, MIN_DRIVEN)
 	var mpk := track_length(driven) / driven
-	var length := track_length(driven) + FERRY_GAP * seas.size()
 	var ferries := []
+	var padded := 0.0
 	for sea in seas:
-		var fz := _sea_z(sea[0], seas, mpk, false)
-		ferries.append({"z": fz, "z_out": fz + FERRY_GAP, "name": sea[2].get("name", ""), "fact": sea[2].get("fact", ""),
-			"sea_km": sea[1] - sea[0]})
+		# open road between the port's streets and the quay, and between the far ramp and the next streets
+		var before: Array = marks.filter(func(m): return m[0] <= sea.k0)[-1]
+		var after: Array = marks.filter(func(m): return m[0] >= sea.k1)[0]
+		var fz := _sea_z(sea.k0, seas, mpk, -1)
+		sea.pre = maxf(0.0, _sea_z(before[0], seas, mpk) + before[1] + FERRY_QUAY + FERRY_CLEAR - fz)
+		fz += sea.pre
+		sea.post = maxf(0.0, fz + FERRY_GAP + FERRY_CLEAR + after[1] - _sea_z(after[0], seas, mpk))
+		padded += sea.pre + FERRY_GAP + sea.post
+		ferries.append({"z": fz, "z_out": fz + FERRY_GAP, "name": sea.fr.get("name", ""), "fact": sea.fr.get("fact", ""),
+			"sea_km": sea.k1 - sea.k0, "km0": sea.k0, "km1": sea.k1, "pad0": fz - sea.pre, "pad1": fz + FERRY_GAP + sea.post})
+	var length := track_length(driven) + padded
 	var zones := []
 	var towns := []
 	var tunnels := []
@@ -194,12 +213,12 @@ static func build(from: String, to: String) -> Dictionary:
 			var lanes_here := part_lanes(rd)
 			if lanes_here == 3:
 				express_km += int(rd[1] - rd[0])
-			var z0 := _sea_z(off + rd[0], seas, mpk, true)
-			var z1 := _sea_z(off + rd[1], seas, mpk, false)
+			var z0 := _sea_z(off + rd[0], seas, mpk, 1)
+			var z1 := _sea_z(off + rd[1], seas, mpk, -1)
 			if z1 > z0: roads.append({"z0": z0, "z1": z1, "road": rd[2], "lanes": lanes_here})
 		for zn in _leg_zones(leg):
-			var z0 := _sea_z(off + zn[0], seas, mpk, true)
-			var z1 := _sea_z(off + zn[1], seas, mpk, false)
+			var z0 := _sea_z(off + zn[0], seas, mpk, 1)
+			var z1 := _sea_z(off + zn[1], seas, mpk, -1)
 			if z1 <= z0: continue # all at sea
 			zones.append({"z0": z0, "z1": z1, "biome": zn[2], "region": zn[3]})
 			if not regions.has(zn[3]): regions.append(zn[3])
@@ -240,7 +259,7 @@ static func build(from: String, to: String) -> Dictionary:
 	roads[-1].z1 = length + Track.TAIL + 200.0
 	for t in towns:
 		t["fact"] = Geo.fact(t.name)
-	var boards := _boards(towns, mpk, roads).filter(func(bd): return not avoid.any(func(tn): return bd.z > tn.z0 - 20.0 and bd.z < tn.z1 + 20.0))
+	var boards := _boards(towns, mpk, roads, ferries, km).filter(func(bd): return not avoid.any(func(tn): return bd.z > tn.z0 - 20.0 and bd.z < tn.z1 + 20.0))
 	var lanes := 3 if express_km * 2 > km else 2
 	var n_st := maxi(1, roundi(length / STATION_EVERY))
 	var stations := []
@@ -286,26 +305,40 @@ static func build(from: String, to: String) -> Dictionary:
 	stage["dual"] = _dual_profile(stage)
 	return stage
 
-## Track z of trip kilometre k: the seas crossed before it are not driven, each one adds FERRY_GAP instead. A k at
-## sea goes to the far quay's z_out (`start`: what begins there) or to the barrier (what ends there).
-static func _sea_z(k: float, seas: Array, mpk: float, start := false) -> float:
+## Track z of trip kilometre k: the seas crossed before it are not driven, each one adds its open road around the
+## quays (pre, post) and FERRY_GAP instead. A k at sea goes to where the road resumes past the far ramp (`side` 1: what
+## begins there) or to the barrier (-1: what ends there, from the quay's km on).
+static func _sea_z(k: float, seas: Array, mpk: float, side := 0) -> float:
 	var sea := 0.0
-	var gaps := 0
+	var pads := 0.0
 	for s in seas:
-		if k >= s[1]:
-			sea += s[1] - s[0]
-			gaps += 1
-		elif k > s[0]:
-			return (s[0] - sea) * mpk + gaps * FERRY_GAP + (FERRY_GAP if start else 0.0)
-	return (k - sea) * mpk + gaps * FERRY_GAP
+		if k >= s.k1:
+			sea += s.k1 - s.k0
+			pads += s.pre + FERRY_GAP + s.post
+		elif k > s.k0 or (k == s.k0 and side < 0):
+			return (s.k0 - sea) * mpk + pads + s.pre + (FERRY_GAP + s.post if side > 0 else 0.0)
+	return (k - sea) * mpk + pads
 
 ## True when trip kilometre k lies out at sea (strictly between a ferry's quays).
 static func _at_sea(k: float, seas: Array) -> bool:
-	return seas.any(func(s): return k > s[0] and k < s[1])
+	return seas.any(func(s): return k > s.k0 and k < s.k1)
+
+## Real trip kilometres at track z: the sea counts in full (passed while on board), the open road put around the
+## quays not at all. At most `total`.
+static func _real_km(z: float, ferries: Array, mpk: float, total: float) -> float:
+	var z_base := 0.0
+	var k_base := 0.0
+	for f in ferries:
+		if z <= f.pad0: break
+		if z < f.pad1:
+			return minf(total, lerpf(f.km0, f.km1, clampf((z - f.z) / FERRY_GAP, 0.0, 1.0)))
+		z_base = f.pad1
+		k_base = f.km1
+	return minf(total, k_base + (z - z_base) / mpk)
 
 ## Distance boards just past each town exit: the nearest town ahead, the next big city, and the destination last,
 ## with real kilometres. Blue on motorways, green elsewhere. Skipped where the next town is too close for one.
-static func _boards(towns: Array, mpk: float, roads: Array) -> Array:
+static func _boards(towns: Array, mpk: float, roads: Array, ferries := [], total := INF) -> Array:
 	var out := []
 	var last := -1000.0
 	for i in towns.size() - 1:
@@ -319,7 +352,7 @@ static func _boards(towns: Array, mpk: float, roads: Array) -> Array:
 			var o: Dictionary = towns[k]
 			if k == i + 1 or (o.big and lines.size() < 2) or o.get("finish", false):
 				if lines.any(func(l): return l[0] == o.name): continue
-				lines.append([o.name, maxi(1, Geo.sign_distance((o.z - zb) / mpk))])
+				lines.append([o.name, maxi(1, Geo.sign_distance(_real_km(o.z, ferries, mpk, total) - _real_km(zb, ferries, mpk, total)))])
 		var road := ""
 		var dual := false
 		for r in roads:
@@ -577,6 +610,9 @@ static func town_at(stage: Dictionary, z: float) -> Dictionary:
 		if absf(z - t.z) <= t.half: return t
 	return {}
 
-## Real kilometres between two track positions.
+## Real kilometres between two track positions (a sea crossed by ferry counts in full).
 static func km_between(stage: Dictionary, z0: float, z1: float) -> float:
-	return (z1 - z0) / stage.m_per_km
+	var f: Array = stage.get("ferries", [])
+	if f.is_empty():
+		return (z1 - z0) / stage.m_per_km
+	return _real_km(z1, f, stage.m_per_km, stage.km) - _real_km(z0, f, stage.m_per_km, stage.km)

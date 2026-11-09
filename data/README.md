@@ -130,7 +130,12 @@ List of roads between two neighbouring cities `a` and `b` (travelling `b` -> `a`
   metres up to a barrier across the road (driving into it is a crash); stopped on the quay the car boards, a chase
   ends, and the crossing takes `Race.FERRY_TIME` seconds off the clock (no time limit, no fuel), then the car comes
   off the ramp on the far quay. Stations, boards, crossings and tunnels keep clear of the quays, traffic too; the
-  time limit gets `Route.FERRY_STOP_TIME` per ferry. The trip's `km` stays the real total (the map).
+  time limit gets `Route.FERRY_STOP_TIME` per ferry. The trip's `km` stays the real total (the map), and the sea
+  counts in full in every real distance (boards, HUD, mini-map, km driven). A port city's streets end at its quay:
+  when `from_km` (or `km - to_km`) would put the quay (or the far ramp) inside a city's or town's streets, open road
+  is put in between, at least `Route.FERRY_CLEAR` metres past them (so `from_km: 0` / `to_km: km` are fine, a road
+  may even be all sea); the track is never scaled by fewer than `Route.MIN_DRIVEN` km. Pulled over by the police
+  the car boards only once the ticket is written. Not handled: tunnels on a quay, borders out at sea (dropped).
 
 ## `countries/<code>/facts.json`
 
