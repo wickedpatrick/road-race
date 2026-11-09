@@ -64,7 +64,7 @@
 		"a": "istanbul",
 		"b": "ankara",
 		"km": 450,
-		"road": "O4",
+		"road": [[15, "O2"], [450, "O4"]],
 		"towns": [["İzmit", 100], ["Adapazarı", 150], ["Düzce", 210], ["Bolu", 265], ["Gerede", 315]],
 		"zones": [
 			[45, "industrial", "İstanbul"], [125, "industrial", "Kocaeli"], [190, "fields", "Sakarya"],
@@ -182,7 +182,7 @@
 		"a": "selcuk",
 		"b": "denizli",
 		"km": 185,
-		"road": "O31",
+		"road": [[55, "O31"], [185, "D320"]],
 		"towns": [["Aydın", 55], ["Nazilli", 105]],
 		"zones": [[60, "mediterranean", "Aydın"], [140, "orchard", "Büyük Menderes"], [185, "fields", "Denizli"]],
 		"via": [[55, 27.84, 37.85], [105, 28.32, 37.91]]
@@ -464,7 +464,7 @@
 		"a": "ankara",
 		"b": "konya",
 		"km": 260,
-		"road": [[100, "D750"], [260, "D715"]],
+		"road": [[25, "D750"], [260, "D715"]],
 		"towns": [["Kulu", 110], ["Cihanbeyli", 165]],
 		"zones": [[90, "steppe", "Ankara"], [190, "steppe", "Tuz Gölü"], [260, "steppe", "Konya"]],
 		"via": [[110, 33.08, 39.09], [165, 32.92, 38.66]]

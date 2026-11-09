@@ -183,7 +183,7 @@
 		{
 			"kind": "tr_kizkalesi",
 			"name": {
-				"pl": "Zamek Dziewczyny",
+				"pl": "Dziewiczy Zamek",
 				"en": "Maiden's Castle",
 				"cs": "Dívčí hrad",
 				"is": "Meyjarkastalinn",
@@ -233,7 +233,7 @@
 				"pl": "Staw z karpiami, których nikt nie łowi; według tradycji tu wrzucono Abrahama w ogień, który zamienił się w wodę",
 				"en": "A pool of carp that nobody fishes; by tradition Abraham was thrown into a fire here that turned into water",
 				"cs": "Jezírko s kapry, které nikdo neloví; podle tradice tu byl Abrahám vhozen do ohně, který se proměnil ve vodu",
-				"is": "Tjörn með vatnakarpa sem enginn veiðir; samkvæmt hefðinni var Abraham kastað hér í eld sem varð að vatni",
+				"is": "Tjörn með vatnakörpum sem enginn veiðir; samkvæmt hefðinni var Abraham kastað hér í eld sem varð að vatni",
 				"de": "Ein Teich mit Karpfen, die niemand fängt; der Überlieferung nach wurde Abraham hier in ein Feuer geworfen, das zu Wasser wurde"
 			},
 			"local": "Balıklıgöl"

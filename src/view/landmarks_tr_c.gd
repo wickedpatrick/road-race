@@ -280,10 +280,6 @@ static func _celsus() -> void:
 	_r(-9.5, 1.6, 9.5, 14, md.darkened(0.12))
 	for x in [-5.0, 0.0, 5.0]:
 		LandmarksTrA.arched(x, 1.6, 2.2 if x == 0.0 else 1.8, 4.6 if x == 0.0 else 4.0, Color("3d3a35"))
-	for x in [-8.0, -2.5, 2.5, 8.0]:
-		if _detail(0.6):
-			LandmarksTrA.arched(x * 0.88 + (0.0 if absf(x) > 5.0 else 0.0), 2.6, 1.0, 2.8, Color("5c574e"))
-			_c(x * 0.88, 4.6, 0.25, mb)
 	for pair in [-7.6, -2.6, 2.6, 7.6]:
 		for d in [-0.7, 0.7]:
 			_r(pair + d - 0.3, 1.6, pair + d + 0.3, 7.2, mb)
@@ -291,6 +287,12 @@ static func _celsus() -> void:
 	for pair in [-5.0, 0.0, 5.0]:
 		for d in [-0.7, 0.7]:
 			_r(pair + d - 0.25, 8.2, pair + d + 0.25, 13.2, mb)
+	# the Virtues in their niches, between the upper column pairs
+	if _detail(0.6):
+		for x in [-7.5, -2.5, 2.5, 7.5]:
+			LandmarksTrA.arched(x, 8.8, 1.2, 3.4, Color("5c574e"))
+			_c(x, 10.6, 0.3, mb)
+			_r(x - 0.22, 8.8, x + 0.22, 10.3, mb)
 	_r(-9, 13.2, 9, 14, mb)
 	_poly([-6.6, 14, -3.4, 14, -5.0, 15.6], mb)
 	_r(-1.8, 14, 1.8, 14.6, mb)
