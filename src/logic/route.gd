@@ -32,6 +32,11 @@ const CROSS_20 := 110.0
 const CROSS_AFTER := 40.0
 const CROSS_LIMITS := [40, 20] ## posted, in the map's units
 const RADAR_BEFORE := 14.0
+## Ferries (roads.json `ferry`): the sea between the quays is not driven. The quay runs FERRY_QUAY track metres up to
+## the barrier at the ferry's z; the car comes off the far quay's ramp FERRY_GAP metres further on (z_out).
+const FERRY_QUAY := 160.0
+const FERRY_GAP := 60.0
+const FERRY_STOP_TIME := 10.0 ## seconds of the time limit for braking and boarding, per ferry
 
 ## Cities one road away from `id` (the only places a trip from it can go to).
 static func neighbours(id: String) -> Array:
@@ -148,8 +153,28 @@ static func build(from: String, to: String) -> Dictionary:
 	var legs := find(from, to)
 	assert(not legs.is_empty(), "no route %s -> %s" % [from, to])
 	var km := total_km(legs)
-	var length := track_length(km)
-	var mpk := length / km
+	# the seas crossed by ferry, in trip km: [start, end, ferry data]
+	var seas := []
+	var sea_km := 0.0
+	var leg_off := 0.0
+	for leg in legs:
+		var fr: Dictionary = leg.road.get("ferry", {})
+		if not fr.is_empty():
+			var leg_km := float(leg.road.km)
+			var fwd: bool = leg.from == leg.road.a
+			var a := float(fr.from_km) if fwd else leg_km - float(fr.to_km)
+			var b := float(fr.to_km) if fwd else leg_km - float(fr.from_km)
+			seas.append([leg_off + a, leg_off + b, fr])
+			sea_km += b - a
+		leg_off += float(leg.road.km)
+	var driven := km - sea_km
+	var mpk := track_length(driven) / driven
+	var length := track_length(driven) + FERRY_GAP * seas.size()
+	var ferries := []
+	for sea in seas:
+		var fz := _sea_z(sea[0], seas, mpk, false)
+		ferries.append({"z": fz, "z_out": fz + FERRY_GAP, "name": sea[2].get("name", ""), "fact": sea[2].get("fact", ""),
+			"sea_km": sea[1] - sea[0]})
 	var zones := []
 	var towns := []
 	var tunnels := []
@@ -169,37 +194,47 @@ static func build(from: String, to: String) -> Dictionary:
 			var lanes_here := part_lanes(rd)
 			if lanes_here == 3:
 				express_km += int(rd[1] - rd[0])
-			roads.append({"z0": (off + rd[0]) * mpk, "z1": (off + rd[1]) * mpk, "road": rd[2], "lanes": lanes_here})
+			var z0 := _sea_z(off + rd[0], seas, mpk, true)
+			var z1 := _sea_z(off + rd[1], seas, mpk, false)
+			if z1 > z0: roads.append({"z0": z0, "z1": z1, "road": rd[2], "lanes": lanes_here})
 		for zn in _leg_zones(leg):
-			zones.append({"z0": (off + zn[0]) * mpk, "z1": (off + zn[1]) * mpk, "biome": zn[2], "region": zn[3]})
+			var z0 := _sea_z(off + zn[0], seas, mpk, true)
+			var z1 := _sea_z(off + zn[1], seas, mpk, false)
+			if z1 <= z0: continue # all at sea
+			zones.append({"z0": z0, "z1": z1, "biome": zn[2], "region": zn[3]})
 			if not regions.has(zn[3]): regions.append(zn[3])
 		for tn in r.get("tunnels", []):
 			var a := float(tn.from_km) if leg.from == r.a else leg_km - float(tn.to_km)
 			var b := float(tn.to_km) if leg.from == r.a else leg_km - float(tn.from_km)
-			tunnels.append({"z0": (off + a) * mpk, "z1": (off + b) * mpk, "name": tn.name, "fact": tn.fact,
+			if _at_sea(off + a, seas) or _at_sea(off + b, seas): continue
+			tunnels.append({"z0": _sea_z(off + a, seas, mpk), "z1": _sea_z(off + b, seas, mpk), "name": tn.name, "fact": tn.fact,
 				"city": tn.get("city", false)})
 		for bd in r.get("borders", []):
 			var fwd: bool = leg.from == r.a
 			var k := float(bd[0]) if fwd else leg_km - float(bd[0])
-			borders.append({"z": (off + k) * mpk, "from": bd[1] if fwd else bd[2], "to": bd[2] if fwd else bd[1],
+			if _at_sea(off + k, seas): continue
+			borders.append({"z": _sea_z(off + k, seas, mpk), "from": bd[1] if fwd else bd[2], "to": bd[2] if fwd else bd[1],
 				"name": bd[3] if bd.size() > 3 else ""})
 		for t in _leg_towns(leg):
 			# a town shared by two consecutive legs (e.g. Stryków) appears once
 			if towns.size() > 0 and towns[-1].name == t[0]: continue
-			towns.append({"z": (off + t[1]) * mpk, "name": t[0], "big": false, "half": TOWN_HALF})
+			if _at_sea(off + t[1], seas): continue
+			towns.append({"z": _sea_z(off + t[1], seas, mpk), "name": t[0], "big": false, "half": TOWN_HALF})
 		off += leg_km
 		path.append(leg.to)
 		if li < legs.size() - 1:
-			towns.append({"z": off * mpk, "name": Geo.city(leg.to).name, "display": Geo.display_name(leg.to), "id": leg.to,
+			towns.append({"z": _sea_z(off, seas, mpk), "name": Geo.city(leg.to).name, "display": Geo.display_name(leg.to), "id": leg.to,
 				"big": true, "half": CITY_HALF})
 	towns.append({"z": length, "name": Geo.city(to).name, "display": Geo.display_name(to), "id": to, "big": _end_big(to),
 		"half": _end_half(to), "finish": true})
 	_separate(towns)
-	_fit_tunnels(tunnels, towns, length)
+	# the quays and the crossing, with a little open road around them
+	var quays: Array = ferries.map(func(f): return {"z0": f.z - FERRY_QUAY - 40.0, "z1": f.z_out + 40.0})
+	_fit_tunnels(tunnels, towns, length, quays)
 	borders.sort_custom(func(p, q): return p.z < q.z)
-	_place_crossings(borders, towns, tunnels, length)
-	# stations and boards keep clear of the crossings as of tunnels
-	var avoid: Array = tunnels + borders.map(func(bd): return {"z0": bd.z - CROSS_40, "z1": bd.z + CROSS_AFTER})
+	_place_crossings(borders, towns, tunnels + quays, length)
+	# stations and boards keep clear of the crossings as of tunnels and quays
+	var avoid: Array = tunnels + quays + borders.map(func(bd): return {"z0": bd.z - CROSS_40, "z1": bd.z + CROSS_AFTER})
 	# the last zone runs on past the finish line (the track has a tail)
 	zones[-1].z1 = length + Track.TAIL + 200.0
 	roads[-1].z1 = length + Track.TAIL + 200.0
@@ -235,7 +270,7 @@ static func build(from: String, to: String) -> Dictionary:
 		hill += Biome.get_data(zn.biome).hill * w
 	# climbs slow every car down a little: hillier routes get more time
 	var part0 := Geo.city_part(from)
-	var legal := _legal_time(towns, roads, length, mpk, borders, part0) * (1.0 + HILL_TIME * hill / length)
+	var legal := _legal_time(towns, roads, length, mpk, borders, part0, ferries.size()) * (1.0 + HILL_TIME * hill / length)
 	var weather := Weather.for_legs(legs)
 	var duration := ceilf((legal * 1.09 * Weather.time_factor(weather) + 6.0 * n_st + 12.0) / 5.0) * 5.0
 	var stage := {
@@ -246,10 +281,27 @@ static func build(from: String, to: String) -> Dictionary:
 		"stations": stations, "finish_label": Geo.city(to).name, "finish_display": Geo.display_name(to),
 		"curve_amount": curve / length, "hill_amount": hill / length,
 		"zones": zones, "towns": towns, "roads": roads, "regions": regions, "boards": boards, "tunnels": tunnels,
-		"borders": borders, "part0": part0, "radars": borders.map(func(bd): return bd.z - RADAR_BEFORE),
+		"borders": borders, "part0": part0, "ferries": ferries, "radars": borders.map(func(bd): return bd.z - RADAR_BEFORE),
 	}
 	stage["dual"] = _dual_profile(stage)
 	return stage
+
+## Track z of trip kilometre k: the seas crossed before it are not driven, each one adds FERRY_GAP instead. A k at
+## sea goes to the far quay's z_out (`start`: what begins there) or to the barrier (what ends there).
+static func _sea_z(k: float, seas: Array, mpk: float, start := false) -> float:
+	var sea := 0.0
+	var gaps := 0
+	for s in seas:
+		if k >= s[1]:
+			sea += s[1] - s[0]
+			gaps += 1
+		elif k > s[0]:
+			return (s[0] - sea) * mpk + gaps * FERRY_GAP + (FERRY_GAP if start else 0.0)
+	return (k - sea) * mpk + gaps * FERRY_GAP
+
+## True when trip kilometre k lies out at sea (strictly between a ferry's quays).
+static func _at_sea(k: float, seas: Array) -> bool:
+	return seas.any(func(s): return k > s[0] and k < s[1])
 
 ## Distance boards just past each town exit: the nearest town ahead, the next big city, and the destination last,
 ## with real kilometres. Blue on motorways, green elsewhere. Skipped where the next town is too close for one.
@@ -280,8 +332,8 @@ static func _boards(towns: Array, mpk: float, roads: Array) -> Array:
 	return out
 
 ## Seconds needed to drive the track keeping to the speed limits (capped at a typical cruising speed), plus
-## time to slow down for and speed up after every town.
-static func _legal_time(towns: Array, roads: Array, length: float, mpk: float, borders := [], part0 := "") -> float:
+## time to slow down for and speed up after every town, and to stop for and board every ferry.
+static func _legal_time(towns: Array, roads: Array, length: float, mpk: float, borders := [], part0 := "", ferries := 0) -> float:
 	var probe := {"towns": towns, "roads": roads, "length": length, "m_per_km": mpk, "borders": borders, "part0": part0}
 	var t := 0.0
 	var z := 0.0
@@ -292,7 +344,7 @@ static func _legal_time(towns: Array, roads: Array, length: float, mpk: float, b
 		if lim == NO_LIMIT: lim = Geo.limit_kmh(int(Geo.limits(Geo.part_at(probe, z)).express))
 		t += 10.0 / (minf(lim, 135.0) / 3.6 * 0.95)
 		z += 10.0
-	return t + 1.5 * towns.size()
+	return t + 1.5 * towns.size() + FERRY_STOP_TIME * ferries
 
 ## Shrinks town streets so neighbouring settlements never overlap (short tracks squeeze them together).
 ## A big city gives way first; a gap of open road is kept between them for the name signs.
@@ -321,8 +373,8 @@ static func _end_big(id: String) -> bool:
 	return Geo.city(id).pop >= SMALL_POP
 
 ## Tunnels are stretched to at least TUNNEL_MIN and moved/shrunk to fit between the towns around them, whose
-## streets give way a little when needed.
-static func _fit_tunnels(tunnels: Array, towns: Array, length: float) -> void:
+## streets give way a little when needed. They keep off the `walls` ({z0, z1}: the quays) too.
+static func _fit_tunnels(tunnels: Array, towns: Array, length: float, walls := []) -> void:
 	for tn in tunnels:
 		var mid: float = (tn.z0 + tn.z1) * 0.5
 		var want: float = maxf(tn.z1 - tn.z0, TUNNEL_MIN)
@@ -334,6 +386,9 @@ static func _fit_tunnels(tunnels: Array, towns: Array, length: float) -> void:
 		# a small town may shrink to its centre, a city keeps most of its streets
 		var lo: float = prev.z + _min_half(prev) + TUNNEL_GAP
 		var hi: float = minf(next.z - _min_half(next) - TUNNEL_GAP, length - 150.0)
+		for w in walls:
+			if w.z1 <= mid: lo = maxf(lo, w.z1)
+			elif w.z0 >= mid: hi = minf(hi, w.z0)
 		var len_t := minf(want, hi - lo)
 		mid = clampf(mid, lo + len_t * 0.5, hi - len_t * 0.5)
 		tn.z0 = mid - len_t * 0.5
@@ -387,6 +442,12 @@ static func _clear_spot_back(z: float, towns: Array, tunnels: Array) -> float:
 				z = tn.z0 - 260.0
 		if not hit: break
 	return z
+
+## The ferry whose quay or crossing contains z ([z - FERRY_QUAY, z_out]), or {}.
+static func ferry_at(stage: Dictionary, z: float) -> Dictionary:
+	for f in stage.get("ferries", []):
+		if z >= f.z - FERRY_QUAY and z <= f.z_out: return f
+	return {}
 
 ## The tunnel at z, or {}.
 static func tunnel_at(stage: Dictionary, z: float) -> Dictionary:

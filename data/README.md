@@ -123,6 +123,14 @@ List of roads between two neighbouring cities `a` and `b` (travelling `b` -> `a`
   red-white barriers on both sides, guard booths, a canopy over the lanes, and a board with the name and flag of the
   country entered. Nothing stops the car. The crossing is moved off town streets and tunnels if it falls on them;
   stations and direction boards keep clear of it.
+- `ferry` (optional): `{from_km, to_km, name, fact}`, the sea between two quays in the `a` -> `b` direction (`b` ->
+  `a` mirrors the km); `name` is plain, `fact` texts by language. The driven road ends at `from_km` and goes on from
+  `to_km`: the sea is not driven (the track is the driven km's, plus `Route.FERRY_GAP` from the barrier to the far
+  quay's ramp), towns, zones, tunnels and borders out at sea are dropped. The quay runs `Route.FERRY_QUAY` track
+  metres up to a barrier across the road (driving into it is a crash); stopped on the quay the car boards, a chase
+  ends, and the crossing takes `Race.FERRY_TIME` seconds off the clock (no time limit, no fuel), then the car comes
+  off the ramp on the far quay. Stations, boards, crossings and tunnels keep clear of the quays, traffic too; the
+  time limit gets `Route.FERRY_STOP_TIME` per ferry. The trip's `km` stays the real total (the map).
 
 ## `countries/<code>/facts.json`
 

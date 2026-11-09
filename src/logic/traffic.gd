@@ -43,6 +43,7 @@ var stage: Dictionary
 var _dual := PackedFloat32Array() ## Route.dual_f per 5 m track segment, so update() needs no lookups
 var _express := PackedByteArray() ## 1 on motorways and expressways (traffic pace)
 var _rng := RandomNumberGenerator.new()
+var _quays := [] ## [from, to] per ferry: no cars on the quay and the crossing (Route.ferry_at)
 
 ## Lane centres (x) for cars going the player's way, and for oncoming cars, where the road is `d` dual.
 const OWN_DUAL := [-0.5, 0.5]
@@ -63,6 +64,8 @@ static func build(stage: Dictionary, seed_value: int) -> Traffic:
 	tf._rng.seed = seed_value + 2000
 	tf.end_z = stage.length + Track.TAIL - 30.0
 	tf.stage = stage
+	for f in stage.get("ferries", []):
+		tf._quays.append([f.z - Route.FERRY_QUAY, f.z_out])
 	var n_seg := int(tf.end_z / Track.SEG_LEN) + 64
 	tf._dual.resize(n_seg)
 	tf._express.resize(n_seg)
@@ -80,7 +83,7 @@ static func build(stage: Dictionary, seed_value: int) -> Traffic:
 		var in_town := not Route.town_at(stage, z).is_empty()
 		var lanes := own_lanes(tf.dual_at(z))
 		var lane: float = lanes[rng.randi() % lanes.size()]
-		if not last_in_lane.has(lane) or z - last_in_lane[lane] > (16.0 if in_town else 30.0):
+		if tf._on_quay(z) < 0.0 and (not last_in_lane.has(lane) or z - last_in_lane[lane] > (16.0 if in_town else 30.0)):
 			var car := tf._new_car(rng, z, lane, 1, in_town)
 			to_edge -= 1
 			if to_edge <= 0:
@@ -99,7 +102,7 @@ static func build(stage: Dictionary, seed_value: int) -> Traffic:
 		var in_town := not Route.town_at(stage, z).is_empty()
 		var lanes := oncoming_lanes(tf.dual_at(z))
 		var lane: float = lanes[rng.randi() % lanes.size()]
-		if not last_in_lane.has(lane) or z - last_in_lane[lane] > 30.0:
+		if tf._on_quay(z) < 0.0 and (not last_in_lane.has(lane) or z - last_in_lane[lane] > 30.0):
 			var car := tf._new_car(rng, z, lane, -1, in_town)
 			to_edge -= 1
 			if to_edge <= 0:
@@ -177,6 +180,13 @@ func update(dt: float, player_z := -INF, player_x := 0.0, player_speed := 0.0) -
 			continue
 		if dir < 0 and c.z < 0.0:
 			c.active = false
+		if not _quays.is_empty() and _on_quay(c.z) >= 0.0:
+			# a car reaching a quay takes the ferry and is gone; an oncoming one comes back far ahead
+			if dir < 0 and player_z > -INF:
+				_respawn_oncoming(c, player_z)
+			else:
+				c.active = false
+			continue
 		if player_z > -INF and absf(c.z - player_z) > FAR:
 			continue # far from the player nobody sees the traffic, it just keeps its speed and lane
 		# keep to a lane of the road the car is on now (a road widens into a dual carriageway and narrows back)
@@ -228,6 +238,9 @@ func _respawn_oncoming(c: Dictionary, player_z: float) -> void:
 			far = o.z
 	var in_town := not Route.town_at(stage, far).is_empty()
 	var z := far + _oncoming_gap(_rng, in_town) / maxf(stage.traffic_density, 0.1)
+	var quay_end := _on_quay(z)
+	if quay_end >= 0.0:
+		z = quay_end + 10.0
 	if z > end_z:
 		c.active = false
 		return
@@ -236,6 +249,12 @@ func _respawn_oncoming(c: Dictionary, player_z: float) -> void:
 	var fresh := _new_car(_rng, z, lane, -1, in_town)
 	for k in fresh:
 		c[k] = fresh[k]
+
+## The far end of the ferry quay (and crossing) containing z, or -1 off any.
+func _on_quay(z: float) -> float:
+	for q in _quays:
+		if z >= q[0] and z <= q[1]: return q[1]
+	return -1.0
 
 ## Cars move at different speeds, but the order changes slowly, so an insertion sort is almost free.
 func _sort_by_z() -> void:
