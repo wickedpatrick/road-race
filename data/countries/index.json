@@ -168,6 +168,12 @@
 			"name": {"pl": "Turcja", "en": "Turkey", "cs": "Turecko", "is": "Tyrkland", "de": "Türkei"},
 			"neighbours": ["gr", "bg"],
 			"favorite_neighbour": "bg"
+		},
+		{
+			"code": "ee",
+			"name": {"pl": "Estonia", "en": "Estonia", "cs": "Estonsko", "is": "Eistland", "de": "Estland"},
+			"neighbours": ["lv", "ru", "fi"],
+			"favorite_neighbour": "fi"
 		}
 	]
 }

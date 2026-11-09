@@ -1,0 +1,17 @@
+{
+	"tallinn": {"name": "Tallinn", "lat": 59.437, "lon": 24.745, "pop": 457, "region": "Harjumaa", "exonym": {"pl": "Tallin"}},
+	"tartu": {"name": "Tartu", "lat": 58.378, "lon": 26.729, "pop": 97, "region": "Tartumaa"},
+	"narva": {"name": "Narva", "lat": 59.377, "lon": 28.19, "pop": 53, "region": "Ida-Virumaa", "exonym": {"pl": "Narwa"}},
+	"parnu": {"name": "Pärnu", "lat": 58.385, "lon": 24.497, "pop": 52, "region": "Pärnumaa"},
+	"kohtla_jarve": {"name": "Kohtla-Järve", "lat": 59.399, "lon": 27.273, "pop": 32, "region": "Ida-Virumaa"},
+	"viljandi": {"name": "Viljandi", "lat": 58.364, "lon": 25.597, "pop": 17, "region": "Viljandimaa"},
+	"rakvere": {"name": "Rakvere", "lat": 59.346, "lon": 26.355, "pop": 15, "region": "Lääne-Virumaa"},
+	"kuressaare": {"name": "Kuressaare", "lat": 58.253, "lon": 22.485, "pop": 13, "region": "Saaremaa"},
+	"valga": {"name": "Valga", "lat": 57.777, "lon": 26.047, "pop": 12, "region": "Valgamaa"},
+	"voru": {"name": "Võru", "lat": 57.834, "lon": 27.019, "pop": 11, "region": "Võrumaa"},
+	"haapsalu": {"name": "Haapsalu", "lat": 58.943, "lon": 23.541, "pop": 9, "region": "Läänemaa"},
+	"paide": {"name": "Paide", "lat": 58.885, "lon": 25.557, "pop": 8, "region": "Järvamaa"},
+	"rapla": {"name": "Rapla", "lat": 58.999, "lon": 24.793, "pop": 5, "region": "Raplamaa"},
+	"polva": {"name": "Põlva", "lat": 58.06, "lon": 27.069, "pop": 5, "region": "Põlvamaa"},
+	"kardla": {"name": "Kärdla", "lat": 58.998, "lon": 22.749, "pop": 3, "region": "Hiiumaa"}
+}

@@ -1,0 +1,296 @@
+{
+	"Tallinn": [
+		{
+			"kind": "ee_tallinn_townhall",
+			"name": {
+				"pl": "Ratusz w Tallinie",
+				"en": "Tallinn Town Hall",
+				"cs": "Tallinnská radnice",
+				"is": "Ráðhúsið í Tallinn",
+				"de": "Rathaus von Tallinn"
+			},
+			"desc": {
+				"pl": "Gotycki ratusz z 1404 roku; na szczycie smukłej wieży od 1530 roku stoi wiatrowskaz Stary Tomasz",
+				"en": "A Gothic town hall completed in 1404; the Old Thomas weathervane has topped its slender spire since 1530",
+				"cs": "Gotická radnice dokončená roku 1404; na štíhlé věži stojí od roku 1530 korouhvička Starý Tomáš",
+				"is": "Gotneskt ráðhús, fullgert árið 1404; á mjóa turninum hefur veðurhaninn Gamli Tómas staðið síðan 1530",
+				"de": "Ein gotisches Rathaus, 1404 vollendet; auf seiner schlanken Turmspitze steht seit 1530 die Wetterfahne Alter Thomas"
+			},
+			"local": "Tallinna raekoda"
+		}
+	],
+	"Tartu": [
+		{
+			"kind": "ee_tartu_university",
+			"name": {
+				"pl": "Gmach główny Uniwersytetu w Tartu",
+				"en": "University of Tartu Main Building",
+				"cs": "Hlavní budova Tartuské univerzity",
+				"is": "Aðalbygging Tartu-háskóla",
+				"de": "Hauptgebäude der Universität Tartu"
+			},
+			"desc": {
+				"pl": "Klasycystyczny gmach z sześcioma kolumnami, ukończony w 1809 roku",
+				"en": "A Neoclassical building with six columns, completed in 1809",
+				"cs": "Klasicistní budova se šesti sloupy, dokončená roku 1809",
+				"is": "Nýklassísk bygging með sex súlum, fullgerð árið 1809",
+				"de": "Ein klassizistischer Bau mit sechs Säulen, 1809 vollendet"
+			},
+			"local": "Tartu Ülikooli peahoone"
+		}
+	],
+	"Narva": [
+		{
+			"kind": "ee_narva_castle",
+			"name": {
+				"pl": "Zamek Hermanna",
+				"en": "Hermann Castle",
+				"cs": "Hermannův hrad",
+				"is": "Hermannskastali",
+				"de": "Hermannsfeste"
+			},
+			"desc": {
+				"pl": "Średniowieczny zamek nad rzeką Narwą z wysoką na 51 metrów wieżą Długi Herman",
+				"en": "A medieval castle on the Narva River with the 51-metre Tall Hermann tower",
+				"cs": "Středověký hrad na řece Narvě s 51 metrů vysokou věží Dlouhý Hermann",
+				"is": "Miðaldakastali við Narva-fljót með 51 metra háa turninum Langa Hermanni",
+				"de": "Eine mittelalterliche Burg an der Narva mit dem 51 Meter hohen Turm Langer Hermann"
+			},
+			"local": "Narva Hermanni linnus"
+		}
+	],
+	"Pärnu": [
+		{
+			"kind": "ee_parnu_gate",
+			"name": {
+				"pl": "Brama Tallińska",
+				"en": "Tallinn Gate",
+				"cs": "Tallinnská brána",
+				"is": "Tallinn-hliðið",
+				"de": "Tallinner Tor"
+			},
+			"desc": {
+				"pl": "Jedyna zachowana brama dawnych szwedzkich umocnień z XVII wieku, przechodząca pod wałem ziemnym",
+				"en": "The only surviving gate of the 17th-century Swedish fortifications, a passage under an earth rampart",
+				"cs": "Jediná dochovaná brána švédského opevnění ze 17. století, průchod pod hliněným valem",
+				"is": "Eina varðveitta hliðið í sænsku víggirðingunum frá 17. öld, göng undir moldarvegg",
+				"de": "Das einzige erhaltene Tor der schwedischen Befestigung aus dem 17. Jahrhundert, ein Durchgang unter einem Erdwall"
+			},
+			"local": "Tallinna värav"
+		}
+	],
+	"Kohtla-Järve": [
+		{
+			"kind": "ee_kohtla_ash_hills",
+			"name": {
+				"pl": "Hałdy popiołu",
+				"en": "The ash hills",
+				"cs": "Popelové haldy",
+				"is": "Öskuhæðirnar",
+				"de": "Die Aschehalden"
+			},
+			"desc": {
+				"pl": "Szare wzgórza z popiołu po spalaniu łupków bitumicznych, jedne z najwyższych sztucznych wzniesień w krajach bałtyckich",
+				"en": "Grey hills of ash from burning oil shale, among the highest man-made hills in the Baltic states",
+				"cs": "Šedé kopce z popela ze spalování ropných břidlic, jedny z nejvyšších umělých kopců v Pobaltí",
+				"is": "Gráar hæðir úr ösku af brenndum olíuleirsteini, með hæstu manngerðu hæðum Eystrasaltslandanna",
+				"de": "Graue Hügel aus der Asche verbrannten Ölschiefers, mit die höchsten künstlichen Hügel des Baltikums"
+			},
+			"local": "Tuhamäed"
+		}
+	],
+	"Viljandi": [
+		{
+			"kind": "ee_viljandi_bridge",
+			"name": {
+				"pl": "Most wiszący w Viljandi",
+				"en": "Viljandi Suspension Bridge",
+				"cs": "Visutý most ve Viljandi",
+				"is": "Hengibrúin í Viljandi",
+				"de": "Hängebrücke von Viljandi"
+			},
+			"desc": {
+				"pl": "Czerwona wisząca kładka z 1931 roku nad parowem obok ruin zamku zakonnego",
+				"en": "A red suspension footbridge from 1931 over a ravine by the ruins of the Order castle",
+				"cs": "Červená visutá lávka z roku 1931 přes rokli u zříceniny řádového hradu",
+				"is": "Rauð hengibrú fyrir gangandi frá 1931 yfir gil við rústir riddarakastalans",
+				"de": "Eine rote Hängebrücke für Fußgänger von 1931 über eine Schlucht bei den Ruinen der Ordensburg"
+			},
+			"local": "Viljandi rippsild"
+		}
+	],
+	"Rakvere": [
+		{
+			"kind": "ee_rakvere_tarvas",
+			"name": {"pl": "Tarvas", "en": "Tarvas", "cs": "Tarvas", "is": "Tarvas", "de": "Tarvas"},
+			"desc": {
+				"pl": "Ponad siedmiometrowy tur z brązu dłuta Tauna Kangra na wzgórzu zamkowym",
+				"en": "A bronze aurochs over seven metres long by Tauno Kangro on the castle hill",
+				"cs": "Přes sedm metrů dlouhý bronzový pratur od Tauna Kangra na hradním vrchu",
+				"is": "Úruxi úr bronsi, meira en sjö metra langur, eftir Tauno Kangro á kastalahæðinni",
+				"de": "Ein über sieben Meter langer Bronze-Auerochse von Tauno Kangro auf dem Burgberg"
+			},
+			"local": "Tarvas"
+		}
+	],
+	"Kuressaare": [
+		{
+			"kind": "ee_kuressaare_castle",
+			"name": {
+				"pl": "Zamek biskupi w Kuressaare",
+				"en": "Kuressaare Castle",
+				"cs": "Hrad Kuressaare",
+				"is": "Kuressaare-kastali",
+				"de": "Bischofsburg Kuressaare"
+			},
+			"desc": {
+				"pl": "Czworoboczny zamek z dolomitu z XIV wieku z dwiema wieżami, otoczony wałami i fosą",
+				"en": "A square 14th-century dolomite castle with two towers, ringed by ramparts and a moat",
+				"cs": "Čtverhranný dolomitový hrad ze 14. století se dvěma věžemi, obklopený valy a vodním příkopem",
+				"is": "Ferhyrndur kastali úr dólómíti frá 14. öld með tveimur turnum, umkringdur virkisgörðum og díki",
+				"de": "Eine quadratische Dolomitburg aus dem 14. Jahrhundert mit zwei Türmen, umgeben von Wällen und Graben"
+			},
+			"local": "Kuressaare piiskopilinnus"
+		}
+	],
+	"Valga": [
+		{
+			"kind": "ee_valga_church",
+			"name": {
+				"pl": "Kościół św. Jana w Valga",
+				"en": "St John's Church, Valga",
+				"cs": "Kostel sv. Jana ve městě Valga",
+				"is": "Jóhannesarkirkjan í Valga",
+				"de": "Johanniskirche in Valga"
+			},
+			"desc": {
+				"pl": "Klasycystyczny kościół z 1816 roku o owalnym planie, z wieżą nad wejściem",
+				"en": "A Neoclassical church of 1816 with an oval plan and a tower over the entrance",
+				"cs": "Klasicistní kostel z roku 1816 s oválným půdorysem a věží nad vchodem",
+				"is": "Nýklassísk kirkja frá 1816, sporöskjulaga að grunnfleti, með turni yfir innganginum",
+				"de": "Eine klassizistische Kirche von 1816 mit ovalem Grundriss und einem Turm über dem Eingang"
+			},
+			"local": "Valga Jaani kirik"
+		}
+	],
+	"Võru": [
+		{
+			"kind": "ee_voru_munamagi",
+			"name": {
+				"pl": "Suur Munamägi",
+				"en": "Suur Munamägi",
+				"cs": "Suur Munamägi",
+				"is": "Suur Munamägi",
+				"de": "Suur Munamägi"
+			},
+			"desc": {
+				"pl": "Wieża widokowa na najwyższym wzgórzu krajów bałtyckich (318 m), na południe od Võru",
+				"en": "An observation tower on the highest hill in the Baltic states (318 m), south of Võru",
+				"cs": "Rozhledna na nejvyšším kopci Pobaltí (318 m), jižně od Võru",
+				"is": "Útsýnisturn á hæstu hæð Eystrasaltslandanna (318 m), sunnan við Võru",
+				"de": "Ein Aussichtsturm auf dem höchsten Hügel des Baltikums (318 m), südlich von Võru"
+			},
+			"local": "Suure Munamäe vaatetorn"
+		}
+	],
+	"Haapsalu": [
+		{
+			"kind": "ee_haapsalu_castle",
+			"name": {
+				"pl": "Zamek biskupi w Haapsalu",
+				"en": "Haapsalu Castle",
+				"cs": "Hrad Haapsalu",
+				"is": "Haapsalu-kastali",
+				"de": "Bischofsburg Haapsalu"
+			},
+			"desc": {
+				"pl": "Zamek biskupów z wysoką wieżą strażniczą i katedrą, w której oknie ukazuje się podobno Biała Dama",
+				"en": "The bishops' castle with its tall watchtower and the cathedral where the White Lady is said to appear",
+				"cs": "Biskupský hrad s vysokou strážní věží a katedrálou, v jejímž okně se prý zjevuje Bílá paní",
+				"is": "Biskupskastalinn með háum varðturni og dómkirkjunni þar sem Hvíta konan á að birtast",
+				"de": "Die Bischofsburg mit hohem Wachturm und dem Dom, in dem die Weiße Dame erscheinen soll"
+			},
+			"local": "Haapsalu piiskopilinnus"
+		}
+	],
+	"Paide": [
+		{
+			"kind": "ee_paide_tower",
+			"name": {
+				"pl": "Wieża Vallitorn",
+				"en": "Vallitorn tower",
+				"cs": "Věž Vallitorn",
+				"is": "Vallitorn-turninn",
+				"de": "Turm Vallitorn"
+			},
+			"desc": {
+				"pl": "Ośmioboczna wieża zamku zakonnego na wzgórzu, wysadzona w 1941 roku i odbudowana w latach 90.",
+				"en": "The octagonal tower of the Order castle on its hill, blown up in 1941 and rebuilt in the 1990s",
+				"cs": "Osmiboká věž řádového hradu na kopci, vyhozená do povětří roku 1941 a obnovená v 90. letech",
+				"is": "Átthyrndur turn riddarakastalans á hæðinni, sprengdur árið 1941 og endurreistur á tíunda áratugnum",
+				"de": "Der achteckige Turm der Ordensburg auf ihrem Hügel, 1941 gesprengt und in den 1990er-Jahren wieder aufgebaut"
+			},
+			"local": "Paide Vallitorn"
+		}
+	],
+	"Rapla": [
+		{
+			"kind": "ee_rapla_church",
+			"name": {
+				"pl": "Kościół św. Marii Magdaleny",
+				"en": "St Mary Magdalene's Church",
+				"cs": "Kostel sv. Marie Magdalény",
+				"is": "Kirkja heilagrar Maríu Magdalenu",
+				"de": "Maria-Magdalena-Kirche"
+			},
+			"desc": {
+				"pl": "Kościół z 1901 roku z dwiema smukłymi wieżami widocznymi z daleka",
+				"en": "A church of 1901 with two slender spires seen from afar",
+				"cs": "Kostel z roku 1901 se dvěma štíhlými věžemi viditelnými zdaleka",
+				"is": "Kirkja frá 1901 með tveimur mjóum turnum sem sjást langt að",
+				"de": "Eine Kirche von 1901 mit zwei schlanken, weithin sichtbaren Türmen"
+			},
+			"local": "Rapla Maarja-Magdaleena kirik"
+		}
+	],
+	"Põlva": [
+		{
+			"kind": "ee_polva_taevaskoja",
+			"name": {
+				"pl": "Suur Taevaskoda",
+				"en": "Suur Taevaskoda",
+				"cs": "Suur Taevaskoda",
+				"is": "Suur Taevaskoda",
+				"de": "Suur Taevaskoda"
+			},
+			"desc": {
+				"pl": "Czerwona skała z piaskowca nad rzeką Ahja, a w niej jaskinie",
+				"en": "A red sandstone cliff above the Ahja river, with caves in its face",
+				"cs": "Červená pískovcová skála nad řekou Ahja s jeskyněmi ve stěně",
+				"is": "Rauður sandsteinshamar yfir ánni Ahja, með hellum í berginu",
+				"de": "Eine rote Sandsteinwand über der Ahja, mit Höhlen im Fels"
+			},
+			"local": "Suur Taevaskoda"
+		}
+	],
+	"Kärdla": [
+		{
+			"kind": "ee_kardla_kopu",
+			"name": {
+				"pl": "Latarnia morska Kõpu",
+				"en": "Kõpu Lighthouse",
+				"cs": "Maják Kõpu",
+				"is": "Kõpu-vitinn",
+				"de": "Leuchtturm Kõpu"
+			},
+			"desc": {
+				"pl": "Jedna z najstarszych wciąż działających latarni na świecie, zapalona po raz pierwszy w 1531 roku, na zachodnim krańcu Hiumy",
+				"en": "One of the oldest working lighthouses in the world, first lit in 1531, on the western tip of Hiiumaa",
+				"cs": "Jeden z nejstarších dosud fungujících majáků na světě, poprvé rozsvícený roku 1531, na západním cípu Hiiumaa",
+				"is": "Einn elsti viti heims sem enn er í notkun, fyrst kveikt á honum árið 1531, á vesturodda Hiiumaa",
+				"de": "Einer der ältesten noch betriebenen Leuchttürme der Welt, 1531 erstmals entzündet, an der Westspitze von Hiiumaa"
+			},
+			"local": "Kõpu tuletorn"
+		}
+	]
+}

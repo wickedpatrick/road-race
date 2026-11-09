@@ -1,0 +1,292 @@
+[
+	{
+		"a": "tallinn",
+		"b": "rakvere",
+		"km": 99,
+		"road": [[35, "1", 3], [90, "1"], [99, "23"]],
+		"towns": [["Maardu", 12], ["Kuusalu", 37], ["Kolga", 46], ["Viitna", 70], ["Haljala", 90]],
+		"zones": [
+			[30, "fields", "Harjumaa"], [62, "forest", "Harjumaa"], [82, "forest", "Lääne-Virumaa"],
+			[99, "fields", "Lääne-Virumaa"]
+		],
+		"via": [[12, 24.98, 59.45], [37, 25.44, 59.44], [46, 25.58, 59.46], [70, 25.96, 59.44], [90, 26.26, 59.42]]
+	},
+	{
+		"a": "rakvere",
+		"b": "kohtla_jarve",
+		"km": 64,
+		"road": [[7, "5"], [64, "1"]],
+		"towns": [["Sõmeru", 7], ["Purtse", 42]],
+		"zones": [[38, "fields", "Lääne-Virumaa"], [55, "forest", "Ida-Virumaa"], [64, "industrial", "Ida-Virumaa"]],
+		"via": [[7, 26.43, 59.36], [42, 27, 59.42]]
+	},
+	{
+		"a": "kohtla_jarve",
+		"b": "narva",
+		"km": 56,
+		"road": "1",
+		"towns": [["Jõhvi", 7], ["Sillamäe", 31], ["Sinimäe", 40]],
+		"zones": [[16, "industrial", "Ida-Virumaa"], [42, "coast", "Ida-Virumaa"], [56, "forest", "Ida-Virumaa"]],
+		"via": [[7, 27.41, 59.36], [31, 27.76, 59.4], [40, 27.86, 59.38]]
+	},
+	{
+		"a": "kohtla_jarve",
+		"b": "tartu",
+		"km": 141,
+		"road": [[7, "1"], [141, "3"]],
+		"towns": [["Jõhvi", 7], ["Iisaku", 29], ["Lohusuu", 66], ["Mustvee", 80], ["Kõrveküla", 133]],
+		"zones": [
+			[12, "industrial", "Ida-Virumaa"], [60, "forest", "Ida-Virumaa"], [76, "lakes", "Ida-Virumaa"],
+			[100, "lakes", "Jõgevamaa"], [120, "forest", "Jõgevamaa"], [141, "fields", "Tartumaa"]
+		],
+		"via": [[7, 27.41, 59.36], [29, 27.31, 59.1], [66, 27.05, 58.94], [80, 26.94, 58.85], [133, 26.77, 58.43]]
+	},
+	{
+		"a": "tallinn",
+		"b": "paide",
+		"km": 92,
+		"road": [[88, "2", 3], [92, "5"]],
+		"towns": [["Jüri", 13], ["Kose", 40], ["Ardu", 55], ["Mäo", 88]],
+		"zones": [[25, "fields", "Harjumaa"], [62, "forest", "Harjumaa"], [92, "fields", "Järvamaa"]],
+		"via": [[13, 24.89, 59.36], [40, 25.17, 59.18], [55, 25.34, 59.07], [88, 25.63, 58.91]]
+	},
+	{
+		"a": "paide",
+		"b": "tartu",
+		"km": 102,
+		"road": [[4, "5"], [102, "2"]],
+		"towns": [["Mäo", 4], ["Imavere", 24], ["Põltsamaa", 45], ["Puurmani", 60], ["Kärevere", 88]],
+		"zones": [
+			[30, "fields", "Järvamaa"], [64, "fields", "Jõgevamaa"], [84, "forest", "Jõgevamaa"],
+			[102, "lakes", "Tartumaa"]
+		],
+		"via": [[4, 25.63, 58.91], [24, 25.77, 58.73], [45, 25.97, 58.65], [60, 26.28, 58.56], [88, 26.48, 58.45]]
+	},
+	{
+		"a": "tartu",
+		"b": "voru",
+		"km": 70,
+		"road": "2",
+		"towns": [["Ülenurme", 7], ["Reola", 11], ["Tatra", 20], ["Saverna", 42]],
+		"zones": [[22, "fields", "Tartumaa"], [52, "upland", "Põlvamaa"], [70, "forest", "Võrumaa"]],
+		"via": [[7, 26.72, 58.31], [20, 26.73, 58.18], [42, 26.84, 58.02]]
+	},
+	{
+		"a": "tartu",
+		"b": "polva",
+		"km": 49,
+		"road": [[11, "2"], [49, "61"]],
+		"towns": [["Ülenurme", 7], ["Reola", 11]],
+		"zones": [[16, "fields", "Tartumaa"], [49, "forest", "Põlvamaa"]],
+		"via": [[11, 26.73, 58.28]]
+	},
+	{
+		"a": "polva",
+		"b": "voru",
+		"km": 25,
+		"road": "64",
+		"towns": [],
+		"zones": [[12, "forest", "Põlvamaa"], [25, "upland", "Võrumaa"]]
+	},
+	{
+		"a": "voru",
+		"b": "valga",
+		"km": 83,
+		"road": "67",
+		"towns": [["Antsla", 26]],
+		"zones": [[45, "forest", "Võrumaa"], [83, "upland", "Valgamaa"]],
+		"via": [[26, 26.54, 57.83]]
+	},
+	{
+		"a": "tartu",
+		"b": "valga",
+		"km": 86,
+		"road": "3",
+		"towns": [["Elva", 24], ["Rõngu", 40], ["Tõlliste", 76]],
+		"zones": [[30, "forest", "Tartumaa"], [48, "fields", "Tartumaa"], [86, "upland", "Valgamaa"]],
+		"via": [[24, 26.42, 58.22], [40, 26.25, 58.14], [76, 26.13, 57.85]]
+	},
+	{
+		"a": "tartu",
+		"b": "viljandi",
+		"km": 80,
+		"road": [[6, "2"], [80, "92"]],
+		"towns": [["Ülenurme", 6], ["Sangla", 36], ["Viiratsi", 74]],
+		"zones": [[20, "fields", "Tartumaa"], [52, "lakes", "Tartumaa"], [80, "fields", "Viljandimaa"]],
+		"via": [[6, 26.72, 58.31], [36, 26.22, 58.35], [74, 25.68, 58.36]]
+	},
+	{
+		"a": "viljandi",
+		"b": "paide",
+		"km": 70,
+		"road": [[46, "49"], [68, "2"], [70, "5"]],
+		"towns": [["Imavere", 46]],
+		"zones": [[25, "fields", "Viljandimaa"], [46, "forest", "Viljandimaa"], [70, "fields", "Järvamaa"]],
+		"via": [[46, 25.77, 58.73]]
+	},
+	{
+		"a": "tallinn",
+		"b": "parnu",
+		"km": 128,
+		"road": [[25, "4", 3], [128, "4"]],
+		"towns": [["Ääsmäe", 28], ["Kernu", 38], ["Märjamaa", 62], ["Konuvere", 74], ["Are", 106], ["Sauga", 121]],
+		"zones": [
+			[45, "fields", "Harjumaa"], [80, "forest", "Raplamaa"], [115, "forest", "Pärnumaa"],
+			[128, "fields", "Pärnumaa"]
+		],
+		"via": [[28, 24.44, 59.25], [38, 24.33, 59.13], [62, 24.42, 58.9], [106, 24.53, 58.53], [121, 24.5, 58.43]]
+	},
+	{
+		"a": "parnu",
+		"b": "valga",
+		"km": 137,
+		"road": [[12, "4"], [137, "6"]],
+		"towns": [["Uulu", 12], ["Kilingi-Nõmme", 47], ["Karksi-Nuia", 82], ["Tõrva", 112]],
+		"zones": [
+			[20, "coast", "Pärnumaa"], [62, "forest", "Pärnumaa"], [95, "fields", "Viljandimaa"],
+			[137, "upland", "Valgamaa"]
+		],
+		"via": [[12, 24.56, 58.29], [47, 24.96, 58.15], [82, 25.56, 58.1], [112, 25.93, 58]]
+	},
+	{
+		"a": "parnu",
+		"b": "paide",
+		"km": 96,
+		"road": "5",
+		"towns": [["Tori", 23], ["Vändra", 50], ["Türi", 80]],
+		"zones": [[30, "fields", "Pärnumaa"], [68, "forest", "Pärnumaa"], [96, "fields", "Järvamaa"]],
+		"via": [[23, 24.82, 58.48], [50, 25.03, 58.65], [80, 25.43, 58.81]]
+	},
+	{
+		"a": "paide",
+		"b": "rakvere",
+		"km": 81,
+		"road": "5",
+		"towns": [["Mäo", 4], ["Aravete", 25], ["Käravete", 34], ["Tapa", 50]],
+		"zones": [[30, "fields", "Järvamaa"], [46, "forest", "Järvamaa"], [81, "upland", "Lääne-Virumaa"]],
+		"via": [[4, 25.63, 58.91], [25, 25.76, 59.14], [34, 25.82, 59.17], [50, 25.96, 59.26]]
+	},
+	{
+		"a": "tallinn",
+		"b": "haapsalu",
+		"km": 99,
+		"road": [[25, "4", 3], [28, "4"], [99, "9"]],
+		"towns": [["Ääsmäe", 28], ["Risti", 71], ["Taebla", 89]],
+		"zones": [
+			[32, "fields", "Harjumaa"], [56, "forest", "Harjumaa"], [84, "forest", "Läänemaa"],
+			[99, "coast", "Läänemaa"]
+		],
+		"via": [[28, 24.44, 59.25], [71, 24.04, 58.99], [89, 23.75, 58.96]]
+	},
+	{
+		"a": "haapsalu",
+		"b": "kardla",
+		"km": 62,
+		"road": [[9, "9"], [62, "80"]],
+		"towns": [["Suuremõisa", 41]],
+		"zones": [[9, "coast", "Läänemaa"], [62, "forest", "Hiiumaa"]],
+		"via": [[9, 23.43, 58.9], [36, 23.05, 58.87], [41, 22.96, 58.86]],
+		"ferry": {
+			"from_km": 9,
+			"to_km": 36,
+			"name": "Rohuküla – Heltermaa",
+			"fact": {
+				"pl": "Prom na Hiuma płynie przez płytkie Morze Väinameri między wysepkami, rejs trwa nieco ponad godzinę",
+				"en": "The ferry to Hiiumaa crosses the shallow Väinameri sea between islets; the crossing takes a little over an hour",
+				"cs": "Trajekt na Hiiumaa pluje přes mělké moře Väinameri mezi ostrůvky, plavba trvá o něco déle než hodinu",
+				"is": "Ferjan til Hiiumaa fer yfir grunnt Väinameri-hafið milli smáeyja og siglingin tekur rúma klukkustund",
+				"de": "Die Fähre nach Hiiumaa fährt über die flache Väinameri zwischen kleinen Inseln, die Überfahrt dauert gut eine Stunde"
+			}
+		}
+	},
+	{
+		"a": "haapsalu",
+		"b": "kuressaare",
+		"km": 167,
+		"road": [[28, "9"], [167, "10"]],
+		"towns": [["Taebla", 10], ["Risti", 28], ["Lihula", 60], ["Virtsu", 82], ["Liiva", 103]],
+		"zones": [
+			[45, "forest", "Läänemaa"], [85, "coast", "Pärnumaa"], [115, "coast", "Saaremaa"],
+			[167, "fields", "Saaremaa"]
+		],
+		"via": [
+			[10, 23.75, 58.96], [28, 24.04, 58.99], [60, 23.84, 58.69], [85, 23.51, 58.57], [92, 23.39, 58.57],
+			[103, 23.24, 58.6], [112, 23.06, 58.56]
+		],
+		"ferry": {
+			"from_km": 85,
+			"to_km": 92,
+			"name": "Virtsu – Kuivastu",
+			"fact": {
+				"pl": "Prom przez cieśninę Suur väin na Muhu płynie około pół godziny; w mroźne zimy otwiera się czasem droga po lodzie",
+				"en": "The ferry across the Suur väin strait to Muhu takes about half an hour; in hard winters an ice road sometimes opens",
+				"cs": "Trajekt přes průliv Suur väin na Muhu pluje asi půl hodiny; v tuhých zimách se někdy otevře cesta po ledu",
+				"is": "Ferjan yfir Suur väin-sundið til Muhu tekur um hálfa klukkustund; í hörðum vetrum er stundum opnaður vegur á ísnum",
+				"de": "Die Fähre über den Suur väin nach Muhu braucht etwa eine halbe Stunde; in strengen Wintern öffnet manchmal eine Eisstraße"
+			}
+		}
+	},
+	{
+		"a": "parnu",
+		"b": "kuressaare",
+		"km": 163,
+		"road": [[56, "60"], [163, "10"]],
+		"towns": [["Audru", 12], ["Lihula", 56], ["Virtsu", 78], ["Liiva", 99]],
+		"zones": [
+			[56, "forest", "Pärnumaa"], [81, "coast", "Pärnumaa"], [111, "coast", "Saaremaa"],
+			[163, "fields", "Saaremaa"]
+		],
+		"via": [
+			[12, 24.36, 58.41], [56, 23.84, 58.69], [81, 23.51, 58.57], [88, 23.39, 58.57], [99, 23.24, 58.6],
+			[108, 23.06, 58.56]
+		],
+		"ferry": {
+			"from_km": 81,
+			"to_km": 88,
+			"name": "Virtsu – Kuivastu",
+			"fact": {
+				"pl": "Prom przez cieśninę Suur väin na Muhu płynie około pół godziny; w mroźne zimy otwiera się czasem droga po lodzie",
+				"en": "The ferry across the Suur väin strait to Muhu takes about half an hour; in hard winters an ice road sometimes opens",
+				"cs": "Trajekt přes průliv Suur väin na Muhu pluje asi půl hodiny; v tuhých zimách se někdy otevře cesta po ledu",
+				"is": "Ferjan yfir Suur väin-sundið til Muhu tekur um hálfa klukkustund; í hörðum vetrum er stundum opnaður vegur á ísnum",
+				"de": "Die Fähre über den Suur väin nach Muhu braucht etwa eine halbe Stunde; in strengen Wintern öffnet manchmal eine Eisstraße"
+			}
+		}
+	},
+	{
+		"a": "parnu",
+		"b": "haapsalu",
+		"km": 104,
+		"road": [[56, "60"], [68, "10"], [104, "31"]],
+		"towns": [["Audru", 12], ["Lihula", 56]],
+		"zones": [[45, "forest", "Pärnumaa"], [66, "lakes", "Pärnumaa"], [104, "coast", "Läänemaa"]],
+		"via": [[12, 24.36, 58.41], [56, 23.84, 58.69], [68, 23.78, 58.79]]
+	},
+	{
+		"a": "tallinn",
+		"b": "rapla",
+		"km": 52,
+		"road": "15",
+		"towns": [["Luige", 13], ["Kohila", 33], ["Hagudi", 43]],
+		"zones": [[25, "fields", "Harjumaa"], [52, "forest", "Raplamaa"]],
+		"via": [[13, 24.73, 59.32], [33, 24.75, 59.17], [43, 24.77, 59.07]]
+	},
+	{
+		"a": "rapla",
+		"b": "paide",
+		"km": 63,
+		"road": [[47, "15"], [63, "5"]],
+		"towns": [["Kehtna", 12], ["Lelle", 22], ["Käru", 32], ["Türi", 47]],
+		"zones": [[36, "forest", "Raplamaa"], [63, "fields", "Järvamaa"]],
+		"via": [[12, 24.88, 58.93], [22, 24.97, 58.86], [32, 25.2, 58.8], [47, 25.43, 58.81]]
+	},
+	{
+		"a": "viljandi",
+		"b": "valga",
+		"km": 90,
+		"road": [[35, "49"], [90, "6"]],
+		"towns": [["Karksi-Nuia", 35], ["Tõrva", 65]],
+		"zones": [[35, "upland", "Viljandimaa"], [90, "upland", "Valgamaa"]],
+		"via": [[35, 25.56, 58.1], [65, 25.93, 58]]
+	}
+]
