@@ -1,0 +1,127 @@
+{
+	"minsk": {"name": "Minsk", "lat": 53.9, "lon": 27.56, "pop": 1996, "region": "Minsk", "exonym": {"pl": "Mińsk"}},
+	"homiel": {
+		"name": "Homieĺ",
+		"lat": 52.43,
+		"lon": 30.98,
+		"pop": 501,
+		"region": "Homieĺ",
+		"exonym": {"pl": "Homel", "en": "Gomel", "cs": "Homel", "is": "Gomel", "de": "Gomel"}
+	},
+	"viciebsk": {
+		"name": "Viciebsk",
+		"lat": 55.19,
+		"lon": 30.2,
+		"pop": 358,
+		"region": "Viciebsk",
+		"exonym": {"pl": "Witebsk", "en": "Vitebsk", "cs": "Vitebsk", "is": "Vitebsk", "de": "Witebsk"}
+	},
+	"mahiliou": {
+		"name": "Mahilioŭ",
+		"lat": 53.9,
+		"lon": 30.33,
+		"pop": 357,
+		"region": "Mahilioŭ",
+		"exonym": {"pl": "Mohylew", "en": "Mogilev", "cs": "Mohylev", "is": "Mogilev", "de": "Mogiljow"}
+	},
+	"hrodna": {
+		"name": "Hrodna",
+		"lat": 53.68,
+		"lon": 23.83,
+		"pop": 356,
+		"region": "Hrodna",
+		"exonym": {"pl": "Grodno", "en": "Grodno", "cs": "Grodno", "is": "Grodno", "de": "Grodno"}
+	},
+	"brest": {"name": "Brest", "lat": 52.1, "lon": 23.69, "pop": 340, "region": "Brest", "exonym": {"pl": "Brześć"}},
+	"babrujsk": {
+		"name": "Babrujsk",
+		"lat": 53.14,
+		"lon": 29.22,
+		"pop": 209,
+		"region": "Mahilioŭ",
+		"exonym": {"pl": "Bobrujsk", "en": "Babruysk", "cs": "Bobrujsk", "is": "Babruysk"}
+	},
+	"baranavicy": {
+		"name": "Baranavičy",
+		"lat": 53.13,
+		"lon": 26.01,
+		"pop": 173,
+		"region": "Brest",
+		"exonym": {"pl": "Baranowicze", "en": "Baranavichy", "cs": "Baranoviči", "is": "Baranavichy", "de": "Baranawitschy"}
+	},
+	"barysau": {
+		"name": "Barysaŭ",
+		"lat": 54.23,
+		"lon": 28.5,
+		"pop": 142,
+		"region": "Minsk",
+		"exonym": {"pl": "Borysów", "en": "Barysaw", "cs": "Borisov", "is": "Barysaw", "de": "Baryssau"}
+	},
+	"pinsk": {"name": "Pinsk", "lat": 52.11, "lon": 26.1, "pop": 125, "region": "Brest", "exonym": {"pl": "Pińsk"}},
+	"orsa": {
+		"name": "Orša",
+		"lat": 54.51,
+		"lon": 30.42,
+		"pop": 107,
+		"region": "Viciebsk",
+		"exonym": {"pl": "Orsza", "en": "Orsha", "is": "Orsha", "de": "Orscha"}
+	},
+	"mazyr": {
+		"name": "Mazyr",
+		"lat": 52.05,
+		"lon": 29.25,
+		"pop": 105,
+		"region": "Homieĺ",
+		"exonym": {"pl": "Mozyrz", "cs": "Mozyr", "de": "Masyr"}
+	},
+	"lida": {"name": "Lida", "lat": 53.89, "lon": 25.3, "pop": 100, "region": "Hrodna"},
+	"maladziecna": {
+		"name": "Maladziečna",
+		"lat": 54.31,
+		"lon": 26.85,
+		"pop": 91,
+		"region": "Minsk",
+		"exonym": {"pl": "Mołodeczno", "en": "Maladzyechna", "cs": "Molodečno", "is": "Maladzyechna", "de": "Maladsetschna"}
+	},
+	"polack": {
+		"name": "Polack",
+		"lat": 55.49,
+		"lon": 28.78,
+		"pop": 82,
+		"region": "Viciebsk",
+		"exonym": {"pl": "Połock", "en": "Polotsk", "is": "Polotsk", "de": "Polazk"}
+	},
+	"navahrudak": {
+		"name": "Navahrudak",
+		"lat": 53.6,
+		"lon": 25.83,
+		"pop": 28,
+		"region": "Hrodna",
+		"exonym": {"pl": "Nowogródek", "de": "Nawahrudak"}
+	},
+	"niasviz": {
+		"name": "Niasviž",
+		"lat": 53.22,
+		"lon": 26.68,
+		"pop": 14,
+		"region": "Minsk",
+		"exonym": {"pl": "Nieśwież", "en": "Nesvizh", "cs": "Nesviž", "is": "Nesvizh", "de": "Neswisch"}
+	},
+	"braslau": {
+		"name": "Braslaŭ",
+		"lat": 55.64,
+		"lon": 27.04,
+		"pop": 9,
+		"region": "Viciebsk",
+		"exonym": {"pl": "Brasław", "en": "Braslaw", "cs": "Braslav", "is": "Braslaw", "de": "Braslau"}
+	},
+	"kamianiec": {
+		"name": "Kamianiec",
+		"lat": 52.4,
+		"lon": 23.82,
+		"pop": 8,
+		"region": "Brest",
+		"exonym": {"pl": "Kamieniec", "en": "Kamyanyets", "cs": "Kameněc", "is": "Kamyanyets", "de": "Kamenez"}
+	},
+	"mir": {"name": "Mir", "lat": 53.45, "lon": 26.47, "pop": 2.3, "region": "Hrodna"}
+}

@@ -1,0 +1,402 @@
+{
+	"Minsk": [
+		{
+			"kind": "by_minsk_library",
+			"name": {
+				"pl": "Biblioteka Narodowa",
+				"en": "National Library",
+				"cs": "Národní knihovna",
+				"is": "Þjóðarbókasafnið",
+				"de": "Nationalbibliothek"
+			},
+			"desc": {
+				"pl": "Szklany „diament” wysoki na 23 piętra, nocą świecący kolorowymi światłami",
+				"en": "A glass 'diamond' 23 storeys high that glows in colours at night",
+				"cs": "Skleněný „diamant“ vysoký 23 pater, který v noci září barevnými světly",
+				"is": "Glerdemantur, 23 hæðir, sem lýsir í öllum litum á nóttunni",
+				"de": "Ein gläserner „Diamant“ mit 23 Etagen, der nachts in bunten Farben leuchtet"
+			},
+			"local": "Нацыянальная бібліятэка"
+		}
+	],
+	"Homieĺ": [
+		{
+			"kind": "by_homiel_palace",
+			"name": {
+				"pl": "Pałac Rumiancewów i Paskiewiczów",
+				"en": "Rumyantsev-Paskevich Palace",
+				"cs": "Palác Rumjancevů a Paskevičů",
+				"is": "Rúmjantsev-Paskevitsj-höllin",
+				"de": "Palast Rumjanzew-Paskewitsch"
+			},
+			"desc": {
+				"pl": "Klasycystyczny pałac z kopułą i wieżą w parku nad Sożem",
+				"en": "A Neoclassical palace with a dome and a tower in a park above the Sozh",
+				"cs": "Klasicistní palác s kupolí a věží v parku nad Sožem",
+				"is": "Nýklassísk höll með hvolfþaki og turni í garði ofan við Sož",
+				"de": "Ein klassizistischer Palast mit Kuppel und Turm im Park über der Sosch"
+			},
+			"local": "Палац Румянцавых і Паскевічаў"
+		}
+	],
+	"Viciebsk": [
+		{
+			"kind": "by_viciebsk_amphitheatre",
+			"name": {
+				"pl": "Letni Amfiteatr",
+				"en": "Summer Amphitheatre",
+				"cs": "Letní amfiteátr",
+				"is": "Sumarhringleikahúsið",
+				"de": "Sommeramphitheater"
+			},
+			"desc": {
+				"pl": "Scena festiwalu Słowiański Bazar pod wielkim białym dachem",
+				"en": "The stage of the Slavianski Bazaar festival under a great white roof",
+				"cs": "Scéna festivalu Slovanský bazar pod velkou bílou střechou",
+				"is": "Svið hátíðarinnar Slavjanskí basar undir stóru hvítu þaki",
+				"de": "Die Bühne des Festivals Slawischer Basar unter einem großen weißen Dach"
+			},
+			"local": "Летні амфітэатр"
+		}
+	],
+	"Mahilioŭ": [
+		{
+			"kind": "by_mahiliou_ratusha",
+			"name": {"pl": "Ratusz", "en": "Town Hall", "cs": "Radnice", "is": "Ráðhúsið", "de": "Rathaus"},
+			"desc": {
+				"pl": "Biały ratusz z wysoką wieżą nad Dnieprem, odbudowany w 2008 roku",
+				"en": "A white town hall with a tall tower above the Dnieper, rebuilt in 2008",
+				"cs": "Bílá radnice s vysokou věží nad Dněprem, obnovená roku 2008",
+				"is": "Hvítt ráðhús með háum turni ofan við Dnjepr, endurreist 2008",
+				"de": "Ein weißes Rathaus mit hohem Turm über dem Dnepr, 2008 wieder aufgebaut"
+			},
+			"local": "Ратуша"
+		}
+	],
+	"Hrodna": [
+		{
+			"kind": "by_hrodna_kalozha",
+			"name": {
+				"pl": "Cerkiew na Kołoży",
+				"en": "Kalozha Church",
+				"cs": "Kostel na Koloži",
+				"is": "Kalozha-kirkjan",
+				"de": "Kalozha-Kirche"
+			},
+			"desc": {
+				"pl": "Cerkiew z XII wieku z kolorowymi kamieniami i glinianymi dzbanami w murach",
+				"en": "A 12th-century church with coloured stones and clay jugs set into its walls",
+				"cs": "Kostel z 12. století s barevnými kameny a hliněnými džbány ve zdech",
+				"is": "Kirkja frá 12. öld með lituðum steinum og leirkrukkum í veggjunum",
+				"de": "Eine Kirche aus dem 12. Jahrhundert mit bunten Steinen und Tonkrügen im Mauerwerk"
+			},
+			"local": "Каложская царква"
+		}
+	],
+	"Brest": [
+		{
+			"kind": "by_brest_kholm_gate",
+			"name": {
+				"pl": "Brama Chełmska",
+				"en": "Kholm Gate",
+				"cs": "Chełmská brána",
+				"is": "Kholm-hliðið",
+				"de": "Cholmer Tor"
+			},
+			"desc": {
+				"pl": "Ceglana brama z basztami XIX-wiecznej twierdzy u ujścia Muchawca",
+				"en": "The turreted brick gate of the 19th-century fortress where the Mukhavets meets the Bug",
+				"cs": "Cihlová brána s věžičkami pevnosti z 19. století u soutoku Muchavce",
+				"is": "Múrsteinshlið með turnum í virkinu frá 19. öld þar sem Múkhavets rennur í Bug",
+				"de": "Das Backsteintor mit Türmchen der Festung aus dem 19. Jahrhundert an der Muchawez-Mündung"
+			},
+			"local": "Холмская брама"
+		}
+	],
+	"Babrujsk": [
+		{
+			"kind": "by_babrujsk_beaver",
+			"name": {
+				"pl": "Pomnik bobra",
+				"en": "Beaver Statue",
+				"cs": "Socha bobra",
+				"is": "Bjórastyttan",
+				"de": "Biberdenkmal"
+			},
+			"desc": {
+				"pl": "Brązowy bóbr, symbol miasta znad Berezyny",
+				"en": "A bronze beaver, the symbol of the town on the Berezina",
+				"cs": "Bronzový bobr, symbol města na Berezině",
+				"is": "Bjór úr bronsi, tákn bæjarins við Berezínu",
+				"de": "Ein Bronzebiber, das Wahrzeichen der Stadt an der Beresina"
+			},
+			"local": "Помнік бабру"
+		}
+	],
+	"Baranavičy": [
+		{
+			"kind": "by_baranavicy_locomotive",
+			"name": {
+				"pl": "Muzeum kolejnictwa",
+				"en": "Railway Museum",
+				"cs": "Železniční muzeum",
+				"is": "Járnbrautasafnið",
+				"de": "Eisenbahnmuseum"
+			},
+			"desc": {
+				"pl": "Stara parowozownia i lokomotywy miasta, które zbudowała kolej",
+				"en": "Old steam engines in the town the railway built",
+				"cs": "Staré parní lokomotivy ve městě, které postavila železnice",
+				"is": "Gamlar gufueimreiðar í bænum sem járnbrautin byggði",
+				"de": "Alte Dampflokomotiven in der Stadt, die die Eisenbahn gebaut hat"
+			},
+			"local": "Музей чыгуначнай тэхнікі"
+		}
+	],
+	"Barysaŭ": [
+		{
+			"kind": "by_barysau_stone",
+			"name": {
+				"pl": "Kamień Borysa",
+				"en": "Barys Stone",
+				"cs": "Borisův kámen",
+				"is": "Barys-steinninn",
+				"de": "Borisstein"
+			},
+			"desc": {
+				"pl": "Głaz z krzyżem i napisem z XII wieku, wyryty na polecenie księcia Borysa",
+				"en": "A boulder with a cross and a 12th-century inscription carved for Prince Barys",
+				"cs": "Balvan s křížem a nápisem z 12. století vytesaným pro knížete Borise",
+				"is": "Bjarg með krossi og áletrun frá 12. öld, höggvin fyrir Barys fursta",
+				"de": "Ein Findling mit Kreuz und Inschrift aus dem 12. Jahrhundert, für Fürst Boris gemeißelt"
+			},
+			"local": "Барысаў камень"
+		}
+	],
+	"Pinsk": [
+		{
+			"kind": "by_pinsk_franciscan",
+			"name": {
+				"pl": "Kościół franciszkanów",
+				"en": "Franciscan Church",
+				"cs": "Františkánský kostel",
+				"is": "Fransiskanakirkjan",
+				"de": "Franziskanerkirche"
+			},
+			"desc": {
+				"pl": "Barokowy kościół Wniebowzięcia z osobną dzwonnicą nad Piną",
+				"en": "The Baroque Church of the Assumption with its separate bell tower above the Pina",
+				"cs": "Barokní kostel Nanebevzetí se samostatnou zvonicí nad Pinou",
+				"is": "Barokkkirkja Maríu meyjar með sérstökum klukkuturni ofan við Pina",
+				"de": "Die barocke Mariä-Himmelfahrt-Kirche mit freistehendem Glockenturm über der Pina"
+			},
+			"local": "Касцёл Узнясення Найсвяцейшай Панны Марыі"
+		}
+	],
+	"Orša": [
+		{
+			"kind": "by_orsa_collegium",
+			"name": {
+				"pl": "Kolegium jezuickie",
+				"en": "Jesuit Collegium",
+				"cs": "Jezuitská kolej",
+				"is": "Jesúítaskólinn",
+				"de": "Jesuitenkolleg"
+			},
+			"desc": {
+				"pl": "Odnowiony gmach jezuickiej szkoły z XVII wieku, dziś muzeum i sala koncertowa",
+				"en": "The restored 17th-century Jesuit school, now a museum and concert hall",
+				"cs": "Obnovená jezuitská škola ze 17. století, dnes muzeum a koncertní sál",
+				"is": "Endurgerður jesúítaskóli frá 17. öld, nú safn og tónleikasalur",
+				"de": "Die restaurierte Jesuitenschule aus dem 17. Jahrhundert, heute Museum und Konzertsaal"
+			},
+			"local": "Езуіцкі калегіум"
+		}
+	],
+	"Mazyr": [
+		{
+			"kind": "by_mazyr_castle",
+			"name": {
+				"pl": "Zamek na Górze Zamkowej",
+				"en": "Castle Hill fort",
+				"cs": "Hrad na Zámeckém vrchu",
+				"is": "Virkið á Kastalahæð",
+				"de": "Burg auf dem Schlossberg"
+			},
+			"desc": {
+				"pl": "Odtworzony drewniany zamek z wieżą bramną nad Prypecią",
+				"en": "A rebuilt wooden castle with a gate tower above the Pripyat",
+				"cs": "Obnovený dřevěný hrad s branskou věží nad Pripjatí",
+				"is": "Endurgerður trékastali með hliðturni ofan við Prípjat",
+				"de": "Eine wiederaufgebaute Holzburg mit Torturm über dem Pripjat"
+			},
+			"local": "Мазырскі замак"
+		}
+	],
+	"Lida": [
+		{
+			"kind": "by_lida_castle",
+			"name": {
+				"pl": "Zamek w Lidzie",
+				"en": "Lida Castle",
+				"cs": "Hrad Lida",
+				"is": "Kastalinn í Lida",
+				"de": "Burg Lida"
+			},
+			"desc": {
+				"pl": "Czworobok murów z kamienia i cegły z dwiema basztami narożnymi",
+				"en": "A square of stone and brick walls with two corner towers",
+				"cs": "Čtverec kamenných a cihlových hradeb se dvěma nárožními věžemi",
+				"is": "Ferhyrningur úr grjóti og múrsteini með tveimur hornturnum",
+				"de": "Ein Mauergeviert aus Stein und Ziegel mit zwei Ecktürmen"
+			},
+			"local": "Лідскі замак"
+		}
+	],
+	"Maladziečna": [
+		{
+			"kind": "by_maladziecna_oginski",
+			"name": {
+				"pl": "Pomnik Ogińskiego",
+				"en": "Ogiński Monument",
+				"cs": "Pomník Ogińského",
+				"is": "Minnisvarði Ogińskis",
+				"de": "Ogiński-Denkmal"
+			},
+			"desc": {
+				"pl": "Kompozytor poloneza „Pożegnanie Ojczyzny” w brązie, z nutami w dłoni",
+				"en": "The composer of the polonaise 'Farewell to the Homeland' in bronze, with music in his hand",
+				"cs": "Skladatel polonézy Rozloučení s vlastí v bronzu, s notami v ruce",
+				"is": "Tónskáld pólónesunnar Kveðja til föðurlandsins í bronsi, með nótur í hendi",
+				"de": "Der Komponist der Polonaise „Abschied von der Heimat“ in Bronze, mit Noten in der Hand"
+			},
+			"local": "Помнік Агінскаму"
+		}
+	],
+	"Polack": [
+		{
+			"kind": "by_polack_sophia",
+			"name": {
+				"pl": "Sobór Mądrości Bożej",
+				"en": "St Sophia Cathedral",
+				"cs": "Chrám Boží Moudrosti",
+				"is": "Soffíukirkjan",
+				"de": "Sophienkathedrale"
+			},
+			"desc": {
+				"pl": "Biały barokowy sobór z dwiema wieżami na skarpie nad Dźwiną",
+				"en": "A white Baroque cathedral with two towers on the bank above the Dvina",
+				"cs": "Bílý barokní chrám se dvěma věžemi na svahu nad Daugavou",
+				"is": "Hvít barokkdómkirkja með tveimur turnum á bakkanum ofan við Dvínu",
+				"de": "Eine weiße Barockkathedrale mit zwei Türmen am Hang über der Düna"
+			},
+			"local": "Сафійскі сабор"
+		}
+	],
+	"Navahrudak": [
+		{
+			"kind": "by_navahrudak_castle",
+			"name": {
+				"pl": "Ruiny zamku",
+				"en": "Castle Ruins",
+				"cs": "Zřícenina hradu",
+				"is": "Kastalarústirnar",
+				"de": "Burgruine"
+			},
+			"desc": {
+				"pl": "Resztki dwóch wież zamku na Górze Zamkowej, obok kopiec Mickiewicza",
+				"en": "What is left of two towers of the castle on Castle Hill, next to the Mickiewicz mound",
+				"cs": "Zbytky dvou věží hradu na Zámeckém vrchu vedle Mickiewiczova návrší",
+				"is": "Leifar tveggja kastalaturna á Kastalahæð, við hlið Mickiewicz-haugsins",
+				"de": "Reste zweier Burgtürme auf dem Schlossberg, neben dem Mickiewicz-Hügel"
+			},
+			"local": "Навагрудскі замак"
+		}
+	],
+	"Niasviž": [
+		{
+			"kind": "by_niasviz_palace",
+			"name": {
+				"pl": "Zamek w Nieświeżu",
+				"en": "Nesvizh Castle",
+				"cs": "Zámek Nesviž",
+				"is": "Kastalinn í Nesvizh",
+				"de": "Schloss Neswisch"
+			},
+			"desc": {
+				"pl": "Pałac Radziwiłłów z wieżą bramną, otoczony stawami i parkiem",
+				"en": "The Radziwiłł palace with its gate tower, ringed by ponds and a park",
+				"cs": "Palác Radziwiłłů s branskou věží, obklopený rybníky a parkem",
+				"is": "Höll Radziwiłł-ættarinnar með hliðturni, umkringd tjörnum og garði",
+				"de": "Das Schloss der Radziwiłłs mit Torturm, umgeben von Teichen und Park"
+			},
+			"local": "Нясвіжскі замак"
+		}
+	],
+	"Mir": [
+		{
+			"kind": "by_mir_castle",
+			"name": {"pl": "Zamek w Mirze", "en": "Mir Castle", "cs": "Hrad Mir", "is": "Kastalinn í Mir", "de": "Burg Mir"},
+			"desc": {
+				"pl": "Gotycki zamek z czerwonej cegły i białego tynku z pięcioma wieżami",
+				"en": "A Gothic castle of red brick and white plaster with five towers",
+				"cs": "Gotický hrad z červených cihel a bílé omítky s pěti věžemi",
+				"is": "Gotneskur kastali úr rauðum múrsteini og hvítri múrhúð með fimm turnum",
+				"de": "Eine gotische Burg aus rotem Backstein und weißem Putz mit fünf Türmen"
+			},
+			"local": "Мірскі замак"
+		}
+	],
+	"Kamianiec": [
+		{
+			"kind": "by_kamianiec_tower",
+			"name": {
+				"pl": "Wieża w Kamieńcu",
+				"en": "Kamyanyets Tower",
+				"cs": "Věž v Kameněci",
+				"is": "Turninn í Kamyanyets",
+				"de": "Turm von Kamenez"
+			},
+			"desc": {
+				"pl": "Ceglana wieża obronna z XIII wieku, wysoka na prawie 30 metrów",
+				"en": "A 13th-century brick defensive tower almost 30 metres high",
+				"cs": "Cihlová obranná věž ze 13. století vysoká skoro 30 metrů",
+				"is": "Varnarturn úr múrsteini frá 13. öld, nærri 30 metra hár",
+				"de": "Ein Wehrturm aus Backstein aus dem 13. Jahrhundert, fast 30 Meter hoch"
+			},
+			"local": "Камянецкая вежа"
+		},
+		{
+			"kind": "by_bialowieza_wisent",
+			"name": {"pl": "Żubr", "en": "Wisent", "cs": "Zubr", "is": "Vísundur", "de": "Wisent"},
+			"desc": {
+				"pl": "Największy ssak Europy żyje na wolności w Puszczy Białowieskiej",
+				"en": "Europe's largest mammal lives in the wild in the Białowieża Forest",
+				"cs": "Největší savec Evropy žije volně v Bělověžském pralese",
+				"is": "Stærsta spendýr Evrópu lifir villt í Białowieża-skógi",
+				"de": "Europas größtes Säugetier lebt frei im Białowieża-Urwald"
+			},
+			"local": "Зубр"
+		}
+	],
+	"Braslaŭ": [
+		{
+			"kind": "by_braslau_lakes",
+			"name": {
+				"pl": "Jeziora Brasławskie",
+				"en": "Braslaw Lakes",
+				"cs": "Braslavská jezera",
+				"is": "Braslaw-vötnin",
+				"de": "Braslauer Seen"
+			},
+			"desc": {
+				"pl": "Widok z Góry Zamkowej na jeziora i zalesione wyspy",
+				"en": "The view from Castle Hill over the lakes and their wooded islands",
+				"cs": "Výhled ze Zámeckého vrchu na jezera a zalesněné ostrovy",
+				"is": "Útsýni af Kastalahæð yfir vötnin og skógivaxnar eyjar",
+				"de": "Der Blick vom Schlossberg über die Seen und ihre bewaldeten Inseln"
+			},
+			"local": "Браслаўскія азёры"
+		}
+	]
+}

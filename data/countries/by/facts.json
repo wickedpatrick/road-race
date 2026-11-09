@@ -1,0 +1,240 @@
+{
+	"Minsk": {
+		"pl": "Stolica Białorusi nad Świsłoczą; nad rzeką zachowało się Przedmieście Trockie z XIX-wiecznymi kamieniczkami",
+		"en": "The capital of Belarus on the Svislach; by the river the Trinity Suburb keeps its 19th-century houses",
+		"cs": "Hlavní město Běloruska na Svislači; u řeky se zachovalo Trojické předměstí s domky z 19. století",
+		"is": "Höfuðborg Hvíta-Rússlands við ána Svislač; við ána standa enn hús frá 19. öld í Þrenningarhverfinu",
+		"de": "Die Hauptstadt von Belarus an der Swislatsch; am Fluss steht noch die Dreifaltigkeitsvorstadt mit Häusern des 19. Jahrhunderts"
+	},
+	"Homieĺ": {
+		"pl": "Drugie co do wielkości miasto kraju, nad rzeką Soż; pałac Rumiancewów i Paskiewiczów stoi w parku nad brzegiem",
+		"en": "The country's second city, on the Sozh river; the Rumyantsev and Paskevich palace stands in a park on its bank",
+		"cs": "Druhé největší město země na řece Sož; v parku na břehu stojí palác Rumjancevů a Paskevičů",
+		"is": "Næststærsta borg landsins, við ána Sož; höll Rúmjantsev- og Paskevitsj-ættanna stendur í garði á bakkanum",
+		"de": "Die zweitgrößte Stadt des Landes am Fluss Sosch; im Park am Ufer steht der Palast der Rumjanzews und Paskewitschs"
+	},
+	"Viciebsk": {
+		"pl": "Tu w 1887 roku urodził się malarz Marc Chagall; co lato miasto gości festiwal Słowiański Bazar",
+		"en": "The painter Marc Chagall was born here in 1887; every summer the city hosts the Slavianski Bazaar festival",
+		"cs": "Roku 1887 se zde narodil malíř Marc Chagall; každé léto město hostí festival Slovanský bazar",
+		"is": "Málarinn Marc Chagall fæddist hér árið 1887; á hverju sumri er hér hátíðin Slavjanskí basar",
+		"de": "Hier wurde 1887 der Maler Marc Chagall geboren; jeden Sommer findet der Slawische Basar statt"
+	},
+	"Mahilioŭ": {
+		"pl": "Miasto nad Dnieprem; jego ratusz z wysoką wieżą odbudowano w 2008 roku według dawnych rycin",
+		"en": "A city on the Dnieper; its town hall with a tall tower was rebuilt in 2008 from old drawings",
+		"cs": "Město na Dněpru; radnici s vysokou věží znovu postavili roku 2008 podle starých rytin",
+		"is": "Borg við Dnjepr; ráðhúsið með háa turninum var endurreist árið 2008 eftir gömlum teikningum",
+		"de": "Eine Stadt am Dnepr; ihr Rathaus mit dem hohen Turm wurde 2008 nach alten Stichen wieder aufgebaut"
+	},
+	"Hrodna": {
+		"pl": "Miasto nad Niemnem, w którym mieszkała i pisała Eliza Orzeszkowa; cerkiew na Kołoży pamięta XII wiek",
+		"en": "A city on the Neman where the writer Eliza Orzeszkowa lived; the Kalozha church dates from the 12th century",
+		"cs": "Město na Němenu, kde žila spisovatelka Eliza Orzeszkowa; kostel na Koloži pochází z 12. století",
+		"is": "Borg við Nemunas þar sem rithöfundurinn Eliza Orzeszkowa bjó; Kalozha-kirkjan er frá 12. öld",
+		"de": "Eine Stadt an der Memel, in der die Schriftstellerin Eliza Orzeszkowa lebte; die Kalozha-Kirche stammt aus dem 12. Jahrhundert"
+	},
+	"Brest": {
+		"pl": "Graniczne miasto u ujścia Muchawca do Bugu; co wieczór latarnik zapala ręcznie lampy naftowe na ulicy Sowieckiej",
+		"en": "A border city where the Mukhavets meets the Bug; every evening a lamplighter lights the kerosene lamps on Savetskaya Street by hand",
+		"cs": "Pohraniční město u soutoku Muchavce s Bugem; každý večer lampář ručně rozsvěcuje petrolejové lampy v Sovětské ulici",
+		"is": "Landamæraborg þar sem Múkhavets rennur í Bug; á hverju kvöldi kveikir luktamaður á steinolíuluktum Savetskaja-götu",
+		"de": "Grenzstadt an der Mündung des Muchawez in den Bug; jeden Abend zündet ein Laternenanzünder die Petroleumlampen der Sowjetskaja-Straße an"
+	},
+	"Babrujsk": {
+		"pl": "Nazwa miasta pochodzi od bobrów, które żyły nad Berezyną; brązowy bóbr stoi w centrum",
+		"en": "The town is named after the beavers of the Berezina; a bronze beaver stands in the centre",
+		"cs": "Město je pojmenováno po bobrech z Bereziny; v centru stojí bronzový bobr",
+		"is": "Bærinn heitir eftir bjórunum í Berezínu; bjór úr bronsi stendur í miðbænum",
+		"de": "Die Stadt ist nach den Bibern der Beresina benannt; mitten im Zentrum steht ein Bronzebiber"
+	},
+	"Baranavičy": {
+		"pl": "Miasto wyrosło w latach 70. XIX wieku wokół węzła kolejowego; dziś ma muzeum kolejnictwa",
+		"en": "The town grew up in the 1870s around a railway junction; today it has a railway museum",
+		"cs": "Město vyrostlo v 70. letech 19. století kolem železničního uzlu; dnes má železniční muzeum",
+		"is": "Bærinn óx upp á áttunda áratug 19. aldar í kringum járnbrautarmót; nú er þar járnbrautasafn",
+		"de": "Die Stadt wuchs in den 1870er-Jahren um einen Eisenbahnknoten; heute hat sie ein Eisenbahnmuseum"
+	},
+	"Barysaŭ": {
+		"pl": "Miasto nad Berezyną; w pobliskiej Studziance armia Napoleona przeprawiała się przez rzekę w 1812 roku",
+		"en": "A town on the Berezina; at nearby Studzyanka Napoleon's army crossed the river in 1812",
+		"cs": "Město na Berezině; u nedaleké Studjanky překračovala Napoleonova armáda roku 1812 řeku",
+		"is": "Bær við Berezínu; við Studzjanka í grenndinni fór her Napóleons yfir ána árið 1812",
+		"de": "Eine Stadt an der Beresina; beim nahen Studjanka überquerte Napoleons Armee 1812 den Fluss"
+	},
+	"Pinsk": {
+		"pl": "Stolica Polesia nad Piną; tu w 1932 roku urodził się reporter Ryszard Kapuściński",
+		"en": "The capital of Polesia on the Pina; the reporter Ryszard Kapuściński was born here in 1932",
+		"cs": "Hlavní město Polesí na Pině; roku 1932 se zde narodil reportér Ryszard Kapuściński",
+		"is": "Höfuðstaður Polesíu við ána Pina; blaðamaðurinn Ryszard Kapuściński fæddist hér árið 1932",
+		"de": "Die Hauptstadt Polesiens an der Pina; hier wurde 1932 der Reporter Ryszard Kapuściński geboren"
+	},
+	"Orša": {
+		"pl": "Stary węzeł kolejowy nad Dnieprem; tu w 1930 roku urodził się pisarz Uładzimir Karatkiewicz",
+		"en": "An old railway junction on the Dnieper; the writer Uladzimir Karatkievich was born here in 1930",
+		"cs": "Starý železniční uzel na Dněpru; roku 1930 se zde narodil spisovatel Uladzimir Karatkevič",
+		"is": "Gömul járnbrautarmót við Dnjepr; rithöfundurinn Uladzimir Karatkevitsj fæddist hér árið 1930",
+		"de": "Ein alter Eisenbahnknoten am Dnepr; hier wurde 1930 der Schriftsteller Uladsimir Karatkewitsch geboren"
+	},
+	"Mazyr": {
+		"pl": "Miasto na wzgórzach nad Prypecią; ze stoku przy Górze Zamkowej zjeżdża się zimą na nartach",
+		"en": "A town on hills above the Pripyat; in winter people ski down the slope by Castle Hill",
+		"cs": "Město na kopcích nad Pripjatí; v zimě se ze svahu u Zámeckého vrchu lyžuje",
+		"is": "Bær á hæðum ofan við Prípjat; á veturna renna menn sér á skíðum niður brekkuna við Kastalahæð",
+		"de": "Eine Stadt auf Hügeln über dem Pripjat; im Winter fährt man am Schlossberg Ski"
+	},
+	"Lida": {
+		"pl": "Zamek w Lidzie zbudował w latach 20. XIV wieku wielki książę Giedymin; miasto słynie też z browaru",
+		"en": "Lida Castle was built in the 1320s by Grand Duke Gediminas; the town is also known for its brewery",
+		"cs": "Hrad v Lidě postavil ve 20. letech 14. století velkokníže Gediminas; město je známé i pivovarem",
+		"is": "Kastalinn í Lida reisti Gediminas stórfursti á þriðja áratug 14. aldar; bærinn er líka þekktur fyrir brugghúsið",
+		"de": "Die Burg Lida ließ Großfürst Gediminas in den 1320er-Jahren bauen; die Stadt ist auch für ihre Brauerei bekannt"
+	},
+	"Maladziečna": {
+		"pl": "Miasto festiwali i muzyki; stoi tu pomnik Michała Kleofasa Ogińskiego, autora poloneza „Pożegnanie Ojczyzny”",
+		"en": "A town of festivals and music, with a monument to Michał Kleofas Ogiński, composer of the polonaise 'Farewell to the Homeland'",
+		"cs": "Město festivalů a hudby s pomníkem Michała Kleofase Ogińského, autora polonézy Rozloučení s vlastí",
+		"is": "Bær hátíða og tónlistar með minnisvarða um Michał Kleofas Ogiński, höfund pólónesunnar Kveðja til föðurlandsins",
+		"de": "Eine Stadt der Festivals und der Musik mit einem Denkmal für Michał Kleofas Ogiński, den Komponisten der Polonaise „Abschied von der Heimat“"
+	},
+	"Polack": {
+		"pl": "Jedno z najstarszych miast regionu, wzmiankowane w 862 roku; tu urodził się drukarz Franciszek Skaryna",
+		"en": "One of the oldest towns in the region, first mentioned in 862; the printer Francysk Skaryna was born here",
+		"cs": "Jedno z nejstarších měst regionu, poprvé zmíněné roku 862; narodil se zde tiskař Francisk Skaryna",
+		"is": "Einn elsti bær svæðisins, fyrst nefndur árið 862; prentarinn Francysk Skaryna fæddist hér",
+		"de": "Eine der ältesten Städte der Region, 862 erstmals erwähnt; hier wurde der Buchdrucker Francysk Skaryna geboren"
+	},
+	"Navahrudak": {
+		"pl": "Tu dorastał Adam Mickiewicz; w jego domu jest muzeum, a nad miastem stoją ruiny zamku",
+		"en": "Adam Mickiewicz grew up here; his house is a museum, and castle ruins stand above the town",
+		"cs": "Vyrůstal zde Adam Mickiewicz; v jeho domě je muzeum a nad městem stojí zřícenina hradu",
+		"is": "Hér ólst Adam Mickiewicz upp; í húsi hans er safn og kastalarústir gnæfa yfir bænum",
+		"de": "Hier wuchs Adam Mickiewicz auf; sein Haus ist ein Museum, über der Stadt stehen Burgruinen"
+	},
+	"Niasviž": {
+		"pl": "Dawna siedziba Radziwiłłów; zespół pałacowo-zamkowy wpisano na listę UNESCO w 2005 roku",
+		"en": "The old seat of the Radziwiłł family; its palace and castle complex has been on the UNESCO list since 2005",
+		"cs": "Bývalé sídlo Radziwiłłů; zámecký komplex je od roku 2005 na seznamu UNESCO",
+		"is": "Fornt aðsetur Radziwiłł-ættarinnar; hallar- og kastalasamstæðan er á heimsminjaskrá UNESCO frá 2005",
+		"de": "Der alte Sitz der Radziwiłłs; das Schloss steht seit 2005 auf der UNESCO-Welterbeliste"
+	},
+	"Mir": {
+		"pl": "Małe miasteczko z wielkim zamkiem z przełomu XV i XVI wieku, wpisanym na listę UNESCO w 2000 roku",
+		"en": "A small town with a great castle from around 1500, on the UNESCO list since 2000",
+		"cs": "Malé městečko s velkým hradem z doby kolem roku 1500, od roku 2000 na seznamu UNESCO",
+		"is": "Lítill bær með miklum kastala frá því um 1500, á heimsminjaskrá UNESCO frá árinu 2000",
+		"de": "Ein kleiner Ort mit einer großen Burg von etwa 1500, seit 2000 UNESCO-Welterbe"
+	},
+	"Kamianiec": {
+		"pl": "Brama do Puszczy Białowieskiej, najstarszego lasu nizinnego Europy, gdzie żyją żubry",
+		"en": "The gateway to the Białowieża Forest, Europe's oldest lowland forest, home of the wisent",
+		"cs": "Brána do Bělověžského pralesa, nejstaršího nížinného lesa Evropy, kde žijí zubři",
+		"is": "Hliðið að Białowieża-skógi, elsta láglendisskógi Evrópu, þar sem vísundar lifa",
+		"de": "Das Tor zum Białowieża-Urwald, Europas ältestem Tieflandwald, in dem Wisente leben"
+	},
+	"Braslaŭ": {
+		"pl": "Miasteczko wśród ponad trzydziestu Jezior Brasławskich; największe z nich to Dryświaty",
+		"en": "A small town among more than thirty Braslaw Lakes; the biggest of them is Drysviaty",
+		"cs": "Městečko mezi více než třiceti Braslavskými jezery; největší z nich je Drysvjaty",
+		"is": "Smábær á milli meira en þrjátíu Braslaw-vatna; það stærsta heitir Drysvjaty",
+		"de": "Ein Städtchen zwischen mehr als dreißig Braslauer Seen; der größte ist der Drysswjaty"
+	},
+	"Žodzina": {
+		"pl": "Tu powstają ogromne wywrotki BiełAZ, jedne z największych na świecie",
+		"en": "The giant BelAZ dump trucks, some of the largest in the world, are built here",
+		"cs": "Vyrábějí se zde obří sklápěče BělAZ, jedny z největších na světě",
+		"is": "Hér eru smíðaðir risastórir BelAZ-trukkar, sumir þeir stærstu í heimi",
+		"de": "Hier werden die riesigen BelAZ-Muldenkipper gebaut, einige der größten der Welt"
+	},
+	"Stoŭbcy": {
+		"pl": "Niedaleko stąd, w Akinczycach, urodził się w 1882 roku poeta Jakub Kołas",
+		"en": "The poet Yakub Kolas was born near here, at Akinchytsy, in 1882",
+		"cs": "Nedaleko odsud, v Akinčycích, se roku 1882 narodil básník Jakub Kolas",
+		"is": "Skáldið Jakub Kolas fæddist skammt héðan, í Akinchytsy, árið 1882",
+		"de": "Nicht weit von hier, in Akintschyzy, wurde 1882 der Dichter Jakub Kolas geboren"
+	},
+	"Dziaržynsk": {
+		"pl": "W pobliżu wznosi się Góra Dzierżyńska, 345 m, najwyższy punkt Białorusi",
+		"en": "Nearby rises Dzyarzhynskaya Hill, 345 m, the highest point in Belarus",
+		"cs": "Nedaleko se zvedá Dzeržinská hora, 345 m, nejvyšší bod Běloruska",
+		"is": "Í grenndinni rís Dzjarzjynskaja-hæð, 345 m, hæsti staður Hvíta-Rússlands",
+		"de": "In der Nähe erhebt sich der Dserschinskaja-Berg, 345 m, der höchste Punkt von Belarus"
+	},
+	"Smilavičy": {
+		"pl": "Tu w 1893 roku urodził się malarz Chaïm Soutine",
+		"en": "The painter Chaïm Soutine was born here in 1893",
+		"cs": "Roku 1893 se zde narodil malíř Chaïm Soutine",
+		"is": "Málarinn Chaïm Soutine fæddist hér árið 1893",
+		"de": "Hier wurde 1893 der Maler Chaïm Soutine geboren"
+	},
+	"Lahojsk": {
+		"pl": "Na zboczach wokół miasteczka działa jeden z nielicznych w kraju ośrodków narciarskich",
+		"en": "The slopes around the town hold one of the country's few ski resorts",
+		"cs": "Na svazích kolem městečka je jedno z mála lyžařských středisek v zemi",
+		"is": "Í brekkunum kringum bæinn er eitt af fáum skíðasvæðum landsins",
+		"de": "An den Hängen um den Ort liegt eines der wenigen Skigebiete des Landes"
+	},
+	"Žlobin": {
+		"pl": "Miasto nad Dnieprem z dużą hutą stali",
+		"en": "A town on the Dnieper with a large steelworks",
+		"cs": "Město na Dněpru s velkou ocelárnou",
+		"is": "Bær við Dnjepr með stóru stálveri",
+		"de": "Eine Stadt am Dnepr mit einem großen Stahlwerk"
+	},
+	"Rečyca": {
+		"pl": "Niedaleko miasta w 1964 roku znaleziono pierwszą białoruską ropę naftową",
+		"en": "The first Belarusian oil was found near the town in 1964",
+		"cs": "Nedaleko města byla roku 1964 objevena první běloruská ropa",
+		"is": "Fyrsta hvítrússneska olían fannst nálægt bænum árið 1964",
+		"de": "Nahe der Stadt wurde 1964 das erste belarussische Erdöl gefunden"
+	},
+	"Valožyn": {
+		"pl": "W XIX wieku działała tu słynna jesziwa, jedna z najważniejszych szkół talmudycznych Europy",
+		"en": "In the 19th century the famous Volozhin yeshiva here was one of Europe's leading Talmudic schools",
+		"cs": "V 19. století zde působila slavná ješiva, jedna z předních talmudských škol Evropy",
+		"is": "Á 19. öld starfaði hér hinn frægi jeshíva-skóli, einn helsti talmúdskóli Evrópu",
+		"de": "Im 19. Jahrhundert wirkte hier die berühmte Jeschiwa, eine der führenden Talmudschulen Europas"
+	},
+	"Biarozaŭka": {
+		"pl": "Huta szkła Niemen wytwarza tu kolorowe szkło od ponad stu lat",
+		"en": "The Neman glassworks has made coloured glass here for over a hundred years",
+		"cs": "Sklárna Neman zde vyrábí barevné sklo už přes sto let",
+		"is": "Glerverksmiðjan Neman hefur framleitt litað gler hér í meira en hundrað ár",
+		"de": "Die Glashütte Neman stellt hier seit über hundert Jahren farbiges Glas her"
+	},
+	"Miadziel": {
+		"pl": "Miasteczko nad Naroczą, największym jeziorem Białorusi",
+		"en": "A small town by Narach, the largest lake in Belarus",
+		"cs": "Městečko u Naroči, největšího jezera Běloruska",
+		"is": "Smábær við Narach, stærsta stöðuvatn Hvíta-Rússlands",
+		"de": "Ein Städtchen am Narotsch, dem größten See von Belarus"
+	},
+	"Škloŭ": {
+		"pl": "Miasteczko ogórków: stoi tu pomnik ogórka, a latem odbywa się święto ogórka",
+		"en": "The cucumber town: it has a cucumber monument and a cucumber festival in summer",
+		"cs": "Okurkové městečko: stojí tu pomník okurky a v létě se slaví okurkový svátek",
+		"is": "Gúrkubærinn: þar er minnisvarði um gúrku og gúrkuhátíð á sumrin",
+		"de": "Die Gurkenstadt: Hier steht ein Gurkendenkmal, im Sommer ist Gurkenfest"
+	},
+	"Slonim": {
+		"pl": "Nad Szczarą stoi Wielka Synagoga z 1642 roku",
+		"en": "The Great Synagogue of 1642 stands by the Shchara river",
+		"cs": "U řeky Ščary stojí Velká synagoga z roku 1642",
+		"is": "Við ána Sjtsjara stendur Stóra samkunduhúsið frá 1642",
+		"de": "An der Schtschara steht die Große Synagoge von 1642"
+	},
+	"Biaroza": {
+		"pl": "Zachowały się tu ruiny klasztoru kartuzów z XVII wieku",
+		"en": "The ruins of a 17th-century Carthusian monastery survive here",
+		"cs": "Zachovaly se zde zříceniny kartuziánského kláštera ze 17. století",
+		"is": "Hér standa rústir kartúsíanaklausturs frá 17. öld",
+		"de": "Hier stehen die Ruinen eines Kartäuserklosters aus dem 17. Jahrhundert"
+	},
+	"Luniniec": {
+		"pl": "Węzeł kolejowy wśród poleskich bagien, nazywany bramą Polesia",
+		"en": "A railway junction among the Polesian marshes, called the gateway to Polesia",
+		"cs": "Železniční uzel uprostřed poleských bažin, nazývaný branou Polesí",
+		"is": "Járnbrautarmót í Polesíu-mýrunum, kallað hlið Polesíu",
+		"de": "Ein Eisenbahnknoten in den Sümpfen Polesiens, Tor nach Polesien genannt"
+	}
+}
