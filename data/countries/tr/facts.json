@@ -1,0 +1,576 @@
+{
+	"İstanbul": {
+		"pl": "Jedyne wielkie miasto na dwóch kontynentach, rozdzielonych Bosforem; dawny Konstantynopol, stolica Bizancjum i Imperium Osmańskiego",
+		"en": "The only great city on two continents, split by the Bosporus; once Constantinople, capital of Byzantium and the Ottoman Empire",
+		"cs": "Jediné velkoměsto na dvou kontinentech, rozdělených Bosporem; dříve Konstantinopol, hlavní město Byzance a Osmanské říše",
+		"is": "Eina stórborgin í tveimur heimsálfum, sem Bospórussund skilur að; áður Konstantínópel, höfuðborg Býsans og Tyrkjaveldis",
+		"de": "Die einzige Großstadt auf zwei Kontinenten, getrennt vom Bosporus; einst Konstantinopel, Hauptstadt von Byzanz und des Osmanischen Reiches"
+	},
+	"Ankara": {
+		"pl": "Stolica Turcji od 1923 roku; dawna Ancyra, od której nazwę wzięły kozy i koty angorskie",
+		"en": "Turkey's capital since 1923; the ancient Ancyra, which gave its name to Angora goats and cats",
+		"cs": "Hlavní město Turecka od roku 1923; starověká Ancyra, po níž se jmenují angorské kozy a kočky",
+		"is": "Höfuðborg Tyrklands frá 1923; hin forna Ancyra, sem angórugeitur og angórukettir eru kenndir við",
+		"de": "Hauptstadt der Türkei seit 1923; das antike Ancyra, nach dem Angoraziegen und Angorakatzen benannt sind"
+	},
+	"İzmir": {
+		"pl": "Trzecie miasto Turcji, dawna Smyrna, jedno z miejsc uważanych za ojczyznę Homera",
+		"en": "Turkey's third city, the ancient Smyrna, one of the places said to be Homer's birthplace",
+		"cs": "Třetí největší město Turecka, starověká Smyrna, jedno z míst považovaných za Homérovo rodiště",
+		"is": "Þriðja stærsta borg Tyrklands, hin forna Smyrna, einn þeirra staða sem sagðir eru fæðingarstaður Hómers",
+		"de": "Die drittgrößte Stadt der Türkei, das antike Smyrna, einer der Orte, die als Homers Geburtsort gelten"
+	},
+	"Bursa": {
+		"pl": "Pierwsza stolica Imperium Osmańskiego (od 1326 roku), miasto jedwabiu, term i kebabu İskender",
+		"en": "The first Ottoman capital (from 1326), a city of silk, hot springs and the İskender kebab",
+		"cs": "První hlavní město Osmanské říše (od roku 1326), město hedvábí, termálních lázní a kebabu İskender",
+		"is": "Fyrsta höfuðborg Tyrkjaveldis (frá 1326), borg silkis, heitra lauga og İskender-kebabsins",
+		"de": "Die erste osmanische Hauptstadt (ab 1326), Stadt der Seide, der Thermalbäder und des İskender-Kebabs"
+	},
+	"Gaziantep": {
+		"pl": "Stolica baklawy i pistacji; w muzeum Zeugmy można zobaczyć mozaikę „Cygańska dziewczyna”",
+		"en": "The capital of baklava and pistachios; the Zeugma museum holds the \"Gypsy Girl\" mosaic",
+		"cs": "Hlavní město baklavy a pistácií; v muzeu Zeugmy je mozaika „Cikánská dívka“",
+		"is": "Höfuðborg baklava og pistasíuhneta; í Zeugma-safninu er mósaíkmyndin „Sígaunastúlkan“",
+		"de": "Hauptstadt der Baklava und der Pistazien; im Zeugma-Museum ist das Mosaik „Zigeunermädchen“ zu sehen"
+	},
+	"Adana": {
+		"pl": "Miasto nad rzeką Seyhan na żyznej równinie Çukurova; od niego nazwę wziął ostry kebab Adana",
+		"en": "A city on the Seyhan river in the fertile Çukurova plain; the spicy Adana kebab is named after it",
+		"cs": "Město na řece Seyhan v úrodné nížině Çukurova; podle něj se jmenuje pálivý kebab Adana",
+		"is": "Borg við ána Seyhan á frjósömu Çukurova-sléttunni; sterki Adana-kebabinn er kenndur við hana",
+		"de": "Stadt am Seyhan in der fruchtbaren Çukurova-Ebene; der scharfe Adana-Kebab ist nach ihr benannt"
+	},
+	"Konya": {
+		"pl": "Dawne Ikonion, stolica Seldżuków Rumu; tu pochowano poetę Rumiego, od którego wywodzą się wirujący derwisze",
+		"en": "The ancient Iconium, capital of the Seljuks of Rum; the poet Rumi, from whom the whirling dervishes descend, is buried here",
+		"cs": "Starověké Ikonion, hlavní město Rúmského sultanátu; je tu pohřben básník Rúmí, od něhož pocházejí tančící dervišové",
+		"is": "Hin forna Ikonion, höfuðborg Seljúka í Rúm; hér er skáldið Rúmí grafið, sem dansandi dervísarnir rekja sig til",
+		"de": "Das antike Ikonion, Hauptstadt der Rum-Seldschuken; hier liegt der Dichter Rumi begraben, auf den die tanzenden Derwische zurückgehen"
+	},
+	"Antalya": {
+		"pl": "Brama Riwiery Tureckiej; stare miasto Kaleiçi schodzi do dawnego portu pod klifem",
+		"en": "The gateway to the Turkish Riviera; the old town of Kaleiçi runs down to the old harbour under the cliffs",
+		"cs": "Brána Turecké riviéry; staré město Kaleiçi sestupuje ke starému přístavu pod útesy",
+		"is": "Hliðið að tyrknesku rívíerunni; gamli bærinn Kaleiçi teygir sig niður að gömlu höfninni undir klettunum",
+		"de": "Das Tor zur Türkischen Riviera; die Altstadt Kaleiçi reicht hinab zum alten Hafen unter den Klippen"
+	},
+	"Kayseri": {
+		"pl": "U stóp wulkanu Erciyes (3917 m); słynie z pastırmy, suszonej przyprawionej wołowiny",
+		"en": "At the foot of the Erciyes volcano (3917 m); famous for pastırma, cured spiced beef",
+		"cs": "Na úpatí sopky Erciyes (3917 m); proslulé pastırmou, sušeným kořeněným hovězím",
+		"is": "Við rætur eldfjallsins Erciyes (3917 m); fræg fyrir pastırma, þurrkað kryddað nautakjöt",
+		"de": "Am Fuß des Vulkans Erciyes (3917 m); berühmt für Pastırma, luftgetrocknetes gewürztes Rindfleisch"
+	},
+	"Mersin": {
+		"pl": "Jeden z największych portów Turcji, wśród gajów cytrusowych nad Morzem Śródziemnym",
+		"en": "One of Turkey's biggest ports, among citrus groves on the Mediterranean",
+		"cs": "Jeden z největších přístavů Turecka, mezi citrusovými sady u Středozemního moře",
+		"is": "Ein stærsta höfn Tyrklands, innan um sítrusgarða við Miðjarðarhafið",
+		"de": "Einer der größten Häfen der Türkei, zwischen Zitrushainen am Mittelmeer"
+	},
+	"Diyarbakır": {
+		"pl": "Nad Tygrysem; czarne bazaltowe mury miasta ciągną się prawie 6 km i razem z ogrodami Hevsel są na liście UNESCO",
+		"en": "On the Tigris; the city's black basalt walls run for almost 6 km and are on the UNESCO list with the Hevsel Gardens",
+		"cs": "Na Tigridu; černé čedičové hradby města jsou dlouhé téměř 6 km a se zahradami Hevsel jsou na seznamu UNESCO",
+		"is": "Við Tígrisfljót; svartir basaltmúrar borgarinnar eru nærri 6 km langir og á lista UNESCO ásamt Hevsel-görðunum",
+		"de": "Am Tigris; die schwarzen Basaltmauern der Stadt sind fast 6 km lang und stehen mit den Hevsel-Gärten auf der UNESCO-Liste"
+	},
+	"Şanlıurfa": {
+		"pl": "Według tradycji miejsce narodzin Abrahama; niedaleko leży Göbekli Tepe, sanktuarium o ponad 6 tysięcy lat starsze od Stonehenge",
+		"en": "By tradition Abraham's birthplace; nearby lies Göbekli Tepe, a sanctuary over 6000 years older than Stonehenge",
+		"cs": "Podle tradice rodiště Abraháma; nedaleko leží Göbekli Tepe, svatyně o více než 6000 let starší než Stonehenge",
+		"is": "Samkvæmt hefðinni fæðingarstaður Abrahams; skammt frá er Göbekli Tepe, helgistaður meira en 6000 árum eldri en Stonehenge",
+		"de": "Der Überlieferung nach Abrahams Geburtsort; in der Nähe liegt Göbekli Tepe, ein Heiligtum, über 6000 Jahre älter als Stonehenge"
+	},
+	"Eskişehir": {
+		"pl": "Miasto studentów nad rzeką Porsuk, po której pływają gondole; w okolicy wydobywa się piankę morską na fajki",
+		"en": "A student city on the Porsuk river, with gondolas on it; meerschaum for pipes is mined nearby",
+		"cs": "Studentské město na řece Porsuk, po níž plují gondoly; v okolí se těží mořská pěna na dýmky",
+		"is": "Námsmannaborg við ána Porsuk, þar sem gondólar sigla; í grenndinni er sæfrauð til pípugerðar unnið úr jörðu",
+		"de": "Studentenstadt am Fluss Porsuk, auf dem Gondeln fahren; in der Nähe wird Meerschaum für Pfeifen abgebaut"
+	},
+	"Denizli": {
+		"pl": "Obok miasta białe wapienne tarasy Pamukkale i ruiny Hierapolis; symbolem miasta jest kogut",
+		"en": "Next to the city lie the white limestone terraces of Pamukkale and the ruins of Hierapolis; the city's emblem is a rooster",
+		"cs": "U města leží bílé vápencové terasy Pamukkale a ruiny Hierapole; symbolem města je kohout",
+		"is": "Við borgina eru hvítir kalksteinsstallar Pamukkale og rústir Hierapolis; tákn borgarinnar er hani",
+		"de": "Neben der Stadt liegen die weißen Kalksinterterrassen von Pamukkale und die Ruinen von Hierapolis; Wahrzeichen der Stadt ist ein Hahn"
+	},
+	"Samsun": {
+		"pl": "Tu 19 maja 1919 roku wylądował Mustafa Kemal, zaczynając turecką wojnę o niepodległość",
+		"en": "Mustafa Kemal landed here on 19 May 1919, starting the Turkish War of Independence",
+		"cs": "Zde 19. května 1919 přistál Mustafa Kemal a zahájil tureckou válku za nezávislost",
+		"is": "Hér steig Mustafa Kemal á land 19. maí 1919 og hóf tyrkneska sjálfstæðisstríðið",
+		"de": "Hier landete Mustafa Kemal am 19. Mai 1919 und begann den türkischen Unabhängigkeitskrieg"
+	},
+	"Malatya": {
+		"pl": "Stolica moreli: z jej sadów pochodzi duża część suszonych moreli na świecie",
+		"en": "The apricot capital: a large share of the world's dried apricots comes from its orchards",
+		"cs": "Hlavní město meruněk: z jejích sadů pochází velká část sušených meruněk na světě",
+		"is": "Höfuðborg apríkósanna: stór hluti þurrkaðra apríkósa heimsins kemur úr görðum hennar",
+		"de": "Die Aprikosenhauptstadt: ein großer Teil der getrockneten Aprikosen der Welt stammt aus ihren Gärten"
+	},
+	"Van": {
+		"pl": "Nad sodowym jeziorem Van, największym w Turcji; słynie z białych kotów o różnokolorowych oczach",
+		"en": "On the soda lake of Van, Turkey's largest; famous for its white cats with odd-coloured eyes",
+		"cs": "U sodného jezera Van, největšího v Turecku; proslulé bílými kočkami s různobarevnýma očima",
+		"is": "Við sódavatnið Van, það stærsta í Tyrklandi; frægt fyrir hvíta ketti með mislit augu",
+		"de": "Am Sodasee Van, dem größten der Türkei; berühmt für seine weißen Katzen mit verschiedenfarbigen Augen"
+	},
+	"Erzurum": {
+		"pl": "Jedno z najwyżej położonych miast Turcji (blisko 1900 m), zimą bardzo mroźne; na stokach Palandöken jeździ się na nartach",
+		"en": "One of Turkey's highest cities (almost 1900 m), bitterly cold in winter; skiers come to the slopes of Palandöken",
+		"cs": "Jedno z nejvýše položených měst Turecka (téměř 1900 m), v zimě velmi mrazivé; na svazích Palandökenu se lyžuje",
+		"is": "Ein hæst liggjandi borg Tyrklands (nærri 1900 m), nístingsköld á veturna; skíðafólk sækir í brekkur Palandöken",
+		"de": "Eine der höchstgelegenen Städte der Türkei (fast 1900 m), im Winter bitterkalt; an den Hängen des Palandöken wird Ski gefahren"
+	},
+	"Sivas": {
+		"pl": "Tu w 1919 roku obradował Kongres Sivaski; z okolic pochodzą psy kangal",
+		"en": "The Sivas Congress met here in 1919; the Kangal dogs come from the surrounding province",
+		"cs": "Zde v roce 1919 zasedal Sivaský kongres; z okolí pocházejí psi kangal",
+		"is": "Sivas-þingið kom hér saman 1919; kangal-hundarnir eru úr héraðinu í kring",
+		"de": "Hier tagte 1919 der Kongress von Sivas; aus der Provinz stammen die Kangal-Hunde"
+	},
+	"Alanya": {
+		"pl": "Twierdza Seldżuków na skalistym cyplu nad morzem, a pod nią jaskinia Damlataş",
+		"en": "A Seljuk fortress on a rocky headland over the sea, with the Damlataş cave below",
+		"cs": "Seldžucká pevnost na skalnatém mysu nad mořem, pod ní jeskyně Damlataş",
+		"is": "Virki Seljúka á klettahöfða yfir sjónum og Damlataş-hellirinn fyrir neðan",
+		"de": "Eine Seldschukenfestung auf einem Felsvorsprung über dem Meer, darunter die Damlataş-Höhle"
+	},
+	"Trabzon": {
+		"pl": "Dawny Trapezunt nad Morzem Czarnym, stolica Cesarstwa Trapezuntu (1204–1461); w górach klasztor Sumela",
+		"en": "The old Trebizond on the Black Sea, capital of the Empire of Trebizond (1204–1461); the Sumela monastery is in the mountains",
+		"cs": "Starý Trapezunt u Černého moře, hlavní město Trapezuntského císařství (1204–1461); v horách klášter Sumela",
+		"is": "Hin forna Trapezunta við Svartahaf, höfuðborg Trapezuntaríkisins (1204–1461); Sumela-klaustrið er í fjöllunum",
+		"de": "Das alte Trapezunt am Schwarzen Meer, Hauptstadt des Kaiserreichs Trapezunt (1204–1461); in den Bergen das Sumela-Kloster"
+	},
+	"Çanakkale": {
+		"pl": "Nad Dardanelami; niedaleko leżą ruiny Troi, a na nabrzeżu stoi drewniany koń z filmu „Troja”",
+		"en": "On the Dardanelles; the ruins of Troy are nearby, and the wooden horse from the film \"Troy\" stands on the waterfront",
+		"cs": "U Dardanel; nedaleko leží ruiny Tróje a na nábřeží stojí dřevěný kůň z filmu „Trója“",
+		"is": "Við Dardanellasund; rústir Tróju eru skammt frá og tréhesturinn úr kvikmyndinni „Troy“ stendur við höfnina",
+		"de": "An den Dardanellen; die Ruinen von Troja liegen in der Nähe, und das Holzpferd aus dem Film „Troja“ steht an der Uferpromenade"
+	},
+	"Bodrum": {
+		"pl": "Dawny Halikarnas, gdzie stało Mauzoleum, jeden z siedmiu cudów świata; urodził się tu Herodot",
+		"en": "The ancient Halicarnassus, home of the Mausoleum, one of the Seven Wonders; Herodotus was born here",
+		"cs": "Starověký Halikarnassos s Mauzoleem, jedním ze sedmi divů světa; narodil se tu Hérodotos",
+		"is": "Hin forna Halikarnassos, þar sem grafhýsið Mausoleum stóð, eitt af sjö undrum veraldar; Heródótos fæddist hér",
+		"de": "Das antike Halikarnassos mit dem Mausoleum, einem der sieben Weltwunder; Herodot wurde hier geboren"
+	},
+	"Edirne": {
+		"pl": "Dawna stolica osmańska przy granicy z Grecją i Bułgarią; co lato odbywają się tu zapasy w oliwie Kırkpınar",
+		"en": "A former Ottoman capital by the Greek and Bulgarian borders; the Kırkpınar oil wrestling is held here every summer",
+		"cs": "Bývalé osmanské hlavní město u hranic s Řeckem a Bulharskem; každé léto se tu koná zápas v oleji Kırkpınar",
+		"is": "Fyrrum höfuðborg Tyrkjaveldis við landamæri Grikklands og Búlgaríu; olíuglíman Kırkpınar fer hér fram á hverju sumri",
+		"de": "Ehemalige osmanische Hauptstadt an der Grenze zu Griechenland und Bulgarien; jeden Sommer findet hier das Ölringen von Kırkpınar statt"
+	},
+	"Fethiye": {
+		"pl": "W skałach nad miastem wykuto licyjskie grobowce; obok laguna Ölüdeniz i paralotniarze startujący z góry Babadağ",
+		"en": "Lycian tombs are carved into the cliffs above the town; nearby the Ölüdeniz lagoon and paragliders taking off from Mount Babadağ",
+		"cs": "Ve skalách nad městem jsou vytesány lýkijské hrobky; nedaleko laguna Ölüdeniz a paraglidisté startující z hory Babadağ",
+		"is": "Lýkískar grafir eru höggnar í klettana ofan við bæinn; skammt frá er Ölüdeniz-lónið og svifvængjafólk sem tekur á loft af Babadağ",
+		"de": "Lykische Felsgräber sind in die Klippen über der Stadt gehauen; nahebei die Lagune Ölüdeniz und Gleitschirmflieger vom Berg Babadağ"
+	},
+	"Rize": {
+		"pl": "Stolica tureckiej herbaty: krzewy herbaciane rosną na stromych zboczach nad Morzem Czarnym",
+		"en": "The capital of Turkish tea: tea bushes grow on the steep slopes above the Black Sea",
+		"cs": "Hlavní město turecského čaje: čajovníky rostou na strmých svazích nad Černým mořem",
+		"is": "Höfuðborg tyrknesks tes: terunnar vaxa í bröttum hlíðum ofan við Svartahaf",
+		"de": "Hauptstadt des türkischen Tees: Teesträucher wachsen an den steilen Hängen über dem Schwarzen Meer"
+	},
+	"Kars": {
+		"pl": "Miasto na wyżynie z kamiennymi kamienicami z czasów rosyjskich (1878–1918); niedaleko ruiny Ani, średniowiecznej stolicy ormiańskiej",
+		"en": "A highland city with stone houses from the Russian period (1878–1918); nearby lie the ruins of Ani, a medieval Armenian capital",
+		"cs": "Město na náhorní plošině s kamennými domy z ruského období (1878–1918); nedaleko ruiny Ani, středověkého arménského hlavního města",
+		"is": "Hálendisborg með steinhúsum frá rússneska tímanum (1878–1918); skammt frá eru rústir Ani, armenskrar höfuðborgar á miðöldum",
+		"de": "Eine Hochlandstadt mit Steinhäusern aus der russischen Zeit (1878–1918); in der Nähe die Ruinen von Ani, einer mittelalterlichen armenischen Hauptstadt"
+	},
+	"Safranbolu": {
+		"pl": "Miasteczko osmańskich domów z muru pruskiego, wpisane na listę UNESCO; nazwę zawdzięcza szafranowi",
+		"en": "A town of Ottoman half-timbered houses on the UNESCO list; it is named after saffron",
+		"cs": "Městečko osmanských hrázděných domů na seznamu UNESCO; jméno má po šafránu",
+		"is": "Bær tyrkneskra bindingsverkshúsa á lista UNESCO; hann er kenndur við saffran",
+		"de": "Ein Städtchen osmanischer Fachwerkhäuser auf der UNESCO-Liste; benannt nach dem Safran"
+	},
+	"Selçuk": {
+		"pl": "Przy ruinach Efezu; tu stała świątynia Artemidy, jeden z siedmiu cudów świata",
+		"en": "By the ruins of Ephesus; the Temple of Artemis, one of the Seven Wonders, stood here",
+		"cs": "U ruin Efesu; stával tu Artemidin chrám, jeden ze sedmi divů světa",
+		"is": "Við rústir Efesus; hér stóð musteri Artemisar, eitt af sjö undrum veraldar",
+		"de": "Bei den Ruinen von Ephesos; hier stand der Tempel der Artemis, eines der sieben Weltwunder"
+	},
+	"Göreme": {
+		"pl": "W sercu Kapadocji: kominy wróżek, kościoły wykute w skale i o świcie dziesiątki balonów",
+		"en": "In the heart of Cappadocia: fairy chimneys, churches cut into the rock and dozens of balloons at dawn",
+		"cs": "V srdci Kappadokie: pohádkové komíny, kostely vytesané do skály a za úsvitu desítky balonů",
+		"is": "Í hjarta Kappadókíu: álfastrompar, kirkjur höggnar í klettinn og tugir loftbelgja í dögun",
+		"de": "Im Herzen Kappadokiens: Feenkamine, in den Fels gehauene Kirchen und im Morgengrauen Dutzende Ballone"
+	},
+	"Uzunköprü": {
+		"pl": "Nazwa znaczy „długi most”: osmański kamienny most z XV wieku ma blisko 1400 m i 174 łuki",
+		"en": "The name means \"long bridge\": the 15th-century Ottoman stone bridge is almost 1400 m long, with 174 arches",
+		"cs": "Jméno znamená „dlouhý most“: osmanský kamenný most z 15. století má téměř 1400 m a 174 oblouků",
+		"is": "Nafnið merkir „langa brú“: tyrkneska steinbrúin frá 15. öld er nærri 1400 m löng með 174 boga",
+		"de": "Der Name bedeutet „lange Brücke“: die osmanische Steinbrücke aus dem 15. Jahrhundert ist fast 1400 m lang, mit 174 Bögen"
+	},
+	"Lüleburgaz": {
+		"pl": "Meczet Sokollu Mehmeda Paszy z XVI wieku zaprojektował architekt Sinan",
+		"en": "The 16th-century Sokollu Mehmed Pasha mosque was designed by the architect Sinan",
+		"cs": "Mešitu Sokollu Mehmeda paši z 16. století navrhl architekt Sinan",
+		"is": "Sokollu Mehmed Pasha-moskan frá 16. öld hannaði arkitektinn Sinan",
+		"de": "Die Sokollu-Mehmed-Pascha-Moschee aus dem 16. Jahrhundert entwarf der Architekt Sinan"
+	},
+	"İzmit": {
+		"pl": "Dawna Nikomedia, przez kilka lat stolica cesarza Dioklecjana",
+		"en": "The ancient Nicomedia, for some years the capital of the emperor Diocletian",
+		"cs": "Starověká Nikomédie, několik let sídlo císaře Diokleciána",
+		"is": "Hin forna Nikómedía, um nokkurra ára skeið höfuðborg Díókletíanusar keisara",
+		"de": "Das antike Nikomedia, einige Jahre lang Residenz des Kaisers Diokletian"
+	},
+	"Bolu": {
+		"pl": "Lasy i górskie jeziora Abant i Yedigöller; kucharze z pobliskiego Mengen słyną w całej Turcji",
+		"en": "Forests and the mountain lakes of Abant and Yedigöller; the cooks of nearby Mengen are famous all over Turkey",
+		"cs": "Lesy a horská jezera Abant a Yedigöller; kuchaři z nedalekého Mengenu jsou proslulí po celém Turecku",
+		"is": "Skógar og fjallavötnin Abant og Yedigöller; kokkarnir frá Mengen í grenndinni eru frægir um allt Tyrkland",
+		"de": "Wälder und die Bergseen Abant und Yedigöller; die Köche aus dem nahen Mengen sind in der ganzen Türkei berühmt"
+	},
+	"Ezine": {
+		"pl": "Słynie z białego sera z mleka owczego, koziego i krowiego",
+		"en": "Famous for its white cheese of sheep's, goat's and cow's milk",
+		"cs": "Proslulé bílým sýrem z ovčího, kozího a kravského mléka",
+		"is": "Frægur fyrir hvítan ost úr kinda-, geita- og kúamjólk",
+		"de": "Berühmt für seinen Weißkäse aus Schafs-, Ziegen- und Kuhmilch"
+	},
+	"Edremit": {
+		"pl": "U stóp Kaz Dağı, antycznej góry Ida; gaje oliwne schodzą tu aż do morza",
+		"en": "At the foot of Kaz Dağı, the ancient Mount Ida; olive groves run down to the sea",
+		"cs": "Na úpatí Kaz Dağı, starověké hory Ida; olivové háje tu sahají až k moři",
+		"is": "Við rætur Kaz Dağı, hins forna Ídafjalls; ólífulundir ná alla leið niður að sjó",
+		"de": "Am Fuß des Kaz Dağı, des antiken Ida-Gebirges; Olivenhaine reichen bis ans Meer"
+	},
+	"Ayvalık": {
+		"pl": "Miasto oliwy z kamiennymi domami zbudowanymi przez społeczność grecką, która żyła tu do wymiany ludności w 1923 roku",
+		"en": "An olive oil town of stone houses built by the Greek community that lived here until the population exchange of 1923",
+		"cs": "Město olivového oleje s kamennými domy, které postavila řecká komunita žijící zde do výměny obyvatelstva v roce 1923",
+		"is": "Ólífuolíubær með steinhúsum sem gríska samfélagið byggði, en það bjó hér fram að fólksskiptunum 1923",
+		"de": "Eine Olivenölstadt mit Steinhäusern, gebaut von der griechischen Gemeinde, die hier bis zum Bevölkerungsaustausch 1923 lebte"
+	},
+	"Bandırma": {
+		"pl": "Port nad Morzem Marmara; jego nazwę nosił statek, którym Mustafa Kemal popłynął w 1919 roku do Samsun",
+		"en": "A port on the Sea of Marmara; the ship that took Mustafa Kemal to Samsun in 1919 bore its name",
+		"cs": "Přístav u Marmarského moře; jeho jméno nesla loď, kterou se Mustafa Kemal v roce 1919 plavil do Samsunu",
+		"is": "Hafnarbær við Marmarahaf; skipið sem flutti Mustafa Kemal til Samsun 1919 bar nafn hans",
+		"de": "Hafen am Marmarameer; sein Name stand auf dem Schiff, mit dem Mustafa Kemal 1919 nach Samsun fuhr"
+	},
+	"Akhisar": {
+		"pl": "Dawna Tiatyra, jedno z siedmiu miast z Apokalipsy św. Jana; dziś słynie z oliwek",
+		"en": "The ancient Thyatira, one of the seven churches of the Book of Revelation; known today for its olives",
+		"cs": "Starověká Thyatira, jedno ze sedmi měst Zjevení Janova; dnes proslulé olivami",
+		"is": "Hin forna Þýatíra, ein af sjö borgum Opinberunarbókarinnar; nú þekkt fyrir ólífur sínar",
+		"de": "Das antike Thyatira, eine der sieben Gemeinden der Offenbarung des Johannes; heute für seine Oliven bekannt"
+	},
+	"İnegöl": {
+		"pl": "Słynie z köfte, małych pulpetów z grilla, i z fabryk mebli",
+		"en": "Known for its köfte, small grilled meatballs, and for its furniture factories",
+		"cs": "Proslulé köfte, malými grilovanými karbanátky, a továrnami na nábytek",
+		"is": "Þekktur fyrir köfte, litlar grillaðar kjötbollur, og húsgagnaverksmiðjur",
+		"de": "Bekannt für seine Köfte, kleine gegrillte Fleischbällchen, und für seine Möbelfabriken"
+	},
+	"Sivrihisar": {
+		"pl": "Wielki Meczet z XIII wieku ma 67 drewnianych kolumn",
+		"en": "Its 13th-century Great Mosque stands on 67 wooden columns",
+		"cs": "Velká mešita ze 13. století stojí na 67 dřevěných sloupech",
+		"is": "Stóra moskan frá 13. öld stendur á 67 trésúlum",
+		"de": "Die Große Moschee aus dem 13. Jahrhundert ruht auf 67 Holzsäulen"
+	},
+	"Polatlı": {
+		"pl": "Obok ruiny Gordionu, stolicy Frygii i króla Midasa, gdzie Aleksander Wielki przeciął węzeł gordyjski",
+		"en": "Near the ruins of Gordion, capital of Phrygia and King Midas, where Alexander the Great cut the Gordian knot",
+		"cs": "Nedaleko ruiny Gordia, hlavního města Frýgie a krále Midase, kde Alexandr Veliký rozťal gordický uzel",
+		"is": "Skammt frá rústum Gordíon, höfuðborgar Frýgíu og Mídasar konungs, þar sem Alexander mikli hjó á Gordíonshnútinn",
+		"de": "Nahe den Ruinen von Gordion, Hauptstadt Phrygiens und König Midas', wo Alexander der Große den Gordischen Knoten zerschlug"
+	},
+	"Milas": {
+		"pl": "Antyczna Mylasa, stolica Karii; w okolicznych wsiach tka się słynne dywany",
+		"en": "The ancient Mylasa, capital of Caria; famous carpets are woven in the villages around",
+		"cs": "Starověká Mylasa, hlavní město Kárie; v okolních vesnicích se tkají proslulé koberce",
+		"is": "Hin forna Mýlasa, höfuðborg Karíu; fræg teppi eru ofin í þorpunum í kring",
+		"de": "Das antike Mylasa, Hauptstadt Kariens; in den Dörfern ringsum werden berühmte Teppiche geknüpft"
+	},
+	"Aydın": {
+		"pl": "Stolica fig: na równinie Wielkiego Menderesu rośnie większość tureckich fig",
+		"en": "The fig capital: most of Turkey's figs grow on the plain of the Büyük Menderes",
+		"cs": "Hlavní město fíků: na rovině Velkého Menderesu roste většina tureckých fíků",
+		"is": "Höfuðborg fíkjanna: flestar fíkjur Tyrklands vaxa á sléttu Büyük Menderes-fljóts",
+		"de": "Hauptstadt der Feigen: die meisten türkischen Feigen wachsen in der Ebene des Büyük Menderes"
+	},
+	"Muğla": {
+		"pl": "Stare miasto białych domów z kominami; stolica prowincji z Bodrum, Marmaris i Fethiye",
+		"en": "An old town of white houses with chimneys; capital of the province of Bodrum, Marmaris and Fethiye",
+		"cs": "Staré město bílých domů s komíny; hlavní město provincie s Bodrumem, Marmarisem a Fethiye",
+		"is": "Gamall bær hvítra húsa með reykháfum; höfuðstaður héraðsins sem Bodrum, Marmaris og Fethiye tilheyra",
+		"de": "Eine Altstadt weißer Häuser mit Schornsteinen; Hauptstadt der Provinz von Bodrum, Marmaris und Fethiye"
+	},
+	"Köyceğiz": {
+		"pl": "Nad jeziorem, z którego kanałami Dalyan pływa się do skalnych grobów Kaunos i na plażę żółwi karetta",
+		"en": "On a lake whose Dalyan channels lead by boat to the rock tombs of Kaunos and the loggerhead turtle beach",
+		"cs": "U jezera, z něhož se kanály Dalyanu pluje ke skalním hrobkám Kaunu a na pláž karet obecných",
+		"is": "Við vatn þar sem siglt er eftir Dalyan-sundum að klettagröfum Kaunos og strönd skjaldbaka",
+		"de": "An einem See, von dem man durch die Dalyan-Kanäle zu den Felsgräbern von Kaunos und zum Strand der Unechten Karettschildkröte fährt"
+	},
+	"Kaş": {
+		"pl": "Miasteczko nurków; po drugiej stronie zatoki, około 2 km od brzegu, leży grecka wyspa Kastelorizo",
+		"en": "A divers' town; across the bay, about 2 km offshore, lies the Greek island of Kastellorizo",
+		"cs": "Městečko potápěčů; na druhé straně zátoky, asi 2 km od břehu, leží řecký ostrov Kastelorizo",
+		"is": "Bær kafara; handan flóans, um 2 km frá landi, er gríska eyjan Kastellorizo",
+		"de": "Ein Taucherstädtchen; jenseits der Bucht, etwa 2 km vor der Küste, liegt die griechische Insel Kastelorizo"
+	},
+	"Finike": {
+		"pl": "Słynie z pomarańczy",
+		"en": "Famous for its oranges",
+		"cs": "Proslulé pomeranči",
+		"is": "Frægur fyrir appelsínur sínar",
+		"de": "Berühmt für seine Orangen"
+	},
+	"Kemer": {
+		"pl": "Kurort pod górami Beydağları; kolejka linowa wjeżdża na Tahtalı (2365 m)",
+		"en": "A resort under the Beydağları mountains; a cable car climbs Mount Tahtalı (2365 m)",
+		"cs": "Letovisko pod pohořím Beydağları; lanovka vyjíždí na horu Tahtalı (2365 m)",
+		"is": "Sumardvalarstaður undir Beydağları-fjöllum; kláfur fer upp á Tahtalı (2365 m)",
+		"de": "Ein Ferienort unter dem Beydağları-Gebirge; eine Seilbahn fährt auf den Tahtalı (2365 m)"
+	},
+	"Serik": {
+		"pl": "Obok rzymski teatr w Aspendos, jeden z najlepiej zachowanych na świecie",
+		"en": "Next to the Roman theatre of Aspendos, one of the best preserved in the world",
+		"cs": "Nedaleko římské divadlo v Aspendu, jedno z nejzachovalejších na světě",
+		"is": "Skammt frá er rómverska leikhúsið í Aspendos, eitt hið best varðveitta í heimi",
+		"de": "In der Nähe das römische Theater von Aspendos, eines der besterhaltenen der Welt"
+	},
+	"Manavgat": {
+		"pl": "Wodospad na rzece Manavgat, a nad morzem antyczne Side ze świątynią Apollina",
+		"en": "A waterfall on the Manavgat river, and by the sea the ancient Side with its temple of Apollo",
+		"cs": "Vodopád na řece Manavgat a u moře antické Side s Apollónovým chrámem",
+		"is": "Foss í Manavgat-ánni og við sjóinn hin forna Side með musteri Apollons",
+		"de": "Ein Wasserfall am Fluss Manavgat und am Meer das antike Side mit seinem Apollontempel"
+	},
+	"Anamur": {
+		"pl": "Najdalej na południe wysunięty punkt Anatolii; średniowieczny zamek Mamure stoi na plaży, wokół plantacje bananów",
+		"en": "The southernmost point of Anatolia; the medieval Mamure castle stands on the beach among banana plantations",
+		"cs": "Nejjižnější bod Anatolie; středověký hrad Mamure stojí na pláži mezi banánovými plantážemi",
+		"is": "Syðsti oddi Anatólíu; Mamure-kastalinn frá miðöldum stendur á ströndinni innan um bananaekrur",
+		"de": "Der südlichste Punkt Anatoliens; die mittelalterliche Burg Mamure steht am Strand zwischen Bananenplantagen"
+	},
+	"Silifke": {
+		"pl": "W pobliskiej rzece Göksu utonął w 1190 roku cesarz Fryderyk Barbarossa",
+		"en": "The emperor Frederick Barbarossa drowned in the nearby Göksu river in 1190",
+		"cs": "V nedaleké řece Göksu se roku 1190 utopil císař Fridrich Barbarossa",
+		"is": "Friðrik Barbarossa keisari drukknaði í Göksu-ánni hér skammt frá árið 1190",
+		"de": "Im nahen Fluss Göksu ertrank 1190 Kaiser Friedrich Barbarossa"
+	},
+	"Tarsus": {
+		"pl": "Miasto narodzin św. Pawła; tu Kleopatra spotkała Marka Antoniusza",
+		"en": "Birthplace of St Paul; Cleopatra met Mark Antony here",
+		"cs": "Rodiště svatého Pavla; zde se Kleopatra setkala s Markem Antoniem",
+		"is": "Fæðingarstaður Páls postula; hér hitti Kleópatra Markús Antóníus",
+		"de": "Geburtsort des Apostels Paulus; hier traf Kleopatra Marcus Antonius"
+	},
+	"Osmaniye": {
+		"pl": "Słynie z orzeszków ziemnych",
+		"en": "Famous for its peanuts",
+		"cs": "Proslulá arašídy",
+		"is": "Fræg fyrir jarðhnetur sínar",
+		"de": "Berühmt für seine Erdnüsse"
+	},
+	"Nizip": {
+		"pl": "Nad Eufratem leżała antyczna Zeugma, której mozaiki ratowano przed zalaniem przez zaporę",
+		"en": "The ancient Zeugma lay on the Euphrates here; its mosaics were rescued before a dam flooded it",
+		"cs": "Na Eufratu tu ležela antická Zeugma, jejíž mozaiky byly zachráněny před zatopením přehradou",
+		"is": "Hin forna Zeugma stóð hér við Efrat; mósaíkmyndum hennar var bjargað áður en stífla færði hana í kaf",
+		"de": "Hier am Euphrat lag das antike Zeugma, dessen Mosaiken vor der Flutung durch einen Staudamm gerettet wurden"
+	},
+	"Birecik": {
+		"pl": "Nad Eufratem; jedno z ostatnich miejsc, gdzie żyją ibisy grzywiaste",
+		"en": "On the Euphrates; one of the last places where northern bald ibises live",
+		"cs": "Na Eufratu; jedno z posledních míst, kde žijí ibisové skalní",
+		"is": "Við Efrat; einn síðasti staðurinn þar sem skalladrúðar lifa",
+		"de": "Am Euphrat; einer der letzten Orte, an denen Waldrappe leben"
+	},
+	"Kangal": {
+		"pl": "Ojczyzna psów kangal, wielkich anatolijskich owczarków",
+		"en": "Home of the Kangal dogs, the big Anatolian shepherd dogs",
+		"cs": "Domov psů kangal, velkých anatolských pasteveckých psů",
+		"is": "Heimkynni kangal-hundanna, stóru anatólísku fjárhundanna",
+		"de": "Heimat der Kangal-Hunde, der großen anatolischen Hirtenhunde"
+	},
+	"Elazığ": {
+		"pl": "Nad miastem stare Harput z zamkiem; obok jezioro zaporowe Keban na Eufracie",
+		"en": "Old Harput with its castle above the town; nearby the Keban reservoir on the Euphrates",
+		"cs": "Nad městem starý Harput s hradem; nedaleko přehradní jezero Keban na Eufratu",
+		"is": "Gamla Harput með kastala sínum ofan við bæinn; skammt frá Keban-lónið í Efrat",
+		"de": "Über der Stadt das alte Harput mit seiner Burg; nahebei der Keban-Stausee am Euphrat"
+	},
+	"Gevaş": {
+		"pl": "Stąd łodzie płyną na wyspę Akdamar z ormiańskim kościołem Świętego Krzyża z X wieku",
+		"en": "Boats leave here for Akdamar island and its 10th-century Armenian Church of the Holy Cross",
+		"cs": "Odtud plují lodě na ostrov Akdamar s arménským kostelem Svatého Kříže z 10. století",
+		"is": "Héðan sigla bátar út í Akdamar-eyju með armensku kirkju hins heilaga kross frá 10. öld",
+		"de": "Von hier fahren Boote zur Insel Akdamar mit der armenischen Heilig-Kreuz-Kirche aus dem 10. Jahrhundert"
+	},
+	"Tatvan": {
+		"pl": "Nad jeziorem Van, pod wulkanem Nemrut z jeziorem w kraterze",
+		"en": "On Lake Van, below the Nemrut volcano with a lake in its crater",
+		"cs": "U jezera Van, pod sopkou Nemrut s jezerem v kráteru",
+		"is": "Við Van-vatn, undir eldfjallinu Nemrut með stöðuvatn í gígnum",
+		"de": "Am Vansee, unter dem Vulkan Nemrut mit einem See im Krater"
+	},
+	"Silvan": {
+		"pl": "Obok kamienny most Malabadi z XII wieku, z jednym łukiem rozpiętym na prawie 40 m",
+		"en": "Near the 12th-century Malabadi stone bridge, whose single arch spans almost 40 m",
+		"cs": "Nedaleko kamenný most Malabadi z 12. století s jediným obloukem o rozpětí téměř 40 m",
+		"is": "Skammt frá er Malabadi-steinbrúin frá 12. öld, með einum boga sem spannar nærri 40 m",
+		"de": "In der Nähe die Malabadi-Steinbrücke aus dem 12. Jahrhundert, deren einziger Bogen fast 40 m spannt"
+	},
+	"Bingöl": {
+		"pl": "Nazwa znaczy „tysiąc jezior”: w górach wokół jest ich wiele",
+		"en": "The name means \"a thousand lakes\": there are many in the mountains around",
+		"cs": "Jméno znamená „tisíc jezer“: v okolních horách jich je mnoho",
+		"is": "Nafnið merkir „þúsund vötn“: þau eru mörg í fjöllunum í kring",
+		"de": "Der Name bedeutet „tausend Seen“: in den Bergen ringsum gibt es viele"
+	},
+	"Sarıkamış": {
+		"pl": "Ośrodek narciarski wśród lasów sosny zwyczajnej",
+		"en": "A ski resort among forests of Scots pine",
+		"cs": "Lyžařské středisko v borových lesích",
+		"is": "Skíðasvæði innan um skógarfuruskóga",
+		"de": "Ein Skigebiet inmitten von Kiefernwäldern"
+	},
+	"Gümüşhane": {
+		"pl": "Nazwa znaczy „srebrny dom”, od dawnych kopalń srebra",
+		"en": "The name means \"silver house\", after its old silver mines",
+		"cs": "Jméno znamená „stříbrný dům“, podle starých stříbrných dolů",
+		"is": "Nafnið merkir „silfurhús“, eftir gömlu silfurnámunum",
+		"de": "Der Name bedeutet „Silberhaus“, nach den alten Silberminen"
+	},
+	"Bayburt": {
+		"pl": "Wielki średniowieczny zamek nad rzeką Çoruh",
+		"en": "A great medieval castle above the Çoruh river",
+		"cs": "Velký středověký hrad nad řekou Çoruh",
+		"is": "Mikill miðaldakastali ofan við Çoruh-ána",
+		"de": "Eine große mittelalterliche Burg über dem Fluss Çoruh"
+	},
+	"Of": {
+		"pl": "Stąd droga prowadzi w góry do wsi Uzungöl nad jeziorem",
+		"en": "From here a road climbs into the mountains to the lakeside village of Uzungöl",
+		"cs": "Odtud vede silnice do hor k vesnici Uzungöl u jezera",
+		"is": "Héðan liggur vegur upp í fjöllin að þorpinu Uzungöl við vatnið",
+		"de": "Von hier führt eine Straße in die Berge zum Dorf Uzungöl am See"
+	},
+	"Ordu": {
+		"pl": "Stolica orzechów laskowych: Turcja zbiera większość orzechów laskowych na świecie",
+		"en": "The hazelnut capital: Turkey grows most of the world's hazelnuts",
+		"cs": "Hlavní město lískových oříšků: Turecko sklízí většinu lískových oříšků na světě",
+		"is": "Höfuðborg heslihnetanna: Tyrkland ræktar flestar heslihnetur heimsins",
+		"de": "Hauptstadt der Haselnüsse: die Türkei erntet die meisten Haselnüsse der Welt"
+	},
+	"Giresun": {
+		"pl": "Od jego antycznej nazwy Kerasous pochodzi podobno łacińska nazwa wiśni, cerasus",
+		"en": "Its ancient name Kerasous is said to have given cherries their Latin name, cerasus",
+		"cs": "Z jeho antického jména Kerasús prý pochází latinský název třešně, cerasus",
+		"is": "Sagt er að latneska heitið á kirsuberjum, cerasus, sé dregið af fornu nafni þess, Kerasous",
+		"de": "Sein antiker Name Kerasous soll der Kirsche ihren lateinischen Namen cerasus gegeben haben"
+	},
+	"Amasya": {
+		"pl": "Nad rzeką Yeşilırmak; w skale nad miastem wykuto grobowce królów Pontu",
+		"en": "On the Yeşilırmak river; the tombs of the kings of Pontus are cut into the cliff above the town",
+		"cs": "Na řece Yeşilırmak; ve skále nad městem jsou vytesány hrobky pontských králů",
+		"is": "Við ána Yeşilırmak; grafir Pontuskonunga eru höggnar í klettinn ofan við bæinn",
+		"de": "Am Fluss Yeşilırmak; die Gräber der Könige von Pontos sind in den Felsen über der Stadt gehauen"
+	},
+	"Şarkışla": {
+		"pl": "Stąd pochodził ludowy poeta i bard Âşık Veysel",
+		"en": "The folk poet and minstrel Âşık Veysel came from here",
+		"cs": "Odtud pocházel lidový básník a pěvec Âşık Veysel",
+		"is": "Alþýðuskáldið og farandsöngvarinn Âşık Veysel var héðan",
+		"de": "Von hier stammte der Volksdichter und Sänger Âşık Veysel"
+	},
+	"Sultanhanı": {
+		"pl": "Jeden z największych seldżuckich karawanserajów, z 1229 roku",
+		"en": "One of the largest Seljuk caravanserais, from 1229",
+		"cs": "Jeden z největších seldžuckých karavanserajů, z roku 1229",
+		"is": "Eitt stærsta úlfaldagistihús Seljúka, frá 1229",
+		"de": "Eine der größten seldschukischen Karawansereien, von 1229"
+	},
+	"Aksaray": {
+		"pl": "U stóp wulkanu Hasan; obok wąwóz Ihlara z kościołami wykutymi w skałach",
+		"en": "At the foot of the Hasan volcano; nearby the Ihlara valley with churches cut into its rock walls",
+		"cs": "Na úpatí sopky Hasan; nedaleko údolí Ihlara s kostely vytesanými do skal",
+		"is": "Við rætur eldfjallsins Hasan; skammt frá er Ihlara-dalurinn með kirkjum höggnum í klettaveggina",
+		"de": "Am Fuß des Vulkans Hasan; nahebei das Ihlara-Tal mit in den Fels gehauenen Kirchen"
+	},
+	"Cihanbeyli": {
+		"pl": "Na wschodzie leży Tuz Gölü, słone jezioro, z którego pochodzi duża część tureckiej soli",
+		"en": "To the east lies Tuz Gölü, the salt lake that gives a large share of Turkey's salt",
+		"cs": "Na východě leží Tuz Gölü, slané jezero, z něhož pochází velká část turecké soli",
+		"is": "Í austri er Tuz Gölü, saltvatnið sem gefur stóran hluta af salti Tyrklands",
+		"de": "Im Osten liegt der Tuz Gölü, der Salzsee, aus dem ein großer Teil des türkischen Salzes stammt"
+	},
+	"Karaman": {
+		"pl": "W 1277 roku bej Mehmed z Karamanu ogłosił tu turecki językiem urzędowym; ten dzień obchodzi się jako Święto Języka",
+		"en": "In 1277 Mehmed Bey of Karaman declared Turkish the official language here; the day is kept as Language Day",
+		"cs": "Roku 1277 zde Mehmed bej z Karamanu vyhlásil turečtinu úředním jazykem; ten den se slaví jako Svátek jazyka",
+		"is": "Árið 1277 lýsti Mehmed bej af Karaman því hér yfir að tyrkneska væri opinbert mál; dagurinn er haldinn sem dagur tungunnar",
+		"de": "1277 erklärte Mehmed Bey von Karaman hier das Türkische zur Amtssprache; der Tag wird als Tag der Sprache begangen"
+	},
+	"Niğde": {
+		"pl": "Na skraju Kapadocji, pod granitowymi szczytami Aladağlar",
+		"en": "On the edge of Cappadocia, under the peaks of the Aladağlar",
+		"cs": "Na okraji Kappadokie, pod štíty pohoří Aladağlar",
+		"is": "Á jaðri Kappadókíu, undir tindum Aladağlar-fjalla",
+		"de": "Am Rand Kappadokiens, unter den Gipfeln des Aladağlar"
+	},
+	"Pozantı": {
+		"pl": "Przy Bramach Cylicyjskich, przełęczy przez Taurus, którą przeszedł Aleksander Wielki",
+		"en": "By the Cilician Gates, the pass through the Taurus that Alexander the Great marched through",
+		"cs": "U Kilikijské brány, průsmyku přes Taurus, kterým prošel Alexandr Veliký",
+		"is": "Við Kilíkíuhliðin, skarðið gegnum Tárusfjöll sem Alexander mikli fór um",
+		"de": "An der Kilikischen Pforte, dem Pass durch den Taurus, den Alexander der Große durchzog"
+	},
+	"Kırşehir": {
+		"pl": "Miasto muzyki na lutni bağlama; pochodził stąd muzyk Neşet Ertaş",
+		"en": "A town of bağlama lute music; the musician Neşet Ertaş came from here",
+		"cs": "Město hudby na loutnu bağlama; pocházel odtud hudebník Neşet Ertaş",
+		"is": "Bær bağlama-lútutónlistar; tónlistarmaðurinn Neşet Ertaş var héðan",
+		"de": "Eine Stadt der Bağlama-Laute; der Musiker Neşet Ertaş stammte von hier"
+	},
+	"Hacıbektaş": {
+		"pl": "Grób Hadżiego Bektasza Weli, świętego ważnego dla alewitów i bektaszytów",
+		"en": "The tomb of Hacı Bektaş Veli, a saint revered by the Alevis and the Bektashis",
+		"cs": "Hrobka Hadžiho Bektaše Velího, světce uctívaného alevity a bektášijci",
+		"is": "Gröf Hacı Bektaş Veli, dýrlings sem alevítar og bektasar heiðra",
+		"de": "Das Grab von Hacı Bektaş Veli, einem von Aleviten und Bektaschi verehrten Heiligen"
+	},
+	"Kızılcahamam": {
+		"pl": "Gorące źródła i lasy parku narodowego Soğuksu",
+		"en": "Hot springs and the forests of the Soğuksu national park",
+		"cs": "Horké prameny a lesy národního parku Soğuksu",
+		"is": "Heitar lindir og skógar Soğuksu-þjóðgarðsins",
+		"de": "Heiße Quellen und die Wälder des Nationalparks Soğuksu"
+	},
+	"Kastamonu": {
+		"pl": "Średniowieczny zamek nad starym miastem pełnym drewnianych domów",
+		"en": "A medieval castle above an old town full of wooden houses",
+		"cs": "Středověký hrad nad starým městem plným dřevěných domů",
+		"is": "Miðaldakastali ofan við gamlan bæ fullan af timburhúsum",
+		"de": "Eine mittelalterliche Burg über einer Altstadt voller Holzhäuser"
+	},
+	"Erzincan": {
+		"pl": "W dolinie Eufratu; w 1939 roku miasto zniszczyło wielkie trzęsienie ziemi",
+		"en": "In the Euphrates valley; a great earthquake destroyed the town in 1939",
+		"cs": "V údolí Eufratu; roku 1939 město zničilo velké zemětřesení",
+		"is": "Í Efratdalnum; mikill jarðskjálfti lagði bæinn í rúst árið 1939",
+		"de": "Im Euphrattal; 1939 zerstörte ein großes Erdbeben die Stadt"
+	}
+}

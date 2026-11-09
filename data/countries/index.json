@@ -144,6 +144,12 @@
 			"name": {"pl": "Rumunia", "en": "Romania", "cs": "Rumunsko", "is": "Rúmenía", "de": "Rumänien"},
 			"neighbours": ["hu", "ua", "md", "bg", "rs"],
 			"favorite_neighbour": "md"
+		},
+		{
+			"code": "tr",
+			"name": {"pl": "Turcja", "en": "Turkey", "cs": "Turecko", "is": "Tyrkland", "de": "Türkei"},
+			"neighbours": ["gr", "bg"],
+			"favorite_neighbour": "bg"
 		}
 	]
 }
