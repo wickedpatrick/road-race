@@ -1,0 +1,142 @@
+{
+	"Lefkosia": {
+		"pl": "Stolica Cypru, jej stare miasto otaczają weneckie mury w kształcie gwiazdy",
+		"en": "Cyprus's capital, its old town ringed by star-shaped Venetian walls",
+		"cs": "Hlavní město Kypru, staré město obepínají benátské hradby ve tvaru hvězdy",
+		"is": "Höfuðborg Kýpur, gamli bærinn umlukinn stjörnulaga feneyskum múrum",
+		"de": "Die Hauptstadt Zyperns, ihre Altstadt umgeben von sternförmigen venezianischen Mauern"
+	},
+	"Lemesos": {
+		"pl": "Drugie co do wielkości miasto i największy port Cypru, z festiwalem wina",
+		"en": "Cyprus's second city and busiest port, with a wine festival every year",
+		"cs": "Druhé největší město a největší přístav Kypru, každý rok tu slaví vinobraní",
+		"is": "Næststærsta borg og stærsta höfn Kýpur, með vínhátíð á hverju ári",
+		"de": "Zyperns zweitgrößte Stadt und größter Hafen, mit einem Weinfest jedes Jahr"
+	},
+	"Larnaka": {
+		"pl": "Miasto z głównym lotniskiem wyspy; zimą na słonym jeziorze żerują flamingi",
+		"en": "Home of the island's main airport; in winter flamingos feed on its salt lake",
+		"cs": "Město s hlavním letištěm ostrova; v zimě se na solném jezeře krmí plameňáci",
+		"is": "Þar er aðalflugvöllur eyjarinnar; á veturna éta flamingóar á saltvatninu",
+		"de": "Hier liegt der Hauptflughafen der Insel; im Winter fressen Flamingos am Salzsee"
+	},
+	"Pafos": {
+		"pl": "Rzymskie mozaiki i Grobowce Królów w Pafos są na liście UNESCO",
+		"en": "Its Roman mosaics and the Tombs of the Kings are on the UNESCO list",
+		"cs": "Římské mozaiky a Královské hrobky v Pafosu jsou na seznamu UNESCO",
+		"is": "Rómversku mósaíkin og Konungagrafirnar í Pafos eru á lista UNESCO",
+		"de": "Die römischen Mosaiken und die Königsgräber von Paphos sind UNESCO-Welterbe"
+	},
+	"Paralimni": {
+		"pl": "Największe miasto Kokkinochorii, „czerwonych wsi” z rdzawą ziemią i ziemniakami",
+		"en": "The biggest town of the Kokkinochoria, the 'red villages' of rust-red soil and potatoes",
+		"cs": "Největší město Kokkinochorie, „červených vesnic“ s rezavou půdou a bramborami",
+		"is": "Stærsti bær Kokkinochoria, „rauðu þorpanna“ með ryðrauða mold og kartöflur",
+		"de": "Größter Ort der Kokkinochoria, der „roten Dörfer“ mit rostroter Erde und Kartoffeln"
+	},
+	"Agia Napa": {
+		"pl": "Dawna wioska rybacka przy klasztorze, dziś kurort z najjaśniejszymi plażami wyspy",
+		"en": "Once a fishing village by a monastery, now a resort with the island's whitest beaches",
+		"cs": "Kdysi rybářská vesnice u kláštera, dnes letovisko s nejsvětlejšími plážemi ostrova",
+		"is": "Áður fiskiþorp við klaustur, nú ferðamannastaður með hvítustu ströndum eyjarinnar",
+		"de": "Einst ein Fischerdorf an einem Kloster, heute ein Badeort mit den hellsten Stränden der Insel"
+	},
+	"Polis": {
+		"pl": "Miasteczko nad zatoką Chrysochou, brama do dzikiego półwyspu Akamas",
+		"en": "A small town on Chrysochou Bay, the gateway to the wild Akamas peninsula",
+		"cs": "Městečko u zálivu Chrysochou, brána na divoký poloostrov Akamas",
+		"is": "Smábær við Chrysochou-flóa, hliðið að villta Akamas-skaganum",
+		"de": "Kleinstadt an der Bucht von Chrysochou, Tor zur wilden Halbinsel Akamas"
+	},
+	"Platres": {
+		"pl": "Górskie letnisko na wysokości 1100 m, gdzie latem ucieka się od upału",
+		"en": "A mountain resort at 1,100 m where people escape the summer heat",
+		"cs": "Horské letovisko ve výšce 1100 m, kam se v létě utíká před horkem",
+		"is": "Fjallaþorp í 1.100 m hæð þar sem fólk flýr sumarhitann",
+		"de": "Bergort auf 1100 m, wohin man im Sommer vor der Hitze flieht"
+	},
+	"Kornos": {
+		"pl": "Wieś garncarzy, gdzie kobiety lepią wielkie dzbany jak przed wiekami",
+		"en": "A potters' village where women still shape big clay jars as centuries ago",
+		"cs": "Hrnčířská vesnice, kde ženy stále tvarují velké hliněné džbány jako před staletími",
+		"is": "Leirkerasmiðaþorp þar sem konur móta enn stórar leirkrukkur eins og fyrir öldum",
+		"de": "Ein Töpferdorf, in dem Frauen noch große Tonkrüge formen wie vor Jahrhunderten"
+	},
+	"Choirokoitia": {
+		"pl": "Osada z okrągłymi kamiennymi domami sprzed 9000 lat, na liście UNESCO",
+		"en": "A settlement of round stone houses from 9,000 years ago, on the UNESCO list",
+		"cs": "Osada kulatých kamenných domů stará 9000 let, na seznamu UNESCO",
+		"is": "Byggð kringlóttra steinhúsa frá því fyrir 9.000 árum, á lista UNESCO",
+		"de": "Eine Siedlung runder Steinhäuser von vor 9000 Jahren, UNESCO-Welterbe"
+	},
+	"Kolossi": {
+		"pl": "Zamek rycerzy joannitów, którzy wyrabiali tu słodkie wino commandaria",
+		"en": "A castle of the Knights Hospitaller, who made the sweet Commandaria wine here",
+		"cs": "Hrad johanitů, kteří tu vyráběli sladké víno commandaria",
+		"is": "Kastali Jóhannesarriddara, sem gerðu hér sæta vínið Commandaria",
+		"de": "Eine Burg der Johanniter, die hier den süßen Commandaria-Wein kelterten"
+	},
+	"Pissouri": {
+		"pl": "Wieś na wzgórzu nad zatoką, wśród winnic i gajów chleba świętojańskiego",
+		"en": "A hilltop village above its bay, among vineyards and carob groves",
+		"cs": "Vesnice na kopci nad zátokou, mezi vinicemi a háji svatojánského chleba",
+		"is": "Þorp á hæð ofan við flóann, innan um vínekrur og jóhannesarbrauðstré",
+		"de": "Ein Dorf auf einem Hügel über seiner Bucht, zwischen Weinbergen und Johannisbrotbäumen"
+	},
+	"Kouklia": {
+		"pl": "Tu stało słynne sanktuarium Afrodyty, czczonej w starożytności w całym świecie greckim",
+		"en": "Site of the famous sanctuary of Aphrodite, worshipped across the ancient Greek world",
+		"cs": "Stála tu slavná svatyně Afrodity, uctívané v celém antickém řeckém světě",
+		"is": "Hér stóð frægur helgidómur Afródítu, sem dýrkuð var um allan forngrískan heim",
+		"de": "Hier stand das berühmte Heiligtum der Aphrodite, verehrt in der ganzen antiken griechischen Welt"
+	},
+	"Geroskipou": {
+		"pl": "Stolica loukoumi, cypryjskiego rachatłukum z wodą różaną i migdałami",
+		"en": "The home of loukoumi, Cyprus delight with rosewater and almonds",
+		"cs": "Domov loukoumi, kyperské sladkosti s růžovou vodou a mandlemi",
+		"is": "Heimili loukoumi, kýpversks sælgætis með rósavatni og möndlum",
+		"de": "Die Heimat des Loukoumi, zyprischer Süßigkeit mit Rosenwasser und Mandeln"
+	},
+	"Kakopetria": {
+		"pl": "Górska wieś z kościołem św. Mikołaja „pod Dachem”, malowanym w środku freskami",
+		"en": "A mountain village with St Nicholas of the Roof, a church painted inside with frescoes",
+		"cs": "Horská vesnice s kostelem sv. Mikuláše „pod Střechou“, uvnitř pokrytým freskami",
+		"is": "Fjallaþorp með kirkju heilags Nikulásar „undir þakinu“, máluð freskum að innan",
+		"de": "Ein Bergdorf mit der Kirche St. Nikolaus vom Dach, innen ganz mit Fresken bemalt"
+	},
+	"Troodos": {
+		"pl": "Pod najwyższym szczytem wyspy, Olimpem (1952 m); zimą jeździ się tu na nartach",
+		"en": "Below the island's highest peak, Olympos (1,952 m); in winter people ski here",
+		"cs": "Pod nejvyšší horou ostrova, Olympem (1952 m); v zimě se tu lyžuje",
+		"is": "Undir hæsta tindi eyjarinnar, Ólympos (1.952 m); á veturna er farið hér á skíði",
+		"de": "Unter dem höchsten Gipfel der Insel, dem Olympos (1952 m); im Winter wird hier Ski gefahren"
+	},
+	"Trimiklini": {
+		"pl": "Wieś w dolinie rzeki Kouris, pośród sadów jabłoni i czereśni",
+		"en": "A village in the Kouris valley, among apple and cherry orchards",
+		"cs": "Vesnice v údolí řeky Kouris, mezi sady jabloní a třešní",
+		"is": "Þorp í Kouris-dalnum, innan um epla- og kirsuberjagarða",
+		"de": "Ein Dorf im Kouris-Tal, zwischen Apfel- und Kirschgärten"
+	},
+	"Oroklini": {
+		"pl": "Jezioro przy wsi to ostoja ptaków: szczudłaków i flamingów",
+		"en": "The lake by the village is a haven for birds: stilts and flamingos",
+		"cs": "Jezero u vesnice je útočištěm ptáků: pisil a plameňáků",
+		"is": "Vatnið við þorpið er griðland fugla: stiltna og flamingóa",
+		"de": "Der See beim Dorf ist ein Vogelparadies: Stelzenläufer und Flamingos"
+	},
+	"Protaras": {
+		"pl": "Kurort nad Zatoką Figowego Drzewa, z kapliczką na skale nad morzem",
+		"en": "A resort on Fig Tree Bay, with a chapel on a rock above the sea",
+		"cs": "Letovisko u Zátoky fíkovníku, s kaplí na skále nad mořem",
+		"is": "Ferðamannastaður við Fíkjutrésflóa, með kapellu á kletti yfir hafinu",
+		"de": "Ein Badeort an der Feigenbaumbucht, mit einer Kapelle auf einem Felsen über dem Meer"
+	},
+	"Evrychou": {
+		"pl": "Wieś w dolinie Solea, dawniej końcowa stacja kolei z Lefkosii",
+		"en": "A village in the Solea valley, once the terminus of the railway from Lefkosia",
+		"cs": "Vesnice v údolí Solea, kdysi konečná stanice železnice z Lefkosie",
+		"is": "Þorp í Solea-dalnum, áður endastöð járnbrautarinnar frá Lefkosia",
+		"de": "Ein Dorf im Solea-Tal, einst Endstation der Eisenbahn aus Lefkosia"
+	}
+}

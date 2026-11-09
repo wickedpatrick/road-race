@@ -869,7 +869,16 @@
 		"mdina_gate": [36, 26],
 		"marsaxlokk_luzzu": [30, 14],
 		"mellieha_red_tower": [24, 26],
-		"gozo_cittadella": [60, 34]
+		"gozo_cittadella": [60, 34],
+		"nicosia_walls": [72, 23],
+		"limassol_castle": [42, 21],
+		"agios_lazaros": [42, 34],
+		"paphos_fort": [34, 18],
+		"petra_tou_romiou": [60, 24],
+		"kamara_tou_koraka": [50, 15],
+		"profitis_ilias_chapel": [30, 29],
+		"aphrodite_baths": [36, 19],
+		"caledonia_falls": [34, 24]
 	},
 	"police": {"escape_chance": 0.2, "escape_kmh": 180, "escape_swerves": [3, 5]},
 	"postcards": {"stamps": [0.15, 0.3, 0.45, 0.6], "stamp_caps": [2, 3, 3, 4, 5, 5, 5]}

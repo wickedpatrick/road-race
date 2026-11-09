@@ -108,6 +108,12 @@
 			"name": {"pl": "Malta", "en": "Malta", "cs": "Malta", "is": "Malta", "de": "Malta"},
 			"neighbours": ["it"],
 			"favorite_neighbour": "it"
+		},
+		{
+			"code": "cy",
+			"name": {"pl": "Cypr", "en": "Cyprus", "cs": "Kypr", "is": "Kýpur", "de": "Zypern"},
+			"neighbours": ["gr"],
+			"favorite_neighbour": "gr"
 		}
 	]
 }
