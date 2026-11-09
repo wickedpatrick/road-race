@@ -44,11 +44,11 @@
 				"pl": "Gorzelnia Kvint",
 				"en": "Kvint distillery",
 				"cs": "Lihovar Kvint",
-				"is": "Kvint-brugghúsið",
+				"is": "Kvint-brennslan",
 				"de": "Brennerei Kvint"
 			},
 			"desc": {
-				"pl": "Od 1897 roku robi tu brandy z naddniestrzańskich winogron",
+				"pl": "Od 1897 roku produkuje się tu brandy z winogron znad Dniestru",
 				"en": "Making brandy from Dniester grapes since 1897",
 				"cs": "Od roku 1897 tu vyrábějí brandy z hroznů od Dněstru",
 				"is": "Hér hefur verið gert brandí úr þrúgum frá Dnjestr síðan 1897",
@@ -142,11 +142,11 @@
 				"de": "Festung Soroca"
 			},
 			"desc": {
-				"pl": "Okrągła kamienna twierdza nad Dniestrem z pięcioma basztami, z czasów Stefana Wielkiego",
-				"en": "A round stone fortress on the Dniester with five towers, from the days of Stephen the Great",
-				"cs": "Kruhová kamenná pevnost na Dněstru s pěti baštami z doby Štěpána Velikého",
-				"is": "Hringlaga steinvirki við Dnjestr með fimm turnum, frá tímum Stefáns mikla",
-				"de": "Eine runde Steinfestung am Dnister mit fünf Türmen, aus der Zeit Stefans des Großen"
+				"pl": "Okrągła kamienna twierdza nad Dniestrem z pięcioma basztami, z XVI wieku, na miejscu drewnianego grodu Stefana Wielkiego",
+				"en": "A round stone fortress on the Dniester with five towers, from the 16th century, on the site of Stephen the Great's wooden fort",
+				"cs": "Kruhová kamenná pevnost na Dněstru s pěti baštami ze 16. století, na místě dřevěného hradiště Štěpána Velikého",
+				"is": "Hringlaga steinvirki við Dnjestr með fimm turnum, frá 16. öld, þar sem trévirki Stefáns mikla stóð áður",
+				"de": "Eine runde Steinfestung am Dnister mit fünf Türmen aus dem 16. Jahrhundert, an der Stelle der hölzernen Burg Stefans des Großen"
 			},
 			"local": "Cetatea Soroca"
 		}
