@@ -84,11 +84,11 @@
 		"de": "Jeden Frühling pflanzt die Stadt Tausende Tulpen für das Fest der Tulpensinfonie"
 	},
 	"Bacău": {
-		"pl": "Miasto poety George'a Bacovii, z najstarszym publicznym obserwatorium w kraju",
-		"en": "The town of the poet George Bacovia, with the country's oldest public observatory",
-		"cs": "Město básníka George Bacovii s nejstarší veřejnou hvězdárnou v zemi",
-		"is": "Bær skáldsins George Bacovia, með elstu almenningsstjörnustöð landsins",
-		"de": "Stadt des Dichters George Bacovia, mit der ältesten Volkssternwarte des Landes"
+		"pl": "Miasto poety George'a Bacovii, z jednym z pierwszych publicznych obserwatoriów w kraju",
+		"en": "The town of the poet George Bacovia, with one of the country's first public observatories",
+		"cs": "Město básníka George Bacovii s jednou z prvních veřejných hvězdáren v zemi",
+		"is": "Bær skáldsins George Bacovia, með einni fyrstu almenningsstjörnustöð landsins",
+		"de": "Stadt des Dichters George Bacovia, mit einer der ersten Volkssternwarten des Landes"
 	},
 	"Sibiu": {
 		"pl": "Saskie Hermannstadt: dachy mają okienka jak oczy, które patrzą na przechodniów",
@@ -135,7 +135,7 @@
 	"Sighișoara": {
 		"pl": "Zamieszkana średniowieczna cytadela na liście UNESCO; tu urodził się Vlad Palownik, pierwowzór Drakuli",
 		"en": "A lived-in medieval citadel on the UNESCO list, birthplace of Vlad the Impaler, the model for Dracula",
-		"cs": "Obydlená středověká citadela na seznamu UNESCO, rodiště Vlada Napichovače, předobrazu Draculy",
+		"cs": "Obydlená středověká citadela na seznamu UNESCO, rodiště Vlada Napichovače, předobrazu Drákuly",
 		"is": "Byggð miðaldaborg á heimsminjaskrá UNESCO, fæðingarstaður Vlads stjaksetjara, fyrirmyndar Drakúla",
 		"de": "Eine bewohnte mittelalterliche Burg auf der UNESCO-Liste, Geburtsort Vlad des Pfählers, des Vorbilds für Dracula"
 	},
@@ -273,11 +273,11 @@
 		"de": "Heimatstadt von Nadia Comăneci, die 1976 die erste perfekte Zehn im Turnen erhielt"
 	},
 	"Focșani": {
-		"pl": "Miasto leży dokładnie na 45. równoleżniku, w połowie drogi z równika na biegun",
-		"en": "The town lies right on the 45th parallel, halfway from the equator to the pole",
-		"cs": "Město leží přesně na 45. rovnoběžce, v půli cesty od rovníku k pólu",
-		"is": "Bærinn liggur beint á 45. breiddarbaug, mitt á milli miðbaugs og pólsins",
-		"de": "Die Stadt liegt genau auf dem 45. Breitengrad, auf halbem Weg vom Äquator zum Pol"
+		"pl": "Stolica okręgu Vrancea, największego regionu winiarskiego Rumunii",
+		"en": "The capital of Vrancea, Romania's largest wine-growing county",
+		"cs": "Hlavní město župy Vrancea, největší vinařské oblasti Rumunska",
+		"is": "Höfuðstaður Vrancea, stærsta vínræktarhéraðs Rúmeníu",
+		"de": "Hauptstadt des Kreises Vrancea, des größten Weinbaugebiets Rumäniens"
 	},
 	"Buzău": {
 		"pl": "Na północ od miasta bulgoczą wulkany błotne, szare i księżycowe",
@@ -287,7 +287,7 @@
 		"de": "Nördlich der Stadt blubbern die Schlammvulkane in einer grauen Mondlandschaft"
 	},
 	"Mediaș": {
-		"pl": "Saskie miasto gazu ziemnego; niedaleko warowny kościół w Biertan z UNESCO",
+		"pl": "Saskie miasto gazu ziemnego; niedaleko warowny kościół w Biertanie (UNESCO)",
 		"en": "A Saxon town of natural gas; the fortified church of Biertan (UNESCO) is nearby",
 		"cs": "Saské město zemního plynu; nedaleko je opevněný kostel v Biertanu (UNESCO)",
 		"is": "Saxneskur jarðgasbær; víggirta kirkjan í Biertan (UNESCO) er skammt frá",
@@ -329,18 +329,18 @@
 		"de": "Das Land Călata ist für seine prächtigen Trachten und geschnitzten Holztore bekannt"
 	},
 	"Deva": {
-		"pl": "Ruiny twierdzy na wulkanicznym wzgórzu nad miastem; niedaleko zamek Korwinów w Hunedoarze",
-		"en": "Fortress ruins on a volcanic hill above the town; Corvin Castle in Hunedoara is nearby",
-		"cs": "Zřícenina pevnosti na sopečném kopci nad městem; nedaleko je Korvínův hrad v Hunedoaře",
-		"is": "Virkisrústir á eldfjallahæð yfir bænum; Corvin-kastali í Hunedoara er skammt frá",
-		"de": "Burgruine auf einem Vulkanhügel über der Stadt; die Burg Hunedoara der Corvinen ist nicht weit"
+		"pl": "Stolica okręgu Hunedoara pod twierdzą na wulkanicznym wzgórzu; niedaleko zamek Korwinów w Hunedoarze",
+		"en": "The seat of Hunedoara county under a fortress on a volcanic hill; Corvin Castle in Hunedoara is nearby",
+		"cs": "Sídlo župy Hunedoara pod pevností na sopečném kopci; nedaleko je Korvínův hrad v Hunedoaře",
+		"is": "Höfuðstaður Hunedoara-sýslu undir virki á eldfjallahæð; Corvin-kastali í Hunedoara er skammt frá",
+		"de": "Hauptort des Kreises Hunedoara unter einer Burg auf einem Vulkanhügel; die Burg Hunedoara der Corvinen ist nicht weit"
 	},
 	"Babadag": {
-		"pl": "Najstarszy meczet w Rumunii (XVII wiek), pamiątka po czasach osmańskich w Dobrudży",
-		"en": "Romania's oldest mosque (17th century), from Dobruja's Ottoman times",
-		"cs": "Nejstarší mešita v Rumunsku (17. století) z osmanských časů Dobrudže",
-		"is": "Elsta moska Rúmeníu (17. öld), frá tímum Ottómana í Dobrudja",
-		"de": "Rumäniens älteste Moschee (17. Jahrhundert), aus der osmanischen Zeit der Dobrudscha"
+		"pl": "Jeden z najstarszych meczetów w Rumunii (XVII wiek), pamiątka po czasach osmańskich w Dobrudży",
+		"en": "One of Romania's oldest mosques (17th century), from Dobruja's Ottoman times",
+		"cs": "Jedna z nejstarších mešit v Rumunsku (17. století) z osmanských časů Dobrudže",
+		"is": "Ein elsta moska Rúmeníu (17. öld), frá tímum Ottómana í Dobrudja",
+		"de": "Eine der ältesten Moscheen Rumäniens (17. Jahrhundert), aus der osmanischen Zeit der Dobrudscha"
 	},
 	"Mihai Viteazu": {
 		"pl": "Niedaleko ruiny Histrii, najstarszego miasta na terenie Rumunii, założonego przez Greków",
@@ -350,7 +350,7 @@
 		"de": "Nahe den Ruinen von Histria, der ältesten Stadt auf rumänischem Boden, von Griechen gegründet"
 	},
 	"Topoloveni": {
-		"pl": "Stąd pochodzi magiun, gęsty powidłowy krem ze śliwek bez cukru",
+		"pl": "Stąd pochodzi magiun, gęste powidła śliwkowe bez cukru",
 		"en": "Home of magiun, a thick plum butter made without sugar",
 		"cs": "Odtud pochází magiun, hustá švestková povidla bez cukru",
 		"is": "Heimkynni magiun, þykks plómumauks án sykurs",
@@ -362,5 +362,12 @@
 		"cs": "Město spisovatelů; každý rok se na dýňovém trhu vybírá největší dýně",
 		"is": "Bær rithöfunda; á hverju ári velur graskersmarkaðurinn stærsta graskerið",
 		"de": "Eine Stadt der Schriftsteller; jedes Jahr kürt der Kürbismarkt den größten Kürbis"
+	},
+	"Mircești": {
+		"pl": "Dwór poety Vasile Alecsandriego, autora wierszy o przyrodzie i pierwszych rumuńskich komedii",
+		"en": "The manor of the poet Vasile Alecsandri, author of nature poems and the first Romanian comedies",
+		"cs": "Sídlo básníka Vasile Alecsandriho, autora přírodní lyriky a prvních rumunských komedií",
+		"is": "Setur skáldsins Vasile Alecsandri, höfundar náttúruljóða og fyrstu rúmensku gamanleikjanna",
+		"de": "Das Gut des Dichters Vasile Alecsandri, Verfasser von Naturgedichten und der ersten rumänischen Komödien"
 	}
 }

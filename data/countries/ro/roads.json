@@ -49,7 +49,7 @@
 		"b": "bacau",
 		"km": 235,
 		"road": "A7",
-		"towns": [["Buzău", 65], ["Râmnicu Sărat", 105], ["Focșani", 140], ["Adjud", 178]],
+		"towns": [["Buzău", 65], ["Focșani", 140]],
 		"zones": [
 			[65, "orchard", "Dealu Mare"], [135, "fields", "Câmpia Râmnicului"], [170, "orchard", "Vrancea"],
 			[235, "fields", "Valea Siretului"]
@@ -154,37 +154,33 @@
 	},
 	{
 		"a": "sibiu",
+		"b": "deva",
+		"km": 120,
+		"road": "A1",
+		"towns": [["Sebeș", 55], ["Orăștie", 92]],
+		"zones": [[55, "foothills", "Mărginimea Sibiului"], [120, "fields", "Valea Mureșului"]],
+		"via": [[55, 23.57, 45.96], [92, 23.2, 45.84]]
+	},
+	{
+		"a": "deva",
 		"b": "timisoara",
-		"km": 285,
-		"road": [[170, "A1"], [182, "DN68A"], [285, "A1"]],
-		"towns": [["Sebeș", 55], ["Orăștie", 92], ["Deva", 120], ["Margina", 180], ["Lugoj", 220]],
-		"zones": [
-			[55, "foothills", "Mărginimea Sibiului"],
-			[120, "fields", "Valea Mureșului"],
-			[195, "forest", "Poiana Ruscă"],
-			[285, "fields", "Banat"]
-		],
-		"via": [
-			[55, 23.57, 45.96], [92, 23.2, 45.84], [120, 22.9, 45.88], [150, 22.65, 45.94], [180, 22.26, 45.86],
-			[220, 21.9, 45.69]
-		]
+		"km": 165,
+		"road": [[50, "A1"], [62, "DN68A"], [165, "A1"]],
+		"towns": [["Margina", 60], ["Lugoj", 100]],
+		"zones": [[75, "forest", "Poiana Ruscă"], [165, "fields", "Banat"]],
+		"via": [[30, 22.65, 45.94], [60, 22.26, 45.86], [100, 21.9, 45.69]]
 	},
 	{
 		"a": "timisoara",
-		"b": "arad",
-		"km": 55,
-		"road": "A1",
-		"towns": [["Sânandrei", 15], ["Orțișoara", 28]],
-		"zones": [[30, "fields", "Banat"], [55, "fields", "Câmpia Aradului"]]
-	},
-	{
-		"a": "arad",
 		"b": "oradea",
-		"km": 117,
-		"road": "DN79",
-		"towns": [["Zimandu Nou", 15], ["Chișineu-Criș", 45], ["Salonta", 75], ["Cefa", 92]],
-		"zones": [[60, "fields", "Câmpia Crișurilor"], [117, "fields", "Crișana"]],
-		"via": [[45, 21.52, 46.52], [75, 21.65, 46.8]]
+		"km": 172,
+		"road": [[55, "A1"], [172, "DN79"]],
+		"towns": [
+			["Sânandrei", 15], ["Arad", 55], ["Zimandu Nou", 70], ["Chișineu-Criș", 100], ["Salonta", 130],
+			["Cefa", 147]
+		],
+		"zones": [[30, "fields", "Banat"], [90, "fields", "Câmpia Aradului"], [172, "fields", "Crișana"]],
+		"via": [[55, 21.31, 46.18], [100, 21.52, 46.52], [130, 21.65, 46.8]]
 	},
 	{
 		"a": "oradea",
@@ -272,10 +268,10 @@
 		"a": "bacau",
 		"b": "iasi",
 		"km": 130,
-		"road": [[75, "DN2"], [130, "DN28"]],
-		"towns": [["Roman", 45], ["Moțca", 75], ["Târgu Frumos", 95], ["Podu Iloaiei", 112]],
+		"road": [[45, "DN2"], [130, "DN28"]],
+		"towns": [["Roman", 45], ["Mircești", 62], ["Târgu Frumos", 90], ["Podu Iloaiei", 110]],
 		"zones": [[60, "fields", "Valea Siretului"], [130, "upland", "Câmpia Jijiei"]],
-		"via": [[45, 26.93, 46.93], [75, 26.62, 47.23], [95, 27.01, 47.21]]
+		"via": [[45, 26.93, 46.93], [62, 26.83, 47.07], [90, 27.01, 47.21]]
 	},
 	{
 		"a": "bacau",

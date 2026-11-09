@@ -20,10 +20,9 @@
 	"timisoara": {"name": "Timișoara", "lat": 45.76, "lon": 21.23, "pop": 251, "region": "Timiș"},
 	"brasov": {"name": "Brașov", "lat": 45.66, "lon": 25.61, "pop": 238, "region": "Brașov"},
 	"craiova": {"name": "Craiova", "lat": 44.32, "lon": 23.8, "pop": 234, "region": "Dolj"},
-	"galati": {"name": "Galați", "lat": 45.44, "lon": 28.05, "pop": 218, "region": "Galați"},
+	"galati": {"name": "Galați", "lat": 45.44, "lon": 28.05, "pop": 218, "region": "Galați", "exonym": {"pl": "Gałacz"}},
 	"oradea": {"name": "Oradea", "lat": 47.07, "lon": 21.93, "pop": 183, "region": "Bihor"},
 	"ploiesti": {"name": "Ploiești", "lat": 44.94, "lon": 26.02, "pop": 180, "region": "Prahova"},
-	"arad": {"name": "Arad", "lat": 46.18, "lon": 21.31, "pop": 145, "region": "Arad"},
 	"pitesti": {"name": "Pitești", "lat": 44.86, "lon": 24.87, "pop": 141, "region": "Argeș"},
 	"bacau": {"name": "Bacău", "lat": 46.57, "lon": 26.91, "pop": 136, "region": "Bacău"},
 	"sibiu": {"name": "Sibiu", "lat": 45.79, "lon": 24.15, "pop": 134, "region": "Sibiu"},
@@ -37,7 +36,8 @@
 		"region": "Mehedinți",
 		"short": "Drobeta"
 	},
-	"suceava": {"name": "Suceava", "lat": 47.65, "lon": 26.26, "pop": 84, "region": "Suceava"},
+	"suceava": {"name": "Suceava", "lat": 47.65, "lon": 26.26, "pop": 84, "region": "Suceava", "exonym": {"pl": "Suczawa"}},
 	"tulcea": {"name": "Tulcea", "lat": 45.18, "lon": 28.8, "pop": 66, "region": "Tulcea"},
+	"deva": {"name": "Deva", "lat": 45.88, "lon": 22.9, "pop": 57, "region": "Hunedoara"},
 	"sighisoara": {"name": "Sighișoara", "lat": 46.22, "lon": 24.79, "pop": 24, "region": "Mureș"}
 }

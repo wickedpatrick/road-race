@@ -10,7 +10,7 @@
 				"de": "Parlamentspalast"
 			},
 			"desc": {
-				"pl": "Ponad tysiąc sal, zbudowany przez Ceaușescu; cięższy od wszystkich budynków świata",
+				"pl": "Ponad tysiąc sal, zbudowany przez Ceaușescu; najcięższy budynek świata",
 				"en": "Over a thousand rooms, built by Ceaușescu; the heaviest building in the world",
 				"cs": "Přes tisíc sálů, postavil ho Ceaușescu; nejtěžší budova světa",
 				"is": "Yfir þúsund salir, byggð af Ceaușescu; þyngsta bygging heims",
@@ -113,7 +113,7 @@
 				"pl": "Największy gotycki kościół w regionie, poczerniały po pożarze w 1689 roku",
 				"en": "The region's largest Gothic church, blackened by the fire of 1689",
 				"cs": "Největší gotický kostel v regionu, zčernalý po požáru roku 1689",
-				"is": "Stærsta gotneska kirkja svæðisins, sverð eftir brunann 1689",
+				"is": "Stærsta gotneska kirkja svæðisins, sótsvört eftir brunann 1689",
 				"de": "Die größte gotische Kirche der Gegend, geschwärzt vom Brand 1689"
 			},
 			"local": "Biserica Neagră"
@@ -190,33 +190,13 @@
 				"de": "Nationales Erdölmuseum"
 			},
 			"desc": {
-				"pl": "Kiwony pompy i drewniane wieże wiertnicze: Rumunia jako pierwsza na świecie oficjalnie notowała wydobycie ropy (1857)",
+				"pl": "Kiwony i drewniane wieże wiertnicze: Rumunia jako pierwsza na świecie oficjalnie notowała wydobycie ropy (1857)",
 				"en": "Pumpjacks and wooden derricks: Romania was the first country to record its oil output officially (1857)",
 				"cs": "Kývací pumpy a dřevěné vrtné věže: Rumunsko jako první na světě oficiálně evidovalo těžbu ropy (1857)",
 				"is": "Olíudælur og trébortturnar: Rúmenía skráði fyrst allra landa olíuvinnslu sína opinberlega (1857)",
 				"de": "Pferdekopfpumpen und hölzerne Bohrtürme: Rumänien verzeichnete als erstes Land amtlich seine Ölförderung (1857)"
 			},
 			"local": "Muzeul Național al Petrolului"
-		}
-	],
-	"Arad": [
-		{
-			"kind": "arad_liberty_statue",
-			"name": {
-				"pl": "Pomnik Wolności",
-				"en": "Statue of Liberty",
-				"cs": "Socha Svobody",
-				"is": "Frelsisstyttan",
-				"de": "Freiheitsstatue"
-			},
-			"desc": {
-				"pl": "Pomnik trzynastu generałów straconych w Aradzie w 1849 roku",
-				"en": "A memorial to the thirteen generals executed at Arad in 1849",
-				"cs": "Pomník třinácti generálů popravených v Aradu roku 1849",
-				"is": "Minnisvarði um þrettán hershöfðingja sem teknir voru af lífi í Arad 1849",
-				"de": "Denkmal für die dreizehn 1849 in Arad hingerichteten Generäle"
-			},
-			"local": "Statuia Libertății"
 		}
 	],
 	"Pitești": [
@@ -230,7 +210,7 @@
 				"de": "Tulpensinfonie"
 			},
 			"desc": {
-				"pl": "Wiosenny festiwal: park Strand pełen tulipanów pod cerkwią Kniaziowską",
+				"pl": "Wiosenny festiwal: park Strand pełen tulipanów pod Cerkwią Książęcą",
 				"en": "The spring festival: Strand Park full of tulips under the Princely Church",
 				"cs": "Jarní festival: park Strand plný tulipánů pod Knížecím kostelem",
 				"is": "Vorhátíðin: Strand-garðurinn fullur af túlípönum undir furstakirkjunni",
@@ -250,11 +230,11 @@
 				"de": "Sternwarte Victor Anestin"
 			},
 			"desc": {
-				"pl": "Pierwsze publiczne obserwatorium w Rumunii, z planetarium pod kopułą",
-				"en": "Romania's first public observatory, with a planetarium under its dome",
-				"cs": "První veřejná hvězdárna v Rumunsku, s planetáriem pod kupolí",
-				"is": "Fyrsta almenningsstjörnustöð Rúmeníu, með stjörnuveri undir hvolfþakinu",
-				"de": "Rumäniens erste Volkssternwarte, mit einem Planetarium unter der Kuppel"
+				"pl": "Jedno z pierwszych publicznych obserwatoriów w Rumunii, z planetarium pod kopułą",
+				"en": "One of Romania's first public observatories, with a planetarium under its dome",
+				"cs": "Jedna z prvních veřejných hvězdáren v Rumunsku, s planetáriem pod kupolí",
+				"is": "Ein fyrsta almenningsstjörnustöð Rúmeníu, með stjörnuveri undir hvolfþakinu",
+				"de": "Eine der ersten Volkssternwarten Rumäniens, mit einem Planetarium unter der Kuppel"
 			},
 			"local": "Observatorul Astronomic Victor Anestin"
 		}
@@ -397,6 +377,26 @@
 				"de": "Der 64 m hohe Torturm der Burg; um Mitternacht wechseln die hölzernen Wochentagsfiguren"
 			},
 			"local": "Turnul cu Ceas"
+		}
+	],
+	"Deva": [
+		{
+			"kind": "deva_citadel",
+			"name": {
+				"pl": "Twierdza Deva",
+				"en": "Deva Fortress",
+				"cs": "Pevnost Deva",
+				"is": "Deva-virkið",
+				"de": "Burg Deva"
+			},
+			"desc": {
+				"pl": "Ruiny średniowiecznej twierdzy na stromym wulkanicznym wzgórzu, na które wjeżdża kolejka",
+				"en": "A medieval fortress in ruins on a steep volcanic hill, with a funicular up to it",
+				"cs": "Zřícenina středověké pevnosti na strmém sopečném kopci, na který vede lanovka",
+				"is": "Rústir miðaldavirkis á brattri eldfjallahæð, með togbraut upp",
+				"de": "Eine mittelalterliche Burgruine auf einem steilen Vulkanhügel, mit einer Standseilbahn hinauf"
+			},
+			"local": "Cetatea Devei"
 		}
 	]
 }

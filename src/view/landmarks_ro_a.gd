@@ -2,12 +2,10 @@ class_name LandmarksRoA
 extends RefCounted
 ## Romanian landmarks (București to Ploiești), drawn with LandmarkPainter's helpers (metres from the base point, y up).
 
-const STONE := Color("e8e1cf")
 const STONE_D := Color("c8bea6")
 const WHITE := Color("f3f0e8")
 const WIN := Color("3a4048")
 const DARK := Color("2e3238")
-const ROOF := Color("b5432e")
 const GRASS := Color("5d8f42")
 const TREE := Color("3f6f34")
 const WATER := Color("3f86b8")
@@ -371,7 +369,7 @@ static func _black_eagle() -> void:
 	for x in [-14.0, 0.0, 14.0]:
 		var rw: float = 7.0 if x == 0.0 else 5.0
 		var rh: float = 7.0 if x == 0.0 else 4.5
-		_poly([x - rw, 19] + _arc(x, 19, rw, rh, 0, PI, 12).slice(0) + [x + rw, 19], w)
+		_poly([x - rw, 19] + _arc(x, 19, rw, rh, 0, PI, 12) + [x + rw, 19], w)
 		_poly(_arc(x, 19, rw * 0.55, rh * 0.5, 0, PI, 8), orn)
 	# the eagle on the middle gable
 	var e := Color("1c1c1e")

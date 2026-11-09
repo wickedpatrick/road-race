@@ -1,24 +1,19 @@
 class_name LandmarksRoB
 extends RefCounted
-## Romanian landmarks (Arad to Sighișoara), drawn with LandmarkPainter's helpers (metres from the base point, y up).
+## Romanian landmarks (Pitești to Deva), drawn with LandmarkPainter's helpers (metres from the base point, y up).
 
-const STONE := Color("ddd5c2")
-const STONE_D := Color("b9ae95")
 const WHITE := Color("f3f0e8")
 const WIN := Color("3a4048")
 const DARK := Color("2e3238")
 const ROOF := Color("b5432e")
 const GRASS := Color("5d8f42")
 const TREE := Color("3f6f34")
-const WATER := Color("3f86b8")
 const WATER_L := Color("8cc0e0")
 const GOLD := Color("e0b43a")
-const BRONZE := Color("55705e")
 
 ## Draws `kind` when it is one of these; false otherwise.
 static func draw(kind: String) -> bool:
 	match kind:
-		"arad_liberty_statue": _liberty_statue()
 		"pitesti_tulips": _tulips()
 		"bacau_observatory": _observatory()
 		"sibiu_roof_eyes": _sibiu()
@@ -28,6 +23,7 @@ static func draw(kind: String) -> bool:
 		"suceava_citadel": _suceava_citadel()
 		"delta_pelicans": _pelicans()
 		"sighisoara_clock_tower": _clock_tower()
+		"deva_citadel": _deva_citadel()
 		_: return false
 	return true
 
@@ -59,32 +55,6 @@ static func _arched(x: float, y0: float, w: float, h: float, col: Color) -> void
 ## A pointed (Gothic) window.
 static func _pointed(x: float, y0: float, w: float, h: float, col: Color) -> void:
 	_poly([x - w * 0.5, y0, x + w * 0.5, y0, x + w * 0.5, y0 + h - w * 0.8, x, y0 + h, x - w * 0.5, y0 + h - w * 0.8], col)
-
-## The Statue of Liberty in Arad: a tall stepped granite pedestal with bronze reliefs and the four seated figures at
-## its foot, Liberty on top holding up a wreath with a sword in her other hand.
-static func _liberty_statue() -> void:
-	var g := Color("b8b0a0")
-	var gd := g.darkened(0.15)
-	_r(-9, 0, 9, 1.5, gd)
-	_r(-7, 1.5, 7, 3, g)
-	_r(-4, 3, 4, 13, g)
-	_r(-4.6, 13, 4.6, 14, gd)
-	_r(-3.4, 14, 3.4, 16.5, g)
-	_r(-3, 6, 3, 10.5, BRONZE.lightened(0.15))
-	# the seated figures on the corners
-	for x in [-6.0, 6.0]:
-		_poly([x - 1.1, 3, x + 1.1, 3, x + 0.8, 5.8, x - 0.8, 5.8], BRONZE)
-		_c(x, 6.4, 0.55, BRONZE)
-	# Liberty
-	var b := BRONZE
-	_poly([-1.4, 16.5, 1.4, 16.5, 0.8, 21.5, -0.8, 21.5], b)
-	_poly([-0.8, 21.5, 0.8, 21.5, 0.6, 22.6, -0.6, 22.6], b)
-	_c(0, 23.2, 0.65, b)
-	_l(0.6, 21.8, 1.9, 24.6, b, 0.3)
-	_c(2.1, 25.2, 0.7, b)
-	_c(2.1, 25.2, 0.4, g.lightened(0.3))
-	_l(-0.6, 21.5, -2.0, 19.5, b, 0.3)
-	_l(-2.0, 19.5, -2.2, 17.2, b, 0.15)
 
 ## Pitești's Tulip Symphony: rows of red, yellow, pink and white tulips in Strand Park, with the white Princely
 ## Church and its little round bell tower behind.
@@ -363,3 +333,36 @@ static func _clock_tower() -> void:
 	_l(0, 60, 0, 63, DARK, 0.15)
 	_c(0, 62, 0.5, GOLD)
 	_l(-0.6, 63.4, 0.6, 63.4, GOLD, 0.15)
+
+## The fortress of Deva: grey ruined walls and towers crowning a steep, wooded volcanic cone, the funicular's track
+## climbing the slope with its little red car, and the town's roofs at the foot.
+static func _deva_citadel() -> void:
+	_poly([-25, 0, -18, 6, -10, 18, -5, 27, 5, 28, 11, 19, 18, 7, 25, 0], TREE)
+	_poly([-25, 0, -20, 3, -14, 6, -4, 7, 8, 6, 18, 3, 25, 0], GRASS)
+	# the town's houses at the foot
+	for k in 6:
+		var x := -22.0 + k * 8.0
+		_r(x, 0, x + 4.5, 3.2, Color("ece4cf") if k % 2 else Color("e8c88a"))
+		_poly([x - 0.3, 3.2, x + 4.8, 3.2, x + 2.25, 5.2], ROOF)
+	# the funicular: a straight track up the right flank and its car
+	_l(15, 3.5, 6, 27, Color("4a4038"), 0.35)
+	_poly([10.6, 14.2, 12.6, 14.6, 12.0, 16.6, 10.0, 16.2], Color("c8302a"))
+	_r(10.5, 15.2, 11.8, 15.9, WHITE)
+	# the walls and towers along the top
+	var st := Color("a49c8c")
+	var sd := st.darkened(0.18)
+	_r(-9, 26, 9, 33, st)
+	for k in 9:
+		var x := -8.5 + k * 2.1
+		if k == 3: continue # a breach in the ruined parapet
+		_r(x - 0.5, 33, x + 0.5, 34.2, st)
+	for x in [-9.0, 9.0]:
+		_r(x - 2.2, 25, x + 2.2, 36, sd)
+		for k in 2:
+			_r(x - 2.0 + k * 2.8, 36, x - 0.8 + k * 2.8, 37.2, sd)
+		_r(x - 0.3, 30, x + 0.3, 32, WIN)
+	_r(-1.8, 26, 1.8, 38.5, sd)
+	_r(-2.0, 38.5, -0.8, 39.6, sd)
+	_r(0.8, 38.5, 2.0, 39.6, sd)
+	_arched(0, 26, 1.6, 3, Color("3a3028"))
+	_r(-0.25, 33, 0.25, 35, WIN)

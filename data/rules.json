@@ -873,7 +873,6 @@
 		"galati_shipyard": [70, 40],
 		"vulturul_negru": [44, 30],
 		"ploiesti_pumpjack": [40, 24],
-		"arad_liberty_statue": [18, 26],
 		"pitesti_tulips": [50, 28],
 		"bacau_observatory": [30, 22],
 		"sibiu_roof_eyes": [50, 44],
@@ -882,7 +881,8 @@
 		"trajan_bridge": [80, 24],
 		"suceava_citadel": [60, 26],
 		"delta_pelicans": [40, 14],
-		"sighisoara_clock_tower": [24, 64]
+		"sighisoara_clock_tower": [24, 64],
+		"deva_citadel": [50, 40]
 	},
 	"police": {"escape_chance": 0.2, "escape_kmh": 180, "escape_swerves": [3, 5]},
 	"postcards": {"stamps": [0.15, 0.3, 0.45, 0.6], "stamp_caps": [2, 3, 3, 4, 5, 5, 5]}
