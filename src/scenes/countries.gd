@@ -163,6 +163,27 @@ func _pick(code: String) -> void:
 func _name(code: String) -> String:
 	return GameData.localize(world.countries[code].name)
 
+## [[flag code, name], ...] for a country in the game: one, or each of the countries a map spans (the Southern
+## Balkans: Montenegro, Kosovo, Albania, North Macedonia), and for one coming soon: its name with the tag.
+func _parts(code: String, names: Dictionary) -> Array:
+	if not names.has(code): return [[code, "%s · %s" % [_name(code), Lang.t("soon_tag")]]]
+	var members := GameData.members(code)
+	if members.is_empty(): return [[code, names[code]]]
+	return members.map(func(m): return [m, _name(m)])
+
+## Flags and names in a row from `pos` (the baseline), each flag before its name; returns the row's width (with
+## draw false only measures it).
+func _row(pos: Vector2, parts: Array, size: int, color: Color, draw := true) -> float:
+	var x := 0.0
+	for k in parts.size():
+		var fh := size * 0.8
+		if draw: FlagPainter.draw(self, parts[k][0], Rect2(pos + Vector2(x, -size * 0.35 - fh * 0.5), Vector2(fh * 1.5, fh)))
+		x += fh * 1.5 + 5.0
+		var text: String = parts[k][1] + (", " if k < parts.size() - 1 else "")
+		if draw: draw_string(font, pos + Vector2(x, 0), text, HORIZONTAL_ALIGNMENT_LEFT, -1, size, color)
+		x += font.get_string_size(text, HORIZONTAL_ALIGNMENT_LEFT, -1, size).x + (8.0 if k < parts.size() - 1 else 0.0)
+	return x
+
 ## Which colour means what: in the game, coming soon.
 func _legend() -> void:
 	draw_rect(LEGEND, Color(0.06, 0.09, 0.13, 0.8))
@@ -218,31 +239,38 @@ func _draw() -> void:
 	for c in GameData.countries(): names[c.code] = c.name
 	for code in play: # the flag in the middle of every country in the game, bigger under the cursor
 		var h := (18.0 if code == hover else 14.0) if _wide(code) else (14.0 if code == hover else 10.0)
-		var fl := Rect2(label_pos(code) - Vector2(h * 0.75, h * 0.5), Vector2(h * 1.5, h))
-		draw_rect(fl.grow(1.0), Color(0, 0, 0, 0.55))
-		FlagPainter.draw(self, code, fl)
+		var members := GameData.members(code)
+		var flags: Array = [code] if members.is_empty() else members
+		var cols := mini(flags.size(), 2) # several countries on one map: their flags two by two
+		var rows := ceili(flags.size() / float(cols))
+		var cell := Vector2(h * 1.5 + 3.0, h + 3.0)
+		var top := label_pos(code) - Vector2(cell.x * cols - 3.0, cell.y * rows - 3.0) * 0.5
+		for i in flags.size():
+			var fl := Rect2(top + Vector2(cell.x * (i % cols), cell.y * (i / cols)), Vector2(h * 1.5, h))
+			draw_rect(fl.grow(1.0), Color(0, 0, 0, 0.55))
+			FlagPainter.draw(self, flags[i], fl)
 	if tip != "": # the name by the cursor: "Poland", or "France · coming soon"
-		var text: String = names[tip] if names.has(tip) else "%s · %s" % [_name(tip), Lang.t("soon_tag")]
-		var w := font.get_string_size(text, HORIZONTAL_ALIGNMENT_LEFT, -1, 15).x + 26 # with the flag
+		var parts := _parts(tip, names)
+		var w := _row(Vector2.ZERO, parts, 15, Color.WHITE, false)
 		var pos := cursor + Vector2(14, 30)
 		pos.x = clampf(pos.x, 8.0, 952.0 - w)
 		pos.y = clampf(pos.y, 80.0, 478.0)
 		var box := Rect2(pos + Vector2(-8, -17), Vector2(w + 16, 24))
 		draw_rect(box, Color(0.1, 0.12, 0.15, 0.85))
 		draw_rect(box, CURRENT, false, 1.5)
-		FlagPainter.draw(self, tip, Rect2(pos + Vector2(0, -12), Vector2(21, 14)))
-		draw_string(font, pos + Vector2(26, 0), text, HORIZONTAL_ALIGNMENT_LEFT, -1, 15, Color.WHITE)
+		_row(pos, parts, 15, Color.WHITE)
 	_legend()
 	# header and footer
 	draw_rect(Rect2(0, 0, 960, 58), Color(0, 0, 0, 0.45))
 	draw_string(font, Vector2(24, 42), Lang.t("pick_country"), HORIZONTAL_ALIGNMENT_LEFT, -1, 32, Color.WHITE)
 	var head_code := hover_soon if hover_soon != "" else (hover if names.has(hover) else "")
-	if head_code != "": # the name on the right, its flag before it
-		var head: String = "%s · %s" % [_name(hover_soon), Lang.t("soon_tag")] if hover_soon != "" else names[hover]
-		var hs := 24 if hover_soon != "" else 28
-		draw_string(font, Vector2(0, 42), head, HORIZONTAL_ALIGNMENT_RIGHT, 936, hs, Color("c8d0d6") if hover_soon != "" else CURRENT)
-		var hw := font.get_string_size(head, HORIZONTAL_ALIGNMENT_LEFT, -1, hs).x
-		FlagPainter.draw(self, head_code, Rect2(Vector2(936 - hw - 52, 14), Vector2(42, 28)))
+	if head_code != "": # the name on the right, its flag before it (each country's on a map of several)
+		var parts := _parts(head_code, names)
+		var title_w := font.get_string_size(Lang.t("pick_country"), HORIZONTAL_ALIGNMENT_LEFT, -1, 32).x + 48.0
+		var hs := 24 if hover_soon != "" or parts.size() > 1 else 28
+		while hs > 12 and _row(Vector2.ZERO, parts, hs, Color.WHITE, false) > 936.0 - title_w: hs -= 2
+		var hw := _row(Vector2.ZERO, parts, hs, Color.WHITE, false)
+		_row(Vector2(936.0 - hw, 42), parts, hs, Color("c8d0d6") if hover_soon != "" else CURRENT)
 	draw_rect(Rect2(0, 486, 960, 54), Color(0, 0, 0, 0.5))
 	Ui.button(self, font, BACK_BTN, Lang.t("back"), false, 20)
 	var hint := Lang.t("country_soon") if soon > 0.0 else ("" if Screen.touch else Lang.t("pick_country_hint"))
