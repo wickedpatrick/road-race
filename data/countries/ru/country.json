@@ -20,7 +20,7 @@
 	},
 	"region_label": {"pl": "region", "en": "region", "cs": "region", "is": "hérað", "de": "Region"},
 	"start": ["moskva", "vladimir"],
-	"express_prefixes": ["M-11", "M-12"],
+	"express_prefixes": ["M-11"],
 	"limits": {"express": 110, "road": 90, "city": 60, "town_on_express": 90, "town": 60},
 	"signs": {"town": "#ffffff", "town_text": "#111111", "board": "#1d5bbf", "board_motorway": "#1f7a3a"},
 	"map": {"lon0": 19, "lon1": 137.5, "lat0": 41, "lat1": 61.5, "lon_k": 0.62, "zoom": 3.2, "labels": "auto", "dot_max": 7},

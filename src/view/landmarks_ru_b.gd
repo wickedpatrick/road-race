@@ -61,7 +61,7 @@ static func _arc(cx: float, cy: float, rx: float, ry: float, a0: float, a1: floa
 static func _arch_win(x: float, y0: float, w: float, h: float, col: Color) -> void:
 	_poly([x - w * 0.5, y0, x + w * 0.5, y0, x + w * 0.5, y0 + h - w * 0.5] + _arc(x, y0 + h - w * 0.5, w * 0.5, w * 0.5, 0, PI, 6), col)
 
-## A wedge-shaped gate arch opening: a rectangle with a round top, x centred, from y0 up h, w wide, in `col`.
+## A gate arch opening: a rectangle with a round top, x centred, from y0 up h, w wide, in `col`.
 static func _opening(x: float, y0: float, w: float, h: float, col: Color) -> void:
 	_arch_win(x, y0, w, h, col)
 

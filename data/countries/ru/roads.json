@@ -103,14 +103,14 @@
 	{
 		"a": "kazan",
 		"b": "ufa",
-		"km": 471,
+		"km": 525,
 		"road": "M-7",
-		"towns": [["Mamadysh", 160], ["Yelabuga", 215], ["Naberezhnye Chelny", 235], ["Kushnarenkovo", 421]],
+		"towns": [["Mamadysh", 178], ["Yelabuga", 240], ["Naberezhnye Chelny", 262], ["Kushnarenkovo", 469]],
 		"zones": [
-			[150, "fields", "Zakazanye"], [260, "fields", "Kama"], [390, "upland", "Predurale"],
-			[471, "fields", "Belaya"]
+			[167, "fields", "Zakazanye"], [290, "fields", "Kama"], [435, "upland", "Preduralye"],
+			[525, "fields", "Belaya"]
 		],
-		"via": [[160, 51.41, 55.71], [215, 52.05, 55.76], [235, 52.4, 55.74], [421, 55.35, 55.1]]
+		"via": [[178, 51.41, 55.71], [240, 52.05, 55.76], [262, 52.4, 55.74], [469, 55.35, 55.1]]
 	},
 	{
 		"a": "samara",
@@ -121,7 +121,7 @@
 		"zones": [
 			[110, "steppe", "Zavolzhye"],
 			[300, "upland", "Bugulminskaya vozvyshennost"],
-			[442, "foothills", "Predurale"]
+			[442, "foothills", "Preduralye"]
 		],
 		"via": [[26, 50.39, 53.5], [98, 51.2, 53.9], [254, 53.25, 54.4], [268, 53.47, 54.48]]
 	},
@@ -131,7 +131,7 @@
 		"km": 400,
 		"road": "M-5",
 		"towns": [["Yuryuzan", 166], ["Zlatoust", 257], ["Miass", 300], ["Chebarkul", 318]],
-		"zones": [[90, "foothills", "Predurale"], [310, "mountains", "Yuzhny Ural"], [400, "lakes", "Zauralye"]],
+		"zones": [[90, "foothills", "Preduralye"], [310, "mountains", "Yuzhny Ural"], [400, "lakes", "Zauralye"]],
 		"via": [[166, 58.43, 54.86], [257, 59.67, 55.17], [300, 60.11, 55.05], [318, 60.37, 54.98]]
 	},
 	{
@@ -166,7 +166,7 @@
 		"km": 650,
 		"road": "R-254",
 		"towns": [["Kalachinsk", 82], ["Tatarsk", 178], ["Barabinsk", 339], ["Kargat", 471]],
-		"zones": [[120, "steppe", "Priirtyshye"], [500, "lakes", "Baraba"], [650, "fields", "Priobye"]],
+		"zones": [[120, "steppe", "Priirtyshye"], [500, "lakes", "Barabinskaya step"], [650, "fields", "Priobye"]],
 		"via": [[82, 74.58, 55.05], [178, 75.97, 55.21], [339, 78.35, 55.35], [471, 80.28, 55.19]]
 	},
 	{
@@ -332,7 +332,7 @@
 		"a": "ust_luga",
 		"b": "kaliningrad",
 		"km": 979,
-		"road": [[2, "A-180"], [979, "27A-002"]],
+		"road": [[2, ""], [979, "27A-002"]],
 		"towns": [["Baltiysk", 933]],
 		"zones": [[2, "coast", "Luzhskaya guba"], [932, "coast", "Baltiyskoye more"], [979, "coast", "Sambiya"]],
 		"via": [[60, 27.6, 59.85], [250, 24, 59.75], [420, 21.6, 59.1], [650, 19.6, 57.4], [932, 19.9, 54.64]],

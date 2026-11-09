@@ -91,11 +91,11 @@
 		"de": "Eine Festung von 1716 an der Mündung des Om in den Irtysch; Dostojewski leistete hier Zwangsarbeit"
 	},
 	"Voronezh": {
-		"pl": "Kolebka rosyjskiej floty: w 1696 roku Piotr I budował tu pierwsze okręty",
-		"en": "The cradle of the Russian navy: Peter the Great built his first ships here in 1696",
-		"cs": "Kolébka ruského loďstva: Petr Veliký tu roku 1696 stavěl své první lodě",
-		"is": "Vagga rússneska flotans: Pétur mikli lét smíða hér fyrstu skip sín árið 1696",
-		"de": "Die Wiege der russischen Flotte: Peter der Große ließ hier 1696 seine ersten Schiffe bauen"
+		"pl": "Kolebka rosyjskiej floty: w 1696 roku Piotr I budował tu okręty wojenne floty azowskiej",
+		"en": "The cradle of the Russian navy: in 1696 Peter the Great had the warships of his Azov fleet built here",
+		"cs": "Kolébka ruského loďstva: Petr Veliký tu roku 1696 stavěl válečné lodě své azovské flotily",
+		"is": "Vagga rússneska flotans: árið 1696 lét Pétur mikli smíða hér herskip Asovflotans",
+		"de": "Die Wiege der russischen Flotte: Peter der Große ließ hier 1696 die Kriegsschiffe seiner Asowschen Flotte bauen"
 	},
 	"Volgograd": {
 		"pl": "Miasto ciągnie się ponad 60 km wzdłuż Wołgi; tu zaczyna się Kanał Wołga–Don",
@@ -157,7 +157,7 @@
 		"pl": "Subtropikalny kurort między Morzem Czarnym a Kaukazem, gospodarz zimowych igrzysk w 2014 roku",
 		"en": "A subtropical resort between the Black Sea and the Caucasus, host of the 2014 Winter Olympics",
 		"cs": "Subtropické letovisko mezi Černým mořem a Kavkazem, hostitel zimních olympijských her 2014",
-		"is": "Hitabeltisleg heilsulind milli Svartahafs og Kákasusfjalla, gestgjafi vetrarólympíuleikanna 2014",
+		"is": "Heittempruð heilsulind milli Svartahafs og Kákasusfjalla, gestgjafi vetrarólympíuleikanna 2014",
 		"de": "Ein subtropischer Kurort zwischen Schwarzem Meer und Kaukasus, Gastgeber der Winterspiele 2014"
 	},
 	"Ulan-Ude": {
@@ -198,7 +198,7 @@
 	"Svobodny": {
 		"pl": "Miasto nad Zeją, niedaleko którego w tajdze zbudowano kosmodrom Wostocznyj",
 		"en": "A town on the Zeya, near which the Vostochny cosmodrome was built in the taiga",
-		"cs": "Město na řece Zeje, nedaleko kterého v tajze postavili kosmodrom Vostočnyj",
+		"cs": "Město na řece Zeji, nedaleko kterého v tajze postavili kosmodrom Vostočnyj",
 		"is": "Bær við ána Zeju; skammt frá honum var Vostotsjní-geimstöðin reist í barrskóginum",
 		"de": "Eine Stadt an der Seja, in deren Nähe das Kosmodrom Wostotschny in der Taiga gebaut wurde"
 	},
@@ -245,7 +245,7 @@
 		"de": "Um das Dreifaltigkeitskloster des heiligen Sergius aus dem 14. Jahrhundert gewachsen; berühmt für die hier geschnitzten Matrjoschkas"
 	},
 	"Pereslavl-Zalessky": {
-		"pl": "Na Jeziorze Plescziejewskim młody Piotr I zbudował swoją pierwszą flotyllę",
+		"pl": "Na Jeziorze Pleszczejewskim młody Piotr I zbudował swoją pierwszą flotyllę",
 		"en": "On Lake Pleshcheyevo the young Peter the Great built his first little fleet",
 		"cs": "Na Pleščejevském jezeře postavil mladý Petr Veliký svou první flotilu",
 		"is": "Á Plesjtsjejevo-vatni smíðaði hinn ungi Pétur mikli fyrsta litla flota sinn",
