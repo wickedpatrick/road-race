@@ -294,7 +294,7 @@ static func build(from: String, to: String) -> Dictionary:
 		hill += Biome.get_data(zn.biome).hill * w
 	# climbs slow every car down a little: hillier routes get more time
 	var part0 := Geo.city_part(from)
-	var legal := _legal_time(towns, roads, length, mpk, borders, part0, ferries.size()) * (1.0 + HILL_TIME * hill / length)
+	var legal := _legal_time(towns, roads, length, mpk, borders, part0, ferries) * (1.0 + HILL_TIME * hill / length)
 	var weather := Weather.for_legs(legs)
 	var duration := ceilf((legal * 1.09 * Weather.time_factor(weather) + 6.0 * n_st + 12.0) / 5.0) * 5.0
 	var stage := {
@@ -370,19 +370,23 @@ static func _boards(towns: Array, mpk: float, roads: Array, ferries := [], total
 	return out
 
 ## Seconds needed to drive the track keeping to the speed limits (capped at a typical cruising speed), plus
-## time to slow down for and speed up after every town, and to stop for and board every ferry.
-static func _legal_time(towns: Array, roads: Array, length: float, mpk: float, borders := [], part0 := "", ferries := 0) -> float:
+## time to slow down for and speed up after every town, and to stop for and board every ferry (the crossing itself,
+## FERRY_GAP between the barrier and the far ramp, is not driven: however wide the sea, a ferry costs FERRY_STOP_TIME).
+static func _legal_time(towns: Array, roads: Array, length: float, mpk: float, borders := [], part0 := "", ferries := []) -> float:
 	var probe := {"towns": towns, "roads": roads, "length": length, "m_per_km": mpk, "borders": borders, "part0": part0}
 	var t := 0.0
 	var z := 0.0
 	while z < length:
+		if ferries.any(func(f): return z >= f.z and z < f.z_out):
+			z += 10.0
+			continue
 		# no limit counts as the posted motorway limit: the time stays fair in heavy Autobahn traffic, and the open
 		# stretches are a gain for whoever drives faster
 		var lim := speed_limit_at(probe, z)
 		if lim == NO_LIMIT: lim = Geo.limit_kmh(int(Geo.limits(Geo.part_at(probe, z)).express))
 		t += 10.0 / (minf(lim, 135.0) / 3.6 * 0.95)
 		z += 10.0
-	return t + 1.5 * towns.size() + FERRY_STOP_TIME * ferries
+	return t + 1.5 * towns.size() + FERRY_STOP_TIME * ferries.size()
 
 ## Shrinks town streets so neighbouring settlements never overlap (short tracks squeeze them together).
 ## A big city gives way first; a gap of open road is kept between them for the name signs.
