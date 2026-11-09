@@ -162,6 +162,12 @@
 			"name": {"pl": "Białoruś", "en": "Belarus", "cs": "Bělorusko", "is": "Hvíta-Rússland", "de": "Belarus"},
 			"neighbours": ["pl", "lt", "lv", "ua", "ru"],
 			"favorite_neighbour": "ru"
+		},
+		{
+			"code": "tr",
+			"name": {"pl": "Turcja", "en": "Turkey", "cs": "Turecko", "is": "Tyrkland", "de": "Türkei"},
+			"neighbours": ["gr", "bg"],
+			"favorite_neighbour": "bg"
 		}
 	]
 }

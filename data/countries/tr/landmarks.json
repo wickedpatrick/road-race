@@ -1,0 +1,614 @@
+{
+	"İstanbul": [
+		{
+			"kind": "tr_hagia_sophia",
+			"name": {"pl": "Hagia Sophia", "en": "Hagia Sophia", "cs": "Hagia Sofia", "is": "Ægisif", "de": "Hagia Sophia"},
+			"desc": {
+				"pl": "Zbudowana w 537 roku jako kościół, od 1453 roku meczet, od 1934 muzeum, a od 2020 znów meczet",
+				"en": "Built in 537 as a church, a mosque from 1453, a museum from 1934 and a mosque again since 2020",
+				"cs": "Postavena roku 537 jako kostel, od roku 1453 mešita, od roku 1934 muzeum a od roku 2020 opět mešita",
+				"is": "Reist árið 537 sem kirkja, moska frá 1453, safn frá 1934 og aftur moska frá 2020",
+				"de": "537 als Kirche erbaut, ab 1453 Moschee, ab 1934 Museum und seit 2020 wieder Moschee"
+			},
+			"local": "Ayasofya"
+		},
+		{
+			"kind": "tr_galata_tower",
+			"name": {
+				"pl": "Wieża Galata",
+				"en": "Galata Tower",
+				"cs": "Galatská věž",
+				"is": "Galata-turninn",
+				"de": "Galataturm"
+			},
+			"desc": {
+				"pl": "Kamienna wieża genueńska z 1348 roku ze stożkowym dachem, nad Złotym Rogiem",
+				"en": "A Genoese stone tower of 1348 with a conical roof, above the Golden Horn",
+				"cs": "Janovská kamenná věž z roku 1348 s kuželovou střechou nad Zlatým rohem",
+				"is": "Genúskur steinturn frá 1348 með keilulaga þaki, ofan við Gullna hornið",
+				"de": "Ein genuesischer Steinturm von 1348 mit Kegeldach über dem Goldenen Horn"
+			},
+			"local": "Galata Kulesi"
+		}
+	],
+	"Ankara": [
+		{
+			"kind": "tr_anitkabir",
+			"name": {"pl": "Anıtkabir", "en": "Anıtkabir", "cs": "Anıtkabir", "is": "Anıtkabir", "de": "Anıtkabir"},
+			"desc": {
+				"pl": "Mauzoleum Mustafy Kemala Atatürka, pierwszego prezydenta Turcji, na wzgórzu nad miastem",
+				"en": "The mausoleum of Mustafa Kemal Atatürk, Turkey's first president, on a hill above the city",
+				"cs": "Mauzoleum Mustafy Kemala Atatürka, prvního prezidenta Turecka, na kopci nad městem",
+				"is": "Grafhýsi Mustafa Kemal Atatürk, fyrsta forseta Tyrklands, á hæð ofan við borgina",
+				"de": "Das Mausoleum von Mustafa Kemal Atatürk, dem ersten Präsidenten der Türkei, auf einem Hügel über der Stadt"
+			},
+			"local": "Anıtkabir"
+		}
+	],
+	"İzmir": [
+		{
+			"kind": "tr_izmir_clock_tower",
+			"name": {
+				"pl": "Wieża zegarowa",
+				"en": "Clock Tower",
+				"cs": "Hodinová věž",
+				"is": "Klukkuturninn",
+				"de": "Uhrturm"
+			},
+			"desc": {
+				"pl": "Ozdobna wieża z 1901 roku na placu Konak, z fontannami u stóp; zegar podarował cesarz Wilhelm II",
+				"en": "An ornate tower of 1901 on Konak Square with fountains at its foot; the clock was a gift from Kaiser Wilhelm II",
+				"cs": "Zdobená věž z roku 1901 na náměstí Konak s fontánami u paty; hodiny daroval císař Vilém II.",
+				"is": "Skrautlegur turn frá 1901 á Konak-torgi með gosbrunnum við fótinn; klukkan var gjöf frá Vilhjálmi II keisara",
+				"de": "Ein verzierter Turm von 1901 am Konak-Platz mit Brunnen zu seinen Füßen; die Uhr schenkte Kaiser Wilhelm II."
+			},
+			"local": "Saat Kulesi"
+		}
+	],
+	"Bursa": [
+		{
+			"kind": "tr_green_tomb",
+			"name": {
+				"pl": "Zielony Grobowiec",
+				"en": "Green Tomb",
+				"cs": "Zelená hrobka",
+				"is": "Græna grafhýsið",
+				"de": "Grünes Grabmal"
+			},
+			"desc": {
+				"pl": "Ośmioboczne mauzoleum sułtana Mehmeda I z 1421 roku, kryte turkusowymi kaflami",
+				"en": "The octagonal mausoleum of Sultan Mehmed I, 1421, clad in turquoise tiles",
+				"cs": "Osmiboké mauzoleum sultána Mehmeda I. z roku 1421, obložené tyrkysovými kachlemi",
+				"is": "Átthyrnt grafhýsi Mehmeds I soldáns frá 1421, klætt grænbláum flísum",
+				"de": "Das achteckige Mausoleum Sultan Mehmeds I. von 1421, mit türkisfarbenen Fliesen verkleidet"
+			},
+			"local": "Yeşil Türbe"
+		}
+	],
+	"Gaziantep": [
+		{
+			"kind": "tr_gaziantep_castle",
+			"name": {
+				"pl": "Zamek w Gaziantepie",
+				"en": "Gaziantep Castle",
+				"cs": "Hrad Gaziantep",
+				"is": "Gaziantep-kastalinn",
+				"de": "Burg Gaziantep"
+			},
+			"desc": {
+				"pl": "Okrągłe baszty na kopcu w środku starego miasta, nad bazarami miedzianych naczyń",
+				"en": "Round towers on a mound in the middle of the old city, above the coppersmiths' bazaars",
+				"cs": "Okrouhlé věže na pahorku uprostřed starého města, nad bazary měditepců",
+				"is": "Hringlaga turnar á hól í miðjum gamla bænum, ofan við basara koparsmiðanna",
+				"de": "Runde Türme auf einem Hügel mitten in der Altstadt, über den Basaren der Kupferschmiede"
+			},
+			"local": "Gaziantep Kalesi"
+		}
+	],
+	"Adana": [
+		{
+			"kind": "tr_adana_taskopru",
+			"name": {
+				"pl": "Kamienny Most",
+				"en": "Stone Bridge",
+				"cs": "Kamenný most",
+				"is": "Steinbrúin",
+				"de": "Steinbrücke"
+			},
+			"desc": {
+				"pl": "Rzymski most na rzece Seyhan, liczący ponad 1600 lat; do 2007 roku jeździły po nim samochody",
+				"en": "A Roman bridge over the Seyhan, more than 1600 years old; cars drove over it until 2007",
+				"cs": "Římský most přes řeku Seyhan, starý přes 1600 let; auta po něm jezdila až do roku 2007",
+				"is": "Rómversk brú yfir Seyhan, meira en 1600 ára gömul; bílar óku yfir hana allt til 2007",
+				"de": "Eine römische Brücke über den Seyhan, über 1600 Jahre alt; bis 2007 fuhren Autos darüber"
+			},
+			"local": "Taşköprü"
+		}
+	],
+	"Konya": [
+		{
+			"kind": "tr_mevlana",
+			"name": {
+				"pl": "Mauzoleum Rumiego",
+				"en": "Mevlana Museum",
+				"cs": "Mauzoleum Rúmího",
+				"is": "Grafhýsi Rúmís",
+				"de": "Mevlana-Museum"
+			},
+			"desc": {
+				"pl": "Grób poety Rumiego (Mevlâny) pod turkusową, żłobkowaną wieżą z XIII wieku",
+				"en": "The tomb of the poet Rumi (Mevlana) under its fluted turquoise tower from the 13th century",
+				"cs": "Hrob básníka Rúmího (Mevlány) pod tyrkysovou žlábkovanou věží ze 13. století",
+				"is": "Gröf skáldsins Rúmís (Mevlana) undir grænbláum, rákóttum turni frá 13. öld",
+				"de": "Das Grab des Dichters Rumi (Mevlana) unter seinem türkisfarbenen, gerippten Turm aus dem 13. Jahrhundert"
+			},
+			"local": "Mevlana Müzesi"
+		}
+	],
+	"Antalya": [
+		{
+			"kind": "tr_hadrians_gate",
+			"name": {
+				"pl": "Brama Hadriana",
+				"en": "Hadrian's Gate",
+				"cs": "Hadriánova brána",
+				"is": "Hlið Hadríanusar",
+				"de": "Hadrianstor"
+			},
+			"desc": {
+				"pl": "Marmurowa brama o trzech łukach, zbudowana na cześć cesarza Hadriana, który odwiedził miasto w 130 roku",
+				"en": "A marble gate of three arches, built in honour of the emperor Hadrian, who visited the city in 130",
+				"cs": "Mramorová brána se třemi oblouky, postavená na počest císaře Hadriána, který město navštívil roku 130",
+				"is": "Marmarahlið með þremur bogum, reist Hadríanusi keisara til heiðurs, sem heimsótti borgina árið 130",
+				"de": "Ein marmornes Tor mit drei Bögen, zu Ehren Kaiser Hadrians errichtet, der die Stadt im Jahr 130 besuchte"
+			},
+			"local": "Hadrian Kapısı"
+		}
+	],
+	"Kayseri": [
+		{
+			"kind": "tr_erciyes",
+			"name": {"pl": "Erciyes", "en": "Mount Erciyes", "cs": "Erciyes", "is": "Erciyes-fjall", "de": "Erciyes"},
+			"desc": {
+				"pl": "Ośnieżony stożek wulkanu (3917 m), najwyższy szczyt środkowej Anatolii, ze stokami narciarskimi",
+				"en": "A snowy volcanic cone (3917 m), the highest peak of central Anatolia, with ski slopes",
+				"cs": "Zasněžený sopečný kužel (3917 m), nejvyšší vrchol střední Anatolie, se sjezdovkami",
+				"is": "Snævi þakin eldfjallskeila (3917 m), hæsti tindur Mið-Anatólíu, með skíðabrekkum",
+				"de": "Ein schneebedeckter Vulkankegel (3917 m), der höchste Gipfel Zentralanatoliens, mit Skipisten"
+			},
+			"local": "Erciyes Dağı"
+		}
+	],
+	"Mersin": [
+		{
+			"kind": "tr_kizkalesi",
+			"name": {
+				"pl": "Dziewiczy Zamek",
+				"en": "Maiden's Castle",
+				"cs": "Dívčí hrad",
+				"is": "Meyjarkastalinn",
+				"de": "Mädchenburg"
+			},
+			"desc": {
+				"pl": "Średniowieczny zamek na wysepce 200 m od brzegu, na wybrzeżu na zachód od Mersin",
+				"en": "A medieval castle on an islet 200 m offshore, on the coast west of Mersin",
+				"cs": "Středověký hrad na ostrůvku 200 m od břehu, na pobřeží západně od Mersinu",
+				"is": "Miðaldakastali á hólma 200 m frá landi, á ströndinni vestan við Mersin",
+				"de": "Eine mittelalterliche Burg auf einer Insel 200 m vor der Küste, westlich von Mersin"
+			},
+			"local": "Kızkalesi"
+		}
+	],
+	"Diyarbakır": [
+		{
+			"kind": "tr_diyarbakir_walls",
+			"name": {
+				"pl": "Mury Diyarbakıru",
+				"en": "Walls of Diyarbakır",
+				"cs": "Hradby Diyarbakıru",
+				"is": "Borgarmúrar Diyarbakır",
+				"de": "Stadtmauern von Diyarbakır"
+			},
+			"desc": {
+				"pl": "Czarne bazaltowe mury z kilkudziesięcioma basztami, jedne z najdłuższych zachowanych murów miejskich na świecie",
+				"en": "Black basalt walls with dozens of towers, among the longest surviving city walls in the world",
+				"cs": "Černé čedičové hradby s desítkami věží, jedny z nejdelších dochovaných městských hradeb na světě",
+				"is": "Svartir basaltmúrar með tugum turna, meðal lengstu varðveittu borgarmúra heims",
+				"de": "Schwarze Basaltmauern mit Dutzenden Türmen, eine der längsten erhaltenen Stadtmauern der Welt"
+			},
+			"local": "Diyarbakır Surları"
+		}
+	],
+	"Şanlıurfa": [
+		{
+			"kind": "tr_balikligol",
+			"name": {
+				"pl": "Staw Świętych Ryb",
+				"en": "Pool of Sacred Fish",
+				"cs": "Jezírko posvátných ryb",
+				"is": "Tjörn hinna helgu fiska",
+				"de": "Teich der heiligen Fische"
+			},
+			"desc": {
+				"pl": "Staw z karpiami, których nikt nie łowi; według tradycji tu wrzucono Abrahama w ogień, który zamienił się w wodę",
+				"en": "A pool of carp that nobody fishes; by tradition Abraham was thrown into a fire here that turned into water",
+				"cs": "Jezírko s kapry, které nikdo neloví; podle tradice tu byl Abrahám vhozen do ohně, který se proměnil ve vodu",
+				"is": "Tjörn með vatnakörpum sem enginn veiðir; samkvæmt hefðinni var Abraham kastað hér í eld sem varð að vatni",
+				"de": "Ein Teich mit Karpfen, die niemand fängt; der Überlieferung nach wurde Abraham hier in ein Feuer geworfen, das zu Wasser wurde"
+			},
+			"local": "Balıklıgöl"
+		}
+	],
+	"Eskişehir": [
+		{
+			"kind": "tr_odunpazari_museum",
+			"name": {
+				"pl": "Muzeum Odunpazarı",
+				"en": "Odunpazarı Modern Museum",
+				"cs": "Muzeum Odunpazarı",
+				"is": "Odunpazarı-nútímasafnið",
+				"de": "Odunpazarı Modern Museum"
+			},
+			"desc": {
+				"pl": "Muzeum sztuki z 2019 roku, ułożone z drewnianych belek jak stos drewna; zaprojektował je Kengo Kuma",
+				"en": "An art museum of 2019 built of stacked timber like a woodpile; designed by Kengo Kuma",
+				"cs": "Muzeum umění z roku 2019 poskládané z dřevěných trámů jako hranice dříví; navrhl ho Kengo Kuma",
+				"is": "Listasafn frá 2019, hlaðið úr timbri eins og viðarstafli; Kengo Kuma hannaði það",
+				"de": "Ein Kunstmuseum von 2019, aus gestapeltem Holz wie ein Holzstoß; entworfen von Kengo Kuma"
+			},
+			"local": "Odunpazarı Modern Müze"
+		}
+	],
+	"Denizli": [
+		{
+			"kind": "tr_pamukkale",
+			"name": {"pl": "Pamukkale", "en": "Pamukkale", "cs": "Pamukkale", "is": "Pamukkale", "de": "Pamukkale"},
+			"desc": {
+				"pl": "„Bawełniany zamek”: białe tarasy wapienne z ciepłą wodą, nad nimi antyczne Hierapolis",
+				"en": "\"Cotton castle\": white limestone terraces with warm water, ancient Hierapolis above them",
+				"cs": "„Bavlněný hrad“: bílé vápencové terasy s teplou vodou, nad nimi antická Hierapolis",
+				"is": "„Bómullarkastalinn“: hvítir kalksteinsstallar með volgu vatni, hin forna Hierapolis ofan við",
+				"de": "„Baumwollburg“: weiße Kalksinterterrassen mit warmem Wasser, darüber das antike Hierapolis"
+			},
+			"local": "Pamukkale Travertenleri"
+		}
+	],
+	"Samsun": [
+		{
+			"kind": "tr_bandirma_ship",
+			"name": {
+				"pl": "Statek Bandırma",
+				"en": "Bandırma Steamer",
+				"cs": "Parník Bandırma",
+				"is": "Gufuskipið Bandırma",
+				"de": "Dampfer Bandırma"
+			},
+			"desc": {
+				"pl": "Wierna kopia parowca, którym Mustafa Kemal przypłynął do Samsun w 1919 roku, dziś muzeum",
+				"en": "A replica of the steamer that brought Mustafa Kemal to Samsun in 1919, now a museum",
+				"cs": "Věrná kopie parníku, kterým Mustafa Kemal připlul roku 1919 do Samsunu, dnes muzeum",
+				"is": "Eftirlíking gufuskipsins sem flutti Mustafa Kemal til Samsun 1919, nú safn",
+				"de": "Ein Nachbau des Dampfers, der Mustafa Kemal 1919 nach Samsun brachte, heute ein Museum"
+			},
+			"local": "Bandırma Vapuru"
+		}
+	],
+	"Malatya": [
+		{
+			"kind": "tr_arslantepe",
+			"name": {"pl": "Arslantepe", "en": "Arslantepe", "cs": "Arslantepe", "is": "Arslantepe", "de": "Arslantepe"},
+			"desc": {
+				"pl": "„Wzgórze lwów”: kopiec dawnego miasta z lwami u bramy, zamieszkany już ponad 6 tysięcy lat temu, na liście UNESCO",
+				"en": "\"Lion hill\": the mound of an old city with lions at its gate, settled over 6000 years ago, on the UNESCO list",
+				"cs": "„Lví pahorek“: pahorek starého města se lvy u brány, osídlený už před více než 6000 lety, na seznamu UNESCO",
+				"is": "„Ljónahæð“: haugur gamallar borgar með ljónum við hliðið, byggður fyrir meira en 6000 árum, á lista UNESCO",
+				"de": "„Löwenhügel“: der Hügel einer alten Stadt mit Löwen am Tor, schon vor über 6000 Jahren besiedelt, auf der UNESCO-Liste"
+			},
+			"local": "Arslantepe Höyüğü"
+		}
+	],
+	"Van": [
+		{
+			"kind": "tr_van_fortress",
+			"name": {"pl": "Twierdza Van", "en": "Van Fortress", "cs": "Pevnost Van", "is": "Van-virkið", "de": "Festung Van"},
+			"desc": {
+				"pl": "Twierdza na długiej skale nad jeziorem, wzniesiona przez królów Urartu w IX wieku p.n.e.",
+				"en": "A fortress on a long rock above the lake, built by the kings of Urartu in the 9th century BC",
+				"cs": "Pevnost na dlouhé skále nad jezerem, kterou postavili urartští králové v 9. století př. n. l.",
+				"is": "Virki á löngum kletti yfir vatninu, reist af konungum Úrartú á 9. öld f.Kr.",
+				"de": "Eine Festung auf einem langen Felsen über dem See, von den Königen von Urartu im 9. Jahrhundert v. Chr. erbaut"
+			},
+			"local": "Van Kalesi"
+		},
+		{
+			"kind": "tr_van_cat",
+			"name": {"pl": "Kot van", "en": "Van cat", "cs": "Vanská kočka", "is": "Van-köttur", "de": "Van-Katze"},
+			"desc": {
+				"pl": "Biały kot, często z jednym okiem niebieskim, a drugim bursztynowym; lubi pływać",
+				"en": "A white cat, often with one blue eye and one amber; it likes to swim",
+				"cs": "Bílá kočka, často s jedním okem modrým a druhým jantarovým; ráda plave",
+				"is": "Hvítur köttur, oft með annað augað blátt og hitt rafgult; finnst gott að synda",
+				"de": "Eine weiße Katze, oft mit einem blauen und einem bernsteinfarbenen Auge; sie schwimmt gern"
+			},
+			"local": "Van Kedisi"
+		}
+	],
+	"Erzurum": [
+		{
+			"kind": "tr_cifte_minareli",
+			"name": {
+				"pl": "Medresa z Dwoma Minaretami",
+				"en": "Double Minaret Madrasa",
+				"cs": "Medresa se dvěma minarety",
+				"is": "Tvíturna-madrassan",
+				"de": "Doppelminarett-Medrese"
+			},
+			"desc": {
+				"pl": "Szkoła koraniczna z XIII wieku: portal z płaskorzeźbami, a nad nim dwa żłobkowane minarety z cegły",
+				"en": "A 13th-century madrasa: a carved portal and two fluted brick minarets above it",
+				"cs": "Koránská škola ze 13. století: zdobený portál a nad ním dva žlábkované cihlové minarety",
+				"is": "Kóranskóli frá 13. öld: skreytt hlið og tveir rákóttir múrsteinsturnar yfir því",
+				"de": "Eine Koranschule aus dem 13. Jahrhundert: ein verziertes Portal und darüber zwei gerippte Ziegelminarette"
+			},
+			"local": "Çifte Minareli Medrese"
+		}
+	],
+	"Sivas": [
+		{
+			"kind": "tr_gok_medrese",
+			"name": {
+				"pl": "Niebieska Medresa",
+				"en": "Blue Madrasa",
+				"cs": "Modrá medresa",
+				"is": "Bláa madrassan",
+				"de": "Blaue Medrese"
+			},
+			"desc": {
+				"pl": "Seldżucka szkoła z 1271 roku, nazwana od niebieskich kafli na minaretach",
+				"en": "A Seljuk school of 1271, named after the blue tiles on its minarets",
+				"cs": "Seldžucká škola z roku 1271, pojmenovaná podle modrých kachlí na minaretech",
+				"is": "Seljúkaskóli frá 1271, nefndur eftir bláu flísunum á turnunum",
+				"de": "Eine seldschukische Schule von 1271, benannt nach den blauen Fliesen ihrer Minarette"
+			},
+			"local": "Gök Medrese"
+		}
+	],
+	"Alanya": [
+		{
+			"kind": "tr_kizil_kule",
+			"name": {
+				"pl": "Czerwona Wieża",
+				"en": "Red Tower",
+				"cs": "Červená věž",
+				"is": "Rauði turninn",
+				"de": "Roter Turm"
+			},
+			"desc": {
+				"pl": "Ośmioboczna wieża z czerwonej cegły z 1226 roku, strzegąca portu i stoczni Seldżuków",
+				"en": "An octagonal red brick tower of 1226 guarding the Seljuk harbour and shipyard",
+				"cs": "Osmiboká věž z červených cihel z roku 1226, která střežila seldžucký přístav a loděnici",
+				"is": "Átthyrndur turn úr rauðum múrsteini frá 1226, sem gætti hafnar og skipasmíðastöðvar Seljúka",
+				"de": "Ein achteckiger Turm aus rotem Ziegel von 1226, der den seldschukischen Hafen und die Werft bewachte"
+			},
+			"local": "Kızıl Kule"
+		}
+	],
+	"Trabzon": [
+		{
+			"kind": "tr_trabzon_hagia_sophia",
+			"name": {
+				"pl": "Hagia Sophia w Trabzonie",
+				"en": "Hagia Sophia of Trabzon",
+				"cs": "Hagia Sofia v Trabzonu",
+				"is": "Ægisif í Trabzon",
+				"de": "Hagia Sophia von Trabzon"
+			},
+			"desc": {
+				"pl": "Bizantyjski kościół z XIII wieku z czasów Cesarstwa Trapezuntu, z freskami; obok dzwonnica",
+				"en": "A 13th-century Byzantine church from the time of the Empire of Trebizond, with frescoes; a bell tower beside it",
+				"cs": "Byzantský kostel ze 13. století z doby Trapezuntského císařství, s freskami; vedle zvonice",
+				"is": "Býsönsk kirkja frá 13. öld frá tíma Trapezuntaríkisins, með freskum; klukkuturn við hliðina",
+				"de": "Eine byzantinische Kirche aus dem 13. Jahrhundert aus der Zeit des Kaiserreichs Trapezunt, mit Fresken; daneben ein Glockenturm"
+			},
+			"local": "Ayasofya Camii"
+		}
+	],
+	"Çanakkale": [
+		{
+			"kind": "tr_canakkale_bridge",
+			"name": {
+				"pl": "Most Çanakkale 1915",
+				"en": "1915 Çanakkale Bridge",
+				"cs": "Most Çanakkale 1915",
+				"is": "Çanakkale-brúin 1915",
+				"de": "Çanakkale-Brücke 1915"
+			},
+			"desc": {
+				"pl": "Most wiszący nad Dardanelami otwarty w 2022 roku; jego przęsło ma 2023 m, najdłuższe na świecie",
+				"en": "A suspension bridge over the Dardanelles opened in 2022; its 2023 m main span is the longest in the world",
+				"cs": "Visutý most přes Dardanely otevřený roku 2022; jeho hlavní pole má 2023 m, nejdelší na světě",
+				"is": "Hengibrú yfir Dardanellasund, opnuð 2022; aðalhaf hennar er 2023 m, það lengsta í heimi",
+				"de": "Eine Hängebrücke über die Dardanellen, 2022 eröffnet; ihre Hauptspannweite von 2023 m ist die längste der Welt"
+			},
+			"local": "1915 Çanakkale Köprüsü"
+		},
+		{
+			"kind": "tr_trojan_horse",
+			"name": {
+				"pl": "Koń trojański",
+				"en": "Trojan Horse",
+				"cs": "Trojský kůň",
+				"is": "Trójuhesturinn",
+				"de": "Trojanisches Pferd"
+			},
+			"desc": {
+				"pl": "Drewniany koń z filmu „Troja” z 2004 roku, podarowany miastu i ustawiony na nabrzeżu",
+				"en": "The wooden horse from the 2004 film \"Troy\", given to the city and set up on the waterfront",
+				"cs": "Dřevěný kůň z filmu „Trója“ z roku 2004, darovaný městu a postavený na nábřeží",
+				"is": "Tréhesturinn úr kvikmyndinni „Troy“ frá 2004, gefinn borginni og settur upp við höfnina",
+				"de": "Das Holzpferd aus dem Film „Troja“ von 2004, der Stadt geschenkt und an der Uferpromenade aufgestellt"
+			},
+			"local": "Truva Atı"
+		}
+	],
+	"Bodrum": [
+		{
+			"kind": "tr_bodrum_castle",
+			"name": {
+				"pl": "Zamek św. Piotra",
+				"en": "Castle of St Peter",
+				"cs": "Hrad svatého Petra",
+				"is": "Kastali heilags Péturs",
+				"de": "Kastell St. Peter"
+			},
+			"desc": {
+				"pl": "Zamek joannitów z XV wieku nad przystanią, zbudowany częściowo z kamieni Mauzoleum; w środku muzeum archeologii podwodnej",
+				"en": "A 15th-century castle of the Knights Hospitaller over the harbour, partly built of stones from the Mausoleum; inside, a museum of underwater archaeology",
+				"cs": "Johanitský hrad z 15. století nad přístavem, zčásti postavený z kamenů Mauzolea; uvnitř muzeum podmořské archeologie",
+				"is": "Kastali Jóhannesarriddara frá 15. öld yfir höfninni, að hluta reistur úr steinum Mausoleum; inni er safn neðansjávarfornleifa",
+				"de": "Eine Johanniterburg aus dem 15. Jahrhundert über dem Hafen, teils aus Steinen des Mausoleums erbaut; innen ein Museum für Unterwasserarchäologie"
+			},
+			"local": "Bodrum Kalesi"
+		}
+	],
+	"Edirne": [
+		{
+			"kind": "tr_selimiye",
+			"name": {
+				"pl": "Meczet Selimiye",
+				"en": "Selimiye Mosque",
+				"cs": "Mešita Selimiye",
+				"is": "Selimiye-moskan",
+				"de": "Selimiye-Moschee"
+			},
+			"desc": {
+				"pl": "Arcydzieło architekta Sinana z 1575 roku: ogromna kopuła i cztery smukłe minarety, na liście UNESCO",
+				"en": "The architect Sinan's masterpiece of 1575: a vast dome and four slender minarets, on the UNESCO list",
+				"cs": "Mistrovské dílo architekta Sinana z roku 1575: obrovská kupole a čtyři štíhlé minarety, na seznamu UNESCO",
+				"is": "Meistaraverk arkitektsins Sinans frá 1575: risastór hvelfing og fjórir grannir turnar, á lista UNESCO",
+				"de": "Das Meisterwerk des Architekten Sinan von 1575: eine gewaltige Kuppel und vier schlanke Minarette, auf der UNESCO-Liste"
+			},
+			"local": "Selimiye Camii"
+		}
+	],
+	"Fethiye": [
+		{
+			"kind": "tr_lycian_tombs",
+			"name": {
+				"pl": "Grób Amyntasa",
+				"en": "Tomb of Amyntas",
+				"cs": "Hrobka Amyntase",
+				"is": "Gröf Amyntasar",
+				"de": "Grab des Amyntas"
+			},
+			"desc": {
+				"pl": "Licyjski grobowiec z IV wieku p.n.e. wykuty w skale jak fasada świątyni z kolumnami",
+				"en": "A Lycian tomb of the 4th century BC cut into the cliff like a temple front with columns",
+				"cs": "Lýkijská hrobka ze 4. století př. n. l. vytesaná do skály jako průčelí chrámu se sloupy",
+				"is": "Lýkísk gröf frá 4. öld f.Kr., höggvin í klettinn eins og musterisframhlið með súlum",
+				"de": "Ein lykisches Grab aus dem 4. Jahrhundert v. Chr., wie eine Tempelfront mit Säulen in den Fels gehauen"
+			},
+			"local": "Amintas Kaya Mezarı"
+		}
+	],
+	"Rize": [
+		{
+			"kind": "tr_rize_tea",
+			"name": {
+				"pl": "Plantacje herbaty",
+				"en": "Tea gardens",
+				"cs": "Čajové zahrady",
+				"is": "Tegarðar",
+				"de": "Teegärten"
+			},
+			"desc": {
+				"pl": "Rzędy krzewów herbacianych na stromym zboczu; liście zbiera się ręcznie do koszy na plecach",
+				"en": "Rows of tea bushes on a steep slope; the leaves are picked into baskets carried on the back",
+				"cs": "Řady čajovníků na strmém svahu; lístky se sbírají do košů nošených na zádech",
+				"is": "Raðir terunna í bröttum hlíðum; laufin eru tínd í körfur sem bornar eru á bakinu",
+				"de": "Reihen von Teesträuchern am steilen Hang; die Blätter werden in Kiepen auf dem Rücken gesammelt"
+			},
+			"local": "Çay Bahçeleri"
+		}
+	],
+	"Kars": [
+		{
+			"kind": "tr_kars_castle",
+			"name": {
+				"pl": "Zamek w Karsie",
+				"en": "Kars Castle",
+				"cs": "Hrad Kars",
+				"is": "Kars-kastalinn",
+				"de": "Burg Kars"
+			},
+			"desc": {
+				"pl": "Twierdza z ciemnego bazaltu na skale nad rzeką Kars, a pod nią kamienny most",
+				"en": "A fortress of dark basalt on a crag above the Kars river, with a stone bridge below",
+				"cs": "Pevnost z tmavého čediče na skále nad řekou Kars a pod ní kamenný most",
+				"is": "Virki úr dökku basalti á kletti yfir Kars-ánni og steinbrú fyrir neðan",
+				"de": "Eine Festung aus dunklem Basalt auf einem Felsen über dem Fluss Kars, darunter eine Steinbrücke"
+			},
+			"local": "Kars Kalesi"
+		}
+	],
+	"Safranbolu": [
+		{
+			"kind": "tr_safranbolu_houses",
+			"name": {
+				"pl": "Domy w Safranbolu",
+				"en": "Safranbolu houses",
+				"cs": "Domy v Safranbolu",
+				"is": "Húsin í Safranbolu",
+				"de": "Häuser von Safranbolu"
+			},
+			"desc": {
+				"pl": "Białe osmańskie domy z muru pruskiego z wysuniętymi piętrami i czerwonymi dachami",
+				"en": "White Ottoman half-timbered houses with jutting upper floors and red roofs",
+				"cs": "Bílé osmanské hrázděné domy s vystupujícími patry a červenými střechami",
+				"is": "Hvít tyrknesk bindingsverkshús með útskotnum efri hæðum og rauðum þökum",
+				"de": "Weiße osmanische Fachwerkhäuser mit vorkragenden Obergeschossen und roten Dächern"
+			},
+			"local": "Safranbolu Evleri"
+		}
+	],
+	"Selçuk": [
+		{
+			"kind": "tr_celsus_library",
+			"name": {
+				"pl": "Biblioteka Celsusa",
+				"en": "Library of Celsus",
+				"cs": "Celsova knihovna",
+				"is": "Bókasafn Celsusar",
+				"de": "Celsus-Bibliothek"
+			},
+			"desc": {
+				"pl": "Dwupiętrowa fasada rzymskiej biblioteki w Efezie z II wieku, z posągami Cnót w niszach",
+				"en": "The two-storey front of the 2nd-century Roman library at Ephesus, with statues of the Virtues in its niches",
+				"cs": "Dvoupatrové průčelí římské knihovny v Efesu z 2. století se sochami Ctností ve výklencích",
+				"is": "Tveggja hæða framhlið rómverska bókasafnsins í Efesus frá 2. öld, með styttum dygðanna í skotum",
+				"de": "Die zweistöckige Fassade der römischen Bibliothek in Ephesos aus dem 2. Jahrhundert, mit Statuen der Tugenden in den Nischen"
+			},
+			"local": "Celsus Kütüphanesi"
+		}
+	],
+	"Göreme": [
+		{
+			"kind": "tr_fairy_chimneys",
+			"name": {
+				"pl": "Kominy wróżek",
+				"en": "Fairy chimneys",
+				"cs": "Pohádkové komíny",
+				"is": "Álfastrompar",
+				"de": "Feenkamine"
+			},
+			"desc": {
+				"pl": "Stożki z miękkiego tufu z ciemnymi kamiennymi czapkami, w nich wykute domy, a nad nimi balony",
+				"en": "Cones of soft tuff with dark stone caps, houses cut into them and balloons above",
+				"cs": "Kužely z měkkého tufu s tmavými kamennými čepicemi, vytesané příbytky a nad nimi balony",
+				"is": "Keilur úr mjúku móbergi með dökkum steinhettum, híbýli höggvin í þær og loftbelgir yfir",
+				"de": "Kegel aus weichem Tuff mit dunklen Steinkappen, Wohnungen hineingehauen und Ballone darüber"
+			},
+			"local": "Peri Bacaları"
+		}
+	]
+}

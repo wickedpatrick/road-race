@@ -1,0 +1,544 @@
+[
+	{
+		"a": "istanbul",
+		"b": "edirne",
+		"km": 235,
+		"road": "O3",
+		"towns": [["Silivri", 65], ["Çorlu", 110], ["Lüleburgaz", 155], ["Babaeski", 180], ["Havsa", 205]],
+		"zones": [
+			[40, "industrial", "İstanbul"], [130, "fields", "Tekirdağ"], [190, "fields", "Kırklareli"],
+			[235, "fields", "Edirne"]
+		],
+		"via": [[65, 28.25, 41.07], [110, 27.8, 41.16], [155, 27.36, 41.4], [180, 27.09, 41.43], [205, 26.82, 41.55]]
+	},
+	{
+		"a": "canakkale",
+		"b": "edirne",
+		"km": 225,
+		"road": [[22, "D200"], [44, "O6"], [225, "D550"]],
+		"towns": [["Keşan", 72], ["Uzunköprü", 114]],
+		"zones": [
+			[28, "mediterranean", "Çanakkale"],
+			[36, "coast", "Çanakkale Boğazı"],
+			[62, "mediterranean", "Gelibolu Yarımadası"],
+			[225, "fields", "Edirne"]
+		],
+		"via": [[28, 26.62, 40.3], [32, 26.64, 40.35], [46, 26.67, 40.41], [72, 26.63, 40.86], [114, 26.69, 41.27]],
+		"bridge": {
+			"from_km": 30,
+			"to_km": 34.6,
+			"name": {
+				"pl": "Most Çanakkale 1915",
+				"en": "1915 Çanakkale Bridge",
+				"cs": "Most Çanakkale 1915",
+				"is": "Çanakkale-brúin 1915",
+				"de": "Çanakkale-Brücke 1915"
+			},
+			"color": "#c8102e"
+		}
+	},
+	{
+		"a": "istanbul",
+		"b": "bursa",
+		"km": 155,
+		"road": [[55, "O4"], [155, "O5"]],
+		"towns": [["Orhangazi", 118]],
+		"zones": [
+			[45, "industrial", "İstanbul"], [70, "industrial", "Kocaeli"], [100, "coast", "Yalova"],
+			[155, "orchard", "Bursa"]
+		],
+		"via": [[50, 29.43, 40.8], [71, 29.52, 40.75], [118, 29.31, 40.49]],
+		"bridge": {
+			"from_km": 70,
+			"to_km": 72.7,
+			"name": {
+				"pl": "Most Osmangazi",
+				"en": "Osmangazi Bridge",
+				"cs": "Most Osmangazi",
+				"is": "Osmangazi-brúin",
+				"de": "Osmangazi-Brücke"
+			}
+		}
+	},
+	{
+		"a": "istanbul",
+		"b": "ankara",
+		"km": 450,
+		"road": [[15, "O2"], [450, "O4"]],
+		"towns": [["İzmit", 100], ["Adapazarı", 150], ["Düzce", 210], ["Bolu", 265], ["Gerede", 315]],
+		"zones": [
+			[45, "industrial", "İstanbul"], [125, "industrial", "Kocaeli"], [190, "fields", "Sakarya"],
+			[232, "forest", "Düzce"], [300, "mountains", "Bolu"], [340, "upland", "Bolu"], [450, "upland", "Ankara"]
+		],
+		"via": [
+			[14, 29.06, 41.09], [100, 29.92, 40.77], [150, 30.4, 40.78], [210, 31.16, 40.84], [265, 31.61, 40.74],
+			[315, 32.2, 40.8]
+		],
+		"bridge": {
+			"from_km": 13,
+			"to_km": 14.5,
+			"name": {
+				"pl": "Most Sułtana Mehmeda Zdobywcy",
+				"en": "Fatih Sultan Mehmet Bridge",
+				"cs": "Most sultána Mehmeda Dobyvatele",
+				"is": "Fatih Sultan Mehmet-brúin",
+				"de": "Fatih-Sultan-Mehmet-Brücke"
+			}
+		},
+		"tunnels": [
+			{
+				"from_km": 240,
+				"to_km": 243,
+				"name": {
+					"pl": "Tunel Bolu Dağı",
+					"en": "Bolu Mountain Tunnel",
+					"cs": "Tunel Bolu Dağı",
+					"is": "Bolu Dağı-göngin",
+					"de": "Bolu-Dağı-Tunnel"
+				},
+				"fact": {
+					"pl": "Prawie 3 km pod przełęczą Bolu, która zimą zamykała drogę śniegiem i mgłą",
+					"en": "Almost 3 km under the Bolu pass, which snow and fog used to close in winter",
+					"cs": "Téměř 3 km pod průsmykem Bolu, který dříve v zimě uzavíral sníh a mlha",
+					"is": "Nærri 3 km undir Bolu-skarði, sem snjór og þoka lokuðu áður á veturna",
+					"de": "Fast 3 km unter dem Bolu-Pass, den früher im Winter Schnee und Nebel sperrten"
+				}
+			}
+		]
+	},
+	{
+		"a": "canakkale",
+		"b": "izmir",
+		"km": 322,
+		"road": "D550",
+		"towns": [["Ezine", 49], ["Edremit", 133], ["Ayvalık", 174], ["Aliağa", 267]],
+		"zones": [
+			[60, "fields", "Çanakkale"], [110, "forest", "Kaz Dağları"], [195, "mediterranean", "Balıkesir"],
+			[322, "mediterranean", "İzmir"]
+		],
+		"via": [[49, 26.33, 39.79], [133, 27.02, 39.6], [174, 26.69, 39.32], [267, 26.97, 38.8]]
+	},
+	{
+		"a": "canakkale",
+		"b": "bursa",
+		"km": 270,
+		"road": "D200",
+		"towns": [["Lapseki", 38], ["Biga", 90], ["Bandırma", 160], ["Karacabey", 210]],
+		"zones": [
+			[45, "coast", "Çanakkale"], [120, "fields", "Biga"], [180, "fields", "Balıkesir"],
+			[235, "lakes", "Uluabat"], [270, "orchard", "Bursa"]
+		],
+		"via": [[38, 26.68, 40.34], [90, 27.24, 40.23], [160, 27.97, 40.35], [210, 28.36, 40.21]]
+	},
+	{
+		"a": "bursa",
+		"b": "izmir",
+		"km": 330,
+		"road": "O5",
+		"towns": [["Susurluk", 75], ["Balıkesir", 150], ["Soma", 213], ["Akhisar", 255], ["Manisa", 295]],
+		"zones": [
+			[60, "orchard", "Bursa"], [190, "fields", "Balıkesir"], [290, "mediterranean", "Manisa"],
+			[330, "mediterranean", "İzmir"]
+		],
+		"via": [[75, 28.16, 39.91], [150, 27.89, 39.65], [213, 27.61, 39.19], [255, 27.84, 38.92], [295, 27.43, 38.61]]
+	},
+	{
+		"a": "bursa",
+		"b": "eskisehir",
+		"km": 150,
+		"road": "D200",
+		"towns": [["İnegöl", 45], ["Bozüyük", 95]],
+		"zones": [[55, "orchard", "Bursa"], [105, "forest", "Bilecik"], [150, "steppe", "Eskişehir"]],
+		"via": [[45, 29.51, 40.08], [95, 30.04, 39.91]]
+	},
+	{
+		"a": "eskisehir",
+		"b": "ankara",
+		"km": 235,
+		"road": "D200",
+		"towns": [["Sivrihisar", 95], ["Polatlı", 160]],
+		"zones": [[120, "steppe", "Eskişehir"], [235, "steppe", "Ankara"]],
+		"via": [[95, 31.54, 39.45], [160, 32.15, 39.58]]
+	},
+	{
+		"a": "izmir",
+		"b": "selcuk",
+		"km": 80,
+		"road": [[70, "O31"], [80, "D550"]],
+		"towns": [["Torbalı", 40]],
+		"zones": [[25, "industrial", "İzmir"], [80, "mediterranean", "İzmir"]],
+		"via": [[40, 27.36, 38.16]]
+	},
+	{
+		"a": "selcuk",
+		"b": "bodrum",
+		"km": 160,
+		"road": [[105, "D525"], [160, "D330"]],
+		"towns": [["Söke", 25], ["Milas", 105]],
+		"zones": [[40, "mediterranean", "Aydın"], [75, "lakes", "Bafa Gölü"], [160, "mediterranean", "Muğla"]],
+		"via": [[25, 27.41, 37.75], [105, 27.78, 37.32]]
+	},
+	{
+		"a": "selcuk",
+		"b": "denizli",
+		"km": 185,
+		"road": [[55, "O31"], [185, "D320"]],
+		"towns": [["Aydın", 55], ["Nazilli", 105]],
+		"zones": [[60, "mediterranean", "Aydın"], [140, "orchard", "Büyük Menderes"], [185, "fields", "Denizli"]],
+		"via": [[55, 27.84, 37.85], [105, 28.32, 37.91]]
+	},
+	{
+		"a": "bodrum",
+		"b": "fethiye",
+		"km": 255,
+		"road": [[115, "D330"], [255, "D400"]],
+		"towns": [["Milas", 50], ["Muğla", 115], ["Köyceğiz", 175], ["Dalaman", 205]],
+		"zones": [
+			[60, "mediterranean", "Bodrum Yarımadası"],
+			[140, "mountains", "Muğla"],
+			[190, "lakes", "Köyceğiz Gölü"],
+			[255, "mediterranean", "Muğla"]
+		],
+		"via": [[50, 27.78, 37.32], [115, 28.36, 37.22], [175, 28.69, 36.97], [205, 28.8, 36.77]]
+	},
+	{
+		"a": "fethiye",
+		"b": "antalya",
+		"km": 298,
+		"road": "D400",
+		"towns": [["Kaş", 107], ["Finike", 180], ["Kemer", 255]],
+		"zones": [
+			[60, "mediterranean", "Muğla"], [150, "coast", "Likya"], [215, "mediterranean", "Antalya"],
+			[270, "mountains", "Beydağları"], [298, "mediterranean", "Antalya"]
+		],
+		"via": [[107, 29.64, 36.2], [180, 30.15, 36.3], [255, 30.56, 36.6]]
+	},
+	{
+		"a": "denizli",
+		"b": "antalya",
+		"km": 235,
+		"road": [[175, "D585"], [235, "D350"]],
+		"towns": [["Acıpayam", 70], ["Korkuteli", 175]],
+		"zones": [
+			[50, "upland", "Denizli"], [140, "mountains", "Toroslar"], [200, "upland", "Antalya"],
+			[235, "mediterranean", "Antalya"]
+		],
+		"via": [[70, 29.35, 37.43], [175, 30.2, 37.07]],
+		"tunnels": [
+			{
+				"from_km": 12,
+				"to_km": 14.6,
+				"name": {
+					"pl": "Tunel Honaz",
+					"en": "Honaz Tunnel",
+					"cs": "Tunel Honaz",
+					"is": "Honaz-göngin",
+					"de": "Honaz-Tunnel"
+				},
+				"fact": {
+					"pl": "2,6 km pod górą Honaz, otwarty w 2023 roku",
+					"en": "2.6 km under Mount Honaz, opened in 2023",
+					"cs": "2,6 km pod horou Honaz, otevřen v roce 2023",
+					"is": "2,6 km undir Honaz-fjalli, opnuð 2023",
+					"de": "2,6 km unter dem Berg Honaz, 2023 eröffnet"
+				}
+			}
+		]
+	},
+	{
+		"a": "antalya",
+		"b": "alanya",
+		"km": 135,
+		"road": "D400",
+		"towns": [["Serik", 40], ["Manavgat", 75]],
+		"zones": [[60, "mediterranean", "Antalya"], [100, "orchard", "Manavgat"], [135, "coast", "Alanya"]],
+		"via": [[40, 31.1, 36.92], [75, 31.44, 36.79]]
+	},
+	{
+		"a": "alanya",
+		"b": "mersin",
+		"km": 355,
+		"road": "D400",
+		"towns": [["Gazipaşa", 45], ["Anamur", 130], ["Silifke", 270], ["Erdemli", 315]],
+		"zones": [
+			[60, "orchard", "Antalya"], [150, "coast", "Anamur"], [240, "mountains", "Mersin"],
+			[355, "mediterranean", "Mersin"]
+		],
+		"via": [[45, 32.32, 36.27], [130, 32.84, 36.08], [270, 33.93, 36.38], [315, 34.31, 36.61]]
+	},
+	{
+		"a": "mersin",
+		"b": "adana",
+		"km": 70,
+		"road": "O51",
+		"towns": [["Tarsus", 30]],
+		"zones": [[45, "orchard", "Mersin"], [70, "fields", "Çukurova"]],
+		"via": [[30, 34.89, 36.92]]
+	},
+	{
+		"a": "adana",
+		"b": "gaziantep",
+		"km": 210,
+		"road": "O52",
+		"towns": [["Ceyhan", 45], ["Osmaniye", 90]],
+		"zones": [[95, "fields", "Çukurova"], [160, "upland", "Amanos Dağları"], [210, "orchard", "Gaziantep"]],
+		"via": [[45, 35.82, 37.03], [90, 36.25, 37.07]]
+	},
+	{
+		"a": "gaziantep",
+		"b": "sanliurfa",
+		"km": 145,
+		"road": "O52",
+		"towns": [["Nizip", 45], ["Birecik", 85]],
+		"zones": [[70, "orchard", "Gaziantep"], [95, "fields", "Fırat"], [145, "steppe", "Şanlıurfa"]],
+		"via": [[45, 37.79, 37.01], [85, 37.98, 37.03]]
+	},
+	{
+		"a": "sanliurfa",
+		"b": "diyarbakir",
+		"km": 180,
+		"road": "D885",
+		"towns": [["Siverek", 97]],
+		"zones": [[110, "steppe", "Şanlıurfa"], [140, "upland", "Karacadağ"], [180, "fields", "Diyarbakır"]],
+		"via": [[97, 39.32, 37.75]]
+	},
+	{
+		"a": "gaziantep",
+		"b": "malatya",
+		"km": 250,
+		"road": "D850",
+		"towns": [["Pazarcık", 75], ["Gölbaşı", 130], ["Doğanşehir", 185]],
+		"zones": [
+			[60, "orchard", "Gaziantep"], [110, "upland", "Kahramanmaraş"], [160, "lakes", "Adıyaman"],
+			[210, "mountains", "Malatya"], [250, "orchard", "Malatya"]
+		],
+		"via": [[75, 37.3, 37.49], [130, 37.64, 37.78], [185, 37.88, 38.09]]
+	},
+	{
+		"a": "malatya",
+		"b": "sivas",
+		"km": 235,
+		"road": "D850",
+		"towns": [["Hekimhan", 90], ["Kangal", 160]],
+		"zones": [[60, "orchard", "Malatya"], [120, "upland", "Malatya"], [235, "upland", "Sivas"]],
+		"via": [[90, 37.93, 38.82], [160, 37.39, 39.23]]
+	},
+	{
+		"a": "malatya",
+		"b": "diyarbakir",
+		"km": 250,
+		"road": [[102, "D300"], [250, "D885"]],
+		"towns": [["Elazığ", 102], ["Ergani", 190]],
+		"zones": [
+			[70, "orchard", "Malatya"], [120, "lakes", "Elazığ"], [180, "mountains", "Elazığ"],
+			[250, "fields", "Diyarbakır"]
+		],
+		"via": [[102, 39.22, 38.68], [190, 39.76, 38.27]]
+	},
+	{
+		"a": "van",
+		"b": "diyarbakir",
+		"km": 367,
+		"road": [[167, "D300"], [367, "D360"]],
+		"towns": [["Gevaş", 45], ["Tatvan", 142], ["Bitlis", 167], ["Silvan", 282]],
+		"zones": [
+			[120, "coast", "Van Gölü"], [150, "upland", "Bitlis"], [230, "mountains", "Bitlis"],
+			[300, "upland", "Batman"], [367, "fields", "Diyarbakır"]
+		],
+		"via": [[45, 43.1, 38.3], [142, 42.28, 38.5], [167, 42.11, 38.4], [282, 41.01, 38.14]]
+	},
+	{
+		"a": "diyarbakir",
+		"b": "erzurum",
+		"km": 331,
+		"road": "D950",
+		"towns": [["Bingöl", 144], ["Çat", 274]],
+		"zones": [
+			[60, "fields", "Diyarbakır"], [120, "mountains", "Diyarbakır"], [210, "upland", "Bingöl"],
+			[280, "mountains", "Erzurum"], [331, "upland", "Erzurum"]
+		],
+		"via": [[144, 40.5, 38.88], [274, 40.98, 39.61]]
+	},
+	{
+		"a": "erzurum",
+		"b": "kars",
+		"km": 205,
+		"road": [[80, "D100"], [205, "D080"]],
+		"towns": [["Horasan", 80], ["Sarıkamış", 150]],
+		"zones": [[90, "upland", "Erzurum"], [175, "forest", "Allahuekber Dağları"], [205, "upland", "Kars"]],
+		"via": [[80, 42.17, 40.04], [150, 42.59, 40.33]]
+	},
+	{
+		"a": "trabzon",
+		"b": "erzurum",
+		"km": 315,
+		"road": [[118, "D885"], [268, "D052"], [315, "D100"]],
+		"towns": [["Gümüşhane", 118], ["Bayburt", 190], ["Aşkale", 268]],
+		"zones": [
+			[30, "forest", "Trabzon"], [80, "mountains", "Zigana Dağları"], [160, "mountains", "Gümüşhane"],
+			[230, "upland", "Bayburt"], [315, "upland", "Erzurum"]
+		],
+		"via": [[118, 39.48, 40.46], [190, 40.23, 40.26], [268, 40.69, 39.92]],
+		"tunnels": [
+			{
+				"from_km": 48,
+				"to_km": 62.5,
+				"name": {
+					"pl": "Tunel Zigana",
+					"en": "Zigana Tunnel",
+					"cs": "Tunel Zigana",
+					"is": "Zigana-göngin",
+					"de": "Zigana-Tunnel"
+				},
+				"fact": {
+					"pl": "Najdłuższy tunel drogowy Turcji, 14,5 km pod górami Zigana, otwarty w 2023 roku",
+					"en": "Turkey's longest road tunnel, 14.5 km under the Zigana Mountains, opened in 2023",
+					"cs": "Nejdelší silniční tunel Turecka, 14,5 km pod pohořím Zigana, otevřen v roce 2023",
+					"is": "Lengstu veggöng Tyrklands, 14,5 km undir Zigana-fjöllum, opnuð 2023",
+					"de": "Der längste Straßentunnel der Türkei, 14,5 km unter dem Zigana-Gebirge, 2023 eröffnet"
+				}
+			}
+		]
+	},
+	{
+		"a": "trabzon",
+		"b": "rize",
+		"km": 75,
+		"road": "D010",
+		"towns": [["Of", 50]],
+		"zones": [[40, "coast", "Trabzon"], [75, "coast", "Rize"]],
+		"via": [[50, 40.27, 40.95]]
+	},
+	{
+		"a": "samsun",
+		"b": "trabzon",
+		"km": 340,
+		"road": "D010",
+		"towns": [["Ünye", 90], ["Ordu", 155], ["Giresun", 200]],
+		"zones": [
+			[60, "coast", "Samsun"], [130, "coast", "Ordu"], [180, "orchard", "Ordu"], [260, "coast", "Giresun"],
+			[340, "coast", "Trabzon"]
+		],
+		"via": [[90, 37.29, 41.13], [155, 37.88, 40.98], [200, 38.39, 40.91]]
+	},
+	{
+		"a": "samsun",
+		"b": "sivas",
+		"km": 340,
+		"road": [[130, "D795"], [230, "D100"], [340, "D850"]],
+		"towns": [["Havza", 75], ["Amasya", 130], ["Tokat", 230]],
+		"zones": [
+			[60, "forest", "Samsun"], [150, "orchard", "Amasya"], [250, "fields", "Tokat"],
+			[300, "mountains", "Çamlıbel"], [340, "upland", "Sivas"]
+		],
+		"via": [[75, 35.66, 40.97], [130, 35.83, 40.65], [230, 36.55, 40.31]]
+	},
+	{
+		"a": "kayseri",
+		"b": "sivas",
+		"km": 195,
+		"road": [[130, "D260"], [195, "D200"]],
+		"towns": [["Gemerek", 95], ["Şarkışla", 130]],
+		"zones": [[80, "steppe", "Kayseri"], [195, "upland", "Sivas"]],
+		"via": [[95, 36.07, 39.18], [130, 36.41, 39.35]]
+	},
+	{
+		"a": "goreme",
+		"b": "kayseri",
+		"km": 80,
+		"road": [[8, "D302"], [80, "D300"]],
+		"towns": [["İncesu", 45]],
+		"zones": [[20, "upland", "Kapadokya"], [80, "steppe", "Kayseri"]],
+		"via": [[45, 35.18, 38.62]]
+	},
+	{
+		"a": "konya",
+		"b": "goreme",
+		"km": 227,
+		"road": [[215, "D300"], [227, "D302"]],
+		"towns": [["Sultanhanı", 102], ["Aksaray", 142]],
+		"zones": [[110, "steppe", "Konya"], [175, "steppe", "Aksaray"], [227, "upland", "Kapadokya"]],
+		"via": [[102, 33.55, 38.25], [142, 34.03, 38.37]]
+	},
+	{
+		"a": "ankara",
+		"b": "konya",
+		"km": 260,
+		"road": [[25, "D750"], [260, "D715"]],
+		"towns": [["Kulu", 110], ["Cihanbeyli", 165]],
+		"zones": [[90, "steppe", "Ankara"], [190, "steppe", "Tuz Gölü"], [260, "steppe", "Konya"]],
+		"via": [[110, 33.08, 39.09], [165, 32.92, 38.66]]
+	},
+	{
+		"a": "konya",
+		"b": "mersin",
+		"km": 333,
+		"road": [[248, "D715"], [333, "D400"]],
+		"towns": [["Karaman", 100], ["Mut", 170], ["Silifke", 248]],
+		"zones": [
+			[120, "steppe", "Konya"], [160, "upland", "Karaman"], [235, "mountains", "Toroslar"],
+			[333, "mediterranean", "Mersin"]
+		],
+		"via": [[100, 33.22, 37.18], [170, 33.44, 36.64], [248, 33.93, 36.38]]
+	},
+	{
+		"a": "goreme",
+		"b": "adana",
+		"km": 300,
+		"road": [[95, "D765"], [260, "O21"], [300, "O51"]],
+		"towns": [["Niğde", 95], ["Pozantı", 190], ["Tarsus", 265]],
+		"zones": [
+			[25, "upland", "Kapadokya"], [120, "upland", "Niğde"], [215, "mountains", "Toroslar"],
+			[270, "orchard", "Mersin"], [300, "fields", "Çukurova"]
+		],
+		"via": [[95, 34.68, 37.97], [190, 34.87, 37.43], [265, 34.89, 36.92]]
+	},
+	{
+		"a": "ankara",
+		"b": "goreme",
+		"km": 287,
+		"road": [[185, "D260"], [287, "D765"]],
+		"towns": [["Kaman", 140], ["Kırşehir", 185], ["Hacıbektaş", 230]],
+		"zones": [
+			[60, "steppe", "Ankara"], [200, "steppe", "Kırşehir"], [265, "upland", "Nevşehir"],
+			[287, "upland", "Kapadokya"]
+		],
+		"via": [[140, 33.72, 39.36], [185, 34.16, 39.15], [230, 34.56, 38.94]]
+	},
+	{
+		"a": "ankara",
+		"b": "safranbolu",
+		"km": 220,
+		"road": [[135, "O4"], [220, "D755"]],
+		"towns": [["Kızılcahamam", 75], ["Gerede", 135], ["Eskipazar", 175]],
+		"zones": [
+			[50, "upland", "Ankara"], [120, "forest", "Köroğlu Dağları"], [160, "upland", "Bolu"],
+			[220, "forest", "Karabük"]
+		],
+		"via": [[75, 32.65, 40.47], [135, 32.2, 40.8], [175, 32.54, 40.95]]
+	},
+	{
+		"a": "safranbolu",
+		"b": "samsun",
+		"km": 415,
+		"road": [[335, "D030"], [415, "D795"]],
+		"towns": [["Kastamonu", 110], ["Boyabat", 210], ["Havza", 335]],
+		"zones": [
+			[60, "forest", "Karabük"], [150, "forest", "Kastamonu"], [250, "upland", "Sinop"],
+			[370, "fields", "Samsun"], [415, "orchard", "Samsun"]
+		],
+		"via": [[110, 33.78, 41.38], [210, 34.77, 41.47], [335, 35.66, 40.97]]
+	},
+	{
+		"a": "sivas",
+		"b": "erzurum",
+		"km": 435,
+		"road": [[245, "D200"], [435, "D100"]],
+		"towns": [["Zara", 70], ["Erzincan", 245], ["Aşkale", 385]],
+		"zones": [
+			[90, "upland", "Sivas"], [200, "mountains", "Sivas"], [260, "orchard", "Erzincan"],
+			[350, "mountains", "Erzincan"], [435, "upland", "Erzurum"]
+		],
+		"via": [[70, 37.75, 39.9], [245, 39.49, 39.75], [385, 40.69, 39.92]]
+	}
+]
