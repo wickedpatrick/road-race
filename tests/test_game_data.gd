@@ -181,3 +181,23 @@ func _check_world(t) -> void:
 			if Geometry2D.is_point_in_polygon(Vector2(c.label[0], c.label[1]), pts): inside = true
 		if not inside or not w.planned.has(code): ok = false; print("  world.json: %s missing or its name outside it" % code)
 	t.check(ok, "every country in the game is on the picker's map, named inside its borders")
+	# Crimea is Ukraine's on the picker (Simferopol's point in Europe's view), never Russia's
+	var simferopol := _world_point(w.views[0], 34.10, 44.95)
+	t.check(_in_country(w, "ua", simferopol) and not _in_country(w, "ru", simferopol), "Crimea is Ukraine's on the picker (%s)" % simferopol)
+	t.check(_in_country(w, "ru", _world_point(w.views[0], 37.62, 55.75)) and _in_country(w, "ua", _world_point(w.views[0], 30.52, 50.45)),
+		"Moscow in Russia, Kyiv in Ukraine")
+
+## A lon/lat point on the picker's screen in one of world.json's views (as tools/make_world.py projects it).
+static func _world_point(view: Dictionary, lon: float, lat: float) -> Vector2:
+	var ll: Array = view.lonlat
+	var r: Array = view.rect
+	var k := cos(deg_to_rad((ll[2] + ll[3]) * 0.5))
+	var s: float = r[3] / (ll[3] - ll[2])
+	return Vector2(r[0] + (lon - ll[0]) * k * s, r[1] + (ll[3] - lat) * s)
+
+static func _in_country(w: Dictionary, code: String, p: Vector2) -> bool:
+	for f in w.countries.get(code, {}).get("polys", []):
+		var pts := PackedVector2Array()
+		for i in range(0, f.size(), 2): pts.append(Vector2(f[i], f[i + 1]))
+		if Geometry2D.is_point_in_polygon(p, pts): return true
+	return false
