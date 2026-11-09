@@ -28,7 +28,10 @@ Numbers: distances along a road in real kilometres from city `a`; populations in
   What grows beside the road per landscape is in `Scenery._nature` (`lava`, `highland`, `glacier`, `fjords`: the
   treeless north in `Scenery._iceland`; `desert`: `Scenery._desert`; `mediterranean`: olives, cypresses, maquis, dry-stone
   walls (`stonewall`, kept clear of the shoulder) and white houses in the settlements, `Scenery._mediterranean`; the
-  stone and the house walls take the palette's `stone` and `wall`).
+  stone and the house walls take the palette's `stone` and `wall`; `steppe`: open dry grass with wind-swept streaks
+  of feather grass (`Weather.FEATHER` by season), poplar shelter belts, haystacks, a lone tree, sheep, low kurgans
+  far off, `Scenery._steppe`; `taiga`: dense spruce, pine and larch, birches at the edge, clearings, log houses and
+  wooden churches in the settlements, no fields, `Scenery._taiga`).
 - `biomes` may also give their `grass`: `{season: ["#rrggbb", "#rrggbb"]}` (the two bands, e.g. moorland brown);
   the grass turns from one landscape's into the next one's over 150 m.
 - `landmark_sizes`: landmark painter kind -> `[width, height]` in metres (see `LandmarkPainter`).
@@ -44,7 +47,8 @@ Numbers: distances along a road in real kilometres from city `a`; populations in
 The country picker's map, made by `tools/make_world.py` from Natural Earth (do not edit by hand): Europe with a
 piece of Asia, North America small on the left, in screen pixels. `countries`: code -> `{polys, label}` for every
 country in the plan (`planned`, grey with borders until it is in `countries/index.json`); `land`: other land, drawn
-without borders.
+without borders; `views`: `{name, rect, lonlat: [lon0, lon1, lat0, lat1]}`. Cyprus is one island (the north merged
+in) and Crimea is Ukraine's (moved out of Russia), as the EU sees them.
 
 ## `countries/index.json`
 
@@ -143,6 +147,17 @@ List of roads between two neighbouring cities `a` and `b` (travelling `b` -> `a`
   lamps, terminal, containers, crane), closed barriers and the ship with its stern ramp down; past the barrier only
   the sea until the crossing, a ~3 s ferry screen (the ship crossing with the car on deck, `name`, the sea km and
   `fact`), and on the maps the sea part of the road dashed. Traffic rolls up the quay slowly into the ship.
+- `bridge` (optional): `{from_km, to_km, name}` (one per road; split the road at a town for two), a suspension
+  bridge over the water in the `a` -> `b` direction (`b` -> `a` mirrors the km), e.g. the 1915 Çanakkale Bridge
+  over the Dardanelles; `name` plain or texts by language; optional `color` (`"#c8322b"`) for the pylons, grey by
+  default. The stretch is driven as it is (real km, no time added); it is never shorter than `Route.BRIDGE_MIN`
+  track metres and is moved off town streets with `Route.BRIDGE_GAP` of open road to them (like tunnels), so a
+  bridge starting at a city's edge is fine; one the towns squeeze under `Route.BRIDGE_DROP` metres is left out (keep
+  ~30 km of road around it; test_game_data checks every real bridge keeps `BRIDGE_MIN`). Stations stand at least `Route.STATION_BEFORE_BRIDGE` before and
+  `Route.STATION_PAST_BRIDGE` past it, boards and crossings keep clear of it; flat and straight. Drawn: a blue sign
+  with `name` before it, then water on both sides of the deck, railings (solid, like tunnel walls), two tall pylons
+  astride the road `Scenery.BRIDGE_SIDE` of the way in from each end, the main cables sagging between them with
+  hangers, the sea on the horizon; on the maps a normal road.
 
 ## `countries/<code>/native.json` (optional)
 

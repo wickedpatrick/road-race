@@ -181,7 +181,7 @@ trasy sensowne), miejscowości po drodze, krainy, ciekawostki po polsku, kontur 
       Niemcy (30), Czechy, Słowacja, Litwa.
 - [ ] Partia 2: Francja (30), Włochy (30), Hiszpania (30), Portugalia, Holandia, Belgia, Luksemburg,
       Austria, Szwajcaria (z Liechtensteinem).
-- [ ] Partia 3: Dania, Szwecja, Norwegia, Finlandia, Islandia, Irlandia, Estonia, Łotwa.
+- [ ] Partia 3: Dania, Szwecja, Norwegia, Finlandia, Irlandia, Estonia, Łotwa (Islandia już jest, wyżej).
 - [x] Partia 4: Słowenia, Chorwacja, Bośnia i Hercegowina, Serbia, mapa „Bałkany Południowe” (Czarnogóra, Kosowo,
       Albania, Macedonia Północna), Węgry, Rumunia, Bułgaria, Mołdawia z Naddniestrzem (jako zwykła Mołdawia),
       Grecja z Kretą (promem z Pireusu do Heraklionu), Cypr (tylko część południowa pod kontrolą Republiki; na
