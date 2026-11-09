@@ -1,0 +1,36 @@
+{
+	"kobenhavn": {
+		"name": "København",
+		"lat": 55.676,
+		"lon": 12.568,
+		"pop": 1381,
+		"region": "Hovedstaden",
+		"exonym": {"pl": "Kopenhaga", "en": "Copenhagen", "cs": "Kodaň", "is": "Kaupmannahöfn", "de": "Kopenhagen"}
+	},
+	"aarhus": {"name": "Aarhus", "lat": 56.157, "lon": 10.211, "pop": 290, "region": "Midtjylland", "exonym": {"is": "Árósar"}},
+	"odense": {"name": "Odense", "lat": 55.396, "lon": 10.388, "pop": 182, "region": "Syddanmark", "exonym": {"is": "Óðinsvé"}},
+	"aalborg": {"name": "Aalborg", "lat": 57.048, "lon": 9.919, "pop": 121, "region": "Nordjylland", "exonym": {"is": "Álaborg"}},
+	"esbjerg": {"name": "Esbjerg", "lat": 55.476, "lon": 8.459, "pop": 72, "region": "Syddanmark"},
+	"randers": {"name": "Randers", "lat": 56.461, "lon": 10.036, "pop": 63, "region": "Midtjylland"},
+	"kolding": {"name": "Kolding", "lat": 55.49, "lon": 9.472, "pop": 62, "region": "Syddanmark"},
+	"vejle": {"name": "Vejle", "lat": 55.709, "lon": 9.536, "pop": 61, "region": "Syddanmark"},
+	"roskilde": {
+		"name": "Roskilde",
+		"lat": 55.642,
+		"lon": 12.08,
+		"pop": 52,
+		"region": "Sjælland",
+		"exonym": {"is": "Hróarskelda"}
+	},
+	"helsingor": {
+		"name": "Helsingør",
+		"lat": 56.036,
+		"lon": 12.611,
+		"pop": 47,
+		"region": "Hovedstaden",
+		"exonym": {"is": "Helsingjaeyri"}
+	},
+	"koge": {"name": "Køge", "lat": 55.458, "lon": 12.182, "pop": 38, "region": "Sjælland"},
+	"ronne": {"name": "Rønne", "lat": 55.1, "lon": 14.706, "pop": 13, "region": "Hovedstaden"},
+	"skagen": {"name": "Skagen", "lat": 57.721, "lon": 10.584, "pop": 8, "region": "Nordjylland"}
+}

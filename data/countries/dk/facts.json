@@ -1,0 +1,163 @@
+{
+	"København": {
+		"pl": "Stolica Danii nad Sundem; park rozrywki Tivoli w jej centrum otwarto w 1843 roku",
+		"en": "The capital of Denmark on the Øresund; the Tivoli amusement park in its centre opened in 1843",
+		"cs": "Hlavní město Dánska u Öresundu; zábavní park Tivoli v jeho centru byl otevřen roku 1843",
+		"is": "Höfuðborg Danmerkur við Eyrarsund; Tívolí-skemmtigarðurinn í miðborginni var opnaður árið 1843",
+		"de": "Die Hauptstadt Dänemarks am Öresund; der Vergnügungspark Tivoli im Zentrum wurde 1843 eröffnet"
+	},
+	"Aarhus": {
+		"pl": "Drugie co do wielkości miasto Danii, wyrosłe z osady wikingów u ujścia rzeki; w 2017 roku Europejska Stolica Kultury",
+		"en": "Denmark's second city, grown from a Viking settlement at a river mouth; European Capital of Culture in 2017",
+		"cs": "Druhé největší město Dánska, vyrostlé z vikinské osady u ústí řeky; v roce 2017 Evropské hlavní město kultury",
+		"is": "Næststærsta borg Danmerkur, sprottin upp úr víkingabyggð við árós; menningarborg Evrópu árið 2017",
+		"de": "Dänemarks zweitgrößte Stadt, aus einer Wikingersiedlung an einer Flussmündung gewachsen; 2017 Kulturhauptstadt Europas"
+	},
+	"Odense": {
+		"pl": "Główne miasto Fionii, nazwane od boga Odyna; w 1805 roku urodził się tu Hans Christian Andersen",
+		"en": "Funen's main city, named after the god Odin; Hans Christian Andersen was born here in 1805",
+		"cs": "Hlavní město ostrova Fyn, pojmenované po bohu Odinovi; roku 1805 se tu narodil Hans Christian Andersen",
+		"is": "Helsta borg Fjóns, kennd við guðinn Óðin; Hans Christian Andersen fæddist hér árið 1805",
+		"de": "Die größte Stadt Fünens, nach dem Gott Odin benannt; 1805 wurde hier Hans Christian Andersen geboren"
+	},
+	"Aalborg": {
+		"pl": "Główne miasto północnej Jutlandii nad Limfjordem; dorastał tu Jørn Utzon, architekt opery w Sydney",
+		"en": "The main city of North Jutland, on the Limfjord; Jørn Utzon, architect of the Sydney Opera House, grew up here",
+		"cs": "Hlavní město severního Jutska na Limfjordu; vyrůstal tu Jørn Utzon, architekt opery v Sydney",
+		"is": "Helsta borg Norður-Jótlands, við Limafjörð; Jørn Utzon, arkitekt óperuhússins í Sydney, ólst hér upp",
+		"de": "Die größte Stadt Nordjütlands am Limfjord; hier wuchs Jørn Utzon auf, der Architekt des Opernhauses von Sydney"
+	},
+	"Esbjerg": {
+		"pl": "Port budowany od 1868 roku, gdy Dania utraciła Szlezwik; dziś zaplecze morskich farm wiatrowych na Morzu Północnym",
+		"en": "A port built from 1868, after Denmark lost Schleswig; today a base for the offshore wind farms of the North Sea",
+		"cs": "Přístav budovaný od roku 1868, poté co Dánsko ztratilo Šlesvicko; dnes zázemí větrných elektráren v Severním moři",
+		"is": "Höfn sem var byggð frá 1868, eftir að Danir misstu Slésvík; nú miðstöð vindorkuvera úti á Norðursjó",
+		"de": "Ein ab 1868 angelegter Hafen, nachdem Dänemark Schleswig verloren hatte; heute Basis der Offshore-Windparks in der Nordsee"
+	},
+	"Randers": {
+		"pl": "Miasto nad Gudenå, najdłuższą rzeką Danii, tam gdzie zaczyna się fiord Randers; tropikalne zoo kryje się pod trzema kopułami",
+		"en": "A town on the Gudenå, Denmark's longest river, where Randers Fjord begins; its rainforest zoo lives under three domes",
+		"cs": "Město na Gudenå, nejdelší dánské řece, kde začíná Randerský fjord; zdejší tropická zoo je pod třemi kopulemi",
+		"is": "Bær við Gudenå, lengstu á Danmerkur, þar sem Randersfjörður byrjar; regnskógadýragarðurinn er undir þremur hvelfingum",
+		"de": "Eine Stadt an der Gudenå, Dänemarks längstem Fluss, wo der Randers Fjord beginnt; der Regenwaldzoo liegt unter drei Kuppeln"
+	},
+	"Kolding": {
+		"pl": "Miasto nad fiordem Kolding z zamkiem Koldinghus; do 1920 roku tuż na południe od niego biegła granica z Niemcami",
+		"en": "A town on Kolding Fjord below Koldinghus castle; until 1920 the border with Germany ran just south of it",
+		"cs": "Město u Koldingského fjordu pod hradem Koldinghus; do roku 1920 vedla hned jižně od něj hranice s Německem",
+		"is": "Bær við Koldingfjörð undir Koldinghus-kastala; fram til 1920 lágu landamærin að Þýskalandi rétt sunnan við bæinn",
+		"de": "Eine Stadt am Kolding Fjord unter dem Schloss Koldinghus; bis 1920 verlief die Grenze zu Deutschland gleich südlich davon"
+	},
+	"Vejle": {
+		"pl": "Miasto na końcu fiordu Vejle wśród stromych, zalesionych wzgórz; autostrada E45 przecina fiord mostem długości 1,7 km",
+		"en": "A town at the head of Vejle Fjord among steep wooded hills; the E45 crosses the fjord on a 1.7 km bridge",
+		"cs": "Město na konci Vejleského fjordu mezi strmými zalesněnými kopci; dálnice E45 překračuje fjord po 1,7 km dlouhém mostě",
+		"is": "Bær innst í Vejlefirði milli brattra, skógi vaxinna hæða; E45 liggur yfir fjörðinn á 1,7 km langri brú",
+		"de": "Eine Stadt am Ende des Vejle Fjords zwischen steilen bewaldeten Hängen; die E45 überquert den Fjord auf einer 1,7 km langen Brücke"
+	},
+	"Roskilde": {
+		"pl": "W średniowieczu stolica Danii; w katedrze spoczywają królowie i królowe, a w muzeum pięć statków wikingów zatopionych w fiordzie około 1070 roku",
+		"en": "Denmark's capital in the Middle Ages; its cathedral holds the tombs of kings and queens, its museum five Viking ships sunk in the fjord around 1070",
+		"cs": "Ve středověku hlavní město Dánska; v katedrále jsou pohřbeni králové a královny, v muzeu je pět vikinských lodí potopených ve fjordu kolem roku 1070",
+		"is": "Höfuðborg Danmerkur á miðöldum; í dómkirkjunni hvíla konungar og drottningar og í safninu eru fimm víkingaskip sem sökkt var í fjörðinn um 1070",
+		"de": "Im Mittelalter Dänemarks Hauptstadt; im Dom ruhen Könige und Königinnen, im Museum fünf Wikingerschiffe, die um 1070 im Fjord versenkt wurden"
+	},
+	"Helsingør": {
+		"pl": "Miasto w najwęższym miejscu Sundu, 4 km od szwedzkiego Helsingborga; do 1857 roku statki płaciły tu cło sundzkie",
+		"en": "The town at the narrowest point of the Øresund, 4 km from Helsingborg in Sweden; ships paid the Sound Dues here until 1857",
+		"cs": "Město v nejužším místě Öresundu, 4 km od švédského Helsingborgu; do roku 1857 tu lodě platily sundské clo",
+		"is": "Bær þar sem Eyrarsund er mjóst, 4 km frá Helsingjaborg í Svíþjóð; til 1857 greiddu skip hér Eyrarsundstollinn",
+		"de": "Die Stadt an der engsten Stelle des Öresunds, 4 km vom schwedischen Helsingborg; bis 1857 zahlten Schiffe hier den Sundzoll"
+	},
+	"Køge": {
+		"pl": "Dawne miasto targowe nad zatoką Køge, z domami o konstrukcji szkieletowej; z jego portu odpływają promy na Bornholm",
+		"en": "An old market town on Køge Bay with half-timbered houses; the ferries to Bornholm leave from its harbour",
+		"cs": "Staré tržní město u zálivu Køge s hrázděnými domy; z jeho přístavu vyplouvají trajekty na Bornholm",
+		"is": "Gamall kaupstaður við Køge-flóa með bindingsverkshúsum; ferjurnar til Borgundarhólms sigla úr höfninni",
+		"de": "Eine alte Marktstadt an der Køge Bucht mit Fachwerkhäusern; vom Hafen fahren die Fähren nach Bornholm"
+	},
+	"Skagen": {
+		"pl": "Najdalej na północ wysunięte miasto Danii; przy cyplu Grenen spotykają się Skagerrak i Kattegat, a w XIX wieku przyjeżdżali tu malarze dla światła",
+		"en": "Denmark's northernmost town; at Grenen the Skagerrak meets the Kattegat, and in the 19th century painters came here for the light",
+		"cs": "Nejsevernější město Dánska; u výběžku Grenen se stýká Skagerrak s Kattegatem a v 19. století sem kvůli světlu jezdili malíři",
+		"is": "Nyrsti bær Danmerkur; við Grenen mætast Skagerak og Kattegat, og á 19. öld komu málarar hingað vegna birtunnar",
+		"de": "Dänemarks nördlichste Stadt; an der Grenen treffen Skagerrak und Kattegat aufeinander, im 19. Jahrhundert kamen Maler wegen des Lichts"
+	},
+	"Rønne": {
+		"pl": "Główne miasto Bornholmu, granitowej wyspy z okrągłymi kościołami, leżącej bliżej Szwecji niż reszty Danii",
+		"en": "The main town of Bornholm, a granite island of round churches that lies closer to Sweden than to the rest of Denmark",
+		"cs": "Hlavní město Bornholmu, žulového ostrova s okrouhlými kostely, který leží blíž Švédsku než zbytku Dánska",
+		"is": "Helsti bær Borgundarhólms, graníteyjar með hringkirkjum sem liggur nær Svíþjóð en öðrum hlutum Danmerkur",
+		"de": "Der Hauptort Bornholms, einer Graniteinsel mit Rundkirchen, die näher an Schweden liegt als am übrigen Dänemark"
+	},
+	"Kongens Lyngby": {
+		"pl": "„Królewskie Lyngby”, siedziba Duńskiego Uniwersytetu Technicznego (DTU)",
+		"en": "'The King's Lyngby', home of the Technical University of Denmark (DTU)",
+		"cs": "„Královské Lyngby“, sídlo Dánské technické univerzity (DTU)",
+		"is": "„Lyngby konungs“, þar sem Danski tækniháskólinn (DTU) er",
+		"de": "„Des Königs Lyngby“, Sitz der Technischen Universität Dänemarks (DTU)"
+	},
+	"Hørsholm": {
+		"pl": "W pobliskim Rungstedlund mieszkała pisarka Karen Blixen; jej dom jest dziś muzeum",
+		"en": "Nearby Rungstedlund was the home of the writer Karen Blixen; it is now a museum",
+		"cs": "V nedalekém Rungstedlundu žila spisovatelka Karen Blixenová; její dům je dnes muzeem",
+		"is": "Í Rungstedlund hér skammt frá bjó rithöfundurinn Karen Blixen; húsið er nú safn",
+		"de": "Im nahen Rungstedlund lebte die Schriftstellerin Karen Blixen; ihr Haus ist heute ein Museum"
+	},
+	"Hillerød": {
+		"pl": "Renesansowy zamek Frederiksborg stoi tu na trzech wysepkach w jeziorze; mieści Muzeum Historii Narodowej",
+		"en": "The Renaissance castle of Frederiksborg stands on three islets in the lake; it houses the Museum of National History",
+		"cs": "Renesanční zámek Frederiksborg stojí na třech ostrůvcích v jezeře; sídlí v něm Muzeum národních dějin",
+		"is": "Endurreisnarhöllin Friðriksborg stendur á þremur hólmum í vatninu; þar er safn um sögu Danmerkur",
+		"de": "Das Renaissanceschloss Frederiksborg steht auf drei Inseln im Schlosssee; darin ist das Nationalhistorische Museum"
+	},
+	"Ishøj": {
+		"pl": "Podmiejska gmina nad zatoką Køge; przy plaży stoi muzeum sztuki współczesnej Arken",
+		"en": "A suburb on Køge Bay; the Arken museum of modern art stands by its beach",
+		"cs": "Předměstí u zálivu Køge; u pláže stojí muzeum moderního umění Arken",
+		"is": "Úthverfi við Køge-flóa; nútímalistasafnið Arken stendur við ströndina",
+		"de": "Ein Vorort an der Køge Bucht; am Strand steht das Museum für moderne Kunst Arken"
+	},
+	"Ringsted": {
+		"pl": "W kościele św. Benedykta pochowano kilku średniowiecznych królów Danii, m.in. Waldemarów",
+		"en": "Several medieval Danish kings, among them the Valdemars, are buried in St Bendt's Church",
+		"cs": "V kostele sv. Benedikta je pohřbeno několik středověkých dánských králů, mezi nimi Valdemarové",
+		"is": "Í Sankti Bents kirkju eru nokkrir danskir miðaldakonungar grafnir, þar á meðal Valdimararnir",
+		"de": "In der St.-Bendts-Kirche sind mehrere dänische Könige des Mittelalters begraben, darunter die Waldemare"
+	},
+	"Sorø": {
+		"pl": "Akademia w Sorø, szkoła nad jeziorem na miejscu XII-wiecznego klasztoru; pisarz Ludvig Holberg zapisał jej swój majątek",
+		"en": "Sorø Academy, a school by the lake on the site of a 12th-century abbey; the writer Ludvig Holberg left it his fortune",
+		"cs": "Akademie v Sorø, škola u jezera na místě kláštera z 12. století; spisovatel Ludvig Holberg jí odkázal své jmění",
+		"is": "Í Sorø er Akademían, skóli við vatnið á stað klausturs frá 12. öld; rithöfundurinn Ludvig Holberg arfleiddi skólann að eigum sínum",
+		"de": "Die Akademie Sorø, eine Schule am See an der Stelle eines Klosters aus dem 12. Jahrhundert; der Dichter Ludvig Holberg vermachte ihr sein Vermögen"
+	},
+	"Horsens": {
+		"pl": "Urodził się tu w 1681 roku żeglarz Vitus Bering, od którego nazwano Cieśninę Beringa",
+		"en": "The navigator Vitus Bering, after whom the Bering Strait is named, was born here in 1681",
+		"cs": "Narodil se tu roku 1681 mořeplavec Vitus Bering, po němž je pojmenován Beringův průliv",
+		"is": "Hér fæddist árið 1681 sæfarinn Vitus Bering, sem Beringssund er kennt við",
+		"de": "Hier wurde 1681 der Seefahrer Vitus Bering geboren, nach dem die Beringstraße benannt ist"
+	},
+	"Skanderborg": {
+		"pl": "Miasto nad jeziorem w duńskiej Krainie Jezior; w bukowym lesie odbywa się festiwal muzyczny Smukfest",
+		"en": "A lakeside town in the Danish Lake District; the Smukfest music festival is held in its beech wood",
+		"cs": "Město u jezera v dánské Jezerní oblasti; v bukovém lese se koná hudební festival Smukfest",
+		"is": "Bær við vatn í dönsku vatnasveitinni; tónlistarhátíðin Smukfest er haldin í beykiskóginum",
+		"de": "Eine Stadt am See im dänischen Seenhochland; im Buchenwald findet das Musikfestival Smukfest statt"
+	},
+	"Hobro": {
+		"pl": "Miasto na końcu fiordu Mariager; nieopodal leży okrągła twierdza wikingów Fyrkat",
+		"en": "A town at the head of Mariager Fjord; the Viking ring fortress of Fyrkat lies nearby",
+		"cs": "Město na konci fjordu Mariager; nedaleko leží kruhová vikinská pevnost Fyrkat",
+		"is": "Bær innst í Mariagerfirði; víkingavirkið Fyrkat er hér skammt frá",
+		"de": "Eine Stadt am Ende des Mariager Fjords; in der Nähe liegt die Wikinger-Ringburg Fyrkat"
+	},
+	"Frederikshavn": {
+		"pl": "Miasto portowe w Vendsyssel, skąd promy płyną do Szwecji i Norwegii",
+		"en": "A port town in Vendsyssel with ferries to Sweden and Norway",
+		"cs": "Přístavní město ve Vendsysselu, odkud plují trajekty do Švédska a Norska",
+		"is": "Hafnarbær á Vendsyssel; þaðan sigla ferjur til Svíþjóðar og Noregs",
+		"de": "Eine Hafenstadt in Vendsyssel mit Fähren nach Schweden und Norwegen"
+	}
+}

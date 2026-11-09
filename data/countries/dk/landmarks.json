@@ -1,0 +1,244 @@
+{
+	"København": [
+		{
+			"kind": "dk_kobenhavn_nyhavn",
+			"name": {"pl": "Nyhavn", "en": "Nyhavn", "cs": "Nyhavn", "is": "Nýhöfn", "de": "Nyhavn"},
+			"desc": {
+				"pl": "Kanał z XVII wieku wzdłuż kolorowych kamienic ze szczytami i starych drewnianych żaglowców; mieszkał tu Hans Christian Andersen",
+				"en": "A 17th-century canal lined with brightly painted gabled houses and old wooden ships; Hans Christian Andersen lived here",
+				"cs": "Kanál ze 17. století lemovaný pestrobarevnými štítovými domy a starými dřevěnými loděmi; bydlel tu Hans Christian Andersen",
+				"is": "Síki frá 17. öld með litríkum gaflhúsum og gömlum tréskipum; Hans Christian Andersen bjó hér",
+				"de": "Ein Kanal aus dem 17. Jahrhundert mit bunten Giebelhäusern und alten Holzschiffen; hier wohnte Hans Christian Andersen"
+			},
+			"local": "Nyhavn"
+		}
+	],
+	"Aarhus": [
+		{
+			"kind": "dk_aarhus_aros",
+			"name": {
+				"pl": "ARoS i tęczowa panorama",
+				"en": "ARoS and Your rainbow panorama",
+				"cs": "ARoS a duhové panorama",
+				"is": "ARoS og regnbogahringurinn",
+				"de": "ARoS mit dem Regenbogenpanorama"
+			},
+			"desc": {
+				"pl": "Na dachu sześciennego muzeum sztuki biegnie okrągły chodnik ze szkła we wszystkich kolorach tęczy, dzieło Olafura Eliassona z 2011 roku",
+				"en": "On the roof of the cube-shaped art museum runs a ring of glass walkway in all the colours of the rainbow, by Olafur Eliasson (2011)",
+				"cs": "Na střeše krychlového muzea umění vede kruhový ochoz ze skla ve všech barvách duhy, dílo Olafura Eliassona z roku 2011",
+				"is": "Á þaki listasafnsins er hringlaga gangur úr gleri í öllum regnbogans litum, verk Ólafs Elíassonar frá 2011",
+				"de": "Auf dem Dach des würfelförmigen Kunstmuseums läuft ein runder Gang aus Glas in allen Regenbogenfarben, ein Werk von Olafur Eliasson (2011)"
+			},
+			"local": "ARoS Aarhus Kunstmuseum"
+		}
+	],
+	"Odense": [
+		{
+			"kind": "dk_odense_andersen",
+			"name": {
+				"pl": "Miejsce urodzenia Andersena",
+				"en": "Andersen's birthplace",
+				"cs": "Andersenův rodný dům",
+				"is": "Fæðingarhús Andersens",
+				"de": "Andersens Geburtshaus"
+			},
+			"desc": {
+				"pl": "Mały żółty dom narożny pod czerwoną dachówką w starej dzielnicy, uważany za miejsce urodzenia Andersena w 1805 roku; dziś część jego muzeum",
+				"en": "A small yellow corner house with a red tiled roof in the old quarter, held to be where Andersen was born in 1805; now part of his museum",
+				"cs": "Malý žlutý nárožní dům s červenou taškovou střechou ve staré čtvrti, pokládaný za Andersenův rodný dům (1805); dnes součást jeho muzea",
+				"is": "Lítið gult hornhús með rauðu tígulsteinsþaki í gamla bænum, talið fæðingarstaður Andersens árið 1805; nú hluti af safni hans",
+				"de": "Ein kleines gelbes Eckhaus mit rotem Ziegeldach in der Altstadt, das als Andersens Geburtshaus von 1805 gilt; heute Teil seines Museums"
+			},
+			"local": "H.C. Andersens Fødehjem"
+		}
+	],
+	"Aalborg": [
+		{
+			"kind": "dk_aalborg_jens_bang",
+			"name": {
+				"pl": "Kamienica Jensa Banga",
+				"en": "Jens Bang's Stone House",
+				"cs": "Kamenný dům Jense Banga",
+				"is": "Steinhús Jens Bang",
+				"de": "Jens Bangs Steinhaus"
+			},
+			"desc": {
+				"pl": "Wysoki renesansowy dom kupca z 1624 roku z bogato zdobionymi szczytami",
+				"en": "A tall Renaissance merchant's house of 1624 with richly decorated gables",
+				"cs": "Vysoký renesanční kupecký dům z roku 1624 s bohatě zdobenými štíty",
+				"is": "Hátt endurreisnarhús kaupmanns frá 1624 með ríkulega skreyttum göflum",
+				"de": "Ein hohes Renaissance-Kaufmannshaus von 1624 mit reich verzierten Giebeln"
+			},
+			"local": "Jens Bangs Stenhus"
+		}
+	],
+	"Esbjerg": [
+		{
+			"kind": "dk_esbjerg_men",
+			"name": {
+				"pl": "Człowiek nad morzem",
+				"en": "Man Meets the Sea",
+				"cs": "Člověk u moře",
+				"is": "Maðurinn við hafið",
+				"de": "Der Mensch am Meer"
+			},
+			"desc": {
+				"pl": "Czterech białych siedzących mężczyzn wysokości 9 metrów, dzieło Svenda Wiiga Hansena z 1995 roku, patrzy na morze z plaży Sædding",
+				"en": "Four white seated men, 9 metres tall, by Svend Wiig Hansen (1995), look out to sea from Sædding Beach",
+				"cs": "Čtyři bílí sedící muži vysocí 9 metrů od Svenda Wiiga Hansena (1995) hledí z pláže Sædding na moře",
+				"is": "Fjórir hvítir sitjandi menn, 9 metra háir, eftir Svend Wiig Hansen (1995), horfa út á hafið frá Sædding-strönd",
+				"de": "Vier weiße sitzende Männer, 9 Meter hoch, von Svend Wiig Hansen (1995), blicken vom Strand Sædding aufs Meer"
+			},
+			"local": "Mennesket ved Havet"
+		}
+	],
+	"Randers": [
+		{
+			"kind": "dk_randers_domes",
+			"name": {
+				"pl": "Randers Regnskov",
+				"en": "Randers Rainforest",
+				"cs": "Deštný prales Randers",
+				"is": "Regnskógurinn í Randers",
+				"de": "Randers Regenwald"
+			},
+			"desc": {
+				"pl": "Tropikalny ogród zoologiczny pod trzema przezroczystymi kopułami: lasy deszczowe Ameryki Południowej, Afryki i Azji",
+				"en": "A tropical zoo under three see-through domes: the rainforests of South America, Africa and Asia",
+				"cs": "Tropická zoo pod třemi průhlednými kopulemi: deštné pralesy Jižní Ameriky, Afriky a Asie",
+				"is": "Hitabeltisdýragarður undir þremur gegnsæjum hvelfingum: regnskógar Suður-Ameríku, Afríku og Asíu",
+				"de": "Ein Tropenzoo unter drei durchsichtigen Kuppeln: die Regenwälder Südamerikas, Afrikas und Asiens"
+			},
+			"local": "Randers Regnskov"
+		}
+	],
+	"Kolding": [
+		{
+			"kind": "dk_kolding_koldinghus",
+			"name": {"pl": "Koldinghus", "en": "Koldinghus", "cs": "Koldinghus", "is": "Koldinghus", "de": "Koldinghus"},
+			"desc": {
+				"pl": "Królewski zamek nad miastem, spalony w 1808 roku, gdy kwaterowali w nim żołnierze; odbudowany jako muzeum, z nowym drewnem w starych murach",
+				"en": "A royal castle above the town, burned out in 1808 while soldiers were quartered there; restored as a museum, with new timber inside the old walls",
+				"cs": "Královský hrad nad městem, vyhořel roku 1808, kdy v něm byli ubytováni vojáci; obnoven jako muzeum, s novým dřevem uvnitř starých zdí",
+				"is": "Konungskastali ofan við bæinn sem brann árið 1808 þegar hermenn höfðu þar aðsetur; endurreistur sem safn, með nýju timbri innan gömlu múranna",
+				"de": "Ein Königsschloss über der Stadt, 1808 ausgebrannt, als Soldaten darin einquartiert waren; als Museum wiederhergestellt, mit neuem Holz in den alten Mauern"
+			},
+			"local": "Koldinghus"
+		}
+	],
+	"Vejle": [
+		{
+			"kind": "dk_vejle_wave",
+			"name": {"pl": "Fala", "en": "The Wave", "cs": "Vlna", "is": "Bylgjan", "de": "Die Welle"},
+			"desc": {
+				"pl": "Budynki mieszkalne w porcie Vejle, których białe dachy wznoszą się i opadają pięcioma grzbietami jak wzgórza wokół fiordu",
+				"en": "Apartment buildings on Vejle harbour whose white roofs rise and fall in five crests, like the hills around the fjord",
+				"cs": "Obytné domy ve vejleském přístavu, jejichž bílé střechy stoupají a klesají v pěti hřebenech jako kopce kolem fjordu",
+				"is": "Íbúðarhús við höfnina í Vejle; hvít þökin rísa og hníga í fimm toppum eins og hæðirnar við fjörðinn",
+				"de": "Wohnhäuser am Hafen von Vejle, deren weiße Dächer in fünf Kämmen steigen und fallen wie die Hügel am Fjord"
+			},
+			"local": "Bølgen"
+		}
+	],
+	"Roskilde": [
+		{
+			"kind": "dk_roskilde_cathedral",
+			"name": {
+				"pl": "Katedra w Roskilde",
+				"en": "Roskilde Cathedral",
+				"cs": "Katedrála v Roskilde",
+				"is": "Dómkirkjan í Hróarskeldu",
+				"de": "Dom zu Roskilde"
+			},
+			"desc": {
+				"pl": "Ceglana gotycka katedra z dwiema smukłymi wieżami, miejsce pochówku duńskich monarchów; wpisana na listę UNESCO",
+				"en": "A brick Gothic cathedral with two slender spires, the burial church of the Danish monarchs; a UNESCO World Heritage Site",
+				"cs": "Cihlová gotická katedrála se dvěma štíhlými věžemi, pohřebiště dánských panovníků; památka UNESCO",
+				"is": "Gotnesk dómkirkja úr múrsteini með tveimur grönnum turnspírum, grafkirkja danskra konunga; á heimsminjaskrá UNESCO",
+				"de": "Ein gotischer Backsteindom mit zwei schlanken Turmspitzen, Grabkirche der dänischen Monarchen; UNESCO-Welterbe"
+			},
+			"local": "Roskilde Domkirke"
+		}
+	],
+	"Helsingør": [
+		{
+			"kind": "dk_helsingor_kronborg",
+			"name": {
+				"pl": "Zamek Kronborg",
+				"en": "Kronborg Castle",
+				"cs": "Hrad Kronborg",
+				"is": "Krónborgarkastali",
+				"de": "Schloss Kronborg"
+			},
+			"desc": {
+				"pl": "Renesansowy zamek strzegący Sundu, Elsynor z „Hamleta” Szekspira; wpisany na listę UNESCO",
+				"en": "A Renaissance castle guarding the Øresund, the Elsinore of Shakespeare's Hamlet; a UNESCO World Heritage Site",
+				"cs": "Renesanční hrad střežící Öresund, Elsinor ze Shakespearova Hamleta; památka UNESCO",
+				"is": "Endurreisnarkastali sem gætir Eyrarsunds, sögusvið Hamlets eftir Shakespeare; á heimsminjaskrá UNESCO",
+				"de": "Ein Renaissanceschloss, das den Öresund bewacht, Schauplatz von Shakespeares Hamlet; UNESCO-Welterbe"
+			},
+			"local": "Kronborg Slot"
+		}
+	],
+	"Køge": [
+		{
+			"kind": "dk_koge_house",
+			"name": {
+				"pl": "Kirkestræde 20",
+				"en": "Kirkestræde 20",
+				"cs": "Kirkestræde 20",
+				"is": "Kirkestræde 20",
+				"de": "Kirkestræde 20"
+			},
+			"desc": {
+				"pl": "Mały dom o konstrukcji szkieletowej z 1527 roku, uważany za najstarszy datowany dom szachulcowy w Danii",
+				"en": "A small half-timbered house of 1527, regarded as the oldest dated half-timbered house in Denmark",
+				"cs": "Malý hrázděný dům z roku 1527, pokládaný za nejstarší datovaný hrázděný dům v Dánsku",
+				"is": "Lítið bindingsverkshús frá 1527, talið elsta bindingsverkshús Danmerkur með þekktu byggingarári",
+				"de": "Ein kleines Fachwerkhaus von 1527, das als ältestes datiertes Fachwerkhaus Dänemarks gilt"
+			},
+			"local": "Kirkestræde 20"
+		}
+	],
+	"Rønne": [
+		{
+			"kind": "dk_ronne_nylars",
+			"name": {
+				"pl": "Okrągły kościół w Nylars",
+				"en": "Nylars Round Church",
+				"cs": "Okrouhlý kostel v Nylarsu",
+				"is": "Hringkirkjan í Nylars",
+				"de": "Rundkirche Nylars"
+			},
+			"desc": {
+				"pl": "Jeden z czterech średniowiecznych okrągłych kościołów Bornholmu, kilka kilometrów na wschód od Rønne: bielona rotunda z XII wieku pod stożkowym dachem",
+				"en": "One of Bornholm's four medieval round churches, a few kilometres east of Rønne: a whitewashed 12th-century rotunda under a cone roof",
+				"cs": "Jeden ze čtyř středověkých okrouhlých kostelů na Bornholmu, pár kilometrů východně od Rønne: bílá rotunda z 12. století pod kuželovou střechou",
+				"is": "Ein af fjórum hringkirkjum Borgundarhólms frá miðöldum, nokkra kílómetra austan við Rønne: hvítkölkuð hringkirkja frá 12. öld undir keilulaga þaki",
+				"de": "Eine der vier mittelalterlichen Rundkirchen Bornholms, wenige Kilometer östlich von Rønne: ein weiß gekalkter Rundbau aus dem 12. Jahrhundert unter einem Kegeldach"
+			},
+			"local": "Nylars Kirke"
+		}
+	],
+	"Skagen": [
+		{
+			"kind": "dk_skagen_church",
+			"name": {
+				"pl": "Zasypany kościół",
+				"en": "The Sand-Covered Church",
+				"cs": "Zavátý kostel",
+				"is": "Sandorpna kirkjan",
+				"de": "Die versandete Kirche"
+			},
+			"desc": {
+				"pl": "Z kościoła zasypanego przez wędrujące piaski w XVIII wieku została tylko bielona wieża, zachowana jako znak dla żeglarzy",
+				"en": "Only the whitewashed tower is left of a church that drifting sand buried in the 18th century; it was kept as a seamark",
+				"cs": "Z kostela, který v 18. století zavál písek, zbyla jen bílá věž, ponechaná jako orientační bod pro námořníky",
+				"is": "Af kirkjunni, sem sandfok gróf á 18. öld, stendur aðeins hvítkalkaður turninn eftir, varðveittur sem leiðarmerki sjófarenda",
+				"de": "Von der Kirche, die im 18. Jahrhundert der Flugsand begrub, steht nur noch der weiße Turm, als Seezeichen erhalten"
+			},
+			"local": "Den Tilsandede Kirke"
+		}
+	]
+}
