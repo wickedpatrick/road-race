@@ -144,7 +144,45 @@ func run(t) -> void:
 		waited += 0.1
 	t.check(r4.fines == 1 and r4.ferry_left > 0.0 and waited >= Race.TICKET_TIME - 0.15 and r4.police.is_empty(),
 		"boards once the ticket is written (%.1f s)" % waited)
-	# traffic keeps off the quay and the crossing
-	t.check(not r.traffic.cars.any(func(c): return c.active and c.z > f.z - Route.FERRY_QUAY and c.z < f.z_out), "no traffic on the quay")
+	# traffic: none set out on the quay or the crossing; the player's way rolls slowly up the quay into the ship and is
+	# gone at the barrier, an oncoming car goes behind the camera of a car just off the ramp before it is gone
+	var trf := Traffic.build(s, 3)
+	t.check(not trf.cars.any(func(c): return c.z > f.z - Route.FERRY_QUAY and c.z < f.z_out), "no traffic set out on the quay")
+	t.check(trf.target_at(f.z - 40.0) * 3.6 <= Traffic.QUAY_KMH + 0.1, "slow on the quay (%.0f km/h)" % (trf.target_at(f.z - 40.0) * 3.6))
+	trf.cars = [{"z": f.z - 40.0, "lane_x": 0.5, "speed": 7.0, "kind": "car", "color_idx": 0, "active": true, "dir": 1},
+		{"z": f.z_out - 1.0, "lane_x": -0.5, "speed": 10.0, "kind": "car", "color_idx": 0, "active": true, "dir": -1}]
+	var seen_on_quay := false
+	for i in 100:
+		trf.update(0.1, f.z_out, 0.5, 0.0)
+		seen_on_quay = seen_on_quay or (trf.cars[0].active and trf.cars[0].z > f.z - 20.0)
+	t.check(seen_on_quay and not trf.cars.any(func(c): return c.active and c.dir > 0 and c.z >= f.z - 0.5 and c.z < f.z_out),
+		"the player's way drives up to the ship and is gone there")
+	t.check(not trf.cars.any(func(c): return c.active and c.dir < 0 and c.z > f.z and c.z < f.z_out - WorldView.PLAYER_DZ - 1.0),
+		"oncoming: gone only behind the camera")
+	# the look: a port before the barrier, the ship with its ramp down at it (both ways, and on the left-hand side)
+	for lh in [false, true]:
+		var cl := fixture()
+		if lh: cl["drive"] = "left"
+		GameData._countries[CODE] = cl
+		for pair in [["aa", "bb"], ["bb", "aa"]]:
+			var ls := Route.build(pair[0], pair[1])
+			var lf: Dictionary = ls.ferries[0]
+			var name: String = "%s->%s%s" % [pair[0], pair[1], " (left)" if lh else ""]
+			var sc := Scenery.build(ls, 1)
+			var all := []
+			for idx in sc: all.append_array(sc[idx])
+			var ships := all.filter(func(it): return it.type == "ferry_ship")
+			var fsigns := all.filter(func(it): return it.type == "ferry_sign")
+			t.check(ships.size() == 1 and absf(ships[0].z - lf.z) < 20.0, "%s: one ship at the barrier" % name)
+			t.check(fsigns.size() == 1 and fsigns[0].z < lf.z - Route.FERRY_QUAY + 1.0 and fsigns[0].z > lf.z - Route.FERRY_QUAY - 60.0
+				and fsigns[0].lat > Scenery.SIGN_EDGE and fsigns[0].text == lf.name, "%s: the ferry sign before the quay, on the kerb side" % name)
+			t.check(all.any(func(it): return it.type == "quay"), "%s: a port on the quay" % name)
+			var stray := all.filter(func(it): return it.z > lf.z - Route.FERRY_QUAY and it.z < lf.z_out)
+			t.check(not stray.any(func(it): return it.type in ["board", "region", "pylon", "limit", "tree", "house", "building"]),
+				"%s: nothing else on the quay" % name)
+			t.check(Scenery.sign_texts(ls).has(lf.name), "%s: the ferry's name warmed" % name)
+			var tr := Track.build(ls, 1)
+			t.check(absf(tr.segment_at(lf.z - 60.0).curve) < 0.001 and absf(tr.segment_at(lf.z - 60.0).grade) < 0.001,
+				"%s: the quay is flat and straight" % name)
 	GameData._countries.erase(CODE)
 	GameData.current = was

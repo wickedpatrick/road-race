@@ -88,6 +88,8 @@ static func build(stage: Dictionary, seed_value: int) -> Dictionary:
 		_station_items(items, s, rng)
 	for bd in stage.get("borders", []):
 		_crossing(items, stage, bd, rng)
+	for f in stage.get("ferries", []):
+		_port(items, f, rng)
 	_add(items, "finish", length, 0.0, 0.0, 7.0, rng)
 	# on a map spanning several countries the signs and stations follow the part of the map they stand in
 	if not stage.get("borders", []).is_empty() or stage.get("part0", "") != "":
@@ -137,7 +139,135 @@ static func _crossing(items: Dictionary, stage: Dictionary, bd: Dictionary, rng:
 	_add(items, "booth", z + 10.0, Track.ROAD_HALF_WIDTH + 4.5, 3.0, 3.2, rng)
 	_add(items, "booth", z + 6.0, -(Track.ROAD_HALF_WIDTH + 4.5), 3.0, 3.2, rng)
 
-## Open barrier: a striped post, the red-white arm raised almost upright.
+## A ferry port (Route ferries): the blue ferry sign before the quay, a concrete pier with bollards, lamps, the
+## terminal, containers and a crane, closed barriers at its end and the ship behind them with its stern ramp down;
+## the far quay past the sea the same, without the ship. Whatever grew there before is cleared away.
+const QUAY_EDGE := 30.0 ## the pier's edges, metres from the road centre (water beyond)
+const FERRY_SIGN_BEFORE := 30.0 ## the ferry sign stands this far before the quay
+static func _port(items: Dictionary, f: Dictionary, rng: RandomNumberGenerator) -> void:
+	var q0: float = f.z - Route.FERRY_QUAY
+	_clear_range(items, q0 - FERRY_SIGN_BEFORE - 8.0, f.z_out + 70.0, -1000.0, 1000.0)
+	_add(items, "ferry_sign", q0 - FERRY_SIGN_BEFORE, SIGN_EDGE + REGION_W * 0.5, REGION_W, 5.0, rng).text = f.name
+	for side in [[q0, f.z - 2.0], [f.z_out - 30.0, f.z_out + 64.0]]:
+		var z: float = side[0] + 6.0
+		while z < side[1]:
+			for sd in [-1.0, 1.0]:
+				_quay(items, "bollard", z, sd * (QUAY_EDGE - 0.8), 0.6, 0.8, rng)
+			if int(z) % 40 < 15:
+				_add(items, "lamp", z, 9.0, 0.4, 8.0, rng)
+				_add(items, "lamp", z, -9.0, 0.4, 8.0, rng)
+			z += 15.0
+	_quay(items, "terminal", q0 + 25.0, 19.0, 14.0, 7.0, rng)
+	for k in 3:
+		_quay(items, "containers", q0 + 50.0 + k * 16.0, -(16.5 + 3.0 * (k % 2)), 12.0, 2.6 * (1 + (k + 1) % 2), rng)
+	_quay(items, "crane", f.z - 25.0, -22.0, 12.0, 30.0, rng)
+	_quay(items, "terminal", f.z_out + 30.0, -19.0, 12.0, 6.0, rng)
+	_add(items, "ferry_ship", f.z + 3.0, 0.0, 24.0, 19.0, rng).text = f.name # before the barriers: drawn behind them
+	for sd in [1.0, -1.0]:
+		var bar := _add(items, "barrier", f.z - 1.5, sd * (Track.ROAD_HALF_WIDTH + 0.9), 1.0, 2.0, rng)
+		bar.dir = sd
+		bar.closed = true
+
+static func _quay(items: Dictionary, kind: String, z: float, lat: float, w: float, h: float, rng: RandomNumberGenerator) -> void:
+	_add(items, "quay", z, lat, w, h, rng).kind = kind
+
+## Port objects on a quay (type "quay", by kind).
+static func _quay_item(cv, it: Dictionary, b: Vector2, pm: float) -> void:
+	var w: float = it.w * pm
+	var h: float = it.h * pm
+	match it.kind:
+		"bollard":
+			cv.draw_rect(Rect2(b + Vector2(-w * 0.35, -h), Vector2(w * 0.7, h)), Color("2b2d31"))
+			cv.draw_rect(Rect2(b + Vector2(-w * 0.5, -h - 0.15 * pm), Vector2(w, 0.25 * pm)), Color("3b3e44"))
+		"terminal":
+			cv.draw_rect(Rect2(b + Vector2(-w * 0.5, -h), Vector2(w, h)), Color("eef1f3"))
+			cv.draw_rect(Rect2(b + Vector2(-w * 0.45, -h * 0.75), Vector2(w * 0.9, h * 0.4)), Color("6f97b8"))
+			cv.draw_rect(Rect2(b + Vector2(-w * 0.5, -h - 0.6 * pm), Vector2(w, 0.6 * pm)), SIGN_BLUE)
+		"containers":
+			var cols := [Color("b5452f"), Color("2f6f9e"), Color("d9a331"), Color("3f8a55")]
+			var rows := maxi(1, roundi(it.h / 2.6))
+			for r in rows:
+				for k in 2:
+					var col: Color = cols[(it.c + r * 2 + k) % cols.size()]
+					var cr := Rect2(b + Vector2(-w * 0.5 + k * w * 0.5, -(r + 1) * 2.6 * pm), Vector2(w * 0.5 - 0.1 * pm, 2.5 * pm))
+					cv.draw_rect(cr, col)
+					if pm > 1.5:
+						for v in 4:
+							cv.draw_line(cr.position + Vector2(cr.size.x * (v + 0.5) / 4.0, 0.2 * pm), cr.position + Vector2(cr.size.x * (v + 0.5) / 4.0, cr.size.y - 0.2 * pm), col.darkened(0.25), maxf(1.0, 0.08 * pm))
+		"crane":
+			# a harbour crane: two legs, the machine house, the boom out over the water
+			var c := Color("d9a331")
+			var lw := maxf(1.0, 0.5 * pm)
+			var top := b + Vector2(0, -h * 0.62)
+			cv.draw_line(b + Vector2(-w * 0.4, 0), top + Vector2(-w * 0.12, 0), c, lw)
+			cv.draw_line(b + Vector2(w * 0.4, 0), top + Vector2(w * 0.12, 0), c, lw)
+			cv.draw_line(b + Vector2(-w * 0.32, -h * 0.2), b + Vector2(w * 0.32, -h * 0.2), c, lw)
+			cv.draw_rect(Rect2(top + Vector2(-w * 0.2, -h * 0.12), Vector2(w * 0.4, h * 0.12)), Color("e9e4d6"))
+			var out := signf(it.lat) * flip # the boom reaches away from the road (drawn unmirrored)
+			cv.draw_line(top + Vector2(0, -h * 0.06), top + Vector2(out * w * 1.6, -h * 0.38), c, lw)
+			cv.draw_line(top + Vector2(0, -h * 0.12), top + Vector2(0, -h * 0.38), c, lw * 0.7)
+			cv.draw_line(top + Vector2(0, -h * 0.38), top + Vector2(out * w * 1.6, -h * 0.38), c, lw * 0.5)
+
+## The ferry's stern at the end of the quay: the hull, the open car deck with its ramp down onto the quay, decks of
+## white superstructure, a funnel, and the ferry's name on the stern.
+static func _ferry_ship(cv, it: Dictionary, b: Vector2, pm: float, font: Font) -> void:
+	var hw: float = it.w * 0.5 * pm
+	var hull := Color("1f3f73")
+	var white := Color("f3f4f2")
+	# hull: dark blue below the car deck, a red waterline stripe
+	cv.draw_colored_polygon(PackedVector2Array([b + Vector2(-hw, -7.0 * pm), b + Vector2(hw, -7.0 * pm), b + Vector2(hw * 0.94, 0.4 * pm), b + Vector2(-hw * 0.94, 0.4 * pm)]), hull)
+	cv.draw_rect(Rect2(b + Vector2(-hw * 0.94, -0.4 * pm), Vector2(hw * 1.88, 0.8 * pm)), Color("b8322a"))
+	# superstructure: two white decks with window rows, the bridge on top
+	cv.draw_rect(Rect2(b + Vector2(-hw, -12.0 * pm), Vector2(hw * 2.0, 5.0 * pm)), white)
+	cv.draw_rect(Rect2(b + Vector2(-hw * 0.8, -15.0 * pm), Vector2(hw * 1.6, 3.0 * pm)), white)
+	if pm > 1.0:
+		for row in [-11.0, -9.2, -14.0]:
+			var span := hw * (0.92 if row > -12.0 else 0.72)
+			var n := 14
+			for k in n:
+				var x := -span + (k + 0.2) * span * 2.0 / n
+				cv.draw_rect(Rect2(b + Vector2(x, row * pm), Vector2(span * 2.0 / n * 0.6, 0.8 * pm)), Color("2a3a4a"))
+	# lifeboats along the upper deck, the funnel
+	for sd in [-1.0, 1.0]:
+		cv.draw_rect(Rect2(b + Vector2(sd * hw * 0.92 - 1.2 * pm, -12.9 * pm), Vector2(2.4 * pm, 0.9 * pm)), Color("f08a1c"))
+	cv.draw_rect(Rect2(b + Vector2(-1.6 * pm, -19.0 * pm), Vector2(3.2 * pm, 4.0 * pm)), white)
+	cv.draw_rect(Rect2(b + Vector2(-1.6 * pm, -18.2 * pm), Vector2(3.2 * pm, 1.0 * pm)), SIGN_BLUE)
+	cv.draw_rect(Rect2(b + Vector2(-1.6 * pm, -19.0 * pm), Vector2(3.2 * pm, 0.5 * pm)), Color("26272b"))
+	# the open stern door: the lit car deck inside, the ramp down onto the quay towards the car
+	var dw := 5.2 * pm
+	cv.draw_rect(Rect2(b + Vector2(-dw, -5.6 * pm), Vector2(dw * 2.0, 5.6 * pm)), Color("2b2f36"))
+	cv.draw_rect(Rect2(b + Vector2(-dw * 0.8, -4.6 * pm), Vector2(dw * 1.6, 3.6 * pm)), Color("4a4f57"))
+	cv.draw_rect(Rect2(b + Vector2(-dw * 0.8, -4.6 * pm), Vector2(dw * 1.6, 0.4 * pm)), Color("f2e6b0"))
+	cv.draw_colored_polygon(PackedVector2Array([b + Vector2(-dw, -0.9 * pm), b + Vector2(dw, -0.9 * pm), b + Vector2(dw * 1.1, 0.9 * pm), b + Vector2(-dw * 1.1, 0.9 * pm)]), Color("6d7178"))
+	for k in 4:
+		var y := lerpf(-0.6, 0.7, k / 3.0) * pm
+		cv.draw_line(b + Vector2(-dw * 1.02, y), b + Vector2(dw * 1.02, y), Color("575b61"), maxf(1.0, 0.1 * pm))
+	# the name on the stern
+	_fit_text(cv, font, Rect2(b + Vector2(-hw * 0.9, -6.9 * pm), Vector2(hw * 1.8, 1.2 * pm)), it.text, Color.WHITE, 1.0 * pm)
+
+## The ferry sign before the port: a blue board with a white ship and the ferry's name.
+static func _ferry_sign(cv, it: Dictionary, b: Vector2, pm: float, font: Font) -> void:
+	var post := 2.8 * pm
+	var w := REGION_W * pm
+	var hh := 2.4 * pm
+	_posts(cv, b, pm, post, [-3.0, 3.0])
+	var r := Rect2(b + Vector2(-w * 0.5, -post - hh), Vector2(w, hh))
+	cv.draw_rect(r, SIGN_BLUE)
+	cv.draw_rect(r.grow(-0.14 * pm), Color.WHITE, false, maxf(1.0, 0.1 * pm))
+	ship_icon(cv, r.position + Vector2(1.2 * pm, hh * 0.62), 0.55 * pm, Color.WHITE)
+	_fit_text(cv, font, Rect2(r.position + Vector2(2.4 * pm, 0.2 * pm), Vector2(w - 2.7 * pm, hh - 0.4 * pm)), it.text, Color.WHITE, 0.75 * pm)
+
+## A ship pictogram centred at c on its waterline, `s` pixels per unit (about 3.4 units long).
+static func ship_icon(cv, c: Vector2, s: float, col: Color) -> void:
+	cv.draw_colored_polygon(PackedVector2Array([c + Vector2(-1.7, -0.6) * s, c + Vector2(1.7, -0.6) * s, c + Vector2(1.2, 0.3) * s, c + Vector2(-1.3, 0.3) * s]), col)
+	cv.draw_rect(Rect2(c + Vector2(-1.0, -1.25) * s, Vector2(1.8, 0.55) * s), col)
+	cv.draw_rect(Rect2(c + Vector2(-0.2, -1.8) * s, Vector2(0.45, 0.5) * s), col)
+	for k in 3:
+		var x := (-1.6 + k * 1.1) * s
+		cv.draw_line(c + Vector2(x, 0.6 * s), c + Vector2(x + 0.5 * s, 0.6 * s), col, maxf(1.0, 0.15 * s))
+
+## Open barrier: a striped post, the red-white arm raised almost upright. Closed (a ferry quay's end): the arm lies
+## across the road.
 static func _barrier(cv, it: Dictionary, b: Vector2, pm: float) -> void:
 	var post := 1.1 * pm
 	cv.draw_rect(Rect2(b + Vector2(-0.25 * pm, -post), Vector2(0.5 * pm, post)), Color("e9e9e9"))
@@ -145,6 +275,8 @@ static func _barrier(cv, it: Dictionary, b: Vector2, pm: float) -> void:
 	var base := b + Vector2(0, -post - 0.15 * pm)
 	var d: float = -it.dir * flip * 0.18 # leans over the road a little
 	var tip := base + Vector2(d * 4.0 * pm, -4.0 * pm)
+	if it.get("closed", false):
+		tip = base + Vector2(-it.dir * flip * absf(it.lat) * pm, 0.0) # to the road's centre, over the median too
 	var n := 6
 	for k in n:
 		var a := base.lerp(tip, float(k) / n)
@@ -246,7 +378,7 @@ static func _solid(it: Dictionary) -> Array:
 			var m := (1.0 + Track.MEDIAN * 0.5) * Track.ROAD_HALF_WIDTH # the median pillar of a dual carriageway
 			return [[-m - 0.4, -m + 0.4], [p - 0.9, p + 0.9]]
 		"haybale", "lavarock", "redrock", "mesa", "building", "house", "woodhouse", "farm", "church", "cerkiew", "block", "castle", "rock", "windmill", \
-				"chimney", "headframe", "cooling", "lighthouse", "landmark", "heap", "turbine", "booth":
+				"chimney", "headframe", "cooling", "lighthouse", "landmark", "heap", "turbine", "booth", "quay":
 			return [[-hw, hw]]
 	return []
 
@@ -636,6 +768,10 @@ static func ground(stage: Dictionary, nseg: int) -> Array:
 		var z := i * Track.SEG_LEN
 		var s := PackedFloat32Array()
 		var ls := Track.left_shift(Route.dual_f(stage, z))
+		if on_pier(stage, z):
+			s.append_array([-400.0 - ls, -QUAY_EDGE - ls, G_WATER, -QUAY_EDGE - ls, -4.8 - ls, G_PAVE, 4.8, QUAY_EDGE, G_PAVE, QUAY_EDGE, 400.0, G_WATER])
+			out[i] = s
+			continue
 		if not Route.town_at(stage, z).is_empty():
 			s.append_array([-7.4 - ls, -4.8 - ls, G_PAVE, 4.8, 7.4, G_PAVE])
 			out[i] = s
@@ -678,6 +814,13 @@ static func ground(stage: Dictionary, nseg: int) -> Array:
 					s[g + 1] -= ls
 		out[i] = s
 	return out
+
+## True on a ferry port's pier: the quay up to the barrier, and the far quay around the ramp.
+static func on_pier(stage: Dictionary, z: float) -> bool:
+	for f in stage.get("ferries", []):
+		if (z >= f.z - Route.FERRY_QUAY and z < f.z) or (z >= f.z_out - 30.0 and z < f.z_out + 70.0):
+			return true
+	return false
 
 ## Field strips laid across the road direction, like a Polish farm checkerboard.
 static func _patchwork(s: PackedFloat32Array, z: float, side: int, start: float, busy: float) -> void:
@@ -774,6 +917,9 @@ static func draw_item(cv, it: Dictionary, b: Vector2, pm: float, pal: Dictionary
 		"booth": _booth(cv, it, b, pm)
 		"radar": _radar(cv, b, pm)
 		"border_board": _border_board(cv, it, b, pm, font)
+		"ferry_sign": _ferry_sign(cv, it, b, pm, font)
+		"ferry_ship": _ferry_ship(cv, it, b, pm, font)
+		"quay": _quay_item(cv, it, b, pm)
 		"border_canopy": pass # drawn across the road by WorldView
 		"shop": _shop(cv, it, b, pm)
 		"finish": pass # drawn across the road by WorldView
@@ -818,6 +964,7 @@ static func sign_texts(stage: Dictionary) -> Array:
 		out.append_array(price_rows(p))
 		for k in Geo.limits(p): out.append(str(Geo.limits(p)[k]))
 	for t in stage.towns: out.append(t.name)
+	for f in stage.get("ferries", []): out.append(f.name)
 	for zn in stage.zones:
 		if not out.has(zn.region): out.append(zn.region)
 	for r in stage.roads: out.append(plate(r.road)[0])

@@ -136,6 +136,10 @@ List of roads between two neighbouring cities `a` and `b` (travelling `b` -> `a`
   is put in between, at least `Route.FERRY_CLEAR` metres past them (so `from_km: 0` / `to_km: km` are fine, a road
   may even be all sea); the track is never scaled by fewer than `Route.MIN_DRIVEN` km. Pulled over by the police
   the car boards only once the ticket is written. Not handled: tunnels on a quay, borders out at sea (dropped).
+  Drawn: a blue ferry sign with `name` before the quay, a flat straight concrete pier over the water (bollards,
+  lamps, terminal, containers, crane), closed barriers and the ship with its stern ramp down; past the barrier only
+  the sea until the crossing, a ~3 s ferry screen (the ship crossing with the car on deck, `name`, the sea km and
+  `fact`), and on the maps the sea part of the road dashed. Traffic rolls up the quay slowly into the ship.
 
 ## `countries/<code>/facts.json`
 

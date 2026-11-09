@@ -43,7 +43,9 @@ var stage: Dictionary
 var _dual := PackedFloat32Array() ## Route.dual_f per 5 m track segment, so update() needs no lookups
 var _express := PackedByteArray() ## 1 on motorways and expressways (traffic pace)
 var _rng := RandomNumberGenerator.new()
-var _quays := [] ## [from, to] per ferry: no cars on the quay and the crossing (Route.ferry_at)
+var _quays := [] ## [quay start, barrier, far ramp] per ferry: no cars set out on the quay and the crossing
+const QUAY_KMH := 25.0 ## cars roll up the quay into the ship this slowly
+const RAMP_BEHIND := 6.0 ## an oncoming car boards this far behind the far ramp: past the camera of a car standing on it
 
 ## Lane centres (x) for cars going the player's way, and for oncoming cars, where the road is `d` dual.
 const OWN_DUAL := [-0.5, 0.5]
@@ -65,7 +67,7 @@ static func build(stage: Dictionary, seed_value: int) -> Traffic:
 	tf.end_z = stage.length + Track.TAIL - 30.0
 	tf.stage = stage
 	for f in stage.get("ferries", []):
-		tf._quays.append([f.z - Route.FERRY_QUAY, f.z_out])
+		tf._quays.append([f.z - Route.FERRY_QUAY, f.z, f.z_out])
 	var n_seg := int(tf.end_z / Track.SEG_LEN) + 64
 	tf._dual.resize(n_seg)
 	tf._express.resize(n_seg)
@@ -74,6 +76,8 @@ static func build(stage: Dictionary, seed_value: int) -> Traffic:
 		tf._dual[k] = Route.dual_f(stage, k * Track.SEG_LEN)
 		tf._express[k] = 1 if Route.lanes_at(stage, k * Track.SEG_LEN) == 3 else 0
 		tf._target[k] = Route.cruise_kmh(stage, k * Track.SEG_LEN) / 3.6
+		if tf._on_quay(k * Track.SEG_LEN) >= 0.0:
+			tf._target[k] = minf(tf._target[k], QUAY_KMH / 3.6)
 	var density := maxf(stage.traffic_density, 0.1)
 	# the player's way
 	var z := 160.0
@@ -180,8 +184,9 @@ func update(dt: float, player_z := -INF, player_x := 0.0, player_speed := 0.0) -
 			continue
 		if dir < 0 and c.z < 0.0:
 			c.active = false
-		if not _quays.is_empty() and _on_quay(c.z) >= 0.0:
-			# a car reaching a quay takes the ferry and is gone; an oncoming one comes back far ahead
+		if not _quays.is_empty() and _boards(c.z, dir):
+			# out of sight: the player's way rolls up the quay into the ship, an oncoming car drives onto the far quay's
+			# ship behind the camera of a car just off the ramp (and comes back far ahead)
 			if dir < 0 and player_z > -INF:
 				_respawn_oncoming(c, player_z)
 			else:
@@ -253,8 +258,15 @@ func _respawn_oncoming(c: Dictionary, player_z: float) -> void:
 ## The far end of the ferry quay (and crossing) containing z, or -1 off any.
 func _on_quay(z: float) -> float:
 	for q in _quays:
-		if z >= q[0] and z <= q[1]: return q[1]
+		if z >= q[0] and z <= q[2]: return q[2]
 	return -1.0
+
+## A car going `dir` at z is on a ferry: the player's way from the ship's ramp at the barrier, oncoming ones from
+## behind the camera of a car standing on the far ramp. Past the barrier WorldView draws only the sea.
+func _boards(z: float, dir: int) -> bool:
+	for q in _quays:
+		if z >= (q[1] - 0.5 if dir > 0 else q[0]) and z <= (q[2] if dir > 0 else q[2] - RAMP_BEHIND): return true
+	return false
 
 ## Cars move at different speeds, but the order changes slowly, so an insertion sort is almost free.
 func _sort_by_z() -> void:

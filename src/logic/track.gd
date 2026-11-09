@@ -107,6 +107,8 @@ static func build(stage: Dictionary, seed_value: int) -> Track:
 				leave = room - enter
 		i = _bend(curves, i, end_i, enter, hold, leave, amount)
 		i += rng.randi_range(10, 60)
+	for k in n:
+		curves[k] *= _quay_flat(stage, k * SEG_LEN)
 	# hills: the grade is a mix of long climbs (~1 km), shorter rises (~400 m) and small humps (~170 m) with random
 	# phases, never steeper than the region allows; the elevation follows from it. Flat at both ends.
 	var p1 := rng.randf() * TAU
@@ -119,7 +121,7 @@ static func build(stage: Dictionary, seed_value: int) -> Track:
 		var z := k * SEG_LEN
 		var fade: float = clampf((z - START_FLAT) / 150.0, 0.0, 1.0) * clampf((length - FINISH_FLAT * 0.6 - z) / 150.0, 0.0, 1.0)
 		var wave := clampf(0.6 * sin(z / 95.0 + p1) + 0.3 * sin(z / 41.0 + p2) + 0.18 * sin(z / 19.0 + p3), -1.0, 1.0)
-		grades[k] = clampf(wave * MAX_GRADE * amp[k], -STEEPEST, STEEPEST) * fade * _tunnel_flat(stage, z)
+		grades[k] = clampf(wave * MAX_GRADE * amp[k], -STEEPEST, STEEPEST) * fade * _tunnel_flat(stage, z) * _quay_flat(stage, z)
 	for k in range(1, n):
 		hills[k] = hills[k - 1] + grades[k - 1] * SEG_LEN
 	for k in n:
@@ -144,6 +146,16 @@ static func _tunnel_flat(stage: Dictionary, z: float) -> float:
 		f = minf(f, lerpf(0.12, 1.0, clampf(d / 120.0, 0.0, 1.0)))
 	return f
 
+## Ferry quays (Route ferries) are flat and straight, the road easing into them over QUAY_EASE: 0 from the quay's
+## start to a little past the far ramp, 1 further away.
+const QUAY_EASE := 120.0
+static func _quay_flat(stage: Dictionary, z: float) -> float:
+	var f := 1.0
+	for fr in stage.get("ferries", []):
+		var d: float = maxf(fr.z - Route.FERRY_QUAY - 20.0 - z, z - fr.z_out - 40.0)
+		f = minf(f, _ease(clampf(d / QUAY_EASE, 0.0, 1.0)))
+	return f
+
 ## Sharp bends only on ordinary roads in open country, away from stations and tunnels, with room for the warning
 ## sign before them.
 static func _sharp_allowed(stage: Dictionary, z0: float, z1: float) -> bool:
@@ -157,6 +169,9 @@ static func _sharp_allowed(stage: Dictionary, z0: float, z1: float) -> bool:
 			return false
 	for tn in stage.get("tunnels", []):
 		if tn.z1 > z0 - 150.0 and tn.z0 < z1 + 150.0:
+			return false
+	for fr in stage.get("ferries", []):
+		if fr.z_out > z0 - 150.0 - QUAY_EASE and fr.z - Route.FERRY_QUAY < z1 + 150.0 + QUAY_EASE:
 			return false
 	var z := z0 - 60.0
 	while true:
