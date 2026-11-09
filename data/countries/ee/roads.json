@@ -67,18 +67,18 @@
 		"b": "voru",
 		"km": 70,
 		"road": "2",
-		"towns": [["Ülenurme", 7], ["Reola", 11], ["Tatra", 20], ["Saverna", 42]],
+		"towns": [["Ülenurme", 6], ["Reola", 9], ["Tatra", 12], ["Saverna", 42]],
 		"zones": [[22, "fields", "Tartumaa"], [52, "upland", "Põlvamaa"], [70, "forest", "Võrumaa"]],
-		"via": [[7, 26.72, 58.31], [20, 26.73, 58.18], [42, 26.84, 58.02]]
+		"via": [[6, 26.72, 58.32], [12, 26.74, 58.25], [42, 26.84, 58.02]]
 	},
 	{
 		"a": "tartu",
 		"b": "polva",
 		"km": 49,
-		"road": [[11, "2"], [49, "61"]],
-		"towns": [["Ülenurme", 7], ["Reola", 11]],
+		"road": [[9, "2"], [49, "61"]],
+		"towns": [["Ülenurme", 6], ["Reola", 9]],
 		"zones": [[16, "fields", "Tartumaa"], [49, "forest", "Põlvamaa"]],
-		"via": [[11, 26.73, 58.28]]
+		"via": [[9, 26.73, 58.29]]
 	},
 	{
 		"a": "polva",
@@ -93,9 +93,9 @@
 		"b": "valga",
 		"km": 83,
 		"road": "67",
-		"towns": [["Antsla", 26]],
-		"zones": [[45, "forest", "Võrumaa"], [83, "upland", "Valgamaa"]],
-		"via": [[26, 26.54, 57.83]]
+		"towns": [["Mõniste", 37]],
+		"zones": [[50, "forest", "Võrumaa"], [83, "upland", "Valgamaa"]],
+		"via": [[18, 26.78, 57.68], [37, 26.53, 57.58], [60, 26.27, 57.66]]
 	},
 	{
 		"a": "tartu",
@@ -110,10 +110,10 @@
 		"a": "tartu",
 		"b": "viljandi",
 		"km": 80,
-		"road": [[6, "2"], [80, "92"]],
-		"towns": [["Ülenurme", 6], ["Sangla", 36], ["Viiratsi", 74]],
+		"road": [[3, "2"], [80, "92"]],
+		"towns": [["Sangla", 36], ["Viiratsi", 74]],
 		"zones": [[20, "fields", "Tartumaa"], [52, "lakes", "Tartumaa"], [80, "fields", "Viljandimaa"]],
-		"via": [[6, 26.72, 58.31], [36, 26.22, 58.35], [74, 25.68, 58.36]]
+		"via": [[36, 26.22, 58.35], [74, 25.68, 58.36]]
 	},
 	{
 		"a": "viljandi",
@@ -191,11 +191,11 @@
 			"to_km": 36,
 			"name": "Rohuküla – Heltermaa",
 			"fact": {
-				"pl": "Prom na Hiuma płynie przez płytkie Morze Väinameri między wysepkami, rejs trwa nieco ponad godzinę",
+				"pl": "Prom na Hiumę płynie przez płytkie Morze Väinameri między wysepkami, rejs trwa nieco ponad godzinę",
 				"en": "The ferry to Hiiumaa crosses the shallow Väinameri sea between islets; the crossing takes a little over an hour",
 				"cs": "Trajekt na Hiiumaa pluje přes mělké moře Väinameri mezi ostrůvky, plavba trvá o něco déle než hodinu",
 				"is": "Ferjan til Hiiumaa fer yfir grunnt Väinameri-hafið milli smáeyja og siglingin tekur rúma klukkustund",
-				"de": "Die Fähre nach Hiiumaa fährt über die flache Väinameri zwischen kleinen Inseln, die Überfahrt dauert gut eine Stunde"
+				"de": "Die Fähre nach Hiiumaa fährt über das flache Väinameri zwischen kleinen Inseln, die Überfahrt dauert gut eine Stunde"
 			}
 		}
 	},
