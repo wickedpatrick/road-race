@@ -1,0 +1,402 @@
+{
+	"Athína": [
+		{
+			"kind": "acropolis_parthenon",
+			"name": {"pl": "Akropol", "en": "The Acropolis", "cs": "Akropole", "is": "Akrópólis", "de": "Die Akropolis"},
+			"desc": {
+				"pl": "Marmurowa świątynia Ateny na skale nad miastem, z V wieku p.n.e.",
+				"en": "Athena's marble temple on the rock above the city, from the 5th century BC",
+				"cs": "Mramorový chrám Athény na skále nad městem z 5. století př. n. l.",
+				"is": "Marmarahof Aþenu á klettinum yfir borginni, frá 5. öld f.Kr.",
+				"de": "Athenas Marmortempel auf dem Felsen über der Stadt, aus dem 5. Jahrhundert v. Chr."
+			},
+			"local": "Παρθενώνας"
+		},
+		{
+			"kind": "evzone_guard",
+			"name": {"pl": "Ewzoni", "en": "The Evzones", "cs": "Evzoni", "is": "Evzónar", "de": "Die Evzonen"},
+			"desc": {
+				"pl": "Gwardziści w spódniczkach z 400 fałdami i butach z pomponami pilnują Grobu Nieznanego Żołnierza",
+				"en": "Guards in kilts with 400 pleats and pompom shoes watch over the Tomb of the Unknown Soldier",
+				"cs": "Strážci v suknicích se 400 sklady a botách s bambulemi hlídají Hrob neznámého vojína",
+				"is": "Verðir í pilsum með 400 fellingum og skóm með dúskum gæta grafar óþekkta hermannsins",
+				"de": "Wachen im Rock mit 400 Falten und Schuhen mit Bommeln bewachen das Grabmal des Unbekannten Soldaten"
+			},
+			"local": "Εύζωνες"
+		}
+	],
+	"Peiraiás": [
+		{
+			"kind": "olympias_trireme",
+			"name": {
+				"pl": "Trirema Olympias",
+				"en": "The trireme Olympias",
+				"cs": "Triéra Olympias",
+				"is": "Þríræðingurinn Olympias",
+				"de": "Die Triere Olympias"
+			},
+			"desc": {
+				"pl": "Wierna kopia ateńskiego okrętu wojennego, 170 wioślarzy w trzech rzędach",
+				"en": "A faithful copy of an Athenian warship, 170 rowers in three rows",
+				"cs": "Věrná kopie athénské válečné lodi, 170 veslařů ve třech řadách",
+				"is": "Nákvæm eftirlíking af aþensku herskipi, 170 ræðarar í þremur röðum",
+				"de": "Ein getreuer Nachbau eines athenischen Kriegsschiffs, 170 Ruderer in drei Reihen"
+			},
+			"local": "Τριήρης Ολυμπιάς"
+		}
+	],
+	"Thessaloníki": [
+		{
+			"kind": "white_tower_thessaloniki",
+			"name": {
+				"pl": "Biała Wieża",
+				"en": "The White Tower",
+				"cs": "Bílá věž",
+				"is": "Hvíti turninn",
+				"de": "Der Weiße Turm"
+			},
+			"desc": {
+				"pl": "Okrągła wieża nad zatoką z XV wieku, symbol Salonik",
+				"en": "A 15th-century round tower on the bay, the symbol of Thessaloniki",
+				"cs": "Kruhová věž u zálivu z 15. století, symbol Soluně",
+				"is": "Hringlaga turn við flóann frá 15. öld, tákn Þessaloníku",
+				"de": "Ein runder Turm am Ufer aus dem 15. Jahrhundert, das Wahrzeichen Thessalonikis"
+			},
+			"local": "Λευκός Πύργος"
+		}
+	],
+	"Pátra": [
+		{
+			"kind": "rio_antirrio_bridge",
+			"name": {
+				"pl": "Most Rio–Antirrio",
+				"en": "The Rio–Antirrio Bridge",
+				"cs": "Most Rio–Antirrio",
+				"is": "Rio–Antirrio-brúin",
+				"de": "Die Rio-Andirrio-Brücke"
+			},
+			"desc": {
+				"pl": "Prawie 3 km nad cieśniną, cztery pylony na wantach, otwarty w 2004 roku",
+				"en": "Almost 3 km over the strait, four pylons with cables, opened in 2004",
+				"cs": "Téměř 3 km přes průliv, čtyři pylony s lany, otevřen v roce 2004",
+				"is": "Næstum 3 km yfir sundið, fjórir turnar með stögum, opnuð árið 2004",
+				"de": "Fast 3 km über die Meerenge, vier Pylone mit Seilen, eröffnet 2004"
+			},
+			"local": "Γέφυρα Ρίου-Αντιρρίου"
+		}
+	],
+	"Irákleio": [
+		{
+			"kind": "knossos_palace",
+			"name": {
+				"pl": "Pałac w Knossos",
+				"en": "The Palace of Knossos",
+				"cs": "Palác v Knóssu",
+				"is": "Höllin í Knossos",
+				"de": "Der Palast von Knossos"
+			},
+			"desc": {
+				"pl": "Pałac Minojczyków z czerwonymi kolumnami, szerszymi u góry, i freskiem z bykiem",
+				"en": "The Minoan palace with red columns, wider at the top, and a bull fresco",
+				"cs": "Mínojský palác s červenými sloupy, nahoře širšími, a freskou býka",
+				"is": "Mínóska höllin með rauðum súlum, breiðari að ofan, og nautsfreskó",
+				"de": "Der minoische Palast mit roten Säulen, oben breiter, und einem Stierfresko"
+			},
+			"local": "Κνωσός"
+		}
+	],
+	"Lárisa": [
+		{
+			"kind": "larisa_ancient_theatre",
+			"name": {
+				"pl": "Teatr starożytny w Larisie",
+				"en": "The Ancient Theatre of Larissa",
+				"cs": "Antické divadlo v Larise",
+				"is": "Forna leikhúsið í Larisa",
+				"de": "Das antike Theater von Larisa"
+			},
+			"desc": {
+				"pl": "Marmurowa widownia z III wieku p.n.e. w samym środku miasta, odkopana spod domów",
+				"en": "A 3rd-century-BC marble theatre right in the middle of town, dug out from under houses",
+				"cs": "Mramorové hlediště ze 3. století př. n. l. uprostřed města, vykopané zpod domů",
+				"is": "Marmaraleikhús frá 3. öld f.Kr. í miðjum bænum, grafið undan húsum",
+				"de": "Ein Marmortheater aus dem 3. Jahrhundert v. Chr. mitten in der Stadt, unter Häusern ausgegraben"
+			},
+			"local": "Αρχαίο Θέατρο Λάρισας"
+		}
+	],
+	"Vólos": [
+		{
+			"kind": "argo_volos",
+			"name": {
+				"pl": "Argo w porcie Wolos",
+				"en": "The Argo in Volos harbour",
+				"cs": "Argó v přístavu Volos",
+				"is": "Argó í höfninni í Volos",
+				"de": "Die Argo im Hafen von Volos"
+			},
+			"desc": {
+				"pl": "Kopia statku Argonautów, którym Jazon popłynął po złote runo",
+				"en": "A copy of the Argonauts' ship, on which Jason sailed for the Golden Fleece",
+				"cs": "Kopie lodi Argonautů, na které Iásón plul pro zlaté rouno",
+				"is": "Eftirlíking af skipi Argonátanna sem Jason sigldi á eftir gullna reyfinu",
+				"de": "Ein Nachbau des Schiffs der Argonauten, mit dem Jason zum Goldenen Vlies segelte"
+			},
+			"local": "Αργώ"
+		}
+	],
+	"Ioánnina": [
+		{
+			"kind": "ioannina_kale_mosque",
+			"name": {
+				"pl": "Twierdza Its Kale nad jeziorem",
+				"en": "Its Kale fortress on the lake",
+				"cs": "Pevnost Its Kale nad jezerem",
+				"is": "Its Kale-virkið við vatnið",
+				"de": "Die Festung Its Kale am See"
+			},
+			"desc": {
+				"pl": "Meczet Fethiye i grób Alego Paszy w murach nad jeziorem Pamwotis",
+				"en": "The Fethiye mosque and Ali Pasha's tomb within the walls over Lake Pamvotis",
+				"cs": "Mešita Fethiye a hrob Aliho Paši v hradbách nad jezerem Pamvotida",
+				"is": "Fethiye-moskan og gröf Ali Pasja innan múranna við Pamvotis-vatn",
+				"de": "Die Fethiye-Moschee und Ali Paschas Grab in den Mauern über dem Pamvotida-See"
+			},
+			"local": "Ιτς Καλέ"
+		}
+	],
+	"Chaniá": [
+		{
+			"kind": "chania_lighthouse",
+			"name": {
+				"pl": "Latarnia w Chanii",
+				"en": "Chania lighthouse",
+				"cs": "Maják v Chanii",
+				"is": "Vitinn í Chania",
+				"de": "Der Leuchtturm von Chania"
+			},
+			"desc": {
+				"pl": "Wenecka latarnia na końcu długiego falochronu, odbudowana przez Egipcjan",
+				"en": "A Venetian lighthouse at the end of a long breakwater, rebuilt by the Egyptians",
+				"cs": "Benátský maják na konci dlouhého vlnolamu, přestavěný Egypťany",
+				"is": "Feneyskur viti við enda langs brimgarðs, endurbyggður af Egyptum",
+				"de": "Ein venezianischer Leuchtturm am Ende einer langen Mole, von den Ägyptern umgebaut"
+			},
+			"local": "Φάρος Χανίων"
+		}
+	],
+	"Kalamáta": [
+		{
+			"kind": "kalamata_olive_harvest",
+			"name": {
+				"pl": "Zbiór oliwek",
+				"en": "The olive harvest",
+				"cs": "Sklizeň oliv",
+				"is": "Ólífuuppskeran",
+				"de": "Die Olivenernte"
+			},
+			"desc": {
+				"pl": "Pod starymi drzewami rozkłada się siatki i strząsa ciemne oliwki kalamata",
+				"en": "Nets are spread under old trees and the dark Kalamata olives are shaken down",
+				"cs": "Pod starými stromy se rozprostřou sítě a setřásají se tmavé olivy kalamata",
+				"is": "Net eru breidd undir gömul tré og dökku Kalamata-ólífurnar hristar niður",
+				"de": "Unter alten Bäumen werden Netze ausgelegt und die dunklen Kalamata-Oliven abgeschüttelt"
+			},
+			"local": "Ελιές Καλαμάτας"
+		}
+	],
+	"Alexandroúpoli": [
+		{
+			"kind": "alexandroupoli_lighthouse",
+			"name": {
+				"pl": "Latarnia w Aleksandropolis",
+				"en": "Alexandroupolis lighthouse",
+				"cs": "Maják v Alexandrupoli",
+				"is": "Vitinn í Alexandrúpolis",
+				"de": "Der Leuchtturm von Alexandroupoli"
+			},
+			"desc": {
+				"pl": "Biała kamienna latarnia z 1880 roku na nadmorskiej promenadzie, symbol miasta",
+				"en": "A white stone lighthouse from 1880 on the seafront promenade, the symbol of the town",
+				"cs": "Bílý kamenný maják z roku 1880 na nábřežní promenádě, symbol města",
+				"is": "Hvítur steinviti frá 1880 við strandgötuna, tákn bæjarins",
+				"de": "Ein weißer Steinleuchtturm von 1880 an der Uferpromenade, das Wahrzeichen der Stadt"
+			},
+			"local": "Φάρος Αλεξανδρούπολης"
+		}
+	],
+	"Kavála": [
+		{
+			"kind": "kavala_kamares",
+			"name": {
+				"pl": "Akwedukt Kamares",
+				"en": "The Kamares aqueduct",
+				"cs": "Akvadukt Kamares",
+				"is": "Kamares-vatnsveitubrúin",
+				"de": "Das Aquädukt Kamares"
+			},
+			"desc": {
+				"pl": "Kamienne łuki z czasów Sulejmana Wspaniałego niosły wodę do twierdzy na wzgórzu",
+				"en": "Stone arches from the time of Suleiman the Magnificent carried water to the hilltop fortress",
+				"cs": "Kamenné oblouky z doby Sulejmana Nádherného vedly vodu do pevnosti na kopci",
+				"is": "Steinbogar frá tíma Súleimans mikla fluttu vatn upp í virkið á hæðinni",
+				"de": "Steinbögen aus der Zeit Süleymans des Prächtigen brachten Wasser zur Festung auf dem Hügel"
+			},
+			"local": "Καμάρες"
+		}
+	],
+	"Lamía": [
+		{
+			"kind": "leonidas_thermopylae",
+			"name": {
+				"pl": "Pomnik Leonidasa w Termopilach",
+				"en": "The Leonidas monument at Thermopylae",
+				"cs": "Pomník Leónida v Thermopylách",
+				"is": "Minnismerki Leónídasar við Laugaskarð",
+				"de": "Das Leonidas-Denkmal an den Thermopylen"
+			},
+			"desc": {
+				"pl": "Brązowy król Sparty z tarczą i włócznią, pod nim jego odpowiedź Persom: Przyjdź i weź",
+				"en": "Sparta's bronze king with shield and spear, below him his answer to the Persians: Come and take them",
+				"cs": "Bronzový spartský král se štítem a kopím, pod ním jeho odpověď Peršanům: Přijď a vezmi si je",
+				"is": "Bronskonungur Spörtu með skjöld og spjót, undir honum svar hans til Persa: Komið og takið þau",
+				"de": "Spartas bronzener König mit Schild und Speer, darunter seine Antwort an die Perser: Komm und hol sie dir"
+			},
+			"local": "Μνημείο Λεωνίδα"
+		}
+	],
+	"Réthymno": [
+		{
+			"kind": "rethymno_fortezza",
+			"name": {
+				"pl": "Fortezza w Retimnie",
+				"en": "The Fortezza of Rethymno",
+				"cs": "Fortezza v Rethymnu",
+				"is": "Fortezza í Retýmnon",
+				"de": "Die Fortezza von Rethymno"
+			},
+			"desc": {
+				"pl": "Wenecka twierdza z XVI wieku na cyplu, w środku meczet z wielką kopułą",
+				"en": "A 16th-century Venetian fortress on a headland, with a big-domed mosque inside",
+				"cs": "Benátská pevnost ze 16. století na mysu, uvnitř mešita s velkou kupolí",
+				"is": "Feneyskt virki frá 16. öld á nesi, með stórhvelfdri mosku inni",
+				"de": "Eine venezianische Festung aus dem 16. Jahrhundert auf einer Landspitze, mit einer Kuppelmoschee darin"
+			},
+			"local": "Φορτέτσα"
+		}
+	],
+	"Kórinthos": [
+		{
+			"kind": "corinth_canal",
+			"name": {
+				"pl": "Kanał Koryncki",
+				"en": "The Corinth Canal",
+				"cs": "Korintský průplav",
+				"is": "Kórintuskurðurinn",
+				"de": "Der Kanal von Korinth"
+			},
+			"desc": {
+				"pl": "Wykuty w skale na głębokość 80 m, tylko 21 m szeroki, otwarty w 1893 roku",
+				"en": "Cut 80 m deep into the rock, only 21 m wide, opened in 1893",
+				"cs": "Vytesaný 80 m hluboko do skály, jen 21 m široký, otevřen v roce 1893",
+				"is": "Höggvinn 80 m djúpt í klettinn, aðeins 21 m breiður, opnaður árið 1893",
+				"de": "80 m tief in den Fels geschnitten, nur 21 m breit, eröffnet 1893"
+			},
+			"local": "Διώρυγα της Κορίνθου"
+		}
+	],
+	"Pýrgos": [
+		{
+			"kind": "olympia_flame",
+			"name": {
+				"pl": "Ogień olimpijski w Olimpii",
+				"en": "The Olympic flame at Olympia",
+				"cs": "Olympijský oheň v Olympii",
+				"is": "Ólympíueldurinn í Ólympíu",
+				"de": "Das olympische Feuer in Olympia"
+			},
+			"desc": {
+				"pl": "Przed świątynią Hery kapłanka zapala ogień od promieni słońca w lustrze",
+				"en": "In front of the Temple of Hera a priestess lights the flame from the sun's rays in a mirror",
+				"cs": "Před Héřiným chrámem kněžka zapaluje oheň slunečními paprsky v zrcadle",
+				"is": "Fyrir framan hof Heru kveikir hofgyðja eldinn með sólargeislum í spegli",
+				"de": "Vor dem Heratempel entzündet eine Priesterin das Feuer mit Sonnenstrahlen in einem Spiegel"
+			},
+			"local": "Αρχαία Ολυμπία"
+		}
+	],
+	"Náfplio": [
+		{
+			"kind": "nafplio_bourtzi",
+			"name": {
+				"pl": "Bourtzi i Palamidi",
+				"en": "Bourtzi and Palamidi",
+				"cs": "Bourtzi a Palamidi",
+				"is": "Bourtzi og Palamidi",
+				"de": "Bourtzi und Palamidi"
+			},
+			"desc": {
+				"pl": "Wenecki zamek na wysepce w porcie, a nad miastem twierdza Palamidi",
+				"en": "A Venetian castle on an islet in the harbour, and the Palamidi fortress above the town",
+				"cs": "Benátský hrad na ostrůvku v přístavu a nad městem pevnost Palamidi",
+				"is": "Feneyskur kastali á hólma í höfninni og Palamidi-virkið yfir bænum",
+				"de": "Eine venezianische Burg auf einer Insel im Hafen und darüber die Festung Palamidi"
+			},
+			"local": "Μπούρτζι"
+		}
+	],
+	"Spárti": [
+		{
+			"kind": "mystras_palace",
+			"name": {"pl": "Mistra", "en": "Mystras", "cs": "Mystras", "is": "Mystras", "de": "Mystras"},
+			"desc": {
+				"pl": "Bizantyjskie miasto na zboczu Tajgetu: cerkwie z kopułami, pałac despotów i zamek na szczycie",
+				"en": "A Byzantine town on the side of the Taygetus: domed churches, the despots' palace and a castle on top",
+				"cs": "Byzantské město na svahu Taygetu: kostely s kupolemi, palác despotů a hrad na vrcholu",
+				"is": "Býsanskur bær í hlíð Taýgetos: hvelfdar kirkjur, höll despótanna og kastali efst",
+				"de": "Eine byzantinische Stadt am Hang des Taygetos: Kuppelkirchen, der Despotenpalast und oben eine Burg"
+			},
+			"local": "Μυστράς"
+		}
+	],
+	"Igoumenítsa": [
+		{
+			"kind": "syvota_bays",
+			"name": {
+				"pl": "Zatoki Syvota",
+				"en": "The Syvota bays",
+				"cs": "Zátoky Syvota",
+				"is": "Syvota-víkurnar",
+				"de": "Die Buchten von Syvota"
+			},
+			"desc": {
+				"pl": "Turkusowe zatoczki i zielone wysepki na południe od portu, pełne żaglówek",
+				"en": "Turquoise coves and green islets south of the port, full of sailing boats",
+				"cs": "Tyrkysové zátoky a zelené ostrůvky jižně od přístavu, plné plachetnic",
+				"is": "Grænbláar víkur og grænir hólmar sunnan við höfnina, fullar af seglbátum",
+				"de": "Türkisfarbene Buchten und grüne Inselchen südlich des Hafens, voller Segelboote"
+			},
+			"local": "Σύβοτα"
+		}
+	],
+	"Kalampáka": [
+		{
+			"kind": "meteora_monastery",
+			"name": {
+				"pl": "Klasztory Meteorów",
+				"en": "The Meteora monasteries",
+				"cs": "Kláštery Meteora",
+				"is": "Meteora-klaustrin",
+				"de": "Die Meteora-Klöster"
+			},
+			"desc": {
+				"pl": "Klasztory na szczytach skalnych słupów; dawniej mnichów wciągano tam w siatce na linie",
+				"en": "Monasteries on top of rock pillars; monks were once hauled up in a net on a rope",
+				"cs": "Kláštery na vrcholcích skalních sloupů; mnichy kdysi vytahovali nahoru v síti na laně",
+				"is": "Klaustur efst á klettasúlum; munkar voru áður dregnir upp í neti á reipi",
+				"de": "Klöster auf Felsnadeln; früher zog man die Mönche in einem Netz am Seil hinauf"
+			},
+			"local": "Μετέωρα"
+		}
+	]
+}

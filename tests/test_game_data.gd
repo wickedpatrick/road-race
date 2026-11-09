@@ -12,6 +12,7 @@ func run(t) -> void:
 		_check_country(t, code, rules)
 		_check_trips(t, code)
 	_check_gb(t)
+	_check_gr(t)
 	_check_world(t)
 	GameData.current = "pl"
 
@@ -24,6 +25,28 @@ func _check_gb(t) -> void:
 	GameData.current = "lt"
 	t.check(Route.lanes_for("A1") == 3 and Route.lanes_for("A2") == 3, "lt: the A1 and A2 are motorways")
 	t.check(Route.lanes_for("A12") == 2 and Route.lanes_for("A5") == 2 and Route.lanes_for("128") == 2, "lt: the A12, A5 and other roads are not")
+
+## Greece: bilingual signs (every city, town and region has its Greek spelling), the Piraeus - Heraklion ferry,
+## motorways A1, A2, A5, A7, A8.
+func _check_gr(t) -> void:
+	GameData.current = "gr"
+	var c: Dictionary = GameData.country("gr")
+	var missing := []
+	for id in c.cities:
+		for n in [c.cities[id].name, c.cities[id].region]:
+			if Geo.native(n) == "": missing.append(n)
+	for r in c.roads:
+		for tw in r.towns:
+			if Geo.native(tw[0]) == "": missing.append(tw[0])
+		for zn in r.zones:
+			if Geo.native(zn[2]) == "": missing.append(zn[2])
+	t.check(missing.is_empty(), "gr: a Greek spelling of every city, town and region %s" % str(missing))
+	var s := Route.build("peiraias", "irakleio")
+	t.check(s.ferries.size() == 1 and absf(s.ferries[0].sea_km - 320.0) < 10.0, "gr: the ferry Peiraiás - Irákleio over ~320 km of sea")
+	t.check(Route.build("irakleio", "peiraias").ferries.size() == 1, "gr: and back")
+	t.check(["A1", "A2", "A5", "A7", "A8"].all(func(n): return Route.lanes_for(n) == 3), "gr: the A roads are motorways")
+	t.check(Geo.city("athina").name == "Athína" and Geo.native("Athína") == "Αθήνα", "gr: Athína on the signs, Αθήνα above it")
+	GameData.current = "pl"
 
 ## Every trip between neighbouring cities builds a playable stage (stations, limits, a track, scenery).
 func _check_trips(t, code: String) -> void:

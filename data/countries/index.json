@@ -120,6 +120,12 @@
 			"name": {"pl": "Mołdawia", "en": "Moldova", "cs": "Moldavsko", "is": "Moldóva", "de": "Moldau"},
 			"neighbours": ["ro", "ua"],
 			"favorite_neighbour": "ro"
+		},
+		{
+			"code": "gr",
+			"name": {"pl": "Grecja", "en": "Greece", "cs": "Řecko", "is": "Grikkland", "de": "Griechenland"},
+			"neighbours": ["al", "mk", "bg", "tr", "cy"],
+			"favorite_neighbour": "cy"
 		}
 	]
 }

@@ -1,0 +1,338 @@
+[
+	{
+		"a": "peiraias",
+		"b": "athina",
+		"km": 12,
+		"road": "EO1",
+		"towns": [["Kallithéa", 6]],
+		"zones": [[12, "mediterranean", "Attikí"]]
+	},
+	{
+		"a": "athina",
+		"b": "korinthos",
+		"km": 84,
+		"road": "A8",
+		"towns": [["Elefsína", 22], ["Mégara", 42], ["Ágioi Theódoroi", 64]],
+		"zones": [[25, "industrial", "Thriásio pedío"], [68, "coast", "Saronikós"], [84, "mediterranean", "Korinthía"]],
+		"via": [[22, 23.54, 38.04], [42, 23.34, 37.99], [64, 23.09, 37.93]]
+	},
+	{
+		"a": "korinthos",
+		"b": "patra",
+		"km": 132,
+		"road": "A8",
+		"towns": [["Kiáto", 20], ["Xylókastro", 35], ["Dervéni", 55], ["Akráta", 70], ["Aígio", 95], ["Río", 124]],
+		"zones": [[30, "mediterranean", "Korinthía"], [80, "coast", "Korinthiakós"], [132, "mediterranean", "Achaia"]],
+		"via": [[20, 22.74, 38.01], [35, 22.63, 38.08], [70, 22.31, 38.15], [95, 22.08, 38.25], [124, 21.79, 38.3]]
+	},
+	{
+		"a": "patra",
+		"b": "pyrgos",
+		"km": 96,
+		"road": "A8",
+		"towns": [["Vrachnaíika", 12], ["Láppas", 35], ["Lechainá", 62], ["Gastoúni", 73], ["Amaliáda", 80]],
+		"zones": [[40, "coast", "Achaia"], [96, "fields", "Ileía"]],
+		"via": [[12, 21.67, 38.17], [35, 21.46, 38.08], [62, 21.27, 37.94], [80, 21.35, 37.8]]
+	},
+	{
+		"a": "korinthos",
+		"b": "nafplio",
+		"km": 62,
+		"road": [[48, "EO7"], [62, "EO70"]],
+		"towns": [["Chiliomódi", 15], ["Dervenákia", 28], ["Fíchti", 35], ["Árgos", 48]],
+		"zones": [[30, "mediterranean", "Korinthía"], [62, "orchard", "Argolída"]],
+		"via": [[15, 22.86, 37.81], [35, 22.75, 37.69], [48, 22.73, 37.63]]
+	},
+	{
+		"a": "korinthos",
+		"b": "kalamata",
+		"km": 158,
+		"road": "A7",
+		"towns": [["Neméa", 30], ["Trípoli", 85], ["Megalópoli", 116], ["Asprochóma", 152]],
+		"zones": [
+			[45, "mediterranean", "Korinthía"], [62, "mountains", "Artemísio"], [120, "upland", "Arkadía"],
+			[158, "mediterranean", "Messinía"]
+		],
+		"via": [[30, 22.66, 37.82], [56, 22.6, 37.62], [85, 22.37, 37.51], [116, 22.14, 37.4], [140, 22, 37.15]],
+		"tunnels": [
+			{
+				"from_km": 56,
+				"to_km": 57.5,
+				"name": {
+					"pl": "Tunel Artemisio",
+					"en": "Artemisio Tunnel",
+					"cs": "Tunel Artemisio",
+					"is": "Artemisio-göngin",
+					"de": "Artemisio-Tunnel"
+				},
+				"fact": {
+					"pl": "Pod górą Artemisio, z Argolidy do Arkadii",
+					"en": "Under Mount Artemisio, from Argolis into Arcadia",
+					"cs": "Pod horou Artemisio, z Argolidy do Arkádie",
+					"is": "Undir Artemisio-fjalli, frá Argólis til Arkadíu",
+					"de": "Unter dem Berg Artemisio, von der Argolis nach Arkadien"
+				}
+			}
+		]
+	},
+	{
+		"a": "kalamata",
+		"b": "sparti",
+		"km": 60,
+		"road": "EO82",
+		"towns": [["Artemisía", 22], ["Lagkáda", 32], ["Trýpi", 52]],
+		"zones": [[12, "mediterranean", "Messinía"], [50, "mountains", "Taÿgetos"], [60, "orchard", "Lakonía"]],
+		"via": [[22, 22.24, 37.1], [32, 22.3, 37.11], [52, 22.37, 37.09]]
+	},
+	{
+		"a": "sparti",
+		"b": "korinthos",
+		"km": 145,
+		"road": [[60, "EO39"], [145, "A7"]],
+		"towns": [["Kastóri", 22], ["Trípoli", 60], ["Neméa", 115]],
+		"zones": [
+			[35, "orchard", "Lakonía"], [83, "upland", "Arkadía"], [100, "mountains", "Artemísio"],
+			[145, "mediterranean", "Korinthía"]
+		],
+		"via": [[22, 22.38, 37.24], [60, 22.37, 37.51], [89, 22.6, 37.62], [115, 22.66, 37.82]],
+		"tunnels": [
+			{
+				"from_km": 87.5,
+				"to_km": 89,
+				"name": {
+					"pl": "Tunel Artemisio",
+					"en": "Artemisio Tunnel",
+					"cs": "Tunel Artemisio",
+					"is": "Artemisio-göngin",
+					"de": "Artemisio-Tunnel"
+				},
+				"fact": {
+					"pl": "Pod górą Artemisio, z Argolidy do Arkadii",
+					"en": "Under Mount Artemisio, from Argolis into Arcadia",
+					"cs": "Pod horou Artemisio, z Argolidy do Arkádie",
+					"is": "Undir Artemisio-fjalli, frá Argólis til Arkadíu",
+					"de": "Unter dem Berg Artemisio, von der Argolis nach Arkadien"
+				}
+			}
+		]
+	},
+	{
+		"a": "athina",
+		"b": "lamia",
+		"km": 212,
+		"road": "A1",
+		"towns": [
+			["Kifisiá", 15], ["Malakása", 33], ["Oinófyta", 52], ["Kástro", 110], ["Atalánti", 145],
+			["Kamména Voúrla", 180], ["Thermopýles", 200]
+		],
+		"zones": [
+			[30, "mediterranean", "Attikí"], [110, "fields", "Voiotía"], [168, "mediterranean", "Lokrída"],
+			[200, "coast", "Maliakós"], [212, "fields", "Fthiótida"]
+		],
+		"via": [
+			[15, 23.81, 38.07], [52, 23.62, 38.31], [110, 23.13, 38.47], [145, 22.99, 38.65], [180, 22.78, 38.78],
+			[200, 22.53, 38.8]
+		]
+	},
+	{
+		"a": "lamia",
+		"b": "larisa",
+		"km": 115,
+		"road": "EO3",
+		"towns": [["Domokós", 33], ["Fársala", 78]],
+		"zones": [[30, "upland", "Óthrys"], [115, "fields", "Thessalikós kámpos"]],
+		"via": [[33, 22.3, 39.13], [78, 22.38, 39.3]]
+	},
+	{
+		"a": "larisa",
+		"b": "volos",
+		"km": 62,
+		"road": "EO6",
+		"towns": [["Velestíno", 45]],
+		"zones": [[42, "fields", "Thessalikós kámpos"], [62, "mediterranean", "Magnisía"]],
+		"via": [[45, 22.74, 39.38]]
+	},
+	{
+		"a": "larisa",
+		"b": "thessaloniki",
+		"km": 152,
+		"road": "A1",
+		"towns": [
+			["Témpi", 27], ["Platamónas", 55], ["Leptokaryá", 63], ["Litóchoro", 75], ["Kateríni", 92],
+			["Chalástra", 138]
+		],
+		"zones": [
+			[24, "fields", "Thessalikós kámpos"], [42, "mountains", "Témpi"], [82, "coast", "Ólympos"],
+			[125, "fields", "Piería"], [152, "lakes", "Délta Axioú"]
+		],
+		"via": [[27, 22.59, 39.89], [55, 22.6, 40], [75, 22.53, 40.1], [92, 22.5, 40.27], [138, 22.74, 40.63]],
+		"tunnels": [
+			{
+				"from_km": 30,
+				"to_km": 36,
+				"name": {
+					"pl": "Tunel Tempi",
+					"en": "Tempi Tunnel",
+					"cs": "Tunel Tempi",
+					"is": "Tempi-göngin",
+					"de": "Tempi-Tunnel"
+				},
+				"fact": {
+					"pl": "Około 6 km pod zboczem Ossy, najdłuższy tunel drogowy Grecji",
+					"en": "About 6 km under the slopes of Mount Ossa, Greece's longest road tunnel",
+					"cs": "Asi 6 km pod svahy hory Ossa, nejdelší silniční tunel Řecka",
+					"is": "Um 6 km undir hlíðum Ossa-fjalls, lengstu veggöng Grikklands",
+					"de": "Rund 6 km unter den Hängen des Ossa, Griechenlands längster Straßentunnel"
+				}
+			}
+		]
+	},
+	{
+		"a": "larisa",
+		"b": "kalampaka",
+		"km": 82,
+		"road": "EO6",
+		"towns": [["Tríkala", 60]],
+		"zones": [[50, "fields", "Thessalikós kámpos"], [82, "upland", "Metéora"]],
+		"via": [[60, 21.77, 39.55]]
+	},
+	{
+		"a": "kalampaka",
+		"b": "ioannina",
+		"km": 108,
+		"road": [[20, "EO6"], [108, "A2"]],
+		"towns": [["Panagiá", 20], ["Métsovo", 52]],
+		"zones": [[20, "upland", "Metéora"], [75, "mountains", "Píndos"], [108, "mountains", "Ípeiros"]],
+		"via": [[20, 21.42, 39.78], [52, 21.18, 39.77], [92, 20.95, 39.7]],
+		"tunnels": [
+			{
+				"from_km": 91,
+				"to_km": 95.5,
+				"name": {
+					"pl": "Tunel Driskos",
+					"en": "Driskos Tunnel",
+					"cs": "Tunel Driskos",
+					"is": "Driskos-göngin",
+					"de": "Driskos-Tunnel"
+				},
+				"fact": {
+					"pl": "Ponad 4 km pod górą Driskos, jeden z najdłuższych tuneli Via Egnatia",
+					"en": "Over 4 km under Mount Driskos, one of the Egnatia's longest tunnels",
+					"cs": "Přes 4 km pod horou Driskos, jeden z nejdelších tunelů dálnice Egnatia",
+					"is": "Yfir 4 km undir Driskos-fjalli, ein lengstu göng Egnatia-vegarins",
+					"de": "Über 4 km unter dem Berg Driskos, einer der längsten Tunnel der Egnatia Odos"
+				}
+			}
+		]
+	},
+	{
+		"a": "ioannina",
+		"b": "igoumenitsa",
+		"km": 78,
+		"road": "A2",
+		"towns": [],
+		"zones": [[50, "mountains", "Ípeiros"], [78, "mediterranean", "Thesprotía"]],
+		"via": [[40, 20.5, 39.6]]
+	},
+	{
+		"a": "ioannina",
+		"b": "patra",
+		"km": 196,
+		"road": "A5",
+		"towns": [["Filippiáda", 58], ["Árta", 74], ["Amfilochía", 108], ["Agrínio", 140], ["Antírrio", 184], ["Río", 188]],
+		"zones": [
+			[55, "mountains", "Ípeiros"],
+			[85, "orchard", "Amvrakikós"],
+			[150, "mediterranean", "Aitoloakarnanía"],
+			[187, "coast", "Patraïkós"],
+			[196, "mediterranean", "Achaia"]
+		],
+		"via": [
+			[58, 20.88, 39.2], [74, 21, 39.15], [108, 21.17, 38.86], [140, 21.41, 38.62], [172, 21.55, 38.4],
+			[184, 21.77, 38.33], [188, 21.79, 38.3]
+		],
+		"tunnels": [
+			{
+				"from_km": 172,
+				"to_km": 173.5,
+				"name": {
+					"pl": "Tunel Klokova",
+					"en": "Klokova Tunnel",
+					"cs": "Tunel Klokova",
+					"is": "Klokova-göngin",
+					"de": "Klokova-Tunnel"
+				},
+				"fact": {
+					"pl": "Pod górą Klokova, tuż przed mostem Rio–Antirrio",
+					"en": "Under Mount Klokova, just before the Rio–Antirrio bridge",
+					"cs": "Pod horou Klokova, kousek před mostem Rio–Antirrio",
+					"is": "Undir Klokova-fjalli, rétt áður en komið er að Rio–Antirrio-brúnni",
+					"de": "Unter dem Berg Klokova, kurz vor der Rio-Andirrio-Brücke"
+				}
+			}
+		]
+	},
+	{
+		"a": "thessaloniki",
+		"b": "kavala",
+		"km": 160,
+		"road": "A2",
+		"towns": [["Lagkadás", 20], ["Asproválta", 80], ["Amfípoli", 95], ["Eleftheroúpoli", 135]],
+		"zones": [
+			[25, "fields", "Mygdonía"], [70, "lakes", "Vólvi"], [100, "coast", "Strymonikós"],
+			[160, "mediterranean", "Pangaío"]
+		],
+		"via": [[20, 23.07, 40.75], [50, 23.4, 40.68], [80, 23.71, 40.72], [95, 23.84, 40.8], [135, 24.25, 40.92]]
+	},
+	{
+		"a": "kavala",
+		"b": "alexandroupoli",
+		"km": 172,
+		"road": "A2",
+		"towns": [["Chrysoúpoli", 30], ["Xánthi", 55], ["Komotiní", 110], ["Sápes", 135]],
+		"zones": [
+			[40, "fields", "Délta Néstou"], [115, "fields", "Thráki"], [150, "upland", "Rodópi"],
+			[172, "coast", "Évros"]
+		],
+		"via": [[30, 24.7, 40.98], [55, 24.89, 41.14], [110, 25.4, 41.12], [135, 25.7, 41.03]]
+	},
+	{
+		"a": "irakleio",
+		"b": "rethymno",
+		"km": 80,
+		"road": "EO90",
+		"towns": [["Gázi", 7], ["Balí", 45], ["Pánormos", 55]],
+		"zones": [[35, "mediterranean", "Malevízi"], [80, "coast", "Mylopótamos"]],
+		"via": [[7, 25.07, 35.33], [30, 24.87, 35.38], [45, 24.78, 35.41], [55, 24.69, 35.42]]
+	},
+	{
+		"a": "rethymno",
+		"b": "chania",
+		"km": 60,
+		"road": "EO90",
+		"towns": [["Georgioúpoli", 25], ["Vrýses", 33], ["Soúda", 54]],
+		"zones": [[24, "coast", "Kritikó pélagos"], [60, "mediterranean", "Apokóronas"]],
+		"via": [[25, 24.26, 35.36], [33, 24.2, 35.38], [54, 24.07, 35.49]]
+	},
+	{
+		"a": "peiraias",
+		"b": "irakleio",
+		"km": 322,
+		"road": [[1, "EO1"], [322, "EO90"]],
+		"towns": [],
+		"zones": [[1, "industrial", "Attikí"], [321, "coast", "Kritikó pélagos"], [322, "mediterranean", "Krítí"]],
+		"via": [[40, 23.75, 37.6], [160, 24.3, 36.6], [280, 24.95, 35.65]],
+		"ferry": {
+			"from_km": 1,
+			"to_km": 321,
+			"name": "Peiraiás – Irákleio",
+			"fact": {
+				"pl": "Promy płyną na Kretę nocą, około 8–9 godzin, z autami w ładowni",
+				"en": "Ferries sail to Crete overnight, about 8–9 hours, with the cars in the hold",
+				"cs": "Trajekty plují na Krétu přes noc, asi 8–9 hodin, s auty v podpalubí",
+				"is": "Ferjur sigla til Krítar yfir nóttina, um 8–9 klukkustundir, með bílana í lestinni",
+				"de": "Die Fähren fahren über Nacht nach Kreta, etwa 8–9 Stunden, mit den Autos im Bauch"
+			}
+		}
+	}
+]
