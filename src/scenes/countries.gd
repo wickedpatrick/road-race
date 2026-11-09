@@ -1,8 +1,9 @@
 extends Node2D
 ## Picking the country to play on a map of Europe (with a piece of Asia) and, small across the sea on the left,
-## North America (data/world.json, made by tools/make_world.py). Countries in the game are green and named; the
-## ones planned but not in the game yet are grey, striped and marked "coming soon" (named under the cursor); any
-## other land has no borders at all. A legend in the corner tells the two apart.
+## North America (data/world.json, made by tools/make_world.py). Countries in the game are green with their flag in
+## the middle; the ones planned but not in the game yet are grey, striped and marked "coming soon"; any other land
+## has no borders at all. Names show in the header and in a tooltip by the cursor (or the tap). A legend in the
+## corner tells the two apart.
 ## Opened from the map in the menu (the country button, C); Esc goes back without a change.
 const SEA := Color("2c5d86")
 const LAND := Color("c4b893") ## land of countries not in the plan, without borders
@@ -21,6 +22,8 @@ var polys := {} ## code -> [PackedVector2Array, ...]
 var land: Array = [] ## PackedVector2Array
 var hover := "" ## the playable country under the mouse or picked with the arrows
 var hover_soon := "" ## a country not in the game yet under the mouse (or last tapped)
+var tip := "" ## the country named in the tooltip by the cursor (or the tap), "" with none or after the arrows
+var cursor := Vector2.ZERO ## where the tooltip stands
 var stripes := PackedVector2Array() ## segment pairs: diagonal stripes over the countries coming soon
 var soon := 0.0 ## seconds left of the "not in the game yet" note
 var t := 0.0
@@ -103,6 +106,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		var c := country_at(event.position)
 		if playable().has(c): hover = c
 		hover_soon = c if c != "" and not playable().has(c) else ""
+		tip = c
+		cursor = event.position
 		return
 	var p = Ui.tap(event)
 	if p != null:
@@ -115,6 +120,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		elif c != "":
 			Sfx.play("blip", -14.0)
 			hover_soon = c
+			tip = c
+			cursor = p
 			soon = 2.0
 		return
 	if not (event is InputEventKey and event.pressed and not event.echo):
@@ -141,6 +148,7 @@ func _step(dir: Vector2) -> void:
 			best = c
 	if best != "":
 		hover = best
+		tip = ""
 		Sfx.play("blip", -12.0)
 
 func _pick(code: String) -> void:
@@ -208,25 +216,22 @@ func _draw() -> void:
 			draw_polyline(ring, CURRENT if code == Session.country else Color.WHITE, w, true)
 	var names := {}
 	for c in GameData.countries(): names[c.code] = c.name
-	for code in play:
-		var size := (17 if code == hover else 14) if polys[code].size() > 0 and _wide(code) else (15 if code == hover else 12)
-		var p := label_pos(code)
-		var w := font.get_string_size(names[code], HORIZONTAL_ALIGNMENT_LEFT, -1, size).x
-		var fl := Vector2(size * 1.2, size * 0.8) # the flag before the name
-		var pos := p + Vector2(-(w + fl.x + 4) * 0.5 + fl.x + 4, size * 0.35)
-		FlagPainter.draw(self, code, Rect2(Vector2(pos.x - fl.x - 4, p.y - fl.y * 0.5), fl))
-		draw_string_outline(font, pos, names[code], HORIZONTAL_ALIGNMENT_LEFT, -1, size, 4, Color(0, 0, 0, 0.6))
-		draw_string(font, pos, names[code], HORIZONTAL_ALIGNMENT_LEFT, -1, size, Color.WHITE)
-	if hover_soon != "": # "France · coming soon" by the country under the cursor
-		var text := "%s · %s" % [_name(hover_soon), Lang.t("soon_tag")]
+	for code in play: # the flag in the middle of every country in the game, bigger under the cursor
+		var h := (18.0 if code == hover else 14.0) if _wide(code) else (14.0 if code == hover else 10.0)
+		var fl := Rect2(label_pos(code) - Vector2(h * 0.75, h * 0.5), Vector2(h * 1.5, h))
+		draw_rect(fl.grow(1.0), Color(0, 0, 0, 0.55))
+		FlagPainter.draw(self, code, fl)
+	if tip != "": # the name by the cursor: "Poland", or "France · coming soon"
+		var text: String = names[tip] if names.has(tip) else "%s · %s" % [_name(tip), Lang.t("soon_tag")]
 		var w := font.get_string_size(text, HORIZONTAL_ALIGNMENT_LEFT, -1, 15).x + 26 # with the flag
-		var p := label_pos(hover_soon) + Vector2(-w * 0.5, 5)
-		p.x = clampf(p.x, 8.0, 952.0 - w)
-		var box := Rect2(p + Vector2(-8, -17), Vector2(w + 16, 24))
+		var pos := cursor + Vector2(14, 30)
+		pos.x = clampf(pos.x, 8.0, 952.0 - w)
+		pos.y = clampf(pos.y, 80.0, 478.0)
+		var box := Rect2(pos + Vector2(-8, -17), Vector2(w + 16, 24))
 		draw_rect(box, Color(0.1, 0.12, 0.15, 0.85))
 		draw_rect(box, CURRENT, false, 1.5)
-		FlagPainter.draw(self, hover_soon, Rect2(p + Vector2(0, -12), Vector2(21, 14)))
-		draw_string(font, p + Vector2(26, 0), text, HORIZONTAL_ALIGNMENT_LEFT, -1, 15, Color.WHITE)
+		FlagPainter.draw(self, tip, Rect2(pos + Vector2(0, -12), Vector2(21, 14)))
+		draw_string(font, pos + Vector2(26, 0), text, HORIZONTAL_ALIGNMENT_LEFT, -1, 15, Color.WHITE)
 	_legend()
 	# header and footer
 	draw_rect(Rect2(0, 0, 960, 58), Color(0, 0, 0, 0.45))
