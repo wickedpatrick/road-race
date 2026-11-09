@@ -1,0 +1,247 @@
+{
+	"Rīga": {
+		"pl": "Stolica Łotwy u ujścia Dźwiny, założona w 1201 roku; około jednej trzeciej budynków w centrum to secesja",
+		"en": "The capital of Latvia near the mouth of the Daugava, founded in 1201; about a third of the buildings in the centre are Art Nouveau",
+		"cs": "Hlavní město Lotyšska u ústí Daugavy, založené roku 1201; asi třetina budov v centru je secesních",
+		"is": "Höfuðborg Lettlands við ósa Daugava, stofnuð árið 1201; um þriðjungur húsanna í miðbænum er í jugendstíl",
+		"de": "Die Hauptstadt Lettlands nahe der Mündung der Daugava, gegründet 1201; etwa ein Drittel der Gebäude im Zentrum ist Jugendstil"
+	},
+	"Daugavpils": {
+		"pl": "Drugie co do wielkości miasto Łotwy, nad Dźwiną; urodził się tu malarz Mark Rothko, a jego centrum sztuki działa w twierdzy",
+		"en": "Latvia's second city, on the Daugava; the painter Mark Rothko was born here, and his art centre is in the fortress",
+		"cs": "Druhé největší město Lotyšska na Daugavě; narodil se tu malíř Mark Rothko a jeho umělecké centrum sídlí v pevnosti",
+		"is": "Næststærsta borg Lettlands, við Daugava; málarinn Mark Rothko fæddist hér og listamiðstöð hans er í virkinu",
+		"de": "Lettlands zweitgrößte Stadt an der Daugava; hier wurde der Maler Mark Rothko geboren, sein Kunstzentrum liegt in der Festung"
+	},
+	"Liepāja": {
+		"pl": "Portowe miasto nad Bałtykiem, z piosenki znane jako „miasto, w którym rodzi się wiatr”; słynie z muzyki",
+		"en": "A port on the Baltic, known from a song as 'the city where the wind is born'; famous for its music",
+		"cs": "Přístav u Baltu, podle písně „město, kde se rodí vítr“; proslulé hudbou",
+		"is": "Hafnarborg við Eystrasalt, kölluð „borgin þar sem vindurinn fæðist“ eftir lagi; þekkt fyrir tónlist",
+		"de": "Eine Hafenstadt an der Ostsee, aus einem Lied bekannt als „die Stadt, in der der Wind geboren wird“; berühmt für ihre Musik"
+	},
+	"Jelgava": {
+		"pl": "Dawna stolica Księstwa Kurlandii; pałac zaprojektowany przez Rastrellego mieści dziś uniwersytet",
+		"en": "The former capital of the Duchy of Courland; its palace, designed by Rastrelli, now houses a university",
+		"cs": "Bývalé hlavní město Kuronského vévodství; v zámku od Rastrelliho dnes sídlí univerzita",
+		"is": "Fyrrum höfuðborg hertogadæmisins Kúrlands; í höllinni, sem Rastrelli teiknaði, er nú háskóli",
+		"de": "Die frühere Hauptstadt des Herzogtums Kurland; im von Rastrelli entworfenen Schloss ist heute eine Universität"
+	},
+	"Jūrmala": {
+		"pl": "Kurort ciągnący się przez ponad 30 km między morzem a rzeką Lelupą, z setkami drewnianych willi",
+		"en": "A resort stretching over 30 km between the sea and the Lielupe river, with hundreds of wooden villas",
+		"cs": "Lázeňské město táhnoucí se přes 30 km mezi mořem a řekou Lielupe, se stovkami dřevěných vil",
+		"is": "Baðstaður sem teygir sig yfir 30 km milli hafsins og árinnar Lielupe, með hundruðum timburvillna",
+		"de": "Ein Badeort, der sich über 30 km zwischen dem Meer und der Lielupe erstreckt, mit Hunderten Holzvillen"
+	},
+	"Ventspils": {
+		"pl": "Jeden z największych niezamarzających portów nad Bałtykiem; nad Ventą stoi zamek zakonu inflanckiego",
+		"en": "One of the largest ice-free ports on the Baltic; a castle of the Livonian Order stands by the Venta",
+		"cs": "Jeden z největších nezamrzajících přístavů v Baltu; u Venty stojí hrad Livonského řádu",
+		"is": "Ein stærsta íslausa höfnin við Eystrasalt; við Venta stendur kastali Líflandsreglunnar",
+		"de": "Einer der größten eisfreien Häfen der Ostsee; an der Venta steht eine Burg des Livländischen Ordens"
+	},
+	"Rēzekne": {
+		"pl": "„Serce Łatgalii”, położone na siedmiu wzgórzach; na środku miasta stoi pomnik Łatgalskiej Mary",
+		"en": "'The heart of Latgale', built on seven hills; the Latgale Māra monument stands in the middle of the town",
+		"cs": "„Srdce Latgale“ postavené na sedmi pahorcích; uprostřed města stojí pomník Latgalská Māra",
+		"is": "„Hjarta Latgale“, byggt á sjö hæðum; minnismerkið Latgales Māra stendur í miðjum bænum",
+		"de": "„Das Herz Lettgallens“, auf sieben Hügeln erbaut; mitten in der Stadt steht das Denkmal der Lettgallischen Māra"
+	},
+	"Valmiera": {
+		"pl": "Dawne miasto hanzeatyckie nad Gaują; kościół św. Szymona pochodzi z 1283 roku",
+		"en": "A former Hanseatic town on the Gauja; St Simon's Church dates from 1283",
+		"cs": "Bývalé hanzovní město na Gauji; kostel sv. Šimona pochází z roku 1283",
+		"is": "Fyrrum Hansabær við Gauja; kirkja heilags Símonar er frá árinu 1283",
+		"de": "Eine ehemalige Hansestadt an der Gauja; die Simonskirche stammt aus dem Jahr 1283"
+	},
+	"Jēkabpils": {
+		"pl": "Miasto nad Dźwiną nazwane na cześć księcia Kurlandii Jakuba, prawa miejskie od 1670 roku; na drugim brzegu leży Krustpils",
+		"en": "A town on the Daugava named after Duke Jacob of Courland, with town rights since 1670; Krustpils lies across the river",
+		"cs": "Město na Daugavě pojmenované po kuronském vévodovi Jakubovi, městem od roku 1670; na druhém břehu leží Krustpils",
+		"is": "Bær við Daugava, nefndur eftir Jakobi hertoga af Kúrlandi, með kaupstaðarréttindi frá 1670; handan árinnar er Krustpils",
+		"de": "Eine Stadt an der Daugava, benannt nach Herzog Jakob von Kurland, Stadtrecht seit 1670; gegenüber liegt Krustpils"
+	},
+	"Sigulda": {
+		"pl": "Zwana „Szwajcarią Widzemską”: zamki nad doliną Gauji, kolejka linowa nad rzeką i tor bobslejowy",
+		"en": "Called 'the Switzerland of Vidzeme': castles above the Gauja valley, a cable car over the river and a bobsleigh track",
+		"cs": "Přezdívaná „vidzemské Švýcarsko“: hrady nad údolím Gauji, lanovka přes řeku a bobová dráha",
+		"is": "Kölluð „Sviss Vidzeme“: kastalar yfir Gauja-dalnum, kláfur yfir ána og bobbsleðabraut",
+		"de": "Genannt „Schweiz von Vidzeme“: Burgen über dem Gauja-Tal, eine Seilbahn über den Fluss und eine Bobbahn"
+	},
+	"Cēsis": {
+		"pl": "Zamek w Cēsis budowano od 1209 roku; jego wieże zwiedza się przy świetle świec w latarniach",
+		"en": "Cēsis Castle was begun in 1209; visitors climb its towers with candle lanterns",
+		"cs": "Hrad v Cēsisu se začal stavět roku 1209; jeho věže se prohlížejí se svíčkami v lucernách",
+		"is": "Bygging kastalans í Cēsis hófst árið 1209; gestir ganga upp í turnana með kertaljós í luktum",
+		"de": "Die Burg von Cēsis wurde ab 1209 gebaut; ihre Türme besichtigt man mit Kerzenlaternen"
+	},
+	"Kuldīga": {
+		"pl": "Stare miasto wpisane w 2023 roku na listę UNESCO; Ventas rumba na rzece Venta to najszerszy wodospad w Europie",
+		"en": "Its old town became a UNESCO World Heritage Site in 2023; the Venta Rapid is the widest waterfall in Europe",
+		"cs": "Staré město je od roku 2023 na seznamu UNESCO; peřej Venty je nejširší vodopád v Evropě",
+		"is": "Gamli bærinn var settur á heimsminjaskrá UNESCO árið 2023; Venta-flúðirnar eru breiðasti foss Evrópu",
+		"de": "Die Altstadt ist seit 2023 UNESCO-Welterbe; der Venta-Wasserfall ist der breiteste Wasserfall Europas"
+	},
+	"Talsi": {
+		"pl": "Miasteczko na dziewięciu wzgórzach wokół dwóch jezior",
+		"en": "A little town on nine hills around two lakes",
+		"cs": "Městečko na devíti pahorcích kolem dvou jezer",
+		"is": "Smábær á níu hæðum í kringum tvö vötn",
+		"de": "Ein Städtchen auf neun Hügeln rund um zwei Seen"
+	},
+	"Bauska": {
+		"pl": "Tu Musza i Niemenek łączą się w Lelupę; nad zbiegiem rzek stoi zamek, a niedaleko pałac w Rundāle",
+		"en": "Here the Mūsa and the Mēmele join to form the Lielupe; a castle stands above them, Rundāle Palace nearby",
+		"cs": "Zde se Mūsa a Mēmele slévají v Lielupe; nad soutokem stojí hrad a nedaleko zámek Rundāle",
+		"is": "Hér sameinast árnar Mūsa og Mēmele og mynda Lielupe; kastali stendur yfir þeim og Rundāle-höllin er skammt frá",
+		"de": "Hier vereinen sich Mūsa und Mēmele zur Lielupe; darüber steht eine Burg, das Schloss Rundāle liegt in der Nähe"
+	},
+	"Salacgrīva": {
+		"pl": "Miasteczko u ujścia Salacy, gdzie minogi łowi się na dawnych drewnianych jazach",
+		"en": "A small town at the mouth of the Salaca, where lampreys are caught on old wooden weirs",
+		"cs": "Městečko u ústí Salacy, kde se mihule loví na starých dřevěných jezech",
+		"is": "Smábær við ósa Salaca, þar sem steinsugur eru veiddar í gömlum trégildrum þvert yfir ána",
+		"de": "Ein Städtchen an der Mündung der Salaca, wo Neunaugen an alten hölzernen Wehren gefangen werden"
+	},
+	"Ķemeri": {
+		"pl": "Uzdrowisko z wodami siarczanymi; biały hotel z 1936 roku nazywany jest „Białym Statkiem”",
+		"en": "A spa with sulphur springs; its white hotel of 1936 is called 'the White Ship'",
+		"cs": "Lázně se sirnými prameny; bílý hotel z roku 1936 se přezdívá „Bílá loď“",
+		"is": "Heilsulind með brennisteinslindum; hvíta hótelið frá 1936 er kallað „Hvíta skipið“",
+		"de": "Ein Kurort mit Schwefelquellen; das weiße Hotel von 1936 heißt „das Weiße Schiff“"
+	},
+	"Tukums": {
+		"pl": "Miasto nazywane „bramą Kurlandii”",
+		"en": "A town called 'the gateway to Courland'",
+		"cs": "Město přezdívané „brána Kuronska“",
+		"is": "Bær sem kallaður er „hlið Kúrlands“",
+		"de": "Eine Stadt, die „Tor nach Kurland“ genannt wird"
+	},
+	"Kandava": {
+		"pl": "Miasteczko nad rzeką Abawą z XIX-wiecznym kamiennym mostem",
+		"en": "A small town on the Abava river with a 19th-century stone bridge",
+		"cs": "Městečko na řece Abavě s kamenným mostem z 19. století",
+		"is": "Smábær við ána Abava með steinbrú frá 19. öld",
+		"de": "Ein Städtchen an der Abava mit einer Steinbrücke aus dem 19. Jahrhundert"
+	},
+	"Ugāle": {
+		"pl": "W tutejszym kościele grają najstarsze organy na Łotwie, z początku XVIII wieku",
+		"en": "The church here has the oldest working organ in Latvia, from the early 18th century",
+		"cs": "Ve zdejším kostele hrají nejstarší varhany v Lotyšsku z počátku 18. století",
+		"is": "Í kirkjunni hér er elsta orgel Lettlands sem enn er leikið á, frá byrjun 18. aldar",
+		"de": "Die Kirche hier hat die älteste spielbare Orgel Lettlands, aus dem frühen 18. Jahrhundert"
+	},
+	"Saldus": {
+		"pl": "W mieście działa muzeum malarza Jānisa Rozentālsa, który dorastał w tych okolicach",
+		"en": "The town has a museum of the painter Jānis Rozentāls, who grew up nearby",
+		"cs": "Ve městě je muzeum malíře Jānise Rozentālse, který vyrůstal v okolí",
+		"is": "Í bænum er safn um málarann Jānis Rozentāls, sem ólst upp í grenndinni",
+		"de": "In der Stadt gibt es ein Museum des Malers Jānis Rozentāls, der in der Nähe aufwuchs"
+	},
+	"Skrunda": {
+		"pl": "Obok miasteczka stał olbrzymi radziecki radar, wysadzony w 1995 roku",
+		"en": "A huge Soviet radar stood next to the town until it was blown up in 1995",
+		"cs": "U městečka stál obří sovětský radar, odstřelený v roce 1995",
+		"is": "Risastór sovésk ratsjá stóð við bæinn þar til hún var sprengd árið 1995",
+		"de": "Neben der Stadt stand ein riesiges sowjetisches Radar, bis es 1995 gesprengt wurde"
+	},
+	"Durbe": {
+		"pl": "W pobliżu w 1260 roku Kurowie i Litwini rozbili wojska zakonu inflanckiego",
+		"en": "Nearby, in 1260, the Curonians and Lithuanians defeated the army of the Livonian Order",
+		"cs": "Nedaleko odsud porazili roku 1260 Kurové a Litevci vojsko Livonského řádu",
+		"is": "Skammt héðan sigruðu Kúrar og Litháar her Líflandsreglunnar árið 1260",
+		"de": "In der Nähe besiegten 1260 Kuren und Litauer das Heer des Livländischen Ordens"
+	},
+	"Grobiņa": {
+		"pl": "Jedna z najstarszych osad skandynawskich na wschodnim brzegu Bałtyku, z kurhanami z czasów wikingów",
+		"en": "One of the oldest Scandinavian settlements on the eastern Baltic, with Viking-age burial mounds",
+		"cs": "Jedno z nejstarších skandinávských sídel na východním pobřeží Baltu, s mohylami z doby Vikingů",
+		"is": "Ein elsta norræna byggðin við austanvert Eystrasalt, með haugum frá víkingaöld",
+		"de": "Eine der ältesten skandinavischen Siedlungen an der östlichen Ostsee, mit Grabhügeln aus der Wikingerzeit"
+	},
+	"Aizpute": {
+		"pl": "Jedno z najstarszych miast Kurlandii, z ruinami zamku zakonu inflanckiego",
+		"en": "One of the oldest towns in Courland, with the ruins of a Livonian Order castle",
+		"cs": "Jedno z nejstarších měst Kuronska se zříceninou hradu Livonského řádu",
+		"is": "Einn elsti bær Kúrlands, með rústum kastala Líflandsreglunnar",
+		"de": "Eine der ältesten Städte Kurlands, mit der Ruine einer Burg des Livländischen Ordens"
+	},
+	"Olaine": {
+		"pl": "Miasto przemysłu chemicznego i farmaceutycznego",
+		"en": "A town of the chemical and pharmaceutical industry",
+		"cs": "Město chemického a farmaceutického průmyslu",
+		"is": "Bær efna- og lyfjaiðnaðar",
+		"de": "Eine Stadt der Chemie- und Pharmaindustrie"
+	},
+	"Pilsrundāle": {
+		"pl": "Wieś przy pałacu w Rundāle, budowanym od 1736 roku według projektu Rastrellego, twórcy Pałacu Zimowego",
+		"en": "The village by Rundāle Palace, begun in 1736 to designs by Rastrelli, the architect of the Winter Palace",
+		"cs": "Obec u zámku Rundāle, stavěného od roku 1736 podle návrhu Rastrelliho, autora Zimního paláce",
+		"is": "Þorpið við Rundāle-höllina, sem byrjað var að reisa árið 1736 eftir teikningum Rastrellis, arkitekts Vetrarhallarinnar",
+		"de": "Das Dorf beim Schloss Rundāle, ab 1736 nach Plänen Rastrellis erbaut, des Architekten des Winterpalasts"
+	},
+	"Salaspils": {
+		"pl": "Tu znajduje się Narodowy Ogród Botaniczny Łotwy",
+		"en": "The National Botanic Garden of Latvia is here",
+		"cs": "Nachází se zde Národní botanická zahrada Lotyšska",
+		"is": "Hér er Grasagarður Lettlands",
+		"de": "Hier liegt der Nationale Botanische Garten Lettlands"
+	},
+	"Ogre": {
+		"pl": "Miasto u ujścia rzeki Ogre do Dźwiny, od końca XIX wieku letnisko",
+		"en": "A town where the Ogre river meets the Daugava, a summer resort since the late 19th century",
+		"cs": "Město u soutoku řeky Ogre s Daugavou, letovisko od konce 19. století",
+		"is": "Bær þar sem áin Ogre rennur í Daugava, sumardvalarstaður frá lokum 19. aldar",
+		"de": "Eine Stadt an der Mündung der Ogre in die Daugava, seit dem späten 19. Jahrhundert ein Sommerkurort"
+	},
+	"Lielvārde": {
+		"pl": "Miasteczko znane z tkanego pasa z ornamentem i z eposu o Lāčplēsisie, Rozdzieraczu Niedźwiedzi",
+		"en": "A town known for its woven patterned belt and for the epic of Lāčplēsis, the Bear Slayer",
+		"cs": "Městečko známé tkaným vzorovaným pásem a eposem o Lāčplēsisovi, Přemožiteli medvědů",
+		"is": "Bær þekktur fyrir ofið mynsturbelti og fyrir söguljóðið um Lāčplēsis, bjarnarbanann",
+		"de": "Ein Städtchen, bekannt für seinen gewebten Mustergürtel und das Epos von Lāčplēsis, dem Bärentöter"
+	},
+	"Aizkraukle": {
+		"pl": "Obok miasta stoi elektrownia wodna Pļaviņas, największa w krajach bałtyckich",
+		"en": "The Pļaviņas hydroelectric plant, the largest in the Baltic states, stands next to the town",
+		"cs": "Vedle města stojí vodní elektrárna Pļaviņas, největší v pobaltských státech",
+		"is": "Við bæinn stendur Pļaviņas-vatnsaflsvirkjunin, sú stærsta í Eystrasaltsríkjunum",
+		"de": "Neben der Stadt steht das Wasserkraftwerk Pļaviņas, das größte im Baltikum"
+	},
+	"Koknese": {
+		"pl": "Ruiny zamku stoją dziś nad samą wodą, odkąd w 1966 roku spiętrzono Dźwinę",
+		"en": "The castle ruins have stood right at the water's edge since the Daugava was dammed in 1966",
+		"cs": "Zřícenina hradu stojí od přehrazení Daugavy v roce 1966 přímo u vody",
+		"is": "Kastalarústirnar hafa staðið alveg við vatnsborðið síðan Daugava var stífluð árið 1966",
+		"de": "Die Burgruine steht direkt am Wasser, seit die Daugava 1966 aufgestaut wurde"
+	},
+	"Līvāni": {
+		"pl": "Miasto szkła: huta działała tu od 1887 roku",
+		"en": "A glassmaking town: a glassworks operated here from 1887",
+		"cs": "Město skla: sklárna tu fungovala od roku 1887",
+		"is": "Glerbær: hér var glerverksmiðja frá árinu 1887",
+		"de": "Eine Glasstadt: Ab 1887 arbeitete hier eine Glashütte"
+	},
+	"Saulkrasti": {
+		"pl": "Nad morzem wznosi się Biała Wydma, piaszczysta skarpa nad plażą",
+		"en": "The White Dune, a sandy bluff above the beach, rises by the sea here",
+		"cs": "U moře se tu zvedá Bílá duna, písečný sráz nad pláží",
+		"is": "Hér rís Hvíta sandaldan, sandbakki yfir ströndinni",
+		"de": "Hier erhebt sich die Weiße Düne, ein sandiger Steilhang über dem Strand"
+	},
+	"Inčukalns": {
+		"pl": "Pod ziemią leży tu jedyny czynny magazyn gazu w krajach bałtyckich",
+		"en": "The only working underground gas storage in the Baltic states lies beneath it",
+		"cs": "Pod zemí je tu jediný provozovaný zásobník plynu v pobaltských státech",
+		"is": "Undir staðnum er eina gasgeymslan neðanjarðar í Eystrasaltsríkjunum sem er í notkun",
+		"de": "Unter dem Ort liegt der einzige betriebene unterirdische Gasspeicher im Baltikum"
+	},
+	"Brocēni": {
+		"pl": "Miasteczko nad jeziorem Ciecere, wyrosłe wokół cementowni",
+		"en": "A small town on Lake Ciecere that grew up around a cement works",
+		"cs": "Městečko u jezera Ciecere, které vyrostlo kolem cementárny",
+		"is": "Smábær við Ciecere-vatn sem óx upp í kringum sementsverksmiðju",
+		"de": "Ein Städtchen am Ciecere-See, um ein Zementwerk herum gewachsen"
+	}
+}

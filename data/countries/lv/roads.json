@@ -1,0 +1,187 @@
+[
+	{
+		"a": "riga",
+		"b": "jurmala",
+		"km": 25,
+		"road": [[25, "A10", 3]],
+		"towns": [],
+		"zones": [[12, "fields", "Pierīga"], [25, "coast", "Rīgas jūras līcis"]]
+	},
+	{
+		"a": "jurmala",
+		"b": "talsi",
+		"km": 88,
+		"road": "A10",
+		"towns": [["Ķemeri", 12], ["Tukums", 37], ["Kandava", 63]],
+		"zones": [
+			[25, "forest", "Ķemeru nacionālais parks"],
+			[50, "fields", "Tukuma pauguraine"],
+			[72, "upland", "Abavas senleja"],
+			[88, "lakes", "Talsu pauguraine"]
+		],
+		"via": [[12, 23.49, 56.95], [37, 23.15, 56.97], [63, 22.78, 57.03]]
+	},
+	{
+		"a": "talsi",
+		"b": "ventspils",
+		"km": 75,
+		"road": "A10",
+		"towns": [["Spāre", 15], ["Ugāle", 37], ["Pope", 52]],
+		"zones": [
+			[25, "forest", "Kurzeme"], [40, "lakes", "Usmas ezers"], [66, "forest", "Ventas lejtece"],
+			[75, "coast", "Piejūras zemiene"]
+		],
+		"via": [[15, 22.35, 57.19], [37, 22.03, 57.27], [52, 21.86, 57.39]]
+	},
+	{
+		"a": "talsi",
+		"b": "kuldiga",
+		"km": 58,
+		"road": "P120",
+		"towns": [["Stende", 14]],
+		"zones": [[20, "upland", "Talsu pauguraine"], [45, "forest", "Kurzeme"], [58, "fields", "Ventas ieleja"]],
+		"via": [[14, 22.54, 57.15]]
+	},
+	{
+		"a": "ventspils",
+		"b": "kuldiga",
+		"km": 56,
+		"road": "P108",
+		"towns": [],
+		"zones": [[35, "forest", "Kurzeme"], [56, "fields", "Ventas ieleja"]]
+	},
+	{
+		"a": "kuldiga",
+		"b": "liepaja",
+		"km": 82,
+		"road": [[70, "P112"], [82, "A9"]],
+		"towns": [["Aizpute", 40], ["Grobiņa", 72]],
+		"zones": [[30, "fields", "Kurzeme"], [62, "upland", "Rietumkursas augstiene"], [82, "coast", "Piejūras zemiene"]],
+		"via": [[40, 21.6, 56.72], [72, 21.17, 56.54]]
+	},
+	{
+		"a": "riga",
+		"b": "liepaja",
+		"km": 211,
+		"road": "A9",
+		"towns": [["Brocēni", 105], ["Saldus", 117], ["Skrunda", 152], ["Durbe", 190], ["Grobiņa", 201]],
+		"zones": [
+			[45, "fields", "Zemgales līdzenums"],
+			[95, "forest", "Kurzeme"],
+			[130, "upland", "Austrumkursas augstiene"],
+			[170, "forest", "Ventas ieleja"],
+			[200, "upland", "Rietumkursas augstiene"],
+			[211, "coast", "Piejūras zemiene"]
+		],
+		"via": [[105, 22.57, 56.68], [117, 22.49, 56.66], [152, 22.02, 56.68], [190, 21.37, 56.59], [201, 21.17, 56.54]]
+	},
+	{
+		"a": "liepaja",
+		"b": "ventspils",
+		"km": 118,
+		"road": [[10, "A9"], [118, "P111"]],
+		"towns": [["Grobiņa", 10]],
+		"zones": [[25, "fields", "Piejūras zemiene"], [95, "forest", "Kurzeme"], [118, "coast", "Piejūras zemiene"]],
+		"via": [[10, 21.17, 56.54], [60, 21.38, 56.88]]
+	},
+	{
+		"a": "riga",
+		"b": "jelgava",
+		"km": 42,
+		"road": "A8",
+		"towns": [["Olaine", 22], ["Ozolnieki", 36]],
+		"zones": [[16, "industrial", "Pierīga"], [42, "fields", "Zemgales līdzenums"]],
+		"via": [[22, 23.94, 56.79], [36, 23.78, 56.69]]
+	},
+	{
+		"a": "jelgava",
+		"b": "bauska",
+		"km": 53,
+		"road": [[20, "A8"], [53, "P103"]],
+		"towns": [["Eleja", 20], ["Sesava", 29], ["Pilsrundāle", 41]],
+		"zones": [[30, "fields", "Zemgales līdzenums"], [53, "orchard", "Zemgale"]],
+		"via": [[20, 23.7, 56.43], [41, 24.02, 56.42]]
+	},
+	{
+		"a": "riga",
+		"b": "bauska",
+		"km": 66,
+		"road": [[8, "A7"], [24, "A7", 3], [66, "A7"]],
+		"towns": [["Iecava", 44]],
+		"zones": [[25, "fields", "Pierīga"], [50, "forest", "Zemgales līdzenums"], [66, "fields", "Zemgale"]],
+		"via": [[44, 24.2, 56.6]]
+	},
+	{
+		"a": "riga",
+		"b": "sigulda",
+		"km": 53,
+		"road": "A2",
+		"towns": [["Garkalne", 16], ["Inčukalns", 37]],
+		"zones": [[40, "forest", "Pierīga"], [53, "upland", "Gaujas senleja"]],
+		"via": [[16, 24.41, 57.04], [37, 24.68, 57.1]]
+	},
+	{
+		"a": "sigulda",
+		"b": "cesis",
+		"km": 40,
+		"road": "A2",
+		"towns": [],
+		"zones": [[28, "forest", "Gaujas nacionālais parks"], [40, "upland", "Vidzemes augstiene"]]
+	},
+	{
+		"a": "cesis",
+		"b": "valmiera",
+		"km": 30,
+		"road": "P20",
+		"towns": [],
+		"zones": [[15, "forest", "Gaujas nacionālais parks"], [30, "fields", "Vidzeme"]]
+	},
+	{
+		"a": "riga",
+		"b": "salacgriva",
+		"km": 100,
+		"road": "A1",
+		"towns": [["Ādaži", 22], ["Saulkrasti", 45], ["Skulte", 55], ["Tūja", 72]],
+		"zones": [[25, "forest", "Pierīga"], [100, "coast", "Vidzemes jūrmala"]],
+		"via": [[22, 24.32, 57.07], [45, 24.41, 57.26], [55, 24.41, 57.32], [72, 24.38, 57.5]]
+	},
+	{
+		"a": "riga",
+		"b": "jekabpils",
+		"km": 142,
+		"road": "A6",
+		"towns": [["Salaspils", 18], ["Ogre", 36], ["Lielvārde", 52], ["Aizkraukle", 86], ["Koknese", 100], ["Pļaviņas", 114]],
+		"zones": [[40, "fields", "Pierīga"], [100, "forest", "Daugavas ieleja"], [142, "fields", "Vidzeme"]],
+		"via": [
+			[18, 24.35, 56.86], [36, 24.6, 56.82], [52, 24.81, 56.72], [86, 25.25, 56.6], [100, 25.43, 56.64],
+			[114, 25.72, 56.62]
+		]
+	},
+	{
+		"a": "jekabpils",
+		"b": "daugavpils",
+		"km": 88,
+		"road": "A6",
+		"towns": [["Līvāni", 33], ["Līksna", 75]],
+		"zones": [[35, "fields", "Austrumlatvijas zemiene"], [70, "forest", "Daugavas ieleja"], [88, "lakes", "Latgale"]],
+		"via": [[33, 26.18, 56.35], [75, 26.4, 55.98]]
+	},
+	{
+		"a": "jekabpils",
+		"b": "rezekne",
+		"km": 95,
+		"road": "A12",
+		"towns": [["Atašiene", 37], ["Viļāni", 70]],
+		"zones": [[45, "fields", "Austrumlatvijas zemiene"], [75, "podlasie", "Latgale"], [95, "lakes", "Latgales augstiene"]],
+		"via": [[37, 26.43, 56.51], [70, 26.92, 56.55]]
+	},
+	{
+		"a": "rezekne",
+		"b": "daugavpils",
+		"km": 90,
+		"road": "A13",
+		"towns": [["Malta", 22]],
+		"zones": [[50, "lakes", "Latgales augstiene"], [90, "forest", "Latgale"]],
+		"via": [[22, 27.17, 56.35]]
+	}
+]
