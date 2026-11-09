@@ -1,0 +1,127 @@
+{
+	"sofia": {
+		"name": "Sofia",
+		"lat": 42.7,
+		"lon": 23.32,
+		"pop": 1183,
+		"region": "Sofia-grad",
+		"exonym": {"cs": "Sofie", "is": "Sófía"}
+	},
+	"plovdiv": {
+		"name": "Plovdiv",
+		"lat": 42.14,
+		"lon": 24.75,
+		"pop": 346,
+		"region": "Plovdiv",
+		"exonym": {"pl": "Płowdiw", "de": "Plowdiw"}
+	},
+	"varna": {
+		"name": "Varna",
+		"lat": 43.21,
+		"lon": 27.91,
+		"pop": 312,
+		"region": "Varna",
+		"exonym": {"pl": "Warna", "de": "Warna"}
+	},
+	"burgas": {"name": "Burgas", "lat": 42.5, "lon": 27.47, "pop": 188, "region": "Burgas"},
+	"ruse": {"name": "Ruse", "lat": 43.85, "lon": 25.97, "pop": 128, "region": "Ruse", "exonym": {"de": "Russe"}},
+	"stara_zagora": {"name": "Stara Zagora", "lat": 42.43, "lon": 25.63, "pop": 121, "region": "Stara Zagora"},
+	"pleven": {
+		"name": "Pleven",
+		"lat": 43.42,
+		"lon": 24.61,
+		"pop": 90,
+		"region": "Pleven",
+		"exonym": {"pl": "Plewen", "de": "Plewen"}
+	},
+	"sliven": {
+		"name": "Sliven",
+		"lat": 42.68,
+		"lon": 26.33,
+		"pop": 79,
+		"region": "Sliven",
+		"exonym": {"pl": "Sliwen", "de": "Sliwen"}
+	},
+	"dobrich": {
+		"name": "Dobrich",
+		"lat": 43.57,
+		"lon": 27.83,
+		"pop": 70,
+		"region": "Dobrich",
+		"exonym": {"pl": "Dobricz", "cs": "Dobrič", "de": "Dobritsch"}
+	},
+	"shumen": {
+		"name": "Shumen",
+		"lat": 43.27,
+		"lon": 26.94,
+		"pop": 69,
+		"region": "Shumen",
+		"exonym": {"pl": "Szumen", "cs": "Šumen", "de": "Schumen"}
+	},
+	"pernik": {"name": "Pernik", "lat": 42.6, "lon": 23.04, "pop": 68, "region": "Pernik"},
+	"veliko_tarnovo": {
+		"name": "Veliko Tarnovo",
+		"lat": 43.08,
+		"lon": 25.63,
+		"pop": 67,
+		"region": "Veliko Tarnovo",
+		"exonym": {"pl": "Wielkie Tyrnowo", "de": "Weliko Tarnowo"}
+	},
+	"haskovo": {
+		"name": "Haskovo",
+		"lat": 41.93,
+		"lon": 25.56,
+		"pop": 66,
+		"region": "Haskovo",
+		"exonym": {"pl": "Chaskowo", "cs": "Chaskovo", "de": "Chaskowo"}
+	},
+	"blagoevgrad": {
+		"name": "Blagoevgrad",
+		"lat": 42.02,
+		"lon": 23.1,
+		"pop": 65,
+		"region": "Blagoevgrad",
+		"exonym": {"pl": "Błagojewgrad", "de": "Blagoewgrad"}
+	},
+	"yambol": {
+		"name": "Yambol",
+		"lat": 42.48,
+		"lon": 26.5,
+		"pop": 64,
+		"region": "Yambol",
+		"exonym": {"pl": "Jamboł", "cs": "Jambol", "de": "Jambol"}
+	},
+	"pazardzhik": {
+		"name": "Pazardzhik",
+		"lat": 42.19,
+		"lon": 24.33,
+		"pop": 61,
+		"region": "Pazardzhik",
+		"exonym": {"pl": "Pazardżik", "cs": "Pazardžik", "de": "Pasardschik"}
+	},
+	"vratsa": {
+		"name": "Vratsa",
+		"lat": 43.2,
+		"lon": 23.55,
+		"pop": 52,
+		"region": "Vratsa",
+		"exonym": {"pl": "Wraca", "cs": "Vraca", "de": "Wraza"}
+	},
+	"gabrovo": {
+		"name": "Gabrovo",
+		"lat": 42.87,
+		"lon": 25.32,
+		"pop": 50,
+		"region": "Gabrovo",
+		"exonym": {"pl": "Gabrowo", "de": "Gabrowo"}
+	},
+	"kazanlak": {
+		"name": "Kazanlak",
+		"lat": 42.62,
+		"lon": 25.4,
+		"pop": 44,
+		"region": "Stara Zagora",
+		"exonym": {"pl": "Kazanłyk", "de": "Kasanlak"}
+	},
+	"bansko": {"name": "Bansko", "lat": 41.84, "lon": 23.49, "pop": 8, "region": "Blagoevgrad"}
+}
