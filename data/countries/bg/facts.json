@@ -1,0 +1,198 @@
+{
+	"Sofia": {
+		"pl": "Stolica Bułgarii u stóp góry Witosza, jedna z najstarszych stolic Europy",
+		"en": "Bulgaria's capital at the foot of Mount Vitosha, one of Europe's oldest capitals",
+		"cs": "Hlavní město Bulharska pod horou Vitoša, jedno z nejstarších hlavních měst Evropy",
+		"is": "Höfuðborg Búlgaríu við rætur Vitosha-fjalls, ein elsta höfuðborg Evrópu",
+		"de": "Bulgariens Hauptstadt am Fuß des Witoscha-Gebirges, eine der ältesten Hauptstädte Europas"
+	},
+	"Plovdiv": {
+		"pl": "Miasto na siedmiu wzgórzach, zamieszkane nieprzerwanie od ponad 6000 lat",
+		"en": "A city on seven hills, lived in without a break for over 6,000 years",
+		"cs": "Město na sedmi pahorcích, nepřetržitě obývané přes 6000 let",
+		"is": "Borg á sjö hæðum sem hefur verið byggð samfellt í yfir 6000 ár",
+		"de": "Eine Stadt auf sieben Hügeln, seit über 6000 Jahren ununterbrochen bewohnt"
+	},
+	"Varna": {
+		"pl": "Morska stolica Bułgarii; w tutejszej nekropolii znaleziono najstarsze złoto świata",
+		"en": "Bulgaria's sea capital; the world's oldest worked gold was found in its necropolis",
+		"cs": "Námořní metropole Bulharska; v místní nekropoli našli nejstarší zlato světa",
+		"is": "Hafnarhöfuðborg Búlgaríu; elsta unna gull heims fannst í grafreit borgarinnar",
+		"de": "Bulgariens Seehauptstadt; in ihrer Nekropole fand man das älteste bearbeitete Gold der Welt"
+	},
+	"Burgas": {
+		"pl": "Portowe miasto otoczone trzema jeziorami, pełnymi pelikanów i flamingów",
+		"en": "A port city ringed by three lakes full of pelicans and flamingos",
+		"cs": "Přístavní město obklopené třemi jezery plnými pelikánů a plameňáků",
+		"is": "Hafnarborg umkringd þremur vötnum full af pelíkönum og flamingóum",
+		"de": "Eine Hafenstadt zwischen drei Seen voller Pelikane und Flamingos"
+	},
+	"Ruse": {
+		"pl": "„Mały Wiedeń” nad Dunajem, skąd mostem przejeżdża się do Rumunii",
+		"en": "The “Little Vienna” on the Danube, with the bridge over to Romania",
+		"cs": "„Malá Vídeň“ na Dunaji, odkud vede most do Rumunska",
+		"is": "„Litla Vín“ við Dóná, þaðan sem brú liggur yfir til Rúmeníu",
+		"de": "Das „Kleine Wien“ an der Donau, mit der Brücke hinüber nach Rumänien"
+	},
+	"Stara Zagora": {
+		"pl": "Miasto lip, spalone w 1877 roku i odbudowane według planu szachownicy",
+		"en": "The city of linden trees, burnt in 1877 and rebuilt on a chessboard plan",
+		"cs": "Město lip, vypálené roku 1877 a znovu postavené podle šachovnicového plánu",
+		"is": "Borg linditrjánna, brennd árið 1877 og endurbyggð eftir skákborðsskipulagi",
+		"de": "Die Stadt der Linden, 1877 niedergebrannt und im Schachbrettmuster neu gebaut"
+	},
+	"Pleven": {
+		"pl": "W 1877 roku Rosjanie i Rumuni przez pięć miesięcy oblegali tu armię turecką",
+		"en": "In 1877 Russians and Romanians besieged the Ottoman army here for five months",
+		"cs": "Roku 1877 tu Rusové a Rumuni pět měsíců obléhali tureckou armádu",
+		"is": "Árið 1877 sátu Rússar og Rúmenar um tyrkneska herinn hér í fimm mánuði",
+		"de": "1877 belagerten Russen und Rumänen hier fünf Monate lang das osmanische Heer"
+	},
+	"Sliven": {
+		"pl": "Miasto stu hajduckich wojewodów i silnego wiatru, pod skałami Sinite kamani",
+		"en": "The town of a hundred voivodes and strong winds, below the Blue Rocks",
+		"cs": "Město sta vojvodů a silného větru pod Modrými skalami",
+		"is": "Bær hundrað uppreisnarforingja og sterkra vinda undir Bláu klettunum",
+		"de": "Die Stadt der hundert Wojwoden und der starken Winde, unter den Blauen Felsen"
+	},
+	"Dobrich": {
+		"pl": "Stolica Dobrudży, spichlerza Bułgarii z niekończącymi się polami pszenicy",
+		"en": "Capital of Dobrudzha, Bulgaria's granary of endless wheat fields",
+		"cs": "Centrum Dobrudže, bulharské obilnice s nekonečnými pšeničnými poli",
+		"is": "Höfuðstaður Dobrudzha, kornforðabúrs Búlgaríu með endalausum hveitiökrum",
+		"de": "Hauptstadt der Dobrudscha, Bulgariens Kornkammer mit endlosen Weizenfeldern"
+	},
+	"Shumen": {
+		"pl": "Tu warzy się piwo Shumensko, a nad miastem stoi pomnik 1300 lat Bułgarii",
+		"en": "Home of Shumensko beer, with the 1,300 Years of Bulgaria monument above the town",
+		"cs": "Domov piva Šumensko, nad městem stojí památník 1300 let Bulharska",
+		"is": "Hér er Shumensko-bjórinn bruggaður og minnisvarðinn um 1300 ár Búlgaríu gnæfir yfir bænum",
+		"de": "Heimat des Shumensko-Biers, über der Stadt das Denkmal 1300 Jahre Bulgarien"
+	},
+	"Pernik": {
+		"pl": "Górnicze miasto, gdzie w styczniu odbywa się wielki festiwal kukierów Surwa",
+		"en": "A mining town that hosts the great Surva festival of kukeri every January",
+		"cs": "Hornické město, kde se každý leden koná velký festival kukerů Surva",
+		"is": "Námubær þar sem hin mikla Surva-hátíð kukeri-grímudansara er haldin í janúar",
+		"de": "Eine Bergbaustadt, in der jeden Januar das große Kukeri-Festival Surva stattfindet"
+	},
+	"Veliko Tarnovo": {
+		"pl": "Stolica średniowiecznego carstwa, z domami wspinającymi się nad rzeką Jantrą",
+		"en": "Capital of the medieval tsardom, its houses climbing above the Yantra river",
+		"cs": "Hlavní město středověkého carství s domy šplhajícími nad řekou Jantrou",
+		"is": "Höfuðborg keisaradæmisins á miðöldum, húsin klifra upp frá ánni Yantra",
+		"de": "Hauptstadt des mittelalterlichen Zarenreichs, die Häuser klettern über die Jantra"
+	},
+	"Haskovo": {
+		"pl": "Nad miastem stoi jeden z najwyższych na świecie posągów Matki Boskiej z Dzieciątkiem",
+		"en": "Above the town stands one of the tallest statues of the Virgin and Child in the world",
+		"cs": "Nad městem stojí jedna z nejvyšších soch Panny Marie s Ježíškem na světě",
+		"is": "Fyrir ofan bæinn stendur ein hæsta stytta heims af Maríu mey með Jesúbarnið",
+		"de": "Über der Stadt steht eine der höchsten Statuen der Muttergottes mit Kind der Welt"
+	},
+	"Blagoevgrad": {
+		"pl": "Studenckie miasto nad Strumą, między Riłą a Pirinem",
+		"en": "A student town on the Struma, between the Rila and Pirin mountains",
+		"cs": "Studentské město na Strumě mezi pohořími Rila a Pirin",
+		"is": "Námsmannabær við Struma, á milli Rila- og Pirin-fjalla",
+		"de": "Eine Studentenstadt an der Struma, zwischen Rila- und Pirin-Gebirge"
+	},
+	"Yambol": {
+		"pl": "Nad Tundżą stoi tu kryty bazar Bezisten z XV wieku",
+		"en": "The covered market Bezisten from the 15th century stands here by the Tundzha",
+		"cs": "U Tundži tu stojí krytá tržnice Bezisten z 15. století",
+		"is": "Yfirbyggði markaðurinn Bezisten frá 15. öld stendur hér við Tundzha",
+		"de": "Hier an der Tundscha steht der überdachte Markt Bezisten aus dem 15. Jahrhundert"
+	},
+	"Pazardzhik": {
+		"pl": "Miasto nad Maricą, słynące z rzeźbionego w drewnie ikonostasu",
+		"en": "A town on the Maritsa, famous for its wood-carved iconostasis",
+		"cs": "Město na Marici, proslulé dřevořezbovým ikonostasem",
+		"is": "Bær við Maritsa, frægur fyrir útskorinn helgimyndavegg úr tré",
+		"de": "Eine Stadt an der Maritza, berühmt für ihre holzgeschnitzte Ikonostase"
+	},
+	"Vratsa": {
+		"pl": "Miasto pod wapiennymi ścianami Wracanskiego Bałkanu, raj wspinaczy",
+		"en": "A town below the limestone walls of the Vratsa Balkan, a climbers' paradise",
+		"cs": "Město pod vápencovými stěnami Vracanského Balkánu, ráj horolezců",
+		"is": "Bær undir kalksteinsveggjum Vratsa-fjalla, paradís klifrara",
+		"de": "Eine Stadt unter den Kalkwänden des Wraza-Balkan, ein Paradies für Kletterer"
+	},
+	"Gabrovo": {
+		"pl": "Stolica bułgarskiego humoru, z żartami o skąpych gabrowczanach",
+		"en": "The capital of Bulgarian humour, full of jokes about the thrifty Gabrovians",
+		"cs": "Hlavní město bulharského humoru, plné vtipů o skoupých Gabrovanech",
+		"is": "Höfuðborg búlgarskrar kímni, full af bröndurum um nísku Gabrovo-búana",
+		"de": "Die Hauptstadt des bulgarischen Humors, voller Witze über die sparsamen Gabrowoer"
+	},
+	"Kazanlak": {
+		"pl": "Serce Doliny Róż, skąd pochodzi większość olejku różanego na świecie",
+		"en": "The heart of the Rose Valley, where most of the world's rose oil comes from",
+		"cs": "Srdce Údolí růží, odkud pochází většina růžového oleje na světě",
+		"is": "Hjarta Rósadalsins, þaðan sem mest af rósaolíu heimsins kemur",
+		"de": "Das Herz des Rosentals, woher das meiste Rosenöl der Welt stammt"
+	},
+	"Bansko": {
+		"pl": "Narciarski kurort pod Pirinem z kamiennymi domami z czasów odrodzenia narodowego",
+		"en": "A ski resort below Pirin, with stone houses from the National Revival",
+		"cs": "Lyžařské středisko pod Pirinem s kamennými domy z dob národního obrození",
+		"is": "Skíðabær undir Pirin með steinhúsum frá endurreisnartímanum",
+		"de": "Ein Skiort unter dem Pirin mit Steinhäusern aus der Wiedergeburtszeit"
+	},
+	"Shipka": {
+		"pl": "Na przełęczy Szipka w 1877 roku Bułgarzy i Rosjanie odparli armię turecką",
+		"en": "At the Shipka Pass in 1877 Bulgarians and Russians held off the Ottoman army",
+		"cs": "Na průsmyku Šipka roku 1877 Bulhaři a Rusové odrazili tureckou armádu",
+		"is": "Í Shipka-skarði árið 1877 héldu Búlgarar og Rússar tyrkneska hernum frá",
+		"de": "Am Schipkapass hielten Bulgaren und Russen 1877 das osmanische Heer auf"
+	},
+	"Karlovo": {
+		"pl": "Tu urodził się Wasił Lewski, Apostoł Wolności",
+		"en": "Birthplace of Vasil Levski, the Apostle of Freedom",
+		"cs": "Rodiště Vasila Levského, apoštola svobody",
+		"is": "Fæðingarstaður Vasil Levski, postula frelsisins",
+		"de": "Geburtsort von Wassil Lewski, dem Apostel der Freiheit"
+	},
+	"Kalofer": {
+		"pl": "Rodzinne miasto poety i rewolucjonisty Christo Botewa",
+		"en": "Home town of the poet and revolutionary Hristo Botev",
+		"cs": "Rodné město básníka a revolucionáře Christa Boteva",
+		"is": "Heimabær skáldsins og byltingarmannsins Hristo Botev",
+		"de": "Heimatstadt des Dichters und Revolutionärs Christo Botew"
+	},
+	"Nesebar": {
+		"pl": "Stare miasto na skalistym półwyspie, pełne średniowiecznych cerkwi",
+		"en": "An old town on a rocky peninsula, full of medieval churches",
+		"cs": "Staré město na skalnatém poloostrově, plné středověkých kostelů",
+		"is": "Gamall bær á klettóttum skaga, fullur af kirkjum frá miðöldum",
+		"de": "Eine Altstadt auf einer felsigen Halbinsel voller mittelalterlicher Kirchen"
+	},
+	"Kocherinovo": {
+		"pl": "Stąd droga skręca w dolinę do Monastyru Rylskiego",
+		"en": "Here the road turns up the valley to the Rila Monastery",
+		"cs": "Odsud vede silnice údolím k Rilskému klášteru",
+		"is": "Hér beygir vegurinn upp dalinn að Rila-klaustrinu",
+		"de": "Hier zweigt die Straße ins Tal zum Rila-Kloster ab"
+	},
+	"Devnya": {
+		"pl": "Obok rośnie Pobiti kamani, kamienny las z kolumn sprzed 50 milionów lat",
+		"en": "Nearby stands Pobiti Kamani, a stone forest of columns 50 million years old",
+		"cs": "Nedaleko stojí Pobiti kamani, kamenný les sloupů starý 50 milionů let",
+		"is": "Skammt frá er Pobiti Kamani, steinskógur úr 50 milljón ára gömlum súlum",
+		"de": "In der Nähe steht Pobiti Kamani, ein steinerner Wald aus 50 Millionen Jahre alten Säulen"
+	},
+	"Pravets": {
+		"pl": "Tu w latach 80. produkowano bułgarskie komputery Prawec",
+		"en": "Bulgaria's Pravets computers were made here in the 1980s",
+		"cs": "V 80. letech se tu vyráběly bulharské počítače Pravec",
+		"is": "Hér voru búlgörsku Pravets-tölvurnar smíðaðar á níunda áratugnum",
+		"de": "Hier wurden in den 1980ern die bulgarischen Prawez-Computer gebaut"
+	},
+	"Velingrad": {
+		"pl": "Uzdrowisko w Rodopach z ponad 70 źródłami gorącej wody",
+		"en": "A Rhodope spa town with more than 70 hot springs",
+		"cs": "Lázně v Rodopech s více než 70 horkými prameny",
+		"is": "Heilsulindabær í Rhodope-fjöllum með yfir 70 heitum lindum",
+		"de": "Ein Kurort in den Rhodopen mit über 70 heißen Quellen"
+	}
+}

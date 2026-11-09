@@ -1,0 +1,300 @@
+[
+	{
+		"a": "sofia",
+		"b": "pernik",
+		"km": 32,
+		"road": "A3",
+		"towns": [],
+		"zones": [[12, "fields", "Sofiysko pole"], [26, "foothills", "Lyulin"], [32, "upland", "Graovo"]]
+	},
+	{
+		"a": "pernik",
+		"b": "blagoevgrad",
+		"km": 82,
+		"road": "A3",
+		"towns": [["Radomir", 18], ["Dupnitsa", 48], ["Kocherinovo", 66]],
+		"zones": [[30, "upland", "Graovo"], [60, "foothills", "Rila"], [82, "foothills", "Struma"]],
+		"via": [[18, 22.96, 42.55], [48, 23.12, 42.26], [66, 23.06, 42.08]]
+	},
+	{
+		"a": "blagoevgrad",
+		"b": "bansko",
+		"km": 62,
+		"road": [[20, "I-1"], [62, "II-19"]],
+		"towns": [["Simitli", 20], ["Razlog", 54]],
+		"zones": [[20, "foothills", "Struma"], [45, "mountains", "Pirin"], [62, "upland", "Razlozhka kotlovina"]],
+		"via": [[20, 23.11, 41.89], [54, 23.47, 41.89]]
+	},
+	{
+		"a": "pazardzhik",
+		"b": "bansko",
+		"km": 128,
+		"road": "II-84",
+		"towns": [["Velingrad", 42], ["Yundola", 62], ["Yakoruda", 86], ["Razlog", 118]],
+		"zones": [
+			[15, "fields", "Trakiyska nizina"], [38, "mountains", "Rodopi"], [55, "upland", "Chepino"],
+			[95, "mountains", "Rila"], [128, "upland", "Razlozhka kotlovina"]
+		],
+		"via": [[42, 23.99, 42.03], [62, 23.85, 42.06], [86, 23.68, 42.03], [118, 23.47, 41.89]]
+	},
+	{
+		"a": "sofia",
+		"b": "pazardzhik",
+		"km": 112,
+		"road": "A1",
+		"towns": [["Vakarel", 36], ["Ihtiman", 52], ["Vetren", 84]],
+		"zones": [[25, "fields", "Sofiysko pole"], [72, "upland", "Sredna gora"], [112, "fields", "Trakiyska nizina"]],
+		"via": [[52, 23.82, 42.43], [84, 24.05, 42.27]],
+		"tunnels": [
+			{
+				"from_km": 60,
+				"to_km": 60.9,
+				"name": {
+					"pl": "Tunel Trajanowa Brama",
+					"en": "Trayan's Gate Tunnel",
+					"cs": "Tunel Trajánova brána",
+					"is": "Trajanusarhliðsgöngin",
+					"de": "Tunnel Trajanstor"
+				},
+				"fact": {
+					"pl": "Nad tunelem leży przełęcz Trajanowa Brama, gdzie car Samuel rozbił w 986 roku wojska Bizancjum",
+					"en": "Above the tunnel lies Trajan's Gate pass, where Tsar Samuel routed the Byzantine army in 986",
+					"cs": "Nad tunelem leží průsmyk Trajánova brána, kde car Samuel roku 986 porazil byzantské vojsko",
+					"is": "Fyrir ofan göngin er Trajanusarhlið, þar sem Samúel keisari sigraði her Býsans árið 986",
+					"de": "Über dem Tunnel liegt der Pass Trajanstor, wo Zar Samuil 986 das byzantinische Heer schlug"
+				}
+			}
+		]
+	},
+	{
+		"a": "pazardzhik",
+		"b": "plovdiv",
+		"km": 38,
+		"road": "A1",
+		"towns": [["Tsalapitsa", 28]],
+		"zones": [[38, "fields", "Trakiyska nizina"]]
+	},
+	{
+		"a": "plovdiv",
+		"b": "stara_zagora",
+		"km": 104,
+		"road": "A1",
+		"towns": [["Popovitsa", 26], ["Chirpan", 58]],
+		"zones": [[60, "fields", "Trakiyska nizina"], [104, "orchard", "Trakiyska nizina"]],
+		"via": [[58, 25.33, 42.22]]
+	},
+	{
+		"a": "stara_zagora",
+		"b": "yambol",
+		"km": 92,
+		"road": "A1",
+		"towns": [["Nova Zagora", 38]],
+		"zones": [[50, "fields", "Trakiyska nizina"], [92, "fields", "Tundzha"]],
+		"via": [[38, 26, 42.45]]
+	},
+	{
+		"a": "yambol",
+		"b": "burgas",
+		"km": 96,
+		"road": "A1",
+		"towns": [["Zimnitsa", 22], ["Karnobat", 50]],
+		"zones": [[40, "fields", "Tundzha"], [82, "fields", "Karnobatsko pole"], [96, "lakes", "Burgaski ezera"]],
+		"via": [[22, 26.62, 42.57], [50, 26.98, 42.62]]
+	},
+	{
+		"a": "stara_zagora",
+		"b": "kazanlak",
+		"km": 34,
+		"road": "I-5",
+		"towns": [["Zmeyovo", 10]],
+		"zones": [[22, "foothills", "Sredna gora"], [34, "orchard", "Rozova dolina"]]
+	},
+	{
+		"a": "kazanlak",
+		"b": "gabrovo",
+		"km": 46,
+		"road": "I-5",
+		"towns": [["Shipka", 12]],
+		"zones": [[10, "orchard", "Rozova dolina"], [32, "mountains", "Stara planina"], [46, "foothills", "Predbalkan"]],
+		"via": [[12, 25.39, 42.71], [24, 25.32, 42.75]]
+	},
+	{
+		"a": "gabrovo",
+		"b": "veliko_tarnovo",
+		"km": 46,
+		"road": "I-5",
+		"towns": [["Dryanovo", 20]],
+		"zones": [[46, "foothills", "Predbalkan"]],
+		"via": [[20, 25.48, 42.98]]
+	},
+	{
+		"a": "veliko_tarnovo",
+		"b": "ruse",
+		"km": 106,
+		"road": "I-5",
+		"towns": [["Polikraishte", 18], ["Byala", 58]],
+		"zones": [[25, "foothills", "Predbalkan"], [106, "fields", "Dunavska ravnina"]],
+		"via": [[58, 25.73, 43.46]]
+	},
+	{
+		"a": "sofia",
+		"b": "pleven",
+		"km": 172,
+		"road": [[88, "A2"], [172, "I-3"]],
+		"towns": [["Botevgrad", 55], ["Pravets", 66], ["Yablanitsa", 88], ["Lukovit", 112], ["Dolni Dabnik", 158]],
+		"zones": [
+			[30, "fields", "Sofiysko pole"], [70, "mountains", "Stara planina"], [120, "foothills", "Predbalkan"],
+			[172, "fields", "Dunavska ravnina"]
+		],
+		"via": [[38, 23.75, 42.78], [55, 23.79, 42.9], [88, 24.11, 43.03], [112, 24.16, 43.2], [158, 24.44, 43.4]],
+		"tunnels": [
+			{
+				"from_km": 38,
+				"to_km": 39.1,
+				"name": {
+					"pl": "Tunel Vitinya",
+					"en": "Vitinya Tunnel",
+					"cs": "Tunel Vitinja",
+					"is": "Vitinya-göngin",
+					"de": "Vitinya-Tunnel"
+				},
+				"fact": {
+					"pl": "Autostrada Hemus przechodzi tu pod przełęczą Vitinya w Starej Płaninie",
+					"en": "The Hemus motorway passes under the Vitinya Pass in the Balkan Mountains here",
+					"cs": "Dálnice Hemus tu vede pod průsmykem Vitinja ve Staré planině",
+					"is": "Hemus-hraðbrautin liggur hér undir Vitinya-skarðið í Balkanfjöllum",
+					"de": "Die Autobahn Hemus führt hier unter dem Vitinya-Pass im Balkangebirge hindurch"
+				}
+			}
+		]
+	},
+	{
+		"a": "sofia",
+		"b": "vratsa",
+		"km": 112,
+		"road": [[55, "A2"], [112, "I-1"]],
+		"towns": [["Botevgrad", 55], ["Mezdra", 92]],
+		"zones": [
+			[30, "fields", "Sofiysko pole"], [55, "mountains", "Stara planina"], [90, "foothills", "Predbalkan"],
+			[112, "upland", "Vrachanski Balkan"]
+		],
+		"via": [[38, 23.75, 42.78], [55, 23.79, 42.9], [92, 23.71, 43.14]],
+		"tunnels": [
+			{
+				"from_km": 38,
+				"to_km": 39.1,
+				"name": {
+					"pl": "Tunel Vitinya",
+					"en": "Vitinya Tunnel",
+					"cs": "Tunel Vitinja",
+					"is": "Vitinya-göngin",
+					"de": "Vitinya-Tunnel"
+				},
+				"fact": {
+					"pl": "Autostrada Hemus przechodzi tu pod przełęczą Vitinya w Starej Płaninie",
+					"en": "The Hemus motorway passes under the Vitinya Pass in the Balkan Mountains here",
+					"cs": "Dálnice Hemus tu vede pod průsmykem Vitinja ve Staré planině",
+					"is": "Hemus-hraðbrautin liggur hér undir Vitinya-skarðið í Balkanfjöllum",
+					"de": "Die Autobahn Hemus führt hier unter dem Vitinya-Pass im Balkangebirge hindurch"
+				}
+			}
+		]
+	},
+	{
+		"a": "pleven",
+		"b": "ruse",
+		"km": 148,
+		"road": [[92, "I-3"], [148, "I-5"]],
+		"towns": [["Totleben", 18], ["Ovcha Mogila", 55], ["Byala", 92]],
+		"zones": [[148, "fields", "Dunavska ravnina"]],
+		"via": [[55, 25.36, 43.42], [92, 25.73, 43.46]]
+	},
+	{
+		"a": "pleven",
+		"b": "veliko_tarnovo",
+		"km": 122,
+		"road": [[35, "II-35"], [122, "I-4"]],
+		"towns": [["Lovech", 35], ["Sevlievo", 68]],
+		"zones": [[20, "fields", "Dunavska ravnina"], [122, "foothills", "Predbalkan"]],
+		"via": [[35, 24.72, 43.13], [68, 25.1, 43.02]]
+	},
+	{
+		"a": "veliko_tarnovo",
+		"b": "shumen",
+		"km": 136,
+		"road": "I-4",
+		"towns": [["Omurtag", 72], ["Targovishte", 100]],
+		"zones": [[70, "foothills", "Predbalkan"], [136, "upland", "Shumensko plato"]],
+		"via": [[72, 26.42, 43.11], [100, 26.57, 43.25]]
+	},
+	{
+		"a": "ruse",
+		"b": "shumen",
+		"km": 112,
+		"road": "I-2",
+		"towns": [["Tsar Kaloyan", 42], ["Razgrad", 64]],
+		"zones": [[30, "fields", "Dunavska ravnina"], [112, "fields", "Ludogorie"]],
+		"via": [[64, 26.52, 43.53]]
+	},
+	{
+		"a": "shumen",
+		"b": "varna",
+		"km": 88,
+		"road": "A2",
+		"towns": [["Novi Pazar", 24], ["Provadia", 50], ["Devnya", 66]],
+		"zones": [[30, "upland", "Shumensko plato"], [70, "fields", "Provadiysko plato"], [88, "lakes", "Varnensko ezero"]],
+		"via": [[24, 27.2, 43.35], [50, 27.44, 43.18], [66, 27.6, 43.22]]
+	},
+	{"a": "varna", "b": "dobrich", "km": 50, "road": "II-29", "towns": [], "zones": [[50, "fields", "Dobrudzha"]]},
+	{
+		"a": "varna",
+		"b": "burgas",
+		"km": 128,
+		"road": [[11, "A5"], [128, "I-9"]],
+		"towns": [["Priseltsi", 11], ["Staro Oryahovo", 36], ["Obzor", 62], ["Nesebar", 90], ["Pomorie", 110]],
+		"zones": [
+			[28, "coast", "Cherno more"], [50, "forest", "Kamchia"], [80, "foothills", "Emine"],
+			[128, "coast", "Cherno more"]
+		],
+		"via": [[36, 27.8, 42.99], [62, 27.88, 42.82], [90, 27.7, 42.68], [110, 27.64, 42.56]]
+	},
+	{
+		"a": "kazanlak",
+		"b": "sliven",
+		"km": 96,
+		"road": "I-6",
+		"towns": [["Maglizh", 20], ["Gurkovo", 42], ["Tvarditsa", 64]],
+		"zones": [[50, "orchard", "Rozova dolina"], [80, "fields", "Tundzha"], [96, "foothills", "Sinite kamani"]],
+		"via": [[42, 25.8, 42.66], [64, 25.9, 42.7]]
+	},
+	{
+		"a": "sliven",
+		"b": "burgas",
+		"km": 114,
+		"road": "I-6",
+		"towns": [["Karnobat", 64]],
+		"zones": [[40, "fields", "Tundzha"], [96, "fields", "Karnobatsko pole"], [114, "lakes", "Burgaski ezera"]],
+		"via": [[64, 26.98, 42.65]]
+	},
+	{
+		"a": "sofia",
+		"b": "kazanlak",
+		"km": 192,
+		"road": "I-6",
+		"towns": [["Zlatitsa", 76], ["Pirdop", 82], ["Karlovo", 142], ["Kalofer", 158], ["Pavel Banya", 176]],
+		"zones": [
+			[45, "foothills", "Sofiysko pole"], [95, "upland", "Sredna gora"], [125, "mountains", "Stara planina"],
+			[192, "orchard", "Rozova dolina"]
+		],
+		"via": [[76, 24.14, 42.71], [142, 24.81, 42.64], [158, 24.98, 42.61], [176, 25.2, 42.6]]
+	},
+	{
+		"a": "plovdiv",
+		"b": "haskovo",
+		"km": 92,
+		"road": [[58, "A1"], [85, "A4"], [92, "I-5"]],
+		"towns": [["Popovitsa", 26], ["Chirpan", 58], ["Dimitrovgrad", 76]],
+		"zones": [[92, "fields", "Trakiyska nizina"]],
+		"via": [[58, 25.33, 42.22], [76, 25.6, 42.06]]
+	}
+]

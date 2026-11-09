@@ -126,6 +126,12 @@
 			"name": {"pl": "Grecja", "en": "Greece", "cs": "Řecko", "is": "Grikkland", "de": "Griechenland"},
 			"neighbours": ["al", "mk", "bg", "tr", "cy"],
 			"favorite_neighbour": "cy"
+		},
+		{
+			"code": "bg",
+			"name": {"pl": "Bułgaria", "en": "Bulgaria", "cs": "Bulharsko", "is": "Búlgaría", "de": "Bulgarien"},
+			"neighbours": ["ro", "rs", "mk", "gr", "tr"],
+			"favorite_neighbour": "gr"
 		}
 	]
 }

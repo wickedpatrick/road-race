@@ -1,0 +1,536 @@
+{
+	"Sofia": [
+		{
+			"kind": "alexander_nevsky_cathedral",
+			"name": {
+				"pl": "Sobór Aleksandra Newskiego",
+				"en": "Alexander Nevsky Cathedral",
+				"cs": "Katedrála Alexandra Něvského",
+				"is": "Dómkirkja Alexanders Nevskí",
+				"de": "Alexander-Newski-Kathedrale"
+			},
+			"desc": {
+				"pl": "Złote i zielone kopuły wzniesione w podzięce za wyzwolenie w 1878 roku",
+				"en": "Gold and green domes raised in thanks for the liberation of 1878",
+				"cs": "Zlaté a zelené kopule postavené jako díky za osvobození roku 1878",
+				"is": "Gyllt og græn hvolfþök reist í þakklæti fyrir frelsunina 1878",
+				"de": "Goldene und grüne Kuppeln, errichtet zum Dank für die Befreiung 1878"
+			},
+			"local": "Храм-паметник „Св. Александър Невски“"
+		}
+	],
+	"Plovdiv": [
+		{
+			"kind": "plovdiv_roman_theatre",
+			"name": {
+				"pl": "Teatr rzymski",
+				"en": "Roman Theatre",
+				"cs": "Římské divadlo",
+				"is": "Rómverska leikhúsið",
+				"de": "Römisches Theater"
+			},
+			"desc": {
+				"pl": "Marmurowe rzędy Filippopolis, w których do dziś grają koncerty",
+				"en": "The marble rows of Philippopolis, still used for concerts today",
+				"cs": "Mramorové řady Filippopole, kde se dodnes hrají koncerty",
+				"is": "Marmarabekkir Philippopolis, þar sem enn eru haldnir tónleikar",
+				"de": "Die Marmorränge von Philippopolis, in denen bis heute Konzerte stattfinden"
+			},
+			"local": "Античен театър"
+		}
+	],
+	"Varna": [
+		{
+			"kind": "varna_dormition_cathedral",
+			"name": {
+				"pl": "Sobór Zaśnięcia Matki Bożej",
+				"en": "Dormition Cathedral",
+				"cs": "Katedrála Zesnutí Bohorodičky",
+				"is": "Maríukirkjan í Varna",
+				"de": "Mariä-Entschlafens-Kathedrale"
+			},
+			"desc": {
+				"pl": "Cerkiew z dzwonnicą i złotymi kopułami w centrum Warny",
+				"en": "A church with a bell tower and golden domes in the middle of Varna",
+				"cs": "Chrám se zvonicí a zlatými kopulemi v centru Varny",
+				"is": "Kirkja með klukkuturni og gylltum hvolfþökum í miðri Varna",
+				"de": "Eine Kirche mit Glockenturm und goldenen Kuppeln mitten in Warna"
+			},
+			"local": "Катедрала „Успение Богородично“"
+		}
+	],
+	"Burgas": [
+		{
+			"kind": "burgas_sea_bridge",
+			"name": {
+				"pl": "Molo w Burgas",
+				"en": "Burgas Pier",
+				"cs": "Molo v Burgasu",
+				"is": "Bryggjan í Burgas",
+				"de": "Seebrücke Burgas"
+			},
+			"desc": {
+				"pl": "Drewniane molo z Ogrodu Morskiego daleko w Morze Czarne",
+				"en": "A wooden pier running from the Sea Garden far out into the Black Sea",
+				"cs": "Dřevěné molo z Mořské zahrady daleko do Černého moře",
+				"is": "Trébryggja frá Sjávargarðinum langt út í Svartahaf",
+				"de": "Eine Holzbrücke vom Meeresgarten weit hinaus ins Schwarze Meer"
+			},
+			"local": "Морският мост"
+		}
+	],
+	"Ruse": [
+		{
+			"kind": "ruse_liberty_monument",
+			"name": {
+				"pl": "Pomnik Wolności",
+				"en": "Monument of Liberty",
+				"cs": "Památník svobody",
+				"is": "Frelsisminnisvarðinn",
+				"de": "Freiheitsdenkmal"
+			},
+			"desc": {
+				"pl": "Kobieta z mieczem na kolumnie, strzeżona przez dwa lwy",
+				"en": "A woman with a sword on a column, guarded by two lions",
+				"cs": "Žena s mečem na sloupu, kterou střeží dva lvi",
+				"is": "Kona með sverð á súlu, gætt af tveimur ljónum",
+				"de": "Eine Frau mit Schwert auf einer Säule, bewacht von zwei Löwen"
+			},
+			"local": "Паметник на свободата"
+		},
+		{
+			"kind": "ruse_danube_bridge",
+			"name": {
+				"pl": "Most Przyjaźni",
+				"en": "Danube Bridge",
+				"cs": "Most Přátelství",
+				"is": "Dónárbrúin",
+				"de": "Donaubrücke"
+			},
+			"desc": {
+				"pl": "Stalowy most kolejowo-drogowy do rumuńskiego Giurgiu, z wieżami na końcach",
+				"en": "The steel road and rail bridge to Giurgiu in Romania, with towers at its ends",
+				"cs": "Ocelový silniční a železniční most do rumunského Giurgiu s věžemi na koncích",
+				"is": "Stálbrú fyrir bíla og lestir til Giurgiu í Rúmeníu, með turnum á endunum",
+				"de": "Die stählerne Straßen- und Eisenbahnbrücke nach Giurgiu in Rumänien, mit Türmen an den Enden"
+			},
+			"local": "Дунав мост"
+		}
+	],
+	"Stara Zagora": [
+		{
+			"kind": "stara_zagora_defenders",
+			"name": {
+				"pl": "Pomnik Obrońców Starej Zagory",
+				"en": "Defenders of Stara Zagora",
+				"cs": "Památník obránců Staré Zagory",
+				"is": "Verjendur Stara Zagora",
+				"de": "Denkmal der Verteidiger"
+			},
+			"desc": {
+				"pl": "Betonowi obrońcy z 1877 roku i Samarska Chorągiew na wzgórzu nad miastem",
+				"en": "Concrete defenders of 1877 and the Samara Flag on a hill above the town",
+				"cs": "Betonoví obránci z roku 1877 a Samarský prapor na kopci nad městem",
+				"is": "Steyptir verjendur frá 1877 og Samara-fáninn á hæð yfir bænum",
+				"de": "Betonverteidiger von 1877 und die Samara-Fahne auf einem Hügel über der Stadt"
+			},
+			"local": "Бранителите на Стара Загора"
+		}
+	],
+	"Pleven": [
+		{
+			"kind": "pleven_panorama",
+			"name": {
+				"pl": "Panorama Plewen 1877",
+				"en": "Pleven Panorama",
+				"cs": "Panorama Pleven",
+				"is": "Pleven-víðmyndin",
+				"de": "Panorama Plewen"
+			},
+			"desc": {
+				"pl": "Okrągły gmach z wielkim malowidłem bitwy o Plewen",
+				"en": "A round hall with a huge painting of the battle for Pleven",
+				"cs": "Kruhová budova s obrovskou malbou bitvy o Pleven",
+				"is": "Hringlaga bygging með risastóru málverki af orrustunni um Pleven",
+				"de": "Ein Rundbau mit einem riesigen Gemälde der Schlacht um Plewen"
+			},
+			"local": "Плевенска епопея 1877"
+		}
+	],
+	"Sliven": [
+		{
+			"kind": "halkata_rock",
+			"name": {
+				"pl": "Halkata w Sinite kamani",
+				"en": "Halkata, the Ring rock",
+				"cs": "Skalní prsten Halkata",
+				"is": "Hringkletturinn Halkata",
+				"de": "Felsring Halkata"
+			},
+			"desc": {
+				"pl": "Skalne okno na grani Niebieskich Skał; przejście przez nie podobno spełnia życzenia",
+				"en": "A rock window on the Blue Rocks' ridge; walking through it is said to grant wishes",
+				"cs": "Skalní okno na hřebeni Modrých skal; průchod jím prý plní přání",
+				"is": "Klettagluggi á hrygg Bláu klettanna; sagt er að sá sem gengur í gegn fái ósk sína uppfyllta",
+				"de": "Ein Felsfenster am Grat der Blauen Felsen; wer hindurchgeht, dem sollen sich Wünsche erfüllen"
+			},
+			"local": "Халката"
+		}
+	],
+	"Dobrich": [
+		{
+			"kind": "stariya_dobrich",
+			"name": {
+				"pl": "Skansen Stary Dobricz",
+				"en": "Old Dobrich",
+				"cs": "Starý Dobrič",
+				"is": "Gamli Dobrich",
+				"de": "Alt-Dobritsch"
+			},
+			"desc": {
+				"pl": "Uliczka rzemieślników z niskimi domami pod dachówką i drewnianymi okiennicami",
+				"en": "A craftsmen's street of low tiled houses with wooden shutters",
+				"cs": "Ulička řemeslníků s nízkými domy pod taškami a dřevěnými okenicemi",
+				"is": "Handverksgata með lágum tígulsteinshúsum og tréhlerum",
+				"de": "Eine Handwerkergasse mit niedrigen Ziegeldachhäusern und hölzernen Fensterläden"
+			},
+			"local": "Стария Добрич"
+		}
+	],
+	"Shumen": [
+		{
+			"kind": "shumen_founders_monument",
+			"name": {
+				"pl": "Pomnik Twórców Państwa Bułgarskiego",
+				"en": "Founders of the Bulgarian State",
+				"cs": "Památník zakladatelů bulharského státu",
+				"is": "Stofnendur búlgarska ríkisins",
+				"de": "Denkmal der Gründer des bulgarischen Staates"
+			},
+			"desc": {
+				"pl": "Ogromne kanciaste postacie chanów na płaskowyżu, widoczne z daleka",
+				"en": "Huge angular figures of the khans on the plateau, seen from far away",
+				"cs": "Obrovské hranaté postavy chánů na plošině, viditelné zdaleka",
+				"is": "Risastórar kantaðar myndir kana á hásléttunni, sjást langt að",
+				"de": "Riesige kantige Figuren der Khane auf dem Plateau, weithin sichtbar"
+			},
+			"local": "Създатели на българската държава"
+		}
+	],
+	"Pernik": [
+		{
+			"kind": "surva_kuker",
+			"name": {
+				"pl": "Kuker z festiwalu Surwa",
+				"en": "A Surva kuker",
+				"cs": "Kuker z festivalu Surva",
+				"is": "Kukeri frá Surva",
+				"de": "Ein Kuker vom Surva-Fest"
+			},
+			"desc": {
+				"pl": "Kosmata postać w rogatej masce z dzwonami przy pasie, odpędzająca złe duchy",
+				"en": "A shaggy figure in a horned mask with bells at the belt, chasing evil spirits away",
+				"cs": "Huňatá postava v rohaté masce se zvony u pasu, která zahání zlé duchy",
+				"is": "Loðin vera með hyrnda grímu og bjöllur við beltið sem rekur illa anda burt",
+				"de": "Eine zottelige Gestalt mit gehörnter Maske und Glocken am Gürtel, die böse Geister vertreibt"
+			},
+			"local": "Сурва"
+		}
+	],
+	"Veliko Tarnovo": [
+		{
+			"kind": "tsarevets_fortress",
+			"name": {
+				"pl": "Twierdza Carewec",
+				"en": "Tsarevets Fortress",
+				"cs": "Pevnost Carevec",
+				"is": "Tsarevets-virkið",
+				"de": "Festung Zarewez"
+			},
+			"desc": {
+				"pl": "Mury carskiego wzgórza nad Jantrą, a na szczycie cerkiew patriarchy",
+				"en": "The walls of the tsars' hill above the Yantra, the Patriarch's church on top",
+				"cs": "Hradby carského vrchu nad Jantrou, na vrcholu patriarchální chrám",
+				"is": "Múrar keisarahæðarinnar yfir Yantra, kirkja patríarkans efst",
+				"de": "Die Mauern des Zarenhügels über der Jantra, oben die Patriarchenkirche"
+			},
+			"local": "Царевец"
+		},
+		{
+			"kind": "asenevtsi_monument",
+			"name": {
+				"pl": "Pomnik Asenowców",
+				"en": "Monument to the Asen Dynasty",
+				"cs": "Památník Asenovců",
+				"is": "Minnisvarði Asen-ættarinnar",
+				"de": "Denkmal der Assenowzi"
+			},
+			"desc": {
+				"pl": "Czterech carów na koniach wokół wysokiego miecza, w zakolu Jantry",
+				"en": "Four tsars on horseback around a tall sword, in a loop of the Yantra",
+				"cs": "Čtyři carové na koních kolem vysokého meče v meandru Jantry",
+				"is": "Fjórir keisarar á hestbaki í kringum hátt sverð, í bugðu Yantra",
+				"de": "Vier Zaren zu Pferd um ein hohes Schwert, in einer Schleife der Jantra"
+			},
+			"local": "Паметник на Асеневци"
+		}
+	],
+	"Haskovo": [
+		{
+			"kind": "haskovo_virgin_mary",
+			"name": {
+				"pl": "Pomnik Matki Bożej",
+				"en": "Statue of the Holy Mother of God",
+				"cs": "Socha Bohorodičky",
+				"is": "Stytta guðsmóðurinnar",
+				"de": "Statue der Gottesmutter"
+			},
+			"desc": {
+				"pl": "Jeden z najwyższych na świecie posągów Matki Boskiej z Dzieciątkiem, na kaplicy na wzgórzu",
+				"en": "One of the tallest statues of the Virgin and Child in the world, on a chapel on the hill",
+				"cs": "Jedna z nejvyšších soch Panny Marie s Ježíškem na světě, na kapli na kopci",
+				"is": "Ein hæsta stytta heims af Maríu mey með barnið, á kapellu á hæðinni",
+				"de": "Eine der höchsten Statuen der Muttergottes mit Kind der Welt, auf einer Kapelle am Hügel"
+			},
+			"local": "Паметник „Света Богородица“"
+		}
+	],
+	"Blagoevgrad": [
+		{
+			"kind": "varosha_annunciation",
+			"name": {
+				"pl": "Stara dzielnica Warosza",
+				"en": "The Varosha quarter",
+				"cs": "Stará čtvrť Varoša",
+				"is": "Varosha-hverfið",
+				"de": "Altstadt Warosch"
+			},
+			"desc": {
+				"pl": "Cerkiew Zwiastowania z dzwonnicą wśród domów z wykuszami",
+				"en": "The Church of the Annunciation and its bell tower among bay-windowed houses",
+				"cs": "Kostel Zvěstování se zvonicí mezi domy s arkýři",
+				"is": "Boðunarkirkjan og klukkuturn hennar meðal húsa með útskotsgluggum",
+				"de": "Die Verkündigungskirche mit Glockenturm zwischen Erkerhäusern"
+			},
+			"local": "Вароша"
+		}
+	],
+	"Yambol": [
+		{
+			"kind": "yambol_bezisten",
+			"name": {
+				"pl": "Bezisten w Jambole",
+				"en": "Yambol Bezisten",
+				"cs": "Bezisten v Jambolu",
+				"is": "Bezisten í Yambol",
+				"de": "Bezisten in Jambol"
+			},
+			"desc": {
+				"pl": "Kamienny kryty bazar z XV wieku pod rzędem ołowianych kopuł",
+				"en": "A 15th-century stone covered market under a row of lead domes",
+				"cs": "Kamenná krytá tržnice z 15. století pod řadou olověných kopulí",
+				"is": "Yfirbyggður steinmarkaður frá 15. öld undir röð blýhvolfa",
+				"de": "Ein steinerner überdachter Markt aus dem 15. Jahrhundert unter einer Reihe von Bleikuppeln"
+			},
+			"local": "Безистен"
+		}
+	],
+	"Pazardzhik": [
+		{
+			"kind": "pazardzhik_virgin_church",
+			"name": {
+				"pl": "Cerkiew Matki Bożej",
+				"en": "Church of the Holy Mother of God",
+				"cs": "Kostel Bohorodičky",
+				"is": "Kirkja guðsmóðurinnar",
+				"de": "Kirche der Gottesmutter"
+			},
+			"desc": {
+				"pl": "Niska kamienna cerkiew z podcieniami; w środku ikonostas rzeźbiony w orzechu",
+				"en": "A low stone church with arcades; inside an iconostasis carved in walnut",
+				"cs": "Nízký kamenný kostel s podloubím; uvnitř ikonostas vyřezaný z ořechu",
+				"is": "Lág steinkirkja með bogagöngum; inni helgimyndaveggur skorinn í valhnetu",
+				"de": "Eine niedrige Steinkirche mit Arkaden; innen eine aus Nussholz geschnitzte Ikonostase"
+			},
+			"local": "Църква „Света Богородица“"
+		}
+	],
+	"Vratsa": [
+		{
+			"kind": "vratsata_gorge",
+			"name": {
+				"pl": "Wąwóz Wracata",
+				"en": "Vratsata Gorge",
+				"cs": "Soutěska Vracata",
+				"is": "Vratsata-gljúfrið",
+				"de": "Wrazata-Schlucht"
+			},
+			"desc": {
+				"pl": "Pionowe wapienne ściany wysokie na 400 metrów, przez które przeciska się droga",
+				"en": "Sheer limestone walls 400 metres high, with the road squeezing between them",
+				"cs": "Kolmé vápencové stěny vysoké 400 metrů, mezi nimiž se protahuje silnice",
+				"is": "Þverhníptir 400 metra kalksteinsveggir og vegurinn smeygir sér á milli",
+				"de": "Senkrechte, 400 Meter hohe Kalkwände, zwischen denen sich die Straße hindurchzwängt"
+			},
+			"local": "Проломът Вратцата"
+		}
+	],
+	"Gabrovo": [
+		{
+			"kind": "etara_watermill",
+			"name": {
+				"pl": "Skansen Etyr",
+				"en": "Etar open-air museum",
+				"cs": "Skanzen Etar",
+				"is": "Etar-útisafnið",
+				"de": "Freilichtmuseum Etar"
+			},
+			"desc": {
+				"pl": "Drewniane domy rzemieślników nad strumieniem, który kręci kołem młyna",
+				"en": "Craftsmen's wooden houses by a stream that turns a mill wheel",
+				"cs": "Dřevěné domy řemeslníků u potoka, který pohání mlýnské kolo",
+				"is": "Timburhús handverksmanna við læk sem snýr mylluhjóli",
+				"de": "Holzhäuser der Handwerker an einem Bach, der ein Mühlrad dreht"
+			},
+			"local": "Етъра"
+		}
+	],
+	"Kazanlak": [
+		{
+			"kind": "kazanlak_thracian_tomb",
+			"name": {
+				"pl": "Tracki grobowiec w Kazanłyku",
+				"en": "Thracian Tomb of Kazanlak",
+				"cs": "Thrácká hrobka v Kazanlaku",
+				"is": "Þrakíska grafhýsið í Kazanlak",
+				"de": "Thrakergrab von Kasanlak"
+			},
+			"desc": {
+				"pl": "Kopiec kryje ceglaną komorę z freskami sprzed 2300 lat",
+				"en": "A mound hiding a brick chamber with frescoes 2,300 years old",
+				"cs": "Mohyla skrývá cihlovou komoru s freskami starými 2300 let",
+				"is": "Haugur sem hylur múrsteinshvelfingu með 2300 ára gömlum freskum",
+				"de": "Ein Hügel birgt eine Ziegelkammer mit 2300 Jahre alten Fresken"
+			},
+			"local": "Казанлъшка гробница"
+		},
+		{
+			"kind": "kazanlak_rose_harvest",
+			"name": {
+				"pl": "Zbiór róż",
+				"en": "The rose harvest",
+				"cs": "Sklizeň růží",
+				"is": "Rósauppskeran",
+				"de": "Die Rosenernte"
+			},
+			"desc": {
+				"pl": "W maju o świcie zrywa się różę damasceńską na olejek różany",
+				"en": "At dawn in May the Damask roses are picked for rose oil",
+				"cs": "V květnu za úsvitu se trhají damašské růže na růžový olej",
+				"is": "Í maí í dögun eru damaskusrósir tíndar í rósaolíu",
+				"de": "Im Mai werden im Morgengrauen die Damaszenerrosen für das Rosenöl gepflückt"
+			},
+			"local": "Розобер"
+		}
+	],
+	"Bansko": [
+		{
+			"kind": "bansko_holy_trinity",
+			"name": {
+				"pl": "Cerkiew Świętej Trójcy",
+				"en": "Holy Trinity Church",
+				"cs": "Kostel Svaté Trojice",
+				"is": "Þrenningarkirkjan",
+				"de": "Dreifaltigkeitskirche"
+			},
+			"desc": {
+				"pl": "Kamienna cerkiew z wysoką dzwonnicą z zegarem, a za nią szczyty Pirinu",
+				"en": "A stone church with a tall clock bell tower, the Pirin peaks behind",
+				"cs": "Kamenný kostel s vysokou zvonicí s hodinami, za ním vrcholy Pirinu",
+				"is": "Steinkirkja með háum klukkuturni og tindar Pirin að baki",
+				"de": "Eine Steinkirche mit hohem Uhr-Glockenturm, dahinter die Gipfel des Pirin"
+			},
+			"local": "Църква „Света Троица“"
+		}
+	],
+	"Kocherinovo": [
+		{
+			"kind": "rila_monastery",
+			"name": {
+				"pl": "Monastyr Rylski",
+				"en": "Rila Monastery",
+				"cs": "Rilský klášter",
+				"is": "Rila-klaustrið",
+				"de": "Rila-Kloster"
+			},
+			"desc": {
+				"pl": "Pasiaste arkady wokół cerkwi i kamiennej wieży Chreli, w dolinie pod Riłą",
+				"en": "Striped arcades around the church and Hrelyo's stone tower, in a valley below Rila",
+				"cs": "Pruhované arkády kolem chrámu a kamenné věže Chreljo v údolí pod Rilou",
+				"is": "Röndóttar bogagöngur kringum kirkjuna og steinturn Hrelyo, í dal undir Rila",
+				"de": "Gestreifte Arkaden um die Kirche und Hreljos Steinturm, in einem Tal unter dem Rila"
+			},
+			"local": "Рилски манастир"
+		}
+	],
+	"Shipka": [
+		{
+			"kind": "shipka_memorial_church",
+			"name": {
+				"pl": "Cerkiew-pomnik w Szipce",
+				"en": "Shipka Memorial Church",
+				"cs": "Pamětní chrám v Šipce",
+				"is": "Minningarkirkjan í Shipka",
+				"de": "Gedächtniskirche Schipka"
+			},
+			"desc": {
+				"pl": "Rosyjska cerkiew ze złotymi cebulastymi kopułami na zboczu Bałkanu",
+				"en": "A Russian-style church with golden onion domes on the Balkan slope",
+				"cs": "Chrám v ruském stylu se zlatými cibulovitými kopulemi na svahu Balkánu",
+				"is": "Kirkja í rússneskum stíl með gylltum laukhvolfum í hlíð Balkanfjalla",
+				"de": "Eine Kirche im russischen Stil mit goldenen Zwiebeltürmen am Hang des Balkans"
+			},
+			"local": "Храм-паметник „Рождество Христово“"
+		}
+	],
+	"Devnya": [
+		{
+			"kind": "pobiti_kamani",
+			"name": {
+				"pl": "Pobiti kamani",
+				"en": "Pobiti Kamani stone forest",
+				"cs": "Kamenný les Pobiti kamani",
+				"is": "Steinskógurinn Pobiti Kamani",
+				"de": "Steinwald Pobiti Kamani"
+			},
+			"desc": {
+				"pl": "Puste kamienne kolumny sterczące z piasku jak pnie drzew",
+				"en": "Hollow stone columns rising out of the sand like tree trunks",
+				"cs": "Duté kamenné sloupy trčící z písku jako kmeny stromů",
+				"is": "Holar steinsúlur sem rísa upp úr sandinum eins og trjástofnar",
+				"de": "Hohle Steinsäulen, die wie Baumstämme aus dem Sand ragen"
+			},
+			"local": "Побити камъни"
+		}
+	],
+	"Nesebar": [
+		{
+			"kind": "nesebar_pantocrator",
+			"name": {
+				"pl": "Cerkiew Chrystusa Pantokratora",
+				"en": "Church of Christ Pantocrator",
+				"cs": "Kostel Krista Pantokratora",
+				"is": "Kirkja Krists Pantókrators",
+				"de": "Kirche Christus Pantokrator"
+			},
+			"desc": {
+				"pl": "Średniowieczna cerkiew z pasów cegły i kamienia, z zielonymi ceramicznymi rozetami",
+				"en": "A medieval church of brick and stone bands, with green ceramic rosettes",
+				"cs": "Středověký kostel z pásů cihel a kamene se zelenými keramickými rozetami",
+				"is": "Kirkja frá miðöldum úr múrsteins- og steinröndum, með grænum leirrósettum",
+				"de": "Eine mittelalterliche Kirche aus Ziegel- und Steinbändern, mit grünen Keramikrosetten"
+			},
+			"local": "Църква „Христос Пантократор“"
+		}
+	]
+}
