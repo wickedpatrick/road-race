@@ -1,0 +1,590 @@
+{
+	"Kyiv": [
+		{
+			"kind": "kyiv_st_sophia",
+			"name": {
+				"pl": "Sobór Mądrości Bożej",
+				"en": "St Sophia's Cathedral",
+				"cs": "Chrám svaté Sofie",
+				"is": "Soffíukirkjan",
+				"de": "Sophienkathedrale"
+			},
+			"desc": {
+				"pl": "Zbudowany za Jarosława Mądrego w XI wieku, z zielonymi i złotymi kopułami i niebiesko-białą dzwonnicą",
+				"en": "Built under Yaroslav the Wise in the 11th century, with green and gold domes and a blue and white bell tower",
+				"cs": "Postaven za Jaroslava Moudrého v 11. století, se zelenými a zlatými kopulemi a modrobílou zvonicí",
+				"is": "Reist á dögum Jaroslavs vitra á 11. öld, með grænum og gylltum hvolfþökum og blá- og hvítum klukkuturni",
+				"de": "Unter Jaroslaw dem Weisen im 11. Jahrhundert erbaut, mit grünen und goldenen Kuppeln und blau-weißem Glockenturm"
+			},
+			"local": "Софійський собор"
+		}
+	],
+	"Kharkiv": [
+		{
+			"kind": "kharkiv_derzhprom",
+			"name": {"pl": "Derżprom", "en": "Derzhprom", "cs": "Deržprom", "is": "Derzhprom", "de": "Derschprom"},
+			"desc": {
+				"pl": "Gmach Przemysłu Państwowego z 1928 roku, jeden z pierwszych drapaczy chmur z betonu w Europie",
+				"en": "The State Industry building of 1928, one of the first concrete skyscrapers in Europe",
+				"cs": "Dům státního průmyslu z roku 1928, jeden z prvních betonových mrakodrapů v Evropě",
+				"is": "Ríkisiðnaðarhúsið frá 1928, einn fyrsti steinsteypti skýjakljúfur Evrópu",
+				"de": "Das Haus der Staatsindustrie von 1928, einer der ersten Betonwolkenkratzer Europas"
+			},
+			"local": "Держпром"
+		}
+	],
+	"Odesa": [
+		{
+			"kind": "odesa_opera",
+			"name": {
+				"pl": "Opera Odeska",
+				"en": "Odesa Opera House",
+				"cs": "Oděská opera",
+				"is": "Óperuhúsið í Odesa",
+				"de": "Opernhaus Odessa"
+			},
+			"desc": {
+				"pl": "Barokowy teatr z 1887 roku, zbudowany przez wiedeńskich architektów Fellnera i Helmera",
+				"en": "A baroque theatre of 1887, designed by the Viennese architects Fellner and Helmer",
+				"cs": "Barokní divadlo z roku 1887 od vídeňských architektů Fellnera a Helmera",
+				"is": "Barokkleikhús frá 1887, hannað af vínversku arkitektunum Fellner og Helmer",
+				"de": "Ein Barocktheater von 1887, entworfen von den Wiener Architekten Fellner und Helmer"
+			},
+			"local": "Одеський оперний театр"
+		}
+	],
+	"Dnipro": [
+		{
+			"kind": "dnipro_menorah",
+			"name": {
+				"pl": "Centrum Menora",
+				"en": "Menorah Centre",
+				"cs": "Centrum Menora",
+				"is": "Menóra-miðstöðin",
+				"de": "Menora-Zentrum"
+			},
+			"desc": {
+				"pl": "Siedem wież w kształcie świecznika; jedno z największych centrów żydowskich na świecie",
+				"en": "Seven towers shaped like a candelabrum; one of the largest Jewish community centres in the world",
+				"cs": "Sedm věží ve tvaru svícnu; jedno z největších židovských center na světě",
+				"is": "Sjö turnar í laginu eins og kertastjaki; ein stærsta miðstöð gyðinga í heiminum",
+				"de": "Sieben Türme in Form eines Leuchters; eines der größten jüdischen Gemeindezentren der Welt"
+			},
+			"local": "Центр «Менора»"
+		}
+	],
+	"Lviv": [
+		{
+			"kind": "lviv_rynok",
+			"name": {
+				"pl": "Rynek i ratusz",
+				"en": "Market Square and Town Hall",
+				"cs": "Náměstí Rynok a radnice",
+				"is": "Markaðstorgið og ráðhúsið",
+				"de": "Marktplatz und Rathaus"
+			},
+			"desc": {
+				"pl": "Kolorowe kamienice wokół ratusza z 65-metrową wieżą; z galerii widać całe stare miasto",
+				"en": "Colourful town houses around the town hall with its 65 m tower; the whole old town can be seen from the top",
+				"cs": "Barevné měšťanské domy kolem radnice s 65metrovou věží; z ochozu je vidět celé staré město",
+				"is": "Litrík borgarhús umhverfis ráðhúsið með 65 m turni; þaðan sést allur gamli bærinn",
+				"de": "Bunte Bürgerhäuser um das Rathaus mit seinem 65 m hohen Turm; oben sieht man die ganze Altstadt"
+			},
+			"local": "Площа Ринок"
+		}
+	],
+	"Zaporizhzhia": [
+		{
+			"kind": "dniprohes_dam",
+			"name": {
+				"pl": "Zapora DniproHES",
+				"en": "DniproHES Dam",
+				"cs": "Přehrada DniproHES",
+				"is": "DniproHES-stíflan",
+				"de": "Staudamm DniproHES"
+			},
+			"desc": {
+				"pl": "Łukowata zapora elektrowni z 1932 roku; po jej koronie biegnie droga przez Dniepr",
+				"en": "The curved dam of a hydroelectric plant from 1932; a road runs across the Dnieper along its top",
+				"cs": "Obloukovitá hráz elektrárny z roku 1932; po její koruně vede silnice přes Dněpr",
+				"is": "Bogadregin stífla vatnsaflsvirkjunar frá 1932; vegur liggur yfir Dnjepr eftir henni",
+				"de": "Der geschwungene Damm eines Wasserkraftwerks von 1932; oben führt eine Straße über den Dnipro"
+			},
+			"local": "Дніпровська ГЕС"
+		}
+	],
+	"Kryvyi Rih": [
+		{
+			"kind": "kryvyi_rih_headframe",
+			"name": {
+				"pl": "Wieża szybowa kopalni rudy",
+				"en": "Iron ore mine headframe",
+				"cs": "Těžní věž rudného dolu",
+				"is": "Lyftuturn járnnámu",
+				"de": "Förderturm einer Erzgrube"
+			},
+			"desc": {
+				"pl": "Kryworoskie zagłębie rudy żelaza ciągnie się ponad 100 km; nad szybami stoją stalowe wieże wyciągowe",
+				"en": "The Kryvbas iron ore basin stretches over 100 km; steel headframes stand over the mine shafts",
+				"cs": "Rudná pánev Kryvbas se táhne přes 100 km; nad šachtami stojí ocelové těžní věže",
+				"is": "Járngrýtisvæðið Kryvbas nær yfir 100 km; stállyftuturnar standa yfir námugöngunum",
+				"de": "Das Eisenerzbecken Krywbas erstreckt sich über 100 km; über den Schächten stehen stählerne Fördertürme"
+			},
+			"local": "Шахтний копер"
+		}
+	],
+	"Mykolaiv": [
+		{
+			"kind": "mykolaiv_slipway",
+			"name": {
+				"pl": "Stocznia nad Bohem",
+				"en": "Shipyard on the Southern Bug",
+				"cs": "Loděnice na Jižním Bugu",
+				"is": "Skipasmíðastöð við Suður-Bug",
+				"de": "Werft am Südlichen Bug"
+			},
+			"desc": {
+				"pl": "Miasto założono w 1789 roku jako stocznię; kadłuby statków wciąż rosną tu na pochylniach pod żurawiami",
+				"en": "The city was founded as a shipyard in 1789; ship hulls still grow on the slipways under the cranes",
+				"cs": "Město bylo založeno roku 1789 jako loděnice; trupy lodí tu dodnes rostou na skluzech pod jeřáby",
+				"is": "Borgin var stofnuð sem skipasmíðastöð 1789; skipsskrokkar rísa enn á dráttarbrautum undir krönunum",
+				"de": "Die Stadt wurde 1789 als Werft gegründet; auf den Hellingen unter den Kränen wachsen noch heute Schiffsrümpfe"
+			},
+			"local": "Суднобудівна верф"
+		}
+	],
+	"Vinnytsia": [
+		{
+			"kind": "vinnytsia_water_tower",
+			"name": {
+				"pl": "Wieża ciśnień",
+				"en": "Water Tower",
+				"cs": "Vodárenská věž",
+				"is": "Vatnsturninn",
+				"de": "Wasserturm"
+			},
+			"desc": {
+				"pl": "Ceglana wieża z zegarem z 1912 roku, symbol miasta nad Bohem",
+				"en": "A brick clock tower of 1912, the symbol of the city on the Southern Bug",
+				"cs": "Cihlová věž s hodinami z roku 1912, symbol města na Jižním Bugu",
+				"is": "Klukkuturn úr múrsteini frá 1912, tákn borgarinnar við Suður-Bug",
+				"de": "Ein Backsteinturm mit Uhr von 1912, das Wahrzeichen der Stadt am Südlichen Bug"
+			},
+			"local": "Водонапірна вежа"
+		}
+	],
+	"Chernihiv": [
+		{
+			"kind": "chernihiv_transfiguration",
+			"name": {
+				"pl": "Sobór Przemienienia Pańskiego",
+				"en": "Transfiguration Cathedral",
+				"cs": "Katedrála Proměnění Páně",
+				"is": "Ummyndunarkirkjan",
+				"de": "Verklärungskathedrale"
+			},
+			"desc": {
+				"pl": "Jedna z najstarszych świątyń Rusi Kijowskiej, z XI wieku, z dwiema okrągłymi wieżami",
+				"en": "One of the oldest churches of Kyivan Rus', from the 11th century, with two round towers",
+				"cs": "Jeden z nejstarších chrámů Kyjevské Rusi z 11. století, se dvěma kulatými věžemi",
+				"is": "Ein elsta kirkja Garðaríkis, frá 11. öld, með tveimur sívölum turnum",
+				"de": "Eine der ältesten Kirchen der Kiewer Rus aus dem 11. Jahrhundert, mit zwei runden Türmen"
+			},
+			"local": "Спасо-Преображенський собор"
+		}
+	],
+	"Poltava": [
+		{
+			"kind": "poltava_white_arbour",
+			"name": {
+				"pl": "Biała Altana",
+				"en": "White Arbour",
+				"cs": "Bílá altána",
+				"is": "Hvíti skálinn",
+				"de": "Weiße Laube"
+			},
+			"desc": {
+				"pl": "Klasycystyczna rotunda na skarpie nad doliną Worskli, ulubione miejsce spacerów",
+				"en": "A classical rotunda on the bluff above the Vorskla valley, a favourite walk",
+				"cs": "Klasicistní rotunda na srázu nad údolím Vorskly, oblíbené místo procházek",
+				"is": "Klassískur hringskáli á brekkubrún yfir Vorskla-dalnum, vinsæll gönguáfangastaður",
+				"de": "Eine klassizistische Rotunde am Hang über dem Tal der Worskla, ein beliebter Spazierweg"
+			},
+			"local": "Біла альтанка"
+		}
+	],
+	"Khmelnytskyi": [
+		{
+			"kind": "khmelnytskyi_hetman",
+			"name": {
+				"pl": "Pomnik Bohdana Chmielnickiego",
+				"en": "Bohdan Khmelnytsky Monument",
+				"cs": "Pomník Bohdana Chmelnického",
+				"is": "Minnisvarði um Bohdan Khmelnytskyj",
+				"de": "Denkmal für Bohdan Chmelnyzkyj"
+			},
+			"desc": {
+				"pl": "Hetman z buławą; od 1954 roku miasto, dawny Płoskirów, nosi jego imię",
+				"en": "The hetman with his mace; since 1954 the city, formerly Proskuriv, bears his name",
+				"cs": "Hejtman s palcátem; od roku 1954 nese město, dříve Proskuriv, jeho jméno",
+				"is": "Hetmaninn með veldissprota sinn; síðan 1954 ber borgin, áður Proskuriv, nafn hans",
+				"de": "Der Hetman mit seinem Streitkolben; seit 1954 trägt die Stadt, früher Proskuriw, seinen Namen"
+			},
+			"local": "Пам’ятник Богдану Хмельницькому"
+		}
+	],
+	"Cherkasy": [
+		{
+			"kind": "cherkasy_dam",
+			"name": {
+				"pl": "Grobla Czerkaska",
+				"en": "Cherkasy Dam Road",
+				"cs": "Čerkaská hráz",
+				"is": "Stíflan við Tsjerkasí",
+				"de": "Damm von Tscherkassy"
+			},
+			"desc": {
+				"pl": "Droga po kilkunastokilometrowej grobli i moście przecina Zalew Krzemieńczucki na Dnieprze",
+				"en": "A road on a dam over a dozen kilometres long and a bridge crosses the Kremenchuk Reservoir on the Dnieper",
+				"cs": "Silnice po více než desetikilometrové hrázi a mostě přetíná Kremenčucké jezero na Dněpru",
+				"is": "Vegur á meira en tíu kílómetra langri stíflu og brú liggur yfir Kremenchuk-lónið á Dnjepr",
+				"de": "Eine Straße auf einem über zehn Kilometer langen Damm und einer Brücke quert den Krementschuker Stausee am Dnipro"
+			},
+			"local": "Черкаська дамба"
+		}
+	],
+	"Chernivtsi": [
+		{
+			"kind": "chernivtsi_residence",
+			"name": {
+				"pl": "Rezydencja metropolitów",
+				"en": "Residence of the Metropolitans",
+				"cs": "Rezidence metropolitů",
+				"is": "Bústaður erkibiskupanna",
+				"de": "Residenz der Metropoliten"
+			},
+			"desc": {
+				"pl": "Ceglany pałac z kolorowymi dachówkami, dziś uniwersytet; wpisany na listę UNESCO",
+				"en": "A brick palace with colourful roof tiles, now the university; a UNESCO World Heritage Site",
+				"cs": "Cihlový palác s barevnými taškami, dnes univerzita; na seznamu UNESCO",
+				"is": "Múrsteinshöll með litríkum þakflísum, nú háskóli; á heimsminjaskrá UNESCO",
+				"de": "Ein Backsteinpalast mit bunten Dachziegeln, heute die Universität; UNESCO-Welterbe"
+			},
+			"local": "Резиденція митрополитів"
+		}
+	],
+	"Zhytomyr": [
+		{
+			"kind": "zhytomyr_rocket",
+			"name": {
+				"pl": "Muzeum Kosmonautyki",
+				"en": "Museum of Cosmonautics",
+				"cs": "Muzeum kosmonautiky",
+				"is": "Geimferðasafnið",
+				"de": "Museum der Raumfahrt"
+			},
+			"desc": {
+				"pl": "Rakieta przed muzeum w mieście, gdzie urodził się Siergiej Korolow, konstruktor pierwszych rakiet kosmicznych",
+				"en": "A rocket outside the museum in the city where Serhiy Korolyov, designer of the first space rockets, was born",
+				"cs": "Raketa před muzeem ve městě, kde se narodil Serhij Koroljov, konstruktér prvních kosmických raket",
+				"is": "Eldflaug fyrir utan safnið í borginni þar sem Serhíj Koroljov, hönnuður fyrstu geimflauganna, fæddist",
+				"de": "Eine Rakete vor dem Museum in der Stadt, in der Serhij Koroljow, Konstrukteur der ersten Weltraumraketen, geboren wurde"
+			},
+			"local": "Музей космонавтики імені С. П. Корольова"
+		}
+	],
+	"Sumy": [
+		{
+			"kind": "sumy_trinity",
+			"name": {
+				"pl": "Sobór Świętej Trójcy",
+				"en": "Holy Trinity Cathedral",
+				"cs": "Katedrála Nejsvětější Trojice",
+				"is": "Þrenningarkirkjan",
+				"de": "Dreifaltigkeitskathedrale"
+			},
+			"desc": {
+				"pl": "Żółta świątynia ze złotą kopułą, ufundowana na początku XX wieku przez cukrowników Charytonenków",
+				"en": "A yellow church with a golden dome, paid for in the early 20th century by the Kharytonenko sugar family",
+				"cs": "Žlutý chrám se zlatou kopulí, postavený na začátku 20. století z peněz cukrovarníků Charytonenkových",
+				"is": "Gul kirkja með gylltu hvolfþaki, kostuð snemma á 20. öld af sykurfjölskyldunni Kharytonenko",
+				"de": "Eine gelbe Kirche mit goldener Kuppel, Anfang des 20. Jahrhunderts von der Zuckerfamilie Charytonenko gestiftet"
+			},
+			"local": "Свято-Троїцький собор"
+		}
+	],
+	"Rivne": [
+		{
+			"kind": "rivne_tunnel_of_love",
+			"name": {
+				"pl": "Tunel Miłości",
+				"en": "Tunnel of Love",
+				"cs": "Tunel lásky",
+				"is": "Ástargöngin",
+				"de": "Tunnel der Liebe"
+			},
+			"desc": {
+				"pl": "Pod Klewaniem tor kolejowy biegnie przez zielony tunel z drzew; pociąg wozi tu drewno",
+				"en": "Near Klevan a railway line runs through a green tunnel of trees; a train carries timber along it",
+				"cs": "U Klevaně vede železniční trať zeleným tunelem ze stromů; jezdí tu vlak se dřevem",
+				"is": "Við Klevan liggur járnbraut um grænan trjágöng; lest flytur þar timbur",
+				"de": "Bei Klewan führt eine Bahnstrecke durch einen grünen Tunnel aus Bäumen; ein Zug bringt dort Holz"
+			},
+			"local": "Тунель кохання"
+		}
+	],
+	"Ivano-Frankivsk": [
+		{
+			"kind": "frankivsk_ratusha",
+			"name": {"pl": "Ratusz", "en": "Town Hall", "cs": "Radnice", "is": "Ráðhúsið", "de": "Rathaus"},
+			"desc": {
+				"pl": "Stanisławowski ratusz w stylu konstruktywizmu z lat 30. XX wieku, z wieżą zwieńczoną iglicą",
+				"en": "Stanisławów's constructivist town hall from the 1930s, its tower topped with a spire",
+				"cs": "Konstruktivistická radnice Stanislavova z 30. let 20. století s věží zakončenou jehlanem",
+				"is": "Ráðhús Stanisławów í konstrúktívískum stíl frá fjórða áratugnum, turninn með spíru",
+				"de": "Das konstruktivistische Rathaus von Stanisławów aus den 1930er Jahren, sein Turm mit einer Spitze"
+			},
+			"local": "Ратуша"
+		}
+	],
+	"Ternopil": [
+		{
+			"kind": "ternopil_castle",
+			"name": {
+				"pl": "Zamek nad stawem",
+				"en": "Castle by the Pond",
+				"cs": "Zámek u rybníka",
+				"is": "Kastalinn við tjörnina",
+				"de": "Schloss am Teich"
+			},
+			"desc": {
+				"pl": "Zamek Tarnowskich z XVI wieku nad Stawem Tarnopolskim, po którym pływają łodzie",
+				"en": "The Tarnowski castle of the 16th century on the Ternopil Pond, with boats sailing on it",
+				"cs": "Zámek Tarnowských ze 16. století u Ternopilského rybníka, po kterém plují lodě",
+				"is": "Kastali Tarnowski-ættarinnar frá 16. öld við Ternopil-tjörnina, þar sem bátar sigla",
+				"de": "Das Schloss der Tarnowski aus dem 16. Jahrhundert am Ternopiler Teich, auf dem Boote fahren"
+			},
+			"local": "Тернопільський замок"
+		}
+	],
+	"Kropyvnytskyi": [
+		{
+			"kind": "elizabeth_fortress",
+			"name": {
+				"pl": "Twierdza św. Elżbiety",
+				"en": "Fortress of St Elizabeth",
+				"cs": "Pevnost sv. Alžběty",
+				"is": "Virki heilagrar Elísabetar",
+				"de": "Festung der heiligen Elisabeth"
+			},
+			"desc": {
+				"pl": "Gwiaździsta ziemna twierdza z 1754 roku, wokół której wyrosło miasto",
+				"en": "A star-shaped earthen fortress of 1754, around which the city grew",
+				"cs": "Hvězdicovitá zemní pevnost z roku 1754, kolem níž vyrostlo město",
+				"is": "Stjörnulaga jarðvirki frá 1754 sem borgin óx upp í kringum",
+				"de": "Eine sternförmige Erdfestung von 1754, um die die Stadt gewachsen ist"
+			},
+			"local": "Фортеця святої Єлисавети"
+		}
+	],
+	"Kremenchuk": [
+		{
+			"kind": "kraz_truck",
+			"name": {
+				"pl": "Ciężarówka KrAZ",
+				"en": "KrAZ Truck",
+				"cs": "Nákladní auto KrAZ",
+				"is": "KrAZ-vörubíll",
+				"de": "KrAZ-Lastwagen"
+			},
+			"desc": {
+				"pl": "W Krzemieńczuku od 1958 roku powstają ciężkie ciężarówki KrAZ, w tym wywrotki do kopalń",
+				"en": "Heavy KrAZ trucks, including tipper lorries for the mines, have been made in Kremenchuk since 1958",
+				"cs": "V Kremenčuku se od roku 1958 vyrábějí těžká nákladní auta KrAZ, také sklápěče pro doly",
+				"is": "Þungir KrAZ-vörubílar, þar á meðal sturtubílar fyrir námur, hafa verið smíðaðir í Kremenchuk síðan 1958",
+				"de": "In Krementschuk werden seit 1958 schwere KrAZ-Lastwagen gebaut, auch Kipper für die Gruben"
+			},
+			"local": "Автомобіль КрАЗ"
+		}
+	],
+	"Lutsk": [
+		{
+			"kind": "lutsk_castle",
+			"name": {
+				"pl": "Zamek Lubarta",
+				"en": "Lubart's Castle",
+				"cs": "Lubartův hrad",
+				"is": "Kastali Lubarts",
+				"de": "Lubart-Burg"
+			},
+			"desc": {
+				"pl": "Ceglany zamek z XIV wieku z trzema wieżami; widnieje na banknocie 200 hrywien",
+				"en": "A 14th-century brick castle with three towers; it appears on the 200-hryvnia banknote",
+				"cs": "Cihlový hrad ze 14. století se třemi věžemi; je na bankovce 200 hřiven",
+				"is": "Múrsteinskastali frá 14. öld með þremur turnum; hann er á 200 hrívna seðlinum",
+				"de": "Eine Backsteinburg aus dem 14. Jahrhundert mit drei Türmen; sie ist auf dem 200-Hrywnja-Schein"
+			},
+			"local": "Замок Любарта"
+		}
+	],
+	"Bila Tserkva": [
+		{
+			"kind": "oleksandriia_park",
+			"name": {
+				"pl": "Park Aleksandria",
+				"en": "Oleksandriia Park",
+				"cs": "Park Oleksandrija",
+				"is": "Oleksandríja-garðurinn",
+				"de": "Park Oleksandrija"
+			},
+			"desc": {
+				"pl": "Park krajobrazowy Branickich z 1793 roku, z kolumnadą Echo nad stawem",
+				"en": "The Branicki family's landscape park of 1793, with the Echo colonnade by the pond",
+				"cs": "Krajinářský park Branických z roku 1793 s kolonádou Echo u rybníka",
+				"is": "Landslagsgarður Branicki-fjölskyldunnar frá 1793, með Bergmálssúlnagöngunum við tjörnina",
+				"de": "Der Landschaftspark der Familie Branicki von 1793, mit der Echo-Kolonnade am Teich"
+			},
+			"local": "Дендропарк «Олександрія»"
+		}
+	],
+	"Uzhhorod": [
+		{
+			"kind": "uzhhorod_wooden_church",
+			"name": {
+				"pl": "Drewniana cerkiew w skansenie",
+				"en": "Wooden Church in the Open-Air Museum",
+				"cs": "Dřevěný chrám ve skanzenu",
+				"is": "Timburkirkja í byggðasafninu",
+				"de": "Holzkirche im Freilichtmuseum"
+			},
+			"desc": {
+				"pl": "Łemkowska cerkiew z wysoką wieżą w skansenie przy zamku, wśród chat z całego Zakarpacia",
+				"en": "A Lemko church with a tall tower in the open-air museum by the castle, among cottages from all over Zakarpattia",
+				"cs": "Lemkovský chrám s vysokou věží ve skanzenu u hradu, mezi chalupami z celého Zakarpatí",
+				"is": "Lemka-kirkja með háum turni í byggðasafninu við kastalann, innan um hús frá öllu Zakarpattíu",
+				"de": "Eine lemkische Kirche mit hohem Turm im Freilichtmuseum an der Burg, zwischen Häusern aus ganz Transkarpatien"
+			},
+			"local": "Закарпатський скансен"
+		}
+	],
+	"Kamianets-Podilskyi": [
+		{
+			"kind": "kamianets_fortress",
+			"name": {
+				"pl": "Twierdza w Kamieńcu",
+				"en": "Kamianets Fortress",
+				"cs": "Pevnost Kameněc",
+				"is": "Kamjanets-virkið",
+				"de": "Festung Kamjanez"
+			},
+			"desc": {
+				"pl": "Baszty na skale nad kanionem Smotrycza, połączone mostem ze starym miastem",
+				"en": "Towers on a rock above the Smotrych canyon, joined to the old town by a bridge",
+				"cs": "Věže na skále nad kaňonem Smotryče, spojené mostem se starým městem",
+				"is": "Turnar á kletti yfir Smotrytsj-gljúfrinu, tengdir gamla bænum með brú",
+				"de": "Türme auf einem Felsen über dem Smotrytsch-Canyon, mit der Altstadt durch eine Brücke verbunden"
+			},
+			"local": "Кам’янець-Подільська фортеця"
+		}
+	],
+	"Mukachevo": [
+		{
+			"kind": "palanok_castle",
+			"name": {
+				"pl": "Zamek Palanok",
+				"en": "Palanok Castle",
+				"cs": "Hrad Palanok",
+				"is": "Palanok-kastalinn",
+				"de": "Burg Palanok"
+			},
+			"desc": {
+				"pl": "Zamek na wulkanicznym wzgórzu; w XVII wieku przez trzy lata broniła go księżna Helena Zrinyi",
+				"en": "A castle on a volcanic hill; in the 17th century Princess Ilona Zrínyi defended it for three years",
+				"cs": "Hrad na sopečném kopci; v 17. století jej tři roky bránila kněžna Jelena Zrinská",
+				"is": "Kastali á eldfjallahæð; á 17. öld varði Ilona Zrínyi prinsessa hann í þrjú ár",
+				"de": "Eine Burg auf einem Vulkanhügel; im 17. Jahrhundert verteidigte sie Fürstin Ilona Zrínyi drei Jahre lang"
+			},
+			"local": "Замок Паланок"
+		}
+	],
+	"Uman": [
+		{
+			"kind": "sofiyivka_park",
+			"name": {
+				"pl": "Park Zofiówka",
+				"en": "Sofiyivka Park",
+				"cs": "Park Sofijivka",
+				"is": "Sofíjivka-garðurinn",
+				"de": "Park Sofijiwka"
+			},
+			"desc": {
+				"pl": "Park ze skałami, grotami i wodospadem, który Stanisław Szczęsny Potocki założył w 1796 roku dla żony Zofii",
+				"en": "A park of rocks, grottoes and a waterfall, laid out in 1796 by Stanisław Szczęsny Potocki for his wife Zofia",
+				"cs": "Park se skalami, jeskyněmi a vodopádem, který roku 1796 založil Stanisław Szczęsny Potocki pro svou ženu Zofii",
+				"is": "Garður með klettum, hellum og fossi sem Stanisław Szczęsny Potocki lét gera 1796 handa Zofiu konu sinni",
+				"de": "Ein Park mit Felsen, Grotten und Wasserfall, 1796 von Stanisław Szczęsny Potocki für seine Frau Zofia angelegt"
+			},
+			"local": "Національний дендропарк «Софіївка»"
+		}
+	],
+	"Izmail": [
+		{
+			"kind": "izmail_cathedral",
+			"name": {
+				"pl": "Sobór Opieki Matki Bożej",
+				"en": "Intercession Cathedral",
+				"cs": "Katedrála Přímluvy Bohorodičky",
+				"is": "Verndarkirkjan",
+				"de": "Fürbittekathedrale"
+			},
+			"desc": {
+				"pl": "Klasycystyczny sobór z kopułami i dzwonnicą z lat 20. XIX wieku, niedaleko brzegu Dunaju",
+				"en": "A classical cathedral with domes and a bell tower from the 1820s, near the bank of the Danube",
+				"cs": "Klasicistní katedrála s kupolemi a zvonicí z 20. let 19. století, nedaleko břehu Dunaje",
+				"is": "Klassísk dómkirkja með hvolfþökum og klukkuturni frá þriðja áratug 19. aldar, nálægt bökkum Dónár",
+				"de": "Eine klassizistische Kathedrale mit Kuppeln und Glockenturm aus den 1820er Jahren, nahe dem Donauufer"
+			},
+			"local": "Покровський собор"
+		}
+	],
+	"Truskavets": [
+		{
+			"kind": "naftusya_pump_room",
+			"name": {
+				"pl": "Pijalnia Naftusi",
+				"en": "Naftusya Pump Room",
+				"cs": "Pítná hala Naftusja",
+				"is": "Naftusja-drykkjarstofan",
+				"de": "Trinkhalle der Naftussja"
+			},
+			"desc": {
+				"pl": "Kuracjusze piją tu wodę mineralną Naftusia, która lekko pachnie ropą naftową",
+				"en": "Spa guests drink the Naftusya mineral water here, which smells faintly of oil",
+				"cs": "Lázeňští hosté tu pijí minerálku Naftusja, která slabě voní po ropě",
+				"is": "Heilsulindargestir drekka hér Naftusja-ölkelduvatnið sem lyktar örlítið af olíu",
+				"de": "Kurgäste trinken hier das Mineralwasser Naftussja, das leicht nach Erdöl riecht"
+			},
+			"local": "Бювет «Нафтуся»"
+		}
+	],
+	"Yaremche": [
+		{
+			"kind": "probiy_waterfall",
+			"name": {
+				"pl": "Wodospad Probij",
+				"en": "Probiy Waterfall",
+				"cs": "Vodopád Probij",
+				"is": "Probíj-fossinn",
+				"de": "Wasserfall Probij"
+			},
+			"desc": {
+				"pl": "Prut przebija się tu przez skały, a nad wodospadem wisi drewniany most",
+				"en": "The Prut breaks through the rocks here, with a wooden footbridge over the falls",
+				"cs": "Prut se tu prodírá skalami a nad vodopádem visí dřevěná lávka",
+				"is": "Prut brýst hér í gegnum klettana og trébrú liggur yfir fossinn",
+				"de": "Der Pruth bricht hier durch die Felsen, über dem Wasserfall hängt eine Holzbrücke"
+			},
+			"local": "Водоспад Пробій"
+		}
+	]
+}

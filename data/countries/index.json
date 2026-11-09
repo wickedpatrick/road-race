@@ -144,6 +144,12 @@
 			"name": {"pl": "Rumunia", "en": "Romania", "cs": "Rumunsko", "is": "Rúmenía", "de": "Rumänien"},
 			"neighbours": ["hu", "ua", "md", "bg", "rs"],
 			"favorite_neighbour": "md"
+		},
+		{
+			"code": "ua",
+			"name": {"pl": "Ukraina", "en": "Ukraine", "cs": "Ukrajina", "is": "Úkraína", "de": "Ukraine"},
+			"neighbours": ["pl", "sk", "hu", "ro", "md", "by", "ru"],
+			"favorite_neighbour": "pl"
 		}
 	]
 }
