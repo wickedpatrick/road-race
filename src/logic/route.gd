@@ -36,6 +36,7 @@ const RADAR_BEFORE := 14.0
 ## the barrier at the ferry's z; the car comes off the far quay's ramp FERRY_GAP metres further on (z_out).
 const FERRY_QUAY := 160.0
 const FERRY_GAP := 60.0
+const FERRY_STERN := 3.0 ## the docked ship's stern door, metres past the barrier (cars drive aboard there)
 const FERRY_STOP_TIME := 10.0 ## seconds of the time limit for braking and boarding, per ferry
 ## A port city's streets end where its quay begins: when a ferry starts (ends) so near a settlement that the quay (the
 ## far ramp) would lie in its streets, open road is put in between, at least FERRY_CLEAR metres beyond the streets.

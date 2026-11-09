@@ -139,9 +139,11 @@ func _draw() -> void:
 	var fc := Color("49d36b") if fr > 0.35 else (Color("f2b01e") if fr > 0.15 else Color("ff4d3d"))
 	draw_rect(Rect2(fp + Vector2(12, 54), Vector2((fw - 24) * fr, 16)), fc)
 	_limit_sign()
-	# police / speeding / station / state hints
+	# police / speeding / station / state hints, none on the ferry screen (its title stands there)
 	var ph: String = race.police.get("phase", "")
-	if ph == "ticket" or (ph == "leave" and race.police.t < 3.0):
+	if not hints_shown(race):
+		pass
+	elif ph == "ticket" or (ph == "leave" and race.police.t < 3.0):
 		_banner(Lang.t("fine") % int(Race.FINE_FUEL), Color("ff6a5a"))
 	elif ph == "crashed" and race.police.t < 3.0:
 		_banner(Lang.t("escaped"), Color("49d36b"))
@@ -165,11 +167,16 @@ func _draw() -> void:
 	elif low_fuel and int(race.elapsed * 2.0) % 2 == 0:
 		_banner(Lang.t("low_fuel"), Color("ff6a5a"))
 
-	_info_card()
-	_board_echo()
+	if hints_shown(race):
+		_info_card()
+		_board_echo()
 	_minimap()
 	if race.stage.get("sharp_test", false):
 		_text(Vector2(200, 532), Lang.t("sharp_test") % race.stage.get("sharp_amount", Track.SHARP_AMOUNT), 14, Color("ffd24a"))
+
+## Banners and info cards show, except while on board a ferry (Race.ferry_left).
+static func hints_shown(r: Race) -> bool:
+	return r.ferry_left <= 0.0
 
 ## Fuel pump: yellow body with a dark display and a hose, centred on the progress bar.
 func _pump_icon(c: Vector2) -> void:

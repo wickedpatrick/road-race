@@ -355,6 +355,8 @@ func _ride_ferry(dt: float) -> void:
 	x = FERRY_LANE
 	_lat_v = 0.0
 	hit_cooldown = 0.0 # the roadside past the ramp counts at once
+	last_crash = -100.0 # the barrier's (or a quay bump's) banner does not come back on the far quay
+	last_hit = -100.0
 	_ferry = {}
 	ferry_ended.emit()
 

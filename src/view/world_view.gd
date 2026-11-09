@@ -63,6 +63,8 @@ var _gcol: Array = [] ## per ground colour id: fogged colour for each view depth
 ## flat at the quay's level; the far quay and the road beyond stay hidden until the crossing
 var _sea_i := 1 << 30
 var _sea_y := 0.0
+var _sea_z := INF ## that barrier's z
+var _gate_up := false ## a car of the player's way is driving aboard: the quay's barriers are lifted for it
 const SEA := Color("2f6f9e")
 ## horizon state, eased towards the region ahead: hills, mountains, sea, industry, wood, skyline
 var _hz := {"hills": 0.3, "mountains": 0.0, "sea": 0.0, "industry": 0.0, "wood": 0.2, "skyline": 1.0, "ice": 0.0}
@@ -352,11 +354,14 @@ func _draw_scene() -> void:
 	var cam_y := _ground_y(cam_z) + CAM_H
 	var near := NEAR_TUNNEL if _in_tunnel(base) else NEAR
 	_sea_i = 1 << 30
+	_sea_z = INF
 	for f in race.stage.get("ferries", []):
 		if f.z > cam_z:
 			_sea_i = int(ceil(f.z / SEG))
 			_sea_y = _ground_y(f.z)
+			_sea_z = f.z
 			break
+	_gate_up = false
 	# base layer: ground colour under the horizon (the sea, with a quay ahead)
 	var far_ground: Color = _sea_color(0) if _sea_i < base + N else _grass[clampi(base + N, 0, _grass.size() / 2 - 1) * 2]
 	_b.draw_rect(Rect2(-20, HORIZON, W + 40, H - HORIZON + 20), _fog(far_ground, N))
@@ -369,6 +374,8 @@ func _draw_scene() -> void:
 	for ci in tcars.size():
 		var c: Dictionary = tcars[ci]
 		if not c.active: continue
+		if c.get("dir", 1) > 0 and c.z > _sea_z - 12.0 and c.z < _sea_z + Route.FERRY_STERN:
+			_gate_up = true
 		var n: int = int(floor(c.z / SEG)) - base
 		if n >= 0 and n < N:
 			_buckets[n].append(ci)
@@ -418,10 +425,15 @@ func _draw_scene() -> void:
 		var its = items.get(i)
 		if its != null:
 			for it in its:
-				_draw_item(it, n, cam_x, cam_y, cam_z)
+				if i < _sea_i or it.type == "ferry_ship":
+					_draw_item(it, n, cam_x, cam_y, cam_z)
 		_b.fog = maxf(_edge_fade(n), _thick_fog(n)) # traffic matters: no haze, only the edge of the view (or thick fog)
 		for ci in _buckets[n]:
-			_draw_traffic_car(tcars[ci], n, cam_x, cam_y, cam_z)
+			if i < _sea_i or tcars[ci].z < _sea_z + Route.FERRY_STERN: # out at sea only the cars still on the ramp
+				_draw_traffic_car(tcars[ci], n, cam_x, cam_y, cam_z)
+		if i >= _sea_i:
+			_b.fog = 0.0
+			continue # out at sea: no far quay, no police until the crossing
 		if not race.police.is_empty() and int(floor(race.police.z / SEG)) == i:
 			_draw_traffic_car({"z": race.police.z, "lane_x": race.police.x, "kind": "police", "color_idx": 0}, n, cam_x, cam_y, cam_z)
 		if _portals.has(i) and _vis[n] != 0 and i * SEG > cam_z + NEAR:
@@ -700,6 +712,7 @@ func _draw_item(it: Dictionary, n: int, cam_x: float, cam_y: float, cam_z: float
 		return
 	# left-hand traffic: drawn unmirrored at the mirrored point, so lettering and shapes stay the right way round
 	_b.set_mirror(false)
+	if it.has("closed"): it.lifted = _gate_up
 	Scenery.draw_item(_b, it, Vector2(W - b.x, b.y) if _left else b, pm, pal, season, font)
 	_b.set_mirror(_left)
 

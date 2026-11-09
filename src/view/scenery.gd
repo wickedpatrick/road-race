@@ -162,7 +162,7 @@ static func _port(items: Dictionary, f: Dictionary, rng: RandomNumberGenerator) 
 		_quay(items, "containers", q0 + 50.0 + k * 16.0, -(16.5 + 3.0 * (k % 2)), 12.0, 2.6 * (1 + (k + 1) % 2), rng)
 	_quay(items, "crane", f.z - 25.0, -22.0, 12.0, 30.0, rng)
 	_quay(items, "terminal", f.z_out + 30.0, -19.0, 12.0, 6.0, rng)
-	_add(items, "ferry_ship", f.z + 3.0, 0.0, 24.0, 19.0, rng).text = f.name # before the barriers: drawn behind them
+	_add(items, "ferry_ship", f.z + Route.FERRY_STERN, 0.0, 24.0, 19.0, rng).text = f.name # before the barriers: drawn behind them
 	for sd in [1.0, -1.0]:
 		var bar := _add(items, "barrier", f.z - 1.5, sd * (Track.ROAD_HALF_WIDTH + 0.9), 1.0, 2.0, rng)
 		bar.dir = sd
@@ -267,7 +267,7 @@ static func ship_icon(cv, c: Vector2, s: float, col: Color) -> void:
 		cv.draw_line(c + Vector2(x, 0.6 * s), c + Vector2(x + 0.5 * s, 0.6 * s), col, maxf(1.0, 0.15 * s))
 
 ## Open barrier: a striped post, the red-white arm raised almost upright. Closed (a ferry quay's end): the arm lies
-## across the road.
+## across the road, lifted (WorldView) while a car drives aboard.
 static func _barrier(cv, it: Dictionary, b: Vector2, pm: float) -> void:
 	var post := 1.1 * pm
 	cv.draw_rect(Rect2(b + Vector2(-0.25 * pm, -post), Vector2(0.5 * pm, post)), Color("e9e9e9"))
@@ -275,7 +275,7 @@ static func _barrier(cv, it: Dictionary, b: Vector2, pm: float) -> void:
 	var base := b + Vector2(0, -post - 0.15 * pm)
 	var d: float = -it.dir * flip * 0.18 # leans over the road a little
 	var tip := base + Vector2(d * 4.0 * pm, -4.0 * pm)
-	if it.get("closed", false):
+	if it.get("closed", false) and not it.get("lifted", false):
 		tip = base + Vector2(-it.dir * flip * absf(it.lat) * pm, 0.0) # to the road's centre, over the median too
 	var n := 6
 	for k in n:

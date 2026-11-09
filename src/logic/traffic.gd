@@ -261,11 +261,12 @@ func _on_quay(z: float) -> float:
 		if z >= q[0] and z <= q[2]: return q[2]
 	return -1.0
 
-## A car going `dir` at z is on a ferry: the player's way from the ship's ramp at the barrier, oncoming ones from
-## behind the camera of a car standing on the far ramp. Past the barrier WorldView draws only the sea.
+## A car going `dir` at z is on a ferry: the player's way once in the ship's stern door (the barrier opens for it),
+## oncoming ones from behind the camera of a car standing on the far ramp. Past the barrier WorldView draws only the
+## sea, the ship and the cars still on its ramp.
 func _boards(z: float, dir: int) -> bool:
 	for q in _quays:
-		if z >= (q[1] - 0.5 if dir > 0 else q[0]) and z <= (q[2] if dir > 0 else q[2] - RAMP_BEHIND): return true
+		if z >= (q[1] + Route.FERRY_STERN if dir > 0 else q[0]) and z <= (q[2] if dir > 0 else q[2] - RAMP_BEHIND): return true
 	return false
 
 ## Cars move at different speeds, but the order changes slowly, so an insertion sort is almost free.

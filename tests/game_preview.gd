@@ -32,8 +32,6 @@ func _physics_process(dt: float) -> void:
 	if countdown <= 0.0 and race.state == "running":
 		var ahead: float = race.track.segment_at(race.z + 40.0).curve
 		race.step(dt, {"accel": race.speed < 28.0 or OS.get_environment("RR_GAS") == "1", "brake": race.speed > 33.0 and OS.get_environment("RR_GAS") != "1", "steer": clampf(-race.x * 1.5 + ahead * 0.35, -1.0, 1.0) * race.side})
-		overlay.queue_redraw()
-		_ferry_screen.queue_redraw()
-		_sea_t += dt
+		_tick_screens(dt)
 	else:
 		super(dt)

@@ -111,10 +111,14 @@ func _read_input() -> Dictionary:
 		"steer": clampf(Input.get_axis("left", "right") + pad.steer(), -1.0, 1.0),
 	}
 
-func _physics_process(dt: float) -> void:
+## Per frame: the overlay and the ferry screen redrawn, its waves rolling on.
+func _tick_screens(dt: float) -> void:
 	overlay.queue_redraw()
 	_ferry_screen.queue_redraw()
 	_sea_t += dt
+
+func _physics_process(dt: float) -> void:
+	_tick_screens(dt)
 	if paused:
 		Sfx.silence_all_loops()
 		return

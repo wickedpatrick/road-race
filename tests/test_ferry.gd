@@ -123,6 +123,11 @@ func run(t) -> void:
 		if r2.ferry_left > 0.0: break
 	t.check(hit and furthest <= f.z and r2.fuel.level < fuel2 - Race.CRASH_FUEL + 0.5, "hit the barrier (furthest %.1f)" % furthest)
 	t.check(r2.ferry_left > 0.0 and r2.speed == 0.0, "stopped dead, then boarded")
+	t.check(not Hud.hints_shown(r2), "on board no banner or card covers the ferry's name")
+	while r2.ferry_left > 0.0:
+		r2.step(0.1, idle)
+	t.check(Hud.hints_shown(r2) and r2.elapsed - r2.last_crash >= Hud.BUMP_BANNER_TIME and r2.elapsed - r2.last_hit >= Hud.BUMP_BANNER_TIME,
+		"the barrier's crash banner does not come back on the far quay")
 	# the chase ends on boarding
 	var r3 := Race.new("xc60", s, 1)
 	r3.z = f.z - 10.0
@@ -154,9 +159,9 @@ func run(t) -> void:
 	var seen_on_quay := false
 	for i in 100:
 		trf.update(0.1, f.z_out, 0.5, 0.0)
-		seen_on_quay = seen_on_quay or (trf.cars[0].active and trf.cars[0].z > f.z - 20.0)
-	t.check(seen_on_quay and not trf.cars.any(func(c): return c.active and c.dir > 0 and c.z >= f.z - 0.5 and c.z < f.z_out),
-		"the player's way drives up to the ship and is gone there")
+		seen_on_quay = seen_on_quay or (trf.cars[0].active and trf.cars[0].z > f.z + 1.0)
+	t.check(seen_on_quay and not trf.cars.any(func(c): return c.active and c.dir > 0 and c.z >= f.z + Route.FERRY_STERN + 0.5 and c.z < f.z_out),
+		"the player's way drives up the ramp and is gone in the ship's stern door")
 	t.check(not trf.cars.any(func(c): return c.active and c.dir < 0 and c.z > f.z and c.z < f.z_out - WorldView.PLAYER_DZ - 1.0),
 		"oncoming: gone only behind the camera")
 	# the look: a port before the barrier, the ship with its ramp down at it (both ways, and on the left-hand side)
