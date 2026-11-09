@@ -1,0 +1,390 @@
+{
+	"Helsingfors": [
+		{
+			"kind": "fi_helsinki_cathedral",
+			"name": {
+				"pl": "Katedra w Helsinkach",
+				"en": "Helsinki Cathedral",
+				"cs": "Helsinská katedrála",
+				"is": "Dómkirkjan í Helsinki",
+				"de": "Dom von Helsinki"
+			},
+			"desc": {
+				"pl": "Biała klasycystyczna katedra z zieloną kopułą nad Placem Senackim, ukończona w 1852 roku według projektu Carla Ludviga Engela",
+				"en": "A white Neoclassical cathedral with a green dome above Senate Square, completed in 1852 to Carl Ludvig Engel's design",
+				"cs": "Bílá klasicistní katedrála se zelenou kupolí nad Senátním náměstím, dokončená roku 1852 podle návrhu Carla Ludviga Engela",
+				"is": "Hvít nýklassísk dómkirkja með grænni hvelfingu yfir Öldungaráðstorginu, fullgerð árið 1852 eftir teikningu Carls Ludvigs Engel",
+				"de": "Ein weißer klassizistischer Dom mit grüner Kuppel über dem Senatsplatz, 1852 nach Plänen von Carl Ludvig Engel vollendet"
+			},
+			"local": "Helsingin tuomiokirkko"
+		}
+	],
+	"Esbo": [
+		{
+			"kind": "fi_espoo_cathedral",
+			"name": {
+				"pl": "Katedra w Espoo",
+				"en": "Espoo Cathedral",
+				"cs": "Katedrála v Espoo",
+				"is": "Dómkirkjan í Espoo",
+				"de": "Dom von Espoo"
+			},
+			"desc": {
+				"pl": "Średniowieczny kamienny kościół z końca XV wieku, najstarszy budynek w Espoo",
+				"en": "A medieval stone church from the late 15th century, the oldest building in Espoo",
+				"cs": "Středověký kamenný kostel z konce 15. století, nejstarší budova v Espoo",
+				"is": "Steinkirkja frá miðöldum, frá síðari hluta 15. aldar, elsta bygging í Espoo",
+				"de": "Eine mittelalterliche Steinkirche aus dem späten 15. Jahrhundert, das älteste Gebäude Espoos"
+			},
+			"local": "Espoon tuomiokirkko"
+		}
+	],
+	"Åbo": [
+		{
+			"kind": "fi_turku_castle",
+			"name": {
+				"pl": "Zamek w Turku",
+				"en": "Turku Castle",
+				"cs": "Hrad Turku",
+				"is": "Kastalinn í Turku",
+				"de": "Burg Turku"
+			},
+			"desc": {
+				"pl": "Zamek u ujścia rzeki Aura, założony około 1280 roku, jeden z największych średniowiecznych budynków Finlandii",
+				"en": "A castle at the mouth of the Aura river, founded around 1280, one of the largest medieval buildings in Finland",
+				"cs": "Hrad u ústí řeky Aura, založený kolem roku 1280, jedna z největších středověkých staveb Finska",
+				"is": "Kastali við ósa Aura-árinnar, stofnaður um 1280, ein stærsta bygging Finnlands frá miðöldum",
+				"de": "Eine Burg an der Mündung des Flusses Aura, um 1280 gegründet, eines der größten mittelalterlichen Gebäude Finnlands"
+			},
+			"local": "Turun linna"
+		}
+	],
+	"Tampere": [
+		{
+			"kind": "fi_tampere_nasinneula",
+			"name": {
+				"pl": "Wieża Näsinneula",
+				"en": "Näsinneula Tower",
+				"cs": "Věž Näsinneula",
+				"is": "Näsinneula-turninn",
+				"de": "Turm Näsinneula"
+			},
+			"desc": {
+				"pl": "Wieża widokowa z 1971 roku nad jeziorem Näsijärvi, wysoka na 168 metrów, z obrotową restauracją na szczycie",
+				"en": "A 168-metre observation tower of 1971 above Lake Näsijärvi, with a revolving restaurant at the top",
+				"cs": "Vyhlídková věž z roku 1971 nad jezerem Näsijärvi, vysoká 168 metrů, s otáčivou restaurací nahoře",
+				"is": "168 metra hár útsýnisturn frá 1971 við Näsijärvi-vatn, með snúningsveitingastað efst",
+				"de": "Ein 168 Meter hoher Aussichtsturm von 1971 über dem Näsijärvi-See, oben mit einem Drehrestaurant"
+			},
+			"local": "Näsinneula"
+		}
+	],
+	"Oulu": [
+		{
+			"kind": "fi_oulu_toripolliisi",
+			"name": {
+				"pl": "Toripolliisi",
+				"en": "Toripolliisi",
+				"cs": "Toripolliisi",
+				"is": "Toripolliisi",
+				"de": "Toripolliisi"
+			},
+			"desc": {
+				"pl": "Przysadzisty brązowy policjant z 1987 roku pilnuje rynku nad morzem, obok czerwonych drewnianych spichrzy",
+				"en": "A stout bronze policeman of 1987 keeps watch over the seaside market square, next to red wooden storehouses",
+				"cs": "Zavalitý bronzový policista z roku 1987 hlídá tržiště u moře vedle červených dřevěných skladišť",
+				"is": "Þrekvaxinn bronslögreglumaður frá 1987 gætir torgsins við sjóinn, hjá rauðum timburskemmum",
+				"de": "Ein stämmiger Bronzepolizist von 1987 wacht über den Marktplatz am Meer, neben roten hölzernen Speichern"
+			},
+			"local": "Toripolliisi"
+		}
+	],
+	"Jyväskylä": [
+		{
+			"kind": "fi_jyvaskyla_saynatsalo",
+			"name": {
+				"pl": "Ratusz w Säynätsalo",
+				"en": "Säynätsalo Town Hall",
+				"cs": "Radnice v Säynätsalu",
+				"is": "Ráðhúsið í Säynätsalo",
+				"de": "Rathaus Säynätsalo"
+			},
+			"desc": {
+				"pl": "Ceglany ratusz Alvara Aalto z 1952 roku wokół podniesionego trawiastego dziedzińca, z wysoką salą rady",
+				"en": "Alvar Aalto's brick town hall of 1952 around a raised grassy courtyard, with its tall council chamber",
+				"cs": "Cihlová radnice Alvara Aalta z roku 1952 kolem vyvýšeného travnatého nádvoří, s vysokou zasedací síní",
+				"is": "Múrsteinsráðhús Alvars Aalto frá 1952 umhverfis upphækkaðan grasigróinn garð, með háum fundarsal",
+				"de": "Alvar Aaltos Backsteinrathaus von 1952 um einen erhöhten Rasenhof, mit dem hohen Ratssaal"
+			},
+			"local": "Säynätsalon kunnantalo"
+		}
+	],
+	"Kuopio": [
+		{
+			"kind": "fi_kuopio_puijo",
+			"name": {"pl": "Wieża Puijo", "en": "Puijo Tower", "cs": "Věž Puijo", "is": "Puijo-turninn", "de": "Puijo-Turm"},
+			"desc": {
+				"pl": "75-metrowa wieża widokowa z 1963 roku na zalesionym wzgórzu Puijo, z widokiem na jezioro Kallavesi",
+				"en": "A 75-metre observation tower of 1963 on the wooded Puijo hill, looking out over Lake Kallavesi",
+				"cs": "Pětasedmdesátimetrová vyhlídková věž z roku 1963 na zalesněném vrchu Puijo s výhledem na jezero Kallavesi",
+				"is": "75 metra hár útsýnisturn frá 1963 á skógi vaxinni Puijo-hæðinni, með útsýni yfir Kallavesi-vatn",
+				"de": "Ein 75 Meter hoher Aussichtsturm von 1963 auf dem bewaldeten Puijo-Hügel mit Blick über den Kallavesi"
+			},
+			"local": "Puijon torni"
+		}
+	],
+	"Lahti": [
+		{
+			"kind": "fi_lahti_ski_jumps",
+			"name": {
+				"pl": "Skocznie w Lahti",
+				"en": "Lahti Ski Jumps",
+				"cs": "Můstky v Lahti",
+				"is": "Skíðastökkpallarnir í Lahti",
+				"de": "Schanzen von Lahti"
+			},
+			"desc": {
+				"pl": "Trzy skocznie narciarskie na grzbiecie Salpausselkä; na szczyt największej można wjechać, by obejrzeć miasto",
+				"en": "Three ski jumps on the Salpausselkä ridge; visitors can go up the biggest one to look out over the town",
+				"cs": "Tři skokanské můstky na hřbetu Salpausselkä; na ten největší mohou návštěvníci vyjet a rozhlédnout se po městě",
+				"is": "Þrír skíðastökkpallar á Salpausselkä-hryggnum; gestir geta farið upp á þann stærsta og horft yfir bæinn",
+				"de": "Drei Sprungschanzen auf dem Salpausselkä; auf die größte können Besucher hinauffahren und über die Stadt blicken"
+			},
+			"local": "Salpausselän hyppyrimäet"
+		}
+	],
+	"Pori": [
+		{
+			"kind": "fi_pori_juselius",
+			"name": {
+				"pl": "Mauzoleum Juseliusa",
+				"en": "Juselius Mausoleum",
+				"cs": "Juseliovo mauzoleum",
+				"is": "Grafhýsi Juselius",
+				"de": "Juselius-Mausoleum"
+			},
+			"desc": {
+				"pl": "Neogotyckie granitowe mauzoleum z 1903 roku, które przemysłowiec F. A. Juselius zbudował dla zmarłej córki",
+				"en": "A Neo-Gothic granite mausoleum of 1903, built by the industrialist F. A. Juselius for his daughter who died young",
+				"cs": "Novogotické žulové mauzoleum z roku 1903, které dal průmyslník F. A. Juselius postavit své zesnulé dceři",
+				"is": "Nýgotneskt grafhýsi úr graníti frá 1903, sem iðnrekandinn F. A. Juselius lét reisa dóttur sinni sem dó ung",
+				"de": "Ein neugotisches Granitmausoleum von 1903, das der Industrielle F. A. Juselius für seine früh verstorbene Tochter bauen ließ"
+			},
+			"local": "Juseliuksen mausoleumi"
+		}
+	],
+	"Joensuu": [
+		{
+			"kind": "fi_joensuu_townhall",
+			"name": {
+				"pl": "Ratusz w Joensuu",
+				"en": "Joensuu Town Hall",
+				"cs": "Radnice v Joensuu",
+				"is": "Ráðhúsið í Joensuu",
+				"de": "Rathaus Joensuu"
+			},
+			"desc": {
+				"pl": "Ratusz z 1914 roku w stylu narodowego romantyzmu, projektu Eliela Saarinena, z wysoką wieżą",
+				"en": "A National Romantic town hall of 1914 by Eliel Saarinen, with a tall tower",
+				"cs": "Radnice z roku 1914 ve stylu národního romantismu od Eliela Saarinena, s vysokou věží",
+				"is": "Ráðhús frá 1914 í þjóðernisrómantískum stíl eftir Eliel Saarinen, með háum turni",
+				"de": "Ein nationalromantisches Rathaus von 1914 von Eliel Saarinen mit hohem Turm"
+			},
+			"local": "Joensuun kaupungintalo"
+		}
+	],
+	"Lappeenranta": [
+		{
+			"kind": "fi_lappeenranta_church",
+			"name": {
+				"pl": "Cerkiew w twierdzy Lappeenranta",
+				"en": "Lappeenranta Fortress Church",
+				"cs": "Pravoslavný kostel v pevnosti Lappeenranta",
+				"is": "Rétttrúnaðarkirkjan í virkinu í Lappeenranta",
+				"de": "Orthodoxe Kirche der Festung Lappeenranta"
+			},
+			"desc": {
+				"pl": "Cerkiew Opieki Matki Bożej z 1785 roku, najstarsza prawosławna świątynia w Finlandii",
+				"en": "The Church of the Intercession of the Theotokos of 1785, the oldest Orthodox church in Finland",
+				"cs": "Kostel Ochrany přesvaté Bohorodice z roku 1785, nejstarší pravoslavný chrám ve Finsku",
+				"is": "Kirkja verndar Guðsmóður frá 1785, elsta rétttrúnaðarkirkja Finnlands",
+				"de": "Die Kirche Mariä Schutz von 1785, die älteste orthodoxe Kirche Finnlands"
+			},
+			"local": "Lappeenrannan ortodoksinen kirkko"
+		}
+	],
+	"Hämeenlinna": [
+		{
+			"kind": "fi_hameenlinna_castle",
+			"name": {"pl": "Zamek Häme", "en": "Häme Castle", "cs": "Hrad Häme", "is": "Häme-kastali", "de": "Burg Häme"},
+			"desc": {
+				"pl": "Średniowieczny zamek z czerwonej cegły nad jeziorem Vanajavesi, którego budowę rozpoczęto pod koniec XIII wieku",
+				"en": "A medieval red-brick castle on Lake Vanajavesi, begun in the late 13th century",
+				"cs": "Středověký hrad z červených cihel u jezera Vanajavesi, jehož stavba začala koncem 13. století",
+				"is": "Kastali úr rauðum múrsteini frá miðöldum við Vanajavesi-vatn, byggingin hófst seint á 13. öld",
+				"de": "Eine mittelalterliche Burg aus rotem Backstein am Vanajavesi, begonnen im späten 13. Jahrhundert"
+			},
+			"local": "Hämeen linna"
+		}
+	],
+	"Vasa": [
+		{
+			"kind": "fi_vaasa_replot_bridge",
+			"name": {
+				"pl": "Most Replot",
+				"en": "Replot Bridge",
+				"cs": "Most Replot",
+				"is": "Replot-brúin",
+				"de": "Replot-Brücke"
+			},
+			"desc": {
+				"pl": "Podwieszany most z 1997 roku na wyspę Replot w archipelagu Kvarken, najdłuższy most w Finlandii (1045 m)",
+				"en": "A cable-stayed bridge of 1997 to the island of Replot in the Kvarken archipelago, the longest bridge in Finland (1,045 m)",
+				"cs": "Zavěšený most z roku 1997 na ostrov Replot v souostroví Kvarken, nejdelší most ve Finsku (1045 m)",
+				"is": "Stagbrú frá 1997 út í eyjuna Replot í Kvarken-skerjagarðinum, lengsta brú Finnlands (1045 m)",
+				"de": "Eine Schrägseilbrücke von 1997 zur Insel Replot im Kvarken-Schärengarten, die längste Brücke Finnlands (1045 m)"
+			},
+			"local": "Raippaluodon silta"
+		}
+	],
+	"Seinäjoki": [
+		{
+			"kind": "fi_seinajoki_lakeuden_risti",
+			"name": {
+				"pl": "Kościół Lakeuden Risti",
+				"en": "Cross of the Plains Church",
+				"cs": "Kostel Lakeuden Risti",
+				"is": "Lakeuden Risti-kirkjan",
+				"de": "Kirche Lakeuden Risti"
+			},
+			"desc": {
+				"pl": "Kościół Alvara Aalto z 1960 roku, którego biała dzwonnica w kształcie krzyża ma 65 metrów i widać ją z daleka nad równiną",
+				"en": "Alvar Aalto's church of 1960, whose white cross-shaped bell tower, 65 metres high, can be seen far across the plain",
+				"cs": "Kostel Alvara Aalta z roku 1960, jehož bílá zvonice ve tvaru kříže je vysoká 65 metrů a je vidět daleko po rovině",
+				"is": "Kirkja Alvars Aalto frá 1960; hvíti krosslaga klukkuturninn er 65 metra hár og sést langt yfir sléttuna",
+				"de": "Alvar Aaltos Kirche von 1960, deren weißer, kreuzförmiger Glockenturm 65 Meter hoch ist und weit über die Ebene zu sehen ist"
+			},
+			"local": "Lakeuden Risti"
+		}
+	],
+	"Rovaniemi": [
+		{
+			"kind": "fi_rovaniemi_candle_bridge",
+			"name": {
+				"pl": "Most Jätkänkynttilä",
+				"en": "Lumberjack's Candle Bridge",
+				"cs": "Most Jätkänkynttilä",
+				"is": "Jätkänkynttilä-brúin",
+				"de": "Jätkänkynttilä-Brücke"
+			},
+			"desc": {
+				"pl": "Most z 1989 roku nad rzeką Kemijoki; na szczytach jego pylonów płoną światła jak świece flisaków",
+				"en": "A bridge of 1989 over the Kemijoki; lights burn on top of its pylons like the log drivers' candles",
+				"cs": "Most z roku 1989 přes řeku Kemijoki; na vrcholcích jeho pylonů svítí světla jako svíčky voroplavců",
+				"is": "Brú frá 1989 yfir Kemijoki; ljós loga efst á turnum hennar eins og kerti fleytingamanna",
+				"de": "Eine Brücke von 1989 über den Kemijoki; auf ihren Pylonen brennen Lichter wie die Kerzen der Flößer"
+			},
+			"local": "Jätkänkynttilä"
+		}
+	],
+	"Kajaani": [
+		{
+			"kind": "fi_kajaani_castle",
+			"name": {
+				"pl": "Ruiny zamku w Kajaani",
+				"en": "Kajaani Castle Ruins",
+				"cs": "Zřícenina hradu Kajaani",
+				"is": "Kastalarústirnar í Kajaani",
+				"de": "Burgruine Kajaani"
+			},
+			"desc": {
+				"pl": "Ruiny XVII-wiecznego zamku na wysepce na rzece Kajaaninjoki, nad którymi przechodzi most",
+				"en": "The ruins of a 17th-century castle on an islet in the Kajaaninjoki, with a bridge passing over them",
+				"cs": "Zřícenina hradu ze 17. století na ostrůvku v řece Kajaaninjoki, přes kterou vede most",
+				"is": "Rústir kastala frá 17. öld á hólma í Kajaaninjoki, og brú liggur yfir þær",
+				"de": "Die Ruinen einer Burg aus dem 17. Jahrhundert auf einer Insel im Kajaaninjoki, über die eine Brücke führt"
+			},
+			"local": "Kajaanin linna"
+		}
+	],
+	"Kotka": [
+		{
+			"kind": "fi_kotka_langinkoski",
+			"name": {
+				"pl": "Carska rybaczówka w Langinkoski",
+				"en": "Langinkoski Imperial Fishing Lodge",
+				"cs": "Carská rybářská chata v Langinkoski",
+				"is": "Keisaralega veiðihúsið í Langinkoski",
+				"de": "Kaiserliche Fischerhütte Langinkoski"
+			},
+			"desc": {
+				"pl": "Drewniany dom z bali nad bystrzami rzeki Kymijoki, zbudowany w 1889 roku dla cara Aleksandra III",
+				"en": "A log house by the Kymijoki rapids, built in 1889 for Tsar Alexander III",
+				"cs": "Srubový dům u peřejí řeky Kymijoki, postavený roku 1889 pro cara Alexandra III.",
+				"is": "Bjálkahús við flúðir Kymijoki, reist árið 1889 handa Alexander III. keisara",
+				"de": "Ein Blockhaus an den Stromschnellen des Kymijoki, 1889 für Zar Alexander III. gebaut"
+			},
+			"local": "Langinkosken keisarillinen kalastusmaja"
+		}
+	],
+	"Savonlinna": [
+		{
+			"kind": "fi_savonlinna_olavinlinna",
+			"name": {
+				"pl": "Zamek Olavinlinna",
+				"en": "Olavinlinna Castle",
+				"cs": "Hrad Olavinlinna",
+				"is": "Olavinlinna-kastali",
+				"de": "Burg Olavinlinna"
+			},
+			"desc": {
+				"pl": "Zamek z 1475 roku na skalistej wyspie między jeziorami, z trzema okrągłymi basztami; latem gra tu festiwal operowy",
+				"en": "A castle of 1475 on a rocky island between lakes, with three round towers; the opera festival plays here in summer",
+				"cs": "Hrad z roku 1475 na skalnatém ostrově mezi jezery, se třemi kulatými věžemi; v létě se tu hraje operní festival",
+				"is": "Kastali frá 1475 á klettaeyju milli vatna, með þremur sívölum turnum; óperuhátíðin fer hér fram á sumrin",
+				"de": "Eine Burg von 1475 auf einer Felsinsel zwischen Seen, mit drei runden Türmen; im Sommer spielen hier die Opernfestspiele"
+			},
+			"local": "Olavinlinna"
+		}
+	],
+	"Kemi": [
+		{
+			"kind": "fi_kemi_sampo",
+			"name": {
+				"pl": "Lodołamacz Sampo",
+				"en": "Icebreaker Sampo",
+				"cs": "Ledoborec Sampo",
+				"is": "Ísbrjóturinn Sampo",
+				"de": "Eisbrecher Sampo"
+			},
+			"desc": {
+				"pl": "Lodołamacz z 1961 roku, który zimą zabiera turystów na zamarzniętą Zatokę Botnicką",
+				"en": "An icebreaker of 1961 that takes visitors out onto the frozen Gulf of Bothnia in winter",
+				"cs": "Ledoborec z roku 1961, který v zimě vozí návštěvníky po zamrzlém Botnickém zálivu",
+				"is": "Ísbrjótur frá 1961 sem fer með ferðamenn út á ísilagðan Helsingjabotn á veturna",
+				"de": "Ein Eisbrecher von 1961, der im Winter Besucher auf den zugefrorenen Bottnischen Meerbusen bringt"
+			},
+			"local": "Jäänmurtaja Sampo"
+		}
+	],
+	"Inari": [
+		{
+			"kind": "fi_inari_pielpajarvi",
+			"name": {
+				"pl": "Kościół w Pielpajärvi",
+				"en": "Pielpajärvi Wilderness Church",
+				"cs": "Kostel v Pielpajärvi",
+				"is": "Óbyggðakirkjan í Pielpajärvi",
+				"de": "Wildniskirche Pielpajärvi"
+			},
+			"desc": {
+				"pl": "Drewniany kościół z XVIII wieku w puszczy niedaleko Inari, do którego dochodzi się tylko pieszo, a zimą na nartach",
+				"en": "An 18th-century wooden church in the wilderness near Inari, reached only on foot, or on skis in winter",
+				"cs": "Dřevěný kostel z 18. století v divočině nedaleko Inari, kam se dá dojít jen pěšky, v zimě na lyžích",
+				"is": "Timburkirkja frá 18. öld í óbyggðum nærri Inari, sem aðeins verður komist að fótgangandi, eða á skíðum að vetri",
+				"de": "Eine Holzkirche aus dem 18. Jahrhundert in der Wildnis bei Inari, nur zu Fuß erreichbar, im Winter auf Skiern"
+			},
+			"local": "Pielpajärven erämaakirkko"
+		}
+	]
+}

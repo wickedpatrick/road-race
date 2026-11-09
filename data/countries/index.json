@@ -56,7 +56,13 @@
 		},
 		{
 			"code": "us",
-			"name": {"pl": "Stany Zjednoczone", "en": "United States", "cs": "Spojené státy", "is": "Bandaríkin", "de": "Vereinigte Staaten"},
+			"name": {
+				"pl": "Stany Zjednoczone",
+				"en": "United States",
+				"cs": "Spojené státy",
+				"is": "Bandaríkin",
+				"de": "Vereinigte Staaten"
+			},
 			"neighbours": ["ca"],
 			"favorite_neighbour": "ca"
 		},
@@ -98,7 +104,13 @@
 		},
 		{
 			"code": "sb",
-			"name": {"pl": "Bałkany Południowe", "en": "Southern Balkans", "cs": "Jižní Balkán", "is": "Suður-Balkanskagi", "de": "Südbalkan"},
+			"name": {
+				"pl": "Bałkany Południowe",
+				"en": "Southern Balkans",
+				"cs": "Jižní Balkán",
+				"is": "Suður-Balkanskagi",
+				"de": "Südbalkan"
+			},
 			"members": ["me", "xk", "al", "mk"],
 			"neighbours": ["hr", "ba", "rs", "gr", "bg"],
 			"favorite_neighbour": "gr"
@@ -174,6 +186,12 @@
 			"name": {"pl": "Łotwa", "en": "Latvia", "cs": "Lotyšsko", "is": "Lettland", "de": "Lettland"},
 			"neighbours": ["ee", "lt", "by", "ru"],
 			"favorite_neighbour": "lt"
+		},
+		{
+			"code": "fi",
+			"name": {"pl": "Finlandia", "en": "Finland", "cs": "Finsko", "is": "Finnland", "de": "Finnland"},
+			"neighbours": ["se", "no", "ru", "ee"],
+			"favorite_neighbour": "ee"
 		}
 	]
 }
