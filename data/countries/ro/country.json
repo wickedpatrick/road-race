@@ -1,0 +1,52 @@
+{
+	"code": "ro",
+	"name": {"pl": "Rumunia", "en": "Romania", "cs": "Rumunsko", "is": "Rúmenía", "de": "Rumänien"},
+	"language": "ro",
+	"drive": "right",
+	"units": "metric",
+	"title": {
+		"pl": "RAJD PRZEZ RUMUNIĘ",
+		"en": "ROMANIA ROAD TRIP",
+		"cs": "RALLY RUMUNSKEM",
+		"is": "ÖKUFERÐ UM RÚMENÍU",
+		"de": "RUMÄNIEN-TOUR"
+	},
+	"subtitle": {
+		"pl": "Edukacyjna podróż przez Karpaty i Transylwanię, od Żelaznej Bramy po deltę Dunaju",
+		"en": "An educational journey across the Carpathians and Transylvania, from the Iron Gates to the Danube Delta",
+		"cs": "Vzdělávací cesta přes Karpaty a Sedmihradsko, od Železných vrat k deltě Dunaje",
+		"is": "Fræðandi ferðalag um Karpatafjöll og Transylvaníu, frá Járnhliðinu að óshólmum Dónár",
+		"de": "Eine lehrreiche Reise durch die Karpaten und Siebenbürgen, vom Eisernen Tor bis zum Donaudelta"
+	},
+	"region_label": {"pl": "okręg", "en": "county", "cs": "župa", "is": "sýsla", "de": "Kreis"},
+	"start": ["bucuresti", "pitesti"],
+	"express_prefixes": ["A", "DEx"],
+	"limits": {"express": 130, "road": 90, "city": 50, "town_on_express": 80, "town": 50},
+	"signs": {"town": "#ffffff", "town_text": "#111111", "board": "#1d4f9c", "board_motorway": "#1a7a3e"},
+	"map": {"lon0": 20.1, "lon1": 29.9, "lat0": 43.5, "lat1": 48.4, "lon_k": 0.695, "zoom": 1.3, "labels": "auto"},
+	"outline": [
+		[28.21, 45.45], [28.45, 45.29], [28.76, 45.23], [28.78, 45.31], [28.89, 45.29], [29.4, 45.42], [29.57, 45.37],
+		[29.71, 45.26], [29.56, 44.84], [29.05, 44.76], [29.08, 44.8], [29.05, 44.93], [29.1, 44.98], [28.98, 44.99],
+		[28.89, 44.92], [28.93, 44.81], [28.81, 44.57], [28.89, 44.57], [28.65, 44.3], [28.66, 43.98], [28.59, 43.74],
+		[28.22, 43.77], [28.05, 43.82], [27.88, 43.99], [27.74, 43.96], [27.43, 44.02], [27.09, 44.17], [26.22, 44.01],
+		[25.82, 43.77], [25.5, 43.67], [23.22, 43.87], [22.92, 43.83], [22.87, 43.86], [22.87, 43.95], [23.03, 44.08],
+		[22.69, 44.25], [22.49, 44.44], [22.55, 44.54], [22.7, 44.56], [22.72, 44.61], [22.5, 44.71], [22.09, 44.54],
+		[21.91, 44.67], [21.64, 44.71], [21.36, 44.83], [21.36, 44.86], [21.53, 44.9], [21.35, 45.01], [21.42, 45.03],
+		[21.49, 45.15], [20.94, 45.37], [20.77, 45.48], [20.79, 45.54], [20.77, 45.75], [20.71, 45.74], [20.58, 45.87],
+		[20.36, 45.98], [20.24, 46.11], [20.51, 46.17], [20.61, 46.13], [20.76, 46.25], [21.04, 46.24], [21.15, 46.3],
+		[21.19, 46.39], [21.26, 46.41], [21.25, 46.49], [21.32, 46.61], [21.5, 46.7], [21.49, 46.79], [21.65, 46.96],
+		[21.66, 47.04], [22, 47.4], [22, 47.51], [22.29, 47.73], [22.61, 47.77], [23.14, 48.09], [23.41, 47.99],
+		[23.67, 47.99], [24.18, 47.91], [24.58, 47.93], [24.89, 47.72], [24.98, 47.72], [25.46, 47.91], [26.16, 47.99],
+		[26.31, 48.2], [26.71, 48.26], [26.98, 48.16], [27.34, 47.64], [27.61, 47.34], [28.07, 46.98], [28.24, 46.64],
+		[28.24, 46.45], [28.1, 45.97], [28.16, 45.65], [28.07, 45.6]
+	],
+	"outline_lines": [],
+	"station": {
+		"sign": "BENZINĂRIE",
+		"board": "CARBURANȚI",
+		"prices": [["Benzină 95", "7,69"], ["Motorină", "7,85"], ["GPL", "3,95"]],
+		"region_sign": "BINE AȚI VENIT"
+	},
+	"plates": [["DJ", "#1d4f9c", "#ffffff"], ["", "#c8102e", "#ffffff"]],
+	"weather": {"default": "sun", "landscape": true, "biomes": {"mountains": "sun"}}
+}

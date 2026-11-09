@@ -1,0 +1,352 @@
+[
+	{
+		"a": "bucuresti",
+		"b": "pitesti",
+		"km": 115,
+		"road": "A1",
+		"towns": [["Bolintin-Deal", 25], ["Găești", 72], ["Topoloveni", 95]],
+		"zones": [[70, "fields", "Câmpia Română"], [115, "orchard", "Dealurile Argeșului"]],
+		"via": [[72, 25.32, 44.72]]
+	},
+	{
+		"a": "bucuresti",
+		"b": "ploiesti",
+		"km": 60,
+		"road": "A3",
+		"towns": [["Ștefăneștii de Jos", 18], ["Moara Vlăsiei", 28]],
+		"zones": [[45, "fields", "Câmpia Vlăsiei"], [60, "industrial", "Câmpia Ploieștiului"]],
+		"via": [[28, 26.2, 44.64]]
+	},
+	{
+		"a": "bucuresti",
+		"b": "constanta",
+		"km": 225,
+		"road": "A2",
+		"towns": [["Lehliu-Gară", 60], ["Fetești", 145], ["Cernavodă", 165]],
+		"zones": [
+			[140, "fields", "Bărăgan"], [165, "lakes", "Balta Ialomiței"], [200, "fields", "Dobrogea"],
+			[215, "orchard", "Murfatlar"], [225, "coast", "Litoral"]
+		],
+		"via": [[60, 26.85, 44.43], [145, 27.83, 44.38], [165, 28.03, 44.34], [190, 28.27, 44.25]]
+	},
+	{
+		"a": "ploiesti",
+		"b": "brasov",
+		"km": 112,
+		"road": "DN1",
+		"towns": [
+			["Băicoi", 18], ["Câmpina", 32], ["Comarnic", 50], ["Sinaia", 65], ["Bușteni", 74], ["Azuga", 80],
+			["Predeal", 88]
+		],
+		"zones": [
+			[30, "upland", "Subcarpații Prahovei"], [50, "foothills", "Valea Prahovei"], [95, "mountains", "Bucegi"],
+			[112, "forest", "Valea Timișului"]
+		],
+		"via": [[32, 25.73, 45.13], [65, 25.55, 45.35], [88, 25.58, 45.5]]
+	},
+	{
+		"a": "ploiesti",
+		"b": "bacau",
+		"km": 235,
+		"road": "A7",
+		"towns": [["Buzău", 65], ["Râmnicu Sărat", 105], ["Focșani", 140], ["Adjud", 178]],
+		"zones": [
+			[65, "orchard", "Dealu Mare"], [135, "fields", "Câmpia Râmnicului"], [170, "orchard", "Vrancea"],
+			[235, "fields", "Valea Siretului"]
+		],
+		"via": [[65, 26.82, 45.15], [140, 27.18, 45.7], [178, 27.18, 46.1]]
+	},
+	{
+		"a": "ploiesti",
+		"b": "galati",
+		"km": 200,
+		"road": [[70, "A7"], [175, "DN2B"], [200, "DN22B"]],
+		"towns": [["Mizil", 35], ["Buzău", 70], ["Făurei", 125], ["Brăila", 175]],
+		"zones": [[70, "orchard", "Dealu Mare"], [175, "fields", "Bărăgan"], [200, "lakes", "Lunca Dunării"]],
+		"via": [[70, 26.82, 45.15], [125, 27.27, 45.08], [175, 27.96, 45.27]]
+	},
+	{
+		"a": "pitesti",
+		"b": "craiova",
+		"km": 125,
+		"road": [[10, "A1"], [125, "DEx12"]],
+		"towns": [["Costești", 28], ["Slatina", 70], ["Balș", 100]],
+		"zones": [[45, "upland", "Podișul Cotmeana"], [80, "fields", "Valea Oltului"], [125, "fields", "Câmpia Romanațiului"]],
+		"via": [[28, 24.63, 44.67], [70, 24.37, 44.43], [100, 24.1, 44.35]]
+	},
+	{
+		"a": "pitesti",
+		"b": "sibiu",
+		"km": 205,
+		"road": [[155, "DN7C"], [205, "DN1"]],
+		"towns": [["Bascov", 6], ["Curtea de Argeș", 35], ["Arefu", 55], ["Cârțișoara", 155], ["Avrig", 175]],
+		"zones": [
+			[35, "upland", "Dealurile Argeșului"],
+			[70, "foothills", "Valea Argeșului"],
+			[145, "mountains", "Munții Făgăraș"],
+			[165, "foothills", "Țara Făgărașului"],
+			[205, "foothills", "Depresiunea Sibiului"]
+		],
+		"via": [
+			[35, 24.68, 45.14], [62, 24.63, 45.37], [95, 24.65, 45.5], [125, 24.61, 45.6], [155, 24.58, 45.71],
+			[175, 24.38, 45.72]
+		],
+		"weather": "snow",
+		"tunnels": [
+			{
+				"from_km": 124,
+				"to_km": 124.9,
+				"name": {
+					"pl": "Tunel Bâlea",
+					"en": "Bâlea Tunnel",
+					"cs": "Tunel Bâlea",
+					"is": "Bâlea-göngin",
+					"de": "Bâlea-Tunnel"
+				},
+				"fact": {
+					"pl": "884 m pod grzbietem Fogaraszy, na wysokości 2042 m: najdłuższy tunel drogowy Rumunii",
+					"en": "884 m under the Făgăraș ridge at 2,042 m: Romania's longest road tunnel",
+					"cs": "884 m pod hřebenem Făgăraše ve výšce 2042 m: nejdelší silniční tunel Rumunska",
+					"is": "884 m undir Făgăraș-hryggnum í 2042 m hæð: lengstu veggöng Rúmeníu",
+					"de": "884 m unter dem Kamm des Făgăraș-Gebirges auf 2042 m: Rumäniens längster Straßentunnel"
+				}
+			}
+		]
+	},
+	{
+		"a": "pitesti",
+		"b": "brasov",
+		"km": 135,
+		"road": "DN73",
+		"towns": [["Mărăcineni", 6], ["Câmpulung", 55], ["Rucăr", 80], ["Bran", 105], ["Râșnov", 118]],
+		"zones": [[50, "upland", "Muscel"], [105, "mountains", "Culoarul Rucăr-Bran"], [135, "foothills", "Țara Bârsei"]],
+		"via": [[55, 25.05, 45.27], [80, 25.17, 45.4], [105, 25.37, 45.52], [118, 25.46, 45.59]]
+	},
+	{
+		"a": "sibiu",
+		"b": "brasov",
+		"km": 142,
+		"road": "DN1",
+		"towns": [
+			["Avrig", 25], ["Porumbacu de Jos", 35], ["Cârțișoara", 48], ["Făgăraș", 75], ["Șercaia", 90],
+			["Codlea", 125]
+		],
+		"zones": [
+			[30, "foothills", "Depresiunea Sibiului"],
+			[105, "foothills", "Țara Făgărașului"],
+			[142, "fields", "Țara Bârsei"]
+		],
+		"via": [[25, 24.38, 45.72], [48, 24.58, 45.71], [75, 24.97, 45.84], [125, 25.45, 45.7]]
+	},
+	{
+		"a": "sibiu",
+		"b": "cluj",
+		"km": 155,
+		"road": [[55, "A1"], [125, "A10"], [155, "DN1"]],
+		"towns": [["Săliște", 20], ["Sebeș", 55], ["Alba Iulia", 70], ["Aiud", 100], ["Turda", 125]],
+		"zones": [
+			[55, "foothills", "Mărginimea Sibiului"],
+			[100, "orchard", "Valea Mureșului"],
+			[125, "upland", "Podișul Transilvaniei"],
+			[155, "upland", "Dealurile Clujului"]
+		],
+		"via": [[55, 23.57, 45.96], [70, 23.58, 46.07], [100, 23.72, 46.31], [125, 23.78, 46.57]]
+	},
+	{
+		"a": "sibiu",
+		"b": "timisoara",
+		"km": 285,
+		"road": [[170, "A1"], [182, "DN68A"], [285, "A1"]],
+		"towns": [["Sebeș", 55], ["Orăștie", 92], ["Deva", 120], ["Margina", 180], ["Lugoj", 220]],
+		"zones": [
+			[55, "foothills", "Mărginimea Sibiului"],
+			[120, "fields", "Valea Mureșului"],
+			[195, "forest", "Poiana Ruscă"],
+			[285, "fields", "Banat"]
+		],
+		"via": [
+			[55, 23.57, 45.96], [92, 23.2, 45.84], [120, 22.9, 45.88], [150, 22.65, 45.94], [180, 22.26, 45.86],
+			[220, 21.9, 45.69]
+		]
+	},
+	{
+		"a": "timisoara",
+		"b": "arad",
+		"km": 55,
+		"road": "A1",
+		"towns": [["Sânandrei", 15], ["Orțișoara", 28]],
+		"zones": [[30, "fields", "Banat"], [55, "fields", "Câmpia Aradului"]]
+	},
+	{
+		"a": "arad",
+		"b": "oradea",
+		"km": 117,
+		"road": "DN79",
+		"towns": [["Zimandu Nou", 15], ["Chișineu-Criș", 45], ["Salonta", 75], ["Cefa", 92]],
+		"zones": [[60, "fields", "Câmpia Crișurilor"], [117, "fields", "Crișana"]],
+		"via": [[45, 21.52, 46.52], [75, 21.65, 46.8]]
+	},
+	{
+		"a": "oradea",
+		"b": "cluj",
+		"km": 152,
+		"road": [[125, "DN1"], [152, "A3"]],
+		"towns": [["Aleșd", 40], ["Ciucea", 85], ["Huedin", 105], ["Gilău", 135]],
+		"zones": [
+			[40, "upland", "Dealurile Oradiei"],
+			[100, "forest", "Defileul Crișului Repede"],
+			[152, "upland", "Țara Călatei"]
+		],
+		"via": [[40, 22.4, 47.06], [85, 22.82, 46.95], [105, 23.03, 46.87], [135, 23.38, 46.76]]
+	},
+	{
+		"a": "cluj",
+		"b": "baia_mare",
+		"km": 150,
+		"road": "DN1C",
+		"towns": [["Bonțida", 30], ["Gherla", 45], ["Dej", 60], ["Cășeiu", 70], ["Șomcuta Mare", 125]],
+		"zones": [
+			[45, "upland", "Câmpia Transilvaniei"], [95, "upland", "Valea Someșului"],
+			[150, "forest", "Țara Chioarului"]
+		],
+		"via": [[45, 23.91, 47.03], [60, 23.88, 47.14], [95, 23.68, 47.3], [125, 23.47, 47.52]]
+	},
+	{
+		"a": "cluj",
+		"b": "targu_mures",
+		"km": 105,
+		"road": [[30, "DN1"], [105, "A3"]],
+		"towns": [["Turda", 30], ["Câmpia Turzii", 42], ["Luduș", 60], ["Iernut", 75], ["Ungheni", 92]],
+		"zones": [[30, "upland", "Dealurile Clujului"], [105, "fields", "Valea Mureșului"]],
+		"via": [[30, 23.78, 46.57], [60, 24.1, 46.48], [75, 24.23, 46.45]]
+	},
+	{
+		"a": "targu_mures",
+		"b": "sighisoara",
+		"km": 55,
+		"road": "DN13",
+		"towns": [["Bălăușeri", 25], ["Vânători", 45]],
+		"zones": [[25, "upland", "Valea Nirajului"], [55, "upland", "Valea Târnavei Mari"]],
+		"via": [[25, 24.68, 46.4]]
+	},
+	{
+		"a": "sighisoara",
+		"b": "brasov",
+		"km": 120,
+		"road": "DN13",
+		"towns": [["Saschiz", 20], ["Rupea", 50], ["Hoghiz", 65], ["Feldioara", 100]],
+		"zones": [[60, "upland", "Podișul Târnavelor"], [95, "forest", "Munții Perșani"], [120, "fields", "Țara Bârsei"]],
+		"via": [[20, 24.96, 46.19], [50, 25.22, 46.03], [65, 25.3, 45.98], [100, 25.59, 45.82]]
+	},
+	{
+		"a": "sibiu",
+		"b": "sighisoara",
+		"km": 92,
+		"road": "DN14",
+		"towns": [["Slimnic", 20], ["Copșa Mică", 45], ["Mediaș", 55], ["Dumbrăveni", 70], ["Daneș", 85]],
+		"zones": [
+			[40, "upland", "Podișul Hârtibaciului"], [50, "industrial", "Copșa Mică"],
+			[92, "orchard", "Podgoria Târnavelor"]
+		],
+		"via": [[45, 24.23, 46.11], [55, 24.35, 46.16], [70, 24.58, 46.23]]
+	},
+	{
+		"a": "brasov",
+		"b": "bacau",
+		"km": 175,
+		"road": "DN11",
+		"towns": [
+			["Sfântu Gheorghe", 30], ["Târgu Secuiesc", 65], ["Brețcu", 80], ["Oituz", 100], ["Onești", 120],
+			["Căiuți", 135]
+		],
+		"zones": [
+			[30, "fields", "Țara Bârsei"],
+			[80, "fields", "Depresiunea Târgu Secuiesc"],
+			[110, "mountains", "Pasul Oituz"],
+			[145, "upland", "Valea Trotușului"],
+			[175, "fields", "Valea Siretului"]
+		],
+		"via": [[30, 25.79, 45.86], [65, 26.14, 46], [100, 26.47, 46.2], [120, 26.77, 46.25]]
+	},
+	{
+		"a": "bacau",
+		"b": "iasi",
+		"km": 130,
+		"road": [[75, "DN2"], [130, "DN28"]],
+		"towns": [["Roman", 45], ["Moțca", 75], ["Târgu Frumos", 95], ["Podu Iloaiei", 112]],
+		"zones": [[60, "fields", "Valea Siretului"], [130, "upland", "Câmpia Jijiei"]],
+		"via": [[45, 26.93, 46.93], [75, 26.62, 47.23], [95, 27.01, 47.21]]
+	},
+	{
+		"a": "bacau",
+		"b": "suceava",
+		"km": 145,
+		"road": "DN2",
+		"towns": [["Roman", 45], ["Moțca", 75], ["Fălticeni", 115]],
+		"zones": [[60, "fields", "Valea Siretului"], [115, "upland", "Podișul Sucevei"], [145, "forest", "Bucovina"]],
+		"via": [[45, 26.93, 46.93], [75, 26.62, 47.23], [115, 26.3, 47.46]]
+	},
+	{
+		"a": "iasi",
+		"b": "suceava",
+		"km": 150,
+		"road": [[50, "DN28"], [80, "DN28A"], [150, "DN2"]],
+		"towns": [["Podu Iloaiei", 20], ["Târgu Frumos", 50], ["Pașcani", 75], ["Fălticeni", 120]],
+		"zones": [[50, "upland", "Câmpia Jijiei"], [120, "upland", "Podișul Sucevei"], [150, "forest", "Bucovina"]],
+		"via": [[50, 27.01, 47.21], [75, 26.72, 47.25], [120, 26.3, 47.46]]
+	},
+	{
+		"a": "iasi",
+		"b": "galati",
+		"km": 245,
+		"road": [[175, "DN24"], [245, "DN25"]],
+		"towns": [["Bârnova", 15], ["Vaslui", 70], ["Crasna", 95], ["Bârlad", 120], ["Tecuci", 175], ["Independența", 215]],
+		"zones": [
+			[70, "forest", "Codrii Iașilor"], [120, "upland", "Podișul Bârladului"],
+			[175, "fields", "Câmpia Tecuciului"], [245, "fields", "Câmpia Covurluiului"]
+		],
+		"via": [[70, 27.73, 46.64], [120, 27.67, 46.23], [175, 27.43, 45.85]]
+	},
+	{
+		"a": "galati",
+		"b": "tulcea",
+		"km": 120,
+		"road": [[25, "DN22B"], [120, "DN22"]],
+		"towns": [["Brăila", 25], ["Smârdan", 33], ["Măcin", 45], ["Luncavița", 70], ["Isaccea", 85]],
+		"zones": [[30, "fields", "Câmpia Brăilei"], [70, "upland", "Munții Măcinului"], [120, "lakes", "Delta Dunării"]],
+		"via": [[25, 27.96, 45.27], [45, 28.13, 45.24], [85, 28.46, 45.27]]
+	},
+	{
+		"a": "tulcea",
+		"b": "constanta",
+		"km": 125,
+		"road": "DN22",
+		"towns": [["Cataloi", 10], ["Babadag", 35], ["Baia", 55], ["Mihai Viteazu", 75], ["Săcele", 87], ["Lumina", 115]],
+		"zones": [[35, "forest", "Podișul Babadag"], [95, "fields", "Dobrogea"], [125, "coast", "Litoral"]],
+		"via": [[35, 28.71, 44.89], [75, 28.68, 44.63], [115, 28.57, 44.28]]
+	},
+	{
+		"a": "craiova",
+		"b": "drobeta",
+		"km": 110,
+		"road": "DN6",
+		"towns": [["Filiași", 32], ["Strehaia", 62], ["Șimian", 100]],
+		"zones": [[40, "fields", "Valea Jiului"], [110, "upland", "Podișul Getic"]],
+		"via": [[32, 23.52, 44.55], [62, 23.2, 44.62]]
+	},
+	{
+		"a": "drobeta",
+		"b": "timisoara",
+		"km": 215,
+		"road": [[150, "DN6"], [215, "A1"]],
+		"towns": [
+			["Gura Văii", 10], ["Orșova", 23], ["Băile Herculane", 45], ["Mehadia", 55], ["Caransebeș", 115],
+			["Lugoj", 150]
+		],
+		"zones": [
+			[25, "lakes", "Porțile de Fier"], [60, "mountains", "Valea Cernei"],
+			[115, "forest", "Culoarul Timiș-Cerna"], [150, "upland", "Dealurile Lugojului"], [215, "fields", "Banat"]
+		],
+		"via": [[10, 22.53, 44.67], [23, 22.4, 44.72], [45, 22.41, 44.88], [115, 22.22, 45.41], [150, 21.9, 45.69]]
+	}
+]

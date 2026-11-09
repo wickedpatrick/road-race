@@ -1,0 +1,366 @@
+{
+	"București": {
+		"pl": "Stolica Rumunii; Pałac Parlamentu to jeden z największych budynków świata",
+		"en": "Romania's capital; its Palace of the Parliament is one of the largest buildings in the world",
+		"cs": "Hlavní město Rumunska; Palác parlamentu patří k největším budovám světa",
+		"is": "Höfuðborg Rúmeníu; þinghöllin er ein stærsta bygging heims",
+		"de": "Rumäniens Hauptstadt; der Parlamentspalast ist eines der größten Gebäude der Welt"
+	},
+	"Cluj-Napoca": {
+		"pl": "Nieformalna stolica Transylwanii, miasto studentów i letniego festiwalu Untold",
+		"en": "The unofficial capital of Transylvania, a student city with the Untold summer festival",
+		"cs": "Neoficiální hlavní město Sedmihradska, studentské město s letním festivalem Untold",
+		"is": "Óopinber höfuðborg Transylvaníu, námsmannaborg með sumarhátíðina Untold",
+		"de": "Heimliche Hauptstadt Siebenbürgens, Studentenstadt mit dem Sommerfestival Untold"
+	},
+	"Iași": {
+		"pl": "Miasto siedmiu wzgórz, tu w 1860 roku powstał pierwszy uniwersytet w kraju",
+		"en": "The city of seven hills, where the country's first university opened in 1860",
+		"cs": "Město sedmi pahorků, kde roku 1860 vznikla první univerzita v zemi",
+		"is": "Borg hinna sjö hæða, þar sem fyrsti háskóli landsins var stofnaður 1860",
+		"de": "Die Stadt der sieben Hügel, hier entstand 1860 die erste Universität des Landes"
+	},
+	"Constanța": {
+		"pl": "Największy port nad Morzem Czarnym, założony przez Greków jako Tomis; tu na wygnaniu zmarł Owidiusz",
+		"en": "The biggest port on the Black Sea, founded by the Greeks as Tomis; the poet Ovid died here in exile",
+		"cs": "Největší přístav na Černém moři, Řeky založený jako Tomis; zde zemřel ve vyhnanství Ovidius",
+		"is": "Stærsta höfnin við Svartahaf, stofnuð af Grikkjum sem Tomis; skáldið Óvíd dó hér í útlegð",
+		"de": "Der größte Hafen am Schwarzen Meer, von Griechen als Tomis gegründet; hier starb Ovid in der Verbannung"
+	},
+	"Timișoara": {
+		"pl": "Pierwsze miasto w Europie z elektrycznym oświetleniem ulic (1884); tu w 1989 roku zaczęła się rewolucja",
+		"en": "The first city in Europe with electric street lighting (1884); the 1989 revolution began here",
+		"cs": "První město v Evropě s elektrickým pouličním osvětlením (1884); zde začala revoluce roku 1989",
+		"is": "Fyrsta borg Evrópu með rafmagnsgötulýsingu (1884); byltingin 1989 hófst hér",
+		"de": "Die erste Stadt Europas mit elektrischer Straßenbeleuchtung (1884); hier begann 1989 die Revolution"
+	},
+	"Brașov": {
+		"pl": "Średniowieczne miasto pod górą Tâmpa, z białym napisem BRAȘOV na zboczu jak w Hollywood",
+		"en": "A medieval town under Mount Tâmpa, with a Hollywood-style BRAȘOV sign on the slope",
+		"cs": "Středověké město pod horou Tâmpa s nápisem BRAȘOV na svahu jako v Hollywoodu",
+		"is": "Miðaldabær undir Tâmpa-fjalli, með BRAȘOV-skilti í hlíðinni eins og í Hollywood",
+		"de": "Mittelalterliche Stadt unter dem Berg Tâmpa, mit einem BRAȘOV-Schriftzug am Hang wie in Hollywood"
+	},
+	"Craiova": {
+		"pl": "Stolica Oltenii; w parku Romanescu wisi stary most nad jeziorem",
+		"en": "The capital of Oltenia; an old suspension bridge hangs over the lake in Romanescu Park",
+		"cs": "Hlavní město Olténie; v parku Romanescu visí nad jezerem starý most",
+		"is": "Höfuðborg Oltenia; gömul hengibrú liggur yfir vatnið í Romanescu-garðinum",
+		"de": "Hauptstadt Olteniens; im Romanescu-Park hängt eine alte Brücke über dem See"
+	},
+	"Galați": {
+		"pl": "Największy port rzeczny Rumunii nad Dunajem, ze stocznią i hutą stali",
+		"en": "Romania's biggest river port on the Danube, with a shipyard and a steelworks",
+		"cs": "Největší říční přístav Rumunska na Dunaji, s loděnicí a ocelárnou",
+		"is": "Stærsta árhöfn Rúmeníu við Dóná, með skipasmíðastöð og stálver",
+		"de": "Rumäniens größter Flusshafen an der Donau, mit Werft und Stahlwerk"
+	},
+	"Oradea": {
+		"pl": "Miasto secesji: kolorowe kamienice i pasaż Czarnego Orła",
+		"en": "A city of Art Nouveau: colourful houses and the Black Eagle passage",
+		"cs": "Město secese: barevné domy a pasáž Černého orla",
+		"is": "Borg Art Nouveau-stílsins: litrík hús og Svarta arnarins-göngin",
+		"de": "Eine Jugendstilstadt: bunte Häuser und die Passage zum Schwarzen Adler"
+	},
+	"Ploiești": {
+		"pl": "Stolica ropy: w 1857 roku działała tu jedna z pierwszych rafinerii świata",
+		"en": "The oil capital: one of the world's first refineries worked here in 1857",
+		"cs": "Hlavní město ropy: roku 1857 zde fungovala jedna z prvních rafinerií světa",
+		"is": "Höfuðborg olíunnar: ein fyrsta olíuhreinsunarstöð heims var hér 1857",
+		"de": "Die Ölhauptstadt: 1857 arbeitete hier eine der ersten Raffinerien der Welt"
+	},
+	"Arad": {
+		"pl": "Miasto nad Maruszą, z wielkim Pałacem Kultury i pomnikiem Wolności",
+		"en": "A town on the Mureș, with a grand Palace of Culture and the Statue of Liberty",
+		"cs": "Město na Mureši s velkým Palácem kultury a sochou Svobody",
+		"is": "Bær við Mureș, með mikilli menningarhöll og Frelsisstyttunni",
+		"de": "Stadt an der Marosch, mit einem prächtigen Kulturpalast und der Freiheitsstatue"
+	},
+	"Pitești": {
+		"pl": "Każdej wiosny miasto obsadza tysiące tulipanów na festiwal Symfonia Tulipanów",
+		"en": "Every spring the town plants thousands of tulips for the Tulip Symphony festival",
+		"cs": "Každé jaro město vysadí tisíce tulipánů na festival Symfonie tulipánů",
+		"is": "Á hverju vori gróðursetur bærinn þúsundir túlípana fyrir Túlípanasinfóníuna",
+		"de": "Jeden Frühling pflanzt die Stadt Tausende Tulpen für das Fest der Tulpensinfonie"
+	},
+	"Bacău": {
+		"pl": "Miasto poety George'a Bacovii, z najstarszym publicznym obserwatorium w kraju",
+		"en": "The town of the poet George Bacovia, with the country's oldest public observatory",
+		"cs": "Město básníka George Bacovii s nejstarší veřejnou hvězdárnou v zemi",
+		"is": "Bær skáldsins George Bacovia, með elstu almenningsstjörnustöð landsins",
+		"de": "Stadt des Dichters George Bacovia, mit der ältesten Volkssternwarte des Landes"
+	},
+	"Sibiu": {
+		"pl": "Saskie Hermannstadt: dachy mają okienka jak oczy, które patrzą na przechodniów",
+		"en": "Saxon Hermannstadt: the roofs have little windows like eyes watching the passers-by",
+		"cs": "Saský Hermannstadt: střechy mají vikýře jako oči, které sledují kolemjdoucí",
+		"is": "Saxneska Hermannstadt: þökin hafa litla glugga eins og augu sem fylgjast með vegfarendum",
+		"de": "Das sächsische Hermannstadt: die Dächer haben Luken wie Augen, die den Passanten nachsehen"
+	},
+	"Târgu Mureș": {
+		"pl": "Miasto róż nad Maruszą, z Pałacem Kultury o dachu z kolorowej dachówki",
+		"en": "The city of roses on the Mureș, with a Palace of Culture under a roof of coloured tiles",
+		"cs": "Město růží na Mureši s Palácem kultury pod střechou z barevných tašek",
+		"is": "Rósaborgin við Mureș, með menningarhöll undir þaki úr litríkum þakskífum",
+		"de": "Die Rosenstadt an der Marosch, mit einem Kulturpalast unter einem Dach aus bunten Ziegeln"
+	},
+	"Baia Mare": {
+		"pl": "Dawne miasto górników złota i srebra, brama do Marmaroszu z drewnianymi cerkwiami",
+		"en": "An old town of gold and silver miners, the gateway to Maramureș and its wooden churches",
+		"cs": "Staré město horníků zlata a stříbra, brána do Maramureše s dřevěnými kostely",
+		"is": "Gamall bær gull- og silfurnámumanna, hliðið að Maramureș og timburkirkjum hans",
+		"de": "Alte Stadt der Gold- und Silberbergleute, das Tor zur Maramuresch mit ihren Holzkirchen"
+	},
+	"Drobeta-Turnu Severin": {
+		"pl": "Tu w 105 roku Rzymianie przerzucili przez Dunaj most Trajana, najdłuższy przez tysiąc lat",
+		"en": "Here in 105 AD the Romans threw Trajan's Bridge across the Danube, the longest for a thousand years",
+		"cs": "Zde roku 105 postavili Římané přes Dunaj Trajánův most, tisíc let nejdelší",
+		"is": "Hér byggðu Rómverjar brú Trajanusar yfir Dóná árið 105, þá lengstu í þúsund ár",
+		"de": "Hier schlugen die Römer 105 n. Chr. die Trajansbrücke über die Donau, ein Jahrtausend lang die längste"
+	},
+	"Suceava": {
+		"pl": "Dawna stolica Stefana Wielkiego; dokoła stoją malowane monastery Bukowiny",
+		"en": "The old seat of Stephen the Great; the painted monasteries of Bucovina stand all around",
+		"cs": "Staré sídlo Štěpána Velikého; všude kolem stojí malované kláštery Bukoviny",
+		"is": "Fornt setur Stefáns mikla; máluð klaustur Búkóvínu standa allt um kring",
+		"de": "Alter Sitz Stephans des Großen; ringsum stehen die Moldauklöster der Bukowina"
+	},
+	"Tulcea": {
+		"pl": "Brama do delty Dunaju, gdzie gniazdują pelikany; dalej już tylko łodzią",
+		"en": "The gateway to the Danube Delta, where pelicans nest; beyond it, only by boat",
+		"cs": "Brána do delty Dunaje, kde hnízdí pelikáni; dál už jen lodí",
+		"is": "Hliðið að óshólmum Dónár þar sem pelíkanar verpa; þaðan aðeins á bát",
+		"de": "Das Tor zum Donaudelta, wo Pelikane nisten; weiter geht es nur per Boot"
+	},
+	"Sighișoara": {
+		"pl": "Zamieszkana średniowieczna cytadela na liście UNESCO; tu urodził się Vlad Palownik, pierwowzór Drakuli",
+		"en": "A lived-in medieval citadel on the UNESCO list, birthplace of Vlad the Impaler, the model for Dracula",
+		"cs": "Obydlená středověká citadela na seznamu UNESCO, rodiště Vlada Napichovače, předobrazu Draculy",
+		"is": "Byggð miðaldaborg á heimsminjaskrá UNESCO, fæðingarstaður Vlads stjaksetjara, fyrirmyndar Drakúla",
+		"de": "Eine bewohnte mittelalterliche Burg auf der UNESCO-Liste, Geburtsort Vlad des Pfählers, des Vorbilds für Dracula"
+	},
+	"Sinaia": {
+		"pl": "Perła Karpat: tu stoi zamek Peleș, letnia rezydencja królów Rumunii",
+		"en": "The Pearl of the Carpathians: home of Peleș Castle, the summer residence of Romania's kings",
+		"cs": "Perla Karpat: stojí tu zámek Peleș, letní sídlo rumunských králů",
+		"is": "Perla Karpatafjalla: þar stendur Peleș-kastali, sumarbústaður konunga Rúmeníu",
+		"de": "Die Perle der Karpaten: hier steht Schloss Peleș, die Sommerresidenz der rumänischen Könige"
+	},
+	"Bușteni": {
+		"pl": "Nad miastem na szczycie Caraiman stoi wielki krzyż, widoczny z doliny Prahovy",
+		"en": "A huge cross stands on Caraiman peak above the town, seen from all over the Prahova valley",
+		"cs": "Nad městem na vrcholu Caraiman stojí velký kříž, viditelný z celého údolí Prahovy",
+		"is": "Risastór kross stendur á Caraiman-tindi yfir bænum og sést um allan Prahova-dal",
+		"de": "Über dem Ort steht auf dem Caraiman ein riesiges Kreuz, im ganzen Prahovatal zu sehen"
+	},
+	"Câmpina": {
+		"pl": "Tu wydobywano ropę, a malarz Nicolae Grigorescu miał swój dom-pracownię",
+		"en": "An oil town, where the painter Nicolae Grigorescu had his house and studio",
+		"cs": "Ropné město, kde měl malíř Nicolae Grigorescu svůj dům a ateliér",
+		"is": "Olíubær þar sem málarinn Nicolae Grigorescu átti hús og vinnustofu",
+		"de": "Eine Ölstadt, in der der Maler Nicolae Grigorescu sein Haus und Atelier hatte"
+	},
+	"Predeal": {
+		"pl": "Najwyżej położone miasto Rumunii (ok. 1100 m), przełęcz między Wołoszczyzną a Transylwanią",
+		"en": "Romania's highest town (about 1,100 m), on the pass between Wallachia and Transylvania",
+		"cs": "Nejvýše položené město Rumunska (asi 1100 m), na průsmyku mezi Valašskem a Sedmihradskem",
+		"is": "Hæsti bær Rúmeníu (um 1100 m), á skarðinu milli Vallakíu og Transylvaníu",
+		"de": "Rumäniens höchstgelegene Stadt (etwa 1100 m), am Pass zwischen der Walachei und Siebenbürgen"
+	},
+	"Bran": {
+		"pl": "Zamek Bran na skale nad przełęczą nazywają zamkiem Drakuli",
+		"en": "Bran Castle, on a rock above the pass, is known as Dracula's Castle",
+		"cs": "Hrad Bran na skále nad průsmykem se přezdívá Drákulův hrad",
+		"is": "Bran-kastali á kletti yfir skarðinu er kallaður kastali Drakúla",
+		"de": "Die Törzburg auf einem Felsen über dem Pass gilt als Draculas Schloss"
+	},
+	"Râșnov": {
+		"pl": "Nad miastem stoi chłopska twierdza z XIII wieku, z głęboką studnią wykutą w skale",
+		"en": "A 13th-century peasant fortress stands above the town, with a deep well cut into the rock",
+		"cs": "Nad městem stojí selská pevnost ze 13. století s hlubokou studnou vytesanou ve skále",
+		"is": "Bændavirki frá 13. öld stendur yfir bænum, með djúpum brunni höggnum í klettinn",
+		"de": "Über der Stadt steht eine Bauernburg aus dem 13. Jahrhundert mit einem tief in den Fels gehauenen Brunnen"
+	},
+	"Curtea de Argeș": {
+		"pl": "Stąd zaczyna się Transfogaraska, droga przez Fogarasze, którą Top Gear nazwał najlepszą na świecie",
+		"en": "The start of the Transfăgărășan over the Făgăraș mountains, which Top Gear called the best road in the world",
+		"cs": "Odtud začíná Transfăgărășan přes pohoří Făgăraš, kterou Top Gear nazval nejlepší silnicí světa",
+		"is": "Hér hefst Transfăgărășan yfir Făgăraș-fjöllin, sem Top Gear kallaði besta veg í heimi",
+		"de": "Hier beginnt die Transfogarascher Hochstraße über das Fogarascher Gebirge, laut Top Gear die beste Straße der Welt"
+	},
+	"Arefu": {
+		"pl": "Nad wsią stoją ruiny twierdzy Poienari, prawdziwego zamku Vlada Palownika: 1480 schodów w górę",
+		"en": "Above the village stand the ruins of Poienari, the real castle of Vlad the Impaler: 1,480 steps up",
+		"cs": "Nad vesnicí stojí zřícenina Poienari, skutečného hradu Vlada Napichovače: 1480 schodů nahoru",
+		"is": "Yfir þorpinu standa rústir Poienari, raunverulegs kastala Vlads stjaksetjara: 1480 þrep upp",
+		"de": "Über dem Dorf steht die Ruine Poienari, die echte Burg Vlad des Pfählers: 1480 Stufen hinauf"
+	},
+	"Cârțișoara": {
+		"pl": "Tu Transfogaraska schodzi serpentynami z gór na równinę Fogaraszy; zimą droga jest zamknięta",
+		"en": "Here the Transfăgărășan comes down its hairpins onto the Făgăraș plain; in winter the road is closed",
+		"cs": "Zde Transfăgărășan sestupuje serpentinami z hor na Făgărašskou rovinu; v zimě je silnice zavřená",
+		"is": "Hér kemur Transfăgărășan niður hárnálabeygjurnar á Făgăraș-sléttuna; á veturna er vegurinn lokaður",
+		"de": "Hier kommt die Transfogarascher Straße in Serpentinen ins Fogarascher Land hinab; im Winter ist sie gesperrt"
+	},
+	"Făgăraș": {
+		"pl": "Twierdza z fosą w środku miasta, pod najwyższymi szczytami Rumunii (Moldoveanu, 2544 m)",
+		"en": "A moated fortress in the middle of town, under Romania's highest peaks (Moldoveanu, 2,544 m)",
+		"cs": "Pevnost s vodním příkopem uprostřed města, pod nejvyššími vrcholy Rumunska (Moldoveanu, 2544 m)",
+		"is": "Virki með síki í miðjum bænum, undir hæstu tindum Rúmeníu (Moldoveanu, 2544 m)",
+		"de": "Eine Wasserburg mitten in der Stadt, unter Rumäniens höchsten Gipfeln (Moldoveanu, 2544 m)"
+	},
+	"Alba Iulia": {
+		"pl": "Twierdza Alba Carolina w kształcie gwiazdy, jedna z największych w Europie",
+		"en": "The star-shaped Alba Carolina fortress, one of the largest in Europe",
+		"cs": "Pevnost Alba Carolina ve tvaru hvězdy, jedna z největších v Evropě",
+		"is": "Stjörnulaga virkið Alba Carolina, eitt það stærsta í Evrópu",
+		"de": "Die sternförmige Festung Alba Carolina, eine der größten Europas"
+	},
+	"Turda": {
+		"pl": "Kopalnia soli w Turdzie ma głęboko pod ziemią diabelski młyn, łódki na jeziorze i minigolf",
+		"en": "The Turda salt mine has a Ferris wheel, rowing boats on a lake and a mini golf deep underground",
+		"cs": "Solný důl v Turdě má hluboko pod zemí ruské kolo, loďky na jezeře a minigolf",
+		"is": "Saltnáman í Turda hefur parísarhjól, árabáta á vatni og mínígolf djúpt neðanjarðar",
+		"de": "Das Salzbergwerk von Turda hat tief unter der Erde ein Riesenrad, Ruderboote auf einem See und Minigolf"
+	},
+	"Cernavodă": {
+		"pl": "Most Anghela Saligny'ego z 1895 roku był wtedy najdłuższym mostem w Europie; obok jedyna w kraju elektrownia atomowa",
+		"en": "Anghel Saligny's bridge of 1895 was then the longest in Europe; the country's only nuclear plant stands beside it",
+		"cs": "Most Anghela Salignyho z roku 1895 byl tehdy nejdelší v Evropě; vedle stojí jediná jaderná elektrárna v zemi",
+		"is": "Brú Anghels Saligny frá 1895 var þá sú lengsta í Evrópu; við hlið hennar er eina kjarnorkuver landsins",
+		"de": "Anghel Salignys Brücke von 1895 war damals die längste Europas; daneben steht das einzige Kernkraftwerk des Landes"
+	},
+	"Brăila": {
+		"pl": "Most nad Dunajem z 2023 roku to najdłuższy most wiszący w Rumunii (1120 m między pylonami)",
+		"en": "The Danube bridge of 2023 is Romania's longest suspension bridge (1,120 m between the towers)",
+		"cs": "Most přes Dunaj z roku 2023 je nejdelší visutý most v Rumunsku (1120 m mezi pylony)",
+		"is": "Dónárbrúin frá 2023 er lengsta hengibrú Rúmeníu (1120 m milli turna)",
+		"de": "Die Donaubrücke von 2023 ist Rumäniens längste Hängebrücke (1120 m zwischen den Pylonen)"
+	},
+	"Măcin": {
+		"pl": "Góry Măcin to najstarsze góry Rumunii, zrównane przez czas do niskich granitowych wzgórz",
+		"en": "The Măcin Mountains are Romania's oldest, worn down by time into low granite hills",
+		"cs": "Pohoří Măcin je nejstarší v Rumunsku, časem obroušené na nízké žulové kopce",
+		"is": "Măcin-fjöllin eru elstu fjöll Rúmeníu, sorfin af tímanum niður í lágar granítahæðir",
+		"de": "Das Măcin-Gebirge ist Rumäniens ältestes, von der Zeit zu niedrigen Granithügeln abgeschliffen"
+	},
+	"Gura Văii": {
+		"pl": "Zapora Żelazna Brama I z 1972 roku, zbudowana razem z Jugosławią, przegradza Dunaj",
+		"en": "The Iron Gates I dam of 1972, built together with Yugoslavia, holds back the Danube",
+		"cs": "Přehrada Železná vrata I z roku 1972, postavená spolu s Jugoslávií, přehrazuje Dunaj",
+		"is": "Járnhliðsstíflan I frá 1972, byggð með Júgóslavíu, stíflar Dóná",
+		"de": "Der Staudamm Eisernes Tor I von 1972, zusammen mit Jugoslawien gebaut, staut die Donau"
+	},
+	"Orșova": {
+		"pl": "Stare miasto i wyspa Ada Kaleh zniknęły pod wodą po budowie zapory; obok przełom Dunaju, Kazany",
+		"en": "The old town and Ada Kaleh island went under water behind the dam; the Danube's Cauldrons gorge is nearby",
+		"cs": "Staré město a ostrov Ada Kaleh zmizely pod vodou za přehradou; nedaleko je soutěska Dunaje, Kotle",
+		"is": "Gamli bærinn og eyjan Ada Kaleh hurfu undir vatn bak við stífluna; Katlarnir, gljúfur Dónár, eru skammt frá",
+		"de": "Die Altstadt und die Insel Ada Kaleh versanken hinter dem Damm; nahebei liegt die Donauschlucht der Kessel"
+	},
+	"Băile Herculane": {
+		"pl": "Uzdrowisko z gorącymi źródłami, gdzie według legendy kąpał się Herkules",
+		"en": "A spa town with hot springs, where Hercules is said to have bathed",
+		"cs": "Lázně s horkými prameny, kde se podle legendy koupal Herkules",
+		"is": "Heilsulindabær með heitum lindum, þar sem Herkúles á að hafa baðað sig",
+		"de": "Ein Kurort mit heißen Quellen, wo der Sage nach Herkules badete"
+	},
+	"Onești": {
+		"pl": "Rodzinne miasto Nadii Comăneci, która w 1976 roku zdobyła pierwszą „dziesiątkę” w gimnastyce",
+		"en": "Home town of Nadia Comăneci, who scored gymnastics' first perfect 10 in 1976",
+		"cs": "Rodné město Nadii Comăneciové, která roku 1976 získala první „desítku“ v gymnastice",
+		"is": "Heimabær Nadiu Comăneci, sem fékk fyrstu fullkomnu tíuna í fimleikum 1976",
+		"de": "Heimatstadt von Nadia Comăneci, die 1976 die erste perfekte Zehn im Turnen erhielt"
+	},
+	"Focșani": {
+		"pl": "Miasto leży dokładnie na 45. równoleżniku, w połowie drogi z równika na biegun",
+		"en": "The town lies right on the 45th parallel, halfway from the equator to the pole",
+		"cs": "Město leží přesně na 45. rovnoběžce, v půli cesty od rovníku k pólu",
+		"is": "Bærinn liggur beint á 45. breiddarbaug, mitt á milli miðbaugs og pólsins",
+		"de": "Die Stadt liegt genau auf dem 45. Breitengrad, auf halbem Weg vom Äquator zum Pol"
+	},
+	"Buzău": {
+		"pl": "Na północ od miasta bulgoczą wulkany błotne, szare i księżycowe",
+		"en": "North of the town the mud volcanoes bubble in a grey, moonlike landscape",
+		"cs": "Severně od města bublají bahenní sopky v šedé měsíční krajině",
+		"is": "Norðan við bæinn bulla leirhverir í gráu tunglslegu landslagi",
+		"de": "Nördlich der Stadt blubbern die Schlammvulkane in einer grauen Mondlandschaft"
+	},
+	"Mediaș": {
+		"pl": "Saskie miasto gazu ziemnego; niedaleko warowny kościół w Biertan z UNESCO",
+		"en": "A Saxon town of natural gas; the fortified church of Biertan (UNESCO) is nearby",
+		"cs": "Saské město zemního plynu; nedaleko je opevněný kostel v Biertanu (UNESCO)",
+		"is": "Saxneskur jarðgasbær; víggirta kirkjan í Biertan (UNESCO) er skammt frá",
+		"de": "Eine sächsische Erdgasstadt; die Kirchenburg von Birthälm (UNESCO) ist nicht weit"
+	},
+	"Copșa Mică": {
+		"pl": "Kiedyś najbardziej zanieczyszczone miasto Europy: sadza barwiła na czarno domy i owce",
+		"en": "Once Europe's most polluted town: soot turned houses and even sheep black",
+		"cs": "Kdysi nejšpinavější město Evropy: saze barvily domy i ovce načerno",
+		"is": "Eitt sinn mengaðasti bær Evrópu: sót gerði hús og jafnvel kindur svartar",
+		"de": "Einst die schmutzigste Stadt Europas: Ruß färbte Häuser und sogar Schafe schwarz"
+	},
+	"Saschiz": {
+		"pl": "Wieś z warownym kościołem saskim i wieżą z zegarem jak w Sighișoarze",
+		"en": "A village with a Saxon fortified church and a clock tower like Sighișoara's",
+		"cs": "Vesnice se saským opevněným kostelem a věží s hodinami jako v Sighișoaře",
+		"is": "Þorp með saxneskri víggirtri kirkju og klukkuturni eins og í Sighișoara",
+		"de": "Ein Dorf mit sächsischer Kirchenburg und einem Uhrturm wie in Schäßburg"
+	},
+	"Vaslui": {
+		"pl": "Tu w 1475 roku Stefan Wielki rozbił wielką armię turecką",
+		"en": "Here in 1475 Stephen the Great defeated a large Ottoman army",
+		"cs": "Zde roku 1475 porazil Štěpán Veliký velké turecké vojsko",
+		"is": "Hér sigraði Stefán mikli stóran tyrkneskan her árið 1475",
+		"de": "Hier schlug Stephan der Große 1475 ein großes osmanisches Heer"
+	},
+	"Dej": {
+		"pl": "W pobliżu kopalnia soli Ocna Dejului; sól z tych stron spławiano kiedyś Samoszem",
+		"en": "Near the Ocna Dejului salt mine; salt from here once went down the Someș by raft",
+		"cs": "U solného dolu Ocna Dejului; sůl odsud se kdysi plavila po Someši",
+		"is": "Nálægt saltnámunni Ocna Dejului; salt þaðan var áður flutt á flekum niður Someș",
+		"de": "Beim Salzbergwerk Ocna Dejului; Salz von hier fuhr einst auf Flößen den Somesch hinab"
+	},
+	"Huedin": {
+		"pl": "Kraina Călata słynie z bogatych strojów ludowych i drewnianych bram",
+		"en": "The Călata country here is known for its rich folk costumes and carved wooden gates",
+		"cs": "Kraj Călata je známý bohatými kroji a vyřezávanými dřevěnými branami",
+		"is": "Călata-héraðið er þekkt fyrir ríkulega þjóðbúninga og útskorin trjáhlið",
+		"de": "Das Land Călata ist für seine prächtigen Trachten und geschnitzten Holztore bekannt"
+	},
+	"Deva": {
+		"pl": "Ruiny twierdzy na wulkanicznym wzgórzu nad miastem; niedaleko zamek Korwinów w Hunedoarze",
+		"en": "Fortress ruins on a volcanic hill above the town; Corvin Castle in Hunedoara is nearby",
+		"cs": "Zřícenina pevnosti na sopečném kopci nad městem; nedaleko je Korvínův hrad v Hunedoaře",
+		"is": "Virkisrústir á eldfjallahæð yfir bænum; Corvin-kastali í Hunedoara er skammt frá",
+		"de": "Burgruine auf einem Vulkanhügel über der Stadt; die Burg Hunedoara der Corvinen ist nicht weit"
+	},
+	"Babadag": {
+		"pl": "Najstarszy meczet w Rumunii (XVII wiek), pamiątka po czasach osmańskich w Dobrudży",
+		"en": "Romania's oldest mosque (17th century), from Dobruja's Ottoman times",
+		"cs": "Nejstarší mešita v Rumunsku (17. století) z osmanských časů Dobrudže",
+		"is": "Elsta moska Rúmeníu (17. öld), frá tímum Ottómana í Dobrudja",
+		"de": "Rumäniens älteste Moschee (17. Jahrhundert), aus der osmanischen Zeit der Dobrudscha"
+	},
+	"Mihai Viteazu": {
+		"pl": "Niedaleko ruiny Histrii, najstarszego miasta na terenie Rumunii, założonego przez Greków",
+		"en": "Near the ruins of Histria, the oldest town on Romanian soil, founded by the Greeks",
+		"cs": "Nedaleko jsou ruiny Histrie, nejstaršího města na území Rumunska, založeného Řeky",
+		"is": "Nálægt rústum Histríu, elsta bæjar á rúmenskri grund, stofnaðs af Grikkjum",
+		"de": "Nahe den Ruinen von Histria, der ältesten Stadt auf rumänischem Boden, von Griechen gegründet"
+	},
+	"Topoloveni": {
+		"pl": "Stąd pochodzi magiun, gęsty powidłowy krem ze śliwek bez cukru",
+		"en": "Home of magiun, a thick plum butter made without sugar",
+		"cs": "Odtud pochází magiun, hustá švestková povidla bez cukru",
+		"is": "Heimkynni magiun, þykks plómumauks án sykurs",
+		"de": "Heimat des Magiun, eines dicken Pflaumenmuses ohne Zucker"
+	},
+	"Fălticeni": {
+		"pl": "Miasto pisarzy; co roku na targu dyń wybiera się największą dynię",
+		"en": "A town of writers; every year its pumpkin fair crowns the biggest pumpkin",
+		"cs": "Město spisovatelů; každý rok se na dýňovém trhu vybírá největší dýně",
+		"is": "Bær rithöfunda; á hverju ári velur graskersmarkaðurinn stærsta graskerið",
+		"de": "Eine Stadt der Schriftsteller; jedes Jahr kürt der Kürbismarkt den größten Kürbis"
+	}
+}

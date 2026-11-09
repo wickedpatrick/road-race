@@ -1,0 +1,402 @@
+{
+	"București": [
+		{
+			"kind": "casa_poporului",
+			"name": {
+				"pl": "Pałac Parlamentu",
+				"en": "Palace of the Parliament",
+				"cs": "Palác parlamentu",
+				"is": "Þinghöllin",
+				"de": "Parlamentspalast"
+			},
+			"desc": {
+				"pl": "Ponad tysiąc sal, zbudowany przez Ceaușescu; cięższy od wszystkich budynków świata",
+				"en": "Over a thousand rooms, built by Ceaușescu; the heaviest building in the world",
+				"cs": "Přes tisíc sálů, postavil ho Ceaușescu; nejtěžší budova světa",
+				"is": "Yfir þúsund salir, byggð af Ceaușescu; þyngsta bygging heims",
+				"de": "Über tausend Säle, von Ceaușescu erbaut; das schwerste Gebäude der Welt"
+			},
+			"local": "Palatul Parlamentului"
+		}
+	],
+	"Cluj-Napoca": [
+		{
+			"kind": "cluj_st_michael",
+			"name": {
+				"pl": "Kościół św. Michała",
+				"en": "St Michael's Church",
+				"cs": "Kostel sv. Michala",
+				"is": "Kirkja heilags Mikaels",
+				"de": "Michaelskirche"
+			},
+			"desc": {
+				"pl": "Gotycki kościół z 80-metrową wieżą, przed nim konny pomnik króla Macieja Korwina",
+				"en": "A Gothic church with an 80 m tower, King Matthias Corvinus on horseback in front",
+				"cs": "Gotický kostel s 80metrovou věží, před ním jezdecká socha krále Matyáše Korvína",
+				"is": "Gotnesk kirkja með 80 m turni, Matthías Corvinus konungur á hestbaki fyrir framan",
+				"de": "Gotische Kirche mit 80 m hohem Turm, davor König Matthias Corvinus zu Pferd"
+			},
+			"local": "Biserica Sfântul Mihail"
+		}
+	],
+	"Iași": [
+		{
+			"kind": "iasi_palace_of_culture",
+			"name": {
+				"pl": "Pałac Kultury",
+				"en": "Palace of Culture",
+				"cs": "Palác kultury",
+				"is": "Menningarhöllin",
+				"de": "Kulturpalast"
+			},
+			"desc": {
+				"pl": "Neogotycki pałac z blisko 300 salami i wieżą zegarową, która co godzinę wygrywa kurant",
+				"en": "A neo-Gothic palace of nearly 300 rooms, its clock tower chiming a tune every hour",
+				"cs": "Novogotický palác s téměř 300 sály a hodinovou věží, jejíž zvonkohra hraje každou hodinu",
+				"is": "Nýgotnesk höll með nærri 300 sölum og klukkuturni sem spilar lag á hverri klukkustund",
+				"de": "Neugotischer Palast mit fast 300 Sälen und einem Uhrturm, dessen Glockenspiel jede Stunde erklingt"
+			},
+			"local": "Palatul Culturii"
+		}
+	],
+	"Constanța": [
+		{
+			"kind": "constanta_casino",
+			"name": {
+				"pl": "Kasyno w Konstancy",
+				"en": "Constanța Casino",
+				"cs": "Kasino v Konstanci",
+				"is": "Spilavítið í Constanța",
+				"de": "Casino von Constanța"
+			},
+			"desc": {
+				"pl": "Secesyjne kasyno z 1910 roku nad samym morzem",
+				"en": "An Art Nouveau casino of 1910 right on the sea",
+				"cs": "Secesní kasino z roku 1910 přímo u moře",
+				"is": "Art Nouveau-spilavíti frá 1910 alveg við sjóinn",
+				"de": "Ein Jugendstil-Casino von 1910 direkt am Meer"
+			},
+			"local": "Cazinoul din Constanța"
+		}
+	],
+	"Timișoara": [
+		{
+			"kind": "timisoara_cathedral",
+			"name": {
+				"pl": "Sobór Metropolitalny",
+				"en": "Metropolitan Cathedral",
+				"cs": "Metropolitní katedrála",
+				"is": "Erkibiskupsdómkirkjan",
+				"de": "Orthodoxe Kathedrale"
+			},
+			"desc": {
+				"pl": "Prawosławna katedra z dachami z kolorowej glazurowanej dachówki, wieża ma 83 m",
+				"en": "An Orthodox cathedral with roofs of coloured glazed tiles and an 83 m tower",
+				"cs": "Pravoslavná katedrála se střechami z barevných glazovaných tašek a 83metrovou věží",
+				"is": "Rétttrúnaðardómkirkja með þökum úr litríkum gljáðum skífum og 83 m turni",
+				"de": "Orthodoxe Kathedrale mit Dächern aus bunten glasierten Ziegeln und 83 m hohem Turm"
+			},
+			"local": "Catedrala Mitropolitană"
+		}
+	],
+	"Brașov": [
+		{
+			"kind": "biserica_neagra",
+			"name": {
+				"pl": "Czarny Kościół",
+				"en": "The Black Church",
+				"cs": "Černý kostel",
+				"is": "Svarta kirkjan",
+				"de": "Schwarze Kirche"
+			},
+			"desc": {
+				"pl": "Największy gotycki kościół w regionie, poczerniały po pożarze w 1689 roku",
+				"en": "The region's largest Gothic church, blackened by the fire of 1689",
+				"cs": "Největší gotický kostel v regionu, zčernalý po požáru roku 1689",
+				"is": "Stærsta gotneska kirkja svæðisins, sverð eftir brunann 1689",
+				"de": "Die größte gotische Kirche der Gegend, geschwärzt vom Brand 1689"
+			},
+			"local": "Biserica Neagră"
+		}
+	],
+	"Craiova": [
+		{
+			"kind": "romanescu_bridge",
+			"name": {
+				"pl": "Most wiszący w parku Romanescu",
+				"en": "Romanescu Park suspension bridge",
+				"cs": "Visutý most v parku Romanescu",
+				"is": "Hengibrúin í Romanescu-garðinum",
+				"de": "Hängebrücke im Romanescu-Park"
+			},
+			"desc": {
+				"pl": "Most nad jeziorem z dwiema wieżyczkami jak z zamku, z 1903 roku",
+				"en": "A bridge over the lake between two castle-like turrets, from 1903",
+				"cs": "Most přes jezero mezi dvěma věžičkami jako z hradu, z roku 1903",
+				"is": "Brú yfir vatnið milli tveggja kastalalegra turna, frá 1903",
+				"de": "Eine Brücke über den See zwischen zwei burgartigen Türmchen, von 1903"
+			},
+			"local": "Podul suspendat din Parcul Romanescu"
+		}
+	],
+	"Galați": [
+		{
+			"kind": "galati_shipyard",
+			"name": {
+				"pl": "Stocznia w Gałaczu",
+				"en": "Galați Shipyard",
+				"cs": "Loděnice Galați",
+				"is": "Skipasmíðastöðin í Galați",
+				"de": "Werft Galați"
+			},
+			"desc": {
+				"pl": "Statki morskie buduje się tu 150 km od morza i spływają Dunajem",
+				"en": "Sea-going ships are built here 150 km from the sea and sail out down the Danube",
+				"cs": "Námořní lodě se tu staví 150 km od moře a plují ven po Dunaji",
+				"is": "Hafskip eru smíðuð hér 150 km frá sjó og sigla út niður Dóná",
+				"de": "Hochseeschiffe werden hier 150 km vom Meer gebaut und fahren die Donau hinab"
+			},
+			"local": "Șantierul Naval Galați"
+		}
+	],
+	"Oradea": [
+		{
+			"kind": "vulturul_negru",
+			"name": {
+				"pl": "Pałac Czarnego Orła",
+				"en": "Black Eagle Palace",
+				"cs": "Palác Černého orla",
+				"is": "Svarta arnarhöllin",
+				"de": "Palast zum Schwarzen Adler"
+			},
+			"desc": {
+				"pl": "Secesyjny pałac z przeszklonym pasażem i czarnym orłem w witrażu",
+				"en": "An Art Nouveau palace with a glass-roofed passage and a black eagle in stained glass",
+				"cs": "Secesní palác s prosklenou pasáží a černým orlem ve vitráži",
+				"is": "Art Nouveau-höll með glerþöktum göngum og svörtum erni í steindu gleri",
+				"de": "Jugendstilpalast mit Glaspassage und einem schwarzen Adler im Buntglas"
+			},
+			"local": "Palatul Vulturul Negru"
+		}
+	],
+	"Ploiești": [
+		{
+			"kind": "ploiesti_pumpjack",
+			"name": {
+				"pl": "Muzeum Ropy Naftowej",
+				"en": "National Oil Museum",
+				"cs": "Národní muzeum ropy",
+				"is": "Olíusafnið",
+				"de": "Nationales Erdölmuseum"
+			},
+			"desc": {
+				"pl": "Kiwony pompy i drewniane wieże wiertnicze: Rumunia jako pierwsza na świecie oficjalnie notowała wydobycie ropy (1857)",
+				"en": "Pumpjacks and wooden derricks: Romania was the first country to record its oil output officially (1857)",
+				"cs": "Kývací pumpy a dřevěné vrtné věže: Rumunsko jako první na světě oficiálně evidovalo těžbu ropy (1857)",
+				"is": "Olíudælur og trébortturnar: Rúmenía skráði fyrst allra landa olíuvinnslu sína opinberlega (1857)",
+				"de": "Pferdekopfpumpen und hölzerne Bohrtürme: Rumänien verzeichnete als erstes Land amtlich seine Ölförderung (1857)"
+			},
+			"local": "Muzeul Național al Petrolului"
+		}
+	],
+	"Arad": [
+		{
+			"kind": "arad_liberty_statue",
+			"name": {
+				"pl": "Pomnik Wolności",
+				"en": "Statue of Liberty",
+				"cs": "Socha Svobody",
+				"is": "Frelsisstyttan",
+				"de": "Freiheitsstatue"
+			},
+			"desc": {
+				"pl": "Pomnik trzynastu generałów straconych w Aradzie w 1849 roku",
+				"en": "A memorial to the thirteen generals executed at Arad in 1849",
+				"cs": "Pomník třinácti generálů popravených v Aradu roku 1849",
+				"is": "Minnisvarði um þrettán hershöfðingja sem teknir voru af lífi í Arad 1849",
+				"de": "Denkmal für die dreizehn 1849 in Arad hingerichteten Generäle"
+			},
+			"local": "Statuia Libertății"
+		}
+	],
+	"Pitești": [
+		{
+			"kind": "pitesti_tulips",
+			"name": {
+				"pl": "Symfonia Tulipanów",
+				"en": "The Tulip Symphony",
+				"cs": "Symfonie tulipánů",
+				"is": "Túlípanasinfónían",
+				"de": "Tulpensinfonie"
+			},
+			"desc": {
+				"pl": "Wiosenny festiwal: park Strand pełen tulipanów pod cerkwią Kniaziowską",
+				"en": "The spring festival: Strand Park full of tulips under the Princely Church",
+				"cs": "Jarní festival: park Strand plný tulipánů pod Knížecím kostelem",
+				"is": "Vorhátíðin: Strand-garðurinn fullur af túlípönum undir furstakirkjunni",
+				"de": "Das Frühlingsfest: der Strand-Park voller Tulpen unter der Fürstenkirche"
+			},
+			"local": "Simfonia Lalelelor"
+		}
+	],
+	"Bacău": [
+		{
+			"kind": "bacau_observatory",
+			"name": {
+				"pl": "Obserwatorium Victora Anestina",
+				"en": "Victor Anestin Observatory",
+				"cs": "Hvězdárna Victora Anestina",
+				"is": "Stjörnustöð Victors Anestin",
+				"de": "Sternwarte Victor Anestin"
+			},
+			"desc": {
+				"pl": "Pierwsze publiczne obserwatorium w Rumunii, z planetarium pod kopułą",
+				"en": "Romania's first public observatory, with a planetarium under its dome",
+				"cs": "První veřejná hvězdárna v Rumunsku, s planetáriem pod kupolí",
+				"is": "Fyrsta almenningsstjörnustöð Rúmeníu, með stjörnuveri undir hvolfþakinu",
+				"de": "Rumäniens erste Volkssternwarte, mit einem Planetarium unter der Kuppel"
+			},
+			"local": "Observatorul Astronomic Victor Anestin"
+		}
+	],
+	"Sibiu": [
+		{
+			"kind": "sibiu_roof_eyes",
+			"name": {
+				"pl": "Wieża Rady i dachy z oczami",
+				"en": "Council Tower and the roofs with eyes",
+				"cs": "Radniční věž a střechy s očima",
+				"is": "Ráðsturninn og þökin með augum",
+				"de": "Ratsturm und die Dächer mit Augen"
+			},
+			"desc": {
+				"pl": "Nad Wielkim Rynkiem wieża, wokół dachy z okienkami jak przymrużone oczy",
+				"en": "Over the Great Square a tower, around it roofs with dormers like half-closed eyes",
+				"cs": "Nad Velkým náměstím věž, kolem střechy s vikýři jako přimhouřené oči",
+				"is": "Yfir Stóratorgi turn, umhverfis þök með kvistgluggum eins og hálflokuð augu",
+				"de": "Über dem Großen Ring ein Turm, ringsum Dächer mit Gauben wie halb geschlossene Augen"
+			},
+			"local": "Turnul Sfatului"
+		}
+	],
+	"Târgu Mureș": [
+		{
+			"kind": "targu_mures_culture_palace",
+			"name": {
+				"pl": "Pałac Kultury",
+				"en": "Palace of Culture",
+				"cs": "Palác kultury",
+				"is": "Menningarhöllin",
+				"de": "Kulturpalast"
+			},
+			"desc": {
+				"pl": "Secesyjny pałac z 1913 roku z dachem z kolorowej dachówki i salą luster",
+				"en": "A 1913 Art Nouveau palace with a coloured tile roof and a Hall of Mirrors",
+				"cs": "Secesní palác z roku 1913 se střechou z barevných tašek a zrcadlovým sálem",
+				"is": "Art Nouveau-höll frá 1913 með litríku skífuþaki og speglasal",
+				"de": "Jugendstilpalast von 1913 mit bunt gedecktem Dach und Spiegelsaal"
+			},
+			"local": "Palatul Culturii"
+		}
+	],
+	"Baia Mare": [
+		{
+			"kind": "turnul_stefan",
+			"name": {
+				"pl": "Wieża Stefana",
+				"en": "Stephen's Tower",
+				"cs": "Štěpánova věž",
+				"is": "Stefánsturninn",
+				"de": "Stephansturm"
+			},
+			"desc": {
+				"pl": "Gotycka wieża z XV wieku, jedyna pozostałość kościoła św. Stefana",
+				"en": "A 15th-century Gothic tower, all that is left of St Stephen's Church",
+				"cs": "Gotická věž z 15. století, jediný zbytek kostela sv. Štěpána",
+				"is": "Gotneskur turn frá 15. öld, það eina sem eftir er af kirkju heilags Stefáns",
+				"de": "Ein gotischer Turm aus dem 15. Jahrhundert, alles, was von der Stephanskirche blieb"
+			},
+			"local": "Turnul lui Ștefan"
+		}
+	],
+	"Drobeta-Turnu Severin": [
+		{
+			"kind": "trajan_bridge",
+			"name": {
+				"pl": "Most Trajana",
+				"en": "Trajan's Bridge",
+				"cs": "Trajánův most",
+				"is": "Brú Trajanusar",
+				"de": "Trajansbrücke"
+			},
+			"desc": {
+				"pl": "Ponad kilometr drewnianych łuków na 20 kamiennych filarach, dzieło Apollodorosa z Damaszku",
+				"en": "Over a kilometre of timber arches on 20 stone piers, by Apollodorus of Damascus",
+				"cs": "Přes kilometr dřevěných oblouků na 20 kamenných pilířích, dílo Apollodóra z Damašku",
+				"is": "Yfir kílómetri af trébogum á 20 steinstöplum, eftir Apollodóros frá Damaskus",
+				"de": "Über einen Kilometer Holzbögen auf 20 Steinpfeilern, ein Werk des Apollodor von Damaskus"
+			},
+			"local": "Podul lui Traian"
+		}
+	],
+	"Suceava": [
+		{
+			"kind": "suceava_citadel",
+			"name": {
+				"pl": "Twierdza Stołeczna w Suczawie",
+				"en": "The Seat Fortress of Suceava",
+				"cs": "Sídelní pevnost Suceava",
+				"is": "Setursvirkið í Suceava",
+				"de": "Fürstenburg Suceava"
+			},
+			"desc": {
+				"pl": "Twierdza Stefana Wielkiego, która w 1476 roku oparła się sułtanowi Mehmedowi II",
+				"en": "Stephen the Great's fortress, which held out against Sultan Mehmed II in 1476",
+				"cs": "Pevnost Štěpána Velikého, která roku 1476 odolala sultánu Mehmedovi II.",
+				"is": "Virki Stefáns mikla, sem stóðst Mehmed II soldán árið 1476",
+				"de": "Die Festung Stephans des Großen, die 1476 Sultan Mehmed II. standhielt"
+			},
+			"local": "Cetatea de Scaun a Sucevei"
+		}
+	],
+	"Tulcea": [
+		{
+			"kind": "delta_pelicans",
+			"name": {
+				"pl": "Pelikany w delcie Dunaju",
+				"en": "Pelicans of the Danube Delta",
+				"cs": "Pelikáni v deltě Dunaje",
+				"is": "Pelíkanar í óshólmum Dónár",
+				"de": "Pelikane im Donaudelta"
+			},
+			"desc": {
+				"pl": "Największa kolonia pelikanów różowych w Europie, wśród trzcin i kanałów",
+				"en": "Europe's largest colony of great white pelicans, among reeds and channels",
+				"cs": "Největší kolonie pelikánů bílých v Evropě, mezi rákosím a kanály",
+				"is": "Stærsta byggð hvítpelíkana í Evrópu, innan um sef og sund",
+				"de": "Europas größte Kolonie von Rosapelikanen, zwischen Schilf und Kanälen"
+			},
+			"local": "Delta Dunării"
+		}
+	],
+	"Sighișoara": [
+		{
+			"kind": "sighisoara_clock_tower",
+			"name": {
+				"pl": "Wieża Zegarowa",
+				"en": "The Clock Tower",
+				"cs": "Hodinová věž",
+				"is": "Klukkuturninn",
+				"de": "Stundturm"
+			},
+			"desc": {
+				"pl": "64-metrowa brama cytadeli; o północy w zegarze zmieniają się drewniane figurki dni tygodnia",
+				"en": "The citadel's 64 m gate tower; at midnight its wooden figures of the weekdays change",
+				"cs": "64metrová brána citadely; o půlnoci se v hodinách mění dřevěné figurky dnů v týdnu",
+				"is": "64 m hliðturn borgarinnar; á miðnætti skipta tréfígúrur vikudaganna um sæti",
+				"de": "Der 64 m hohe Torturm der Burg; um Mitternacht wechseln die hölzernen Wochentagsfiguren"
+			},
+			"local": "Turnul cu Ceas"
+		}
+	]
+}
