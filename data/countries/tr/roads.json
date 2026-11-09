@@ -281,7 +281,7 @@
 		"km": 210,
 		"road": "O52",
 		"towns": [["Ceyhan", 45], ["Osmaniye", 90]],
-		"zones": [[95, "fields", "Çukurova"], [160, "mountains", "Amanos Dağları"], [210, "orchard", "Gaziantep"]],
+		"zones": [[95, "fields", "Çukurova"], [160, "upland", "Amanos Dağları"], [210, "orchard", "Gaziantep"]],
 		"via": [[45, 35.82, 37.03], [90, 36.25, 37.07]]
 	},
 	{
