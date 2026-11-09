@@ -281,12 +281,17 @@ def anthems():  # melodies from the scores on Wikipedia/Commons; all of them in 
         (69, .5), (67, .5), (69, .5), (70, .5), (72, 2)], 0.32, [41, 57, 60, 65])  # My, Belarusy (Sakalouski, d. 1950): Commons "My Belarusy instr.jpg"
     anthem("lv", [(72, 2), (72, 1), (72, 1), (76, 1.5), (74, .5), (72, 2), (74, 2), (74, 1), (74, 1), (77, 1.5), (76, .5), (74, 2)], 0.3,
         [43, 55, 59, 62])  # Dievs, svētī Latviju (Baumanis, d. 1905): his manuscript, Commons "Dievs. svētī Latviju Original.jpg"
-    anthem("ee", [(64, .5), (61, .5), (62, .5), (64, 1.5), (69, .5), (71, .75), (64, .25), (73, 2), (69, 1), (66, .75), (71, .25), (69, 1), (68, 1), (69, 1.5)], 0.45,
-        [45, 57, 61, 64])  # Mu isamaa (Pacius, d. 1891; Finland's Maamme): trillian.mit.edu abc/anthem/NA_Finland.abc
+    pacius = [(64, .5), (61, .5), (62, .5), (64, 1.5), (69, .5), (71, .75), (64, .25), (73, 2), (69, 1), (66, .75), (71, .25), (69, 1), (68, 1), (69, 1.5)]
+    anthem("ee", pacius, 0.45, [45, 57, 61, 64])  # Mu isamaa (Pacius, d. 1891; Finland's Maamme): trillian.mit.edu abc/anthem/NA_Finland.abc
+    anthem("fi", pacius, 0.45, [45, 57, 61, 64])  # ... Finland's Maamme / Vårt land itself (the same notes in the score on en.wikipedia "Maamme")
     anthem("ie", [(70, 1.5), (72, .5), (74, 1), (70, 1), (65, 3), (65, 1), (67, 1.5), (67, .5), (63, 1), (67, 1), (65, 2), (65, 2)], 0.3,
         [46, 58, 62, 65])  # Amhrán na bhFiann, the refrain (Heeney, d. 1911, Kearney, d. 1942): trillian.mit.edu abc/anthem/Soldiers_Song_S.abc
     anthem("me", [(70, 1.5), (68, .5), (68, 1), (70, 1), (72, 1), (72, .5), (70, .5), (68, 1), (67, 1), (75, 1.5), (72, .5), (70, .5), (72, .5), (68, .5), (70, .5),
         (67, 1.5), (68, .5), (70, 1)], 0.33, [39, 55, 58, 63])  # Ubavoj nam Crnoj Gori (Ivanišević, d. 1889), the Kingdom's anthem: Commons "Sheet music - Ubavoj nam Crnoj Gori.jpg"
+    anthem("se", [(74, .5), (74, 1), (70, .5), (70, .5), (70, 1), (72, .5), (74, .5), (74, 1), (72, .5), (70, .5), (69, 1), (None, .5), (72, .5),
+        (72, 1), (69, .5), (70, .5), (72, .5), (69, .5), (74, .75), (70, .25), (67, 2), (65, 1)], 0.34, [41, 57, 60, 65])  # Du gamla, du fria (folk melody): the score on en.wikipedia "Du gamla, du fria"
+    anthem("dk", [(62, .5), (69, 1.5), (69, .5), (66, 1), (62, 1), (71, 2), (None, 1.5), (62, .5), (74, 1.5), (74, .5), (73, 1), (71, 1), (71, 1), (69, 1)], 0.32,
+        [45, 57, 61, 64])  # Der er et yndigt land (Krøyer, d. 1879): Commons "Der er et yndigt land.mid" and .png
 def motifs():  # the best-known bars of each country's classical (or folk) tune, on arrival every other time
     motif = lambda code, melody, q, chord, tail=0.8: anthem(code, melody, q, chord, tail, "motif_")
     motif("pl", [(69, .5), (None, .25), (69, .25), (69, .5), (None, .25), (69, .25), (73, .25), (76, .25), (78, .25), (80, .25), (81, 1)], 0.5, [45, 57, 61, 64, 69])  # Chopin, Polonaise in A major "Military" (from memory and the score's opening)
@@ -342,6 +347,15 @@ def motifs():  # the best-known bars of each country's classical (or folk) tune,
         [43, 55, 59, 62])  # Õige ja vasemba (folk dance): trillian Estonia/OigeJaVasemba.abc
     motif("ie", [(62, 1), (67, 1.5), (67, .5), (67, 1), (67, .5), (71, 1.5), (67, 1), (69, 1.5), (69, .5), (69, 1), (69, .5), (72, 1.5), (69, .5), (69, .5),
         (71, .5), (74, 1.5), (72, 1), (71, .5), (74, 1.5), (72, 1), (71, 1.5), (67, .5), (69, 1), (67, 2)], 0.2, [43, 55, 59, 62])  # Molly Malone, the refrain (trad.): trillian Ireland/song
+    motif("fi", [(69, .5), (64, .5), (62, .5), (60, .5), (60, .5), (59, .5), (59, .5), (60, .25), (62, .25), (64, .75), (62, .25), (60, .5), (59, .5),
+        (59, .5), (57, .5), (57, .5), (60, .25), (64, .25), (69, .5), (64, .5), (62, .5), (60, .5), (60, .5), (59, .5), (59, .5), (60, .25), (62, .25),
+        (64, .5), (62, .5), (60, .5), (59, .5), (57, 1)], 0.25, [45, 57, 60, 64])  # Säkkijärven polkka (folk), an octave down: trillian Finland/Sakkijarven_polkka_Am.abc
+    motif("se", [(72, .5), (69, .75), (69, .25), (69, .5), (72, .5), (69, .75), (69, .25), (69, .5), (72, .5), (74, .5), (72, .5), (70, .5), (69, .5), (67, 1), (None, .5), (70, .5),
+        (67, .75), (67, .25), (67, .5), (70, .5), (67, .75), (67, .25), (67, .5), (70, .5), (72, .5), (70, .5), (69, .5), (67, .5), (65, 1)], 0.27,
+        [41, 57, 60, 65])  # Små grodorna (folk): trillian Scand/Sma_Grodorna.abc
+    motif("dk", [(67, .5), (71, .5), (67, .5), (72, .5), (69, .5), (74, 1), (71, .5), (76, .5), (72, .5), (72, .5), (71, .5), (71, .5), (69, 1.5), (74, .5),
+        (71, .5), (71, .5), (69, .5), (69, .5), (67, 1), (64, .5), (72, .5), (71, .5), (71, .5), (69, .5), (69, .5), (67, 1)], 0.26,
+        [43, 55, 59, 62])  # Nielsen (d. 1931), Jeg ved en Lærkerede: Carl Nielsen Udgaven III/5 no. 182 (kb.dk), the score on da.wikipedia
     # the countries with two tunes instead of the anthem
     motif("si", [(66, .5), (69, .5), (69, .5), (69, .5), (66, .5), (69, .5), (69, .5), (69, .5), (66, .5), (66, .5), (64, .5), (64, .5), (62, 1), (62, 1),
         (62, 1), (64, 1), (66, .5), (69, .5), (69, .5), (None, .5), (66, .5), (66, .5), (64, .5), (64, .5), (62, 1)], 0.28, [50, 57, 62, 66])  # Marko skače (folk): trillian Slovenia/MarkoSkace.abc
