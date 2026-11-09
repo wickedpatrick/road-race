@@ -1,0 +1,180 @@
+{
+	"Lefkosia": [
+		{
+			"kind": "nicosia_walls",
+			"name": {
+				"pl": "Mury weneckie",
+				"en": "The Venetian Walls",
+				"cs": "Benátské hradby",
+				"is": "Feneysku múrarnir",
+				"de": "Die Venezianischen Mauern"
+			},
+			"desc": {
+				"pl": "Wenecjanie zbudowali je w 1567 roku: gwiazda z jedenastoma bastionami w kształcie serca",
+				"en": "Built by the Venetians in 1567: a star with eleven heart-shaped bastions",
+				"cs": "Benátčané je postavili roku 1567: hvězda s jedenácti bastiony ve tvaru srdce",
+				"is": "Feneyingar reistu þá árið 1567: stjarna með ellefu hjartalaga virkisbrjóstum",
+				"de": "1567 von den Venezianern erbaut: ein Stern mit elf herzförmigen Bastionen"
+			},
+			"local": "Ενετικά Τείχη"
+		}
+	],
+	"Lemesos": [
+		{
+			"kind": "limassol_castle",
+			"name": {
+				"pl": "Zamek w Limassolu",
+				"en": "Limassol Castle",
+				"cs": "Hrad Limassol",
+				"is": "Kastalinn í Limassol",
+				"de": "Burg von Limassol"
+			},
+			"desc": {
+				"pl": "Według legendy w kaplicy tego zamku Ryszard Lwie Serce poślubił Berengarię w 1191 roku",
+				"en": "Legend says Richard the Lionheart married Berengaria in its chapel in 1191",
+				"cs": "Podle legendy si tu Richard Lví srdce roku 1191 vzal Berengarii",
+				"is": "Sagan segir að Ríkharður ljónshjarta hafi gifst Berengaríu hér árið 1191",
+				"de": "Der Legende nach heiratete Richard Löwenherz hier 1191 Berengaria"
+			},
+			"local": "Κάστρο Λεμεσού"
+		}
+	],
+	"Larnaka": [
+		{
+			"kind": "agios_lazaros",
+			"name": {
+				"pl": "Kościół św. Łazarza",
+				"en": "Church of St Lazarus",
+				"cs": "Kostel sv. Lazara",
+				"is": "Kirkja heilags Lasarusar",
+				"de": "Lazaruskirche"
+			},
+			"desc": {
+				"pl": "Kamienny bizantyjski kościół z wysoką dzwonnicą, nad grobem Łazarza",
+				"en": "A stone Byzantine church with a tall bell tower, over the tomb of Lazarus",
+				"cs": "Kamenný byzantský kostel s vysokou zvonicí nad Lazarovým hrobem",
+				"is": "Býsönsk steinkirkja með háum klukkuturni, yfir gröf Lasarusar",
+				"de": "Eine byzantinische Steinkirche mit hohem Glockenturm über dem Grab des Lazarus"
+			},
+			"local": "Άγιος Λάζαρος"
+		}
+	],
+	"Pafos": [
+		{
+			"kind": "paphos_fort",
+			"name": {
+				"pl": "Fort w Pafos",
+				"en": "Paphos Castle",
+				"cs": "Pevnost Pafos",
+				"is": "Virkið í Pafos",
+				"de": "Hafenkastell von Paphos"
+			},
+			"desc": {
+				"pl": "Mały kamienny fort strzegący portu od czasów średniowiecza",
+				"en": "A small stone fort guarding the harbour since the Middle Ages",
+				"cs": "Malá kamenná pevnost, která od středověku střeží přístav",
+				"is": "Lítið steinvirki sem hefur gætt hafnarinnar síðan á miðöldum",
+				"de": "Ein kleines Steinkastell, das seit dem Mittelalter den Hafen bewacht"
+			},
+			"local": "Κάστρο Πάφου"
+		},
+		{
+			"kind": "petra_tou_romiou",
+			"name": {
+				"pl": "Skała Afrodyty",
+				"en": "Aphrodite's Rock",
+				"cs": "Afroditina skála",
+				"is": "Klettur Afródítu",
+				"de": "Felsen der Aphrodite"
+			},
+			"desc": {
+				"pl": "Według mitu tu z morskiej piany wyszła na brzeg bogini Afrodyta",
+				"en": "In the myth, the goddess Aphrodite rose from the sea foam here",
+				"cs": "Podle mýtu tu z mořské pěny vystoupila bohyně Afrodita",
+				"is": "Samkvæmt goðsögninni reis gyðjan Afródíta hér úr sjávarfroðunni",
+				"de": "Laut dem Mythos entstieg hier die Göttin Aphrodite dem Meeresschaum"
+			},
+			"local": "Πέτρα του Ρωμιού"
+		}
+	],
+	"Agia Napa": [
+		{
+			"kind": "kamara_tou_koraka",
+			"name": {
+				"pl": "Łuk Kruka",
+				"en": "The Raven's Arch",
+				"cs": "Havraní oblouk",
+				"is": "Hrafnsboginn",
+				"de": "Rabenbogen"
+			},
+			"desc": {
+				"pl": "Naturalny skalny łuk nad turkusową wodą przy przylądku Greko",
+				"en": "A natural rock arch over turquoise water near Cape Greco",
+				"cs": "Přírodní skalní oblouk nad tyrkysovou vodou u mysu Greko",
+				"is": "Náttúrulegur klettabogi yfir grænbláu vatni við Greco-höfða",
+				"de": "Ein natürlicher Felsbogen über türkisem Wasser am Kap Greco"
+			},
+			"local": "Καμάρα του Κόρακα"
+		}
+	],
+	"Paralimni": [
+		{
+			"kind": "profitis_ilias_chapel",
+			"name": {
+				"pl": "Kaplica Proroka Eliasza",
+				"en": "Prophet Elias Chapel",
+				"cs": "Kaple proroka Eliáše",
+				"is": "Kapella Elía spámanns",
+				"de": "Kapelle des Propheten Elias"
+			},
+			"desc": {
+				"pl": "Biała kapliczka na skale w Protaras, prowadzi do niej ponad sto schodów",
+				"en": "A white chapel on a rock in Protaras, reached by over a hundred steps",
+				"cs": "Bílá kaple na skále v Protarasu, vede k ní přes sto schodů",
+				"is": "Hvít kapella á kletti í Protaras, yfir hundrað þrep liggja upp að henni",
+				"de": "Eine weiße Kapelle auf einem Felsen in Protaras, über hundert Stufen hinauf"
+			},
+			"local": "Προφήτης Ηλίας"
+		}
+	],
+	"Polis": [
+		{
+			"kind": "aphrodite_baths",
+			"name": {
+				"pl": "Łaźnie Afrodyty",
+				"en": "The Baths of Aphrodite",
+				"cs": "Afroditiny lázně",
+				"is": "Böð Afródítu",
+				"de": "Bäder der Aphrodite"
+			},
+			"desc": {
+				"pl": "Grota z sadzawką w cieniu figowca, gdzie według mitu kąpała się bogini",
+				"en": "A grotto pool shaded by a fig tree, where the goddess bathed in the myth",
+				"cs": "Jeskyňka s tůní ve stínu fíkovníku, kde se podle mýtu koupala bohyně",
+				"is": "Hellir með tjörn í skugga fíkjutrés, þar sem gyðjan baðaði sig í goðsögninni",
+				"de": "Eine Grotte mit einem Becken im Schatten eines Feigenbaums, wo die Göttin im Mythos badete"
+			},
+			"local": "Λουτρά της Αφροδίτης"
+		}
+	],
+	"Platres": [
+		{
+			"kind": "caledonia_falls",
+			"name": {
+				"pl": "Wodospad Kaledonia",
+				"en": "Caledonia Waterfall",
+				"cs": "Vodopád Kaledonia",
+				"is": "Kaledóníufoss",
+				"de": "Caledonia-Wasserfall"
+			},
+			"desc": {
+				"pl": "Najwyższy wodospad Cypru, 13 m, w cieniu sosen i platanów",
+				"en": "Cyprus's highest waterfall, 13 m, under pines and plane trees",
+				"cs": "Nejvyšší vodopád Kypru, 13 m, ve stínu borovic a platanů",
+				"is": "Hæsti foss Kýpur, 13 m, undir furum og platanviði",
+				"de": "Zyperns höchster Wasserfall, 13 m, unter Kiefern und Platanen"
+			},
+			"local": "Καταρράκτης Καληδονίας"
+		}
+	]
+}
