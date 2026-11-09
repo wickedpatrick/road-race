@@ -999,14 +999,14 @@ static func _name_lines(cv, font: Font, r: Rect2, text: String, col: Color, size
 static func _town_sign(cv, it: Dictionary, b: Vector2, pm: float, font: Font, ending: bool) -> void:
 	var post := 3.0 * pm
 	var w := TOWN_SIGN_W * pm
-	var hh := 1.8 * pm
+	var hh := (2.4 if Geo.native(it.text) != "" else 1.8) * pm # two lines of name: a taller board
 	_posts(cv, b, pm, post, [-1.6, 1.6])
 	var r := Rect2(b + Vector2(-w * 0.5, -post - hh), Vector2(w, hh))
 	var p: String = it.get("p", "")
 	var ink := sign_color("town_text", p)
 	cv.draw_rect(r, sign_color("town", p))
 	cv.draw_rect(r.grow(-0.14 * pm), ink, false, maxf(1.0, 0.1 * pm))
-	_name_lines(cv, font, r.grow_individual(-0.35 * pm, 0, -0.35 * pm, 0), it.text, ink, 0.95 * pm)
+	_name_lines(cv, font, r.grow_individual(-0.35 * pm, -0.3 * pm, -0.35 * pm, -0.3 * pm), it.text, ink, 0.95 * pm)
 	if ending:
 		cv.draw_line(r.position + Vector2(w * 0.08, hh * 0.85), r.position + Vector2(w * 0.92, hh * 0.15), SIGN_RED, maxf(1.0, 0.24 * pm))
 
@@ -1015,8 +1015,10 @@ static func _town_sign(cv, it: Dictionary, b: Vector2, pm: float, font: Font, en
 static func _board(cv, it: Dictionary, b: Vector2, pm: float, font: Font) -> void:
 	var lines: Array = it.lines
 	var two := false # a native name on the board: taller rows, the native name over the Latin one
+	var nats: Array = []
 	for l in lines:
-		if Geo.native(l[0]) != "": two = true
+		nats.append(Geo.native(l[0]))
+		if nats[-1] != "": two = true
 	var lh := (2.1 if two else 1.45) * pm
 	var w := BOARD_W * pm
 	var head := 1.5 * pm if it.road != "" else 0.25 * pm
@@ -1035,8 +1037,8 @@ static func _board(cv, it: Dictionary, b: Vector2, pm: float, font: Font) -> voi
 		_fit_text(cv, font, pr, pl[0], pl[2], 0.8 * pm)
 	for i in lines.size():
 		var row := Rect2(r.position + Vector2(0.5 * pm, head + lh * i), Vector2(w - 1.0 * pm, lh))
-		if two and Geo.native(lines[i][0]) != "":
-			var nat := Geo.native(lines[i][0])
+		if nats[i] != "":
+			var nat: String = nats[i]
 			_fit_text(cv, font, Rect2(row.position, Vector2(row.size.x * 0.78, lh * 0.55)), nat, ink, 0.72 * pm, HORIZONTAL_ALIGNMENT_LEFT)
 			_fit_text(cv, font, Rect2(row.position + Vector2(0, lh * 0.52), Vector2(row.size.x * 0.78, lh * 0.46)), lines[i][0], ink, 0.52 * pm, HORIZONTAL_ALIGNMENT_LEFT)
 		else:
@@ -1047,7 +1049,8 @@ static func _board(cv, it: Dictionary, b: Vector2, pm: float, font: Font) -> voi
 static func _region(cv, it: Dictionary, b: Vector2, pm: float, font: Font) -> void:
 	var post := 2.8 * pm
 	var w := REGION_W * pm
-	var hh := 2.2 * pm
+	var nat := Geo.native(it.text) != ""
+	var hh := (3.0 if nat else 2.2) * pm # taller with a native name: two lines of name
 	_posts(cv, b, pm, post, [-3.0, 3.0])
 	var r := Rect2(b + Vector2(-w * 0.5, -post - hh), Vector2(w, hh))
 	cv.draw_rect(r, SIGN_BROWN)
@@ -1056,8 +1059,8 @@ static func _region(cv, it: Dictionary, b: Vector2, pm: float, font: Font) -> vo
 	if fl.x >= 3.0:
 		var code: String = it.get("p", "")
 		FlagPainter.draw(cv, code if code != "" else GameData.current, Rect2(r.position + Vector2(0.35 * pm, 0.18 * pm), fl))
-	_fit_text(cv, font, Rect2(r.position + Vector2(0.55 * pm + fl.x, 0.1 * pm), Vector2(w - 0.9 * pm - fl.x, hh * 0.42)), Geo.station(it.get("p", "")).region_sign, Color("f1d9b5"), 0.55 * pm)
-	_name_lines(cv, font, Rect2(r.position + Vector2(0.35 * pm, hh * 0.42), Vector2(w - 0.7 * pm, hh * 0.52)), it.text, Color.WHITE, 0.8 * pm)
+	_fit_text(cv, font, Rect2(r.position + Vector2(0.55 * pm + fl.x, (0.3 if nat else 0.1) * pm), Vector2(w - 0.9 * pm - fl.x, (0.7 * pm if nat else hh * 0.42))), Geo.station(it.get("p", "")).region_sign, Color("f1d9b5"), 0.55 * pm)
+	_name_lines(cv, font, Rect2(r.position + Vector2(0.35 * pm, 1.0 * pm if nat else hh * 0.42), Vector2(w - 0.7 * pm, 1.8 * pm if nat else hh * 0.52)), it.text, Color.WHITE, 0.8 * pm)
 
 ## Brown tourist board (E-22c style) naming the landmark next to it.
 static func _poi(cv, it: Dictionary, b: Vector2, pm: float, font: Font) -> void:
