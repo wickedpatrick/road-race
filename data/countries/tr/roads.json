@@ -4,12 +4,12 @@
 		"b": "edirne",
 		"km": 235,
 		"road": "O3",
-		"towns": [["Silivri", 65], ["Lüleburgaz", 155], ["Havsa", 205]],
+		"towns": [["Silivri", 65], ["Çorlu", 110], ["Lüleburgaz", 155], ["Babaeski", 180], ["Havsa", 205]],
 		"zones": [
 			[40, "industrial", "İstanbul"], [130, "fields", "Tekirdağ"], [190, "fields", "Kırklareli"],
 			[235, "fields", "Edirne"]
 		],
-		"via": [[65, 28.25, 41.07], [155, 27.36, 41.4], [205, 26.82, 41.55]]
+		"via": [[65, 28.25, 41.07], [110, 27.8, 41.16], [155, 27.36, 41.4], [180, 27.09, 41.43], [205, 26.82, 41.55]]
 	},
 	{
 		"a": "canakkale",
@@ -65,12 +65,15 @@
 		"b": "ankara",
 		"km": 450,
 		"road": "O4",
-		"towns": [["İzmit", 100], ["Düzce", 210], ["Bolu", 265], ["Gerede", 315]],
+		"towns": [["İzmit", 100], ["Adapazarı", 150], ["Düzce", 210], ["Bolu", 265], ["Gerede", 315]],
 		"zones": [
 			[45, "industrial", "İstanbul"], [125, "industrial", "Kocaeli"], [190, "fields", "Sakarya"],
 			[232, "forest", "Düzce"], [300, "mountains", "Bolu"], [340, "upland", "Bolu"], [450, "upland", "Ankara"]
 		],
-		"via": [[14, 29.06, 41.09], [100, 29.92, 40.77], [210, 31.16, 40.84], [265, 31.61, 40.74], [315, 32.2, 40.8]],
+		"via": [
+			[14, 29.06, 41.09], [100, 29.92, 40.77], [150, 30.4, 40.78], [210, 31.16, 40.84], [265, 31.61, 40.74],
+			[315, 32.2, 40.8]
+		],
 		"bridge": {
 			"from_km": 13,
 			"to_km": 14.5,
@@ -132,12 +135,12 @@
 		"b": "izmir",
 		"km": 330,
 		"road": "O5",
-		"towns": [["Balıkesir", 150], ["Akhisar", 255]],
+		"towns": [["Susurluk", 75], ["Balıkesir", 150], ["Soma", 213], ["Akhisar", 255], ["Manisa", 295]],
 		"zones": [
 			[60, "orchard", "Bursa"], [190, "fields", "Balıkesir"], [290, "mediterranean", "Manisa"],
 			[330, "mediterranean", "İzmir"]
 		],
-		"via": [[150, 27.89, 39.65], [255, 27.84, 38.92]]
+		"via": [[75, 28.16, 39.91], [150, 27.89, 39.65], [213, 27.61, 39.19], [255, 27.84, 38.92], [295, 27.43, 38.61]]
 	},
 	{
 		"a": "bursa",
@@ -145,7 +148,7 @@
 		"km": 150,
 		"road": "D200",
 		"towns": [["İnegöl", 45], ["Bozüyük", 95]],
-		"zones": [[55, "orchard", "Bursa"], [105, "forest", "Bilecik"], [150, "fields", "Eskişehir"]],
+		"zones": [[55, "orchard", "Bursa"], [105, "forest", "Bilecik"], [150, "steppe", "Eskişehir"]],
 		"via": [[45, 29.51, 40.08], [95, 30.04, 39.91]]
 	},
 	{
@@ -154,7 +157,7 @@
 		"km": 235,
 		"road": "D200",
 		"towns": [["Sivrihisar", 95], ["Polatlı", 160]],
-		"zones": [[120, "fields", "Eskişehir"], [235, "fields", "Ankara"]],
+		"zones": [[120, "steppe", "Eskişehir"], [235, "steppe", "Ankara"]],
 		"via": [[95, 31.54, 39.45], [160, 32.15, 39.58]]
 	},
 	{
@@ -287,7 +290,7 @@
 		"km": 145,
 		"road": "O52",
 		"towns": [["Nizip", 45], ["Birecik", 85]],
-		"zones": [[70, "orchard", "Gaziantep"], [95, "fields", "Fırat"], [145, "fields", "Şanlıurfa"]],
+		"zones": [[70, "orchard", "Gaziantep"], [95, "fields", "Fırat"], [145, "steppe", "Şanlıurfa"]],
 		"via": [[45, 37.79, 37.01], [85, 37.98, 37.03]]
 	},
 	{
@@ -296,7 +299,7 @@
 		"km": 180,
 		"road": "D885",
 		"towns": [["Siverek", 97]],
-		"zones": [[110, "fields", "Şanlıurfa"], [140, "upland", "Karacadağ"], [180, "fields", "Diyarbakır"]],
+		"zones": [[110, "steppe", "Şanlıurfa"], [140, "upland", "Karacadağ"], [180, "fields", "Diyarbakır"]],
 		"via": [[97, 39.32, 37.75]]
 	},
 	{
@@ -436,7 +439,7 @@
 		"km": 195,
 		"road": [[130, "D260"], [195, "D200"]],
 		"towns": [["Gemerek", 95], ["Şarkışla", 130]],
-		"zones": [[80, "fields", "Kayseri"], [195, "upland", "Sivas"]],
+		"zones": [[80, "steppe", "Kayseri"], [195, "upland", "Sivas"]],
 		"via": [[95, 36.07, 39.18], [130, 36.41, 39.35]]
 	},
 	{
@@ -445,7 +448,7 @@
 		"km": 80,
 		"road": [[8, "D302"], [80, "D300"]],
 		"towns": [["İncesu", 45]],
-		"zones": [[20, "upland", "Kapadokya"], [80, "upland", "Kayseri"]],
+		"zones": [[20, "upland", "Kapadokya"], [80, "steppe", "Kayseri"]],
 		"via": [[45, 35.18, 38.62]]
 	},
 	{
@@ -454,7 +457,7 @@
 		"km": 227,
 		"road": [[215, "D300"], [227, "D302"]],
 		"towns": [["Sultanhanı", 102], ["Aksaray", 142]],
-		"zones": [[110, "fields", "Konya"], [175, "fields", "Aksaray"], [227, "upland", "Kapadokya"]],
+		"zones": [[110, "steppe", "Konya"], [175, "steppe", "Aksaray"], [227, "upland", "Kapadokya"]],
 		"via": [[102, 33.55, 38.25], [142, 34.03, 38.37]]
 	},
 	{
@@ -463,7 +466,7 @@
 		"km": 260,
 		"road": [[100, "D750"], [260, "D715"]],
 		"towns": [["Kulu", 110], ["Cihanbeyli", 165]],
-		"zones": [[90, "fields", "Ankara"], [190, "lakes", "Tuz Gölü"], [260, "fields", "Konya"]],
+		"zones": [[90, "steppe", "Ankara"], [190, "steppe", "Tuz Gölü"], [260, "steppe", "Konya"]],
 		"via": [[110, 33.08, 39.09], [165, 32.92, 38.66]]
 	},
 	{
@@ -473,7 +476,7 @@
 		"road": [[248, "D715"], [333, "D400"]],
 		"towns": [["Karaman", 100], ["Mut", 170], ["Silifke", 248]],
 		"zones": [
-			[120, "fields", "Konya"], [160, "upland", "Karaman"], [235, "mountains", "Toroslar"],
+			[120, "steppe", "Konya"], [160, "upland", "Karaman"], [235, "mountains", "Toroslar"],
 			[333, "mediterranean", "Mersin"]
 		],
 		"via": [[100, 33.22, 37.18], [170, 33.44, 36.64], [248, 33.93, 36.38]]
@@ -497,7 +500,7 @@
 		"road": [[185, "D260"], [287, "D765"]],
 		"towns": [["Kaman", 140], ["Kırşehir", 185], ["Hacıbektaş", 230]],
 		"zones": [
-			[60, "fields", "Ankara"], [200, "fields", "Kırşehir"], [265, "upland", "Nevşehir"],
+			[60, "steppe", "Ankara"], [200, "steppe", "Kırşehir"], [265, "upland", "Nevşehir"],
 			[287, "upland", "Kapadokya"]
 		],
 		"via": [[140, 33.72, 39.36], [185, 34.16, 39.15], [230, 34.56, 38.94]]

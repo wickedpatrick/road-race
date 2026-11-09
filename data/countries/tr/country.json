@@ -21,6 +21,7 @@
 	"region_label": {"pl": "prowincja", "en": "province", "cs": "provincie", "is": "hérað", "de": "Provinz"},
 	"start": ["istanbul", "bursa"],
 	"express_prefixes": ["O"],
+	"traffic": 0.4,
 	"limits": {"express": 120, "road": 90, "city": 50, "town_on_express": 80, "town": 50},
 	"signs": {"town": "#ffffff", "town_text": "#111111", "board": "#1d4f9c", "board_motorway": "#0b7a3e"},
 	"map": {"lon0": 25.5, "lon1": 45, "lat0": 35.6, "lat1": 42.3, "lon_k": 0.777, "zoom": 1.6, "labels": "auto"},
