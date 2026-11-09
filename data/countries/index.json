@@ -138,6 +138,12 @@
 			"name": {"pl": "Węgry", "en": "Hungary", "cs": "Maďarsko", "is": "Ungverjaland", "de": "Ungarn"},
 			"neighbours": ["at", "sk", "ua", "ro", "rs", "hr", "si"],
 			"favorite_neighbour": "pl"
+		},
+		{
+			"code": "ro",
+			"name": {"pl": "Rumunia", "en": "Romania", "cs": "Rumunsko", "is": "Rúmenía", "de": "Rumänien"},
+			"neighbours": ["hu", "ua", "md", "bg", "rs"],
+			"favorite_neighbour": "md"
 		}
 	]
 }
