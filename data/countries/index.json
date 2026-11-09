@@ -102,6 +102,12 @@
 			"members": ["me", "xk", "al", "mk"],
 			"neighbours": ["hr", "ba", "rs", "gr", "bg"],
 			"favorite_neighbour": "gr"
+		},
+		{
+			"code": "gr",
+			"name": {"pl": "Grecja", "en": "Greece", "cs": "Řecko", "is": "Grikkland", "de": "Griechenland"},
+			"neighbours": ["al", "mk", "bg", "tr", "cy"],
+			"favorite_neighbour": "cy"
 		}
 	]
 }

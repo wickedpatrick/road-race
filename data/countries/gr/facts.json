@@ -1,0 +1,352 @@
+{
+	"Athína": {
+		"pl": "Stolica Grecji pod Akropolem, kolebka demokracji i filozofii",
+		"en": "Greece's capital below the Acropolis, the cradle of democracy and philosophy",
+		"cs": "Hlavní město Řecka pod Akropolí, kolébka demokracie a filozofie",
+		"is": "Höfuðborg Grikklands undir Akrópólis, vagga lýðræðis og heimspeki",
+		"de": "Griechenlands Hauptstadt unter der Akropolis, Wiege der Demokratie und der Philosophie"
+	},
+	"Peiraiás": {
+		"pl": "Największy port Grecji, stąd promy płyną na Kretę i wyspy Morza Egejskiego",
+		"en": "Greece's biggest port, where ferries leave for Crete and the Aegean islands",
+		"cs": "Největší přístav Řecka, odtud plují trajekty na Krétu a ostrovy v Egejském moři",
+		"is": "Stærsta höfn Grikklands, þaðan sigla ferjur til Krítar og Eyjahafseyja",
+		"de": "Griechenlands größter Hafen, von hier fahren die Fähren nach Kreta und auf die Ägäis-Inseln"
+	},
+	"Thessaloníki": {
+		"pl": "Drugie miasto Grecji nad Zatoką Termajską, założone przez Kassandra i nazwane imieniem siostry Aleksandra Wielkiego",
+		"en": "Greece's second city on the Thermaic Gulf, founded by Cassander and named after Alexander the Great's sister",
+		"cs": "Druhé největší město Řecka u Thermajského zálivu, pojmenované po sestře Alexandra Velikého",
+		"is": "Næststærsta borg Grikklands við Þermaíska flóann, nefnd eftir systur Alexanders mikla",
+		"de": "Griechenlands zweitgrößte Stadt am Thermaischen Golf, benannt nach der Schwester Alexanders des Großen"
+	},
+	"Pátra": {
+		"pl": "Port nad Zatoką Patrajską, słynie z karnawału, największego w Grecji",
+		"en": "A port on the Gulf of Patras, famous for Greece's biggest carnival",
+		"cs": "Přístav u Patraského zálivu, proslulý největším karnevalem v Řecku",
+		"is": "Hafnarborg við Patras-flóa, fræg fyrir stærstu kjötkveðjuhátíð Grikklands",
+		"de": "Hafenstadt am Golf von Patras, berühmt für den größten Karneval Griechenlands"
+	},
+	"Irákleio": {
+		"pl": "Największe miasto Krety, kilka kilometrów od pałacu w Knossos, gdzie żył mityczny Minotaur",
+		"en": "Crete's biggest city, a few kilometres from the palace of Knossos, home of the mythical Minotaur",
+		"cs": "Největší město Kréty, pár kilometrů od paláce v Knóssu, kde žil bájný Mínotauros",
+		"is": "Stærsta borg Krítar, nokkra kílómetra frá höllinni í Knossos þar sem hinn goðsagnakenndi Mínótáros bjó",
+		"de": "Kretas größte Stadt, wenige Kilometer vom Palast von Knossos, wo der sagenhafte Minotaurus hauste"
+	},
+	"Lárisa": {
+		"pl": "Stolica Tesalii na równinie nad rzeką Pinios, według legendy tu zmarł Hipokrates",
+		"en": "Thessaly's capital on the plain by the Pineios, where Hippocrates is said to have died",
+		"cs": "Hlavní město Thesálie na rovině u řeky Pineios, podle tradice zde zemřel Hippokratés",
+		"is": "Höfuðborg Þessalíu á sléttunni við Pineios-ána, þar á Hippókrates að hafa dáið",
+		"de": "Thessaliens Hauptstadt in der Ebene am Pinios, hier soll Hippokrates gestorben sein"
+	},
+	"Vólos": {
+		"pl": "Port u stóp góry Pelion, stąd według mitu Jazon wypłynął Argo po złote runo",
+		"en": "A port at the foot of Mount Pelion, where Jason set sail on the Argo for the Golden Fleece",
+		"cs": "Přístav pod horou Pélion, odkud podle mýtu vyplul Iásón na Argó pro zlaté rouno",
+		"is": "Hafnarborg undir Pelíon-fjalli, þaðan sigldi Jason á Argó eftir gullna reyfinu",
+		"de": "Hafen am Fuß des Pilion, von hier segelte Jason mit der Argo zum Goldenen Vlies"
+	},
+	"Ioánnina": {
+		"pl": "Miasto nad jeziorem Pamwotis, z twierdzą Alego Paszy i wyspą bez nazwy",
+		"en": "A town on Lake Pamvotis, with Ali Pasha's fortress and an island with no name",
+		"cs": "Město u jezera Pamvotida s pevností Aliho Paši a ostrovem bez jména",
+		"is": "Bær við Pamvotis-vatn, með virki Ali Pasja og eyju sem heitir ekki neitt",
+		"de": "Stadt am Pamvotida-See, mit der Festung Ali Paschas und einer Insel ohne Namen"
+	},
+	"Chaniá": {
+		"pl": "Dawna stolica Krety z weneckim portem i latarnią z XVI wieku",
+		"en": "Crete's old capital, with a Venetian harbour and a 16th-century lighthouse",
+		"cs": "Bývalé hlavní město Kréty s benátským přístavem a majákem ze 16. století",
+		"is": "Gamla höfuðborg Krítar, með feneyska höfn og vita frá 16. öld",
+		"de": "Kretas alte Hauptstadt, mit venezianischem Hafen und einem Leuchtturm aus dem 16. Jahrhundert"
+	},
+	"Kalamáta": {
+		"pl": "Stolica Mesenii, od niej nazwę wzięły słynne czarne oliwki",
+		"en": "Messinia's capital, which gave its name to the famous dark olives",
+		"cs": "Hlavní město Messénie, podle něj se jmenují slavné tmavé olivy",
+		"is": "Höfuðborg Messiníu, sem frægu dökku ólífurnar eru kenndar við",
+		"de": "Hauptstadt Messeniens, nach der die berühmten dunklen Oliven benannt sind"
+	},
+	"Alexandroúpoli": {
+		"pl": "Ostatnie duże miasto przed Turcją, z latarnią morską nad nadbrzeżem",
+		"en": "The last big town before Turkey, with a lighthouse on its seafront",
+		"cs": "Poslední velké město před Tureckem, s majákem na nábřeží",
+		"is": "Síðasti stóri bærinn fyrir Tyrkland, með vita við strandgötuna",
+		"de": "Die letzte große Stadt vor der Türkei, mit einem Leuchtturm an der Uferpromenade"
+	},
+	"Kavála": {
+		"pl": "Port u stóp twierdzy, z XVI-wiecznym akweduktem nad ulicami",
+		"en": "A port below a fortress, with a 16th-century aqueduct striding over the streets",
+		"cs": "Přístav pod pevností, s akvaduktem ze 16. století nad ulicemi",
+		"is": "Hafnarborg undir virki, með vatnsveitubrú frá 16. öld yfir götunum",
+		"de": "Hafen unter einer Festung, mit einem Aquädukt aus dem 16. Jahrhundert über den Straßen"
+	},
+	"Lamía": {
+		"pl": "Stolica Ftiotydy, 20 km od wąwozu Termopile, gdzie walczył król Leonidas",
+		"en": "Phthiotis' capital, 20 km from Thermopylae, where King Leonidas fought",
+		"cs": "Hlavní město Fthiótidy, 20 km od Thermopyl, kde bojoval král Leónidás",
+		"is": "Höfuðborg Fþíótis, 20 km frá Laugaskarði þar sem Leónídas konungur barðist",
+		"de": "Hauptstadt der Phthiotis, 20 km von den Thermopylen, wo König Leonidas kämpfte"
+	},
+	"Réthymno": {
+		"pl": "Weneckie stare miasto z wielką fortecą Fortezza nad morzem",
+		"en": "A Venetian old town with the great Fortezza fortress above the sea",
+		"cs": "Benátské staré město s velkou pevností Fortezza nad mořem",
+		"is": "Feneyskur gamli bær með stóra virkinu Fortezza yfir sjónum",
+		"de": "Venezianische Altstadt mit der großen Festung Fortezza über dem Meer"
+	},
+	"Kórinthos": {
+		"pl": "Miasto przy Kanale Korynckim, który przecina przesmyk i oddziela Peloponez od lądu",
+		"en": "A town by the Corinth Canal, which cuts the isthmus and makes the Peloponnese an island",
+		"cs": "Město u Korintského průplavu, který protíná šíji a odděluje Peloponés od pevniny",
+		"is": "Bær við Kórintuskurðinn sem sker eiðið og skilur Pelópsskaga frá meginlandinu",
+		"de": "Stadt am Kanal von Korinth, der den Isthmus durchschneidet und den Peloponnes vom Festland trennt"
+	},
+	"Pýrgos": {
+		"pl": "Stolica Elidy, 20 km od Olimpii, gdzie odbywały się starożytne igrzyska",
+		"en": "Elis' capital, 20 km from Olympia, home of the ancient Games",
+		"cs": "Hlavní město Élidy, 20 km od Olympie, kde se konaly antické hry",
+		"is": "Höfuðborg Elís, 20 km frá Ólympíu þar sem fornu leikarnir fóru fram",
+		"de": "Hauptstadt von Elis, 20 km von Olympia, wo die antiken Spiele stattfanden"
+	},
+	"Náfplio": {
+		"pl": "Pierwsza stolica wolnej Grecji, z twierdzą Palamidi na 999 schodach",
+		"en": "The first capital of free Greece, with the Palamidi fortress up 999 steps",
+		"cs": "První hlavní město svobodného Řecka, s pevností Palamidi nahoře po 999 schodech",
+		"is": "Fyrsta höfuðborg frjáls Grikklands, með Palamidi-virkið efst í 999 tröppum",
+		"de": "Erste Hauptstadt des freien Griechenlands, mit der Festung Palamidi über 999 Stufen"
+	},
+	"Spárti": {
+		"pl": "Miasto dawnych Spartan w dolinie Eurotasu, nad nim ruiny bizantyjskiej Mistry",
+		"en": "The town of the ancient Spartans in the Evrotas valley, below the Byzantine ruins of Mystras",
+		"cs": "Město starověkých Sparťanů v údolí Eurótu, nad ním byzantské trosky Mystry",
+		"is": "Bær hinna fornu Spartverja í Evrotas-dalnum, undir býsönsku rústunum í Mystras",
+		"de": "Die Stadt der alten Spartaner im Eurotas-Tal, unter den byzantinischen Ruinen von Mystras"
+	},
+	"Igoumenítsa": {
+		"pl": "Port promowy do Włoch i Korfu, tu zaczyna się autostrada Egnatia",
+		"en": "The ferry port for Italy and Corfu, where the Egnatia motorway begins",
+		"cs": "Trajektový přístav do Itálie a na Korfu, zde začíná dálnice Egnatia",
+		"is": "Ferjuhöfn til Ítalíu og Korfú, þar sem Egnatia-hraðbrautin byrjar",
+		"de": "Fährhafen nach Italien und Korfu, hier beginnt die Autobahn Egnatia"
+	},
+	"Kalampáka": {
+		"pl": "Miasteczko pod skałami Meteorów, na których szczytach stoją klasztory",
+		"en": "A small town below the Meteora rocks, with monasteries on their tops",
+		"cs": "Městečko pod skalami Meteor, na jejichž vrcholcích stojí kláštery",
+		"is": "Smábær undir Meteora-klettunum, með klaustur á toppum þeirra",
+		"de": "Kleinstadt unter den Meteora-Felsen, auf deren Gipfeln Klöster stehen"
+	},
+	"Elefsína": {
+		"pl": "Starożytne Eleusis, miejsce tajemnych misteriów ku czci Demeter",
+		"en": "Ancient Eleusis, home of the secret Mysteries of Demeter",
+		"cs": "Antický Eleusín, místo tajných mystérií bohyně Démétér",
+		"is": "Hin forna Elevsis, þar sem leyndardómar Demetru voru haldnir",
+		"de": "Das antike Eleusis, Ort der geheimen Mysterien der Demeter"
+	},
+	"Mégara": {
+		"pl": "Starożytna Megara, jej koloniści założyli Bizancjum, późniejszy Konstantynopol",
+		"en": "Ancient Megara, whose settlers founded Byzantium, later Constantinople",
+		"cs": "Antická Megara, její osadníci založili Byzantion, pozdější Konstantinopol",
+		"is": "Hin forna Megara, en landnemar hennar stofnuðu Býsans, síðar Konstantínópel",
+		"de": "Das antike Megara, dessen Siedler Byzanz gründeten, das spätere Konstantinopel"
+	},
+	"Aígio": {
+		"pl": "Miasto nad Zatoką Koryncką, w 1821 roku zebrali się tu przywódcy powstania",
+		"en": "A town on the Gulf of Corinth, where the leaders of the 1821 uprising met",
+		"cs": "Město u Korintského zálivu, kde se v roce 1821 sešli vůdci povstání",
+		"is": "Bær við Kórintuflóa, þar sem leiðtogar uppreisnarinnar 1821 hittust",
+		"de": "Stadt am Golf von Korinth, hier trafen sich 1821 die Anführer des Aufstands"
+	},
+	"Río": {
+		"pl": "Stąd most Rio–Antirrio, jeden z najdłuższych mostów wantowych świata, przekracza zatokę",
+		"en": "From here the Rio–Antirrio bridge, one of the world's longest cable-stayed bridges, crosses the gulf",
+		"cs": "Odtud vede přes záliv most Rio–Antirrio, jeden z nejdelších zavěšených mostů světa",
+		"is": "Héðan liggur Rio–Antirrio-brúin, ein lengsta stagbrú heims, yfir flóann",
+		"de": "Von hier überquert die Rio-Andirrio-Brücke, eine der längsten Schrägseilbrücken der Welt, den Golf"
+	},
+	"Antírrio": {
+		"pl": "Most Rio–Antirrio, prawie 3 km, stoi na filarach, które mogą się przesuwać przy trzęsieniu ziemi",
+		"en": "The Rio–Antirrio bridge, almost 3 km, stands on piers that can shift in an earthquake",
+		"cs": "Most Rio–Antirrio, téměř 3 km dlouhý, stojí na pilířích, které se při zemětřesení mohou posunout",
+		"is": "Rio–Antirrio-brúin, næstum 3 km, stendur á stöplum sem geta hnikast í jarðskjálfta",
+		"de": "Die fast 3 km lange Rio-Andirrio-Brücke steht auf Pfeilern, die bei einem Erdbeben verrutschen dürfen"
+	},
+	"Árgos": {
+		"pl": "Jedno z najstarszych miast Europy, zamieszkane od ponad 7000 lat",
+		"en": "One of Europe's oldest towns, lived in for over 7,000 years",
+		"cs": "Jedno z nejstarších měst Evropy, osídlené přes 7000 let",
+		"is": "Einn elsti bær Evrópu, byggður í yfir 7000 ár",
+		"de": "Eine der ältesten Städte Europas, seit über 7000 Jahren bewohnt"
+	},
+	"Neméa": {
+		"pl": "Tu Herakles pokonał lwa nemejskiego, a dziś rosną tu winnice czerwonego Agiorgitiko",
+		"en": "Where Heracles slew the Nemean lion; today vineyards of red Agiorgitiko grow here",
+		"cs": "Zde Héraklés přemohl nemejského lva, dnes tu rostou vinice červeného Agiorgitika",
+		"is": "Hér drap Herakles Nemeuljónið, nú vaxa hér vínekrur af rauðu Agiorgitiko",
+		"de": "Hier erlegte Herakles den Nemeischen Löwen, heute wächst hier der rote Agiorgitiko"
+	},
+	"Trípoli": {
+		"pl": "Stolica Arkadii wysoko w górach, w środku Peloponezu",
+		"en": "Arcadia's capital high in the mountains, in the middle of the Peloponnese",
+		"cs": "Hlavní město Arkádie vysoko v horách, uprostřed Peloponésu",
+		"is": "Höfuðborg Arkadíu hátt uppi í fjöllunum, í miðjum Pelópsskaga",
+		"de": "Hauptstadt Arkadiens hoch in den Bergen, mitten auf dem Peloponnes"
+	},
+	"Megalópoli": {
+		"pl": "Wielkie Miasto starożytnej Arkadii, dziś znane z elektrowni na węgiel brunatny",
+		"en": "The ancient Great City of Arcadia, known today for its lignite power station",
+		"cs": "Antické Velké město Arkádie, dnes známé hnědouhelnou elektrárnou",
+		"is": "Borgin mikla í fornu Arkadíu, nú þekkt fyrir brúnkolaorkuverið",
+		"de": "Die antike Große Stadt Arkadiens, heute bekannt für ihr Braunkohlekraftwerk"
+	},
+	"Lagkáda": {
+		"pl": "Wieś na stromym zboczu Tajgetu, przy górskiej drodze z Kalamaty do Sparty",
+		"en": "A village on the steep side of the Taygetus, on the mountain road from Kalamata to Sparta",
+		"cs": "Vesnice na strmém svahu Taygetu, na horské silnici z Kalamaty do Sparty",
+		"is": "Þorp í brattri hlíð Taýgetos, á fjallveginum frá Kalamata til Spörtu",
+		"de": "Ein Dorf am steilen Hang des Taygetos, an der Bergstraße von Kalamata nach Sparta"
+	},
+	"Thermopýles": {
+		"pl": "W 480 r. p.n.e. 300 Spartan króla Leonidasa broniło tu wąskiego przejścia przed armią perską",
+		"en": "In 480 BC King Leonidas' 300 Spartans held this narrow pass against the Persian army",
+		"cs": "Roku 480 př. n. l. zde 300 Sparťanů krále Leónida bránilo úzký průsmyk proti perskému vojsku",
+		"is": "Árið 480 f.Kr. vörðu 300 Spartverjar Leónídasar konungs þetta þrönga skarð gegn her Persa",
+		"de": "480 v. Chr. hielten hier die 300 Spartaner des Königs Leonidas den engen Pass gegen das Perserheer"
+	},
+	"Kamména Voúrla": {
+		"pl": "Uzdrowisko nad Zatoką Malijską z gorącymi źródłami",
+		"en": "A spa town on the Malian Gulf with hot springs",
+		"cs": "Lázně u Malijského zálivu s horkými prameny",
+		"is": "Heilsulindabær við Malíaflóa með heitum laugum",
+		"de": "Kurort am Malischen Golf mit heißen Quellen"
+	},
+	"Kifisiá": {
+		"pl": "Zielone przedmieście Aten, dokąd ateńczycy uciekają przed letnim upałem",
+		"en": "A leafy suburb of Athens, where Athenians escape the summer heat",
+		"cs": "Zelené předměstí Athén, kam Athéňané utíkají před letním vedrem",
+		"is": "Grænt úthverfi Aþenu, þangað sem Aþeningar flýja sumarhitann",
+		"de": "Ein grüner Vorort Athens, in den die Athener vor der Sommerhitze flüchten"
+	},
+	"Témpi": {
+		"pl": "Dolina Tempe między Olimpem a Ossą, wąski wąwóz rzeki Pinios",
+		"en": "The Vale of Tempe between Olympus and Ossa, the Pineios' narrow gorge",
+		"cs": "Údolí Tempé mezi Olympem a Ossou, úzká soutěska řeky Pineios",
+		"is": "Tempe-dalurinn milli Ólympsfjalls og Ossa, þröngt gljúfur Pineios-árinnar",
+		"de": "Das Tempetal zwischen Olymp und Ossa, die enge Schlucht des Pinios"
+	},
+	"Litóchoro": {
+		"pl": "Miasteczko u stóp Olimpu, 2918 m, najwyższej góry Grecji i siedziby bogów",
+		"en": "A small town at the foot of Olympus, 2,918 m, Greece's highest mountain and home of the gods",
+		"cs": "Městečko pod Olympem, 2918 m, nejvyšší horou Řecka a sídlem bohů",
+		"is": "Smábær við rætur Ólympsfjalls, 2918 m, hæsta fjalls Grikklands og bústaðar guðanna",
+		"de": "Kleinstadt am Fuß des Olymp, 2918 m, Griechenlands höchster Berg und Sitz der Götter"
+	},
+	"Platamónas": {
+		"pl": "Bizantyjski zamek nad morzem, u wylotu doliny Tempe",
+		"en": "A Byzantine castle above the sea, at the mouth of the Vale of Tempe",
+		"cs": "Byzantský hrad nad mořem, u ústí údolí Tempé",
+		"is": "Býsanskur kastali yfir sjónum, við mynni Tempe-dalsins",
+		"de": "Eine byzantinische Burg über dem Meer, am Ausgang des Tempetals"
+	},
+	"Kateríni": {
+		"pl": "Stolica Pierii, krainy Muz, pod Olimpem",
+		"en": "The capital of Pieria, land of the Muses, below Olympus",
+		"cs": "Hlavní město Pierie, země Múz, pod Olympem",
+		"is": "Höfuðborg Píeríu, lands Músanna, undir Ólympsfjalli",
+		"de": "Hauptstadt Pieriens, des Landes der Musen, unter dem Olymp"
+	},
+	"Tríkala": {
+		"pl": "Miasto boga medycyny Asklepiosa, z zamkiem i młynami nad rzeką Lithaios",
+		"en": "The town of Asclepius, god of medicine, with a castle and mills on the river Lithaios",
+		"cs": "Město boha lékařství Asklépia, s hradem a mlýny na řece Lithaios",
+		"is": "Bær Asklepíosar, guðs lækninga, með kastala og myllum við ána Lithaios",
+		"de": "Die Stadt des Heilgottes Asklepios, mit einer Burg und Mühlen am Fluss Lithaios"
+	},
+	"Métsovo": {
+		"pl": "Górskie miasteczko Wołochów w Pindosie, słynie z wędzonego sera metsovone",
+		"en": "An Aromanian mountain town in the Pindus, famous for its smoked metsovone cheese",
+		"cs": "Arumunské horské městečko v Pindu, proslulé uzeným sýrem metsovone",
+		"is": "Arúmenskur fjallabær í Pindos-fjöllum, frægur fyrir reykta metsovone-ostinn",
+		"de": "Ein aromunisches Bergstädtchen im Pindos, berühmt für seinen geräucherten Metsovone-Käse"
+	},
+	"Árta": {
+		"pl": "Słynny kamienny most z legendy, w którego filar budowniczy wmurował własną żonę",
+		"en": "Its famous stone bridge has a legend: the master builder walled his own wife into a pier",
+		"cs": "Slavný kamenný most z legendy, do jehož pilíře stavitel zazdil vlastní ženu",
+		"is": "Fræga steinbrúin hennar á sér sögu: smiðurinn múraði eigin konu inn í stöpul",
+		"de": "Die berühmte Steinbrücke hat eine Sage: Der Baumeister mauerte seine eigene Frau in einen Pfeiler ein"
+	},
+	"Agrínio": {
+		"pl": "Największe miasto Etolii-Akarnanii, dawniej stolica uprawy tytoniu",
+		"en": "The biggest town of Aetolia-Acarnania, once Greece's tobacco capital",
+		"cs": "Největší město Aitólie-Akarnánie, kdysi centrum pěstování tabáku",
+		"is": "Stærsti bærinn í Etólíu-Akarnaníu, áður tóbakshöfuðborg Grikklands",
+		"de": "Die größte Stadt Ätolien-Akarnaniens, einst Griechenlands Tabakhauptstadt"
+	},
+	"Amfípoli": {
+		"pl": "Starożytne miasto nad Strymonem, z ogromnym marmurowym lwem",
+		"en": "An ancient city on the Strymon, guarded by a huge marble lion",
+		"cs": "Antické město na řece Strymón, s obrovským mramorovým lvem",
+		"is": "Forn borg við Strymon-ána, gætt af risastóru marmaraljóni",
+		"de": "Eine antike Stadt am Strymon, bewacht von einem riesigen Marmorlöwen"
+	},
+	"Xánthi": {
+		"pl": "Kolorowe stare miasto z drewnianymi domami pod górami Rodopów",
+		"en": "A colourful old town with wooden houses below the Rhodope mountains",
+		"cs": "Barevné staré město s dřevěnými domy pod Rodopami",
+		"is": "Litríkur gamall bær með timburhúsum undir Rodópafjöllum",
+		"de": "Eine bunte Altstadt mit Holzhäusern unter den Rhodopen"
+	},
+	"Komotiní": {
+		"pl": "Stolica Tracji, mieszkają tu obok siebie chrześcijanie i muzułmanie",
+		"en": "Thrace's capital, where Christians and Muslims live side by side",
+		"cs": "Hlavní město Thrákie, kde žijí vedle sebe křesťané a muslimové",
+		"is": "Höfuðborg Þrakíu, þar sem kristnir og múslimar búa hlið við hlið",
+		"de": "Hauptstadt Thrakiens, wo Christen und Muslime Seite an Seite leben"
+	},
+	"Lagkadás": {
+		"pl": "Miasteczko znane z anastenaria, tańca boso po rozżarzonych węglach",
+		"en": "A small town known for the anastenaria, dancing barefoot on glowing embers",
+		"cs": "Městečko známé anastenárií, tancem naboso po žhavém uhlí",
+		"is": "Smábær þekktur fyrir anastenaria, dans berfættur á glóandi glóðum",
+		"de": "Kleinstadt, bekannt für die Anastenaria, den barfüßigen Tanz über glühende Kohlen"
+	},
+	"Georgioúpoli": {
+		"pl": "Kurort przy plaży, w pobliżu jedyne słodkowodne jezioro Krety, Kournas",
+		"en": "A beach resort near Crete's only freshwater lake, Kournas",
+		"cs": "Letovisko u pláže, nedaleko jediného sladkovodního jezera Kréty, Kournas",
+		"is": "Strandbær nálægt eina ferskvatnsvatni Krítar, Kournas",
+		"de": "Ein Badeort nahe Kournas, dem einzigen Süßwassersee Kretas"
+	},
+	"Soúda": {
+		"pl": "Głęboka zatoka Suda, jeden z największych naturalnych portów Morza Śródziemnego",
+		"en": "Souda Bay, one of the Mediterranean's biggest natural harbours",
+		"cs": "Hluboká zátoka Souda, jeden z největších přírodních přístavů Středomoří",
+		"is": "Souda-flói, ein stærsta náttúrulega höfn Miðjarðarhafsins",
+		"de": "Die Souda-Bucht, einer der größten Naturhäfen des Mittelmeers"
+	},
+	"Velestíno": {
+		"pl": "Rodzinne miasto Rigasa Fereosa, poety i bohatera walki o wolność Grecji",
+		"en": "The home town of Rigas Feraios, poet and hero of Greece's fight for freedom",
+		"cs": "Rodné město Rigase Feraia, básníka a hrdiny boje za svobodu Řecka",
+		"is": "Heimabær Rigas Feraios, skálds og hetju frelsisbaráttu Grikkja",
+		"de": "Heimatstadt von Rigas Feraios, Dichter und Held des griechischen Freiheitskampfs"
+	},
+	"Fársala": {
+		"pl": "Tu w 48 r. p.n.e. Juliusz Cezar pokonał Pompejusza",
+		"en": "Here in 48 BC Julius Caesar defeated Pompey",
+		"cs": "Zde roku 48 př. n. l. Julius Caesar porazil Pompeia",
+		"is": "Hér sigraði Júlíus Sesar Pompeius árið 48 f.Kr.",
+		"de": "Hier besiegte Julius Caesar 48 v. Chr. Pompeius"
+	},
+	"Amaliáda": {
+		"pl": "Miasteczko w zielonej Elidzie, otoczone polami truskawek i arbuzów",
+		"en": "A small town in green Elis, surrounded by strawberry and watermelon fields",
+		"cs": "Městečko v zelené Élidě, obklopené poli jahod a melounů",
+		"is": "Smábær í grænu Elís, umkringdur jarðarberja- og vatnsmelónuökrum",
+		"de": "Kleinstadt im grünen Elis, umgeben von Erdbeer- und Melonenfeldern"
+	}
+}

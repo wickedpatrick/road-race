@@ -1,0 +1,168 @@
+{
+	"athina": {
+		"name": "Athína",
+		"lat": 37.98,
+		"lon": 23.73,
+		"pop": 643,
+		"region": "Attikí",
+		"exonym": {"pl": "Ateny", "en": "Athens", "cs": "Atény", "is": "Aþena", "de": "Athen"}
+	},
+	"thessaloniki": {
+		"name": "Thessaloníki",
+		"lat": 40.64,
+		"lon": 22.94,
+		"pop": 319,
+		"region": "Kentrikí Makedonía",
+		"exonym": {"pl": "Saloniki", "en": "Thessaloniki", "cs": "Soluň", "is": "Þessaloníka", "de": "Thessaloniki"}
+	},
+	"patra": {
+		"name": "Pátra",
+		"lat": 38.25,
+		"lon": 21.73,
+		"pop": 215,
+		"region": "Dytikí Elláda",
+		"exonym": {"pl": "Patras", "en": "Patras", "cs": "Patras", "is": "Patras", "de": "Patras"}
+	},
+	"irakleio": {
+		"name": "Irákleio",
+		"lat": 35.34,
+		"lon": 25.13,
+		"pop": 179,
+		"region": "Krítí",
+		"exonym": {"pl": "Heraklion", "en": "Heraklion", "cs": "Heraklion", "is": "Heraklíon", "de": "Heraklion"}
+	},
+	"peiraias": {
+		"name": "Peiraiás",
+		"lat": 37.94,
+		"lon": 23.65,
+		"pop": 169,
+		"region": "Attikí",
+		"exonym": {"pl": "Pireus", "en": "Piraeus", "cs": "Pireus", "is": "Píreus", "de": "Piräus"}
+	},
+	"larisa": {
+		"name": "Lárisa",
+		"lat": 39.64,
+		"lon": 22.42,
+		"pop": 148,
+		"region": "Thessalía",
+		"exonym": {"pl": "Larisa", "en": "Larissa", "cs": "Larisa", "is": "Larisa", "de": "Larisa"}
+	},
+	"volos": {
+		"name": "Vólos",
+		"lat": 39.36,
+		"lon": 22.94,
+		"pop": 136,
+		"region": "Thessalía",
+		"exonym": {"pl": "Wolos", "en": "Volos", "cs": "Volos", "is": "Volos", "de": "Volos"}
+	},
+	"ioannina": {
+		"name": "Ioánnina",
+		"lat": 39.66,
+		"lon": 20.85,
+		"pop": 113,
+		"region": "Ípeiros",
+		"exonym": {"pl": "Janina", "en": "Ioannina", "cs": "Ioannina", "is": "Ioannína", "de": "Ioannina"}
+	},
+	"chania": {
+		"name": "Chaniá",
+		"lat": 35.51,
+		"lon": 24.02,
+		"pop": 109,
+		"region": "Krítí",
+		"exonym": {"pl": "Chania", "en": "Chania", "cs": "Chania", "is": "Chania", "de": "Chania"}
+	},
+	"kalamata": {
+		"name": "Kalamáta",
+		"lat": 37.04,
+		"lon": 22.11,
+		"pop": 70,
+		"region": "Pelopónnisos",
+		"exonym": {"pl": "Kalamata", "en": "Kalamata", "cs": "Kalamata", "is": "Kalamata", "de": "Kalamata"}
+	},
+	"alexandroupoli": {
+		"name": "Alexandroúpoli",
+		"lat": 40.85,
+		"lon": 25.87,
+		"pop": 71,
+		"region": "Anatolikí Makedonía kai Thráki",
+		"exonym": {
+			"pl": "Aleksandropolis",
+			"en": "Alexandroupolis",
+			"cs": "Alexandrupoli",
+			"is": "Alexandrúpolis",
+			"de": "Alexandroupoli"
+		}
+	},
+	"kavala": {
+		"name": "Kavála",
+		"lat": 40.94,
+		"lon": 24.41,
+		"pop": 67,
+		"region": "Anatolikí Makedonía kai Thráki",
+		"exonym": {"pl": "Kawala", "en": "Kavala", "cs": "Kavala", "is": "Kavala", "de": "Kavala"}
+	},
+	"lamia": {
+		"name": "Lamía",
+		"lat": 38.9,
+		"lon": 22.43,
+		"pop": 65,
+		"region": "Stereá Elláda",
+		"exonym": {"pl": "Lamia", "en": "Lamia", "cs": "Lamia", "is": "Lamía", "de": "Lamia"}
+	},
+	"rethymno": {
+		"name": "Réthymno",
+		"lat": 35.37,
+		"lon": 24.47,
+		"pop": 58,
+		"region": "Krítí",
+		"exonym": {"pl": "Retimno", "en": "Rethymno", "cs": "Rethymno", "is": "Retýmnon", "de": "Rethymno"}
+	},
+	"korinthos": {
+		"name": "Kórinthos",
+		"lat": 37.94,
+		"lon": 22.93,
+		"pop": 55,
+		"region": "Pelopónnisos",
+		"exonym": {"pl": "Korynt", "en": "Corinth", "cs": "Korint", "is": "Kórinta", "de": "Korinth"}
+	},
+	"pyrgos": {
+		"name": "Pýrgos",
+		"lat": 37.67,
+		"lon": 21.44,
+		"pop": 45,
+		"region": "Dytikí Elláda",
+		"exonym": {"pl": "Pirgos", "en": "Pyrgos", "cs": "Pyrgos", "is": "Pyrgos", "de": "Pyrgos"}
+	},
+	"nafplio": {
+		"name": "Náfplio",
+		"lat": 37.57,
+		"lon": 22.8,
+		"pop": 33,
+		"region": "Pelopónnisos",
+		"exonym": {"pl": "Nauplion", "en": "Nafplio", "cs": "Nauplion", "is": "Nafplio", "de": "Nafplio"}
+	},
+	"sparti": {
+		"name": "Spárti",
+		"lat": 37.07,
+		"lon": 22.43,
+		"pop": 32,
+		"region": "Pelopónnisos",
+		"exonym": {"pl": "Sparta", "en": "Sparta", "cs": "Sparta", "is": "Sparta", "de": "Sparta"}
+	},
+	"igoumenitsa": {
+		"name": "Igoumenítsa",
+		"lat": 39.5,
+		"lon": 20.27,
+		"pop": 25,
+		"region": "Ípeiros",
+		"exonym": {"pl": "Igumenitsa", "en": "Igoumenitsa", "cs": "Igumenica", "is": "Igoumenitsa", "de": "Igoumenitsa"}
+	},
+	"kalampaka": {
+		"name": "Kalampáka",
+		"lat": 39.71,
+		"lon": 21.63,
+		"pop": 20,
+		"region": "Thessalía",
+		"exonym": {"pl": "Kalambaka", "en": "Kalambaka", "cs": "Kalambaka", "is": "Kalambaka", "de": "Kalambaka"}
+	}
+}
