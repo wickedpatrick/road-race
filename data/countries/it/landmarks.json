@@ -1,0 +1,456 @@
+{
+	"Roma": [
+		{
+			"kind": "it_roma_colosseum",
+			"name": {"pl": "Koloseum", "en": "Colosseum", "cs": "Koloseum", "is": "Colosseum", "de": "Kolosseum"},
+			"desc": {
+				"pl": "Największy amfiteatr starożytnego Rzymu, otwarty w 80 roku n.e. za cesarza Tytusa; mieścił około 50 tysięcy widzów",
+				"en": "The largest amphitheatre of ancient Rome, opened in AD 80 under the emperor Titus; it held about 50,000 spectators",
+				"cs": "Největší amfiteátr starověkého Říma, otevřený roku 80 n. l. za císaře Tita; pojal asi 50 tisíc diváků",
+				"is": "Stærsta hringleikahús Rómar til forna, opnað árið 80 e.Kr. í stjórnartíð Títusar keisara; það rúmaði um 50.000 áhorfendur",
+				"de": "Das größte Amphitheater des antiken Rom, im Jahr 80 n. Chr. unter Kaiser Titus eröffnet; es fasste etwa 50.000 Zuschauer"
+			},
+			"local": "Colosseo"
+		}
+	],
+	"Milano": [
+		{
+			"kind": "it_milano_duomo",
+			"name": {
+				"pl": "Katedra w Mediolanie",
+				"en": "Milan Cathedral",
+				"cs": "Milánská katedrála",
+				"is": "Dómkirkjan í Mílanó",
+				"de": "Mailänder Dom"
+			},
+			"desc": {
+				"pl": "Gotycka katedra z białego i różowego marmuru, budowana od 1386 roku przez blisko sześć wieków; na najwyższej iglicy stoi złota Madonnina",
+				"en": "A Gothic cathedral of white and pink marble, begun in 1386 and built over nearly six centuries; the golden Madonnina stands on its highest spire",
+				"cs": "Gotická katedrála z bílého a růžového mramoru, stavěná od roku 1386 téměř šest staletí; na nejvyšší věžičce stojí zlatá Madonnina",
+				"is": "Gotnesk dómkirkja úr hvítum og bleikum marmara, hafin árið 1386 og í byggingu í nærri sex aldir; gyllta Madonnina-styttan stendur á hæstu spírunni",
+				"de": "Ein gotischer Dom aus weißem und rosa Marmor, 1386 begonnen und fast sechs Jahrhunderte lang gebaut; auf der höchsten Turmspitze steht die goldene Madonnina"
+			},
+			"local": "Duomo di Milano"
+		}
+	],
+	"Napoli": [
+		{
+			"kind": "it_napoli_maschio_angioino",
+			"name": {
+				"pl": "Castel Nuovo",
+				"en": "Castel Nuovo",
+				"cs": "Castel Nuovo",
+				"is": "Castel Nuovo",
+				"de": "Castel Nuovo"
+			},
+			"desc": {
+				"pl": "Zamek zbudowany pod koniec XIII wieku przez Karola I Andegaweńskiego, zwany Maschio Angioino; jego bramę zdobi renesansowy łuk triumfalny Alfonsa Aragońskiego",
+				"en": "A castle built in the late 13th century by Charles I of Anjou, known as the Maschio Angioino; its gate is a Renaissance triumphal arch of Alfonso of Aragon",
+				"cs": "Hrad postavený na konci 13. století Karlem I. z Anjou, zvaný Maschio Angioino; jeho bránu zdobí renesanční vítězný oblouk Alfonse Aragonského",
+				"is": "Kastali reistur seint á 13. öld af Karli 1. af Anjou, kallaður Maschio Angioino; hliðið er sigurbogi Alfonsos af Aragóníu í endurreisnarstíl",
+				"de": "Eine Burg, Ende des 13. Jahrhunderts von Karl I. von Anjou erbaut und Maschio Angioino genannt; ihr Tor ist der Renaissance-Triumphbogen Alfons' von Aragón"
+			},
+			"local": "Castel Nuovo"
+		}
+	],
+	"Torino": [
+		{
+			"kind": "it_torino_mole",
+			"name": {
+				"pl": "Mole Antonelliana",
+				"en": "Mole Antonelliana",
+				"cs": "Mole Antonelliana",
+				"is": "Mole Antonelliana",
+				"de": "Mole Antonelliana"
+			},
+			"desc": {
+				"pl": "Budowla Alessandra Antonellego z iglicą na wysokość 167 metrów, zaczęta w 1863 roku jako synagoga; dziś mieści Narodowe Muzeum Kina",
+				"en": "Alessandro Antonelli's building with its spire rising to 167 metres, begun in 1863 as a synagogue; today it houses the National Cinema Museum",
+				"cs": "Stavba Alessandra Antonelliho s věží do výšky 167 metrů, započatá roku 1863 jako synagoga; dnes v ní sídlí Národní muzeum filmu",
+				"is": "Bygging Alessandros Antonelli með spíru sem nær 167 metra hæð, hafin árið 1863 sem samkunduhús; þar er nú Þjóðarkvikmyndasafnið",
+				"de": "Der Bau Alessandro Antonellis mit seiner 167 Meter hohen Spitze, 1863 als Synagoge begonnen; heute beherbergt er das Nationale Filmmuseum"
+			},
+			"local": "Mole Antonelliana"
+		}
+	],
+	"Palermo": [
+		{
+			"kind": "it_palermo_teatro_massimo",
+			"name": {
+				"pl": "Teatro Massimo",
+				"en": "Teatro Massimo",
+				"cs": "Teatro Massimo",
+				"is": "Teatro Massimo",
+				"de": "Teatro Massimo"
+			},
+			"desc": {
+				"pl": "Neoklasycystyczny gmach opery otwarty w 1897 roku, największy teatr operowy we Włoszech; schodów pilnują dwa lwy z brązu",
+				"en": "A Neoclassical opera house opened in 1897, the largest in Italy; two bronze lions guard its steps",
+				"cs": "Klasicistní budova opery otevřená roku 1897, největší operní dům v Itálii; schodiště hlídají dva bronzoví lvi",
+				"is": "Nýklassískt óperuhús opnað árið 1897, það stærsta á Ítalíu; tvö bronsljón gæta tröppanna",
+				"de": "Ein klassizistisches Opernhaus, 1897 eröffnet, das größte Italiens; zwei Bronzelöwen bewachen die Treppe"
+			},
+			"local": "Teatro Massimo"
+		}
+	],
+	"Genova": [
+		{
+			"kind": "it_genova_lanterna",
+			"name": {
+				"pl": "Latarnia Lanterna",
+				"en": "The Lanterna",
+				"cs": "Maják Lanterna",
+				"is": "Vitinn Lanterna",
+				"de": "Die Lanterna"
+			},
+			"desc": {
+				"pl": "Latarnia morska strzegąca portu w Genui, symbol miasta; obecna wieża o wysokości 77 metrów pochodzi z 1543 roku",
+				"en": "The lighthouse guarding the port of Genoa and the symbol of the city; the present 77-metre tower dates from 1543",
+				"cs": "Maják střežící janovský přístav a symbol města; dnešní 77 metrů vysoká věž pochází z roku 1543",
+				"is": "Vitinn sem gætir hafnarinnar í Genúa og tákn borgarinnar; núverandi turn, 77 metra hár, er frá árinu 1543",
+				"de": "Der Leuchtturm über dem Hafen von Genua und Wahrzeichen der Stadt; der heutige, 77 Meter hohe Turm stammt von 1543"
+			},
+			"local": "Lanterna di Genova"
+		}
+	],
+	"Bologna": [
+		{
+			"kind": "it_bologna_due_torri",
+			"name": {
+				"pl": "Dwie Wieże",
+				"en": "The Two Towers",
+				"cs": "Dvě věže",
+				"is": "Turnarnir tveir",
+				"de": "Die Zwei Türme"
+			},
+			"desc": {
+				"pl": "Średniowieczne wieże rodów Asinelli i Garisenda z XII wieku; Asinelli ma 97 metrów, niższa Garisenda wyraźnie się pochyla",
+				"en": "The 12th-century towers of the Asinelli and Garisenda families; the Asinelli is 97 metres tall, the lower Garisenda leans visibly",
+				"cs": "Středověké věže rodů Asinelli a Garisenda z 12. století; Asinelli měří 97 metrů, nižší Garisenda se viditelně naklání",
+				"is": "Turnar Asinelli- og Garisenda-ættanna frá 12. öld; Asinelli er 97 metra hár en lægri turninn, Garisenda, hallar greinilega",
+				"de": "Die Türme der Familien Asinelli und Garisenda aus dem 12. Jahrhundert; der Asinelli ist 97 Meter hoch, der niedrigere Garisenda neigt sich sichtbar"
+			},
+			"local": "Due Torri"
+		}
+	],
+	"Firenze": [
+		{
+			"kind": "it_firenze_duomo",
+			"name": {
+				"pl": "Katedra we Florencji",
+				"en": "Florence Cathedral",
+				"cs": "Florentská katedrála",
+				"is": "Dómkirkjan í Flórens",
+				"de": "Dom von Florenz"
+			},
+			"desc": {
+				"pl": "Santa Maria del Fiore z kopułą Filippa Brunelleschiego ukończoną w 1436 roku i dzwonnicą Giotta, obłożona białym, zielonym i różowym marmurem",
+				"en": "Santa Maria del Fiore, with Filippo Brunelleschi's dome completed in 1436 and Giotto's bell tower, faced in white, green and pink marble",
+				"cs": "Santa Maria del Fiore s kupolí Filippa Brunelleschiho dokončenou roku 1436 a Giottovou zvonicí, obložená bílým, zeleným a růžovým mramorem",
+				"is": "Santa Maria del Fiore með hvolfþaki Filippos Brunelleschi, fullgerðu árið 1436, og klukkuturni Giottos, klædd hvítum, grænum og bleikum marmara",
+				"de": "Santa Maria del Fiore mit Filippo Brunelleschis 1436 vollendeter Kuppel und Giottos Glockenturm, verkleidet mit weißem, grünem und rosa Marmor"
+			},
+			"local": "Santa Maria del Fiore"
+		}
+	],
+	"Bari": [
+		{
+			"kind": "it_bari_san_nicola",
+			"name": {
+				"pl": "Bazylika św. Mikołaja",
+				"en": "Basilica of Saint Nicholas",
+				"cs": "Bazilika svatého Mikuláše",
+				"is": "Basilíka heilags Nikulásar",
+				"de": "Basilika San Nicola"
+			},
+			"desc": {
+				"pl": "Romańska bazylika zbudowana dla relikwii świętego Mikołaja, które żeglarze z Bari przywieźli z Myry w 1087 roku",
+				"en": "A Romanesque basilica built for the relics of Saint Nicholas, which sailors from Bari brought from Myra in 1087",
+				"cs": "Románská bazilika postavená pro ostatky svatého Mikuláše, které námořníci z Bari přivezli z Myry roku 1087",
+				"is": "Rómönsk basilíka reist yfir helga dóma heilags Nikulásar sem sjómenn frá Bari fluttu frá Myru árið 1087",
+				"de": "Eine romanische Basilika für die Reliquien des heiligen Nikolaus, die Seeleute aus Bari 1087 aus Myra brachten"
+			},
+			"local": "Basilica di San Nicola"
+		}
+	],
+	"Catania": [
+		{
+			"kind": "it_catania_elefante",
+			"name": {
+				"pl": "Fontanna Słonia",
+				"en": "Elephant Fountain",
+				"cs": "Sloní fontána",
+				"is": "Fílsbrunnurinn",
+				"de": "Elefantenbrunnen"
+			},
+			"desc": {
+				"pl": "Słoń z czarnej lawy z egipskim obeliskiem na grzbiecie, ustawiony w 1736 roku przez Giovanniego Battistę Vaccariniego; mieszkańcy nazywają go u Liotru",
+				"en": "An elephant of black lava stone carrying an Egyptian obelisk, set up in 1736 by Giovanni Battista Vaccarini; the locals call it u Liotru",
+				"cs": "Slon z černé lávy s egyptským obeliskem na hřbetě, postavený roku 1736 Giovannim Battistou Vaccarinim; místní mu říkají u Liotru",
+				"is": "Fíll úr svörtu hrauni með egypska broddsúlu á bakinu, settur upp árið 1736 af Giovanni Battista Vaccarini; heimamenn kalla hann u Liotru",
+				"de": "Ein Elefant aus schwarzem Lavagestein mit einem ägyptischen Obelisken auf dem Rücken, 1736 von Giovanni Battista Vaccarini aufgestellt; die Einheimischen nennen ihn u Liotru"
+			},
+			"local": "Fontana dell'Elefante"
+		}
+	],
+	"Verona": [
+		{
+			"kind": "it_verona_arena",
+			"name": {
+				"pl": "Arena w Weronie",
+				"en": "Verona Arena",
+				"cs": "Aréna ve Veroně",
+				"is": "Hringleikahúsið í Verona",
+				"de": "Arena von Verona"
+			},
+			"desc": {
+				"pl": "Rzymski amfiteatr z I wieku n.e. z różowego wapienia; od 1913 roku latem odbywa się w nim festiwal operowy",
+				"en": "A Roman amphitheatre of pink limestone from the 1st century AD; an opera festival has been held in it every summer since 1913",
+				"cs": "Římský amfiteátr z růžového vápence z 1. století n. l.; od roku 1913 se v něm každé léto koná operní festival",
+				"is": "Rómverskt hringleikahús úr bleikum kalksteini frá 1. öld e.Kr.; þar hefur óperuhátíð verið haldin á hverju sumri frá 1913",
+				"de": "Ein römisches Amphitheater aus rosa Kalkstein aus dem 1. Jahrhundert n. Chr.; seit 1913 findet darin jeden Sommer ein Opernfestival statt"
+			},
+			"local": "Arena di Verona"
+		}
+	],
+	"Venezia": [
+		{
+			"kind": "it_venezia_rialto",
+			"name": {
+				"pl": "Most Rialto",
+				"en": "Rialto Bridge",
+				"cs": "Most Rialto",
+				"is": "Rialto-brúin",
+				"de": "Rialtobrücke"
+			},
+			"desc": {
+				"pl": "Kamienny most nad Canal Grande ukończony w 1591 roku według projektu Antonia da Ponte, z dwoma rzędami sklepów",
+				"en": "A stone bridge over the Grand Canal completed in 1591 to Antonio da Ponte's design, with two rows of shops on it",
+				"cs": "Kamenný most přes Canal Grande dokončený roku 1591 podle návrhu Antonia da Ponte, se dvěma řadami obchodů",
+				"is": "Steinbrú yfir Canal Grande, fullgerð árið 1591 eftir teikningu Antonios da Ponte, með tveimur röðum verslana",
+				"de": "Eine Steinbrücke über den Canal Grande, 1591 nach dem Entwurf Antonio da Pontes vollendet, mit zwei Reihen von Läden"
+			},
+			"local": "Ponte di Rialto"
+		}
+	],
+	"Messina": [
+		{
+			"kind": "it_messina_madonnina",
+			"name": {
+				"pl": "Madonna della Lettera",
+				"en": "Madonna della Lettera",
+				"cs": "Madonna della Lettera",
+				"is": "Madonna della Lettera",
+				"de": "Madonna della Lettera"
+			},
+			"desc": {
+				"pl": "Złota figura Matki Boskiej na wysokiej kolumnie u wejścia do portu, postawiona w 1934 roku na wieży dawnego fortu San Salvatore",
+				"en": "A golden statue of the Virgin on a tall column at the harbour mouth, set up in 1934 on the tower of the old San Salvatore fort",
+				"cs": "Zlatá socha Panny Marie na vysokém sloupu u vjezdu do přístavu, postavená roku 1934 na věži staré pevnosti San Salvatore",
+				"is": "Gyllt stytta af Maríu mey á hárri súlu við hafnarmynnið, reist árið 1934 á turni gamla San Salvatore-virkisins",
+				"de": "Eine goldene Marienstatue auf einer hohen Säule an der Hafeneinfahrt, 1934 auf dem Turm des alten Forts San Salvatore errichtet"
+			},
+			"local": "Madonna della Lettera"
+		}
+	],
+	"Trieste": [
+		{
+			"kind": "it_trieste_miramare",
+			"name": {
+				"pl": "Zamek Miramare",
+				"en": "Miramare Castle",
+				"cs": "Zámek Miramare",
+				"is": "Miramare-kastali",
+				"de": "Schloss Miramare"
+			},
+			"desc": {
+				"pl": "Biały zamek nad Zatoką Triesteńską, zbudowany w latach 1856–1860 dla arcyksięcia Ferdynanda Maksymiliana Habsburga",
+				"en": "A white castle over the Gulf of Trieste, built in 1856–1860 for Archduke Ferdinand Maximilian of Austria",
+				"cs": "Bílý zámek nad Terstským zálivem, postavený v letech 1856–1860 pro arcivévodu Ferdinanda Maxmiliána",
+				"is": "Hvítur kastali við Trieste-flóa, reistur á árunum 1856–1860 fyrir Ferdinand Maximilian erkihertoga af Austurríki",
+				"de": "Ein weißes Schloss über dem Golf von Triest, 1856–1860 für Erzherzog Ferdinand Maximilian erbaut"
+			},
+			"local": "Castello di Miramare"
+		}
+	],
+	"Reggio Calabria": [
+		{
+			"kind": "it_reggio_bronzi",
+			"name": {
+				"pl": "Wojownicy z Riace",
+				"en": "Riace Bronzes",
+				"cs": "Bronzy z Riace",
+				"is": "Riace-bronsstytturnar",
+				"de": "Bronzen von Riace"
+			},
+			"desc": {
+				"pl": "Dwie greckie statuy wojowników z brązu z V wieku p.n.e., wyłowione z morza koło Riace w 1972 roku; stoją w Narodowym Muzeum Wielkiej Grecji",
+				"en": "Two Greek bronze statues of warriors from the 5th century BC, found in the sea off Riace in 1972; they stand in the National Museum of Magna Graecia",
+				"cs": "Dvě řecké bronzové sochy válečníků z 5. století př. n. l., nalezené v moři u Riace roku 1972; stojí v Národním muzeu Velkého Řecka",
+				"is": "Tvær grískar bronsstyttur af stríðsmönnum frá 5. öld f.Kr., sem fundust í sjónum undan Riace árið 1972; þær standa í Þjóðminjasafni Magna Graecia",
+				"de": "Zwei griechische Bronzestatuen von Kriegern aus dem 5. Jahrhundert v. Chr., 1972 vor Riace im Meer gefunden; sie stehen im Nationalmuseum der Magna Graecia"
+			},
+			"local": "Bronzi di Riace"
+		}
+	],
+	"Perugia": [
+		{
+			"kind": "it_perugia_fontana",
+			"name": {
+				"pl": "Fontana Maggiore",
+				"en": "Fontana Maggiore",
+				"cs": "Fontana Maggiore",
+				"is": "Fontana Maggiore",
+				"de": "Fontana Maggiore"
+			},
+			"desc": {
+				"pl": "Średniowieczna fontanna z lat 1275–1278 dłuta Nicoli i Giovanniego Pisano, z dwiema wielobocznymi marmurowymi czaszami",
+				"en": "A medieval fountain of 1275–1278 by Nicola and Giovanni Pisano, with two polygonal marble basins",
+				"cs": "Středověká kašna z let 1275–1278 od Nicoly a Giovanniho Pisanových, se dvěma mnohobokými mramorovými nádržemi",
+				"is": "Gosbrunnur frá miðöldum, frá 1275–1278, eftir Nicola og Giovanni Pisano, með tveimur marghyrndum marmaraskálum",
+				"de": "Ein mittelalterlicher Brunnen von 1275–1278 von Nicola und Giovanni Pisano mit zwei vieleckigen Marmorbecken"
+			},
+			"local": "Fontana Maggiore"
+		}
+	],
+	"Salerno": [
+		{
+			"kind": "it_salerno_arechi",
+			"name": {
+				"pl": "Zamek Arechi",
+				"en": "Arechi Castle",
+				"cs": "Hrad Arechi",
+				"is": "Arechi-kastali",
+				"de": "Burg Arechi"
+			},
+			"desc": {
+				"pl": "Zamek na wzgórzu nad miastem i zatoką, rozbudowany w VIII wieku przez longobardzkiego księcia Arechisa II",
+				"en": "A castle on the hill above the city and the gulf, enlarged in the 8th century by the Lombard prince Arechis II",
+				"cs": "Hrad na kopci nad městem a zálivem, rozšířený v 8. století langobardským knížetem Arechisem II.",
+				"is": "Kastali á hæðinni ofan við borgina og flóann, stækkaður á 8. öld af langbarðska furstanum Arechis II",
+				"de": "Eine Burg auf dem Hügel über Stadt und Golf, im 8. Jahrhundert vom langobardischen Fürsten Arechis II. ausgebaut"
+			},
+			"local": "Castello di Arechi"
+		}
+	],
+	"Pescara": [
+		{
+			"kind": "it_pescara_ponte_del_mare",
+			"name": {
+				"pl": "Ponte del Mare",
+				"en": "Ponte del Mare",
+				"cs": "Ponte del Mare",
+				"is": "Ponte del Mare",
+				"de": "Ponte del Mare"
+			},
+			"desc": {
+				"pl": "Biały most dla pieszych i rowerzystów nad ujściem rzeki Pescara, podwieszony na linach do jednego pylonu, otwarty w 2009 roku",
+				"en": "A white bridge for walkers and cyclists over the mouth of the Pescara river, hung by cables from a single pylon, opened in 2009",
+				"cs": "Bílý most pro pěší a cyklisty přes ústí řeky Pescara, zavěšený na lanech z jediného pylonu, otevřený roku 2009",
+				"is": "Hvít brú fyrir gangandi og hjólandi yfir ósa Pescara-árinnar, hengd í stögum frá einum turni, opnuð árið 2009",
+				"de": "Eine weiße Brücke für Fußgänger und Radfahrer über die Mündung des Pescara, an Seilen von einem einzigen Pylon gehalten, 2009 eröffnet"
+			},
+			"local": "Ponte del Mare"
+		}
+	],
+	"Bolzano": [
+		{
+			"kind": "it_bolzano_duomo",
+			"name": {
+				"pl": "Katedra w Bolzano",
+				"en": "Bolzano Cathedral",
+				"cs": "Katedrála v Bolzanu",
+				"is": "Dómkirkjan í Bolzano",
+				"de": "Bozner Dom"
+			},
+			"desc": {
+				"pl": "Gotycka katedra z dachem z kolorowej glazurowanej dachówki układanej we wzór i ażurową iglicą wieży z początku XVI wieku",
+				"en": "A Gothic cathedral with a roof of coloured glazed tiles laid in a pattern and an openwork spire from the early 16th century",
+				"cs": "Gotická katedrála se střechou z barevných glazovaných tašek kladených do vzoru a s prolamovanou věží z počátku 16. století",
+				"is": "Gotnesk dómkirkja með þaki úr marglitum gljáðum þakflísum í mynstri og gataðri turnspíru frá byrjun 16. aldar",
+				"de": "Ein gotischer Dom mit einem Dach aus bunten, im Muster verlegten glasierten Ziegeln und einem durchbrochenen Turmhelm aus dem frühen 16. Jahrhundert"
+			},
+			"local": "Duomo di Bolzano"
+		}
+	],
+	"Ancona": [
+		{
+			"kind": "it_ancona_arco_traiano",
+			"name": {
+				"pl": "Łuk Trajana",
+				"en": "Arch of Trajan",
+				"cs": "Trajánův oblouk",
+				"is": "Sigurbogi Trajanusar",
+				"de": "Trajansbogen"
+			},
+			"desc": {
+				"pl": "Marmurowy łuk na molo portowym, wzniesiony w latach 114–115 n.e. na cześć cesarza Trajana, który rozbudował port w Ankonie",
+				"en": "A marble arch on the harbour mole, raised in AD 114–115 in honour of the emperor Trajan, who enlarged the port of Ancona",
+				"cs": "Mramorový oblouk na přístavním molu, vztyčený v letech 114–115 n. l. na počest císaře Trajána, který rozšířil anconský přístav",
+				"is": "Marmarabogi á hafnargarðinum, reistur árin 114–115 e.Kr. til heiðurs Trajanusi keisara sem stækkaði höfnina í Ancona",
+				"de": "Ein Marmorbogen auf der Hafenmole, 114–115 n. Chr. zu Ehren Kaiser Trajans errichtet, der den Hafen von Ancona ausbauen ließ"
+			},
+			"local": "Arco di Traiano"
+		}
+	],
+	"Lecce": [
+		{
+			"kind": "it_lecce_santa_croce",
+			"name": {
+				"pl": "Bazylika Świętego Krzyża",
+				"en": "Basilica of Santa Croce",
+				"cs": "Bazilika Santa Croce",
+				"is": "Santa Croce-basilíkan",
+				"de": "Basilika Santa Croce"
+			},
+			"desc": {
+				"pl": "Arcydzieło baroku z Lecce z miękkiego miejscowego kamienia, budowane w latach 1549–1695, z wielką rozetą i balkonem pełnym rzeźb",
+				"en": "A masterpiece of Lecce Baroque in the soft local stone, built in 1549–1695, with a great rose window and a balcony full of carvings",
+				"cs": "Mistrovské dílo lecceského baroka z měkkého místního kamene, stavěné v letech 1549–1695, s velkou rozetou a balkonem plným soch",
+				"is": "Meistaraverk Lecce-barokksins úr mjúkum steini héraðsins, byggt á árunum 1549–1695, með stórum rósaglugga og svölum alsettum höggmyndum",
+				"de": "Ein Meisterwerk des Lecceser Barocks aus dem weichen heimischen Stein, 1549–1695 erbaut, mit großer Fensterrose und einem Balkon voller Skulpturen"
+			},
+			"local": "Basilica di Santa Croce"
+		}
+	],
+	"Pisa": [
+		{
+			"kind": "it_pisa_torre",
+			"name": {
+				"pl": "Krzywa Wieża",
+				"en": "Leaning Tower",
+				"cs": "Šikmá věž",
+				"is": "Skakki turninn",
+				"de": "Schiefer Turm"
+			},
+			"desc": {
+				"pl": "Marmurowa dzwonnica katedry, budowana od 1173 roku; zaczęła się przechylać na miękkim gruncie już w trakcie budowy",
+				"en": "The cathedral's marble bell tower, begun in 1173; it started to lean on the soft ground while it was still being built",
+				"cs": "Mramorová zvonice katedrály, stavěná od roku 1173; na měkkém podloží se začala naklánět už během stavby",
+				"is": "Marmaraklukkuturn dómkirkjunnar, hafinn árið 1173; hann tók að halla á mjúkum jarðveginum strax meðan á byggingu stóð",
+				"de": "Der Marmor-Glockenturm des Doms, 1173 begonnen; schon während des Baus begann er sich auf dem weichen Boden zu neigen"
+			},
+			"local": "Torre di Pisa"
+		}
+	],
+	"Cosenza": [
+		{
+			"kind": "it_cosenza_castello",
+			"name": {
+				"pl": "Zamek Szwabski",
+				"en": "Swabian Castle",
+				"cs": "Švábský hrad",
+				"is": "Svabakastalinn",
+				"de": "Stauferburg"
+			},
+			"desc": {
+				"pl": "Zamek na wzgórzu Pancrazio nad starym miastem, przebudowany za cesarza Fryderyka II",
+				"en": "A castle on the Pancrazio hill above the old town, rebuilt under the emperor Frederick II",
+				"cs": "Hrad na kopci Pancrazio nad starým městem, přestavěný za císaře Fridricha II.",
+				"is": "Kastali á Pancrazio-hæð ofan við gamla bæinn, endurbyggður í tíð Friðriks 2. keisara",
+				"de": "Eine Burg auf dem Pancrazio-Hügel über der Altstadt, unter Kaiser Friedrich II. umgebaut"
+			},
+			"local": "Castello Svevo"
+		}
+	]
+}

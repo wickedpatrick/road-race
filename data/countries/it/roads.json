@@ -1,0 +1,409 @@
+[
+	{
+		"a": "milano",
+		"b": "torino",
+		"km": 140,
+		"road": "A4",
+		"towns": [["Rho", 15], ["Novara", 45], ["Vercelli", 70], ["Santhià", 82], ["Chivasso", 115]],
+		"zones": [[35, "fields", "Lombardia"], [140, "fields", "Piemonte"]],
+		"via": [[45, 8.62, 45.45], [82, 8.17, 45.37]]
+	},
+	{
+		"a": "milano",
+		"b": "verona",
+		"km": 160,
+		"road": "A4",
+		"towns": [["Bergamo", 50], ["Brescia", 95], ["Desenzano del Garda", 125], ["Peschiera del Garda", 140]],
+		"zones": [
+			[118, "fields", "Lombardia"], [133, "lakes", "Lombardia"], [145, "lakes", "Veneto"],
+			[160, "fields", "Veneto"]
+		],
+		"via": [[50, 9.67, 45.68], [95, 10.21, 45.54], [125, 10.54, 45.47]]
+	},
+	{
+		"a": "verona",
+		"b": "venezia",
+		"km": 115,
+		"road": "A4",
+		"towns": [["San Bonifacio", 25], ["Vicenza", 50], ["Padova", 80], ["Dolo", 95], ["Mestre", 108]],
+		"zones": [[115, "fields", "Veneto"]],
+		"via": [[50, 11.55, 45.55], [80, 11.88, 45.41]]
+	},
+	{
+		"a": "venezia",
+		"b": "trieste",
+		"km": 160,
+		"road": [[145, "A4"], [160, "RA13"]],
+		"towns": [
+			["Quarto d'Altino", 18], ["San Donà di Piave", 32], ["Portogruaro", 60], ["Latisana", 75],
+			["Monfalcone", 130], ["Sistiana", 145]
+		],
+		"zones": [[70, "fields", "Veneto"], [128, "fields", "Friuli-Venezia Giulia"], [160, "karst", "Friuli-Venezia Giulia"]],
+		"via": [[60, 12.84, 45.78], [100, 13.3, 45.87], [130, 13.53, 45.81]]
+	},
+	{
+		"a": "verona",
+		"b": "bolzano",
+		"km": 150,
+		"road": "A22",
+		"towns": [["Ala", 50], ["Rovereto", 70], ["Trento", 95], ["Mezzocorona", 112], ["Salorno", 118], ["Egna", 127]],
+		"zones": [[35, "upland", "Veneto"], [150, "mountains", "Trentino-Alto Adige"]],
+		"via": [[35, 10.85, 45.73], [70, 11.04, 45.89], [95, 11.12, 46.07], [118, 11.2, 46.24]]
+	},
+	{
+		"a": "verona",
+		"b": "bologna",
+		"km": 140,
+		"road": [[95, "A22"], [140, "A1"]],
+		"towns": [["Nogarole Rocca", 20], ["Mantova", 35], ["Pegognaga", 60], ["Carpi", 80], ["Modena", 100]],
+		"zones": [[22, "fields", "Veneto"], [64, "fields", "Lombardia"], [140, "fields", "Emilia-Romagna"]],
+		"via": [[35, 10.8, 45.16], [80, 10.89, 44.78], [100, 10.93, 44.65]]
+	},
+	{
+		"a": "milano",
+		"b": "bologna",
+		"km": 215,
+		"road": "A1",
+		"towns": [
+			["Lodi", 30], ["Casalpusterlengo", 50], ["Piacenza", 65], ["Fiorenzuola d'Arda", 85], ["Fidenza", 100],
+			["Parma", 125], ["Reggio Emilia", 150], ["Modena", 178]
+		],
+		"zones": [[62, "fields", "Lombardia"], [215, "fields", "Emilia-Romagna"]],
+		"via": [[30, 9.5, 45.31], [65, 9.69, 45.05], [125, 10.33, 44.8], [178, 10.93, 44.65]]
+	},
+	{
+		"a": "milano",
+		"b": "genova",
+		"km": 145,
+		"road": "A7",
+		"towns": [
+			["Binasco", 20], ["Casei Gerola", 58], ["Tortona", 72], ["Serravalle Scrivia", 92],
+			["Isola del Cantone", 107], ["Busalla", 118]
+		],
+		"zones": [
+			[65, "fields", "Lombardia"], [88, "fields", "Piemonte"], [102, "mountains", "Piemonte"],
+			[137, "mountains", "Liguria"], [145, "coast", "Liguria"]
+		],
+		"via": [[58, 8.93, 45], [72, 8.86, 44.89], [107, 8.96, 44.62]]
+	},
+	{
+		"a": "torino",
+		"b": "genova",
+		"km": 178,
+		"road": [[135, "A6"], [178, "A10"]],
+		"towns": [
+			["Moncalieri", 10], ["Carmagnola", 27], ["Fossano", 60], ["Mondovì", 78], ["Ceva", 95], ["Altare", 120],
+			["Savona", 135], ["Varazze", 150], ["Arenzano", 160]
+		],
+		"zones": [
+			[85, "fields", "Piemonte"], [118, "mountains", "Piemonte"], [132, "mountains", "Liguria"],
+			[178, "coast", "Liguria"]
+		],
+		"via": [
+			[27, 7.72, 44.85], [60, 7.73, 44.55], [78, 7.82, 44.39], [95, 8.03, 44.38], [135, 8.48, 44.31],
+			[150, 8.58, 44.36]
+		]
+	},
+	{
+		"a": "genova",
+		"b": "pisa",
+		"km": 165,
+		"road": "A12",
+		"towns": [
+			["Recco", 20], ["Rapallo", 30], ["Chiavari", 40], ["Sestri Levante", 50], ["Brugnato", 85],
+			["La Spezia", 100], ["Sarzana", 110], ["Carrara", 120], ["Massa", 127], ["Viareggio", 145]
+		],
+		"zones": [[50, "coast", "Liguria"], [92, "mountains", "Liguria"], [113, "coast", "Liguria"], [165, "coast", "Toscana"]],
+		"via": [
+			[30, 9.23, 44.35], [50, 9.4, 44.27], [85, 9.72, 44.22], [100, 9.82, 44.11], [127, 10.14, 44.03],
+			[145, 10.25, 43.87]
+		]
+	},
+	{
+		"a": "firenze",
+		"b": "pisa",
+		"km": 90,
+		"road": "A11",
+		"towns": [["Prato", 18], ["Pistoia", 35], ["Montecatini Terme", 48], ["Altopascio", 60], ["Lucca", 72]],
+		"zones": [[90, "fields", "Toscana"]],
+		"via": [[18, 11.09, 43.88], [35, 10.92, 43.93], [72, 10.5, 43.84]]
+	},
+	{
+		"a": "bologna",
+		"b": "firenze",
+		"km": 105,
+		"road": "A1",
+		"towns": [["Sasso Marconi", 18], ["Rioveggio", 35], ["Barberino di Mugello", 75], ["Calenzano", 92]],
+		"zones": [
+			[18, "fields", "Emilia-Romagna"], [50, "mountains", "Emilia-Romagna"], [85, "mountains", "Toscana"],
+			[105, "fields", "Toscana"]
+		],
+		"via": [[35, 11.24, 44.28], [75, 11.24, 43.99]],
+		"tunnels": [
+			{
+				"from_km": 42,
+				"to_km": 50.6,
+				"name": {
+					"pl": "Galleria di Base",
+					"en": "Galleria di Base",
+					"cs": "Galleria di Base",
+					"is": "Galleria di Base-göngin",
+					"de": "Galleria di Base"
+				},
+				"fact": {
+					"pl": "Ponad 8,5 km pod Apeninami: najdłuższy tunel Variante di Valico, nowej trasy A1 otwartej w 2015 roku",
+					"en": "Over 8.5 km under the Apennines: the longest tunnel of the Variante di Valico, the new A1 route opened in 2015",
+					"cs": "Přes 8,5 km pod Apeninami: nejdelší tunel Variante di Valico, nové trasy A1 otevřené roku 2015",
+					"is": "Rúmlega 8,5 km undir Appenínafjöllum: lengstu göngin á Variante di Valico, nýrri leið A1 sem var opnuð árið 2015",
+					"de": "Über 8,5 km unter dem Apennin: der längste Tunnel der Variante di Valico, der 2015 eröffneten neuen Trasse der A1"
+				}
+			}
+		]
+	},
+	{
+		"a": "firenze",
+		"b": "roma",
+		"km": 275,
+		"road": "A1",
+		"towns": [
+			["Incisa in Val d'Arno", 22], ["Arezzo", 65], ["Monte San Savino", 85], ["Chiusi", 118], ["Fabro", 135],
+			["Orvieto", 155], ["Orte", 195], ["Fiano Romano", 238]
+		],
+		"zones": [[130, "fields", "Toscana"], [188, "upland", "Umbria"], [275, "fields", "Lazio"]],
+		"via": [
+			[22, 11.46, 43.66], [65, 11.82, 43.43], [118, 11.95, 43], [155, 12.11, 42.72], [195, 12.38, 42.46],
+			[238, 12.6, 42.16]
+		]
+	},
+	{
+		"a": "firenze",
+		"b": "perugia",
+		"km": 150,
+		"road": [[88, "A1"], [150, "RA6"]],
+		"towns": [
+			["Incisa in Val d'Arno", 22], ["Arezzo", 65], ["Foiano della Chiana", 92],
+			["Passignano sul Trasimeno", 125], ["Magione", 135]
+		],
+		"zones": [[105, "fields", "Toscana"], [137, "lakes", "Umbria"], [150, "upland", "Umbria"]],
+		"via": [[22, 11.46, 43.66], [65, 11.82, 43.43], [88, 11.8, 43.23], [125, 12.13, 43.19]]
+	},
+	{
+		"a": "perugia",
+		"b": "ancona",
+		"km": 140,
+		"road": [[50, "SS318"], [140, "SS76"]],
+		"towns": [
+			["Valfabbrica", 20], ["Gualdo Tadino", 42], ["Fossato di Vico", 50], ["Fabriano", 70], ["Jesi", 110],
+			["Chiaravalle", 122]
+		],
+		"zones": [[55, "mountains", "Umbria"], [90, "mountains", "Marche"], [140, "fields", "Marche"]],
+		"via": [[20, 12.6, 43.15], [50, 12.76, 43.29], [70, 12.9, 43.34], [110, 13.24, 43.52]]
+	},
+	{
+		"a": "roma",
+		"b": "napoli",
+		"km": 225,
+		"road": "A1",
+		"towns": [
+			["Valmontone", 40], ["Anagni", 60], ["Frosinone", 85], ["Ceprano", 105], ["Cassino", 130], ["Capua", 190],
+			["Caserta", 200]
+		],
+		"zones": [[145, "fields", "Lazio"], [225, "fields", "Campania"]],
+		"via": [[40, 12.92, 41.78], [85, 13.35, 41.64], [130, 13.83, 41.49], [190, 14.21, 41.11]]
+	},
+	{
+		"a": "napoli",
+		"b": "salerno",
+		"km": 55,
+		"road": "A3",
+		"towns": [
+			["Portici", 8], ["Ercolano", 12], ["Torre del Greco", 16], ["Torre Annunziata", 22], ["Pompei", 26],
+			["Nocera Inferiore", 38], ["Cava de' Tirreni", 47]
+		],
+		"zones": [[30, "industrial", "Campania"], [55, "fields", "Campania"]],
+		"via": [[16, 14.37, 40.79], [26, 14.5, 40.75], [38, 14.64, 40.74]]
+	},
+	{
+		"a": "salerno",
+		"b": "cosenza",
+		"km": 240,
+		"road": "A2",
+		"towns": [
+			["Battipaglia", 20], ["Eboli", 28], ["Sala Consilina", 90], ["Lagonegro", 125], ["Lauria", 140],
+			["Mormanno", 160], ["Castrovillari", 180], ["Tarsia", 205]
+		],
+		"zones": [
+			[30, "fields", "Campania"], [118, "mountains", "Campania"], [155, "mountains", "Basilicata"],
+			[195, "mountains", "Calabria"], [240, "fields", "Calabria"]
+		],
+		"via": [
+			[28, 15.05, 40.61], [90, 15.6, 40.4], [125, 15.76, 40.12], [160, 15.99, 39.89], [180, 16.2, 39.82],
+			[205, 16.27, 39.6]
+		]
+	},
+	{
+		"a": "cosenza",
+		"b": "reggio_calabria",
+		"km": 200,
+		"road": "A2",
+		"towns": [
+			["Rogliano", 18], ["Lamezia Terme", 60], ["Pizzo", 85], ["Vibo Valentia", 100], ["Rosarno", 135],
+			["Palmi", 153], ["Bagnara Calabra", 167], ["Scilla", 177], ["Villa San Giovanni", 188]
+		],
+		"zones": [
+			[45, "mountains", "Calabria"], [80, "fields", "Calabria"], [130, "upland", "Calabria"],
+			[200, "coast", "Calabria"]
+		],
+		"via": [
+			[18, 16.32, 39.18], [60, 16.31, 38.97], [100, 16.12, 38.68], [135, 15.98, 38.49], [153, 15.85, 38.36],
+			[177, 15.71, 38.25], [188, 15.7, 38.2]
+		]
+	},
+	{
+		"a": "reggio_calabria",
+		"b": "messina",
+		"km": 25,
+		"road": [[14, "A2"], [25, "SS114"]],
+		"towns": [],
+		"zones": [[14, "coast", "Calabria"], [25, "coast", "Sicilia"]],
+		"via": [[13, 15.68, 38.2]],
+		"ferry": {
+			"from_km": 14,
+			"to_km": 23,
+			"name": "Villa San Giovanni – Messina",
+			"fact": {
+				"pl": "Promy przez Cieśninę Mesyńską kursują przez całą dobę; przeprawa na Sycylię trwa około 20 minut",
+				"en": "Ferries cross the Strait of Messina round the clock; the crossing to Sicily takes about 20 minutes",
+				"cs": "Trajekty přes Messinskou úžinu jezdí nepřetržitě; přeplavba na Sicílii trvá asi 20 minut",
+				"is": "Ferjur fara yfir Messínasund allan sólarhringinn; siglingin til Sikileyjar tekur um 20 mínútur",
+				"de": "Die Fähren über die Straße von Messina fahren rund um die Uhr; die Überfahrt nach Sizilien dauert etwa 20 Minuten"
+			}
+		}
+	},
+	{
+		"a": "messina",
+		"b": "catania",
+		"km": 95,
+		"road": "A18",
+		"towns": [
+			["Letojanni", 40], ["Taormina", 47], ["Giardini Naxos", 52], ["Fiumefreddo di Sicilia", 60],
+			["Giarre", 68], ["Acireale", 80]
+		],
+		"zones": [[58, "coast", "Sicilia"], [95, "mediterranean", "Sicilia"]],
+		"via": [[25, 15.38, 38], [47, 15.26, 37.85], [68, 15.18, 37.72], [80, 15.14, 37.61]]
+	},
+	{
+		"a": "messina",
+		"b": "palermo",
+		"km": 230,
+		"road": [[185, "A20"], [230, "A19"]],
+		"towns": [
+			["Milazzo", 35], ["Barcellona Pozzo di Gotto", 45], ["Patti", 72], ["Capo d'Orlando", 92],
+			["Sant'Agata di Militello", 108], ["Santo Stefano di Camastra", 130], ["Cefalù", 167],
+			["Termini Imerese", 195], ["Bagheria", 217]
+		],
+		"zones": [[120, "coast", "Sicilia"], [175, "mediterranean", "Sicilia"], [230, "coast", "Sicilia"]],
+		"via": [
+			[15, 15.43, 38.24], [45, 15.22, 38.15], [72, 14.96, 38.14], [92, 14.75, 38.15], [130, 14.35, 38.02],
+			[167, 14.02, 38.02], [195, 13.7, 37.98]
+		]
+	},
+	{
+		"a": "palermo",
+		"b": "catania",
+		"km": 205,
+		"road": "A19",
+		"towns": [["Bagheria", 13], ["Termini Imerese", 35], ["Catenanuova", 165]],
+		"zones": [[40, "coast", "Sicilia"], [170, "upland", "Sicilia"], [205, "fields", "Sicilia"]],
+		"via": [[35, 13.7, 37.98], [65, 13.88, 37.85], [128, 14.28, 37.55], [165, 14.69, 37.57]]
+	},
+	{
+		"a": "roma",
+		"b": "pescara",
+		"km": 210,
+		"road": [[80, "A24"], [210, "A25"]],
+		"towns": [
+			["Tivoli", 30], ["Vicovaro", 45], ["Carsoli", 65], ["Tagliacozzo", 85], ["Avezzano", 105],
+			["Pescina", 125], ["Pratola Peligna", 150], ["Popoli", 160], ["Chieti", 195]
+		],
+		"zones": [
+			[25, "fields", "Lazio"], [60, "mountains", "Lazio"], [170, "mountains", "Abruzzo"],
+			[210, "fields", "Abruzzo"]
+		],
+		"via": [
+			[30, 12.8, 41.96], [65, 13.09, 42.1], [105, 13.43, 42.03], [150, 13.86, 42.1], [160, 13.83, 42.17],
+			[195, 14.16, 42.35]
+		]
+	},
+	{
+		"a": "ancona",
+		"b": "pescara",
+		"km": 155,
+		"road": "A14",
+		"towns": [
+			["Porto Recanati", 25], ["Civitanova Marche", 38], ["Porto Sant'Elpidio", 47], ["Porto San Giorgio", 55],
+			["Grottammare", 80], ["San Benedetto del Tronto", 86], ["Giulianova", 105], ["Roseto degli Abruzzi", 115],
+			["Silvi", 135], ["Montesilvano", 145]
+		],
+		"zones": [[92, "coast", "Marche"], [155, "coast", "Abruzzo"]],
+		"via": [[25, 13.63, 43.43], [55, 13.79, 43.18], [85, 13.88, 42.94], [115, 13.99, 42.67]]
+	},
+	{
+		"a": "bologna",
+		"b": "ancona",
+		"km": 210,
+		"road": "A14",
+		"towns": [
+			["Imola", 35], ["Faenza", 50], ["Forlì", 64], ["Cesena", 82], ["Rimini", 110], ["Riccione", 120],
+			["Cattolica", 130], ["Pesaro", 145], ["Fano", 160], ["Senigallia", 185]
+		],
+		"zones": [[105, "fields", "Emilia-Romagna"], [133, "coast", "Emilia-Romagna"], [210, "coast", "Marche"]],
+		"via": [
+			[35, 11.71, 44.35], [64, 12.04, 44.22], [82, 12.24, 44.14], [110, 12.57, 44.06], [145, 12.9, 43.91],
+			[185, 13.22, 43.71]
+		]
+	},
+	{
+		"a": "pescara",
+		"b": "bari",
+		"km": 315,
+		"road": "A14",
+		"towns": [
+			["Ortona", 25], ["Vasto", 70], ["San Salvo", 80], ["Termoli", 100], ["Poggio Imperiale", 135],
+			["San Severo", 160], ["Foggia", 185], ["Cerignola", 222], ["Canosa di Puglia", 238], ["Andria", 256],
+			["Trani", 270], ["Molfetta", 288]
+		],
+		"zones": [[85, "coast", "Abruzzo"], [118, "coast", "Molise"], [315, "fields", "Puglia"]],
+		"via": [
+			[25, 14.38, 42.34], [70, 14.7, 42.11], [100, 14.99, 42], [135, 15.36, 41.82], [185, 15.55, 41.46],
+			[222, 15.9, 41.27], [256, 16.29, 41.23], [288, 16.6, 41.2]
+		]
+	},
+	{
+		"a": "napoli",
+		"b": "bari",
+		"km": 255,
+		"road": [[180, "A16"], [255, "A14"]],
+		"towns": [
+			["Nola", 25], ["Avellino", 52], ["Grottaminarda", 88], ["Lacedonia", 112], ["Candela", 128],
+			["Canosa di Puglia", 180], ["Andria", 198], ["Trani", 210], ["Molfetta", 228]
+		],
+		"zones": [[30, "fields", "Campania"], [118, "upland", "Campania"], [255, "fields", "Puglia"]],
+		"via": [
+			[25, 14.53, 40.93], [52, 14.79, 40.91], [88, 15.06, 41.07], [128, 15.52, 41.14], [180, 16.07, 41.22],
+			[210, 16.42, 41.27]
+		]
+	},
+	{
+		"a": "bari",
+		"b": "lecce",
+		"km": 155,
+		"road": [[115, "SS16", 3], [155, "SS613", 3]],
+		"towns": [
+			["Mola di Bari", 20], ["Polignano a Mare", 35], ["Monopoli", 45], ["Fasano", 60], ["Ostuni", 80],
+			["Brindisi", 115]
+		],
+		"zones": [[50, "coast", "Puglia"], [100, "mediterranean", "Puglia"], [155, "fields", "Puglia"]],
+		"via": [[45, 17.27, 40.94], [80, 17.58, 40.73], [115, 17.94, 40.63]]
+	}
+]

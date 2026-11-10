@@ -1,0 +1,233 @@
+{
+	"Roma": {
+		"pl": "Stolica Włoch od 1871 roku; w jej granicach leży Watykan, najmniejsze państwo świata",
+		"en": "The capital of Italy since 1871; the Vatican, the world's smallest state, lies within it",
+		"cs": "Hlavní město Itálie od roku 1871; leží v něm Vatikán, nejmenší stát světa",
+		"is": "Höfuðborg Ítalíu frá 1871; innan hennar er Vatíkanið, minnsta ríki heims",
+		"de": "Seit 1871 die Hauptstadt Italiens; in ihr liegt der Vatikan, der kleinste Staat der Welt"
+	},
+	"Milano": {
+		"pl": "Stolica mody i finansów Włoch; w klasztorze Santa Maria delle Grazie można zobaczyć Ostatnią Wieczerzę Leonarda da Vinci",
+		"en": "Italy's capital of fashion and finance; Leonardo da Vinci's Last Supper is in the convent of Santa Maria delle Grazie",
+		"cs": "Italské hlavní město módy a financí; v klášteře Santa Maria delle Grazie je Poslední večeře Leonarda da Vinci",
+		"is": "Höfuðborg tísku og fjármála á Ítalíu; Síðasta kvöldmáltíðin eftir Leonardo da Vinci er í klaustrinu Santa Maria delle Grazie",
+		"de": "Italiens Hauptstadt der Mode und der Finanzen; Leonardo da Vincis Abendmahl ist im Kloster Santa Maria delle Grazie zu sehen"
+	},
+	"Napoli": {
+		"pl": "Miasto u stóp Wezuwiusza, ojczyzna pizzy; jego historyczne centrum jest na liście UNESCO",
+		"en": "A city at the foot of Vesuvius and the home of pizza; its historic centre is on UNESCO's list",
+		"cs": "Město pod Vesuvem a domov pizzy; jeho historické centrum je na seznamu UNESCO",
+		"is": "Borg við rætur Vesúvíusar og heimkynni pítsunnar; sögulegi miðbærinn er á heimsminjaskrá UNESCO",
+		"de": "Eine Stadt am Fuß des Vesuvs und die Heimat der Pizza; ihre Altstadt gehört zum UNESCO-Welterbe"
+	},
+	"Torino": {
+		"pl": "Pierwsza stolica zjednoczonych Włoch (1861–1865) i miasto Fiata; w katedrze przechowywany jest Całun Turyński",
+		"en": "The first capital of united Italy (1861–1865) and the home of Fiat; the Shroud of Turin is kept in its cathedral",
+		"cs": "První hlavní město sjednocené Itálie (1861–1865) a domov Fiatu; v katedrále je uložen Turínské plátno",
+		"is": "Fyrsta höfuðborg sameinaðrar Ítalíu (1861–1865) og heimaborg Fiat; líkklæðið frá Tórínó er geymt í dómkirkjunni",
+		"de": "Die erste Hauptstadt des geeinten Italien (1861–1865) und Heimat von Fiat; im Dom wird das Turiner Grabtuch aufbewahrt"
+	},
+	"Palermo": {
+		"pl": "Stolica Sycylii założona przez Fenicjan; arabsko-normańskie kościoły i pałace są na liście UNESCO",
+		"en": "The capital of Sicily, founded by the Phoenicians; its Arab-Norman churches and palaces are on UNESCO's list",
+		"cs": "Hlavní město Sicílie založené Féničany; jeho arabsko-normanské kostely a paláce jsou na seznamu UNESCO",
+		"is": "Höfuðborg Sikileyjar, stofnuð af Föníkum; arabísk-normannskar kirkjur hennar og hallir eru á heimsminjaskrá UNESCO",
+		"de": "Die Hauptstadt Siziliens, von den Phöniziern gegründet; ihre arabisch-normannischen Kirchen und Paläste gehören zum UNESCO-Welterbe"
+	},
+	"Genova": {
+		"pl": "Dawna republika morska i największy port Włoch; według tradycji urodził się tu Krzysztof Kolumb",
+		"en": "A former maritime republic and Italy's largest port; by tradition Christopher Columbus was born here",
+		"cs": "Bývalá námořní republika a největší přístav Itálie; podle tradice se zde narodil Kryštof Kolumbus",
+		"is": "Fyrrum sjóveldi og stærsta höfn Ítalíu; samkvæmt hefð fæddist Kristófer Kólumbus hér",
+		"de": "Eine ehemalige Seerepublik und Italiens größter Hafen; der Überlieferung nach wurde hier Christoph Kolumbus geboren"
+	},
+	"Bologna": {
+		"pl": "Siedziba najstarszego uniwersytetu w Europie, założonego w 1088 roku; ulice ciągną się pod niemal 40 km arkad",
+		"en": "Home of Europe's oldest university, founded in 1088; its streets run under almost 40 km of porticoes",
+		"cs": "Sídlo nejstarší univerzity v Evropě, založené roku 1088; ulice vedou pod téměř 40 km podloubí",
+		"is": "Hér er elsti háskóli Evrópu, stofnaður árið 1088; göturnar liggja undir nærri 40 km af súlnagöngum",
+		"de": "Sitz der ältesten Universität Europas, 1088 gegründet; die Straßen verlaufen unter fast 40 km Laubengängen"
+	},
+	"Firenze": {
+		"pl": "Kolebka renesansu i miasto Medyceuszy; w Galerii Uffizi wiszą dzieła Botticellego i Leonarda",
+		"en": "The cradle of the Renaissance and the city of the Medici; the Uffizi Gallery holds works by Botticelli and Leonardo",
+		"cs": "Kolébka renesance a město Medicejských; v galerii Uffizi visí díla Botticelliho a Leonarda",
+		"is": "Vagga endurreisnarinnar og borg Medici-ættarinnar; í Uffizi-safninu eru verk eftir Botticelli og Leonardo",
+		"de": "Die Wiege der Renaissance und die Stadt der Medici; die Uffizien zeigen Werke von Botticelli und Leonardo"
+	},
+	"Bari": {
+		"pl": "Stolica Apulii i port nad Adriatykiem; w starym mieście kobiety wciąż ręcznie robią makaron orecchiette na ulicy",
+		"en": "The capital of Apulia and a port on the Adriatic; in the old town women still make orecchiette pasta by hand in the street",
+		"cs": "Hlavní město Apulie a přístav na Jadranu; ve starém městě ženy dodnes ručně vyrábějí na ulici těstoviny orecchiette",
+		"is": "Höfuðborg Apúlíu og hafnarborg við Adríahaf; í gamla bænum búa konur enn til orecchiette-pasta í höndunum úti á götu",
+		"de": "Die Hauptstadt Apuliens und ein Hafen an der Adria; in der Altstadt machen Frauen noch auf der Straße Orecchiette von Hand"
+	},
+	"Catania": {
+		"pl": "Miasto u stóp Etny, najwyższego czynnego wulkanu Europy; po trzęsieniu ziemi w 1693 roku odbudowano je z czarnej lawy",
+		"en": "A city at the foot of Etna, Europe's highest active volcano; after the earthquake of 1693 it was rebuilt in black lava stone",
+		"cs": "Město pod Etnou, nejvyšší činnou sopkou Evropy; po zemětřesení roku 1693 bylo znovu postaveno z černé lávy",
+		"is": "Borg við rætur Etnu, hæsta virka eldfjalls Evrópu; eftir jarðskjálftann 1693 var hún endurbyggð úr svörtu hraungrýti",
+		"de": "Eine Stadt am Fuß des Ätna, des höchsten aktiven Vulkans Europas; nach dem Erdbeben von 1693 wurde sie aus schwarzem Lavastein wieder aufgebaut"
+	},
+	"Verona": {
+		"pl": "Miasto, w którym Szekspir umieścił akcję „Romea i Julii”; turyści odwiedzają tu dom i balkon Julii",
+		"en": "The city where Shakespeare set Romeo and Juliet; visitors come to see Juliet's house and balcony",
+		"cs": "Město, kam Shakespeare zasadil děj Romea a Julie; turisté sem chodí za Juliiným domem a balkonem",
+		"is": "Borgin þar sem Shakespeare lét Rómeó og Júlíu gerast; ferðamenn koma til að sjá hús Júlíu og svalirnar",
+		"de": "Die Stadt, in der Shakespeare Romeo und Julia spielen ließ; Besucher kommen zu Julias Haus und Balkon"
+	},
+	"Venezia": {
+		"pl": "Miasto na ponad stu wyspach laguny, bez samochodów; po kanałach pływają gondole i tramwaje wodne vaporetto",
+		"en": "A city on over a hundred islands in a lagoon, without cars; gondolas and vaporetto water buses ply its canals",
+		"cs": "Město na více než stovce ostrovů v laguně, bez aut; po kanálech plují gondoly a vodní autobusy vaporetto",
+		"is": "Borg á rúmlega hundrað eyjum í lóni, án bíla; gondólar og vatnastrætóar, vaporetto, sigla um síkin",
+		"de": "Eine Stadt auf über hundert Inseln einer Lagune, ohne Autos; auf den Kanälen fahren Gondeln und Vaporetti"
+	},
+	"Messina": {
+		"pl": "Brama Sycylii nad Cieśniną Mesyńską; zegar astronomiczny na dzwonnicy katedry co dzień w południe wprawia w ruch figury",
+		"en": "The gateway to Sicily on the Strait of Messina; at noon every day the astronomical clock on the cathedral's bell tower sets its figures moving",
+		"cs": "Brána Sicílie na Messinské úžině; orloj na zvonici katedrály každý den v poledne rozpohybuje své figury",
+		"is": "Hlið Sikileyjar við Messínasund; á hádegi hvern dag setur stjörnuklukkan í klukkuturni dómkirkjunnar fígúrur sínar á hreyfingu",
+		"de": "Das Tor zu Sizilien an der Straße von Messina; jeden Mittag setzt die astronomische Uhr am Glockenturm des Doms ihre Figuren in Bewegung"
+	},
+	"Trieste": {
+		"pl": "Dawny główny port monarchii habsburskiej, miasto kawiarni i silnego wiatru bora",
+		"en": "Once the main port of the Habsburg monarchy, a city of cafés and the strong bora wind",
+		"cs": "Kdysi hlavní přístav habsburské monarchie, město kaváren a silného větru bóra",
+		"is": "Áður aðalhöfn Habsborgaraveldisins, borg kaffihúsa og hins sterka bóruvinds",
+		"de": "Einst der Haupthafen der Habsburgermonarchie, eine Stadt der Kaffeehäuser und der starken Bora"
+	},
+	"Reggio Calabria": {
+		"pl": "Miasto na czubku włoskiego „buta”, naprzeciw Sycylii; jego nadmorski bulwar zwany jest najpiękniejszym kilometrem Włoch",
+		"en": "A city on the toe of the Italian boot, facing Sicily; its seafront promenade is called the most beautiful kilometre in Italy",
+		"cs": "Město na špičce italské „boty“ naproti Sicílii; jeho nábřežní promenáda se nazývá nejkrásnějším kilometrem Itálie",
+		"is": "Borg á tánni á ítalska „stígvélinu“, andspænis Sikiley; strandgatan er kölluð fegursti kílómetri Ítalíu",
+		"de": "Eine Stadt an der Spitze des italienischen Stiefels, gegenüber Sizilien; ihre Strandpromenade gilt als der schönste Kilometer Italiens"
+	},
+	"Perugia": {
+		"pl": "Stolica Umbrii na wzgórzu, z Uniwersytetem dla Cudzoziemców; słynie z czekolady i festiwalu Umbria Jazz",
+		"en": "The hilltop capital of Umbria, with a University for Foreigners; known for its chocolate and the Umbria Jazz festival",
+		"cs": "Hlavní město Umbrie na kopci, s Univerzitou pro cizince; proslulé čokoládou a festivalem Umbria Jazz",
+		"is": "Höfuðborg Úmbríu á hæð, með háskóla fyrir útlendinga; þekkt fyrir súkkulaði og Umbria Jazz-hátíðina",
+		"de": "Die Hauptstadt Umbriens auf einem Hügel, mit einer Universität für Ausländer; bekannt für Schokolade und das Festival Umbria Jazz"
+	},
+	"Salerno": {
+		"pl": "Port na początku Wybrzeża Amalfitańskiego; w średniowieczu działała tu Szkoła Medyczna Salernitańska, jedna z pierwszych w Europie",
+		"en": "A port at the start of the Amalfi Coast; in the Middle Ages the Schola Medica Salernitana, one of Europe's first medical schools, was here",
+		"cs": "Přístav na začátku Amalfinského pobřeží; ve středověku zde působila salernská lékařská škola, jedna z prvních v Evropě",
+		"is": "Hafnarborg þar sem Amalfi-ströndin hefst; á miðöldum starfaði hér læknaskólinn í Salerno, einn sá fyrsti í Evrópu",
+		"de": "Ein Hafen am Beginn der Amalfiküste; im Mittelalter wirkte hier die Schule von Salerno, eine der ersten medizinischen Schulen Europas"
+	},
+	"Pescara": {
+		"pl": "Nadmorskie miasto Abruzji z długimi plażami; urodził się tu poeta Gabriele D'Annunzio",
+		"en": "A seaside city of Abruzzo with long beaches; the poet Gabriele D'Annunzio was born here",
+		"cs": "Přímořské město Abruzzo s dlouhými plážemi; narodil se zde básník Gabriele D'Annunzio",
+		"is": "Strandborg í Abrútsi með löngum ströndum; skáldið Gabriele D'Annunzio fæddist hér",
+		"de": "Eine Küstenstadt der Abruzzen mit langen Stränden; hier wurde der Dichter Gabriele D'Annunzio geboren"
+	},
+	"Bolzano": {
+		"pl": "Stolica dwujęzycznego Południowego Tyrolu; w muzeum archeologicznym leży Ötzi, człowiek lodu sprzed ponad 5000 lat",
+		"en": "The capital of bilingual South Tyrol; the archaeology museum keeps Ötzi, the Iceman who lived over 5,000 years ago",
+		"cs": "Hlavní město dvojjazyčného Jižního Tyrolska; v archeologickém muzeu leží Ötzi, ledový muž starý přes 5000 let",
+		"is": "Höfuðborg tvítyngda Suður-Týról; í fornminjasafninu hvílir Ötzi, ísmaðurinn sem lifði fyrir meira en 5000 árum",
+		"de": "Die Hauptstadt des zweisprachigen Südtirols; im Archäologiemuseum liegt Ötzi, der Mann aus dem Eis, der vor über 5000 Jahren lebte"
+	},
+	"Ancona": {
+		"pl": "Port nad Adriatykiem założony przez Greków z Syrakuz; promy płyną stąd do Chorwacji i Grecji",
+		"en": "An Adriatic port founded by Greeks from Syracuse; ferries sail from here to Croatia and Greece",
+		"cs": "Jaderský přístav založený Řeky ze Syrakus; odtud plují trajekty do Chorvatska a Řecka",
+		"is": "Hafnarborg við Adríahaf, stofnuð af Grikkjum frá Sýrakúsu; héðan sigla ferjur til Króatíu og Grikklands",
+		"de": "Ein Adriahafen, von Griechen aus Syrakus gegründet; von hier fahren Fähren nach Kroatien und Griechenland"
+	},
+	"Lecce": {
+		"pl": "„Florencja Południa”, pełna barokowych kościołów z miękkiego, złocistego kamienia z okolicy",
+		"en": "The \"Florence of the South\", full of Baroque churches in the soft, golden local stone",
+		"cs": "„Florencie jihu“, plná barokních kostelů z měkkého zlatavého místního kamene",
+		"is": "„Flórens suðursins“, full af barokkkirkjum úr mjúkum, gullnum steini héraðsins",
+		"de": "Das „Florenz des Südens“, voller Barockkirchen aus dem weichen, goldenen Stein der Gegend"
+	},
+	"Pisa": {
+		"pl": "Dawna republika morska; Piazza dei Miracoli z katedrą, baptysterium i krzywą wieżą jest na liście UNESCO, a Galileusz urodził się tutaj",
+		"en": "A former maritime republic; the Piazza dei Miracoli with its cathedral, baptistery and leaning tower is on UNESCO's list, and Galileo was born here",
+		"cs": "Bývalá námořní republika; Piazza dei Miracoli s katedrálou, baptisteriem a šikmou věží je na seznamu UNESCO a narodil se zde Galileo",
+		"is": "Fyrrum sjóveldi; Piazza dei Miracoli með dómkirkju, skírnarhúsi og skakka turninum er á heimsminjaskrá UNESCO og Galíleó fæddist hér",
+		"de": "Eine ehemalige Seerepublik; die Piazza dei Miracoli mit Dom, Baptisterium und schiefem Turm gehört zum UNESCO-Welterbe, und Galileo wurde hier geboren"
+	},
+	"Cosenza": {
+		"pl": "Miasto nad rzekami Crati i Busento; według legendy w korycie Busento pochowano króla Wizygotów Alaryka",
+		"en": "A city on the Crati and Busento rivers; legend has it that Alaric, king of the Visigoths, was buried in the bed of the Busento",
+		"cs": "Město na řekách Crati a Busento; podle legendy byl v korytě Busenta pohřben vizigótský král Alarich",
+		"is": "Borg við árnar Crati og Busento; sagan segir að Alarik Vestgotakonungur hafi verið grafinn í farvegi Busento",
+		"de": "Eine Stadt an Crati und Busento; der Sage nach wurde der Westgotenkönig Alarich im Bett des Busento begraben"
+	},
+	"Pompei": {
+		"pl": "Rzymskie miasto zasypane popiołem Wezuwiusza w 79 roku n.e., odkopywane od XVIII wieku",
+		"en": "A Roman town buried by the ash of Vesuvius in AD 79, excavated since the 18th century",
+		"cs": "Římské město zasypané popelem Vesuvu roku 79 n. l., odkrývané od 18. století",
+		"is": "Rómverskur bær sem grófst í ösku frá Vesúvíusi árið 79 e.Kr. og hefur verið grafinn upp frá 18. öld",
+		"de": "Eine römische Stadt, im Jahr 79 n. Chr. von der Asche des Vesuvs verschüttet und seit dem 18. Jahrhundert ausgegraben"
+	},
+	"Taormina": {
+		"pl": "Miasteczko na skale nad morzem z greckim teatrem, z którego widać Etnę",
+		"en": "A town on a cliff above the sea with a Greek theatre that looks out to Etna",
+		"cs": "Městečko na skále nad mořem s řeckým divadlem, ze kterého je vidět Etna",
+		"is": "Bær á kletti ofan við hafið með grísku leikhúsi þaðan sem sést til Etnu",
+		"de": "Ein Städtchen auf einem Felsen über dem Meer mit einem griechischen Theater, von dem man den Ätna sieht"
+	},
+	"Rimini": {
+		"pl": "Kurort nad Adriatykiem z kilometrami plaż; urodził się tu reżyser Federico Fellini",
+		"en": "A resort on the Adriatic with miles of beaches; the film director Federico Fellini was born here",
+		"cs": "Letovisko na Jadranu s kilometry pláží; narodil se zde režisér Federico Fellini",
+		"is": "Baðstaður við Adríahaf með kílómetralöngum ströndum; kvikmyndaleikstjórinn Federico Fellini fæddist hér",
+		"de": "Ein Badeort an der Adria mit kilometerlangen Stränden; hier wurde der Regisseur Federico Fellini geboren"
+	},
+	"Parma": {
+		"pl": "Miasto szynki parmeńskiej i sera Parmigiano Reggiano; urodził się tu dyrygent Arturo Toscanini",
+		"en": "The city of Parma ham and Parmigiano Reggiano cheese; the conductor Arturo Toscanini was born here",
+		"cs": "Město parmské šunky a sýra Parmigiano Reggiano; narodil se zde dirigent Arturo Toscanini",
+		"is": "Borg Parma-skinkunnar og Parmigiano Reggiano-ostsins; hljómsveitarstjórinn Arturo Toscanini fæddist hér",
+		"de": "Die Stadt des Parmaschinkens und des Parmigiano Reggiano; hier wurde der Dirigent Arturo Toscanini geboren"
+	},
+	"Modena": {
+		"pl": "Ojczyzna octu balsamicznego; w pobliskim Maranello Ferrari buduje swoje samochody",
+		"en": "The home of balsamic vinegar; Ferrari builds its cars in nearby Maranello",
+		"cs": "Domov balzamikového octa; v nedalekém Maranellu staví své vozy Ferrari",
+		"is": "Heimkynni balsamediksins; Ferrari smíðar bíla sína í Maranello skammt frá",
+		"de": "Die Heimat des Balsamessigs; im nahen Maranello baut Ferrari seine Autos"
+	},
+	"Padova": {
+		"pl": "Miasto uniwersyteckie od 1222 roku; ogród botaniczny założony w 1545 roku jest na liście UNESCO",
+		"en": "A university city since 1222; its botanical garden, founded in 1545, is on UNESCO's list",
+		"cs": "Univerzitní město od roku 1222; botanická zahrada založená roku 1545 je na seznamu UNESCO",
+		"is": "Háskólaborg frá 1222; grasagarðurinn, stofnaður árið 1545, er á heimsminjaskrá UNESCO",
+		"de": "Eine Universitätsstadt seit 1222; ihr 1545 gegründeter Botanischer Garten gehört zum UNESCO-Welterbe"
+	},
+	"Arezzo": {
+		"pl": "W kościele San Francesco można zobaczyć freski Piera della Francesca z „Legendą Krzyża Świętego”",
+		"en": "The church of San Francesco holds Piero della Francesca's frescoes of the Legend of the True Cross",
+		"cs": "V kostele San Francesco jsou fresky Piera della Francesca s Legendou o svatém Kříži",
+		"is": "Í kirkju heilags Frans eru freskur Pieros della Francesca um helgisögnina af krossinum helga",
+		"de": "In der Kirche San Francesco sind Piero della Francescas Fresken der Kreuzeslegende zu sehen"
+	},
+	"Trento": {
+		"pl": "W latach 1545–1563 obradował tu sobór trydencki, który zapoczątkował kontrreformację",
+		"en": "The Council of Trent met here in 1545–1563 and launched the Counter-Reformation",
+		"cs": "V letech 1545–1563 zde zasedal Tridentský koncil, který zahájil protireformaci",
+		"is": "Kirkjuþingið í Trento kom hér saman á árunum 1545–1563 og hratt gagnsiðbótinni af stað",
+		"de": "Hier tagte 1545–1563 das Konzil von Trient, das die Gegenreformation einleitete"
+	},
+	"Lucca": {
+		"pl": "Miasto w pełni otoczone renesansowymi murami, po których można spacerować; urodził się tu Giacomo Puccini",
+		"en": "A town ringed entirely by Renaissance walls that you can walk along; Giacomo Puccini was born here",
+		"cs": "Město celé obehnané renesančními hradbami, po kterých se dá procházet; narodil se zde Giacomo Puccini",
+		"is": "Bær alveg umkringdur borgarmúrum frá endurreisnartímanum sem hægt er að ganga eftir; Giacomo Puccini fæddist hér",
+		"de": "Eine Stadt, ganz von begehbaren Renaissancemauern umgeben; hier wurde Giacomo Puccini geboren"
+	},
+	"Cefalù": {
+		"pl": "Rybackie miasteczko pod skałą La Rocca z normańską katedrą z XII wieku",
+		"en": "A fishing town under the La Rocca crag with a 12th-century Norman cathedral",
+		"cs": "Rybářské městečko pod skálou La Rocca s normanskou katedrálou z 12. století",
+		"is": "Fiskibær undir klettinum La Rocca með normannskri dómkirkju frá 12. öld",
+		"de": "Ein Fischerstädtchen unter dem Felsen La Rocca mit einem normannischen Dom aus dem 12. Jahrhundert"
+	}
+}
