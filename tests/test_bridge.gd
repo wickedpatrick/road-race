@@ -20,6 +20,9 @@ static func fixture() -> Dictionary:
 		"bb": {"name": "Beta", "lat": 40.4, "lon": 27.0, "pop": 150, "region": "R2"},
 		"cc": {"name": "Gamma", "lat": 40.6, "lon": 27.3, "pop": 150, "region": "R2"},
 		"dd": {"name": "Delta", "lat": 40.7, "lon": 27.5, "pop": 150, "region": "R2"},
+		"ee": {"name": "Epsilon", "lat": 41.2, "lon": 28.3, "pop": 150, "region": "R2"},
+		"ff": {"name": "Zeta", "lat": 41.7, "lon": 29.1, "pop": 150, "region": "R2"},
+		"gg": {"name": "Eta", "lat": 45.0, "lon": 33.0, "pop": 150, "region": "R2"},
 	}
 	c["roads"] = [
 		{"a": "aa", "b": "bb", "km": 100, "road": "O5", "towns": [["Westtown", 20], ["Easttown", 70]],
@@ -28,9 +31,17 @@ static func fixture() -> Dictionary:
 		# the bridge begins at the city's edge: it is moved out past the streets
 		{"a": "bb", "b": "cc", "km": 80, "road": "D100", "towns": [], "zones": [[80, "fields", "R2"]],
 			"bridge": {"from_km": 0.5, "to_km": 2, "name": "Short"}},
-		# towns crowd the bridge: too short to draw, it is left out
+		# towns crowd the bridge: track is put in at it for its full length
 		{"a": "cc", "b": "dd", "km": 20, "road": "D110", "towns": [["Left", 8], ["Right", 12]], "zones": [[20, "fields", "R2"]],
 			"bridge": {"from_km": 9.5, "to_km": 10.5, "name": "Squeezed"}},
+		# a cable-stayed bridge, and a long low beam bridge
+		{"a": "dd", "b": "ee", "km": 80, "road": "D120", "towns": [], "zones": [[80, "fields", "R2"]],
+			"bridge": {"from_km": 30, "to_km": 38, "name": "Stayed", "kind": "stayed"}},
+		{"a": "ee", "b": "ff", "km": 80, "road": "D130", "towns": [], "zones": [[80, "fields", "R2"]],
+			"bridge": {"from_km": 30, "to_km": 40, "name": "Causeway", "kind": "beam"}},
+		# a long, compressed trip: towns 1 km before and after a bridge (Barton-upon-Humber, South Queensferry)
+		{"a": "ff", "b": "gg", "km": 600, "road": "D140", "towns": [["Northbank", 299], ["Southbank", 306]],
+			"zones": [[600, "fields", "R2"]], "bridge": {"from_km": 300, "to_km": 305, "name": "Estuary"}},
 	]
 	c["facts"] = {}
 	c["landmarks"] = {}
@@ -43,6 +54,7 @@ func run(t) -> void:
 	var s := Route.build("aa", "bb")
 	t.check(s.bridges.size() == 1 and s.bridges[0].name == "Most", "one bridge on the way, its name in the player's language")
 	var br: Dictionary = s.bridges[0]
+	t.check(br.kind == "suspension", "a bridge without a kind is a suspension bridge")
 	t.check(absf((br.z0 + br.z1) * 0.5 - 42.5 * s.m_per_km) < 1.0 and br.z1 - br.z0 >= Route.BRIDGE_MIN - 0.5,
 		"a->b: around km 42.5, at least BRIDGE_MIN long (%.0f..%.0f)" % [br.z0, br.z1])
 	t.check(Route.bridge_at(s, (br.z0 + br.z1) * 0.5) == br and Route.bridge_at(s, br.z0 - 5.0).is_empty(), "bridge_at")
@@ -113,9 +125,100 @@ func run(t) -> void:
 		var qs := Scenery.build(q, 1)
 		var towers := 0
 		for idx in qs: towers += qs[idx].filter(func(it): return it.type == "bridge_tower").size()
-		t.check(q.bridges.is_empty() and towers == 0, "%s->%s: a bridge squeezed by the towns is left out" % pair)
+		t.check(q.bridges.size() == 1 and q.bridges[0].z1 - q.bridges[0].z0 >= Route.BRIDGE_MIN - 0.5 and towers == 2
+			and q.towns.size() == 4, "%s->%s: a bridge crowded by the towns gets its room, the towns stay" % pair)
+		var rq: Race = Bot.run_race("xc60", q, 11, 0.9)
+		t.check(rq.state == "won" and rq.fines == 0, "%s->%s: the autopilot makes it in time (%s, %.0f s left)" % [pair[0], pair[1], rq.state, rq.time_left])
+	_kinds(t)
+	_room(t)
 	# right after a city: the bridge starts past the start's streets
 	var short := Route.build("bb", "cc")
 	t.check(short.bridges[0].z0 - 40.0 >= short.towns[0].z + short.towns[0].half, "the bridge past the start city's streets")
 	GameData._countries.erase(CODE)
 	GameData.current = was
+
+## The other kinds: a cable-stayed bridge (pylons, stays, no main cable) and a beam bridge (no pylons, no cables), both
+## with the water, the railings and the sign of any bridge.
+func _kinds(t) -> void:
+	for pair in [["dd", "ee"], ["ee", "dd"], ["ee", "ff"], ["ff", "ee"]]:
+		var p := Route.build(pair[0], pair[1])
+		var name: String = "%s->%s" % pair
+		var kind := "stayed" if "dd" in pair else "beam"
+		t.check(p.bridges.size() == 1 and p.bridges[0].kind == kind, "%s: one %s bridge" % [name, kind])
+		if p.bridges.is_empty(): continue
+		var b: Dictionary = p.bridges[0]
+		var span: float = b.z1 - b.z0
+		var mid: float = (b.z0 + b.z1) * 0.5
+		var sc := Scenery.build(p, 1)
+		var all := []
+		for idx in sc: all.append_array(sc[idx])
+		var towers := all.filter(func(it): return it.type == "bridge_tower")
+		var steps := range(0, 41).map(func(k): return b.z0 + span * k / 40.0)
+		t.check(steps.all(func(z): return Scenery.cable_h(b, z) < 0.0), "%s: no main cable or hangers on the %s bridge" % [name, kind])
+		var sign := all.filter(func(it): return it.type == "bridge_sign")
+		t.check(sign.size() == 1 and sign[0].get("kind", "") == kind and sign[0].z < b.z0, "%s: the %s bridge's sign" % [name, kind])
+		if sign.size() == 1:
+			var pen := Pen.new()
+			Scenery.draw_item(pen, sign[0], Vector2(400, 400), 12.0, SeasonPalette.by_name("summer"), "summer", ThemeDB.fallback_font)
+			t.check(pen.n > 6, "%s: the %s bridge's sign is drawn (%d)" % [name, kind, pen.n])
+		if kind == "stayed":
+			var lower := func(it): return it.get("kind", "") == "stayed" and absf(it.h - Scenery.BRIDGE_TOWER_H * Scenery.BRIDGE_STAYED_H) < 0.01
+			t.check(towers.size() == 2 and towers.all(lower)
+				and towers.any(func(it): return it.z < b.z0 + span * 0.3) and towers.any(func(it): return it.z > b.z1 - span * 0.3),
+				"%s: two lower pylons near the ends" % name)
+			# stays on both sides of each pylon, the longest from the top, the shorter ones landing nearer
+			for tw in towers:
+				var tz: float = tw.z
+				var inward: float = signf(mid - tz)
+				var top_k := Scenery.BRIDGE_STAYS - 1
+				var ok := true
+				for z in [tz + inward * span * 0.1, tz - inward * span * 0.1]:
+					ok = ok and Scenery.stay_pylon(b, z) == tz and Scenery.stay_h(b, tz, top_k, z) > 3.0
+				ok = ok and absf(Scenery.stay_h(b, tz, top_k, tz + 0.01) - Scenery.tower_h(b) * 0.98) < 0.1
+				ok = ok and Scenery.stay_h(b, tz, 0, tz + inward * span * 0.1) < 0.0
+				t.check(ok, "%s: stays fan from the pylon at %.0f to both sides" % [name, tz])
+			t.check(is_nan(Scenery.stay_pylon(b, mid)) and is_nan(Scenery.stay_pylon(b, b.z0 + 1.0)),
+				"%s: the stays land before mid-span and the bridge's end" % name)
+		else:
+			t.check(towers.is_empty() and steps.all(func(z): return is_nan(Scenery.stay_pylon(b, z))),
+				"%s: no pylons, no stays on the beam bridge" % name)
+		var on_deck := all.filter(func(it): return it.z > b.z0 and it.z < b.z1 and not it.type in ["bridge_tower"])
+		t.check(on_deck.is_empty(), "%s: nothing else on %s %s" % [name, b.name, str(on_deck.map(func(it): return it.type))])
+		var ground := Scenery.ground(p, int(p.length / Track.SEG_LEN) + 10)
+		var gs: PackedFloat32Array = ground[int(mid / Track.SEG_LEN)]
+		var water := []
+		for g in range(0, gs.size(), 3):
+			if int(gs[g + 2]) == Scenery.G_WATER: water.append(signf(gs[g]))
+		t.check(water.has(-1.0) and water.has(1.0) and Scenery.on_bridge(p, mid), "%s: water on both sides of %s" % [name, b.name])
+		var obs := Scenery.obstacles(sc, p)
+		var m := int(mid / Track.SEG_LEN)
+		t.check(obs.get(m, []).any(func(ob): return ob[1] > 0.0 and ob[1] <= Scenery.BRIDGE_RAIL + 0.01)
+			and obs.get(m, []).any(func(ob): return ob[2] < 0.0), "%s: railings on both sides of %s" % [name, b.name])
+		t.check(not p.stations.any(func(z): return z > b.z0 - 40.0 and z < b.z1 + 40.0), "%s: no station by %s" % [name, b.name])
+
+## A bridge between two towns 1 km away on a compressed trip: track is put in at the bridge, so it keeps BRIDGE_MIN and
+## both towns keep their streets; the real km (boards, the trip) stay as they are, the time limit grows with the track.
+func _room(t) -> void:
+	for pair in [["ff", "gg"], ["gg", "ff"]]:
+		var p := Route.build(pair[0], pair[1])
+		var name: String = "%s->%s" % pair
+		t.check(p.bridges.size() == 1, "%s: the bridge between the towns kept" % name)
+		if p.bridges.is_empty(): continue
+		var b: Dictionary = p.bridges[0]
+		var near: Array = p.towns.filter(func(tn): return tn.name in ["Northbank", "Southbank"])
+		t.check(b.z1 - b.z0 >= Route.BRIDGE_MIN - 0.5, "%s: the bridge keeps BRIDGE_MIN (%.0f)" % [name, b.z1 - b.z0])
+		t.check(near.size() == 2 and near.all(func(tn): return tn.half >= 20.0), "%s: both towns keep their streets %s"
+			% [name, str(near.map(func(tn): return [tn.name, tn.half]))])
+		t.check(near.all(func(tn): return tn.z + tn.half + Route.BRIDGE_GAP <= b.z0 + 0.5 or tn.z - tn.half - Route.BRIDGE_GAP >= b.z1 - 0.5),
+			"%s: open road between the towns and the bridge" % name)
+		var extra: float = p.length - Route.track_length(600.0)
+		t.check(extra > 100.0 and absf(p.m_per_km - Route.track_length(600.0) / 600.0) < 0.001,
+			"%s: %.0f m of track put in, the scale unchanged" % [name, extra])
+		t.check(absf(Route.km_between(p, 0.0, p.length) - 600.0) < 0.01, "%s: the trip still 600 real km" % name)
+		var after: float = maxf(near[0].z, near[1].z)
+		var left_km := 294.0 if pair[0] == "ff" else 299.0 # from the town past the bridge (km 306 or 301) to the finish
+		t.check(absf(Route.km_between(p, after, p.length) - left_km) < 0.5,
+			"%s: real km from the town past the bridge to the finish (%.1f)" % [name, Route.km_between(p, after, p.length)])
+		var plain := {"towns": p.towns, "roads": p.roads, "length": p.length - extra}
+		t.check(Route._legal_time(p.towns, p.roads, p.length, p.m_per_km) > Route._legal_time(p.towns, p.roads, plain.length, p.m_per_km),
+			"%s: the time limit counts the metres put in" % name)

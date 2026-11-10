@@ -128,7 +128,19 @@
 		"road": "E45",
 		"towns": [["Horsens", 27], ["Skanderborg", 50]],
 		"zones": [[22, "fields", "Østjylland"], [60, "lakes", "Søhøjlandet"], [72, "fields", "Østjylland"]],
-		"via": [[27, 9.83, 55.87], [50, 9.93, 56.04]]
+		"via": [[27, 9.83, 55.87], [50, 9.93, 56.04]],
+		"bridge": {
+			"from_km": 3.9,
+			"to_km": 5.6,
+			"name": {
+				"pl": "Most przez fiord Vejle",
+				"en": "Vejle Fjord Bridge",
+				"cs": "Most přes Vejlefjord",
+				"is": "Vejle-fjarðarbrúin",
+				"de": "Vejlefjordbrücke"
+			},
+			"kind": "beam"
+		}
 	},
 	{
 		"a": "aarhus",

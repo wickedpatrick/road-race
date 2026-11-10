@@ -224,6 +224,18 @@
 				"is": "Ferjan yfir Suur väin-sundið til Muhu tekur um hálfa klukkustund; í hörðum vetrum er stundum opnaður vegur á ísnum",
 				"de": "Die Fähre über den Suur väin nach Muhu braucht etwa eine halbe Stunde; in strengen Wintern öffnet manchmal eine Eisstraße"
 			}
+		},
+		"bridge": {
+			"from_km": 111.5,
+			"to_km": 115,
+			"name": {
+				"pl": "Grobla Väinatamm (Muhu-Saaremaa)",
+				"en": "Väinatamm causeway (Muhu-Saaremaa)",
+				"cs": "Hráz Väinatamm (Muhu-Saaremaa)",
+				"is": "Väinatamm-fyllingin (Muhu-Saaremaa)",
+				"de": "Väinatamm-Damm (Muhu-Saaremaa)"
+			},
+			"kind": "beam"
 		}
 	},
 	{
@@ -251,6 +263,18 @@
 				"is": "Ferjan yfir Suur väin-sundið til Muhu tekur um hálfa klukkustund; í hörðum vetrum er stundum opnaður vegur á ísnum",
 				"de": "Die Fähre über den Suur väin nach Muhu braucht etwa eine halbe Stunde; in strengen Wintern öffnet manchmal eine Eisstraße"
 			}
+		},
+		"bridge": {
+			"from_km": 107.5,
+			"to_km": 111,
+			"name": {
+				"pl": "Grobla Väinatamm (Muhu-Saaremaa)",
+				"en": "Väinatamm causeway (Muhu-Saaremaa)",
+				"cs": "Hráz Väinatamm (Muhu-Saaremaa)",
+				"is": "Väinatamm-fyllingin (Muhu-Saaremaa)",
+				"de": "Väinatamm-Damm (Muhu-Saaremaa)"
+			},
+			"kind": "beam"
 		}
 	},
 	{
