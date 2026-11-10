@@ -5,6 +5,7 @@ var race: Race
 var view: WorldView
 var t := 0.0
 func _ready() -> void:
+	Session.save_path = "res://.godot/rr_preview_profile.json" # a preview never writes the player's profile
 	DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, true) # dev runs: no window frame, no focus stealing
 	DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_NO_FOCUS, true)
 	var args := OS.get_cmdline_user_args()

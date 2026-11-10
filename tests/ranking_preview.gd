@@ -3,6 +3,7 @@ extends "res://src/scenes/ranking.gd"
 ## none] [roads driven, for the country's ranking]. RR_COUNTRY=cz for another map, RR_LANG=de, RR_TOUCH=1. The made-up
 ## player's times stay in memory; nothing is saved (any back quits).
 func _ready() -> void:
+	Session.save_path = "res://.godot/rr_preview_profile.json" # a preview never writes the player's profile
 	if OS.get_environment("RR_LANG") != "": GameData.set_language(OS.get_environment("RR_LANG"))
 	Session.country = OS.get_environment("RR_COUNTRY") if OS.get_environment("RR_COUNTRY") != "" else "pl" # in memory only
 	GameData.current = Session.country

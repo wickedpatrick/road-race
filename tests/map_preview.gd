@@ -4,6 +4,7 @@ extends Node2D
 var map: CountryMap
 
 func _ready() -> void:
+	Session.save_path = "res://.godot/rr_preview_profile.json" # a preview never writes the player's profile
 	if OS.get_environment("RR_COUNTRY") != "": Session.switch_country(OS.get_environment("RR_COUNTRY"))
 	if OS.get_environment("RR_FERRY") != "": # the ferry fixture (tests/test_ferry.gd) on a coast and two islands of its own
 		var fx: Dictionary = load("res://tests/test_ferry.gd").fixture()

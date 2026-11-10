@@ -1,5 +1,6 @@
 extends "res://src/scenes/game.gd"
 func _ready() -> void:
+	Session.save_path = "res://.godot/rr_preview_profile.json" # a preview never writes the player's profile
 	var a := OS.get_cmdline_user_args()
 	var w: String = {"summer": "sun", "spring": "sun", "winter": "snow"}.get(a[2], a[2]) # the weather, or a season name
 	Session.from_city = a[0]; Session.to_city = a[1]; Session.car_id = a[3]

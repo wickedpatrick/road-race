@@ -2,6 +2,7 @@ extends "res://src/scenes/album.gd"
 ## Dev-only: the album with some postcards collected (not saved). Env RR_COUNTRY, RR_LANG, RR_FLIP (cards turned
 ## over), RR_OPEN (the first route unfolded); arg: scroll in pixels.
 func _ready() -> void:
+	Session.save_path = "res://.godot/rr_preview_profile.json" # a preview never writes the player's profile
 	if OS.get_environment("RR_LANG") != "": GameData.set_language(OS.get_environment("RR_LANG"))
 	if OS.get_environment("RR_COUNTRY") != "": # without saving the profile
 		Session.country = OS.get_environment("RR_COUNTRY")

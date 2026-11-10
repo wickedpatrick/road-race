@@ -2,6 +2,7 @@ extends "res://src/scenes/results.gd"
 ## Dev-only: the results screen of a won trip. Args: city before after [age in s] [new cars? 1] [fines] [ranking time
 ## as a share of each road's best, 1.06]. Nothing saved.
 func _ready() -> void:
+	Session.save_path = "res://.godot/rr_preview_profile.json" # a preview never writes the player's profile
 	if OS.get_environment("RR_LANG") != "": GameData.set_language(OS.get_environment("RR_LANG"))
 	Session.country = OS.get_environment("RR_COUNTRY") if OS.get_environment("RR_COUNTRY") != "" else "pl" # in memory only
 	GameData.current = Session.country
