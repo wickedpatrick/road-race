@@ -272,18 +272,24 @@ naprawdę jednymi z najlepszych możliwych (blisko czasu idealnego przejazdu: na
 zakrętami, bez kar), żeby podium było wyzwaniem nawet dla dobrego gracza. Czasy liczone deterministycznie z
 długości i zakrętów odcinka (np. z czasu bota), te same przy każdym uruchomieniu.
 
-- [ ] **Ranking trasy:** tylko odcinki między sąsiednimi miastami (bezpośrednie drogi z danych kraju, np.
+- [x] **Ranking trasy:** tylko odcinki między sąsiednimi miastami (bezpośrednie drogi z danych kraju, np.
       Kraków - Rzeszów). Przy dłuższej trasie (Kraków -> Gdańsk) zapisujemy międzyczasy na każdym mijanym mieście,
       więc każdy przejechany odcinek liczy się do swojego rankingu. A -> B i B -> A to jeden wspólny ranking.
-- [ ] **Najszybszy kierowca kraju:** suma najlepszych czasów gracza na wszystkich odcinkach kraju. Pełny ranking
+- [x] **Najszybszy kierowca kraju:** suma najlepszych czasów gracza na wszystkich odcinkach kraju. Pełny ranking
       dla graczy, którzy przejechali wszystkie odcinki; pozostali niżej, wg liczby przejechanych odcinków, potem
       sumy czasu.
-- [ ] Wynik zapisywany tylko przy wygranej (dojechanie w limicie czasu i paliwa); kary (zderzenia, policja)
+- [x] Wynik zapisywany tylko przy wygranej (dojechanie w limicie czasu i paliwa); kary (zderzenia, policja)
       już są w czasie.
-- [ ] Rankingi wspólne dla wszystkich aut i warunków (pogoda, noc, pora roku): bez podziału i bez bonusów.
+- [x] Rankingi wspólne dla wszystkich aut i warunków (pogoda, noc, pora roku): bez podziału i bez bonusów.
       Auto i warunki zapisujemy przy wyniku tylko informacyjnie.
-- [ ] Ruch uliczny w rankingach zostaje losowy (raz lepiej, raz gorzej): bez wspólnego seeda dla wszystkich graczy.
-- [ ] Ekrany: wynik trasy z pozycją i najlepszym czasem, tabela rankingu trasy z mapy, ranking kraju.
+- [x] Ruch uliczny w rankingach zostaje losowy (raz lepiej, raz gorzej): bez wspólnego seeda dla wszystkich graczy.
+- [x] Ekrany: wynik trasy z pozycją i najlepszym czasem, tabela rankingu trasy z mapy, ranking kraju.
+- [x] Zrobione: `src/logic/rankings.gd` (20 fałszywych kierowców na mapę z puli nicków, czasy z najlepszego przejazdu
+      bota najszybszym autem: `data/rankings/<kod>.json` z `tools/calibrate_rankings.sh`; 965 odcinków przejechanych,
+      109 z dopasowania czas legalny x mediana mapy), międzyczasy w `Race.splits`, wyniki w profilu (`rankings`),
+      ekrany: panel na wynikach (R), `src/scenes/ranking.tscn` (z mapy: przycisk Ranking / R; C: ranking kraju).
+- [ ] Do sprawdzenia: dokończyć kalibrację odcinków z listy `fitted` (dk, se, fi, fr, no, it, ch, es, pt, bx w
+      części), np. `JOBS=12 tools/calibrate_rankings.sh 2 fr it es` w tle.
 - [ ] Później (backend): identyfikator gracza i nick, format wyniku (kraj, odcinek, kierunek, auto, warunki, czas,
       wersja gry, seed), kolejka wysyłki, weryfikacja po stronie serwera (anty-cheat); fałszywi kierowcy znikają.
 
