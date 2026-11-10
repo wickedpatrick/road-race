@@ -184,7 +184,7 @@
 	"Uman": {
 		"pl": "Słynie z parku Zofiówka; co roku pielgrzymi przybywają do grobu cadyka Nachmana z Bracławia",
 		"en": "Famous for Sofiyivka Park; every year pilgrims come to the grave of Rabbi Nachman of Breslov",
-		"cs": "Proslulý parkem Sofijivka; každý rok sem přijíždějí poutníci ke hrobu rabína Nachmana z Braclavi",
+		"cs": "Proslulá parkem Sofijivka; každý rok sem přijíždějí poutníci ke hrobu rabína Nachmana z Braclavi",
 		"is": "Frægur fyrir Sofíjivka-garðinn; á hverju ári koma pílagrímar að gröf rabbína Nachmans frá Breslov",
 		"de": "Berühmt für den Park Sofijiwka; jedes Jahr kommen Pilger zum Grab von Rabbi Nachman von Breslow"
 	},
@@ -238,7 +238,7 @@
 		"de": "Hier wurde der Schriftsteller Joseph Roth geboren"
 	},
 	"Skole": {
-		"pl": "Brama do Parku Narodowego Bieszczady Skolskie",
+		"pl": "Brama do Parku Narodowego Skolskie Beskidy",
 		"en": "The gateway to the Skole Beskids National Park",
 		"cs": "Brána do Národního parku Skolivské Beskydy",
 		"is": "Hliðið að Skole-Beskídí-þjóðgarðinum",
@@ -248,7 +248,7 @@
 		"pl": "Słynie ze źródeł wód mineralnych",
 		"en": "Known for its mineral water springs",
 		"cs": "Proslulá prameny minerálních vod",
-		"is": "Þekkt fyrir ölkeldulindir sínar",
+		"is": "Þekktur fyrir ölkeldulindir sínar",
 		"de": "Bekannt für seine Mineralwasserquellen"
 	},
 	"Kremenets": {
@@ -339,7 +339,7 @@
 		"pl": "Słynie z białego haftu i tkanych dywanów",
 		"en": "Famous for its white embroidery and woven carpets",
 		"cs": "Proslulá bílou výšivkou a tkanými koberci",
-		"is": "Fræg fyrir hvítan útsaum og ofin teppi",
+		"is": "Frægur fyrir hvítan útsaum og ofin teppi",
 		"de": "Berühmt für ihre weiße Stickerei und gewebte Teppiche"
 	},
 	"Berestyn": {
@@ -402,7 +402,7 @@
 		"pl": "Założona w 1822 roku przez niemieckich osadników",
 		"en": "Founded by German settlers in 1822",
 		"cs": "Založena německými osadníky roku 1822",
-		"is": "Stofnuð af þýskum landnemum árið 1822",
+		"is": "Stofnaður af þýskum landnemum árið 1822",
 		"de": "1822 von deutschen Siedlern gegründet"
 	}
 }
