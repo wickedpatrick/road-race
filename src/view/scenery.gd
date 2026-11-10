@@ -170,23 +170,45 @@ static func _port(items: Dictionary, f: Dictionary, rng: RandomNumberGenerator) 
 		bar.dir = sd
 		bar.closed = true
 
-## A suspension bridge (Route bridges): the blue sign with its name before it, then only the deck over the water
-## (Scenery.ground), railings (solid, see obstacles), two tall pylons a BRIDGE_SIDE share of the way in from each end
-## and the cables between them (WorldView draws the pylons, cables and railings). Whatever grew there is cleared away.
+## A bridge (Route bridges): the blue sign with its name before it, then only the deck over the water
+## (Scenery.ground), railings (solid, see obstacles) and, by the bridge's `kind`:
+## - "suspension" (default): two tall pylons a BRIDGE_SIDE share of the way in from each end and the main cables
+##   sagging between them with hangers;
+## - "stayed": the same two pylons, a bit lower (BRIDGE_STAYED_H), with straight stay cables fanning down from each
+##   to the deck on both sides (stay_h), no main cable;
+## - "beam": no pylons and no cables, a low concrete parapet with lamp posts.
+## WorldView draws the pylons, cables and railings. Whatever grew there is cleared away.
 const BRIDGE_RAIL := 7.2 ## the railings, metres from the road centre
 const BRIDGE_DECK := 7.8 ## the deck's edge (water beyond)
 const BRIDGE_CABLE := 8.4 ## the main cables and the pylons' legs, metres from the road centre
 const BRIDGE_TOWER_H := 46.0
+const BRIDGE_STAYED_H := 0.8 ## a cable-stayed bridge's pylons, as a share of BRIDGE_TOWER_H
 const BRIDGE_SIDE := 0.2 ## the side spans' share of the bridge, from each end to its pylon
 const BRIDGE_SIGN_BEFORE := 50.0
+const BRIDGE_STAYS := 8 ## stay cables on each side of a cable-stayed bridge's pylon (in both planes alike)
+const BRIDGE_KINDS := ["suspension", "stayed", "beam"]
 static func _bridge(items: Dictionary, br: Dictionary, rng: RandomNumberGenerator) -> void:
 	_clear_range(items, br.z0 - 6.0, br.z1 + 6.0, -1000.0, 1000.0)
 	var zs: float = br.z0 - BRIDGE_SIGN_BEFORE
 	_clear_range(items, zs - 6.0, zs + 6.0, 0.0, SIGN_EDGE + REGION_W + 1.0)
-	_add(items, "bridge_sign", zs, SIGN_EDGE + REGION_W * 0.5, REGION_W, 5.0, rng).text = br.name
+	var kind: String = br.get("kind", "suspension")
+	var sign := _add(items, "bridge_sign", zs, SIGN_EDGE + REGION_W * 0.5, REGION_W, 5.0, rng)
+	sign.text = br.name
+	if kind != "suspension": sign.kind = kind
+	for z in bridge_pylons(br):
+		var tw := _add(items, "bridge_tower", z, 0.0, 0.0, tower_h(br), rng)
+		tw.color = br.get("color", "")
+		if kind != "suspension": tw.kind = kind
+
+## The z of a bridge's two pylons (none on a beam bridge).
+static func bridge_pylons(br: Dictionary) -> Array:
+	if br.get("kind", "suspension") == "beam": return []
 	var span: float = br.z1 - br.z0
-	for z in [br.z0 + span * BRIDGE_SIDE, br.z1 - span * BRIDGE_SIDE]:
-		_add(items, "bridge_tower", z, 0.0, 0.0, BRIDGE_TOWER_H, rng).color = br.get("color", "")
+	return [br.z0 + span * BRIDGE_SIDE, br.z1 - span * BRIDGE_SIDE]
+
+## A bridge's pylon height above the deck: lower on a cable-stayed bridge.
+static func tower_h(br: Dictionary) -> float:
+	return BRIDGE_TOWER_H * (BRIDGE_STAYED_H if br.get("kind", "suspension") == "stayed" else 1.0)
 
 ## The bridge whose deck or sign (BRIDGE_SIGN_BEFORE ahead of it) a roadside board at z would stand on, or {}.
 static func _near_bridge(stage: Dictionary, z: float) -> Dictionary:
@@ -194,13 +216,15 @@ static func _near_bridge(stage: Dictionary, z: float) -> Dictionary:
 		if z >= br.z0 - BRIDGE_SIGN_BEFORE - 10.0 and z <= br.z1 + 10.0: return br
 	return {}
 
-## True on a suspension bridge's deck.
+## True on a bridge's deck (any kind).
 static func on_bridge(stage: Dictionary, z: float) -> bool:
 	return not Route.bridge_at(stage, z).is_empty()
 
 ## Height of a bridge's main cable above the deck at z: from the deck at the ends up to the pylons' tops, sagging
-## between them to just over the railings at mid-span.
+## between them to just over the railings at mid-span. -1 on a bridge without a main cable (stayed, beam).
 static func cable_h(br: Dictionary, z: float) -> float:
+	if br.get("kind", "suspension") != "suspension":
+		return -1.0
 	var span: float = br.z1 - br.z0
 	var t0: float = br.z0 + span * BRIDGE_SIDE
 	var t1: float = br.z1 - span * BRIDGE_SIDE
@@ -212,6 +236,29 @@ static func cable_h(br: Dictionary, z: float) -> float:
 	var u: float = (z - (t0 + t1) * 0.5) / ((t1 - t0) * 0.5)
 	return lerpf(3.0, top, u * u)
 
+## The pylon (its z) of a cable-stayed bridge whose stays come down over z, or NAN: from each pylon they reach
+## nearly to the bridge's end on the outer side and nearly to mid-span on the inner one.
+static func stay_pylon(br: Dictionary, z: float) -> float:
+	if br.get("kind", "suspension") != "stayed": return NAN
+	var span: float = br.z1 - br.z0
+	var tz: float = br.z0 + span * BRIDGE_SIDE if z < (br.z0 + br.z1) * 0.5 else br.z1 - span * BRIDGE_SIDE
+	return tz if absf(z - tz) < stay_reach(br, tz, z) else NAN
+
+## How far along the deck the longest stay on z's side of the pylon at tz lands from it.
+static func stay_reach(br: Dictionary, tz: float, z: float) -> float:
+	var span: float = br.z1 - br.z0
+	var outer: bool = (z < tz) == (tz < (br.z0 + br.z1) * 0.5)
+	return span * (BRIDGE_SIDE * 0.9 if outer else (0.5 - BRIDGE_SIDE) * 0.95)
+
+## Height above the deck at z of stay k of the pylon at tz (0 = the shortest, lowest on the pylon .. BRIDGE_STAYS - 1 =
+## the longest, from its top), or -1 where that stay has already come down to the deck: a semi-fan, anchored on the
+## pylon from 62% to 98% of its height, landing evenly spaced up to stay_reach.
+static func stay_h(br: Dictionary, tz: float, k: int, z: float) -> float:
+	var d: float = stay_reach(br, tz, z) * (k + 1) / BRIDGE_STAYS
+	var u: float = absf(z - tz) / d
+	if u >= 1.0: return -1.0
+	return tower_h(br) * lerpf(0.62, 0.98, float(k) / (BRIDGE_STAYS - 1)) * (1.0 - u)
+
 ## The sign before a suspension bridge: a blue board with a white bridge and its name.
 static func _bridge_sign(cv, it: Dictionary, b: Vector2, pm: float, font: Font) -> void:
 	var post := 2.8 * pm
@@ -221,13 +268,28 @@ static func _bridge_sign(cv, it: Dictionary, b: Vector2, pm: float, font: Font) 
 	var r := Rect2(b + Vector2(-w * 0.5, -post - hh), Vector2(w, hh))
 	cv.draw_rect(r, SIGN_BLUE)
 	cv.draw_rect(r.grow(-0.14 * pm), Color.WHITE, false, maxf(1.0, 0.1 * pm))
-	bridge_icon(cv, r.position + Vector2(1.25 * pm, hh * 0.78), 0.5 * pm, Color.WHITE)
+	bridge_icon(cv, r.position + Vector2(1.25 * pm, hh * 0.78), 0.5 * pm, Color.WHITE, it.get("kind", "suspension"))
 	_fit_text(cv, font, Rect2(r.position + Vector2(2.5 * pm, 0.2 * pm), Vector2(w - 2.8 * pm, hh - 0.4 * pm)), it.text, Color.WHITE, 0.75 * pm)
 
-## A suspension bridge pictogram: the deck, two pylons and the sagging cable, centred at c on the deck, `s` pixels
-## per unit (about 3.6 units long, 2.6 high).
-static func bridge_icon(cv, c: Vector2, s: float, col: Color) -> void:
+## A bridge pictogram centred at c on the deck, `s` pixels per unit (about 3.6 units long, 2.6 high): a suspension
+## bridge's deck, two pylons and the sagging cable; a cable-stayed one's pylon with a fan of stays to each side; a beam
+## bridge's flat deck on piers.
+static func bridge_icon(cv, c: Vector2, s: float, col: Color, kind := "suspension") -> void:
 	var lw := maxf(1.0, 0.18 * s)
+	if kind == "stayed":
+		cv.draw_line(c + Vector2(-1.8, 0) * s, c + Vector2(1.8, 0) * s, col, lw * 1.4)
+		cv.draw_line(c + Vector2(0, 0.3) * s, c + Vector2(0, -2.4) * s, col, lw * 1.3)
+		for k in 4:
+			var top := -2.25 + 0.3 * k
+			var x := 1.7 - 0.36 * k
+			cv.draw_line(c + Vector2(0, top) * s, c + Vector2(-x, 0) * s, col, lw * 0.75)
+			cv.draw_line(c + Vector2(0, top) * s, c + Vector2(x, 0) * s, col, lw * 0.75)
+		return
+	if kind == "beam":
+		cv.draw_rect(Rect2(c + Vector2(-1.8, -1.1) * s, Vector2(3.6, 0.5) * s), col)
+		for x in [-1.3, -0.43, 0.43, 1.3]:
+			cv.draw_rect(Rect2(c + Vector2(x - 0.13, -0.6) * s, Vector2(0.26, 0.9) * s), col)
+		return
 	cv.draw_line(c + Vector2(-1.8, 0) * s, c + Vector2(1.8, 0) * s, col, lw * 1.4)
 	for x in [-1.0, 1.0]:
 		cv.draw_line(c + Vector2(x, 0.3) * s, c + Vector2(x, -2.3) * s, col, lw * 1.2)

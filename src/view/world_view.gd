@@ -27,6 +27,7 @@ var font: Font
 var parallax := 0.0
 var particles: Array = []
 var smoke_on := false ## exhaust smoke drawn (the full graphics; set by the game)
+var detail_on := true ## the full graphics (set by the game): the light mode thins some fine lines (bridge stays)
 var smoke := 0.0 ## exhaust smoke, 0..1: up fast while the gas is pressed, dying away slowly once it is let go
 var puffs: Array = [] ## exhaust smoke puffs by the player's car: {x, y (painter units from the car), vx, vy, r, age, life}
 const SMOKE_UP := 7.0 ## per second while the gas is pressed (a full cloud in ~0.15 s)
@@ -55,7 +56,7 @@ var _tunnel_road: Array = [] ## road colours under cover (no snow or rain in a t
 var _grass := PackedColorArray() ## per track segment: the two grass bands of its landscape (Weather.grass)
 const GRASS_BLEND := 150.0 ## metres over which the grass turns into the next landscape's
 var _tun := PackedByteArray() ## per track segment: 1 inside a tunnel
-var _brg := PackedByteArray() ## per track segment: 1 on a suspension bridge's deck (water below, cables above)
+var _brg := PackedByteArray() ## per track segment: 1 on a bridge's deck (water below, cables above)
 var _dualf := PackedFloat32Array() ## per track segment: Route.dual_f (0 single road .. 1 dual carriageway)
 var _portals := {} ## segment index where a tunnel starts -> the tunnel
 var _left := false ## left-hand traffic: the batch mirrors the world; signs, cars and landmarks are drawn unmirrored
@@ -713,7 +714,10 @@ func _draw_item(it: Dictionary, n: int, cam_x: float, cam_y: float, cam_z: float
 		_draw_bridge(b, pm, Route.dual_f(race.stage, it.z))
 		return
 	if it.type == "bridge_tower":
-		_draw_tower(b, pm, Route.dual_f(race.stage, it.z), it.get("color", ""))
+		if it.get("kind", "") == "stayed":
+			_draw_stayed_pylon(b, pm, Route.dual_f(race.stage, it.z), it.get("color", ""))
+		else:
+			_draw_tower(b, pm, Route.dual_f(race.stage, it.z), it.get("color", ""))
 		return
 	if it.type == "finish":
 		_draw_finish(b, pm)
@@ -761,8 +765,31 @@ func _draw_tower(b: Vector2, pm: float, d: float, color: String) -> void:
 		for px in [-left, right]:
 			_b.draw_circle(b + Vector2(px, -top - 0.4 * pm), maxf(1.0, 0.4 * pm), Color("e23b2e"))
 
-## A suspension bridge's deck segment over the water: railings along both edges (two rails on posts), and the main
-## cables above them (Scenery.cable_h) with a hanger down to the deck on every other segment.
+## A cable-stayed bridge's pylon astride the deck: two slim tapering legs where the stays hang (Scenery.BRIDGE_CABLE,
+## beyond the far carriageway too), Scenery.tower_h high, one cross beam under the stays' anchors, red warning lights
+## on top. Grey, or the bridge's own `color`.
+func _draw_stayed_pylon(b: Vector2, pm: float, d: float, color: String) -> void:
+	var col := Color(color) if color != "" else Color("d3d7dc")
+	var right := Scenery.BRIDGE_CABLE * pm
+	var left := (Scenery.BRIDGE_CABLE + Track.left_shift(d)) * pm
+	var top := Scenery.BRIDGE_TOWER_H * Scenery.BRIDGE_STAYED_H * pm
+	for px in [-left, right]:
+		_b.draw_colored_polygon(PackedVector2Array([b + Vector2(px - 1.1 * pm, 0), b + Vector2(px + 1.1 * pm, 0),
+			b + Vector2(px + 0.55 * pm, -top), b + Vector2(px - 0.55 * pm, -top)]), col)
+		var inner := -signf(px) # the side facing the road, in shade
+		_b.draw_colored_polygon(PackedVector2Array([b + Vector2(px, 0), b + Vector2(px + inner * 1.1 * pm, 0),
+			b + Vector2(px + inner * 0.55 * pm, -top), b + Vector2(px, -top)]), col.darkened(0.18))
+	var by := top * 0.5
+	_b.draw_rect(Rect2(b + Vector2(-left - 0.6 * pm, -by), Vector2(left + right + 1.2 * pm, 1.8 * pm)), col.darkened(0.06))
+	_b.draw_rect(Rect2(b + Vector2(-left - 0.6 * pm, -by + 1.5 * pm), Vector2(left + right + 1.2 * pm, 0.3 * pm)), col.darkened(0.3))
+	if pm > 0.5:
+		for px in [-left, right]:
+			_b.draw_circle(b + Vector2(px, -top - 0.4 * pm), maxf(1.0, 0.4 * pm), Color("e23b2e"))
+
+## A bridge's deck segment over the water: railings along both edges (two rails on posts), and by the bridge's kind:
+## the main cables above them (Scenery.cable_h) with a hanger down to the deck on every other segment (suspension), the
+## stay cables passing over it (Scenery.stay_h, every other one far away and in the light graphics; stayed), or a lamp
+## post every 50 m (beam).
 func _draw_deck(n: int, i: int) -> void:
 	var br := Route.bridge_at(race.stage, i * SEG + SEG * 0.5)
 	if br.is_empty():
@@ -780,6 +807,15 @@ func _draw_deck(n: int, i: int) -> void:
 	var cable := _fog(Color("8c949c"), n)
 	var ha := Scenery.cable_h(br, za)
 	var hb := Scenery.cable_h(br, zb)
+	var kind: String = br.get("kind", "suspension")
+	var tz := NAN
+	var lamp := cable
+	var glow := cable
+	if kind == "stayed":
+		tz = Scenery.stay_pylon(br, (za + zb) * 0.5)
+	elif kind == "beam" and i % 10 == 0:
+		lamp = _fog(Color("b9bcc0"), n)
+		glow = _fog(Color("fff1c4"), n)
 	for sgn in [-1.0, 1.0]:
 		var shift := ls if sgn < 0.0 else 0.0
 		var rail: float = sgn * Scenery.BRIDGE_RAIL - shift
@@ -791,6 +827,24 @@ func _draw_deck(n: int, i: int) -> void:
 		if n <= FAR_DETAIL:
 			_b.draw_line(Vector2(x0 + rail * p0, y0), Vector2(x0 + rail * p0, y0 - 1.24 * p0), steel, maxf(1.0, 0.1 * p0))
 		var cab: float = sgn * Scenery.BRIDGE_CABLE - shift
+		if ha < 0.0: # no main cable
+			if kind == "stayed" and not is_nan(tz):
+				var step := 1 if detail_on and n <= FAR_DETAIL else 2
+				for k in range(Scenery.BRIDGE_STAYS - 1, -1, -step):
+					var sa := Scenery.stay_h(br, tz, k, za)
+					var sb := Scenery.stay_h(br, tz, k, zb)
+					if sa < 0.0 and sb < 0.0:
+						break # the shorter ones landed already
+					_b.draw_line(Vector2(x0 + cab * p0, y0 - maxf(sa, 0.0) * p0), Vector2(x1 + cab * p1, y1 - maxf(sb, 0.0) * p1),
+						cable, maxf(1.0, 0.09 * p0))
+			elif kind == "beam" and i % 10 == 0:
+				var lx: float = x0 + (rail + sgn * 0.3) * p0
+				var ly := y0 - 7.0 * p0
+				_b.draw_line(Vector2(lx, y0), Vector2(lx, ly), lamp, maxf(1.0, 0.18 * p0))
+				if n <= FAR_DETAIL:
+					_b.draw_line(Vector2(lx, ly), Vector2(lx - sgn * 1.4 * p0, ly), lamp, maxf(1.0, 0.12 * p0))
+					_b.draw_rect(Rect2(Vector2(lx - sgn * 1.4 * p0 - 0.35 * p0, ly), Vector2(0.7 * p0, maxf(1.0, 0.18 * p0))), glow)
+			continue
 		var c0 := maxf(1.0, 0.32 * p0)
 		var c1 := maxf(1.0, 0.32 * p1)
 		_quad(Vector2(x0 + cab * p0, y0 - ha * p0), Vector2(x1 + cab * p1, y1 - hb * p1),

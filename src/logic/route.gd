@@ -244,7 +244,7 @@ static func build(from: String, to: String) -> Dictionary:
 			var bb := float(brg.to_km) if leg.from == r.a else leg_km - float(brg.from_km)
 			if not _at_sea(off + ba, seas) and not _at_sea(off + bb, seas):
 				bridges.append({"z0": _sea_z(off + ba, seas, mpk), "z1": _sea_z(off + bb, seas, mpk), "name": brg.name,
-					"color": brg.get("color", "")})
+					"color": brg.get("color", ""), "kind": brg.get("kind", "suspension")})
 		for bd in r.get("borders", []):
 			var fwd: bool = leg.from == r.a
 			var k := float(bd[0]) if fwd else leg_km - float(bd[0])
@@ -516,7 +516,7 @@ static func ferry_at(stage: Dictionary, z: float) -> Dictionary:
 		if z >= f.z - FERRY_QUAY and z <= f.z_out: return f
 	return {}
 
-## The suspension bridge at z, or {}.
+## The bridge (any kind) at z, or {}.
 static func bridge_at(stage: Dictionary, z: float) -> Dictionary:
 	for b in stage.get("bridges", []):
 		if z >= b.z0 and z <= b.z1: return b

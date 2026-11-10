@@ -66,6 +66,7 @@ func _ready() -> void:
 func _apply_quality() -> void:
 	var low := Session.quality == "low"
 	view.smoke_on = not low
+	view.detail_on = not low
 	if low and _world_vp == null:
 		_world_vp = SubViewport.new()
 		_world_vp.size = Vector2i(960, 540)
