@@ -23,7 +23,7 @@
 	"express_prefixes": [],
 	"limits": {"express": 120, "road": 100, "city": 50, "town_on_express": 80, "town": 50},
 	"signs": {"town": "#1d4f9c", "town_text": "#ffffff", "board": "#1d4f9c", "board_motorway": "#1a7a3e"},
-	"plates": [["E", "#1a7a3e", "#ffffff"], ["", "#f2c500", "#111111"]],
+	"plates": [["E", "#1a7a3e", "#ffffff"], ["71", "#f2c500", "#111111"], ["", "#c8102e", "#ffffff"]],
 	"map": {"lon0": 20.4, "lon1": 31.8, "lat0": 59.65, "lat1": 70.2, "lon_k": 0.423, "zoom": 1.6, "labels": "auto"},
 	"outline": [
 		[28.95, 69.03], [28.41, 68.9], [28.8, 68.84], [28.45, 68.53], [28.66, 68.2], [29.33, 68.07], [30.01, 67.69],
