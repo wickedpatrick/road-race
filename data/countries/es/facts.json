@@ -1,0 +1,275 @@
+{
+	"Madrid": {
+		"pl": "Stolica Hiszpanii od 1561 roku; leży niemal dokładnie w środku Półwyspu Iberyjskiego",
+		"en": "The capital of Spain since 1561; it lies almost exactly in the middle of the Iberian Peninsula",
+		"cs": "Hlavní město Španělska od roku 1561; leží téměř přesně uprostřed Pyrenejského poloostrova",
+		"is": "Höfuðborg Spánar frá 1561; hún liggur nánast nákvæmlega í miðjum Íberíuskaga",
+		"de": "Seit 1561 die Hauptstadt Spaniens; sie liegt fast genau in der Mitte der Iberischen Halbinsel"
+	},
+	"Barcelona": {
+		"pl": "Stolica Katalonii; w 1992 roku gościła letnie igrzyska olimpijskie",
+		"en": "The capital of Catalonia; it hosted the Summer Olympic Games in 1992",
+		"cs": "Hlavní město Katalánska; v roce 1992 hostila letní olympijské hry",
+		"is": "Höfuðborg Katalóníu; þar voru sumarólympíuleikarnir haldnir árið 1992",
+		"de": "Die Hauptstadt Kataloniens; 1992 war sie Gastgeberin der Olympischen Sommerspiele"
+	},
+	"Valencia": {
+		"pl": "Uważana za ojczyznę paelli; co roku w marcu płoną tu wielkie figury podczas święta Fallas",
+		"en": "Regarded as the home of paella; every March huge figures are burnt here during the Fallas festival",
+		"cs": "Považuje se za domov paelly; každý březen se tu při svátku Fallas pálí obří figury",
+		"is": "Talin heimkynni paellunnar; í mars ár hvert eru risastórar fígúrur brenndar hér á Fallas-hátíðinni",
+		"de": "Sie gilt als Heimat der Paella; jedes Jahr im März werden hier beim Fallas-Fest riesige Figuren verbrannt"
+	},
+	"Zaragoza": {
+		"pl": "Założona przez Rzymian jako Caesaraugusta; w 2008 roku odbyła się tu wystawa światowa Expo",
+		"en": "Founded by the Romans as Caesaraugusta; it hosted the Expo world's fair in 2008",
+		"cs": "Založena Římany jako Caesaraugusta; v roce 2008 se zde konala světová výstava Expo",
+		"is": "Rómverjar stofnuðu hana sem Caesaraugusta; heimssýningin Expo var haldin hér árið 2008",
+		"de": "Von den Römern als Caesaraugusta gegründet; 2008 fand hier die Weltausstellung Expo statt"
+	},
+	"Sevilla": {
+		"pl": "Stolica Andaluzji; przez dwa stulecia tylko jej port mógł prowadzić handel z Ameryką",
+		"en": "The capital of Andalusia; for two centuries only its port was allowed to trade with the Americas",
+		"cs": "Hlavní město Andalusie; dvě století měl jen její přístav právo obchodovat s Amerikou",
+		"is": "Höfuðborg Andalúsíu; í tvær aldir mátti aðeins höfnin hér stunda verslun við Ameríku",
+		"de": "Die Hauptstadt Andalusiens; zwei Jahrhunderte lang durfte nur ihr Hafen mit Amerika Handel treiben"
+	},
+	"Málaga": {
+		"pl": "Miasto urodzin Pabla Picassa (1881); główne miasto Costa del Sol",
+		"en": "Pablo Picasso's birthplace (1881); the main city of the Costa del Sol",
+		"cs": "Rodiště Pabla Picassa (1881); hlavní město Costa del Sol",
+		"is": "Fæðingarstaður Pablos Picasso (1881); helsta borgin á Costa del Sol",
+		"de": "Geburtsort Pablo Picassos (1881); die wichtigste Stadt der Costa del Sol"
+	},
+	"Murcia": {
+		"pl": "Otoczona żyzną doliną Segury, zwaną ogrodem warzywnym Europy (huerta)",
+		"en": "Surrounded by the fertile Segura valley, the huerta known as the vegetable garden of Europe",
+		"cs": "Obklopuje ji úrodné údolí řeky Segury (huerta), přezdívané zelinářská zahrada Evropy",
+		"is": "Umhverfis hana er frjósamur Segura-dalurinn (huerta), kallaður matjurtagarður Evrópu",
+		"de": "Umgeben vom fruchtbaren Tal des Segura, der Huerta, die als Gemüsegarten Europas gilt"
+	},
+	"Alicante": {
+		"pl": "Nadmorski deptak Explanada de España wyłożony jest falującą mozaiką z około 6,5 miliona płytek",
+		"en": "The seafront Explanada de España is paved with a wavy mosaic of about 6.5 million tiles",
+		"cs": "Nábřežní promenáda Explanada de España je vydlážděna vlnitou mozaikou z asi 6,5 milionu dlaždic",
+		"is": "Strandgatan Explanada de España er lögð bylgjóttu mósaíki úr um 6,5 milljónum flísa",
+		"de": "Die Strandpromenade Explanada de España ist mit einem welligen Mosaik aus etwa 6,5 Millionen Fliesen gepflastert"
+	},
+	"Bilbao": {
+		"pl": "Dawne miasto stoczni i hut; Muzeum Guggenheima z 1997 roku odmieniło jego wizerunek",
+		"en": "Once a city of shipyards and steelworks; the Guggenheim Museum of 1997 changed its image",
+		"cs": "Kdysi město loděnic a oceláren; Guggenheimovo muzeum z roku 1997 změnilo jeho tvář",
+		"is": "Áður borg skipasmíðastöðva og stálvera; Guggenheim-safnið frá 1997 breytti ímynd hennar",
+		"de": "Einst eine Stadt der Werften und Stahlwerke; das Guggenheim-Museum von 1997 veränderte ihr Bild"
+	},
+	"Córdoba": {
+		"pl": "W X wieku stolica kalifatu Kordoby i jedno z największych miast Europy",
+		"en": "In the 10th century the capital of the Caliphate of Córdoba and one of the largest cities in Europe",
+		"cs": "V 10. století hlavní město Córdobského chalífátu a jedno z největších měst Evropy",
+		"is": "Á 10. öld höfuðborg kalífadæmisins í Córdoba og ein stærsta borg Evrópu",
+		"de": "Im 10. Jahrhundert die Hauptstadt des Kalifats von Córdoba und eine der größten Städte Europas"
+	},
+	"Valladolid": {
+		"pl": "Tu w 1506 roku zmarł Krzysztof Kolumb; w XVII wieku krótko stolica Hiszpanii",
+		"en": "Christopher Columbus died here in 1506; briefly the capital of Spain in the 17th century",
+		"cs": "Zde roku 1506 zemřel Kryštof Kolumbus; v 17. století krátce hlavní město Španělska",
+		"is": "Hér lést Kristófer Kólumbus árið 1506; borgin var stuttlega höfuðborg Spánar á 17. öld",
+		"de": "Hier starb 1506 Christoph Kolumbus; im 17. Jahrhundert kurz die Hauptstadt Spaniens"
+	},
+	"Vigo": {
+		"pl": "Największy port rybacki Hiszpanii; u wejścia do zatoki leżą wyspy Cíes",
+		"en": "Spain's largest fishing port; the Cíes Islands lie at the mouth of its ría",
+		"cs": "Největší rybářský přístav Španělska; u vjezdu do zálivu leží ostrovy Cíes",
+		"is": "Stærsta fiskihöfn Spánar; Cíes-eyjar liggja við mynni fjarðarins",
+		"de": "Spaniens größter Fischereihafen; vor der Mündung seiner Ría liegen die Cíes-Inseln"
+	},
+	"Vitoria-Gasteiz": {
+		"pl": "Siedziba władz Kraju Basków; w 2012 roku Zielona Stolica Europy",
+		"en": "The seat of the Basque government; European Green Capital in 2012",
+		"cs": "Sídlo baskické vlády; v roce 2012 Zelené hlavní město Evropy",
+		"is": "Aðsetur basknesku stjórnarinnar; græna höfuðborg Evrópu árið 2012",
+		"de": "Sitz der baskischen Regierung; 2012 Grüne Hauptstadt Europas"
+	},
+	"A Coruña": {
+		"pl": "Port nad Atlantykiem, nazywany miastem szkła od przeszklonych galerii na fasadach domów",
+		"en": "An Atlantic port called the city of glass for the glazed galleries on its house fronts",
+		"cs": "Atlantický přístav, kterému se pro prosklené galerie na průčelích domů říká město skla",
+		"is": "Hafnarborg við Atlantshaf, kölluð glerborgin vegna glerjaðra svala á framhliðum húsanna",
+		"de": "Ein Atlantikhafen, wegen der verglasten Galerien an den Hausfassaden Stadt aus Glas genannt"
+	},
+	"Granada": {
+		"pl": "Ostatnie państwo muzułmańskie na Półwyspie Iberyjskim; poddała się Królom Katolickim w 1492 roku",
+		"en": "The last Muslim state on the Iberian Peninsula; it surrendered to the Catholic Monarchs in 1492",
+		"cs": "Poslední muslimský stát na Pyrenejském poloostrově; Katolickým Veličenstvům se vzdala roku 1492",
+		"is": "Síðasta ríki múslima á Íberíuskaga; það gafst upp fyrir kaþólsku konungshjónunum árið 1492",
+		"de": "Der letzte muslimische Staat auf der Iberischen Halbinsel; er ergab sich 1492 den Katholischen Königen"
+	},
+	"Oviedo": {
+		"pl": "Stolica Asturii; jej przedromańskie kościoły z IX wieku są na liście UNESCO",
+		"en": "The capital of Asturias; its pre-Romanesque churches of the 9th century are on the UNESCO list",
+		"cs": "Hlavní město Asturie; jeho předrománské kostely z 9. století jsou na seznamu UNESCO",
+		"is": "Höfuðborg Astúríu; kirkjurnar þar frá 9. öld, frá því fyrir rómanska tímann, eru á heimsminjaskrá UNESCO",
+		"de": "Die Hauptstadt Asturiens; ihre vorromanischen Kirchen aus dem 9. Jahrhundert stehen auf der UNESCO-Liste"
+	},
+	"Pamplona": {
+		"pl": "Podczas święta San Fermín w lipcu ulicami starego miasta biegną byki (encierro)",
+		"en": "During the San Fermín festival in July bulls run through the streets of the old town (the encierro)",
+		"cs": "Během svátku San Fermín v červenci běží ulicemi starého města býci (encierro)",
+		"is": "Á San Fermín-hátíðinni í júlí hlaupa nautin um götur gamla bæjarins (encierro)",
+		"de": "Beim Fest San Fermín im Juli laufen Stiere durch die Straßen der Altstadt (der Encierro)"
+	},
+	"Almería": {
+		"pl": "Pobliska pustynia Tabernas była planem wielu westernów",
+		"en": "The nearby Tabernas Desert was the set of many westerns",
+		"cs": "Nedaleká poušť Tabernas posloužila jako kulisa mnoha westernů",
+		"is": "Tabernas-eyðimörkin í grenndinni var tökustaður margra vestra",
+		"de": "Die nahe Wüste von Tabernas war Drehort vieler Western"
+	},
+	"San Sebastián": {
+		"pl": "Plaża La Concha w kształcie muszli; co roku we wrześniu odbywa się tu festiwal filmowy",
+		"en": "Its La Concha beach is shaped like a shell; a film festival is held here every September",
+		"cs": "Pláž La Concha má tvar mušle; každé září se tu koná filmový festival",
+		"is": "La Concha-ströndin er í laginu eins og skel; kvikmyndahátíð er haldin hér í september ár hvert",
+		"de": "Der Strand La Concha hat die Form einer Muschel; jedes Jahr im September findet hier ein Filmfestival statt"
+	},
+	"Burgos": {
+		"pl": "Leży na Drodze św. Jakuba; w jej katedrze spoczywa El Cid",
+		"en": "It lies on the Way of St James; El Cid is buried in its cathedral",
+		"cs": "Leží na Svatojakubské cestě; v její katedrále odpočívá El Cid",
+		"is": "Hún liggur á Jakobsveginum; El Cid hvílir í dómkirkjunni",
+		"de": "Sie liegt am Jakobsweg; in ihrer Kathedrale ist El Cid begraben"
+	},
+	"Albacete": {
+		"pl": "Od wieków słynie z wyrobu noży i nożyczek",
+		"en": "Famous for making knives and scissors for centuries",
+		"cs": "Odedávna proslulé výrobou nožů a nůžek",
+		"is": "Fræg um aldir fyrir smíði hnífa og skæra",
+		"de": "Seit Jahrhunderten berühmt für die Herstellung von Messern und Scheren"
+	},
+	"Santander": {
+		"pl": "Stolica Kantabrii; niedaleko leży jaskinia Altamira z malowidłami sprzed ponad 14 tysięcy lat",
+		"en": "The capital of Cantabria; the Altamira cave with paintings over 14,000 years old lies nearby",
+		"cs": "Hlavní město Kantábrie; nedaleko leží jeskyně Altamira s malbami starými přes 14 tisíc let",
+		"is": "Höfuðborg Kantabríu; skammt frá er Altamira-hellirinn með rúmlega 14.000 ára gömlum málverkum",
+		"de": "Die Hauptstadt Kantabriens; in der Nähe liegt die Höhle von Altamira mit über 14.000 Jahre alten Malereien"
+	},
+	"Logroño": {
+		"pl": "Stolica regionu winiarskiego Rioja; ulica Laurel słynie z barów z tapas",
+		"en": "The capital of the Rioja wine region; Calle del Laurel is famous for its tapas bars",
+		"cs": "Hlavní město vinařské oblasti Rioja; ulice Laurel je proslulá tapas bary",
+		"is": "Höfuðborg vínhéraðsins Rioja; Laurel-gatan er fræg fyrir tapasbari",
+		"de": "Die Hauptstadt des Weinbaugebiets Rioja; die Calle del Laurel ist für ihre Tapas-Bars bekannt"
+	},
+	"Salamanca": {
+		"pl": "Jej uniwersytet, założony w 1218 roku, jest najstarszym działającym w Hiszpanii",
+		"en": "Its university, founded in 1218, is the oldest still running in Spain",
+		"cs": "Její univerzita, založená roku 1218, je nejstarší dosud fungující ve Španělsku",
+		"is": "Háskólinn þar, stofnaður árið 1218, er sá elsti á Spáni sem enn starfar",
+		"de": "Ihre 1218 gegründete Universität ist die älteste noch bestehende Spaniens"
+	},
+	"Tarragona": {
+		"pl": "Rzymska Tarraco była stolicą prowincji Hispania Tarraconensis",
+		"en": "Roman Tarraco was the capital of the province of Hispania Tarraconensis",
+		"cs": "Římské Tarraco bylo hlavním městem provincie Hispania Tarraconensis",
+		"is": "Rómverska borgin Tarraco var höfuðborg skattlandsins Hispania Tarraconensis",
+		"de": "Das römische Tarraco war die Hauptstadt der Provinz Hispania Tarraconensis"
+	},
+	"León": {
+		"pl": "Witraże jej gotyckiej katedry zajmują około 1800 metrów kwadratowych",
+		"en": "The stained glass of its Gothic cathedral covers about 1,800 square metres",
+		"cs": "Vitráže její gotické katedrály zabírají asi 1800 metrů čtverečních",
+		"is": "Steindir gluggar gotnesku dómkirkjunnar þekja um 1.800 fermetra",
+		"de": "Die Glasfenster ihrer gotischen Kathedrale bedecken etwa 1.800 Quadratmeter"
+	},
+	"Cádiz": {
+		"pl": "Jedno z najstarszych miast Europy, założone przez Fenicjan; tu w 1812 roku uchwalono pierwszą konstytucję Hiszpanii",
+		"en": "One of the oldest cities in Europe, founded by the Phoenicians; Spain's first constitution was passed here in 1812",
+		"cs": "Jedno z nejstarších měst Evropy, založené Féničany; roku 1812 zde byla přijata první španělská ústava",
+		"is": "Ein elsta borg Evrópu, stofnuð af Föníkum; fyrsta stjórnarskrá Spánar var samþykkt hér árið 1812",
+		"de": "Eine der ältesten Städte Europas, von den Phöniziern gegründet; 1812 wurde hier die erste Verfassung Spaniens verabschiedet"
+	},
+	"Jaén": {
+		"pl": "Prowincja Jaén ma więcej drzew oliwnych niż jakakolwiek inna na świecie",
+		"en": "The province of Jaén has more olive trees than any other in the world",
+		"cs": "Provincie Jaén má více olivovníků než kterákoli jiná na světě",
+		"is": "Í Jaén-héraði eru fleiri ólífutré en í nokkru öðru héraði í heiminum",
+		"de": "Die Provinz Jaén hat mehr Olivenbäume als jede andere der Welt"
+	},
+	"Toledo": {
+		"pl": "Miasto trzech kultur: przez wieki żyli tu obok siebie chrześcijanie, muzułmanie i Żydzi",
+		"en": "The city of three cultures: for centuries Christians, Muslims and Jews lived side by side here",
+		"cs": "Město tří kultur: po staletí zde vedle sebe žili křesťané, muslimové a Židé",
+		"is": "Borg þriggja menningarheima: um aldir bjuggu kristnir menn, múslimar og gyðingar hér hlið við hlið",
+		"de": "Die Stadt der drei Kulturen: Jahrhundertelang lebten hier Christen, Muslime und Juden nebeneinander"
+	},
+	"Mérida": {
+		"pl": "Założona w 25 roku p.n.e. jako Emerita Augusta; jej rzymskie zabytki są na liście UNESCO",
+		"en": "Founded in 25 BC as Emerita Augusta; its Roman monuments are on the UNESCO list",
+		"cs": "Založena roku 25 př. n. l. jako Emerita Augusta; její římské památky jsou na seznamu UNESCO",
+		"is": "Stofnuð árið 25 f.Kr. sem Emerita Augusta; rómversku minjarnar þar eru á heimsminjaskrá UNESCO",
+		"de": "25 v. Chr. als Emerita Augusta gegründet; ihre römischen Bauten stehen auf der UNESCO-Liste"
+	},
+	"Santiago de Compostela": {
+		"pl": "Cel Drogi św. Jakuba; według tradycji w katedrze spoczywa apostoł Jakub",
+		"en": "The end of the Way of St James; by tradition the apostle James rests in its cathedral",
+		"cs": "Cíl Svatojakubské cesty; podle tradice v katedrále odpočívá apoštol Jakub",
+		"is": "Endastöð Jakobsvegarins; samkvæmt hefðinni hvílir Jakob postuli í dómkirkjunni",
+		"de": "Das Ziel des Jakobswegs; der Überlieferung nach ruht der Apostel Jakobus in der Kathedrale"
+	},
+	"Teruel": {
+		"pl": "Jej wieże w stylu mudéjar są na liście UNESCO; słynie z legendy o kochankach z Teruel",
+		"en": "Its Mudéjar towers are on the UNESCO list; it is known for the legend of the Lovers of Teruel",
+		"cs": "Její věže ve stylu mudéjar jsou na seznamu UNESCO; proslula legendou o milencích z Teruelu",
+		"is": "Mudéjar-turnarnir þar eru á heimsminjaskrá UNESCO; borgin er þekkt fyrir þjóðsöguna um elskendurna í Teruel",
+		"de": "Ihre Türme im Mudéjar-Stil stehen auf der UNESCO-Liste; bekannt ist sie für die Legende der Liebenden von Teruel"
+	},
+	"Lleida": {
+		"pl": "Nad miastem góruje Seu Vella, stara katedra na wzgórzu",
+		"en": "The Seu Vella, the old cathedral on a hill, towers over the city",
+		"cs": "Nad městem se tyčí Seu Vella, stará katedrála na kopci",
+		"is": "Seu Vella, gamla dómkirkjan á hæðinni, gnæfir yfir borginni",
+		"de": "Über der Stadt thront die Seu Vella, die alte Kathedrale auf einem Hügel"
+	},
+	"Jerez de la Frontera": {
+		"pl": "Od niej wzięło nazwę wino sherry",
+		"en": "Sherry wine takes its name from the town",
+		"cs": "Podle něj dostalo jméno víno sherry",
+		"is": "Sérríið dregur nafn sitt af bænum",
+		"de": "Nach ihr ist der Sherry benannt"
+	},
+	"Ávila": {
+		"pl": "Otaczają ją średniowieczne mury z 87 basztami, zachowane w całości",
+		"en": "It is enclosed by complete medieval walls with 87 towers",
+		"cs": "Obklopují ji úplně zachované středověké hradby s 87 věžemi",
+		"is": "Heillegir miðaldamúrar með 87 turnum umlykja bæinn",
+		"de": "Sie ist von vollständig erhaltenen mittelalterlichen Mauern mit 87 Türmen umgeben"
+	},
+	"Cáceres": {
+		"pl": "Jej stare miasto z wieżami szlacheckich domów jest na liście UNESCO",
+		"en": "Its old town with the towers of noble houses is on the UNESCO list",
+		"cs": "Její staré město s věžemi šlechtických domů je na seznamu UNESCO",
+		"is": "Gamli bærinn með turnum aðalshúsanna er á heimsminjaskrá UNESCO",
+		"de": "Ihre Altstadt mit den Türmen der Adelshäuser steht auf der UNESCO-Liste"
+	},
+	"Aranjuez": {
+		"pl": "Królewski pałac i ogrody nad Tagiem; rodzina królewska spędzała tu wiosny",
+		"en": "A royal palace and gardens on the Tagus; the royal family spent its springs here",
+		"cs": "Královský palác a zahrady na Taji; královská rodina zde trávila jara",
+		"is": "Konungshöll og garðar við Tajo-fljót; konungsfjölskyldan dvaldi hér á vorin",
+		"de": "Ein Königspalast mit Gärten am Tajo; die Königsfamilie verbrachte hier die Frühjahre"
+	},
+	"Benidorm": {
+		"pl": "Ma najwięcej wieżowców na mieszkańca na świecie",
+		"en": "It has more skyscrapers per inhabitant than anywhere else in the world",
+		"cs": "Má nejvíce mrakodrapů na obyvatele na světě",
+		"is": "Þar eru fleiri skýjakljúfar á hvern íbúa en nokkurs staðar annars staðar í heiminum",
+		"de": "Hier gibt es weltweit die meisten Hochhäuser pro Einwohner"
+	},
+	"Lugo": {
+		"pl": "Jedyne miasto otoczone w całości zachowanymi murami rzymskimi",
+		"en": "The only city enclosed by complete Roman walls",
+		"cs": "Jediné město obehnané úplně zachovanými římskými hradbami",
+		"is": "Eina borgin sem er umlukin heillegum rómverskum borgarmúrum",
+		"de": "Die einzige Stadt, die von vollständig erhaltenen römischen Mauern umgeben ist"
+	}
+}

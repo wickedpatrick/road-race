@@ -236,6 +236,18 @@
 			"favorite_neighbour": "fr"
 		},
 		{
+			"code": "ch",
+			"name": {"pl": "Szwajcaria", "en": "Switzerland", "cs": "Švýcarsko", "is": "Sviss", "de": "Schweiz"},
+			"neighbours": ["de", "fr", "it", "at", "li"],
+			"favorite_neighbour": "de"
+		},
+		{
+			"code": "es",
+			"name": {"pl": "Hiszpania", "en": "Spain", "cs": "Španělsko", "is": "Spánn", "de": "Spanien"},
+			"neighbours": ["fr", "pt", "ad"],
+			"favorite_neighbour": "pt"
+		},
+		{
 			"code": "pt",
 			"name": {"pl": "Portugalia", "en": "Portugal", "cs": "Portugalsko", "is": "Portúgal", "de": "Portugal"},
 			"neighbours": ["es"],

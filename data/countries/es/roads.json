@@ -1,0 +1,550 @@
+[
+	{
+		"a": "madrid",
+		"b": "toledo",
+		"km": 72,
+		"road": "A-42",
+		"towns": [["Fuenlabrada", 20], ["Illescas", 37]],
+		"zones": [[30, "steppe", "Comunidad de Madrid"], [72, "steppe", "Castilla-La Mancha"]]
+	},
+	{
+		"a": "madrid",
+		"b": "burgos",
+		"km": 240,
+		"road": "A-1",
+		"towns": [["San Sebastián de los Reyes", 18], ["Buitrago del Lozoya", 75], ["Aranda de Duero", 160], ["Lerma", 202]],
+		"zones": [
+			[60, "fields", "Comunidad de Madrid"],
+			[100, "mountains", "Comunidad de Madrid"],
+			[120, "upland", "Castilla y León"],
+			[240, "fields", "Castilla y León"]
+		],
+		"via": [[75, -3.64, 40.99], [160, -3.69, 41.67]]
+	},
+	{
+		"a": "madrid",
+		"b": "zaragoza",
+		"km": 315,
+		"road": "A-2",
+		"towns": [
+			["Alcalá de Henares", 30], ["Guadalajara", 55], ["Medinaceli", 150], ["Calatayud", 235],
+			["La Almunia de Doña Godina", 265]
+		],
+		"zones": [
+			[60, "fields", "Comunidad de Madrid"], [140, "steppe", "Castilla-La Mancha"],
+			[200, "upland", "Castilla-La Mancha"], [250, "upland", "Aragón"], [315, "steppe", "Aragón"]
+		],
+		"via": [[55, -3.17, 40.63], [150, -2.43, 41.14], [235, -1.64, 41.35]]
+	},
+	{
+		"a": "madrid",
+		"b": "albacete",
+		"km": 255,
+		"road": [[165, "A-3"], [255, "A-31"]],
+		"towns": [["Arganda del Rey", 27], ["Tarancón", 82], ["La Roda", 215]],
+		"zones": [[45, "fields", "Comunidad de Madrid"], [255, "steppe", "Castilla-La Mancha"]],
+		"via": [[82, -3.01, 40.01], [165, -2.2, 39.47], [215, -2.16, 39.21]]
+	},
+	{
+		"a": "madrid",
+		"b": "jaen",
+		"km": 335,
+		"road": [[298, "A-4"], [335, "A-44"]],
+		"towns": [
+			["Aranjuez", 47], ["Ocaña", 64], ["Madridejos", 120], ["Manzanares", 173], ["Valdepeñas", 200],
+			["La Carolina", 268], ["Bailén", 296]
+		],
+		"zones": [
+			[50, "fields", "Comunidad de Madrid"], [235, "steppe", "Castilla-La Mancha"],
+			[262, "mountains", "Andalucía"], [335, "mediterranean", "Andalucía"]
+		],
+		"via": [[47, -3.6, 40.03], [120, -3.53, 39.47], [200, -3.38, 38.76], [268, -3.62, 38.27], [296, -3.78, 38.1]],
+		"tunnels": [
+			{
+				"from_km": 248,
+				"to_km": 249.5,
+				"name": "Túnel de Despeñaperros",
+				"fact": {
+					"pl": "Nowy przebieg A-4 przez wąwóz Despeñaperros, otwarty w 2012 roku, prowadzi przez tunele i wiadukty nad starą krętą drogą",
+					"en": "The new A-4 through the Despeñaperros gorge, opened in 2012, runs through tunnels and over viaducts above the old winding road",
+					"cs": "Nová trasa A-4 soutěskou Despeñaperros, otevřená roku 2012, vede tunely a po viaduktech nad starou klikatou silnicí",
+					"is": "Nýja leið A-4 um Despeñaperros-gljúfrið, opnuð árið 2012, liggur um göng og brýr fyrir ofan gamla hlykkjótta veginn",
+					"de": "Die 2012 eröffnete neue Trasse der A-4 durch die Schlucht von Despeñaperros führt durch Tunnel und über Viadukte oberhalb der alten kurvigen Straße"
+				}
+			}
+		]
+	},
+	{
+		"a": "madrid",
+		"b": "merida",
+		"km": 340,
+		"road": "A-5",
+		"towns": [
+			["Móstoles", 18], ["Navalcarnero", 32], ["Talavera de la Reina", 115], ["Oropesa", 150],
+			["Navalmoral de la Mata", 180], ["Trujillo", 252], ["Miajadas", 290]
+		],
+		"zones": [
+			[40, "fields", "Comunidad de Madrid"], [115, "fields", "Castilla-La Mancha"],
+			[160, "fields", "Castilla-La Mancha"], [340, "steppe", "Extremadura"]
+		],
+		"via": [[115, -4.83, 39.96], [180, -5.54, 39.89], [252, -5.88, 39.46], [290, -5.91, 39.15]]
+	},
+	{
+		"a": "madrid",
+		"b": "valladolid",
+		"km": 205,
+		"road": [[38, "A-6"], [110, "AP-6"], [178, "A-6"], [205, "A-62"]],
+		"towns": [
+			["Las Rozas", 18], ["Collado Villalba", 38], ["Arévalo", 125], ["Medina del Campo", 155],
+			["Tordesillas", 178]
+		],
+		"zones": [
+			[38, "fields", "Comunidad de Madrid"],
+			[70, "mountains", "Comunidad de Madrid"],
+			[85, "upland", "Castilla y León"],
+			[205, "fields", "Castilla y León"]
+		],
+		"via": [[38, -4, 40.63], [85, -4.4, 40.75], [125, -4.72, 41.06], [178, -5, 41.5]],
+		"tunnels": [
+			{
+				"from_km": 58,
+				"to_km": 61.3,
+				"name": "Túnel de Guadarrama",
+				"fact": {
+					"pl": "Tunele AP-6 przeprowadzają autostradę pod przełęczą Alto del León w Sierra de Guadarrama, między Madrytem a Kastylią i León",
+					"en": "The AP-6 tunnels carry the motorway under the Alto del León pass in the Sierra de Guadarrama, between Madrid and Castile and León",
+					"cs": "Tunely AP-6 vedou dálnici pod průsmykem Alto del León v pohoří Sierra de Guadarrama, mezi Madridem a Kastilií a Leónem",
+					"is": "Göng AP-6 leiða hraðbrautina undir Alto del León-skarðið í Sierra de Guadarrama, milli Madrídar og Kastilíu og León",
+					"de": "Die Tunnel der AP-6 führen die Autobahn unter dem Pass Alto del León in der Sierra de Guadarrama hindurch, zwischen Madrid und Kastilien-León"
+				}
+			}
+		]
+	},
+	{
+		"a": "madrid",
+		"b": "salamanca",
+		"km": 212,
+		"road": [[38, "A-6"], [85, "AP-6"], [110, "AP-51"], [212, "A-50"]],
+		"towns": [["Las Rozas", 18], ["Collado Villalba", 38], ["Ávila", 110], ["Peñaranda de Bracamonte", 175]],
+		"zones": [
+			[38, "fields", "Comunidad de Madrid"],
+			[70, "mountains", "Comunidad de Madrid"],
+			[110, "upland", "Castilla y León"],
+			[212, "fields", "Castilla y León"]
+		],
+		"via": [[38, -4, 40.63], [85, -4.4, 40.75], [110, -4.7, 40.66], [175, -5.2, 40.9]],
+		"tunnels": [
+			{
+				"from_km": 58,
+				"to_km": 61.3,
+				"name": "Túnel de Guadarrama",
+				"fact": {
+					"pl": "Tunele AP-6 przeprowadzają autostradę pod przełęczą Alto del León w Sierra de Guadarrama, między Madrytem a Kastylią i León",
+					"en": "The AP-6 tunnels carry the motorway under the Alto del León pass in the Sierra de Guadarrama, between Madrid and Castile and León",
+					"cs": "Tunely AP-6 vedou dálnici pod průsmykem Alto del León v pohoří Sierra de Guadarrama, mezi Madridem a Kastilií a Leónem",
+					"is": "Göng AP-6 leiða hraðbrautina undir Alto del León-skarðið í Sierra de Guadarrama, milli Madrídar og Kastilíu og León",
+					"de": "Die Tunnel der AP-6 führen die Autobahn unter dem Pass Alto del León in der Sierra de Guadarrama hindurch, zwischen Madrid und Kastilien-León"
+				}
+			}
+		]
+	},
+	{
+		"a": "zaragoza",
+		"b": "barcelona",
+		"km": 305,
+		"road": "A-2",
+		"towns": [["Bujaraloz", 70], ["Fraga", 115], ["Lleida", 145], ["Cervera", 200], ["Igualada", 240], ["Martorell", 280]],
+		"zones": [
+			[110, "steppe", "Aragón"], [150, "fields", "Cataluña"], [250, "upland", "Cataluña"],
+			[305, "mediterranean", "Cataluña"]
+		],
+		"via": [[70, -0.15, 41.5], [145, 0.62, 41.62], [200, 1.27, 41.67], [240, 1.62, 41.58], [280, 1.93, 41.48]]
+	},
+	{
+		"a": "barcelona",
+		"b": "tarragona",
+		"km": 100,
+		"road": [[15, "B-23", 3, 100], [100, "AP-7"]],
+		"towns": [["Martorell", 28], ["Vilafranca del Penedès", 52], ["El Vendrell", 72]],
+		"zones": [[100, "mediterranean", "Cataluña"]],
+		"via": [[28, 1.93, 41.48], [52, 1.7, 41.35], [72, 1.53, 41.22]]
+	},
+	{
+		"a": "tarragona",
+		"b": "valencia",
+		"km": 255,
+		"road": "AP-7",
+		"towns": [
+			["Cambrils", 20], ["L'Ametlla de Mar", 50], ["Vinaròs", 115], ["Benicarló", 125],
+			["Castellón de la Plana", 185], ["Sagunto", 225]
+		],
+		"zones": [[100, "mediterranean", "Cataluña"], [255, "mediterranean", "Comunidad Valenciana"]],
+		"via": [[20, 1.06, 41.07], [50, 0.77, 40.91], [115, 0.47, 40.47], [185, -0.05, 39.99], [225, -0.27, 39.68]]
+	},
+	{
+		"a": "zaragoza",
+		"b": "valencia",
+		"km": 310,
+		"road": "A-23",
+		"towns": [["Cariñena", 48], ["Calamocha", 110], ["Teruel", 180], ["Sarrión", 215], ["Segorbe", 255], ["Sagunto", 285]],
+		"zones": [
+			[50, "steppe", "Aragón"],
+			[215, "upland", "Aragón"],
+			[260, "mountains", "Comunidad Valenciana"],
+			[310, "mediterranean", "Comunidad Valenciana"]
+		],
+		"via": [
+			[48, -1.22, 41.34], [110, -1.3, 40.92], [180, -1.11, 40.34], [215, -0.81, 40.14], [255, -0.49, 39.85],
+			[285, -0.27, 39.68]
+		]
+	},
+	{
+		"a": "valencia",
+		"b": "albacete",
+		"km": 190,
+		"road": [[60, "A-7"], [110, "A-35"], [190, "A-31"]],
+		"towns": [["Alzira", 38], ["Xàtiva", 60], ["Almansa", 110], ["Chinchilla de Montearagón", 175]],
+		"zones": [
+			[60, "mediterranean", "Comunidad Valenciana"],
+			[110, "upland", "Comunidad Valenciana"],
+			[190, "steppe", "Castilla-La Mancha"]
+		],
+		"via": [[38, -0.43, 39.15], [60, -0.52, 38.99], [110, -1.1, 38.87], [175, -1.72, 38.92]]
+	},
+	{
+		"a": "valencia",
+		"b": "alicante",
+		"km": 175,
+		"road": "AP-7",
+		"towns": [["Gandia", 65], ["Benissa", 120], ["Benidorm", 140], ["Villajoyosa", 152]],
+		"zones": [[175, "mediterranean", "Comunidad Valenciana"]],
+		"via": [[65, -0.18, 38.97], [120, 0.05, 38.71], [140, -0.15, 38.57]]
+	},
+	{
+		"a": "albacete",
+		"b": "alicante",
+		"km": 165,
+		"road": "A-31",
+		"towns": [["Almansa", 75], ["Villena", 107], ["Elda", 128], ["Monforte del Cid", 145]],
+		"zones": [[60, "steppe", "Castilla-La Mancha"], [165, "mediterranean", "Comunidad Valenciana"]],
+		"via": [[75, -1.1, 38.87], [107, -0.86, 38.63], [128, -0.79, 38.48]]
+	},
+	{
+		"a": "albacete",
+		"b": "murcia",
+		"km": 145,
+		"road": "A-30",
+		"towns": [["Hellín", 60], ["Cieza", 105], ["Molina de Segura", 135]],
+		"zones": [[75, "steppe", "Castilla-La Mancha"], [145, "mediterranean", "Región de Murcia"]],
+		"via": [[60, -1.7, 38.51], [105, -1.42, 38.24]]
+	},
+	{
+		"a": "alicante",
+		"b": "murcia",
+		"km": 80,
+		"road": "A-7",
+		"towns": [["Elche", 22], ["Crevillent", 35], ["Orihuela", 58]],
+		"zones": [[55, "mediterranean", "Comunidad Valenciana"], [80, "mediterranean", "Región de Murcia"]],
+		"via": [[22, -0.7, 38.27], [58, -0.94, 38.08]]
+	},
+	{
+		"a": "murcia",
+		"b": "almeria",
+		"km": 215,
+		"road": "A-7",
+		"towns": [
+			["Alhama de Murcia", 30], ["Totana", 45], ["Lorca", 65], ["Puerto Lumbreras", 82], ["Huércal-Overa", 100],
+			["Vera", 125]
+		],
+		"zones": [[95, "mediterranean", "Región de Murcia"], [215, "steppe", "Andalucía"]],
+		"via": [[45, -1.5, 37.77], [65, -1.7, 37.67], [100, -1.94, 37.39], [125, -1.87, 37.24]]
+	},
+	{
+		"a": "almeria",
+		"b": "granada",
+		"km": 165,
+		"road": "A-92",
+		"towns": [["Gádor", 18], ["Fiñana", 70], ["Guadix", 110], ["Purullena", 117]],
+		"zones": [[60, "steppe", "Andalucía"], [110, "mountains", "Andalucía"], [165, "upland", "Andalucía"]],
+		"via": [[70, -2.84, 37.16], [110, -3.14, 37.3]]
+	},
+	{
+		"a": "almeria",
+		"b": "malaga",
+		"km": 205,
+		"road": "A-7",
+		"towns": [
+			["El Ejido", 35], ["Adra", 55], ["Motril", 110], ["Almuñécar", 130], ["Nerja", 155], ["Vélez-Málaga", 178],
+			["Rincón de la Victoria", 192]
+		],
+		"zones": [[60, "coast", "Andalucía"], [205, "coast", "Andalucía"]],
+		"via": [
+			[35, -2.81, 36.78], [55, -3.02, 36.75], [110, -3.52, 36.75], [130, -3.69, 36.77], [155, -3.88, 36.76],
+			[178, -4.1, 36.78]
+		]
+	},
+	{
+		"a": "granada",
+		"b": "malaga",
+		"km": 125,
+		"road": [[70, "A-92"], [88, "A-92M"], [125, "A-45"]],
+		"towns": [["Santa Fe", 12], ["Loja", 52], ["Casabermeja", 108]],
+		"zones": [[50, "mediterranean", "Andalucía"], [110, "mountains", "Andalucía"], [125, "mediterranean", "Andalucía"]],
+		"via": [[52, -4.15, 37.17], [80, -4.37, 37.08], [108, -4.43, 36.89]]
+	},
+	{
+		"a": "granada",
+		"b": "jaen",
+		"km": 95,
+		"road": "A-44",
+		"towns": [["Albolote", 10], ["Iznalloz", 35], ["Campillo de Arenas", 60]],
+		"zones": [[95, "mediterranean", "Andalucía"]],
+		"via": [[35, -3.53, 37.39], [60, -3.64, 37.55]]
+	},
+	{
+		"a": "jaen",
+		"b": "cordoba",
+		"km": 140,
+		"road": [[37, "A-44"], [140, "A-4"]],
+		"towns": [["Bailén", 37], ["Andújar", 63], ["Montoro", 100]],
+		"zones": [[140, "mediterranean", "Andalucía"]],
+		"via": [[37, -3.78, 38.1], [63, -4.05, 38.04], [100, -4.38, 38.02]]
+	},
+	{
+		"a": "cordoba",
+		"b": "sevilla",
+		"km": 140,
+		"road": "A-4",
+		"towns": [["Écija", 52], ["Carmona", 105]],
+		"zones": [[140, "fields", "Andalucía"]],
+		"via": [[52, -5.08, 37.54], [105, -5.64, 37.47]]
+	},
+	{
+		"a": "malaga",
+		"b": "sevilla",
+		"km": 205,
+		"road": [[50, "A-45"], [205, "A-92"]],
+		"towns": [["Antequera", 50], ["Estepa", 105], ["Osuna", 135], ["Alcalá de Guadaíra", 192]],
+		"zones": [[40, "mountains", "Andalucía"], [205, "fields", "Andalucía"]],
+		"via": [[50, -4.56, 37.02], [105, -4.88, 37.29], [135, -5.1, 37.24], [192, -5.84, 37.34]]
+	},
+	{
+		"a": "sevilla",
+		"b": "cadiz",
+		"km": 125,
+		"road": "AP-4",
+		"towns": [["Dos Hermanas", 15], ["Jerez de la Frontera", 90], ["Puerto Real", 110]],
+		"zones": [[100, "fields", "Andalucía"], [125, "coast", "Andalucía"]],
+		"via": [[15, -5.92, 37.28], [90, -6.12, 36.69], [110, -6.19, 36.53]]
+	},
+	{
+		"a": "sevilla",
+		"b": "merida",
+		"km": 195,
+		"road": "A-66",
+		"towns": [["Guillena", 20], ["El Ronquillo", 40], ["Monesterio", 92], ["Zafra", 135], ["Almendralejo", 168]],
+		"zones": [[65, "mediterranean", "Andalucía"], [100, "upland", "Extremadura"], [195, "fields", "Extremadura"]],
+		"via": [[40, -6.18, 37.72], [92, -6.27, 38.08], [135, -6.42, 38.42], [168, -6.4, 38.68]]
+	},
+	{
+		"a": "merida",
+		"b": "salamanca",
+		"km": 280,
+		"road": "A-66",
+		"towns": [["Cáceres", 70], ["Plasencia", 150], ["Béjar", 200], ["Guijuelo", 230]],
+		"zones": [
+			[110, "steppe", "Extremadura"], [190, "upland", "Extremadura"], [215, "mountains", "Castilla y León"],
+			[280, "fields", "Castilla y León"]
+		],
+		"via": [[70, -6.37, 39.47], [150, -6.09, 40.03], [200, -5.76, 40.39], [230, -5.67, 40.56]]
+	},
+	{
+		"a": "salamanca",
+		"b": "valladolid",
+		"km": 120,
+		"road": "A-62",
+		"towns": [["Tordesillas", 80], ["Simancas", 108]],
+		"zones": [[120, "fields", "Castilla y León"]],
+		"via": [[80, -5, 41.5]]
+	},
+	{
+		"a": "salamanca",
+		"b": "leon",
+		"km": 200,
+		"road": "A-66",
+		"towns": [["Zamora", 62], ["Benavente", 128], ["La Bañeza", 160]],
+		"zones": [[200, "fields", "Castilla y León"]],
+		"via": [[62, -5.74, 41.5], [128, -5.67, 42], [160, -5.9, 42.3]]
+	},
+	{
+		"a": "valladolid",
+		"b": "burgos",
+		"km": 125,
+		"road": "A-62",
+		"towns": [["Dueñas", 30], ["Venta de Baños", 38], ["Torquemada", 65]],
+		"zones": [[125, "fields", "Castilla y León"]],
+		"via": [[38, -4.49, 41.92], [65, -4.32, 42.03]]
+	},
+	{
+		"a": "leon",
+		"b": "burgos",
+		"km": 180,
+		"road": "A-231",
+		"towns": [["Mansilla de las Mulas", 18], ["Sahagún", 62], ["Carrión de los Condes", 92], ["Osorno la Mayor", 115]],
+		"zones": [[180, "fields", "Castilla y León"]],
+		"via": [[62, -5.03, 42.37], [92, -4.6, 42.34], [115, -4.36, 42.41]]
+	},
+	{
+		"a": "leon",
+		"b": "oviedo",
+		"km": 120,
+		"road": [[78, "AP-66"], [120, "A-66"]],
+		"towns": [["La Robla", 25], ["Campomanes", 75], ["Mieres", 100]],
+		"zones": [
+			[40, "fields", "Castilla y León"],
+			[62, "mountains", "Castilla y León"],
+			[110, "mountains", "Principado de Asturias"],
+			[120, "forest", "Principado de Asturias"]
+		],
+		"via": [[25, -5.62, 42.8], [60, -5.78, 42.95], [75, -5.84, 43.09], [100, -5.78, 43.25]],
+		"tunnels": [
+			{
+				"from_km": 56,
+				"to_km": 60.1,
+				"name": "Túnel del Negrón",
+				"fact": {
+					"pl": "Ponad 4 km pod Kordylierą Kantabryjską: tunel autostrady AP-66 (Autopista del Huerna) na granicy León i Asturii",
+					"en": "Over 4 km under the Cantabrian Mountains: the AP-66 (Autopista del Huerna) tunnel on the border of León and Asturias",
+					"cs": "Přes 4 km pod Kantaberským pohořím: tunel dálnice AP-66 (Autopista del Huerna) na hranici Leónu a Asturie",
+					"is": "Rúmlega 4 km undir Kantabríufjöllum: göng AP-66 (Autopista del Huerna) á mörkum León og Astúríu",
+					"de": "Über 4 km unter dem Kantabrischen Gebirge: der Tunnel der AP-66 (Autopista del Huerna) an der Grenze zwischen León und Asturien"
+				}
+			}
+		]
+	},
+	{
+		"a": "leon",
+		"b": "a_coruna",
+		"km": 330,
+		"road": [[45, "AP-71"], [330, "A-6"]],
+		"towns": [
+			["Astorga", 45], ["Bembibre", 85], ["Ponferrada", 105], ["Villafranca del Bierzo", 125], ["Becerreá", 185],
+			["Lugo", 235], ["Betanzos", 310]
+		],
+		"zones": [
+			[60, "fields", "Castilla y León"], [140, "upland", "Castilla y León"], [190, "mountains", "Galicia"],
+			[330, "forest", "Galicia"]
+		],
+		"via": [
+			[45, -6.06, 42.46], [105, -6.6, 42.55], [125, -6.81, 42.61], [185, -7.16, 42.86], [235, -7.56, 43.01],
+			[310, -8.21, 43.28]
+		]
+	},
+	{
+		"a": "a_coruna",
+		"b": "vigo",
+		"km": 155,
+		"road": "AP-9",
+		"towns": [["Santiago de Compostela", 68], ["Padrón", 88], ["Pontevedra", 125]],
+		"zones": [[130, "forest", "Galicia"], [155, "coast", "Galicia"]],
+		"via": [[68, -8.54, 42.88], [88, -8.66, 42.74], [125, -8.64, 42.43], [142, -8.66, 42.29]],
+		"bridge": {"from_km": 140, "to_km": 141.6, "name": "Puente de Rande", "kind": "stayed"}
+	},
+	{
+		"a": "oviedo",
+		"b": "santander",
+		"km": 200,
+		"road": [[42, "A-64"], [200, "A-8"]],
+		"towns": [
+			["Villaviciosa", 40], ["Ribadesella", 78], ["Llanes", 105], ["San Vicente de la Barquera", 140],
+			["Torrelavega", 175]
+		],
+		"zones": [
+			[40, "forest", "Principado de Asturias"],
+			[125, "coast", "Principado de Asturias"],
+			[200, "coast", "Cantabria"]
+		],
+		"via": [[40, -5.43, 43.48], [78, -5.06, 43.46], [105, -4.75, 43.42], [140, -4.4, 43.38], [175, -4.05, 43.35]]
+	},
+	{
+		"a": "santander",
+		"b": "bilbao",
+		"km": 100,
+		"road": "A-8",
+		"towns": [["Laredo", 50], ["Castro Urdiales", 72], ["Portugalete", 92]],
+		"zones": [[75, "coast", "Cantabria"], [100, "coast", "País Vasco"]],
+		"via": [[25, -3.62, 43.4], [50, -3.42, 43.4], [72, -3.22, 43.38]]
+	},
+	{
+		"a": "bilbao",
+		"b": "san_sebastian",
+		"km": 100,
+		"road": "AP-8",
+		"towns": [["Durango", 30], ["Eibar", 48], ["Zarautz", 80]],
+		"zones": [[100, "forest", "País Vasco"]],
+		"via": [[30, -2.63, 43.17], [48, -2.47, 43.18], [80, -2.17, 43.28]]
+	},
+	{
+		"a": "bilbao",
+		"b": "logrono",
+		"km": 130,
+		"road": "AP-68",
+		"towns": [["Llodio", 20], ["Miranda de Ebro", 80], ["Haro", 100], ["Cenicero", 115]],
+		"zones": [[55, "forest", "País Vasco"], [85, "upland", "Castilla y León"], [130, "fields", "La Rioja"]],
+		"via": [[20, -2.96, 43.14], [45, -2.8, 42.97], [80, -2.95, 42.68], [100, -2.85, 42.58]]
+	},
+	{
+		"a": "burgos",
+		"b": "vitoria",
+		"km": 115,
+		"road": "A-1",
+		"towns": [["Briviesca", 40], ["Pancorbo", 63], ["Miranda de Ebro", 80], ["Armiñón", 92]],
+		"zones": [[90, "fields", "Castilla y León"], [115, "fields", "País Vasco"]],
+		"via": [[40, -3.32, 42.55], [63, -3.11, 42.63], [80, -2.95, 42.68]]
+	},
+	{
+		"a": "vitoria",
+		"b": "pamplona",
+		"km": 95,
+		"road": [[45, "A-1"], [75, "A-10"], [95, "A-15"]],
+		"towns": [["Salvatierra", 25], ["Alsasua", 45], ["Irurtzun", 75]],
+		"zones": [[40, "fields", "País Vasco"], [95, "forest", "Navarra"]],
+		"via": [[25, -2.39, 42.85], [45, -2.17, 42.9], [75, -1.83, 42.92]]
+	},
+	{
+		"a": "pamplona",
+		"b": "san_sebastian",
+		"km": 85,
+		"road": "A-15",
+		"towns": [["Irurtzun", 20], ["Lekunberri", 35], ["Andoain", 70]],
+		"zones": [[45, "forest", "Navarra"], [85, "forest", "País Vasco"]],
+		"via": [[20, -1.83, 42.92], [35, -1.89, 43], [70, -2.02, 43.22]]
+	},
+	{
+		"a": "pamplona",
+		"b": "logrono",
+		"km": 90,
+		"road": "A-12",
+		"towns": [["Puente la Reina", 22], ["Estella", 45], ["Los Arcos", 65], ["Viana", 83]],
+		"zones": [[83, "fields", "Navarra"], [90, "fields", "La Rioja"]],
+		"via": [[22, -1.81, 42.67], [45, -2.03, 42.67], [65, -2.19, 42.57]]
+	},
+	{
+		"a": "pamplona",
+		"b": "zaragoza",
+		"km": 175,
+		"road": [[95, "AP-15"], [175, "AP-68"]],
+		"towns": [["Tafalla", 35], ["Olite", 42], ["Tudela", 95], ["Gallur", 125], ["Alagón", 150]],
+		"zones": [[50, "fields", "Navarra"], [105, "steppe", "Navarra"], [175, "steppe", "Aragón"]],
+		"via": [[35, -1.67, 42.53], [95, -1.61, 42.06], [125, -1.32, 41.87]]
+	},
+	{
+		"a": "logrono",
+		"b": "zaragoza",
+		"km": 170,
+		"road": "AP-68",
+		"towns": [["Calahorra", 50], ["Alfaro", 75], ["Tudela", 95], ["Gallur", 125], ["Alagón", 150]],
+		"zones": [[80, "fields", "La Rioja"], [105, "steppe", "Navarra"], [170, "steppe", "Aragón"]],
+		"via": [[50, -1.96, 42.31], [75, -1.75, 42.18], [95, -1.61, 42.06], [125, -1.32, 41.87]]
+	}
+]

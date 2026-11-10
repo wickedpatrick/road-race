@@ -8,6 +8,8 @@ func run(t) -> void:
 		"fi": 20, "fr": 30,
 		"no": 17,
 		"it": 30,
+		"ch": 14,
+		"es": 30,
 		"pt": 13,
 		"bx": 20}
 	for code in sizes:

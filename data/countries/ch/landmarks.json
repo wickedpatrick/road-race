@@ -1,0 +1,276 @@
+{
+	"Zürich": [
+		{
+			"kind": "ch_zuerich_grossmuenster",
+			"name": {
+				"pl": "Grossmünster",
+				"en": "The Grossmünster",
+				"cs": "Grossmünster",
+				"is": "Grossmünster-kirkjan",
+				"de": "Grossmünster"
+			},
+			"desc": {
+				"pl": "Romański kościół z dwiema wieżami, z którego Zwingli głosił reformację",
+				"en": "A Romanesque church with twin towers, where Zwingli preached the Reformation",
+				"cs": "Románský kostel se dvěma věžemi, kde Zwingli kázal reformaci",
+				"is": "Rómönsk kirkja með tvo turna þar sem Zwingli boðaði siðbótina",
+				"de": "Romanische Kirche mit zwei Türmen, in der Zwingli die Reformation predigte"
+			},
+			"local": "Grossmünster"
+		}
+	],
+	"Genève": [
+		{
+			"kind": "ch_geneve_jet_deau",
+			"name": {
+				"pl": "Jet d'Eau",
+				"en": "The Jet d'Eau",
+				"cs": "Jet d'Eau",
+				"is": "Jet d'Eau-gosbrunnurinn",
+				"de": "Jet d'Eau"
+			},
+			"desc": {
+				"pl": "Fontanna w jeziorze wyrzuca wodę na wysokość około 140 metrów",
+				"en": "A fountain in the lake that throws water about 140 metres high",
+				"cs": "Fontána v jezeře vystřikuje vodu do výšky asi 140 metrů",
+				"is": "Gosbrunnur í vatninu sem þeytir vatni um 140 metra upp í loftið",
+				"de": "Eine Fontäne im See, die das Wasser etwa 140 Meter hoch spritzt"
+			},
+			"local": "Jet d'eau"
+		}
+	],
+	"Basel": [
+		{
+			"kind": "ch_basel_rathaus",
+			"name": {
+				"pl": "Ratusz w Bazylei",
+				"en": "Basel Town Hall",
+				"cs": "Basilejská radnice",
+				"is": "Ráðhúsið í Basel",
+				"de": "Basler Rathaus"
+			},
+			"desc": {
+				"pl": "Czerwony ratusz z malowanymi ścianami i złotą iglicą na wieży",
+				"en": "A red town hall with painted walls and a gilt spire on its tower",
+				"cs": "Červená radnice s malovanými stěnami a zlatou špicí na věži",
+				"is": "Rautt ráðhús með máluðum veggjum og gylltri spíru á turninum",
+				"de": "Ein rotes Rathaus mit bemalten Wänden und einer goldenen Turmspitze"
+			},
+			"local": "Rathaus Basel"
+		}
+	],
+	"Lausanne": [
+		{
+			"kind": "ch_lausanne_cathedrale",
+			"name": {
+				"pl": "Katedra w Lozannie",
+				"en": "Lausanne Cathedral",
+				"cs": "Katedrála v Lausanne",
+				"is": "Dómkirkjan í Lausanne",
+				"de": "Kathedrale von Lausanne"
+			},
+			"desc": {
+				"pl": "Co noc strażnik z wieży ogłasza godziny od 22:00 do 2:00",
+				"en": "Every night a watchman calls out the hours from the tower, from 10 pm to 2 am",
+				"cs": "Každou noc z věže hlásí ponocný hodiny od 22 do 2 hodin",
+				"is": "Á hverri nóttu kallar vaktmaður tímann úr turninum frá kl. 22 til 2",
+				"de": "Jede Nacht ruft ein Nachtwächter vom Turm die Stunden aus, von 22 bis 2 Uhr"
+			},
+			"local": "Cathédrale de Lausanne"
+		}
+	],
+	"Bern": [
+		{
+			"kind": "ch_bern_zytglogge",
+			"name": {
+				"pl": "Zytglogge",
+				"en": "The Zytglogge",
+				"cs": "Zytglogge",
+				"is": "Zytglogge-klukkuturninn",
+				"de": "Zytglogge"
+			},
+			"desc": {
+				"pl": "Średniowieczna wieża z zegarem astronomicznym i figurkami, które ruszają się co godzinę",
+				"en": "A medieval tower with an astronomical clock and figures that move every hour",
+				"cs": "Středověká věž s orlojem a figurkami, které se každou hodinu pohnou",
+				"is": "Turn frá miðöldum með stjarnfræðiklukku og fígúrum sem hreyfast á hverri klukkustund",
+				"de": "Ein mittelalterlicher Turm mit astronomischer Uhr und Figuren, die sich jede Stunde bewegen"
+			},
+			"local": "Zytglogge"
+		}
+	],
+	"Winterthur": [
+		{
+			"kind": "ch_winterthur_stadthaus",
+			"name": {
+				"pl": "Stadthaus w Winterthur",
+				"en": "Winterthur Stadthaus",
+				"cs": "Stadthaus ve Winterthuru",
+				"is": "Stadthaus í Winterthur",
+				"de": "Stadthaus Winterthur"
+			},
+			"desc": {
+				"pl": "Klasycystyczny gmach z kolumnadą zaprojektowany przez Gottfrieda Sempera",
+				"en": "A classical building with a portico of columns, designed by Gottfried Semper",
+				"cs": "Klasicistní budova se sloupovým portikem, navržená Gottfriedem Semperem",
+				"is": "Klassísk bygging með súlnaforskála sem Gottfried Semper teiknaði",
+				"de": "Ein klassizistischer Bau mit Säulenportikus, entworfen von Gottfried Semper"
+			},
+			"local": "Stadthaus Winterthur"
+		}
+	],
+	"Luzern": [
+		{
+			"kind": "ch_luzern_kapellbruecke",
+			"name": {
+				"pl": "Kapellbrücke",
+				"en": "The Chapel Bridge",
+				"cs": "Most Kapellbrücke",
+				"is": "Kapellubrúin",
+				"de": "Kapellbrücke"
+			},
+			"desc": {
+				"pl": "Kryty drewniany most przez Reuss z ośmiokątną Wieżą Wodną",
+				"en": "A covered wooden bridge over the Reuss with the octagonal Water Tower",
+				"cs": "Krytý dřevěný most přes Reussu s osmibokou Vodní věží",
+				"is": "Yfirbyggð trébrú yfir Reuss með átthyrnda Vatnsturninum",
+				"de": "Eine gedeckte Holzbrücke über die Reuss mit dem achteckigen Wasserturm"
+			},
+			"local": "Kapellbrücke"
+		}
+	],
+	"St. Gallen": [
+		{
+			"kind": "ch_st_gallen_kathedrale",
+			"name": {
+				"pl": "Katedra w Sankt Gallen",
+				"en": "St. Gallen Cathedral",
+				"cs": "Katedrála v St. Gallen",
+				"is": "Dómkirkjan í St. Gallen",
+				"de": "Kathedrale St. Gallen"
+			},
+			"desc": {
+				"pl": "Barokowy kościół dawnego opactwa, obok którego stoi słynna biblioteka",
+				"en": "The Baroque church of the former abbey, beside its famous library",
+				"cs": "Barokní kostel bývalého opatství vedle jeho slavné knihovny",
+				"is": "Barokkirkja fyrrverandi klaustursins við hlið hins fræga bókasafns",
+				"de": "Die barocke Kirche des einstigen Klosters neben der berühmten Stiftsbibliothek"
+			},
+			"local": "Kathedrale St. Gallen"
+		}
+	],
+	"Lugano": [
+		{
+			"kind": "ch_lugano_san_lorenzo",
+			"name": {
+				"pl": "Katedra św. Wawrzyńca",
+				"en": "San Lorenzo Cathedral",
+				"cs": "Katedrála svatého Vavřince",
+				"is": "Dómkirkja heilags Lárentíusar",
+				"de": "Kathedrale San Lorenzo"
+			},
+			"desc": {
+				"pl": "Renesansowa fasada z białego marmuru, z tarasu widać jezioro",
+				"en": "A Renaissance front of white marble; its terrace looks over the lake",
+				"cs": "Renesanční průčelí z bílého mramoru, z terasy je vidět jezero",
+				"is": "Framhlið úr hvítum marmara frá endurreisnartímanum; af veröndinni sést yfir vatnið",
+				"de": "Eine Renaissancefassade aus weissem Marmor, von der Terrasse sieht man den See"
+			},
+			"local": "Cattedrale di San Lorenzo"
+		}
+	],
+	"Biel": [
+		{
+			"kind": "ch_biel_vennerbrunnen",
+			"name": {
+				"pl": "Fontanna Chorążego",
+				"en": "The Banneret Fountain",
+				"cs": "Kašna praporečníka",
+				"is": "Merkisberagosbrunnurinn",
+				"de": "Vennerbrunnen"
+			},
+			"desc": {
+				"pl": "Fontanna z XVI wieku na placu Ring, z chorążym w zbroi",
+				"en": "A 16th-century fountain on the Ring square, with a standard-bearer in armour",
+				"cs": "Kašna ze 16. století na náměstí Ring s praporečníkem ve zbroji",
+				"is": "Gosbrunnur frá 16. öld á Ring-torginu, með merkisbera í brynju",
+				"de": "Ein Brunnen aus dem 16. Jahrhundert auf dem Ring, mit einem Venner in Rüstung"
+			},
+			"local": "Vennerbrunnen"
+		}
+	],
+	"Thun": [
+		{
+			"kind": "ch_thun_schloss",
+			"name": {
+				"pl": "Zamek w Thun",
+				"en": "Thun Castle",
+				"cs": "Hrad Thun",
+				"is": "Kastalinn í Thun",
+				"de": "Schloss Thun"
+			},
+			"desc": {
+				"pl": "Biały donżon z czterema narożnymi wieżami, zbudowany ponad 800 lat temu",
+				"en": "A white keep with four corner towers, built over 800 years ago",
+				"cs": "Bílý donjon se čtyřmi nárožními věžemi, postavený před více než 800 lety",
+				"is": "Hvítur kastalaturn með fjórum hornturnum, reistur fyrir meira en 800 árum",
+				"de": "Ein weisser Bergfried mit vier Ecktürmen, vor über 800 Jahren erbaut"
+			},
+			"local": "Schloss Thun"
+		}
+	],
+	"Fribourg": [
+		{
+			"kind": "ch_fribourg_cathedrale",
+			"name": {
+				"pl": "Katedra św. Mikołaja",
+				"en": "St. Nicholas Cathedral",
+				"cs": "Katedrála svatého Mikuláše",
+				"is": "Dómkirkja heilags Nikulásar",
+				"de": "Kathedrale St. Nikolaus"
+			},
+			"desc": {
+				"pl": "Gotycka katedra z 74-metrową wieżą zakończoną płasko, bez iglicy",
+				"en": "A Gothic cathedral with a 74 m tower that ends flat, without a spire",
+				"cs": "Gotická katedrála se 74 m vysokou věží, která končí rovně, bez špice",
+				"is": "Gotnesk dómkirkja með 74 m turni sem endar flatur, án spíru",
+				"de": "Eine gotische Kathedrale mit einem 74 m hohen Turm, der flach endet, ohne Spitze"
+			},
+			"local": "Cathédrale Saint-Nicolas"
+		}
+	],
+	"Chur": [
+		{
+			"kind": "ch_chur_obertor",
+			"name": {"pl": "Brama Górna", "en": "The Upper Gate", "cs": "Horní brána", "is": "Efra hliðið", "de": "Obertor"},
+			"desc": {
+				"pl": "Średniowieczna wieża bramna dawnych murów miejskich",
+				"en": "A medieval gate tower of the old town walls",
+				"cs": "Středověká branská věž bývalých městských hradeb",
+				"is": "Hliðturn frá miðöldum í gömlu borgarmúrunum",
+				"de": "Ein mittelalterlicher Torturm der alten Stadtmauer"
+			},
+			"local": "Obertor"
+		}
+	],
+	"Sion": [
+		{
+			"kind": "ch_sion_valere_tourbillon",
+			"name": {
+				"pl": "Valère i Tourbillon",
+				"en": "Valère and Tourbillon",
+				"cs": "Valère a Tourbillon",
+				"is": "Valère og Tourbillon",
+				"de": "Valère und Tourbillon"
+			},
+			"desc": {
+				"pl": "Dwa wzgórza nad miastem: ruiny zamku Tourbillon i warowna bazylika Valère",
+				"en": "Two hills over the town: the ruined Tourbillon castle and the fortified Valère basilica",
+				"cs": "Dva kopce nad městem: zřícenina hradu Tourbillon a opevněná bazilika Valère",
+				"is": "Tvær hæðir yfir bænum: kastalarústir Tourbillon og víggirt basilíkan Valère",
+				"de": "Zwei Hügel über der Stadt: die Burgruine Tourbillon und die befestigte Basilika Valère"
+			},
+			"local": "Valère et Tourbillon"
+		}
+	]
+}
