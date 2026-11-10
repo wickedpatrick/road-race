@@ -1,0 +1,95 @@
+{
+	"roma": {
+		"name": "Roma",
+		"lat": 41.89,
+		"lon": 12.49,
+		"pop": 2750,
+		"region": "Lazio",
+		"exonym": {"pl": "Rzym", "en": "Rome", "cs": "Řím", "is": "Róm", "de": "Rom"}
+	},
+	"milano": {
+		"name": "Milano",
+		"lat": 45.46,
+		"lon": 9.19,
+		"pop": 1370,
+		"region": "Lombardia",
+		"exonym": {"pl": "Mediolan", "en": "Milan", "cs": "Milán", "is": "Mílanó", "de": "Mailand"}
+	},
+	"napoli": {
+		"name": "Napoli",
+		"lat": 40.85,
+		"lon": 14.27,
+		"pop": 910,
+		"region": "Campania",
+		"exonym": {"pl": "Neapol", "en": "Naples", "cs": "Neapol", "is": "Napólí", "de": "Neapel"}
+	},
+	"torino": {
+		"name": "Torino",
+		"lat": 45.07,
+		"lon": 7.69,
+		"pop": 845,
+		"region": "Piemonte",
+		"exonym": {"pl": "Turyn", "en": "Turin", "cs": "Turín", "is": "Tórínó", "de": "Turin"}
+	},
+	"palermo": {"name": "Palermo", "lat": 38.12, "lon": 13.36, "pop": 630, "region": "Sicilia"},
+	"genova": {
+		"name": "Genova",
+		"lat": 44.41,
+		"lon": 8.93,
+		"pop": 560,
+		"region": "Liguria",
+		"exonym": {"pl": "Genua", "en": "Genoa", "cs": "Janov", "is": "Genúa", "de": "Genua"}
+	},
+	"bologna": {
+		"name": "Bologna",
+		"lat": 44.49,
+		"lon": 11.34,
+		"pop": 390,
+		"region": "Emilia-Romagna",
+		"exonym": {"pl": "Bolonia", "cs": "Boloňa"}
+	},
+	"firenze": {
+		"name": "Firenze",
+		"lat": 43.77,
+		"lon": 11.25,
+		"pop": 360,
+		"region": "Toscana",
+		"exonym": {"pl": "Florencja", "en": "Florence", "cs": "Florencie", "is": "Flórens", "de": "Florenz"}
+	},
+	"bari": {"name": "Bari", "lat": 41.12, "lon": 16.87, "pop": 315, "region": "Puglia"},
+	"catania": {"name": "Catania", "lat": 37.5, "lon": 15.09, "pop": 300, "region": "Sicilia", "exonym": {"pl": "Katania"}},
+	"verona": {"name": "Verona", "lat": 45.44, "lon": 10.99, "pop": 255, "region": "Veneto", "exonym": {"pl": "Werona"}},
+	"venezia": {
+		"name": "Venezia",
+		"lat": 45.48,
+		"lon": 12.25,
+		"pop": 250,
+		"region": "Veneto",
+		"exonym": {"pl": "Wenecja", "en": "Venice", "cs": "Benátky", "is": "Feneyjar", "de": "Venedig"}
+	},
+	"messina": {"name": "Messina", "lat": 38.19, "lon": 15.55, "pop": 220, "region": "Sicilia", "exonym": {"pl": "Mesyna"}},
+	"trieste": {
+		"name": "Trieste",
+		"lat": 45.65,
+		"lon": 13.78,
+		"pop": 200,
+		"region": "Friuli-Venezia Giulia",
+		"exonym": {"pl": "Triest", "cs": "Terst", "de": "Triest"}
+	},
+	"reggio_calabria": {"name": "Reggio Calabria", "lat": 38.11, "lon": 15.65, "pop": 170, "region": "Calabria", "short": "Reggio C."},
+	"perugia": {"name": "Perugia", "lat": 43.11, "lon": 12.39, "pop": 162, "region": "Umbria"},
+	"salerno": {"name": "Salerno", "lat": 40.68, "lon": 14.77, "pop": 127, "region": "Campania"},
+	"pescara": {"name": "Pescara", "lat": 42.46, "lon": 14.21, "pop": 118, "region": "Abruzzo"},
+	"bolzano": {
+		"name": "Bolzano",
+		"lat": 46.5,
+		"lon": 11.35,
+		"pop": 107,
+		"region": "Trentino-Alto Adige",
+		"exonym": {"de": "Bozen"}
+	},
+	"ancona": {"name": "Ancona", "lat": 43.59, "lon": 13.49, "pop": 99, "region": "Marche", "exonym": {"pl": "Ankona"}},
+	"lecce": {"name": "Lecce", "lat": 40.35, "lon": 18.17, "pop": 95, "region": "Puglia"},
+	"pisa": {"name": "Pisa", "lat": 43.72, "lon": 10.4, "pop": 89, "region": "Toscana", "exonym": {"pl": "Piza"}},
+	"cosenza": {"name": "Cosenza", "lat": 39.3, "lon": 16.25, "pop": 64, "region": "Calabria"}
+}
