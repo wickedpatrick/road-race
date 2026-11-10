@@ -467,5 +467,53 @@
 	"legend_playable": {"pl": "W grze", "en": "In the game", "cs": "Ve hře", "is": "Í leiknum", "de": "Im Spiel"},
 	"legend_soon": {"pl": "Wkrótce", "en": "Coming soon", "cs": "Brzy", "is": "Kemur bráðum", "de": "Bald"},
 	"soon_tag": {"pl": "wkrótce!", "en": "coming soon!", "cs": "brzy!", "is": "kemur bráðum!", "de": "bald!"},
-	"change_country": {"pl": "Zmień kraj", "en": "Change country", "cs": "Změnit zemi", "is": "Skipta um land", "de": "Land wechseln"}
+	"change_country": {"pl": "Zmień kraj", "en": "Change country", "cs": "Změnit zemi", "is": "Skipta um land", "de": "Land wechseln"},
+	"ranking_btn": {"pl": "Ranking", "en": "Ranking", "cs": "Žebříček", "is": "Stigatafla", "de": "Rangliste"},
+	"rankings": {"pl": "Rankingi", "en": "Rankings", "cs": "Žebříčky", "is": "Stigatöflur", "de": "Ranglisten"},
+	"ranking_road": {
+		"pl": "Ranking odcinka",
+		"en": "Road ranking",
+		"cs": "Žebříček úseku",
+		"is": "Stigatafla leiðar",
+		"de": "Streckenrangliste"
+	},
+	"ranking_country": {
+		"pl": "Najszybszy kierowca: %s",
+		"en": "Fastest driver: %s",
+		"cs": "Nejrychlejší řidič: %s",
+		"is": "Hraðasti ökumaðurinn: %s",
+		"de": "Schnellster Fahrer: %s"
+	},
+	"ranking_you": {"pl": "Ty", "en": "You", "cs": "Ty", "is": "Þú", "de": "Du"},
+	"ranking_roads": {
+		"pl": "%d/%d odcinków",
+		"en": "%d/%d roads",
+		"cs": "%d/%d úseků",
+		"is": "%d/%d leiðir",
+		"de": "%d/%d Strecken"
+	},
+	"ranking_row": {
+		"pl": "%s · %d. miejsce · najlepszy %s",
+		"en": "%s · place %d · best %s",
+		"cs": "%s · %d. místo · nejlepší %s",
+		"is": "%s · %d. sæti · besti %s",
+		"de": "%s · Platz %d · Bestzeit %s"
+	},
+	"ranking_no_time": {
+		"pl": "Jeszcze nie masz czasu na tym odcinku: wygraj trasę, która nim prowadzi",
+		"en": "No time of yours on this road yet: win a trip that takes it",
+		"cs": "Na tomto úseku ještě nemáš čas: vyhraj cestu, která po něm vede",
+		"is": "Þú átt engan tíma á þessari leið enn: kláraðu ferð sem fer hana",
+		"de": "Noch keine Zeit von dir auf dieser Strecke: gewinne eine Fahrt, die über sie führt"
+	},
+	"ranking_road_btn": {"pl": "Odcinek", "en": "Road", "cs": "Úsek", "is": "Leið", "de": "Strecke"},
+	"ranking_country_btn": {"pl": "Kraj", "en": "Country", "cs": "Země", "is": "Land", "de": "Land"},
+	"ranking_hint": {
+		"pl": "Strzałki: odcinek      C: kraj      Esc: wstecz",
+		"en": "Arrows: road      C: country      Esc: back",
+		"cs": "Šipky: úsek      C: země      Esc: zpět",
+		"is": "Örvar: leið      C: land      Esc: til baka",
+		"de": "Pfeile: Strecke      C: Land      Esc: zurück"
+	},
+	"hint_ranking": {"pl": "      R: ranking", "en": "      R: ranking", "cs": "      R: žebříček", "is": "      R: stigatafla", "de": "      R: Rangliste"}
 }

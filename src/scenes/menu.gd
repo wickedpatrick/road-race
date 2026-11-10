@@ -27,6 +27,7 @@ const CAR_GAP := 8.0 ## pixels between the car cards
 const LANG_BTN := Rect2(736, 124, 196, 36) ## car step: the game's language (L key)
 const ALBUM_CAR_BTN := Rect2(28, 124, 196, 36) ## the postcard album (P key): on the car step
 const ALBUM_MAP_BTN := Rect2(796, 14, 148, 40) ## and on the map steps
+const RANKING_BTN := Rect2(764, 440, 168, 36) ## destination step: the rankings of the trip's roads (R key)
 var loading := false ## start chosen: the "get ready" card is shown while the race scene loads
 var t := 0.0
 
@@ -124,6 +125,9 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.keycode == KEY_P and (kind() == "car" or kind() == "dest"):
 		_open_album()
 		return
+	if kind() == "dest" and event.keycode == KEY_R:
+		_open_ranking()
+		return
 	if kind() == "car" and event.keycode == KEY_L:
 		_next_language()
 		return
@@ -173,6 +177,18 @@ func _open_album() -> void:
 	Session.album_back_to_map = _on_map()
 	get_tree().change_scene_to_file("res://src/scenes/album.tscn")
 
+## The ranking tables (src/scenes/ranking.gd): the roads of the trip picked, or every road from the start city.
+func _open_ranking() -> void:
+	Sfx.play("blip", -15.0)
+	_keep_picks()
+	var keys := []
+	if not legs.is_empty():
+		keys = legs.map(func(l): return Rankings.key(l.from, l.to))
+	else:
+		keys = Route.neighbours(start_city).map(func(id): return Rankings.key(start_city, id))
+	Session.ranking_view = {"keys": keys, "i": 0, "country": false, "back": "menu"}
+	get_tree().change_scene_to_file("res://src/scenes/ranking.tscn")
+
 func _next_language() -> void:
 	Sfx.play("blip", -15.0)
 	var langs := GameData.LANGUAGES
@@ -203,6 +219,9 @@ func _tap(p: Vector2) -> bool:
 		return true
 	if (kind() == "car" or kind() == "dest") and _album_btn().has_point(p):
 		_open_album()
+		return true
+	if kind() == "dest" and RANKING_BTN.has_point(p):
+		_open_ranking()
 		return true
 	if Screen.touch:
 		if NEXT_BTN.has_point(p):
@@ -322,6 +341,8 @@ func _draw() -> void:
 		Ui.button(self, font, LANG_BTN, Lang.t("lang_btn") % Lang.NAMES[GameData.language], false, 16)
 	if kind() == "car" or kind() == "dest":
 		Ui.button(self, font, _album_btn(), Lang.t("album_btn"), false, 16)
+	if kind() == "dest":
+		Ui.button(self, font, RANKING_BTN, Lang.t("ranking_btn"), false, 16)
 	if Screen.touch:
 		if step > 0:
 			Ui.button(self, font, BACK_BTN, Lang.t("back"), false, 20)
@@ -333,6 +354,8 @@ func _draw() -> void:
 		hint = Lang.t("hint_car")
 	if kind() == "car" or kind() == "dest":
 		hint += Lang.t("hint_album")
+	if kind() == "dest":
+		hint += Lang.t("hint_ranking")
 	if step > 0:
 		hint += Lang.t("hint_back")
 	hint += Lang.t("hint_sound")

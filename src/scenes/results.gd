@@ -13,10 +13,17 @@ const POSTMARK_TIME := 0.25
 const STAMPS_AT := 2.6 ## the first new stamp (0.6 s on a postcard collected before)
 const STAMPS_AT_OLD := 0.6
 const STAMP_EVERY := 0.3
+## a won trip's road rankings, right of the postcard: each road's time, place and the best time; the button (or R)
+## opens the ranking tables (src/scenes/ranking.gd)
+const RANK_PANEL := Rect2(668, 112, 282, 228)
+const RANK_BTN := Rect2(700, 296, 218, 38)
+const RANK_ROWS := 3
 
 func _ready() -> void:
 	font = ThemeDB.fallback_font
 	r = Session.last_result
+	if r.get("seen", false): # back from the ranking: no animation again
+		age = 99.0
 
 ## How far the stamps are struck: the stamps the postcard had, plus the new ones as they drop in (fractions).
 func _struck(pc: Dictionary) -> float:
@@ -81,7 +88,41 @@ func _draw() -> void:
 		if n >= Geo.cities().size():
 			text = Lang.t("all_cities") % n
 		_banner(banner_y, ys.banner_h, text, Color(0.75, 0.55, 0.05, 0.9))
+	_draw_rankings()
 	draw_string(font, Vector2(0, 530), Lang.t("back_touch") if Screen.touch else Lang.t("back_key"), HORIZONTAL_ALIGNMENT_CENTER, 960, 22 if pc.is_empty() else 18, Color.WHITE)
+
+func _ranking_rows() -> Array:
+	return r.get("rankings", []) if r.get("state", "") == "won" else []
+
+func _draw_rankings() -> void:
+	var rows := _ranking_rows()
+	if rows.is_empty():
+		return
+	var bg := StyleBoxFlat.new()
+	bg.bg_color = Color(0.06, 0.09, 0.13, 0.82)
+	bg.set_corner_radius_all(12)
+	draw_style_box(bg, RANK_PANEL)
+	var x := RANK_PANEL.position.x + 12
+	var w := RANK_PANEL.size.x - 24
+	var head := Lang.t("rankings") + ("  (+%d)" % (rows.size() - RANK_ROWS) if rows.size() > RANK_ROWS else "")
+	draw_string(font, Vector2(x, RANK_PANEL.position.y + 26), head, HORIZONTAL_ALIGNMENT_LEFT, w, 20, Color("ffd24a"))
+	for i in mini(rows.size(), RANK_ROWS):
+		var row: Dictionary = rows[i]
+		var y := RANK_PANEL.position.y + 54 + i * 52
+		draw_string(font, Vector2(x, y), "%s - %s" % [Geo.display_name(row.from), Geo.display_name(row.to)], HORIZONTAL_ALIGNMENT_LEFT, w, 16, Color.WHITE)
+		var best: float = minf(row.top, row.best)
+		var line := Lang.t("ranking_row") % [Rankings.time_text(row.t), row.pos, Rankings.time_text(best)]
+		var fs := 15
+		while fs > 11 and font.get_string_size(line, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x > w:
+			fs -= 1
+		draw_string(font, Vector2(x, y + 20), line, HORIZONTAL_ALIGNMENT_LEFT, w, fs, Color("7fe0a0") if row.new_best else Color("c8d6e3"))
+	Ui.button(self, font, RANK_BTN, Lang.t("ranking_btn") + ("" if Screen.touch else " (R)"), false, 17)
+
+## The ranking tables of the roads just driven; they come back here.
+func _open_ranking() -> void:
+	Sfx.play("blip", -15.0)
+	Session.ranking_view = {"keys": _ranking_rows().map(func(x): return x.key), "i": 0, "country": false, "back": "results"}
+	get_tree().change_scene_to_file("res://src/scenes/ranking.tscn")
 
 func _banner(y: float, h: float, text: String, col: Color) -> void:
 	draw_rect(Rect2(150, y, 660, h), col)
@@ -105,6 +146,11 @@ func _unhandled_input(event: InputEvent) -> void:
 	var pressed := (event is InputEventKey or event is InputEventMouseButton) and event.is_pressed() and not event.is_echo()
 	if not pressed or age < 0.8:
 		return # ignore keys right after the race (the child may still be mashing the brake)
+	if not _ranking_rows().is_empty():
+		var tp = Ui.tap(event)
+		if (tp != null and RANK_BTN.has_point(tp)) or (event is InputEventKey and event.keycode == KEY_R):
+			_open_ranking()
+			return
 	# back to the map; after arriving, the destination is preselected as the new start
 	if r.get("state", "") == "won":
 		Session.from_city = Session.to_city
