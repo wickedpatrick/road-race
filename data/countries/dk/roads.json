@@ -1,0 +1,177 @@
+[
+	{
+		"a": "kobenhavn",
+		"b": "helsingor",
+		"km": 46,
+		"road": "E47",
+		"towns": [["Kongens Lyngby", 13], ["Hørsholm", 29]],
+		"zones": [[14, "fields", "Storkøbenhavn"], [36, "forest", "Nordsjælland"], [46, "coast", "Øresund"]],
+		"via": [[13, 12.5, 55.77], [29, 12.5, 55.88]]
+	},
+	{
+		"a": "kobenhavn",
+		"b": "roskilde",
+		"km": 32,
+		"road": [[32, "21", 3]],
+		"towns": [["Taastrup", 17], ["Hedehusene", 23]],
+		"zones": [[18, "fields", "Københavns Vestegn"], [32, "fields", "Hedeland"]],
+		"via": [[17, 12.3, 55.65], [23, 12.2, 55.65]]
+	},
+	{
+		"a": "kobenhavn",
+		"b": "koge",
+		"km": 40,
+		"road": "E20",
+		"towns": [["Ishøj", 19], ["Solrød Strand", 31]],
+		"zones": [[20, "fields", "Københavns Vestegn"], [40, "coast", "Køge Bugt"]],
+		"via": [[8, 12.48, 55.64], [19, 12.35, 55.615], [31, 12.22, 55.535]]
+	},
+	{
+		"a": "helsingor",
+		"b": "roskilde",
+		"km": 60,
+		"road": "6",
+		"towns": [["Hillerød", 24]],
+		"zones": [[30, "forest", "Nordsjælland"], [50, "fields", "Nordsjælland"], [60, "fields", "Roskilde Fjord"]],
+		"via": [[24, 12.3, 55.93]]
+	},
+	{"a": "roskilde", "b": "koge", "km": 25, "road": "6", "towns": [], "zones": [[25, "fields", "Midtsjælland"]]},
+	{
+		"a": "koge",
+		"b": "odense",
+		"km": 125,
+		"road": "E20",
+		"towns": [["Ringsted", 27], ["Sorø", 42]],
+		"zones": [
+			[34, "fields", "Midtsjælland"], [48, "lakes", "Sorø Sø"], [72, "fields", "Vestsjælland"],
+			[91, "coast", "Storebælt"], [125, "fields", "Fyn"]
+		],
+		"via": [
+			[27, 11.79, 55.43], [42, 11.56, 55.41], [56, 11.35, 55.39], [74, 11.1, 55.345], [81, 10.97, 55.33],
+			[90, 10.85, 55.3], [95, 10.77, 55.31]
+		],
+		"bridge": {
+			"from_km": 74,
+			"to_km": 80.8,
+			"name": {
+				"pl": "Most nad Wielkim Bełtem",
+				"en": "Great Belt Bridge",
+				"cs": "Most přes Velký Belt",
+				"is": "Stórabeltisbrúin",
+				"de": "Brücke über den Großen Belt"
+			}
+		}
+	},
+	{
+		"a": "koge",
+		"b": "ronne",
+		"km": 170,
+		"road": "",
+		"towns": [],
+		"zones": [[1, "coast", "Køge Bugt"], [169, "coast", "Østersøen"], [170, "coast", "Bornholm"]],
+		"via": [[1, 12.2, 55.455], [30, 12.55, 55.3], [56, 12.95, 55.25], [169, 14.68, 55.1]],
+		"ferry": {
+			"from_km": 1,
+			"to_km": 169,
+			"name": "Køge – Rønne",
+			"fact": {
+				"pl": "Prom płynie przez Bałtyk na Bornholm około pięciu i pół godziny, często nocą",
+				"en": "The ferry crosses the Baltic to Bornholm in about five and a half hours, often overnight",
+				"cs": "Trajekt pluje přes Baltské moře na Bornholm asi pět a půl hodiny, často přes noc",
+				"is": "Ferjan siglir yfir Eystrasalt til Borgundarhólms á um fimm og hálfri klukkustund, oft að nóttu",
+				"de": "Die Fähre fährt in etwa fünfeinhalb Stunden über die Ostsee nach Bornholm, oft über Nacht"
+			}
+		}
+	},
+	{
+		"a": "odense",
+		"b": "kolding",
+		"km": 73,
+		"road": "E20",
+		"towns": [],
+		"zones": [[44, "fields", "Fyn"], [56, "coast", "Lillebælt"], [73, "fields", "Trekantområdet"]],
+		"via": [[20, 10.12, 55.43], [44, 9.82, 55.5], [50, 9.76, 55.515], [52, 9.73, 55.52], [60, 9.65, 55.52]],
+		"bridge": {
+			"from_km": 50,
+			"to_km": 51.7,
+			"name": {
+				"pl": "Nowy Most nad Małym Bełtem",
+				"en": "New Little Belt Bridge",
+				"cs": "Nový most přes Malý Belt",
+				"is": "Nýja Litlabeltisbrúin",
+				"de": "Neue Brücke über den Kleinen Belt"
+			}
+		}
+	},
+	{
+		"a": "esbjerg",
+		"b": "kolding",
+		"km": 72,
+		"road": "E20",
+		"towns": [["Holsted", 32], ["Vejen", 46]],
+		"zones": [[10, "coast", "Vadehavet"], [72, "fields", "Sydvestjylland"]],
+		"via": [[32, 8.92, 55.5], [46, 9.15, 55.47]]
+	},
+	{
+		"a": "kolding",
+		"b": "vejle",
+		"km": 30,
+		"road": "E45",
+		"towns": [],
+		"zones": [[22, "fields", "Trekantområdet"], [30, "coast", "Vejle Fjord"]],
+		"via": [[12, 9.5, 55.58]]
+	},
+	{
+		"a": "vejle",
+		"b": "aarhus",
+		"km": 72,
+		"road": "E45",
+		"towns": [["Horsens", 27], ["Skanderborg", 50]],
+		"zones": [[22, "fields", "Østjylland"], [60, "lakes", "Søhøjlandet"], [72, "fields", "Østjylland"]],
+		"via": [[27, 9.83, 55.87], [50, 9.93, 56.04]]
+	},
+	{
+		"a": "aarhus",
+		"b": "randers",
+		"km": 38,
+		"road": "E45",
+		"towns": [["Hadsten", 22]],
+		"zones": [[38, "fields", "Østjylland"]],
+		"via": [[22, 10.05, 56.33]]
+	},
+	{
+		"a": "randers",
+		"b": "aalborg",
+		"km": 82,
+		"road": "E45",
+		"towns": [["Hobro", 28], ["Støvring", 59]],
+		"zones": [[28, "fields", "Kronjylland"], [52, "forest", "Rold Skov"], [82, "fields", "Himmerland"]],
+		"via": [[28, 9.79, 56.64], [45, 9.83, 56.79], [59, 9.84, 56.89]]
+	},
+	{
+		"a": "aalborg",
+		"b": "skagen",
+		"km": 105,
+		"road": [[65, "E45"], [105, "40"]],
+		"towns": [["Frederikshavn", 65], ["Ålbæk", 86]],
+		"zones": [
+			[6, "coast", "Limfjorden"], [55, "fields", "Vendsyssel"], [72, "coast", "Kattegat"],
+			[96, "forest", "Bunken Klitplantage"], [105, "coast", "Skagen Odde"]
+		],
+		"via": [[4, 9.95, 57.07], [65, 10.53, 57.44], [86, 10.42, 57.6]],
+		"tunnels": [
+			{
+				"from_km": 3,
+				"to_km": 4,
+				"name": "Limfjordstunnelen",
+				"fact": {
+					"pl": "Tunel zatapiany pod Limfjordem, otwarty w 1969 roku, łączy Aalborg z Nørresundby",
+					"en": "An immersed tunnel under the Limfjord, opened in 1969, linking Aalborg with Nørresundby",
+					"cs": "Ponořený tunel pod Limfjordem, otevřený roku 1969, spojuje Aalborg s Nørresundby",
+					"is": "Göng undir Limafirði, opnuð árið 1969, tengja Álaborg við Nørresundby",
+					"de": "Ein Absenktunnel unter dem Limfjord, 1969 eröffnet, verbindet Aalborg mit Nørresundby"
+				}
+			}
+		]
+	}
+]

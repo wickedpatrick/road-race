@@ -1,0 +1,373 @@
+{
+	"Stockholm": {
+		"pl": "Stolica Szwecji, położona na 14 wyspach tam, gdzie jezioro Melar spotyka się z Bałtykiem",
+		"en": "The capital of Sweden, built on 14 islands where Lake Mälaren meets the Baltic Sea",
+		"cs": "Hlavní město Švédska na 14 ostrovech v místě, kde se jezero Mälaren stýká s Baltem",
+		"is": "Höfuðborg Svíþjóðar, byggð á 14 eyjum þar sem vatnið Mälaren mætir Eystrasalti",
+		"de": "Die Hauptstadt Schwedens, auf 14 Inseln erbaut, wo der Mälarsee auf die Ostsee trifft"
+	},
+	"Göteborg": {
+		"pl": "Drugie co do wielkości miasto Szwecji i największy port krajów nordyckich, założony w 1621 roku przez króla Gustawa II Adolfa; od 1927 roku powstają tu samochody Volvo",
+		"en": "Sweden's second city and the largest port in the Nordic countries, founded in 1621 by King Gustavus Adolphus; Volvo cars have been built here since 1927",
+		"cs": "Druhé největší město Švédska a největší přístav severských zemí, založené roku 1621 králem Gustavem II. Adolfem; od roku 1927 se tu vyrábějí auta Volvo",
+		"is": "Næststærsta borg Svíþjóðar og stærsta höfn Norðurlanda, stofnuð 1621 af Gústaf 2. Adólf konungi; þar hafa Volvo-bílar verið smíðaðir síðan 1927",
+		"de": "Schwedens zweitgrößte Stadt und der größte Hafen des Nordens, 1621 von König Gustav II. Adolf gegründet; seit 1927 werden hier Volvos gebaut"
+	},
+	"Malmö": {
+		"pl": "Trzecie co do wielkości miasto Szwecji; od 2000 roku Most nad Sundem łączy je z Kopenhagą",
+		"en": "Sweden's third city; since 2000 the Øresund Bridge has linked it with Copenhagen",
+		"cs": "Třetí největší město Švédska; od roku 2000 ho Öresundský most spojuje s Kodaní",
+		"is": "Þriðja stærsta borg Svíþjóðar; síðan árið 2000 tengir Eyrarsundsbrúin hana við Kaupmannahöfn",
+		"de": "Schwedens drittgrößte Stadt; seit 2000 verbindet die Öresundbrücke sie mit Kopenhagen"
+	},
+	"Uppsala": {
+		"pl": "Najstarsze miasto uniwersyteckie Szwecji (uniwersytet z 1477 roku); wykładał tu Karol Linneusz, a tuż na północ leżą kurhany Starej Uppsali",
+		"en": "Sweden's oldest university town (the university dates from 1477); Carl Linnaeus taught here, and the royal mounds of Old Uppsala lie just north",
+		"cs": "Nejstarší univerzitní město Švédska (univerzita z roku 1477); přednášel zde Carl Linné a kousek na sever leží mohyly Staré Uppsaly",
+		"is": "Elsti háskólabær Svíþjóðar (háskólinn er frá 1477); Carl von Linné kenndi hér og rétt norðan við eru konungshaugarnir í Gömlu Uppsölum",
+		"de": "Schwedens älteste Universitätsstadt (die Universität stammt von 1477); hier lehrte Carl von Linné, und gleich nördlich liegen die Königshügel von Alt-Uppsala"
+	},
+	"Linköping": {
+		"pl": "Miasto uniwersyteckie i ośrodek szwedzkiego przemysłu lotniczego: Saab buduje tu myśliwce, m.in. Gripena",
+		"en": "A university town and the centre of Sweden's aircraft industry: Saab builds its fighter jets here, the Gripen among them",
+		"cs": "Univerzitní město a centrum švédského leteckého průmyslu: Saab tu staví stíhačky, mimo jiné Gripen",
+		"is": "Háskólabær og miðstöð sænsks flugvélaiðnaðar: Saab smíðar hér orrustuþotur, meðal annars Gripen",
+		"de": "Universitätsstadt und Zentrum der schwedischen Flugzeugindustrie: Saab baut hier Kampfjets, darunter den Gripen"
+	},
+	"Örebro": {
+		"pl": "W 1810 roku obradujący w Örebro parlament wybrał francuskiego marszałka Jeana Baptiste'a Bernadotte'a następcą tronu; jego potomkowie panują do dziś",
+		"en": "In 1810 the Riksdag meeting in Örebro chose the French marshal Jean-Baptiste Bernadotte as heir to the throne; his descendants still reign",
+		"cs": "Roku 1810 zvolil říšský sněm zasedající v Örebro následníkem trůnu francouzského maršála Jeana-Baptista Bernadotta; jeho potomci vládnou dodnes",
+		"is": "Árið 1810 kaus ríkisþingið í Örebro franska marskálkinn Jean-Baptiste Bernadotte ríkisarfa; afkomendur hans ríkja enn",
+		"de": "1810 wählte der in Örebro tagende Reichstag den französischen Marschall Jean-Baptiste Bernadotte zum Thronfolger; seine Nachkommen regieren bis heute"
+	},
+	"Västerås": {
+		"pl": "Jedno z najstarszych miast Szwecji, nad jeziorem Melar; nazwa znaczy „zachodnie ujście rzeki”, a od końca XIX wieku miasto słynie z przemysłu elektrotechnicznego (ASEA, dziś ABB)",
+		"en": "One of Sweden's oldest towns, on Lake Mälaren; its name means 'western river mouth', and since the late 19th century it has been known for electrical engineering (ASEA, now ABB)",
+		"cs": "Jedno z nejstarších měst Švédska u jezera Mälaren; jméno znamená „západní ústí řeky“ a od konce 19. století je město známé elektrotechnikou (ASEA, dnes ABB)",
+		"is": "Einn elsti bær Svíþjóðar, við vatnið Mälaren; nafnið merkir „vestri árós“ og frá lokum 19. aldar hefur bærinn verið þekktur fyrir rafiðnað (ASEA, nú ABB)",
+		"de": "Eine der ältesten Städte Schwedens am Mälarsee; der Name bedeutet „westliche Flussmündung“, seit dem späten 19. Jahrhundert ist sie für Elektrotechnik bekannt (ASEA, heute ABB)"
+	},
+	"Helsingborg": {
+		"pl": "Od duńskiego Helsingør dzielą je tylko 4 km cieśniny Sund; promy kursują przez całą dobę",
+		"en": "Only 4 km of the Øresund separate it from Helsingør in Denmark; ferries cross round the clock",
+		"cs": "Od dánského Helsingøru ho dělí jen 4 km průlivu Öresund; trajekty jezdí ve dne v noci",
+		"is": "Aðeins 4 km af Eyrarsundi skilja hana frá Helsingjaeyri í Danmörku; ferjur ganga allan sólarhringinn",
+		"de": "Nur 4 km Öresund trennen sie vom dänischen Helsingør; Fähren pendeln rund um die Uhr"
+	},
+	"Jönköping": {
+		"pl": "Leży na południowym krańcu Wetter, drugiego co do wielkości jeziora Szwecji",
+		"en": "At the southern tip of Lake Vättern, Sweden's second largest lake",
+		"cs": "Leží na jižním cípu jezera Vättern, druhého největšího ve Švédsku",
+		"is": "Stendur við suðurenda Vättern, næststærsta vatns Svíþjóðar",
+		"de": "Liegt am Südende des Vättern, des zweitgrößten Sees Schwedens"
+	},
+	"Norrköping": {
+		"pl": "Przędzalnie i tkalnie nad bystrzami rzeki Motala ström uczyniły z niego „szwedzki Manchester”; ostatnie duże fabryki zamknięto w latach 70. XX wieku",
+		"en": "Its textile mills by the rapids of the Motala ström made it 'Sweden's Manchester'; the last big mills closed in the 1970s",
+		"cs": "Textilky u peřejí řeky Motala ström z něj udělaly „švédský Manchester“; poslední velké továrny zavřely v 70. letech 20. století",
+		"is": "Vefnaðarverksmiðjurnar við flúðir Motala ström gerðu bæinn að „Manchester Svíþjóðar“; síðustu stóru verksmiðjunum var lokað á áttunda áratug 20. aldar",
+		"de": "Die Textilfabriken an den Stromschnellen des Motala ström machten es zum „schwedischen Manchester“; die letzten großen Werke schlossen in den 1970er-Jahren"
+	},
+	"Lund": {
+		"pl": "Założone około 990 roku, jedno z najstarszych miast Skandynawii; uniwersytet z 1666 roku należy do największych w krajach nordyckich",
+		"en": "Founded around 990, one of the oldest towns in Scandinavia; its university of 1666 is one of the largest in the Nordic countries",
+		"cs": "Založen kolem roku 990, jedno z nejstarších měst Skandinávie; univerzita z roku 1666 patří k největším v severských zemích",
+		"is": "Stofnaður um 990, einn elsti bær Norðurlanda; háskólinn frá 1666 er einn sá stærsti á Norðurlöndum",
+		"de": "Um 990 gegründet, eine der ältesten Städte Skandinaviens; die Universität von 1666 gehört zu den größten des Nordens"
+	},
+	"Umeå": {
+		"pl": "Największe miasto północnej Szwecji i ośrodek akademicki; w 2014 roku było Europejską Stolicą Kultury",
+		"en": "The largest town in northern Sweden and a university city; in 2014 it was a European Capital of Culture",
+		"cs": "Největší město severního Švédska a univerzitní centrum; v roce 2014 bylo Evropským hlavním městem kultury",
+		"is": "Stærsti bær Norður-Svíþjóðar og háskólabær; árið 2014 var hann menningarhöfuðborg Evrópu",
+		"de": "Die größte Stadt Nordschwedens und Universitätsstadt; 2014 war sie Kulturhauptstadt Europas"
+	},
+	"Gävle": {
+		"pl": "Najstarsze miasto Norrlandii, z prawami miejskimi od 1446 roku",
+		"en": "The oldest town in Norrland, chartered in 1446",
+		"cs": "Nejstarší město Norrlandu, městská práva získalo roku 1446",
+		"is": "Elsti kaupstaður Norrlands, fékk kaupstaðarréttindi árið 1446",
+		"de": "Die älteste Stadt Norrlands, seit 1446 mit Stadtrecht"
+	},
+	"Sundsvall": {
+		"pl": "W XIX wieku na wybrzeżu wokół Sundsvall działały dziesiątki parowych tartaków; był to jeden z największych ośrodków przemysłu drzewnego na świecie",
+		"en": "In the 19th century dozens of steam sawmills stood on the coast around Sundsvall, one of the largest timber districts in the world",
+		"cs": "V 19. století stály na pobřeží kolem Sundsvallu desítky parních pil; byla to jedna z největších dřevařských oblastí světa",
+		"is": "Á 19. öld stóðu tugir gufusögunarmyllna á ströndinni við Sundsvall, eitt stærsta timburhérað heims",
+		"de": "Im 19. Jahrhundert standen an der Küste um Sundsvall Dutzende Dampfsägewerke, eines der größten Holzreviere der Welt"
+	},
+	"Karlstad": {
+		"pl": "Leży w delcie rzeki Klarälven, uchodzącej do Wener, największego jeziora Szwecji",
+		"en": "On the delta of the Klarälven where it flows into Vänern, Sweden's largest lake",
+		"cs": "Leží v deltě řeky Klarälven při jejím ústí do Vänernu, největšího jezera Švédska",
+		"is": "Stendur á óshólmum Klarälven þar sem áin rennur í Vänern, stærsta vatn Svíþjóðar",
+		"de": "Liegt im Delta des Klarälven, wo er in den Vänern mündet, den größten See Schwedens"
+	},
+	"Luleå": {
+		"pl": "Port i miasto hutnicze u ujścia rzeki Lule; zimą na zamarzniętym morzu wytycza się drogi na wyspy",
+		"en": "A port and steel town at the mouth of the Lule River; in winter roads are ploughed across the frozen sea to the islands",
+		"cs": "Přístav a ocelářské město u ústí řeky Lule; v zimě se po zamrzlém moři vytyčují silnice na ostrovy",
+		"is": "Hafnar- og stálbær við ósa Luleälven; á veturna eru ruddir vegir yfir ísilagt hafið út í eyjarnar",
+		"de": "Hafen- und Stahlstadt an der Mündung des Lule älv; im Winter werden über das zugefrorene Meer Straßen zu den Inseln geräumt"
+	},
+	"Kalmar": {
+		"pl": "Leży naprzeciw Olandii, po drugiej stronie cieśniny Kalmarsund; łączy je ponad sześciokilometrowy most otwarty w 1972 roku",
+		"en": "It faces the island of Öland across the Kalmarsund; a bridge over six kilometres long, opened in 1972, links them",
+		"cs": "Leží naproti ostrovu Öland přes průliv Kalmarsund; spojuje je přes šest kilometrů dlouhý most otevřený roku 1972",
+		"is": "Stendur gegnt eyjunni Öland handan Kalmarsunds; meira en sex kílómetra löng brú, opnuð 1972, tengir þau",
+		"de": "Liegt gegenüber der Insel Öland am Kalmarsund; eine über sechs Kilometer lange Brücke, 1972 eröffnet, verbindet beide"
+	},
+	"Östersund": {
+		"pl": "Jedyne miasto Jämtlandii, nad jeziorem Storsjön; z wyspy Frösön widać góry na zachodzie",
+		"en": "The only town in Jämtland, on the shore of Storsjön; from the island of Frösön you can see the mountains to the west",
+		"cs": "Jediné město Jämtlandu, na břehu jezera Storsjön; z ostrova Frösön je vidět hory na západě",
+		"is": "Eini bærinn í Jämtlandi, við vatnið Storsjön; frá eyjunni Frösön sjást fjöllin í vestri",
+		"de": "Die einzige Stadt Jämtlands, am Ufer des Storsjön; von der Insel Frösön sieht man die Berge im Westen"
+	},
+	"Visby": {
+		"pl": "Główne miasto Gotlandii, największej wyspy Szwecji; w średniowieczu bogaty port hanzeatycki",
+		"en": "The main town of Gotland, Sweden's largest island; in the Middle Ages a rich Hanseatic port",
+		"cs": "Hlavní město Gotlandu, největšího švédského ostrova; ve středověku bohatý hanzovní přístav",
+		"is": "Höfuðstaður Gotlands, stærstu eyjar Svíþjóðar; á miðöldum auðug Hansahöfn",
+		"de": "Hauptort Gotlands, der größten Insel Schwedens; im Mittelalter ein reicher Hansehafen"
+	},
+	"Kiruna": {
+		"pl": "Najdalej na północ położone miasto Szwecji, wyrosłe przy największej podziemnej kopalni rudy żelaza na świecie; ponieważ kopalnia podkopuje miasto, jego centrum przenosi się o 3 km na wschód",
+		"en": "Sweden's northernmost town, grown up by the world's largest underground iron ore mine; as the mine undermines the town, its centre is moving 3 km east",
+		"cs": "Nejsevernější město Švédska, které vyrostlo u největšího podzemního dolu na železnou rudu na světě; protože důl město podkopává, jeho centrum se stěhuje o 3 km na východ",
+		"is": "Nyrsti bær Svíþjóðar, sem óx upp við stærstu neðanjarðarnámu járngrýtis í heiminum; þar sem náman grefur undan bænum er miðbærinn fluttur 3 km til austurs",
+		"de": "Die nördlichste Stadt Schwedens, gewachsen am größten unterirdischen Eisenerzbergwerk der Welt; weil die Grube die Stadt untergräbt, wird ihr Zentrum 3 km nach Osten verlegt"
+	},
+	"Södertälje": {
+		"pl": "Siedziba producenta ciężarówek Scania, który działa tu od 1911 roku",
+		"en": "Home of the truck maker Scania, based here since 1911",
+		"cs": "Sídlo výrobce nákladních aut Scania, který tu působí od roku 1911",
+		"is": "Hér eru höfuðstöðvar vörubílaframleiðandans Scania, allt frá 1911",
+		"de": "Sitz des Lkw-Herstellers Scania, der seit 1911 hier ansässig ist"
+	},
+	"Nyköping": {
+		"pl": "W zamku w Nyköping król Birger kazał w 1317 roku uwięzić podczas uczty swoich dwóch braci; wydarzenie to nazywa się „Ucztą w Nyköping”",
+		"en": "At Nyköping Castle in 1317 King Birger had his two brothers seized during a feast, remembered as the 'Nyköping Banquet'",
+		"cs": "Na hradě v Nyköpingu dal roku 1317 král Birger během hostiny zajmout své dva bratry; událost se nazývá „nyköpingská hostina“",
+		"is": "Í kastalanum í Nyköping lét Birgir konungur handtaka tvo bræður sína í veislu árið 1317; atburðurinn kallast „Nyköpingsveislan“",
+		"de": "Auf der Burg Nyköping ließ König Birger 1317 bei einem Gelage seine beiden Brüder gefangen nehmen, bekannt als das „Nyköpinger Gastmahl“"
+	},
+	"Gränna": {
+		"pl": "Słynie z polkagris, biało-czerwonych miętowych lasek cukrowych, które w 1859 roku zaczęła tu wyrabiać Amalia Eriksson",
+		"en": "Famous for polkagris, red and white peppermint candy sticks first made here by Amalia Eriksson in 1859",
+		"cs": "Proslulá polkagrisem, bílo-červenými mátovými cukrovými tyčinkami, které tu roku 1859 začala vyrábět Amalia Erikssonová",
+		"is": "Þekkt fyrir polkagris, rauða og hvíta piparmyntustafi sem Amalia Eriksson byrjaði að búa til hér árið 1859",
+		"de": "Berühmt für Polkagris, rot-weiße Pfefferminzstangen, die Amalia Eriksson hier 1859 erstmals herstellte"
+	},
+	"Trollhättan": {
+		"pl": "Wodospady na rzece Göta älv omija tu kaskada śluz Kanału Trollhätte, otwartego w 1800 roku",
+		"en": "A staircase of locks of the Trollhätte Canal, opened in 1800, takes ships round the falls of the Göta älv here",
+		"cs": "Vodopády na řece Göta älv tu obchází kaskáda zdymadel Trollhättanského kanálu otevřeného roku 1800",
+		"is": "Hér fara skip fram hjá fossunum í Göta älv um skipastiga Trollhätte-skurðarins, sem opnaður var árið 1800",
+		"de": "Die Wasserfälle des Göta älv umgeht hier die Schleusentreppe des 1800 eröffneten Trollhätte-Kanals"
+	},
+	"Åmål": {
+		"pl": "Jedyne miasto Dalslandii, nad jeziorem Wener",
+		"en": "The only town in Dalsland, on the shore of Vänern",
+		"cs": "Jediné město Dalslandu, na břehu Vänernu",
+		"is": "Eini bærinn í Dalslandi, við Vänern",
+		"de": "Die einzige Stadt Dalslands, am Ufer des Vänern"
+	},
+	"Kristinehamn": {
+		"pl": "Na brzegu Wener stoi 15-metrowa betonowa rzeźba wykonana w 1965 roku według projektu Picassa",
+		"en": "On the shore of Vänern stands a 15-metre concrete sculpture made in 1965 from a design by Picasso",
+		"cs": "Na břehu Vänernu stojí patnáctimetrová betonová socha vytvořená roku 1965 podle návrhu Picassa",
+		"is": "Á strönd Vänern stendur 15 metra há höggmynd úr steinsteypu, gerð árið 1965 eftir teikningu Picassos",
+		"de": "Am Ufer des Vänern steht eine 15 Meter hohe Betonskulptur, 1965 nach einem Entwurf Picassos gefertigt"
+	},
+	"Karlskoga": {
+		"pl": "Alfred Nobel, właściciel zakładów zbrojeniowych Bofors, w ostatnich latach życia spędzał tu lato w dworze Björkborn",
+		"en": "Alfred Nobel, owner of the Bofors arms works, spent the summers of his last years at the Björkborn manor here",
+		"cs": "Alfred Nobel, majitel zbrojovky Bofors, tu v posledních letech života trávil léta na statku Björkborn",
+		"is": "Alfred Nobel, eigandi vopnaverksmiðjunnar Bofors, dvaldi hér á sumrin síðustu æviárin, á herragarðinum Björkborn",
+		"de": "Alfred Nobel, Eigentümer des Rüstungswerks Bofors, verbrachte in seinen letzten Lebensjahren die Sommer hier auf Gut Björkborn"
+	},
+	"Arboga": {
+		"pl": "Zgromadzenie w Arbodze w 1435 roku uważa się często za pierwszy szwedzki parlament",
+		"en": "A meeting at Arboga in 1435 is often counted as Sweden's first Riksdag",
+		"cs": "Shromáždění v Arboze roku 1435 se často považuje za první švédský říšský sněm",
+		"is": "Fundurinn í Arboga árið 1435 er oft talinn fyrsta ríkisþing Svíþjóðar",
+		"de": "Die Versammlung von Arboga 1435 gilt oft als erster schwedischer Reichstag"
+	},
+	"Skara": {
+		"pl": "Jedno z najstarszych miast Szwecji, siedziba biskupa od XI wieku",
+		"en": "One of Sweden's oldest towns, a bishop's see since the 11th century",
+		"cs": "Jedno z nejstarších měst Švédska, sídlo biskupa od 11. století",
+		"is": "Einn elsti bær Svíþjóðar, biskupssetur frá 11. öld",
+		"de": "Eine der ältesten Städte Schwedens, Bischofssitz seit dem 11. Jahrhundert"
+	},
+	"Alingsås": {
+		"pl": "W latach 20. XVIII wieku Jonas Alströmer założył tu manufaktury włókiennicze; przypisuje mu się też upowszechnienie uprawy ziemniaków w Szwecji",
+		"en": "In the 1720s Jonas Alströmer founded textile mills here; he is also credited with spreading potato growing in Sweden",
+		"cs": "Ve 20. letech 18. století zde Jonas Alströmer založil textilní manufaktury; připisuje se mu i rozšíření pěstování brambor ve Švédsku",
+		"is": "Á þriðja áratug 18. aldar stofnaði Jonas Alströmer hér vefnaðarverksmiðjur; honum er líka eignað að hafa breitt út kartöflurækt í Svíþjóð",
+		"de": "In den 1720er-Jahren gründete Jonas Alströmer hier Textilmanufakturen; ihm wird auch zugeschrieben, den Kartoffelanbau in Schweden verbreitet zu haben"
+	},
+	"Borås": {
+		"pl": "Ośrodek szwedzkiego przemysłu włókienniczego; mieści się tu Szwedzkie Muzeum Tekstyliów",
+		"en": "A centre of Sweden's textile industry; the Textile Museum of Sweden is here",
+		"cs": "Centrum švédského textilního průmyslu; sídlí zde Švédské textilní muzeum",
+		"is": "Miðstöð sænsks vefnaðariðnaðar; hér er Textílsafn Svíþjóðar",
+		"de": "Ein Zentrum der schwedischen Textilindustrie; hier ist das Textilmuseum Schwedens"
+	},
+	"Varberg": {
+		"pl": "W nadmorskiej twierdzy, budowanej od XIII wieku, można zobaczyć Człowieka z Bocksten – średniowieczne ciało znalezione w torfowisku",
+		"en": "Its fortress by the sea, begun in the 13th century, shows the Bocksten Man, a medieval body found in a bog",
+		"cs": "V přímořské pevnosti budované od 13. století je k vidění muž z Bockstenu – středověké tělo nalezené v rašeliništi",
+		"is": "Í virkinu við sjóinn, sem reist var frá 13. öld, má sjá Bocksten-manninn, lík frá miðöldum sem fannst í mýri",
+		"de": "In der Festung am Meer, ab dem 13. Jahrhundert erbaut, ist der Bockstenmann zu sehen, eine mittelalterliche Moorleiche"
+	},
+	"Halmstad": {
+		"pl": "Nadmorskie miasto u ujścia rzeki Nissan, z długimi piaszczystymi plażami, jak Tylösand",
+		"en": "A seaside town at the mouth of the Nissan, with long sandy beaches such as Tylösand",
+		"cs": "Přímořské město u ústí řeky Nissan s dlouhými písečnými plážemi, například Tylösand",
+		"is": "Strandbær við ósa árinnar Nissan, með löngum sandströndum eins og Tylösand",
+		"de": "Eine Küstenstadt an der Mündung der Nissan mit langen Sandstränden wie Tylösand"
+	},
+	"Landskrona": {
+		"pl": "Jej XVI-wieczna cytadela otoczona fosami należy do najlepiej zachowanych w Europie",
+		"en": "Its 16th-century citadel, ringed by moats, is one of the best preserved in Europe",
+		"cs": "Její citadela z 16. století obklopená vodními příkopy patří k nejzachovalejším v Evropě",
+		"is": "Kastalavirki bæjarins frá 16. öld, umlukið síkjum, er eitt hið best varðveitta í Evrópu",
+		"de": "Ihre von Wassergräben umgebene Zitadelle aus dem 16. Jahrhundert gehört zu den besterhaltenen Europas"
+	},
+	"Karlskrona": {
+		"pl": "Baza marynarki wojennej założona w 1680 roku i nadal główny port szwedzkiej floty; obiekt UNESCO",
+		"en": "A naval base founded in 1680, still the main port of the Swedish navy; a UNESCO World Heritage Site",
+		"cs": "Námořní základna založená roku 1680, dodnes hlavní přístav švédského loďstva; památka UNESCO",
+		"is": "Flotastöð stofnuð 1680, enn aðalhöfn sænska sjóhersins; á heimsminjaskrá UNESCO",
+		"de": "Ein 1680 gegründeter Flottenstützpunkt, bis heute der wichtigste Hafen der schwedischen Marine; UNESCO-Welterbe"
+	},
+	"Karlshamn": {
+		"pl": "W porcie stoi pomnik emigrantów – Karla Oskara i Kristiny z powieści Vilhelma Moberga",
+		"en": "By the harbour stands the Emigrant Monument: Karl Oskar and Kristina from Vilhelm Moberg's novels",
+		"cs": "V přístavu stojí pomník vystěhovalců – Karl Oskar a Kristina z románů Vilhelma Moberga",
+		"is": "Við höfnina stendur minnismerki um vesturfara: Karl Oskar og Kristina úr skáldsögum Vilhelms Moberg",
+		"de": "Am Hafen steht das Auswandererdenkmal: Karl Oskar und Kristina aus den Romanen von Vilhelm Moberg"
+	},
+	"Kristianstad": {
+		"pl": "Założony w 1614 roku przez duńskiego króla Chrystiana IV jako miasto-twierdza; Skania należała do Danii do 1658 roku",
+		"en": "Founded in 1614 by the Danish king Christian IV as a fortress town; Skåne was Danish until 1658",
+		"cs": "Založen roku 1614 dánským králem Kristiánem IV. jako pevnostní město; Skåne patřilo Dánsku do roku 1658",
+		"is": "Stofnaður 1614 af Kristjáni 4. Danakonungi sem virkisbær; Skánn var danskur til 1658",
+		"de": "1614 vom dänischen König Christian IV. als Festungsstadt gegründet; Schonen war bis 1658 dänisch"
+	},
+	"Oskarshamn": {
+		"pl": "Stąd odpływają promy do Visby na Gotlandii",
+		"en": "Ferries leave here for Visby on Gotland",
+		"cs": "Odtud plují trajekty do Visby na Gotlandu",
+		"is": "Héðan fara ferjur til Visby á Gotlandi",
+		"de": "Von hier fahren Fähren nach Visby auf Gotland"
+	},
+	"Västervik": {
+		"pl": "Nadmorskie miasto na skraju archipelagu Tjust, liczącego tysiące wysp",
+		"en": "A coastal town at the edge of the Tjust archipelago with its thousands of islands",
+		"cs": "Přímořské město na okraji souostroví Tjust s tisíci ostrovů",
+		"is": "Strandbær við jaðar skerjagarðsins Tjust með þúsundum eyja",
+		"de": "Küstenstadt am Rand der Tjust-Schären mit ihren Tausenden Inseln"
+	},
+	"Söderköping": {
+		"pl": "Średniowieczne miasteczko kupieckie, przez które przepływa Kanał Gotyjski tuż przed ujściem do Bałtyku",
+		"en": "A medieval trading town through which the Göta Canal runs just before it reaches the Baltic Sea",
+		"cs": "Středověké kupecké městečko, kterým vede Götský kanál těsně před ústím do Baltu",
+		"is": "Verslunarbær frá miðöldum sem Göta-skurðurinn liggur um rétt áður en hann nær Eystrasalti",
+		"de": "Ein mittelalterliches Handelsstädtchen, durch das der Göta-Kanal kurz vor der Ostsee führt"
+	},
+	"Växjö": {
+		"pl": "Dom Emigrantów opowiada o ponad milionie Szwedów, którzy w XIX i XX wieku wyjechali do Ameryki",
+		"en": "The House of Emigrants tells of the more than a million Swedes who left for America in the 19th and 20th centuries",
+		"cs": "Dům vystěhovalců vypráví o více než milionu Švédů, kteří v 19. a 20. století odešli do Ameriky",
+		"is": "Vesturfarasafnið segir frá meira en milljón Svíum sem fluttu til Ameríku á 19. og 20. öld",
+		"de": "Das Haus der Auswanderer erzählt von über einer Million Schweden, die im 19. und 20. Jahrhundert nach Amerika gingen"
+	},
+	"Nybro": {
+		"pl": "W sercu Królestwa Kryształu, krainy hut szkła w Smalandii",
+		"en": "In the heart of the Kingdom of Crystal, the glassworks country of Småland",
+		"cs": "V srdci Království křišťálu, kraje skláren ve Smålandu",
+		"is": "Í hjarta Kristalsríkisins, glerverkssvæðis Smálanda",
+		"de": "Im Herzen des Glasreichs, der Gegend der Glashütten in Småland"
+	},
+	"Docksta": {
+		"pl": "Wznosi się tu góra Skuleberget; dawna linia brzegowa na wysokości 286 m jest najwyższą na świecie – ląd podnosi się tu od epoki lodowcowej",
+		"en": "Skuleberget rises here; its old shoreline 286 m up is the highest in the world, as the land has been rising since the ice age",
+		"cs": "Tyčí se tu hora Skuleberget; stará pobřežní čára ve výšce 286 m je nejvyšší na světě – země se tu od doby ledové zvedá",
+		"is": "Hér rís fjallið Skuleberget; forn strandlína í 286 m hæð er sú hæsta í heimi, því landið hefur risið frá ísöld",
+		"de": "Hier ragt der Skuleberget auf; seine alte Uferlinie in 286 m Höhe ist die höchste der Welt, denn das Land hebt sich seit der Eiszeit"
+	},
+	"Örnsköldsvik": {
+		"pl": "Niewielkie miasto, z którego wywodzi się wielu hokeistów NHL",
+		"en": "A small town that has produced many NHL ice hockey players",
+		"cs": "Malé město, z něhož pochází mnoho hokejistů NHL",
+		"is": "Lítill bær sem hefur alið marga íshokkíleikmenn í NHL-deildinni",
+		"de": "Eine kleine Stadt, aus der viele Eishockeyspieler der NHL stammen"
+	},
+	"Härnösand": {
+		"pl": "Duża część miasta leży na wyspie Härnön; skansen Murberget należy do największych w Szwecji",
+		"en": "Much of the town lies on the island of Härnön; the Murberget open-air museum is one of the largest in Sweden",
+		"cs": "Velká část města leží na ostrově Härnön; skanzen Murberget patří k největším ve Švédsku",
+		"is": "Stór hluti bæjarins stendur á eyjunni Härnön; byggðasafnið Murberget er eitt það stærsta í Svíþjóð",
+		"de": "Ein großer Teil der Stadt liegt auf der Insel Härnön; das Freilichtmuseum Murberget gehört zu den größten Schwedens"
+	},
+	"Hudiksvall": {
+		"pl": "W okolicy stoją zdobione zagrody Hälsinglandu, wpisane na listę UNESCO",
+		"en": "Around it stand the decorated farmhouses of Hälsingland, a UNESCO World Heritage Site",
+		"cs": "V okolí stojí zdobené statky Hälsinglandu zapsané na seznam UNESCO",
+		"is": "Í nágrenninu standa skreyttir bóndabæir Hälsinglands sem eru á heimsminjaskrá UNESCO",
+		"de": "In der Umgebung stehen die bemalten Bauernhöfe Hälsinglands, UNESCO-Welterbe"
+	},
+	"Ånge": {
+		"pl": "W pobliżu leży Flataklocken, uważany za geograficzny środek Szwecji",
+		"en": "Nearby is Flataklocken, held to be the geographical centre of Sweden",
+		"cs": "Nedaleko leží Flataklocken, považovaný za geografický střed Švédska",
+		"is": "Skammt frá er Flataklocken, talinn landfræðileg miðja Svíþjóðar",
+		"de": "In der Nähe liegt Flataklocken, der als geografischer Mittelpunkt Schwedens gilt"
+	},
+	"Skellefteå": {
+		"pl": "W okolicy wydobywa się złoto, miedź i inne rudy; w latach 20. XX wieku powstał tu koncern górniczy Boliden",
+		"en": "Gold, copper and other ores are mined around it; the Boliden mining company began here in the 1920s",
+		"cs": "V okolí se těží zlato, měď a další rudy; ve 20. letech 20. století tu vznikla těžařská společnost Boliden",
+		"is": "Í nágrenninu er unnið gull, kopar og annað málmgrýti; námufélagið Boliden varð til hér á þriðja áratug 20. aldar",
+		"de": "In der Umgebung werden Gold, Kupfer und andere Erze abgebaut; in den 1920er-Jahren entstand hier der Bergbaukonzern Boliden"
+	},
+	"Piteå": {
+		"pl": "Jego kąpielisko Pite Havsbad nazywane jest „Riwierą Północy”",
+		"en": "Its beach resort, Pite Havsbad, is called the 'Riviera of the North'",
+		"cs": "Jeho letovisku Pite Havsbad se říká „Riviéra severu“",
+		"is": "Baðstaðurinn Pite Havsbad er kallaður „Rívíera norðursins“",
+		"de": "Sein Seebad Pite Havsbad wird „Riviera des Nordens“ genannt"
+	},
+	"Töre": {
+		"pl": "Uważa się, że tu znajduje się najdalej na północ wysunięty punkt Morza Bałtyckiego",
+		"en": "Said to be the northernmost point of the Baltic Sea",
+		"cs": "Podle tradice zde leží nejsevernější bod Baltského moře",
+		"is": "Hér er sagður vera nyrsti punktur Eystrasalts",
+		"de": "Hier soll der nördlichste Punkt der Ostsee liegen"
+	},
+	"Överkalix": {
+		"pl": "Około 25 km na północ od miejscowości przebiega koło podbiegunowe",
+		"en": "The Arctic Circle runs some 25 km north of the village",
+		"cs": "Asi 25 km severně od obce vede severní polární kruh",
+		"is": "Um 25 km norðan við þorpið liggur heimskautsbaugurinn",
+		"de": "Etwa 25 km nördlich des Ortes verläuft der Polarkreis"
+	},
+	"Gällivare": {
+		"pl": "W sąsiednim Malmberget od końca XIX wieku wydobywa się rudę żelaza",
+		"en": "Iron ore has been mined at neighbouring Malmberget since the late 19th century",
+		"cs": "V sousedním Malmbergetu se od konce 19. století těží železná ruda",
+		"is": "Í nágrannabænum Malmberget hefur járngrýti verið unnið síðan undir lok 19. aldar",
+		"de": "Im benachbarten Malmberget wird seit dem späten 19. Jahrhundert Eisenerz abgebaut"
+	},
+	"Nynäshamn": {
+		"pl": "Z tutejszego portu odpływają promy na Gotlandię i do Gdańska",
+		"en": "Ferries leave its harbour for Gotland and for Gdańsk",
+		"cs": "Z místního přístavu plují trajekty na Gotland a do Gdaňsku",
+		"is": "Frá höfninni ganga ferjur til Gotlands og Gdańsk",
+		"de": "Vom Hafen fahren Fähren nach Gotland und nach Danzig"
+	}
+}

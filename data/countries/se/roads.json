@@ -1,0 +1,289 @@
+[
+	{
+		"a": "stockholm",
+		"b": "uppsala",
+		"km": 70,
+		"road": [[70, "E4", 3]],
+		"towns": [["Upplands Väsby", 25]],
+		"zones": [[18, "forest", "Järvafältet"], [45, "forest", "Uppland"], [70, "fields", "Uppsalaslätten"]],
+		"via": [[25, 17.91, 59.52], [42, 17.93, 59.66]]
+	},
+	{
+		"a": "stockholm",
+		"b": "vasteras",
+		"km": 107,
+		"road": [[107, "E18", 3]],
+		"towns": [["Bålsta", 53], ["Enköping", 80]],
+		"zones": [[22, "forest", "Uppland"], [62, "lakes", "Mälardalen"], [107, "fields", "Västmanland"]],
+		"via": [[53, 17.53, 59.57], [80, 17.08, 59.64]]
+	},
+	{
+		"a": "vasteras",
+		"b": "orebro",
+		"km": 95,
+		"road": [[95, "E18", 3]],
+		"towns": [["Köping", 35], ["Arboga", 53]],
+		"zones": [[42, "fields", "Mälardalen"], [75, "forest", "Bergslagen"], [95, "fields", "Närke"]],
+		"via": [[35, 15.99, 59.51], [53, 15.84, 59.39]]
+	},
+	{
+		"a": "uppsala",
+		"b": "vasteras",
+		"km": 80,
+		"road": [[45, "55"], [80, "E18", 3]],
+		"towns": [["Enköping", 45]],
+		"zones": [[45, "fields", "Uppland"], [80, "fields", "Mälardalen"]],
+		"via": [[45, 17.08, 59.64]]
+	},
+	{
+		"a": "stockholm",
+		"b": "norrkoping",
+		"km": 162,
+		"road": [[162, "E4", 3]],
+		"towns": [["Södertälje", 35], ["Nyköping", 103]],
+		"zones": [
+			[30, "industrial", "Södertörn"], [120, "forest", "Södermanland"], [145, "upland", "Kolmården"],
+			[162, "fields", "Östergötland"]
+		],
+		"via": [[35, 17.63, 59.2], [103, 17, 58.76], [140, 16.45, 58.67]]
+	},
+	{
+		"a": "norrkoping",
+		"b": "linkoping",
+		"km": 42,
+		"road": [[42, "E4", 3]],
+		"towns": [],
+		"zones": [[42, "fields", "Östgötaslätten"]]
+	},
+	{
+		"a": "linkoping",
+		"b": "jonkoping",
+		"km": 130,
+		"road": [[130, "E4", 3]],
+		"towns": [["Mjölby", 32], ["Ödeshög", 82], ["Gränna", 100]],
+		"zones": [[45, "fields", "Östgötaslätten"], [85, "forest", "Holaveden"], [130, "lakes", "Vättern"]],
+		"via": [[32, 15.13, 58.32], [82, 14.65, 58.23], [100, 14.46, 58.02]]
+	},
+	{
+		"a": "jonkoping",
+		"b": "helsingborg",
+		"km": 195,
+		"road": [[195, "E4", 3]],
+		"towns": [["Värnamo", 70], ["Ljungby", 115], ["Markaryd", 150]],
+		"zones": [
+			[60, "forest", "Småländska höglandet"], [125, "lakes", "Lagadalen"], [165, "forest", "Småland"],
+			[195, "fields", "Skåne"]
+		],
+		"via": [[70, 14.04, 57.18], [115, 13.94, 56.83], [150, 13.6, 56.46]]
+	},
+	{
+		"a": "helsingborg",
+		"b": "lund",
+		"km": 53,
+		"road": [[53, "E6", 3]],
+		"towns": [["Landskrona", 24]],
+		"zones": [[25, "coast", "Öresund"], [53, "fields", "Skåne"]],
+		"via": [[24, 12.88, 55.88]]
+	},
+	{"a": "lund", "b": "malmo", "km": 18, "road": [[18, "E6", 3]], "towns": [], "zones": [[18, "fields", "Skåne"]]},
+	{
+		"a": "helsingborg",
+		"b": "goteborg",
+		"km": 220,
+		"road": [[220, "E6", 3]],
+		"towns": [["Ängelholm", 25], ["Halmstad", 78], ["Falkenberg", 118], ["Varberg", 148], ["Kungsbacka", 192]],
+		"zones": [
+			[30, "fields", "Skåne"], [48, "upland", "Hallandsåsen"], [110, "fields", "Halland"],
+			[175, "coast", "Kattegatt"], [220, "forest", "Västergötland"]
+		],
+		"via": [[25, 12.86, 56.24], [78, 12.86, 56.67], [118, 12.5, 56.9], [148, 12.27, 57.13], [192, 12.08, 57.49]]
+	},
+	{
+		"a": "goteborg",
+		"b": "jonkoping",
+		"km": 148,
+		"road": [[148, "40", 3]],
+		"towns": [["Borås", 65], ["Ulricehamn", 105]],
+		"zones": [[65, "lakes", "Sjuhärad"], [110, "forest", "Västergötland"], [148, "upland", "Småländska höglandet"]],
+		"via": [[65, 12.94, 57.72], [105, 13.42, 57.79]]
+	},
+	{
+		"a": "goteborg",
+		"b": "karlstad",
+		"km": 253,
+		"road": [[84, "E45", 3], [228, "E45"], [253, "E18"]],
+		"towns": [
+			["Lilla Edet", 45], ["Trollhättan", 72], ["Vänersborg", 84], ["Mellerud", 130], ["Åmål", 167],
+			["Säffle", 202], ["Grums", 228]
+		],
+		"zones": [
+			[84, "fields", "Göta älvdalen"], [130, "fields", "Dalboslätten"], [170, "lakes", "Dalsland"],
+			[225, "forest", "Värmland"], [253, "lakes", "Vänern"]
+		],
+		"via": [
+			[45, 12.13, 58.13], [72, 12.29, 58.28], [84, 12.32, 58.38], [130, 12.45, 58.7], [167, 12.7, 59.05],
+			[202, 12.93, 59.13], [228, 13.1, 59.35]
+		]
+	},
+	{
+		"a": "karlstad",
+		"b": "orebro",
+		"km": 112,
+		"road": [[45, "E18", 3], [97, "E18"], [112, "E18", 3]],
+		"towns": [["Kristinehamn", 45], ["Karlskoga", 77]],
+		"zones": [[45, "lakes", "Vänern"], [90, "forest", "Bergslagen"], [112, "fields", "Närke"]],
+		"via": [[45, 14.11, 59.31], [77, 14.52, 59.33]]
+	},
+	{
+		"a": "orebro",
+		"b": "goteborg",
+		"km": 288,
+		"road": [[245, "E20"], [288, "E20", 3]],
+		"towns": [["Laxå", 58], ["Hova", 88], ["Mariestad", 116], ["Skara", 160], ["Alingsås", 245]],
+		"zones": [
+			[30, "fields", "Närke"], [100, "forest", "Tiveden"], [135, "lakes", "Vänern"],
+			[210, "fields", "Västgötaslätten"], [288, "forest", "Västergötland"]
+		],
+		"via": [
+			[25, 15.1, 59.07], [58, 14.62, 58.99], [88, 14.21, 58.86], [116, 13.82, 58.71], [160, 13.44, 58.39],
+			[195, 12.95, 58.26], [245, 12.53, 57.93]
+		]
+	},
+	{
+		"a": "uppsala",
+		"b": "gavle",
+		"km": 110,
+		"road": [[110, "E4", 3]],
+		"towns": [["Tierp", 62]],
+		"zones": [[40, "fields", "Uppland"], [92, "forest", "Norduppland"], [110, "forest", "Gästrikland"]],
+		"via": [[62, 17.51, 60.34]]
+	},
+	{
+		"a": "gavle",
+		"b": "sundsvall",
+		"km": 213,
+		"road": [[213, "E4"]],
+		"towns": [["Söderhamn", 75], ["Hudiksvall", 135], ["Njurundabommen", 198]],
+		"zones": [[35, "forest", "Gästrikland"], [150, "coast", "Hälsingekusten"], [213, "forest", "Medelpad"]],
+		"via": [[75, 17.06, 61.3], [135, 17.1, 61.73], [198, 17.37, 62.26]]
+	},
+	{
+		"a": "sundsvall",
+		"b": "umea",
+		"km": 263,
+		"road": [[263, "E4"]],
+		"towns": [["Härnösand", 48], ["Docksta", 118], ["Örnsköldsvik", 152], ["Nordmaling", 208]],
+		"zones": [
+			[48, "forest", "Medelpad"], [125, "coast", "Höga kusten"], [200, "forest", "Ångermanland"],
+			[263, "coast", "Västerbotten"]
+		],
+		"via": [[48, 17.94, 62.63], [77, 17.93, 62.79], [118, 18.33, 63.05], [152, 18.72, 63.29], [208, 19.5, 63.57]],
+		"bridge": {
+			"from_km": 77,
+			"to_km": 78.9,
+			"name": {
+				"pl": "Most Höga Kusten",
+				"en": "High Coast Bridge",
+				"cs": "Most Höga Kusten",
+				"is": "Höga Kusten-brúin",
+				"de": "Höga-Kusten-Brücke"
+			}
+		}
+	},
+	{
+		"a": "umea",
+		"b": "lulea",
+		"km": 268,
+		"road": [[268, "E4"]],
+		"towns": [["Skellefteå", 135], ["Piteå", 213]],
+		"zones": [[150, "forest", "Västerbotten"], [245, "taiga", "Norrbotten"], [268, "coast", "Luleå skärgård"]],
+		"via": [[135, 20.95, 64.75], [213, 21.48, 65.32]]
+	},
+	{
+		"a": "lulea",
+		"b": "kiruna",
+		"km": 395,
+		"road": [[60, "E4"], [395, "E10"]],
+		"towns": [["Råneå", 35], ["Töre", 60], ["Överkalix", 115], ["Gällivare", 280], ["Svappavaara", 350]],
+		"zones": [
+			[60, "coast", "Norrbottenskusten"], [160, "taiga", "Kalixälvdalen"], [280, "taiga", "Lappland"],
+			[395, "taiga", "Malmfälten"]
+		],
+		"via": [
+			[35, 22.3, 65.86], [60, 22.65, 65.91], [115, 22.84, 66.33], [200, 21.8, 66.8], [280, 20.66, 67.13],
+			[350, 21.06, 67.65]
+		]
+	},
+	{
+		"a": "sundsvall",
+		"b": "ostersund",
+		"km": 188,
+		"road": [[188, "E14"]],
+		"towns": [["Stöde", 38], ["Ånge", 88], ["Bräcke", 118], ["Brunflo", 172]],
+		"zones": [[90, "forest", "Ljungandalen"], [150, "taiga", "Jämtland"], [188, "foothills", "Storsjöbygden"]],
+		"via": [[38, 16.58, 62.42], [88, 15.66, 62.52], [118, 15.42, 62.75], [172, 14.82, 63.08]]
+	},
+	{
+		"a": "kalmar",
+		"b": "norrkoping",
+		"km": 255,
+		"road": [[255, "E22"]],
+		"towns": [["Mönsterås", 32], ["Oskarshamn", 78], ["Västervik", 150], ["Valdemarsvik", 205], ["Söderköping", 238]],
+		"zones": [[80, "coast", "Kalmarsund"], [205, "forest", "Tjust"], [255, "fields", "Östergötland"]],
+		"via": [[32, 16.44, 57.04], [78, 16.45, 57.26], [150, 16.58, 57.74], [205, 16.6, 58.2], [238, 16.32, 58.48]]
+	},
+	{
+		"a": "kalmar",
+		"b": "lund",
+		"km": 267,
+		"road": [[267, "E22"]],
+		"towns": [
+			["Karlskrona", 88], ["Ronneby", 112], ["Karlshamn", 137], ["Sölvesborg", 163], ["Kristianstad", 192],
+			["Hörby", 232]
+		],
+		"zones": [
+			[88, "coast", "Kalmarsund"], [165, "coast", "Blekinge"], [200, "fields", "Kristianstadsslätten"],
+			[240, "forest", "Linderödsåsen"], [267, "fields", "Skåne"]
+		],
+		"via": [
+			[60, 16, 56.35], [88, 15.6, 56.18], [112, 15.28, 56.21], [137, 14.86, 56.17], [163, 14.58, 56.05],
+			[192, 14.16, 56.03], [232, 13.66, 55.85]
+		]
+	},
+	{
+		"a": "jonkoping",
+		"b": "kalmar",
+		"km": 230,
+		"road": [[120, "30"], [230, "25"]],
+		"towns": [["Lammhult", 70], ["Växjö", 120], ["Nybro", 200]],
+		"zones": [
+			[70, "forest", "Småländska höglandet"], [150, "lakes", "Värend"], [205, "forest", "Glasriket"],
+			[230, "fields", "Kalmarslätten"]
+		],
+		"via": [[70, 14.59, 57.17], [120, 14.81, 56.88], [200, 15.91, 56.74]]
+	},
+	{
+		"a": "stockholm",
+		"b": "visby",
+		"km": 217,
+		"road": [[30, "73", 3], [60, "73"], [217, ""]],
+		"towns": [["Nynäshamn", 56]],
+		"zones": [
+			[30, "forest", "Södertörn"], [60, "coast", "Stockholms skärgård"], [214, "coast", "Östersjön"],
+			[217, "coast", "Gotland"]
+		],
+		"via": [[30, 18.15, 59.12], [56, 17.95, 58.9], [60, 17.96, 58.88]],
+		"ferry": {
+			"from_km": 60,
+			"to_km": 215,
+			"name": "Nynäshamn – Visby",
+			"fact": {
+				"pl": "Szybkie promy płyną z Nynäshamn do Visby na Gotlandii nieco ponad trzy godziny",
+				"en": "Fast ferries sail from Nynäshamn to Visby on Gotland in a little over three hours",
+				"cs": "Rychlé trajekty plují z Nynäshamnu do Visby na Gotlandu něco přes tři hodiny",
+				"is": "Hraðferjur sigla frá Nynäshamn til Visby á Gotlandi á rúmum þremur klukkustundum",
+				"de": "Schnellfähren fahren von Nynäshamn nach Visby auf Gotland in gut drei Stunden"
+			}
+		}
+	}
+]
