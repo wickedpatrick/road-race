@@ -14,7 +14,7 @@
 		"lon": -0.38,
 		"pop": 825,
 		"region": "Comunidad Valenciana",
-		"exonym": {"pl": "Walencja", "cs": "Valencie"}
+		"exonym": {"pl": "Walencja", "cs": "Valencie", "is": "Valensía"}
 	},
 	"zaragoza": {
 		"name": "Zaragoza",

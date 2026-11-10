@@ -3,5 +3,11 @@
 	"Pamplona": {"under": "Iruña"},
 	"País Vasco": "Euskadi",
 	"Cataluña": "Catalunya",
-	"Alicante": {"under": "Alacant"}
+	"Alicante": {"under": "Alacant"},
+	"Valencia": "València",
+	"Comunidad Valenciana": "Comunitat Valenciana",
+	"Castellón de la Plana": "Castelló de la Plana",
+	"Alsasua": "Altsasu",
+	"Llodio": "Laudio",
+	"Salvatierra": {"under": "Agurain"}
 }

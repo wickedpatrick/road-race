@@ -31,8 +31,8 @@
 			["La Almunia de Doña Godina", 265]
 		],
 		"zones": [
-			[60, "fields", "Comunidad de Madrid"], [140, "steppe", "Castilla-La Mancha"],
-			[200, "upland", "Castilla-La Mancha"], [250, "upland", "Aragón"], [315, "steppe", "Aragón"]
+			[40, "fields", "Comunidad de Madrid"], [135, "steppe", "Castilla-La Mancha"],
+			[185, "upland", "Castilla y León"], [250, "upland", "Aragón"], [315, "steppe", "Aragón"]
 		],
 		"via": [[55, -3.17, 40.63], [150, -2.43, 41.14], [235, -1.64, 41.35]]
 	},
@@ -42,7 +42,7 @@
 		"km": 255,
 		"road": [[165, "A-3"], [255, "A-31"]],
 		"towns": [["Arganda del Rey", 27], ["Tarancón", 82], ["La Roda", 215]],
-		"zones": [[45, "fields", "Comunidad de Madrid"], [255, "steppe", "Castilla-La Mancha"]],
+		"zones": [[58, "fields", "Comunidad de Madrid"], [255, "steppe", "Castilla-La Mancha"]],
 		"via": [[82, -3.01, 40.01], [165, -2.2, 39.47], [215, -2.16, 39.21]]
 	},
 	{
@@ -62,14 +62,14 @@
 		"tunnels": [
 			{
 				"from_km": 248,
-				"to_km": 249.5,
+				"to_km": 249.9,
 				"name": "Túnel de Despeñaperros",
 				"fact": {
-					"pl": "Nowy przebieg A-4 przez wąwóz Despeñaperros, otwarty w 2012 roku, prowadzi przez tunele i wiadukty nad starą krętą drogą",
-					"en": "The new A-4 through the Despeñaperros gorge, opened in 2012, runs through tunnels and over viaducts above the old winding road",
-					"cs": "Nová trasa A-4 soutěskou Despeñaperros, otevřená roku 2012, vede tunely a po viaduktech nad starou klikatou silnicí",
-					"is": "Nýja leið A-4 um Despeñaperros-gljúfrið, opnuð árið 2012, liggur um göng og brýr fyrir ofan gamla hlykkjótta veginn",
-					"de": "Die 2012 eröffnete neue Trasse der A-4 durch die Schlucht von Despeñaperros führt durch Tunnel und über Viadukte oberhalb der alten kurvigen Straße"
+					"pl": "Nowy przebieg A-4 przez wąwóz Despeñaperros, ukończony w 2012 roku, prowadzi przez tunele (najdłuższy ma 1,9 km) i wiadukty nad starą krętą drogą",
+					"en": "The new A-4 through the Despeñaperros gorge, finished in 2012, runs through tunnels (the longest 1.9 km) and over viaducts above the old winding road",
+					"cs": "Nová trasa A-4 soutěskou Despeñaperros, dokončená roku 2012, vede tunely (nejdelší má 1,9 km) a po viaduktech nad starou klikatou silnicí",
+					"is": "Nýja leið A-4 um Despeñaperros-gljúfrið, fullgerð árið 2012, liggur um göng (hin lengstu eru 1,9 km) og brýr fyrir ofan gamla hlykkjótta veginn",
+					"de": "Die 2012 fertiggestellte neue Trasse der A-4 durch die Schlucht von Despeñaperros führt durch Tunnel (der längste 1,9 km) und über Viadukte oberhalb der alten kurvigen Straße"
 				}
 			}
 		]
@@ -100,7 +100,8 @@
 		],
 		"zones": [
 			[38, "fields", "Comunidad de Madrid"],
-			[70, "mountains", "Comunidad de Madrid"],
+			[60, "mountains", "Comunidad de Madrid"],
+			[70, "mountains", "Castilla y León"],
 			[85, "upland", "Castilla y León"],
 			[205, "fields", "Castilla y León"]
 		],
@@ -128,7 +129,8 @@
 		"towns": [["Las Rozas", 18], ["Collado Villalba", 38], ["Ávila", 110], ["Peñaranda de Bracamonte", 175]],
 		"zones": [
 			[38, "fields", "Comunidad de Madrid"],
-			[70, "mountains", "Comunidad de Madrid"],
+			[60, "mountains", "Comunidad de Madrid"],
+			[70, "mountains", "Castilla y León"],
 			[110, "upland", "Castilla y León"],
 			[212, "fields", "Castilla y León"]
 		],
@@ -155,7 +157,7 @@
 		"road": "A-2",
 		"towns": [["Bujaraloz", 70], ["Fraga", 115], ["Lleida", 145], ["Cervera", 200], ["Igualada", 240], ["Martorell", 280]],
 		"zones": [
-			[110, "steppe", "Aragón"], [150, "fields", "Cataluña"], [250, "upland", "Cataluña"],
+			[122, "steppe", "Aragón"], [150, "fields", "Cataluña"], [250, "upland", "Cataluña"],
 			[305, "mediterranean", "Cataluña"]
 		],
 		"via": [[70, -0.15, 41.5], [145, 0.62, 41.62], [200, 1.27, 41.67], [240, 1.62, 41.58], [280, 1.93, 41.48]]
@@ -206,7 +208,7 @@
 		"towns": [["Alzira", 38], ["Xàtiva", 60], ["Almansa", 110], ["Chinchilla de Montearagón", 175]],
 		"zones": [
 			[60, "mediterranean", "Comunidad Valenciana"],
-			[110, "upland", "Comunidad Valenciana"],
+			[100, "upland", "Comunidad Valenciana"],
 			[190, "steppe", "Castilla-La Mancha"]
 		],
 		"via": [[38, -0.43, 39.15], [60, -0.52, 38.99], [110, -1.1, 38.87], [175, -1.72, 38.92]]
@@ -226,7 +228,7 @@
 		"km": 165,
 		"road": "A-31",
 		"towns": [["Almansa", 75], ["Villena", 107], ["Elda", 128], ["Monforte del Cid", 145]],
-		"zones": [[60, "steppe", "Castilla-La Mancha"], [165, "mediterranean", "Comunidad Valenciana"]],
+		"zones": [[90, "steppe", "Castilla-La Mancha"], [165, "mediterranean", "Comunidad Valenciana"]],
 		"via": [[75, -1.1, 38.87], [107, -0.86, 38.63], [128, -0.79, 38.48]]
 	},
 	{
@@ -432,8 +434,8 @@
 			["Lugo", 235], ["Betanzos", 310]
 		],
 		"zones": [
-			[60, "fields", "Castilla y León"], [140, "upland", "Castilla y León"], [190, "mountains", "Galicia"],
-			[330, "forest", "Galicia"]
+			[60, "fields", "Castilla y León"], [140, "upland", "Castilla y León"],
+			[160, "mountains", "Castilla y León"], [190, "mountains", "Galicia"], [330, "forest", "Galicia"]
 		],
 		"via": [
 			[45, -6.06, 42.46], [105, -6.6, 42.55], [125, -6.81, 42.61], [185, -7.16, 42.86], [235, -7.56, 43.01],
@@ -490,7 +492,10 @@
 		"km": 130,
 		"road": "AP-68",
 		"towns": [["Llodio", 20], ["Miranda de Ebro", 80], ["Haro", 100], ["Cenicero", 115]],
-		"zones": [[55, "forest", "País Vasco"], [85, "upland", "Castilla y León"], [130, "fields", "La Rioja"]],
+		"zones": [
+			[55, "forest", "País Vasco"], [70, "upland", "País Vasco"], [85, "upland", "Castilla y León"],
+			[130, "fields", "La Rioja"]
+		],
 		"via": [[20, -2.96, 43.14], [45, -2.8, 42.97], [80, -2.95, 42.68], [100, -2.85, 42.58]]
 	},
 	{
