@@ -181,9 +181,10 @@ trasy sensowne), miejscowości po drodze, krainy, ciekawostki po polsku, kontur 
 
 - [x] Partia 1 (priorytet): **Wielka Brytania (Anglia obowiązkowo, 30)**, **USA (30)**, **Kanada (30)**,
       Niemcy (30), Czechy, Słowacja, Litwa.
-- [ ] Partia 2: Hiszpania (30), Portugalia, Holandia, Belgia, Luksemburg, Austria, Szwajcaria (z Liechtensteinem).
-      Zrobione 2026-11-10: Francja (30 miast, wiadukt Millau, most Normandie), Włochy (30, prom przez Cieśninę
-      Mesyńską). Bez Korsyki i Sardynii (do dodania z promem).
+- [x] Partia 2 (2026-11-10): Francja (30 miast, wiadukt Millau, most Normandie), Włochy (30, prom przez Cieśninę
+      Mesyńską), Hiszpania (30, most Rande), Portugalia (13, mosty 25 Kwietnia i Vasco da Gamy), Benelux (jedna mapa:
+      10 nl, 8 be, 2 lu, Afsluitdijk, tunel Westerschelde), Szwajcaria (14, tunel Gotarda). Austria była wcześniej.
+      Później: Korsyka, Sardynia, Baleary (promy), Liechtenstein.
 - [x] Partia 3: Norwegia (17 miast, 5 promów, tunel Lærdal, 6 mostów, 2026-11-10). Zrobione też: Dania (most nad Wielkim Bełtem, prom na Bornholm), Szwecja (prom na Gotlandię,
       Högakustenbron), Finlandia (tablice fińsko-szwedzkie), Irlandia (ruch lewostronny, tablice irlandzko-angielskie,
       prom przez Shannon), Estonia (promy na Saaremę i Hiumę), Łotwa; Islandia już wcześniej.
@@ -310,48 +311,46 @@ Opis: `docs/superpowers/specs/2026-11-03-postcards-design.md`.
 - [x] Długie trasy (USA, Kanada) jadą się za długo: powyżej pewnego dystansu długość w grze ma rosnąć wolniej
       niż liniowo (np. pierwiastkowo), patrz wzór w `Route.build`.
 
-## 15. Do sprawdzenia: partia 5 i noc z 2026-11-10 (Estonia, Łotwa, Irlandia, Finlandia, Szwecja, Dania)
+## 15. Sprawdzone w nocy z 2026-11-10 (ee, lv, ie, fi, se, dk, ru, ua, by, tr, no, fr, it, es, pt, bx, ch)
 
-Rzeczy zrobione bez oglądania w grze albo na przybliżonych danych. Do puszczenia agentom (bez okna gry; zrzuty
-na koniec jednym rzutem).
+Agenci sprawdzili dane ze źródłami (km, numery dróg, miejscowości, promy, mosty, tunele, regiony, ceny paliwa,
+waluty, kolory tablic i rejestracji, fakty, gramatyka pl/cs/is/de) i obejrzeli wszystkie pocztówki wyrenderowane do
+obrazków; błędy poprawione, testy i autopilot przechodzą. Zrzuty z gry promów, mostów i tuneli obejrzane.
 
-- [ ] Pocztówki: obejrzeć na ekranie wszystkie nowe rysunki (ok. 105: ee, lv, ie, fi, se, dk oraz ru, ua, by, tr),
-      poprawić te, które nie przypominają zabytku albo mają rozjechane elementy.
-- [ ] Kilometry, numery dróg i miejscowości po drodze w nowych krajach: sprawdzić z mapą (odległości miast,
-      kolejność miejscowości, numery jak na tablicach).
-- [ ] Ceny paliwa i waluty na stacjach w nowych krajach (przybliżone).
-- [ ] Kolory tablic (miejscowości, kierunkowe, numery dróg) i rejestracji w nowych krajach (przybliżone).
-- [ ] Zrzuty z gry tam, gdzie nikt nie patrzył: promy w Estonii (Saarema, Hiuma) i Irlandii (Shannon), prom na
-      Gotlandię, Högakustenbron, Mały Bełt, prom na Bornholm, tablice fińsko-szwedzkie, Łotwa w ogóle.
-- [ ] Melodie przyjazdu do odsłuchu: Czarnogóra (dwa fragmenty starego hymnu), łotewska kołysanka, maltański motyw
-      na dudy, szwedzkie Små grodorna (melodia może nie być szwedzka), Mołdawia (dwie ludowe); hymn Finlandii
-      brzmi jak estoński (ta sama melodia Paciusa, zostaje?).
-- [ ] Decyzje do potwierdzenia: Kaliningrad bez polskiej nazwy Królewiec; ulubiony sąsiad Szwecji to Norwegia
-      (jeszcze jej nie ma w grze); Irlandia bez progu 80 km/h (wszędzie 100 poza autostradą) i bez Irlandii
-      Północnej; Dania 13 miast (bez Slagelse, Køge jako miasto dla promu); w Szwecji most Högakustenbron zamiast
-      mostu na Olandię; Finlandia bez nazw lapońskich na tablicach.
-
-## 16. Do sprawdzenia: Norwegia, Francja, Włochy (2026-11-10)
-
-Jak w sekcji 15: zrobione bez oglądania w grze, część danych przybliżona. Pierwsze 17 + 23 + 23 miast przeszło
-kontrolę faktów, km i tłumaczeń przez osobnego agenta; dołożone później miasta (fr: Metz, Poitiers, Nîmes, Tulon,
-Hawr, Amiens, Annecy; it: Padwa, Parma, Brescia, Rimini, Trydent, Syrakuzy, Siena) jeszcze nie.
-
-- [ ] Kontrola faktów, km, numerów dróg, miejscowości po drodze i tłumaczeń (pl, cs, is, de) dla 14 dołożonych
-      miast Francji i Włoch, oraz ich rysunków (w ramce `landmark_sizes`, nic nie wisi w powietrzu).
-- [ ] Pocztówki: obejrzeć na ekranie wszystkie 77 nowych rysunków (no 17, fr 30, it 30).
-- [ ] Zrzuty z gry: promy na E39 i Bognes – Skarberget, tunel Lærdal, mosty Hålogaland, Grenland i Kvalsund,
-      wiadukt Millau, most Normandie, prom przez Cieśninę Mesyńską, tablice niemiecko-włoskie w Bolzano.
-- [ ] Limity: nowy limit odcinka drogi (`[km, numer, pasy, limit]`) w grze — znak 110 na N12/N137 i włoskich SS,
-      radar i policja trzymają 110; Norwegia 90 na zwykłych drogach (czy gdzieś nie powinno być 80 albo 70).
-      Sprawdzić, które jeszcze drogi w innych krajach mają inny limit niż krajowy (np. 110 w Hiszpanii później).
-- [ ] Autopilot: limit czasu liczy podjazdy, ale nie zakręty; we Francji i Włoszech to wymusiło ruch 0.3, usunięcie
+- [x] Pocztówki ee, lv, ie, fi, se, dk, ru, ua, by, tr, no, fr, it, es, pt, bx, ch obejrzane i poprawione.
+- [x] Dane wszystkich nowych krajów sprawdzone ze źródłami i poprawione; limity 110 (fr, it) i 80/90 (no, z NVDB).
+- [x] Zrzuty z gry: promy (Saarema, Hiuma, Shannon, Gotlandia, Bornholm, E39, Mesyna), mosty (Grenland,
+      Hålogaland, Millau, Normandie, Rande, 25 Kwietnia, Afsluitdijk, Högakustenbron, Mały Bełt, Väinatamm), tunele
+      (Lærdal, Westerschelde, Gotard).
+- [ ] Do odsłuchu (tylko ucho): Czarnogóra (dwa fragmenty starego hymnu), łotewska kołysanka, maltański motyw na
+      dudy, Små grodorna, Mołdawia; hymn Finlandii = estoński (ta sama melodia); norweski hymn o oktawę wyżej niż
+      tenory; „Funiculì, funiculà” sklejony; włoski hymn może być wolny; Hiszpania: drugi motyw to „Carmen” Bizeta
+      (Francuz); Belgia: drugi motyw „De Vlaamse Leeuw” (tylko flamandzki, może jednostronny); Portugalia: rytm
+      hymnu z nieczystego MIDI; Liechtenstein: „Abendlied” odczytany z małego skanu.
+- [ ] Decyzje do potwierdzenia: Kaliningrad bez nazwy Królewiec; Irlandia bez progu 80 i bez Irlandii Północnej;
+      Dania 13 miast; w Szwecji Högakustenbron zamiast mostu na Olandię; Finlandia i Norwegia bez nazw lapońskich;
+      Haugesund jako miasto dla dwóch promów E39; Tromsø 5 km na lądzie; Francja bez Korsyki, Włochy bez Sardynii,
+      Hiszpania bez Balearów i Kanarów; Trydent bez niemieckiej tablicy; Szwajcaria bez Liechtensteinu i z
+      niemieckimi tekstami stacji wszędzie (nazwy miejscowości lokalne); Benelux jako jedna mapa z przejściami
+      granicznymi (choć Schengen); Belgia: stacje dwujęzyczne, poza drogami 90 (Walonia; Flandria ma 70).
+- [ ] Niepewne dane (źródła nie rozstrzygnęły): Turcja: D052 Bayburt – Aşkale (D915?), D100 Amasya – Tokat, D360
+      Bitlis – Silvan, podział D260/D200 w Şarkışla, Hagia Sophia w Trabzonie opisana jako kościół (od 2013 meczet);
+      Białoruś: Babrujsk – Homiel 150 km (realnie ok. 160), Mińsk – Mohylew 182 (ok. 195); kolory tabliczek z
+      numerami dróg w Rosji i na Ukrainie; Rosja: M-12 jako autostrada (żadna droga jej jeszcze nie używa); Szwecja:
+      Gällivare na km 280 (ok. 265); Irlandia: tablice miejscowości zmienione na zielone (sprawdzić), prom Shannon
+      3 km (ok. 3,7), strefa Offaly na M7; Łotwa: Jurmała – Talsi przez A10 zamiast P128; Estonia: tablice
+      kierunkowe na drogach lokalnych białe czy niebieskie; Włochy: tabliczka E45 Katania – Syrakuzy, SS715 jako
+      dwupasmówka; Francja: limity D1075 Grenoble – Sisteron; Hiszpania: kolor tablic miejscowości, B-23 (100,
+      zmienny), Valencia/València, Kordoba czy Kordowa; Belgia: kolor tabliczek dróg R, Luksemburg: kolor tablic
+      kierunkowych.
+- [ ] Rysunki do ewentualnej poprawy (nie są błędne, ale słabsze): tur w Rakvere, zamek Turaida (mury nad
+      wzgórzem), samolot Alcocka i Browna w Clifden (był wbity nosem w bagno), zamek w Örebro (okrągłe wieże),
+      Joanna d'Arc w Orleanie (koń), Gros-Horloge w Rouen (łuk nad ulicą), fontanna w Perugii, brama Obertor w Chur.
+- [ ] Gra: przy wjeździe do tunelu wzgórze z portalem zasłania całe niebo (widać na Westerschelde pod wodą i na
+      Gotardzie); tunel pod wodą powinien mieć portal bez góry. Na Gotardzie znak 120, a w tunelu jest 80 (limit
+      tunelu w danych?). Wiadukt Millau stoi nad wodą zamiast nad doliną.
+- [ ] Autopilot: limit czasu liczy podjazdy, ale nie zakręty; we Francji i Włoszech wymusiło to ruch 0.3 i usunięcie
       kilku miejscowości (fr: Châtellerault, Nemours, Sainte-Menehould, Verdun, Phalsbourg, Sélestat, Montbéliard;
-      it: Milazzo, Barcellona Pozzo di Gotto, Santo Stefano di Camastra) i pola zamiast lasu na A4/A36/A6.
-      Rozważyć doliczanie zakrętów do limitu czasu i przywrócenie tych miejscowości. Na Palermo – Mesyna range
-      rover przy jednym ziarnie (13) nie wyprzedza i nie zdąża.
-- [ ] Melodie do odsłuchu: norweski hymn (oktawa wyżej niż tenory), refren „Funiculì, funiculà” (sklejony,
-      bez środka), włoski hymn (może brzmieć wolno z pauzami z nut).
-- [ ] Decyzje do potwierdzenia: Norwegia bez nazw lapońskich, Haugesund jako miasto dla dwóch promów E39, Tromsø
-      przesunięte 5 km na ląd (wyspy nie ma na mapie 50m); Francja bez miast na Korsyce; Włochy bez Sardynii
-      i Trydent bez niemieckiej tablicy (Trient); ulubieni sąsiedzi no → se, fr → de, it → fr.
+      it: Milazzo, Barcellona Pozzo di Gotto, Santo Stefano di Camastra). Rozważyć doliczanie zakrętów i przywrócenie
+      tych miejscowości. Na Palermo – Mesyna range rover przy jednym ziarnie (13) nie wyprzedza i nie zdąża.
+- [ ] Szwajcaria i Belgia: język stacji i tablic regionu zależny od regionu, nie tylko od kraju (kawałek kodu).
