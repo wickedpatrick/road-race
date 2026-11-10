@@ -1,0 +1,212 @@
+{
+	"Zürich": {
+		"pl": "Największe miasto Szwajcarii, nad Jeziorem Zuryskim i rzeką Limmat",
+		"en": "Switzerland's largest city, on Lake Zurich and the river Limmat",
+		"cs": "Největší město Švýcarska, na Curyšském jezeře a řece Limmat",
+		"is": "Stærsta borg Sviss, við Zürich-vatn og ána Limmat",
+		"de": "Die grösste Stadt der Schweiz, am Zürichsee und an der Limmat"
+	},
+	"Genève": {
+		"pl": "Miasto nad Jeziorem Genewskim, siedziba Czerwonego Krzyża i wielu biur ONZ",
+		"en": "A city on Lake Geneva, home of the Red Cross and many UN offices",
+		"cs": "Město u Ženevského jezera, sídlo Červeného kříže a mnoha úřadů OSN",
+		"is": "Borg við Genfarvatn þar sem Rauði krossinn og margar skrifstofur SÞ hafa aðsetur",
+		"de": "Stadt am Genfersee, Sitz des Roten Kreuzes und vieler UNO-Büros"
+	},
+	"Basel": {
+		"pl": "Miasto nad Renem, gdzie stykają się Szwajcaria, Francja i Niemcy",
+		"en": "A city on the Rhine where Switzerland, France and Germany meet",
+		"cs": "Město na Rýně, kde se stýkají Švýcarsko, Francie a Německo",
+		"is": "Borg við Rín þar sem Sviss, Frakkland og Þýskaland mætast",
+		"de": "Stadt am Rhein, wo sich die Schweiz, Frankreich und Deutschland treffen"
+	},
+	"Lausanne": {
+		"pl": "Miasto na stromym zboczu nad Jeziorem Genewskim, siedziba MKOl",
+		"en": "A city on a steep slope above Lake Geneva, home of the IOC",
+		"cs": "Město na strmém svahu nad Ženevským jezerem, sídlo MOV",
+		"is": "Borg í brattri hlíð ofan við Genfarvatn þar sem Alþjóðaólympíunefndin hefur aðsetur",
+		"de": "Stadt am steilen Hang über dem Genfersee, Sitz des IOC"
+	},
+	"Bern": {
+		"pl": "Siedziba rządu i parlamentu, stare miasto w zakolu Aare jest na liście UNESCO",
+		"en": "Seat of the government and parliament; its old town in a bend of the Aare is a UNESCO site",
+		"cs": "Sídlo vlády a parlamentu; staré město v ohbí Aary je památkou UNESCO",
+		"is": "Aðsetur ríkisstjórnar og þings; gamli bærinn í bugðu Aare er á heimsminjaskrá UNESCO",
+		"de": "Sitz von Regierung und Parlament, die Altstadt in der Aareschlaufe ist UNESCO-Welterbe"
+	},
+	"Winterthur": {
+		"pl": "Szóste co do wielkości miasto Szwajcarii, znane z muzeów sztuki",
+		"en": "Switzerland's sixth-largest city, known for its art museums",
+		"cs": "Šesté největší město Švýcarska, známé svými muzei umění",
+		"is": "Sjötta stærsta borg Sviss, þekkt fyrir listasöfn sín",
+		"de": "Sechstgrösste Stadt der Schweiz, bekannt für ihre Kunstmuseen"
+	},
+	"Luzern": {
+		"pl": "Miasto nad Jeziorem Czterech Kantonów, z drewnianym mostem Kapellbrücke",
+		"en": "A city on Lake Lucerne with the wooden Chapel Bridge",
+		"cs": "Město u Lucernského jezera s dřevěným mostem Kapellbrücke",
+		"is": "Borg við Luzern-vatn með Kapellubrúna úr timbri",
+		"de": "Stadt am Vierwaldstättersee mit der hölzernen Kapellbrücke"
+	},
+	"St. Gallen": {
+		"pl": "Miasto opactwa, którego biblioteka jest na liście UNESCO",
+		"en": "The abbey town whose library is a UNESCO World Heritage Site",
+		"cs": "Klášterní město, jehož knihovna je památkou UNESCO",
+		"is": "Klausturbær þar sem bókasafnið er á heimsminjaskrá UNESCO",
+		"de": "Die Klosterstadt, deren Stiftsbibliothek UNESCO-Welterbe ist"
+	},
+	"Lugano": {
+		"pl": "Największe miasto włoskojęzycznego Ticino, nad Jeziorem Lugano",
+		"en": "The largest city of Italian-speaking Ticino, on Lake Lugano",
+		"cs": "Největší město italsky mluvícího Ticina, u jezera Lugano",
+		"is": "Stærsta borg ítölskumælandi Ticino, við Lugano-vatn",
+		"de": "Grösste Stadt des italienischsprachigen Tessins, am Luganersee"
+	},
+	"Biel": {
+		"pl": "Największe dwujęzyczne miasto Szwajcarii, stolica przemysłu zegarmistrzowskiego",
+		"en": "Switzerland's largest bilingual city, a capital of watchmaking",
+		"cs": "Největší dvojjazyčné město Švýcarska, centrum hodinářství",
+		"is": "Stærsta tvítyngda borg Sviss og miðstöð úrsmíða",
+		"de": "Die grösste zweisprachige Stadt der Schweiz, eine Hauptstadt der Uhrenindustrie"
+	},
+	"Thun": {
+		"pl": "Miasto u wypływu Aare z Jeziora Thuńskiego, z zamkiem na wzgórzu",
+		"en": "A town where the Aare leaves Lake Thun, with a castle on its hill",
+		"cs": "Město, kde Aare vytéká z Thunského jezera, s hradem na kopci",
+		"is": "Bær þar sem Aare rennur úr Thun-vatni, með kastala á hæðinni",
+		"de": "Stadt am Ausfluss der Aare aus dem Thunersee, mit dem Schloss auf dem Hügel"
+	},
+	"Fribourg": {
+		"pl": "Dwujęzyczne miasto nad rzeką Saane, tu przebiega granica języka niemieckiego i francuskiego",
+		"en": "A bilingual town on the Saane, where German and French meet",
+		"cs": "Dvojjazyčné město na řece Saane, kde se setkává němčina s francouzštinou",
+		"is": "Tvítyngdur bær við ána Saane þar sem þýska og franska mætast",
+		"de": "Zweisprachige Stadt an der Saane, wo Deutsch und Französisch aufeinandertreffen"
+	},
+	"Chur": {
+		"pl": "Uważany za najstarsze miasto Szwajcarii, stolica Gryzonii",
+		"en": "Held to be Switzerland's oldest town, capital of Graubünden",
+		"cs": "Pokládán za nejstarší město Švýcarska, metropole Graubündenu",
+		"is": "Talinn elsti bær Sviss, höfuðstaður Graubünden",
+		"de": "Gilt als älteste Stadt der Schweiz, Hauptort Graubündens"
+	},
+	"Sion": {
+		"pl": "Stolica Valais, między dwoma wzgórzami z zamkiem i bazyliką",
+		"en": "The capital of Valais, between two hills crowned by a castle and a basilica",
+		"cs": "Metropole Valais mezi dvěma kopci s hradem a bazilikou",
+		"is": "Höfuðstaður Valais, milli tveggja hæða með kastala og basilíku",
+		"de": "Hauptort des Wallis, zwischen zwei Hügeln mit Burg und Basilika"
+	},
+	"Montreux": {
+		"pl": "Miasto festiwalu jazzowego, z zamkiem Chillon na skale w jeziorze",
+		"en": "The jazz festival town, with Chillon Castle on a rock in the lake",
+		"cs": "Město jazzového festivalu s hradem Chillon na skále v jezeře",
+		"is": "Bær djasshátíðarinnar, með Chillon-kastala á kletti í vatninu",
+		"de": "Stadt des Jazzfestivals, mit dem Schloss Chillon auf einem Felsen im See"
+	},
+	"Vevey": {
+		"pl": "Tu Charlie Chaplin spędził ostatnie lata życia",
+		"en": "Charlie Chaplin spent the last years of his life here",
+		"cs": "Zde strávil Charlie Chaplin poslední léta svého života",
+		"is": "Hér bjó Charlie Chaplin síðustu æviár sín",
+		"de": "Hier verbrachte Charlie Chaplin seine letzten Lebensjahre"
+	},
+	"Martigny": {
+		"pl": "Tu dolina Rodanu skręca na północ, a droga przez Wielką Przełęcz Świętego Bernarda prowadzi do Włoch",
+		"en": "Here the Rhône valley turns north and the road over the Great St Bernard leads to Italy",
+		"cs": "Zde se údolí Rhôny stáčí k severu a silnice přes Velký Svatý Bernard vede do Itálie",
+		"is": "Hér beygir Rónardalur til norðurs og vegurinn yfir Stóra Sankti Bernharðsskarð liggur til Ítalíu",
+		"de": "Hier biegt das Rhonetal nach Norden, und die Strasse über den Grossen St. Bernhard führt nach Italien"
+	},
+	"Interlaken": {
+		"pl": "Miasteczko między jeziorami Thun i Brienz, z widokiem na Jungfrau",
+		"en": "A town between Lake Thun and Lake Brienz, looking up to the Jungfrau",
+		"cs": "Městečko mezi Thunským a Brienzským jezerem s výhledem na Jungfrau",
+		"is": "Bær milli Thun-vatns og Brienz-vatns með útsýni til Jungfrau",
+		"de": "Ort zwischen Thuner- und Brienzersee, mit Blick auf die Jungfrau"
+	},
+	"Brienz": {
+		"pl": "Wieś snycerzy, znana z rzeźb w drewnie",
+		"en": "The woodcarvers' village, known for its wooden sculptures",
+		"cs": "Vesnice řezbářů, známá dřevěnými sochami",
+		"is": "Þorp tréskurðarmanna, þekkt fyrir útskornar styttur",
+		"de": "Das Dorf der Holzschnitzer, bekannt für seine Schnitzereien"
+	},
+	"Altdorf": {
+		"pl": "Według legendy tu Wilhelm Tell zestrzelił jabłko z głowy syna",
+		"en": "Where, in the legend, William Tell shot the apple off his son's head",
+		"cs": "Podle pověsti zde Vilém Tell sestřelil jablko z hlavy svého syna",
+		"is": "Samkvæmt sögninni skaut Vilhjálmur Tell hér epli af höfði sonar síns",
+		"de": "Hier schoss Wilhelm Tell der Sage nach den Apfel vom Kopf seines Sohnes"
+	},
+	"Göschenen": {
+		"pl": "Wieś u północnego wylotu tuneli pod Gotardem",
+		"en": "The village at the northern end of the Gotthard tunnels",
+		"cs": "Vesnice u severního portálu gotthardských tunelů",
+		"is": "Þorp við norðurenda Gotthard-ganganna",
+		"de": "Das Dorf am Nordportal der Gotthardtunnel"
+	},
+	"Airolo": {
+		"pl": "Pierwsza wieś włoskojęzycznego Ticino za tunelem Gotarda",
+		"en": "The first village of Italian-speaking Ticino past the Gotthard tunnel",
+		"cs": "První vesnice italsky mluvícího Ticina za gotthardským tunelem",
+		"is": "Fyrsta þorp ítölskumælandi Ticino handan Gotthard-ganganna",
+		"de": "Das erste Dorf des italienischsprachigen Tessins nach dem Gotthardtunnel"
+	},
+	"Bellinzona": {
+		"pl": "Stolica Ticino z trzema zamkami na liście UNESCO",
+		"en": "The capital of Ticino, with three castles on the UNESCO list",
+		"cs": "Metropole Ticina se třemi hrady na seznamu UNESCO",
+		"is": "Höfuðstaður Ticino með þrjá kastala á heimsminjaskrá UNESCO",
+		"de": "Hauptort des Tessins, mit drei Burgen auf der UNESCO-Liste"
+	},
+	"Thusis": {
+		"pl": "Tuż za miastem droga wchodzi w wąwóz Viamala, wyżłobiony przez Ren",
+		"en": "Just past the town the road enters the Viamala gorge, cut by the Rhine",
+		"cs": "Hned za městem vstupuje silnice do soutěsky Viamala, kterou vyhloubil Rýn",
+		"is": "Rétt handan bæjarins liggur vegurinn inn í Viamala-gljúfrið sem Rín gróf",
+		"de": "Gleich nach dem Ort führt die Strasse in die Viamala-Schlucht, die der Rhein gegraben hat"
+	},
+	"Buchs": {
+		"pl": "Po drugiej stronie Renu leży Liechtenstein",
+		"en": "Liechtenstein lies across the Rhine",
+		"cs": "Na druhém břehu Rýna leží Lichtenštejnsko",
+		"is": "Liechtenstein er hinum megin við Rín",
+		"de": "Auf der anderen Seite des Rheins liegt Liechtenstein"
+	},
+	"Moutier": {
+		"pl": "Od 1 stycznia 2026 roku należy do kantonu Jura zamiast Berna",
+		"en": "Since 1 January 2026 it belongs to the canton of Jura instead of Bern",
+		"cs": "Od 1. ledna 2026 patří ke kantonu Jura místo Bernu",
+		"is": "Frá 1. janúar 2026 tilheyrir bærinn kantónunni Jura í stað Bern",
+		"de": "Gehört seit dem 1. Januar 2026 zum Kanton Jura statt zu Bern"
+	},
+	"Rheinfelden": {
+		"pl": "Miasteczko nad Renem, po drugiej stronie mostu leży niemieckie Rheinfelden",
+		"en": "A town on the Rhine; across the bridge lies German Rheinfelden",
+		"cs": "Městečko na Rýně, za mostem leží německý Rheinfelden",
+		"is": "Bær við Rín; handan brúarinnar er þýska Rheinfelden",
+		"de": "Städtchen am Rhein, jenseits der Brücke liegt das deutsche Rheinfelden"
+	},
+	"Baden": {
+		"pl": "Miasto znane od czasów rzymskich z gorących źródeł",
+		"en": "A town known for its hot springs since Roman times",
+		"cs": "Město známé horkými prameny už od římských dob",
+		"is": "Bær þekktur fyrir heitar laugar allt frá tímum Rómverja",
+		"de": "Seit der Römerzeit für ihre heissen Quellen bekannte Stadt"
+	},
+	"Bulle": {
+		"pl": "Miasto w Gruyère, krainie znanej z sera o tej samej nazwie",
+		"en": "A town in Gruyère, the land of the cheese of that name",
+		"cs": "Město v kraji Gruyère, domově stejnojmenného sýra",
+		"is": "Bær í Gruyère, héraðinu sem samnefndur ostur er kenndur við",
+		"de": "Stadt im Greyerzerland, der Heimat des gleichnamigen Käses"
+	},
+	"Walenstadt": {
+		"pl": "Miasteczko na końcu jeziora Walensee, pod stromymi ścianami Churfirsten",
+		"en": "A town at the end of the Walensee, below the steep walls of the Churfirsten",
+		"cs": "Městečko na konci jezera Walensee pod strmými stěnami Churfirsten",
+		"is": "Bær við enda Walensee, undir bröttum hömrum Churfirsten",
+		"de": "Städtchen am Ende des Walensees, unter den steilen Wänden der Churfirsten"
+	}
+}

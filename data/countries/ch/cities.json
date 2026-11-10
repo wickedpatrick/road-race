@@ -1,0 +1,51 @@
+{
+	"zuerich": {
+		"name": "Zürich",
+		"lat": 47.37,
+		"lon": 8.54,
+		"pop": 427,
+		"region": "Zürich",
+		"exonym": {"pl": "Zurych", "en": "Zurich", "cs": "Curych"}
+	},
+	"geneve": {
+		"name": "Genève",
+		"lat": 46.2,
+		"lon": 6.14,
+		"pop": 204,
+		"region": "Genève",
+		"exonym": {"pl": "Genewa", "en": "Geneva", "cs": "Ženeva", "is": "Genf", "de": "Genf"}
+	},
+	"basel": {
+		"name": "Basel",
+		"lat": 47.56,
+		"lon": 7.59,
+		"pop": 174,
+		"region": "Basel-Stadt",
+		"exonym": {"pl": "Bazylea", "cs": "Basilej"}
+	},
+	"lausanne": {"name": "Lausanne", "lat": 46.52, "lon": 6.63, "pop": 141, "region": "Vaud", "exonym": {"pl": "Lozanna"}},
+	"bern": {"name": "Bern", "lat": 46.95, "lon": 7.45, "pop": 134, "region": "Bern", "exonym": {"pl": "Berno"}},
+	"winterthur": {"name": "Winterthur", "lat": 47.5, "lon": 8.72, "pop": 118, "region": "Zürich"},
+	"luzern": {
+		"name": "Luzern",
+		"lat": 47.05,
+		"lon": 8.31,
+		"pop": 83,
+		"region": "Luzern",
+		"exonym": {"pl": "Lucerna", "en": "Lucerne", "cs": "Lucern"}
+	},
+	"st_gallen": {
+		"name": "St. Gallen",
+		"lat": 47.42,
+		"lon": 9.37,
+		"pop": 76,
+		"region": "St. Gallen",
+		"exonym": {"pl": "Sankt Gallen"}
+	},
+	"lugano": {"name": "Lugano", "lat": 46, "lon": 8.95, "pop": 63, "region": "Ticino"},
+	"biel": {"name": "Biel", "lat": 47.14, "lon": 7.25, "pop": 56, "region": "Bern"},
+	"thun": {"name": "Thun", "lat": 46.76, "lon": 7.63, "pop": 44, "region": "Bern"},
+	"fribourg": {"name": "Fribourg", "lat": 46.8, "lon": 7.16, "pop": 39, "region": "Fribourg"},
+	"chur": {"name": "Chur", "lat": 46.85, "lon": 9.53, "pop": 38, "region": "Graubünden"},
+	"sion": {"name": "Sion", "lat": 46.23, "lon": 7.36, "pop": 36, "region": "Valais", "exonym": {"de": "Sitten"}}
+}

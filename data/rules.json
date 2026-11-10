@@ -1299,7 +1299,21 @@
 		"it_rimini_arco_augusto": [17, 17],
 		"it_trento_buonconsiglio": [90, 40],
 		"it_siracusa_teatro_greco": [140, 25],
-		"it_siena_torre_mangia": [70, 102]
+		"it_siena_torre_mangia": [70, 102],
+		"ch_zuerich_grossmuenster": [40, 61],
+		"ch_geneve_jet_deau": [40, 140],
+		"ch_basel_rathaus": [36, 43],
+		"ch_lausanne_cathedrale": [70, 76],
+		"ch_bern_zytglogge": [16, 54],
+		"ch_winterthur_stadthaus": [50, 25],
+		"ch_luzern_kapellbruecke": [90, 40],
+		"ch_st_gallen_kathedrale": [60, 67],
+		"ch_lugano_san_lorenzo": [36, 45],
+		"ch_biel_vennerbrunnen": [8, 10],
+		"ch_thun_schloss": [30, 45],
+		"ch_fribourg_cathedrale": [36, 75],
+		"ch_chur_obertor": [12, 30],
+		"ch_sion_valere_tourbillon": [160, 113]
 	},
 	"police": {"escape_chance": 0.2, "escape_kmh": 180, "escape_swerves": [3, 5]},
 	"postcards": {"stamps": [0.15, 0.3, 0.45, 0.6], "stamp_caps": [2, 3, 3, 4, 5, 5, 5]}

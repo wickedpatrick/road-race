@@ -234,6 +234,12 @@
 			"name": {"pl": "Włochy", "en": "Italy", "cs": "Itálie", "is": "Ítalía", "de": "Italien"},
 			"neighbours": ["fr", "ch", "at", "si", "mt"],
 			"favorite_neighbour": "fr"
+		},
+		{
+			"code": "ch",
+			"name": {"pl": "Szwajcaria", "en": "Switzerland", "cs": "Švýcarsko", "is": "Sviss", "de": "Schweiz"},
+			"neighbours": ["de", "fr", "it", "at", "li"],
+			"favorite_neighbour": "de"
 		}
 	]
 }

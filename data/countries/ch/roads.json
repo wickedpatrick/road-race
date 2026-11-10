@@ -1,0 +1,388 @@
+[
+	{
+		"a": "geneve",
+		"b": "lausanne",
+		"km": 62,
+		"road": "A1",
+		"towns": [["Nyon", 23], ["Rolle", 35], ["Morges", 50]],
+		"zones": [[12, "lakes", "Genève"], [62, "lakes", "Vaud"]],
+		"via": [[23, 6.24, 46.39], [35, 6.34, 46.47], [50, 6.5, 46.52]]
+	},
+	{
+		"a": "lausanne",
+		"b": "fribourg",
+		"km": 70,
+		"road": [[14, "A9"], [70, "A12"]],
+		"towns": [["Châtel-Saint-Denis", 27], ["Bulle", 43]],
+		"zones": [[24, "foothills", "Vaud"], [70, "upland", "Fribourg"]],
+		"via": [[14, 6.8, 46.5], [27, 6.9, 46.53], [43, 7.06, 46.62]]
+	},
+	{
+		"a": "lausanne",
+		"b": "sion",
+		"km": 95,
+		"road": "A9",
+		"towns": [["Vevey", 19], ["Montreux", 25], ["Aigle", 42], ["Saint-Maurice", 56], ["Martigny", 69], ["Riddes", 81]],
+		"zones": [[31, "lakes", "Vaud"], [53, "foothills", "Vaud"], [95, "foothills", "Valais"]],
+		"via": [
+			[19, 6.84, 46.47], [25, 6.91, 46.43], [31, 6.93, 46.4], [42, 6.97, 46.32], [56, 7, 46.22],
+			[69, 7.07, 46.1], [81, 7.22, 46.15]
+		]
+	},
+	{
+		"a": "fribourg",
+		"b": "bern",
+		"km": 34,
+		"road": "A12",
+		"towns": [["Düdingen", 7], ["Flamatt", 20]],
+		"zones": [[22, "upland", "Fribourg"], [34, "fields", "Bern"]],
+		"via": [[7, 7.19, 46.85], [20, 7.32, 46.89]]
+	},
+	{
+		"a": "bern",
+		"b": "biel",
+		"km": 38,
+		"road": [[10, "A1"], [38, "A6"]],
+		"towns": [["Lyss", 24]],
+		"zones": [[38, "fields", "Bern"]],
+		"via": [[10, 7.47, 47.02], [24, 7.31, 47.07]]
+	},
+	{
+		"a": "bern",
+		"b": "thun",
+		"km": 29,
+		"road": "A6",
+		"towns": [["Münsingen", 14]],
+		"zones": [[18, "fields", "Bern"], [29, "foothills", "Bern"]],
+		"via": [[14, 7.56, 46.87]]
+	},
+	{
+		"a": "biel",
+		"b": "basel",
+		"km": 88,
+		"road": [[45, "A16"], [88, "18"]],
+		"towns": [
+			["Sonceboz-Sombeval", 12], ["Tavannes", 20], ["Moutier", 34], ["Delémont", 45], ["Laufen", 63],
+			["Aesch", 76]
+		],
+		"zones": [[30, "jura", "Bern"], [52, "jura", "Jura"], [80, "jura", "Basel-Landschaft"], [88, "fields", "Basel-Stadt"]],
+		"via": [[12, 7.17, 47.2], [20, 7.2, 47.22], [34, 7.37, 47.28], [45, 7.35, 47.36], [63, 7.5, 47.42], [76, 7.6, 47.47]]
+	},
+	{
+		"a": "bern",
+		"b": "zuerich",
+		"km": 125,
+		"road": "A1",
+		"towns": [["Kirchberg", 17], ["Oensingen", 45], ["Rothrist", 62], ["Lenzburg", 87], ["Baden", 102], ["Dietikon", 112]],
+		"zones": [[30, "fields", "Bern"], [55, "fields", "Solothurn"], [108, "fields", "Aargau"], [125, "fields", "Zürich"]],
+		"via": [
+			[17, 7.58, 47.08], [45, 7.75, 47.31], [62, 7.9, 47.3], [87, 8.17, 47.39], [102, 8.31, 47.45],
+			[112, 8.4, 47.4]
+		]
+	},
+	{
+		"a": "basel",
+		"b": "zuerich",
+		"km": 87,
+		"road": [[52, "A3"], [87, "A1"]],
+		"towns": [["Rheinfelden", 16], ["Frick", 32], ["Brugg", 47], ["Dietikon", 75]],
+		"zones": [
+			[5, "industrial", "Basel-Stadt"], [14, "fields", "Basel-Landschaft"], [46, "jura", "Aargau"],
+			[72, "fields", "Aargau"], [87, "fields", "Zürich"]
+		],
+		"via": [[16, 7.79, 47.55], [32, 8.01, 47.51], [47, 8.21, 47.48], [63, 8.31, 47.45], [75, 8.4, 47.4]],
+		"tunnels": [
+			{
+				"from_km": 38,
+				"to_km": 41.7,
+				"name": {
+					"pl": "Tunel Bözberg",
+					"en": "Bözberg Tunnel",
+					"cs": "Tunel Bözberg",
+					"is": "Bözberg-göngin",
+					"de": "Bözbergtunnel"
+				},
+				"fact": {
+					"pl": "3,7 km pod pasmem Jury Bözberg, między Frick a Brugg",
+					"en": "3.7 km under the Bözberg in the Jura, between Frick and Brugg",
+					"cs": "3,7 km pod jurským hřbetem Bözberg, mezi Frickem a Bruggem",
+					"is": "3,7 km undir Bözberg í Júrafjöllum, milli Frick og Brugg",
+					"de": "3,7 km unter dem Bözberg im Jura, zwischen Frick und Brugg"
+				}
+			}
+		]
+	},
+	{
+		"a": "basel",
+		"b": "luzern",
+		"km": 97,
+		"road": "A2",
+		"towns": [
+			["Liestal", 15], ["Sissach", 24], ["Egerkingen", 41], ["Oftringen", 57], ["Dagmersellen", 66],
+			["Sursee", 79], ["Emmen", 92]
+		],
+		"zones": [
+			[3, "industrial", "Basel-Stadt"], [12, "fields", "Basel-Landschaft"], [34, "jura", "Basel-Landschaft"],
+			[38, "jura", "Solothurn"], [50, "fields", "Solothurn"], [62, "fields", "Aargau"], [97, "fields", "Luzern"]
+		],
+		"via": [
+			[15, 7.73, 47.48], [24, 7.81, 47.46], [41, 7.79, 47.32], [57, 7.92, 47.31], [66, 7.99, 47.21],
+			[79, 8.13, 47.17], [92, 8.29, 47.08]
+		],
+		"tunnels": [
+			{
+				"from_km": 32,
+				"to_km": 35.2,
+				"name": {
+					"pl": "Tunel Belchen",
+					"en": "Belchen Tunnel",
+					"cs": "Tunel Belchen",
+					"is": "Belchen-göngin",
+					"de": "Belchentunnel"
+				},
+				"fact": {
+					"pl": "3,2 km pod Jurą, z Bazylei-Okręgu do Solury",
+					"en": "3.2 km under the Jura, from Basel-Landschaft into Solothurn",
+					"cs": "3,2 km pod Jurou, z kantonu Basilej-venkov do Solothurnu",
+					"is": "3,2 km undir Júrafjöllum, frá Basel-Landschaft til Solothurn",
+					"de": "3,2 km unter dem Jura, von Basel-Landschaft in den Kanton Solothurn"
+				}
+			}
+		]
+	},
+	{
+		"a": "zuerich",
+		"b": "winterthur",
+		"km": 25,
+		"road": "A1",
+		"towns": [["Wallisellen", 8]],
+		"zones": [[25, "fields", "Zürich"]],
+		"via": [[8, 8.6, 47.41]]
+	},
+	{
+		"a": "winterthur",
+		"b": "st_gallen",
+		"km": 59,
+		"road": "A1",
+		"towns": [["Wil", 29], ["Uzwil", 39], ["Gossau", 50]],
+		"zones": [[14, "fields", "Zürich"], [24, "upland", "Thurgau"], [59, "upland", "St. Gallen"]],
+		"via": [[29, 9.05, 47.46], [39, 9.13, 47.43], [50, 9.25, 47.42]]
+	},
+	{
+		"a": "zuerich",
+		"b": "luzern",
+		"km": 52,
+		"road": [[5, "A3"], [37, "A4"], [52, "A14"]],
+		"towns": [["Affoltern am Albis", 23], ["Rotkreuz", 37], ["Ebikon", 47]],
+		"zones": [[26, "upland", "Zürich"], [38, "fields", "Zug"], [52, "fields", "Luzern"]],
+		"via": [[23, 8.45, 47.28], [37, 8.43, 47.14], [47, 8.34, 47.08]],
+		"tunnels": [
+			{
+				"from_km": 5.5,
+				"to_km": 9.9,
+				"name": {
+					"pl": "Tunel Uetliberg",
+					"en": "Uetliberg Tunnel",
+					"cs": "Tunel Uetliberg",
+					"is": "Uetliberg-göngin",
+					"de": "Uetlibergtunnel"
+				},
+				"fact": {
+					"pl": "4,4 km pod Uetlibergiem, górą Zurychu",
+					"en": "4.4 km under the Uetliberg, Zurich's own mountain",
+					"cs": "4,4 km pod Uetlibergem, curyšskou horou",
+					"is": "4,4 km undir Uetliberg, bæjarfjalli Zürich",
+					"de": "4,4 km unter dem Uetliberg, dem Hausberg von Zürich"
+				}
+			},
+			{
+				"from_km": 12,
+				"to_km": 17,
+				"name": {
+					"pl": "Tunel Islisberg",
+					"en": "Islisberg Tunnel",
+					"cs": "Tunel Islisberg",
+					"is": "Islisberg-göngin",
+					"de": "Islisbergtunnel"
+				},
+				"fact": {
+					"pl": "5 km pod wzgórzem Islisberg, w drodze do Knonauer Amt",
+					"en": "5 km under the Islisberg, on the way into the Knonauer Amt",
+					"cs": "5 km pod vrchem Islisberg, cestou do Knonauer Amt",
+					"is": "5 km undir Islisberg, á leiðinni inn í Knonauer Amt",
+					"de": "5 km unter dem Islisberg, auf dem Weg ins Knonauer Amt"
+				}
+			}
+		]
+	},
+	{
+		"a": "luzern",
+		"b": "lugano",
+		"km": 170,
+		"road": "A2",
+		"weather": "snow",
+		"towns": [
+			["Hergiswil", 8], ["Stans", 14], ["Beckenried", 23], ["Altdorf", 40], ["Erstfeld", 46], ["Amsteg", 52],
+			["Wassen", 62], ["Göschenen", 68], ["Airolo", 89], ["Faido", 108], ["Biasca", 124], ["Bellinzona", 142],
+			["Rivera", 155]
+		],
+		"zones": [
+			[6, "lakes", "Luzern"], [30, "lakes", "Nidwalden"], [79, "mountains", "Uri"], [124, "mountains", "Ticino"],
+			[152, "foothills", "Ticino"], [170, "lakes", "Ticino"]
+		],
+		"via": [
+			[8, 8.29, 46.99], [14, 8.37, 46.96], [23, 8.51, 46.97], [40, 8.64, 46.88], [52, 8.67, 46.76],
+			[62, 8.6, 46.71], [68, 8.59, 46.67], [89, 8.61, 46.53], [108, 8.84, 46.46], [124, 8.97, 46.36],
+			[142, 9.02, 46.19], [155, 8.92, 46.11]
+		],
+		"tunnels": [
+			{
+				"from_km": 25,
+				"to_km": 34.3,
+				"name": {
+					"pl": "Tunel Seelisberg",
+					"en": "Seelisberg Tunnel",
+					"cs": "Tunel Seelisberg",
+					"is": "Seelisberg-göngin",
+					"de": "Seelisbergtunnel"
+				},
+				"fact": {
+					"pl": "9,3 km pod górą Seelisberg, nad Jeziorem Czterech Kantonów",
+					"en": "9.3 km under the Seelisberg, by Lake Lucerne",
+					"cs": "9,3 km pod horou Seelisberg u Lucernského jezera",
+					"is": "9,3 km undir Seelisberg við Luzern-vatn",
+					"de": "9,3 km unter dem Seelisberg am Vierwaldstättersee"
+				}
+			},
+			{
+				"from_km": 70,
+				"to_km": 86.9,
+				"name": {
+					"pl": "Tunel drogowy św. Gotarda",
+					"en": "Gotthard Road Tunnel",
+					"cs": "Silniční tunel Gotthard",
+					"is": "Gotthard-veggöngin",
+					"de": "Gotthard-Strassentunnel"
+				},
+				"fact": {
+					"pl": "16,9 km z Göschenen do Airolo pod przełęczą św. Gotarda, otwarty w 1980 roku",
+					"en": "16.9 km from Göschenen to Airolo under the Gotthard Pass, opened in 1980",
+					"cs": "16,9 km z Göschenenu do Airola pod průsmykem Gotthard, otevřen v roce 1980",
+					"is": "16,9 km frá Göschenen til Airolo undir Gotthard-skarði, opnuð árið 1980",
+					"de": "16,9 km von Göschenen nach Airolo unter dem Gotthardpass, eröffnet 1980"
+				}
+			}
+		]
+	},
+	{
+		"a": "chur",
+		"b": "lugano",
+		"km": 145,
+		"road": [[117, "A13"], [145, "A2"]],
+		"weather": "snow",
+		"towns": [
+			["Domat/Ems", 7], ["Thusis", 26], ["Andeer", 38], ["Splügen", 54], ["Hinterrhein", 62],
+			["San Bernardino", 73], ["Mesocco", 84], ["Lostallo", 93], ["Roveredo", 104], ["Bellinzona", 117],
+			["Rivera", 130]
+		],
+		"zones": [
+			[26, "foothills", "Graubünden"], [108, "mountains", "Graubünden"], [124, "foothills", "Ticino"],
+			[145, "lakes", "Ticino"]
+		],
+		"via": [
+			[7, 9.45, 46.83], [26, 9.44, 46.7], [38, 9.44, 46.6], [54, 9.32, 46.55], [62, 9.18, 46.53],
+			[73, 9.19, 46.46], [84, 9.23, 46.35], [104, 9.13, 46.24], [117, 9.02, 46.19], [130, 8.92, 46.11]
+		],
+		"tunnels": [
+			{
+				"from_km": 64.5,
+				"to_km": 71.1,
+				"name": {
+					"pl": "Tunel San Bernardino",
+					"en": "San Bernardino Tunnel",
+					"cs": "Tunel San Bernardino",
+					"is": "San Bernardino-göngin",
+					"de": "San-Bernardino-Tunnel"
+				},
+				"fact": {
+					"pl": "6,6 km pod przełęczą San Bernardino, z doliny Renu do doliny Mesolcina",
+					"en": "6.6 km under the San Bernardino Pass, from the Rhine valley into the Mesolcina",
+					"cs": "6,6 km pod průsmykem San Bernardino, z údolí Rýna do údolí Mesolcina",
+					"is": "6,6 km undir San Bernardino-skarði, úr Rínardal í Mesolcina-dal",
+					"de": "6,6 km unter dem San-Bernardino-Pass, vom Rheintal ins Misox"
+				}
+			}
+		]
+	},
+	{
+		"a": "zuerich",
+		"b": "chur",
+		"km": 118,
+		"road": "A3",
+		"towns": [
+			["Wädenswil", 24], ["Pfäffikon", 35], ["Lachen", 42], ["Niederurnen", 53], ["Walenstadt", 74],
+			["Sargans", 88], ["Bad Ragaz", 93], ["Landquart", 102]
+		],
+		"zones": [
+			[26, "lakes", "Zürich"], [50, "lakes", "Schwyz"], [64, "lakes", "Glarus"], [96, "lakes", "St. Gallen"],
+			[118, "foothills", "Graubünden"]
+		],
+		"via": [
+			[24, 8.67, 47.23], [35, 8.78, 47.2], [42, 8.85, 47.19], [53, 9.05, 47.13], [74, 9.31, 47.12],
+			[88, 9.44, 47.05], [102, 9.56, 46.96]
+		],
+		"tunnels": [
+			{
+				"from_km": 57,
+				"to_km": 62.7,
+				"name": {
+					"pl": "Tunel Kerenzerberg",
+					"en": "Kerenzerberg Tunnel",
+					"cs": "Tunel Kerenzerberg",
+					"is": "Kerenzerberg-göngin",
+					"de": "Kerenzerbergtunnel"
+				},
+				"fact": {
+					"pl": "5,7 km pod górą Kerenzerberg, nad jeziorem Walensee",
+					"en": "5.7 km under the Kerenzerberg, above the Walensee",
+					"cs": "5,7 km pod horou Kerenzerberg nad jezerem Walensee",
+					"is": "5,7 km undir Kerenzerberg við Walensee-vatn",
+					"de": "5,7 km unter dem Kerenzerberg am Walensee"
+				}
+			}
+		]
+	},
+	{
+		"a": "st_gallen",
+		"b": "chur",
+		"km": 100,
+		"road": [[20, "A1"], [100, "A13"]],
+		"towns": [
+			["St. Margrethen", 20], ["Altstätten", 34], ["Oberriet", 42], ["Buchs", 56], ["Sargans", 70],
+			["Bad Ragaz", 76], ["Landquart", 85]
+		],
+		"zones": [[20, "upland", "St. Gallen"], [78, "fields", "St. Gallen"], [100, "foothills", "Graubünden"]],
+		"via": [
+			[20, 9.64, 47.47], [34, 9.55, 47.38], [42, 9.57, 47.32], [56, 9.48, 47.17], [70, 9.44, 47.05],
+			[85, 9.56, 46.96]
+		]
+	},
+	{
+		"a": "thun",
+		"b": "luzern",
+		"km": 98,
+		"road": [[10, "A6"], [45, "A8"], [80, "8"], [98, "A8"]],
+		"towns": [
+			["Spiez", 10], ["Interlaken", 27], ["Brienz", 45], ["Lungern", 62], ["Giswil", 70], ["Sachseln", 76],
+			["Sarnen", 80], ["Alpnach", 86], ["Hergiswil", 92]
+		],
+		"zones": [
+			[45, "lakes", "Bern"], [54, "mountains", "Bern"], [66, "mountains", "Obwalden"], [88, "lakes", "Obwalden"],
+			[94, "lakes", "Nidwalden"], [98, "lakes", "Luzern"]
+		],
+		"via": [
+			[10, 7.68, 46.69], [27, 7.86, 46.69], [45, 8.04, 46.75], [55, 8.14, 46.75], [62, 8.16, 46.79],
+			[70, 8.18, 46.84], [80, 8.25, 46.9], [86, 8.28, 46.94], [92, 8.29, 46.99]
+		]
+	}
+]
