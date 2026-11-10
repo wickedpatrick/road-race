@@ -25,15 +25,24 @@
 	},
 	{
 		"a": "reims",
-		"b": "strasbourg",
-		"km": 350,
+		"b": "metz",
+		"km": 188,
 		"road": "A4",
-		"towns": [["Metz", 188], ["Saverne", 318]],
+		"towns": [["Sainte-Menehould", 80], ["Verdun", 125]],
+		"zones": [[100, "fields", "Grand Est"], [135, "fields", "Grand Est"], [188, "fields", "Grand Est"]],
+		"via": [[80, 4.9, 49.09], [125, 5.39, 49.16]]
+	},
+	{
+		"a": "metz",
+		"b": "strasbourg",
+		"km": 162,
+		"road": "A4",
+		"towns": [["Saverne", 130]],
 		"zones": [
-			[100, "fields", "Grand Est"], [135, "fields", "Grand Est"], [300, "fields", "Grand Est"],
-			[318, "forest", "Grand Est"], [325, "fields", "Grand Est"], [350, "fields", "Grand Est"]
+			[112, "fields", "Grand Est"], [130, "forest", "Grand Est"], [137, "fields", "Grand Est"],
+			[162, "fields", "Grand Est"]
 		],
-		"via": [[188, 6.18, 49.12], [318, 7.36, 48.74]]
+		"via": [[60, 6.75, 48.95], [130, 7.36, 48.74]]
 	},
 	{
 		"a": "strasbourg",
@@ -67,17 +76,25 @@
 	},
 	{
 		"a": "tours",
-		"b": "bordeaux",
-		"km": 345,
+		"b": "poitiers",
+		"km": 102,
 		"road": "A10",
-		"towns": [["Poitiers", 102], ["Niort", 175], ["Saintes", 245]],
+		"towns": [["Sainte-Maure-de-Touraine", 35], ["Châtellerault", 70]],
+		"zones": [[48, "fields", "Centre-Val de Loire"], [102, "fields", "Nouvelle-Aquitaine"]],
+		"via": [[35, 0.61, 47.11], [70, 0.55, 46.82]]
+	},
+	{
+		"a": "poitiers",
+		"b": "bordeaux",
+		"km": 243,
+		"road": "A10",
+		"towns": [["Niort", 73], ["Saintes", 143]],
 		"zones": [
-			[48, "fields", "Centre-Val de Loire"],
-			[230, "fields", "Nouvelle-Aquitaine"],
-			[320, "orchard", "Nouvelle-Aquitaine"],
-			[345, "industrial", "Nouvelle-Aquitaine"]
+			[128, "fields", "Nouvelle-Aquitaine"],
+			[218, "orchard", "Nouvelle-Aquitaine"],
+			[243, "industrial", "Nouvelle-Aquitaine"]
 		],
-		"via": [[102, 0.34, 46.58], [175, -0.46, 46.32], [245, -0.63, 45.75]]
+		"via": [[73, -0.46, 46.32], [143, -0.63, 45.75]]
 	},
 	{
 		"a": "bordeaux",
@@ -120,12 +137,21 @@
 	},
 	{
 		"a": "montpellier",
+		"b": "nimes",
+		"km": 50,
+		"road": "A9",
+		"towns": [["Lunel", 25]],
+		"zones": [[50, "mediterranean", "Occitanie"]],
+		"via": [[25, 4.13, 43.68]]
+	},
+	{
+		"a": "nimes",
 		"b": "avignon",
-		"km": 95,
-		"road": [[80, "A9"], [95, "N100"]],
-		"towns": [["Lunel", 25], ["Nîmes", 50], ["Remoulins", 75]],
-		"zones": [[85, "mediterranean", "Occitanie"], [95, "mediterranean", "Provence-Alpes-Côte d'Azur"]],
-		"via": [[50, 4.36, 43.84], [75, 4.56, 43.94]]
+		"km": 45,
+		"road": [[30, "A9"], [45, "N100"]],
+		"towns": [["Remoulins", 25]],
+		"zones": [[35, "mediterranean", "Occitanie"], [45, "mediterranean", "Provence-Alpes-Côte d'Azur"]],
+		"via": [[25, 4.56, 43.94]]
 	},
 	{
 		"a": "avignon",
@@ -335,7 +361,7 @@
 		"a": "nantes",
 		"b": "rennes",
 		"km": 110,
-		"road": [[110, "N137", 3]],
+		"road": [[110, "N137", 3, 110]],
 		"towns": [["Derval", 55], ["Bain-de-Bretagne", 75]],
 		"zones": [[65, "fields", "Pays de la Loire"], [110, "fields", "Bretagne"]],
 		"via": [[55, -1.67, 47.67], [75, -1.68, 47.84]]
@@ -344,7 +370,7 @@
 		"a": "rennes",
 		"b": "brest",
 		"km": 245,
-		"road": [[245, "N12", 3]],
+		"road": [[245, "N12", 3, 110]],
 		"towns": [["Saint-Brieuc", 100], ["Guingamp", 130], ["Morlaix", 185], ["Landerneau", 225]],
 		"zones": [
 			[60, "fields", "Bretagne"], [90, "forest", "Bretagne"], [110, "coast", "Bretagne"],
@@ -429,5 +455,141 @@
 			[215, "fields", "Centre-Val de Loire"], [300, "forest", "Centre-Val de Loire"]
 		],
 		"via": [[15, 3.11, 45.89], [95, 2.6, 46.34], [140, 2.49, 46.72], [185, 2.4, 47.08], [218, 2.07, 47.22]]
+	},
+	{
+		"a": "marseille",
+		"b": "toulon",
+		"km": 65,
+		"road": "A50",
+		"towns": [["Aubagne", 17], ["La Ciotat", 32], ["Bandol", 48]],
+		"zones": [
+			[8, "industrial", "Provence-Alpes-Côte d'Azur"],
+			[58, "mediterranean", "Provence-Alpes-Côte d'Azur"],
+			[65, "industrial", "Provence-Alpes-Côte d'Azur"]
+		],
+		"via": [[17, 5.57, 43.29], [32, 5.62, 43.19], [48, 5.75, 43.14]]
+	},
+	{
+		"a": "toulon",
+		"b": "nice",
+		"km": 150,
+		"road": [[45, "A57"], [150, "A8"]],
+		"towns": [["Cuers", 20], ["Le Luc", 45], ["Fréjus", 85], ["Cannes", 118], ["Antibes", 132]],
+		"zones": [
+			[10, "industrial", "Provence-Alpes-Côte d'Azur"],
+			[60, "mediterranean", "Provence-Alpes-Côte d'Azur"],
+			[100, "foothills", "Provence-Alpes-Côte d'Azur"],
+			[150, "mediterranean", "Provence-Alpes-Côte d'Azur"]
+		],
+		"via": [[20, 6.07, 43.24], [45, 6.31, 43.39], [85, 6.74, 43.45], [118, 7, 43.57], [132, 7.1, 43.6]]
+	},
+	{
+		"a": "rouen",
+		"b": "le_havre",
+		"km": 88,
+		"road": [[32, "A150"], [68, "A29"], [88, "A131"]],
+		"towns": [["Barentin", 17], ["Yvetot", 32], ["Bolbec", 52], ["Harfleur", 80]],
+		"zones": [[8, "industrial", "Normandie"], [75, "fields", "Normandie"], [88, "industrial", "Normandie"]],
+		"via": [[17, 0.95, 49.55], [32, 0.75, 49.6], [52, 0.47, 49.56], [80, 0.2, 49.51]]
+	},
+	{
+		"a": "caen",
+		"b": "le_havre",
+		"km": 90,
+		"road": [[62, "A13"], [80, "A29"], [90, "A131"]],
+		"towns": [["Dozulé", 25], ["Pont-l'Évêque", 45], ["Honfleur", 64]],
+		"zones": [
+			[10, "industrial", "Normandie"], [62, "orchard", "Normandie"], [80, "coast", "Normandie"],
+			[90, "industrial", "Normandie"]
+		],
+		"via": [[25, -0.04, 49.23], [45, 0.18, 49.28], [64, 0.24, 49.41], [76, 0.27, 49.44]],
+		"bridge": {
+			"from_km": 74,
+			"to_km": 76.14,
+			"name": {
+				"pl": "Most Normandzki",
+				"en": "Pont de Normandie",
+				"cs": "Normandský most",
+				"is": "Normandíbrúin",
+				"de": "Pont de Normandie"
+			},
+			"kind": "stayed",
+			"color": "#e8e6e0"
+		}
+	},
+	{
+		"a": "paris",
+		"b": "amiens",
+		"km": 140,
+		"road": [[30, "A115"], [140, "A16"]],
+		"towns": [["L'Isle-Adam", 35], ["Beauvais", 75], ["Breteuil", 105]],
+		"zones": [
+			[25, "industrial", "Île-de-France"], [50, "forest", "Île-de-France"], [130, "fields", "Hauts-de-France"],
+			[140, "industrial", "Hauts-de-France"]
+		],
+		"via": [[35, 2.22, 49.11], [75, 2.08, 49.43], [105, 2.29, 49.63]]
+	},
+	{
+		"a": "amiens",
+		"b": "rouen",
+		"km": 120,
+		"road": [[75, "A29"], [120, "A28"]],
+		"towns": [["Poix-de-Picardie", 28], ["Aumale", 50], ["Neufchâtel-en-Bray", 72]],
+		"zones": [
+			[8, "industrial", "Hauts-de-France"], [55, "fields", "Hauts-de-France"], [110, "fields", "Normandie"],
+			[120, "industrial", "Normandie"]
+		],
+		"via": [[28, 1.98, 49.78], [50, 1.75, 49.77], [72, 1.44, 49.73]]
+	},
+	{
+		"a": "amiens",
+		"b": "lille",
+		"km": 140,
+		"road": [[45, "A29"], [140, "A1"]],
+		"towns": [["Villers-Bretonneux", 18], ["Bapaume", 75], ["Arras", 95]],
+		"zones": [
+			[8, "industrial", "Hauts-de-France"], [125, "fields", "Hauts-de-France"],
+			[140, "industrial", "Hauts-de-France"]
+		],
+		"via": [[18, 2.52, 49.87], [45, 2.82, 49.86], [75, 2.85, 50.1], [95, 2.81, 50.29]]
+	},
+	{
+		"a": "lyon",
+		"b": "annecy",
+		"km": 150,
+		"road": [[100, "A43"], [150, "A41"]],
+		"towns": [["Bourgoin-Jallieu", 40], ["La Tour-du-Pin", 55], ["Chambéry", 100], ["Aix-les-Bains", 115]],
+		"zones": [
+			[15, "industrial", "Auvergne-Rhône-Alpes"],
+			[70, "fields", "Auvergne-Rhône-Alpes"],
+			[125, "foothills", "Auvergne-Rhône-Alpes"],
+			[150, "lakes", "Auvergne-Rhône-Alpes"]
+		],
+		"via": [[40, 5.28, 45.59], [55, 5.44, 45.57], [100, 5.92, 45.57], [115, 5.91, 45.69]]
+	},
+	{
+		"a": "annecy",
+		"b": "grenoble",
+		"km": 105,
+		"road": "A41",
+		"towns": [["Aix-les-Bains", 33], ["Chambéry", 50], ["Montmélian", 64], ["Crolles", 88]],
+		"zones": [
+			[35, "lakes", "Auvergne-Rhône-Alpes"],
+			[60, "foothills", "Auvergne-Rhône-Alpes"],
+			[105, "mountains", "Auvergne-Rhône-Alpes"]
+		],
+		"via": [[33, 5.91, 45.69], [50, 5.92, 45.57], [64, 6.05, 45.5], [88, 5.88, 45.28]]
+	},
+	{
+		"a": "poitiers",
+		"b": "limoges",
+		"km": 122,
+		"road": "N147",
+		"towns": [["Mignaloux-Beauvoir", 8], ["Lussac-les-Châteaux", 37], ["Bellac", 82], ["Couzeix", 115]],
+		"zones": [
+			[45, "fields", "Nouvelle-Aquitaine"], [95, "forest", "Nouvelle-Aquitaine"],
+			[122, "fields", "Nouvelle-Aquitaine"]
+		],
+		"via": [[37, 0.72, 46.4], [82, 1.05, 46.12]]
 	}
 ]

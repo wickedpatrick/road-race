@@ -63,5 +63,19 @@
 		"pop": 91,
 		"region": "Provence-Alpes-Côte d'Azur",
 		"exonym": {"pl": "Awinion"}
-	}
+	},
+	"metz": {"name": "Metz", "lat": 49.119, "lon": 6.176, "pop": 121, "region": "Grand Est"},
+	"poitiers": {"name": "Poitiers", "lat": 46.58, "lon": 0.34, "pop": 89, "region": "Nouvelle-Aquitaine"},
+	"nimes": {"name": "Nîmes", "lat": 43.837, "lon": 4.36, "pop": 148, "region": "Occitanie"},
+	"toulon": {
+		"name": "Toulon",
+		"lat": 43.124,
+		"lon": 5.928,
+		"pop": 180,
+		"region": "Provence-Alpes-Côte d'Azur",
+		"exonym": {"pl": "Tulon"}
+	},
+	"le_havre": {"name": "Le Havre", "lat": 49.494, "lon": 0.108, "pop": 166, "region": "Normandie", "exonym": {"pl": "Hawr"}},
+	"amiens": {"name": "Amiens", "lat": 49.894, "lon": 2.296, "pop": 134, "region": "Hauts-de-France"},
+	"annecy": {"name": "Annecy", "lat": 45.899, "lon": 6.129, "pop": 131, "region": "Auvergne-Rhône-Alpes"}
 }

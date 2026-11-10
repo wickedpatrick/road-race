@@ -452,5 +452,145 @@
 			},
 			"local": "Pont Saint-Bénézet"
 		}
+	],
+	"Metz": [
+		{
+			"kind": "fr_metz_pompidou",
+			"name": {
+				"pl": "Centrum Pompidou-Metz",
+				"en": "Centre Pompidou-Metz",
+				"cs": "Centre Pompidou-Metz",
+				"is": "Pompidou-miðstöðin í Metz",
+				"de": "Centre Pompidou-Metz"
+			},
+			"desc": {
+				"pl": "Filia paryskiego muzeum sztuki nowoczesnej z 2010 roku pod falującym dachem z drewnianej plecionki, z iglicą wysoką na 77 m na pamiątkę roku 1977",
+				"en": "A branch of the Paris modern art museum from 2010 under a wavy roof of woven timber, its spire 77 m tall in memory of 1977",
+				"cs": "Pobočka pařížského muzea moderního umění z roku 2010 pod vlnitou střechou z dřevěného pletiva, s věží vysokou 77 m na památku roku 1977",
+				"is": "Útibú nútímalistasafnsins í París frá 2010 undir bylgjóttu þaki úr fléttuðum viði, með 77 m háa spíru til minningar um árið 1977",
+				"de": "Ein Ableger des Pariser Museums für moderne Kunst von 2010 unter einem welligen Dach aus Holzgeflecht, mit 77 m hoher Spitze in Erinnerung an 1977"
+			},
+			"local": "Centre Pompidou-Metz"
+		}
+	],
+	"Poitiers": [
+		{
+			"kind": "fr_poitiers_notre_dame",
+			"name": {
+				"pl": "Kościół Notre-Dame-la-Grande",
+				"en": "Notre-Dame la Grande",
+				"cs": "Kostel Notre-Dame-la-Grande",
+				"is": "Notre-Dame-la-Grande",
+				"de": "Notre-Dame-la-Grande"
+			},
+			"desc": {
+				"pl": "Romański kościół z XII wieku; jego fasada z arkadami pełnymi rzeźb stoi między dwiema wieżyczkami z dachami jak szyszki",
+				"en": "A 12th-century Romanesque church; its front of arcades full of carvings stands between two turrets with pine-cone roofs",
+				"cs": "Románský kostel z 12. století; jeho průčelí s arkádami plnými soch stojí mezi dvěma věžičkami se střechami jako šišky",
+				"is": "Rómönsk kirkja frá 12. öld; framhliðin með bogagöngum fullum af höggmyndum stendur milli tveggja turna með köngullaga þökum",
+				"de": "Eine romanische Kirche aus dem 12. Jahrhundert; ihre Fassade mit Arkaden voller Skulpturen steht zwischen zwei Türmchen mit Zapfendächern"
+			},
+			"local": "Notre-Dame-la-Grande"
+		}
+	],
+	"Nîmes": [
+		{
+			"kind": "fr_nimes_maison_carree",
+			"name": {
+				"pl": "Maison Carrée",
+				"en": "Maison Carrée",
+				"cs": "Maison Carrée",
+				"is": "Maison Carrée",
+				"de": "Maison Carrée"
+			},
+			"desc": {
+				"pl": "Rzymska świątynia z początku naszej ery, jedna z najlepiej zachowanych na świecie; wzorował się na niej Thomas Jefferson",
+				"en": "A Roman temple from the turn of the era, one of the best preserved in the world; Thomas Jefferson modelled the Virginia Capitol on it",
+				"cs": "Římský chrám z přelomu letopočtu, jeden z nejzachovalejších na světě; podle něj stavěl Thomas Jefferson Kapitol ve Virginii",
+				"is": "Rómverskt hof frá upphafi tímatalsins, eitt best varðveitta í heimi; Thomas Jefferson hafði það að fyrirmynd þinghússins í Virginíu",
+				"de": "Ein römischer Tempel aus der Zeitenwende, einer der besterhaltenen der Welt; Thomas Jefferson nahm ihn zum Vorbild für das Kapitol von Virginia"
+			},
+			"local": "Maison Carrée"
+		}
+	],
+	"Toulon": [
+		{
+			"kind": "fr_toulon_tour_royale",
+			"name": {
+				"pl": "Wieża Królewska",
+				"en": "Tour Royale",
+				"cs": "Královská věž",
+				"is": "Konungsturninn",
+				"de": "Tour Royale"
+			},
+			"desc": {
+				"pl": "Okrągła forteca z 1524 roku u wejścia do redy Tulonu, z murami grubymi na 7 m, później więzienie i muzeum marynarki",
+				"en": "A round fortress of 1524 at the entrance to Toulon's roadstead, its walls 7 m thick, later a prison and a naval museum",
+				"cs": "Kruhová pevnost z roku 1524 u vjezdu do toulonského přístavu se zdmi silnými 7 m, později vězení a námořní muzeum",
+				"is": "Hringlaga virki frá 1524 við innsiglinguna til Toulon, með 7 m þykka veggi, síðar fangelsi og sjóminjasafn",
+				"de": "Eine runde Festung von 1524 an der Einfahrt zur Reede von Toulon, mit 7 m dicken Mauern, später Gefängnis und Marinemuseum"
+			},
+			"local": "Tour Royale"
+		}
+	],
+	"Le Havre": [
+		{
+			"kind": "fr_le_havre_saint_joseph",
+			"name": {
+				"pl": "Kościół św. Józefa",
+				"en": "St Joseph's Church",
+				"cs": "Kostel svatého Josefa",
+				"is": "Jósefskirkjan",
+				"de": "Kirche Saint-Joseph"
+			},
+			"desc": {
+				"pl": "Betonowy kościół Auguste'a Perreta z 1957 roku, pomnik ofiar bombardowań; jego 107-metrowa wieża z kolorowymi szybkami świeci jak latarnia morska",
+				"en": "Auguste Perret's concrete church of 1957, a memorial to the bombing victims; its 107 m tower of coloured glass shines like a lighthouse",
+				"cs": "Betonový kostel Augusta Perreta z roku 1957, památník obětem bombardování; jeho 107 m vysoká věž z barevných sklíček svítí jako maják",
+				"is": "Steinsteypukirkja Auguste Perret frá 1957, minnisvarði um fórnarlömb loftárásanna; 107 m hár turninn úr lituðu gleri lýsir eins og viti",
+				"de": "Auguste Perrets Betonkirche von 1957, ein Denkmal für die Bombenopfer; ihr 107 m hoher Turm aus farbigem Glas leuchtet wie ein Leuchtturm"
+			},
+			"local": "Église Saint-Joseph"
+		}
+	],
+	"Amiens": [
+		{
+			"kind": "fr_amiens_cathedral",
+			"name": {
+				"pl": "Katedra w Amiens",
+				"en": "Amiens Cathedral",
+				"cs": "Katedrála v Amiens",
+				"is": "Dómkirkjan í Amiens",
+				"de": "Kathedrale von Amiens"
+			},
+			"desc": {
+				"pl": "Największa gotycka katedra Francji, budowana od 1220 roku; zmieściłyby się w niej dwie katedry Notre-Dame w Paryżu",
+				"en": "France's largest Gothic cathedral, begun in 1220; two Notre-Dames of Paris would fit inside it",
+				"cs": "Největší gotická katedrála Francie, stavěná od roku 1220; vešly by se do ní dvě pařížské Notre-Dame",
+				"is": "Stærsta gotneska dómkirkja Frakklands, hafin 1220; tvær Notre-Dame-kirkjur Parísar kæmust inn í hana",
+				"de": "Frankreichs größte gotische Kathedrale, begonnen 1220; zweimal Notre-Dame de Paris hätte darin Platz"
+			},
+			"local": "Cathédrale Notre-Dame d'Amiens"
+		}
+	],
+	"Annecy": [
+		{
+			"kind": "fr_annecy_palais_ile",
+			"name": {
+				"pl": "Pałac na Wyspie",
+				"en": "Palais de l'Île",
+				"cs": "Palác na ostrově",
+				"is": "Eyjarhöllin",
+				"de": "Palais de l'Île"
+			},
+			"desc": {
+				"pl": "Dom z XII wieku na wysepce w kanale Thiou w kształcie dziobu statku; był pałacem, mennicą, sądem i więzieniem",
+				"en": "A 12th-century house shaped like a ship's bow on an islet in the Thiou canal; it has been a palace, a mint, a court and a prison",
+				"cs": "Dům z 12. století ve tvaru přídě lodi na ostrůvku v kanálu Thiou; byl palácem, mincovnou, soudem i vězením",
+				"is": "Hús frá 12. öld, lagað eins og stefni skips, á hólma í Thiou-skurðinum; það hefur verið höll, myntslátta, dómhús og fangelsi",
+				"de": "Ein Haus aus dem 12. Jahrhundert in Form eines Schiffsbugs auf einer Insel im Thiou-Kanal; es war Palast, Münze, Gericht und Gefängnis"
+			},
+			"local": "Palais de l'Île"
+		}
 	]
 }
