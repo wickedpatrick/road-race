@@ -111,6 +111,9 @@ static func _dijon_palais() -> void:
 			for k in 9:
 				var x := -22.0 + k * 3.2 + row * 1.6
 				var y := 17.6 + row * 2.2
+				var inset := (y + 2.0 - 16.0) * 0.3125 # keep each lozenge inside the sloping roof
+				if x - 1.1 < -25.5 + inset or x + 1.1 > 6.5 - inset:
+					continue
 				_poly([x, y, x + 1.1, y + 1, x, y + 2, x - 1.1, y + 1], cols[(k + row) % 3])
 	_r(16, 0, 25, 14, stone)
 	_windows(16.5, 24.5, 4, 10, 3, WIN)
@@ -124,7 +127,7 @@ static func _grenoble_bulles() -> void:
 	_poly([10, 2, 30, 2, 30, 30, 22, 34, 16, 26], rock)
 	_poly([19, 30, 30, 30, 30, 36, 19, 36], Color("9b8f72")) # the fort
 	for k in 4:
-		_r(19 + k * 3.3, 36, 20.6 + k * 3.3, 37.4, Color("9b8f72"))
+		_r(19 + k * 3.1, 36, 20.6 + k * 3.1, 37.4, Color("9b8f72"))
 	_r(-30, 2, -20, 10, CREAM) # the lower station
 	_r(-30.4, 10, -19.6, 11, SLATE)
 	_l(-22, 9, 20, 32, DARK, 0.18)
@@ -301,12 +304,13 @@ static func _avignon_pont() -> void:
 	_r(-40, 0, -32, 12, stone) # the bank
 	var xs := [-32.0, -16.0, 0.0, 16.0]
 	var top := 10.0
-	_r(-32, top - 2.5, 30, top, stone)
+	_r(-32, top - 2.5, 33, top, stone)
 	for k in xs.size():
 		var x: float = xs[k]
-		_poly([x + 1, 0, x + 1, 4] + _arc(x + 8, 4, 7, 4.5, PI, 0, 10) + [x + 15, 4, x + 15, 0, x + 17, 0, x + 17, top - 2.5, x - 1, top - 2.5, x - 1, 0], stone)
+		# the arch opening's crown (4 + 3.2) stays under the deck (top - 2.5), so the polygon stays simple
+		_poly([x + 1, 0, x + 1, 4] + _arc(x + 8, 4, 7, 3.2, PI, 0, 10) + [x + 15, 4, x + 15, 0, x + 17, 0, x + 17, top - 2.5, x - 1, top - 2.5, x - 1, 0], stone)
 		_r(x + 15, 0, x + 17, top - 2.5, stone_d)
-	_r(28, 0, 30, top, stone_d) # the broken end
+	_r(31, 0, 33, top, stone_d) # the broken end
 	# the chapel on the second pier
 	_r(-19, top, -11, 14.5, stone)
 	_poly([-19.5, 14.5, -10.5, 14.5, -15, 16.5], stone_d)

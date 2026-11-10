@@ -202,7 +202,7 @@ static func _pescara_ponte_del_mare() -> void:
 ## The Castello di Arechi high over Salerno: the grey stone walls and square towers along the green hilltop, the
 ## round tower at the end.
 static func _salerno_arechi() -> void:
-	_poly([-30, 0, 30, 0, 22, 10, 8, 14, -12, 13, -26, 7], HILL)
+	_poly([-30, 0, 30, 0, 29, 6, 27, 9.5, 8, 14, -12, 13, -24, 9, -28, 5], HILL)
 	var wall := Color("a49c8a")
 	var wall_d := Color("847c6a")
 	_poly([-22, 9, 20, 11, 20, 18, -22, 16], wall)
@@ -212,7 +212,7 @@ static func _salerno_arechi() -> void:
 		_r(x - 3.4, 24, x + 3.4, 25, wall_d)
 		_merlons(x - 3, x + 3, 25, 1.2, wall_d)
 		_windows(x - 1, x + 1, 18, 20.5, 1, DARK)
-	_r(20, 10, 27, 21, wall)
+	_r(20, 9, 27, 21, wall)
 	_poly(_arc(23.5, 21, 3.5, 1.2, 0, PI, 6), wall_d)
 	_arched(-10, 10, 2.2, 4, DARK)
 
@@ -279,8 +279,9 @@ static func _lecce_santa_croce() -> void:
 	# the pediment and the curved scrolls beside it
 	_poly([-11.5, 26, 11.5, 26, 0, 31], LIME_D)
 	_poly([-10, 26.5, 10, 26.5, 0, 30.2], LIME)
-	for s in [-1, 1]:
-		_poly(_arc(s * 13.5, 15.2, 3, 4.5, PI if s < 0 else 0.0, PI * 1.5 if s < 0 else PI * 0.5, 5) + [s * 11.0, 15.2], LIME)
+	for s in [-1.0, 1.0]:
+		_poly([s * 11.0, 15.2] + _arc(s * 16.5, 22, 5.5, 6.8, PI if s > 0 else 0.0, PI * 1.5 if s > 0 else -PI * 0.5, 6), LIME)
+		_c(s * 15.8, 16.0, 0.7, LIME_D)
 	_l(0, 31, 0, 32.5, LIME_D, 0.25)
 
 ## The Leaning Tower of Pisa: the white marble bell tower of six open arcaded galleries over the blind-arcaded base,
