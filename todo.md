@@ -181,9 +181,11 @@ trasy sensowne), miejscowości po drodze, krainy, ciekawostki po polsku, kontur 
 
 - [x] Partia 1 (priorytet): **Wielka Brytania (Anglia obowiązkowo, 30)**, **USA (30)**, **Kanada (30)**,
       Niemcy (30), Czechy, Słowacja, Litwa.
-- [ ] Partia 2: Francja (30), Włochy (30), Hiszpania (30), Portugalia, Holandia, Belgia, Luksemburg,
-      Austria, Szwajcaria (z Liechtensteinem).
-- [ ] Partia 3: Norwegia. Zrobione: Dania (most nad Wielkim Bełtem, prom na Bornholm), Szwecja (prom na Gotlandię,
+- [ ] Partia 2: Hiszpania (30), Portugalia, Holandia, Belgia, Luksemburg, Austria, Szwajcaria (z Liechtensteinem).
+      Zrobione 2026-11-10: Francja (23 miasta, wiadukt Millau), Włochy (23, prom przez Cieśninę Mesyńską);
+      do rozbudowy do 30 (Francja: Annecy, Le Havre z mostem Normandie, Korsyka; Włochy: Siena, Rimini, Cagliari,
+      Syrakuzy).
+- [x] Partia 3: Norwegia (17 miast, 5 promów, tunel Lærdal, 6 mostów, 2026-11-10). Zrobione też: Dania (most nad Wielkim Bełtem, prom na Bornholm), Szwecja (prom na Gotlandię,
       Högakustenbron), Finlandia (tablice fińsko-szwedzkie), Irlandia (ruch lewostronny, tablice irlandzko-angielskie,
       prom przez Shannon), Estonia (promy na Saaremę i Hiumę), Łotwa; Islandia już wcześniej.
 - [x] Partia 4: Słowenia, Chorwacja, Bośnia i Hercegowina, Serbia, mapa „Bałkany Południowe” (Czarnogóra, Kosowo,
