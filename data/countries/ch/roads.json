@@ -270,7 +270,8 @@
 					"cs": "16,9 km z Göschenenu do Airola pod průsmykem Gotthard, otevřen v roce 1980",
 					"is": "16,9 km frá Göschenen til Airolo undir Gotthard-skarði, opnuð árið 1980",
 					"de": "16,9 km von Göschenen nach Airolo unter dem Gotthardpass, eröffnet 1980"
-				}
+				},
+				"limit": 80
 			}
 		]
 	},
@@ -310,7 +311,8 @@
 					"cs": "6,6 km pod průsmykem San Bernardino, z údolí Rýna do údolí Mesolcina",
 					"is": "6,6 km undir San Bernardino-skarði, úr Rínardal í Mesolcina-dal",
 					"de": "6,6 km unter dem San-Bernardino-Pass, vom Rheintal ins Misox"
-				}
+				},
+				"limit": 80
 			}
 		]
 	},

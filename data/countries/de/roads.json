@@ -84,7 +84,8 @@
 					"is": "A7-hraðbrautin liggur undir Saxelfi og höfninni í Hamborg (3,3 km), í fjórum göngum",
 					"de": "Die A7 führt in vier Röhren unter der Elbe und dem Hamburger Hafen hindurch (3,3 km)"
 				},
-				"city": true
+				"city": true,
+				"under": "water"
 			}
 		]
 	},

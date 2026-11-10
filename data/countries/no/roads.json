@@ -84,7 +84,8 @@
 					"cs": "Podmořský tunel z roku 1992, který klesá 223 metrů pod hladinu moře",
 					"is": "Neðansjávargöng frá 1992 sem ná 223 metra undir sjávarmál",
 					"de": "Ein Unterwassertunnel von 1992, der bis 223 Meter unter den Meeresspiegel hinabführt"
-				}
+				},
+				"under": "water"
 			},
 			{
 				"from_km": 17,
@@ -102,7 +103,8 @@
 					"cs": "Druhý z podmořských tunelů Rennfast, které spojují Stavanger s ostrovem Rennesøy",
 					"is": "Önnur af Rennfast-neðansjávargöngunum sem tengja Stavanger við eyjuna Rennesøy",
 					"de": "Der zweite der Rennfast-Unterwassertunnel, die Stavanger mit der Insel Rennesøy verbinden"
-				}
+				},
+				"under": "water"
 			}
 		],
 		"ferry": {
@@ -149,7 +151,8 @@
 					"cs": "Podmořský tunel z roku 2000, dlouhý skoro 8 km, klesá 260 metrů pod hladinu moře",
 					"is": "Neðansjávargöng frá 2000, tæplega 8 km löng, sem ná 260 metra undir sjávarmál",
 					"de": "Ein Unterwassertunnel von 2000, fast 8 km lang, der bis 260 Meter unter den Meeresspiegel reicht"
-				}
+				},
+				"under": "water"
 			}
 		],
 		"ferry": {
@@ -193,7 +196,8 @@
 					"cs": "Tunel dlouhý 11,4 km mezi Nærøyfjordem a Aurlandsfjordem",
 					"is": "11,4 km löng göng milli Nærøyfjarðar og Aurlandsfjarðar",
 					"de": "Ein 11,4 km langer Tunnel zwischen dem Nærøyfjord und dem Aurlandsfjord"
-				}
+				},
+				"limit": 80
 			}
 		]
 	},
@@ -233,7 +237,8 @@
 					"cs": "Nejdelší silniční tunel světa: 24,5 km, otevřený roku 2000; tři modře nasvícené jeskyně dělí jízdu na úseky",
 					"is": "Lengstu veggöng heims: 24,5 km, opnuð árið 2000; þrír blálýstir hellar skipta akstrinum upp",
 					"de": "Der längste Straßentunnel der Welt: 24,5 km, im Jahr 2000 eröffnet; drei blau beleuchtete Hallen unterbrechen die Fahrt"
-				}
+				},
+				"limit": 80
 			}
 		]
 	},

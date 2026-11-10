@@ -130,8 +130,22 @@ List of roads between two neighbouring cities `a` and `b` (travelling `b` -> `a`
 - `zones`: `[[km where it ends, biome, region name], ...]`; the last one ends at `km`.
 - `via` (optional): `[[km, lon, lat], ...]` points the road bends through on the map (otherwise a straight line
   between the cities), e.g. Lithuania's A1 bowing north to meet the A12 at Kryžkalnis.
-- `tunnels` (optional): `[{from_km, to_km, name, fact, city}]`; `city: true` for a cut-and-cover tunnel under a
-  town district (a grassy embankment instead of a mountain at the entrance).
+- `tunnels` (optional): `[{from_km, to_km, name, fact, city, under, limit}]`; `city: true` for a cut-and-cover tunnel under a
+  town district (a grassy embankment instead of a mountain at the entrance). The hill around a portal (and a city
+  tunnel's blocks) keeps its shape but is pressed down to rise at most `WorldView.PORTAL_HILL_PX` over the horizon
+  (never under the portal's frame), so sky stays above it on the way in. Optional `under: "water"` for a tunnel under
+  a strait, fjord or river (the Westerschelde, Norway's undersea tunnels, Hvalfjarðargöng, the Tyne): no hill, the
+  portals at the deep end of a cutting, the road between concrete retaining walls (`Scenery.UNDER_WALL` from the
+  centre, solid) rising to the land's level at the portal (`Scenery.UNDER_DEPTH`) over `Route.UNDER_RAMP` metres
+  (`Scenery.ramps`: shorter where a town is nearer, but at least `Scenery.UNDER_RAMP_MIN`, the town's last signs then
+  standing at the wall; cut short by a station or a ferry's quay, none at all right by one), a flat head wall with a
+  railing over the opening, the flat land beyond, the sea on the horizon; nothing but the roadside signs
+  (`Scenery.CUT_KEEP`) stands over the walls, stations and boards keep clear of the cuttings where there is room.
+  It wins over `city`. Optional `limit`: the tunnel's own posted limit (in the map's units, e.g. the Gotthard's 80 on
+  the A2's 120, the Brynglas Tunnels' 50 mph), from a sign `Route.TUNNEL_LIMIT_BEFORE` before the portal to
+  `Route.TUNNEL_LIMIT_AFTER` past the exit, where the road's limit is signed again (`Route.tunnel_limit_at`; towns
+  and border crossings still go first); the time limit, traffic, the police and the autopilot follow it. Set only
+  where a source confirms it. Tested in `tests/test_tunnel.gd`.
 - `borders` (optional, a map of several countries): `[[km, from_code, to_code, crossing name], ...]` in the `a` ->
   `b` direction (`b` -> `a` mirrors the km and swaps the codes). A border crossing stands there: limit signs 40 then
   20 (`Route.CROSS_LIMITS`, from `CROSS_40` / `CROSS_20` track metres before the barriers to `CROSS_AFTER` past
@@ -174,6 +188,12 @@ List of roads between two neighbouring cities `a` and `b` (travelling `b` -> `a`
   (`Scenery.BRIDGE_STAYED_H`), no main cable, and fans of straight stays (`Scenery.BRIDGE_STAYS` per side) from each
   pylon to the deck, reaching nearly to the bridge's end and to mid-span; a `beam` bridge has no pylons and no cables,
   only the railings and a lamp post every 50 m. The sign's pictogram follows the kind (`Scenery.bridge_icon`).
+  Optional `over`: `"water"` (default) or `"valley"` for a viaduct high over a valley rather than the sea (the
+  Millau Viaduct over the Tarn): no water beside the deck and none on the horizon, the valley floor
+  `Scenery.VALLEY_DEPTH` below the deck in hazy bands of meadow with the river across it at mid-span and rocky
+  slopes beyond the ends (`WorldView._draw_valley`, behind everything: the deck's segments draw no ground beside
+  them), and tall concrete piers from the deck down to the floor about every `Scenery.VALLEY_PIER_EVERY` metres
+  (`Scenery.valley_piers`), the kind's pylons and cables over the deck as usual.
 
 ## `countries/<code>/native.json` (optional)
 

@@ -84,6 +84,11 @@ static func build(stage: Dictionary, seed_value: int) -> Dictionary:
 		_add(items, "poi", lm.z - 22.0, SIGN_EDGE + REGION_W * 0.5, REGION_W, 5.0, rng).text = lm.local
 	for tn in stage.get("tunnels", []):
 		_clear_range(items, tn.z0 - 6.0, tn.z1 + 6.0, -1000.0, 1000.0)
+		if tn.get("under", "") != "": # nothing on the land over the cutting's walls but the roadside signs
+			var rl := ramps(stage, tn)
+			for zr in [[tn.z0 - rl[0], tn.z0], [tn.z1, tn.z1 + rl[1]]]:
+				_clear_range(items, zr[0], zr[1], UNDER_WALL - 0.5, 1000.0, CUT_KEEP)
+				_clear_range(items, zr[0], zr[1], -1000.0, -UNDER_WALL + 0.5, CUT_KEEP)
 	for s in stage.stations:
 		_station_items(items, s, rng)
 	for br in stage.get("bridges", []):
@@ -195,10 +200,32 @@ static func _bridge(items: Dictionary, br: Dictionary, rng: RandomNumberGenerato
 	var sign := _add(items, "bridge_sign", zs, SIGN_EDGE + REGION_W * 0.5, REGION_W, 5.0, rng)
 	sign.text = br.name
 	if kind != "suspension": sign.kind = kind
+	if br.get("over", "water") == "valley":
+		for z in valley_piers(br):
+			_add(items, "valley_pier", z, 0.0, 0.0, VALLEY_DEPTH, rng)
 	for z in bridge_pylons(br):
 		var tw := _add(items, "bridge_tower", z, 0.0, 0.0, tower_h(br), rng)
 		tw.color = br.get("color", "")
 		if kind != "suspension": tw.kind = kind
+
+## A bridge over a valley (roads.json bridge `over: "valley"`: the Millau Viaduct over the Tarn): no water, the
+## valley floor VALLEY_DEPTH below the deck (green, with a river across it at mid-span, rocky slopes up to the
+## plateau at both ends; WorldView), and tall piers from the deck down to it every VALLEY_PIER_EVERY metres or so.
+const BRIDGE_OVER := ["water", "valley"]
+const VALLEY_DEPTH := 120.0
+const VALLEY_PIER_EVERY := 90.0
+const VALLEY_RIVER := 14.0 ## the river's width across the valley floor at mid-span, metres
+
+## The z of a valley bridge's piers (evenly spread, the ends on the plateau), [] for a bridge over water.
+static func valley_piers(br: Dictionary) -> Array:
+	if br.get("over", "water") != "valley": return []
+	var span: float = br.z1 - br.z0
+	var n := maxi(2, roundi(span / VALLEY_PIER_EVERY) - 1)
+	return range(n).map(func(k): return br.z0 + span * (k + 1) / (n + 1))
+
+## True on the deck of a bridge over a valley.
+static func over_valley(stage: Dictionary, z: float) -> bool:
+	return Route.bridge_at(stage, z).get("over", "water") == "valley"
 
 ## The z of a bridge's two pylons (none on a beam bridge).
 static func bridge_pylons(br: Dictionary) -> Array:
@@ -447,10 +474,58 @@ static func _border_board(cv, it: Dictionary, b: Vector2, pm: float, font: Font)
 	_fit_text(cv, font, Rect2(r.position + Vector2(0.55 * pm + fl.x, 0.15 * pm), Vector2(w - 0.9 * pm - fl.x, hh * 0.5)), it.country, Color.WHITE, 0.8 * pm)
 	_fit_text(cv, font, Rect2(r.position + Vector2(0.35 * pm, hh * 0.55), Vector2(w - 0.7 * pm, hh * 0.4)), it.text, Color("dfe8f5"), 0.6 * pm)
 
-static func _clear_range(items: Dictionary, z0: float, z1: float, lat0: float, lat1: float) -> void:
+## An underwater tunnel (roads.json tunnel `under`: the Westerschelde, Norway's undersea tunnels) has no mountain:
+## its portals sit at the deep end of a cutting, the road ramping down UNDER_RAMP metres between concrete retaining
+## walls UNDER_WALL from the road centre, their tops at the land's level (UNDER_DEPTH over the road at the portal,
+## level with its frame) and the flat land or the water beyond them. The walls are solid where they stand UNDER_SOLID high.
+const TUNNEL_UNDER := ["", "water"]
+const UNDER_RAMP := Route.UNDER_RAMP
+const UNDER_WALL := 7.6
+const UNDER_DEPTH := 9.4
+const UNDER_SOLID := 0.8
+
+## The retaining walls' height over the road at z on the ramp before or after an underwater tunnel, 0 elsewhere.
+static func ramp_h(stage: Dictionary, z: float) -> float:
+	var h := 0.0
+	for tn in stage.get("tunnels", []):
+		if tn.get("under", "") == "" or z < tn.z0 - UNDER_RAMP or z > tn.z1 + UNDER_RAMP: continue
+		var rl := ramps(stage, tn)
+		var d: float = tn.z0 - z
+		var len_r: float = rl[0]
+		if z > tn.z1:
+			d = z - tn.z1
+			len_r = rl[1]
+		if d >= 0.0 and d < len_r:
+			h = maxf(h, UNDER_DEPTH * (1.0 - d / len_r))
+	return h
+
+## The lengths of an underwater tunnel's ramps [before, after]: UNDER_RAMP, shorter where a town's streets come
+## nearer (the cutting begins 30 m past them, but runs at least UNDER_RAMP_MIN: a town's last signs may stand in it),
+## and clear of a station's stretch and a ferry's quays and far pier.
+const UNDER_RAMP_MIN := 50.0
+static func ramps(stage: Dictionary, tn: Dictionary) -> Array:
+	var a := UNDER_RAMP
+	var b := UNDER_RAMP
+	for t in stage.get("towns", []):
+		if t.z < tn.z0: a = minf(a, tn.z0 - (t.z + t.half) - 30.0)
+		elif t.z > tn.z1: b = minf(b, t.z - t.half - tn.z1 - 30.0)
+	a = maxf(a, UNDER_RAMP_MIN)
+	b = maxf(b, UNDER_RAMP_MIN)
+	var walls: Array = stage.get("stations", []).map(func(s): return [s - Race.STATION_HALF_LEN - 40.0, s + Race.STATION_HALF_LEN + 30.0])
+	for f in stage.get("ferries", []):
+		walls.append([f.z - Route.FERRY_QUAY - FERRY_SIGN_BEFORE - 10.0, f.z_out + Route.FAR_PIER + 10.0])
+	for w in walls:
+		if w[0] + w[1] < tn.z0 + tn.z1: a = minf(a, tn.z0 - w[1])
+		else: b = minf(b, w[0] - tn.z1)
+	return [maxf(a, 0.0), maxf(b, 0.0)]
+
+## Roadside signs keep their place in a cutting (they stand at its wall, as town signs do by a cut-and-cover portal).
+const CUT_KEEP := ["town_sign", "town_end", "limit", "board", "region", "poi", "border_board", "radar", "barrier", "booth"]
+
+static func _clear_range(items: Dictionary, z0: float, z1: float, lat0: float, lat1: float, keep := []) -> void:
 	for idx in range(int(z0 / Track.SEG_LEN), int(z1 / Track.SEG_LEN) + 1):
 		if items.has(idx):
-			items[idx] = items[idx].filter(func(it): return not (it.z >= z0 and it.z <= z1 and it.lat >= lat0 and it.lat <= lat1))
+			items[idx] = items[idx].filter(func(it): return it.type in keep or not (it.z >= z0 and it.z <= z1 and it.lat >= lat0 and it.lat <= lat1))
 
 ## Solid parts of the roadside objects the car can reach: segment -> [[z, lat0, lat1], ...]. Sign boards stand high
 ## on their posts (the car would pass under), so only the posts count; trees by their trunk, houses by their width.
@@ -481,6 +556,13 @@ static func obstacles(items: Dictionary, stage: Dictionary) -> Dictionary:
 			_obstacle(out, z, -40.0, -TUNNEL_WALL)
 			_obstacle(out, z, TUNNEL_WALL, 40.0)
 			z += 2.0
+		if tn.get("under", "") != "": # the cutting's retaining walls, where they stand high enough to hit
+			z = tn.z0 - UNDER_RAMP
+			while z <= tn.z1 + UNDER_RAMP:
+				if (z < tn.z0 or z > tn.z1) and ramp_h(stage, z) >= UNDER_SOLID:
+					_obstacle(out, z, -40.0, -UNDER_WALL)
+					_obstacle(out, z, UNDER_WALL, 40.0)
+				z += 2.0
 	for br in stage.get("bridges", []):
 		var z: float = br.z0
 		while z <= br.z1:
@@ -856,6 +938,15 @@ static func _signs(items: Dictionary, stage: Dictionary, rng: RandomNumberGenera
 		var zr: float = stage.roads[i].z0 + 20.0
 		if stage.roads[i].lanes != stage.roads[i - 1].lanes and Route.town_at(stage, zr).is_empty():
 			_limit_sign(items, zr, Route.sign_limit_at(stage, zr), rng)
+	# a tunnel's own limit (the Gotthard's 80) before its portal, the road's again past the exit (towns sign their own)
+	for tn in stage.get("tunnels", []):
+		if tn.get("limit", 0) <= 0: continue
+		var za: float = tn.z0 - Route.TUNNEL_LIMIT_BEFORE
+		if Route.town_at(stage, za).is_empty():
+			_limit_sign(items, za, tn.limit, rng)
+		var zb: float = tn.z1 + Route.TUNNEL_LIMIT_AFTER
+		if Route.town_at(stage, zb + 1.0).is_empty() and zb < stage.length - 20.0:
+			_limit_sign(items, zb, Route.sign_limit_at(stage, zb + 1.0), rng)
 	# where an Autobahn's limit ends or starts again away from towns (Germany)
 	var zl := 40.0
 	while zl < stage.length:
@@ -987,6 +1078,10 @@ static func ground(stage: Dictionary, nseg: int) -> Array:
 		var ls := Track.left_shift(Route.dual_f(stage, z))
 		if on_pier(stage, z):
 			s.append_array([-400.0 - ls, -QUAY_EDGE - ls, G_WATER, -QUAY_EDGE - ls, -4.8 - ls, G_PAVE, 4.8, QUAY_EDGE, G_PAVE, QUAY_EDGE, 400.0, G_WATER])
+			out[i] = s
+			continue
+		if over_valley(stage, z): # the deck only, the valley far below (WorldView)
+			s.append_array([-BRIDGE_DECK - ls, BRIDGE_DECK, G_PAVE])
 			out[i] = s
 			continue
 		if on_bridge(stage, z):
@@ -1158,7 +1253,7 @@ static func draw_item(cv, it: Dictionary, b: Vector2, pm: float, pal: Dictionary
 		"border_canopy": pass # drawn across the road by WorldView
 		"shop": _shop(cv, it, b, pm)
 		"finish": pass # drawn across the road by WorldView
-		"bridge", "bridge_tower": pass # drawn across the road by WorldView
+		"bridge", "bridge_tower", "valley_pier": pass # drawn across the road by WorldView
 		"bridge_sign": _bridge_sign(cv, it, b, pm, font)
 
 ## Text centred in a rectangle, shrunk to fit; a pale bar stands in for text too small to read.

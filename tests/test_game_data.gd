@@ -140,13 +140,15 @@ func _check_country(t, code: String, rules: Dictionary) -> void:
 			prev = zn[0]
 		if prev != r.km: roads_ok = false; print("  %s: road %s: zones do not reach the end" % [code, tag])
 		for tn in r.get("tunnels", []):
-			if not (tn.from_km > 0.0 and tn.from_km < tn.to_km and tn.to_km < r.km) or not (tn.name is String and tn.fact is String):
+			if not (tn.from_km > 0.0 and tn.from_km < tn.to_km and tn.to_km < r.km) or not (tn.name is String and tn.fact is String) \
+					or not tn.get("under", "") in Scenery.TUNNEL_UNDER or not (int(tn.get("limit", 0)) >= 0 and int(tn.get("limit", 0)) <= 130):
 				roads_ok = false; print("  %s: road %s: bad tunnel" % [code, tag])
 		if r.has("bridge"):
 			var br: Dictionary = r.bridge
 			if not (br.from_km >= 0.0 and br.from_km < br.to_km and br.to_km <= r.km) or not br.get("name") is String \
 					or not (br.get("color", "") == "" or (br.color is String and Color.html_is_valid(br.color))) \
-					or not br.get("kind", "suspension") in Scenery.BRIDGE_KINDS:
+					or not br.get("kind", "suspension") in Scenery.BRIDGE_KINDS \
+					or not br.get("over", "water") in Scenery.BRIDGE_OVER:
 				roads_ok = false; print("  %s: road %s: bad bridge" % [code, tag])
 	t.check(roads_ok, "%s: roads consistent" % code)
 	# every city reachable from every other one

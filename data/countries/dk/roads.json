@@ -182,7 +182,8 @@
 					"cs": "Ponořený tunel pod Limfjordem, otevřený roku 1969, spojuje Aalborg s Nørresundby",
 					"is": "Göng undir Limafirði, opnuð árið 1969, tengja Álaborg við Nørresundby",
 					"de": "Ein Absenktunnel unter dem Limfjord, 1969 eröffnet, verbindet Aalborg mit Nørresundby"
-				}
+				},
+				"under": "water"
 			}
 		]
 	}
