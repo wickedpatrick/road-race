@@ -150,8 +150,8 @@ static func _oleksandriia() -> void:
 	_poly([-30, 0, -30, 6, -12, 8, 12, 8, 30, 6, 30, 0], GRASS)
 	_r(-30, 0, 30, 3, WATER)
 	_r(-30, 2.4, 30, 3, WATER_L)
-	_tree(-25, 5, 13, TREE)
-	_tree(24, 5, 14, TREE_L)
+	_tree(-22.4, 5, 13, TREE)
+	_tree(21.8, 5, 14, TREE_L)
 	_tree(-15, 7, 9, TREE_L)
 	_tree(15, 7, 10, TREE)
 	# the colonnade: columns along a half circle seen from the front, the curved entablature over them
@@ -263,9 +263,9 @@ static func _palanok() -> void:
 static func _sofiyivka() -> void:
 	_r(-30, 0, 30, 3.5, WATER)
 	_r(-30, 2.9, 30, 3.5, WATER_L)
-	_tree(-26, 3.5, 12, TREE)
-	_tree(25, 3.5, 13, TREE_L)
-	_tree(14, 8, 10, TREE)
+	_tree(-23, 3.5, 12, TREE)
+	_tree(22.4, 3.5, 13, TREE_L)
+	_tree(11, 8, 10, TREE)
 	# the rocks
 	_poly([-20, 3.5, -18, 10, -12, 14, -4, 13, 2, 16, 8, 12, 12, 8, 14, 3.5], ROCK)
 	_poly([-12, 14, -8, 9, -4, 13], ROCK.darkened(0.15))
@@ -328,8 +328,8 @@ static func _pump_room() -> void:
 	var w := Color("f0ead8")
 	var wd := w.darkened(0.14)
 	_r(-20, 0, 20, 1, Color("c9c2ad"))
-	_tree(-17, 1, 9, TREE)
-	_tree(17, 1, 9, TREE_L)
+	_tree(-15.4, 1, 8, TREE)
+	_tree(15.4, 1, 8, TREE_L)
 	# the hall
 	_r(-12, 1, 12, 11, w)
 	_r(-9, 2, 9, 9.5, Color("8fb0c8"))
@@ -344,7 +344,7 @@ static func _pump_room() -> void:
 	_r(-3, 1, 3, 2, Color("b9b4a8"))
 	_r(-0.4, 2, 0.4, 4, Color("b9b4a8"))
 	_c(0, 4.3, 0.9, WATER_L)
-	for x in [-15.0, 15.0]:
+	for x in [-13.4, 13.4]:
 		_l(x, 1, x, 5, DARK, 0.15)
 		_c(x, 5.2, 0.4, Color("fff2b0"))
 
