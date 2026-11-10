@@ -23,7 +23,7 @@
 	"express_prefixes": ["M"],
 	"traffic": 0.7,
 	"limits": {"express": 120, "road": 100, "city": 50, "town_on_express": 100, "town": 50},
-	"signs": {"town": "#ffffff", "town_text": "#111111", "board": "#00694b", "board_motorway": "#0058a8"},
+	"signs": {"town": "#00694b", "town_text": "#ffffff", "board": "#00694b", "board_motorway": "#0058a8"},
 	"map": {"lon0": -10.75, "lon1": -5.8, "lat0": 51.35, "lat1": 55.5, "lon_k": 0.6, "zoom": 1.3, "labels": "auto"},
 	"outline": [
 		[-7.25, 55.07], [-7.41, 55], [-7.54, 54.74], [-7.93, 54.7], [-7.71, 54.6], [-8.17, 54.46], [-7.86, 54.21],
@@ -59,7 +59,7 @@
 		"prices": [["Unleaded", "€1.749"], ["Diesel", "€1.699"]],
 		"region_sign": "FÁILTE · WELCOME"
 	},
-	"plates": [["M", "#0058a8", "#ffffff"], ["N", "#00694b", "#ffffff"], ["R", "#ffffff", "#111111"]],
+	"plates": [["M", "#0058a8", "#ffffff"], ["N", "#00694b", "#ffd200"], ["R", "#ffffff", "#111111"]],
 	"weather": {
 		"default": "cloudy",
 		"landscape": true,
