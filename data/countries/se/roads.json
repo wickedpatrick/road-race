@@ -67,14 +67,14 @@
 	{
 		"a": "jonkoping",
 		"b": "helsingborg",
-		"km": 195,
-		"road": [[195, "E4", 3]],
-		"towns": [["Värnamo", 70], ["Ljungby", 115], ["Markaryd", 150]],
+		"km": 235,
+		"road": [[235, "E4", 3]],
+		"towns": [["Värnamo", 72], ["Ljungby", 117], ["Markaryd", 165]],
 		"zones": [
-			[60, "forest", "Småländska höglandet"], [125, "lakes", "Lagadalen"], [165, "forest", "Småland"],
-			[195, "fields", "Skåne"]
+			[70, "forest", "Småländska höglandet"], [145, "lakes", "Lagadalen"], [180, "forest", "Småland"],
+			[235, "fields", "Skåne"]
 		],
-		"via": [[70, 14.04, 57.18], [115, 13.94, 56.83], [150, 13.6, 56.46]]
+		"via": [[72, 14.04, 57.18], [117, 13.94, 56.83], [165, 13.6, 56.46]]
 	},
 	{
 		"a": "helsingborg",
@@ -167,7 +167,7 @@
 		"zones": [[35, "forest", "Gästrikland"], [150, "coast", "Hälsingekusten"], [213, "forest", "Medelpad"]],
 		"via": [[75, 17.06, 61.3], [135, 17.1, 61.73], [198, 17.37, 62.26]],
 		"bridge": {
-			"from_km": 210.8,
+			"from_km": 210.1,
 			"to_km": 212.2,
 			"name": {
 				"pl": "Most w Sundsvall",
