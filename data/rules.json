@@ -1169,7 +1169,20 @@
 		"ie_dingle_gallarus": [10, 6],
 		"ie_kenmare_circle": [18, 5],
 		"ie_cashel_rock": [72, 44],
-		"ie_cahersiveen_ballycarbery": [30, 18]
+		"ie_cahersiveen_ballycarbery": [30, 18],
+		"dk_kobenhavn_nyhavn": [56, 22],
+		"dk_aarhus_aros": [44, 36],
+		"dk_odense_andersen": [22, 10],
+		"dk_aalborg_jens_bang": [18, 26],
+		"dk_esbjerg_men": [28, 10],
+		"dk_randers_domes": [60, 20],
+		"dk_kolding_koldinghus": [60, 26],
+		"dk_vejle_wave": [72, 26],
+		"dk_roskilde_cathedral": [64, 66],
+		"dk_helsingor_kronborg": [84, 48],
+		"dk_koge_house": [14, 11],
+		"dk_ronne_nylars": [26, 18],
+		"dk_skagen_church": [16, 24]
 	},
 	"police": {"escape_chance": 0.2, "escape_kmh": 180, "escape_swerves": [3, 5]},
 	"postcards": {"stamps": [0.15, 0.3, 0.45, 0.6], "stamp_caps": [2, 3, 3, 4, 5, 5, 5]}

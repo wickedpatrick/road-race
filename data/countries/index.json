@@ -56,7 +56,13 @@
 		},
 		{
 			"code": "us",
-			"name": {"pl": "Stany Zjednoczone", "en": "United States", "cs": "Spojené státy", "is": "Bandaríkin", "de": "Vereinigte Staaten"},
+			"name": {
+				"pl": "Stany Zjednoczone",
+				"en": "United States",
+				"cs": "Spojené státy",
+				"is": "Bandaríkin",
+				"de": "Vereinigte Staaten"
+			},
 			"neighbours": ["ca"],
 			"favorite_neighbour": "ca"
 		},
@@ -98,7 +104,13 @@
 		},
 		{
 			"code": "sb",
-			"name": {"pl": "Bałkany Południowe", "en": "Southern Balkans", "cs": "Jižní Balkán", "is": "Suður-Balkanskagi", "de": "Südbalkan"},
+			"name": {
+				"pl": "Bałkany Południowe",
+				"en": "Southern Balkans",
+				"cs": "Jižní Balkán",
+				"is": "Suður-Balkanskagi",
+				"de": "Südbalkan"
+			},
 			"members": ["me", "xk", "al", "mk"],
 			"neighbours": ["hr", "ba", "rs", "gr", "bg"],
 			"favorite_neighbour": "gr"
@@ -186,6 +198,12 @@
 			"name": {"pl": "Irlandia", "en": "Ireland", "cs": "Irsko", "is": "Írland", "de": "Irland"},
 			"neighbours": ["gb"],
 			"favorite_neighbour": "gb"
+		},
+		{
+			"code": "dk",
+			"name": {"pl": "Dania", "en": "Denmark", "cs": "Dánsko", "is": "Danmörk", "de": "Dänemark"},
+			"neighbours": ["de", "se"],
+			"favorite_neighbour": "se"
 		}
 	]
 }
