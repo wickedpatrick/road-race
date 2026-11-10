@@ -96,6 +96,9 @@ func label_pos(code: String) -> Vector2:
 	var l: Array = world.countries[code].label
 	return Vector2(l[0], l[1])
 
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_WM_MOUSE_EXIT: tip = "" # the cursor left the window: no tooltip left standing
+
 func _process(dt: float) -> void:
 	t += dt
 	soon = maxf(0.0, soon - dt)
@@ -237,7 +240,9 @@ func _draw() -> void:
 			draw_polyline(ring, CURRENT if code == Session.country else Color.WHITE, w, true)
 	var names := {}
 	for c in GameData.countries(): names[c.code] = c.name
-	for code in play: # the flag in the middle of every country in the game, bigger under the cursor
+	var flag_order: Array = play.filter(func(c): return c != hover) # the one under the cursor last, over its neighbours
+	if play.has(hover): flag_order.append(hover)
+	for code in flag_order: # the flag in the middle of every country in the game, bigger under the cursor
 		var h := (18.0 if code == hover else 14.0) if _wide(code) else (14.0 if code == hover else 10.0)
 		var members := GameData.members(code)
 		var flags: Array = [code] if members.is_empty() else members
