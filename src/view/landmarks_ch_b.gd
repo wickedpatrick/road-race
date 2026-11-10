@@ -130,7 +130,9 @@ static func _biel_vennerbrunnen() -> void:
 	_poly([-0.28, 7.7, 0.28, 7.7, 0, 8.05], Color("8a9298"))
 	_l(0.45, 5.0, 0.45, 8.9, BRONZE, 0.07)
 	_poly([0.48, 8.9, 2.4, 8.7, 2.3, 7.6, 0.48, 7.8], RED)
-	_poly([0.48, 8.35, 2.36, 8.18, 2.33, 7.9, 0.48, 8.05], WHITE)
+	# Biel's arms: two white axes in saltire
+	_l(0.85, 7.85, 2.0, 8.6, WHITE, 0.18)
+	_l(0.85, 8.65, 2.0, 7.8, WHITE, 0.18)
 
 ## Thun Castle: the white keep of the Zähringer on its hill, four round corner towers with pointed red roofs and the
 ## steep hipped roof between them.
