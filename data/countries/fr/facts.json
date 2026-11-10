@@ -229,5 +229,33 @@
 		"cs": "Město filmového festivalu, poprvé pořádaného roku 1946, jehož hlavní cenou je Zlatá palma",
 		"is": "Bær kvikmyndahátíðarinnar, sem fyrst var haldin 1946 og veitir Gullpálmann sem æðstu verðlaun",
 		"de": "Die Stadt der Filmfestspiele, erstmals 1946 ausgetragen, deren Hauptpreis die Goldene Palme ist"
+	},
+	"Poitiers": {
+		"pl": "Pod Poitiers Karol Młot zatrzymał w 732 roku pochód Arabów na północ; obok miasta leży park rozrywki Futuroscope",
+		"en": "Near Poitiers Charles Martel stopped the Arab advance northwards in 732; the Futuroscope theme park lies just outside the city",
+		"cs": "U Poitiers zastavil Karel Martel roku 732 postup Arabů na sever; kousek za městem leží zábavní park Futuroscope",
+		"is": "Við Poitiers stöðvaði Karl Martel framsókn Araba norður á bóginn árið 732; Futuroscope-skemmtigarðurinn er rétt utan við borgina",
+		"de": "Bei Poitiers stoppte Karl Martell 732 den Vormarsch der Araber nach Norden; gleich vor der Stadt liegt der Freizeitpark Futuroscope"
+	},
+	"Le Havre": {
+		"pl": "Monet namalował tu „Impresję, wschód słońca”, od której wziął nazwę impresjonizm; zburzone w 1944 roku centrum odbudował Auguste Perret i jest na liście UNESCO",
+		"en": "Monet painted 'Impression, Sunrise' here, the picture that gave Impressionism its name; the centre, destroyed in 1944, was rebuilt by Auguste Perret and is a UNESCO site",
+		"cs": "Monet tu namaloval „Imprese, východ slunce“, obraz, který dal jméno impresionismu; centrum zničené roku 1944 obnovil Auguste Perret a je na seznamu UNESCO",
+		"is": "Monet málaði hér „Impression, sólarupprás“, myndina sem gaf impressjónismanum nafn; miðbærinn, eyddur 1944, var endurreistur af Auguste Perret og er á heimsminjaskrá UNESCO",
+		"de": "Monet malte hier „Impression, Sonnenaufgang“, das dem Impressionismus seinen Namen gab; das 1944 zerstörte Zentrum baute Auguste Perret wieder auf, es ist UNESCO-Welterbe"
+	},
+	"Amiens": {
+		"pl": "Juliusz Verne mieszkał tu ponad 30 lat i był radnym miasta; jego dom z wieżyczką jest dziś muzeum",
+		"en": "Jules Verne lived here for over 30 years and sat on the city council; his house with its little tower is now a museum",
+		"cs": "Jules Verne tu žil přes 30 let a byl členem městské rady; jeho dům s věžičkou je dnes muzeem",
+		"is": "Jules Verne bjó hér í yfir 30 ár og sat í borgarstjórn; húsið hans með litla turninum er nú safn",
+		"de": "Jules Verne lebte hier über 30 Jahre und saß im Stadtrat; sein Haus mit dem Türmchen ist heute ein Museum"
+	},
+	"Annecy": {
+		"pl": "„Wenecja Alp” z kanałami nad jeziorem Annecy, jednym z najczystszych w Europie; co roku odbywa się tu największy festiwal filmów animowanych",
+		"en": "The 'Venice of the Alps', with canals by Lake Annecy, one of the cleanest lakes in Europe; it hosts the largest animated film festival every year",
+		"cs": "„Benátky Alp“ s kanály u jezera Annecy, jednoho z nejčistších v Evropě; každý rok se tu koná největší festival animovaných filmů",
+		"is": "„Feneyjar Alpanna“, með síkjum við Annecy-vatn, eitt hreinasta vatn Evrópu; þar er ár hvert stærsta hátíð teiknimynda",
+		"de": "Das „Venedig der Alpen“ mit Kanälen am Lac d'Annecy, einem der saubersten Seen Europas; hier findet jedes Jahr das größte Animationsfilmfestival statt"
 	}
 }

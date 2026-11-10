@@ -1,6 +1,6 @@
 class_name LandmarksFrB
 extends RefCounted
-## French landmarks (Reims to Avignon), drawn with LandmarkPainter's helpers (metres from the base point, y up).
+## French landmarks (Reims to Annecy), drawn with LandmarkPainter's helpers (metres from the base point, y up).
 
 const WHITE := Color("f1ede2")
 const CREAM := Color("e3d6b8")
@@ -26,6 +26,13 @@ static func draw(kind: String) -> bool:
 		"fr_rouen_gros_horloge": _rouen_gros_horloge()
 		"fr_caen_abbaye": _caen_abbaye()
 		"fr_avignon_pont": _avignon_pont()
+		"fr_metz_pompidou": _metz_pompidou()
+		"fr_poitiers_notre_dame": _poitiers_notre_dame()
+		"fr_nimes_maison_carree": _nimes_maison_carree()
+		"fr_toulon_tour_royale": _toulon_tour_royale()
+		"fr_le_havre_saint_joseph": _le_havre_saint_joseph()
+		"fr_amiens_cathedral": _amiens_cathedral()
+		"fr_annecy_palais_ile": _annecy_palais_ile()
 		_: return false
 	return true
 
@@ -305,3 +312,164 @@ static func _avignon_pont() -> void:
 	_poly([-19.5, 14.5, -10.5, 14.5, -15, 16.5], stone_d)
 	_r(-14, 14, -12.5, 17.5, stone)
 	_arched(-15, top, 1.6, 2.6, DARK)
+
+## The Centre Pompidou-Metz (2010): a white hexagonal roof of woven timber billowing like a Chinese hat over
+## three long gallery tubes that poke out of it, and the 77 m spire rising through the middle.
+static func _metz_pompidou() -> void:
+	var membrane := Color("f4f1ea")
+	var shade := Color("d9d4c8")
+	var glass := Color("8fa5b5")
+	_r(-45, 0, 45, 1.2, Color("9a9a92")) # the forecourt
+	# the gallery tubes under the roof, their glass ends facing the town
+	_r(-30, 10, 14, 17, Color("dedad2"))
+	_r(-36, 10, -30, 17, glass)
+	_r(-8, 18, 40, 24, Color("dedad2"))
+	_r(40, 18, 45, 24, glass)
+	_r(-26, 24, 18, 30, Color("dedad2"))
+	_r(-31, 24, -26, 30, glass)
+	# the wavy roof: low at the edges, lifted in the middle
+	_poly([-44, 4, -36, 9, -24, 15] + _arc(0, 15, 24, 14, PI, 0, 14) + [24, 15, 36, 9, 44, 4, 36, 7, 24, 12, 0, 18, -24, 12, -36, 7], membrane)
+	if _detail(1.5):
+		for k in 9:
+			var x := -32.0 + k * 8.0
+			_l(x - 4, 9 + absf(x) * -0.05 + 4, x + 4, 9 + 8, shade, 0.15)
+	_r(-1, 10, 1, 77, Color("e9e5dc")) # the spire
+	_r(-0.4, 30, 0.4, 77, shade)
+	_r(-14, 0, 14, 10, glass) # the glazed hall under the roof
+	for k in 6:
+		_r(-13 + k * 5, 0, -12.6 + k * 5, 10, shade)
+
+## Notre-Dame-la-Grande in Poitiers (12th century): the Romanesque west front crowded with carved arcades, a big
+## arched door, and the two round corner turrets capped with scaly pine-cone roofs.
+static func _poitiers_notre_dame() -> void:
+	var stone := Color("dccca6")
+	var stone_d := Color("bba984")
+	_r(-12, 0, 12, 20, stone)
+	_poly([-12, 20, 12, 20, 0, 27], stone) # the gable
+	_c(0, 22.5, 1.6, stone_d) # the mandorla with Christ
+	_arched(0, 0, 6, 9, DARK)
+	_arched(-7.5, 0, 3, 6.5, stone_d)
+	_arched(7.5, 0, 3, 6.5, stone_d)
+	for k in 5:
+		_arched(-8 + k * 4, 11, 2.6, 4.5, stone_d)
+	_r(-12, 10, 12, 10.6, stone_d)
+	_r(-12, 16, 12, 16.5, stone_d)
+	for x in [-14.5, 14.5]:
+		_r(x - 2.5, 0, x + 2.5, 22, stone)
+		for k in 3:
+			_arched(x, 8 + k * 4.5, 1.2, 3, stone_d)
+		_r(x - 2.8, 22, x + 2.8, 23, stone_d)
+		_poly([x - 2.6, 23, x + 2.6, 23, x + 1.6, 28, x, 31, x - 1.6, 28], stone)
+		if _detail(1.0):
+			for k in 3:
+				_l(x - 2.2 + k * 0.3, 24 + k * 2, x + 2.2 - k * 0.3, 24 + k * 2, stone_d, 0.15)
+
+## The Maison Carrée in Nîmes (around 2 AD): a Roman temple on a high podium, steps up to a porch of six Corinthian
+## columns under a low pediment.
+static func _nimes_maison_carree() -> void:
+	var stone := Color("e4d8bc")
+	var stone_d := Color("c2b48f")
+	_r(-8, 0, 8, 3.2, stone_d) # the podium
+	for k in 6:
+		_r(-4 + k * 0.3, 3.2 - k * 0.5, 4 - k * 0.3, 3.7 - k * 0.5, stone)
+	_r(-7.5, 3.2, 7.5, 4, stone)
+	_r(-6.8, 4, 6.8, 12.5, Color("8a7d64")) # the shade of the porch
+	for k in 6:
+		var x := -6.2 + k * 2.48
+		_r(x - 0.5, 4, x + 0.5, 12, stone)
+		_r(x - 0.75, 11.6, x + 0.75, 12.5, stone_d)
+	_r(-7.5, 12.5, 7.5, 14.2, stone) # the entablature
+	_r(-7.5, 13.2, 7.5, 13.5, stone_d)
+	_poly([-7.8, 14.2, 7.8, 14.2, 0, 17], stone)
+	_poly([-6.3, 14.6, 6.3, 14.6, 0, 16.4], stone_d)
+
+## The Tour Royale in Toulon (1524): a squat round artillery tower with 7 m walls at the mouth of the roadstead, a
+## low parapet with gun ports, on the rocks by the sea.
+static func _toulon_tour_royale() -> void:
+	var stone := Color("d9cba8")
+	var stone_d := Color("b5a47c")
+	_r(-30, 0, 30, 2, WATER)
+	_poly([-30, 2, -22, 4, -12, 3, 12, 3, 22, 4, 30, 2], Color("8f8676")) # the rocks
+	_poly([-22, 3, 22, 3, 20, 16, -20, 16], stone) # the battered round wall
+	_r(-20.5, 16, 20.5, 17, stone_d)
+	_r(-19, 17, 19, 20, stone)
+	for k in 6:
+		_r(-15 + k * 6, 17.6, -13.6 + k * 6, 19.2, DARK) # gun ports
+	for k in 7:
+		_l(-18 + k * 6, 3, -17 + k * 5.7, 16, stone_d, 0.2)
+	_r(-1, 20, 1, 22, stone_d) # the flagstaff base
+	_l(0, 22, 0, 26, DARK, 0.15)
+	_poly([0, 26, 3, 25.2, 0, 24.4], Color("2850a0"))
+
+## The Church of St Joseph in Le Havre (Auguste Perret, 1957): a square concrete base and the 107 m octagonal
+## lantern tower above it, its walls pierced by thousands of small coloured panes.
+static func _le_havre_saint_joseph() -> void:
+	var concrete := Color("cfcabd")
+	var concrete_d := Color("a8a294")
+	_r(-22, 0, 22, 18, concrete)
+	for k in 8:
+		_r(-20 + k * 5.2, 3, -17 + k * 5.2, 15, concrete_d)
+	_arched(0, 0, 5, 7, DARK)
+	_r(-8, 18, 8, 30, concrete)
+	_poly([-8, 30, 8, 30, 6.5, 100, -6.5, 100], concrete) # the tapering lantern
+	var cols := [Color("e0b43a"), Color("c8462b"), Color("3a6fb0"), Color("4c9a5a")]
+	if _detail(0.6):
+		for k in 14:
+			var y := 33.0 + k * 4.7
+			var w := 7.4 - k * 0.07
+			for j in 4:
+				_r(-w + j * w * 0.5 + 0.4, y, -w + j * w * 0.5 + w * 0.5 - 0.4, y + 3.6, cols[(k + j) % 4])
+	else:
+		_r(-6, 32, 6, 97, Color("c9a65a"))
+	_poly([-6.5, 100, 6.5, 100, 0, 107], concrete_d)
+
+## Notre-Dame d'Amiens (from 1220): France's largest Gothic cathedral, the west front with three deep portals, the
+## rose window and two unequal towers, and the slender 112 m spire over the crossing behind.
+static func _amiens_cathedral() -> void:
+	var stone := Color("e0d6bf")
+	var stone_d := Color("bcb093")
+	_r(-28, 0, 28, 42, stone_d) # the nave behind
+	_poly([-28, 42, 28, 42, 0, 50], SLATE)
+	_r(-1, 44, 1, 80, Color("6b7380")) # the crossing spire
+	_poly([-2.5, 76, 2.5, 76, 0, 112], Color("6b7380"))
+	_r(-18, 0, 18, 46, stone)
+	for x in [-11.0, 0.0, 11.0]:
+		_lancet(x, 0, 8 if x == 0.0 else 6.5, 15, DARK)
+		_poly([x - 4, 15, x + 4, 15, x, 21], stone_d)
+	_r(-18, 22, 18, 23, stone_d)
+	for k in 9:
+		_lancet(-14 + k * 3.5, 24, 1.6, 5, WIN) # the gallery of kings
+	_c(0, 36, 6, stone_d)
+	_c(0, 36, 5, WIN)
+	if _detail(1.0):
+		for k in 8:
+			var a := k * PI / 4.0
+			_l(0, 36, cos(a) * 5, 36 + sin(a) * 5, stone_d, 0.3)
+	_r(-18, 46, -8, 62, stone) # the south tower (left), the taller
+	_r(8, 46, 18, 58, stone)
+	_lancet(-13, 48, 3, 11, WIN)
+	_lancet(13, 47, 3, 9, WIN)
+	_r(-18.5, 61, -7.5, 62.5, stone_d)
+	_r(7.5, 57, 18.5, 58.5, stone_d)
+
+## The Palais de l'Île in Annecy (12th century): a stone house on an islet in the Thiou canal, its pointed end
+## cutting the water like a ship's bow, with a little turret, between the quays.
+static func _annecy_palais_ile() -> void:
+	var wall := Color("ddd2bb")
+	var wall_d := Color("b9ab8c")
+	var roof := Color("6c5446")
+	_r(-18, 0, 18, 2.5, WATER)
+	_r(-18, 2.5, -12, 5, Color("a59d8c")) # the quays
+	_r(12, 2.5, 18, 5, Color("a59d8c"))
+	_poly([-10, 2.5, 6, 2.5, 10, 6, 10, 2.5, 6, 2.5], wall_d) # the islet's stone base
+	_poly([-10, 2.5, 6, 2.5, 11, 8, 11, 12, 6, 12, -10, 12], wall) # the bow-shaped house
+	_poly([-10.5, 12, 6.5, 12, 11.5, 12, 8, 15.5, -7, 15.5], roof)
+	for k in 4:
+		_r(-8 + k * 3.5, 7.5, -6.6 + k * 3.5, 10, WIN)
+	_arched(-3, 2.5, 2, 3.5, DARK)
+	_r(-11, 2.5, -7, 14, wall) # the turret
+	_poly([-11.5, 14, -6.5, 14, -9, 18], roof)
+	_r(-9.6, 10, -8.4, 12, WIN)
+	if _detail(1.0):
+		for k in 6:
+			_c(-6 + k * 2.5, 4.5, 0.25, Color("e05a4a")) # flower boxes
