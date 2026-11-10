@@ -202,11 +202,11 @@
 			"to_km": 54,
 			"name": "Shannon Ferry",
 			"fact": {
-				"pl": "Od 1969 roku prom przepływa ujście Shannon z Killimer do Tarbert w około 20 minut, oszczędzając 137 km jazdy przez Limerick",
-				"en": "Since 1969 the ferry has crossed the Shannon estuary from Killimer to Tarbert in about 20 minutes, saving 137 km of road via Limerick",
-				"cs": "Od roku 1969 přeplouvá trajekt ústí Shannonu z Killimeru do Tarbertu asi za 20 minut a ušetří 137 km cesty přes Limerick",
-				"is": "Síðan 1969 hefur ferjan siglt yfir Shannon-ósinn frá Killimer til Tarbert á um 20 mínútum og sparað 137 km akstur um Limerick",
-				"de": "Seit 1969 überquert die Fähre die Shannon-Mündung von Killimer nach Tarbert in etwa 20 Minuten und erspart 137 km Fahrt über Limerick"
+				"pl": "Od 1969 roku prom przepływa ujście Shannon z Killimer do Tarbert w około 20 minut, zamiast 137 km jazdy przez Limerick",
+				"en": "Since 1969 the ferry has crossed the Shannon estuary from Killimer to Tarbert in about 20 minutes, instead of a 137 km drive via Limerick",
+				"cs": "Od roku 1969 přeplouvá trajekt ústí Shannonu z Killimeru do Tarbertu asi za 20 minut místo 137 km cesty přes Limerick",
+				"is": "Síðan 1969 hefur ferjan siglt yfir Shannon-ósinn frá Killimer til Tarbert á um 20 mínútum í stað 137 km aksturs um Limerick",
+				"de": "Seit 1969 überquert die Fähre die Shannon-Mündung von Killimer nach Tarbert in etwa 20 Minuten statt 137 km Fahrt über Limerick"
 			}
 		}
 	},
