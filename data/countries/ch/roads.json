@@ -172,7 +172,7 @@
 		"a": "zuerich",
 		"b": "luzern",
 		"km": 52,
-		"road": [[5, "A3"], [37, "A4"], [52, "A14"]],
+		"road": [[10, "A3"], [37, "A4"], [52, "A14"]],
 		"towns": [["Affoltern am Albis", 23], ["Rotkreuz", 37], ["Ebikon", 47]],
 		"zones": [[26, "upland", "Zürich"], [38, "fields", "Zug"], [52, "fields", "Luzern"]],
 		"via": [[23, 8.45, 47.28], [37, 8.43, 47.14], [47, 8.34, 47.08]],
@@ -318,7 +318,7 @@
 		"a": "zuerich",
 		"b": "chur",
 		"km": 118,
-		"road": "A3",
+		"road": [[88, "A3"], [118, "A13"]],
 		"towns": [
 			["Wädenswil", 24], ["Pfäffikon", 35], ["Lachen", 42], ["Niederurnen", 53], ["Walenstadt", 74],
 			["Sargans", 88], ["Bad Ragaz", 93], ["Landquart", 102]
@@ -371,7 +371,7 @@
 		"a": "thun",
 		"b": "luzern",
 		"km": 98,
-		"road": [[10, "A6"], [45, "A8"], [80, "8"], [98, "A8"]],
+		"road": [[10, "A6"], [27, "A8"], [45, "A8", 2, 100], [70, "4"], [90, "A8", 2, 100], [98, "A2"]],
 		"towns": [
 			["Spiez", 10], ["Interlaken", 27], ["Brienz", 45], ["Lungern", 62], ["Giswil", 70], ["Sachseln", 76],
 			["Sarnen", 80], ["Alpnach", 86], ["Hergiswil", 92]

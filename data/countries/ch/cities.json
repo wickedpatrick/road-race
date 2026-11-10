@@ -45,7 +45,7 @@
 	"lugano": {"name": "Lugano", "lat": 46, "lon": 8.95, "pop": 63, "region": "Ticino"},
 	"biel": {"name": "Biel", "lat": 47.14, "lon": 7.25, "pop": 56, "region": "Bern"},
 	"thun": {"name": "Thun", "lat": 46.76, "lon": 7.63, "pop": 44, "region": "Bern"},
-	"fribourg": {"name": "Fribourg", "lat": 46.8, "lon": 7.16, "pop": 39, "region": "Fribourg"},
+	"fribourg": {"name": "Fribourg", "lat": 46.8, "lon": 7.16, "pop": 39, "region": "Fribourg", "exonym": {"pl": "Fryburg"}},
 	"chur": {"name": "Chur", "lat": 46.85, "lon": 9.53, "pop": 38, "region": "Graubünden"},
 	"sion": {"name": "Sion", "lat": 46.23, "lon": 7.36, "pop": 36, "region": "Valais", "exonym": {"de": "Sitten"}}
 }
