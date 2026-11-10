@@ -30,8 +30,8 @@
 		"road": "A4",
 		"towns": [["Metz", 188], ["Saverne", 318]],
 		"zones": [
-			[100, "fields", "Grand Est"], [135, "fields", "Grand Est"], [290, "fields", "Grand Est"],
-			[325, "fields", "Grand Est"], [350, "fields", "Grand Est"]
+			[100, "fields", "Grand Est"], [135, "fields", "Grand Est"], [300, "fields", "Grand Est"],
+			[318, "forest", "Grand Est"], [325, "fields", "Grand Est"], [350, "fields", "Grand Est"]
 		],
 		"via": [[188, 6.18, 49.12], [318, 7.36, 48.74]]
 	},
@@ -162,7 +162,7 @@
 		"towns": [["Auxerre", 165], ["Avallon", 210], ["Pouilly-en-Auxois", 272]],
 		"zones": [
 			[25, "industrial", "Île-de-France"],
-			[100, "fields", "Île-de-France"],
+			[78, "fields", "Île-de-France"],
 			[230, "fields", "Bourgogne-Franche-Comté"],
 			[315, "fields", "Bourgogne-Franche-Comté"]
 		],
@@ -357,7 +357,7 @@
 		"b": "bordeaux",
 		"km": 345,
 		"road": [[140, "A83"], [345, "A10"]],
-		"towns": [["Montaigu", 35], ["Fontenay-le-Comte", 115], ["Niort", 145], ["Saint-Jean-d'Angély", 195], ["Saintes", 225]],
+		"towns": [["Montaigu", 35], ["Fontenay-le-Comte", 115], ["Niort", 145], ["Saint-Jean-d'Angély", 195], ["Saintes", 228]],
 		"zones": [
 			[15, "industrial", "Pays de la Loire"],
 			[125, "fields", "Pays de la Loire"],

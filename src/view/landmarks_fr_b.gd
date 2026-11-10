@@ -115,9 +115,9 @@ static func _grenoble_bulles() -> void:
 	var rock := Color("8e8a7c")
 	_r(-30, 0, 30, 2, WATER)
 	_poly([10, 2, 30, 2, 30, 30, 22, 34, 16, 26], rock)
-	_poly([18, 30, 30, 30, 30, 36, 18, 36], Color("9b8f72")) # the fort
+	_poly([19, 30, 30, 30, 30, 36, 19, 36], Color("9b8f72")) # the fort
 	for k in 4:
-		_r(18 + k * 3.3, 36, 19.6 + k * 3.3, 37.4, Color("9b8f72"))
+		_r(19 + k * 3.3, 36, 20.6 + k * 3.3, 37.4, Color("9b8f72"))
 	_r(-30, 2, -20, 10, CREAM) # the lower station
 	_r(-30.4, 10, -19.6, 11, SLATE)
 	_l(-22, 9, 20, 32, DARK, 0.18)
