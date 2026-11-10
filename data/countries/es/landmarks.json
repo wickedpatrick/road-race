@@ -3,7 +3,7 @@
 		{
 			"kind": "es_madrid_puerta_alcala",
 			"name": {
-				"pl": "Brama Alkalska",
+				"pl": "Puerta de Alcalá",
 				"en": "Puerta de Alcalá",
 				"cs": "Puerta de Alcalá",
 				"is": "Puerta de Alcalá",
@@ -216,7 +216,7 @@
 	"Vigo": [
 		{
 			"kind": "es_vigo_sireno",
-			"name": {"pl": "Syren", "en": "The Sireno", "cs": "Sireno", "is": "Sireno", "de": "Der Sireno"},
+			"name": {"pl": "Sireno", "en": "The Sireno", "cs": "Sireno", "is": "Sireno", "de": "Der Sireno"},
 			"desc": {
 				"pl": "Rzeźba Francisca Leiro z 1991 roku: pół człowiek, pół ryba na wysokiej kolumnie nad placem w centrum",
 				"en": "Francisco Leiro's sculpture of 1991: half man, half fish on a tall column over a square in the centre",

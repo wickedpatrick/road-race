@@ -18,7 +18,7 @@
 		"en": "Regarded as the home of paella; every March huge figures are burnt here during the Fallas festival",
 		"cs": "Považuje se za domov paelly; každý březen se tu při svátku Fallas pálí obří figury",
 		"is": "Talin heimkynni paellunnar; í mars ár hvert eru risastórar fígúrur brenndar hér á Fallas-hátíðinni",
-		"de": "Sie gilt als Heimat der Paella; jedes Jahr im März werden hier beim Fallas-Fest riesige Figuren verbrannt"
+		"de": "Die Stadt gilt als Heimat der Paella; jedes Jahr im März werden hier beim Fallas-Fest riesige Figuren verbrannt"
 	},
 	"Zaragoza": {
 		"pl": "Założona przez Rzymian jako Caesaraugusta; w 2008 roku odbyła się tu wystawa światowa Expo",
@@ -60,7 +60,7 @@
 		"en": "Once a city of shipyards and steelworks; the Guggenheim Museum of 1997 changed its image",
 		"cs": "Kdysi město loděnic a oceláren; Guggenheimovo muzeum z roku 1997 změnilo jeho tvář",
 		"is": "Áður borg skipasmíðastöðva og stálvera; Guggenheim-safnið frá 1997 breytti ímynd hennar",
-		"de": "Einst eine Stadt der Werften und Stahlwerke; das Guggenheim-Museum von 1997 veränderte ihr Bild"
+		"de": "Einst eine Stadt der Werften und Stahlwerke; das Guggenheim-Museum von 1997 veränderte das Bild der Stadt"
 	},
 	"Córdoba": {
 		"pl": "W X wieku stolica kalifatu Kordoby i jedno z największych miast Europy",
@@ -98,14 +98,14 @@
 		"de": "Ein Atlantikhafen, wegen der verglasten Galerien an den Hausfassaden Stadt aus Glas genannt"
 	},
 	"Granada": {
-		"pl": "Ostatnie państwo muzułmańskie na Półwyspie Iberyjskim; poddała się Królom Katolickim w 1492 roku",
-		"en": "The last Muslim state on the Iberian Peninsula; it surrendered to the Catholic Monarchs in 1492",
-		"cs": "Poslední muslimský stát na Pyrenejském poloostrově; Katolickým Veličenstvům se vzdala roku 1492",
-		"is": "Síðasta ríki múslima á Íberíuskaga; það gafst upp fyrir kaþólsku konungshjónunum árið 1492",
-		"de": "Der letzte muslimische Staat auf der Iberischen Halbinsel; er ergab sich 1492 den Katholischen Königen"
+		"pl": "Stolica ostatniego państwa muzułmańskiego na Półwyspie Iberyjskim; poddała się Królom Katolickim w 1492 roku",
+		"en": "The capital of the last Muslim state on the Iberian Peninsula; it surrendered to the Catholic Monarchs in 1492",
+		"cs": "Hlavní město posledního muslimského státu na Pyrenejském poloostrově; roku 1492 se vzdalo katolickým králům",
+		"is": "Höfuðborg síðasta ríkis múslima á Íberíuskaga; hún gafst upp fyrir kaþólsku konungshjónunum árið 1492",
+		"de": "Die Hauptstadt des letzten muslimischen Staates auf der Iberischen Halbinsel; sie ergab sich 1492 den Katholischen Königen"
 	},
 	"Oviedo": {
-		"pl": "Stolica Asturii; jej przedromańskie kościoły z IX wieku są na liście UNESCO",
+		"pl": "Stolica Asturii; tutejsze przedromańskie kościoły z IX wieku są na liście UNESCO",
 		"en": "The capital of Asturias; its pre-Romanesque churches of the 9th century are on the UNESCO list",
 		"cs": "Hlavní město Asturie; jeho předrománské kostely z 9. století jsou na seznamu UNESCO",
 		"is": "Höfuðborg Astúríu; kirkjurnar þar frá 9. öld, frá því fyrir rómanska tímann, eru á heimsminjaskrá UNESCO",
@@ -133,11 +133,11 @@
 		"de": "Der Strand La Concha hat die Form einer Muschel; jedes Jahr im September findet hier ein Filmfestival statt"
 	},
 	"Burgos": {
-		"pl": "Leży na Drodze św. Jakuba; w jej katedrze spoczywa El Cid",
+		"pl": "Leży na Drodze św. Jakuba; w tutejszej katedrze spoczywa El Cid",
 		"en": "It lies on the Way of St James; El Cid is buried in its cathedral",
-		"cs": "Leží na Svatojakubské cestě; v její katedrále odpočívá El Cid",
+		"cs": "Leží na Svatojakubské cestě; v tamní katedrále odpočívá El Cid",
 		"is": "Hún liggur á Jakobsveginum; El Cid hvílir í dómkirkjunni",
-		"de": "Sie liegt am Jakobsweg; in ihrer Kathedrale ist El Cid begraben"
+		"de": "Die Stadt liegt am Jakobsweg; in ihrer Kathedrale ist El Cid begraben"
 	},
 	"Albacete": {
 		"pl": "Od wieków słynie z wyrobu noży i nożyczek",
@@ -165,7 +165,7 @@
 		"en": "Its university, founded in 1218, is the oldest still running in Spain",
 		"cs": "Její univerzita, založená roku 1218, je nejstarší dosud fungující ve Španělsku",
 		"is": "Háskólinn þar, stofnaður árið 1218, er sá elsti á Spáni sem enn starfar",
-		"de": "Ihre 1218 gegründete Universität ist die älteste noch bestehende Spaniens"
+		"de": "Die 1218 gegründete Universität der Stadt ist die älteste noch bestehende Spaniens"
 	},
 	"Tarragona": {
 		"pl": "Rzymska Tarraco była stolicą prowincji Hispania Tarraconensis",
@@ -175,11 +175,11 @@
 		"de": "Das römische Tarraco war die Hauptstadt der Provinz Hispania Tarraconensis"
 	},
 	"León": {
-		"pl": "Witraże jej gotyckiej katedry zajmują około 1800 metrów kwadratowych",
+		"pl": "Witraże tutejszej gotyckiej katedry zajmują około 1800 metrów kwadratowych",
 		"en": "The stained glass of its Gothic cathedral covers about 1,800 square metres",
-		"cs": "Vitráže její gotické katedrály zabírají asi 1800 metrů čtverečních",
+		"cs": "Vitráže tamní gotické katedrály zabírají asi 1800 metrů čtverečních",
 		"is": "Steindir gluggar gotnesku dómkirkjunnar þekja um 1.800 fermetra",
-		"de": "Die Glasfenster ihrer gotischen Kathedrale bedecken etwa 1.800 Quadratmeter"
+		"de": "Die Glasfenster der gotischen Kathedrale bedecken etwa 1.800 Quadratmeter"
 	},
 	"Cádiz": {
 		"pl": "Jedno z najstarszych miast Europy, założone przez Fenicjan; tu w 1812 roku uchwalono pierwszą konstytucję Hiszpanii",
@@ -207,7 +207,7 @@
 		"en": "Founded in 25 BC as Emerita Augusta; its Roman monuments are on the UNESCO list",
 		"cs": "Založena roku 25 př. n. l. jako Emerita Augusta; její římské památky jsou na seznamu UNESCO",
 		"is": "Stofnuð árið 25 f.Kr. sem Emerita Augusta; rómversku minjarnar þar eru á heimsminjaskrá UNESCO",
-		"de": "25 v. Chr. als Emerita Augusta gegründet; ihre römischen Bauten stehen auf der UNESCO-Liste"
+		"de": "25 v. Chr. als Emerita Augusta gegründet; die römischen Bauten der Stadt stehen auf der UNESCO-Liste"
 	},
 	"Santiago de Compostela": {
 		"pl": "Cel Drogi św. Jakuba; według tradycji w katedrze spoczywa apostoł Jakub",
@@ -217,11 +217,11 @@
 		"de": "Das Ziel des Jakobswegs; der Überlieferung nach ruht der Apostel Jakobus in der Kathedrale"
 	},
 	"Teruel": {
-		"pl": "Jej wieże w stylu mudéjar są na liście UNESCO; słynie z legendy o kochankach z Teruel",
+		"pl": "Tutejsze wieże w stylu mudéjar są na liście UNESCO; słynie z legendy o kochankach z Teruel",
 		"en": "Its Mudéjar towers are on the UNESCO list; it is known for the legend of the Lovers of Teruel",
-		"cs": "Její věže ve stylu mudéjar jsou na seznamu UNESCO; proslula legendou o milencích z Teruelu",
+		"cs": "Zdejší věže ve stylu mudéjar jsou na seznamu UNESCO; město proslulo legendou o milencích z Teruelu",
 		"is": "Mudéjar-turnarnir þar eru á heimsminjaskrá UNESCO; borgin er þekkt fyrir þjóðsöguna um elskendurna í Teruel",
-		"de": "Ihre Türme im Mudéjar-Stil stehen auf der UNESCO-Liste; bekannt ist sie für die Legende der Liebenden von Teruel"
+		"de": "Die Türme der Stadt im Mudéjar-Stil stehen auf der UNESCO-Liste; bekannt ist sie für die Legende der Liebenden von Teruel"
 	},
 	"Lleida": {
 		"pl": "Nad miastem góruje Seu Vella, stara katedra na wzgórzu",
@@ -231,25 +231,25 @@
 		"de": "Über der Stadt thront die Seu Vella, die alte Kathedrale auf einem Hügel"
 	},
 	"Jerez de la Frontera": {
-		"pl": "Od niej wzięło nazwę wino sherry",
+		"pl": "Wino sherry wzięło nazwę od tego miasta",
 		"en": "Sherry wine takes its name from the town",
 		"cs": "Podle něj dostalo jméno víno sherry",
 		"is": "Sérríið dregur nafn sitt af bænum",
-		"de": "Nach ihr ist der Sherry benannt"
+		"de": "Nach der Stadt ist der Sherry benannt"
 	},
 	"Ávila": {
 		"pl": "Otaczają ją średniowieczne mury z 87 basztami, zachowane w całości",
 		"en": "It is enclosed by complete medieval walls with 87 towers",
 		"cs": "Obklopují ji úplně zachované středověké hradby s 87 věžemi",
 		"is": "Heillegir miðaldamúrar með 87 turnum umlykja bæinn",
-		"de": "Sie ist von vollständig erhaltenen mittelalterlichen Mauern mit 87 Türmen umgeben"
+		"de": "Die Stadt ist von vollständig erhaltenen mittelalterlichen Mauern mit 87 Türmen umgeben"
 	},
 	"Cáceres": {
-		"pl": "Jej stare miasto z wieżami szlacheckich domów jest na liście UNESCO",
+		"pl": "Tutejsze stare miasto z wieżami szlacheckich domów jest na liście UNESCO",
 		"en": "Its old town with the towers of noble houses is on the UNESCO list",
-		"cs": "Její staré město s věžemi šlechtických domů je na seznamu UNESCO",
+		"cs": "Zdejší staré město s věžemi šlechtických domů je na seznamu UNESCO",
 		"is": "Gamli bærinn með turnum aðalshúsanna er á heimsminjaskrá UNESCO",
-		"de": "Ihre Altstadt mit den Türmen der Adelshäuser steht auf der UNESCO-Liste"
+		"de": "Die Altstadt mit den Türmen der Adelshäuser steht auf der UNESCO-Liste"
 	},
 	"Aranjuez": {
 		"pl": "Królewski pałac i ogrody nad Tagiem; rodzina królewska spędzała tu wiosny",
