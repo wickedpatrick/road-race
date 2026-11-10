@@ -174,21 +174,37 @@ static func _fribourg_cathedrale() -> void:
 		_r(x, 67, x + 0.8, 70.5, GREY)
 		_poly([x - 0.1, 70.5, x + 0.9, 70.5, x + 0.4, 74], GREY_D)
 
-## Chur's Obertor: the medieval gate tower of the old town wall, the arch of the passage, the clock and the steep
-## roof with its little ridge turret.
+## Chur's Obertor: the medieval gate tower by the Plessur bridge, four storeys of pale plaster narrowing upwards, the
+## round-arched passage, small windows and the clock, the steep saddle roof with its gable to the street and the little
+## 17th-century ridge turret with an onion cap.
 static func _chur_obertor() -> void:
 	_r(-6, 0, 6, 0.4, PAVE)
-	_r(-4.5, 0.4, 4.5, 18, SAND)
-	_r(-4.5, 0.4, -3.5, 18, SAND_D)
-	_arched(0, 0.4, 4.0, 6.5, DARK)
-	_r(-0.6, 9, 0.6, 10.6, WIN)
-	_c(0, 14, 1.8, WHITE)
-	_c(0, 14, 1.5, Color("2c4f8a"))
-	_l(0, 14, 0, 15.2, GOLD, 0.15)
-	_l(0, 14, 0.9, 14, GOLD, 0.15)
-	_poly([-5, 18, 5, 18, 0, 26], ROOF)
-	_r(-0.5, 23, 0.5, 26.5, SLATE)
-	_poly([-0.8, 26.5, 0.8, 26.5, 0, 29.5], SLATE)
+	# the tower, a little narrower at the top, shaded on one side
+	_poly([-4.7, 0.4, 4.7, 0.4, 4.1, 18, -4.1, 18], SAND)
+	_poly([-4.7, 0.4, -3.6, 0.4, -3.1, 18, -4.1, 18], SAND_D)
+	# the string courses between the storeys
+	for y in [7.6, 11.4, 15.0]:
+		var hw: float = 4.7 - 0.6 * (y - 0.4) / 17.6
+		_r(-hw, y, hw, y + 0.3, SAND_D)
+	# the passage and its painted arch
+	_arched(0, 0.4, 4.4, 6.6, Color("6e5a48"))
+	_arched(0, 0.4, 3.8, 6.2, DARK)
+	# the windows of the upper storeys and the clock
+	_r(-1.9, 8.6, -0.9, 10.4, WIN)
+	_r(0.9, 8.6, 1.9, 10.4, WIN)
+	_r(-0.5, 12.2, 0.5, 14.0, WIN)
+	_c(0, 16.6, 1.25, WHITE)
+	_c(0, 16.6, 1.0, Color("2c4f8a"))
+	_l(0, 16.6, 0, 17.4, GOLD, 0.12)
+	_l(0, 16.6, 0.6, 16.6, GOLD, 0.12)
+	# the steep saddle roof, its gable towards the street
+	_poly([-4.6, 18, 4.6, 18, 0, 25.6], ROOF)
+	_poly([-4.6, 18, -3.6, 18, 0, 24.0, 0, 25.6], ROOF_D)
+	# the ridge turret: a little white lantern with a round opening under its onion cap and spike
+	_r(-0.7, 24.4, 0.7, 26.6, WHITE)
+	_arched(0, 25.0, 0.6, 1.2, DARK)
+	_poly([-0.9, 26.6, 0.9, 26.6, 0.8, 27.2, 0.3, 27.7, 0.12, 28.4, -0.12, 28.4, -0.3, 27.7, -0.8, 27.2], SLATE)
+	_l(0, 28.4, 0, 29.6, SLATE, 0.1)
 
 ## Sion's two hills: Tourbillon with the ruined castle walls and keep on the left, Valère with its fortified
 ## basilica and the bell tower on the right, the vineyards on their slopes.

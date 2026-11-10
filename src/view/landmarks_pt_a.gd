@@ -255,20 +255,46 @@ static func _faro_arco_vila() -> void:
 	_c(-0.1, 25.1, 0.4, WHITE)
 	_l(0.2, 25.1, 1.1, 24.9, Color("d94a3a"), 0.15)
 
-## The Roman Temple of Évora: the granite podium and the row of fluted columns with their marble capitals still
-## carrying a piece of the architrave.
+## The Roman Temple of Évora seen from the east: the long granite podium, the colonnade still standing over its northern
+## half (the corner column of the front and the east side) with marble bases and Corinthian capitals on granite shafts,
+## all of one height and still carrying the granite architrave and frieze, the west-side columns showing darker
+## behind, and the bare southern end of the podium where the cella and the stairs were.
 static func _evora_templo() -> void:
+	var marble := WHITE
+	var marble_d := Color("dcd6c8")
 	_r(-12, 0, 12, 0.4, Color("a89a7a"))
-	_r(-11, 0.4, 11, 4, GRANITE)
-	_r(-11.3, 3.6, 11.3, 4.2, GRANITE_D)
-	var xs := [-9.6, -5.8, -1.9, 1.9, 5.8, 9.6]
+	# the podium: the base moulding, the granite blocks, the top moulding
+	_r(-11.6, 0.4, 11.6, 1.0, GRANITE_D)
+	_r(-11, 1.0, 11, 3.5, GRANITE)
+	if LandmarkPainter._pm > 1.0:
+		for x in [-8.0, -4.0, 0.0, 4.0, 8.0]:
+			_l(x, 1.0, x, 3.5, GRANITE_D, 0.08)
+		_l(-11, 2.25, 11, 2.25, GRANITE_D, 0.08)
+	_r(-11.4, 3.5, 11.4, 4.0, GRANITE_D)
+	# the ruined stair blocks at the southern end
+	_r(-11.6, 0.4, -10.2, 1.6, GRANITE_D)
+	var xs := [-0.8, 2.1, 5.0, 7.9, 10.8]
+	# the west-side columns behind, darker, with the far end of the frieze
+	for x in xs.slice(2):
+		_column(x - 0.9, GRANITE_D, marble_d)
+	# the east-side columns in front
 	for x in xs:
-		var top := 13.0 if absf(x) < 7.0 else 11.0
-		_r(x - 0.7, 4.2, x + 0.7, top, GRANITE)
-		_r(x - 0.2, 4.6, x + 0.2, top - 0.4, GRANITE_D)
-		_r(x - 1.0, top, x + 1.0, top + 1.2, WHITE)
-	_r(-6.8, 14.2, 6.8, 15.4, GRANITE)
-	_r(-6.8, 15.4, 4.0, 15.9, GRANITE_D)
+		_column(x, GRANITE, marble)
+	# the architrave and the frieze over the colonnade, a little broken at the south end
+	_r(-1.7, 11.85, 11.6, 12.85, GRANITE)
+	_r(-1.7, 12.75, 11.6, 12.9, GRANITE_D)
+	_poly([-1.4, 12.9, 11.6, 12.9, 11.6, 13.9, -0.4, 13.9, -0.9, 13.4], GRANITE)
+	_r(-0.4, 13.9, 11.6, 14.1, GRANITE_D)
+
+## One column of the temple at x: the marble base, the fluted granite shaft and the flaring Corinthian capital.
+static func _column(x: float, shaft: Color, marble: Color) -> void:
+	_r(x - 0.75, 4.0, x + 0.75, 4.5, marble)
+	_r(x - 0.55, 4.5, x + 0.55, 10.6, shaft)
+	if LandmarkPainter._pm > 1.2:
+		for d in [-0.25, 0.0, 0.25]:
+			_l(x + d, 4.7, x + d, 10.4, GRANITE_D, 0.06)
+	_poly([x - 0.55, 10.6, x + 0.55, 10.6, x + 0.95, 11.6, x - 0.95, 11.6], marble)
+	_r(x - 1.0, 11.6, x + 1.0, 11.85, marble)
 
 ## Mateus Palace: the Baroque manor with its white walls and granite trim, the two wings forward, the tall
 ## central front with statues on its pediment, the pool before it.

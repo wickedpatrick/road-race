@@ -129,31 +129,57 @@ static func _reggio_bronzi() -> void:
 		# the shield seen edge-on, an oval behind the arm
 		_poly(_arc(x - 0.95, 2.3, 0.18, 0.5, 0, TAU, 10), BRONZE_D)
 
-## The Fontana Maggiore in Perugia: the two polygonal marble basins with their carved panels in white and pink, the
-## bronze bowl on a column above them and the group of nymphs on top.
+## The Fontana Maggiore in Perugia: on its round steps the wide 25-sided lower basin of white and pink marble, its
+## carved panels in pairs narrowing towards the sides as the facets turn away; from its middle a cluster of columns
+## carries the smaller 12-sided upper basin with statues at its corners; on top the bronze bowl and the three bronze
+## nymphs holding up the griffins.
 static func _perugia_fontana() -> void:
 	var pink := Color("e7c9bc")
+	var pink_d := Color("d4aea0")
+	# the steps
 	for k in 3:
 		_r(-8 + k * 0.6, k * 0.35, 8 - k * 0.6, k * 0.35 + 0.35, STONE_D if k % 2 == 0 else STONE)
-	# the lower basin with its panels
-	_r(-7, 1, 7, 3.2, MARBLE)
+	# the lower basin: ten facets seen, each a pair of panels between little columns, narrower towards the sides
+	var r1 := 6.8
+	_r(-r1, 1.05, r1, 3.3, MARBLE)
 	for k in 10:
-		var x := -6.6 + k * 1.4
-		_r(x, 1.3, x + 1.1, 2.9, pink if k % 2 == 0 else MARBLE_D)
-	_r(-7.2, 3.2, 7.2, 3.5, MARBLE_D)
-	# the upper basin on columns
-	for x in [-3.5, -1.5, 1.5, 3.5]:
-		_r(x - 0.2, 3.5, x + 0.2, 4.6, MARBLE_D)
-	_r(-4.5, 4.6, 4.5, 6.0, pink)
-	_r(-4.6, 6.0, 4.6, 6.25, MARBLE_D)
-	# the bronze bowl and the nymphs
-	_r(-0.35, 6.25, 0.35, 7.1, BRONZE)
-	_poly([-1.6, 7.1, 1.6, 7.1, 0.9, 7.7, -0.9, 7.7], BRONZE)
+		var xa := r1 * sin(-PI * 0.5 + PI * k / 10.0)
+		var xb := r1 * sin(-PI * 0.5 + PI * (k + 1) / 10.0)
+		var xm := (xa + xb) * 0.5
+		var g := minf(0.12, (xb - xa) * 0.1)
+		_r(xa + g, 1.35, xm - g, 3.0, pink)
+		_r(xm + g, 1.35, xb - g, 3.0, MARBLE_D)
+		_l(xa, 1.05, xa, 3.3, STONE_D, 0.1)
+	_r(-r1 - 0.25, 3.3, r1 + 0.25, 3.6, MARBLE_D)
+	# the cluster of columns rising from the water of the lower basin
+	_r(-1.1, 3.6, 1.1, 4.5, MARBLE_D)
+	for x in [-0.8, 0.0, 0.8]:
+		_l(x, 3.6, x, 4.5, MARBLE, 0.25)
+	# the upper basin: six facets seen, plain pink panels, flaring a little to its rim
+	var r2 := 4.0
+	_poly([-1.4, 4.5, 1.4, 4.5, r2, 4.9, r2, 6.0, -r2, 6.0, -r2, 4.9], pink_d)
+	for k in 6:
+		var xa := r2 * sin(-PI * 0.5 + PI * k / 6.0)
+		var xb := r2 * sin(-PI * 0.5 + PI * (k + 1) / 6.0)
+		_r(xa + 0.15, 5.0, xb - 0.15, 5.85, pink)
+	_r(-r2 - 0.2, 6.0, r2 + 0.2, 6.25, MARBLE_D)
+	# the statues at the corners of the upper basin, standing against it
+	for k in range(1, 6):
+		var x := r2 * sin(-PI * 0.5 + PI * k / 6.0)
+		_r(x - 0.17, 4.85, x + 0.17, 5.9, MARBLE)
+		_c(x, 6.05, 0.15, MARBLE)
+	# the bronze: a short shaft, the shallow bowl, the three nymphs back to back holding up the griffins
+	_r(-0.3, 6.25, 0.3, 6.8, BRONZE_D)
+	_poly([-1.5, 7.3, 1.5, 7.3, 0.8, 6.8, -0.8, 6.8], BRONZE)
 	for x in [-0.4, 0.0, 0.4]:
-		_l(x, 7.7, x, 8.5, BRONZE_D, 0.22)
-	_c(0, 8.65, 0.2, BRONZE_D)
-	_l(-0.6, 7.6, -0.9, 7.0, Color("9cc4dc"), 0.08)
-	_l(0.6, 7.6, 0.9, 7.0, Color("9cc4dc"), 0.08)
+		_l(x, 7.3, x, 8.2, BRONZE_D, 0.22)
+		_c(x, 8.3, 0.14, BRONZE_D)
+	_poly([-0.8, 8.4, 0.8, 8.4, 0.5, 8.7, -0.5, 8.7], BRONZE)
+	_poly([-0.7, 8.7, -0.2, 8.7, -0.45, 8.95], BRONZE_D)
+	_poly([0.2, 8.7, 0.7, 8.7, 0.45, 8.95], BRONZE_D)
+	# the water spilling from the bowl
+	_l(-1.4, 7.25, -1.7, 6.3, Color("9cc4dc"), 0.08)
+	_l(1.4, 7.25, 1.7, 6.3, Color("9cc4dc"), 0.08)
 
 ## The Arch of Trajan on Ancona's harbour mole: a tall narrow marble arch on a high base reached by steps, with
 ## pairs of columns on each side and the attic with its inscription.

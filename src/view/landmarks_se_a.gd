@@ -208,31 +208,49 @@ static func _linkoping_draken() -> void:
 	_c(11.1, 10.9, 1.0, Color("1d5aa6"))
 	_c(11.1, 10.9, 0.45, Color("f2c230"))
 
-## Örebro Castle: a pale block with four round corner towers under dark conical roofs, on its islet in the
-## Svartån.
+## Örebro Castle: the pale Renaissance castle rising straight out of the Svartån, a long block under a dark hipped roof
+## with dormers, its round corner towers fatter and higher than the walls under dark bell-shaped domes with lanterns.
 static func _orebro_slott() -> void:
 	var wall := Color("ddd5c4")
 	var wall_d := Color("c4baa6")
-	var roof := Color("4b4a4f")
-	_r(-25, 0, 25, 2, WATER)
-	_r(-24, 1.6, 24, 2.6, Color("9a958a"))
-	# the main block
-	_r(-17, 2.6, 17, 17.5, wall)
-	_poly([-17.5, 17.5, 17.5, 17.5, 15.5, 21, -15.5, 21], roof)
-	_windows(-15, 15, 6, 8.5, 8, WIN)
-	_windows(-15, 15, 11, 13.5, 8, WIN)
-	_arched(0, 2.6, 3.2, 5.6, Color("4a3e34"))
-	# the round corner towers (the near pair; the far ones peep over the roof)
-	for cx in [-11.0, 11.0]:
-		_r(cx - 2.2, 17, cx + 2.2, 22.5, wall_d)
-		_poly([cx - 2.6, 22.5, cx + 2.6, 22.5, cx, 25.2], roof)
-	for cx in [-20.0, 20.0]:
-		_r(cx - 4, 2.6, cx + 4, 20, wall)
-		_l(cx + (2.4 if cx < 0 else -2.4), 3, cx + (2.4 if cx < 0 else -2.4), 19.5, wall_d, 0.7)
-		_windows(cx - 3, cx + 3, 8, 10.5, 2, WIN)
-		_windows(cx - 3, cx + 3, 13.5, 16, 2, WIN)
-		_poly([cx - 4.6, 20, cx + 4.6, 20, cx, 27.6], roof)
-		_l(cx, 27.6, cx, 28, GOLD, 0.15)
+	var wall_l := Color("ebe5d8")
+	var roof := Color("3f4045")
+	_r(-25, 0, 25, 1.8, WATER)
+	if _detail(1.0):
+		for x in [-22.0, -9.0, 5.0, 18.0]:
+			_l(x, 0.8, x + 3.5, 0.8, Color("7aa3c4"), 0.15)
+	# the granite foot sloping out into the water
+	_poly([-24.8, 1.4, 24.8, 1.4, 24.0, 3.0, -24.0, 3.0], Color("9a958a"))
+	# the main block under its hipped roof with dormers
+	_r(-17, 3, 17, 17.6, wall)
+	_r(-17.3, 17.2, 17.3, 17.9, wall_l)
+	_poly([-17.6, 17.9, 17.6, 17.9, 15, 22, -15, 22], roof)
+	for x in [-9.0, -3.0, 3.0, 9.0]:
+		_r(x - 0.8, 18.4, x + 0.8, 20.0, wall)
+		_poly([x - 1.0, 20.0, x + 1.0, 20.0, x, 21.0], roof)
+		_r(x - 0.4, 18.7, x + 0.4, 19.6, WIN)
+	for y in [6.0, 10.0, 13.8]:
+		_windows(-15.5, 15.5, y, y + 2.1, 9, WIN)
+	_arched(0, 3, 3.0, 5.2, Color("4a3e34"))
+	# the round corner towers, shaded to look round, each under a bell-shaped dome with a lantern
+	for cx in [-20.5, 20.5]:
+		_r(cx - 4.3, 3, cx + 4.3, 21, wall)
+		_r(cx - 4.3, 3, cx - 3.0, 21, wall_d)
+		_r(cx + 1.2, 3, cx + 2.6, 21, wall_l)
+		for y in [6.0, 10.0, 13.8, 17.4]:
+			_r(cx - 2.0, y, cx - 1.0, y + 2.1, WIN)
+			_r(cx + 0.4, y, cx + 1.4, y + 2.1, WIN)
+		_r(cx - 4.5, 20.6, cx + 4.5, 21.4, wall_l)
+		var left := [-4.5, 0.0, -4.35, 0.8, -3.9, 1.6, -3.1, 2.4, -2.0, 3.2, -1.1, 3.8, -0.7, 4.2]
+		var dome := []
+		for k in range(0, left.size(), 2):
+			dome.append_array([cx + left[k], 21.4 + left[k + 1]])
+		for k in range(left.size() - 2, -1, -2):
+			dome.append_array([cx - left[k], 21.4 + left[k + 1]])
+		_poly(dome, roof)
+		_r(cx - 0.7, 25.6, cx + 0.7, 26.6, wall_l)
+		_poly([cx - 0.9, 26.6, cx + 0.9, 26.6, cx, 27.6], roof)
+		_l(cx, 27.6, cx, 27.95, GOLD, 0.12)
 
 ## Anundshög by Västerås: the great grassy burial mound, a rune stone before it and a ship setting of standing
 ## stones beside it.

@@ -245,36 +245,59 @@ static func _letterkenny_eunan() -> void:
 		_poly([x - 0.7, 36, x + 0.7, 36, x, 41], stone)
 	_l(-10, 71.5, -10, 72, DARK, 0.3)
 
-## Alcock and Brown's Vickers Vimy in the Derrygimlagh bog: the big biplane seen from the side, two engines between
-## the wings, the twin tail, sitting on the brown bog.
+## Alcock and Brown's Vickers Vimy in the Derrygimlagh bog as it landed on 15 June 1919: the big biplane seen from the
+## side, nose down in the brown bog and tail up in the air, the two wings edge-on with their struts, an engine and its
+## propeller between them, the wheels sunk in the peat and the twin rudders between the two tailplanes.
 static func _clifden_vimy() -> void:
 	var fabric := Color("ddd3b6")
 	var fab_d := Color("b9ae90")
 	var strut := Color("6b5a43")
-	_r(-7.5, 0, 7.5, 0.5, BOG)
+	var o := Vector2(-5.6, 0.6) # the nose, dug into the bog
+	var a := 0.5 # nose down by about 29 degrees
+	# the undercarriage: struts from the lower wing to the wheels, half sunk
+	var w := _tilt([3.4, -1.9], o, a)
+	for u in [3.0, 3.8]:
+		var t := _tilt([u, -0.9], o, a)
+		_l(t[0], t[1], w[0], w[1], strut, 0.12)
+	_c(w[0], w[1], 0.55, DARK)
+	_c(w[0], w[1], 0.22, Color("8b8b8b"))
+	# the lower wing edge-on, under the fuselage
+	_poly(_tilt([2.3, -1.0, 5.6, -1.0, 5.6, -0.72, 2.3, -0.65], o, a), fab_d)
+	# the fuselage: blunt nose, slimming to the tail
+	_poly(_tilt([0, -0.6, 0, 0.8, 1.2, 0.9, 12.8, 0.45, 13.3, 0.4, 13.3, 0.0, 12.8, 0.0, 1.2, -0.75], o, a), fabric)
+	_poly(_tilt([1.5, 0.75, 2.5, 0.72, 2.5, 1.1, 1.5, 1.1], o, a), DARK) # the open cockpit
+	# the interplane struts
+	for u in [2.8, 5.0]:
+		var p0 := _tilt([u, -0.7, u, 2.7], o, a)
+		_l(p0[0], p0[1], p0[2], p0[3], strut, 0.1)
+	# the engine nacelle between the wings, the propeller in front of it
+	_poly(_tilt([1.7, 0.5, 4.4, 0.6, 4.9, 1.0, 4.4, 1.5, 1.7, 1.55, 1.5, 1.0], o, a), Color("6e7377"))
+	var pr := _tilt([1.35, -0.6, 1.35, 2.6], o, a)
+	_l(pr[0], pr[1], pr[2], pr[3], Color("5a4632"), 0.16)
+	var hub := _tilt([1.4, 1.0], o, a)
+	_c(hub[0], hub[1], 0.18, DARK)
+	# the upper wing edge-on
+	_poly(_tilt([2.3, 2.7, 5.6, 2.7, 5.6, 2.95, 2.3, 3.0], o, a), fabric)
+	# the biplane tail: two tailplanes with the twin rudders between them, high in the air
+	_poly(_tilt([12.4, 0.4, 13.4, 0.4, 13.5, 1.9, 12.7, 1.9], o, a), fab_d)
+	_poly(_tilt([10.9, 0.3, 13.6, 0.3, 13.6, 0.45, 10.9, 0.5], o, a), fabric)
+	_poly(_tilt([11.2, 1.85, 13.6, 1.85, 13.6, 2.0, 11.2, 2.0], o, a), fabric)
+	# the bog over the buried nose and wheels
+	_r(-7.5, 0, 7.5, 0.6, BOG)
 	if _detail(2.0):
-		_c(-5, 0.5, 0.35, Color("8a6e4a"))
-		_c(4.5, 0.5, 0.3, Color("8a6e4a"))
-	# the wheels
-	for x in [-1.8, -0.6]:
-		_c(x, 0.9, 0.55, DARK)
-		_c(x, 0.9, 0.22, Color("8b8b8b"))
-	_l(-1.2, 1.4, -1.6, 2.4, strut, 0.12)
-	# the fuselage: nose on the left, slimming to the tail
-	_poly([-6.5, 2.2, -5.8, 3.2, 4.8, 3.0, 6.4, 2.75, 6.4, 2.55, 4.8, 2.3, -5.8, 1.7], fabric)
-	_r(-5.0, 2.95, -3.9, 3.35, DARK) # the open cockpit
-	# the twin tail: fins and the tailplane
-	_poly([5.0, 2.9, 6.5, 2.9, 6.6, 4.3, 5.6, 4.3], fabric)
-	_l(4.6, 2.75, 7.0, 2.75, fab_d, 0.25)
-	# the wings edge-on, upper and lower, with struts
-	_r(-3.6, 5.6, -0.4, 5.95, fabric)
-	_r(-3.6, 2.0, -0.4, 2.3, fab_d)
-	for x in [-3.2, -0.8]:
-		_l(x, 2.3, x, 5.6, strut, 0.1)
-	# the engine nacelle between the wings, a propeller in front
-	_poly([-4.0, 3.5, -1.0, 3.6, -0.6, 4.1, -1.0, 4.6, -4.0, 4.6, -4.4, 4.05], Color("6e7377"))
-	_l(-4.6, 2.9, -4.6, 5.2, Color("5a4632"), 0.18)
-	_c(-4.5, 4.05, 0.18, DARK)
+		_c(-6.8, 0.6, 0.35, Color("8a6e4a"))
+		_c(5.6, 0.6, 0.3, Color("8a6e4a"))
+		for x in [-1.0, 2.5, 6.6]:
+			_l(x, 0.5, x - 0.15, 0.95, GRASS_D, 0.08)
+			_l(x, 0.5, x + 0.15, 0.9, GRASS_D, 0.08)
+
+## Flat [x, y, ...] points given along the tilted aircraft (u along the fuselage from the nose, v up from it), turned
+## by `a` radians and placed at `o`.
+static func _tilt(uv: Array, o: Vector2, a: float) -> Array:
+	var out := []
+	for k in range(0, uv.size(), 2):
+		out.append_array([o.x + uv[k] * cos(a) - uv[k + 1] * sin(a), o.y + uv[k] * sin(a) + uv[k + 1] * cos(a)])
+	return out
 
 ## The Gallarus Oratory: seen from its west end, the dry-stone walls curving inwards up to the ridge like an
 ## upturned boat, the narrow doorway with sloping jambs.
