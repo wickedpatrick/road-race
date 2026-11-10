@@ -584,7 +584,7 @@
 		"a": "poitiers",
 		"b": "limoges",
 		"km": 122,
-		"road": "N147",
+		"road": [[25, "N147", 3, 110], [122, "N147"]],
 		"towns": [["Mignaloux-Beauvoir", 8], ["Lussac-les-Châteaux", 37], ["Bellac", 82], ["Couzeix", 115]],
 		"zones": [
 			[45, "fields", "Nouvelle-Aquitaine"], [95, "forest", "Nouvelle-Aquitaine"],
