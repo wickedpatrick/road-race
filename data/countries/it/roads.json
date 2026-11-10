@@ -264,7 +264,7 @@
 		"b": "messina",
 		"km": 25,
 		"road": [[14, "A2"], [25, "SS114"]],
-		"towns": [["Villa San Giovanni", 12]],
+		"towns": [],
 		"zones": [[14, "coast", "Calabria"], [25, "coast", "Sicilia"]],
 		"via": [[13, 15.68, 38.2]],
 		"ferry": {
@@ -295,17 +295,17 @@
 	{
 		"a": "messina",
 		"b": "palermo",
-		"km": 235,
-		"road": [[190, "A20"], [235, "A19"]],
+		"km": 230,
+		"road": [[185, "A20"], [230, "A19"]],
 		"towns": [
-			["Villafranca Tirrena", 15], ["Milazzo", 35], ["Barcellona Pozzo di Gotto", 45], ["Patti", 72],
-			["Capo d'Orlando", 92], ["Sant'Agata di Militello", 108], ["Santo Stefano di Camastra", 132],
-			["Cefalù", 170], ["Termini Imerese", 200], ["Bagheria", 222]
+			["Milazzo", 35], ["Barcellona Pozzo di Gotto", 45], ["Patti", 72], ["Capo d'Orlando", 92],
+			["Sant'Agata di Militello", 108], ["Santo Stefano di Camastra", 130], ["Cefalù", 167],
+			["Termini Imerese", 195], ["Bagheria", 217]
 		],
-		"zones": [[120, "coast", "Sicilia"], [180, "mediterranean", "Sicilia"], [235, "coast", "Sicilia"]],
+		"zones": [[120, "coast", "Sicilia"], [175, "mediterranean", "Sicilia"], [230, "coast", "Sicilia"]],
 		"via": [
-			[15, 15.43, 38.24], [45, 15.22, 38.15], [72, 14.96, 38.14], [92, 14.75, 38.15], [132, 14.35, 38.02],
-			[170, 14.02, 38.02], [200, 13.7, 37.98]
+			[15, 15.43, 38.24], [45, 15.22, 38.15], [72, 14.96, 38.14], [92, 14.75, 38.15], [130, 14.35, 38.02],
+			[167, 14.02, 38.02], [195, 13.7, 37.98]
 		]
 	},
 	{
