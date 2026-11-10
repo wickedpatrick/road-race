@@ -205,7 +205,8 @@ static func _polva_taevaskoja() -> void:
 	_poly([22, 1.6, 30, 1.6, 30, 6, 23, 6], GRASS)
 	_poly([-30, 1.6, -26, 1.6, -25, 9, -30, 9], GRASS)
 	for x in [-22.0, -16.0, -9.0, -3.0, 4.0, 11.0, 17.0]:
-		_spruce(x, 19.5 + (2.0 if absf(x) < 12 else 0.0), 6.5)
+		# set on the cliff top, which drops to 17 m at the left end
+		_spruce(x, 17.0 if x < -20 else 19.5 + (2.0 if absf(x) < 12 else 0.0), 6.5)
 	for x in [-12.5, 0.5, 14.0]:
 		_c(x, 24.5, 1.8, TREE)
 	_c(27, 8.5, 2.4, TREE)

@@ -119,7 +119,8 @@ static func _ennis_friary() -> void:
 	# the nave (left) and chancel (right), roofless: walls with gables at the ends
 	_r(-17, 0.5, 17, 9, stone)
 	_poly([-17, 9, -11, 9, -14, 14], stone)
-	_poly([11, 9, 17, 9, 14, 14.5], stone)
+	# the east gable, centred on the great window so its pointed head stays inside the wall
+	_poly([5, 9, 17, 9, 11, 15.5], stone)
 	_r(-17, 8.4, 17, 9, shade)
 	# the tower over the crossing
 	_r(-2.6, 9, 2.6, 23, stone)

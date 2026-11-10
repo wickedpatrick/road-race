@@ -348,5 +348,6 @@ static func _killarney_ross() -> void:
 		_r(-3.5, y, -2.7, y + 1.6, DARK)
 		_r(1.0, y, 1.8, y + 1.6, DARK)
 	_arched(-1, 1.2, 1.6, 3, DARK)
+	_l(-12, 1.2, -12, 6, Color("5a4632"), 0.4)
 	_c(-12, 7.5, 2.4, Color("3d6b33"))
 	_c(-10.5, 8.6, 1.8, Color("4a7a3c"))
