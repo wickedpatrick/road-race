@@ -234,6 +234,12 @@
 			"name": {"pl": "Włochy", "en": "Italy", "cs": "Itálie", "is": "Ítalía", "de": "Italien"},
 			"neighbours": ["fr", "ch", "at", "si", "mt"],
 			"favorite_neighbour": "fr"
+		},
+		{
+			"code": "es",
+			"name": {"pl": "Hiszpania", "en": "Spain", "cs": "Španělsko", "is": "Spánn", "de": "Spanien"},
+			"neighbours": ["fr", "pt", "ad"],
+			"favorite_neighbour": "pt"
 		}
 	]
 }

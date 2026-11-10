@@ -1,0 +1,584 @@
+{
+	"Madrid": [
+		{
+			"kind": "es_madrid_puerta_alcala",
+			"name": {
+				"pl": "Brama Alkalska",
+				"en": "Puerta de Alcalá",
+				"cs": "Puerta de Alcalá",
+				"is": "Puerta de Alcalá",
+				"de": "Puerta de Alcalá"
+			},
+			"desc": {
+				"pl": "Neoklasyczna brama triumfalna z pięcioma przejściami, wzniesiona w 1778 roku za panowania Karola III",
+				"en": "A neoclassical triumphal gate with five openings, built in 1778 under King Charles III",
+				"cs": "Neoklasicistní vítězná brána s pěti průchody, postavená roku 1778 za vlády Karla III.",
+				"is": "Nýklassískt sigurhlið með fimm opum, reist árið 1778 í stjórnartíð Karls III.",
+				"de": "Ein klassizistisches Triumphtor mit fünf Durchgängen, 1778 unter König Karl III. errichtet"
+			},
+			"local": "Puerta de Alcalá"
+		}
+	],
+	"Barcelona": [
+		{
+			"kind": "es_barcelona_sagrada",
+			"name": {
+				"pl": "Sagrada Família",
+				"en": "Sagrada Família",
+				"cs": "Sagrada Família",
+				"is": "Sagrada Família",
+				"de": "Sagrada Família"
+			},
+			"desc": {
+				"pl": "Bazylika Antoniego Gaudíego, budowana od 1882 roku; jej wieże wciąż rosną",
+				"en": "Antoni Gaudí's basilica, under construction since 1882; its towers are still rising",
+				"cs": "Bazilika Antoniho Gaudího, stavěná od roku 1882; její věže stále rostou",
+				"is": "Basilíka Antonis Gaudí, í byggingu frá 1882; turnarnir eru enn að hækka",
+				"de": "Antoni Gaudís Basilika, seit 1882 im Bau; ihre Türme wachsen noch immer"
+			},
+			"local": "Sagrada Família"
+		}
+	],
+	"Valencia": [
+		{
+			"kind": "es_valencia_serranos",
+			"name": {
+				"pl": "Torres de Serranos",
+				"en": "Serranos Towers",
+				"cs": "Torres de Serranos",
+				"is": "Serranos-turnarnir",
+				"de": "Torres de Serranos"
+			},
+			"desc": {
+				"pl": "Gotycka brama dawnych murów miejskich z końca XIV wieku, z dwiema wielobocznymi wieżami",
+				"en": "A Gothic gate of the old city walls from the late 14th century, with two polygonal towers",
+				"cs": "Gotická brána bývalých městských hradeb z konce 14. století se dvěma mnohobokými věžemi",
+				"is": "Gotneskt hlið í gömlu borgarmúrunum frá lokum 14. aldar, með tveimur marghyrndum turnum",
+				"de": "Ein gotisches Tor der alten Stadtmauer aus dem späten 14. Jahrhundert mit zwei vieleckigen Türmen"
+			},
+			"local": "Torres de Serranos"
+		}
+	],
+	"Zaragoza": [
+		{
+			"kind": "es_zaragoza_pilar",
+			"name": {
+				"pl": "Bazylika del Pilar",
+				"en": "Basilica of Our Lady of the Pillar",
+				"cs": "Bazilika del Pilar",
+				"is": "Pilar-basilíkan",
+				"de": "Basilika del Pilar"
+			},
+			"desc": {
+				"pl": "Barokowa bazylika nad Ebro z kolorowymi kopułami i czterema wieżami; jedno z najważniejszych sanktuariów maryjnych",
+				"en": "A Baroque basilica on the Ebro with colourful domes and four towers; one of the most important Marian shrines",
+				"cs": "Barokní bazilika na Ebru s barevnými kupolemi a čtyřmi věžemi; jedno z nejvýznamnějších mariánských poutních míst",
+				"is": "Barokkbasilíka við Ebró með litríkum hvelfingum og fjórum turnum; einn mikilvægasti Maríuhelgistaðurinn",
+				"de": "Eine barocke Basilika am Ebro mit bunten Kuppeln und vier Türmen; eines der wichtigsten Marienheiligtümer"
+			},
+			"local": "Basílica del Pilar"
+		}
+	],
+	"Sevilla": [
+		{
+			"kind": "es_sevilla_giralda",
+			"name": {"pl": "Giralda", "en": "Giralda", "cs": "Giralda", "is": "Giralda", "de": "Giralda"},
+			"desc": {
+				"pl": "Dzwonnica katedry, dawny minaret z XII wieku, w XVI wieku podwyższona o renesansową część; ma 104 metry",
+				"en": "The cathedral's bell tower, a 12th-century minaret raised by a Renaissance top in the 16th century; 104 metres high",
+				"cs": "Zvonice katedrály, bývalý minaret z 12. století, v 16. století zvýšený o renesanční nástavbu; měří 104 metrů",
+				"is": "Klukkuturn dómkirkjunnar, áður bænaturn frá 12. öld, hækkaður með endurreisnarhluta á 16. öld; 104 metra hár",
+				"de": "Der Glockenturm der Kathedrale, ein Minarett aus dem 12. Jahrhundert, im 16. Jahrhundert mit einem Renaissance-Aufsatz erhöht; 104 Meter hoch"
+			},
+			"local": "La Giralda"
+		}
+	],
+	"Málaga": [
+		{
+			"kind": "es_malaga_alcazaba",
+			"name": {
+				"pl": "Alcazaba w Maladze",
+				"en": "Alcazaba of Málaga",
+				"cs": "Alcazaba v Málaze",
+				"is": "Alcazaba í Málaga",
+				"de": "Alcazaba von Málaga"
+			},
+			"desc": {
+				"pl": "Mauretańska twierdza z XI wieku na zboczu góry Gibralfaro, nad rzymskim teatrem",
+				"en": "An 11th-century Moorish fortress on the slope of Mount Gibralfaro, above the Roman theatre",
+				"cs": "Maurská pevnost z 11. století na svahu hory Gibralfaro nad římským divadlem",
+				"is": "Márískt virki frá 11. öld í hlíð Gibralfaro-fjalls, ofan við rómverska leikhúsið",
+				"de": "Eine maurische Festung aus dem 11. Jahrhundert am Hang des Gibralfaro, oberhalb des römischen Theaters"
+			},
+			"local": "Alcazaba de Málaga"
+		}
+	],
+	"Murcia": [
+		{
+			"kind": "es_murcia_catedral",
+			"name": {
+				"pl": "Katedra w Murcji",
+				"en": "Murcia Cathedral",
+				"cs": "Katedrála v Murcii",
+				"is": "Dómkirkjan í Murcia",
+				"de": "Kathedrale von Murcia"
+			},
+			"desc": {
+				"pl": "Gotycka katedra z barokową fasadą; jej dzwonnica mierzy około 93 metrów",
+				"en": "A Gothic cathedral with a Baroque front; its bell tower is about 93 metres high",
+				"cs": "Gotická katedrála s barokním průčelím; její zvonice měří asi 93 metrů",
+				"is": "Gotnesk dómkirkja með barokkframhlið; klukkuturninn er um 93 metra hár",
+				"de": "Eine gotische Kathedrale mit barocker Fassade; ihr Glockenturm ist etwa 93 Meter hoch"
+			},
+			"local": "Catedral de Murcia"
+		}
+	],
+	"Alicante": [
+		{
+			"kind": "es_alicante_santa_barbara",
+			"name": {
+				"pl": "Zamek Świętej Barbary",
+				"en": "Santa Bárbara Castle",
+				"cs": "Hrad Santa Bárbara",
+				"is": "Santa Bárbara-kastali",
+				"de": "Castillo de Santa Bárbara"
+			},
+			"desc": {
+				"pl": "Twierdza na szczycie góry Benacantil, 166 metrów nad portem i plażą Postiguet",
+				"en": "A fortress on top of Mount Benacantil, 166 metres above the port and Postiguet beach",
+				"cs": "Pevnost na vrcholu hory Benacantil, 166 metrů nad přístavem a pláží Postiguet",
+				"is": "Virki á tindi Benacantil-fjalls, 166 metrum ofan við höfnina og Postiguet-ströndina",
+				"de": "Eine Festung auf dem Gipfel des Benacantil, 166 Meter über dem Hafen und dem Strand Postiguet"
+			},
+			"local": "Castillo de Santa Bárbara"
+		}
+	],
+	"Bilbao": [
+		{
+			"kind": "es_bilbao_guggenheim",
+			"name": {
+				"pl": "Muzeum Guggenheima",
+				"en": "Guggenheim Museum Bilbao",
+				"cs": "Guggenheimovo muzeum",
+				"is": "Guggenheim-safnið",
+				"de": "Guggenheim-Museum Bilbao"
+			},
+			"desc": {
+				"pl": "Muzeum sztuki współczesnej Franka Gehry'ego z 1997 roku, pokryte tytanowymi płytami, nad rzeką Nervión",
+				"en": "Frank Gehry's museum of modern art of 1997, clad in titanium, on the Nervión river",
+				"cs": "Muzeum moderního umění Franka Gehryho z roku 1997, obložené titanem, na řece Nervión",
+				"is": "Nútímalistasafn Franks Gehry frá 1997, klætt títani, við ána Nervión",
+				"de": "Frank Gehrys Museum für moderne Kunst von 1997, mit Titan verkleidet, am Fluss Nervión"
+			},
+			"local": "Museo Guggenheim Bilbao"
+		}
+	],
+	"Córdoba": [
+		{
+			"kind": "es_cordoba_mezquita",
+			"name": {
+				"pl": "Meczet-Katedra w Kordobie",
+				"en": "Mosque-Cathedral of Córdoba",
+				"cs": "Mešita-katedrála v Córdobě",
+				"is": "Moskudómkirkjan í Córdoba",
+				"de": "Mezquita-Catedral von Córdoba"
+			},
+			"desc": {
+				"pl": "Wielki meczet z VIII–X wieku z lasem kolumn i biało-czerwonymi łukami, od XIII wieku katedra",
+				"en": "The great mosque of the 8th to 10th centuries with its forest of columns and red and white arches, a cathedral since the 13th century",
+				"cs": "Velká mešita z 8. až 10. století s lesem sloupů a červenobílými oblouky, od 13. století katedrála",
+				"is": "Stóra moskan frá 8. til 10. öld með súlnaskógi og rauðum og hvítum bogum, dómkirkja frá 13. öld",
+				"de": "Die große Moschee aus dem 8. bis 10. Jahrhundert mit ihrem Säulenwald und rot-weißen Bögen, seit dem 13. Jahrhundert eine Kathedrale"
+			},
+			"local": "Mezquita-Catedral de Córdoba"
+		}
+	],
+	"Valladolid": [
+		{
+			"kind": "es_valladolid_san_pablo",
+			"name": {
+				"pl": "Kościół św. Pawła",
+				"en": "Church of San Pablo",
+				"cs": "Kostel svatého Pavla",
+				"is": "Kirkja heilags Páls",
+				"de": "Kirche San Pablo"
+			},
+			"desc": {
+				"pl": "Kościół z bogato rzeźbioną fasadą w stylu izabelińskim, późnej hiszpańskiej odmianie gotyku",
+				"en": "A church with a richly carved front in the Isabelline style, the late Spanish Gothic",
+				"cs": "Kostel s bohatě zdobeným průčelím v isabelském stylu, pozdní španělské gotice",
+				"is": "Kirkja með ríkulega útskorinni framhlið í ísabellustíl, síðgotneskum spænskum stíl",
+				"de": "Eine Kirche mit reich gemeißelter Fassade im isabellinischen Stil, der spanischen Spätgotik"
+			},
+			"local": "Iglesia de San Pablo"
+		}
+	],
+	"Vigo": [
+		{
+			"kind": "es_vigo_sireno",
+			"name": {"pl": "Syren", "en": "The Sireno", "cs": "Sireno", "is": "Sireno", "de": "Der Sireno"},
+			"desc": {
+				"pl": "Rzeźba Francisca Leiro z 1991 roku: pół człowiek, pół ryba na wysokiej kolumnie nad placem w centrum",
+				"en": "Francisco Leiro's sculpture of 1991: half man, half fish on a tall column over a square in the centre",
+				"cs": "Socha Francisca Leira z roku 1991: napůl muž, napůl ryba na vysokém sloupu nad náměstím v centru",
+				"is": "Höggmynd Franciscos Leiro frá 1991: hálfur maður og hálfur fiskur á hárri súlu yfir torgi í miðbænum",
+				"de": "Francisco Leiros Skulptur von 1991: halb Mann, halb Fisch auf einer hohen Säule über einem Platz im Zentrum"
+			},
+			"local": "O Sireno"
+		}
+	],
+	"Vitoria-Gasteiz": [
+		{
+			"kind": "es_vitoria_catedral_nueva",
+			"name": {
+				"pl": "Nowa Katedra",
+				"en": "New Cathedral",
+				"cs": "Nová katedrála",
+				"is": "Nýja dómkirkjan",
+				"de": "Neue Kathedrale"
+			},
+			"desc": {
+				"pl": "Neogotycka katedra budowana od 1907 roku i konsekrowana w 1973 roku",
+				"en": "A neo-Gothic cathedral begun in 1907 and consecrated in 1973",
+				"cs": "Novogotická katedrála stavěná od roku 1907 a vysvěcená roku 1973",
+				"is": "Nýgotnesk dómkirkja, hafin bygging 1907 og vígð 1973",
+				"de": "Eine neugotische Kathedrale, 1907 begonnen und 1973 geweiht"
+			},
+			"local": "Catedral de María Inmaculada"
+		}
+	],
+	"A Coruña": [
+		{
+			"kind": "es_coruna_torre_hercules",
+			"name": {
+				"pl": "Wieża Herkulesa",
+				"en": "Tower of Hercules",
+				"cs": "Herkulova věž",
+				"is": "Herkúlesarturninn",
+				"de": "Herkulesturm"
+			},
+			"desc": {
+				"pl": "Rzymska latarnia morska z I–II wieku, wciąż działająca; najstarsza czynna latarnia na świecie",
+				"en": "A Roman lighthouse of the 1st–2nd century, still in use; the oldest working lighthouse in the world",
+				"cs": "Římský maják z 1.–2. století, dodnes v provozu; nejstarší funkční maják na světě",
+				"is": "Rómverskur viti frá 1.–2. öld, enn í notkun; elsti starfandi viti í heimi",
+				"de": "Ein römischer Leuchtturm aus dem 1.–2. Jahrhundert, noch in Betrieb; der älteste aktive Leuchtturm der Welt"
+			},
+			"local": "Torre de Hércules"
+		}
+	],
+	"Granada": [
+		{
+			"kind": "es_granada_alhambra",
+			"name": {"pl": "Alhambra", "en": "Alhambra", "cs": "Alhambra", "is": "Alhambra", "de": "Alhambra"},
+			"desc": {
+				"pl": "Pałac i twierdza Nasrydów na wzgórzu nad miastem, z wieżą Comares, na tle Sierra Nevada",
+				"en": "The Nasrid palace and fortress on a hill above the city, with the Comares Tower, against the Sierra Nevada",
+				"cs": "Palác a pevnost Nasrovců na kopci nad městem s věží Comares, na pozadí Sierra Nevady",
+				"is": "Höll og virki Nasrída á hæð yfir borginni, með Comares-turninum, og Sierra Nevada að baki",
+				"de": "Palast und Festung der Nasriden auf einem Hügel über der Stadt, mit dem Comares-Turm, vor der Sierra Nevada"
+			},
+			"local": "Alhambra"
+		}
+	],
+	"Oviedo": [
+		{
+			"kind": "es_oviedo_naranco",
+			"name": {
+				"pl": "Santa María del Naranco",
+				"en": "Santa María del Naranco",
+				"cs": "Santa María del Naranco",
+				"is": "Santa María del Naranco",
+				"de": "Santa María del Naranco"
+			},
+			"desc": {
+				"pl": "Przedromańska budowla z 842 roku na zboczu góry Naranco, pierwotnie pałac króla Asturii Ramiro I",
+				"en": "A pre-Romanesque building of 842 on the slope of Mount Naranco, first a palace of King Ramiro I of Asturias",
+				"cs": "Předrománská stavba z roku 842 na svahu hory Naranco, původně palác asturského krále Ramira I.",
+				"is": "Bygging frá 842 í hlíð Naranco-fjalls, frá því fyrir rómanska tímann, upphaflega höll Ramiros I. Astúríukonungs",
+				"de": "Ein vorromanischer Bau von 842 am Hang des Naranco, ursprünglich ein Palast König Ramiros I. von Asturien"
+			},
+			"local": "Santa María del Naranco"
+		}
+	],
+	"Pamplona": [
+		{
+			"kind": "es_pamplona_ayuntamiento",
+			"name": {
+				"pl": "Ratusz w Pampelunie",
+				"en": "Pamplona Town Hall",
+				"cs": "Radnice v Pamploně",
+				"is": "Ráðhúsið í Pamplona",
+				"de": "Rathaus von Pamplona"
+			},
+			"desc": {
+				"pl": "Barokowa fasada ratusza z XVIII wieku; z balkonu 6 lipca wystrzeliwuje się rakietę rozpoczynającą San Fermín",
+				"en": "The town hall's 18th-century Baroque front; on 6 July the rocket that opens San Fermín is fired from its balcony",
+				"cs": "Barokní průčelí radnice z 18. století; z balkonu se 6. července odpaluje raketa, která zahajuje San Fermín",
+				"is": "Barokkframhlið ráðhússins frá 18. öld; 6. júlí er flugeldinum sem setur San Fermín skotið af svölunum",
+				"de": "Die barocke Fassade des Rathauses aus dem 18. Jahrhundert; am 6. Juli wird von ihrem Balkon die Rakete abgefeuert, die San Fermín eröffnet"
+			},
+			"local": "Casa Consistorial de Pamplona"
+		}
+	],
+	"Almería": [
+		{
+			"kind": "es_almeria_cable_ingles",
+			"name": {
+				"pl": "Cable Inglés",
+				"en": "Cable Inglés",
+				"cs": "Cable Inglés",
+				"is": "Cable Inglés",
+				"de": "Cable Inglés"
+			},
+			"desc": {
+				"pl": "Żelazne nabrzeże załadunkowe z 1904 roku, którym rudę żelaza zsypywano prosto na statki",
+				"en": "An iron loading pier of 1904 from which iron ore was tipped straight into the ships",
+				"cs": "Železné nakládací molo z roku 1904, z něhož se železná ruda sypala přímo do lodí",
+				"is": "Hleðslubryggja úr járni frá 1904 þar sem járngrýti var hellt beint í skipin",
+				"de": "Eine eiserne Verladebrücke von 1904, von der Eisenerz direkt in die Schiffe geschüttet wurde"
+			},
+			"local": "Cable Inglés"
+		}
+	],
+	"San Sebastián": [
+		{
+			"kind": "es_donostia_peine_viento",
+			"name": {
+				"pl": "Grzebień Wiatru",
+				"en": "The Comb of the Wind",
+				"cs": "Hřeben větru",
+				"is": "Vindkamburinn",
+				"de": "Windkamm"
+			},
+			"desc": {
+				"pl": "Trzy stalowe rzeźby Eduarda Chillidy z 1977 roku wbite w skały na końcu zatoki La Concha",
+				"en": "Three steel sculptures by Eduardo Chillida of 1977 set into the rocks at the end of La Concha bay",
+				"cs": "Tři ocelové sochy Eduarda Chillidy z roku 1977 zasazené do skal na konci zátoky La Concha",
+				"is": "Þrjú stálverk eftir Eduardo Chillida frá 1977, fest í klettana við enda La Concha-flóans",
+				"de": "Drei Stahlskulpturen von Eduardo Chillida aus dem Jahr 1977, in die Felsen am Ende der Bucht La Concha gesetzt"
+			},
+			"local": "Peine del Viento"
+		}
+	],
+	"Burgos": [
+		{
+			"kind": "es_burgos_catedral",
+			"name": {
+				"pl": "Katedra w Burgos",
+				"en": "Burgos Cathedral",
+				"cs": "Katedrála v Burgosu",
+				"is": "Dómkirkjan í Burgos",
+				"de": "Kathedrale von Burgos"
+			},
+			"desc": {
+				"pl": "Gotycka katedra rozpoczęta w 1221 roku, z ażurowymi iglicami; na liście UNESCO",
+				"en": "A Gothic cathedral begun in 1221, with openwork spires; on the UNESCO list",
+				"cs": "Gotická katedrála započatá roku 1221 s prolamovanými věžemi; na seznamu UNESCO",
+				"is": "Gotnesk dómkirkja, hafin bygging 1221, með gegnskornum turnspírum; á heimsminjaskrá UNESCO",
+				"de": "Eine 1221 begonnene gotische Kathedrale mit durchbrochenen Turmhelmen; auf der UNESCO-Liste"
+			},
+			"local": "Catedral de Burgos"
+		}
+	],
+	"Albacete": [
+		{
+			"kind": "es_albacete_lodares",
+			"name": {
+				"pl": "Pasaż Lodares",
+				"en": "Pasaje de Lodares",
+				"cs": "Pasáž Lodares",
+				"is": "Lodares-göngin",
+				"de": "Pasaje de Lodares"
+			},
+			"desc": {
+				"pl": "Kryty pasaż handlowy z 1925 roku z przeszklonym dachem i bogato zdobionymi fasadami",
+				"en": "A covered shopping arcade of 1925 with a glass roof and richly decorated fronts",
+				"cs": "Krytá obchodní pasáž z roku 1925 se skleněnou střechou a bohatě zdobenými průčelími",
+				"is": "Yfirbyggð verslunargata frá 1925 með glerþaki og ríkulega skreyttum framhliðum",
+				"de": "Eine überdachte Einkaufspassage von 1925 mit Glasdach und reich verzierten Fassaden"
+			},
+			"local": "Pasaje de Lodares"
+		}
+	],
+	"Santander": [
+		{
+			"kind": "es_santander_magdalena",
+			"name": {
+				"pl": "Pałac Magdalena",
+				"en": "Magdalena Palace",
+				"cs": "Palác Magdalena",
+				"is": "Magdalena-höllin",
+				"de": "Palacio de la Magdalena"
+			},
+			"desc": {
+				"pl": "Pałac z lat 1909–1911 na półwyspie nad zatoką, letnia rezydencja króla Alfonsa XIII",
+				"en": "A palace of 1909–1911 on a peninsula above the bay, the summer residence of King Alfonso XIII",
+				"cs": "Palác z let 1909–1911 na poloostrově nad zálivem, letní sídlo krále Alfonse XIII.",
+				"is": "Höll frá 1909–1911 á nesi við flóann, sumarbústaður Alfonsos XIII. konungs",
+				"de": "Ein Palast von 1909–1911 auf einer Halbinsel über der Bucht, die Sommerresidenz König Alfons' XIII."
+			},
+			"local": "Palacio de la Magdalena"
+		}
+	],
+	"Logroño": [
+		{
+			"kind": "es_logrono_redonda",
+			"name": {
+				"pl": "Konkatedra Santa María de la Redonda",
+				"en": "Co-cathedral of Santa María de la Redonda",
+				"cs": "Konkatedrála Santa María de la Redonda",
+				"is": "Santa María de la Redonda",
+				"de": "Konkathedrale Santa María de la Redonda"
+			},
+			"desc": {
+				"pl": "Kościół z dwiema barokowymi wieżami z XVIII wieku, zwanymi bliźniaczkami",
+				"en": "A church with two 18th-century Baroque towers known as the twins",
+				"cs": "Kostel se dvěma barokními věžemi z 18. století, přezdívanými dvojčata",
+				"is": "Kirkja með tveimur barokkturnum frá 18. öld sem kallaðir eru tvíburarnir",
+				"de": "Eine Kirche mit zwei barocken Türmen aus dem 18. Jahrhundert, die Zwillinge genannt"
+			},
+			"local": "Concatedral de Santa María de la Redonda"
+		}
+	],
+	"Salamanca": [
+		{
+			"kind": "es_salamanca_plaza_mayor",
+			"name": {
+				"pl": "Plaza Mayor w Salamance",
+				"en": "Plaza Mayor of Salamanca",
+				"cs": "Plaza Mayor v Salamance",
+				"is": "Plaza Mayor í Salamanca",
+				"de": "Plaza Mayor von Salamanca"
+			},
+			"desc": {
+				"pl": "Barokowy rynek z lat 1729–1755 otoczony arkadami, z pawilonem ratusza",
+				"en": "A Baroque square of 1729–1755 surrounded by arcades, with the town hall pavilion",
+				"cs": "Barokní náměstí z let 1729–1755 obklopené podloubím, s pavilonem radnice",
+				"is": "Barokktorg frá 1729–1755, umkringt súlnagöngum, með ráðhússhlutanum",
+				"de": "Ein barocker Platz von 1729–1755, von Arkaden umgeben, mit dem Rathauspavillon"
+			},
+			"local": "Plaza Mayor de Salamanca"
+		}
+	],
+	"Tarragona": [
+		{
+			"kind": "es_tarragona_anfiteatro",
+			"name": {
+				"pl": "Amfiteatr w Tarragonie",
+				"en": "Tarragona Amphitheatre",
+				"cs": "Amfiteátr v Tarragoně",
+				"is": "Hringleikahúsið í Tarragona",
+				"de": "Amphitheater von Tarragona"
+			},
+			"desc": {
+				"pl": "Rzymski amfiteatr z II wieku nad samym morzem; na arenie stoją ruiny średniowiecznego kościoła",
+				"en": "A 2nd-century Roman amphitheatre right by the sea; the ruins of a medieval church stand in its arena",
+				"cs": "Římský amfiteátr z 2. století přímo u moře; v aréně stojí ruiny středověkého kostela",
+				"is": "Rómverskt hringleikahús frá 2. öld alveg við sjóinn; á leikvanginum standa rústir miðaldakirkju",
+				"de": "Ein römisches Amphitheater aus dem 2. Jahrhundert direkt am Meer; in seiner Arena stehen die Ruinen einer mittelalterlichen Kirche"
+			},
+			"local": "Amfiteatre de Tarragona"
+		}
+	],
+	"León": [
+		{
+			"kind": "es_leon_catedral",
+			"name": {
+				"pl": "Katedra w León",
+				"en": "León Cathedral",
+				"cs": "Katedrála v Leónu",
+				"is": "Dómkirkjan í León",
+				"de": "Kathedrale von León"
+			},
+			"desc": {
+				"pl": "Gotycka katedra z XIII wieku, zwana Pulchra Leonina, z wielką rozetą i dwiema wieżami",
+				"en": "A 13th-century Gothic cathedral called Pulchra Leonina, with a great rose window and two towers",
+				"cs": "Gotická katedrála z 13. století zvaná Pulchra Leonina, s velkou rozetou a dvěma věžemi",
+				"is": "Gotnesk dómkirkja frá 13. öld, kölluð Pulchra Leonina, með stórum rósaglugga og tveimur turnum",
+				"de": "Eine gotische Kathedrale aus dem 13. Jahrhundert, Pulchra Leonina genannt, mit großer Fensterrose und zwei Türmen"
+			},
+			"local": "Catedral de León"
+		}
+	],
+	"Cádiz": [
+		{
+			"kind": "es_cadiz_catedral",
+			"name": {
+				"pl": "Katedra w Kadyksie",
+				"en": "Cádiz Cathedral",
+				"cs": "Katedrála v Cádizu",
+				"is": "Dómkirkjan í Cádiz",
+				"de": "Kathedrale von Cádiz"
+			},
+			"desc": {
+				"pl": "Katedra budowana od 1722 do 1838 roku, z kopułą pokrytą złocistymi płytkami, nad brzegiem Atlantyku",
+				"en": "A cathedral built from 1722 to 1838, with a dome covered in golden tiles, on the Atlantic shore",
+				"cs": "Katedrála stavěná v letech 1722 až 1838 s kupolí pokrytou zlatavými dlaždicemi, na břehu Atlantiku",
+				"is": "Dómkirkja byggð á árunum 1722 til 1838, með hvelfingu klæddri gullnum flísum, við strönd Atlantshafsins",
+				"de": "Eine von 1722 bis 1838 erbaute Kathedrale mit einer mit goldfarbenen Kacheln gedeckten Kuppel, an der Atlantikküste"
+			},
+			"local": "Catedral de Cádiz"
+		}
+	],
+	"Jaén": [
+		{
+			"kind": "es_jaen_catedral",
+			"name": {
+				"pl": "Katedra w Jaén",
+				"en": "Jaén Cathedral",
+				"cs": "Katedrála v Jaénu",
+				"is": "Dómkirkjan í Jaén",
+				"de": "Kathedrale von Jaén"
+			},
+			"desc": {
+				"pl": "Renesansowa katedra projektu Andrésa de Vandelviry z dwiema wieżami na fasadzie",
+				"en": "A Renaissance cathedral designed by Andrés de Vandelvira, with two towers on its front",
+				"cs": "Renesanční katedrála podle návrhu Andrése de Vandelviry se dvěma věžemi v průčelí",
+				"is": "Endurreisnardómkirkja teiknuð af Andrés de Vandelvira, með tveimur turnum á framhliðinni",
+				"de": "Eine Renaissance-Kathedrale nach Plänen von Andrés de Vandelvira mit zwei Türmen an der Fassade"
+			},
+			"local": "Catedral de Jaén"
+		}
+	],
+	"Toledo": [
+		{
+			"kind": "es_toledo_alcazar",
+			"name": {
+				"pl": "Alkazar w Toledo",
+				"en": "Alcázar of Toledo",
+				"cs": "Alcázar v Toledu",
+				"is": "Alcázar í Toledo",
+				"de": "Alcázar von Toledo"
+			},
+			"desc": {
+				"pl": "Czworoboczna twierdza z czterema narożnymi wieżami na najwyższym punkcie miasta; dziś muzeum wojska",
+				"en": "A square fortress with four corner towers on the highest point of the city; today the army museum",
+				"cs": "Čtyřboká pevnost se čtyřmi nárožními věžemi na nejvyšším místě města; dnes vojenské muzeum",
+				"is": "Ferhyrnt virki með fjórum hornturnum á hæsta stað borgarinnar; nú hersafn",
+				"de": "Eine quadratische Festung mit vier Ecktürmen auf dem höchsten Punkt der Stadt; heute das Armeemuseum"
+			},
+			"local": "Alcázar de Toledo"
+		}
+	],
+	"Mérida": [
+		{
+			"kind": "es_merida_teatro",
+			"name": {
+				"pl": "Teatr rzymski w Méridzie",
+				"en": "Roman Theatre of Mérida",
+				"cs": "Římské divadlo v Méridě",
+				"is": "Rómverska leikhúsið í Mérida",
+				"de": "Römisches Theater von Mérida"
+			},
+			"desc": {
+				"pl": "Teatr z około 16–15 roku p.n.e. z dwupiętrową kolumnadą sceny; latem wciąż gra się tu sztuki",
+				"en": "A theatre of about 16–15 BC with a two-storey colonnade behind the stage; plays are still staged here in summer",
+				"cs": "Divadlo z doby kolem let 16–15 př. n. l. s dvoupatrovou kolonádou jeviště; v létě se tu stále hraje",
+				"is": "Leikhús frá um 16–15 f.Kr. með tveggja hæða súlnaröð að baki sviðinu; á sumrin eru enn sýnd leikrit hér",
+				"de": "Ein Theater aus der Zeit um 16–15 v. Chr. mit einer zweigeschossigen Säulenwand hinter der Bühne; im Sommer wird hier noch gespielt"
+			},
+			"local": "Teatro romano de Mérida"
+		}
+	]
+}
