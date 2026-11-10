@@ -1,0 +1,43 @@
+{
+	"stockholm": {
+		"name": "Stockholm",
+		"lat": 59.33,
+		"lon": 18.07,
+		"pop": 984,
+		"region": "Uppland",
+		"exonym": {"pl": "Sztokholm", "is": "Stokkhólmur"}
+	},
+	"goteborg": {
+		"name": "Göteborg",
+		"lat": 57.71,
+		"lon": 11.97,
+		"pop": 604,
+		"region": "Västergötland",
+		"exonym": {"en": "Gothenburg", "is": "Gautaborg"}
+	},
+	"malmo": {"name": "Malmö", "lat": 55.6, "lon": 13, "pop": 362, "region": "Skåne", "exonym": {"is": "Málmey"}},
+	"uppsala": {"name": "Uppsala", "lat": 59.86, "lon": 17.64, "pop": 245, "region": "Uppland", "exonym": {"is": "Uppsalir"}},
+	"linkoping": {"name": "Linköping", "lat": 58.41, "lon": 15.62, "pop": 167, "region": "Östergötland"},
+	"orebro": {"name": "Örebro", "lat": 59.27, "lon": 15.21, "pop": 158, "region": "Närke"},
+	"vasteras": {"name": "Västerås", "lat": 59.61, "lon": 16.55, "pop": 157, "region": "Västmanland"},
+	"helsingborg": {
+		"name": "Helsingborg",
+		"lat": 56.06,
+		"lon": 12.7,
+		"pop": 151,
+		"region": "Skåne",
+		"exonym": {"is": "Helsingjaborg"}
+	},
+	"norrkoping": {"name": "Norrköping", "lat": 58.59, "lon": 16.18, "pop": 145, "region": "Östergötland"},
+	"jonkoping": {"name": "Jönköping", "lat": 57.78, "lon": 14.16, "pop": 144, "region": "Småland"},
+	"umea": {"name": "Umeå", "lat": 63.83, "lon": 20.26, "pop": 131, "region": "Västerbotten"},
+	"lund": {"name": "Lund", "lat": 55.7, "lon": 13.19, "pop": 129, "region": "Skåne", "exonym": {"is": "Lundur"}},
+	"gavle": {"name": "Gävle", "lat": 60.67, "lon": 17.14, "pop": 104, "region": "Gästrikland"},
+	"sundsvall": {"name": "Sundsvall", "lat": 62.39, "lon": 17.31, "pop": 100, "region": "Medelpad"},
+	"karlstad": {"name": "Karlstad", "lat": 59.38, "lon": 13.5, "pop": 96, "region": "Värmland"},
+	"lulea": {"name": "Luleå", "lat": 65.57, "lon": 22.13, "pop": 80, "region": "Norrbotten"},
+	"kalmar": {"name": "Kalmar", "lat": 56.69, "lon": 16.33, "pop": 72, "region": "Småland"},
+	"ostersund": {"name": "Östersund", "lat": 63.18, "lon": 14.64, "pop": 65, "region": "Jämtland"},
+	"visby": {"name": "Visby", "lat": 57.64, "lon": 18.29, "pop": 24, "region": "Gotland"},
+	"kiruna": {"name": "Kiruna", "lat": 67.85, "lon": 20.23, "pop": 22, "region": "Lappland"}
+}

@@ -1,0 +1,396 @@
+{
+	"Stockholm": [
+		{
+			"kind": "se_stockholm_stadshuset",
+			"name": {
+				"pl": "Ratusz Sztokholmski",
+				"en": "Stockholm City Hall",
+				"cs": "Stockholmská radnice",
+				"is": "Ráðhúsið í Stokkhólmi",
+				"de": "Stockholmer Stadshaus"
+			},
+			"desc": {
+				"pl": "Ceglany ratusz z lat 1911–1923 nad jeziorem Melar; na szczycie 106-metrowej wieży lśnią trzy złote korony, a w Błękitnej Sali odbywa się bankiet noblowski",
+				"en": "A brick city hall of 1911–1923 on Lake Mälaren; three golden crowns top its 106-metre tower, and the Nobel banquet is held in its Blue Hall",
+				"cs": "Cihlová radnice z let 1911–1923 u jezera Mälaren; 106 metrů vysokou věž zdobí tři zlaté koruny a v Modrém sále se koná nobelovský banket",
+				"is": "Ráðhús úr múrsteini frá 1911–1923 við vatnið Mälaren; þrjár gylltar krónur prýða 106 metra háan turninn og Nóbelsveislan er haldin í Bláa salnum",
+				"de": "Ein Backsteinrathaus von 1911–1923 am Mälarsee; drei goldene Kronen sitzen auf dem 106 Meter hohen Turm, im Blauen Saal findet das Nobelbankett statt"
+			},
+			"local": "Stadshuset"
+		}
+	],
+	"Göteborg": [
+		{
+			"kind": "se_goteborg_feskekorka",
+			"name": {
+				"pl": "Hala rybna Feskekôrka",
+				"en": "Feskekôrka fish market",
+				"cs": "Rybí tržnice Feskekôrka",
+				"is": "Fiskmarkaðurinn Feskekôrka",
+				"de": "Fischhalle Feskekôrka"
+			},
+			"desc": {
+				"pl": "Hala targowa z 1874 roku, zbudowana na kształt neogotyckiego kościoła; w miejscowej gwarze jej nazwa znaczy „rybny kościół”",
+				"en": "A fish market hall of 1874 built like a neo-Gothic church; in the local dialect its name means 'fish church'",
+				"cs": "Rybí tržnice z roku 1874 postavená jako novogotický kostel; v místním nářečí její jméno znamená „rybí kostel“",
+				"is": "Fiskmarkaður frá 1874, byggður eins og kirkja í nýgotneskum stíl; á mállýsku borgarbúa merkir nafnið „fiskikirkja“",
+				"de": "Eine Fischmarkthalle von 1874 in Gestalt einer neugotischen Kirche; im örtlichen Dialekt bedeutet ihr Name „Fischkirche“"
+			},
+			"local": "Feskekôrka"
+		}
+	],
+	"Malmö": [
+		{
+			"kind": "se_malmo_torso",
+			"name": {
+				"pl": "Turning Torso",
+				"en": "Turning Torso",
+				"cs": "Turning Torso",
+				"is": "Turning Torso",
+				"de": "Turning Torso"
+			},
+			"desc": {
+				"pl": "Wieżowiec z 2005 roku projektu Santiaga Calatravy: dziewięć pięciopiętrowych segmentów skręconych łącznie o 90 stopni, 190 metrów wysokości",
+				"en": "A 190-metre tower of 2005 by Santiago Calatrava: nine five-storey cubes twisting through 90 degrees from bottom to top",
+				"cs": "Mrakodrap z roku 2005 od Santiaga Calatravy: devět pětipodlažních krychlí stočených celkem o 90 stupňů, vysoký 190 metrů",
+				"is": "190 metra hár turn frá 2005 eftir Santiago Calatrava: níu fimm hæða teningar sem snúast samtals um 90 gráður",
+				"de": "Ein 190 Meter hoher Turm von 2005 nach Santiago Calatrava: neun fünfstöckige Würfel, insgesamt um 90 Grad verdreht"
+			},
+			"local": "Turning Torso"
+		}
+	],
+	"Uppsala": [
+		{
+			"kind": "se_uppsala_domkyrka",
+			"name": {
+				"pl": "Katedra w Uppsali",
+				"en": "Uppsala Cathedral",
+				"cs": "Katedrála v Uppsale",
+				"is": "Dómkirkjan í Uppsölum",
+				"de": "Dom zu Uppsala"
+			},
+			"desc": {
+				"pl": "Najwyższy kościół Skandynawii: gotycka ceglana katedra konsekrowana w 1435 roku; jej dwie wieże mają 118,7 metra – tyle, ile wynosi długość świątyni",
+				"en": "Scandinavia's tallest church: a Gothic brick cathedral consecrated in 1435, its two towers 118.7 metres high – exactly as long as the church",
+				"cs": "Nejvyšší kostel Skandinávie: gotická cihlová katedrála vysvěcená roku 1435; její dvě věže měří 118,7 metru – stejně, jako je chrám dlouhý",
+				"is": "Hæsta kirkja Norðurlanda: gotnesk dómkirkja úr múrsteini, vígð 1435; turnarnir tveir eru 118,7 metrar, jafnlangir kirkjunni sjálfri",
+				"de": "Die höchste Kirche Skandinaviens: ein gotischer Backsteindom, 1435 geweiht; seine zwei Türme sind 118,7 Meter hoch – genau so lang wie die Kirche"
+			},
+			"local": "Uppsala domkyrka"
+		}
+	],
+	"Linköping": [
+		{
+			"kind": "se_linkoping_draken",
+			"name": {
+				"pl": "Saab 35 Draken",
+				"en": "Saab 35 Draken",
+				"cs": "Saab 35 Draken",
+				"is": "Saab 35 Draken",
+				"de": "Saab 35 Draken"
+			},
+			"desc": {
+				"pl": "Myśliwiec o podwójnie trójkątnym skrzydle, budowany przez Saaba w Linköpingu i oblatany w 1955 roku; można go zobaczyć w muzeum lotnictwa pod miastem",
+				"en": "A jet fighter with a double-delta wing, built by Saab in Linköping and first flown in 1955; it can be seen at the Air Force Museum outside the city",
+				"cs": "Proudová stíhačka s dvojitým delta křídlem, kterou Saab stavěl v Linköpingu a která poprvé vzlétla roku 1955; je k vidění v leteckém muzeu za městem",
+				"is": "Orrustuþota með tvöföldum þríhyrningsvæng, smíðuð af Saab í Linköping og flaug fyrst 1955; hana má sjá í flugherssafninu utan við borgina",
+				"de": "Ein Düsenjäger mit Doppeldeltaflügel, von Saab in Linköping gebaut und 1955 erstmals geflogen; zu sehen im Luftwaffenmuseum vor der Stadt"
+			},
+			"local": "Saab 35 Draken"
+		}
+	],
+	"Örebro": [
+		{
+			"kind": "se_orebro_slott",
+			"name": {
+				"pl": "Zamek w Örebro",
+				"en": "Örebro Castle",
+				"cs": "Hrad Örebro",
+				"is": "Örebro-kastali",
+				"de": "Schloss Örebro"
+			},
+			"desc": {
+				"pl": "Zamek na wysepce na rzece Svartån, z czterema okrągłymi narożnymi wieżami; jego najstarszą częścią jest XIII-wieczna wieża obronna",
+				"en": "A castle on an islet in the Svartån river, with four round corner towers; its oldest part is a 13th-century defensive tower",
+				"cs": "Hrad na ostrůvku v řece Svartån se čtyřmi kulatými nárožními věžemi; jeho nejstarší částí je obranná věž ze 13. století",
+				"is": "Kastali á hólma í ánni Svartån með fjórum sívölum hornturnum; elsti hluti hans er varnarturn frá 13. öld",
+				"de": "Ein Schloss auf einer Insel im Fluss Svartån mit vier runden Ecktürmen; sein ältester Teil ist ein Wehrturm aus dem 13. Jahrhundert"
+			},
+			"local": "Örebro slott"
+		}
+	],
+	"Västerås": [
+		{
+			"kind": "se_vasteras_anundshog",
+			"name": {
+				"pl": "Kurhan Anundshög",
+				"en": "Anundshög",
+				"cs": "Mohyla Anundshög",
+				"is": "Anundshög-haugurinn",
+				"de": "Anundshög"
+			},
+			"desc": {
+				"pl": "Największy kurhan w Szwecji, z epoki żelaza, a obok niego kamienie ustawione w kształt statków",
+				"en": "Sweden's largest burial mound, from the Iron Age, with ship settings of standing stones beside it",
+				"cs": "Největší mohyla ve Švédsku z doby železné a vedle ní kameny rozestavěné do tvaru lodí",
+				"is": "Stærsti grafhaugur Svíþjóðar, frá járnöld, og við hlið hans steinar reistir í skipslögun",
+				"de": "Der größte Grabhügel Schwedens aus der Eisenzeit, daneben Schiffssetzungen aus aufgerichteten Steinen"
+			},
+			"local": "Anundshög"
+		}
+	],
+	"Helsingborg": [
+		{
+			"kind": "se_helsingborg_karnan",
+			"name": {"pl": "Kärnan", "en": "Kärnan", "cs": "Kärnan", "is": "Kärnan", "de": "Kärnan"},
+			"desc": {
+				"pl": "Średniowieczna ceglana wieża wysoka na 35 metrów, ostatnia pozostałość duńskiego zamku strzegącego cieśniny Sund",
+				"en": "A medieval brick keep 35 metres high, all that is left of a Danish castle that guarded the Øresund",
+				"cs": "Středověká cihlová věž vysoká 35 metrů, poslední zbytek dánského hradu, který střežil průliv Öresund",
+				"is": "Miðaldaturn úr múrsteini, 35 metra hár, það eina sem eftir er af dönskum kastala sem gætti Eyrarsunds",
+				"de": "Ein mittelalterlicher Backsteinturm, 35 Meter hoch, der letzte Rest einer dänischen Burg, die den Öresund bewachte"
+			},
+			"local": "Kärnan"
+		}
+	],
+	"Jönköping": [
+		{
+			"kind": "se_jonkoping_match",
+			"name": {
+				"pl": "Muzeum Zapałek",
+				"en": "Match Museum",
+				"cs": "Muzeum zápalek",
+				"is": "Eldspýtnasafnið",
+				"de": "Zündholzmuseum"
+			},
+			"desc": {
+				"pl": "Dawna fabryka, w której bracia Lundström zaczęli w 1845 roku wyrabiać zapałki; to tu powstały szwedzkie zapałki bezpieczne",
+				"en": "The old factory where the Lundström brothers began making matches in 1845; the Swedish safety match was developed here",
+				"cs": "Bývalá továrna, v níž bratři Lundströmové roku 1845 začali vyrábět zápalky; vznikly zde švédské bezpečnostní zápalky",
+				"is": "Gamla verksmiðjan þar sem Lundström-bræður hófu eldspýtnagerð árið 1845; hér urðu sænsku öryggiseldspýturnar til",
+				"de": "Die alte Fabrik, in der die Brüder Lundström 1845 mit der Herstellung von Zündhölzern begannen; hier entstand das schwedische Sicherheitszündholz"
+			},
+			"local": "Tändsticksmuseet"
+		}
+	],
+	"Norrköping": [
+		{
+			"kind": "se_norrkoping_strykjarnet",
+			"name": {
+				"pl": "Strykjärnet („Żelazko”)",
+				"en": "Strykjärnet (the Flatiron)",
+				"cs": "Strykjärnet („Žehlička“)",
+				"is": "Strykjärnet („Straujárnið“)",
+				"de": "Strykjärnet („Bügeleisen“)"
+			},
+			"desc": {
+				"pl": "Klinowaty budynek dawnej tkalni z 1917 roku między odnogami rzeki Motala ström, w sercu dawnej dzielnicy fabrycznej",
+				"en": "A wedge-shaped former weaving mill of 1917 between two arms of the Motala ström, in the heart of the old industrial quarter",
+				"cs": "Klínovitá budova bývalé tkalcovny z roku 1917 mezi rameny řeky Motala ström, uprostřed staré tovární čtvrti",
+				"is": "Fleyglaga fyrrum vefnaðarverksmiðja frá 1917 milli kvísla árinnar Motala ström, í hjarta gamla iðnaðarhverfisins",
+				"de": "Ein keilförmiges ehemaliges Webereigebäude von 1917 zwischen zwei Armen des Motala ström, mitten im alten Industrieviertel"
+			},
+			"local": "Strykjärnet"
+		}
+	],
+	"Lund": [
+		{
+			"kind": "se_lund_domkyrka",
+			"name": {
+				"pl": "Katedra w Lundzie",
+				"en": "Lund Cathedral",
+				"cs": "Katedrála v Lundu",
+				"is": "Dómkirkjan í Lundi",
+				"de": "Dom zu Lund"
+			},
+			"desc": {
+				"pl": "Romańska katedra konsekrowana w 1145 roku, niegdyś siedziba arcybiskupa całej Skandynawii; jej zegar astronomiczny co dzień gra „In dulci jubilo”",
+				"en": "A Romanesque cathedral consecrated in 1145, once the seat of the archbishop of all Scandinavia; its astronomical clock plays 'In dulci jubilo' every day",
+				"cs": "Románská katedrála vysvěcená roku 1145, kdysi sídlo arcibiskupa celé Skandinávie; její orloj každý den hraje „In dulci jubilo“",
+				"is": "Rómönsk dómkirkja, vígð 1145, eitt sinn aðsetur erkibiskups allra Norðurlanda; stjörnuúrið leikur „In dulci jubilo“ á hverjum degi",
+				"de": "Ein romanischer Dom, 1145 geweiht, einst Sitz des Erzbischofs für ganz Skandinavien; seine astronomische Uhr spielt jeden Tag „In dulci jubilo“"
+			},
+			"local": "Lunds domkyrka"
+		}
+	],
+	"Umeå": [
+		{
+			"kind": "se_umea_birches",
+			"name": {
+				"pl": "Brzozowe aleje Umeå",
+				"en": "Umeå's birch avenues",
+				"cs": "Březové aleje v Umeå",
+				"is": "Birkitrjágöngin í Umeå",
+				"de": "Birkenalleen von Umeå"
+			},
+			"desc": {
+				"pl": "Po wielkim pożarze w 1888 roku miasto odbudowano z szerokimi alejami obsadzonymi brzozami, które miały zatrzymywać ogień; Umeå nazywa się miastem brzóz",
+				"en": "After the great fire of 1888 the town was rebuilt with wide avenues of birches to stop fires spreading; Umeå is known as the City of Birches",
+				"cs": "Po velkém požáru roku 1888 bylo město obnoveno se širokými alejemi bříz, které měly bránit šíření ohně; Umeå se říká město bříz",
+				"is": "Eftir brunann mikla 1888 var bærinn endurbyggður með breiðum birkitrjágöngum sem áttu að hefta útbreiðslu elds; Umeå gengur undir nafninu borg birkitrjánna",
+				"de": "Nach dem großen Brand von 1888 wurde die Stadt mit breiten Birkenalleen wieder aufgebaut, die Feuer aufhalten sollten; Umeå wird die Stadt der Birken genannt"
+			},
+			"local": "Björkarnas stad"
+		}
+	],
+	"Gävle": [
+		{
+			"kind": "se_gavle_bocken",
+			"name": {
+				"pl": "Kozioł z Gävle",
+				"en": "Gävle Goat",
+				"cs": "Kozel z Gävle",
+				"is": "Jólahafurinn í Gävle",
+				"de": "Julbock von Gävle"
+			},
+			"desc": {
+				"pl": "Olbrzymi słomiany kozioł bożonarodzeniowy, stawiany co roku w adwencie na placu Slottstorget od 1966 roku; ma około 13 metrów i wiele razy go podpalono",
+				"en": "A giant Yule goat of straw raised on the Castle Square every Advent since 1966, about 13 metres high; it has often been burnt down",
+				"cs": "Obří vánoční kozel ze slámy, který od roku 1966 každý advent stojí na Zámeckém náměstí; měří asi 13 metrů a mnohokrát shořel",
+				"is": "Risastór jólahafur úr hálmi sem reistur er á Hallartorginu á hverri aðventu síðan 1966; hann er um 13 metrar og hefur oft verið brenndur",
+				"de": "Ein riesiger Julbock aus Stroh, seit 1966 jeden Advent auf dem Schlossplatz aufgestellt, etwa 13 Meter hoch; er ist schon oft abgebrannt"
+			},
+			"local": "Gävlebocken"
+		}
+	],
+	"Sundsvall": [
+		{
+			"kind": "se_sundsvall_stenstaden",
+			"name": {
+				"pl": "Kamienne Miasto",
+				"en": "Stenstaden (the Stone Town)",
+				"cs": "Kamenné město",
+				"is": "Steinbærinn",
+				"de": "Steinstadt"
+			},
+			"desc": {
+				"pl": "Po pożarze w 1888 roku centrum odbudowano z kamienia i cegły; bogato zdobione kamienice powstały za pieniądze z handlu drewnem",
+				"en": "After the fire of 1888 the centre was rebuilt in stone and brick; its ornate town palaces were paid for by the timber trade",
+				"cs": "Po požáru roku 1888 bylo centrum obnoveno z kamene a cihel; bohatě zdobené měšťanské domy zaplatil obchod se dřevem",
+				"is": "Eftir brunann 1888 var miðbærinn endurbyggður úr steini og múrsteini; skrautlegu húsin voru greidd með timburversluninni",
+				"de": "Nach dem Brand von 1888 wurde das Zentrum aus Stein und Ziegel neu gebaut; die prächtigen Stadtpaläste bezahlte der Holzhandel"
+			},
+			"local": "Stenstaden"
+		}
+	],
+	"Karlstad": [
+		{
+			"kind": "se_karlstad_ostrabron",
+			"name": {
+				"pl": "Most Wschodni",
+				"en": "Östra bron (the East Bridge)",
+				"cs": "Východní most",
+				"is": "Eystri brúin",
+				"de": "Östliche Brücke"
+			},
+			"desc": {
+				"pl": "Najdłuższy kamienny most łukowy w Szwecji: 168 metrów i dwanaście łuków nad rzeką Klarälven, z XVIII wieku",
+				"en": "Sweden's longest stone arch bridge: 168 metres and twelve arches over the Klarälven, from the 18th century",
+				"cs": "Nejdelší kamenný klenbový most ve Švédsku: 168 metrů a dvanáct oblouků přes řeku Klarälven, z 18. století",
+				"is": "Lengsta steinbogabrú Svíþjóðar: 168 metrar og tólf bogar yfir ána Klarälven, frá 18. öld",
+				"de": "Die längste Steinbogenbrücke Schwedens: 168 Meter und zwölf Bögen über den Klarälven, aus dem 18. Jahrhundert"
+			},
+			"local": "Östra bron"
+		}
+	],
+	"Östersund": [
+		{
+			"kind": "se_ostersund_odjuret",
+			"name": {
+				"pl": "Potwór z jeziora Storsjön",
+				"en": "Storsjö Monster",
+				"cs": "Netvor ze Storsjönu",
+				"is": "Storsjön-skrímslið",
+				"de": "Storsjö-Ungeheuer"
+			},
+			"desc": {
+				"pl": "Legendarne stworzenie, które według opowieści żyje w jeziorze Storsjön; historie o nim krążą od stuleci, a za wodą wznoszą się góry",
+				"en": "A legendary creature said to live in the lake Storsjön; stories of it go back centuries, and beyond the water rise the mountains",
+				"cs": "Legendární tvor, který podle vyprávění žije v jezeře Storsjön; příběhy o něm se vyprávějí po staletí a za vodou se zvedají hory",
+				"is": "Þjóðsagnavera sem sögð er búa í vatninu Storsjön; sögur af henni ná aldir aftur í tímann og handan vatnsins rísa fjöllin",
+				"de": "Ein Sagenwesen, das im See Storsjön leben soll; Geschichten von ihm gibt es seit Jahrhunderten, und jenseits des Wassers erheben sich die Berge"
+			},
+			"local": "Storsjöodjuret"
+		}
+	],
+	"Luleå": [
+		{
+			"kind": "se_lulea_gammelstad",
+			"name": {
+				"pl": "Osada kościelna Gammelstad",
+				"en": "Gammelstad Church Town",
+				"cs": "Kostelní městečko Gammelstad",
+				"is": "Kirkjubærinn Gammelstad",
+				"de": "Kirchstadt Gammelstad"
+			},
+			"desc": {
+				"pl": "Kamienny kościół z XV wieku otoczony 424 drewnianymi domkami, w których nocowali parafianie z dalekich wsi przybywający na nabożeństwa; obiekt UNESCO",
+				"en": "A 15th-century stone church surrounded by 424 wooden cottages where parishioners from far away stayed overnight for services; a UNESCO World Heritage Site",
+				"cs": "Kamenný kostel z 15. století obklopený 424 dřevěnými chaloupkami, v nichž přespávali farníci ze vzdálených vesnic, když přišli na bohoslužbu; památka UNESCO",
+				"is": "Steinkirkja frá 15. öld umkringd 424 litlum timburhúsum þar sem kirkjugestir úr fjarlægum sveitum gistu þegar þeir komu til messu; á heimsminjaskrá UNESCO",
+				"de": "Eine Steinkirche aus dem 15. Jahrhundert, umgeben von 424 Holzhäuschen, in denen Kirchgänger aus fernen Dörfern zum Gottesdienst übernachteten; UNESCO-Welterbe"
+			},
+			"local": "Gammelstads kyrkstad"
+		}
+	],
+	"Kiruna": [
+		{
+			"kind": "se_kiruna_kyrka",
+			"name": {
+				"pl": "Kościół w Kirunie",
+				"en": "Kiruna Church",
+				"cs": "Kostel v Kiruně",
+				"is": "Kirkjan í Kiruna",
+				"de": "Kirche von Kiruna"
+			},
+			"desc": {
+				"pl": "Drewniany kościół z 1912 roku w kształcie saamskiego szałasu; w 2025 roku przewieziono go w całości 5 km do nowego centrum, z dala od kopalni rudy żelaza",
+				"en": "A wooden church of 1912 shaped like a Sámi hut; in 2025 it was moved in one piece 5 km to the new town centre, away from the iron ore mine",
+				"cs": "Dřevěný kostel z roku 1912 ve tvaru sámské chýše; v roce 2025 jej v celku převezli 5 km do nového centra, dál od železnorudného dolu",
+				"is": "Timburkirkja frá 1912 í laginu eins og samískur kofi; árið 2025 var hún flutt í heilu lagi 5 km í nýja miðbæinn, burt frá járnnámunni",
+				"de": "Eine Holzkirche von 1912 in Form einer samischen Kote; 2025 wurde sie im Ganzen 5 km ins neue Zentrum versetzt, weg von der Eisenerzgrube"
+			},
+			"local": "Kiruna kyrka"
+		}
+	],
+	"Visby": [
+		{
+			"kind": "se_visby_ringmuren",
+			"name": {
+				"pl": "Mury miejskie Visby",
+				"en": "Visby town wall",
+				"cs": "Městské hradby Visby",
+				"is": "Borgarmúrinn í Visby",
+				"de": "Stadtmauer von Visby"
+			},
+			"desc": {
+				"pl": "Średniowieczny mur obronny długości 3,4 km z kilkudziesięcioma basztami, jeden z najlepiej zachowanych w północnej Europie; hanzeatyckie miasto jest na liście UNESCO",
+				"en": "A medieval ring wall 3.4 km long with dozens of towers, one of the best preserved in Northern Europe; the old Hanseatic town is a UNESCO site",
+				"cs": "Středověké hradby dlouhé 3,4 km s desítkami věží, jedny z nejzachovalejších v severní Evropě; hanzovní město je na seznamu UNESCO",
+				"is": "Miðaldamúr, 3,4 km langur með tugum turna, einn sá best varðveitti í Norður-Evrópu; gamli Hansabærinn er á heimsminjaskrá UNESCO",
+				"de": "Eine 3,4 km lange mittelalterliche Ringmauer mit Dutzenden Türmen, eine der besterhaltenen Nordeuropas; die alte Hansestadt ist UNESCO-Welterbe"
+			},
+			"local": "Ringmuren"
+		}
+	],
+	"Kalmar": [
+		{
+			"kind": "se_kalmar_slott",
+			"name": {
+				"pl": "Zamek w Kalmarze",
+				"en": "Kalmar Castle",
+				"cs": "Zámek Kalmar",
+				"is": "Kalmarkastali",
+				"de": "Schloss Kalmar"
+			},
+			"desc": {
+				"pl": "Średniowieczna twierdza przebudowana przez królów z dynastii Wazów na renesansowy pałac, otoczona wodą; w 1397 roku w Kalmarze zawarto unię trzech królestw",
+				"en": "A medieval fortress rebuilt by the Vasa kings as a Renaissance palace, ringed by water; the union of three kingdoms was sealed in Kalmar in 1397",
+				"cs": "Středověká pevnost, kterou králové z rodu Vasa přestavěli na renesanční palác, obklopená vodou; roku 1397 zde byla uzavřena Kalmarská unie tří království",
+				"is": "Miðaldavirki sem Vasakonungar breyttu í endurreisnarhöll, umlukið vatni; Kalmarsambandið milli þriggja konungsríkja var gert í bænum árið 1397",
+				"de": "Eine mittelalterliche Festung, von den Wasa-Königen zum Renaissanceschloss umgebaut, von Wasser umgeben; 1397 wurde hier die Kalmarer Union dreier Königreiche geschlossen"
+			},
+			"local": "Kalmar slott"
+		}
+	]
+}

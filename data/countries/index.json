@@ -204,6 +204,12 @@
 			"name": {"pl": "Dania", "en": "Denmark", "cs": "Dánsko", "is": "Danmörk", "de": "Dänemark"},
 			"neighbours": ["de", "se"],
 			"favorite_neighbour": "se"
+		},
+		{
+			"code": "se",
+			"name": {"pl": "Szwecja", "en": "Sweden", "cs": "Švédsko", "is": "Svíþjóð", "de": "Schweden"},
+			"neighbours": ["no", "fi", "dk"],
+			"favorite_neighbour": "no"
 		}
 	]
 }
