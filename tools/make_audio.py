@@ -298,6 +298,20 @@ def anthems():  # melodies from the scores on Wikipedia/Commons; all of them in 
         (72, 2), (69, .75), (66, .25), (67, 2)], 0.32, [43, 55, 59, 62])  # La Marseillaise (Rouget de Lisle, d. 1836): Commons "Allons, enfants de la patrie.mid"
     anthem("it", [(65, 1), (65, .75), (67, .25), (65, 1), (None, 1), (74, 1), (74, .75), (75, .25), (74, 1), (None, 1), (74, 1), (77, .75), (75, .25), (74, 1), (None, 1),
         (72, 1), (74, .75), (72, .25), (70, 1)], 0.27, [46, 58, 62, 65])  # Il Canto degli Italiani (Novaro, d. 1885): the score on it.wikipedia "Il Canto degli Italiani"
+    anthem("es", [(72, 1), (67, .5), (76, .5), (76, 1), (72, .5), (79, .5), (77, .5), (76, .5), (74, .5), (72, .5), (72, .5), (71, .5), (69, .5), (67, .5), (72, 1), (74, 1),
+        (76, 2)], 0.4, [48, 60, 64, 67])  # Marcha Real (anon., 1761): Commons "Marcha Real (1930s).png" (Edición Damas, Sevilla), bars 1-6
+    anthem("pt", [(70, .25), (67, .75), (63, .25), (72, 2), (70, 1.75), (72, .25), (70, 1), (68, 1), (67, .75), (63, .25), (62, .75), (63, .25), (67, 2), (69, .75), (70, .25),
+        (72, .75), (74, .25), (70, 2)], 0.3, [39, 55, 58, 63])  # A Portuguesa (Keil, d. 1907), Heróis do mar ... imortal: Commons "A portuguesa.mid" (in E flat), checked against "A Portuguesa music sheet (1957 official).gif"
+    anthem("nl", [(62, 1), (67, 1), (67, 1), (69, .5), (71, .5), (72, .5), (69, .5), (71, 1), (69, .5), (71, .5), (72, 1), (71, 1), (69, .5), (67, .5), (69, 1), (67, 3)], 0.35,
+        [43, 55, 59, 62])  # Wilhelmus (16th c., after Valerius 1626): the score (LilyPond) on nl.wikipedia "Wilhelmus"
+    anthem("be", [(65, .25), (62, .75), (63, .25), (65, 1), (67, .75), (69, .25), (70, .75), (69, .25), (70, .75), (74, .25), (65, 1.5), (69, .25), (67, .25), (65, 1), (69, .75),
+        (70, .25), (72, 1.75), (72, .25), (72, .75), (72, .25), (70, .75), (69, .25), (70, 1)], 0.32,
+        [46, 58, 62, 65])  # La Brabançonne (Campenhout, d. 1848): Commons "Belgium National Anthem.png", checked against ingeb.org obelgiq2.mid
+    anthem("lu", [(67, 1), (67, 1.5), (72, .5), (72, 1), (64, 1), (67, 1), (65, 1), (65, 1), (None, .5), (65, .5), (65, 1), (67, .5), (69, .5), (67, 1.5), (65, .5), (64, 2)], 0.32,
+        [48, 60, 64, 67])  # Ons Heemecht (Zinnen, d. 1898): Commons "Ons Heemecht - partition of the national anthem of Luxembourg.png"
+    anthem("ch", [(64, .75), (64, .25), (64, 1), (69, 1), (69, .75), (68, .25), (68, 1.5), (None, .5), (64, .75), (64, .25), (64, 1), (71, 1), (71, .75), (69, .25), (69, 1.5)], 0.38,
+        [45, 57, 61, 64])  # Schweizerpsalm (Zwyssig, d. 1854), Trittst im Morgenrot daher, seh' ich dich im Strahlenmeer: Commons "Trittst im Morgenrot daher.mid"
+    anthem("li", [(67, 1), (67, 1), (69, 1), (66, 1.5), (67, .5), (69, 1), (71, 1), (71, 1), (72, 1), (71, 1.5), (69, .5), (67, 1)], 0.28, [43, 59, 62, 67], 0.7)  # Oben am jungen Rhein, sung to God Save the King (as gb)
 def motifs():  # the best-known bars of each country's classical (or folk) tune, on arrival every other time
     motif = lambda code, melody, q, chord, tail=0.8: anthem(code, melody, q, chord, tail, "motif_")
     motif("pl", [(69, .5), (None, .25), (69, .25), (69, .5), (None, .25), (69, .25), (73, .25), (76, .25), (78, .25), (80, .25), (81, 1)], 0.5, [45, 57, 61, 64, 69])  # Chopin, Polonaise in A major "Military" (from memory and the score's opening)
@@ -371,6 +385,25 @@ def motifs():  # the best-known bars of each country's classical (or folk) tune,
     motif("it", [(74, 1.5), (72, 1.5), (74, 1.5), (72, 1.5), (75, 1), (74, .5), (72, 1), (75, .5), (74, 3),
         (75, 3), (77, 1), (75, .5), (72, 1), (75, .5), (70, 1), (67, .5), (67, 1), (68, .5), (70, 1), (68, .5), (67, 1), (65, .5), (63, 2)], 0.19,
         [39, 51, 55, 58])  # Denza (d. 1922), Funiculì, funiculà: the refrain's first line and its last, Commons "Funiculì funiculà.mid"
+    motif("es", [(69, .5), (69, .25), (69, .25), (69, .25), (64, .25), (62, .25), (64, .25), (69, .5), (69, .25), (69, .25), (69, .25), (71, .25), (73, .25), (71, .25),
+        (69, .5), (69, .25), (69, .25), (71, .25), (69, .25), (68, .25), (69, .25), (71, 1.625), (70, .375),
+        (74, .5), (74, .25), (74, .25), (74, .25), (69, .25), (67, .25), (69, .25), (74, .5), (74, .25), (74, .25), (74, .25), (76, .25), (78, .25), (76, .25),
+        (74, .5), (74, .25), (73, .25), (71, .5), (71, .25), (69, .25), (68, 2)], 0.28,
+        [40, 52, 56, 59])  # Bizet (d. 1875), Carmen, the Prélude's march of the toreros (Seville), an octave down: mutopiaproject.org BizetG/prelude/prelude.mid
+    motif("pt", [(67, 1), (67, 1), (71, 1), (71, 1), (74, 1), (74, 1), (74, 1), (67, 1), (67, 1), (67, 1), (71, 1), (71, 1), (74, 1), (74, 1),
+        (74, 1), (66, 1), (66, 1), (66, 1), (69, 1), (69, 1), (74, 1), (74, 1), (78, 1), (76, 1), (74, 1), (72, 1), (71, 1), (72, 1), (69, 1), (71, 1), (67, 2)], 0.15,
+        [43, 55, 59, 62])  # O Malhão (Portuguese folk): trillian.mit.edu abc/Intl/event/2013DECDF/Malhao.abc (after ifdo.ca intl.abc)
+    motif("nl", [(62, 1), (67, 1), (67, 1), (71, 1), (69, 1), (67, 1.5), (66, .25), (64, .25), (62, 1), (67, 1), (66, 1), (67, 1), (72, 1), (71, 1), (71, 1), (69, 2)], 0.3,
+        [50, 57, 62, 66])  # Wien Neêrlands bloed (Viotta, d. 1859), the anthem of 1815-1932: Commons "Wien Neêrlands bloed in d' aders vloeit.mid"
+    motif("be", [(62, .25), (62, .875), (62, .125), (67, .875), (71, .125), (69, 2), (74, 1), (None, .75), (74, .25), (71, 1.5), (72, .25), (71, .25), (69, 1), (67, 1),
+        (69, 2)], 0.38, [50, 57, 62, 66])  # Miry (d. 1889), De Vlaamse Leeuw: Commons "Flanders National Anthem Dutch.png"
+    motif("lu", [(72, 1), (74, .5), (72, .5), (71, 1), (71, 1), (69, 1), (71, .5), (72, .5), (67, 1), (None, 1), (67, 1), (67, .5), (65, .5), (64, 1), (69, 1), (67, 1),
+        (71, 1), (72, 2)], 0.3, [48, 60, 64, 67])  # Lentz (d. 1893), De Feierwon, the refrain's last line: Commons "De Feierwon.png"
+    motif("ch", [(67, 1), (72, 1), (76, 1), (76, 1), (79, 2), (76, 1), (79, .5), (77, .5), (76, .5), (74, .5), (76, 1), (72, 2), (67, 1),
+        (72, 1), (76, 1), (76, 1), (79, 2), (76, 1), (79, .5), (77, .5), (76, .5), (74, .5), (74, 3), (None, 1), (79, 2), (76, 1), (72, 3)], 0.16,
+        [48, 60, 64, 67])  # Ranz des vaches (Swiss folk): trillian.mit.edu book/Hamilton/HUTB2-1846-V1 #598 (Hamilton's Universal Tune-Book, 1846)
+    motif("li", [(72, 1), (74, 1), (76, 1), (77, 2), (77, 2), (77, 2), (76, 2), (74, 3), (74, 1), (72, 4)], 0.25,
+        [41, 53, 57, 60])  # Rheinberger (of Vaduz, d. 1901), Abendlied op. 69/3, Bleib bei uns: the soprano in Commons "Abendlied (IA imslp-rheinberger-josef-gabriel).pdf"
     # the countries with two tunes instead of the anthem
     motif("si", [(66, .5), (69, .5), (69, .5), (69, .5), (66, .5), (69, .5), (69, .5), (69, .5), (66, .5), (66, .5), (64, .5), (64, .5), (62, 1), (62, 1),
         (62, 1), (64, 1), (66, .5), (69, .5), (69, .5), (None, .5), (66, .5), (66, .5), (64, .5), (64, .5), (62, 1)], 0.28, [50, 57, 62, 66])  # Marko skače (folk): trillian Slovenia/MarkoSkace.abc

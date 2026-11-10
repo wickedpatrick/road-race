@@ -208,7 +208,7 @@
 		"a": "firenze",
 		"b": "perugia",
 		"km": 150,
-		"road": [[88, "A1"], [150, "RA6", 3, 110]],
+		"road": [[88, "A1"], [113, "RA6", 3, 90], [150, "RA6", 3, 110]],
 		"towns": [
 			["Incisa in Val d'Arno", 22], ["Arezzo", 65], ["Foiano della Chiana", 92],
 			["Passignano sul Trasimeno", 125], ["Magione", 135]
@@ -220,7 +220,7 @@
 		"a": "perugia",
 		"b": "ancona",
 		"km": 140,
-		"road": [[50, "SS318", 3, 110], [140, "SS76", 3, 110]],
+		"road": [[50, "SS318", 3, 90], [88, "SS76", 3, 90], [140, "SS76", 3, 110]],
 		"towns": [
 			["Valfabbrica", 20], ["Gualdo Tadino", 42], ["Fossato di Vico", 50], ["Fabriano", 70], ["Jesi", 110],
 			["Chiaravalle", 122]
@@ -441,7 +441,7 @@
 		"a": "catania",
 		"b": "siracusa",
 		"km": 65,
-		"road": [[12, "RA15", 3], [65, "SS114", 3, 110]],
+		"road": [[10, "RA15", 3, 100], [37, "E45", 3], [65, "SS114", 3, 110]],
 		"towns": [["Lentini", 30], ["Augusta", 45], ["Priolo Gargallo", 55]],
 		"zones": [[15, "fields", "Sicilia"], [45, "mediterranean", "Sicilia"], [65, "coast", "Sicilia"]],
 		"via": [[30, 15, 37.29], [45, 15.2, 37.24], [55, 15.19, 37.16]]
@@ -450,7 +450,7 @@
 		"a": "firenze",
 		"b": "siena",
 		"km": 75,
-		"road": [[75, "RA3", 3, 110]],
+		"road": [[75, "RA3", 3, 90]],
 		"towns": [
 			["San Casciano in Val di Pesa", 15], ["Tavarnelle Val di Pesa", 28], ["Poggibonsi", 45],
 			["Monteriggioni", 60]
@@ -462,7 +462,7 @@
 		"a": "siena",
 		"b": "perugia",
 		"km": 105,
-		"road": [[105, "RA6", 3, 110]],
+		"road": [[50, "SS715", 3, 90], [75, "RA6", 3, 90], [105, "RA6", 3, 110]],
 		"towns": [
 			["Rapolano Terme", 25], ["Sinalunga", 40], ["Bettolle", 50], ["Passignano sul Trasimeno", 80],
 			["Magione", 90]
