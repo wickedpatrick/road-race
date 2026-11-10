@@ -165,7 +165,10 @@ List of roads between two neighbouring cities `a` and `b` (travelling `b` -> `a`
 Cyrillic), e.g. `"Thessaloníki": "Θεσσαλονίκη"`; missing file = `{}` (`Geo.native(name)` gives `""`). A place-name
 sign, a distance board row and the region board then show the native spelling on top (larger) and the Latin one
 below it (~70%), in the same colour; boards with a native name have taller rows. Names without an entry stay one
-line. The font has Greek and Cyrillic; `Scenery.sign_texts` warms the native texts too. Preview: `RR_NATIVE=1` in
+line. Where the name itself goes on top (the majority language of a bilingual Finnish town, e.g. Helsinki over
+Helsingfors), the value is `{"under": "Helsingfors"}` instead: the name larger on top, the `under` one below it
+(`Geo.under`; `Geo.sign_lines` gives the two lines either way). The font has Greek and Cyrillic; `Scenery.sign_texts`
+warms the second names too. Preview: `RR_NATIVE=1` in
 `tests/game_preview.gd` (the fixture of `tests/test_native.gd`).
 
 ## `countries/<code>/facts.json`

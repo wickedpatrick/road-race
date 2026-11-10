@@ -23,10 +23,25 @@ static func display_name(id: String) -> String:
 static func city_ids() -> Array:
 	return cities().keys()
 
-## The native spelling of a name for a bilingual sign (Greek, Cyrillic), "" when there is none or it is the same.
+## The native spelling of a name for a bilingual sign (Greek, Cyrillic), drawn above the name; "" when there is
+## none, it is the same, or the name itself goes on top (see under()).
 static func native(name: String) -> String:
-	var n: String = GameData.country().get("native", {}).get(name, "")
-	return "" if n == name else n
+	var n = GameData.country().get("native", {}).get(name, "")
+	return "" if not n is String or n == name else n
+
+## The second name drawn below the name itself on a bilingual sign (native.json {"under": ...}, e.g. Helsinki over
+## Helsingfors), "" when there is none.
+static func under(name: String) -> String:
+	var n = GameData.country().get("native", {}).get(name, "")
+	if not n is Dictionary: return ""
+	var u: String = n.get("under", "")
+	return "" if u == name else u
+
+## The two lines of a bilingual sign for a name, [top, bottom] (the top one larger), or [] for a one-line sign.
+static func sign_lines(name: String) -> Array:
+	if native(name) != "": return [native(name), name]
+	if under(name) != "": return [name, under(name)]
+	return []
 
 static func fact(name: String) -> String:
 	return GameData.country().facts.get(name, "")

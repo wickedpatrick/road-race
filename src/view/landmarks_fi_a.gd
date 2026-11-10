@@ -95,13 +95,6 @@ static func _helsinki_cathedral() -> void:
 		_r(x - 0.5, base + 1, x + 0.5, base + 13.5, WHITE)
 		_l(x + 0.35, base + 1.2, x + 0.35, base + 13.3, WHITE_D, 0.15)
 	_r(-8.4, base + 13.5, 8.4, base + 15, WHITE_D)
-	_poly([-8.8, base + 15, 8.8, base + 15, 0, base + 19], WHITE)
-	_poly([-7, base + 15.5, 7, base + 15.5, 0, base + 18.4], WHITE_D)
-	# the apostles on the roof line
-	for x in [-15.0, -11.5, -8.8, 0.0, 8.8, 11.5, 15.0]:
-		var y := base + (19.0 if x == 0.0 else 15.2)
-		_r(x - 0.3, y, x + 0.3, y + 1.6, Color("6f7d72"))
-		_c(x, y + 1.9, 0.32, Color("6f7d72"))
 	# the four small domes on their drums
 	for x in [-13.5, 13.5]:
 		_r(x - 2, base + 15.2, x + 2, base + 18.5, WHITE)
@@ -123,6 +116,13 @@ static func _helsinki_cathedral() -> void:
 	_dome(0, dy + 19.5, 1.3, 1.6, COPPER)
 	_l(0, dy + 21, 0, dy + 24, GOLD, 0.2)
 	_l(-0.8, dy + 23, 0.8, dy + 23, GOLD, 0.2)
+	# the portico's pediment in front of the drum's base, the apostles on it and on the roof line clear of the domes
+	_poly([-8.8, base + 15, 8.8, base + 15, 0, base + 19], WHITE)
+	_poly([-7, base + 15.5, 7, base + 15.5, 0, base + 18.4], WHITE_D)
+	for x in [-16.6, -10.0, -8.6, 0.0, 8.6, 10.0, 16.6]:
+		var y := base + (19.0 if x == 0.0 else 15.2)
+		_r(x - 0.3, y, x + 0.3, y + 1.6, Color("6f7d72"))
+		_c(x, y + 1.9, 0.32, Color("6f7d72"))
 
 ## Espoo Cathedral: the medieval whitewashed stone church with its steep dark roof and stepped east gable, the west
 ## tower with its tall black spire.

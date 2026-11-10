@@ -22,29 +22,29 @@
 	{
 		"a": "helsinki",
 		"b": "hameenlinna",
-		"km": 100,
-		"road": [[100, "E12", 3]],
+		"km": 101,
+		"road": [[101, "E12", 3]],
 		"towns": [["Hyvinkää", 52], ["Riihimäki", 68]],
-		"zones": [[60, "fields", "Uusimaa"], [100, "forest", "Kanta-Häme"]],
+		"zones": [[60, "fields", "Uusimaa"], [101, "forest", "Kanta-Häme"]],
 		"via": [[52, 24.8, 60.62], [68, 24.72, 60.74]]
 	},
 	{
 		"a": "hameenlinna",
 		"b": "tampere",
-		"km": 79,
-		"road": [[79, "E12", 3]],
-		"towns": [["Akaa", 40], ["Lempäälä", 62]],
-		"zones": [[25, "fields", "Kanta-Häme"], [55, "lakes", "Pirkanmaa"], [79, "fields", "Pirkanmaa"]],
-		"via": [[40, 23.99, 61.17], [62, 23.75, 61.31]]
+		"km": 80,
+		"road": [[80, "E12", 3]],
+		"towns": [["Akaa", 40], ["Lempäälä", 58]],
+		"zones": [[25, "fields", "Kanta-Häme"], [55, "lakes", "Pirkanmaa"], [80, "fields", "Pirkanmaa"]],
+		"via": [[40, 23.87, 61.17], [58, 23.75, 61.31]]
 	},
 	{
 		"a": "helsinki",
 		"b": "lahti",
 		"km": 108,
 		"road": [[108, "E75", 3]],
-		"towns": [["Kerava", 28], ["Järvenpää", 38], ["Mäntsälä", 60]],
-		"zones": [[40, "fields", "Uusimaa"], [82, "forest", "Uusimaa"], [108, "fields", "Päijät-Häme"]],
-		"via": [[28, 25.1, 60.4], [38, 25.09, 60.47], [60, 25.32, 60.64]]
+		"towns": [["Kerava", 28], ["Järvenpää", 38], ["Mäntsälä", 62]],
+		"zones": [[40, "fields", "Uusimaa"], [83, "forest", "Uusimaa"], [108, "fields", "Päijät-Häme"]],
+		"via": [[28, 25.1, 60.4], [38, 25.09, 60.47], [62, 25.32, 60.64]]
 	},
 	{
 		"a": "lahti",
@@ -61,15 +61,15 @@
 		"km": 338,
 		"road": [[20, "E75", 3], [313, "E75"], [338, "E75", 3]],
 		"towns": [
-			["Äänekoski", 45], ["Viitasaari", 97], ["Pihtipudas", 137], ["Pyhäjärvi", 188], ["Kärsämäki", 232],
+			["Äänekoski", 45], ["Viitasaari", 99], ["Pihtipudas", 137], ["Pyhäjärvi", 179], ["Kärsämäki", 215],
 			["Kempele", 323]
 		],
 		"zones": [
-			[60, "forest", "Keski-Suomi"], [165, "lakes", "Keski-Suomi"], [290, "taiga", "Pohjois-Pohjanmaa"],
+			[61, "forest", "Keski-Suomi"], [172, "lakes", "Keski-Suomi"], [290, "taiga", "Pohjois-Pohjanmaa"],
 			[338, "fields", "Pohjois-Pohjanmaa"]
 		],
 		"via": [
-			[45, 25.73, 62.6], [97, 25.86, 63.07], [137, 25.57, 63.37], [188, 25.99, 63.68], [232, 25.76, 63.98],
+			[45, 25.73, 62.6], [99, 25.86, 63.07], [137, 25.57, 63.37], [179, 25.99, 63.68], [215, 25.76, 63.98],
 			[323, 25.5, 64.91]
 		]
 	},
@@ -77,13 +77,13 @@
 		"a": "oulu",
 		"b": "kemi",
 		"km": 108,
-		"road": [[15, "E75", 3], [100, "E75"], [108, "E75", 3]],
-		"towns": [["Haukipudas", 20], ["Ii", 37], ["Simo", 76]],
+		"road": [[15, "E75", 3], [101, "E75"], [108, "E75", 3]],
+		"towns": [["Haukipudas", 20], ["Ii", 37], ["Simo", 79]],
 		"zones": [
-			[30, "fields", "Pohjois-Pohjanmaa"], [58, "forest", "Pohjois-Pohjanmaa"], [95, "taiga", "Lappi"],
+			[30, "fields", "Pohjois-Pohjanmaa"], [60, "forest", "Pohjois-Pohjanmaa"], [96, "taiga", "Lappi"],
 			[108, "coast", "Lappi"]
 		],
-		"via": [[20, 25.36, 65.18], [37, 25.37, 65.32], [76, 25.06, 65.66]]
+		"via": [[20, 25.36, 65.18], [37, 25.37, 65.32], [79, 25.06, 65.66]]
 	},
 	{
 		"a": "kemi",
@@ -100,9 +100,9 @@
 		"b": "inari",
 		"km": 328,
 		"road": "E75",
-		"towns": [["Sodankylä", 128], ["Vuotso", 205], ["Saariselkä", 260], ["Ivalo", 288]],
-		"zones": [[230, "taiga", "Lappi"], [272, "upland", "Lappi"], [310, "taiga", "Lappi"], [328, "lakes", "Lappi"]],
-		"via": [[128, 26.59, 67.42], [205, 26.95, 68.09], [260, 27.42, 68.42], [288, 27.54, 68.66]],
+		"towns": [["Sodankylä", 128], ["Vuotso", 206], ["Saariselkä", 260], ["Ivalo", 288]],
+		"zones": [[231, "taiga", "Lappi"], [272, "upland", "Lappi"], [310, "taiga", "Lappi"], [328, "lakes", "Lappi"]],
+		"via": [[128, 26.59, 67.42], [206, 26.95, 68.09], [260, 27.42, 68.42], [288, 27.54, 68.66]],
 		"weather": "snow"
 	},
 	{
@@ -110,18 +110,18 @@
 		"b": "kotka",
 		"km": 132,
 		"road": [[122, "E18", 3], [132, "15"]],
-		"towns": [["Borgå", 50], ["Lovisa", 88]],
+		"towns": [["Porvoo", 50], ["Loviisa", 88]],
 		"zones": [[50, "fields", "Uusimaa"], [100, "forest", "Uusimaa"], [132, "coast", "Kymenlaakso"]],
 		"via": [[50, 25.66, 60.39], [88, 26.23, 60.46]]
 	},
 	{
 		"a": "kotka",
 		"b": "lappeenranta",
-		"km": 105,
-		"road": [[10, "15"], [28, "E18", 3], [80, "26"], [105, "6", 3]],
-		"towns": [["Hamina", 28], ["Taavetti", 80]],
-		"zones": [[28, "coast", "Kymenlaakso"], [60, "forest", "Kymenlaakso"], [105, "lakes", "Etelä-Karjala"]],
-		"via": [[28, 27.2, 60.57], [80, 27.56, 60.92]]
+		"km": 112,
+		"road": [[10, "15"], [28, "E18", 3], [73, "26"], [112, "6", 3]],
+		"towns": [["Hamina", 28], ["Taavetti", 73]],
+		"zones": [[28, "coast", "Kymenlaakso"], [63, "forest", "Kymenlaakso"], [112, "lakes", "Etelä-Karjala"]],
+		"via": [[28, 27.2, 60.57], [73, 27.56, 60.92]]
 	},
 	{
 		"a": "lahti",
@@ -137,21 +137,21 @@
 		"b": "savonlinna",
 		"km": 155,
 		"road": [[38, "6", 3], [101, "6"], [155, "14"]],
-		"towns": [["Imatra", 38], ["Simpele", 72], ["Parikkala", 98], ["Punkaharju", 120]],
+		"towns": [["Imatra", 38], ["Simpele", 81], ["Parikkala", 98], ["Punkaharju", 123]],
 		"zones": [
-			[30, "lakes", "Etelä-Karjala"], [45, "industrial", "Etelä-Karjala"], [105, "forest", "Etelä-Karjala"],
+			[30, "lakes", "Etelä-Karjala"], [47, "industrial", "Etelä-Karjala"], [106, "forest", "Etelä-Karjala"],
 			[155, "lakes", "Etelä-Savo"]
 		],
-		"via": [[38, 28.77, 61.19], [72, 29.37, 61.43], [98, 29.5, 61.55], [120, 29.39, 61.76]]
+		"via": [[38, 28.77, 61.19], [81, 29.37, 61.43], [98, 29.5, 61.55], [123, 29.39, 61.76]]
 	},
 	{
 		"a": "savonlinna",
 		"b": "joensuu",
-		"km": 130,
-		"road": [[60, "71"], [130, "6"]],
-		"towns": [["Kerimäki", 23], ["Kitee", 55]],
-		"zones": [[38, "lakes", "Etelä-Savo"], [130, "forest", "Pohjois-Karjala"]],
-		"via": [[23, 29.29, 61.91], [55, 30.14, 62.1]]
+		"km": 150,
+		"road": [[85, "71"], [150, "6"]],
+		"towns": [["Kerimäki", 23], ["Kitee", 75]],
+		"zones": [[45, "lakes", "Etelä-Savo"], [150, "forest", "Pohjois-Karjala"]],
+		"via": [[23, 29.29, 61.91], [75, 30.14, 62.1]]
 	},
 	{
 		"a": "joensuu",
@@ -174,56 +174,56 @@
 	{
 		"a": "tampere",
 		"b": "jyvaskyla",
-		"km": 150,
-		"road": [[15, "E63", 3], [140, "E63"], [150, "E63", 3]],
-		"towns": [["Kangasala", 17], ["Orivesi", 45], ["Jämsä", 100], ["Muurame", 137]],
-		"zones": [[50, "lakes", "Pirkanmaa"], [80, "forest", "Pirkanmaa"], [150, "lakes", "Keski-Suomi"]],
-		"via": [[17, 24.07, 61.46], [45, 24.36, 61.68], [100, 25.19, 61.86], [137, 25.67, 62.13]]
+		"km": 154,
+		"road": [[16, "E63", 3], [143, "E63"], [154, "E63", 3]],
+		"towns": [["Kangasala", 18], ["Orivesi", 48], ["Jämsä", 100], ["Muurame", 140]],
+		"zones": [[53, "lakes", "Pirkanmaa"], [81, "forest", "Pirkanmaa"], [154, "lakes", "Keski-Suomi"]],
+		"via": [[18, 24.07, 61.46], [48, 24.36, 61.68], [100, 25.19, 61.86], [140, 25.67, 62.13]]
 	},
 	{
 		"a": "turku",
 		"b": "tampere",
-		"km": 160,
-		"road": [[12, "E63", 3], [140, "E63"], [160, "E63", 3]],
-		"towns": [["Lieto", 14], ["Aura", 30], ["Loimaa", 58], ["Akaa", 115], ["Lempäälä", 140]],
-		"zones": [[70, "fields", "Varsinais-Suomi"], [82, "forest", "Kanta-Häme"], [160, "fields", "Pirkanmaa"]],
-		"via": [[14, 22.46, 60.5], [30, 22.59, 60.61], [58, 23.06, 60.85], [115, 23.99, 61.17], [140, 23.75, 61.31]]
+		"km": 166,
+		"road": [[12, "E63", 3], [144, "E63"], [166, "E63", 3]],
+		"towns": [["Lieto", 14], ["Aura", 30], ["Loimaa", 68], ["Akaa", 126], ["Lempäälä", 144]],
+		"zones": [[72, "fields", "Varsinais-Suomi"], [85, "forest", "Kanta-Häme"], [166, "fields", "Pirkanmaa"]],
+		"via": [[14, 22.46, 60.5], [30, 22.59, 60.61], [68, 23.06, 60.85], [126, 23.87, 61.17], [144, 23.75, 61.31]]
 	},
 	{
 		"a": "turku",
 		"b": "pori",
-		"km": 141,
-		"road": [[20, "E8", 3], [141, "E8"]],
-		"towns": [["Raisio", 8], ["Mynämäki", 30], ["Laitila", 55], ["Rauma", 90], ["Eurajoki", 110]],
-		"zones": [[70, "fields", "Varsinais-Suomi"], [100, "coast", "Satakunta"], [141, "fields", "Satakunta"]],
-		"via": [[8, 22.17, 60.49], [30, 22, 60.68], [55, 21.69, 60.88], [90, 21.51, 61.13], [110, 21.73, 61.2]]
+		"km": 142,
+		"road": [[21, "E8", 3], [142, "E8"]],
+		"towns": [["Raisio", 8], ["Mynämäki", 32], ["Laitila", 61], ["Rauma", 92], ["Eurajoki", 110]],
+		"zones": [[74, "fields", "Varsinais-Suomi"], [101, "coast", "Satakunta"], [142, "fields", "Satakunta"]],
+		"via": [[8, 22.17, 60.49], [32, 22, 60.68], [61, 21.69, 60.88], [92, 21.51, 61.13], [110, 21.73, 61.2]]
 	},
 	{
 		"a": "pori",
 		"b": "tampere",
-		"km": 113,
-		"road": [[101, "11"], [113, "E12", 3]],
-		"towns": [["Kaasmarkku", 20], ["Kiikoinen", 44], ["Mouhijärvi", 60], ["Nokia", 101]],
-		"zones": [[40, "fields", "Satakunta"], [90, "forest", "Pirkanmaa"], [113, "lakes", "Pirkanmaa"]],
-		"via": [[20, 22.08, 61.47], [44, 22.63, 61.45], [60, 22.98, 61.5], [101, 23.51, 61.48]]
+		"km": 115,
+		"road": [[101, "11"], [115, "E12", 3]],
+		"towns": [["Kaasmarkku", 20], ["Kiikoinen", 50], ["Mouhijärvi", 70], ["Nokia", 101]],
+		"zones": [[45, "fields", "Satakunta"], [93, "forest", "Pirkanmaa"], [115, "lakes", "Pirkanmaa"]],
+		"via": [[20, 22.08, 61.47], [50, 22.63, 61.45], [70, 22.98, 61.5], [101, 23.51, 61.48]]
 	},
 	{
 		"a": "pori",
 		"b": "vaasa",
-		"km": 192,
-		"road": [[182, "E8"], [192, "E8", 3]],
-		"towns": [["Merikarvia", 50], ["Närpiö", 128], ["Maalahti", 165]],
-		"zones": [[60, "forest", "Satakunta"], [110, "coast", "Pohjanmaa"], [192, "fields", "Pohjanmaa"]],
-		"via": [[50, 21.5, 61.86], [128, 21.34, 62.47], [165, 21.55, 62.94]]
+		"km": 194,
+		"road": [[187, "E8"], [194, "E8", 3]],
+		"towns": [["Merikarvia", 50], ["Närpiö", 120], ["Maalahti", 175]],
+		"zones": [[62, "forest", "Satakunta"], [120, "coast", "Pohjanmaa"], [194, "fields", "Pohjanmaa"]],
+		"via": [[50, 21.5, 61.86], [120, 21.34, 62.47], [175, 21.55, 62.94]]
 	},
 	{
 		"a": "vaasa",
 		"b": "seinajoki",
-		"km": 76,
-		"road": [[10, "E12", 3], [24, "E12"], [76, "18"]],
-		"towns": [["Laihia", 24], ["Ylistaro", 55]],
-		"zones": [[30, "fields", "Pohjanmaa"], [76, "fields", "Etelä-Pohjanmaa"]],
-		"via": [[24, 22.01, 62.98], [55, 22.52, 62.94]]
+		"km": 79,
+		"road": [[10, "E12", 3], [25, "E12"], [79, "18"]],
+		"towns": [["Laihia", 25], ["Ylistaro", 55]],
+		"zones": [[31, "fields", "Pohjanmaa"], [79, "fields", "Etelä-Pohjanmaa"]],
+		"via": [[25, 22.01, 62.98], [55, 22.52, 62.94]]
 	},
 	{
 		"a": "seinajoki",
@@ -238,22 +238,22 @@
 		"a": "seinajoki",
 		"b": "tampere",
 		"km": 180,
-		"road": [[40, "19"], [160, "E12"], [180, "E12", 3]],
-		"towns": [["Jalasjärvi", 40], ["Parkano", 92], ["Hämeenkyrö", 145], ["Ylöjärvi", 165]],
-		"zones": [[65, "fields", "Etelä-Pohjanmaa"], [125, "forest", "Pirkanmaa"], [180, "lakes", "Pirkanmaa"]],
-		"via": [[40, 22.76, 62.49], [92, 23.02, 62.01], [145, 23.2, 61.64], [165, 23.6, 61.55]]
+		"road": [[40, "19"], [163, "E12"], [180, "E12", 3]],
+		"towns": [["Jalasjärvi", 40], ["Parkano", 97], ["Hämeenkyrö", 145], ["Ylöjärvi", 169]],
+		"zones": [[67, "fields", "Etelä-Pohjanmaa"], [127, "forest", "Pirkanmaa"], [180, "lakes", "Pirkanmaa"]],
+		"via": [[40, 22.76, 62.49], [97, 23.02, 62.01], [145, 23.2, 61.64], [169, 23.6, 61.55]]
 	},
 	{
 		"a": "vaasa",
 		"b": "oulu",
-		"km": 315,
-		"road": [[5, "E8", 3], [293, "E8"], [315, "E75", 3]],
-		"towns": [["Uusikaarlepyy", 85], ["Karleby", 121], ["Kalajoki", 197], ["Raahe", 251], ["Liminka", 293]],
+		"km": 323,
+		"road": [[5, "E8", 3], [300, "E8"], [323, "E75", 3]],
+		"towns": [["Uusikaarlepyy", 70], ["Kokkola", 121], ["Kalajoki", 197], ["Raahe", 252], ["Liminka", 300]],
 		"zones": [
 			[60, "fields", "Pohjanmaa"], [105, "coast", "Pohjanmaa"], [165, "fields", "Keski-Pohjanmaa"],
-			[230, "coast", "Pohjois-Pohjanmaa"], [315, "fields", "Pohjois-Pohjanmaa"]
+			[231, "coast", "Pohjois-Pohjanmaa"], [323, "fields", "Pohjois-Pohjanmaa"]
 		],
-		"via": [[85, 22.53, 63.52], [121, 23.13, 63.84], [197, 24.17, 64.26], [251, 24.48, 64.68], [293, 25.41, 64.81]]
+		"via": [[70, 22.53, 63.52], [121, 23.13, 63.84], [197, 23.95, 64.26], [252, 24.48, 64.68], [300, 25.41, 64.81]]
 	},
 	{
 		"a": "oulu",
@@ -272,17 +272,17 @@
 		"b": "kuopio",
 		"km": 179,
 		"road": [[154, "E63"], [179, "E63", 3]],
-		"towns": [["Iisalmi", 86], ["Lapinlahti", 129], ["Siilinjärvi", 156]],
-		"zones": [[55, "forest", "Kainuu"], [120, "lakes", "Pohjois-Savo"], [179, "fields", "Pohjois-Savo"]],
-		"via": [[86, 27.19, 63.56], [129, 27.39, 63.37], [156, 27.66, 63.08]]
+		"towns": [["Iisalmi", 86], ["Lapinlahti", 110], ["Siilinjärvi", 156]],
+		"zones": [[55, "forest", "Kainuu"], [122, "lakes", "Pohjois-Savo"], [179, "fields", "Pohjois-Savo"]],
+		"via": [[86, 27.19, 63.56], [110, 27.39, 63.37], [156, 27.66, 63.08]]
 	},
 	{
 		"a": "kajaani",
 		"b": "joensuu",
-		"km": 216,
+		"km": 225,
 		"road": "6",
-		"towns": [["Nurmes", 98], ["Juuka", 143]],
-		"zones": [[70, "taiga", "Kainuu"], [160, "lakes", "Pohjois-Karjala"], [216, "forest", "Pohjois-Karjala"]],
-		"via": [[98, 28.11, 63.54], [143, 28.33, 63.24]]
+		"towns": [["Nurmes", 108], ["Juuka", 145]],
+		"zones": [[75, "taiga", "Kainuu"], [165, "lakes", "Pohjois-Karjala"], [225, "forest", "Pohjois-Karjala"]],
+		"via": [[108, 29.14, 63.54], [145, 29.25, 63.24]]
 	}
 ]

@@ -1,19 +1,19 @@
 {
-	"Helsingfors": {
+	"Helsinki": {
 		"pl": "Stolica Finlandii od 1812 roku, założona w 1550 roku przez szwedzkiego króla Gustawa Wazę; morska twierdza Suomenlinna jest na liście UNESCO",
 		"en": "The capital of Finland since 1812, founded in 1550 by the Swedish king Gustav Vasa; the sea fortress of Suomenlinna is on UNESCO's list",
 		"cs": "Hlavní město Finska od roku 1812, založené roku 1550 švédským králem Gustavem Vasou; námořní pevnost Suomenlinna je na seznamu UNESCO",
 		"is": "Höfuðborg Finnlands frá 1812, stofnuð árið 1550 af Gústafi Vasa Svíakonungi; sjávarvirkið Suomenlinna er á heimsminjaskrá UNESCO",
 		"de": "Seit 1812 die Hauptstadt Finnlands, 1550 vom schwedischen König Gustav Wasa gegründet; die Seefestung Suomenlinna gehört zum UNESCO-Welterbe"
 	},
-	"Esbo": {
+	"Espoo": {
 		"pl": "Drugie co do wielkości miasto Finlandii; tu leżą kampus Uniwersytetu Aalto w Otaniemi i Park Narodowy Nuuksio z jeziorami i lasami",
 		"en": "Finland's second-largest city; the Aalto University campus in Otaniemi and the Nuuksio National Park, all lakes and forest, are here",
 		"cs": "Druhé největší město Finska; leží tu kampus Aaltovy univerzity v Otaniemi a národní park Nuuksio plný jezer a lesů",
 		"is": "Næststærsta borg Finnlands; hér eru háskólasvæði Aalto-háskólans í Otaniemi og Nuuksio-þjóðgarðurinn með vötnum og skógum",
 		"de": "Finnlands zweitgrößte Stadt; hier liegen der Campus der Aalto-Universität in Otaniemi und der Nationalpark Nuuksio mit Seen und Wäldern"
 	},
-	"Åbo": {
+	"Turku": {
 		"pl": "Najstarsze miasto Finlandii i jej stolica do 1812 roku; katedra konsekrowana w 1300 roku to narodowe sanktuarium kraju",
 		"en": "Finland's oldest city and its capital until 1812; the cathedral, consecrated in 1300, is the country's national shrine",
 		"cs": "Nejstarší město Finska a jeho hlavní město do roku 1812; katedrála vysvěcená roku 1300 je národní svatyní země",
@@ -21,7 +21,7 @@
 		"de": "Finnlands älteste Stadt und bis 1812 seine Hauptstadt; der 1300 geweihte Dom ist das Nationalheiligtum des Landes"
 	},
 	"Tampere": {
-		"pl": "Największe śródlądowe miasto Skandynawii, między dwoma jeziorami połączonymi bystrzami Tammerkoski; kolebka fińskiego przemysłu z ceglanymi fabrykami",
+		"pl": "Największe śródlądowe miasto krajów nordyckich, między dwoma jeziorami połączonymi bystrzami Tammerkoski; kolebka fińskiego przemysłu z ceglanymi fabrykami",
 		"en": "The largest inland city in the Nordic countries, between two lakes joined by the Tammerkoski rapids; the cradle of Finnish industry, with red-brick mills",
 		"cs": "Největší vnitrozemské město severských zemí mezi dvěma jezery spojenými peřejemi Tammerkoski; kolébka finského průmyslu s cihlovými továrnami",
 		"is": "Stærsta borg Norðurlanda fjarri sjó, milli tveggja vatna sem Tammerkoski-flúðirnar tengja; vagga finnsks iðnaðar með rauðum múrsteinsverksmiðjum",
@@ -43,10 +43,10 @@
 	},
 	"Kuopio": {
 		"pl": "Miasto nad jeziorem Kallavesi, znane z kalakukko: ryby i wieprzowiny zapiekanych w żytnim cieście",
-		"en": "A city on Lake Kallavesi, known for kalakukko, fish and pork baked inside a rye crust",
+		"en": "A city on Lake Kallavesi, known for kalakukko: fish and pork baked inside a rye crust",
 		"cs": "Město u jezera Kallavesi, známé kalakukkem: rybami a vepřovým masem zapečenými v žitném těstě",
-		"is": "Borg við Kallavesi-vatn, þekkt fyrir kalakukko, fisk og svínakjöt bakað inni í rúgbrauðsskorpu",
-		"de": "Eine Stadt am Kallavesi-See, bekannt für Kalakukko, Fisch und Schweinefleisch, in einer Roggenkruste gebacken"
+		"is": "Borg við Kallavesi-vatn, þekkt fyrir kalakukko: fisk og svínakjöt bakað inni í rúgbrauðsskorpu",
+		"de": "Eine Stadt am Kallavesi-See, bekannt für Kalakukko: Fisch und Schweinefleisch, in einer Roggenkruste gebacken"
 	},
 	"Lahti": {
 		"pl": "Miasto sportów zimowych na grzbiecie Salpausselkä; siedmiokrotnie gościło mistrzostwa świata w narciarstwie klasycznym",
@@ -83,7 +83,7 @@
 		"is": "Bærinn þar sem tónskáldið Jean Sibelius fæddist árið 1865; við Vanajavesi-vatn stendur kastali úr múrsteini frá miðöldum",
 		"de": "Die Stadt, in der 1865 der Komponist Jean Sibelius geboren wurde; am Vanajavesi steht eine mittelalterliche Backsteinburg"
 	},
-	"Vasa": {
+	"Vaasa": {
 		"pl": "Dwujęzyczne miasto nad Zatoką Botnicką; pobliski archipelag Kvarken wynurza się z morza o około 8 mm rocznie i jest na liście UNESCO",
 		"en": "A bilingual city on the Gulf of Bothnia; the nearby Kvarken archipelago rises from the sea by about 8 mm a year and is on UNESCO's list",
 		"cs": "Dvojjazyčné město u Botnického zálivu; nedaleké souostroví Kvarken se zvedá z moře asi o 8 mm ročně a je na seznamu UNESCO",
@@ -139,14 +139,14 @@
 		"is": "Þorp við Inari-vatn, miðstöð samískrar menningar með þinghúsinu Sajos og Siida-safninu; Inari er stærsta sveitarfélag Finnlands",
 		"de": "Ein Dorf am Inarisee, ein Zentrum der samischen Kultur mit dem Parlamentsgebäude Sajos und dem Siida-Museum; Inari ist Finnlands größte Gemeinde"
 	},
-	"Borgå": {
+	"Porvoo": {
 		"pl": "Drugie najstarsze miasto Finlandii z czerwonymi spichrzami nad rzeką; w 1809 roku obradował tu sejm w Porvoo",
 		"en": "Finland's second-oldest town, with red storehouses along its river; the Diet of Porvoo met here in 1809",
 		"cs": "Druhé nejstarší město Finska s červenými skladišti u řeky; roku 1809 tu zasedal sněm v Porvoo",
 		"is": "Næstelsti bær Finnlands með rauðum pakkhúsum við ána; Porvoo-þingið kom hér saman árið 1809",
 		"de": "Finnlands zweitälteste Stadt mit roten Speichern am Fluss; 1809 tagte hier der Landtag von Porvoo"
 	},
-	"Lovisa": {
+	"Loviisa": {
 		"pl": "Założona w 1745 roku i nazwana na cześć szwedzkiej królowej Luizy Ulryki; zatoki strzeże morska twierdza Svartholm",
 		"en": "Founded in 1745 and named after the Swedish queen Louisa Ulrika; the sea fortress of Svartholm guards its bay",
 		"cs": "Založena roku 1745 a pojmenována po švédské královně Luise Ulrice; zátoku střeží námořní pevnost Svartholm",
@@ -184,7 +184,7 @@
 	"Rauma": {
 		"pl": "Stare Rauma, dzielnica około 600 drewnianych domów, jest na liście UNESCO; miasto słynie też z koronek klockowych",
 		"en": "Old Rauma, a quarter of some 600 wooden buildings, is on UNESCO's list; the town is also known for its bobbin lace",
-		"cs": "Staré Rauma, čtvrť asi 600 dřevěných domů, je na seznamu UNESCO; město je známé i paličkovanou krajkou",
+		"cs": "Stará Rauma, čtvrť asi 600 dřevěných domů, je na seznamu UNESCO; město je známé i paličkovanou krajkou",
 		"is": "Gamla Rauma, hverfi um 600 timburhúsa, er á heimsminjaskrá UNESCO; bærinn er einnig þekktur fyrir knipplinga",
 		"de": "Alt-Rauma, ein Viertel aus rund 600 Holzhäusern, ist UNESCO-Welterbe; die Stadt ist auch für ihre Klöppelspitzen bekannt"
 	},
@@ -244,7 +244,7 @@
 		"is": "Steinkirkjan frá 16. öld er ein sú elsta í Norður-Finnlandi",
 		"de": "Die Steinkirche aus dem 16. Jahrhundert gehört zu den ältesten in Nordfinnland"
 	},
-	"Karleby": {
+	"Kokkola": {
 		"pl": "Miasto założone w 1620 roku; w dzielnicy Neristan zachowały się drewniane domy z XVIII i XIX wieku",
 		"en": "Founded in 1620; the Neristan quarter keeps its wooden houses of the 18th and 19th centuries",
 		"cs": "Město založené roku 1620; ve čtvrti Neristan se zachovaly dřevěné domy z 18. a 19. století",

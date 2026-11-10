@@ -1,5 +1,5 @@
 {
-	"Helsingfors": [
+	"Helsinki": [
 		{
 			"kind": "fi_helsinki_cathedral",
 			"name": {
@@ -19,7 +19,7 @@
 			"local": "Helsingin tuomiokirkko"
 		}
 	],
-	"Esbo": [
+	"Espoo": [
 		{
 			"kind": "fi_espoo_cathedral",
 			"name": {
@@ -39,7 +39,7 @@
 			"local": "Espoon tuomiokirkko"
 		}
 	],
-	"Åbo": [
+	"Turku": [
 		{
 			"kind": "fi_turku_castle",
 			"name": {
@@ -227,7 +227,7 @@
 			"local": "Hämeen linna"
 		}
 	],
-	"Vasa": [
+	"Vaasa": [
 		{
 			"kind": "fi_vaasa_replot_bridge",
 			"name": {

@@ -1,11 +1,11 @@
 {
-	"Helsingfors": "Helsinki",
-	"Esbo": "Espoo",
-	"Åbo": "Turku",
-	"Vasa": "Vaasa",
-	"Borgå": "Porvoo",
-	"Lovisa": "Loviisa",
-	"Karleby": "Kokkola",
+	"Helsinki": {"under": "Helsingfors"},
+	"Espoo": {"under": "Esbo"},
+	"Turku": {"under": "Åbo"},
+	"Vaasa": {"under": "Vasa"},
+	"Porvoo": {"under": "Borgå"},
+	"Loviisa": {"under": "Lovisa"},
+	"Kokkola": {"under": "Karleby"},
 	"Närpiö": "Närpes",
 	"Maalahti": "Malax",
 	"Uusikaarlepyy": "Nykarleby"
