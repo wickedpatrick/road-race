@@ -333,7 +333,19 @@
 			[70, "orchard", "Malatya"], [120, "lakes", "Elazığ"], [180, "mountains", "Elazığ"],
 			[250, "fields", "Diyarbakır"]
 		],
-		"via": [[102, 39.22, 38.68], [190, 39.76, 38.27]]
+		"via": [[102, 39.22, 38.68], [190, 39.76, 38.27]],
+		"bridge": {
+			"from_km": 50,
+			"to_km": 50.7,
+			"name": {
+				"pl": "Most Kömürhan",
+				"en": "Kömürhan Bridge",
+				"cs": "Most Kömürhan",
+				"is": "Kömürhan-brúin",
+				"de": "Kömürhan-Brücke"
+			},
+			"kind": "stayed"
+		}
 	},
 	{
 		"a": "van",

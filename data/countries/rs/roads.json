@@ -13,7 +13,13 @@
 		"km": 94,
 		"road": "A1",
 		"towns": [["Inđija", 45], ["Stara Pazova", 58]],
-		"zones": [[25, "upland", "Fruška gora"], [94, "fields", "Srem"]]
+		"zones": [[25, "upland", "Fruška gora"], [94, "fields", "Srem"]],
+		"bridge": {
+			"from_km": 24,
+			"to_km": 26.2,
+			"name": {"pl": "Most Beška", "en": "Beška Bridge", "cs": "Most Beška", "is": "Beška-brúin", "de": "Beška-Brücke"},
+			"kind": "beam"
+		}
 	},
 	{
 		"a": "novi_sad",

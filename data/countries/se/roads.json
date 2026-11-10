@@ -165,7 +165,19 @@
 		"road": [[213, "E4"]],
 		"towns": [["Söderhamn", 75], ["Hudiksvall", 135], ["Njurundabommen", 198]],
 		"zones": [[35, "forest", "Gästrikland"], [150, "coast", "Hälsingekusten"], [213, "forest", "Medelpad"]],
-		"via": [[75, 17.06, 61.3], [135, 17.1, 61.73], [198, 17.37, 62.26]]
+		"via": [[75, 17.06, 61.3], [135, 17.1, 61.73], [198, 17.37, 62.26]],
+		"bridge": {
+			"from_km": 210.8,
+			"to_km": 212.2,
+			"name": {
+				"pl": "Most w Sundsvall",
+				"en": "Sundsvall Bridge",
+				"cs": "Most v Sundsvallu",
+				"is": "Sundsvall-brúin",
+				"de": "Sundsvallbrücke"
+			},
+			"kind": "beam"
+		}
 	},
 	{
 		"a": "sundsvall",

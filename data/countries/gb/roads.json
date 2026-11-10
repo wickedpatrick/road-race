@@ -261,7 +261,19 @@
 					"de": "Zwei Autobahntunnel der M4 unter einem Hügel in Newport, unter den ersten Autobahntunneln Großbritanniens (1967)"
 				}
 			}
-		]
+		],
+		"bridge": {
+			"from_km": 21.4,
+			"to_km": 26.5,
+			"name": {
+				"pl": "Most Prince of Wales (Severn)",
+				"en": "Prince of Wales Bridge (Second Severn Crossing)",
+				"cs": "Most prince z Walesu (Severn)",
+				"is": "Prince-of-Wales-brúin yfir Severn",
+				"de": "Prince-of-Wales-Brücke (Severn)"
+			},
+			"kind": "stayed"
+		}
 	},
 	{
 		"a": "cardiff",
@@ -443,7 +455,18 @@
 		"km": 130,
 		"road": [[60, "A46"], [120, "A15"], [130, "A63"]],
 		"towns": [["Newark-on-Trent", 30], ["Lincoln", 60], ["Brigg", 98], ["Barton-upon-Humber", 115]],
-		"zones": [[45, "fields", "Trent Vale"], [100, "fields", "Lincoln Cliff"], [130, "coast", "Humber Estuary"]]
+		"zones": [[45, "fields", "Trent Vale"], [100, "fields", "Lincoln Cliff"], [130, "coast", "Humber Estuary"]],
+		"bridge": {
+			"from_km": 116.5,
+			"to_km": 118.7,
+			"name": {
+				"pl": "Most Humber",
+				"en": "Humber Bridge",
+				"cs": "Humber Bridge",
+				"is": "Humber-brúin",
+				"de": "Humber-Brücke"
+			}
+		}
 	},
 	{
 		"a": "manchester",
@@ -636,7 +659,19 @@
 		"zones": [
 			[14, "fields", "Lothian"], [30, "coast", "Firth of Forth"], [70, "upland", "Ochil Hills"],
 			[100, "fields", "Carse of Gowrie"]
-		]
+		],
+		"bridge": {
+			"from_km": 14,
+			"to_km": 16.7,
+			"name": {
+				"pl": "Queensferry Crossing",
+				"en": "Queensferry Crossing",
+				"cs": "Queensferry Crossing",
+				"is": "Queensferry Crossing",
+				"de": "Queensferry Crossing"
+			},
+			"kind": "stayed"
+		}
 	},
 	{
 		"a": "glasgow",
@@ -678,7 +713,19 @@
 			[14, "fields", "Lothian"], [30, "coast", "Firth of Forth"], [70, "upland", "Ochil Hills"],
 			[125, "forest", "Highland Perthshire"], [168, "highland", "Drumochter"], [215, "forest", "Cairngorms"],
 			[250, "highland", "Monadhliath"]
-		]
+		],
+		"bridge": {
+			"from_km": 14,
+			"to_km": 16.7,
+			"name": {
+				"pl": "Queensferry Crossing",
+				"en": "Queensferry Crossing",
+				"cs": "Queensferry Crossing",
+				"is": "Queensferry Crossing",
+				"de": "Queensferry Crossing"
+			},
+			"kind": "stayed"
+		}
 	},
 	{
 		"a": "glasgow",

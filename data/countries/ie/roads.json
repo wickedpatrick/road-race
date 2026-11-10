@@ -84,7 +84,19 @@
 		"road": "N25",
 		"towns": [["New Ross", 37], ["Glenmore", 44]],
 		"zones": [[38, "fields", "County Wexford"], [50, "upland", "County Kilkenny"], [58, "fields", "County Waterford"]],
-		"via": [[37, -6.94, 52.4], [44, -7.02, 52.35]]
+		"via": [[37, -6.94, 52.4], [44, -7.02, 52.35]],
+		"bridge": {
+			"from_km": 38.2,
+			"to_km": 39.1,
+			"name": {
+				"pl": "Most Rose Fitzgerald Kennedy",
+				"en": "Rose Fitzgerald Kennedy Bridge",
+				"cs": "Most Rose Fitzgerald Kennedy",
+				"is": "Rose-Fitzgerald-Kennedy-brúin",
+				"de": "Rose-Fitzgerald-Kennedy-Brücke"
+			},
+			"kind": "stayed"
+		}
 	},
 	{
 		"a": "waterford",

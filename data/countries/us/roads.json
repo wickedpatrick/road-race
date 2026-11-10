@@ -1557,7 +1557,19 @@
 				-86.8,
 				33.52
 			]
-		]
+		],
+		"bridge": {
+			"from_km": 33.1,
+			"to_km": 41.95,
+			"name": {
+				"pl": "Twin Span przez jezioro Pontchartrain (I-10)",
+				"en": "I-10 Twin Span Bridge (Lake Pontchartrain)",
+				"cs": "Twin Span přes jezero Pontchartrain (I-10)",
+				"is": "Twin Span-brúin yfir Pontchartrain-vatn (I-10)",
+				"de": "Twin-Span-Brücke über den Lake Pontchartrain (I-10)"
+			},
+			"kind": "beam"
+		}
 	},
 	{
 		"a": "houston",
@@ -3542,7 +3554,19 @@
 				-121.78,
 				47.5
 			]
-		]
+		],
+		"bridge": {
+			"from_km": 442.0,
+			"to_km": 444.0,
+			"name": {
+				"pl": "Pływający most Lacey V. Murrow (I-90)",
+				"en": "Lacey V. Murrow Memorial Bridge (I-90 floating bridge)",
+				"cs": "Plovoucí most Lacey V. Murrow (I-90)",
+				"is": "Fljótandi brúin Lacey V. Murrow (I-90)",
+				"de": "Schwimmbrücke Lacey V. Murrow (I-90)"
+			},
+			"kind": "beam"
+		}
 	},
 	{
 		"a": "spokane",
