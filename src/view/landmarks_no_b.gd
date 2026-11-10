@@ -158,12 +158,14 @@ static func _narvik_halogaland() -> void:
 static func _tromso_ishavskatedralen() -> void:
 	_poly([-22, 0, -22, 14, -6, 24, 10, 18, 22, 22, 22, 0], Color("8a96a2"))
 	_r(-22, 0, 22, 1, SNOW)
-	# the stepped triangular planes, from the low back ones to the high front one
+	# the stepped triangular planes, the big one at the back first and each smaller, lighter one in front of it, so
+	# every step shows as a band with its shadowed left edge
 	var shades := [Color("c9ced3"), Color("d6dadf"), Color("e2e6ea"), Color("eef1f4"), Color("f8fafb")]
-	for k in 5:
+	for i in 5:
+		var k := 4 - i
 		var w := 9.0 + k * 3.2
 		var h := 14.0 + k * 5.2
-		_poly([-w, 1, w, 1, 0, 1 + h], shades[k])
+		_poly([-w, 1, w, 1, 0, 1 + h], shades[i])
 		_poly([-w, 1, -w + 0.6, 1, 0, 1 + h - 0.8, 0, 1 + h], Color("9aa2aa"))
 	# the glass front
 	_poly([-5.5, 1, 5.5, 1, 0, 14], Color("6a8fb6"))
