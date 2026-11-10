@@ -1,0 +1,492 @@
+[
+	{
+		"a": "oslo",
+		"b": "drammen",
+		"km": 40,
+		"road": [[40, "E18", 3]],
+		"towns": [["Sandvika", 14], ["Asker", 22], ["Lier", 32]],
+		"zones": [[8, "industrial", "Oslo"], [27, "forest", "Akershus"], [40, "fields", "Buskerud"]],
+		"via": [[14, 10.52, 59.89], [22, 10.43, 59.83], [32, 10.25, 59.79]]
+	},
+	{
+		"a": "drammen",
+		"b": "kristiansand",
+		"km": 285,
+		"road": [[145, "E18", 3], [190, "E18"], [285, "E18", 3]],
+		"towns": [
+			["Holmestrand", 30], ["Sandefjord", 77], ["Larvik", 97], ["Porsgrunn", 120], ["Tvedestrand", 195],
+			["Arendal", 215], ["Grimstad", 239], ["Lillesand", 258]
+		],
+		"zones": [
+			[20, "fields", "Buskerud"], [110, "fields", "Vestfold"], [180, "forest", "Telemark"],
+			[255, "coast", "Agder"], [285, "forest", "Agder"]
+		],
+		"via": [
+			[30, 10.31, 59.49], [77, 10.22, 59.13], [97, 10.03, 59.05], [126, 9.72, 59.05], [195, 8.93, 58.62],
+			[215, 8.77, 58.47], [239, 8.56, 58.36], [258, 8.37, 58.26]
+		],
+		"bridge": {
+			"from_km": 126.7,
+			"to_km": 127.3,
+			"kind": "stayed",
+			"name": {
+				"pl": "Most Grenlandzki",
+				"en": "Grenland Bridge",
+				"cs": "Grenlandský most",
+				"is": "Grenland-brúin",
+				"de": "Grenlandbrücke"
+			}
+		}
+	},
+	{
+		"a": "kristiansand",
+		"b": "stavanger",
+		"km": 233,
+		"road": [[42, "E39", 3], [215, "E39"], [233, "E39", 3]],
+		"towns": [
+			["Mandal", 42], ["Lyngdal", 75], ["Flekkefjord", 115], ["Helleland", 155], ["Vikeså", 170],
+			["Ålgård", 195], ["Sandnes", 218]
+		],
+		"zones": [
+			[42, "forest", "Agder"], [120, "coast", "Lister"], [175, "upland", "Dalane"], [200, "upland", "Rogaland"],
+			[233, "fields", "Jæren"]
+		],
+		"via": [
+			[42, 7.46, 58.03], [75, 7.07, 58.14], [115, 6.66, 58.3], [155, 6.13, 58.53], [170, 6.08, 58.64],
+			[195, 5.85, 58.77], [218, 5.74, 58.85]
+		]
+	},
+	{
+		"a": "stavanger",
+		"b": "haugesund",
+		"km": 79,
+		"road": [[58, "E39"], [79, "E134"]],
+		"towns": [["Aksdal", 58]],
+		"zones": [
+			[8, "industrial", "Stavanger"], [25, "coast", "Ryfylke"], [36, "coast", "Boknafjorden"],
+			[79, "coast", "Haugalandet"]
+		],
+		"via": [[25, 5.76, 59.1], [36, 5.55, 59.25], [58, 5.45, 59.42]],
+		"tunnels": [
+			{
+				"from_km": 8,
+				"to_km": 13.9,
+				"name": {
+					"pl": "Tunel Byfjord",
+					"en": "Byfjord Tunnel",
+					"cs": "Tunel Byfjord",
+					"is": "Byfjord-göngin",
+					"de": "Byfjordtunnel"
+				},
+				"fact": {
+					"pl": "Podmorski tunel z 1992 roku schodzący 223 metry pod poziom morza",
+					"en": "An undersea tunnel of 1992 that goes down to 223 metres below sea level",
+					"cs": "Podmořský tunel z roku 1992, který klesá 223 metrů pod hladinu moře",
+					"is": "Neðansjávargöng frá 1992 sem ná 223 metra undir sjávarmál",
+					"de": "Ein Unterwassertunnel von 1992, der bis 223 Meter unter den Meeresspiegel hinabführt"
+				}
+			},
+			{
+				"from_km": 17,
+				"to_km": 21.4,
+				"name": {
+					"pl": "Tunel Mastrafjord",
+					"en": "Mastrafjord Tunnel",
+					"cs": "Tunel Mastrafjord",
+					"is": "Mastrafjord-göngin",
+					"de": "Mastrafjordtunnel"
+				},
+				"fact": {
+					"pl": "Drugi z podmorskich tuneli Rennfast, łączących Stavanger z wyspą Rennesøy",
+					"en": "The second of the Rennfast undersea tunnels linking Stavanger with the island of Rennesøy",
+					"cs": "Druhý z podmořských tunelů Rennfast, které spojují Stavanger s ostrovem Rennesøy",
+					"is": "Önnur af Rennfast-neðansjávargöngunum sem tengja Stavanger við eyjuna Rennesøy",
+					"de": "Der zweite der Rennfast-Unterwassertunnel, die Stavanger mit der Insel Rennesøy verbinden"
+				}
+			}
+		],
+		"ferry": {
+			"from_km": 25,
+			"to_km": 36,
+			"name": "Mortavika – Arsvågen",
+			"fact": {
+				"pl": "Prom drogi E39 przez Boknafjord płynie około 25 minut; tunel Rogfast pod fjordem ma go kiedyś zastąpić",
+				"en": "The E39 ferry across the Boknafjord takes about 25 minutes; the Rogfast tunnel under the fjord is to replace it one day",
+				"cs": "Trajekt silnice E39 přes Boknafjord pluje asi 25 minut; jednou ho má nahradit tunel Rogfast pod fjordem",
+				"is": "Ferja E39 yfir Boknafjörð siglir í um 25 mínútur; Rogfast-göngin undir firðinum eiga einhvern tíma að leysa hana af",
+				"de": "Die Fähre der E39 über den Boknafjord braucht etwa 25 Minuten; eines Tages soll sie der Rogfast-Tunnel unter dem Fjord ersetzen"
+			}
+		}
+	},
+	{
+		"a": "haugesund",
+		"b": "bergen",
+		"km": 147,
+		"road": [[20, "E134"], [147, "E39"]],
+		"towns": [["Aksdal", 20], ["Leirvik", 75], ["Os", 123]],
+		"zones": [
+			[20, "coast", "Haugalandet"], [62, "forest", "Sunnhordland"], [88, "coast", "Stord"],
+			[115, "coast", "Bjørnafjorden"], [147, "forest", "Vestland"]
+		],
+		"via": [
+			[20, 5.45, 59.42], [56, 5.43, 59.69], [75, 5.5, 59.78], [88, 5.5, 59.88], [115, 5.38, 60.15],
+			[123, 5.47, 60.19]
+		],
+		"tunnels": [
+			{
+				"from_km": 52,
+				"to_km": 59.9,
+				"name": {
+					"pl": "Tunel pod Bømlafjordem",
+					"en": "Bømlafjord Tunnel",
+					"cs": "Tunel Bømlafjord",
+					"is": "Bømlafjord-göngin",
+					"de": "Bømlafjordtunnel"
+				},
+				"fact": {
+					"pl": "Podmorski tunel z 2000 roku, długi na prawie 8 km, schodzi 260 metrów pod poziom morza",
+					"en": "An undersea tunnel of 2000, nearly 8 km long, going down to 260 metres below sea level",
+					"cs": "Podmořský tunel z roku 2000, dlouhý skoro 8 km, klesá 260 metrů pod hladinu moře",
+					"is": "Neðansjávargöng frá 2000, tæplega 8 km löng, sem ná 260 metra undir sjávarmál",
+					"de": "Ein Unterwassertunnel von 2000, fast 8 km lang, der bis 260 Meter unter den Meeresspiegel reicht"
+				}
+			}
+		],
+		"ferry": {
+			"from_km": 88,
+			"to_km": 115,
+			"name": "Sandvikvåg – Halhjem",
+			"fact": {
+				"pl": "Prom drogi E39 przez Bjørnafjord płynie około 40 minut",
+				"en": "The E39 ferry across the Bjørnafjord takes about 40 minutes",
+				"cs": "Trajekt silnice E39 přes Bjørnafjord pluje asi 40 minut",
+				"is": "Ferja E39 yfir Bjørnafjörð siglir í um 40 mínútur",
+				"de": "Die Fähre der E39 über den Bjørnafjord braucht etwa 40 Minuten"
+			}
+		}
+	},
+	{
+		"a": "bergen",
+		"b": "flam",
+		"km": 167,
+		"road": [[12, "E16", 3], [167, "E16"]],
+		"towns": [["Dale", 55], ["Voss", 100], ["Gudvangen", 146]],
+		"zones": [
+			[15, "industrial", "Bergen"], [60, "coast", "Vestland"], [110, "mountains", "Voss"],
+			[146, "mountains", "Nærøydalen"], [167, "mountains", "Aurland"]
+		],
+		"via": [[15, 5.47, 60.42], [55, 5.8, 60.59], [100, 6.42, 60.63], [146, 6.84, 60.88]],
+		"tunnels": [
+			{
+				"from_km": 147,
+				"to_km": 158.4,
+				"name": {
+					"pl": "Tunel Gudvanga",
+					"en": "Gudvanga Tunnel",
+					"cs": "Tunel Gudvanga",
+					"is": "Gudvanga-göngin",
+					"de": "Gudvangatunnel"
+				},
+				"fact": {
+					"pl": "Tunel długości 11,4 km między Nærøyfjordem a Aurlandsfjordem",
+					"en": "An 11.4 km tunnel between the Nærøyfjord and the Aurlandsfjord",
+					"cs": "Tunel dlouhý 11,4 km mezi Nærøyfjordem a Aurlandsfjordem",
+					"is": "11,4 km löng göng milli Nærøyfjarðar og Aurlandsfjarðar",
+					"de": "Ein 11,4 km langer Tunnel zwischen dem Nærøyfjord und dem Aurlandsfjord"
+				}
+			}
+		]
+	},
+	{
+		"a": "flam",
+		"b": "oslo",
+		"km": 330,
+		"road": [[318, "E16"], [330, "E16", 3]],
+		"towns": [
+			["Aurland", 9], ["Lærdal", 40], ["Borgund", 70], ["Vang", 108], ["Fagernes", 155], ["Bagn", 200],
+			["Hønefoss", 275], ["Sandvika", 318]
+		],
+		"zones": [
+			[10, "coast", "Aurlandsfjorden"], [45, "mountains", "Lærdal"], [100, "mountains", "Filefjell"],
+			[220, "forest", "Valdres"], [290, "forest", "Ringerike"], [322, "forest", "Akershus"],
+			[330, "industrial", "Oslo"]
+		],
+		"via": [
+			[9, 7.19, 60.9], [40, 7.48, 61.1], [70, 7.83, 61.05], [90, 8.2, 61.11], [108, 8.57, 61.12],
+			[155, 9.24, 60.99], [200, 9.56, 60.82], [275, 10.26, 60.17], [318, 10.52, 59.89]
+		],
+		"weather": "snow",
+		"tunnels": [
+			{
+				"from_km": 11,
+				"to_km": 35.5,
+				"name": {
+					"pl": "Tunel Lærdal",
+					"en": "Lærdal Tunnel",
+					"cs": "Tunel Lærdal",
+					"is": "Lærdal-göngin",
+					"de": "Lærdalstunnel"
+				},
+				"fact": {
+					"pl": "Najdłuższy tunel drogowy świata: 24,5 km, otwarty w 2000 roku; trzy oświetlone na niebiesko groty dzielą go na odcinki",
+					"en": "The world's longest road tunnel: 24.5 km, opened in 2000; three caves lit in blue break up the drive",
+					"cs": "Nejdelší silniční tunel světa: 24,5 km, otevřený roku 2000; tři modře nasvícené jeskyně dělí jízdu na úseky",
+					"is": "Lengstu veggöng heims: 24,5 km, opnuð árið 2000; þrír blálýstir hellar skipta akstrinum upp",
+					"de": "Der längste Straßentunnel der Welt: 24,5 km, im Jahr 2000 eröffnet; drei blau beleuchtete Hallen unterbrechen die Fahrt"
+				}
+			}
+		]
+	},
+	{
+		"a": "oslo",
+		"b": "lillehammer",
+		"km": 180,
+		"road": [[150, "E6", 3], [180, "E6"]],
+		"towns": [["Jessheim", 48], ["Eidsvoll", 68], ["Hamar", 125], ["Brumunddal", 140], ["Moelv", 150], ["Biri", 163]],
+		"zones": [
+			[12, "industrial", "Oslo"], [80, "fields", "Akershus"], [115, "lakes", "Mjøsa"],
+			[148, "fields", "Hedmarken"], [180, "lakes", "Innlandet"]
+		],
+		"via": [
+			[48, 11.18, 60.14], [68, 11.26, 60.33], [125, 11.07, 60.79], [140, 10.94, 60.88], [150, 10.7, 60.93],
+			[163, 10.61, 60.96]
+		],
+		"bridge": {
+			"from_km": 154.5,
+			"to_km": 155.9,
+			"kind": "beam",
+			"name": {
+				"pl": "Most na Mjøsie",
+				"en": "Mjøsa Bridge",
+				"cs": "Most přes Mjøsu",
+				"is": "Mjøsa-brúin",
+				"de": "Mjøsabrücke"
+			}
+		}
+	},
+	{
+		"a": "lillehammer",
+		"b": "trondheim",
+		"km": 345,
+		"road": [[325, "E6"], [345, "E6", 3]],
+		"towns": [
+			["Ringebu", 60], ["Vinstra", 85], ["Otta", 118], ["Dombås", 160], ["Hjerkinn", 195], ["Oppdal", 240],
+			["Berkåk", 280], ["Støren", 310]
+		],
+		"zones": [
+			[118, "forest", "Gudbrandsdalen"], [165, "mountains", "Gudbrandsdalen"], [225, "mountains", "Dovrefjell"],
+			[255, "mountains", "Oppdal"], [315, "forest", "Gauldalen"], [345, "fields", "Trøndelag"]
+		],
+		"via": [
+			[60, 10.14, 61.53], [85, 9.75, 61.6], [118, 9.54, 61.77], [160, 9.12, 62.07], [195, 9.6, 62.22],
+			[240, 9.69, 62.59], [280, 10.01, 62.82], [310, 10.29, 63.04]
+		],
+		"weather": "snow"
+	},
+	{
+		"a": "trondheim",
+		"b": "molde",
+		"km": 215,
+		"road": [[12, "E6", 3], [215, "E39"]],
+		"towns": [["Orkanger", 42], ["Vinjeøra", 95], ["Halsa", 127], ["Batnfjordsøra", 172]],
+		"zones": [
+			[42, "fields", "Trøndelag"], [95, "forest", "Hemne"], [128, "coast", "Halsafjorden"],
+			[134, "coast", "Halsafjorden"], [215, "coast", "Nordmøre"]
+		],
+		"via": [[42, 9.85, 63.31], [95, 9, 63.2], [127, 8.19, 63.05], [134, 8.1, 63.03], [150, 7.77, 63], [172, 7.69, 62.9]],
+		"ferry": {
+			"from_km": 128,
+			"to_km": 134,
+			"name": "Halsa – Kanestraum",
+			"fact": {
+				"pl": "Krótki prom drogi E39 przez Halsafjord, jeden z kilku na tej drodze wzdłuż zachodniego wybrzeża",
+				"en": "A short E39 ferry across the Halsafjord, one of several on this road along the west coast",
+				"cs": "Krátký trajekt silnice E39 přes Halsafjord, jeden z několika na této silnici podél západního pobřeží",
+				"is": "Stutt ferja E39 yfir Halsafjörð, ein af nokkrum á þessum vegi meðfram vesturströndinni",
+				"de": "Eine kurze Fähre der E39 über den Halsafjord, eine von mehreren auf dieser Straße entlang der Westküste"
+			}
+		}
+	},
+	{
+		"a": "molde",
+		"b": "alesund",
+		"km": 82,
+		"road": [[82, "E39"]],
+		"towns": [["Vestnes", 12], ["Sjøholt", 45], ["Spjelkavik", 72]],
+		"zones": [[11, "coast", "Romsdalsfjorden"], [45, "coast", "Romsdal"], [82, "coast", "Sunnmøre"]],
+		"via": [[12, 7.06, 62.6], [45, 6.81, 62.48], [72, 6.37, 62.46]],
+		"ferry": {
+			"from_km": 0,
+			"to_km": 11,
+			"name": "Molde – Vestnes",
+			"fact": {
+				"pl": "Prom drogi E39 przez Romsdalsfjord płynie około 35 minut",
+				"en": "The E39 ferry across the Romsdalsfjord takes about 35 minutes",
+				"cs": "Trajekt silnice E39 přes Romsdalsfjord pluje asi 35 minut",
+				"is": "Ferja E39 yfir Romsdalsfjörð siglir í um 35 mínútur",
+				"de": "Die Fähre der E39 über den Romsdalsfjord braucht etwa 35 Minuten"
+			}
+		}
+	},
+	{
+		"a": "alesund",
+		"b": "lillehammer",
+		"km": 370,
+		"road": [[70, "E39"], [210, "E136"], [370, "E6"]],
+		"towns": [
+			["Spjelkavik", 10], ["Sjøholt", 37], ["Vestnes", 70], ["Åndalsnes", 110], ["Bjorli", 155], ["Lesja", 180],
+			["Dombås", 210], ["Otta", 252], ["Vinstra", 285], ["Ringebu", 310]
+		],
+		"zones": [
+			[37, "coast", "Sunnmøre"], [85, "coast", "Romsdal"], [160, "mountains", "Romsdalen"],
+			[210, "mountains", "Lesja"], [310, "forest", "Gudbrandsdalen"], [370, "forest", "Innlandet"]
+		],
+		"via": [
+			[10, 6.37, 62.46], [37, 6.81, 62.48], [70, 7.06, 62.6], [80, 7.15, 62.53], [110, 7.69, 62.57],
+			[155, 8.2, 62.26], [180, 8.86, 62.12], [210, 9.12, 62.07], [252, 9.54, 61.77], [285, 9.75, 61.6],
+			[310, 10.14, 61.53]
+		],
+		"weather": "snow",
+		"bridge": {
+			"from_km": 79.4,
+			"to_km": 80.7,
+			"kind": "beam",
+			"name": {
+				"pl": "Most na Tresfjordzie",
+				"en": "Tresfjord Bridge",
+				"cs": "Most přes Tresfjord",
+				"is": "Tresfjord-brúin",
+				"de": "Tresfjordbrücke"
+			}
+		}
+	},
+	{
+		"a": "trondheim",
+		"b": "moirana",
+		"km": 475,
+		"road": [[30, "E6", 3], [475, "E6"]],
+		"towns": [
+			["Stjørdal", 33], ["Levanger", 80], ["Verdal", 92], ["Steinkjer", 125], ["Snåsa", 175], ["Grong", 210],
+			["Namsskogan", 270], ["Majavatn", 305], ["Trofors", 350], ["Mosjøen", 385]
+		],
+		"zones": [
+			[35, "fields", "Trøndelag"], [125, "fields", "Innherred"], [215, "forest", "Namdalen"],
+			[290, "taiga", "Namdalen"], [390, "taiga", "Helgeland"], [475, "mountains", "Helgeland"]
+		],
+		"via": [
+			[33, 10.92, 63.47], [80, 11.3, 63.75], [92, 11.48, 63.79], [125, 11.5, 64.01], [175, 12.38, 64.25],
+			[210, 12.31, 64.46], [270, 13.16, 64.93], [305, 13.37, 65.17], [350, 13.4, 65.53], [385, 13.2, 65.84]
+		]
+	},
+	{
+		"a": "moirana",
+		"b": "bodo",
+		"km": 233,
+		"road": [[170, "E6"], [233, "80"]],
+		"towns": [["Rognan", 150], ["Fauske", 170]],
+		"zones": [
+			[60, "taiga", "Dunderlandsdalen"], [115, "mountains", "Saltfjellet"], [170, "forest", "Saltdal"],
+			[233, "coast", "Salten"]
+		],
+		"via": [[80, 15.32, 66.55], [150, 15.4, 67.1], [170, 15.39, 67.26]]
+	},
+	{
+		"a": "bodo",
+		"b": "narvik",
+		"km": 282,
+		"road": [[63, "80"], [282, "E6"]],
+		"towns": [["Fauske", 63], ["Straumen", 100], ["Ballangen", 240]],
+		"zones": [
+			[63, "coast", "Salten"], [190, "mountains", "Sørfold"], [197, "coast", "Tysfjorden"],
+			[282, "mountains", "Ofoten"]
+		],
+		"via": [
+			[63, 15.39, 67.26], [100, 15.6, 67.35], [150, 15.9, 67.7], [190, 16, 68], [197, 16.1, 68.05],
+			[240, 16.83, 68.34]
+		],
+		"ferry": {
+			"from_km": 190,
+			"to_km": 197,
+			"name": "Bognes – Skarberget",
+			"fact": {
+				"pl": "Jedyny prom na drodze E6: przez Tysfjord płynie się około 25 minut",
+				"en": "The only ferry on the E6: the crossing of the Tysfjord takes about 25 minutes",
+				"cs": "Jediný trajekt na silnici E6: plavba přes Tysfjord trvá asi 25 minut",
+				"is": "Eina ferjan á E6: siglingin yfir Tysfjörð tekur um 25 mínútur",
+				"de": "Die einzige Fähre auf der E6: Die Überfahrt über den Tysfjord dauert etwa 25 Minuten"
+			}
+		},
+		"bridge": {
+			"from_km": 262,
+			"to_km": 262.7,
+			"kind": "suspension",
+			"name": {
+				"pl": "Most Skjomen",
+				"en": "Skjomen Bridge",
+				"cs": "Most Skjomen",
+				"is": "Skjomen-brúin",
+				"de": "Skjomenbrücke"
+			}
+		}
+	},
+	{
+		"a": "narvik",
+		"b": "tromso",
+		"km": 240,
+		"road": [[170, "E6"], [240, "E8"]],
+		"towns": [["Bjerkvik", 16], ["Setermoen", 80], ["Nordkjosbotn", 170]],
+		"zones": [[30, "mountains", "Ofoten"], [120, "taiga", "Bardu"], [170, "taiga", "Troms"], [240, "coast", "Balsfjorden"]],
+		"via": [[16, 17.56, 68.55], [80, 18.35, 68.86], [170, 19.55, 69.22]],
+		"bridge": {
+			"from_km": 4.5,
+			"to_km": 6,
+			"kind": "suspension",
+			"name": {
+				"pl": "Most Hålogaland",
+				"en": "Hålogaland Bridge",
+				"cs": "Most Hålogaland",
+				"is": "Hålogaland-brúin",
+				"de": "Hålogalandbrücke"
+			}
+		}
+	},
+	{
+		"a": "tromso",
+		"b": "alta",
+		"km": 390,
+		"road": [[70, "E8"], [390, "E6"]],
+		"towns": [
+			["Nordkjosbotn", 70], ["Skibotn", 130], ["Olderdalen", 175], ["Storslett", 220], ["Burfjord", 270],
+			["Langfjordbotn", 350]
+		],
+		"zones": [
+			[70, "coast", "Balsfjorden"], [175, "mountains", "Lyngen"], [250, "mountains", "Nordreisa"],
+			[300, "coast", "Kvænangen"], [390, "coast", "Finnmark"]
+		],
+		"via": [
+			[70, 19.55, 69.22], [130, 20.27, 69.39], [175, 20.53, 69.6], [220, 21.03, 69.77], [270, 22.05, 69.94],
+			[350, 22.28, 70.03]
+		]
+	},
+	{
+		"a": "alta",
+		"b": "hammerfest",
+		"km": 140,
+		"road": [[85, "E6"], [140, "94"]],
+		"towns": [["Skaidi", 85], ["Kvalsund", 108]],
+		"zones": [[20, "forest", "Alta"], [85, "fjords", "Sennalandet"], [140, "coast", "Finnmark"]],
+		"via": [[85, 24.5, 70.43], [108, 24.03, 70.48]],
+		"bridge": {
+			"from_km": 112,
+			"to_km": 112.7,
+			"kind": "suspension",
+			"name": {
+				"pl": "Most Kvalsund",
+				"en": "Kvalsund Bridge",
+				"cs": "Most Kvalsund",
+				"is": "Kvalsund-brúin",
+				"de": "Kvalsundbrücke"
+			}
+		}
+	}
+]

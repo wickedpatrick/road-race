@@ -1,0 +1,184 @@
+{
+	"Oslo": {
+		"pl": "Stolica Norwegii u końca Oslofjordu, założona około 1040 roku; w ratuszu co roku wręcza się Pokojową Nagrodę Nobla",
+		"en": "The capital of Norway at the head of the Oslofjord, founded around 1040; the Nobel Peace Prize is awarded in its City Hall every year",
+		"cs": "Hlavní město Norska na konci Oslofjordu, založené kolem roku 1040; v jeho radnici se každý rok uděluje Nobelova cena míru",
+		"is": "Höfuðborg Noregs innst í Oslófirði, stofnuð um 1040; friðarverðlaun Nóbels eru afhent í ráðhúsi hennar ár hvert",
+		"de": "Die Hauptstadt Norwegens am Ende des Oslofjords, um 1040 gegründet; im Rathaus wird jedes Jahr der Friedensnobelpreis verliehen"
+	},
+	"Bergen": {
+		"pl": "Drugie co do wielkości miasto Norwegii, otoczone siedmioma górami; dawne miasto Hanzy i brama do fiordów",
+		"en": "Norway's second city, surrounded by seven mountains; an old Hanseatic town and the gateway to the fjords",
+		"cs": "Druhé největší město Norska obklopené sedmi horami; staré hanzovní město a brána k fjordům",
+		"is": "Næststærsta borg Noregs, umkringd sjö fjöllum; gamall Hansabær og hliðið að fjörðunum",
+		"de": "Norwegens zweitgrößte Stadt, von sieben Bergen umgeben; eine alte Hansestadt und das Tor zu den Fjorden"
+	},
+	"Trondheim": {
+		"pl": "Dawna stolica królestwa założona w 997 roku; od średniowiecza cel pielgrzymek do grobu świętego Olafa",
+		"en": "An old royal capital founded in 997; since the Middle Ages pilgrims have come to the grave of Saint Olaf",
+		"cs": "Stará královská metropole založená roku 997; od středověku cíl poutí ke hrobu svatého Olafa",
+		"is": "Forn höfuðstaður konungsríkisins, stofnaður 997; frá miðöldum hafa pílagrímar komið að gröf Ólafs helga",
+		"de": "Eine alte Königsstadt, 997 gegründet; seit dem Mittelalter pilgert man hierher zum Grab des heiligen Olav"
+	},
+	"Stavanger": {
+		"pl": "Miasto drewnianych białych domów, od lat 70. XX wieku centrum norweskiego przemysłu naftowego na Morzu Północnym",
+		"en": "A town of white wooden houses and, since the 1970s, the centre of Norway's North Sea oil industry",
+		"cs": "Město bílých dřevěných domů a od 70. let 20. století centrum norského ropného průmyslu v Severním moři",
+		"is": "Bær hvítra timburhúsa og frá áttunda áratugnum miðstöð norska olíuiðnaðarins í Norðursjó",
+		"de": "Eine Stadt weißer Holzhäuser und seit den 1970er-Jahren das Zentrum der norwegischen Nordseeölindustrie"
+	},
+	"Kristiansand": {
+		"pl": "Miasto założone w 1641 roku przez króla Chrystiana IV, z ulicami wytyczonymi w regularną siatkę",
+		"en": "A town founded in 1641 by King Christian IV, its streets laid out in a regular grid",
+		"cs": "Město založené roku 1641 králem Kristiánem IV., s ulicemi v pravidelné síti",
+		"is": "Bær stofnaður 1641 af Kristjáni 4. konungi, með götum í reglulegu neti",
+		"de": "Eine Stadt, 1641 von König Christian IV. gegründet, mit Straßen in einem regelmäßigen Raster"
+	},
+	"Drammen": {
+		"pl": "Miasto nad rzeką Drammenselva, która płynie do Drammensfjordu; dawny port eksportu drewna",
+		"en": "A town on the Drammenselva river where it flows into the Drammensfjord; an old timber port",
+		"cs": "Město na řece Drammenselva, kde se vlévá do Drammensfjordu; starý přístav pro vývoz dřeva",
+		"is": "Bær við ána Drammenselva þar sem hún rennur í Drammensfjörð; gömul timburhöfn",
+		"de": "Eine Stadt am Fluss Drammenselva, wo er in den Drammensfjord mündet; ein alter Holzhafen"
+	},
+	"Tromsø": {
+		"pl": "Największe miasto północnej Norwegii, daleko za kołem podbiegunowym; zimą słońce nie wschodzi tu przez prawie dwa miesiące",
+		"en": "The largest town in northern Norway, far beyond the Arctic Circle; in winter the sun does not rise for nearly two months",
+		"cs": "Největší město severního Norska daleko za polárním kruhem; v zimě tu slunce téměř dva měsíce nevychází",
+		"is": "Stærsti bær Norður-Noregs, langt norðan heimskautsbaugs; á veturna kemur sólin ekki upp í nærri tvo mánuði",
+		"de": "Die größte Stadt Nordnorwegens, weit jenseits des Polarkreises; im Winter geht die Sonne fast zwei Monate lang nicht auf"
+	},
+	"Ålesund": {
+		"pl": "Portowe miasto rybackie na wyspach przy wejściu do fiordów; słynie z suszonego dorsza i secesyjnej zabudowy",
+		"en": "A fishing port on islands at the mouth of the fjords, known for its dried cod and its Art Nouveau streets",
+		"cs": "Rybářský přístav na ostrovech u vstupu do fjordů, známý sušenou treskou a secesní zástavbou",
+		"is": "Fiskihöfn á eyjum við mynni fjarðanna, þekkt fyrir skreið og jugendstílshús",
+		"de": "Ein Fischereihafen auf Inseln an der Mündung der Fjorde, bekannt für Klippfisch und seine Jugendstilstraßen"
+	},
+	"Bodø": {
+		"pl": "Miasto tuż za kołem podbiegunowym; od czerwca do lipca słońce nie zachodzi tu przez kilka tygodni",
+		"en": "A town just north of the Arctic Circle; from June to July the sun does not set here for several weeks",
+		"cs": "Město kousek za polárním kruhem; od června do července tu slunce několik týdnů nezapadá",
+		"is": "Bær rétt norðan heimskautsbaugs; frá júní fram í júlí sest sólin ekki í nokkrar vikur",
+		"de": "Eine Stadt knapp nördlich des Polarkreises; von Juni bis Juli geht die Sonne hier mehrere Wochen lang nicht unter"
+	},
+	"Haugesund": {
+		"pl": "Miasto rybaków śledzi i armatorów nad cieśniną Karmsund; według tradycji pochowano tu Haralda Pięknowłosego",
+		"en": "A town of herring fishermen and shipowners on the Karmsund strait; tradition says Harald Fairhair is buried here",
+		"cs": "Město lovců sleďů a rejdařů u průlivu Karmsund; podle tradice je tu pohřben Harald Krásnovlasý",
+		"is": "Bær síldveiðimanna og útgerðarmanna við Karmsund; samkvæmt hefð er Haraldur hárfagri heygður hér",
+		"de": "Eine Stadt der Heringsfischer und Reeder am Karmsund; der Überlieferung nach liegt hier Harald Schönhaar begraben"
+	},
+	"Molde": {
+		"pl": "„Miasto róż” nad Romsdalsfjordem; z punktu widokowego Varden widać ponad 200 szczytów górskich",
+		"en": "The 'town of roses' on the Romsdalsfjord; from the Varden viewpoint more than 200 mountain peaks can be seen",
+		"cs": "„Město růží“ u Romsdalsfjordu; z vyhlídky Varden je vidět přes 200 horských vrcholů",
+		"is": "„Rósabærinn“ við Romsdalsfjörð; frá útsýnisstaðnum Varden sjást yfir 200 fjallatindar",
+		"de": "Die „Stadt der Rosen“ am Romsdalsfjord; vom Aussichtspunkt Varden sieht man über 200 Berggipfel"
+	},
+	"Lillehammer": {
+		"pl": "Miasto nad północnym krańcem jeziora Mjøsa, gospodarz zimowych igrzysk olimpijskich w 1994 roku",
+		"en": "A town at the north end of Lake Mjøsa, host of the 1994 Winter Olympics",
+		"cs": "Město na severním konci jezera Mjøsa, pořadatel zimních olympijských her 1994",
+		"is": "Bær við norðurenda vatnsins Mjøsa, gestgjafi vetrarólympíuleikanna 1994",
+		"de": "Eine Stadt am Nordende des Mjøsa-Sees, Gastgeber der Olympischen Winterspiele 1994"
+	},
+	"Mo i Rana": {
+		"pl": "Miasto hutnicze u końca Ranfjordu, kilkadziesiąt kilometrów od koła podbiegunowego",
+		"en": "A steel town at the head of the Ranfjord, a few dozen kilometres from the Arctic Circle",
+		"cs": "Hutnické město na konci Ranfjordu, několik desítek kilometrů od polárního kruhu",
+		"is": "Stáliðnaðarbær innst í Ranfirði, nokkra tugi kílómetra frá heimskautsbaugnum",
+		"de": "Eine Stahlstadt am Ende des Ranfjords, einige Dutzend Kilometer vom Polarkreis entfernt"
+	},
+	"Narvik": {
+		"pl": "Port wolny od lodu, przez który przez cały rok wywozi się koleją rudę żelaza ze szwedzkiej Kiruny",
+		"en": "An ice-free port through which iron ore from Kiruna in Sweden is shipped by rail all year round",
+		"cs": "Nezamrzající přístav, kterým se po železnici celý rok vyváží železná ruda ze švédské Kiruny",
+		"is": "Íslaus höfn sem járngrýti frá Kiruna í Svíþjóð er flutt um með járnbraut allt árið",
+		"de": "Ein eisfreier Hafen, über den das ganze Jahr Eisenerz aus dem schwedischen Kiruna per Bahn verschifft wird"
+	},
+	"Alta": {
+		"pl": "Największe miasto Finnmarku; na skałach nad fiordem zachowało się kilka tysięcy rytów naskalnych sprzed tysięcy lat",
+		"en": "The largest town in Finnmark; thousands of rock carvings, several thousand years old, survive on the rocks by the fjord",
+		"cs": "Největší město Finnmarku; na skalách u fjordu se dochovaly tisíce skalních rytin starých tisíce let",
+		"is": "Stærsti bær Finnmerkur; á klöppunum við fjörðinn eru þúsundir bergristna sem eru þúsunda ára gamlar",
+		"de": "Die größte Stadt der Finnmark; auf den Felsen am Fjord sind Tausende Jahrtausende alte Felsritzungen erhalten"
+	},
+	"Hammerfest": {
+		"pl": "Jedno z najdalej na północ położonych miast świata; po spaleniu w 1944 roku zostało całkowicie odbudowane",
+		"en": "One of the northernmost towns in the world; burnt down in 1944, it was completely rebuilt",
+		"cs": "Jedno z nejsevernějších měst světa; po vypálení v roce 1944 bylo zcela obnoveno",
+		"is": "Einn nyrsti bær í heimi; hann brann 1944 og var endurreistur frá grunni",
+		"de": "Eine der nördlichsten Städte der Welt; 1944 niedergebrannt und vollständig wieder aufgebaut"
+	},
+	"Flåm": {
+		"pl": "Wieś u końca Aurlandsfjordu, skąd odpływają statki na Nærøyfjord wpisany na listę UNESCO",
+		"en": "A village at the head of the Aurlandsfjord, where boats leave for the Nærøyfjord, a UNESCO World Heritage Site",
+		"cs": "Vesnice na konci Aurlandsfjordu, odkud vyplouvají lodě na Nærøyfjord zapsaný na seznam UNESCO",
+		"is": "Þorp innst í Aurlandsfirði þaðan sem bátar sigla um Nærøyfjörð, sem er á heimsminjaskrá UNESCO",
+		"de": "Ein Dorf am Ende des Aurlandsfjords, von wo Boote zum Nærøyfjord fahren, einem UNESCO-Welterbe"
+	},
+	"Hamar": {
+		"pl": "Miasto nad jeziorem Mjøsa; jego hala łyżwiarska Vikingskipet ma kształt odwróconej łodzi wikingów",
+		"en": "A town on Lake Mjøsa; its skating hall, Vikingskipet, is shaped like an upturned Viking ship",
+		"cs": "Město u jezera Mjøsa; jeho bruslařská hala Vikingskipet má tvar převrácené vikingské lodi",
+		"is": "Bær við vatnið Mjøsa; skautahöllin Vikingskipet er eins og víkingaskip á hvolfi",
+		"de": "Eine Stadt am Mjøsa-See; ihre Eisschnelllaufhalle Vikingskipet hat die Form eines umgedrehten Wikingerschiffs"
+	},
+	"Eidsvoll": {
+		"pl": "Tu w 1814 roku uchwalono konstytucję Norwegii",
+		"en": "Norway's constitution was adopted here in 1814",
+		"cs": "Zde byla roku 1814 přijata norská ústava",
+		"is": "Hér var stjórnarskrá Noregs samþykkt árið 1814",
+		"de": "Hier wurde 1814 die norwegische Verfassung beschlossen"
+	},
+	"Voss": {
+		"pl": "Ośrodek sportów górskich i ekstremalnych między fiordami",
+		"en": "A centre of mountain and extreme sports between the fjords",
+		"cs": "Středisko horských a extrémních sportů mezi fjordy",
+		"is": "Miðstöð fjalla- og jaðaríþrótta milli fjarðanna",
+		"de": "Ein Zentrum für Berg- und Extremsport zwischen den Fjorden"
+	},
+	"Borgund": {
+		"pl": "Stoi tu klepkowy kościół z około 1180 roku, jeden z najlepiej zachowanych w Norwegii",
+		"en": "A stave church of around 1180 stands here, one of the best preserved in Norway",
+		"cs": "Stojí tu roubený sloupový kostel z doby kolem roku 1180, jeden z nejzachovalejších v Norsku",
+		"is": "Hér stendur stafkirkja frá um 1180, ein sú best varðveitta í Noregi",
+		"de": "Hier steht eine Stabkirche von etwa 1180, eine der am besten erhaltenen Norwegens"
+	},
+	"Dombås": {
+		"pl": "Wieś u podnóża Dovrefjell, gdzie droga E136 do Åndalsnes odchodzi od E6",
+		"en": "A village below the Dovrefjell where the E136 to Åndalsnes leaves the E6",
+		"cs": "Vesnice pod Dovrefjellem, kde silnice E136 do Åndalsnesu odbočuje z E6",
+		"is": "Þorp undir Dofrafjalli þar sem E136 til Åndalsnes greinist frá E6",
+		"de": "Ein Dorf am Fuß des Dovrefjells, wo die E136 nach Åndalsnes von der E6 abzweigt"
+	},
+	"Åndalsnes": {
+		"pl": "Wieś w dolinie Romsdalen, pod ścianą Trollveggen, najwyższą pionową ścianą skalną w Europie",
+		"en": "A village in the Romsdalen valley below the Trollveggen, the tallest vertical rock face in Europe",
+		"cs": "Vesnice v údolí Romsdalen pod stěnou Trollveggen, nejvyšší kolmou skalní stěnou v Evropě",
+		"is": "Þorp í Romsdal undir Tröllaveggnum, hæsta lóðrétta klettavegg Evrópu",
+		"de": "Ein Dorf im Romsdal unter der Trollwand, der höchsten senkrechten Felswand Europas"
+	},
+	"Steinkjer": {
+		"pl": "Miasto u końca Trondheimsfjordu, w krainie dawnych wodzów Trøndelagu",
+		"en": "A town at the head of the Trondheimsfjord, in the land of the old chieftains of Trøndelag",
+		"cs": "Město na konci Trondheimsfjordu v kraji dávných náčelníků Trøndelagu",
+		"is": "Bær innst í Þrándheimsfirði, í landi fornra höfðingja Þrændalaga",
+		"de": "Eine Stadt am Ende des Trondheimsfjords, im Land der alten Häuptlinge Trøndelags"
+	},
+	"Larvik": {
+		"pl": "Rodzinne miasto podróżnika Thora Heyerdahla; wydobywa się tu niebieskawy kamień larwikit",
+		"en": "The home town of the explorer Thor Heyerdahl; the bluish larvikite stone is quarried here",
+		"cs": "Rodné město cestovatele Thora Heyerdahla; těží se tu modravý kámen larvikit",
+		"is": "Heimabær landkönnuðarins Thors Heyerdahl; hér er blágrái steinninn larvíkít unninn",
+		"de": "Die Heimatstadt des Forschers Thor Heyerdahl; hier wird der bläuliche Larvikit gebrochen"
+	},
+	"Sandefjord": {
+		"pl": "Dawne centrum norweskiego wielorybnictwa",
+		"en": "The old centre of Norwegian whaling",
+		"cs": "Bývalé centrum norského velrybářství",
+		"is": "Fyrrum miðstöð norskra hvalveiða",
+		"de": "Das einstige Zentrum des norwegischen Walfangs"
+	}
+}

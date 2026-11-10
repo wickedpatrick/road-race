@@ -1,0 +1,330 @@
+{
+	"Oslo": [
+		{
+			"kind": "no_oslo_opera",
+			"name": {
+				"pl": "Opera w Oslo",
+				"en": "Oslo Opera House",
+				"cs": "Opera v Oslu",
+				"is": "Óperuhúsið í Ósló",
+				"de": "Opernhaus Oslo"
+			},
+			"desc": {
+				"pl": "Gmach opery z 2008 roku nad fiordem; po jego skośnym dachu z białego marmuru można wejść aż na sam szczyt",
+				"en": "An opera house of 2008 on the fjord; visitors can walk up its sloping roof of white marble to the very top",
+				"cs": "Budova opery z roku 2008 u fjordu; po její šikmé střeše z bílého mramoru se dá vyjít až nahoru",
+				"is": "Óperuhús frá 2008 við fjörðinn; gestir geta gengið upp hallandi þak úr hvítum marmara alla leið upp",
+				"de": "Ein Opernhaus von 2008 am Fjord; über sein schräges Dach aus weißem Marmor kann man bis ganz nach oben gehen"
+			},
+			"local": "Operahuset"
+		}
+	],
+	"Bergen": [
+		{
+			"kind": "no_bergen_bryggen",
+			"name": {"pl": "Bryggen", "en": "Bryggen", "cs": "Bryggen", "is": "Bryggen", "de": "Bryggen"},
+			"desc": {
+				"pl": "Rząd drewnianych domów kupieckich z czasów Hanzy przy dawnym nabrzeżu, wpisany na listę UNESCO",
+				"en": "A row of wooden merchants' houses from the Hanseatic days on the old wharf, a UNESCO World Heritage Site",
+				"cs": "Řada dřevěných kupeckých domů z dob Hanzy na starém nábřeží, zapsaná na seznam UNESCO",
+				"is": "Röð timburhúsa kaupmanna frá tímum Hansakaupmanna við gömlu bryggjuna, á heimsminjaskrá UNESCO",
+				"de": "Eine Reihe hölzerner Kaufmannshäuser aus der Hansezeit am alten Kai, UNESCO-Welterbe"
+			},
+			"local": "Bryggen"
+		}
+	],
+	"Trondheim": [
+		{
+			"kind": "no_trondheim_nidaros",
+			"name": {
+				"pl": "Katedra Nidaros",
+				"en": "Nidaros Cathedral",
+				"cs": "Katedrála Nidaros",
+				"is": "Niðarósdómkirkja",
+				"de": "Nidarosdom"
+			},
+			"desc": {
+				"pl": "Gotycka katedra zbudowana nad grobem świętego Olafa; jej zachodnia fasada jest pełna kamiennych posągów",
+				"en": "A Gothic cathedral built over the grave of Saint Olaf; its west front is filled with stone statues",
+				"cs": "Gotická katedrála postavená nad hrobem svatého Olafa; její západní průčelí je plné kamenných soch",
+				"is": "Gotnesk dómkirkja reist yfir gröf Ólafs helga; vesturhlið hennar er full af steinstyttum",
+				"de": "Ein gotischer Dom über dem Grab des heiligen Olav; seine Westfassade ist voller Steinfiguren"
+			},
+			"local": "Nidarosdomen"
+		}
+	],
+	"Stavanger": [
+		{
+			"kind": "no_stavanger_sverd",
+			"name": {
+				"pl": "Miecze w skale",
+				"en": "Swords in Rock",
+				"cs": "Meče ve skále",
+				"is": "Sverðin í berginu",
+				"de": "Schwerter im Fels"
+			},
+			"desc": {
+				"pl": "Trzy dziesięciometrowe miecze z brązu nad Hafrsfjordem z 1983 roku upamiętniają bitwę, po której Harald Pięknowłosy zjednoczył Norwegię",
+				"en": "Three ten-metre bronze swords of 1983 by the Hafrsfjord recall the battle after which Harald Fairhair united Norway",
+				"cs": "Tři desetimetrové bronzové meče z roku 1983 u Hafrsfjordu připomínají bitvu, po níž Harald Krásnovlasý sjednotil Norsko",
+				"is": "Þrjú tíu metra há bronssverð frá 1983 við Hafursfjörð minna á orrustuna sem leiddi til þess að Haraldur hárfagri sameinaði Noreg",
+				"de": "Drei zehn Meter hohe Bronzeschwerter von 1983 am Hafrsfjord erinnern an die Schlacht, nach der Harald Schönhaar Norwegen einte"
+			},
+			"local": "Sverd i fjell"
+		}
+	],
+	"Haugesund": [
+		{
+			"kind": "no_haugesund_haraldshaugen",
+			"name": {
+				"pl": "Haraldshaugen",
+				"en": "Haraldshaugen",
+				"cs": "Haraldshaugen",
+				"is": "Haraldshaugen",
+				"de": "Haraldshaugen"
+			},
+			"desc": {
+				"pl": "Narodowy pomnik z 1872 roku: granitowy obelisk na kopcu, gdzie według sag pochowano Haralda Pięknowłosego",
+				"en": "The national monument of 1872: a granite obelisk on the mound where, the sagas say, Harald Fairhair was buried",
+				"cs": "Národní památník z roku 1872: žulový obelisk na mohyle, kde byl podle ság pohřben Harald Krásnovlasý",
+				"is": "Þjóðarminnismerki frá 1872: granítsúla á haugnum þar sem Haraldur hárfagri var heygður samkvæmt sögunum",
+				"de": "Das Nationaldenkmal von 1872: ein Granitobelisk auf dem Hügel, in dem laut den Sagas Harald Schönhaar begraben liegt"
+			},
+			"local": "Haraldshaugen"
+		}
+	],
+	"Kristiansand": [
+		{
+			"kind": "no_kristiansand_domkirke",
+			"name": {
+				"pl": "Katedra w Kristiansand",
+				"en": "Kristiansand Cathedral",
+				"cs": "Katedrála v Kristiansandu",
+				"is": "Dómkirkjan í Kristiansand",
+				"de": "Dom von Kristiansand"
+			},
+			"desc": {
+				"pl": "Neogotycka katedra z 1885 roku z wieżą wysoką na 70 metrów; jedna z największych świątyń w Norwegii",
+				"en": "A neo-Gothic cathedral of 1885 with a 70-metre tower, one of the largest churches in Norway",
+				"cs": "Novogotická katedrála z roku 1885 se sedmdesátimetrovou věží, jeden z největších kostelů v Norsku",
+				"is": "Nýgotnesk dómkirkja frá 1885 með 70 metra háum turni, ein stærsta kirkja Noregs",
+				"de": "Ein neugotischer Dom von 1885 mit einem 70 Meter hohen Turm, eine der größten Kirchen Norwegens"
+			},
+			"local": "Kristiansand domkirke"
+		}
+	],
+	"Drammen": [
+		{
+			"kind": "no_drammen_spiralen",
+			"name": {"pl": "Spiralen", "en": "Spiralen", "cs": "Spiralen", "is": "Spiralen", "de": "Spiralen"},
+			"desc": {
+				"pl": "Tunel drogowy z 1961 roku, który sześcioma zakrętami spirali wspina się wewnątrz góry na punkt widokowy nad miastem",
+				"en": "A road tunnel of 1961 that climbs inside the hill in six spiral turns to a viewpoint above the town",
+				"cs": "Silniční tunel z roku 1961, který v šesti závitech spirály stoupá uvnitř kopce na vyhlídku nad městem",
+				"is": "Veggöng frá 1961 sem klifra innan í fjallinu í sex hringjum upp á útsýnisstað yfir bænum",
+				"de": "Ein Straßentunnel von 1961, der im Berg in sechs Spiralwindungen zu einem Aussichtspunkt über der Stadt hinaufführt"
+			},
+			"local": "Spiralen"
+		}
+	],
+	"Lillehammer": [
+		{
+			"kind": "no_lillehammer_lysgard",
+			"name": {
+				"pl": "Skocznie Lysgårdsbakken",
+				"en": "Lysgårdsbakken ski jumps",
+				"cs": "Můstky Lysgårdsbakken",
+				"is": "Skíðastökkpallarnir í Lysgårdsbakken",
+				"de": "Schanzen Lysgårdsbakken"
+			},
+			"desc": {
+				"pl": "Skocznie narciarskie zimowych igrzysk olimpijskich 1994; z ich wieży widać miasto i jezioro Mjøsa",
+				"en": "The ski jumps of the 1994 Winter Olympics; their tower looks over the town and Lake Mjøsa",
+				"cs": "Skokanské můstky zimních olympijských her 1994; z jejich věže je vidět město a jezero Mjøsa",
+				"is": "Skíðastökkpallar vetrarólympíuleikanna 1994; úr turni þeirra sést yfir bæinn og vatnið Mjøsa",
+				"de": "Die Skisprungschanzen der Olympischen Winterspiele 1994; von ihrem Turm sieht man die Stadt und den Mjøsa-See"
+			},
+			"local": "Lysgårdsbakkene"
+		}
+	],
+	"Ålesund": [
+		{
+			"kind": "no_alesund_jugend",
+			"name": {
+				"pl": "Secesyjne kamienice w Ålesund",
+				"en": "Ålesund's Art Nouveau houses",
+				"cs": "Secesní domy v Ålesundu",
+				"is": "Jugendstílshúsin í Ålesund",
+				"de": "Jugendstilhäuser in Ålesund"
+			},
+			"desc": {
+				"pl": "Po pożarze w 1904 roku miasto odbudowano w kilka lat w stylu secesji, z wieżyczkami i zdobionymi szczytami",
+				"en": "After the fire of 1904 the town was rebuilt within a few years in Art Nouveau, with turrets and decorated gables",
+				"cs": "Po požáru roku 1904 bylo město během několika let obnoveno v secesním slohu, s věžičkami a zdobenými štíty",
+				"is": "Eftir brunann 1904 var bærinn endurreistur á fáeinum árum í jugendstíl, með turnum og skreyttum göflum",
+				"de": "Nach dem Brand von 1904 wurde die Stadt binnen weniger Jahre im Jugendstil wieder aufgebaut, mit Türmchen und verzierten Giebeln"
+			},
+			"local": "Jugendstilbyen"
+		}
+	],
+	"Molde": [
+		{
+			"kind": "no_molde_domkirke",
+			"name": {
+				"pl": "Katedra w Molde",
+				"en": "Molde Cathedral",
+				"cs": "Katedrála v Molde",
+				"is": "Dómkirkjan í Molde",
+				"de": "Dom von Molde"
+			},
+			"desc": {
+				"pl": "Ceglana katedra z 1957 roku z wysoką wolno stojącą dzwonnicą, zbudowana po zniszczeniu miasta w 1940 roku",
+				"en": "A brick cathedral of 1957 with a tall free-standing bell tower, built after the town was destroyed in 1940",
+				"cs": "Cihlová katedrála z roku 1957 s vysokou samostatnou zvonicí, postavená po zničení města v roce 1940",
+				"is": "Dómkirkja úr múrsteini frá 1957 með háum stökum klukkuturni, reist eftir að bærinn eyðilagðist 1940",
+				"de": "Ein Backsteindom von 1957 mit einem hohen freistehenden Glockenturm, gebaut nachdem die Stadt 1940 zerstört worden war"
+			},
+			"local": "Molde domkirke"
+		}
+	],
+	"Flåm": [
+		{
+			"kind": "no_flam_flamsbana",
+			"name": {
+				"pl": "Kolej Flåm",
+				"en": "Flåm Railway",
+				"cs": "Flåmská dráha",
+				"is": "Flåm-járnbrautin",
+				"de": "Flåmsbahn"
+			},
+			"desc": {
+				"pl": "Linia kolejowa z 1940 roku: na 20 kilometrach wspina się 863 metry z Flåm na górską stację Myrdal",
+				"en": "A railway of 1940 that climbs 863 metres in 20 kilometres from Flåm to the mountain station of Myrdal",
+				"cs": "Železnice z roku 1940, která na 20 kilometrech vystoupá o 863 metrů z Flåmu na horskou stanici Myrdal",
+				"is": "Járnbraut frá 1940 sem klifrar 863 metra á 20 kílómetrum frá Flåm upp á fjallastöðina Myrdal",
+				"de": "Eine Bahn von 1940, die auf 20 Kilometern 863 Meter von Flåm zum Bergbahnhof Myrdal hinaufsteigt"
+			},
+			"local": "Flåmsbana"
+		}
+	],
+	"Mo i Rana": [
+		{
+			"kind": "no_moirana_havmannen",
+			"name": {
+				"pl": "Havmannen",
+				"en": "Havmannen (The Man from the Sea)",
+				"cs": "Havmannen (Muž z moře)",
+				"is": "Havmannen (Maðurinn úr hafinu)",
+				"de": "Havmannen (Der Meermann)"
+			},
+			"desc": {
+				"pl": "Granitowa postać mężczyzny wysoka na 10 metrów, stojąca w wodzie fiordu; rzeźba Antony'ego Gormleya z 1995 roku",
+				"en": "A ten-metre granite figure of a man standing in the water of the fjord, by Antony Gormley, 1995",
+				"cs": "Desetimetrová žulová postava muže stojícího ve vodě fjordu, dílo Antonyho Gormleyho z roku 1995",
+				"is": "Tíu metra há granítstytta af manni sem stendur í sjó fjarðarins, eftir Antony Gormley frá 1995",
+				"de": "Eine zehn Meter hohe Granitfigur eines Mannes, der im Wasser des Fjords steht, von Antony Gormley, 1995"
+			},
+			"local": "Havmannen"
+		}
+	],
+	"Bodø": [
+		{
+			"kind": "no_bodo_saltstraumen",
+			"name": {
+				"pl": "Saltstraumen",
+				"en": "Saltstraumen",
+				"cs": "Saltstraumen",
+				"is": "Saltstraumen",
+				"de": "Saltstraumen"
+			},
+			"desc": {
+				"pl": "Jeden z najsilniejszych prądów pływowych świata: co sześć godzin morze przeciska się przez cieśninę pod mostem, tworząc wiry",
+				"en": "One of the strongest tidal currents in the world: every six hours the sea pours through the strait under the bridge in whirlpools",
+				"cs": "Jeden z nejsilnějších přílivových proudů světa: každých šest hodin se moře žene úžinou pod mostem a tvoří víry",
+				"is": "Einn sterkasti sjávarfallastraumur heims: á sex klukkustunda fresti þrýstist sjórinn gegnum sundið undir brúnni í iðum",
+				"de": "Eine der stärksten Gezeitenströmungen der Welt: alle sechs Stunden drängt das Meer in Strudeln durch die Enge unter der Brücke"
+			},
+			"local": "Saltstraumen"
+		}
+	],
+	"Narvik": [
+		{
+			"kind": "no_narvik_halogaland",
+			"name": {
+				"pl": "Most Hålogaland",
+				"en": "Hålogaland Bridge",
+				"cs": "Most Hålogaland",
+				"is": "Hålogaland-brúin",
+				"de": "Hålogalandbrücke"
+			},
+			"desc": {
+				"pl": "Most wiszący z 2018 roku nad Rombaksfjordem, długi na ponad 1500 metrów, jeden z najdalej na północ położonych tego typu",
+				"en": "A suspension bridge of 2018 over the Rombaksfjord, over 1,500 metres long, one of the northernmost of its kind",
+				"cs": "Visutý most z roku 2018 přes Rombaksfjord, dlouhý přes 1 500 metrů, jeden z nejsevernějších svého druhu",
+				"is": "Hengibrú frá 2018 yfir Rombaksfjörð, yfir 1.500 metra löng, ein nyrsta brú sinnar gerðar",
+				"de": "Eine Hängebrücke von 2018 über den Rombaksfjord, über 1500 Meter lang, eine der nördlichsten ihrer Art"
+			},
+			"local": "Hålogalandsbrua"
+		}
+	],
+	"Tromsø": [
+		{
+			"kind": "no_tromso_ishavskatedralen",
+			"name": {
+				"pl": "Katedra Arktyczna",
+				"en": "Arctic Cathedral",
+				"cs": "Arktická katedrála",
+				"is": "Íshafsdómkirkjan",
+				"de": "Eismeerkathedrale"
+			},
+			"desc": {
+				"pl": "Kościół z 1965 roku o trójkątnych ścianach ułożonych jedna za drugą, ze szklaną mozaiką we wschodnim szczycie",
+				"en": "A church of 1965 of triangular walls set one behind another, with a glass mosaic in its east gable",
+				"cs": "Kostel z roku 1965 z trojúhelníkových stěn řazených za sebou, se skleněnou mozaikou ve východním štítu",
+				"is": "Kirkja frá 1965 úr þríhyrndum veggjum hverjum á bak við annan, með glermósaík í austurgaflinum",
+				"de": "Eine Kirche von 1965 aus hintereinander gestaffelten dreieckigen Wänden, mit einem Glasmosaik im Ostgiebel"
+			},
+			"local": "Ishavskatedralen"
+		}
+	],
+	"Alta": [
+		{
+			"kind": "no_alta_nordlys",
+			"name": {
+				"pl": "Katedra Zorzy Polarnej",
+				"en": "Northern Lights Cathedral",
+				"cs": "Katedrála polární záře",
+				"is": "Norðurljósadómkirkjan",
+				"de": "Nordlichtkathedrale"
+			},
+			"desc": {
+				"pl": "Kościół z 2013 roku obłożony tytanowymi płytami, którego wieża wznosi się spiralą jak zorza polarna",
+				"en": "A church of 2013 clad in titanium plates, its tower rising in a spiral like the northern lights",
+				"cs": "Kostel z roku 2013 obložený titanovými plechy, jehož věž stoupá ve spirále jako polární záře",
+				"is": "Kirkja frá 2013 klædd títanplötum; turninn rís í spíral eins og norðurljósin",
+				"de": "Eine Kirche von 2013, mit Titanplatten verkleidet, deren Turm sich spiralförmig wie das Nordlicht emporschraubt"
+			},
+			"local": "Nordlyskatedralen"
+		}
+	],
+	"Hammerfest": [
+		{
+			"kind": "no_hammerfest_meridian",
+			"name": {
+				"pl": "Kolumna Południka",
+				"en": "Meridian Column",
+				"cs": "Poledníkový sloup",
+				"is": "Lengdarbaugssúlan",
+				"de": "Meridiansäule"
+			},
+			"desc": {
+				"pl": "Kolumna z 1854 roku na północnym końcu Łuku Struvego, pomiaru kształtu Ziemi wpisanego na listę UNESCO",
+				"en": "A column of 1854 at the northern end of the Struve Geodetic Arc, a survey of the Earth's shape on the UNESCO list",
+				"cs": "Sloup z roku 1854 na severním konci Struveho geodetického oblouku, měření tvaru Země zapsaného na seznam UNESCO",
+				"is": "Súla frá 1854 við nyrðri enda Struve-bogans, mælingar á lögun jarðar sem er á heimsminjaskrá UNESCO",
+				"de": "Eine Säule von 1854 am Nordende des Struve-Bogens, einer Vermessung der Erdgestalt auf der UNESCO-Liste"
+			},
+			"local": "Meridianstøtta"
+		}
+	]
+}
