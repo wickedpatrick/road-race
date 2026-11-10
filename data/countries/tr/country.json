@@ -23,7 +23,7 @@
 	"express_prefixes": ["O"],
 	"traffic": 0.4,
 	"limits": {"express": 120, "road": 90, "city": 50, "town_on_express": 80, "town": 50},
-	"signs": {"town": "#ffffff", "town_text": "#111111", "board": "#1d4f9c", "board_motorway": "#0b7a3e"},
+	"signs": {"town": "#1d4f9c", "town_text": "#ffffff", "board": "#1d4f9c", "board_motorway": "#0b7a3e"},
 	"map": {"lon0": 25.5, "lon1": 45, "lat0": 35.6, "lat1": 42.3, "lon_k": 0.777, "zoom": 1.6, "labels": "auto"},
 	"outline": [
 		[41.51, 41.52], [41.82, 41.43], [41.93, 41.5], [42.47, 41.44], [42.61, 41.58], [42.79, 41.56], [43.17, 41.29],
@@ -66,10 +66,10 @@
 	"station": {
 		"sign": "AKARYAKIT",
 		"board": "FİYATLAR",
-		"prices": [["Benzin", "58,90"], ["Motorin", "60,20"], ["LPG", "29,40"]],
+		"prices": [["Benzin", "75,40"], ["Motorin", "101,20"], ["LPG", "50,50"]],
 		"region_sign": "HOŞ GELDİNİZ"
 	},
-	"plates": [["O", "#0b7a3e", "#ffffff"], ["", "#1d4f9c", "#ffffff"]],
+	"plates": [["O", "#dd7500", "#111111"], ["", "#1d4f9c", "#ffffff"]],
 	"weather": {
 		"default": "sun",
 		"landscape": true,
