@@ -23,6 +23,11 @@ const SMALL_POP := 30
 const DUAL_TAPER := 60.0 ## a road widens into a dual carriageway (and narrows back) over this many metres
 const TUNNEL_MIN := 300.0 ## a tunnel is never shorter than this in the game (real ones would flash by)
 const TUNNEL_GAP := 40.0 ## open road kept between a tunnel and a town (name and speed limit signs)
+## A tunnel's own posted limit (roads.json tunnel `limit`) holds from its sign TUNNEL_LIMIT_BEFORE metres before the
+## portal to TUNNEL_LIMIT_AFTER past the exit, where the road's limit is signed again.
+const TUNNEL_LIMIT_BEFORE := 60.0
+const TUNNEL_LIMIT_AFTER := 30.0
+const UNDER_RAMP := 110.0 ## the cutting before and after an underwater tunnel (tunnel `under`, Scenery.ramp_h)
 const STATION_OFF_SIGN := 75.0 ## a station's stretch (Scenery clears it) keeps this far off a town's name signs
 const STATION_AFTER_TOWN := 230.0 ## a station stands this far past a town's end (after its signs and boards)
 ## Border crossings (a map spanning several countries, roads.json `borders`): the barriers stand at the crossing's z,
@@ -260,14 +265,14 @@ static func build(from: String, to: String) -> Dictionary:
 			var b := float(tn.to_km) if leg.from == r.a else leg_km - float(tn.from_km)
 			if _at_sea(off + a, seas) or _at_sea(off + b, seas): continue
 			tunnels.append({"z0": _sea_z(off + a, seas, mpk), "z1": _sea_z(off + b, seas, mpk), "name": tn.name, "fact": tn.fact,
-				"city": tn.get("city", false)})
+				"city": tn.get("city", false), "under": tn.get("under", ""), "limit": int(tn.get("limit", 0))})
 		var brg: Dictionary = r.get("bridge", {})
 		if not brg.is_empty():
 			var ba := float(brg.from_km) if leg.from == r.a else leg_km - float(brg.to_km)
 			var bb := float(brg.to_km) if leg.from == r.a else leg_km - float(brg.from_km)
 			if not _at_sea(off + ba, seas) and not _at_sea(off + bb, seas):
 				bridges.append({"z0": _sea_z(off + ba, seas, mpk), "z1": _sea_z(off + bb, seas, mpk), "name": brg.name,
-					"color": brg.get("color", ""), "kind": brg.get("kind", "suspension")})
+					"color": brg.get("color", ""), "kind": brg.get("kind", "suspension"), "over": brg.get("over", "water")})
 		for bd in r.get("borders", []):
 			var fwd: bool = leg.from == r.a
 			var k := float(bd[0]) if fwd else leg_km - float(bd[0])
@@ -296,10 +301,12 @@ static func build(from: String, to: String) -> Dictionary:
 	_place_crossings(borders, towns, tunnels + quays + bridges, length)
 	# stations and boards keep clear of the crossings as of tunnels, quays and bridges (with the bridge's sign before it)
 	var crossings: Array = borders.map(func(bd): return {"z0": bd.z - CROSS_40, "z1": bd.z + CROSS_AFTER})
-	var avoid: Array = tunnels + quays + crossings + bridges.map(func(b): return {"z0": b.z0 - 40.0, "z1": b.z1 + 30.0})
+	# an underwater tunnel with the cutting before and after it (Scenery.ramp_h): nothing stands over its walls
+	var cuts: Array = tunnels.map(func(tn): return {"z0": tn.z0 - UNDER_RAMP, "z1": tn.z1 + UNDER_RAMP} if tn.under != "" else tn)
+	var avoid: Array = cuts + quays + crossings + bridges.map(func(b): return {"z0": b.z0 - 40.0, "z1": b.z1 + 30.0})
 	# a station's sign stands well before it: STATION_PAST_BRIDGE past a bridge, so it is off the deck (as of tunnels,
 	# _clear_spot and _free_spot keep 250 m before and 120 m past each stretch to avoid)
-	var st_avoid: Array = tunnels + quays + crossings + bridges.map(func(b): return {"z0": b.z0 - STATION_BEFORE_BRIDGE + 250.0,
+	var st_avoid: Array = cuts + quays + crossings + bridges.map(func(b): return {"z0": b.z0 - STATION_BEFORE_BRIDGE + 250.0,
 		"z1": b.z1 + STATION_PAST_BRIDGE - 120.0})
 	# the last zone runs on past the finish line (the track has a tail)
 	zones[-1].z1 = length + Track.TAIL + 200.0
@@ -341,7 +348,7 @@ static func build(from: String, to: String) -> Dictionary:
 		hill += Biome.get_data(zn.biome).hill * w
 	# climbs slow every car down a little: hillier routes get more time
 	var part0 := Geo.city_part(from)
-	var legal := _legal_time(towns, roads, length, mpk, borders, part0, ferries) * (1.0 + HILL_TIME * hill / length)
+	var legal := _legal_time(towns, roads, length, mpk, borders, part0, ferries, tunnels) * (1.0 + HILL_TIME * hill / length)
 	var weather := Weather.for_legs(legs)
 	var duration := ceilf((legal * 1.09 * Weather.time_factor(weather) + 6.0 * n_st + 12.0) / 5.0) * 5.0
 	var stage := {
@@ -452,8 +459,8 @@ static func _boards(towns: Array, mpk: float, roads: Array, ferries := [], total
 ## Seconds needed to drive the track keeping to the speed limits (capped at a typical cruising speed), plus
 ## time to slow down for and speed up after every town, and to stop for and board every ferry (the crossing itself,
 ## FERRY_GAP between the barrier and the far ramp, is not driven: however wide the sea, a ferry costs FERRY_STOP_TIME).
-static func _legal_time(towns: Array, roads: Array, length: float, mpk: float, borders := [], part0 := "", ferries := []) -> float:
-	var probe := {"towns": towns, "roads": roads, "length": length, "m_per_km": mpk, "borders": borders, "part0": part0}
+static func _legal_time(towns: Array, roads: Array, length: float, mpk: float, borders := [], part0 := "", ferries := [], tunnels := []) -> float:
+	var probe := {"towns": towns, "roads": roads, "length": length, "m_per_km": mpk, "borders": borders, "part0": part0, "tunnels": tunnels}
 	var t := 0.0
 	var z := 0.0
 	while z < length:
@@ -612,6 +619,9 @@ static func sign_limit_at(stage: Dictionary, z: float) -> int:
 	var express := lanes_at(stage, z) == 3
 	if not t.is_empty():
 		return int(lim.city if t.big else (lim.town_on_express if express else lim.town))
+	var tl := tunnel_limit_at(stage, z)
+	if tl > 0:
+		return tl
 	if express and lim.has("unlimited_beyond_km"): # Germany: no limit on the Autobahn away from the cities
 		var edge: float = maxf(lim.unlimited_beyond_km * stage.m_per_km, END_CITY + LIMITED_AFTER_CITY)
 		if z > edge and z < stage.length - edge:
@@ -620,6 +630,14 @@ static func sign_limit_at(stage: Dictionary, z: float) -> int:
 	if own > 0:
 		return own
 	return int(lim.express if express else lim.road)
+
+## A tunnel's own posted limit (roads.json tunnel `limit`: the Gotthard's 80) from its sign TUNNEL_LIMIT_BEFORE the
+## portal to TUNNEL_LIMIT_AFTER past the exit, 0 elsewhere or where the tunnel has none.
+static func tunnel_limit_at(stage: Dictionary, z: float) -> int:
+	for tn in stage.get("tunnels", []):
+		if tn.get("limit", 0) > 0 and z >= tn.z0 - TUNNEL_LIMIT_BEFORE and z < tn.z1 + TUNNEL_LIMIT_AFTER:
+			return tn.limit
+	return 0
 
 ## The road part's own posted limit at z (roads.json [km, number, lanes, limit]), 0 where the country's applies.
 static func limit_part_at(stage: Dictionary, z: float) -> int:

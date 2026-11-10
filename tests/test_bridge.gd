@@ -23,6 +23,7 @@ static func fixture() -> Dictionary:
 		"ee": {"name": "Epsilon", "lat": 41.2, "lon": 28.3, "pop": 150, "region": "R2"},
 		"ff": {"name": "Zeta", "lat": 41.7, "lon": 29.1, "pop": 150, "region": "R2"},
 		"gg": {"name": "Eta", "lat": 45.0, "lon": 33.0, "pop": 150, "region": "R2"},
+		"hh": {"name": "Theta", "lat": 45.6, "lon": 33.8, "pop": 150, "region": "R2"},
 	}
 	c["roads"] = [
 		{"a": "aa", "b": "bb", "km": 100, "road": "O5", "towns": [["Westtown", 20], ["Easttown", 70]],
@@ -42,6 +43,9 @@ static func fixture() -> Dictionary:
 		# a long, compressed trip: towns 1 km before and after a bridge (Barton-upon-Humber, South Queensferry)
 		{"a": "ff", "b": "gg", "km": 600, "road": "D140", "towns": [["Northbank", 299], ["Southbank", 306]],
 			"zones": [[600, "fields", "R2"]], "bridge": {"from_km": 300, "to_km": 305, "name": "Estuary"}},
+		# a viaduct high over a valley (Millau)
+		{"a": "gg", "b": "hh", "km": 90, "road": "D150", "towns": [], "zones": [[90, "upland", "R2"]],
+			"bridge": {"from_km": 40, "to_km": 42.5, "name": "Viaduct", "kind": "stayed", "over": "valley"}},
 	]
 	c["facts"] = {}
 	c["landmarks"] = {}
@@ -131,6 +135,7 @@ func run(t) -> void:
 		t.check(rq.state == "won" and rq.fines == 0, "%s->%s: the autopilot makes it in time (%s, %.0f s left)" % [pair[0], pair[1], rq.state, rq.time_left])
 	_kinds(t)
 	_room(t)
+	_valley(t)
 	# right after a city: the bridge starts past the start's streets
 	var short := Route.build("bb", "cc")
 	t.check(short.bridges[0].z0 - 40.0 >= short.towns[0].z + short.towns[0].half, "the bridge past the start city's streets")
@@ -222,3 +227,52 @@ func _room(t) -> void:
 		var plain := {"towns": p.towns, "roads": p.roads, "length": p.length - extra}
 		t.check(Route._legal_time(p.towns, p.roads, p.length, p.m_per_km) > Route._legal_time(p.towns, p.roads, plain.length, p.m_per_km),
 			"%s: the time limit counts the metres put in" % name)
+
+## A viaduct over a valley (`over: "valley"`, Millau): no water beside the deck, only the deck itself (the valley floor
+## is drawn far below by WorldView), tall piers from the deck down to the floor between the ends, the stayed pylons
+## and the railings as on any bridge, no sea on the horizon; drawn without errors.
+func _valley(t) -> void:
+	for pair in [["gg", "hh"], ["hh", "gg"]]:
+		var p := Route.build(pair[0], pair[1])
+		var name: String = "%s->%s" % pair
+		t.check(p.bridges.size() == 1 and p.bridges[0].over == "valley" and p.bridges[0].kind == "stayed", "%s: a viaduct over a valley" % name)
+		if p.bridges.is_empty(): continue
+		var b: Dictionary = p.bridges[0]
+		var mid: float = (b.z0 + b.z1) * 0.5
+		t.check(Scenery.over_valley(p, mid) and Scenery.on_bridge(p, mid) and not Scenery.over_valley(p, b.z0 - 10.0), "%s: over_valley" % name)
+		var ground := Scenery.ground(p, int(p.length / Track.SEG_LEN) + 10)
+		var gs: PackedFloat32Array = ground[int(mid / Track.SEG_LEN)]
+		var kinds := []
+		for g in range(0, gs.size(), 3): kinds.append(int(gs[g + 2]))
+		t.check(kinds == [Scenery.G_PAVE] and gs[1] <= Scenery.BRIDGE_DECK + 0.01, "%s: only the deck, no water beside it %s" % [name, str(gs)])
+		var sc := Scenery.build(p, 1)
+		var all := []
+		for idx in sc: all.append_array(sc[idx])
+		var piers := all.filter(func(it): return it.type == "valley_pier")
+		t.check(piers.size() >= 2 and piers.all(func(it): return it.z > b.z0 + 20.0 and it.z < b.z1 - 20.0 and it.h == Scenery.VALLEY_DEPTH),
+			"%s: tall piers down to the valley floor between the ends %s" % [name, str(piers.map(func(it): return it.z))])
+		t.check(all.filter(func(it): return it.type == "bridge_tower").size() == 2, "%s: the stayed pylons" % name)
+		var on_deck := all.filter(func(it): return it.z > b.z0 and it.z < b.z1 and not it.type in ["bridge_tower", "valley_pier"])
+		t.check(on_deck.is_empty(), "%s: nothing else on the viaduct %s" % [name, str(on_deck.map(func(it): return it.type))])
+		var obs := Scenery.obstacles(sc, p)
+		t.check(obs.get(int(mid / Track.SEG_LEN), []).any(func(ob): return ob[1] > 0.0 and ob[1] <= Scenery.BRIDGE_RAIL + 0.01), "%s: railings" % name)
+		var r := Race.new("xc60", p, 1)
+		var v := WorldView.new()
+		v.bind(r, "sun")
+		var kept := {} # signs write their text straight onto the canvas: only the piers and pylons here
+		for idx in v.items:
+			kept[idx] = v.items[idx].filter(func(it): return it.type in ["valley_pier", "bridge_tower"])
+		v.items = kept
+		var drawn := 0
+		for z in [b.z0 - 100.0, mid - 60.0]:
+			r.z = z
+			t.check(v._horizon_target().sea == 0.0 or Biome.get_data("upland").sea > 0.0, "%s: no sea opening up over the valley" % name)
+			v._b.begin(v)
+			v._draw_sky()
+			v._draw_scene()
+			drawn += v._b._idx.size()
+			v._b._pts.clear(); v._b._cols.clear(); v._b._idx.clear()
+		t.check(drawn > 0, "%s: the viaduct is drawn" % name)
+		v.free()
+	var w := Route.build("aa", "bb")
+	t.check(w.bridges[0].over == "water" and Scenery.valley_piers(w.bridges[0]).is_empty(), "a bridge without `over` spans water, no piers")

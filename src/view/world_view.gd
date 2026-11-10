@@ -56,7 +56,8 @@ var _tunnel_road: Array = [] ## road colours under cover (no snow or rain in a t
 var _grass := PackedColorArray() ## per track segment: the two grass bands of its landscape (Weather.grass)
 const GRASS_BLEND := 150.0 ## metres over which the grass turns into the next landscape's
 var _tun := PackedByteArray() ## per track segment: 1 inside a tunnel
-var _brg := PackedByteArray() ## per track segment: 1 on a bridge's deck (water below, cables above)
+var _brg := PackedByteArray() ## per track segment: 1 on a bridge's deck (water below, cables above), 2 over a valley
+var _ramp := PackedFloat32Array() ## per track segment boundary: Scenery.ramp_h (an underwater tunnel's cutting)
 var _dualf := PackedFloat32Array() ## per track segment: Route.dual_f (0 single road .. 1 dual carriageway)
 var _portals := {} ## segment index where a tunnel starts -> the tunnel
 var _left := false ## left-hand traffic: the batch mirrors the world; signs, cars and landmarks are drawn unmirrored
@@ -103,7 +104,11 @@ func bind(p_race: Race, p_weather := "") -> void:
 		if first >= 0: _portals[first] = tn
 	_brg.resize(race.track.segments.size())
 	for k in _brg.size():
-		_brg[k] = 1 if Scenery.on_bridge(race.stage, k * SEG + SEG * 0.5) else 0
+		var zm := k * SEG + SEG * 0.5
+		_brg[k] = (2 if Scenery.over_valley(race.stage, zm) else 1) if Scenery.on_bridge(race.stage, zm) else 0
+	_ramp.resize(race.track.segments.size() + 1)
+	for k in _ramp.size():
+		_ramp[k] = Scenery.ramp_h(race.stage, k * SEG)
 	_gcol.clear()
 	for key in Scenery.GROUND_KEYS:
 		var cols := PackedColorArray()
@@ -199,7 +204,11 @@ func _horizon_target() -> Dictionary:
 	for t in race.stage.towns:
 		if t.big and t.z + t.half > race.z and t.z - t.half - 500.0 < race.z:
 			sky = 1.0
-	var strait := 1.0 if Scenery.on_bridge(race.stage, race.z + 150.0) else 0.0 # the sea opens up from a bridge
+	var ahead := Route.bridge_at(race.stage, race.z + 150.0)
+	var strait := 1.0 if ahead.get("over", "") == "water" else 0.0 # the sea opens up from a bridge (not over a valley)
+	for tn in race.stage.get("tunnels", []): # and over the land before (after) a tunnel under it
+		if tn.get("under", "") == "water" and race.z > tn.z0 - 400.0 and race.z < tn.z1 + 150.0:
+			strait = 1.0
 	return {"hills": bd.hills, "mountains": bd.mountains, "sea": maxf(bd.sea, strait), "industry": bd.industry, "wood": bd.wood, "skyline": sky, "ice": bd.get("ice", 0.0)}
 
 func _quad(a: Vector2, b: Vector2, c: Vector2, d: Vector2, col: Color) -> void:
@@ -371,6 +380,7 @@ func _draw_scene() -> void:
 	# base layer: ground colour under the horizon (the sea, with a quay ahead)
 	var far_ground: Color = _sea_color(0) if _sea_i < base + N else _grass[clampi(base + N, 0, _grass.size() / 2 - 1) * 2]
 	_b.draw_rect(Rect2(-20, HORIZON, W + 40, H - HORIZON + 20), _fog(far_ground, N))
+	_draw_valley(cam_z, cam_y)
 	var dx: float = -_seg(base).curve * CURVE_K * base_pct
 	var off := 0.0
 	var maxy := H + 1.0
@@ -444,7 +454,10 @@ func _draw_scene() -> void:
 			_draw_traffic_car({"z": race.police.z, "lane_x": race.police.x, "kind": "police", "color_idx": 0}, n, cam_x, cam_y, cam_z)
 		if _portals.has(i) and _vis[n] != 0 and i * SEG > cam_z + NEAR:
 			_b.fog = _item_fog(n)
-			_draw_portal(n, _portals[i].get("city", false))
+			if _portals[i].get("under", "") != "":
+				_draw_under_portal(n)
+			else:
+				_draw_portal(n, _portals[i].get("city", false))
 		_b.fog = 0.0
 
 func _in_tunnel(i: int) -> bool:
@@ -464,9 +477,10 @@ func _draw_segment(n: int, i: int) -> void:
 	var x1 := _x1[n]
 	var w0 := Track.ROAD_HALF_WIDTH * _s0[n] * W * 0.5
 	var w1 := Track.ROAD_HALF_WIDTH * _s1[n] * W * 0.5
-	var on_deck := i >= 0 and i < _brg.size() and _brg[i] == 1
+	var on_deck := i >= 0 and i < _brg.size() and _brg[i] != 0
 	var grass: Color = _fog(_sea_color((i / 2) % 2) if on_deck else _grass[clampi(i, 0, _grass.size() / 2 - 1) * 2 + band], n)
-	_b.draw_rect(Rect2(-20, y1, W + 40, y0 - y1 + 1.0), grass)
+	if not on_deck or _brg[i] != 2: # over a valley the floor far below shows beside the deck (_draw_valley)
+		_b.draw_rect(Rect2(-20, y1, W + 40, y0 - y1 + 1.0), grass)
 	# fields, lakes, canals, pavements beside the road
 	var gs: PackedFloat32Array = _ground[clampi(i, 0, _ground.size() - 1)]
 	if not gs.is_empty():
@@ -516,11 +530,85 @@ func _draw_segment(n: int, i: int) -> void:
 		_quad(Vector2(ex0 - lw0, y0), Vector2(ex0 + lw0, y0), Vector2(ex1 + lw1, y1), Vector2(ex1 - lw1, y1), lc)
 	if on_deck:
 		_draw_deck(n, i)
+	if _ramp_at(i) > 0.0 or _ramp_at(i + 1) > 0.0:
+		_draw_ramp(n, i, grass)
 	if i == _sea_i - 1:
 		# the quay's edge over the water: a dark concrete kerb along the end of the pier
 		var p1 := _s1[n] * W * 0.5
 		var e := Scenery.QUAY_EDGE + Track.left_shift(_dualf[clampi(i, 0, _dualf.size() - 1)])
 		_b.draw_rect(Rect2(x1 - e * p1, y1, (e + Scenery.QUAY_EDGE) * p1, maxf(1.0, 0.5 * p1)), _fog(Color("55585e"), n))
+
+## The valley under a bridge over one (Scenery.over_valley), behind everything: its floor Scenery.VALLEY_DEPTH below
+## the deck as bands of meadow, the river across it at mid-span, rocky slopes beyond the bridge's ends. The deck's
+## segments draw no ground beside them, so the floor shows there; the plateau's ground covers it elsewhere.
+func _draw_valley(cam_z: float, cam_y: float) -> void:
+	for br in race.stage.get("bridges", []):
+		if br.get("over", "water") != "valley" or br.z1 < cam_z or br.z0 > cam_z + N * SEG:
+			continue
+		var mid: float = (br.z0 + br.z1) * 0.5
+		var drop: float = cam_y - (_ground_y(mid) - Scenery.VALLEY_DEPTH)
+		var meadow: Color = (pal.grass_a as Color).darkened(0.12)
+		var rock := Color("8b8478").lerp(pal.grass_b, 0.25)
+		var row_z := func(y: float) -> float: return cam_z + Track.CAM_DEPTH * drop * HORIZON / maxf(y - HORIZON, 0.01)
+		var y := HORIZON + 0.5
+		while y < H + 4.0:
+			var dz: float = row_z.call(y + 1.5) - cam_z
+			var zf: float = cam_z + dz
+			var c: Color
+			if zf < br.z0 or zf > br.z1:
+				c = rock.darkened(0.08 * float(int(zf / 30.0) % 2))
+			else:
+				c = meadow.lerp(pal.tree, 0.35 * float(int(zf / 22.0) % 2))
+			c = c.lerp(pal.sky_bottom, clampf(dz / 2500.0, 0.0, 0.5) + 0.12) # the haze of the depth below
+			_b.draw_rect(Rect2(-20, y, W + 40, 3.2), _fog(c, clampi(int(dz / SEG), 0, N)))
+			y += 3.0
+		# the river across the floor
+		var ya := HORIZON + Track.CAM_DEPTH * drop * HORIZON / maxf(mid + Scenery.VALLEY_RIVER * 0.5 - cam_z, 1.0)
+		var yb := HORIZON + Track.CAM_DEPTH * drop * HORIZON / maxf(mid - Scenery.VALLEY_RIVER * 0.5 - cam_z, 1.0)
+		if mid - Scenery.VALLEY_RIVER * 0.5 > cam_z and ya < H:
+			var rc := _sea_color(0).lerp(pal.sky_bottom, 0.2)
+			_b.draw_rect(Rect2(-20, ya, W + 40, maxf(1.0, minf(yb, H + 4.0) - ya)), _fog(rc, clampi(int((mid - cam_z) / SEG), 0, N)))
+
+## A valley bridge's pier (Scenery.valley_piers): a tall tapering concrete column from under the deck down to the
+## valley floor, wider at its foot, its shaded side towards the road's left.
+func _draw_valley_pier(b: Vector2, pm: float, z: float) -> void:
+	var s := pm / (W * 0.5)
+	var foot := s * Scenery.VALLEY_DEPTH * HORIZON
+	var cx := b.x - Track.left_shift(Route.dual_f(race.stage, z)) * 0.5 * pm
+	var top := Scenery.BRIDGE_DECK * 0.7 * pm
+	var bot := Scenery.BRIDGE_DECK * 1.3 * pm
+	var col := Color("cfd2d6")
+	_quad(Vector2(cx - top, b.y + 0.6 * pm), Vector2(cx + top, b.y + 0.6 * pm), Vector2(cx + bot, b.y + foot), Vector2(cx - bot, b.y + foot), col)
+	_quad(Vector2(cx - top, b.y + 0.6 * pm), Vector2(cx - top * 0.4, b.y + 0.6 * pm), Vector2(cx - bot * 0.4, b.y + foot), Vector2(cx - bot, b.y + foot), col.darkened(0.2))
+	_b.draw_rect(Rect2(cx - top * 1.25, b.y, top * 2.5, maxf(1.0, 1.2 * pm)), col.darkened(0.3)) # the deck's girder over it
+
+func _ramp_at(i: int) -> float:
+	return _ramp[i] if i >= 0 and i < _ramp.size() else 0.0
+
+## The cutting before (after) an underwater tunnel: concrete retaining walls at Scenery.UNDER_WALL rising to the
+## land's level at the portal, the flat land beyond their tops (the far carriageway has its own cutting).
+func _draw_ramp(n: int, i: int, land: Color) -> void:
+	var y0 := _y0[n]
+	var y1 := _y1[n]
+	var x0 := _x0[n]
+	var x1 := _x1[n]
+	var p0 := _s0[n] * W * 0.5
+	var p1 := _s1[n] * W * 0.5
+	var za := maxf(i * SEG, race.z - PLAYER_DZ + NEAR)
+	var h0 := lerpf(_ramp_at(i), _ramp_at(i + 1), clampf(za / SEG - i, 0.0, 1.0))
+	var h1 := _ramp_at(i + 1)
+	var wall := _fog(Color("a9abad") if (i / 2) % 2 == 0 else Color("a2a4a6"), n)
+	var top := _fog(Color("7d8084"), n)
+	for sgn in [-1.0, 1.0]:
+		var lat: float = sgn * Scenery.UNDER_WALL
+		var edge := -20.0 if sgn < 0.0 else W + 20.0
+		var a := Vector2(x0 + lat * p0, y0 - h0 * p0)
+		var b := Vector2(x1 + lat * p1, y1 - h1 * p1)
+		_b.draw_colored_polygon(PackedVector2Array([a, b, Vector2(edge, b.y), Vector2(edge, y0)]), land.darkened(0.05))
+		_quad(Vector2(x0 + lat * p0, y0), a, b, Vector2(x1 + lat * p1, y1), wall)
+		var c0 := maxf(1.0, 0.25 * p0)
+		var c1 := maxf(1.0, 0.25 * p1)
+		_quad(a, b, b - Vector2(0, c1), a - Vector2(0, c0), top)
 
 func _sea_color(band: int) -> Color:
 	return SEA.lerp(pal.water, 0.3).lightened(0.05 * band)
@@ -556,6 +644,21 @@ func _draw_ruts(n: int, a: float, b: float, band: int) -> void:
 ## Tunnel cross-section, [lat, height] in metres from the left wall foot over the vault to the right wall foot.
 const TUNNEL_SECTION := [[-Scenery.TUNNEL_WALL, 0.0], [-Scenery.TUNNEL_WALL, 4.4], [-3.9, 6.6], [3.9, 6.6], [Scenery.TUNNEL_WALL, 4.4], [Scenery.TUNNEL_WALL, 0.0]]
 const TUNNEL_DARK := Color(0.03, 0.035, 0.04)
+## A portal's hill rises at most this many pixels over the horizon (it used to fill the whole sky ~100 m before the
+## portal); PORTAL_PEAK / PORTAL_CITY_PEAK are the tallest points of the hill and of a city tunnel's blocks, metres.
+const PORTAL_HILL_PX := 110.0
+const PORTAL_PEAK := 51.0
+const PORTAL_CITY_PEAK := 35.0
+const PORTAL_FRAME_TOP := 10.6 ## the hill never comes lower than this over the road (the frame is 9.4 high)
+
+## How much a portal's hill is pressed down (1: its full height) with the portal's foot at screen y `gy` and `pm`
+## pixels per metre there, so its top stays within PORTAL_HILL_PX over the horizon.
+static func portal_squash(gy: float, pm: float, city := false) -> float:
+	return clampf((gy - (HORIZON - PORTAL_HILL_PX)) / (pm * (PORTAL_CITY_PEAK if city else PORTAL_PEAK)), 0.0, 1.0)
+
+## The screen y of a portal hill's highest point (see portal_squash).
+static func portal_top(gy: float, pm: float, city := false) -> float:
+	return gy - pm * maxf((PORTAL_CITY_PEAK if city else PORTAL_PEAK) * portal_squash(gy, pm, city), PORTAL_FRAME_TOP)
 
 ## Tunnel lighting: bright near the camera, dark further in (the exit still shines at the end).
 func _tfog(c: Color, n: int) -> Color:
@@ -616,11 +719,14 @@ func _draw_portal(n: int, city := false) -> void:
 	var hill := (pal.tree as Color).darkened(0.25)
 	if season == "winter": hill = Color("dfe5ea")
 	if city: hill = (pal.grass_a as Color).darkened(0.1)
+	# the hill (and a city's blocks) keep their shape but are pressed down to rise at most PORTAL_HILL_PX over the
+	# horizon, so sky stays above them on the way in; never lower than the portal's frame
+	var squash := portal_squash(gy, pm, city)
 	var ridge := func(x: float) -> float:
 		var lat := (x - cx) / pm
 		if city:
-			return gy - pm * 11.0
-		return gy - pm * maxf(14.0, 46.0 - absf(lat) * 0.09 + 5.0 * sin(lat * 0.045) + 3.0 * sin(lat * 0.13 + 1.0))
+			return gy - pm * maxf(11.0 * squash, PORTAL_FRAME_TOP)
+		return gy - pm * maxf(squash * maxf(14.0, 46.0 - absf(lat) * 0.09 + 5.0 * sin(lat * 0.045) + 3.0 * sin(lat * 0.13 + 1.0)), PORTAL_FRAME_TOP)
 	var half := func(sgn: float, inner: Array, outer: Callable, col: Color) -> void:
 		var pts := PackedVector2Array()
 		pts.append(Vector2(cx, outer.call(cx)))
@@ -643,12 +749,13 @@ func _draw_portal(n: int, city := false) -> void:
 			var lat := (k - 6.5) * 16.0 + 4.0 * sin(k * 1.7)
 			if absf(lat) < 14.0: continue
 			var bw := 9.0 + 4.0 * absf(sin(k * 2.3))
-			var bh := 8.0 + 16.0 * absf(sin(k * 1.3)) if k % 3 != 0 else 6.0
+			var bh := (8.0 + 16.0 * absf(sin(k * 1.3)) if k % 3 != 0 else 6.0) * squash
+			var base := maxf(11.0 * squash, PORTAL_FRAME_TOP)
 			var col: Color = Scenery.BUILDING_COLORS[k % Scenery.BUILDING_COLORS.size()]
-			_b.draw_rect(Rect2(cx + (lat - bw * 0.5) * pm, gy - (11.0 + bh) * pm, bw * pm, bh * pm), col)
+			_b.draw_rect(Rect2(cx + (lat - bw * 0.5) * pm, gy - (base + bh) * pm, bw * pm, bh * pm), col)
 			if pm > 1.5:
 				for f in int(bh / 3.5):
-					_b.draw_rect(Rect2(cx + (lat - bw * 0.4) * pm, gy - (11.0 + bh - 1.0 - f * 3.5) * pm, bw * 0.8 * pm, 0.9 * pm), Color("4a5560"))
+					_b.draw_rect(Rect2(cx + (lat - bw * 0.4) * pm, gy - (base + bh - 1.0 - f * 3.5) * pm, bw * 0.8 * pm, 0.9 * pm), Color("4a5560"))
 	elif pm * 46.0 > 6.0:
 		var tree := hill.darkened(0.3)
 		for k in 18:
@@ -664,6 +771,31 @@ func _draw_portal(n: int, city := false) -> void:
 			pts.append(Vector2(cx + sgn * pt[0] * pm, gy - pt[1] * pm))
 		_b.draw_colored_polygon(pts, conc)
 	_b.draw_rect(Rect2(cx - 9.0 * pm, gy - 9.4 * pm, 18.0 * pm, 0.5 * pm), conc.darkened(0.25))
+
+## An underwater tunnel's portal (tunnel `under`): no hill, a concrete head wall across the deep end of the cutting
+## (between the retaining walls, _draw_ramp) up to the land's level, a dark coping and a railing along its top; the
+## flat land, or the water, lies beyond it at the level of its top.
+func _draw_under_portal(n: int) -> void:
+	var cx := _x0[n]
+	var gy := _y0[n]
+	var pm := _s0[n] * W * 0.5
+	var conc := Color("b4b6b8")
+	var top := Scenery.UNDER_DEPTH
+	var open := [[Scenery.TUNNEL_WALL, 0.0], [Scenery.TUNNEL_WALL, 4.4], [3.9, 6.6], [0.0, 6.6]]
+	for sgn in [-1.0, 1.0]:
+		var pts := PackedVector2Array()
+		for pt in [[0.0, top], [Scenery.UNDER_WALL, top], [Scenery.UNDER_WALL, 0.0]]:
+			pts.append(Vector2(cx + sgn * pt[0] * pm, gy - pt[1] * pm))
+		for pt in open:
+			pts.append(Vector2(cx + sgn * pt[0] * pm, gy - pt[1] * pm))
+		_b.draw_colored_polygon(pts, conc)
+	var w := Scenery.UNDER_WALL * pm
+	_b.draw_rect(Rect2(cx - w, gy - top * pm, 2.0 * w, maxf(1.0, 0.5 * pm)), conc.darkened(0.3))
+	_b.draw_rect(Rect2(cx - w, gy - (top + 1.1) * pm, 2.0 * w, maxf(1.0, 0.12 * pm)), Color("6d7278"))
+	if pm > 1.0:
+		for k in 9:
+			var px := cx + lerpf(-w, w, k / 8.0)
+			_b.draw_line(Vector2(px, gy - top * pm), Vector2(px, gy - (top + 1.1) * pm), Color("6d7278"), maxf(1.0, 0.1 * pm))
 
 ## Dual carriageway: a guardrail in the green median, then the oncoming carriageway (widening in with d).
 func _draw_far_carriageway(n: int, d: float, band: int, lc: Color, lw0: float, lw1: float) -> void:
@@ -718,6 +850,9 @@ func _draw_item(it: Dictionary, n: int, cam_x: float, cam_y: float, cam_z: float
 			_draw_stayed_pylon(b, pm, Route.dual_f(race.stage, it.z), it.get("color", ""))
 		else:
 			_draw_tower(b, pm, Route.dual_f(race.stage, it.z), it.get("color", ""))
+		return
+	if it.type == "valley_pier":
+		_draw_valley_pier(b, pm, it.z)
 		return
 	if it.type == "finish":
 		_draw_finish(b, pm)
@@ -893,8 +1028,8 @@ func _draw_traffic_car(c: Dictionary, n: int, cam_x: float, cam_y: float, cam_z:
 	var scale := s * W * 0.5 * CAR_UNIT
 	if scale < MIN_CAR_SCALE or (_vis[n] == 0 and py - 4.5 * s * W * 0.5 >= _clip[n]):
 		return
-	if _in_tunnel(i) and c.lane_x * Track.ROAD_HALF_WIDTH < -Scenery.TUNNEL_WALL:
-		return # the far carriageway runs in its own tube
+	if (_in_tunnel(i) or _ramp_at(i) > 1.0) and c.lane_x * Track.ROAD_HALF_WIDTH < -Scenery.TUNNEL_WALL:
+		return # the far carriageway runs in its own tube (and its own cutting)
 	_b.set_mirror(false)
 	CarPainter.draw_traffic(_b, c.kind, Vector2(W - px if _left else px, py), scale, CarPainter.TRAFFIC_COLORS[c.color_idx], c.get("dir", 1) < 0)
 	_b.set_mirror(_left)

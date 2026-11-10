@@ -171,7 +171,9 @@
 					"cs": "Tunel pod dnem fjordu, 165 metrů pod hladinou moře",
 					"is": "Göng undir botni fjarðarins, 165 metra undir sjávarmáli",
 					"de": "Ein Tunnel unter dem Fjordboden, 165 Meter unter dem Meeresspiegel"
-				}
+				},
+				"under": "water",
+				"limit": 70
 			}
 		]
 	},

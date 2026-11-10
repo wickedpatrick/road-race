@@ -398,7 +398,8 @@
 					"cs": "14 km, nejdelší silniční tunel Rakouska, pod průsmykem Arlberg",
 					"is": "14 km, lengstu veggöng Austurríkis, undir Arlberg-skarði",
 					"de": "14 km, der längste Straßentunnel Österreichs, unter dem Arlbergpass"
-				}
+				},
+				"limit": 80
 			}
 		],
 		"via": [

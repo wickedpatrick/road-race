@@ -143,7 +143,9 @@
 					"cs": "6,6 km pod ústím Západní Šeldy, až 60 metrů pod hladinou; otevřen roku 2003",
 					"is": "6,6 km undir ósi Vestur-Schelde, allt að 60 metrum undir vatnsborði; opnuð árið 2003",
 					"de": "6,6 km unter der Westerschelde, bis zu 60 Meter unter dem Wasserspiegel; 2003 eröffnet"
-				}
+				},
+				"under": "water",
+				"limit": 100
 			}
 		],
 		"borders": [[48, "nl", "be", "Sas van Gent / Zelzate"]]

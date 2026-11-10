@@ -259,7 +259,8 @@
 					"cs": "Dva tunely dálnice M4 pod kopcem v Newportu, jedny z prvních dálničních tunelů ve Velké Británii (1967)",
 					"is": "Tvenn göng hraðbrautarinnar M4 undir hæð í Newport, meðal fyrstu hraðbrautarganga Bretlands (1967)",
 					"de": "Zwei Autobahntunnel der M4 unter einem Hügel in Newport, unter den ersten Autobahntunneln Großbritanniens (1967)"
-				}
+				},
+				"limit": 50
 			}
 		],
 		"bridge": {
@@ -342,7 +343,8 @@
 					"cs": "První ponořený tunel ve Velké Británii: vede pod ústím řeky, aby nezakryl hrad v Conwy. Před ním vedou silnici A55 skalní tunely Penmaenbach",
 					"is": "Fyrstu sökkvigöng Bretlands: undir árósnum, svo að þau skyggðu ekki á kastalann í Conwy. Á undan þeim liggur vegur A55 um klettagöngin Penmaenbach",
 					"de": "Großbritanniens erster Absenktunnel: Er führt unter der Flussmündung hindurch, damit er Conwy Castle nicht verdeckt. Davor verläuft die A55 durch die Felstunnel von Penmaenbach"
-				}
+				},
+				"under": "water"
 			},
 			{
 				"from_km": 121,
@@ -361,7 +363,8 @@
 					"is": "Göng undir ána Mersey frá Wallasey til Liverpool; við hliðina liggja eldri Queensway-göngin frá 1934",
 					"de": "Ein Tunnel unter dem Mersey von Wallasey nach Liverpool; der ältere Queensway-Tunnel von 1934 liegt ganz in der Nähe"
 				},
-				"city": true
+				"city": true,
+				"under": "water"
 			}
 		]
 	},
@@ -563,7 +566,8 @@
 					"is": "Tvenn göng vegar A19 undir ána Tyne milli Jarrow og Howdon; þau seinni voru opnuð árið 2011",
 					"de": "Zwei Straßentunnel der A19 unter dem Tyne zwischen Jarrow und Howdon; der zweite wurde 2011 eröffnet"
 				},
-				"city": true
+				"city": true,
+				"under": "water"
 			}
 		]
 	},
