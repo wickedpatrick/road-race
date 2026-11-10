@@ -10,24 +10,38 @@
 	},
 	{
 		"a": "milano",
-		"b": "verona",
-		"km": 160,
+		"b": "brescia",
+		"km": 95,
 		"road": "A4",
-		"towns": [["Bergamo", 50], ["Brescia", 95], ["Desenzano del Garda", 125], ["Peschiera del Garda", 140]],
-		"zones": [
-			[118, "fields", "Lombardia"], [133, "lakes", "Lombardia"], [145, "lakes", "Veneto"],
-			[160, "fields", "Veneto"]
-		],
-		"via": [[50, 9.67, 45.68], [95, 10.21, 45.54], [125, 10.54, 45.47]]
+		"towns": [["Bergamo", 50]],
+		"zones": [[95, "fields", "Lombardia"]],
+		"via": [[50, 9.67, 45.68]]
+	},
+	{
+		"a": "brescia",
+		"b": "verona",
+		"km": 65,
+		"road": "A4",
+		"towns": [["Desenzano del Garda", 30], ["Peschiera del Garda", 45]],
+		"zones": [[23, "fields", "Lombardia"], [38, "lakes", "Lombardia"], [50, "lakes", "Veneto"], [65, "fields", "Veneto"]],
+		"via": [[30, 10.54, 45.47]]
 	},
 	{
 		"a": "verona",
-		"b": "venezia",
-		"km": 115,
+		"b": "padova",
+		"km": 80,
 		"road": "A4",
-		"towns": [["San Bonifacio", 25], ["Vicenza", 50], ["Padova", 80], ["Dolo", 95], ["Mestre", 108]],
-		"zones": [[115, "fields", "Veneto"]],
-		"via": [[50, 11.55, 45.55], [80, 11.88, 45.41]]
+		"towns": [["San Bonifacio", 25], ["Vicenza", 50]],
+		"zones": [[80, "fields", "Veneto"]],
+		"via": [[50, 11.55, 45.55]]
+	},
+	{
+		"a": "padova",
+		"b": "venezia",
+		"km": 35,
+		"road": "A4",
+		"towns": [["Dolo", 15], ["Mestre", 28]],
+		"zones": [[35, "fields", "Veneto"]]
 	},
 	{
 		"a": "venezia",
@@ -43,12 +57,21 @@
 	},
 	{
 		"a": "verona",
-		"b": "bolzano",
-		"km": 150,
+		"b": "trento",
+		"km": 95,
 		"road": "A22",
-		"towns": [["Ala", 50], ["Rovereto", 70], ["Trento", 95], ["Mezzocorona", 112], ["Salorno", 118], ["Egna", 127]],
-		"zones": [[35, "upland", "Veneto"], [150, "mountains", "Trentino-Alto Adige"]],
-		"via": [[35, 10.85, 45.73], [70, 11.04, 45.89], [95, 11.12, 46.07], [118, 11.2, 46.24]]
+		"towns": [["Ala", 50], ["Rovereto", 70]],
+		"zones": [[35, "upland", "Veneto"], [95, "mountains", "Trentino-Alto Adige"]],
+		"via": [[35, 10.85, 45.73], [70, 11.04, 45.89]]
+	},
+	{
+		"a": "trento",
+		"b": "bolzano",
+		"km": 55,
+		"road": "A22",
+		"towns": [["Mezzocorona", 17], ["Salorno", 23], ["Egna", 32]],
+		"zones": [[55, "mountains", "Trentino-Alto Adige"]],
+		"via": [[23, 11.2, 46.24]]
 	},
 	{
 		"a": "verona",
@@ -61,15 +84,21 @@
 	},
 	{
 		"a": "milano",
-		"b": "bologna",
-		"km": 215,
+		"b": "parma",
+		"km": 125,
 		"road": "A1",
-		"towns": [
-			["Lodi", 30], ["Casalpusterlengo", 50], ["Piacenza", 65], ["Fiorenzuola d'Arda", 85], ["Fidenza", 100],
-			["Parma", 125], ["Reggio Emilia", 150], ["Modena", 178]
-		],
-		"zones": [[62, "fields", "Lombardia"], [215, "fields", "Emilia-Romagna"]],
-		"via": [[30, 9.5, 45.31], [65, 9.69, 45.05], [125, 10.33, 44.8], [178, 10.93, 44.65]]
+		"towns": [["Lodi", 30], ["Casalpusterlengo", 50], ["Piacenza", 65], ["Fiorenzuola d'Arda", 85], ["Fidenza", 100]],
+		"zones": [[62, "fields", "Lombardia"], [125, "fields", "Emilia-Romagna"]],
+		"via": [[30, 9.5, 45.31], [65, 9.69, 45.05]]
+	},
+	{
+		"a": "parma",
+		"b": "bologna",
+		"km": 90,
+		"road": "A1",
+		"towns": [["Reggio Emilia", 25], ["Modena", 53]],
+		"zones": [[90, "fields", "Emilia-Romagna"]],
+		"via": [[53, 10.93, 44.65]]
 	},
 	{
 		"a": "milano",
@@ -179,7 +208,7 @@
 		"a": "firenze",
 		"b": "perugia",
 		"km": 150,
-		"road": [[88, "A1"], [150, "RA6"]],
+		"road": [[88, "A1"], [150, "RA6", 3, 110]],
 		"towns": [
 			["Incisa in Val d'Arno", 22], ["Arezzo", 65], ["Foiano della Chiana", 92],
 			["Passignano sul Trasimeno", 125], ["Magione", 135]
@@ -191,7 +220,7 @@
 		"a": "perugia",
 		"b": "ancona",
 		"km": 140,
-		"road": [[50, "SS318"], [140, "SS76"]],
+		"road": [[50, "SS318", 3, 110], [140, "SS76", 3, 110]],
 		"towns": [
 			["Valfabbrica", 20], ["Gualdo Tadino", 42], ["Fossato di Vico", 50], ["Fabriano", 70], ["Jesi", 110],
 			["Chiaravalle", 122]
@@ -349,18 +378,21 @@
 	},
 	{
 		"a": "bologna",
-		"b": "ancona",
-		"km": 210,
+		"b": "rimini",
+		"km": 110,
 		"road": "A14",
-		"towns": [
-			["Imola", 35], ["Faenza", 50], ["Forlì", 64], ["Cesena", 82], ["Rimini", 110], ["Riccione", 120],
-			["Cattolica", 130], ["Pesaro", 145], ["Fano", 160], ["Senigallia", 185]
-		],
-		"zones": [[105, "fields", "Emilia-Romagna"], [133, "coast", "Emilia-Romagna"], [210, "coast", "Marche"]],
-		"via": [
-			[35, 11.71, 44.35], [64, 12.04, 44.22], [82, 12.24, 44.14], [110, 12.57, 44.06], [145, 12.9, 43.91],
-			[185, 13.22, 43.71]
-		]
+		"towns": [["Imola", 35], ["Faenza", 50], ["Forlì", 64], ["Cesena", 82]],
+		"zones": [[105, "fields", "Emilia-Romagna"], [110, "coast", "Emilia-Romagna"]],
+		"via": [[35, 11.71, 44.35], [64, 12.04, 44.22], [82, 12.24, 44.14]]
+	},
+	{
+		"a": "rimini",
+		"b": "ancona",
+		"km": 100,
+		"road": "A14",
+		"towns": [["Riccione", 10], ["Cattolica", 20], ["Pesaro", 35], ["Fano", 50], ["Senigallia", 75]],
+		"zones": [[23, "coast", "Emilia-Romagna"], [100, "coast", "Marche"]],
+		"via": [[35, 12.9, 43.91], [75, 13.22, 43.71]]
 	},
 	{
 		"a": "pescara",
@@ -397,12 +429,45 @@
 		"a": "bari",
 		"b": "lecce",
 		"km": 155,
-		"road": [[115, "SS16", 3], [155, "SS613", 3]],
+		"road": [[115, "SS16", 3, 110], [155, "SS613", 3, 110]],
 		"towns": [
 			["Mola di Bari", 20], ["Polignano a Mare", 35], ["Monopoli", 45], ["Fasano", 60], ["Ostuni", 80],
 			["Brindisi", 115]
 		],
 		"zones": [[50, "coast", "Puglia"], [100, "mediterranean", "Puglia"], [155, "fields", "Puglia"]],
 		"via": [[45, 17.27, 40.94], [80, 17.58, 40.73], [115, 17.94, 40.63]]
+	},
+	{
+		"a": "catania",
+		"b": "siracusa",
+		"km": 65,
+		"road": [[12, "RA15", 3], [65, "SS114", 3, 110]],
+		"towns": [["Lentini", 30], ["Augusta", 45], ["Priolo Gargallo", 55]],
+		"zones": [[15, "fields", "Sicilia"], [45, "mediterranean", "Sicilia"], [65, "coast", "Sicilia"]],
+		"via": [[30, 15, 37.29], [45, 15.2, 37.24], [55, 15.19, 37.16]]
+	},
+	{
+		"a": "firenze",
+		"b": "siena",
+		"km": 75,
+		"road": [[75, "RA3", 3, 110]],
+		"towns": [
+			["San Casciano in Val di Pesa", 15], ["Tavarnelle Val di Pesa", 28], ["Poggibonsi", 45],
+			["Monteriggioni", 60]
+		],
+		"zones": [[75, "upland", "Toscana"]],
+		"via": [[15, 11.18, 43.66], [45, 11.15, 43.47], [60, 11.22, 43.39]]
+	},
+	{
+		"a": "siena",
+		"b": "perugia",
+		"km": 105,
+		"road": [[105, "RA6", 3, 110]],
+		"towns": [
+			["Rapolano Terme", 25], ["Sinalunga", 40], ["Bettolle", 50], ["Passignano sul Trasimeno", 80],
+			["Magione", 90]
+		],
+		"zones": [[62, "upland", "Toscana"], [92, "lakes", "Umbria"], [105, "upland", "Umbria"]],
+		"via": [[25, 11.6, 43.29], [50, 11.83, 43.2], [80, 12.13, 43.19]]
 	}
 ]

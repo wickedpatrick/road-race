@@ -1285,7 +1285,14 @@
 		"it_bolzano_duomo": [54, 67],
 		"it_lecce_santa_croce": [36, 33],
 		"it_pisa_torre": [30, 60],
-		"it_cosenza_castello": [60, 24]
+		"it_cosenza_castello": [60, 24],
+		"it_padova_santo": [90, 68],
+		"it_parma_battistero": [24, 37],
+		"it_brescia_duomo": [80, 82],
+		"it_rimini_arco_augusto": [17, 17],
+		"it_trento_buonconsiglio": [90, 40],
+		"it_siracusa_teatro_greco": [140, 25],
+		"it_siena_torre_mangia": [70, 102]
 	},
 	"police": {"escape_chance": 0.2, "escape_kmh": 180, "escape_swerves": [3, 5]},
 	"postcards": {"stamps": [0.15, 0.3, 0.45, 0.6], "stamp_caps": [2, 3, 3, 4, 5, 5, 5]}

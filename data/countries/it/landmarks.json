@@ -452,5 +452,145 @@
 			},
 			"local": "Castello Svevo"
 		}
+	],
+	"Padova": [
+		{
+			"kind": "it_padova_santo",
+			"name": {
+				"pl": "Bazylika św. Antoniego",
+				"en": "Basilica of Saint Anthony",
+				"cs": "Bazilika svatého Antonína",
+				"is": "Basilíka heilags Antons",
+				"de": "Basilika des heiligen Antonius"
+			},
+			"desc": {
+				"pl": "Bazylika z XIII wieku z ośmioma kopułami i dwiema smukłymi wieżami jak minarety; kryje grób św. Antoniego i co roku przyciąga miliony pielgrzymów",
+				"en": "A 13th-century basilica with eight domes and two slender towers like minarets; it holds Saint Anthony's tomb and draws millions of pilgrims a year",
+				"cs": "Bazilika ze 13. století s osmi kupolemi a dvěma štíhlými věžemi jako minarety; skrývá hrob svatého Antonína a ročně přitahuje miliony poutníků",
+				"is": "Basilíka frá 13. öld með átta hvolfþökum og tveimur grönnum turnum eins og mínarettum; þar er gröf heilags Antons og milljónir pílagríma koma árlega",
+				"de": "Eine Basilika aus dem 13. Jahrhundert mit acht Kuppeln und zwei schlanken Türmen wie Minarette; sie birgt das Grab des heiligen Antonius und zieht jährlich Millionen Pilger an"
+			},
+			"local": "Basilica di Sant'Antonio"
+		}
+	],
+	"Parma": [
+		{
+			"kind": "it_parma_battistero",
+			"name": {
+				"pl": "Baptysterium w Parmie",
+				"en": "Parma Baptistery",
+				"cs": "Baptisterium v Parmě",
+				"is": "Skírnarhúsið í Parma",
+				"de": "Baptisterium von Parma"
+			},
+			"desc": {
+				"pl": "Ośmioboczne baptysterium z różowego marmuru z Werony, budowane od 1196 roku przez Benedetta Antelamiego; przejście między romańszczyzną a gotykiem",
+				"en": "An octagonal baptistery of pink Verona marble, begun in 1196 by Benedetto Antelami; it marks the passage from Romanesque to Gothic",
+				"cs": "Osmiboké baptisterium z růžového veronského mramoru, stavěné od roku 1196 Benedettem Antelamim; přechod od románského slohu ke gotice",
+				"is": "Átthyrnt skírnarhús úr bleikum Verónamarmara, hafið árið 1196 af Benedetto Antelami; það markar skilin milli rómanskrar og gotneskrar listar",
+				"de": "Ein achteckiges Baptisterium aus rosa Veroneser Marmor, 1196 von Benedetto Antelami begonnen; es steht am Übergang von der Romanik zur Gotik"
+			},
+			"local": "Battistero di Parma"
+		}
+	],
+	"Brescia": [
+		{
+			"kind": "it_brescia_duomo",
+			"name": {
+				"pl": "Stara i Nowa Katedra",
+				"en": "Old and New Cathedrals",
+				"cs": "Stará a Nová katedrála",
+				"is": "Gamla og nýja dómkirkjan",
+				"de": "Alter und Neuer Dom"
+			},
+			"desc": {
+				"pl": "Dwie katedry obok siebie: okrągła romańska Rotonda z XI wieku i barokowa Nowa Katedra z białego marmuru z kopułą wysoką na 82 metry",
+				"en": "Two cathedrals side by side: the round Romanesque Rotonda of the 11th century and the white marble Baroque New Cathedral with a dome 82 metres high",
+				"cs": "Dvě katedrály vedle sebe: kruhová románská Rotonda z 11. století a barokní Nová katedrála z bílého mramoru s kupolí vysokou 82 metrů",
+				"is": "Tvær dómkirkjur hlið við hlið: hringlaga rómönsk Rotonda frá 11. öld og barokk Nýja dómkirkjan úr hvítum marmara með 82 metra háu hvolfþaki",
+				"de": "Zwei Dome nebeneinander: die runde romanische Rotonda aus dem 11. Jahrhundert und der barocke Neue Dom aus weißem Marmor mit einer 82 Meter hohen Kuppel"
+			},
+			"local": "Duomo Vecchio e Duomo Nuovo"
+		}
+	],
+	"Rimini": [
+		{
+			"kind": "it_rimini_arco_augusto",
+			"name": {
+				"pl": "Łuk Augusta",
+				"en": "Arch of Augustus",
+				"cs": "Augustův oblouk",
+				"is": "Bogi Ágústusar",
+				"de": "Augustusbogen"
+			},
+			"desc": {
+				"pl": "Najstarszy zachowany łuk rzymski, wzniesiony w 27 roku p.n.e. na cześć Augusta tam, gdzie Via Flaminia z Rzymu dochodziła do Ariminum",
+				"en": "The oldest surviving Roman arch, raised in 27 BC for Augustus where the Via Flaminia from Rome reached Ariminum",
+				"cs": "Nejstarší dochovaný římský oblouk, postavený roku 27 př. n. l. na počest Augusta tam, kde Via Flaminia z Říma končila v Ariminu",
+				"is": "Elsti varðveitti rómverski sigurbogi, reistur árið 27 f.Kr. til heiðurs Ágústusi þar sem Via Flaminia frá Róm kom til Ariminum",
+				"de": "Der älteste erhaltene römische Bogen, 27 v. Chr. für Augustus errichtet, wo die Via Flaminia aus Rom Ariminum erreichte"
+			},
+			"local": "Arco d'Augusto"
+		}
+	],
+	"Trento": [
+		{
+			"kind": "it_trento_buonconsiglio",
+			"name": {
+				"pl": "Zamek Buonconsiglio",
+				"en": "Buonconsiglio Castle",
+				"cs": "Hrad Buonconsiglio",
+				"is": "Buonconsiglio-kastali",
+				"de": "Castello del Buonconsiglio"
+			},
+			"desc": {
+				"pl": "Rezydencja książąt-biskupów Trydentu od XIII do XVIII wieku: średniowieczny Castelvecchio z okrągłą Torre d'Augusto i renesansowy Magno Palazzo",
+				"en": "The seat of the prince-bishops of Trent from the 13th to the 18th century: the medieval Castelvecchio with the round Torre d'Augusto and the Renaissance Magno Palazzo",
+				"cs": "Sídlo knížat-biskupů tridentských od 13. do 18. století: středověký Castelvecchio s kruhovou Torre d'Augusto a renesanční Magno Palazzo",
+				"is": "Aðsetur furstabiskupanna í Trento frá 13. til 18. aldar: miðaldakastalinn Castelvecchio með hringlaga Torre d'Augusto og endurreisnarhöllin Magno Palazzo",
+				"de": "Sitz der Fürstbischöfe von Trient vom 13. bis zum 18. Jahrhundert: das mittelalterliche Castelvecchio mit dem runden Torre d'Augusto und der Renaissancebau Magno Palazzo"
+			},
+			"local": "Castello del Buonconsiglio"
+		}
+	],
+	"Siracusa": [
+		{
+			"kind": "it_siracusa_teatro_greco",
+			"name": {
+				"pl": "Teatr grecki w Syrakuzach",
+				"en": "Greek Theatre of Syracuse",
+				"cs": "Řecké divadlo v Syrakusách",
+				"is": "Gríska leikhúsið í Sýrakúsu",
+				"de": "Griechisches Theater von Syrakus"
+			},
+			"desc": {
+				"pl": "Teatr wykuty w skale wzgórza Temenite w V wieku p.n.e.; tu Ajschylos wystawił swoje tragedie, a przedstawienia antyczne grane są do dziś",
+				"en": "A theatre cut into the rock of the Temenite hill in the 5th century BC; Aeschylus staged his tragedies here, and ancient plays are still performed",
+				"cs": "Divadlo vytesané do skály pahorku Temenite v 5. století př. n. l.; Aischylos tu uváděl své tragédie a antické hry se tu hrají dodnes",
+				"is": "Leikhús höggvið í klöpp Temenite-hæðar á 5. öld f.Kr.; Æskýlos setti hér upp harmleiki sína og forn leikrit eru enn sýnd þar",
+				"de": "Ein im 5. Jahrhundert v. Chr. in den Fels des Temenitenhügels gehauenes Theater; Aischylos brachte hier seine Tragödien auf die Bühne, und noch heute werden antike Stücke gespielt"
+			},
+			"local": "Teatro Greco"
+		}
+	],
+	"Siena": [
+		{
+			"kind": "it_siena_torre_mangia",
+			"name": {
+				"pl": "Wieża Mangia",
+				"en": "Torre del Mangia",
+				"cs": "Věž Mangia",
+				"is": "Mangia-turninn",
+				"de": "Torre del Mangia"
+			},
+			"desc": {
+				"pl": "Smukła ceglana wieża Palazzo Pubblico z lat 1338–1348, wysoka na 102 metry, nad muszlowatym Piazza del Campo",
+				"en": "The slender brick tower of the Palazzo Pubblico, built in 1338–1348 and 102 metres tall, over the shell-shaped Piazza del Campo",
+				"cs": "Štíhlá cihlová věž Palazzo Pubblico z let 1338–1348, vysoká 102 metrů, nad mušlovitým Piazza del Campo",
+				"is": "Grannur múrsteinsturn Palazzo Pubblico frá 1338–1348, 102 metra hár, yfir skeljarlaga Piazza del Campo",
+				"de": "Der schlanke Backsteinturm des Palazzo Pubblico, 1338–1348 erbaut und 102 Meter hoch, über der muschelförmigen Piazza del Campo"
+			},
+			"local": "Torre del Mangia"
+		}
 	]
 }

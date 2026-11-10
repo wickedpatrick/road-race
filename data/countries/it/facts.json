@@ -229,5 +229,26 @@
 		"cs": "Rybářské městečko pod skálou La Rocca s normanskou katedrálou z 12. století",
 		"is": "Fiskibær undir klettinum La Rocca með normannskri dómkirkju frá 12. öld",
 		"de": "Ein Fischerstädtchen unter dem Felsen La Rocca mit einem normannischen Dom aus dem 12. Jahrhundert"
+	},
+	"Brescia": {
+		"pl": "Stąd startuje i tu kończy się Mille Miglia, legendarny wyścig samochodowy na tysiąc mil po drogach Włoch, rozgrywany od 1927 roku",
+		"en": "The start and finish of the Mille Miglia, the legendary thousand-mile car race over Italy's roads, first run in 1927",
+		"cs": "Zde startuje a končí Mille Miglia, legendární automobilový závod na tisíc mil po italských silnicích, jetý od roku 1927",
+		"is": "Hér hefst og endar Mille Miglia, hinn goðsagnakenndi þúsund mílna kappakstur um vegi Ítalíu, fyrst ekinn árið 1927",
+		"de": "Start und Ziel der Mille Miglia, des legendären Autorennens über tausend Meilen auf Italiens Straßen, erstmals 1927 ausgetragen"
+	},
+	"Siracusa": {
+		"pl": "W starożytności jedno z największych miast greckiego świata; urodził się tu Archimedes, który bronił miasta przed Rzymianami swoimi machinami",
+		"en": "In antiquity one of the largest cities of the Greek world; Archimedes was born here and defended it against the Romans with his machines",
+		"cs": "Ve starověku jedno z největších měst řeckého světa; narodil se tu Archimédés, který město bránil svými stroji proti Římanům",
+		"is": "Til forna ein stærsta borg gríska heimsins; Arkímedes fæddist hér og varði hana gegn Rómverjum með vélum sínum",
+		"de": "In der Antike eine der größten Städte der griechischen Welt; hier wurde Archimedes geboren, der sie mit seinen Maschinen gegen die Römer verteidigte"
+	},
+	"Siena": {
+		"pl": "Dwa razy w roku, 2 lipca i 16 sierpnia, na muszlowatym Piazza del Campo odbywa się Palio, wyścig konny na oklep dzielnic miasta",
+		"en": "Twice a year, on 2 July and 16 August, the shell-shaped Piazza del Campo hosts the Palio, a bareback horse race between the city's districts",
+		"cs": "Dvakrát ročně, 2. července a 16. srpna, se na mušlovitém Piazza del Campo koná Palio, dostih bez sedel mezi městskými čtvrtěmi",
+		"is": "Tvisvar á ári, 2. júlí og 16. ágúst, fer Palio fram á skeljarlaga Piazza del Campo, berbakt veðhlaup milli hverfa borgarinnar",
+		"de": "Zweimal im Jahr, am 2. Juli und 16. August, findet auf der muschelförmigen Piazza del Campo der Palio statt, ein Pferderennen ohne Sattel zwischen den Stadtvierteln"
 	}
 }

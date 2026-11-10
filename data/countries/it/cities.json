@@ -68,6 +68,14 @@
 		"exonym": {"pl": "Wenecja", "en": "Venice", "cs": "Benátky", "is": "Feneyjar", "de": "Venedig"}
 	},
 	"messina": {"name": "Messina", "lat": 38.19, "lon": 15.55, "pop": 220, "region": "Sicilia", "exonym": {"pl": "Mesyna"}},
+	"padova": {
+		"name": "Padova",
+		"lat": 45.41,
+		"lon": 11.88,
+		"pop": 207,
+		"region": "Veneto",
+		"exonym": {"pl": "Padwa", "en": "Padua", "is": "Padúa", "de": "Padua"}
+	},
 	"trieste": {
 		"name": "Trieste",
 		"lat": 45.65,
@@ -76,10 +84,29 @@
 		"region": "Friuli-Venezia Giulia",
 		"exonym": {"pl": "Triest", "cs": "Terst", "de": "Triest"}
 	},
+	"parma": {"name": "Parma", "lat": 44.8, "lon": 10.33, "pop": 198, "region": "Emilia-Romagna"},
+	"brescia": {"name": "Brescia", "lat": 45.54, "lon": 10.21, "pop": 197, "region": "Lombardia"},
 	"reggio_calabria": {"name": "Reggio Calabria", "lat": 38.11, "lon": 15.65, "pop": 170, "region": "Calabria", "short": "Reggio C."},
 	"perugia": {"name": "Perugia", "lat": 43.11, "lon": 12.39, "pop": 162, "region": "Umbria"},
+	"rimini": {"name": "Rimini", "lat": 44.06, "lon": 12.57, "pop": 150, "region": "Emilia-Romagna"},
 	"salerno": {"name": "Salerno", "lat": 40.68, "lon": 14.77, "pop": 127, "region": "Campania"},
 	"pescara": {"name": "Pescara", "lat": 42.46, "lon": 14.21, "pop": 118, "region": "Abruzzo"},
+	"trento": {
+		"name": "Trento",
+		"lat": 46.07,
+		"lon": 11.12,
+		"pop": 118,
+		"region": "Trentino-Alto Adige",
+		"exonym": {"pl": "Trydent", "de": "Trient"}
+	},
+	"siracusa": {
+		"name": "Siracusa",
+		"lat": 37.08,
+		"lon": 15.29,
+		"pop": 117,
+		"region": "Sicilia",
+		"exonym": {"pl": "Syrakuzy", "en": "Syracuse", "cs": "Syrakusy", "is": "Sýrakúsa", "de": "Syrakus"}
+	},
 	"bolzano": {
 		"name": "Bolzano",
 		"lat": 46.5,
@@ -91,5 +118,6 @@
 	"ancona": {"name": "Ancona", "lat": 43.59, "lon": 13.49, "pop": 99, "region": "Marche", "exonym": {"pl": "Ankona"}},
 	"lecce": {"name": "Lecce", "lat": 40.35, "lon": 18.17, "pop": 95, "region": "Puglia"},
 	"pisa": {"name": "Pisa", "lat": 43.72, "lon": 10.4, "pop": 89, "region": "Toscana", "exonym": {"pl": "Piza"}},
-	"cosenza": {"name": "Cosenza", "lat": 39.3, "lon": 16.25, "pop": 64, "region": "Calabria"}
+	"cosenza": {"name": "Cosenza", "lat": 39.3, "lon": 16.25, "pop": 64, "region": "Calabria"},
+	"siena": {"name": "Siena", "lat": 43.32, "lon": 11.33, "pop": 53, "region": "Toscana"}
 }
