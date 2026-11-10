@@ -106,6 +106,10 @@ var _lat_v := 0.0 ## the steering's sideways speed now (road half-widths per sec
 var ferry_left := 0.0 ## seconds of the crossing left, > 0 while on board
 var _ferry := {} ## the ferry the car is on
 var police_rng := RandomNumberGenerator.new() ## a separate stream: the officers do not reshuffle anything else
+## split times for the road rankings (Rankings): [[city id, race seconds], ...] as each map city is reached (the start
+## at 0); race seconds are the time limit used up, so the bump penalties are in them
+var splits := []
+var _cities := [] ## the stage's map cities, by z
 
 func _init(p_car_id: String, p_stage: Dictionary, seed_value: int) -> void:
 	car_id = p_car_id
@@ -127,6 +131,9 @@ func _init(p_car_id: String, p_stage: Dictionary, seed_value: int) -> void:
 	_grip_accel = Weather.grip(weather, "accel")
 	_inertia = Weather.inertia(weather)
 	police_rng.seed = seed_value + 303
+	_cities = stage.get("towns", []).filter(func(t): return t.has("id"))
+	_cities.sort_custom(func(p, q): return p.z < q.z)
+	_record_splits()
 
 func speed_ratio() -> float:
 	return clampf(speed / stats.max_speed, 0.0, 1.0)
@@ -378,6 +385,10 @@ func _station_near(zz: float) -> bool:
 			return true
 	return false
 
+func _record_splits() -> void:
+	while splits.size() < _cities.size() and z >= _cities[splits.size()].z:
+		splits.append([_cities[splits.size()].id, stage.duration - time_left])
+
 func step(dt: float, input: Dictionary) -> void:
 	if state != "running":
 		return
@@ -479,6 +490,7 @@ func step(dt: float, input: Dictionary) -> void:
 			x = clampf(car.lane_x + (clear if head_on or x >= car.lane_x else -clear), -1.8, 1.8)
 			collided.emit(idx)
 	_check_boarding()
+	_record_splits()
 	# end of race
 	if z >= stage.length:
 		state = "won"

@@ -50,6 +50,13 @@ country in the plan (`planned`, grey with borders until it is in `countries/inde
 without borders; `views`: `{name, rect, lonlat: [lon0, lon1, lat0, lat1]}`. Cyprus is one island (the north merged
 in) and Crimea is Ukraine's (moved out of Russia), as the EU sees them.
 
+## `rankings/<code>.json` (generated: `tools/calibrate_rankings.sh`)
+
+The road rankings' yardstick per map (`src/logic/rankings.gd`): `roads` is road key (`"a|b"`, the two city ids
+sorted, one ranking for both ways) -> the autopilot's best seconds on that road alone in the fastest car (`car`),
+keeping the limits, in the sun. Roads under `fitted` were not run to the end: their time is the road's legal time
+x `ratio` (the map's median best/legal). The 20 made-up drivers' times are drawn from these, the same on every run.
+
 ## `countries/index.json`
 
 `countries`: `[{code, name, neighbours: [codes], favorite_neighbour}]`. Each `code` has a folder `countries/<code>/`.

@@ -2,6 +2,7 @@ extends Node
 ## Current choices and the player's profile. The profile is saved to user:// (in the browser that is the
 ## site's IndexedDB storage), so progress survives closing the page.
 const SAVE_PATH := "user://profile.json"
+var save_path := SAVE_PATH ## the tests point it at a file of their own
 var car_id := "yaris"
 ## The country being played; from_city, to_city, home_city and visited belong to it. The other countries' are kept
 ## in `places` (code -> {home_city, from_city, to_city, visited}); kilometres and cars are shared.
@@ -17,6 +18,11 @@ var quality := "high" ## "high": everything at full screen sharpness; "low": the
 var home_city := "" ## picked on the first start; "" until then
 var menu_at_map := false ## the menu opens at the destination map (coming back from a race)
 var last_result := {}
+## the player's road rankings (Rankings): country -> road key -> {t, car, weather, date}, best times of won trips
+var rankings := {}
+## what the ranking screen shows: {keys: road keys to page through, i: the one shown, country: bool (the country's
+## ranking instead), back: "menu" | "results"}
+var ranking_view := {}
 ## test mode for tuning the sharp bends: every bend sharp, optionally with a given sharpness. In the browser add
 ## ?zakrety (or ?zakrety=20) to the address; on the desktop pass -- --zakrety (or --zakrety=20).
 var sharp_test := false
@@ -70,7 +76,7 @@ func _read_test_flags() -> void:
 			weather_test = kv[1]
 
 func load_profile() -> void:
-	var f := FileAccess.open(SAVE_PATH, FileAccess.READ)
+	var f := FileAccess.open(save_path, FileAccess.READ)
 	if f == null:
 		return
 	var d = JSON.parse_string(f.get_as_text())
@@ -81,6 +87,7 @@ func load_profile() -> void:
 	if d.get("language", "") in GameData.LANGUAGES:
 		GameData.set_language(d.language)
 	places = d.get("places", {}) if d.get("places") is Dictionary else {}
+	rankings = d.get("rankings", {}) if d.get("rankings") is Dictionary else {} # none in profiles from before the rankings
 	if not d.has("places"):
 		# profiles from before countries: everything was Poland (and from before home cities: the player is
 		# already somewhere, keep it)
@@ -100,12 +107,12 @@ func set_language(code: String) -> void:
 	save_profile()
 
 func save_profile() -> void:
-	var f := FileAccess.open(SAVE_PATH, FileAccess.WRITE)
+	var f := FileAccess.open(save_path, FileAccess.WRITE)
 	if f == null:
 		return
 	places[country] = _place()
 	f.store_string(JSON.stringify({"total_km": total_km, "car_id": car_id, "quality": quality, "language": GameData.language,
-		"country": country, "places": places}))
+		"country": country, "places": places, "rankings": rankings}))
 
 ## The current country's progress, as kept in `places`.
 func _place() -> Dictionary:
@@ -181,3 +188,20 @@ func add_km(km: float) -> Array:
 	total_km += km
 	save_profile()
 	return CarStats.ids().slice(before, Profile.unlocked_count(total_km))
+
+## The road rankings after a trip: a won one (in time and fuel) saves each road's time (its split, scaled to the
+## road's own stage) when it beats the player's best there; a lost one saves nothing. Returns Rankings.record's
+## rows ([] for a lost trip).
+func record_trip(race: Race) -> Array:
+	if race.state != "won" or sharp_test or police_test: # the test modes change the road: no ranking
+		return []
+	var times := Rankings.road_times(country, race.stage, race.splits)
+	var d := Time.get_date_dict_from_system()
+	var rows := Rankings.record(rankings, country, times, race.car_id, race.weather, "%04d-%02d-%02d" % [d.year, d.month, d.day])
+	save_profile()
+	return rows
+
+## The player's best times on a map's roads (key -> {t, car, ...}), the current map's by default.
+func my_rankings(code := "") -> Dictionary:
+	var r = rankings.get(country if code == "" else code, {})
+	return r if r is Dictionary else {}

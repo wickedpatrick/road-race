@@ -166,8 +166,9 @@ static func track_length(km: float) -> float:
 		return M_PER_KM * LONG_FROM * sqrt(km / LONG_FROM)
 	return maxf(km * M_PER_KM, SHORT_BASE + km * SHORT_PER_KM)
 
-static func build(from: String, to: String) -> Dictionary:
-	var legs := find(from, to)
+## `via` gives the legs instead of the shortest path (Rankings: one direct road, even where a way round is shorter).
+static func build(from: String, to: String, via: Array = []) -> Dictionary:
+	var legs := via if not via.is_empty() else find(from, to)
 	assert(not legs.is_empty(), "no route %s -> %s" % [from, to])
 	var km := total_km(legs)
 	# the seas crossed by ferry, in trip km (k0..k1), and the settlements with their streets' half-length (marks)
