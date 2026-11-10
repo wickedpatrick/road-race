@@ -1,0 +1,262 @@
+{
+	"Lisboa": [
+		{
+			"kind": "pt_lisboa_belem",
+			"name": {
+				"pl": "Wieża Belém",
+				"en": "Belém Tower",
+				"cs": "Belémská věž",
+				"is": "Belém-turninn",
+				"de": "Turm von Belém"
+			},
+			"desc": {
+				"pl": "Manuelińska wieża obronna nad Tagiem, zbudowana w latach 1514–1519 tam, skąd wypływali odkrywcy; na liście UNESCO",
+				"en": "A Manueline fortified tower on the Tagus, built in 1514–1519 where the explorers set sail; on UNESCO's list",
+				"cs": "Manuelská obranná věž na řece Tejo z let 1514–1519, odkud vyplouvali mořeplavci; na seznamu UNESCO",
+				"is": "Víggirtur turn í manúelstíl við Tagus, reistur 1514–1519 þar sem landkönnuðirnir létu úr höfn; á heimsminjaskrá UNESCO",
+				"de": "Ein manuelinischer Wehrturm am Tejo, 1514–1519 dort gebaut, wo die Entdecker in See stachen; UNESCO-Welterbe"
+			},
+			"local": "Torre de Belém"
+		}
+	],
+	"Porto": [
+		{
+			"kind": "pt_porto_clerigos",
+			"name": {
+				"pl": "Torre dos Clérigos",
+				"en": "Clérigos Tower",
+				"cs": "Věž Clérigos",
+				"is": "Clérigos-turninn",
+				"de": "Torre dos Clérigos"
+			},
+			"desc": {
+				"pl": "Barokowa dzwonnica o wysokości 75 metrów, zaprojektowana przez Nicolau Nasoniego i ukończona w 1763 roku; symbol Porto",
+				"en": "A Baroque bell tower 75 metres high, designed by Nicolau Nasoni and finished in 1763; the symbol of Porto",
+				"cs": "Barokní zvonice vysoká 75 metrů, navržená Nicolauem Nasonim a dokončená roku 1763; symbol Porta",
+				"is": "Barokkklukkuturn, 75 metra hár, hannaður af Nicolau Nasoni og fullgerður árið 1763; tákn Porto",
+				"de": "Ein 75 Meter hoher barocker Glockenturm, von Nicolau Nasoni entworfen und 1763 vollendet; das Wahrzeichen Portos"
+			},
+			"local": "Torre dos Clérigos"
+		}
+	],
+	"Braga": [
+		{
+			"kind": "pt_braga_bom_jesus",
+			"name": {
+				"pl": "Bom Jesus do Monte",
+				"en": "Bom Jesus do Monte",
+				"cs": "Bom Jesus do Monte",
+				"is": "Bom Jesus do Monte",
+				"de": "Bom Jesus do Monte"
+			},
+			"desc": {
+				"pl": "Sanktuarium na wzgórzu nad miastem z barokowymi schodami biegnącymi zygzakiem; na liście UNESCO",
+				"en": "A hilltop sanctuary above the city with a zigzag Baroque stairway; on UNESCO's list",
+				"cs": "Poutní místo na kopci nad městem s barokním schodištěm klikatícím se cik cak; na seznamu UNESCO",
+				"is": "Helgidómur á hæð ofan við borgina með barokktröppum sem liggja í sikksakk; á heimsminjaskrá UNESCO",
+				"de": "Ein Heiligtum auf einem Hügel über der Stadt mit einer barocken Zickzacktreppe; UNESCO-Welterbe"
+			},
+			"local": "Bom Jesus do Monte"
+		}
+	],
+	"Guimarães": [
+		{
+			"kind": "pt_guimaraes_castelo",
+			"name": {
+				"pl": "Zamek w Guimarães",
+				"en": "Guimarães Castle",
+				"cs": "Hrad Guimarães",
+				"is": "Kastalinn í Guimarães",
+				"de": "Burg Guimarães"
+			},
+			"desc": {
+				"pl": "Zamek z X wieku z kwadratową wieżą główną, związany z narodzinami Portugalii i jej pierwszym królem",
+				"en": "A 10th-century castle with a square keep, linked with the birth of Portugal and its first king",
+				"cs": "Hrad z 10. století se čtverhrannou hlavní věží, spojovaný se zrodem Portugalska a jeho prvním králem",
+				"is": "Kastali frá 10. öld með ferhyrndum höfuðturni, tengdur upphafi Portúgals og fyrsta konungi þess",
+				"de": "Eine Burg aus dem 10. Jahrhundert mit viereckigem Bergfried, verbunden mit der Geburt Portugals und seinem ersten König"
+			},
+			"local": "Castelo de Guimarães"
+		}
+	],
+	"Coimbra": [
+		{
+			"kind": "pt_coimbra_universidade",
+			"name": {
+				"pl": "Wieża Uniwersytetu w Coimbrze",
+				"en": "Coimbra University Tower",
+				"cs": "Věž univerzity v Coimbře",
+				"is": "Háskólaturninn í Coimbra",
+				"de": "Turm der Universität Coimbra"
+			},
+			"desc": {
+				"pl": "Wieża zegarowa z 1733 roku nad dziedzińcem dawnego pałacu królewskiego, w którym mieści się uniwersytet",
+				"en": "The clock tower of 1733 over the courtyard of the former royal palace that houses the university",
+				"cs": "Hodinová věž z roku 1733 nad nádvořím bývalého královského paláce, v němž sídlí univerzita",
+				"is": "Klukkuturn frá 1733 yfir garði fyrrverandi konungshallarinnar sem hýsir háskólann",
+				"de": "Der Uhrturm von 1733 über dem Hof des ehemaligen Königspalasts, in dem die Universität sitzt"
+			},
+			"local": "Torre da Universidade"
+		}
+	],
+	"Leiria": [
+		{
+			"kind": "pt_leiria_castelo",
+			"name": {
+				"pl": "Zamek w Leirii",
+				"en": "Leiria Castle",
+				"cs": "Hrad Leiria",
+				"is": "Kastalinn í Leiria",
+				"de": "Burg Leiria"
+			},
+			"desc": {
+				"pl": "Zamek na wzgórzu nad miastem, założony w 1135 roku przez Alfonsa I, z gotycką loggią królewskiego pałacu",
+				"en": "A castle on the hill over the town, founded in 1135 by Afonso I, with the Gothic loggia of a royal palace",
+				"cs": "Hrad na kopci nad městem, založený roku 1135 Alfonsem I., s gotickou lodžií královského paláce",
+				"is": "Kastali á hæðinni yfir bænum, stofnaður árið 1135 af Afonso I., með gotneskum svölum konungshallar",
+				"de": "Eine Burg auf dem Hügel über der Stadt, 1135 von Afonso I. gegründet, mit der gotischen Loggia eines Königspalasts"
+			},
+			"local": "Castelo de Leiria"
+		}
+	],
+	"Setúbal": [
+		{
+			"kind": "pt_setubal_sao_filipe",
+			"name": {
+				"pl": "Fort São Filipe",
+				"en": "Fort of São Filipe",
+				"cs": "Pevnost São Filipe",
+				"is": "São Filipe-virkið",
+				"de": "Festung São Filipe"
+			},
+			"desc": {
+				"pl": "Gwiaździsta forteca z 1582 roku na zboczu nad ujściem Sado, z widokiem na półwysep Tróia",
+				"en": "A star-shaped fortress of 1582 on the slope over the mouth of the Sado, looking out to the Tróia peninsula",
+				"cs": "Hvězdicová pevnost z roku 1582 na svahu nad ústím Sada s výhledem na poloostrov Tróia",
+				"is": "Stjörnulaga virki frá 1582 í hlíðinni ofan við ósa Sado, með útsýni til Tróia-skagans",
+				"de": "Eine sternförmige Festung von 1582 am Hang über der Sado-Mündung mit Blick auf die Halbinsel Tróia"
+			},
+			"local": "Forte de São Filipe"
+		}
+	],
+	"Viseu": [
+		{
+			"kind": "pt_viseu_se",
+			"name": {
+				"pl": "Katedra w Viseu",
+				"en": "Viseu Cathedral",
+				"cs": "Katedrála ve Viseu",
+				"is": "Dómkirkjan í Viseu",
+				"de": "Kathedrale von Viseu"
+			},
+			"desc": {
+				"pl": "Katedra na najwyższym punkcie starego miasta, z dwiema kwadratowymi wieżami i manierystyczną fasadą",
+				"en": "The cathedral on the highest point of the old town, with two square towers and a Mannerist façade",
+				"cs": "Katedrála na nejvyšším místě starého města se dvěma čtverhrannými věžemi a manýristickým průčelím",
+				"is": "Dómkirkjan á hæsta stað gamla bæjarins, með tveimur ferhyrndum turnum og framhlið í manierískum stíl",
+				"de": "Die Kathedrale am höchsten Punkt der Altstadt mit zwei viereckigen Türmen und einer manieristischen Fassade"
+			},
+			"local": "Sé de Viseu"
+		}
+	],
+	"Aveiro": [
+		{
+			"kind": "pt_aveiro_moliceiro",
+			"name": {
+				"pl": "Łódź moliceiro",
+				"en": "Moliceiro boat",
+				"cs": "Člun moliceiro",
+				"is": "Moliceiro-bátur",
+				"de": "Moliceiro-Boot"
+			},
+			"desc": {
+				"pl": "Długa płaskodenna łódź z wysoko wygiętym dziobem, malowana w kolorowe sceny; dawniej zbierano nią wodorosty w lagunie",
+				"en": "A long flat-bottomed boat with a high curled prow painted with colourful scenes; once used to gather seaweed in the lagoon",
+				"cs": "Dlouhý člun s plochým dnem a vysoko zahnutou přídí pomalovanou barevnými výjevy; dříve se jím v laguně sbíraly řasy",
+				"is": "Langur flatbotna bátur með hátt uppsveigðu stefni málaður litríkum myndum; áður notaður til að safna þangi í lóninu",
+				"de": "Ein langes Boot mit flachem Boden und hoch geschwungenem, bunt bemaltem Bug; früher sammelte man damit Seetang in der Lagune"
+			},
+			"local": "Barco Moliceiro"
+		}
+	],
+	"Faro": [
+		{
+			"kind": "pt_faro_arco_vila",
+			"name": {
+				"pl": "Arco da Vila",
+				"en": "Arco da Vila",
+				"cs": "Arco da Vila",
+				"is": "Arco da Vila",
+				"de": "Arco da Vila"
+			},
+			"desc": {
+				"pl": "Klasycystyczna brama do starego miasta z 1812 roku, z posągiem św. Tomasza z Akwinu; na dzwonnicy gnieżdżą się bociany",
+				"en": "The Neoclassical gate of 1812 into the old town, with a statue of St Thomas Aquinas; storks nest on its bell tower",
+				"cs": "Klasicistní brána do starého města z roku 1812 se sochou svatého Tomáše Akvinského; na její zvonici hnízdí čápi",
+				"is": "Nýklassískt borgarhlið frá 1812 inn í gamla bæinn, með styttu af heilögum Tómasi frá Aquino; storkar verpa á klukkuturninum",
+				"de": "Das klassizistische Tor von 1812 in die Altstadt mit einer Statue des heiligen Thomas von Aquin; auf dem Glockenturm nisten Störche"
+			},
+			"local": "Arco da Vila"
+		}
+	],
+	"Évora": [
+		{
+			"kind": "pt_evora_templo",
+			"name": {
+				"pl": "Świątynia rzymska w Évorze",
+				"en": "Roman Temple of Évora",
+				"cs": "Římský chrám v Évoře",
+				"is": "Rómverska hofið í Évora",
+				"de": "Römischer Tempel von Évora"
+			},
+			"desc": {
+				"pl": "Korynckie kolumny świątyni z I wieku n.e. na granitowym podium; przez wieki zamurowana, przetrwała w środku miasta",
+				"en": "The Corinthian columns of a 1st-century AD temple on a granite podium; walled in for centuries, it survived in the middle of the town",
+				"cs": "Korintské sloupy chrámu z 1. století n. l. na žulovém pódiu; po staletí zazděný přežil uprostřed města",
+				"is": "Korintusarsúlur hofs frá 1. öld e.Kr. á granítpalli; múrað inn um aldir og varðveittist í miðjum bænum",
+				"de": "Die korinthischen Säulen eines Tempels aus dem 1. Jahrhundert n. Chr. auf einem Granitpodium; jahrhundertelang eingemauert, überdauerte er mitten in der Stadt"
+			},
+			"local": "Templo Romano"
+		}
+	],
+	"Vila Real": [
+		{
+			"kind": "pt_vila_real_mateus",
+			"name": {
+				"pl": "Pałac Mateus",
+				"en": "Mateus Palace",
+				"cs": "Palác Mateus",
+				"is": "Mateus-höllin",
+				"de": "Palácio de Mateus"
+			},
+			"desc": {
+				"pl": "Barokowy dwór z XVIII wieku z sadzawką przed fasadą; jego wizerunek trafił na etykietę wina Mateus Rosé",
+				"en": "An 18th-century Baroque manor with a pool before its façade; its picture went onto the Mateus Rosé wine label",
+				"cs": "Barokní panské sídlo z 18. století s nádrží před průčelím; jeho obrázek se dostal na etiketu vína Mateus Rosé",
+				"is": "Barokksetur frá 18. öld með tjörn framan við framhliðina; mynd af því prýðir miða Mateus Rosé-vínsins",
+				"de": "Ein barockes Herrenhaus aus dem 18. Jahrhundert mit einem Teich vor der Fassade; sein Bild kam auf das Etikett des Mateus Rosé"
+			},
+			"local": "Palácio de Mateus"
+		}
+	],
+	"Bragança": [
+		{
+			"kind": "pt_braganca_castelo",
+			"name": {
+				"pl": "Zamek w Bragançy",
+				"en": "Bragança Castle",
+				"cs": "Hrad Bragança",
+				"is": "Kastalinn í Bragança",
+				"de": "Burg Bragança"
+			},
+			"desc": {
+				"pl": "Średniowieczny zamek otoczony murami cytadeli, z 33-metrową wieżą główną z XV wieku",
+				"en": "A medieval castle inside the citadel walls, with a 33-metre keep of the 15th century",
+				"cs": "Středověký hrad obklopený hradbami citadely, s 33 metrů vysokou hlavní věží z 15. století",
+				"is": "Miðaldakastali innan borgarmúra, með 33 metra háum höfuðturni frá 15. öld",
+				"de": "Eine mittelalterliche Burg in den Mauern der Zitadelle mit einem 33 Meter hohen Bergfried aus dem 15. Jahrhundert"
+			},
+			"local": "Castelo de Bragança"
+		}
+	]
+}

@@ -1299,7 +1299,20 @@
 		"it_rimini_arco_augusto": [17, 17],
 		"it_trento_buonconsiglio": [90, 40],
 		"it_siracusa_teatro_greco": [140, 25],
-		"it_siena_torre_mangia": [70, 102]
+		"it_siena_torre_mangia": [70, 102],
+		"pt_lisboa_belem": [40, 36],
+		"pt_porto_clerigos": [30, 80],
+		"pt_braga_bom_jesus": [60, 56],
+		"pt_guimaraes_castelo": [56, 32],
+		"pt_coimbra_universidade": [50, 40],
+		"pt_leiria_castelo": [64, 40],
+		"pt_setubal_sao_filipe": [70, 24],
+		"pt_viseu_se": [40, 38],
+		"pt_aveiro_moliceiro": [22, 9],
+		"pt_faro_arco_vila": [22, 26],
+		"pt_evora_templo": [24, 16],
+		"pt_vila_real_mateus": [76, 26],
+		"pt_braganca_castelo": [46, 38]
 	},
 	"police": {"escape_chance": 0.2, "escape_kmh": 180, "escape_swerves": [3, 5]},
 	"postcards": {"stamps": [0.15, 0.3, 0.45, 0.6], "stamp_caps": [2, 3, 3, 4, 5, 5, 5]}

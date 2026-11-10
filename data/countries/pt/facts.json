@@ -1,0 +1,177 @@
+{
+	"Lisboa": {
+		"pl": "Stolica Portugalii nad ujściem Tagu; trzęsienie ziemi w 1755 roku zniszczyło dużą część miasta, odbudowanego potem w dzielnicy Baixa w regularnej siatce ulic",
+		"en": "The capital of Portugal on the mouth of the Tagus; the 1755 earthquake destroyed much of the city, and the Baixa was rebuilt on a regular grid of streets",
+		"cs": "Hlavní město Portugalska u ústí Tejo; zemětřesení roku 1755 zničilo velkou část města a čtvrť Baixa byla znovu postavena v pravidelné síti ulic",
+		"is": "Höfuðborg Portúgals við ósa Tagus-fljóts; jarðskjálftinn árið 1755 eyddi stórum hluta borgarinnar og Baixa-hverfið var endurreist með reglulegu gatnaneti",
+		"de": "Die Hauptstadt Portugals an der Mündung des Tejo; das Erdbeben von 1755 zerstörte große Teile der Stadt, die Baixa wurde danach im regelmäßigen Straßenraster neu gebaut"
+	},
+	"Porto": {
+		"pl": "Miasto nad rzeką Douro, które dało nazwę Portugalii i winu porto; jego historyczne centrum jest na liście UNESCO",
+		"en": "The city on the Douro that gave its name to Portugal and to port wine; its historic centre is on UNESCO's list",
+		"cs": "Město na řece Douro, které dalo jméno Portugalsku i portskému vínu; jeho historické centrum je na seznamu UNESCO",
+		"is": "Borgin við Douro-fljót sem gaf bæði Portúgal og púrtvíni nafn sitt; sögulegi miðbærinn er á heimsminjaskrá UNESCO",
+		"de": "Die Stadt am Douro, die Portugal und dem Portwein den Namen gab; ihre Altstadt steht auf der UNESCO-Liste"
+	},
+	"Braga": {
+		"pl": "Jedno z najstarszych miast Portugalii, rzymska Bracara Augusta; siedziba arcybiskupa od średniowiecza, zwana portugalskim Rzymem",
+		"en": "One of Portugal's oldest cities, the Roman Bracara Augusta; the seat of an archbishop since the Middle Ages, called the Portuguese Rome",
+		"cs": "Jedno z nejstarších měst Portugalska, římská Bracara Augusta; od středověku sídlo arcibiskupa, přezdívané portugalský Řím",
+		"is": "Ein elsta borg Portúgals, Bracara Augusta Rómverja; aðsetur erkibiskups frá miðöldum, kölluð Róm Portúgals",
+		"de": "Eine der ältesten Städte Portugals, das römische Bracara Augusta; seit dem Mittelalter Sitz eines Erzbischofs, das portugiesische Rom genannt"
+	},
+	"Guimarães": {
+		"pl": "Uważane za kolebkę Portugalii: tu urodził się Alfons I, pierwszy król kraju; na murze przy wjeździe widnieje napis „Aqui nasceu Portugal”",
+		"en": "Seen as the cradle of Portugal: Afonso I, the country's first king, was born here; a wall at the entrance reads \"Aqui nasceu Portugal\"",
+		"cs": "Považuje se za kolébku Portugalska: narodil se tu Alfons I., první král země; na zdi u vjezdu stojí nápis „Aqui nasceu Portugal“",
+		"is": "Talin vagga Portúgals: Afonso I., fyrsti konungur landsins, fæddist hér; á vegg við innkomuna stendur „Aqui nasceu Portugal“",
+		"de": "Gilt als Wiege Portugals: Hier wurde Afonso I., der erste König des Landes, geboren; an einer Mauer am Eingang steht „Aqui nasceu Portugal“"
+	},
+	"Coimbra": {
+		"pl": "Siedziba najstarszego uniwersytetu Portugalii, przeniesionego tu na stałe w 1537 roku; dawna stolica kraju",
+		"en": "Home of Portugal's oldest university, settled here for good in 1537; a former capital of the country",
+		"cs": "Sídlo nejstarší univerzity Portugalska, natrvalo přesunuté sem roku 1537; bývalé hlavní město země",
+		"is": "Aðsetur elsta háskóla Portúgals sem fluttist hingað til frambúðar árið 1537; fyrrverandi höfuðborg landsins",
+		"de": "Sitz der ältesten Universität Portugals, die 1537 endgültig hierher zog; eine frühere Hauptstadt des Landes"
+	},
+	"Leiria": {
+		"pl": "Miasto pod zamkiem króla Dionizego I, który kazał zasadzić pobliski sosnowy bór Pinhal de Leiria",
+		"en": "A town under the castle of King Denis I, who had the nearby pine forest of Pinhal de Leiria planted",
+		"cs": "Město pod hradem krále Dinise I., který dal vysadit nedaleký borový les Pinhal de Leiria",
+		"is": "Bær undir kastala Dinis I. konungs, sem lét planta furuskóginum Pinhal de Leiria í grenndinni",
+		"de": "Eine Stadt unter der Burg König Dionysius' I., der den nahen Kiefernwald Pinhal de Leiria pflanzen ließ"
+	},
+	"Setúbal": {
+		"pl": "Port nad ujściem rzeki Sado; w estuarium żyje stado butlonosów, a naprzeciwko leży półwysep Tróia",
+		"en": "A port on the mouth of the Sado; a group of bottlenose dolphins lives in the estuary, and the Tróia peninsula lies across it",
+		"cs": "Přístav u ústí řeky Sado; v estuáru žije skupina delfínů skákavých a naproti leží poloostrov Tróia",
+		"is": "Hafnarborg við ósa Sado-fljóts; hópur stökkla býr í árósnum og Tróia-skaginn liggur handan hans",
+		"de": "Ein Hafen an der Mündung des Sado; im Ästuar lebt eine Gruppe Großer Tümmler, gegenüber liegt die Halbinsel Tróia"
+	},
+	"Viseu": {
+		"pl": "Centrum regionu winiarskiego Dão; tradycja łączy ją z Wiriatem, wodzem Luzytanów walczących z Rzymem",
+		"en": "The centre of the Dão wine region; tradition links it with Viriathus, leader of the Lusitanians against Rome",
+		"cs": "Centrum vinařské oblasti Dão; tradice ji spojuje s Viriathem, vůdcem Lusitánů v boji proti Římu",
+		"is": "Höfuðstaður Dão-vínhéraðsins; hefðin tengir hana við Viriathus, leiðtoga Lúsitana gegn Róm",
+		"de": "Das Zentrum des Weinbaugebiets Dão; die Überlieferung verbindet sie mit Viriathus, dem Anführer der Lusitaner gegen Rom"
+	},
+	"Aveiro": {
+		"pl": "Miasto kanałów nad laguną Ria de Aveiro, po których pływają kolorowe łodzie moliceiro; słynie ze słodyczy ovos moles",
+		"en": "A town of canals on the Ria de Aveiro lagoon, sailed by painted moliceiro boats; known for its ovos moles sweets",
+		"cs": "Město kanálů u laguny Ria de Aveiro, po nichž plují malované čluny moliceiro; proslulé sladkostmi ovos moles",
+		"is": "Bær með síkjum við Ria de Aveiro-lónið þar sem málaðir moliceiro-bátar sigla; þekktur fyrir sætindin ovos moles",
+		"de": "Eine Stadt der Kanäle an der Lagune Ria de Aveiro, befahren von bemalten Moliceiro-Booten; bekannt für die Süßigkeit Ovos moles"
+	},
+	"Faro": {
+		"pl": "Stolica Algarve na skraju laguny Ria Formosa, parku przyrody pełnego ptaków wodnych",
+		"en": "The capital of the Algarve on the edge of the Ria Formosa lagoon, a nature park full of water birds",
+		"cs": "Hlavní město Algarve na okraji laguny Ria Formosa, přírodního parku plného vodních ptáků",
+		"is": "Höfuðstaður Algarve á jaðri Ria Formosa-lónsins, náttúrugarðs fullum af vatnafuglum",
+		"de": "Die Hauptstadt der Algarve am Rand der Lagune Ria Formosa, eines Naturparks voller Wasservögel"
+	},
+	"Évora": {
+		"pl": "Miasto otoczone murami w sercu Alentejo, na liście UNESCO; w kościele św. Franciszka jest Kaplica Kości wyłożona ludzkimi czaszkami",
+		"en": "A walled town in the heart of the Alentejo, on UNESCO's list; the Chapel of Bones in the Church of St Francis is lined with human skulls",
+		"cs": "Město obehnané hradbami v srdci Alenteja, na seznamu UNESCO; kaple kostí v kostele sv. Františka je obložená lidskými lebkami",
+		"is": "Múrum girtur bær í hjarta Alentejo, á heimsminjaskrá UNESCO; Beinakapellan í kirkju heilags Frans er klædd mannshauskúpum",
+		"de": "Eine ummauerte Stadt im Herzen des Alentejo, auf der UNESCO-Liste; die Knochenkapelle der Franziskuskirche ist mit menschlichen Schädeln ausgekleidet"
+	},
+	"Vila Real": {
+		"pl": "Miasto nad wąwozem rzeki Corgo u stóp gór Marão, brama do winnic doliny Douro",
+		"en": "A town above the gorge of the Corgo under the Marão mountains, the gateway to the vineyards of the Douro valley",
+		"cs": "Město nad soutěskou řeky Corgo pod horami Marão, brána k vinicím údolí Doura",
+		"is": "Bær ofan við gljúfur Corgo-árinnar undir Marão-fjöllum, hliðið að vínekrum Douro-dalsins",
+		"de": "Eine Stadt über der Schlucht des Corgo am Fuß der Serra do Marão, das Tor zu den Weinbergen des Douro-Tals"
+	},
+	"Bragança": {
+		"pl": "Miasto w odległym Trás-os-Montes, od którego nazwę wzięła dynastia Bragança, panująca w Portugalii od 1640 do 1910 roku",
+		"en": "A town in remote Trás-os-Montes that gave its name to the House of Braganza, which ruled Portugal from 1640 to 1910",
+		"cs": "Město v odlehlém kraji Trás-os-Montes, podle něhož se jmenuje dynastie Bragança, vládnoucí Portugalsku v letech 1640 až 1910",
+		"is": "Bær í afskekktu Trás-os-Montes sem Bragança-ættin, er ríkti í Portúgal frá 1640 til 1910, dregur nafn sitt af",
+		"de": "Eine Stadt im abgelegenen Trás-os-Montes, nach der das Haus Braganza benannt ist, das Portugal von 1640 bis 1910 regierte"
+	},
+	"Almada": {
+		"pl": "Nad miastem stoi pomnik Chrystusa Króla (Cristo Rei), zwrócony z otwartymi ramionami w stronę Lizbony",
+		"en": "The Cristo Rei statue stands over the town, facing Lisbon with open arms",
+		"cs": "Nad městem stojí socha Krista Krále (Cristo Rei), obrácená s rozpřaženýma rukama k Lisabonu",
+		"is": "Styttan Cristo Rei stendur yfir bænum og snýr að Lissabon með opinn faðminn",
+		"de": "Über der Stadt steht die Christkönig-Statue Cristo Rei, mit offenen Armen Lissabon zugewandt"
+	},
+	"Torres Vedras": {
+		"pl": "Od miasta nazwę wzięły Linie Torres Vedras, umocnienia, które w 1810 roku zatrzymały armię Napoleona przed Lizboną",
+		"en": "The town gave its name to the Lines of Torres Vedras, the forts that stopped Napoleon's army before Lisbon in 1810",
+		"cs": "Podle města se jmenují Linie Torres Vedras, opevnění, která roku 1810 zastavila Napoleonovu armádu před Lisabonem",
+		"is": "Bærinn gaf nafn sitt Torres Vedras-línunum, virkjunum sem stöðvuðu her Napóleons fyrir utan Lissabon árið 1810",
+		"de": "Nach der Stadt heißen die Linien von Torres Vedras, die Befestigungen, die 1810 Napoleons Armee vor Lissabon aufhielten"
+	},
+	"Caldas da Rainha": {
+		"pl": "Uzdrowisko założone w XV wieku przez królową Eleonorę; miasto słynie z ceramiki w kształcie liści kapusty",
+		"en": "A spa founded in the 15th century by Queen Leonor; the town is known for its cabbage-leaf pottery",
+		"cs": "Lázně založené v 15. století královnou Eleonorou; město je známé keramikou ve tvaru zelných listů",
+		"is": "Heilsulind sem Leonor drottning stofnaði á 15. öld; bærinn er þekktur fyrir leirmuni í laginu eins og kálblöð",
+		"de": "Ein Kurort, im 15. Jahrhundert von Königin Leonor gegründet; die Stadt ist für ihre Keramik in Kohlblattform bekannt"
+	},
+	"Alcobaça": {
+		"pl": "W tutejszym klasztorze cystersów, na liście UNESCO, spoczywają król Piotr I i Inês de Castro",
+		"en": "King Peter I and Inês de Castro lie in the town's Cistercian monastery, on UNESCO's list",
+		"cs": "V místním cisterciáckém klášteře, zapsaném na seznamu UNESCO, odpočívají král Petr I. a Inês de Castro",
+		"is": "Pétur I. konungur og Inês de Castro hvíla í sistersíanaklaustri bæjarins, sem er á heimsminjaskrá UNESCO",
+		"de": "Im Zisterzienserkloster der Stadt, einem UNESCO-Welterbe, ruhen König Peter I. und Inês de Castro"
+	},
+	"Mealhada": {
+		"pl": "Słynie z leitão, pieczonego prosięcia podawanego w przydrożnych restauracjach",
+		"en": "Known for leitão, roast suckling pig served in the roadside restaurants",
+		"cs": "Proslulá pečeným seletem leitão, které se podává v restauracích u silnice",
+		"is": "Þekkt fyrir leitão, steiktan grís sem borinn er fram á veitingastöðum við veginn",
+		"de": "Bekannt für Leitão, gebratenes Spanferkel aus den Restaurants an der Straße"
+	},
+	"Vila Nova de Gaia": {
+		"pl": "Na brzegu Douro naprzeciw Porto stoją piwnice, w których od wieków dojrzewa wino porto",
+		"en": "On the bank of the Douro opposite Porto stand the lodges where port wine has aged for centuries",
+		"cs": "Na břehu Doura naproti Portu stojí sklepy, v nichž po staletí zraje portské víno",
+		"is": "Á bakka Douro gegnt Porto standa kjallararnir þar sem púrtvín hefur þroskast um aldir",
+		"de": "Am Douro-Ufer gegenüber von Porto stehen die Kellereien, in denen seit Jahrhunderten der Portwein reift"
+	},
+	"Amarante": {
+		"pl": "Miasto nad rzeką Tâmega ze średniowiecznym mostem i kościołem św. Gonçalo, patrona miasta",
+		"en": "A town on the Tâmega with an old bridge and the church of São Gonçalo, its patron saint",
+		"cs": "Město na řece Tâmega se starým mostem a kostelem svatého Gonçala, patrona města",
+		"is": "Bær við Tâmega-ána með gamalli brú og kirkju heilags Gonçalo, verndardýrlings bæjarins",
+		"de": "Eine Stadt am Tâmega mit einer alten Brücke und der Kirche des heiligen Gonçalo, ihres Schutzpatrons"
+	},
+	"Peso da Régua": {
+		"pl": "Serce regionu Douro, najstarszego wyznaczonego regionu winiarskiego świata (1756); tarasowe winnice są na liście UNESCO",
+		"en": "The heart of the Douro, the world's oldest demarcated wine region (1756); its terraced vineyards are on UNESCO's list",
+		"cs": "Srdce oblasti Douro, nejstarší vymezené vinařské oblasti světa (1756); terasovité vinice jsou na seznamu UNESCO",
+		"is": "Hjarta Douro, elsta afmarkaða vínhéraðs heims (1756); stölluðu vínekrurnar eru á heimsminjaskrá UNESCO",
+		"de": "Das Herz des Douro, des ältesten abgegrenzten Weinbaugebiets der Welt (1756); die Terrassenweinberge stehen auf der UNESCO-Liste"
+	},
+	"Lamego": {
+		"pl": "Do sanktuarium Nossa Senhora dos Remédios prowadzą barokowe schody o ponad 600 stopniach",
+		"en": "A Baroque stairway of over 600 steps climbs to the sanctuary of Nossa Senhora dos Remédios",
+		"cs": "K poutnímu kostelu Nossa Senhora dos Remédios vede barokní schodiště o více než 600 schodech",
+		"is": "Barokktröppur með yfir 600 þrepum liggja upp að helgidóminum Nossa Senhora dos Remédios",
+		"de": "Eine barocke Treppe mit über 600 Stufen führt hinauf zum Heiligtum Nossa Senhora dos Remédios"
+	},
+	"Mirandela": {
+		"pl": "Słynie z alheiry, kiełbasy z drobiu i chleba, oraz z długiego średniowiecznego mostu na rzece Tua",
+		"en": "Known for alheira, a sausage of poultry and bread, and for its long old bridge over the Tua",
+		"cs": "Proslulá klobásou alheira z drůbeže a chleba a dlouhým starým mostem přes řeku Tua",
+		"is": "Þekkt fyrir alheira, pylsu úr alifuglakjöti og brauði, og langa gamla brú yfir Tua-ána",
+		"de": "Bekannt für die Alheira, eine Wurst aus Geflügel und Brot, und für ihre lange alte Brücke über den Tua"
+	},
+	"Grândola": {
+		"pl": "Piosenka „Grândola, Vila Morena” nadana przez radio 25 kwietnia 1974 roku była sygnałem do rewolucji goździków",
+		"en": "The song \"Grândola, Vila Morena\", played on the radio on 25 April 1974, was the signal for the Carnation Revolution",
+		"cs": "Píseň „Grândola, Vila Morena“, odvysílaná v rozhlase 25. dubna 1974, byla signálem k Karafiátové revoluci",
+		"is": "Lagið „Grândola, Vila Morena“, sem leikið var í útvarpi 25. apríl 1974, var merkið um upphaf Nellikubyltingarinnar",
+		"de": "Das Lied „Grândola, Vila Morena“, am 25. April 1974 im Radio gespielt, war das Signal zur Nelkenrevolution"
+	},
+	"Montemor-o-Novo": {
+		"pl": "Miasto pod ruinami zamku wśród dębów korkowych Alentejo; Portugalia dostarcza około połowy światowego korka",
+		"en": "A town under a ruined castle among the cork oaks of the Alentejo; Portugal produces about half of the world's cork",
+		"cs": "Město pod zříceninou hradu mezi korkovými duby Alenteja; Portugalsko produkuje asi polovinu světového korku",
+		"is": "Bær undir kastalarúst innan um korkeikur Alentejo; Portúgal framleiðir um helming alls korks í heiminum",
+		"de": "Eine Stadt unter einer Burgruine zwischen den Korkeichen des Alentejo; Portugal liefert etwa die Hälfte des Korks der Welt"
+	}
+}
