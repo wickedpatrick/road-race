@@ -2658,10 +2658,6 @@
 		],
 		"towns": [
 			[
-				"Livermore",
-				70
-			],
-			[
 				"Tracy",
 				100
 			],
@@ -2683,6 +2679,11 @@
 			]
 		],
 		"zones": [
+			[
+				10,
+				"coast",
+				"California"
+			],
 			[
 				100,
 				"upland",
@@ -2706,6 +2707,11 @@
 		],
 		"via": [
 			[
+				5,
+				-122.37,
+				37.815
+			],
+			[
 				100,
 				-121.43,
 				37.74
@@ -2715,7 +2721,18 @@
 				-119.96,
 				36.01
 			]
-		]
+		],
+		"bridge": {
+			"from_km": 2,
+			"to_km": 7.5,
+			"name": {
+				"pl": "Most Bay Bridge",
+				"en": "San Francisco–Oakland Bay Bridge",
+				"cs": "Most Bay Bridge",
+				"is": "Bay Bridge-brúin",
+				"de": "San Francisco–Oakland Bay Bridge"
+			}
+		}
 	},
 	{
 		"a": "san_francisco",
@@ -2750,6 +2767,11 @@
 		],
 		"zones": [
 			[
+				10,
+				"coast",
+				"California"
+			],
+			[
 				140,
 				"fields",
 				"California"
@@ -2771,6 +2793,11 @@
 			]
 		],
 		"via": [
+			[
+				5,
+				-122.37,
+				37.815
+			],
 			[
 				140,
 				-121.49,
@@ -2801,7 +2828,18 @@
 				-114.04,
 				40.74
 			]
-		]
+		],
+		"bridge": {
+			"from_km": 2,
+			"to_km": 7.5,
+			"name": {
+				"pl": "Most Bay Bridge",
+				"en": "San Francisco–Oakland Bay Bridge",
+				"cs": "Most Bay Bridge",
+				"is": "Bay Bridge-brúin",
+				"de": "San Francisco–Oakland Bay Bridge"
+			}
+		}
 	},
 	{
 		"a": "denver",

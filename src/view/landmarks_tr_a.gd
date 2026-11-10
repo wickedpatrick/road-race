@@ -72,9 +72,9 @@ static func minaret(x: float, y0: float, h: float, w: float, col: Color, balconi
 	_poly([x - w * 0.55, top, x + w * 0.55, top, x, y0 + h * 0.98], LEAD)
 	_l(x, y0 + h * 0.97, x, y0 + h, DARK, maxf(0.1, w * 0.08))
 
-## The Turkish flag, its cloth's lower left corner at (x, y), w wide, on a pole.
-static func flag(x: float, y: float, w: float) -> void:
-	_l(x, y - w * 1.6, x, y + w * 0.7, DARK, w * 0.05)
+## The Turkish flag, its cloth's lower left corner at (x, y), w wide, on a pole standing on the ground at `foot`.
+static func flag(x: float, y: float, w: float, foot := 0.0) -> void:
+	_l(x, foot, x, y + w * 0.7, DARK, w * 0.05)
 	var h := w * 0.66
 	_r(x, y, x + w, y + h, TR_RED)
 	_c(x + w * 0.36, y + h * 0.5, h * 0.25, WHITE)
