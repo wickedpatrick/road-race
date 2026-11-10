@@ -51,7 +51,7 @@
 	"Helsingborg": {
 		"pl": "Od duńskiego Helsingør dzielą je tylko 4 km cieśniny Sund; promy kursują przez całą dobę",
 		"en": "Only 4 km of the Øresund separate it from Helsingør in Denmark; ferries cross round the clock",
-		"cs": "Od dánského Helsingøru ji dělí jen 4 km průlivu Öresund; trajekty jezdí ve dne v noci",
+		"cs": "Od dánského Helsingøru ho dělí jen 4 km průlivu Öresund; trajekty jezdí ve dne v noci",
 		"is": "Aðeins 4 km af Eyrarsundi skilja hana frá Helsingjaeyri í Danmörku; ferjur ganga allan sólarhringinn",
 		"de": "Nur 4 km Öresund trennen sie vom dänischen Helsingør; Fähren pendeln rund um die Uhr"
 	},
@@ -115,7 +115,7 @@
 		"pl": "Leży naprzeciw Olandii, po drugiej stronie cieśniny Kalmarsund; łączy je ponad sześciokilometrowy most otwarty w 1972 roku",
 		"en": "It faces the island of Öland across the Kalmarsund; a bridge over six kilometres long, opened in 1972, links them",
 		"cs": "Leží naproti ostrovu Öland přes průliv Kalmarsund; spojuje je přes šest kilometrů dlouhý most otevřený roku 1972",
-		"is": "Stendur gegnt eyjunni Öland handan Kalmarsunds; meira en sex kílómetra löng brú, opnuð 1972, tengir þær",
+		"is": "Stendur gegnt eyjunni Öland handan Kalmarsunds; meira en sex kílómetra löng brú, opnuð 1972, tengir þau",
 		"de": "Liegt gegenüber der Insel Öland am Kalmarsund; eine über sechs Kilometer lange Brücke, 1972 eröffnet, verbindet beide"
 	},
 	"Östersund": {
@@ -338,7 +338,7 @@
 	"Piteå": {
 		"pl": "Jego kąpielisko Pite Havsbad nazywane jest „Riwierą Północy”",
 		"en": "Its beach resort, Pite Havsbad, is called the 'Riviera of the North'",
-		"cs": "Jeho letovisko Pite Havsbad se přezdívá „Riviéra severu“",
+		"cs": "Jeho letovisku Pite Havsbad se říká „Riviéra severu“",
 		"is": "Baðstaðurinn Pite Havsbad er kallaður „Rívíera norðursins“",
 		"de": "Sein Seebad Pite Havsbad wird „Riviera des Nordens“ genannt"
 	},

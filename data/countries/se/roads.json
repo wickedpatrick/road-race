@@ -85,7 +85,7 @@
 		"zones": [[25, "coast", "Öresund"], [53, "fields", "Skåne"]],
 		"via": [[24, 12.88, 55.88]]
 	},
-	{"a": "lund", "b": "malmo", "km": 18, "road": [[18, "E22", 3]], "towns": [], "zones": [[18, "fields", "Skåne"]]},
+	{"a": "lund", "b": "malmo", "km": 18, "road": [[18, "E6", 3]], "towns": [], "zones": [[18, "fields", "Skåne"]]},
 	{
 		"a": "helsingborg",
 		"b": "goteborg",
@@ -96,7 +96,7 @@
 			[30, "fields", "Skåne"], [48, "upland", "Hallandsåsen"], [110, "fields", "Halland"],
 			[175, "coast", "Kattegatt"], [220, "forest", "Västergötland"]
 		],
-		"via": [[25, 12.86, 56.24], [78, 12.86, 56.67], [118, 12.5, 56.9], [148, 12.25, 57.11], [192, 12.08, 57.49]]
+		"via": [[25, 12.86, 56.24], [78, 12.86, 56.67], [118, 12.5, 56.9], [148, 12.27, 57.13], [192, 12.08, 57.49]]
 	},
 	{
 		"a": "goteborg",
@@ -129,7 +129,7 @@
 		"a": "karlstad",
 		"b": "orebro",
 		"km": 112,
-		"road": [[112, "E18"]],
+		"road": [[45, "E18", 3], [97, "E18"], [112, "E18", 3]],
 		"towns": [["Kristinehamn", 45], ["Karlskoga", 77]],
 		"zones": [[45, "lakes", "Vänern"], [90, "forest", "Bergslagen"], [112, "fields", "Närke"]],
 		"via": [[45, 14.11, 59.31], [77, 14.52, 59.33]]
@@ -207,7 +207,7 @@
 		"towns": [["Råneå", 35], ["Töre", 60], ["Överkalix", 115], ["Gällivare", 280], ["Svappavaara", 350]],
 		"zones": [
 			[60, "coast", "Norrbottenskusten"], [160, "taiga", "Kalixälvdalen"], [280, "taiga", "Lappland"],
-			[360, "taiga", "Malmfälten"], [395, "mountains", "Kirunafjällen"]
+			[395, "taiga", "Malmfälten"]
 		],
 		"via": [
 			[35, 22.3, 65.86], [60, 22.65, 65.91], [115, 22.84, 66.33], [200, 21.8, 66.8], [280, 20.66, 67.13],
@@ -230,7 +230,7 @@
 		"road": [[255, "E22"]],
 		"towns": [["Mönsterås", 32], ["Oskarshamn", 78], ["Västervik", 150], ["Valdemarsvik", 205], ["Söderköping", 238]],
 		"zones": [[80, "coast", "Kalmarsund"], [205, "forest", "Tjust"], [255, "fields", "Östergötland"]],
-		"via": [[32, 16.44, 57.04], [78, 16.45, 57.26], [150, 16.64, 57.76], [205, 16.6, 58.2], [238, 16.32, 58.48]]
+		"via": [[32, 16.44, 57.04], [78, 16.45, 57.26], [150, 16.58, 57.74], [205, 16.6, 58.2], [238, 16.32, 58.48]]
 	},
 	{
 		"a": "kalmar",
