@@ -1,0 +1,247 @@
+{
+	"Amsterdam": {
+		"pl": "Stolica Niderlandów; pierścień kanałów z XVII wieku jest na liście UNESCO, a rowerów jest tu więcej niż mieszkańców",
+		"en": "The capital of the Netherlands; its 17th-century ring of canals is on UNESCO's list, and there are more bicycles than people",
+		"cs": "Hlavní město Nizozemska; prstenec kanálů ze 17. století je na seznamu UNESCO a jízdních kol je tu víc než obyvatel",
+		"is": "Höfuðborg Hollands; síkjahringurinn frá 17. öld er á heimsminjaskrá UNESCO og hér eru fleiri reiðhjól en íbúar",
+		"de": "Die Hauptstadt der Niederlande; der Grachtengürtel aus dem 17. Jahrhundert ist UNESCO-Welterbe, und es gibt mehr Fahrräder als Einwohner"
+	},
+	"Rotterdam": {
+		"pl": "Największy port Europy; centrum zniszczone bombardowaniem w 1940 roku odbudowano jako miasto nowoczesnej architektury",
+		"en": "Europe's largest port; its centre, destroyed by bombing in 1940, was rebuilt as a city of modern architecture",
+		"cs": "Největší přístav Evropy; centrum zničené bombardováním roku 1940 bylo znovu postaveno jako město moderní architektury",
+		"is": "Stærsta höfn Evrópu; miðborgin, sem eyðilagðist í loftárás árið 1940, var endurreist sem borg nútímabyggingarlistar",
+		"de": "Europas größter Hafen; das 1940 durch Bomben zerstörte Zentrum wurde als Stadt moderner Architektur wieder aufgebaut"
+	},
+	"Den Haag": {
+		"pl": "Siedziba parlamentu, rządu i króla Niderlandów, choć stolicą jest Amsterdam; w Pałacu Pokoju obraduje Międzynarodowy Trybunał Sprawiedliwości",
+		"en": "The seat of the Dutch parliament, government and king, though Amsterdam is the capital; the International Court of Justice sits in the Peace Palace",
+		"cs": "Sídlo nizozemského parlamentu, vlády a krále, ačkoli hlavním městem je Amsterdam; v Paláci míru zasedá Mezinárodní soudní dvůr",
+		"is": "Aðsetur hollenska þingsins, ríkisstjórnarinnar og konungsins, þótt Amsterdam sé höfuðborgin; Alþjóðadómstóllinn situr í Friðarhöllinni",
+		"de": "Sitz des niederländischen Parlaments, der Regierung und des Königs, obwohl Amsterdam die Hauptstadt ist; im Friedenspalast tagt der Internationale Gerichtshof"
+	},
+	"Utrecht": {
+		"pl": "Miasto z jedną z najwyższych wież kościelnych Niderlandów; tu w 1713 roku podpisano pokój utrechcki",
+		"en": "A city with one of the tallest church towers in the Netherlands; the Peace of Utrecht was signed here in 1713",
+		"cs": "Město s jednou z nejvyšších kostelních věží Nizozemska; roku 1713 tu byl podepsán utrechtský mír",
+		"is": "Borg með einum hæsta kirkjuturni Hollands; Utrecht-friðurinn var undirritaður hér árið 1713",
+		"de": "Eine Stadt mit einem der höchsten Kirchtürme der Niederlande; 1713 wurde hier der Frieden von Utrecht unterzeichnet"
+	},
+	"Eindhoven": {
+		"pl": "Miasto, które wyrosło wokół fabryk żarówek Philipsa założonych w 1891 roku; dziś ośrodek wzornictwa i techniki",
+		"en": "A city that grew around the Philips light bulb works founded in 1891; today a centre of design and technology",
+		"cs": "Město, které vyrostlo kolem továrny na žárovky Philips založené roku 1891; dnes centrum designu a techniky",
+		"is": "Borg sem óx upp í kringum ljósaperuverksmiðju Philips, stofnaða árið 1891; nú miðstöð hönnunar og tækni",
+		"de": "Eine Stadt, die um die 1891 gegründete Glühlampenfabrik von Philips wuchs; heute ein Zentrum für Design und Technik"
+	},
+	"Groningen": {
+		"pl": "Największe miasto północy kraju, w którym prawie co czwarty mieszkaniec jest studentem",
+		"en": "The largest city of the north, where nearly one resident in four is a student",
+		"cs": "Největší město severu země, kde je téměř každý čtvrtý obyvatel student",
+		"is": "Stærsta borg norðursins, þar sem nærri fjórði hver íbúi er námsmaður",
+		"de": "Die größte Stadt des Nordens, in der fast jeder vierte Einwohner studiert"
+	},
+	"Maastricht": {
+		"pl": "W 1992 roku podpisano tu traktat z Maastricht, który powołał Unię Europejską",
+		"en": "The Maastricht Treaty, which created the European Union, was signed here in 1992",
+		"cs": "Roku 1992 tu byla podepsána Maastrichtská smlouva, která založila Evropskou unii",
+		"is": "Maastricht-sáttmálinn, sem stofnaði Evrópusambandið, var undirritaður hér árið 1992",
+		"de": "1992 wurde hier der Vertrag von Maastricht unterzeichnet, der die Europäische Union gründete"
+	},
+	"Arnhem": {
+		"pl": "We wrześniu 1944 roku o most na Renie toczyła się bitwa pod Arnhem, w której walczyła też polska 1. Samodzielna Brygada Spadochronowa",
+		"en": "In September 1944 the Battle of Arnhem was fought for the bridge over the Rhine; the Polish 1st Independent Parachute Brigade fought in it too",
+		"cs": "V září 1944 se o most přes Rýn sváděla bitva u Arnhemu, v níž bojovala i polská 1. samostatná výsadková brigáda",
+		"is": "Í september 1944 var barist um brúna yfir Rín í orrustunni við Arnhem; pólska 1. sjálfstæða fallhlífarsveitin tók einnig þátt",
+		"de": "Im September 1944 wurde in der Schlacht um Arnheim um die Rheinbrücke gekämpft; auch die polnische 1. Unabhängige Fallschirmbrigade war dabei"
+	},
+	"Zwolle": {
+		"pl": "Dawne miasto hanzeatyckie nad rzeką IJssel, z gwiaździstymi fosami wokół starego miasta",
+		"en": "An old Hanseatic town on the IJssel, with star-shaped moats around its old town",
+		"cs": "Staré hanzovní město na řece IJssel s hvězdicovými vodními příkopy kolem starého města",
+		"is": "Gamall Hansabær við IJssel-ána, með stjörnulaga síkjum umhverfis gamla bæinn",
+		"de": "Eine alte Hansestadt an der IJssel mit sternförmigen Grachten um die Altstadt"
+	},
+	"Middelburg": {
+		"pl": "Stolica Zelandii na wyspie Walcheren; w XVII wieku jeden z portów Kompanii Wschodnioindyjskiej",
+		"en": "The capital of Zeeland on the island of Walcheren; in the 17th century one of the ports of the East India Company",
+		"cs": "Hlavní město Zélandu na ostrově Walcheren; v 17. století jeden z přístavů Východoindické společnosti",
+		"is": "Höfuðstaður Sjálands á eyjunni Walcheren; á 17. öld ein af höfnum Austur-Indíafélagsins",
+		"de": "Die Hauptstadt Zeelands auf der Insel Walcheren; im 17. Jahrhundert einer der Häfen der Ostindien-Kompanie"
+	},
+	"Bruxelles": {
+		"pl": "Dwujęzyczna stolica Belgii i siedziba głównych instytucji Unii Europejskiej oraz NATO; Wielki Plac jest na liście UNESCO",
+		"en": "The bilingual capital of Belgium and the seat of the main institutions of the European Union and of NATO; the Grand-Place is on UNESCO's list",
+		"cs": "Dvojjazyčné hlavní město Belgie a sídlo hlavních institucí Evropské unie i NATO; náměstí Grand-Place je na seznamu UNESCO",
+		"is": "Tvítyngd höfuðborg Belgíu og aðsetur helstu stofnana Evrópusambandsins og NATO; Grand-Place-torgið er á heimsminjaskrá UNESCO",
+		"de": "Die zweisprachige Hauptstadt Belgiens und Sitz der wichtigsten Institutionen der Europäischen Union und der NATO; der Grand-Place ist UNESCO-Welterbe"
+	},
+	"Antwerpen": {
+		"pl": "Drugi co do wielkości port Europy i światowe centrum handlu diamentami; tu mieszkał i pracował Rubens",
+		"en": "Europe's second-largest port and a world centre of the diamond trade; Rubens lived and worked here",
+		"cs": "Druhý největší přístav Evropy a světové centrum obchodu s diamanty; žil a tvořil tu Rubens",
+		"is": "Næststærsta höfn Evrópu og heimsmiðstöð demantaverslunar; Rubens bjó hér og starfaði",
+		"de": "Europas zweitgrößter Hafen und ein Weltzentrum des Diamantenhandels; hier lebte und arbeitete Rubens"
+	},
+	"Gent": {
+		"pl": "W katedrze św. Bawona można zobaczyć Ołtarz Gandawski braci van Eyck z 1432 roku",
+		"en": "St Bavo's Cathedral holds the Ghent Altarpiece by the van Eyck brothers, finished in 1432",
+		"cs": "V katedrále sv. Bavona je Gentský oltář bratří van Eyckových z roku 1432",
+		"is": "Í dómkirkju heilags Bavós er Gent-altaristaflan eftir van Eyck-bræður, fullgerð árið 1432",
+		"de": "In der Kathedrale St. Bavo hängt der Genter Altar der Brüder van Eyck von 1432"
+	},
+	"Brugge": {
+		"pl": "Średniowieczne miasto kanałów i kupców, którego historyczne centrum jest na liście UNESCO",
+		"en": "A medieval town of canals and merchants whose historic centre is on UNESCO's list",
+		"cs": "Středověké město kanálů a kupců, jehož historické centrum je na seznamu UNESCO",
+		"is": "Miðaldabær síkja og kaupmanna og er sögulegi miðbærinn á heimsminjaskrá UNESCO",
+		"de": "Eine mittelalterliche Stadt der Kanäle und Kaufleute, deren Altstadt UNESCO-Welterbe ist"
+	},
+	"Liège": {
+		"pl": "Miasto nad Mozą, dawne księstwo biskupie i ośrodek przemysłu stalowego; schody Montagne de Bueren mają 374 stopnie",
+		"en": "A city on the Meuse, once a prince-bishopric and a centre of the steel industry; the Montagne de Bueren stairway has 374 steps",
+		"cs": "Město na Máse, kdysi knížecí biskupství a centrum ocelářství; schodiště Montagne de Bueren má 374 schodů",
+		"is": "Borg við Maas-fljót, áður furstabiskupsdæmi og miðstöð stáliðnaðar; tröppurnar Montagne de Bueren eru 374 þrep",
+		"de": "Eine Stadt an der Maas, einst Fürstbistum und Zentrum der Stahlindustrie; die Treppe Montagne de Bueren hat 374 Stufen"
+	},
+	"Namur": {
+		"pl": "Stolica Walonii u zbiegu Mozy i Sambry, pod jedną z największych cytadel Europy",
+		"en": "The capital of Wallonia where the Sambre meets the Meuse, under one of the largest citadels in Europe",
+		"cs": "Hlavní město Valonska na soutoku Mázy a Sambry, pod jednou z největších citadel Evropy",
+		"is": "Höfuðstaður Vallóníu þar sem Sambre rennur í Maas, undir einu stærsta virki Evrópu",
+		"de": "Die Hauptstadt der Wallonie am Zusammenfluss von Sambre und Maas, unter einer der größten Zitadellen Europas"
+	},
+	"Charleroi": {
+		"pl": "Dawne zagłębie węglowe i hutnicze; zielone hałdy kopalń otaczają miasto jak wzgórza",
+		"en": "A former coal and steel basin; the green slag heaps of its mines surround the city like hills",
+		"cs": "Bývalá uhelná a hutnická pánev; zelené haldy dolů obklopují město jako kopce",
+		"is": "Fyrrverandi kola- og stálhérað; grónir gjallhaugar námanna umlykja borgina eins og hæðir",
+		"de": "Ein ehemaliges Kohle- und Stahlrevier; die begrünten Halden der Zechen umgeben die Stadt wie Hügel"
+	},
+	"Leuven": {
+		"pl": "Miasto uniwersyteckie z uczelnią założoną w 1425 roku; tu ma siedzibę największy koncern piwowarski świata",
+		"en": "A university town with a university founded in 1425; the world's largest brewing company has its headquarters here",
+		"cs": "Univerzitní město s univerzitou založenou roku 1425; sídlí tu největší pivovarnická společnost světa",
+		"is": "Háskólabær með háskóla sem stofnaður var árið 1425; stærsta bruggfyrirtæki heims hefur höfuðstöðvar sínar hér",
+		"de": "Eine Universitätsstadt mit einer 1425 gegründeten Universität; hier sitzt der größte Brauereikonzern der Welt"
+	},
+	"Luxembourg": {
+		"pl": "Stolica Wielkiego Księstwa na skałach nad dolinami Alzette i Pétrusse; jej stare miasto i fortyfikacje są na liście UNESCO",
+		"en": "The capital of the Grand Duchy on cliffs above the valleys of the Alzette and the Pétrusse; its old town and fortifications are on UNESCO's list",
+		"cs": "Hlavní město velkovévodství na skalách nad údolími Alzette a Pétrusse; staré město a opevnění jsou na seznamu UNESCO",
+		"is": "Höfuðborg stórhertogadæmisins á klettum ofan við dali Alzette og Pétrusse; gamli bærinn og virkin eru á heimsminjaskrá UNESCO",
+		"de": "Die Hauptstadt des Großherzogtums auf Felsen über den Tälern von Alzette und Petruss; Altstadt und Festungswerke sind UNESCO-Welterbe"
+	},
+	"Esch-sur-Alzette": {
+		"pl": "Drugie miasto Luksemburga, wyrosłe na rudzie żelaza; na terenie dawnej huty Belval powstała dzielnica uniwersytecka",
+		"en": "Luxembourg's second city, which grew on iron ore; a university quarter has been built on the old Belval steelworks",
+		"cs": "Druhé největší město Lucemburska, které vyrostlo na železné rudě; v areálu bývalé huti Belval vznikla univerzitní čtvrť",
+		"is": "Næststærsti bær Lúxemborgar, sem óx á járngrýti; háskólahverfi hefur risið á lóð gamla stálversins í Belval",
+		"de": "Luxemburgs zweitgrößte Stadt, auf Eisenerz gewachsen; auf dem Gelände des alten Hüttenwerks Belval entstand ein Universitätsviertel"
+	},
+	"Delft": {
+		"pl": "Miasto niebiesko-białej ceramiki delftów i malarza Jana Vermeera",
+		"en": "The town of blue and white Delftware and of the painter Johannes Vermeer",
+		"cs": "Město modrobílé delftské keramiky a malíře Jana Vermeera",
+		"is": "Bær bláhvíta Delft-leirsins og málarans Johannesar Vermeer",
+		"de": "Die Stadt der blau-weißen Delfter Keramik und des Malers Jan Vermeer"
+	},
+	"Leiden": {
+		"pl": "Siedziba najstarszego uniwersytetu Niderlandów, założonego w 1575 roku",
+		"en": "Home of the oldest university in the Netherlands, founded in 1575",
+		"cs": "Sídlo nejstarší univerzity Nizozemska, založené roku 1575",
+		"is": "Aðsetur elsta háskóla Hollands, sem stofnaður var árið 1575",
+		"de": "Sitz der ältesten Universität der Niederlande, 1575 gegründet"
+	},
+	"Gouda": {
+		"pl": "Od średniowiecza na tutejszym rynku handluje się serem, który od miasta wziął nazwę",
+		"en": "Cheese has been traded on the market square since the Middle Ages, and the cheese took the town's name",
+		"cs": "Na zdejším náměstí se od středověku obchoduje se sýrem, který po městě dostal jméno",
+		"is": "Ostur hefur verið seldur á markaðstorginu frá miðöldum og osturinn dregur nafn sitt af bænum",
+		"de": "Auf dem Marktplatz wird seit dem Mittelalter Käse gehandelt, der nach der Stadt benannt ist"
+	},
+	"Hoofddorp": {
+		"pl": "Leży na polderze Haarlemmermeer, osuszonym w latach 1849–1852 pompami parowymi; lotnisko Schiphol leży około 4 metrów poniżej poziomu morza",
+		"en": "It lies on the Haarlemmermeer polder, drained by steam pumps in 1849–1852; Schiphol Airport is about 4 metres below sea level",
+		"cs": "Leží na polderu Haarlemmermeer, vysušeném parními čerpadly v letech 1849–1852; letiště Schiphol je asi 4 metry pod hladinou moře",
+		"is": "Liggur á Haarlemmermeer-sjávarflæminu sem var þurrkað með gufudælum 1849–1852; Schiphol-flugvöllur er um 4 metrum undir sjávarmáli",
+		"de": "Liegt im Haarlemmermeer-Polder, 1849–1852 mit Dampfpumpen trockengelegt; der Flughafen Schiphol liegt etwa 4 Meter unter dem Meeresspiegel"
+	},
+	"Hoorn": {
+		"pl": "Dawny port Kompanii Wschodnioindyjskiej; urodzony tu Willem Schouten nazwał przylądek Horn na cześć swojego miasta",
+		"en": "An old port of the East India Company; Willem Schouten, born here, named Cape Horn after his town",
+		"cs": "Starý přístav Východoindické společnosti; zdejší rodák Willem Schouten pojmenoval po svém městě mys Horn",
+		"is": "Gömul höfn Austur-Indíafélagsins; Willem Schouten, sem fæddist hér, nefndi Hornhöfða eftir bænum sínum",
+		"de": "Ein alter Hafen der Ostindien-Kompanie; der hier geborene Willem Schouten benannte Kap Hoorn nach seiner Stadt"
+	},
+	"Den Oever": {
+		"pl": "Tu zaczyna się Afsluitdijk, 32-kilometrowa zapora z 1932 roku, która zamieniła morze Zuiderzee w jezioro IJsselmeer",
+		"en": "The Afsluitdijk starts here, the 32 km dam of 1932 that turned the Zuiderzee sea into the IJsselmeer lake",
+		"cs": "Začíná tu Afsluitdijk, 32 km dlouhá hráz z roku 1932, která proměnila moře Zuiderzee v jezero IJsselmeer",
+		"is": "Hér hefst Afsluitdijk, 32 km langur stíflugarður frá 1932 sem breytti Zuiderzee-flóanum í IJsselmeer-vatnið",
+		"de": "Hier beginnt der Afsluitdijk, der 32 km lange Abschlussdeich von 1932, der die Zuiderzee in das IJsselmeer verwandelte"
+	},
+	"Sneek": {
+		"pl": "Fryzyjskie miasto żeglarzy nad jeziorami, z wodną bramą Waterpoort z XVII wieku",
+		"en": "A Frisian sailing town among the lakes, with its 17th-century Waterpoort water gate",
+		"cs": "Fríské město jachtařů mezi jezery s vodní branou Waterpoort ze 17. století",
+		"is": "Frísneskur siglingabær innan um vötnin, með vatnshliðinu Waterpoort frá 17. öld",
+		"de": "Eine friesische Seglerstadt zwischen den Seen mit dem Wassertor Waterpoort aus dem 17. Jahrhundert"
+	},
+	"'s-Hertogenbosch": {
+		"pl": "Miasto, w którym urodził się i malował Hieronim Bosch",
+		"en": "The town where Hieronymus Bosch was born and painted",
+		"cs": "Město, kde se narodil a maloval Hieronymus Bosch",
+		"is": "Bærinn þar sem Hieronymus Bosch fæddist og málaði",
+		"de": "Die Stadt, in der Hieronymus Bosch geboren wurde und malte"
+	},
+	"Breda": {
+		"pl": "Polscy żołnierze 1. Dywizji Pancernej generała Maczka wyzwolili Bredę w październiku 1944 roku bez zniszczenia miasta",
+		"en": "Polish soldiers of General Maczek's 1st Armoured Division liberated Breda in October 1944 without destroying the town",
+		"cs": "Polští vojáci 1. obrněné divize generála Maczka osvobodili Bredu v říjnu 1944, aniž by město zničili",
+		"is": "Pólskir hermenn 1. brynherdeildar Maczeks hershöfðingja frelsuðu Breda í október 1944 án þess að eyðileggja bæinn",
+		"de": "Polnische Soldaten der 1. Panzerdivision General Maczeks befreiten Breda im Oktober 1944, ohne die Stadt zu zerstören"
+	},
+	"Dordrecht": {
+		"pl": "Najstarsze miasto Holandii, prawa miejskie od 1220 roku; w pobliżu stoją wiatraki Kinderdijk z listy UNESCO",
+		"en": "The oldest town in Holland, chartered in 1220; the Kinderdijk windmills of UNESCO's list stand nearby",
+		"cs": "Nejstarší město Holandska s městskými právy od roku 1220; nedaleko stojí větrné mlýny Kinderdijk ze seznamu UNESCO",
+		"is": "Elsti bær Hollands, með kaupstaðarréttindi frá 1220; vindmyllurnar í Kinderdijk á heimsminjaskrá UNESCO eru í grenndinni",
+		"de": "Die älteste Stadt Hollands, Stadtrecht seit 1220; in der Nähe stehen die Windmühlen von Kinderdijk, UNESCO-Welterbe"
+	},
+	"Apeldoorn": {
+		"pl": "Miasto na skraju Veluwe z pałacem Het Loo, dawną letnią rezydencją rodziny królewskiej",
+		"en": "A town on the edge of the Veluwe with Het Loo Palace, once a summer residence of the royal family",
+		"cs": "Město na okraji Veluwe s palácem Het Loo, dřívějším letním sídlem královské rodiny",
+		"is": "Bær á jaðri Veluwe með Het Loo-höllinni, áður sumarbústað konungsfjölskyldunnar",
+		"de": "Eine Stadt am Rand der Veluwe mit dem Palast Het Loo, einst Sommerresidenz der Königsfamilie"
+	},
+	"Assen": {
+		"pl": "Na torze w Assen co roku ścigają się motocykliści o Grand Prix Holandii",
+		"en": "Motorcycle riders race for the Dutch TT on the Assen circuit every year",
+		"cs": "Na okruhu v Assenu se každý rok jezdí motocyklová Velká cena Nizozemska",
+		"is": "Á kappakstursbrautinni í Assen keppa mótorhjólamenn árlega um hollenska TT-kappaksturinn",
+		"de": "Auf dem Kurs von Assen fahren die Motorradrennfahrer jedes Jahr die Dutch TT"
+	},
+	"Mechelen": {
+		"pl": "Dawna stolica Niderlandów Burgundzkich; z wieży katedry św. Rumolda słychać carillon, a w mieście działa szkoła gry na carillonie",
+		"en": "A former capital of the Burgundian Netherlands; the carillon rings from St Rumbold's tower, and the town has a carillon school",
+		"cs": "Bývalé hlavní město burgundského Nizozemí; z věže katedrály sv. Rumolda zní carillon a ve městě je škola hry na carillon",
+		"is": "Fyrrverandi höfuðborg búrgúndísku Niðurlanda; klukknaspil hljómar úr turni dómkirkju heilags Rumbolds og í bænum er skóli fyrir klukknaspilara",
+		"de": "Eine frühere Hauptstadt der Burgundischen Niederlande; vom Turm der Kathedrale St. Rumbold erklingt das Glockenspiel, und die Stadt hat eine Glockenspielschule"
+	},
+	"Arlon": {
+		"pl": "Jedno z najstarszych miast Belgii, rzymskie Orolaunum, stolica belgijskiej prowincji Luksemburg",
+		"en": "One of Belgium's oldest towns, the Roman Orolaunum, and capital of the Belgian province of Luxembourg",
+		"cs": "Jedno z nejstarších měst Belgie, římské Orolaunum, hlavní město belgické provincie Lucemburk",
+		"is": "Einn elsti bær Belgíu, Orolaunum Rómverja, og höfuðstaður belgíska héraðsins Lúxemborgar",
+		"de": "Eine der ältesten Städte Belgiens, das römische Orolaunum, und Hauptstadt der belgischen Provinz Luxemburg"
+	},
+	"Aywaille": {
+		"pl": "Miasteczko w dolinie Amblève w Ardenach; w pobliskim Remouchamps są jaskinie z podziemną rzeką",
+		"en": "A small town in the Amblève valley in the Ardennes; nearby Remouchamps has caves with an underground river",
+		"cs": "Městečko v údolí Amblève v Ardenách; v nedalekém Remouchamps jsou jeskyně s podzemní řekou",
+		"is": "Smábær í Amblève-dalnum í Ardennafjöllum; í Remouchamps í grenndinni eru hellar með neðanjarðará",
+		"de": "Ein Städtchen im Amblève-Tal in den Ardennen; im nahen Remouchamps gibt es Grotten mit einem unterirdischen Fluss"
+	}
+}

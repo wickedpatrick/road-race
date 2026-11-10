@@ -1,0 +1,265 @@
+[
+	{
+		"a": "amsterdam",
+		"b": "den_haag",
+		"km": 58,
+		"road": "A4",
+		"towns": [["Hoofddorp", 18], ["Leiden", 38]],
+		"zones": [[28, "zulawy", "Noord-Holland"], [58, "zulawy", "Zuid-Holland"]],
+		"via": [[18, 4.71, 52.3], [38, 4.5, 52.16]]
+	},
+	{
+		"a": "den_haag",
+		"b": "rotterdam",
+		"km": 24,
+		"road": "A13",
+		"towns": [["Delft", 10]],
+		"zones": [[24, "zulawy", "Zuid-Holland"]]
+	},
+	{
+		"a": "amsterdam",
+		"b": "utrecht",
+		"km": 43,
+		"road": "A2",
+		"towns": [["Breukelen", 26], ["Maarssen", 34]],
+		"zones": [[20, "zulawy", "Noord-Holland"], [43, "zulawy", "Utrecht"]],
+		"via": [[26, 5, 52.18]]
+	},
+	{
+		"a": "rotterdam",
+		"b": "utrecht",
+		"km": 57,
+		"road": [[20, "A20"], [57, "A12"]],
+		"towns": [["Gouda", 22], ["Woerden", 40]],
+		"zones": [[30, "zulawy", "Zuid-Holland"], [57, "zulawy", "Utrecht"]],
+		"via": [[22, 4.7, 52.02], [40, 4.88, 52.09]]
+	},
+	{
+		"a": "utrecht",
+		"b": "arnhem",
+		"km": 64,
+		"road": "A12",
+		"towns": [["Veenendaal", 35], ["Ede", 45]],
+		"zones": [[22, "fields", "Utrecht"], [40, "forest", "Utrecht"], [64, "forest", "Gelderland"]],
+		"via": [[35, 5.56, 52.03], [45, 5.67, 52.04]]
+	},
+	{
+		"a": "utrecht",
+		"b": "eindhoven",
+		"km": 92,
+		"road": "A2",
+		"towns": [["Zaltbommel", 40], ["'s-Hertogenbosch", 55], ["Boxtel", 72]],
+		"zones": [[45, "zulawy", "Gelderland"], [92, "fields", "Noord-Brabant"]],
+		"via": [[40, 5.25, 51.81], [55, 5.3, 51.69], [72, 5.33, 51.59]]
+	},
+	{
+		"a": "eindhoven",
+		"b": "maastricht",
+		"km": 88,
+		"road": "A2",
+		"towns": [["Weert", 30], ["Roermond", 50]],
+		"zones": [[22, "fields", "Noord-Brabant"], [88, "fields", "Limburg"]],
+		"via": [[30, 5.71, 51.25], [50, 5.99, 51.19], [70, 5.82, 51]]
+	},
+	{
+		"a": "arnhem",
+		"b": "zwolle",
+		"km": 68,
+		"road": "A50",
+		"towns": [["Apeldoorn", 27]],
+		"zones": [[50, "forest", "Gelderland"], [68, "fields", "Overijssel"]],
+		"via": [[27, 5.96, 52.21], [50, 5.98, 52.42]]
+	},
+	{
+		"a": "zwolle",
+		"b": "groningen",
+		"km": 102,
+		"road": "A28",
+		"towns": [["Meppel", 22], ["Hoogeveen", 42], ["Assen", 77]],
+		"zones": [[15, "fields", "Overijssel"], [88, "forest", "Drenthe"], [102, "fields", "Groningen"]],
+		"via": [[22, 6.19, 52.7], [42, 6.48, 52.73], [77, 6.56, 52.99]]
+	},
+	{
+		"a": "amsterdam",
+		"b": "groningen",
+		"km": 200,
+		"road": "A7",
+		"towns": [
+			["Purmerend", 20], ["Hoorn", 38], ["Den Oever", 76], ["Bolsward", 120], ["Sneek", 133],
+			["Heerenveen", 156], ["Drachten", 172]
+		],
+		"zones": [
+			[76, "zulawy", "Noord-Holland"], [108, "coast", "Noord-Holland"], [185, "zulawy", "Fryslân"],
+			[200, "fields", "Groningen"]
+		],
+		"via": [
+			[20, 4.96, 52.5], [38, 5.06, 52.64], [76, 5.04, 52.93], [108, 5.4, 53.07], [133, 5.66, 53.03],
+			[156, 5.92, 52.96], [172, 6.1, 53.1]
+		],
+		"bridge": {"from_km": 79, "to_km": 108, "name": "Afsluitdijk", "kind": "beam"}
+	},
+	{
+		"a": "rotterdam",
+		"b": "middelburg",
+		"km": 100,
+		"road": [[15, "A15"], [100, "N57"]],
+		"towns": [["Hellevoetsluis", 28], ["Vrouwenpolder", 86]],
+		"zones": [[48, "zulawy", "Zuid-Holland"], [100, "coast", "Zeeland"]],
+		"via": [[15, 4.2, 51.88], [28, 4.15, 51.83], [52, 3.9, 51.75], [72, 3.69, 51.65], [86, 3.62, 51.58]],
+		"bridge": {"from_km": 70, "to_km": 79, "name": "Oosterscheldekering", "kind": "beam"}
+	},
+	{
+		"a": "rotterdam",
+		"b": "antwerpen",
+		"km": 100,
+		"road": [[62, "A16"], [100, "E19"]],
+		"towns": [["Dordrecht", 20], ["Breda", 50]],
+		"zones": [[25, "zulawy", "Zuid-Holland"], [62, "fields", "Noord-Brabant"], [100, "fields", "Antwerpen"]],
+		"via": [[20, 4.67, 51.8], [50, 4.77, 51.59], [62, 4.73, 51.48]],
+		"borders": [[62, "nl", "be", "Hazeldonk / Meer"]]
+	},
+	{
+		"a": "middelburg",
+		"b": "gent",
+		"km": 75,
+		"road": [[15, "A58"], [48, "N62", 3, 100], [75, "R4", 3, 90]],
+		"towns": [["Terneuzen", 38], ["Sas van Gent", 46], ["Zelzate", 51]],
+		"zones": [[48, "zulawy", "Zeeland"], [75, "fields", "Oost-Vlaanderen"]],
+		"via": [[15, 3.85, 51.5], [23, 3.85, 51.42], [38, 3.83, 51.32], [48, 3.8, 51.2]],
+		"tunnels": [
+			{
+				"from_km": 23,
+				"to_km": 29.6,
+				"name": {
+					"pl": "Tunel pod Skaldą Zachodnią",
+					"en": "Westerschelde Tunnel",
+					"cs": "Tunel pod Západní Šeldou",
+					"is": "Westerschelde-göngin",
+					"de": "Westerscheldetunnel"
+				},
+				"fact": {
+					"pl": "6,6 km pod estuarium Skaldy Zachodniej, do 60 metrów pod powierzchnią wody; otwarty w 2003 roku",
+					"en": "6.6 km under the Western Scheldt estuary, up to 60 metres below the water; opened in 2003",
+					"cs": "6,6 km pod ústím Západní Šeldy, až 60 metrů pod hladinou; otevřen roku 2003",
+					"is": "6,6 km undir ósi Vestur-Schelde, allt að 60 metrum undir vatnsborði; opnuð árið 2003",
+					"de": "6,6 km unter der Westerschelde, bis zu 60 Meter unter dem Wasserspiegel; 2003 eröffnet"
+				}
+			}
+		],
+		"borders": [[48, "nl", "be", "Sas van Gent / Zelzate"]]
+	},
+	{
+		"a": "maastricht",
+		"b": "liege",
+		"km": 30,
+		"road": [[9, "A2"], [30, "E25"]],
+		"towns": [["Visé", 15]],
+		"zones": [[9, "fields", "Limburg"], [30, "industrial", "Liège"]],
+		"via": [[15, 5.69, 50.73]],
+		"borders": [[9, "nl", "be", "Eijsden / Visé"]]
+	},
+	{
+		"a": "bruxelles",
+		"b": "antwerpen",
+		"km": 45,
+		"road": "E19",
+		"towns": [["Vilvoorde", 10], ["Mechelen", 24]],
+		"zones": [[6, "industrial", "Bruxelles-Capitale"], [30, "fields", "Vlaams-Brabant"], [45, "fields", "Antwerpen"]],
+		"via": [[24, 4.47, 51.03]]
+	},
+	{
+		"a": "bruxelles",
+		"b": "gent",
+		"km": 55,
+		"road": "E40",
+		"towns": [["Aalst", 28]],
+		"zones": [[12, "fields", "Vlaams-Brabant"], [55, "fields", "Oost-Vlaanderen"]],
+		"via": [[28, 4.04, 50.92]]
+	},
+	{
+		"a": "gent",
+		"b": "brugge",
+		"km": 45,
+		"road": "E40",
+		"towns": [["Aalter", 23]],
+		"zones": [[20, "fields", "Oost-Vlaanderen"], [45, "fields", "West-Vlaanderen"]],
+		"via": [[23, 3.45, 51.08]]
+	},
+	{
+		"a": "bruxelles",
+		"b": "leuven",
+		"km": 25,
+		"road": "E40",
+		"towns": [["Kortenberg", 15]],
+		"zones": [[8, "fields", "Bruxelles-Capitale"], [25, "fields", "Vlaams-Brabant"]]
+	},
+	{
+		"a": "leuven",
+		"b": "liege",
+		"km": 80,
+		"road": "E40",
+		"towns": [["Tienen", 22], ["Waremme", 52]],
+		"zones": [[40, "fields", "Vlaams-Brabant"], [80, "fields", "Liège"]],
+		"via": [[22, 4.94, 50.8], [52, 5.25, 50.69]]
+	},
+	{
+		"a": "bruxelles",
+		"b": "namur",
+		"km": 63,
+		"road": "E411",
+		"towns": [["Wavre", 25]],
+		"zones": [
+			[8, "industrial", "Bruxelles-Capitale"], [18, "forest", "Vlaams-Brabant"],
+			[40, "fields", "Brabant wallon"], [63, "fields", "Namur"]
+		],
+		"via": [[25, 4.6, 50.72]]
+	},
+	{
+		"a": "bruxelles",
+		"b": "charleroi",
+		"km": 60,
+		"road": [[33, "E19"], [60, "A54"]],
+		"towns": [["Nivelles", 31]],
+		"zones": [[10, "fields", "Vlaams-Brabant"], [33, "fields", "Brabant wallon"], [60, "industrial", "Hainaut"]],
+		"via": [[31, 4.33, 50.6]]
+	},
+	{
+		"a": "namur",
+		"b": "charleroi",
+		"km": 38,
+		"road": "E42",
+		"towns": [["Fleurus", 25]],
+		"zones": [[20, "fields", "Namur"], [38, "industrial", "Hainaut"]],
+		"via": [[25, 4.55, 50.48]]
+	},
+	{
+		"a": "namur",
+		"b": "liege",
+		"km": 63,
+		"road": "E42",
+		"towns": [],
+		"zones": [[30, "fields", "Namur"], [63, "fields", "Liège"]],
+		"via": [[30, 5.17, 50.57]]
+	},
+	{
+		"a": "liege",
+		"b": "luxembourg",
+		"km": 165,
+		"road": [[105, "E25"], [145, "E411"], [165, "A6"]],
+		"towns": [["Aywaille", 25], ["Neufchâteau", 105], ["Arlon", 138]],
+		"zones": [
+			[30, "forest", "Liège"], [100, "upland", "Luxembourg"], [145, "forest", "Luxembourg"],
+			[158, "fields", "Capellen"], [165, "fields", "Luxembourg"]
+		],
+		"via": [[25, 5.68, 50.47], [60, 5.72, 50.25], [85, 5.6, 50], [105, 5.43, 49.84], [138, 5.81, 49.68]],
+		"borders": [[145, "be", "lu", "Sterpenich / Steinfort"]]
+	},
+	{
+		"a": "luxembourg",
+		"b": "esch",
+		"km": 18,
+		"road": "A4",
+		"towns": [],
+		"zones": [[10, "fields", "Luxembourg"], [18, "industrial", "Esch-sur-Alzette"]]
+	}
+]
