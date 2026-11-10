@@ -21,6 +21,7 @@
 	"region_label": {"pl": "region", "en": "region", "cs": "region", "is": "hérað", "de": "Region"},
 	"start": ["roma", "napoli"],
 	"express_prefixes": ["A", "RA"],
+	"traffic": 0.3,
 	"limits": {"express": 130, "road": 90, "city": 50, "town_on_express": 80, "town": 50},
 	"signs": {"town": "#ffffff", "town_text": "#111111", "board": "#1f4fa0", "board_motorway": "#1a7a3e"},
 	"plates": [["A", "#1a7a3e", "#ffffff"], ["RA", "#1a7a3e", "#ffffff"], ["", "#1f4fa0", "#ffffff"]],

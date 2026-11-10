@@ -23,7 +23,7 @@
 	"Torino": {
 		"pl": "Pierwsza stolica zjednoczonych Włoch (1861–1865) i miasto Fiata; w katedrze przechowywany jest Całun Turyński",
 		"en": "The first capital of united Italy (1861–1865) and the home of Fiat; the Shroud of Turin is kept in its cathedral",
-		"cs": "První hlavní město sjednocené Itálie (1861–1865) a domov Fiatu; v katedrále je uložen Turínské plátno",
+		"cs": "První hlavní město sjednocené Itálie (1861–1865) a domov Fiatu; v katedrále je uloženo Turínské plátno",
 		"is": "Fyrsta höfuðborg sameinaðrar Ítalíu (1861–1865) og heimaborg Fiat; líkklæðið frá Tórínó er geymt í dómkirkjunni",
 		"de": "Die erste Hauptstadt des geeinten Italien (1861–1865) und Heimat von Fiat; im Dom wird das Turiner Grabtuch aufbewahrt"
 	},
@@ -35,11 +35,11 @@
 		"de": "Die Hauptstadt Siziliens, von den Phöniziern gegründet; ihre arabisch-normannischen Kirchen und Paläste gehören zum UNESCO-Welterbe"
 	},
 	"Genova": {
-		"pl": "Dawna republika morska i największy port Włoch; według tradycji urodził się tu Krzysztof Kolumb",
-		"en": "A former maritime republic and Italy's largest port; by tradition Christopher Columbus was born here",
-		"cs": "Bývalá námořní republika a největší přístav Itálie; podle tradice se zde narodil Kryštof Kolumbus",
-		"is": "Fyrrum sjóveldi og stærsta höfn Ítalíu; samkvæmt hefð fæddist Kristófer Kólumbus hér",
-		"de": "Eine ehemalige Seerepublik und Italiens größter Hafen; der Überlieferung nach wurde hier Christoph Kolumbus geboren"
+		"pl": "Dawna republika morska i jeden z największych portów Włoch; według tradycji urodził się tu Krzysztof Kolumb",
+		"en": "A former maritime republic and one of Italy's largest ports; by tradition Christopher Columbus was born here",
+		"cs": "Bývalá námořní republika a jeden z největších přístavů Itálie; podle tradice se zde narodil Kryštof Kolumbus",
+		"is": "Fyrrum sjóveldi og ein stærsta höfn Ítalíu; samkvæmt hefð fæddist Kristófer Kólumbus hér",
+		"de": "Eine ehemalige Seerepublik und einer der größten Häfen Italiens; der Überlieferung nach wurde hier Christoph Kolumbus geboren"
 	},
 	"Bologna": {
 		"pl": "Siedziba najstarszego uniwersytetu w Europie, założonego w 1088 roku; ulice ciągną się pod niemal 40 km arkad",
@@ -121,7 +121,7 @@
 	"Pescara": {
 		"pl": "Nadmorskie miasto Abruzji z długimi plażami; urodził się tu poeta Gabriele D'Annunzio",
 		"en": "A seaside city of Abruzzo with long beaches; the poet Gabriele D'Annunzio was born here",
-		"cs": "Přímořské město Abruzzo s dlouhými plážemi; narodil se zde básník Gabriele D'Annunzio",
+		"cs": "Přímořské město v Abruzzu s dlouhými plážemi; narodil se zde básník Gabriele D'Annunzio",
 		"is": "Strandborg í Abrútsi með löngum ströndum; skáldið Gabriele D'Annunzio fæddist hér",
 		"de": "Eine Küstenstadt der Abruzzen mit langen Stränden; hier wurde der Dichter Gabriele D'Annunzio geboren"
 	},
@@ -129,7 +129,7 @@
 		"pl": "Stolica dwujęzycznego Południowego Tyrolu; w muzeum archeologicznym leży Ötzi, człowiek lodu sprzed ponad 5000 lat",
 		"en": "The capital of bilingual South Tyrol; the archaeology museum keeps Ötzi, the Iceman who lived over 5,000 years ago",
 		"cs": "Hlavní město dvojjazyčného Jižního Tyrolska; v archeologickém muzeu leží Ötzi, ledový muž starý přes 5000 let",
-		"is": "Höfuðborg tvítyngda Suður-Týról; í fornminjasafninu hvílir Ötzi, ísmaðurinn sem lifði fyrir meira en 5000 árum",
+		"is": "Höfuðborg hins tvítyngda Suður-Týróls; í fornminjasafninu hvílir Ötzi, ísmaðurinn sem lifði fyrir meira en 5000 árum",
 		"de": "Die Hauptstadt des zweisprachigen Südtirols; im Archäologiemuseum liegt Ötzi, der Mann aus dem Eis, der vor über 5000 Jahren lebte"
 	},
 	"Ancona": {

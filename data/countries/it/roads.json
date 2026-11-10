@@ -298,8 +298,7 @@
 		"km": 230,
 		"road": [[185, "A20"], [230, "A19"]],
 		"towns": [
-			["Milazzo", 35], ["Barcellona Pozzo di Gotto", 45], ["Patti", 72], ["Capo d'Orlando", 92],
-			["Sant'Agata di Militello", 108], ["Santo Stefano di Camastra", 130], ["Cefalù", 167],
+			["Patti", 72], ["Capo d'Orlando", 92], ["Sant'Agata di Militello", 108], ["Cefalù", 167],
 			["Termini Imerese", 195], ["Bagheria", 217]
 		],
 		"zones": [[120, "coast", "Sicilia"], [175, "mediterranean", "Sicilia"], [230, "coast", "Sicilia"]],
