@@ -102,7 +102,9 @@ Dane wysokości już są (`hills` w `Track.build`), ale amplituda (~5 m + 1,6 m 
 
 ## 8. Przyczepność i poślizg (zima, deszcz, śnieg) (`src/logic/race.gd`)
 
-Dziś sterowanie przesuwa `x` natychmiast (`x += steer * handling * ...`), bez bezwładności.
+Śnieg zrobiony (bezwładność boczna, słabsza przyczepność, hamowanie, ruszanie, `Weather.GRIP`/`HANDLING`).
+Deszcz: połowa dryftu i lagu ze śniegu (bezwładność 0,2 s, przyczepność skrętu 0,9), zrobione 2026-11-10;
+reszty z listy poniżej na razie nie robimy.
 
 - [ ] Współczynnik przyczepności `grip` zależny od warunków, np.: sucho 1,0; mokro 0,75; zima bez opadów
       (odśnieżone) 0,7; śnieg 0,45; pobocze mniej. Stałe w jednym miejscu, do strojenia.
@@ -262,7 +264,11 @@ Przygotować razem z 9a (mechanizm działa już przy jednym kraju, testowany na 
 
 ## 11. Rankingi
 
-Na razie lokalnie (zapis wyników w profilu) i z myślą o backendzie, który przyjdzie później.
+Robimy offline: wyniki gracza w profilu, bez backendu. Ranking wypełnia 20 fałszywych kierowców (nicki, auta)
+z różnymi czasami na każdym odcinku, rozłożonymi od słabych do bardzo dobrych. Trzy najlepsze czasy mają być
+naprawdę jednymi z najlepszych możliwych (blisko czasu idealnego przejazdu: najszybsze auto, bez hamowania poza
+zakrętami, bez kar), żeby podium było wyzwaniem nawet dla dobrego gracza. Czasy liczone deterministycznie z
+długości i zakrętów odcinka (np. z czasu bota), te same przy każdym uruchomieniu.
 
 - [ ] **Ranking trasy:** tylko odcinki między sąsiednimi miastami (bezpośrednie drogi z danych kraju, np.
       Kraków - Rzeszów). Przy dłuższej trasie (Kraków -> Gdańsk) zapisujemy międzyczasy na każdym mijanym mieście,
@@ -276,8 +282,8 @@ Na razie lokalnie (zapis wyników w profilu) i z myślą o backendzie, który pr
       Auto i warunki zapisujemy przy wyniku tylko informacyjnie.
 - [ ] Ruch uliczny w rankingach zostaje losowy (raz lepiej, raz gorzej): bez wspólnego seeda dla wszystkich graczy.
 - [ ] Ekrany: wynik trasy z pozycją i najlepszym czasem, tabela rankingu trasy z mapy, ranking kraju.
-- [ ] Pod backend: identyfikator gracza i nick, format wyniku (kraj, odcinek, kierunek, auto, warunki, czas,
-      wersja gry, seed), kolejka wysyłki offline, później weryfikacja po stronie serwera (anty-cheat).
+- [ ] Później (backend): identyfikator gracza i nick, format wyniku (kraj, odcinek, kierunek, auto, warunki, czas,
+      wersja gry, seed), kolejka wysyłki, weryfikacja po stronie serwera (anty-cheat); fałszywi kierowcy znikają.
 
 ## 12. Pocztówki (`src/logic/postcards.gd`, `src/view/postcard_painter.gd`, `src/scenes/album.gd`)
 
