@@ -151,10 +151,13 @@ List of roads between two neighbouring cities `a` and `b` (travelling `b` -> `a`
   bridge over the water in the `a` -> `b` direction (`b` -> `a` mirrors the km), e.g. the 1915 Çanakkale Bridge
   over the Dardanelles; `name` plain or texts by language; optional `color` (`"#c8322b"`) for the pylons, grey by
   default; optional `kind`: `"suspension"` (default), `"stayed"` (a cable-stayed bridge, e.g. the Øresund Bridge) or
-  `"beam"` (a long low bridge or causeway on piers, e.g. the Confederation Bridge). The stretch is driven as it is (real km, no time added); it is never shorter than `Route.BRIDGE_MIN`
+  `"beam"` (a long low bridge or causeway on piers, e.g. the Confederation Bridge). The stretch is never shorter than `Route.BRIDGE_MIN`
   track metres and is moved off town streets with `Route.BRIDGE_GAP` of open road to them (like tunnels), so a
-  bridge starting at a city's edge is fine; one the towns squeeze under `Route.BRIDGE_DROP` metres is left out (keep
-  ~30 km of road around it; test_game_data checks every real bridge keeps `BRIDGE_MIN` on trips between neighbouring cities; on long trips through a squeezed city it may come out shorter, down to `BRIDGE_DROP`). Stations stand at least `Route.STATION_BEFORE_BRIDGE` before and
+  bridge starting at a city's edge, or a town right at its end (Barton-upon-Humber), is fine: where a compressed trip
+  leaves less room between the towns, tunnels or quays around it, track is put in at the bridge
+  (`Route._bridge_pads`, like the open road around a ferry's quays): driven and timed, but not counted in real km
+  (boards and the trip's km stay real). test_game_data checks every real bridge keeps `BRIDGE_MIN` on trips between
+  neighbouring cities (`Route.BRIDGE_DROP` remains as a safety net: a bridge squeezed under it is left out). Stations stand at least `Route.STATION_BEFORE_BRIDGE` before and
   `Route.STATION_PAST_BRIDGE` past it, boards and crossings keep clear of it; flat and straight. Drawn: a blue sign
   with `name` before it, then water on both sides of the deck, railings (solid, like tunnel walls), two tall pylons
   astride the road `Scenery.BRIDGE_SIDE` of the way in from each end, the main cables sagging between them with

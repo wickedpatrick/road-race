@@ -22,6 +22,7 @@ static func fixture() -> Dictionary:
 		"dd": {"name": "Delta", "lat": 40.7, "lon": 27.5, "pop": 150, "region": "R2"},
 		"ee": {"name": "Epsilon", "lat": 41.2, "lon": 28.3, "pop": 150, "region": "R2"},
 		"ff": {"name": "Zeta", "lat": 41.7, "lon": 29.1, "pop": 150, "region": "R2"},
+		"gg": {"name": "Eta", "lat": 45.0, "lon": 33.0, "pop": 150, "region": "R2"},
 	}
 	c["roads"] = [
 		{"a": "aa", "b": "bb", "km": 100, "road": "O5", "towns": [["Westtown", 20], ["Easttown", 70]],
@@ -30,7 +31,7 @@ static func fixture() -> Dictionary:
 		# the bridge begins at the city's edge: it is moved out past the streets
 		{"a": "bb", "b": "cc", "km": 80, "road": "D100", "towns": [], "zones": [[80, "fields", "R2"]],
 			"bridge": {"from_km": 0.5, "to_km": 2, "name": "Short"}},
-		# towns crowd the bridge: too short to draw, it is left out
+		# towns crowd the bridge: track is put in at it for its full length
 		{"a": "cc", "b": "dd", "km": 20, "road": "D110", "towns": [["Left", 8], ["Right", 12]], "zones": [[20, "fields", "R2"]],
 			"bridge": {"from_km": 9.5, "to_km": 10.5, "name": "Squeezed"}},
 		# a cable-stayed bridge, and a long low beam bridge
@@ -38,6 +39,9 @@ static func fixture() -> Dictionary:
 			"bridge": {"from_km": 30, "to_km": 38, "name": "Stayed", "kind": "stayed"}},
 		{"a": "ee", "b": "ff", "km": 80, "road": "D130", "towns": [], "zones": [[80, "fields", "R2"]],
 			"bridge": {"from_km": 30, "to_km": 40, "name": "Causeway", "kind": "beam"}},
+		# a long, compressed trip: towns 1 km before and after a bridge (Barton-upon-Humber, South Queensferry)
+		{"a": "ff", "b": "gg", "km": 600, "road": "D140", "towns": [["Northbank", 299], ["Southbank", 306]],
+			"zones": [[600, "fields", "R2"]], "bridge": {"from_km": 300, "to_km": 305, "name": "Estuary"}},
 	]
 	c["facts"] = {}
 	c["landmarks"] = {}
@@ -121,8 +125,12 @@ func run(t) -> void:
 		var qs := Scenery.build(q, 1)
 		var towers := 0
 		for idx in qs: towers += qs[idx].filter(func(it): return it.type == "bridge_tower").size()
-		t.check(q.bridges.is_empty() and towers == 0, "%s->%s: a bridge squeezed by the towns is left out" % pair)
+		t.check(q.bridges.size() == 1 and q.bridges[0].z1 - q.bridges[0].z0 >= Route.BRIDGE_MIN - 0.5 and towers == 2
+			and q.towns.size() == 4, "%s->%s: a bridge crowded by the towns gets its room, the towns stay" % pair)
+		var rq: Race = Bot.run_race("xc60", q, 11, 0.9)
+		t.check(rq.state == "won" and rq.fines == 0, "%s->%s: the autopilot makes it in time (%s, %.0f s left)" % [pair[0], pair[1], rq.state, rq.time_left])
 	_kinds(t)
+	_room(t)
 	# right after a city: the bridge starts past the start's streets
 	var short := Route.build("bb", "cc")
 	t.check(short.bridges[0].z0 - 40.0 >= short.towns[0].z + short.towns[0].half, "the bridge past the start city's streets")
@@ -187,3 +195,30 @@ func _kinds(t) -> void:
 		t.check(obs.get(m, []).any(func(ob): return ob[1] > 0.0 and ob[1] <= Scenery.BRIDGE_RAIL + 0.01)
 			and obs.get(m, []).any(func(ob): return ob[2] < 0.0), "%s: railings on both sides of %s" % [name, b.name])
 		t.check(not p.stations.any(func(z): return z > b.z0 - 40.0 and z < b.z1 + 40.0), "%s: no station by %s" % [name, b.name])
+
+## A bridge between two towns 1 km away on a compressed trip: track is put in at the bridge, so it keeps BRIDGE_MIN and
+## both towns keep their streets; the real km (boards, the trip) stay as they are, the time limit grows with the track.
+func _room(t) -> void:
+	for pair in [["ff", "gg"], ["gg", "ff"]]:
+		var p := Route.build(pair[0], pair[1])
+		var name: String = "%s->%s" % pair
+		t.check(p.bridges.size() == 1, "%s: the bridge between the towns kept" % name)
+		if p.bridges.is_empty(): continue
+		var b: Dictionary = p.bridges[0]
+		var near: Array = p.towns.filter(func(tn): return tn.name in ["Northbank", "Southbank"])
+		t.check(b.z1 - b.z0 >= Route.BRIDGE_MIN - 0.5, "%s: the bridge keeps BRIDGE_MIN (%.0f)" % [name, b.z1 - b.z0])
+		t.check(near.size() == 2 and near.all(func(tn): return tn.half >= 20.0), "%s: both towns keep their streets %s"
+			% [name, str(near.map(func(tn): return [tn.name, tn.half]))])
+		t.check(near.all(func(tn): return tn.z + tn.half + Route.BRIDGE_GAP <= b.z0 + 0.5 or tn.z - tn.half - Route.BRIDGE_GAP >= b.z1 - 0.5),
+			"%s: open road between the towns and the bridge" % name)
+		var extra: float = p.length - Route.track_length(600.0)
+		t.check(extra > 100.0 and absf(p.m_per_km - Route.track_length(600.0) / 600.0) < 0.001,
+			"%s: %.0f m of track put in, the scale unchanged" % [name, extra])
+		t.check(absf(Route.km_between(p, 0.0, p.length) - 600.0) < 0.01, "%s: the trip still 600 real km" % name)
+		var after: float = maxf(near[0].z, near[1].z)
+		var left_km := 294.0 if pair[0] == "ff" else 299.0 # from the town past the bridge (km 306 or 301) to the finish
+		t.check(absf(Route.km_between(p, after, p.length) - left_km) < 0.5,
+			"%s: real km from the town past the bridge to the finish (%.1f)" % [name, Route.km_between(p, after, p.length)])
+		var plain := {"towns": p.towns, "roads": p.roads, "length": p.length - extra}
+		t.check(Route._legal_time(p.towns, p.roads, p.length, p.m_per_km) > Route._legal_time(p.towns, p.roads, plain.length, p.m_per_km),
+			"%s: the time limit counts the metres put in" % name)
