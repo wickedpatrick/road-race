@@ -49,11 +49,11 @@
 		"de": "Ein Hafen an der Mündung des Sado; im Ästuar lebt eine Gruppe Großer Tümmler, gegenüber liegt die Halbinsel Tróia"
 	},
 	"Viseu": {
-		"pl": "Centrum regionu winiarskiego Dão; tradycja łączy ją z Wiriatem, wodzem Luzytanów walczących z Rzymem",
+		"pl": "Centrum regionu winiarskiego Dão; tradycja łączy to miasto z Wiriatem, wodzem Luzytanów walczących z Rzymem",
 		"en": "The centre of the Dão wine region; tradition links it with Viriathus, leader of the Lusitanians against Rome",
-		"cs": "Centrum vinařské oblasti Dão; tradice ji spojuje s Viriathem, vůdcem Lusitánů v boji proti Římu",
-		"is": "Höfuðstaður Dão-vínhéraðsins; hefðin tengir hana við Viriathus, leiðtoga Lúsitana gegn Róm",
-		"de": "Das Zentrum des Weinbaugebiets Dão; die Überlieferung verbindet sie mit Viriathus, dem Anführer der Lusitaner gegen Rom"
+		"cs": "Centrum vinařské oblasti Dão; tradice spojuje město s Viriathem, vůdcem Lusitánů v boji proti Římu",
+		"is": "Höfuðstaður Dão-vínhéraðsins; hefðin tengir borgina við Viriathus, leiðtoga Lúsitana gegn Róm",
+		"de": "Das Zentrum des Weinbaugebiets Dão; die Überlieferung verbindet die Stadt mit Viriathus, dem Anführer der Lusitaner gegen Rom"
 	},
 	"Aveiro": {
 		"pl": "Miasto kanałów nad laguną Ria de Aveiro, po których pływają kolorowe łodzie moliceiro; słynie ze słodyczy ovos moles",
@@ -66,7 +66,7 @@
 		"pl": "Stolica Algarve na skraju laguny Ria Formosa, parku przyrody pełnego ptaków wodnych",
 		"en": "The capital of the Algarve on the edge of the Ria Formosa lagoon, a nature park full of water birds",
 		"cs": "Hlavní město Algarve na okraji laguny Ria Formosa, přírodního parku plného vodních ptáků",
-		"is": "Höfuðstaður Algarve á jaðri Ria Formosa-lónsins, náttúrugarðs fullum af vatnafuglum",
+		"is": "Höfuðstaður Algarve á jaðri Ria Formosa-lónsins, náttúrugarðs fulls af vatnafuglum",
 		"de": "Die Hauptstadt der Algarve am Rand der Lagune Ria Formosa, eines Naturparks voller Wasservögel"
 	},
 	"Évora": {
@@ -133,18 +133,18 @@
 		"de": "Am Douro-Ufer gegenüber von Porto stehen die Kellereien, in denen seit Jahrhunderten der Portwein reift"
 	},
 	"Amarante": {
-		"pl": "Miasto nad rzeką Tâmega ze średniowiecznym mostem i kościołem św. Gonçalo, patrona miasta",
+		"pl": "Miasto nad rzeką Tâmega ze starym mostem i kościołem św. Gonçalo, patrona miasta",
 		"en": "A town on the Tâmega with an old bridge and the church of São Gonçalo, its patron saint",
 		"cs": "Město na řece Tâmega se starým mostem a kostelem svatého Gonçala, patrona města",
 		"is": "Bær við Tâmega-ána með gamalli brú og kirkju heilags Gonçalo, verndardýrlings bæjarins",
 		"de": "Eine Stadt am Tâmega mit einer alten Brücke und der Kirche des heiligen Gonçalo, ihres Schutzpatrons"
 	},
 	"Peso da Régua": {
-		"pl": "Serce regionu Douro, najstarszego wyznaczonego regionu winiarskiego świata (1756); tarasowe winnice są na liście UNESCO",
-		"en": "The heart of the Douro, the world's oldest demarcated wine region (1756); its terraced vineyards are on UNESCO's list",
-		"cs": "Srdce oblasti Douro, nejstarší vymezené vinařské oblasti světa (1756); terasovité vinice jsou na seznamu UNESCO",
-		"is": "Hjarta Douro, elsta afmarkaða vínhéraðs heims (1756); stölluðu vínekrurnar eru á heimsminjaskrá UNESCO",
-		"de": "Das Herz des Douro, des ältesten abgegrenzten Weinbaugebiets der Welt (1756); die Terrassenweinberge stehen auf der UNESCO-Liste"
+		"pl": "Serce regionu Douro, jednego z najstarszych wyznaczonych regionów winiarskich świata (1756); tarasowe winnice są na liście UNESCO",
+		"en": "The heart of the Douro, one of the world's oldest demarcated wine regions (1756); its terraced vineyards are on UNESCO's list",
+		"cs": "Srdce oblasti Douro, jedné z nejstarších vymezených vinařských oblastí světa (1756); terasovité vinice jsou na seznamu UNESCO",
+		"is": "Hjarta Douro, eins elsta afmarkaða vínhéraðs heims (1756); stölluðu vínekrurnar eru á heimsminjaskrá UNESCO",
+		"de": "Das Herz des Douro, eines der ältesten abgegrenzten Weinbaugebiete der Welt (1756); die Terrassenweinberge stehen auf der UNESCO-Liste"
 	},
 	"Lamego": {
 		"pl": "Do sanktuarium Nossa Senhora dos Remédios prowadzą barokowe schody o ponad 600 stopniach",

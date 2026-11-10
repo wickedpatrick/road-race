@@ -30,7 +30,7 @@
 		"board_motorway": "#1f4fa0"
 	},
 	"plates": [
-		["A", "#1f4fa0", "#ffffff"], ["IP", "#c8322b", "#ffffff"], ["IC", "#1a7a3e", "#ffffff"],
+		["A", "#1f4fa0", "#ffffff"], ["IP", "#c8322b", "#ffffff"], ["IC", "#ffffff", "#111111"],
 		["", "#ffffff", "#111111"]
 	],
 	"map": {"lon0": -9.8, "lon1": -6, "lat0": 36.8, "lat1": 42.3, "lon_k": 0.772, "zoom": 1.5, "labels": "auto"},

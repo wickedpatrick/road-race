@@ -79,8 +79,8 @@ static func _bruxelles_atomium() -> void:
 	var mid := Vector2(0, 55)
 	var ring := [Vector2(-21, 72), Vector2(21, 72), Vector2(-21, 38), Vector2(21, 38), Vector2(-8, 66), Vector2(8, 44)]
 	# the bipods
-	for x in [-14.0, 14.0]:
-		_l(x, 0.5, x * 0.5, 38, STEEL_D, 1.6)
+	for b in [[-14.0, -17.0, 32.0], [14.0, 7.0, 38.0]]:
+		_l(b[0], 0.5, b[1], b[2], STEEL_D, 1.6)
 	_l(0, 0.5, 0, 18, STEEL_D, 2.0)
 	# the tubes
 	for p in ring:
@@ -244,7 +244,7 @@ static func _leuven_stadhuis() -> void:
 	for x in [-10.0, 10.0]:
 		_r(x - 0.9, 23, x + 0.9, 28, STONE)
 		_spire(x, 28, 33.5, 2.0, STONE_D)
-	for x in [-17.0, 17.0]:
+	for x in [-15.6, 15.6]:
 		_r(x - 0.7, 12, x + 0.7, 19, STONE)
 		_spire(x, 19, 23, 1.4, STONE_D)
 
@@ -280,7 +280,7 @@ static func _esch_belval() -> void:
 		_r(x - 2.6, 66, x + 2.6, 68, RUST_D)
 		_l(x - 1.2, 68, x - 1.2, 78, RUST_D, 0.8)
 		_l(x + 1.2, 68, x + 1.2, 74, RUST_D, 0.8)
-		_l(x + s * 4.0, 44, x + s * 15.5, 2.0, Color("5a5a56"), 1.0)
+		_l(x + s * 4.0, 44, x + s * 15.5, 0.6, Color("5a5a56"), 1.0)
 	# the hot-air stoves in the middle
 	for x in [-4.0, 0.0, 4.0]:
 		_r(x - 1.6, 0.6, x + 1.6, 34, Color("6f6f6a"))

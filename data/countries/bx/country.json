@@ -64,7 +64,7 @@
 				"board_motorway": "#1f4fa0"
 			},
 			"plates": [
-				["E", "#1a7a3e", "#ffffff"], ["A", "#1f4fa0", "#ffffff"], ["R", "#1f4fa0", "#ffffff"],
+				["E", "#1a7a3e", "#ffffff"], ["A", "#ffffff", "#111111"], ["R", "#1f4fa0", "#ffffff"],
 				["N", "#1f4fa0", "#ffffff"]
 			],
 			"limits": {"express": 120, "road": 90, "city": 50, "town_on_express": 70, "town": 50}
@@ -80,13 +80,13 @@
 				"region_sign": "CANTON DE"
 			},
 			"signs": {
-				"town": "#ffffff",
+				"town": "#eec700",
 				"town_text": "#111111",
 				"board": "#ffffff",
 				"board_text": "#111111",
 				"board_motorway": "#1f4fa0"
 			},
-			"plates": [["A", "#1f4fa0", "#ffffff"], ["E", "#1a7a3e", "#ffffff"], ["N", "#ffffff", "#111111"]],
+			"plates": [["A", "#1f4fa0", "#ffffff"], ["E", "#1a7a3e", "#ffffff"], ["N", "#c1121c", "#ffffff"]],
 			"limits": {"express": 130, "road": 90, "city": 50, "town_on_express": 70, "town": 50}
 		}
 	},
