@@ -124,7 +124,7 @@ static func _aarhus_aros() -> void:
 	_r(-19.5, 25.6, 20.5, 26.6, Color("d7d2c8"))
 	# the panorama: a ring of coloured glass seen slightly from below, back half first
 	var n := 40
-	var cy := 29.4
+	var cy := 31.5 # the ring stands on its legs above the roof
 	for half in [0, 1]:
 		for k in n:
 			var a0 := TAU * k / n
@@ -140,7 +140,7 @@ static func _aarhus_aros() -> void:
 	# the roof edge of the walkway and its thin legs
 	_l(-19.5, cy + 2.2, 19.5, cy + 2.2, Color(1, 1, 1, 0.35), 0.15)
 	for x in [-14.0, -5.0, 5.0, 14.0]:
-		_l(x, 26.6, x, cy - 3.6 + 1.8 * (1.0 - absf(x) / 19.5), Color("8a8a8a"), 0.2)
+		_l(x, 26.6, x, cy - 2.2 - 1.8 * sqrt(1.0 - pow(x / 19.5, 2.0)), Color("8a8a8a"), 0.2)
 
 ## H.C. Andersen's birthplace in Odense: a low yellow corner house with a red tiled roof, small white-framed windows,
 ## a green door and the gable end turned to the side street.

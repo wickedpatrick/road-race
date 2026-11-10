@@ -255,12 +255,19 @@ static func _skagen_church() -> void:
 		_arched(0, 11.0, 1.0, 2.4, WIN)
 		_arched(0, 6.5, 0.9, 1.8, WIN)
 	# the dune and the marram grass
-	_poly([-8, 0, 8, 0, 8, 1.2, 4.5, 2.2, 2.0, 3.4, -1.0, 4.6, -4.0, 4.4, -6.5, 3.0, -8, 1.8], SAND)
+	var dune := [-8.0, 1.8, -6.5, 3.0, -4.0, 4.4, -1.0, 4.6, 2.0, 3.4, 4.5, 2.2, 8.0, 1.2] # the top, west to east
+	var outline := [-8, 0, 8, 0]
+	for i in range(dune.size() - 2, -1, -2):
+		outline.append_array([dune[i], dune[i + 1]])
+	_poly(outline, SAND)
 	_poly([-8, 0, 8, 0, 8, 0.6, -8, 0.6], Color("cdbd8e"))
 	if _detail(1.0):
 		var grass := Color("8a9a5a")
 		for gx in [-6.5, -4.6, -2.2, 0.4, 3.0, 5.6]:
-			var gy := 1.2 + 3.2 * (1.0 - absf(gx + 2.0) / 7.0)
+			var gy := 0.0 # the dune's height there, so the tuft sits on the sand
+			for i in range(0, dune.size() - 2, 2):
+				if gx >= dune[i] and gx <= dune[i + 2]:
+					gy = lerpf(dune[i + 1], dune[i + 3], (gx - dune[i]) / (dune[i + 2] - dune[i])) - 0.1
 			_l(gx, gy, gx - 0.4, gy + 0.9, grass, 0.08)
 			_l(gx, gy, gx + 0.1, gy + 1.1, grass, 0.08)
 			_l(gx, gy, gx + 0.5, gy + 0.8, grass, 0.08)

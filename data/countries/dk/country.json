@@ -14,9 +14,9 @@
 	"subtitle": {
 		"pl": "Edukacyjna podróż od Kopenhagi przez most nad Wielkim Bełtem i pola Jutlandii po wydmy Skagen i granitowy Bornholm",
 		"en": "An educational journey from Copenhagen over the Great Belt Bridge and across the fields of Jutland to the dunes of Skagen and granite Bornholm",
-		"cs": "Vzdělávací cesta z Kodaně přes most přes Velký Belt a pole Jutska až k dunám Skagenu a na žulový Bornholm",
+		"cs": "Vzdělávací cesta z Kodaně po mostě přes Velký Belt a pole Jutska až k dunám Skagenu a na žulový Bornholm",
 		"is": "Fræðandi ferðalag frá Kaupmannahöfn yfir Stórabeltisbrúna og um akra Jótlands að sandöldum Skagen og til Borgundarhólms úr graníti",
-		"de": "Eine lehrreiche Reise von Kopenhagen über die Brücke über den Großen Belt und durch die Felder Jütlands zu den Dünen von Skagen und ins granitene Bornholm"
+		"de": "Eine lehrreiche Reise von Kopenhagen über die Storebælt-Brücke und durch die Felder Jütlands zu den Dünen von Skagen und ins granitene Bornholm"
 	},
 	"region_label": {"pl": "region", "en": "region", "cs": "region", "is": "hérað", "de": "Region"},
 	"start": ["kobenhavn", "helsingor"],
