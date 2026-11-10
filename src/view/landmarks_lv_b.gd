@@ -150,29 +150,39 @@ static func _kuldiga_rumba() -> void:
 static func _sigulda_turaida() -> void:
 	var brick := Color("b0503a")
 	var brick_d := Color("8c3d2c")
-	# the hill and the woods
-	_poly([-20, 0, 20, 0, 20, 4, 12, 7, -10, 7.5, -20, 3.5], GRASS)
-	for x in [-18.0, -15.5, 15.0, 17.8]:
-		_c(x, 5.5, 2.0, TREE)
-	# the walls
-	_r(-14, 7, 13, 13.5, brick)
+	var brick_l := Color("c25e45")
+	var hole := Color("3b2a24")
+	var roof := Color("4a3a32")
+	# everything stands on the hilltop: the walls and towers start below its edge and the hill is drawn over their feet
+	# the curtain wall with its battlements and the gate
+	_r(-14, 6, 13, 13.5, brick)
 	_merlons(-14, -5, 13.5, 1.2, 6, brick)
 	_merlons(5, 13, 13.5, 1.2, 5, brick)
-	_r(-14, 7, 13, 8, brick_d)
-	# the half-round south tower on the right
-	_r(9, 7, 16, 21, brick)
-	_r(9, 7, 10.2, 21, brick_d)
-	_poly([8.5, 21, 16.5, 21, 12.5, 25], Color("4a3a32"))
-	_r(11.8, 14, 13.2, 16.5, Color("3b2a24"))
-	# the round main tower
-	_r(-4.5, 7, 4.5, 35, brick)
-	_r(-4.5, 7, -3, 35, brick_d)
-	_r(2.6, 7, 4.5, 35, Color("c25e45"))
+	_r(-14, 12.6, 13, 13.0, brick_d)
+	_arched(-9.5, 7.6, 2.6, 3.6, hole)
+	# the half-round south tower on the right, under its half cone
+	_r(9, 6, 16, 21, brick)
+	_r(9, 6, 10.4, 21, brick_d)
+	_r(14.6, 6, 16, 21, brick_l)
+	_poly([8.6, 21, 16.4, 21, 12.5, 26], roof)
+	_r(12.0, 14, 13.0, 16.5, hole)
+	_r(12.1, 9.5, 12.9, 11.2, hole)
+	# the round main tower: shaded at both sides to look round, slit windows, the top ring and the cone
+	_r(-4.5, 6, 4.5, 35, brick)
+	_r(-4.5, 6, -3.2, 35, brick_d)
+	_r(1.8, 6, 3.3, 35, brick_l)
+	_r(3.3, 6, 4.5, 35, brick)
 	for y in [15.0, 22.0, 29.0]:
-		_r(-0.7, y, 0.7, y + 2.2, Color("3b2a24"))
-	_r(-5, 35, 5, 35.8, brick_d)
-	_poly([-5.2, 35.8, 5.2, 35.8, 0, 41.5], Color("4a3a32"))
+		_r(-0.5, y, 0.5, y + 2.4, hole)
+	_r(-5, 34.6, 5, 35.8, brick_d)
+	for k in 5:
+		_r(-4.4 + k * 2.0, 33.6, -3.6 + k * 2.0, 34.6, brick_d) # the corbels under the top ring
+	_poly([-5.2, 35.8, 5.2, 35.8, 0, 41.5], roof)
 	_l(0, 41.5, 0, 42, DARK, 0.1)
+	# the hill with its flat top, then the woods on its flanks
+	_poly([-20, 0, 20, 0, 20, 3, 16.5, 6.5, 14.5, 7.6, -15, 7.6, -17, 6.5, -20, 3], GRASS)
+	for x in [-18.0, -15.5, 15.0, 17.8]:
+		_c(x, 6.0, 2.0, TREE)
 
 ## Talsi on its hills: green hills round a lake, red roofs on the slopes and the white church with its tower and spire on
 ## Church Hill.

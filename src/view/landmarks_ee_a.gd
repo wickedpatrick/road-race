@@ -265,22 +265,39 @@ static func _viljandi_bridge() -> void:
 
 ## Tarvas in Rakvere: the giant bronze aurochs striding on its rock, head low and long horns swept forward.
 static func _rakvere_tarvas() -> void:
-	# the rock
-	_poly([-4.4, 0, 4.4, 0, 3.8, 1.2, 1.5, 1.6, -2, 1.5, -4, 1.1], Color("8d8a84"))
-	# the legs
-	for x in [-2.9, -2.1, 1.4, 2.2]:
-		_r(x - 0.22, 1.4, x + 0.22, 3.2, BRONZE)
-	# the body, the hump and the head
-	_ell(-0.4, 3.9, 3.1, 1.25, 0.05, BRONZE)
-	_ell(1.2, 4.5, 1.6, 1.2, 0.3, BRONZE)
-	_ell(-1.2, 4.2, 1.6, 0.6, 0, BRONZE_L)
-	_poly([2.2, 4.6, 3.6, 3.6, 3.9, 2.9, 3.3, 2.8, 2.4, 3.6], BRONZE)
-	_c(3.5, 3.0, 0.35, BRONZE)
-	# the horns, out and forward
-	_poly([3.0, 4.0, 3.4, 4.9, 4.1, 5.3, 4.2, 5.1, 3.6, 4.6, 3.3, 3.9], Color("4f4230"))
-	_poly([2.7, 3.9, 2.8, 4.8, 2.4, 5.4, 2.6, 5.4, 3.1, 4.8, 3.0, 3.9], Color("4f4230"))
-	# the tail
-	_l(-3.4, 4.3, -4.0, 2.8, BRONZE, 0.12)
+	var far := Color("4f4230")
+	# the rock, flat on top
+	_poly([-4.4, 0, 4.4, 0, 4.1, 0.9, 3.4, 1.5, -3.6, 1.5, -4.2, 0.8], Color("8d8a84"))
+	_poly([-4.4, 0, -1.0, 0, -2.0, 0.7, -4.2, 0.8], Color("7a7771"))
+	# the far horn and the far legs, darker behind the body
+	for seg in [[2.6, 4.5, 2.9, 5.0, 0.26], [2.9, 5.0, 3.4, 5.35, 0.2], [3.4, 5.35, 3.75, 5.75, 0.14]]:
+		_l(seg[0], seg[1], seg[2], seg[3], far, seg[4])
+	_l(-2.0, 3.0, -2.0, 2.2, far, 0.5)
+	_l(-2.0, 2.2, -2.2, 1.5, far, 0.3)
+	_l(1.0, 2.7, 0.9, 1.5, far, 0.34)
+	# the near legs: the hind leg with its hock, the foreleg striding forward
+	_l(-2.8, 3.2, -2.55, 2.3, BRONZE, 0.6)
+	_l(-2.55, 2.3, -2.95, 1.5, BRONZE, 0.32)
+	_l(1.6, 2.7, 2.0, 2.0, BRONZE, 0.4)
+	_l(2.0, 2.0, 2.35, 1.5, BRONZE, 0.32)
+	for x in [-2.95, -2.2, 0.9, 2.35]:
+		_r(x - 0.2, 1.5, x + 0.2, 1.7, far) # the hooves
+	# the body: the rump, the high hump over the shoulders and the heavy head held low
+	_poly([-3.75, 3.3, -3.45, 4.2, -2.0, 4.4, -0.5, 4.6, 0.5, 5.15, 1.4, 5.35, 2.1, 5.05, 2.7, 4.55, 3.3, 3.95,
+			3.75, 3.2, 3.6, 2.8, 3.15, 2.75, 2.55, 3.15, 1.95, 2.85, 1.5, 2.45, 0.4, 2.55, -0.8, 2.6, -2.2, 2.6,
+			-3.25, 2.75], BRONZE)
+	_ell(-0.6, 4.15, 2.3, 0.32, 0.1, BRONZE_L) # the light along the back
+	_poly([2.45, 4.55, 2.15, 4.85, 2.7, 4.7], far) # the ear
+	if _detail(2.0):
+		_c(3.05, 4.0, 0.08, DARK)
+	# the near horn: out of the poll, forward and then up at the tip
+	for seg in [[2.75, 4.35, 3.25, 4.75, 0.3], [3.25, 4.75, 3.85, 4.95, 0.24], [3.85, 4.95, 4.25, 5.25, 0.18],
+			[4.25, 5.25, 4.35, 5.7, 0.12]]:
+		_l(seg[0], seg[1], seg[2], seg[3], BRONZE_L, seg[4])
+	# the tail with its tuft
+	_l(-3.6, 3.9, -3.95, 3.0, BRONZE, 0.13)
+	_l(-3.95, 3.0, -3.9, 2.4, BRONZE, 0.12)
+	_ell(-3.9, 2.2, 0.16, 0.3, 0, far)
 
 ## Kuressaare Castle: the square dolomite convent castle on its star-shaped ramparts behind the moat, the slim
 ## watchtower Tall Hermann at one corner and the broad defence tower at the other.

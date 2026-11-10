@@ -241,38 +241,98 @@ static func _perpignan_castillet() -> void:
 		_r(-5 + k * 2.4, 26, -3.8 + k * 2.4, 27.6, brick)
 	_r(10, 0, 13, 16, brick_d)
 
-## Joan of Arc on the Place du Martroi in Orléans (1855): the bronze rider on her horse, sword raised, on a tall
-## stone pedestal.
+## Joan of Arc on the Place du Martroi in Orléans (Foyatier, 1855): the bronze rider in armour on her walking horse,
+## one foreleg lifted, holding her sword point down in thanks for the victory, on a tall granite pedestal with the band
+## of bronze reliefs.
 static func _orleans_jeanne() -> void:
 	var bronze := Color("4a5a4c")
-	_r(-4, 0, 4, 5.5, CREAM)
-	_r(-4.4, 5.5, 4.4, 6, WHITE)
-	# the horse
-	_poly([-3, 7.6, 2, 7.6, 3, 8.6, 2.5, 9.6, -2.6, 9.4], bronze)
-	_poly([2, 9, 3.6, 10.6, 4.2, 10.2, 3.6, 9.2, 2.8, 8.4], bronze)
-	for x in [-2.4, -1.4, 1.0, 1.8]:
-		_l(x, 6, x, 7.8, bronze, 0.3)
-	_l(-3, 9, -3.8, 7.6, bronze, 0.3)
-	# the rider
-	_r(-0.6, 9.4, 0.6, 11.4, bronze)
-	_c(0, 11.9, 0.45, bronze)
-	_l(0.4, 10.9, 1.8, 12.8, bronze, 0.22)
-	_l(1.8, 12.8, 0.6, 13.0, bronze, 0.12)
+	var far := Color("3a473c")
+	var granite := Color("cfc6b2")
+	var granite_d := Color("b3a993")
+	# the pedestal: the steps, the block with its relief band, the cornice
+	_r(-4.4, 0, 4.4, 0.6, granite_d)
+	_r(-3.4, 0.6, 3.4, 5.3, granite)
+	_r(-3.1, 2.6, 3.1, 4.0, Color("8a907c"))
+	_r(-3.4, 0.6, -2.9, 5.3, granite_d)
+	_r(-3.8, 5.3, 3.8, 6.0, CREAM)
+	# the far legs and the tail
+	_l(-1.7, 7.6, -1.9, 6.0, far, 0.26)
+	_l(1.3, 7.6, 1.4, 6.0, far, 0.26)
+	_l(-2.4, 8.5, -2.8, 7.2, bronze, 0.3)
+	# the near hind leg with its hock, the near foreleg lifted and bent at the knee
+	_l(-1.9, 7.9, -2.2, 6.8, bronze, 0.36)
+	_l(-2.2, 6.8, -2.0, 6.0, bronze, 0.26)
+	_l(1.7, 7.7, 2.2, 6.9, bronze, 0.32)
+	_l(2.2, 6.9, 2.0, 6.5, bronze, 0.26)
+	# the horse: rump, back, the arched neck and the head bowed forward
+	_poly([-2.5, 8.4, -2.3, 8.75, -1.0, 8.9, 0.9, 9.0, 1.5, 9.7, 1.9, 10.6, 2.15, 11.2, 2.4, 10.95, 3.4, 10.1,
+			3.4, 9.75, 3.0, 9.7, 2.6, 9.85, 2.4, 9.4, 2.3, 8.6, 1.9, 7.75, 1.2, 7.45, -1.3, 7.45, -2.1, 7.7], bronze)
+	# the rider: the near leg in armour, the body upright, the head raised to the sky
+	_l(0.2, 9.1, 0.75, 8.4, far, 0.32)
+	_l(0.75, 8.4, 0.6, 7.6, far, 0.26)
+	_poly([-0.15, 9.0, 0.7, 9.0, 0.6, 10.6, 0.0, 10.6], bronze)
+	_c(0.35, 11.0, 0.33, bronze)
+	_poly([-0.2, 9.0, -0.75, 8.4, 0.0, 8.6], bronze) # the skirt of her surcoat over the horse's back
+	# the right arm down and forward, the sword held point down
+	_l(0.5, 10.4, 1.1, 9.7, bronze, 0.2)
+	_l(0.95, 10.0, 1.5, 7.9, Color("a8b0a2"), 0.1)
+	_l(0.8, 9.85, 1.3, 9.95, far, 0.1) # the cross-guard
 
-## The Gros-Horloge in Rouen: a Renaissance arch over the Rue du Gros-Horloge with the gilded one-hand clock face
-## on a blue starry ground, beside the Gothic belfry.
+## The Gros-Horloge in Rouen: the Renaissance pavilion straddling the Rue du Gros-Horloge on its low arch, the great
+## gilded one-hand dial on a blue starry ground in its carved frame with the moon-phase globe above, the slate roof,
+## the tall Gothic belfry beside it and a half-timbered house on the other side.
 static func _rouen_gros_horloge() -> void:
-	var stone := Color("d8cfba")
-	_r(-12, 0, -2, 18, Color("cfc5ad")) # the belfry
-	_poly([-12.4, 18, -1.6, 18, -7, 20], SLATE)
-	_r(-2, 0, 10, 14, stone)
-	_arched(4, 0, 7, 9, Color("6d7f8e"))
-	_r(-1, 9.5, 9, 14, stone)
-	_c(4, 11.5, 2.6, GOLD)
-	_c(4, 11.5, 2.1, Color("1f3a7a"))
-	_l(4, 11.5, 5.2, 12.8, GOLD, 0.25)
-	_poly([-2.4, 14, 10.4, 14, 4, 17], SLATE)
-	_r(10, 0, 12, 12, Color("c4b89c"))
+	var stone := Color("ddd3bd")
+	var stone_d := Color("bfb398")
+	var blue := Color("1f3a7a")
+	# the belfry: the square Gothic tower with its balustrade and the slate roof with a lantern
+	_r(-11.6, 0, -3, 21, Color("cfc5ad"))
+	_r(-11.6, 0, -10.6, 21, stone_d)
+	for y in [8.0, 13.5]:
+		_pointed_win(-7.3, y, 1.4, 3.2)
+	_r(-12, 21, -2.6, 21.8, stone_d)
+	_poly([-11.6, 21.8, -3, 21.8, -5.5, 24.2, -9.1, 24.2], SLATE)
+	_r(-8.0, 24.2, -6.6, 25.3, stone_d)
+	_poly([-8.2, 25.3, -6.4, 25.3, -7.3, 26], SLATE)
+	# the half-timbered house on the right
+	_r(9, 0, 12, 15, Color("efe6d2"))
+	for x in [9.2, 10.5, 11.8]:
+		_l(x, 0.5, x, 15, Color("6b4a32"), 0.25)
+	for y in [5.0, 10.0, 15.0]:
+		_l(9, y, 12, y, Color("6b4a32"), 0.3)
+	_poly([8.8, 15, 12, 15, 12, 18], SLATE)
+	# the pavilion over the street: the low basket arch, the panels beside it, the cornice and the roof
+	_r(-3, 0, 9, 14, stone)
+	_poly([0, 0, 6, 0] + _arc(3, 4.2, 3, 2.2, 0, PI, 8), Color("6d7f8e"))
+	_r(-3, 0, -2.2, 14, stone_d)
+	_r(-3.3, 7.0, 9.3, 7.5, stone_d)
+	_r(-3.4, 14, 9.4, 14.8, stone_d)
+	_poly([-3.4, 14.8, 9.4, 14.8, 7.6, 18.8, -1.6, 18.8], SLATE)
+	_poly([0.6, 18.8, 5.4, 18.8, 3, 20], SLATE)
+	# the carved square frame with gilded corners and the dial: gold sun rays on the blue ground, gold ring, one hand
+	_r(0.0, 8.0, 6.0, 13.6, stone_d)
+	for p in [[0.0, 8.0], [5.2, 8.0], [0.0, 12.8], [5.2, 12.8]]:
+		_r(p[0], p[1], p[0] + 0.8, p[1] + 0.8, GOLD)
+	var rays := []
+	for k in 32:
+		var ang := TAU * k / 32.0
+		var rr: float = 2.55 if k % 2 == 0 else 2.15
+		rays.append_array([3 + cos(ang) * rr, 10.8 + sin(ang) * rr])
+	_poly(rays, GOLD)
+	_c(3, 10.8, 2.0, blue)
+	if _detail(2.0):
+		for k in 8:
+			var ang := TAU * (k + 0.5) / 8.0
+			_c(3 + cos(ang) * 1.4, 10.8 + sin(ang) * 1.4, 0.1, GOLD)
+	_c(3, 10.8, 0.55, GOLD)
+	_l(3, 10.8, 3.9, 12.1, GOLD, 0.22)
+	# the moon-phase globe in its niche over the dial
+	_c(3, 14.2, 0.55, blue)
+	_poly(_arc(3, 14.2, 0.55, 0.55, -PI * 0.5, PI * 0.5, 6), GOLD)
+
+## A narrow pointed window from y0 up, `h` high.
+static func _pointed_win(x: float, y0: float, w: float, h: float) -> void:
+	_poly([x - w * 0.5, y0, x + w * 0.5, y0, x + w * 0.5, y0 + h - w * 0.6, x, y0 + h, x - w * 0.5, y0 + h - w * 0.6], WIN)
 
 ## The Abbaye aux Hommes in Caen: the Romanesque abbey church of Saint-Étienne founded by William the Conqueror,
 ## its plain west front between two tall towers with Gothic spires.
