@@ -27,7 +27,7 @@
 				"is": "Bretland",
 				"de": "Großbritannien"
 			},
-			"neighbours": [],
+			"neighbours": ["ie"],
 			"favorite_neighbour": "ie"
 		},
 		{
@@ -186,6 +186,18 @@
 			"name": {"pl": "Łotwa", "en": "Latvia", "cs": "Lotyšsko", "is": "Lettland", "de": "Lettland"},
 			"neighbours": ["ee", "lt", "by", "ru"],
 			"favorite_neighbour": "lt"
+		},
+		{
+			"code": "ee",
+			"name": {"pl": "Estonia", "en": "Estonia", "cs": "Estonsko", "is": "Eistland", "de": "Estland"},
+			"neighbours": ["lv", "ru", "fi"],
+			"favorite_neighbour": "fi"
+		},
+		{
+			"code": "ie",
+			"name": {"pl": "Irlandia", "en": "Ireland", "cs": "Irsko", "is": "Írland", "de": "Irland"},
+			"neighbours": ["gb"],
+			"favorite_neighbour": "gb"
 		},
 		{
 			"code": "fi",
