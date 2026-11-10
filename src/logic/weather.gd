@@ -9,18 +9,19 @@ const KINDS := ["sun", "cloudy", "rain", "fog", "autumn", "snow"]
 const SEASON := {"sun": "summer", "cloudy": "summer", "rain": "summer", "fog": "summer", "autumn": "autumn", "snow": "winter"}
 ## share of the car's grip: steering (and holding a bend), braking, pulling away
 const GRIP := {
-	"rain": {"steer": 0.92, "brake": 0.75, "accel": 1.0},
+	"rain": {"steer": 0.9, "brake": 0.75, "accel": 1.0},
 	"snow": {"steer": 0.8, "brake": 0.55, "accel": 0.8},
 }
 ## steering on a slippery road: the car's sideways movement follows the steering with "inertia" (seconds, the time
 ## constant): it turns in late and, let go, keeps turning a moment; held, it turns as hard as on a dry road (so a
-## bend is held as well, only the grip limits it). Rain gets its own values once snow is tuned.
+## bend is held as well, only the grip limits it). Rain has half of snow's: half the lag and half the steering grip lost.
 ## red desert sand (the "desert" landscape's ground patches) by season; SeasonPalette has no such ground
 const RED_SAND := {"summer": Color("b9704a"), "autumn": Color("a86a4a"), "winter": Color("d8cdc4")}
 ## feather grass bent by the wind (the "steppe" landscape's pale streaks) by season: silvery in summer, golden in
 ## autumn, wind-blown snow in winter
 const FEATHER := {"summer": Color("c3c48c"), "autumn": Color("cdb06c"), "winter": Color("e2e8ec")}
 const HANDLING := {
+	"rain": {"inertia": 0.2},
 	"snow": {"inertia": 0.4},
 }
 ## more time for the trip where the weather slows the car down
