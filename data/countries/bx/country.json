@@ -1,0 +1,138 @@
+{
+	"code": "bx",
+	"name": {"pl": "Benelux", "en": "Benelux", "cs": "Benelux", "is": "Benelúx", "de": "Benelux"},
+	"language": "nl",
+	"drive": "right",
+	"units": "metric",
+	"title": {
+		"pl": "RAJD PRZEZ BENELUX",
+		"en": "BENELUX ROAD TRIP",
+		"cs": "RALLY BENELUXEM",
+		"is": "ÖKUFERÐ UM BENELÚX",
+		"de": "BENELUX-TOUR"
+	},
+	"subtitle": {
+		"pl": "Edukacyjna podróż przez Niderlandy, Belgię i Luksemburg, od polderów i grobli po Ardeny",
+		"en": "An educational journey through the Netherlands, Belgium and Luxembourg, from the polders and dykes to the Ardennes",
+		"cs": "Vzdělávací cesta Nizozemskem, Belgií a Lucemburskem, od polderů a hrází až do Arden",
+		"is": "Fræðandi ferðalag um Holland, Belgíu og Lúxemborg, frá sjávarflæmum og flóðgörðum til Ardenna",
+		"de": "Eine lehrreiche Reise durch die Niederlande, Belgien und Luxemburg, von den Poldern und Deichen bis in die Ardennen"
+	},
+	"region_label": {"pl": "prowincja", "en": "province", "cs": "provincie", "is": "hérað", "de": "Provinz"},
+	"start": ["amsterdam", "utrecht"],
+	"express_prefixes": ["A", "E"],
+	"traffic": 0.3,
+	"limits": {"express": 100, "road": 80, "city": 50, "town_on_express": 80, "town": 50},
+	"signs": {"town": "#1f4fa0", "town_text": "#ffffff", "board": "#1f4fa0", "board_motorway": "#1f4fa0"},
+	"station": {
+		"sign": "TANKSTATION",
+		"board": "PRIJZEN",
+		"prices": [["Euro 95", "2,05"], ["Diesel", "1,79"]],
+		"region_sign": "PROVINCIE"
+	},
+	"plates": [["A", "#c8322b", "#ffffff"], ["E", "#1a7a3e", "#ffffff"], ["N", "#f5c400", "#111111"]],
+	"parts": {
+		"nl": {
+			"name": {"pl": "Niderlandy", "en": "Netherlands", "cs": "Nizozemsko", "is": "Holland", "de": "Niederlande"},
+			"language": "nl",
+			"region_label": {"pl": "prowincja", "en": "province", "cs": "provincie", "is": "hérað", "de": "Provinz"},
+			"station": {
+				"sign": "TANKSTATION",
+				"board": "PRIJZEN",
+				"prices": [["Euro 95", "2,05"], ["Diesel", "1,79"]],
+				"region_sign": "PROVINCIE"
+			},
+			"signs": {"town": "#1f4fa0", "town_text": "#ffffff", "board": "#1f4fa0", "board_motorway": "#1f4fa0"},
+			"plates": [["A", "#c8322b", "#ffffff"], ["E", "#1a7a3e", "#ffffff"], ["N", "#f5c400", "#111111"]],
+			"limits": {"express": 100, "road": 80, "city": 50, "town_on_express": 80, "town": 50}
+		},
+		"be": {
+			"name": {"pl": "Belgia", "en": "Belgium", "cs": "Belgie", "is": "Belgía", "de": "Belgien"},
+			"language": "nl",
+			"region_label": {"pl": "prowincja", "en": "province", "cs": "provincie", "is": "hérað", "de": "Provinz"},
+			"station": {
+				"sign": "TANKSTATION · STATION",
+				"board": "PRIJZEN · PRIX",
+				"prices": [["Euro 95", "1,72"], ["Diesel", "1,77"]],
+				"region_sign": "PROVINCIE · PROVINCE"
+			},
+			"signs": {
+				"town": "#ffffff",
+				"town_text": "#111111",
+				"board": "#ffffff",
+				"board_text": "#111111",
+				"board_motorway": "#1f4fa0"
+			},
+			"plates": [
+				["E", "#1a7a3e", "#ffffff"], ["A", "#1f4fa0", "#ffffff"], ["R", "#1f4fa0", "#ffffff"],
+				["N", "#1f4fa0", "#ffffff"]
+			],
+			"limits": {"express": 120, "road": 90, "city": 50, "town_on_express": 70, "town": 50}
+		},
+		"lu": {
+			"name": {"pl": "Luksemburg", "en": "Luxembourg", "cs": "Lucembursko", "is": "Lúxemborg", "de": "Luxemburg"},
+			"language": "fr",
+			"region_label": {"pl": "kanton", "en": "canton", "cs": "kanton", "is": "kantóna", "de": "Kanton"},
+			"station": {
+				"sign": "STATION-SERVICE",
+				"board": "PRIX",
+				"prices": [["Super 95", "1,55"], ["Diesel", "1,46"]],
+				"region_sign": "CANTON DE"
+			},
+			"signs": {
+				"town": "#ffffff",
+				"town_text": "#111111",
+				"board": "#ffffff",
+				"board_text": "#111111",
+				"board_motorway": "#1f4fa0"
+			},
+			"plates": [["A", "#1f4fa0", "#ffffff"], ["E", "#1a7a3e", "#ffffff"], ["N", "#ffffff", "#111111"]],
+			"limits": {"express": 130, "road": 90, "city": 50, "town_on_express": 70, "town": 50}
+		}
+	},
+	"map": {"lon0": 2.4, "lon1": 7.4, "lat0": 49.35, "lat1": 53.65, "lon_k": 0.623, "zoom": 1.5, "labels": "auto"},
+	"outline": [
+		[4.23, 51.39], [4.01, 51.44], [3.82, 51.41], [3.69, 51.45], [3.59, 51.45], [3.45, 51.54], [3.55, 51.59],
+		[3.74, 51.6], [3.89, 51.57], [4.14, 51.46], [4.27, 51.47], [4, 51.6], [4.18, 51.61], [4.13, 51.67],
+		[3.95, 51.81], [4.08, 51.99], [4.21, 52.06], [4.48, 52.31], [4.56, 52.44], [4.68, 52.81], [4.77, 52.94],
+		[4.89, 52.91], [5.06, 52.96], [5.36, 53.1], [5.45, 53.21], [5.53, 53.27], [5.87, 53.38], [6.06, 53.41],
+		[6.82, 53.44], [6.97, 53.33], [7.2, 53.28], [7.19, 53], [7.05, 52.74], [7.03, 52.65], [7.01, 52.63],
+		[6.75, 52.63], [6.71, 52.62], [6.72, 52.57], [6.69, 52.53], [6.75, 52.46], [6.97, 52.44], [7, 52.42],
+		[7.04, 52.38], [7.02, 52.27], [6.98, 52.21], [6.72, 52.08], [6.72, 52.04], [6.8, 51.98], [6.74, 51.91],
+		[6.52, 51.85], [6.42, 51.86], [6.36, 51.82], [6.17, 51.88], [5.95, 51.8], [5.95, 51.76], [6.09, 51.64],
+		[6.09, 51.6], [6.19, 51.49], [6.2, 51.45], [6.17, 51.35], [6.08, 51.22], [6.08, 51.18], [6.14, 51.16],
+		[6.13, 51.15], [5.94, 51.04], [5.86, 51.03], [5.89, 50.98], [6.01, 50.95], [6.05, 50.9], [5.99, 50.75],
+		[6.24, 50.6], [6.17, 50.55], [6.2, 50.5], [6.29, 50.49], [6.34, 50.45], [6.36, 50.32], [6.18, 50.23],
+		[6.12, 50.12], [6.11, 50.03], [6.14, 49.97], [6.2, 49.92], [6.32, 49.84], [6.49, 49.8], [6.48, 49.71],
+		[6.38, 49.6], [6.34, 49.45], [6.18, 49.5], [6.01, 49.45], [5.82, 49.51], [5.79, 49.54], [5.51, 49.51],
+		[5.28, 49.68], [5.01, 49.78], [4.87, 49.79], [4.84, 49.91], [4.79, 49.96], [4.86, 50.14], [4.82, 50.15],
+		[4.71, 50.1], [4.66, 50], [4.55, 49.96], [4.37, 49.94], [4.18, 49.96], [4.14, 50], [4.19, 50.09],
+		[4.14, 50.14], [4.17, 50.25], [4.04, 50.32], [3.95, 50.34], [3.75, 50.34], [3.69, 50.31], [3.63, 50.46],
+		[3.6, 50.48], [3.32, 50.51], [3.27, 50.53], [3.23, 50.66], [3.18, 50.73], [3.11, 50.78], [2.84, 50.71],
+		[2.6, 50.88], [2.58, 50.91], [2.6, 50.96], [2.52, 51.1], [3.23, 51.35], [3.35, 51.38], [3.38, 51.29],
+		[3.43, 51.25], [3.58, 51.29], [3.9, 51.21], [4.17, 51.31]
+	],
+	"outline_lines": [
+		[
+			[5.99, 50.75], [5.75, 50.76], [5.69, 50.77], [5.64, 50.84], [5.75, 50.95], [5.75, 50.99], [5.82, 51.09],
+			[5.83, 51.13], [5.8, 51.15], [5.61, 51.2], [5.48, 51.29], [5.31, 51.26], [5.21, 51.28], [5.1, 51.35],
+			[5.06, 51.45], [5.03, 51.47], [4.94, 51.41], [4.85, 51.4], [4.76, 51.49], [4.63, 51.42], [4.59, 51.42],
+			[4.5, 51.47], [4.38, 51.43], [4.4, 51.37], [4.37, 51.36], [4.23, 51.39]
+		],
+		[
+			[6.12, 50.12], [6.09, 50.15], [5.98, 50.17], [5.87, 50.08], [5.74, 49.92], [5.72, 49.81], [5.88, 49.64],
+			[5.79, 49.54]
+		]
+	],
+	"islands": [
+		[
+			[4.23, 51.39], [4.17, 51.31], [3.9, 51.21], [3.58, 51.29], [3.43, 51.25], [3.38, 51.29], [3.35, 51.38],
+			[3.59, 51.4], [3.88, 51.35], [4.01, 51.4], [4.11, 51.36]
+		],
+		[
+			[3.95, 51.74], [4.08, 51.65], [3.95, 51.63], [3.82, 51.69], [3.73, 51.68], [3.7, 51.71], [3.7, 51.73],
+			[3.79, 51.75]
+		]
+	],
+	"weather": {"default": "cloudy", "landscape": true, "biomes": {"upland": "rain", "industrial": "cloudy"}}
+}

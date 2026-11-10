@@ -246,6 +246,19 @@
 			"name": {"pl": "Hiszpania", "en": "Spain", "cs": "Španělsko", "is": "Spánn", "de": "Spanien"},
 			"neighbours": ["fr", "pt", "ad"],
 			"favorite_neighbour": "pt"
+		},
+		{
+			"code": "pt",
+			"name": {"pl": "Portugalia", "en": "Portugal", "cs": "Portugalsko", "is": "Portúgal", "de": "Portugal"},
+			"neighbours": ["es"],
+			"favorite_neighbour": "es"
+		},
+		{
+			"code": "bx",
+			"name": {"pl": "Benelux", "en": "Benelux", "cs": "Benelux", "is": "Benelúx", "de": "Benelux"},
+			"members": ["nl", "be", "lu"],
+			"neighbours": ["de", "fr"],
+			"favorite_neighbour": "de"
 		}
 	]
 }

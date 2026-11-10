@@ -1,0 +1,95 @@
+{
+	"bruxelles": {
+		"name": "Bruxelles",
+		"lat": 50.85,
+		"lon": 4.35,
+		"pop": 1250,
+		"region": "Bruxelles-Capitale",
+		"country": "be",
+		"exonym": {"pl": "Bruksela", "en": "Brussels", "cs": "Brusel", "is": "Brussel", "de": "Brüssel"}
+	},
+	"amsterdam": {"name": "Amsterdam", "lat": 52.37, "lon": 4.9, "pop": 930, "region": "Noord-Holland", "country": "nl"},
+	"rotterdam": {"name": "Rotterdam", "lat": 51.92, "lon": 4.48, "pop": 670, "region": "Zuid-Holland", "country": "nl"},
+	"den_haag": {
+		"name": "Den Haag",
+		"lat": 52.08,
+		"lon": 4.3,
+		"pop": 560,
+		"region": "Zuid-Holland",
+		"country": "nl",
+		"exonym": {"pl": "Haga", "en": "The Hague", "cs": "Haag", "is": "Haag"},
+		"label": "left"
+	},
+	"antwerpen": {
+		"name": "Antwerpen",
+		"lat": 51.22,
+		"lon": 4.4,
+		"pop": 545,
+		"region": "Antwerpen",
+		"country": "be",
+		"exonym": {"pl": "Antwerpia", "en": "Antwerp", "cs": "Antverpy"}
+	},
+	"utrecht": {"name": "Utrecht", "lat": 52.09, "lon": 5.12, "pop": 370, "region": "Utrecht", "country": "nl"},
+	"gent": {
+		"name": "Gent",
+		"lat": 51.05,
+		"lon": 3.72,
+		"pop": 265,
+		"region": "Oost-Vlaanderen",
+		"country": "be",
+		"exonym": {"pl": "Gandawa", "en": "Ghent"}
+	},
+	"eindhoven": {"name": "Eindhoven", "lat": 51.44, "lon": 5.48, "pop": 240, "region": "Noord-Brabant", "country": "nl"},
+	"groningen": {"name": "Groningen", "lat": 53.22, "lon": 6.57, "pop": 238, "region": "Groningen", "country": "nl"},
+	"charleroi": {"name": "Charleroi", "lat": 50.41, "lon": 4.44, "pop": 202, "region": "Hainaut", "country": "be"},
+	"liege": {
+		"name": "Liège",
+		"lat": 50.63,
+		"lon": 5.57,
+		"pop": 197,
+		"region": "Liège",
+		"country": "be",
+		"exonym": {"cs": "Lutych", "de": "Lüttich"}
+	},
+	"arnhem": {"name": "Arnhem", "lat": 51.98, "lon": 5.91, "pop": 165, "region": "Gelderland", "country": "nl"},
+	"luxembourg": {
+		"name": "Luxembourg",
+		"lat": 49.61,
+		"lon": 6.13,
+		"pop": 135,
+		"region": "Luxembourg",
+		"country": "lu",
+		"exonym": {"pl": "Luksemburg", "cs": "Lucemburk", "is": "Lúxemborg", "de": "Luxemburg"}
+	},
+	"zwolle": {"name": "Zwolle", "lat": 52.51, "lon": 6.09, "pop": 132, "region": "Overijssel", "country": "nl"},
+	"maastricht": {"name": "Maastricht", "lat": 50.85, "lon": 5.69, "pop": 122, "region": "Limburg", "country": "nl"},
+	"brugge": {
+		"name": "Brugge",
+		"lat": 51.21,
+		"lon": 3.22,
+		"pop": 119,
+		"region": "West-Vlaanderen",
+		"country": "be",
+		"exonym": {"pl": "Brugia", "en": "Bruges", "cs": "Bruggy", "de": "Brügge"}
+	},
+	"namur": {"name": "Namur", "lat": 50.47, "lon": 4.87, "pop": 113, "region": "Namur", "country": "be"},
+	"leuven": {
+		"name": "Leuven",
+		"lat": 50.88,
+		"lon": 4.7,
+		"pop": 103,
+		"region": "Vlaams-Brabant",
+		"country": "be",
+		"exonym": {"cs": "Lovaň", "de": "Löwen"}
+	},
+	"middelburg": {"name": "Middelburg", "lat": 51.5, "lon": 3.61, "pop": 49, "region": "Zeeland", "country": "nl"},
+	"esch": {
+		"name": "Esch-sur-Alzette",
+		"lat": 49.5,
+		"lon": 5.98,
+		"pop": 37,
+		"region": "Esch-sur-Alzette",
+		"country": "lu",
+		"short": "Esch"
+	}
+}

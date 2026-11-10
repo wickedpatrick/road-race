@@ -1,0 +1,142 @@
+[
+	{
+		"a": "lisboa",
+		"b": "setubal",
+		"km": 48,
+		"road": [[40, "A2"], [48, "A12"]],
+		"towns": [["Almada", 9], ["Coina", 24], ["Palmela", 40]],
+		"zones": [[6, "coast", "Lisboa"], [48, "mediterranean", "Setúbal"]],
+		"via": [[9, -9.16, 38.67], [40, -8.9, 38.57]],
+		"bridge": {"from_km": 3, "to_km": 5.3, "name": "Ponte 25 de Abril", "color": "#c0392b"}
+	},
+	{
+		"a": "lisboa",
+		"b": "evora",
+		"km": 135,
+		"road": [[42, "A12"], [58, "A2"], [135, "A6"]],
+		"towns": [["Vendas Novas", 84], ["Montemor-o-Novo", 106]],
+		"zones": [[22, "coast", "Lisboa"], [70, "mediterranean", "Setúbal"], [135, "mediterranean", "Évora"]],
+		"via": [[22, -8.97, 38.72], [58, -8.75, 38.6], [84, -8.46, 38.68], [106, -8.21, 38.65]],
+		"bridge": {"from_km": 9, "to_km": 21.3, "name": "Ponte Vasco da Gama", "kind": "beam"}
+	},
+	{
+		"a": "lisboa",
+		"b": "leiria",
+		"km": 146,
+		"road": "A8",
+		"towns": [["Loures", 13], ["Torres Vedras", 45], ["Caldas da Rainha", 86], ["Alcobaça", 110]],
+		"zones": [[60, "fields", "Lisboa"], [120, "orchard", "Leiria"], [146, "forest", "Leiria"]],
+		"via": [[45, -9.26, 39.09], [86, -9.14, 39.4], [110, -8.98, 39.55]]
+	},
+	{
+		"a": "leiria",
+		"b": "coimbra",
+		"km": 72,
+		"road": "A1",
+		"towns": [["Pombal", 30], ["Condeixa-a-Nova", 60]],
+		"zones": [[45, "forest", "Leiria"], [72, "fields", "Coimbra"]],
+		"via": [[30, -8.63, 39.92], [60, -8.5, 40.11]]
+	},
+	{
+		"a": "coimbra",
+		"b": "aveiro",
+		"km": 62,
+		"road": [[50, "A1"], [62, "A25"]],
+		"towns": [["Mealhada", 22]],
+		"zones": [[15, "fields", "Coimbra"], [50, "forest", "Aveiro"], [62, "coast", "Aveiro"]],
+		"via": [[22, -8.45, 40.38], [50, -8.52, 40.6]]
+	},
+	{
+		"a": "aveiro",
+		"b": "porto",
+		"km": 72,
+		"road": "A29",
+		"towns": [["Estarreja", 18], ["Ovar", 32], ["Vila Nova de Gaia", 66]],
+		"zones": [[45, "coast", "Aveiro"], [72, "fields", "Porto"]],
+		"via": [[18, -8.57, 40.75], [32, -8.62, 40.86], [66, -8.61, 41.12]]
+	},
+	{
+		"a": "porto",
+		"b": "braga",
+		"km": 55,
+		"road": "A3",
+		"towns": [["Maia", 11], ["Vila Nova de Famalicão", 33]],
+		"zones": [[25, "fields", "Porto"], [55, "forest", "Braga"]],
+		"via": [[11, -8.62, 41.23], [33, -8.52, 41.41]]
+	},
+	{"a": "braga", "b": "guimaraes", "km": 25, "road": "A11", "towns": [], "zones": [[25, "forest", "Braga"]]},
+	{
+		"a": "porto",
+		"b": "vila_real",
+		"km": 95,
+		"road": "A4",
+		"towns": [["Valongo", 12], ["Paredes", 27], ["Penafiel", 36], ["Amarante", 57]],
+		"zones": [[60, "fields", "Porto"], [72, "mountains", "Porto"], [95, "mountains", "Vila Real"]],
+		"via": [[27, -8.33, 41.2], [57, -8.08, 41.27], [76, -7.87, 41.29]],
+		"tunnels": [
+			{
+				"from_km": 70,
+				"to_km": 75.7,
+				"name": {
+					"pl": "Tunel Marão",
+					"en": "Marão Tunnel",
+					"cs": "Tunel Marão",
+					"is": "Marão-göngin",
+					"de": "Marão-Tunnel"
+				},
+				"fact": {
+					"pl": "5,7 km pod górami Serra do Marão: najdłuższy tunel drogowy Portugalii, otwarty w 2016 roku",
+					"en": "5.7 km under the Serra do Marão: Portugal's longest road tunnel, opened in 2016",
+					"cs": "5,7 km pod pohořím Serra do Marão: nejdelší silniční tunel Portugalska, otevřený roku 2016",
+					"is": "5,7 km undir Serra do Marão-fjöllunum: lengstu veggöng Portúgals, opnuð árið 2016",
+					"de": "5,7 km unter der Serra do Marão: Portugals längster Straßentunnel, 2016 eröffnet"
+				}
+			}
+		]
+	},
+	{
+		"a": "vila_real",
+		"b": "braganca",
+		"km": 122,
+		"road": "A4",
+		"towns": [["Murça", 32], ["Mirandela", 66], ["Macedo de Cavaleiros", 92]],
+		"zones": [[45, "upland", "Vila Real"], [122, "upland", "Bragança"]],
+		"via": [[32, -7.45, 41.4], [66, -7.18, 41.49], [92, -6.96, 41.54]]
+	},
+	{
+		"a": "vila_real",
+		"b": "viseu",
+		"km": 98,
+		"road": "A24",
+		"towns": [["Peso da Régua", 22], ["Lamego", 31], ["Castro Daire", 66]],
+		"zones": [[26, "mountains", "Vila Real"], [98, "upland", "Viseu"]],
+		"via": [[22, -7.79, 41.16], [31, -7.81, 41.1], [66, -7.93, 40.9]]
+	},
+	{
+		"a": "viseu",
+		"b": "aveiro",
+		"km": 85,
+		"road": "A25",
+		"towns": [["Oliveira de Frades", 36], ["Albergaria-a-Velha", 66]],
+		"zones": [[50, "upland", "Viseu"], [75, "forest", "Aveiro"], [85, "coast", "Aveiro"]],
+		"via": [[36, -8.17, 40.73], [66, -8.48, 40.69]]
+	},
+	{
+		"a": "viseu",
+		"b": "coimbra",
+		"km": 86,
+		"road": [[86, "IP3", 3, 100]],
+		"towns": [["Tondela", 22], ["Santa Comba Dão", 38]],
+		"zones": [[52, "upland", "Viseu"], [86, "forest", "Coimbra"]],
+		"via": [[22, -8.08, 40.52], [38, -8.13, 40.4], [62, -8.28, 40.3]]
+	},
+	{
+		"a": "setubal",
+		"b": "faro",
+		"km": 245,
+		"road": [[215, "A2"], [245, "A22"]],
+		"towns": [["Grândola", 72], ["São Bartolomeu de Messines", 200], ["Loulé", 228]],
+		"zones": [[95, "mediterranean", "Setúbal"], [170, "steppe", "Beja"], [245, "mediterranean", "Faro"]],
+		"via": [[20, -8.75, 38.55], [72, -8.57, 38.17], [200, -8.28, 37.26], [228, -8.02, 37.14]]
+	}
+]

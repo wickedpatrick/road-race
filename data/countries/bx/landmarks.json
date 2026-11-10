@@ -1,0 +1,372 @@
+{
+	"Amsterdam": [
+		{
+			"kind": "bx_amsterdam_grachten",
+			"name": {
+				"pl": "Kamienice nad kanałami",
+				"en": "Canal houses",
+				"cs": "Domy u kanálů",
+				"is": "Síkjahúsin",
+				"de": "Grachtenhäuser"
+			},
+			"desc": {
+				"pl": "Wąskie kupieckie kamienice z XVII wieku ze szczytami i belkami z hakiem, którymi wciągano towary na strych",
+				"en": "Narrow 17th-century merchants' houses with gables and hoist beams for lifting goods to the attic",
+				"cs": "Úzké kupecké domy ze 17. století se štíty a trámy s kladkou, jimiž se zboží vytahovalo na půdu",
+				"is": "Mjó kaupmannahús frá 17. öld með göflum og hífibitum til að draga varning upp á loft",
+				"de": "Schmale Kaufmannshäuser aus dem 17. Jahrhundert mit Giebeln und Lastbalken, an denen Waren auf den Dachboden gezogen wurden"
+			},
+			"local": "Grachtenpanden"
+		}
+	],
+	"Rotterdam": [
+		{
+			"kind": "bx_rotterdam_erasmus",
+			"name": {
+				"pl": "Most Erazma",
+				"en": "Erasmus Bridge",
+				"cs": "Erasmův most",
+				"is": "Erasmusbrúin",
+				"de": "Erasmusbrücke"
+			},
+			"desc": {
+				"pl": "Most podwieszany na Mozie z 1996 roku, z białym, zgiętym pylonem o wysokości 139 metrów, zwany Łabędziem",
+				"en": "A cable-stayed bridge over the Maas from 1996 with a bent white pylon 139 metres high, nicknamed the Swan",
+				"cs": "Zavěšený most přes Mázu z roku 1996 s bílým zalomeným pylonem vysokým 139 metrů, přezdívaný Labuť",
+				"is": "Stagbrú yfir Maas frá 1996 með hvítum, sveigðum 139 metra háum turni, kölluð Svanurinn",
+				"de": "Eine Schrägseilbrücke über die Maas von 1996 mit einem geknickten weißen, 139 Meter hohen Pylon, der Schwan genannt"
+			},
+			"local": "Erasmusbrug"
+		}
+	],
+	"Den Haag": [
+		{
+			"kind": "bx_den_haag_ridderzaal",
+			"name": {
+				"pl": "Ridderzaal",
+				"en": "Ridderzaal",
+				"cs": "Rytířský sál",
+				"is": "Riddarasalurinn",
+				"de": "Rittersaal"
+			},
+			"desc": {
+				"pl": "Gotycka Sala Rycerska z XIII wieku na dziedzińcu Binnenhof; tu król tradycyjnie wygłasza mowę tronową",
+				"en": "The 13th-century Gothic Hall of Knights in the Binnenhof courtyard, where the king traditionally gives the speech from the throne",
+				"cs": "Gotický Rytířský sál ze 13. století na nádvoří Binnenhof, kde král tradičně přednáší trůnní řeč",
+				"is": "Gotneski Riddarasalurinn frá 13. öld í Binnenhof-garðinum, þar sem konungurinn flytur jafnan hásætisræðuna",
+				"de": "Der gotische Rittersaal aus dem 13. Jahrhundert im Binnenhof, in dem der König traditionell die Thronrede hält"
+			},
+			"local": "Ridderzaal"
+		}
+	],
+	"Utrecht": [
+		{
+			"kind": "bx_utrecht_domtoren",
+			"name": {"pl": "Wieża Domtoren", "en": "Dom Tower", "cs": "Věž Domtoren", "is": "Dómturninn", "de": "Domturm"},
+			"desc": {
+				"pl": "Gotycka wieża katedralna z XIV wieku, o wysokości 112 metrów najwyższa wieża kościelna Niderlandów; nawę między nią a kościołem zniszczyła burza w 1674 roku",
+				"en": "A 14th-century Gothic cathedral tower, at 112 metres the tallest church tower in the Netherlands; a storm in 1674 destroyed the nave between it and the church",
+				"cs": "Gotická katedrální věž ze 14. století, se 112 metry nejvyšší kostelní věž Nizozemska; loď mezi ní a kostelem zničila bouře roku 1674",
+				"is": "Gotneskur dómkirkjuturn frá 14. öld, 112 metra hár og hæsti kirkjuturn Hollands; óveður árið 1674 eyddi kirkjuskipinu milli hans og kirkjunnar",
+				"de": "Ein gotischer Domturm aus dem 14. Jahrhundert, mit 112 Metern der höchste Kirchturm der Niederlande; ein Sturm zerstörte 1674 das Kirchenschiff zwischen ihm und der Kirche"
+			},
+			"local": "Domtoren"
+		}
+	],
+	"Eindhoven": [
+		{
+			"kind": "bx_eindhoven_evoluon",
+			"name": {"pl": "Evoluon", "en": "Evoluon", "cs": "Evoluon", "is": "Evoluon", "de": "Evoluon"},
+			"desc": {
+				"pl": "Budynek w kształcie latającego spodka, zbudowany przez Philipsa w 1966 roku jako muzeum nauki i techniki",
+				"en": "A building shaped like a flying saucer, built by Philips in 1966 as a museum of science and technology",
+				"cs": "Budova ve tvaru létajícího talíře, kterou postavil Philips roku 1966 jako muzeum vědy a techniky",
+				"is": "Bygging í laginu eins og fljúgandi diskur, reist af Philips árið 1966 sem vísinda- og tæknisafn",
+				"de": "Ein Gebäude in Form einer fliegenden Untertasse, 1966 von Philips als Museum für Wissenschaft und Technik gebaut"
+			},
+			"local": "Evoluon"
+		}
+	],
+	"Groningen": [
+		{
+			"kind": "bx_groningen_martinitoren",
+			"name": {
+				"pl": "Martinitoren",
+				"en": "Martini Tower",
+				"cs": "Martinitoren",
+				"is": "Martini-turninn",
+				"de": "Martiniturm"
+			},
+			"desc": {
+				"pl": "Wieża kościoła św. Marcina z XV wieku, wysoka na 97 metrów; mieszkańcy nazywają ją Olle Grieze, Starą Szarą",
+				"en": "The 15th-century tower of St Martin's Church, 97 metres high; the locals call it Olle Grieze, the Old Grey One",
+				"cs": "Věž kostela sv. Martina z 15. století, vysoká 97 metrů; místní jí říkají Olle Grieze, Stará šedivka",
+				"is": "Turn Marteinskirkju frá 15. öld, 97 metra hár; heimamenn kalla hann Olle Grieze, Gamla gráa",
+				"de": "Der Turm der Martinikirche aus dem 15. Jahrhundert, 97 Meter hoch; die Einheimischen nennen ihn Olle Grieze, den Alten Grauen"
+			},
+			"local": "Martinitoren"
+		}
+	],
+	"Maastricht": [
+		{
+			"kind": "bx_maastricht_helpoort",
+			"name": {"pl": "Helpoort", "en": "Helpoort", "cs": "Helpoort", "is": "Helpoort-hliðið", "de": "Helpoort"},
+			"desc": {
+				"pl": "Najstarsza zachowana brama miejska Niderlandów, z około 1230 roku, z dwiema okrągłymi basztami",
+				"en": "The oldest surviving town gate in the Netherlands, from about 1230, with two round towers",
+				"cs": "Nejstarší dochovaná městská brána Nizozemska z doby kolem roku 1230 se dvěma kulatými věžemi",
+				"is": "Elsta varðveitta borgarhlið Hollands, frá um 1230, með tveimur hringlaga turnum",
+				"de": "Das älteste erhaltene Stadttor der Niederlande, um 1230 gebaut, mit zwei runden Türmen"
+			},
+			"local": "Helpoort"
+		}
+	],
+	"Arnhem": [
+		{
+			"kind": "bx_arnhem_john_frost",
+			"name": {
+				"pl": "Most Johna Frosta",
+				"en": "John Frost Bridge",
+				"cs": "Most Johna Frosta",
+				"is": "John Frost-brúin",
+				"de": "John-Frost-Brücke"
+			},
+			"desc": {
+				"pl": "Łukowy most na Renie, odbudowany po wojnie; nosi imię dowódcy brytyjskich spadochroniarzy, którzy w 1944 roku bronili jego przyczółka",
+				"en": "An arch bridge over the Rhine, rebuilt after the war; named after the commander of the British paratroopers who held its end in 1944",
+				"cs": "Obloukový most přes Rýn, po válce znovu postavený; nese jméno velitele britských výsadkářů, kteří roku 1944 drželi jeho předmostí",
+				"is": "Bogabrú yfir Rín, endurreist eftir stríðið; nefnd eftir foringja bresku fallhlífarhermannanna sem héldu brúarsporðinum árið 1944",
+				"de": "Eine Bogenbrücke über den Rhein, nach dem Krieg wieder aufgebaut; benannt nach dem Kommandeur der britischen Fallschirmjäger, die 1944 ihren Brückenkopf hielten"
+			},
+			"local": "John Frostbrug"
+		}
+	],
+	"Zwolle": [
+		{
+			"kind": "bx_zwolle_sassenpoort",
+			"name": {
+				"pl": "Sassenpoort",
+				"en": "Sassenpoort",
+				"cs": "Sassenpoort",
+				"is": "Sassenpoort-hliðið",
+				"de": "Sassenpoort"
+			},
+			"desc": {
+				"pl": "Ceglana gotycka brama miejska z 1409 roku, z ośmioboczną wieżą i czterema narożnymi wieżyczkami",
+				"en": "A Gothic brick town gate of 1409 with an octagonal tower and four corner turrets",
+				"cs": "Gotická cihlová městská brána z roku 1409 s osmibokou věží a čtyřmi nárožními věžičkami",
+				"is": "Gotneskt borgarhlið úr múrsteini frá 1409 með átthyrndum turni og fjórum hornturnum",
+				"de": "Ein gotisches Backsteinstadttor von 1409 mit achteckigem Turm und vier Ecktürmchen"
+			},
+			"local": "Sassenpoort"
+		}
+	],
+	"Middelburg": [
+		{
+			"kind": "bx_middelburg_lange_jan",
+			"name": {"pl": "Lange Jan", "en": "Lange Jan", "cs": "Lange Jan", "is": "Lange Jan", "de": "Lange Jan"},
+			"desc": {
+				"pl": "Wieża kościoła opactwa w Middelburgu, wysoka na 91 metrów, z ośmiobocznymi kondygnacjami i latarnią na szczycie",
+				"en": "The tower of Middelburg's abbey church, 91 metres high, with octagonal storeys and a lantern on top",
+				"cs": "Věž klášterního kostela v Middelburgu, vysoká 91 metrů, s osmibokými patry a lucernou na vrcholu",
+				"is": "Turn klausturkirkjunnar í Middelburg, 91 metra hár, með átthyrndum hæðum og ljóskeri efst",
+				"de": "Der Turm der Abteikirche von Middelburg, 91 Meter hoch, mit achteckigen Geschossen und einer Laterne obenauf"
+			},
+			"local": "Lange Jan"
+		}
+	],
+	"Bruxelles": [
+		{
+			"kind": "bx_bruxelles_atomium",
+			"name": {"pl": "Atomium", "en": "Atomium", "cs": "Atomium", "is": "Atomium", "de": "Atomium"},
+			"desc": {
+				"pl": "Dziewięć stalowych kul połączonych rurami, kryształ żelaza powiększony 165 miliardów razy; zbudowane na wystawę światową w 1958 roku",
+				"en": "Nine steel spheres joined by tubes, an iron crystal magnified 165 billion times; built for the 1958 World's Fair",
+				"cs": "Devět ocelových koulí spojených trubkami, krystal železa zvětšený 165miliardkrát; postaveno pro světovou výstavu roku 1958",
+				"is": "Níu stálkúlur tengdar með rörum, járnkristall stækkaður 165 milljarðfalt; reist fyrir heimssýninguna árið 1958",
+				"de": "Neun Stahlkugeln, durch Röhren verbunden, ein 165-milliardenfach vergrößerter Eisenkristall; für die Weltausstellung 1958 gebaut"
+			},
+			"local": "Atomium"
+		}
+	],
+	"Antwerpen": [
+		{
+			"kind": "bx_antwerpen_kathedraal",
+			"name": {
+				"pl": "Katedra Najświętszej Marii Panny",
+				"en": "Cathedral of Our Lady",
+				"cs": "Katedrála Panny Marie",
+				"is": "Maríudómkirkjan",
+				"de": "Liebfrauenkathedrale"
+			},
+			"desc": {
+				"pl": "Gotycka katedra z jedyną ukończoną wieżą o wysokości 123 metrów; w środku wiszą obrazy Rubensa",
+				"en": "A Gothic cathedral with its one finished tower 123 metres high; paintings by Rubens hang inside",
+				"cs": "Gotická katedrála s jedinou dokončenou věží vysokou 123 metrů; uvnitř visí obrazy Rubense",
+				"is": "Gotnesk dómkirkja með eina fullgerða turninum, 123 metra háum; inni hanga málverk eftir Rubens",
+				"de": "Eine gotische Kathedrale mit ihrem einzigen vollendeten, 123 Meter hohen Turm; innen hängen Gemälde von Rubens"
+			},
+			"local": "Onze-Lieve-Vrouwekathedraal"
+		}
+	],
+	"Gent": [
+		{
+			"kind": "bx_gent_gravensteen",
+			"name": {
+				"pl": "Gravensteen",
+				"en": "Gravensteen",
+				"cs": "Gravensteen",
+				"is": "Gravensteen-kastalinn",
+				"de": "Gravensteen"
+			},
+			"desc": {
+				"pl": "Zamek hrabiów Flandrii z 1180 roku w środku miasta, z wieżą główną i murami nad fosą",
+				"en": "The castle of the Counts of Flanders of 1180 in the middle of the city, with its keep and walls above the moat",
+				"cs": "Hrad flanderských hrabat z roku 1180 uprostřed města s hlavní věží a hradbami nad příkopem",
+				"is": "Kastali greifanna af Flæmingjalandi frá 1180 í miðri borginni, með höfuðturni og múrum yfir díkinu",
+				"de": "Die Burg der Grafen von Flandern von 1180 mitten in der Stadt, mit Bergfried und Mauern über dem Wassergraben"
+			},
+			"local": "Gravensteen"
+		}
+	],
+	"Brugge": [
+		{
+			"kind": "bx_brugge_belfort",
+			"name": {
+				"pl": "Dzwonnica w Brugii",
+				"en": "Belfry of Bruges",
+				"cs": "Zvonice v Bruggách",
+				"is": "Klukkuturninn í Brugge",
+				"de": "Belfried von Brügge"
+			},
+			"desc": {
+				"pl": "Średniowieczna dzwonnica nad Rynkiem, wysoka na 83 metry, z carillonem; prowadzi na nią 366 stopni",
+				"en": "The medieval belfry over the Markt, 83 metres high, with a carillon; 366 steps lead to the top",
+				"cs": "Středověká zvonice nad náměstím Markt, vysoká 83 metrů, s carillonem; nahoru vede 366 schodů",
+				"is": "Klukkuturn frá miðöldum yfir Markt-torginu, 83 metra hár, með klukknaspili; 366 þrep liggja upp",
+				"de": "Der mittelalterliche Belfried über dem Markt, 83 Meter hoch, mit Glockenspiel; 366 Stufen führen hinauf"
+			},
+			"local": "Belfort"
+		}
+	],
+	"Liège": [
+		{
+			"kind": "bx_liege_guillemins",
+			"name": {
+				"pl": "Dworzec Liège-Guillemins",
+				"en": "Liège-Guillemins station",
+				"cs": "Nádraží Liège-Guillemins",
+				"is": "Liège-Guillemins-lestarstöðin",
+				"de": "Bahnhof Lüttich-Guillemins"
+			},
+			"desc": {
+				"pl": "Dworzec kolejowy Santiaga Calatravy z 2009 roku, przykryty falą białej stali i szkła",
+				"en": "Santiago Calatrava's railway station of 2009, covered by a wave of white steel and glass",
+				"cs": "Nádraží Santiaga Calatravy z roku 2009, zastřešené vlnou z bílé oceli a skla",
+				"is": "Lestarstöð Santiagos Calatrava frá 2009, undir bylgju úr hvítu stáli og gleri",
+				"de": "Der Bahnhof von Santiago Calatrava aus dem Jahr 2009, überdacht von einer Welle aus weißem Stahl und Glas"
+			},
+			"local": "Gare de Liège-Guillemins"
+		}
+	],
+	"Namur": [
+		{
+			"kind": "bx_namur_citadelle",
+			"name": {
+				"pl": "Cytadela w Namur",
+				"en": "Citadel of Namur",
+				"cs": "Citadela v Namuru",
+				"is": "Virkið í Namur",
+				"de": "Zitadelle von Namur"
+			},
+			"desc": {
+				"pl": "Twierdza na skale nad zbiegiem Mozy i Sambry, rozbudowywana od średniowiecza do XIX wieku",
+				"en": "A fortress on the rock above the meeting of the Meuse and the Sambre, extended from the Middle Ages to the 19th century",
+				"cs": "Pevnost na skále nad soutokem Mázy a Sambry, rozšiřovaná od středověku do 19. století",
+				"is": "Virki á klettinum ofan við ármót Maas og Sambre, stækkað frá miðöldum fram á 19. öld",
+				"de": "Eine Festung auf dem Felsen über dem Zusammenfluss von Maas und Sambre, vom Mittelalter bis ins 19. Jahrhundert ausgebaut"
+			},
+			"local": "Citadelle de Namur"
+		}
+	],
+	"Charleroi": [
+		{
+			"kind": "bx_charleroi_beffroi",
+			"name": {
+				"pl": "Dzwonnica ratusza w Charleroi",
+				"en": "Charleroi town hall belfry",
+				"cs": "Zvonice radnice v Charleroi",
+				"is": "Klukkuturn ráðhússins í Charleroi",
+				"de": "Belfried des Rathauses von Charleroi"
+			},
+			"desc": {
+				"pl": "Smukła dzwonnica w stylu art déco z 1936 roku, wysoka na 70 metrów, wpisana na listę UNESCO z dzwonnicami Belgii i Francji",
+				"en": "A slender Art Deco belfry of 1936, 70 metres high, on UNESCO's list with the belfries of Belgium and France",
+				"cs": "Štíhlá zvonice ve stylu art deco z roku 1936, vysoká 70 metrů, zapsaná na seznam UNESCO se zvonicemi Belgie a Francie",
+				"is": "Grannur art deco-klukkuturn frá 1936, 70 metra hár, á heimsminjaskrá UNESCO með klukkuturnum Belgíu og Frakklands",
+				"de": "Ein schlanker Art-déco-Belfried von 1936, 70 Meter hoch, mit den Belfrieden Belgiens und Frankreichs UNESCO-Welterbe"
+			},
+			"local": "Beffroi de Charleroi"
+		}
+	],
+	"Leuven": [
+		{
+			"kind": "bx_leuven_stadhuis",
+			"name": {
+				"pl": "Ratusz w Leuven",
+				"en": "Leuven Town Hall",
+				"cs": "Radnice v Lovani",
+				"is": "Ráðhúsið í Leuven",
+				"de": "Rathaus von Löwen"
+			},
+			"desc": {
+				"pl": "Późnogotycki ratusz z XV wieku, z sześcioma wieżyczkami i ponad 200 posągami na fasadzie",
+				"en": "A late Gothic town hall of the 15th century with six turrets and over 200 statues on its façade",
+				"cs": "Pozdně gotická radnice z 15. století se šesti věžičkami a více než 200 sochami na průčelí",
+				"is": "Síðgotneskt ráðhús frá 15. öld með sex turnspírum og yfir 200 styttum á framhliðinni",
+				"de": "Ein spätgotisches Rathaus aus dem 15. Jahrhundert mit sechs Türmchen und über 200 Statuen an der Fassade"
+			},
+			"local": "Stadhuis van Leuven"
+		}
+	],
+	"Luxembourg": [
+		{
+			"kind": "bx_luxembourg_adolphe",
+			"name": {
+				"pl": "Most Adolfa",
+				"en": "Adolphe Bridge",
+				"cs": "Adolfův most",
+				"is": "Adolphe-brúin",
+				"de": "Adolphe-Brücke"
+			},
+			"desc": {
+				"pl": "Kamienny most łukowy nad doliną Pétrusse z 1903 roku; jego łuk o rozpiętości 85 metrów był wtedy największym kamiennym łukiem świata",
+				"en": "A stone arch bridge over the Pétrusse valley from 1903; its 85-metre arch was then the largest stone arch in the world",
+				"cs": "Kamenný obloukový most přes údolí Pétrusse z roku 1903; jeho oblouk o rozpětí 85 metrů byl tehdy největším kamenným obloukem světa",
+				"is": "Steinbogabrú yfir Pétrusse-dalinn frá 1903; 85 metra bogi hennar var þá stærsti steinbogi heims",
+				"de": "Eine steinerne Bogenbrücke über das Petrusstal von 1903; ihr 85 Meter weiter Bogen war damals der größte Steinbogen der Welt"
+			},
+			"local": "Pont Adolphe"
+		}
+	],
+	"Esch-sur-Alzette": [
+		{
+			"kind": "bx_esch_belval",
+			"name": {
+				"pl": "Wielkie piece Belval",
+				"en": "Belval blast furnaces",
+				"cs": "Vysoké pece Belval",
+				"is": "Belval-háofnarnir",
+				"de": "Hochöfen von Belval"
+			},
+			"desc": {
+				"pl": "Dwa zachowane wielkie piece dawnej huty, zgaszone w 1997 roku, dziś pomnik przemysłu w nowej dzielnicy uniwersyteckiej",
+				"en": "Two blast furnaces of the old steelworks, blown out in 1997, now an industrial monument in the new university quarter",
+				"cs": "Dvě zachované vysoké pece bývalé huti, vyhaslé roku 1997, dnes technická památka v nové univerzitní čtvrti",
+				"is": "Tveir varðveittir háofnar gamla stálversins, slökktir árið 1997, nú iðnaðarminjar í nýja háskólahverfinu",
+				"de": "Zwei erhaltene Hochöfen des alten Hüttenwerks, 1997 stillgelegt, heute ein Industriedenkmal im neuen Universitätsviertel"
+			},
+			"local": "Hauts fourneaux de Belval"
+		}
+	]
+}
