@@ -218,6 +218,12 @@
 			"favorite_neighbour": "ee"
 		},
 		{
+			"code": "no",
+			"name": {"pl": "Norwegia", "en": "Norway", "cs": "Norsko", "is": "Noregur", "de": "Norwegen"},
+			"neighbours": ["se", "fi", "ru"],
+			"favorite_neighbour": "se"
+		},
+		{
 			"code": "it",
 			"name": {"pl": "Włochy", "en": "Italy", "cs": "Itálie", "is": "Ítalía", "de": "Italien"},
 			"neighbours": ["fr", "ch", "at", "si", "mt"],

@@ -1,0 +1,46 @@
+{
+	"oslo": {"name": "Oslo", "lat": 59.91, "lon": 10.75, "pop": 717, "region": "Oslo", "exonym": {"is": "Ósló"}},
+	"bergen": {"name": "Bergen", "lat": 60.39, "lon": 5.32, "pop": 291, "region": "Vestland", "exonym": {"is": "Björgvin"}},
+	"trondheim": {
+		"name": "Trondheim",
+		"lat": 63.42,
+		"lon": 10.39,
+		"pop": 216,
+		"region": "Trøndelag",
+		"exonym": {"is": "Þrándheimur"}
+	},
+	"stavanger": {"name": "Stavanger", "lat": 58.97, "lon": 5.73, "pop": 149, "region": "Rogaland", "exonym": {"is": "Stafangur"}},
+	"kristiansand": {"name": "Kristiansand", "lat": 58.15, "lon": 7.99, "pop": 117, "region": "Agder"},
+	"drammen": {"name": "Drammen", "lat": 59.74, "lon": 10.2, "pop": 104, "region": "Buskerud"},
+	"tromso": {"name": "Tromsø", "lat": 69.64, "lon": 19.08, "pop": 78, "region": "Troms"},
+	"alesund": {
+		"name": "Ålesund",
+		"lat": 62.45,
+		"lon": 6.19,
+		"pop": 58,
+		"region": "Møre og Romsdal",
+		"exonym": {"is": "Álasund"}
+	},
+	"bodo": {"name": "Bodø", "lat": 67.27, "lon": 14.44, "pop": 53, "region": "Nordland"},
+	"haugesund": {"name": "Haugesund", "lat": 59.41, "lon": 5.27, "pop": 38, "region": "Rogaland"},
+	"molde": {"name": "Molde", "lat": 62.74, "lon": 7.16, "pop": 33, "region": "Møre og Romsdal"},
+	"lillehammer": {"name": "Lillehammer", "lat": 61.12, "lon": 10.47, "pop": 29, "region": "Innlandet"},
+	"moirana": {"name": "Mo i Rana", "lat": 66.31, "lon": 14.14, "pop": 26, "region": "Nordland"},
+	"narvik": {"name": "Narvik", "lat": 68.41, "lon": 17.44, "pop": 22, "region": "Nordland"},
+	"alta": {"name": "Alta", "lat": 69.97, "lon": 23.27, "pop": 21, "region": "Finnmark"},
+	"hammerfest": {"name": "Hammerfest", "lat": 70.66, "lon": 23.68, "pop": 11, "region": "Finnmark"},
+	"flam": {
+		"name": "Flåm",
+		"lat": 60.86,
+		"lon": 7.11,
+		"pop": 0,
+		"region": "Vestland",
+		"note": {
+			"pl": "wieś u końca Aurlandsfjordu, odnogi Sognefjordu",
+			"en": "a village at the head of the Aurlandsfjord, an arm of the Sognefjord",
+			"cs": "vesnice na konci Aurlandsfjordu, ramene Sognefjordu",
+			"is": "þorp innst í Aurlandsfirði, armi Sognfjarðar",
+			"de": "ein Dorf am Ende des Aurlandsfjords, eines Arms des Sognefjords"
+		}
+	}
+}

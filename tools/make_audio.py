@@ -292,6 +292,12 @@ def anthems():  # melodies from the scores on Wikipedia/Commons; all of them in 
         (72, 1), (69, .5), (70, .5), (72, .5), (69, .5), (74, .75), (70, .25), (67, 2), (65, 1)], 0.34, [41, 57, 60, 65])  # Du gamla, du fria (folk melody): the score on en.wikipedia "Du gamla, du fria"
     anthem("dk", [(62, .5), (69, 1.5), (69, .5), (66, 1), (62, 1), (71, 2), (None, 1.5), (62, .5), (74, 1.5), (74, .5), (73, 1), (71, 1), (71, 1), (69, 1)], 0.32,
         [45, 57, 61, 64])  # Der er et yndigt land (Krøyer, d. 1879): Commons "Der er et yndigt land.mid" and .png
+    anthem("no", [(71, 1.5), (69, .5), (68, 1), (66, 1), (64, 1), (66, 1), (68, 1), (69, 1), (71, 1.5), (73, .5), (71, 1), (69, 1), (68, 2)], 0.34,
+        [40, 52, 56, 59])  # Ja, vi elsker dette landet (Nordraak, d. 1866): Commons "Ja, vi elsker.svg" (tenor I), checked against his manuscript "Rikard Nordraak, Norsk Fædrelandssang.png"
+    anthem("fr", [(62, .25), (62, .75), (62, .25), (67, 1), (67, 1), (69, 1), (69, 1), (74, 1.5), (71, .5), (67, .75), (67, .25), (71, .75), (67, .25), (64, 1),
+        (72, 2), (69, .75), (66, .25), (67, 2)], 0.32, [43, 55, 59, 62])  # La Marseillaise (Rouget de Lisle, d. 1836): Commons "Allons, enfants de la patrie.mid"
+    anthem("it", [(65, 1), (65, .75), (67, .25), (65, 1), (None, 1), (74, 1), (74, .75), (75, .25), (74, 1), (None, 1), (74, 1), (77, .75), (75, .25), (74, 1), (None, 1),
+        (72, 1), (74, .75), (72, .25), (70, 1)], 0.27, [46, 58, 62, 65])  # Il Canto degli Italiani (Novaro, d. 1885): the score on it.wikipedia "Il Canto degli Italiani"
 def motifs():  # the best-known bars of each country's classical (or folk) tune, on arrival every other time
     motif = lambda code, melody, q, chord, tail=0.8: anthem(code, melody, q, chord, tail, "motif_")
     motif("pl", [(69, .5), (None, .25), (69, .25), (69, .5), (None, .25), (69, .25), (73, .25), (76, .25), (78, .25), (80, .25), (81, 1)], 0.5, [45, 57, 61, 64, 69])  # Chopin, Polonaise in A major "Military" (from memory and the score's opening)
@@ -356,6 +362,15 @@ def motifs():  # the best-known bars of each country's classical (or folk) tune,
     motif("dk", [(67, .5), (71, .5), (67, .5), (72, .5), (69, .5), (74, 1), (71, .5), (76, .5), (72, .5), (72, .5), (71, .5), (71, .5), (69, 1.5), (74, .5),
         (71, .5), (71, .5), (69, .5), (69, .5), (67, 1), (64, .5), (72, .5), (71, .5), (71, .5), (69, .5), (69, .5), (67, 1)], 0.26,
         [43, 55, 59, 62])  # Nielsen (d. 1931), Jeg ved en Lærkerede: Carl Nielsen Udgaven III/5 no. 182 (kb.dk), the score on da.wikipedia
+    motif("no", [(59, .5), (61, .5), (62, .5), (64, .5), (66, .5), (62, .5), (66, 1), (65, .5), (61, .5), (65, 1), (64, .5), (60, .5), (64, 1),
+        (59, .5), (61, .5), (62, .5), (64, .5), (66, .5), (62, .5), (66, .5), (71, .5), (69, .5), (66, .5), (62, .5), (66, .5), (69, 2)], 0.28,
+        [50, 57, 62, 66])  # Grieg (d. 1907), In the Hall of the Mountain King, two octaves up: mutopiaproject.org GriegE/O46 Dans_l_antre_du_roi_de_la_montagne.mid
+    motif("fr", [(67, 1), (67, 1), (67, 2), (69, 1), (69, 1), (69, 2), (71, 1), (72, 1), (74, 1), (67, 1), (66, 1), (67, 1), (69, 1), (62, 1),
+        (67, 1), (67, 1), (67, 2), (69, 1), (69, 1), (69, 2), (71, 1), (72, 1), (74, 1), (67, 1), (69, 1), (66, 1), (67, 2)], 0.16,
+        [43, 55, 59, 62])  # Sur le pont d'Avignon (folk): Commons "Sur le pont d'Avignon.mid"
+    motif("it", [(74, 1.5), (72, 1.5), (74, 1.5), (72, 1.5), (75, 1), (74, .5), (72, 1), (75, .5), (74, 3),
+        (75, 3), (77, 1), (75, .5), (72, 1), (75, .5), (70, 1), (67, .5), (67, 1), (68, .5), (70, 1), (68, .5), (67, 1), (65, .5), (63, 2)], 0.19,
+        [39, 51, 55, 58])  # Denza (d. 1922), Funiculì, funiculà: the refrain's first line and its last, Commons "Funiculì funiculà.mid"
     # the countries with two tunes instead of the anthem
     motif("si", [(66, .5), (69, .5), (69, .5), (69, .5), (66, .5), (69, .5), (69, .5), (69, .5), (66, .5), (66, .5), (64, .5), (64, .5), (62, 1), (62, 1),
         (62, 1), (64, 1), (66, .5), (69, .5), (69, .5), (None, .5), (66, .5), (66, .5), (64, .5), (64, .5), (62, 1)], 0.28, [50, 57, 62, 66])  # Marko skače (folk): trillian Slovenia/MarkoSkace.abc
