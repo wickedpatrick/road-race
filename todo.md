@@ -330,3 +330,28 @@ na koniec jednym rzutem).
       (jeszcze jej nie ma w grze); Irlandia bez progu 80 km/h (wszędzie 100 poza autostradą) i bez Irlandii
       Północnej; Dania 13 miast (bez Slagelse, Køge jako miasto dla promu); w Szwecji most Högakustenbron zamiast
       mostu na Olandię; Finlandia bez nazw lapońskich na tablicach.
+
+## 16. Do sprawdzenia: Norwegia, Francja, Włochy (2026-11-10)
+
+Jak w sekcji 15: zrobione bez oglądania w grze, część danych przybliżona. Pierwsze 17 + 23 + 23 miast przeszło
+kontrolę faktów, km i tłumaczeń przez osobnego agenta; dołożone później miasta (fr: Metz, Poitiers, Nîmes, Tulon,
+Hawr, Amiens, Annecy; it: Padwa, Parma, Brescia, Rimini, Trydent, Syrakuzy, Siena) jeszcze nie.
+
+- [ ] Kontrola faktów, km, numerów dróg, miejscowości po drodze i tłumaczeń (pl, cs, is, de) dla 14 dołożonych
+      miast Francji i Włoch, oraz ich rysunków (w ramce `landmark_sizes`, nic nie wisi w powietrzu).
+- [ ] Pocztówki: obejrzeć na ekranie wszystkie 77 nowych rysunków (no 17, fr 30, it 30).
+- [ ] Zrzuty z gry: promy na E39 i Bognes – Skarberget, tunel Lærdal, mosty Hålogaland, Grenland i Kvalsund,
+      wiadukt Millau, most Normandie, prom przez Cieśninę Mesyńską, tablice niemiecko-włoskie w Bolzano.
+- [ ] Limity: nowy limit odcinka drogi (`[km, numer, pasy, limit]`) w grze — znak 110 na N12/N137 i włoskich SS,
+      radar i policja trzymają 110; Norwegia 90 na zwykłych drogach (czy gdzieś nie powinno być 80 albo 70).
+      Sprawdzić, które jeszcze drogi w innych krajach mają inny limit niż krajowy (np. 110 w Hiszpanii później).
+- [ ] Autopilot: limit czasu liczy podjazdy, ale nie zakręty; we Francji i Włoszech to wymusiło ruch 0.3, usunięcie
+      kilku miejscowości (fr: Châtellerault, Nemours, Sainte-Menehould, Verdun, Phalsbourg, Sélestat, Montbéliard;
+      it: Milazzo, Barcellona Pozzo di Gotto, Santo Stefano di Camastra) i pola zamiast lasu na A4/A36/A6.
+      Rozważyć doliczanie zakrętów do limitu czasu i przywrócenie tych miejscowości. Na Palermo – Mesyna range
+      rover przy jednym ziarnie (13) nie wyprzedza i nie zdąża.
+- [ ] Melodie do odsłuchu: norweski hymn (oktawa wyżej niż tenory), refren „Funiculì, funiculà” (sklejony,
+      bez środka), włoski hymn (może brzmieć wolno z pauzami z nut).
+- [ ] Decyzje do potwierdzenia: Norwegia bez nazw lapońskich, Haugesund jako miasto dla dwóch promów E39, Tromsø
+      przesunięte 5 km na ląd (wyspy nie ma na mapie 50m); Francja bez miast na Korsyce; Włochy bez Sardynii
+      i Trydent bez niemieckiej tablicy (Trient); ulubieni sąsiedzi no → se, fr → de, it → fr.
