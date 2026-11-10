@@ -42,15 +42,15 @@
 		"b": "bursa",
 		"km": 155,
 		"road": [[55, "O4"], [155, "O5"]],
-		"towns": [["Orhangazi", 118]],
+		"towns": [["Orhangazi", 95]],
 		"zones": [
-			[45, "industrial", "İstanbul"], [70, "industrial", "Kocaeli"], [100, "coast", "Yalova"],
+			[45, "industrial", "İstanbul"], [61, "industrial", "Kocaeli"], [100, "coast", "Yalova"],
 			[155, "orchard", "Bursa"]
 		],
-		"via": [[50, 29.43, 40.8], [71, 29.52, 40.75], [118, 29.31, 40.49]],
+		"via": [[50, 29.43, 40.8], [61, 29.52, 40.75], [95, 29.31, 40.49]],
 		"bridge": {
-			"from_km": 70,
-			"to_km": 72.7,
+			"from_km": 60,
+			"to_km": 62.7,
 			"name": {
 				"pl": "Most Osmangazi",
 				"en": "Osmangazi Bridge",
@@ -133,14 +133,17 @@
 	{
 		"a": "bursa",
 		"b": "izmir",
-		"km": 330,
-		"road": "O5",
-		"towns": [["Susurluk", 75], ["Balıkesir", 150], ["Soma", 213], ["Akhisar", 255], ["Manisa", 295]],
+		"km": 320,
+		"road": [[258, "O5"], [320, "D565"]],
+		"towns": [["Susurluk", 90], ["Balıkesir", 132], ["Soma", 195], ["Akhisar", 225], ["Manisa", 278]],
 		"zones": [
-			[60, "orchard", "Bursa"], [190, "fields", "Balıkesir"], [290, "mediterranean", "Manisa"],
-			[330, "mediterranean", "İzmir"]
+			[75, "orchard", "Bursa"], [185, "fields", "Balıkesir"], [293, "mediterranean", "Manisa"],
+			[320, "mediterranean", "İzmir"]
 		],
-		"via": [[75, 28.16, 39.91], [150, 27.89, 39.65], [213, 27.61, 39.19], [255, 27.84, 38.92], [295, 27.43, 38.61]]
+		"via": [
+			[90, 28.16, 39.91], [132, 27.89, 39.65], [195, 27.61, 39.19], [225, 27.84, 38.92], [258, 27.57, 38.73],
+			[278, 27.43, 38.61]
+		]
 	},
 	{
 		"a": "bursa",
@@ -375,7 +378,7 @@
 		"a": "erzurum",
 		"b": "kars",
 		"km": 205,
-		"road": [[80, "D100"], [205, "D080"]],
+		"road": [[80, "D100"], [115, "D080"], [205, "D957"]],
 		"towns": [["Horasan", 80], ["Sarıkamış", 150]],
 		"zones": [[90, "upland", "Erzurum"], [175, "forest", "Allahuekber Dağları"], [205, "upland", "Kars"]],
 		"via": [[80, 42.17, 40.04], [150, 42.59, 40.33]]
@@ -458,7 +461,7 @@
 		"a": "goreme",
 		"b": "kayseri",
 		"km": 80,
-		"road": [[8, "D302"], [80, "D300"]],
+		"road": [[45, "D302"], [80, "D300"]],
 		"towns": [["İncesu", 45]],
 		"zones": [[20, "upland", "Kapadokya"], [80, "steppe", "Kayseri"]],
 		"via": [[45, 35.18, 38.62]]
