@@ -216,6 +216,12 @@
 			"name": {"pl": "Finlandia", "en": "Finland", "cs": "Finsko", "is": "Finnland", "de": "Finnland"},
 			"neighbours": ["se", "no", "ru", "ee"],
 			"favorite_neighbour": "ee"
+		},
+		{
+			"code": "fr",
+			"name": {"pl": "Francja", "en": "France", "cs": "Francie", "is": "Frakkland", "de": "Frankreich"},
+			"neighbours": ["be", "lu", "de", "ch", "it", "es", "ad", "mc"],
+			"favorite_neighbour": "de"
 		}
 	]
 }

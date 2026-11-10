@@ -1,0 +1,67 @@
+{
+	"paris": {
+		"name": "Paris",
+		"lat": 48.857,
+		"lon": 2.352,
+		"pop": 2103,
+		"region": "Île-de-France",
+		"exonym": {"pl": "Paryż", "cs": "Paříž", "is": "París"}
+	},
+	"marseille": {
+		"name": "Marseille",
+		"lat": 43.296,
+		"lon": 5.37,
+		"pop": 873,
+		"region": "Provence-Alpes-Côte d'Azur",
+		"exonym": {"pl": "Marsylia"}
+	},
+	"lyon": {"name": "Lyon", "lat": 45.764, "lon": 4.836, "pop": 520, "region": "Auvergne-Rhône-Alpes"},
+	"toulouse": {"name": "Toulouse", "lat": 43.605, "lon": 1.444, "pop": 504, "region": "Occitanie", "exonym": {"pl": "Tuluza"}},
+	"nice": {
+		"name": "Nice",
+		"lat": 43.703,
+		"lon": 7.266,
+		"pop": 348,
+		"region": "Provence-Alpes-Côte d'Azur",
+		"exonym": {"pl": "Nicea", "de": "Nizza"}
+	},
+	"nantes": {"name": "Nantes", "lat": 47.218, "lon": -1.554, "pop": 323, "region": "Pays de la Loire"},
+	"montpellier": {"name": "Montpellier", "lat": 43.611, "lon": 3.877, "pop": 302, "region": "Occitanie"},
+	"strasbourg": {
+		"name": "Strasbourg",
+		"lat": 48.573,
+		"lon": 7.752,
+		"pop": 291,
+		"region": "Grand Est",
+		"exonym": {"pl": "Strasburg", "cs": "Štrasburk", "is": "Strassborg", "de": "Straßburg"}
+	},
+	"bordeaux": {"name": "Bordeaux", "lat": 44.838, "lon": -0.579, "pop": 261, "region": "Nouvelle-Aquitaine"},
+	"lille": {"name": "Lille", "lat": 50.629, "lon": 3.057, "pop": 236, "region": "Hauts-de-France"},
+	"rennes": {"name": "Rennes", "lat": 48.117, "lon": -1.678, "pop": 225, "region": "Bretagne"},
+	"reims": {"name": "Reims", "lat": 49.258, "lon": 4.032, "pop": 179, "region": "Grand Est", "exonym": {"cs": "Remeš"}},
+	"dijon": {"name": "Dijon", "lat": 47.322, "lon": 5.041, "pop": 159, "region": "Bourgogne-Franche-Comté"},
+	"grenoble": {"name": "Grenoble", "lat": 45.188, "lon": 5.724, "pop": 157, "region": "Auvergne-Rhône-Alpes"},
+	"clermont": {"name": "Clermont-Ferrand", "lat": 45.778, "lon": 3.087, "pop": 147, "region": "Auvergne-Rhône-Alpes"},
+	"brest": {"name": "Brest", "lat": 48.39, "lon": -4.486, "pop": 139, "region": "Bretagne"},
+	"tours": {"name": "Tours", "lat": 47.394, "lon": 0.684, "pop": 136, "region": "Centre-Val de Loire"},
+	"limoges": {"name": "Limoges", "lat": 45.834, "lon": 1.261, "pop": 130, "region": "Nouvelle-Aquitaine"},
+	"perpignan": {"name": "Perpignan", "lat": 42.699, "lon": 2.895, "pop": 120, "region": "Occitanie"},
+	"orleans": {
+		"name": "Orléans",
+		"lat": 47.903,
+		"lon": 1.909,
+		"pop": 116,
+		"region": "Centre-Val de Loire",
+		"exonym": {"pl": "Orlean"}
+	},
+	"rouen": {"name": "Rouen", "lat": 49.443, "lon": 1.099, "pop": 114, "region": "Normandie"},
+	"caen": {"name": "Caen", "lat": 49.183, "lon": -0.37, "pop": 108, "region": "Normandie"},
+	"avignon": {
+		"name": "Avignon",
+		"lat": 43.949,
+		"lon": 4.806,
+		"pop": 91,
+		"region": "Provence-Alpes-Côte d'Azur",
+		"exonym": {"pl": "Awinion"}
+	}
+}

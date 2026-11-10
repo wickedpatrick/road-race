@@ -1,0 +1,436 @@
+[
+	{
+		"a": "paris",
+		"b": "lille",
+		"km": 225,
+		"road": "A1",
+		"towns": [["Senlis", 45], ["Roye", 110], ["Arras", 180]],
+		"zones": [
+			[25, "industrial", "Île-de-France"], [35, "fields", "Île-de-France"], [212, "fields", "Hauts-de-France"],
+			[225, "industrial", "Hauts-de-France"]
+		],
+		"via": [[45, 2.59, 49.2], [110, 2.79, 49.69], [180, 2.83, 50.29]]
+	},
+	{
+		"a": "paris",
+		"b": "reims",
+		"km": 145,
+		"road": "A4",
+		"towns": [["Meaux", 45], ["Château-Thierry", 90]],
+		"zones": [
+			[20, "industrial", "Île-de-France"], [70, "fields", "Île-de-France"], [115, "fields", "Hauts-de-France"],
+			[145, "orchard", "Grand Est"]
+		],
+		"via": [[45, 2.88, 48.94], [90, 3.4, 49.04]]
+	},
+	{
+		"a": "reims",
+		"b": "strasbourg",
+		"km": 350,
+		"road": "A4",
+		"towns": [["Sainte-Menehould", 80], ["Verdun", 118], ["Metz", 188], ["Phalsbourg", 305], ["Saverne", 318]],
+		"zones": [
+			[100, "fields", "Grand Est"], [135, "forest", "Grand Est"], [290, "fields", "Grand Est"],
+			[325, "forest", "Grand Est"], [350, "fields", "Grand Est"]
+		],
+		"via": [[80, 4.9, 49.09], [118, 5.38, 49.16], [188, 6.18, 49.12], [318, 7.36, 48.74]]
+	},
+	{
+		"a": "strasbourg",
+		"b": "dijon",
+		"km": 335,
+		"road": [[110, "A35"], [295, "A36"], [335, "A39"]],
+		"towns": [
+			["Sélestat", 48], ["Colmar", 70], ["Mulhouse", 110], ["Belfort", 152], ["Montbéliard", 168],
+			["Besançon", 245], ["Dole", 290]
+		],
+		"zones": [
+			[125, "fields", "Grand Est"],
+			[255, "forest", "Bourgogne-Franche-Comté"],
+			[335, "fields", "Bourgogne-Franche-Comté"]
+		],
+		"via": [[70, 7.36, 48.08], [110, 7.34, 47.75], [152, 6.86, 47.64], [245, 6.02, 47.24], [290, 5.49, 47.09]]
+	},
+	{
+		"a": "paris",
+		"b": "orleans",
+		"km": 130,
+		"road": "A10",
+		"towns": [["Dourdan", 50], ["Artenay", 110]],
+		"zones": [[25, "industrial", "Île-de-France"], [62, "fields", "Île-de-France"], [130, "fields", "Centre-Val de Loire"]]
+	},
+	{
+		"a": "orleans",
+		"b": "tours",
+		"km": 115,
+		"road": "A10",
+		"towns": [["Meung-sur-Loire", 20], ["Blois", 58]],
+		"zones": [[115, "fields", "Centre-Val de Loire"]],
+		"via": [[58, 1.33, 47.59]]
+	},
+	{
+		"a": "tours",
+		"b": "bordeaux",
+		"km": 345,
+		"road": "A10",
+		"towns": [["Châtellerault", 70], ["Poitiers", 102], ["Niort", 175], ["Saintes", 245]],
+		"zones": [
+			[48, "fields", "Centre-Val de Loire"],
+			[230, "fields", "Nouvelle-Aquitaine"],
+			[320, "orchard", "Nouvelle-Aquitaine"],
+			[345, "industrial", "Nouvelle-Aquitaine"]
+		],
+		"via": [[102, 0.34, 46.58], [175, -0.46, 46.32], [245, -0.63, 45.75]]
+	},
+	{
+		"a": "bordeaux",
+		"b": "toulouse",
+		"km": 245,
+		"road": "A62",
+		"towns": [["Langon", 48], ["Marmande", 85], ["Agen", 140], ["Montauban", 195]],
+		"zones": [
+			[15, "industrial", "Nouvelle-Aquitaine"],
+			[60, "orchard", "Nouvelle-Aquitaine"],
+			[165, "fields", "Nouvelle-Aquitaine"],
+			[230, "fields", "Occitanie"],
+			[245, "industrial", "Occitanie"]
+		],
+		"via": [[85, 0.17, 44.5], [140, 0.62, 44.2], [195, 1.35, 44.02]]
+	},
+	{
+		"a": "toulouse",
+		"b": "perpignan",
+		"km": 205,
+		"road": [[150, "A61"], [205, "A9"]],
+		"towns": [["Castelnaudary", 58], ["Carcassonne", 92], ["Lézignan-Corbières", 125], ["Narbonne", 150], ["Sigean", 168]],
+		"zones": [
+			[70, "fields", "Occitanie"], [160, "mediterranean", "Occitanie"], [182, "coast", "Occitanie"],
+			[205, "mediterranean", "Occitanie"]
+		],
+		"via": [[58, 1.95, 43.32], [92, 2.35, 43.21], [150, 3, 43.18], [168, 2.98, 43.03]]
+	},
+	{
+		"a": "perpignan",
+		"b": "montpellier",
+		"km": 160,
+		"road": "A9",
+		"towns": [["Sigean", 38], ["Narbonne", 62], ["Béziers", 90]],
+		"zones": [
+			[25, "mediterranean", "Occitanie"], [48, "coast", "Occitanie"], [140, "mediterranean", "Occitanie"],
+			[160, "coast", "Occitanie"]
+		],
+		"via": [[38, 2.98, 43.03], [62, 3, 43.18], [90, 3.22, 43.34], [125, 3.6, 43.45]]
+	},
+	{
+		"a": "montpellier",
+		"b": "avignon",
+		"km": 95,
+		"road": [[80, "A9"], [95, "N100"]],
+		"towns": [["Lunel", 25], ["Nîmes", 50], ["Remoulins", 75]],
+		"zones": [[85, "mediterranean", "Occitanie"], [95, "mediterranean", "Provence-Alpes-Côte d'Azur"]],
+		"via": [[50, 4.36, 43.84], [75, 4.56, 43.94]]
+	},
+	{
+		"a": "avignon",
+		"b": "marseille",
+		"km": 100,
+		"road": "A7",
+		"towns": [["Cavaillon", 27], ["Salon-de-Provence", 50], ["Vitrolles", 80]],
+		"zones": [
+			[30, "orchard", "Provence-Alpes-Côte d'Azur"],
+			[85, "mediterranean", "Provence-Alpes-Côte d'Azur"],
+			[100, "industrial", "Provence-Alpes-Côte d'Azur"]
+		],
+		"via": [[27, 5.04, 43.84], [50, 5.1, 43.64], [80, 5.25, 43.42]]
+	},
+	{
+		"a": "lyon",
+		"b": "avignon",
+		"km": 230,
+		"road": "A7",
+		"towns": [["Vienne", 30], ["Valence", 100], ["Montélimar", 150], ["Orange", 200]],
+		"zones": [
+			[20, "industrial", "Auvergne-Rhône-Alpes"],
+			[125, "orchard", "Auvergne-Rhône-Alpes"],
+			[180, "mediterranean", "Auvergne-Rhône-Alpes"],
+			[230, "mediterranean", "Provence-Alpes-Côte d'Azur"]
+		],
+		"via": [[30, 4.87, 45.52], [100, 4.89, 44.93], [150, 4.75, 44.56], [200, 4.81, 44.14]]
+	},
+	{
+		"a": "paris",
+		"b": "dijon",
+		"km": 315,
+		"road": [[275, "A6"], [315, "A38"]],
+		"towns": [["Nemours", 78], ["Auxerre", 165], ["Avallon", 210], ["Pouilly-en-Auxois", 272]],
+		"zones": [
+			[25, "industrial", "Île-de-France"],
+			[100, "fields", "Île-de-France"],
+			[230, "fields", "Bourgogne-Franche-Comté"],
+			[315, "upland", "Bourgogne-Franche-Comté"]
+		],
+		"via": [[78, 2.69, 48.27], [165, 3.57, 47.8], [210, 3.91, 47.49], [272, 4.55, 47.26]]
+	},
+	{
+		"a": "dijon",
+		"b": "lyon",
+		"km": 195,
+		"road": [[40, "A31"], [195, "A6"]],
+		"towns": [
+			["Nuits-Saint-Georges", 22], ["Beaune", 42], ["Chalon-sur-Saône", 72], ["Tournus", 100], ["Mâcon", 130],
+			["Villefranche-sur-Saône", 168]
+		],
+		"zones": [
+			[50, "orchard", "Bourgogne-Franche-Comté"],
+			[140, "fields", "Bourgogne-Franche-Comté"],
+			[182, "fields", "Auvergne-Rhône-Alpes"],
+			[195, "industrial", "Auvergne-Rhône-Alpes"]
+		],
+		"via": [[42, 4.84, 47.02], [72, 4.85, 46.78], [130, 4.83, 46.31], [168, 4.72, 45.99]]
+	},
+	{
+		"a": "lyon",
+		"b": "grenoble",
+		"km": 105,
+		"road": [[55, "A43"], [105, "A48"]],
+		"towns": [["Bourgoin-Jallieu", 42], ["Voiron", 85]],
+		"zones": [
+			[15, "industrial", "Auvergne-Rhône-Alpes"],
+			[75, "fields", "Auvergne-Rhône-Alpes"],
+			[105, "foothills", "Auvergne-Rhône-Alpes"]
+		],
+		"via": [[42, 5.28, 45.59], [85, 5.59, 45.36]]
+	},
+	{
+		"a": "grenoble",
+		"b": "marseille",
+		"km": 280,
+		"road": [[8, "A480"], [33, "A51"], [145, "D1075"], [280, "A51"]],
+		"towns": [
+			["Vif", 15], ["Monestier-de-Clermont", 35], ["Lus-la-Croix-Haute", 75], ["Aspres-sur-Buëch", 100],
+			["Laragne-Montéglin", 128], ["Sisteron", 145], ["Manosque", 190], ["Aix-en-Provence", 250]
+		],
+		"zones": [
+			[12, "foothills", "Auvergne-Rhône-Alpes"],
+			[82, "mountains", "Auvergne-Rhône-Alpes"],
+			[150, "mountains", "Provence-Alpes-Côte d'Azur"],
+			[265, "mediterranean", "Provence-Alpes-Côte d'Azur"],
+			[280, "industrial", "Provence-Alpes-Côte d'Azur"]
+		],
+		"via": [
+			[35, 5.63, 44.93], [75, 5.71, 44.66], [100, 5.75, 44.52], [145, 5.94, 44.2], [190, 5.79, 43.83],
+			[250, 5.45, 43.53]
+		]
+	},
+	{
+		"a": "marseille",
+		"b": "nice",
+		"km": 225,
+		"road": [[65, "A50"], [110, "A57"], [225, "A8"]],
+		"towns": [
+			["Aubagne", 17], ["Bandol", 48], ["Toulon", 65], ["Cuers", 85], ["Le Luc", 108], ["Le Muy", 135],
+			["Fréjus", 150], ["Cannes", 185], ["Antibes", 200]
+		],
+		"zones": [
+			[12, "industrial", "Provence-Alpes-Côte d'Azur"],
+			[58, "coast", "Provence-Alpes-Côte d'Azur"],
+			[72, "industrial", "Provence-Alpes-Côte d'Azur"],
+			[145, "mediterranean", "Provence-Alpes-Côte d'Azur"],
+			[225, "coast", "Provence-Alpes-Côte d'Azur"]
+		],
+		"via": [
+			[17, 5.57, 43.29], [48, 5.75, 43.14], [65, 5.93, 43.12], [108, 6.31, 43.39], [150, 6.74, 43.43],
+			[185, 6.99, 43.58], [200, 7.07, 43.62]
+		]
+	},
+	{
+		"a": "lyon",
+		"b": "clermont",
+		"km": 170,
+		"road": "A89",
+		"towns": [["Tarare", 40], ["Balbigny", 75], ["Thiers", 130]],
+		"zones": [
+			[12, "industrial", "Auvergne-Rhône-Alpes"],
+			[62, "upland", "Auvergne-Rhône-Alpes"],
+			[90, "fields", "Auvergne-Rhône-Alpes"],
+			[140, "forest", "Auvergne-Rhône-Alpes"],
+			[170, "fields", "Auvergne-Rhône-Alpes"]
+		],
+		"via": [[40, 4.43, 45.9], [75, 4.19, 45.82], [130, 3.55, 45.86]],
+		"tunnels": [
+			{
+				"from_km": 52,
+				"to_km": 55.9,
+				"name": "Tunnel de Violay",
+				"fact": {
+					"pl": "Tunel pod Monts du Lyonnais, otwarty w 2013 roku, mierzy około 3,9 km",
+					"en": "A tunnel under the Monts du Lyonnais, opened in 2013, about 3.9 km long",
+					"cs": "Tunel pod pohořím Monts du Lyonnais, otevřený roku 2013, je dlouhý asi 3,9 km",
+					"is": "Göng undir Monts du Lyonnais, opnuð 2013, um 3,9 km löng",
+					"de": "Ein Tunnel unter den Monts du Lyonnais, 2013 eröffnet, etwa 3,9 km lang"
+				}
+			}
+		]
+	},
+	{
+		"a": "clermont",
+		"b": "montpellier",
+		"km": 335,
+		"road": [[290, "A75"], [335, "A750"]],
+		"towns": [
+			["Issoire", 35], ["Saint-Flour", 110], ["Marvejols", 160], ["Millau", 215], ["Lodève", 270],
+			["Clermont-l'Hérault", 290], ["Gignac", 305]
+		],
+		"zones": [
+			[30, "fields", "Auvergne-Rhône-Alpes"], [135, "upland", "Auvergne-Rhône-Alpes"],
+			[210, "upland", "Occitanie"], [230, "mountains", "Occitanie"], [265, "upland", "Occitanie"],
+			[335, "mediterranean", "Occitanie"]
+		],
+		"via": [
+			[35, 3.25, 45.54], [110, 3.09, 45.03], [160, 3.29, 44.55], [215, 3.08, 44.1], [270, 3.32, 43.73],
+			[305, 3.54, 43.65]
+		],
+		"bridge": {
+			"from_km": 222,
+			"to_km": 224.46,
+			"name": {
+				"pl": "Wiadukt Millau",
+				"en": "Millau Viaduct",
+				"cs": "Viadukt Millau",
+				"is": "Millau-brúin",
+				"de": "Viadukt von Millau"
+			},
+			"kind": "stayed",
+			"color": "#e8e6e0"
+		}
+	},
+	{
+		"a": "orleans",
+		"b": "limoges",
+		"km": 275,
+		"road": [[80, "A71"], [275, "A20"]],
+		"towns": [
+			["Lamotte-Beuvron", 38], ["Salbris", 58], ["Vierzon", 80], ["Châteauroux", 140],
+			["Argenton-sur-Creuse", 170], ["La Souterraine", 215]
+		],
+		"zones": [
+			[85, "forest", "Centre-Val de Loire"], [195, "fields", "Centre-Val de Loire"],
+			[275, "upland", "Nouvelle-Aquitaine"]
+		],
+		"via": [[38, 2.02, 47.62], [80, 2.07, 47.22], [140, 1.69, 46.81], [215, 1.49, 46.24]]
+	},
+	{
+		"a": "limoges",
+		"b": "toulouse",
+		"km": 290,
+		"road": [[262, "A20"], [290, "A62"]],
+		"towns": [
+			["Uzerche", 60], ["Brive-la-Gaillarde", 90], ["Souillac", 130], ["Cahors", 190], ["Caussade", 240],
+			["Montauban", 262]
+		],
+		"zones": [
+			[100, "forest", "Nouvelle-Aquitaine"], [125, "fields", "Nouvelle-Aquitaine"], [245, "upland", "Occitanie"],
+			[290, "fields", "Occitanie"]
+		],
+		"via": [[60, 1.56, 45.42], [90, 1.53, 45.16], [130, 1.48, 44.9], [190, 1.44, 44.45], [262, 1.35, 44.02]]
+	},
+	{
+		"a": "nantes",
+		"b": "rennes",
+		"km": 110,
+		"road": [[110, "N137", 3]],
+		"towns": [["Derval", 55], ["Bain-de-Bretagne", 75]],
+		"zones": [[65, "fields", "Pays de la Loire"], [110, "fields", "Bretagne"]],
+		"via": [[55, -1.67, 47.67], [75, -1.68, 47.84]]
+	},
+	{
+		"a": "rennes",
+		"b": "brest",
+		"km": 245,
+		"road": [[245, "N12", 3]],
+		"towns": [["Saint-Brieuc", 100], ["Guingamp", 130], ["Morlaix", 185], ["Landerneau", 225]],
+		"zones": [
+			[60, "fields", "Bretagne"], [90, "forest", "Bretagne"], [110, "coast", "Bretagne"],
+			[245, "fields", "Bretagne"]
+		],
+		"via": [[100, -2.76, 48.51], [130, -3.15, 48.56], [185, -3.83, 48.58], [225, -4.25, 48.45]]
+	},
+	{
+		"a": "nantes",
+		"b": "bordeaux",
+		"km": 345,
+		"road": [[140, "A83"], [345, "A10"]],
+		"towns": [["Montaigu", 35], ["Fontenay-le-Comte", 115], ["Niort", 145], ["Saint-Jean-d'Angély", 195], ["Saintes", 225]],
+		"zones": [
+			[15, "industrial", "Pays de la Loire"],
+			[125, "fields", "Pays de la Loire"],
+			[300, "fields", "Nouvelle-Aquitaine"],
+			[330, "orchard", "Nouvelle-Aquitaine"],
+			[345, "industrial", "Nouvelle-Aquitaine"]
+		],
+		"via": [[35, -1.31, 46.97], [115, -0.81, 46.47], [145, -0.46, 46.32], [195, -0.52, 45.95], [225, -0.63, 45.75]]
+	},
+	{
+		"a": "nantes",
+		"b": "tours",
+		"km": 205,
+		"road": [[90, "A11"], [205, "A85"]],
+		"towns": [["Ancenis", 40], ["Angers", 88], ["Saumur", 138], ["Langeais", 182]],
+		"zones": [
+			[15, "industrial", "Pays de la Loire"], [160, "fields", "Pays de la Loire"],
+			[205, "orchard", "Centre-Val de Loire"]
+		],
+		"via": [[40, -1.18, 47.37], [88, -0.55, 47.47], [138, -0.08, 47.26], [182, 0.41, 47.32]]
+	},
+	{
+		"a": "rennes",
+		"b": "caen",
+		"km": 185,
+		"road": "A84",
+		"towns": [["Fougères", 50], ["Avranches", 80], ["Villedieu-les-Poêles", 105], ["Villers-Bocage", 160]],
+		"zones": [[62, "fields", "Bretagne"], [185, "fields", "Normandie"]],
+		"via": [[50, -1.2, 48.35], [80, -1.36, 48.68], [105, -1.22, 48.84], [160, -0.66, 49.08]]
+	},
+	{
+		"a": "caen",
+		"b": "rouen",
+		"km": 130,
+		"road": "A13",
+		"towns": [["Pont-l'Évêque", 48], ["Bourg-Achard", 105]],
+		"zones": [[15, "industrial", "Normandie"], [118, "fields", "Normandie"], [130, "industrial", "Normandie"]],
+		"via": [[48, 0.18, 49.29], [105, 0.82, 49.35]]
+	},
+	{
+		"a": "rouen",
+		"b": "paris",
+		"km": 135,
+		"road": "A13",
+		"towns": [["Louviers", 30], ["Vernon", 58], ["Mantes-la-Jolie", 80]],
+		"zones": [[65, "fields", "Normandie"], [110, "fields", "Île-de-France"], [135, "industrial", "Île-de-France"]],
+		"via": [[30, 1.17, 49.22], [58, 1.48, 49.09], [80, 1.72, 48.99]]
+	},
+	{
+		"a": "reims",
+		"b": "lille",
+		"km": 205,
+		"road": [[175, "A26"], [205, "A1"]],
+		"towns": [["Laon", 48], ["Saint-Quentin", 98], ["Cambrai", 140]],
+		"zones": [[30, "fields", "Grand Est"], [190, "fields", "Hauts-de-France"], [205, "industrial", "Hauts-de-France"]],
+		"via": [[48, 3.62, 49.56], [98, 3.29, 49.85], [140, 3.24, 50.18], [175, 3.05, 50.33]]
+	},
+	{
+		"a": "clermont",
+		"b": "orleans",
+		"km": 300,
+		"road": "A71",
+		"towns": [
+			["Riom", 15], ["Montluçon", 95], ["Saint-Amand-Montrond", 140], ["Bourges", 185], ["Vierzon", 218],
+			["Salbris", 242], ["Lamotte-Beuvron", 262]
+		],
+		"zones": [
+			[60, "fields", "Auvergne-Rhône-Alpes"], [115, "forest", "Auvergne-Rhône-Alpes"],
+			[215, "fields", "Centre-Val de Loire"], [300, "forest", "Centre-Val de Loire"]
+		],
+		"via": [[15, 3.11, 45.89], [95, 2.6, 46.34], [140, 2.49, 46.72], [185, 2.4, 47.08], [218, 2.07, 47.22]]
+	}
+]

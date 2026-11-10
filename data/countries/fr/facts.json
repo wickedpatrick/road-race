@@ -1,0 +1,240 @@
+{
+	"Paris": {
+		"pl": "Stolica Francji nad Sekwaną; od katedry Notre-Dame liczy się odległości na francuskich drogach",
+		"en": "France's capital on the Seine; distances on French roads are measured from Notre-Dame Cathedral",
+		"cs": "Hlavní město Francie na Seině; od katedrály Notre-Dame se měří vzdálenosti na francouzských silnicích",
+		"is": "Höfuðborg Frakklands við Signu; vegalengdir á frönskum vegum eru mældar frá Notre-Dame-dómkirkjunni",
+		"de": "Frankreichs Hauptstadt an der Seine; die Entfernungen auf französischen Straßen werden von Notre-Dame aus gemessen"
+	},
+	"Marseille": {
+		"pl": "Najstarsze miasto Francji, założone około 600 roku p.n.e. przez Greków jako Massalia; największy port kraju",
+		"en": "France's oldest city, founded around 600 BC by Greeks as Massalia; the country's largest port",
+		"cs": "Nejstarší město Francie, založené kolem roku 600 př. n. l. Řeky jako Massalia; největší přístav země",
+		"is": "Elsta borg Frakklands, stofnuð um 600 f.Kr. af Grikkjum sem Massalía; stærsta höfn landsins",
+		"de": "Frankreichs älteste Stadt, um 600 v. Chr. von Griechen als Massalia gegründet; der größte Hafen des Landes"
+	},
+	"Lyon": {
+		"pl": "Miasto u zbiegu Rodanu i Saony, dawny Lugdunum; tu bracia Lumière nakręcili w 1895 roku jeden z pierwszych filmów",
+		"en": "A city where the Rhône meets the Saône, the Roman Lugdunum; here the Lumière brothers shot one of the first films in 1895",
+		"cs": "Město na soutoku Rhôny a Saôny, římský Lugdunum; zde natočili bratři Lumièrové roku 1895 jeden z prvních filmů",
+		"is": "Borg þar sem Rón og Saône mætast, hin rómverska Lugdunum; þar tóku Lumière-bræður eina af fyrstu kvikmyndunum árið 1895",
+		"de": "Eine Stadt am Zusammenfluss von Rhone und Saône, das römische Lugdunum; hier drehten die Brüder Lumière 1895 einen der ersten Filme"
+	},
+	"Toulouse": {
+		"pl": "Stolica europejskiego przemysłu lotniczego: tu składa się samoloty Airbus i mieści się Cité de l'espace",
+		"en": "The capital of Europe's aircraft industry: Airbus planes are assembled here, and the Cité de l'espace stands here",
+		"cs": "Hlavní město evropského leteckého průmyslu: montují se tu letadla Airbus a stojí tu Cité de l'espace",
+		"is": "Höfuðborg evrópsks flugvélaiðnaðar: þar eru Airbus-vélar settar saman og þar er Cité de l'espace",
+		"de": "Die Hauptstadt der europäischen Luftfahrtindustrie: Hier werden Airbus-Flugzeuge montiert, und hier steht die Cité de l'espace"
+	},
+	"Nice": {
+		"pl": "Miasto na Lazurowym Wybrzeżu; do 1860 roku należało do Sabaudii, potem przyłączono je do Francji",
+		"en": "A city on the Côte d'Azur; it belonged to Savoy until 1860, when it was joined to France",
+		"cs": "Město na Azurovém pobřeží; do roku 1860 patřilo Savojsku, pak bylo připojeno k Francii",
+		"is": "Borg á Côte d'Azur; hún tilheyrði Savoja til 1860, þegar hún var sameinuð Frakklandi",
+		"de": "Eine Stadt an der Côte d'Azur; sie gehörte bis 1860 zu Savoyen und kam dann zu Frankreich"
+	},
+	"Nantes": {
+		"pl": "Miasto nad Loarą, rodzinne miasto Juliusza Verne'a i dawna stolica książąt Bretanii",
+		"en": "A city on the Loire, the birthplace of Jules Verne and once the seat of the Dukes of Brittany",
+		"cs": "Město na Loiře, rodiště Julese Verna a dřívější sídlo bretaňských vévodů",
+		"is": "Borg við Loire-fljót, fæðingarstaður Jules Verne og áður aðsetur hertoganna af Bretagne",
+		"de": "Eine Stadt an der Loire, Geburtsort von Jules Verne und einst Sitz der Herzöge der Bretagne"
+	},
+	"Montpellier": {
+		"pl": "Miasto z jednym z najstarszych wydziałów medycyny na świecie, działającym od XIII wieku",
+		"en": "A city with one of the oldest medical schools in the world, teaching since the 13th century",
+		"cs": "Město s jednou z nejstarších lékařských fakult na světě, která učí od 13. století",
+		"is": "Borg með einum elsta læknaskóla heims, sem hefur kennt frá 13. öld",
+		"de": "Eine Stadt mit einer der ältesten medizinischen Fakultäten der Welt, die seit dem 13. Jahrhundert lehrt"
+	},
+	"Strasbourg": {
+		"pl": "Stolica Alzacji nad Renem, siedziba Parlamentu Europejskiego i Rady Europy",
+		"en": "The capital of Alsace on the Rhine, seat of the European Parliament and the Council of Europe",
+		"cs": "Hlavní město Alsaska na Rýně, sídlo Evropského parlamentu a Rady Evropy",
+		"is": "Höfuðborg Elsass við Rín, aðsetur Evrópuþingsins og Evrópuráðsins",
+		"de": "Die Hauptstadt des Elsass am Rhein, Sitz des Europäischen Parlaments und des Europarats"
+	},
+	"Bordeaux": {
+		"pl": "Port nad Garonną, od wieków handlujący winem; jego XVIII-wieczne nabrzeża są na liście UNESCO",
+		"en": "A port on the Garonne that has traded in wine for centuries; its 18th-century quays are on the UNESCO list",
+		"cs": "Přístav na Garonně, který po staletí obchoduje s vínem; jeho nábřeží z 18. století jsou na seznamu UNESCO",
+		"is": "Hafnarborg við Garonne sem hefur verslað með vín um aldir; hafnarbakkarnir frá 18. öld eru á heimsminjaskrá UNESCO",
+		"de": "Ein Hafen an der Garonne, der seit Jahrhunderten mit Wein handelt; seine Kais aus dem 18. Jahrhundert stehen auf der UNESCO-Liste"
+	},
+	"Lille": {
+		"pl": "Stolica Flandrii francuskiej, rodzinne miasto Charles'a de Gaulle'a",
+		"en": "The capital of French Flanders, the birthplace of Charles de Gaulle",
+		"cs": "Hlavní město francouzských Flander, rodiště Charlese de Gaulla",
+		"is": "Höfuðborg franska Flæmingjalands, fæðingarstaður Charles de Gaulle",
+		"de": "Die Hauptstadt Französisch-Flanderns, Geburtsort von Charles de Gaulle"
+	},
+	"Rennes": {
+		"pl": "Stolica Bretanii; w 1720 roku wielki pożar strawił większość drewnianego miasta",
+		"en": "The capital of Brittany; in 1720 a great fire destroyed most of the timber-framed town",
+		"cs": "Hlavní město Bretaně; roku 1720 velký požár zničil většinu hrázděného města",
+		"is": "Höfuðborg Bretagne; árið 1720 eyddi mikill bruni stærstum hluta timburbæjarins",
+		"de": "Die Hauptstadt der Bretagne; 1720 zerstörte ein Großbrand den Großteil der Fachwerkstadt"
+	},
+	"Reims": {
+		"pl": "Stolica Szampanii: w kredowych piwnicach pod miastem dojrzewają miliony butelek szampana",
+		"en": "The capital of Champagne: millions of bottles of champagne age in the chalk cellars under the city",
+		"cs": "Hlavní město Champagne: v křídových sklepech pod městem zrají miliony lahví šampaňského",
+		"is": "Höfuðborg Champagne: milljónir kampavínsflaskna þroskast í krítarkjöllurunum undir borginni",
+		"de": "Die Hauptstadt der Champagne: In den Kreidekellern unter der Stadt reifen Millionen Flaschen Champagner"
+	},
+	"Dijon": {
+		"pl": "Dawna stolica książąt Burgundii, znana z musztardy i z sowy wyrzeźbionej na kościele Notre-Dame",
+		"en": "The old capital of the Dukes of Burgundy, known for its mustard and the owl carved on the church of Notre-Dame",
+		"cs": "Bývalé hlavní město burgundských vévodů, známé hořčicí a sovou vytesanou na kostele Notre-Dame",
+		"is": "Gamla höfuðborg hertoganna af Búrgúnd, þekkt fyrir sinnep og ugluna sem er höggvin í kirkjuna Notre-Dame",
+		"de": "Die alte Hauptstadt der Herzöge von Burgund, bekannt für ihren Senf und die Eule an der Kirche Notre-Dame"
+	},
+	"Grenoble": {
+		"pl": "Miasto otoczone Alpami; gospodarz zimowych igrzysk olimpijskich w 1968 roku",
+		"en": "A city ringed by the Alps; host of the 1968 Winter Olympics",
+		"cs": "Město obklopené Alpami; pořadatel zimních olympijských her v roce 1968",
+		"is": "Borg umlukin Ölpunum; þar voru vetrarólympíuleikarnir haldnir árið 1968",
+		"de": "Eine von den Alpen umgebene Stadt; Gastgeber der Olympischen Winterspiele 1968"
+	},
+	"Clermont-Ferrand": {
+		"pl": "Miasto u stóp łańcucha wulkanów Chaîne des Puys; tu narodziła się firma oponiarska Michelin",
+		"en": "A city at the foot of the Chaîne des Puys volcanoes; the home of the Michelin tyre company",
+		"cs": "Město na úpatí sopečného řetězu Chaîne des Puys; domov firmy Michelin vyrábějící pneumatiky",
+		"is": "Borg við rætur eldfjallakeðjunnar Chaîne des Puys; þar er dekkjaframleiðandinn Michelin upprunninn",
+		"de": "Eine Stadt am Fuß der Vulkankette Chaîne des Puys; die Heimat des Reifenherstellers Michelin"
+	},
+	"Brest": {
+		"pl": "Port wojenny na krańcu Bretanii, prawie całkowicie odbudowany po zniszczeniach II wojny światowej",
+		"en": "A naval port at the tip of Brittany, almost entirely rebuilt after the destruction of the Second World War",
+		"cs": "Válečný přístav na cípu Bretaně, téměř celý znovu postavený po zničení ve druhé světové válce",
+		"is": "Herskipahöfn yst á Bretagne, nær öll endurbyggð eftir eyðilegginguna í seinni heimsstyrjöldinni",
+		"de": "Ein Marinehafen an der Spitze der Bretagne, nach den Zerstörungen des Zweiten Weltkriegs fast ganz neu aufgebaut"
+	},
+	"Tours": {
+		"pl": "Miasto w dolinie Loary, wśród zamków nad rzeką; mówi się, że tu mówi się najczystszą francuszczyzną",
+		"en": "A city in the Loire Valley among the river's châteaux; the French spoken here is said to be the purest",
+		"cs": "Město v údolí Loiry mezi zámky na řece; o zdejší francouzštině se říká, že je nejčistší",
+		"is": "Borg í Loire-dalnum, mitt á meðal hallanna við ána; sagt er að þar sé töluð hreinasta franskan",
+		"de": "Eine Stadt im Loiretal zwischen den Schlössern am Fluss; das Französisch hier gilt als das reinste"
+	},
+	"Limoges": {
+		"pl": "Stolica francuskiej porcelany, wyrabianej tu od XVIII wieku z miejscowego kaolinu",
+		"en": "The capital of French porcelain, made here since the 18th century from local kaolin",
+		"cs": "Hlavní město francouzského porcelánu, vyráběného tu od 18. století z místního kaolinu",
+		"is": "Höfuðborg fransks postulíns, sem hefur verið búið til þar frá 18. öld úr kaólíni úr héraðinu",
+		"de": "Die Hauptstadt des französischen Porzellans, das hier seit dem 18. Jahrhundert aus heimischem Kaolin hergestellt wird"
+	},
+	"Perpignan": {
+		"pl": "Stolica francuskiej Katalonii, dawniej kontynentalna stolica Królestwa Majorki",
+		"en": "The capital of French Catalonia, once the mainland capital of the Kingdom of Majorca",
+		"cs": "Hlavní město francouzského Katalánska, kdysi pevninská metropole Mallorského království",
+		"is": "Höfuðborg franska Katalóníu, áður höfuðborg Mallorca-konungsríkisins á meginlandinu",
+		"de": "Die Hauptstadt Französisch-Kataloniens, einst die Festlandshauptstadt des Königreichs Mallorca"
+	},
+	"Orléans": {
+		"pl": "Miasto nad Loarą, które Joanna d'Arc uwolniła od oblężenia angielskiego w 1429 roku",
+		"en": "A city on the Loire that Joan of Arc freed from the English siege in 1429",
+		"cs": "Město na Loiře, které Johanka z Arku osvobodila z anglického obležení roku 1429",
+		"is": "Borg við Loire-fljót sem Jóhanna af Örk frelsaði úr umsátri Englendinga árið 1429",
+		"de": "Eine Stadt an der Loire, die Jeanne d'Arc 1429 von der englischen Belagerung befreite"
+	},
+	"Rouen": {
+		"pl": "Stolica Normandii nad Sekwaną; tu w 1431 roku spalono Joannę d'Arc, a Monet malował katedrę ponad 30 razy",
+		"en": "The capital of Normandy on the Seine; Joan of Arc was burned here in 1431, and Monet painted its cathedral over 30 times",
+		"cs": "Hlavní město Normandie na Seině; roku 1431 tu byla upálena Johanka z Arku a Monet zdejší katedrálu namaloval přes 30krát",
+		"is": "Höfuðborg Normandí við Signu; þar var Jóhanna af Örk brennd árið 1431 og Monet málaði dómkirkjuna yfir 30 sinnum",
+		"de": "Die Hauptstadt der Normandie an der Seine; hier wurde 1431 Jeanne d'Arc verbrannt, und Monet malte die Kathedrale über 30-mal"
+	},
+	"Caen": {
+		"pl": "Miasto Wilhelma Zdobywcy; w 1944 roku w bitwie o Normandię zniszczono większość miasta",
+		"en": "William the Conqueror's city; most of it was destroyed in the Battle of Normandy in 1944",
+		"cs": "Město Viléma Dobyvatele; většina města byla zničena v bitvě o Normandii roku 1944",
+		"is": "Borg Vilhjálms sigursæla; stór hluti hennar eyðilagðist í orrustunni um Normandí árið 1944",
+		"de": "Die Stadt Wilhelms des Eroberers; 1944 wurde sie in der Schlacht um die Normandie großenteils zerstört"
+	},
+	"Avignon": {
+		"pl": "Siedziba papieży w latach 1309–1377; Pałac Papieski to jedna z największych gotyckich budowli Europy",
+		"en": "The seat of the popes from 1309 to 1377; the Palace of the Popes is one of the largest Gothic buildings in Europe",
+		"cs": "Sídlo papežů v letech 1309–1377; Papežský palác je jednou z největších gotických staveb Evropy",
+		"is": "Aðsetur páfanna 1309–1377; Páfahöllin er ein stærsta gotneska bygging Evrópu",
+		"de": "Sitz der Päpste von 1309 bis 1377; der Papstpalast ist einer der größten gotischen Bauten Europas"
+	},
+	"Millau": {
+		"pl": "Miasto rękawiczników nad Tarnem; nad doliną przechodzi wiadukt Millau, najwyższy most świata (343 m z pylonami)",
+		"en": "A glove-making town on the Tarn; the Millau Viaduct crosses the valley, the world's tallest bridge (343 m with its pylons)",
+		"cs": "Město rukavičkářů na Tarnu; údolí překračuje viadukt Millau, nejvyšší most světa (343 m i s pylony)",
+		"is": "Hanskagerðarbær við ána Tarn; yfir dalinn liggur Millau-brúin, hæsta brú heims (343 m með turnum)",
+		"de": "Eine Handschuhmacherstadt am Tarn; über das Tal führt das Viadukt von Millau, die höchste Brücke der Welt (343 m mit Pylonen)"
+	},
+	"Carcassonne": {
+		"pl": "Średniowieczne miasto warowne z podwójnym pierścieniem murów i 52 wieżami, odnowione w XIX wieku przez Viollet-le-Duca",
+		"en": "A medieval walled city with a double ring of walls and 52 towers, restored in the 19th century by Viollet-le-Duc",
+		"cs": "Středověké opevněné město s dvojitým prstencem hradeb a 52 věžemi, obnovené v 19. století Viollet-le-Ducem",
+		"is": "Víggirt miðaldaborg með tvöföldum múrhring og 52 turnum, endurgerð á 19. öld af Viollet-le-Duc",
+		"de": "Eine mittelalterliche Festungsstadt mit doppeltem Mauerring und 52 Türmen, im 19. Jahrhundert von Viollet-le-Duc restauriert"
+	},
+	"Verdun": {
+		"pl": "Miejsce jednej z najdłuższych bitew I wojny światowej, stoczonej w 1916 roku",
+		"en": "The site of one of the longest battles of the First World War, fought in 1916",
+		"cs": "Místo jedné z nejdelších bitev první světové války, svedené roku 1916",
+		"is": "Vettvangur einnar lengstu orrustu fyrri heimsstyrjaldarinnar, háðrar árið 1916",
+		"de": "Ort einer der längsten Schlachten des Ersten Weltkriegs, 1916 geschlagen"
+	},
+	"Metz": {
+		"pl": "Stolica Lotaryngii; katedra Saint-Étienne ma jedne z największych powierzchni witraży na świecie",
+		"en": "The capital of Lorraine; Saint-Étienne Cathedral has one of the largest areas of stained glass in the world",
+		"cs": "Hlavní město Lotrinska; katedrála Saint-Étienne má jednu z největších ploch vitráží na světě",
+		"is": "Höfuðborg héraðsins Lorraine; Saint-Étienne-dómkirkjan hefur einn stærsta flöt steindra glugga í heimi",
+		"de": "Die Hauptstadt Lothringens; die Kathedrale Saint-Étienne hat eine der größten Glasfensterflächen der Welt"
+	},
+	"Colmar": {
+		"pl": "Alzackie miasteczko z kolorowymi domami z muru pruskiego nad kanałami dzielnicy Petite Venise",
+		"en": "An Alsatian town of colourful timber-framed houses along the canals of the Petite Venise quarter",
+		"cs": "Alsaské městečko s barevnými hrázděnými domy podél kanálů čtvrti Petite Venise",
+		"is": "Bær í Elsass með litríkum bindingshúsum við síki Petite Venise-hverfisins",
+		"de": "Eine elsässische Stadt mit bunten Fachwerkhäusern an den Kanälen des Viertels Petite Venise"
+	},
+	"Blois": {
+		"pl": "Zamek w Blois był rezydencją siedmiu królów Francji; ma słynne zewnętrzne kręte schody",
+		"en": "The Château de Blois was home to seven kings of France; it has a famous open spiral staircase",
+		"cs": "Zámek v Blois byl sídlem sedmi francouzských králů; je známý venkovním točitým schodištěm",
+		"is": "Höllin í Blois var aðsetur sjö Frakkakonunga; hún er fræg fyrir opinn hringstiga",
+		"de": "Das Schloss von Blois war Residenz von sieben Königen Frankreichs; berühmt ist seine offene Wendeltreppe"
+	},
+	"Beaune": {
+		"pl": "Stolica win burgundzkich; Hospicjum z 1443 roku ma dach z kolorowych glazurowanych dachówek",
+		"en": "The capital of Burgundy wine; the Hospices of 1443 have a roof of colourful glazed tiles",
+		"cs": "Hlavní město burgundských vín; špitál z roku 1443 má střechu z barevných glazovaných tašek",
+		"is": "Höfuðstaður búrgúndarvína; sjúkrahúsið frá 1443 er með þak úr litríkum gljáðum tígulsteinum",
+		"de": "Die Hauptstadt des Burgunderweins; das Hospiz von 1443 hat ein Dach aus bunten glasierten Ziegeln"
+	},
+	"Nîmes": {
+		"pl": "Rzymskie Nemausus z zachowanym amfiteatrem i świątynią Maison Carrée; od nazwy miasta pochodzi słowo „denim”",
+		"en": "The Roman Nemausus with a surviving amphitheatre and the Maison Carrée temple; the word \"denim\" comes from the city's name",
+		"cs": "Římský Nemausus se zachovaným amfiteátrem a chrámem Maison Carrée; od názvu města pochází slovo „denim“",
+		"is": "Hin rómverska Nemausus með hringleikahúsi og hofinu Maison Carrée; orðið „denim“ er dregið af nafni borgarinnar",
+		"de": "Das römische Nemausus mit erhaltenem Amphitheater und dem Tempel Maison Carrée; das Wort „Denim“ kommt vom Namen der Stadt"
+	},
+	"Orange": {
+		"pl": "Ma najlepiej zachowany rzymski teatr w Europie, z 37-metrową ścianą sceny",
+		"en": "It has the best-preserved Roman theatre in Europe, with a stage wall 37 m high",
+		"cs": "Má nejlépe zachované římské divadlo v Evropě s 37 m vysokou stěnou jeviště",
+		"is": "Þar er best varðveitta rómverska leikhús Evrópu, með 37 metra háum sviðsvegg",
+		"de": "Hier steht das besterhaltene römische Theater Europas mit einer 37 m hohen Bühnenwand"
+	},
+	"Toulon": {
+		"pl": "Główna baza francuskiej marynarki wojennej nad Morzem Śródziemnym",
+		"en": "The main base of the French Navy on the Mediterranean",
+		"cs": "Hlavní základna francouzského válečného loďstva ve Středomoří",
+		"is": "Helsta flotastöð franska sjóhersins við Miðjarðarhaf",
+		"de": "Der Hauptstützpunkt der französischen Marine am Mittelmeer"
+	},
+	"Cannes": {
+		"pl": "Miasto festiwalu filmowego, po raz pierwszy zorganizowanego w 1946 roku, ze Złotą Palmą jako główną nagrodą",
+		"en": "The town of the film festival, first held in 1946, whose top prize is the Palme d'Or",
+		"cs": "Město filmového festivalu, poprvé pořádaného roku 1946, jehož hlavní cenou je Zlatá palma",
+		"is": "Bær kvikmyndahátíðarinnar, sem fyrst var haldin 1946 og veitir Gullpálmann sem æðstu verðlaun",
+		"de": "Die Stadt der Filmfestspiele, erstmals 1946 ausgetragen, deren Hauptpreis die Goldene Palme ist"
+	}
+}
