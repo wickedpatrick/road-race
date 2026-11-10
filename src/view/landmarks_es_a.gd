@@ -289,10 +289,10 @@ static func _bilbao_guggenheim() -> void:
 	_sail(44, 6, 28, 18, TITAN_D)
 	# the glass atrium and its tower of curving fins
 	_poly([-8, 6, 10, 6, 12, 38, 4, 50, -4, 44, -10, 30], GLASS)
-	_poly([-2, 30, 4, 32, 6, 54, 1, 55, -3, 42], TITAN)
-	_sail(6, 18, 20, 22, TITAN)
 	for x in [-6.0, 0.0, 6.0]:
 		_l(x, 7, x + 1.0, 28, GRANITE_D, 0.4)
+	_poly([-2, 30, 4, 32, 6, 54, 1, 55, -3, 42], TITAN)
+	_sail(6, 18, 20, 22, TITAN)
 
 ## The Mezquita of Córdoba: the long outer wall with its buttresses and decorated horseshoe-arched doors, the roof
 ## of the cathedral nave rising from the middle, and the bell tower that was the minaret.
