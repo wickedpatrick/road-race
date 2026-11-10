@@ -113,21 +113,22 @@ static func _leg_towns(leg: Dictionary) -> Array:
 	out.sort_custom(func(p, q): return p[1] < q[1])
 	return out
 
-## Road numbers along one leg in travel direction: [[start_km, end_km, number, lanes], ...]. `lanes` is the part's
-## own 2 or 3 from roads.json ([km, number, lanes]: e.g. Canada's Hwy 5, a freeway over the Coquihalla but a
-## two-lane road up the Yellowhead), 0 when the number decides (see part_lanes).
+## Road numbers along one leg in travel direction: [[start_km, end_km, number, lanes, limit], ...]. `lanes` is the
+## part's own 2 or 3 from roads.json ([km, number, lanes]: e.g. Canada's Hwy 5, a freeway over the Coquihalla but a
+## two-lane road up the Yellowhead), 0 when the number decides (see part_lanes). `limit` is the part's own posted
+## limit ([km, number, lanes, limit]: France's N12, a dual carriageway at 110), 0 for the country's.
 static func leg_roads(leg: Dictionary) -> Array:
 	var r: Dictionary = leg.road
 	var parts: Array = [[r.km, r.road]] if r.road is String else r.road
 	var out := []
 	var start := 0.0
 	for pt in parts:
-		out.append([start, float(pt[0]), pt[1], int(pt[2]) if pt.size() > 2 else 0])
+		out.append([start, float(pt[0]), pt[1], int(pt[2]) if pt.size() > 2 else 0, int(pt[3]) if pt.size() > 3 else 0])
 		start = float(pt[0])
 	if leg.from != r.a:
 		var rev := []
 		for pt in out:
-			rev.push_front([float(r.km) - pt[1], float(r.km) - pt[0], pt[2], pt[3]])
+			rev.push_front([float(r.km) - pt[1], float(r.km) - pt[0], pt[2], pt[3], pt[4]])
 		out = rev
 	return out
 
@@ -247,7 +248,7 @@ static func build(from: String, to: String) -> Dictionary:
 				express_km += int(rd[1] - rd[0])
 			var z0 := _sea_z(off + rd[0], seas, mpk, 1)
 			var z1 := _sea_z(off + rd[1], seas, mpk, -1)
-			if z1 > z0: roads.append({"z0": z0, "z1": z1, "road": rd[2], "lanes": lanes_here})
+			if z1 > z0: roads.append({"z0": z0, "z1": z1, "road": rd[2], "lanes": lanes_here, "limit": rd[4]})
 		for zn in _leg_zones(leg):
 			var z0 := _sea_z(off + zn[0], seas, mpk, 1)
 			var z1 := _sea_z(off + zn[1], seas, mpk, -1)
@@ -615,7 +616,16 @@ static func sign_limit_at(stage: Dictionary, z: float) -> int:
 		var edge: float = maxf(lim.unlimited_beyond_km * stage.m_per_km, END_CITY + LIMITED_AFTER_CITY)
 		if z > edge and z < stage.length - edge:
 			return NO_LIMIT
+	var own := limit_part_at(stage, z)
+	if own > 0:
+		return own
 	return int(lim.express if express else lim.road)
+
+## The road part's own posted limit at z (roads.json [km, number, lanes, limit]), 0 where the country's applies.
+static func limit_part_at(stage: Dictionary, z: float) -> int:
+	for r in stage.roads:
+		if z < r.z1: return r.get("limit", 0)
+	return stage.roads[-1].get("limit", 0) if not stage.roads.is_empty() else 0
 
 ## The posted limit at a border crossing (CROSS_LIMITS before and at the barriers), 0 away from one.
 static func crossing_limit_at(stage: Dictionary, z: float) -> int:

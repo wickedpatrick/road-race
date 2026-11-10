@@ -21,7 +21,7 @@
 	"region_label": {"pl": "okręg", "en": "county", "cs": "kraj", "is": "fylki", "de": "Provinz"},
 	"start": ["oslo", "drammen"],
 	"express_prefixes": [],
-	"limits": {"express": 110, "road": 80, "city": 50, "town_on_express": 70, "town": 50},
+	"limits": {"express": 110, "road": 90, "city": 50, "town_on_express": 70, "town": 50},
 	"signs": {"town": "#1d4ea1", "town_text": "#ffffff", "board": "#1d4ea1", "board_motorway": "#1d4ea1"},
 	"plates": [["E", "#00843d", "#ffffff"], ["", "#f5c400", "#111111"]],
 	"map": {"lon0": 4.4, "lon1": 31.4, "lat0": 57.7, "lat1": 71.4, "lon_k": 0.43, "zoom": 2.6, "labels": "auto"},

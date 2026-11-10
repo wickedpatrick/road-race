@@ -117,6 +117,8 @@ List of roads between two neighbouring cities `a` and `b` (travelling `b` -> `a`
   starting with A or S are motorways / expressways (dual carriageway, faster limit); `DK`/`DW` prefixes are shown
   as on Polish plates. A part can give its own lanes, `[km, number, 3]` (dual carriageway) or `[km, number, 2]`,
   where the number alone does not tell: Canada's Hwy 1 is twinned across the prairies but two-lane over Rogers Pass.
+  A fourth element is the part's own posted limit outside towns, `[km, number, lanes, limit]` (lanes 0: by the
+  number), where it differs from the country's `limits`: France's N12 `[km, "N12", 3, 110]`.
 - `towns`: `[[name, km], ...]` passed on the way, in order.
 - `zones`: `[[km where it ends, biome, region name], ...]`; the last one ends at `km`.
 - `via` (optional): `[[km, lon, lat], ...]` points the road bends through on the map (otherwise a straight line

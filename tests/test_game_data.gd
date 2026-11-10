@@ -66,6 +66,11 @@ func _check_trips(t, code: String) -> void:
 				if br.z1 - br.z0 < Route.BRIDGE_MIN - 0.5: ok = false; print("  %s: trip %s-%s: %s squeezed (%.0f m)" % [code, a, b, br.name, br.z1 - br.z0])
 			if Geo.roads().any(func(r): return r.has("bridge") and ((r.a == a and r.b == b) or (r.a == b and r.b == a))) and s.bridges.is_empty():
 				ok = false; print("  %s: trip %s-%s lost its bridge" % [code, a, b])
+			# a road part's own limit ([km, number, lanes, limit]) is posted on it away from the towns
+			for rp in s.roads:
+				var mid: float = (rp.z0 + rp.z1) * 0.5
+				if rp.get("limit", 0) > 0 and Route.town_at(s, mid).is_empty() and Route.crossing_limit_at(s, mid) == 0 and Route.sign_limit_at(s, mid) != rp.limit:
+					ok = false; print("  %s: trip %s-%s: %s not at its own %d" % [code, a, b, rp.road, rp.limit])
 			for tn in s.tunnels:
 				for tw in s.towns:
 					if tw.z + tw.half > tn.z0 and tw.z - tw.half < tn.z1: ok = false; print("  %s: %s-%s tunnel in a town" % [code, a, b])
