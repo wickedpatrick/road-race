@@ -1,0 +1,456 @@
+{
+	"Paris": [
+		{
+			"kind": "fr_paris_eiffel",
+			"name": {
+				"pl": "Wieża Eiffla",
+				"en": "Eiffel Tower",
+				"cs": "Eiffelova věž",
+				"is": "Eiffelturninn",
+				"de": "Eiffelturm"
+			},
+			"desc": {
+				"pl": "Stalowa wieża na wystawę światową 1889 roku, przez ponad 40 lat najwyższa budowla świata",
+				"en": "An iron tower built for the 1889 World's Fair, the tallest structure in the world for over 40 years",
+				"cs": "Železná věž postavená pro světovou výstavu roku 1889, přes 40 let nejvyšší stavba světa",
+				"is": "Járnturn reistur fyrir heimssýninguna 1889, hæsta mannvirki heims í rúm 40 ár",
+				"de": "Ein eiserner Turm für die Weltausstellung 1889, über 40 Jahre lang das höchste Bauwerk der Welt"
+			},
+			"local": "Tour Eiffel"
+		}
+	],
+	"Marseille": [
+		{
+			"kind": "fr_marseille_bonne_mere",
+			"name": {
+				"pl": "Bazylika Notre-Dame-de-la-Garde",
+				"en": "Notre-Dame de la Garde",
+				"cs": "Bazilika Notre-Dame-de-la-Garde",
+				"is": "Notre-Dame de la Garde",
+				"de": "Notre-Dame de la Garde"
+			},
+			"desc": {
+				"pl": "Bazylika z 1864 roku na wzgórzu nad portem, ze złoconym posągiem Madonny na dzwonnicy",
+				"en": "A basilica of 1864 on the hill above the port, with a gilded statue of the Virgin on its bell tower",
+				"cs": "Bazilika z roku 1864 na kopci nad přístavem se zlacenou sochou Panny Marie na zvonici",
+				"is": "Basilíka frá 1864 á hæðinni ofan við höfnina, með gylltri Maríustyttu á klukkuturninum",
+				"de": "Eine Basilika von 1864 auf dem Hügel über dem Hafen, mit einer vergoldeten Marienstatue auf dem Glockenturm"
+			},
+			"local": "Notre-Dame de la Garde"
+		}
+	],
+	"Lyon": [
+		{
+			"kind": "fr_lyon_fourviere",
+			"name": {
+				"pl": "Bazylika Notre-Dame de Fourvière",
+				"en": "Basilica of Notre-Dame de Fourvière",
+				"cs": "Bazilika Notre-Dame de Fourvière",
+				"is": "Notre-Dame de Fourvière",
+				"de": "Basilika Notre-Dame de Fourvière"
+			},
+			"desc": {
+				"pl": "Biała bazylika z czterema wieżami, zbudowana w latach 1872–1896 na wzgórzu nad starym miastem",
+				"en": "A white basilica with four towers, built in 1872–1896 on the hill above the old town",
+				"cs": "Bílá bazilika se čtyřmi věžemi, postavená v letech 1872–1896 na kopci nad starým městem",
+				"is": "Hvít basilíka með fjórum turnum, reist 1872–1896 á hæðinni ofan við gamla bæinn",
+				"de": "Eine weiße Basilika mit vier Türmen, 1872–1896 auf dem Hügel über der Altstadt erbaut"
+			},
+			"local": "Basilique de Fourvière"
+		}
+	],
+	"Toulouse": [
+		{
+			"kind": "fr_toulouse_capitole",
+			"name": {
+				"pl": "Kapitol w Tuluzie",
+				"en": "Capitole de Toulouse",
+				"cs": "Capitole v Toulouse",
+				"is": "Capitole í Toulouse",
+				"de": "Capitole de Toulouse"
+			},
+			"desc": {
+				"pl": "Ratusz i teatr z XVIII-wiecznej fasady z różowej cegły i kamienia; od cegły Tuluza nazywana jest Różowym Miastem",
+				"en": "The city hall and theatre behind an 18th-century front of pink brick and stone; the brick gives Toulouse its name, the Pink City",
+				"cs": "Radnice a divadlo za průčelím z 18. století z růžových cihel a kamene; podle cihel se Toulouse říká Růžové město",
+				"is": "Ráðhús og leikhús á bak við framhlið úr bleikum múrsteini og steini frá 18. öld; múrsteinninn gefur Toulouse nafnið Bleika borgin",
+				"de": "Rathaus und Theater hinter einer Fassade aus rosa Ziegeln und Stein aus dem 18. Jahrhundert; die Ziegel geben Toulouse den Namen Rosa Stadt"
+			},
+			"local": "Capitole"
+		}
+	],
+	"Nice": [
+		{
+			"kind": "fr_nice_negresco",
+			"name": {
+				"pl": "Hotel Negresco",
+				"en": "Hotel Negresco",
+				"cs": "Hotel Negresco",
+				"is": "Hótel Negresco",
+				"de": "Hotel Negresco"
+			},
+			"desc": {
+				"pl": "Hotel z 1913 roku na Promenade des Anglais, z różową kopułą nad białą fasadą",
+				"en": "A hotel of 1913 on the Promenade des Anglais, with a pink dome over its white front",
+				"cs": "Hotel z roku 1913 na Promenade des Anglais s růžovou kupolí nad bílým průčelím",
+				"is": "Hótel frá 1913 við Promenade des Anglais, með bleika hvelfingu yfir hvítri framhliðinni",
+				"de": "Ein Hotel von 1913 an der Promenade des Anglais mit einer rosa Kuppel über der weißen Fassade"
+			},
+			"local": "Hôtel Negresco"
+		}
+	],
+	"Nantes": [
+		{
+			"kind": "fr_nantes_elephant",
+			"name": {
+				"pl": "Wielki Słoń",
+				"en": "The Great Elephant",
+				"cs": "Velký slon",
+				"is": "Stóri fíllinn",
+				"de": "Der Große Elefant"
+			},
+			"desc": {
+				"pl": "Chodząca maszyna z drewna i stali, 12 metrów wysokości, wozi pasażerów po wyspie Nantes od 2007 roku",
+				"en": "A walking machine of wood and steel, 12 metres tall, carrying passengers around the Île de Nantes since 2007",
+				"cs": "Kráčející stroj ze dřeva a oceli, vysoký 12 metrů, vozí cestující po ostrově Nantes od roku 2007",
+				"is": "Gangandi vél úr tré og stáli, 12 metra há, sem hefur borið farþega um eyjuna í Nantes frá 2007",
+				"de": "Eine laufende Maschine aus Holz und Stahl, 12 Meter hoch, die seit 2007 Fahrgäste über die Île de Nantes trägt"
+			},
+			"local": "Le Grand Éléphant"
+		}
+	],
+	"Montpellier": [
+		{
+			"kind": "fr_montpellier_arc",
+			"name": {
+				"pl": "Łuk triumfalny w Montpellier",
+				"en": "Arc de Triomphe of Montpellier",
+				"cs": "Vítězný oblouk v Montpellier",
+				"is": "Sigurboginn í Montpellier",
+				"de": "Triumphbogen von Montpellier"
+			},
+			"desc": {
+				"pl": "Brama Peyrou z 1693 roku, wzniesiona na cześć Ludwika XIV na skraju starego miasta",
+				"en": "The Porte du Peyrou of 1693, raised in honour of Louis XIV at the edge of the old town",
+				"cs": "Brána Peyrou z roku 1693, postavená na počest Ludvíka XIV. na okraji starého města",
+				"is": "Peyrou-hliðið frá 1693, reist til heiðurs Loðvíki 14. í jaðri gamla bæjarins",
+				"de": "Die Porte du Peyrou von 1693, zu Ehren Ludwigs XIV. am Rand der Altstadt errichtet"
+			},
+			"local": "Arc de triomphe"
+		}
+	],
+	"Strasbourg": [
+		{
+			"kind": "fr_strasbourg_cathedral",
+			"name": {
+				"pl": "Katedra w Strasburgu",
+				"en": "Strasbourg Cathedral",
+				"cs": "Štrasburská katedrála",
+				"is": "Dómkirkjan í Strassborg",
+				"de": "Straßburger Münster"
+			},
+			"desc": {
+				"pl": "Gotycka katedra z różowego piaskowca z jedną wieżą o wysokości 142 m, ukończoną w 1439 roku",
+				"en": "A Gothic cathedral of pink sandstone with a single spire 142 m tall, finished in 1439",
+				"cs": "Gotická katedrála z růžového pískovce s jedinou věží vysokou 142 m, dokončenou roku 1439",
+				"is": "Gotnesk dómkirkja úr bleikum sandsteini með einum 142 metra háum turni, fullgerðum 1439",
+				"de": "Eine gotische Kathedrale aus rosa Sandstein mit einem einzigen, 142 m hohen Turm, 1439 vollendet"
+			},
+			"local": "Cathédrale Notre-Dame"
+		}
+	],
+	"Bordeaux": [
+		{
+			"kind": "fr_bordeaux_miroir",
+			"name": {
+				"pl": "Place de la Bourse",
+				"en": "Place de la Bourse",
+				"cs": "Place de la Bourse",
+				"is": "Place de la Bourse",
+				"de": "Place de la Bourse"
+			},
+			"desc": {
+				"pl": "XVIII-wieczny plac nad Garonną; od 2006 roku jego pałace odbijają się w płytkim Lustrze Wody",
+				"en": "An 18th-century square on the Garonne; since 2006 its palaces have been reflected in the shallow Water Mirror",
+				"cs": "Náměstí z 18. století u Garonny; od roku 2006 se jeho paláce zrcadlí ve mělkém Vodním zrcadle",
+				"is": "Torg frá 18. öld við Garonne-fljót; frá 2006 speglast hallirnar í grunnum Vatnsspeglinum",
+				"de": "Ein Platz des 18. Jahrhunderts an der Garonne; seit 2006 spiegeln sich seine Paläste im flachen Wasserspiegel"
+			},
+			"local": "Miroir d'eau"
+		}
+	],
+	"Lille": [
+		{
+			"kind": "fr_lille_beffroi",
+			"name": {
+				"pl": "Dzwonnica ratusza w Lille",
+				"en": "Lille City Hall Belfry",
+				"cs": "Zvonice radnice v Lille",
+				"is": "Klukkuturn ráðhússins í Lille",
+				"de": "Belfried des Rathauses von Lille"
+			},
+			"desc": {
+				"pl": "Ceglana dzwonnica z 1932 roku, wysoka na 104 m, wpisana na listę UNESCO z innymi dzwonnicami regionu",
+				"en": "A brick belfry of 1932, 104 m tall, on the UNESCO list with the other belfries of the region",
+				"cs": "Cihlová zvonice z roku 1932, vysoká 104 m, zapsaná na seznam UNESCO s dalšími zvonicemi kraje",
+				"is": "Klukkuturn úr múrsteini frá 1932, 104 metra hár, á heimsminjaskrá UNESCO með öðrum klukkuturnum héraðsins",
+				"de": "Ein Backstein-Belfried von 1932, 104 m hoch, mit den anderen Belfrieden der Region auf der UNESCO-Liste"
+			},
+			"local": "Beffroi de l'hôtel de ville"
+		}
+	],
+	"Rennes": [
+		{
+			"kind": "fr_rennes_parlement",
+			"name": {
+				"pl": "Parlament Bretanii",
+				"en": "Parliament of Brittany",
+				"cs": "Bretaňský parlament",
+				"is": "Þinghús Bretagne",
+				"de": "Parlament der Bretagne"
+			},
+			"desc": {
+				"pl": "Pałac z 1655 roku, dawna siedziba parlamentu Bretanii, odbudowany po pożarze w 1994 roku",
+				"en": "A palace of 1655, once the seat of the Parliament of Brittany, restored after a fire in 1994",
+				"cs": "Palác z roku 1655, dříve sídlo bretaňského parlamentu, obnovený po požáru v roce 1994",
+				"is": "Höll frá 1655, áður aðsetur þings Bretagne, endurreist eftir bruna árið 1994",
+				"de": "Ein Palast von 1655, einst Sitz des Parlaments der Bretagne, nach einem Brand 1994 wiederhergestellt"
+			},
+			"local": "Parlement de Bretagne"
+		}
+	],
+	"Reims": [
+		{
+			"kind": "fr_reims_cathedral",
+			"name": {
+				"pl": "Katedra w Reims",
+				"en": "Reims Cathedral",
+				"cs": "Katedrála v Remeši",
+				"is": "Dómkirkjan í Reims",
+				"de": "Kathedrale von Reims"
+			},
+			"desc": {
+				"pl": "Gotycka katedra z XIII wieku, w której przez wieki koronowano królów Francji",
+				"en": "A 13th-century Gothic cathedral where the kings of France were crowned for centuries",
+				"cs": "Gotická katedrála ze 13. století, v níž byli po staletí korunováni francouzští králové",
+				"is": "Gotnesk dómkirkja frá 13. öld þar sem konungar Frakklands voru krýndir um aldir",
+				"de": "Eine gotische Kathedrale aus dem 13. Jahrhundert, in der jahrhundertelang die Könige Frankreichs gekrönt wurden"
+			},
+			"local": "Cathédrale Notre-Dame"
+		}
+	],
+	"Dijon": [
+		{
+			"kind": "fr_dijon_palais",
+			"name": {
+				"pl": "Pałac Książąt Burgundii",
+				"en": "Palace of the Dukes of Burgundy",
+				"cs": "Palác burgundských vévodů",
+				"is": "Höll hertoganna af Búrgúnd",
+				"de": "Palast der Herzöge von Burgund"
+			},
+			"desc": {
+				"pl": "Pałac książąt z wieżą Filipa Dobrego (46 m) z XV wieku, dziś ratusz i muzeum sztuki",
+				"en": "The dukes' palace with the 15th-century Tower of Philip the Good (46 m), today the city hall and an art museum",
+				"cs": "Vévodský palác s věží Filipa Dobrého (46 m) z 15. století, dnes radnice a muzeum umění",
+				"is": "Höll hertoganna með turni Filippusar góða (46 m) frá 15. öld, nú ráðhús og listasafn",
+				"de": "Der Herzogspalast mit dem Turm Philipps des Guten (46 m) aus dem 15. Jahrhundert, heute Rathaus und Kunstmuseum"
+			},
+			"local": "Palais des ducs"
+		}
+	],
+	"Grenoble": [
+		{
+			"kind": "fr_grenoble_bulles",
+			"name": {
+				"pl": "Kolejka na Bastylię",
+				"en": "Bastille cable car",
+				"cs": "Lanovka na Bastilu",
+				"is": "Kláfurinn upp að Bastille",
+				"de": "Seilbahn zur Bastille"
+			},
+			"desc": {
+				"pl": "Kolejka linowa z 1934 roku, której kuliste wagoniki, „bańki”, wwożą znad Izery na fort Bastylii",
+				"en": "A cable car of 1934 whose round cabins, the \"bubbles\", climb from the Isère to the Bastille fort",
+				"cs": "Lanovka z roku 1934, jejíž kulaté kabinky, „bubliny“, vyjíždějí od Isèry k pevnosti Bastila",
+				"is": "Kláfur frá 1934 sem flytur fólk í kringlóttum klefum, „búbblunum“, frá ánni Isère upp að virkinu Bastille",
+				"de": "Eine Seilbahn von 1934, deren runde Kabinen, die „Blasen“, von der Isère zur Festung Bastille fahren"
+			},
+			"local": "Téléphérique de la Bastille"
+		}
+	],
+	"Clermont-Ferrand": [
+		{
+			"kind": "fr_clermont_cathedral",
+			"name": {
+				"pl": "Katedra w Clermont-Ferrand",
+				"en": "Clermont-Ferrand Cathedral",
+				"cs": "Katedrála v Clermont-Ferrand",
+				"is": "Dómkirkjan í Clermont-Ferrand",
+				"de": "Kathedrale von Clermont-Ferrand"
+			},
+			"desc": {
+				"pl": "Gotycka katedra z ciemnego kamienia wulkanicznego z Volvic; wieże dodał w XIX wieku Viollet-le-Duc",
+				"en": "A Gothic cathedral of dark volcanic stone from Volvic; its spires were added in the 19th century by Viollet-le-Duc",
+				"cs": "Gotická katedrála z tmavého sopečného kamene z Volvicu; věže přidal v 19. století Viollet-le-Duc",
+				"is": "Gotnesk dómkirkja úr dökkum eldfjallasteini frá Volvic; turnunum bætti Viollet-le-Duc við á 19. öld",
+				"de": "Eine gotische Kathedrale aus dunklem Vulkanstein aus Volvic; die Türme fügte Viollet-le-Duc im 19. Jahrhundert hinzu"
+			},
+			"local": "Cathédrale Notre-Dame-de-l'Assomption"
+		}
+	],
+	"Brest": [
+		{
+			"kind": "fr_brest_recouvrance",
+			"name": {
+				"pl": "Most Recouvrance",
+				"en": "Recouvrance Bridge",
+				"cs": "Most Recouvrance",
+				"is": "Recouvrance-brúin",
+				"de": "Pont de Recouvrance"
+			},
+			"desc": {
+				"pl": "Most podnoszony z 1954 roku nad ujściem rzeki Penfeld, między dwiema betonowymi wieżami wysokimi na 64 m",
+				"en": "A vertical-lift bridge of 1954 over the mouth of the Penfeld, between two concrete towers 64 m tall",
+				"cs": "Zdvižný most z roku 1954 přes ústí řeky Penfeld mezi dvěma betonovými věžemi vysokými 64 m",
+				"is": "Lyftibrú frá 1954 yfir ósa árinnar Penfeld, milli tveggja 64 metra hárra steinsteyputurna",
+				"de": "Eine Hubbrücke von 1954 über die Mündung der Penfeld zwischen zwei 64 m hohen Betontürmen"
+			},
+			"local": "Pont de Recouvrance"
+		}
+	],
+	"Tours": [
+		{
+			"kind": "fr_tours_cathedral",
+			"name": {
+				"pl": "Katedra w Tours",
+				"en": "Tours Cathedral",
+				"cs": "Katedrála v Tours",
+				"is": "Dómkirkjan í Tours",
+				"de": "Kathedrale von Tours"
+			},
+			"desc": {
+				"pl": "Katedra św. Gacjana, budowana od XIII do XVI wieku, z dwiema wieżami zwieńczonymi renesansowymi kopułkami",
+				"en": "Saint-Gatien Cathedral, built from the 13th to the 16th century, with two towers topped by Renaissance cupolas",
+				"cs": "Katedrála svatého Gaciána, stavěná od 13. do 16. století, se dvěma věžemi zakončenými renesančními kupolkami",
+				"is": "Dómkirkja heilags Gatíanusar, reist frá 13. til 16. aldar, með tveimur turnum sem bera endurreisnarhvolf",
+				"de": "Die Kathedrale Saint-Gatien, vom 13. bis zum 16. Jahrhundert erbaut, mit zwei Türmen unter Renaissance-Kuppeln"
+			},
+			"local": "Cathédrale Saint-Gatien"
+		}
+	],
+	"Limoges": [
+		{
+			"kind": "fr_limoges_gare",
+			"name": {
+				"pl": "Dworzec Limoges-Bénédictins",
+				"en": "Limoges-Bénédictins station",
+				"cs": "Nádraží Limoges-Bénédictins",
+				"is": "Limoges-Bénédictins-stöðin",
+				"de": "Bahnhof Limoges-Bénédictins"
+			},
+			"desc": {
+				"pl": "Dworzec kolejowy z 1929 roku z miedzianą kopułą i wieżą zegarową, stojący nad torami",
+				"en": "A railway station of 1929 with a copper dome and a clock tower, standing over the tracks",
+				"cs": "Nádraží z roku 1929 s měděnou kupolí a hodinovou věží, stojící nad kolejemi",
+				"is": "Járnbrautarstöð frá 1929 með koparhvelfingu og klukkuturni, reist yfir teinunum",
+				"de": "Ein Bahnhof von 1929 mit Kupferkuppel und Uhrturm, über den Gleisen gebaut"
+			},
+			"local": "Gare des Bénédictins"
+		}
+	],
+	"Perpignan": [
+		{
+			"kind": "fr_perpignan_castillet",
+			"name": {"pl": "Castillet", "en": "Le Castillet", "cs": "Castillet", "is": "Castillet", "de": "Castillet"},
+			"desc": {
+				"pl": "Ceglana brama miejska z XIV wieku z blankami, dawna część murów, dziś muzeum kultury katalońskiej",
+				"en": "A 14th-century brick town gate with battlements, once part of the walls, now a museum of Catalan culture",
+				"cs": "Cihlová městská brána ze 14. století s cimbuřím, kdysi součást hradeb, dnes muzeum katalánské kultury",
+				"is": "Borgarhlið úr múrsteini frá 14. öld með virkisskörðum, áður hluti borgarmúranna, nú safn um katalónska menningu",
+				"de": "Ein Stadttor aus Backstein aus dem 14. Jahrhundert mit Zinnen, einst Teil der Mauern, heute ein Museum katalanischer Kultur"
+			},
+			"local": "Le Castillet"
+		}
+	],
+	"Orléans": [
+		{
+			"kind": "fr_orleans_jeanne",
+			"name": {
+				"pl": "Pomnik Joanny d'Arc",
+				"en": "Statue of Joan of Arc",
+				"cs": "Socha Johanky z Arku",
+				"is": "Stytta Jóhönnu af Örk",
+				"de": "Reiterstandbild der Jeanne d'Arc"
+			},
+			"desc": {
+				"pl": "Konny posąg z 1855 roku na placu Martroi; Joanna d'Arc uwolniła Orlean od oblężenia w 1429 roku",
+				"en": "An equestrian statue of 1855 on the Place du Martroi; Joan of Arc lifted the siege of Orléans in 1429",
+				"cs": "Jezdecká socha z roku 1855 na náměstí Martroi; Johanka z Arku osvobodila Orléans z obležení roku 1429",
+				"is": "Riddarastytta frá 1855 á Place du Martroi; Jóhanna af Örk aflétti umsátrinu um Orléans árið 1429",
+				"de": "Ein Reiterstandbild von 1855 auf der Place du Martroi; Jeanne d'Arc beendete 1429 die Belagerung von Orléans"
+			},
+			"local": "Jeanne d'Arc"
+		}
+	],
+	"Rouen": [
+		{
+			"kind": "fr_rouen_gros_horloge",
+			"name": {
+				"pl": "Gros-Horloge",
+				"en": "Gros-Horloge",
+				"cs": "Gros-Horloge",
+				"is": "Gros-Horloge",
+				"de": "Gros-Horloge"
+			},
+			"desc": {
+				"pl": "Astronomiczny zegar z XIV wieku nad renesansowym łukiem nad ulicą starego miasta",
+				"en": "A 14th-century astronomical clock on a Renaissance arch over a street of the old town",
+				"cs": "Astronomické hodiny ze 14. století na renesančním oblouku nad ulicí starého města",
+				"is": "Stjarnfræðiklukka frá 14. öld á endurreisnarboga yfir götu í gamla bænum",
+				"de": "Eine astronomische Uhr aus dem 14. Jahrhundert auf einem Renaissancebogen über einer Altstadtgasse"
+			},
+			"local": "Gros-Horloge"
+		}
+	],
+	"Caen": [
+		{
+			"kind": "fr_caen_abbaye",
+			"name": {
+				"pl": "Opactwo Męskie",
+				"en": "Abbaye aux Hommes",
+				"cs": "Mužské opatství",
+				"is": "Karlaklaustrið",
+				"de": "Männerabtei"
+			},
+			"desc": {
+				"pl": "Romańskie opactwo ufundowane przez Wilhelma Zdobywcę, który jest w nim pochowany; dziś mieści też ratusz",
+				"en": "A Romanesque abbey founded by William the Conqueror, who is buried in it; it also houses the city hall today",
+				"cs": "Románské opatství založené Vilémem Dobyvatelem, který je v něm pohřben; dnes v něm sídlí i radnice",
+				"is": "Rómanskt klaustur sem Vilhjálmur sigursæli stofnaði og er grafinn í; þar er nú einnig ráðhúsið",
+				"de": "Eine romanische Abtei, gegründet von Wilhelm dem Eroberer, der darin begraben liegt; heute auch das Rathaus"
+			},
+			"local": "Abbaye aux Hommes"
+		}
+	],
+	"Avignon": [
+		{
+			"kind": "fr_avignon_pont",
+			"name": {
+				"pl": "Most w Awinionie",
+				"en": "Pont d'Avignon",
+				"cs": "Avignonský most",
+				"is": "Brúin í Avignon",
+				"de": "Pont d'Avignon"
+			},
+			"desc": {
+				"pl": "Most św. Benedykta z XII wieku; z 22 łuków nad Rodanem zostały cztery, z kaplicą, znane z piosenki",
+				"en": "The 12th-century Pont Saint-Bénézet; of its 22 arches over the Rhône four remain, with a chapel, known from the song",
+				"cs": "Most svatého Bénézeta z 12. století; z 22 oblouků přes Rhônu zbyly čtyři s kaplí, známé z písničky",
+				"is": "Saint-Bénézet-brúin frá 12. öld; af 22 bogum yfir Rón standa fjórir eftir, með kapellu, kunnir úr söngnum",
+				"de": "Die Brücke Saint-Bénézet aus dem 12. Jahrhundert; von 22 Bögen über die Rhone stehen noch vier mit einer Kapelle, bekannt aus dem Lied"
+			},
+			"local": "Pont Saint-Bénézet"
+		}
+	]
+}

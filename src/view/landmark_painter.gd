@@ -33,6 +33,7 @@ static var MORE := [LandmarksDeA, LandmarksDeB, LandmarksDeC, LandmarksSk, Landm
 		LandmarksIeA, LandmarksIeB,
 		LandmarksDkA, LandmarksDkB, LandmarksSeA, LandmarksSeB,
 		LandmarksFiA, LandmarksFiB,
+		LandmarksFrA, LandmarksFrB,
 		LandmarksNoA, LandmarksNoB]
 
 static var _cv

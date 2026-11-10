@@ -218,6 +218,12 @@
 			"favorite_neighbour": "ee"
 		},
 		{
+			"code": "fr",
+			"name": {"pl": "Francja", "en": "France", "cs": "Francie", "is": "Frakkland", "de": "Frankreich"},
+			"neighbours": ["be", "lu", "de", "ch", "it", "es", "ad", "mc"],
+			"favorite_neighbour": "de"
+		},
+		{
 			"code": "no",
 			"name": {"pl": "Norwegia", "en": "Norway", "cs": "Norsko", "is": "Noregur", "de": "Norwegen"},
 			"neighbours": ["se", "fi", "ru"],
