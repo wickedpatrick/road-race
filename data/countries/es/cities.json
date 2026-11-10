@@ -1,0 +1,74 @@
+{
+	"madrid": {
+		"name": "Madrid",
+		"lat": 40.42,
+		"lon": -3.7,
+		"pop": 3460,
+		"region": "Comunidad de Madrid",
+		"exonym": {"pl": "Madryt", "is": "Madríd"}
+	},
+	"barcelona": {"name": "Barcelona", "lat": 41.39, "lon": 2.17, "pop": 1700, "region": "Cataluña", "exonym": {"is": "Barselóna"}},
+	"valencia": {
+		"name": "Valencia",
+		"lat": 39.47,
+		"lon": -0.38,
+		"pop": 825,
+		"region": "Comunidad Valenciana",
+		"exonym": {"pl": "Walencja", "cs": "Valencie"}
+	},
+	"zaragoza": {
+		"name": "Zaragoza",
+		"lat": 41.65,
+		"lon": -0.88,
+		"pop": 690,
+		"region": "Aragón",
+		"exonym": {"pl": "Saragossa", "de": "Saragossa"}
+	},
+	"sevilla": {
+		"name": "Sevilla",
+		"lat": 37.39,
+		"lon": -5.99,
+		"pop": 685,
+		"region": "Andalucía",
+		"exonym": {"pl": "Sewilla", "en": "Seville"}
+	},
+	"malaga": {"name": "Málaga", "lat": 36.72, "lon": -4.42, "pop": 595, "region": "Andalucía", "exonym": {"pl": "Malaga"}},
+	"murcia": {
+		"name": "Murcia",
+		"lat": 37.99,
+		"lon": -1.13,
+		"pop": 475,
+		"region": "Región de Murcia",
+		"exonym": {"pl": "Murcja"}
+	},
+	"alicante": {"name": "Alicante", "lat": 38.35, "lon": -0.48, "pop": 360, "region": "Comunidad Valenciana"},
+	"bilbao": {"name": "Bilbao", "lat": 43.26, "lon": -2.93, "pop": 347, "region": "País Vasco"},
+	"cordoba": {"name": "Córdoba", "lat": 37.88, "lon": -4.78, "pop": 322, "region": "Andalucía", "exonym": {"pl": "Kordoba"}},
+	"valladolid": {"name": "Valladolid", "lat": 41.65, "lon": -4.72, "pop": 299, "region": "Castilla y León"},
+	"vigo": {"name": "Vigo", "lat": 42.23, "lon": -8.71, "pop": 294, "region": "Galicia"},
+	"vitoria": {"name": "Vitoria-Gasteiz", "lat": 42.85, "lon": -2.67, "pop": 258, "region": "País Vasco"},
+	"a_coruna": {"name": "A Coruña", "lat": 43.36, "lon": -8.41, "pop": 249, "region": "Galicia"},
+	"granada": {"name": "Granada", "lat": 37.18, "lon": -3.6, "pop": 230, "region": "Andalucía", "exonym": {"pl": "Grenada"}},
+	"oviedo": {"name": "Oviedo", "lat": 43.36, "lon": -5.85, "pop": 220, "region": "Principado de Asturias"},
+	"pamplona": {"name": "Pamplona", "lat": 42.82, "lon": -1.64, "pop": 205, "region": "Navarra", "exonym": {"pl": "Pampeluna"}},
+	"almeria": {"name": "Almería", "lat": 36.84, "lon": -2.46, "pop": 200, "region": "Andalucía"},
+	"san_sebastian": {"name": "San Sebastián", "lat": 43.31, "lon": -1.98, "pop": 189, "region": "País Vasco"},
+	"burgos": {"name": "Burgos", "lat": 42.34, "lon": -3.7, "pop": 175, "region": "Castilla y León"},
+	"albacete": {"name": "Albacete", "lat": 38.99, "lon": -1.86, "pop": 174, "region": "Castilla-La Mancha"},
+	"santander": {"name": "Santander", "lat": 43.46, "lon": -3.81, "pop": 173, "region": "Cantabria"},
+	"logrono": {"name": "Logroño", "lat": 42.47, "lon": -2.45, "pop": 152, "region": "La Rioja"},
+	"salamanca": {
+		"name": "Salamanca",
+		"lat": 40.97,
+		"lon": -5.66,
+		"pop": 145,
+		"region": "Castilla y León",
+		"exonym": {"pl": "Salamanka"}
+	},
+	"tarragona": {"name": "Tarragona", "lat": 41.12, "lon": 1.25, "pop": 140, "region": "Cataluña"},
+	"leon": {"name": "León", "lat": 42.6, "lon": -5.57, "pop": 122, "region": "Castilla y León"},
+	"cadiz": {"name": "Cádiz", "lat": 36.52, "lon": -6.22, "pop": 111, "region": "Andalucía", "exonym": {"pl": "Kadyks"}},
+	"jaen": {"name": "Jaén", "lat": 37.77, "lon": -3.79, "pop": 111, "region": "Andalucía"},
+	"toledo": {"name": "Toledo", "lat": 39.86, "lon": -4.02, "pop": 86, "region": "Castilla-La Mancha"},
+	"merida": {"name": "Mérida", "lat": 38.92, "lon": -6.34, "pop": 61, "region": "Extremadura"}
+}

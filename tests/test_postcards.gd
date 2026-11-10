@@ -8,7 +8,8 @@ func run(t) -> void:
 		"fi": 20, "fr": 30,
 		"no": 17,
 		"it": 30,
-		"ch": 14}
+		"ch": 14,
+		"es": 30}
 	for code in sizes:
 		var ids := Postcards.cities(code)
 		var map: Dictionary = GameData.country(code).cities
