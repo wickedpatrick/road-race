@@ -302,3 +302,24 @@ Opis: `docs/superpowers/specs/2026-11-03-postcards-design.md`.
 
 - [x] Długie trasy (USA, Kanada) jadą się za długo: powyżej pewnego dystansu długość w grze ma rosnąć wolniej
       niż liniowo (np. pierwiastkowo), patrz wzór w `Route.build`.
+
+## 15. Do sprawdzenia: partia 5 i noc z 2026-11-10 (Estonia, Łotwa, Irlandia, Finlandia, Szwecja, Dania)
+
+Rzeczy zrobione bez oglądania w grze albo na przybliżonych danych. Do puszczenia agentom (bez okna gry; zrzuty
+na koniec jednym rzutem).
+
+- [ ] Pocztówki: obejrzeć na ekranie wszystkie nowe rysunki (ok. 105: ee, lv, ie, fi, se, dk oraz ru, ua, by, tr),
+      poprawić te, które nie przypominają zabytku albo mają rozjechane elementy.
+- [ ] Kilometry, numery dróg i miejscowości po drodze w nowych krajach: sprawdzić z mapą (odległości miast,
+      kolejność miejscowości, numery jak na tablicach).
+- [ ] Ceny paliwa i waluty na stacjach w nowych krajach (przybliżone).
+- [ ] Kolory tablic (miejscowości, kierunkowe, numery dróg) i rejestracji w nowych krajach (przybliżone).
+- [ ] Zrzuty z gry tam, gdzie nikt nie patrzył: promy w Estonii (Saarema, Hiuma) i Irlandii (Shannon), prom na
+      Gotlandię, Högakustenbron, Mały Bełt, prom na Bornholm, tablice fińsko-szwedzkie, Łotwa w ogóle.
+- [ ] Melodie przyjazdu do odsłuchu: Czarnogóra (dwa fragmenty starego hymnu), łotewska kołysanka, maltański motyw
+      na dudy, szwedzkie Små grodorna (melodia może nie być szwedzka), Mołdawia (dwie ludowe); hymn Finlandii
+      brzmi jak estoński (ta sama melodia Paciusa, zostaje?).
+- [ ] Decyzje do potwierdzenia: Kaliningrad bez polskiej nazwy Królewiec; ulubiony sąsiad Szwecji to Norwegia
+      (jeszcze jej nie ma w grze); Irlandia bez progu 80 km/h (wszędzie 100 poza autostradą) i bez Irlandii
+      Północnej; Dania 13 miast (bez Slagelse, Køge jako miasto dla promu); w Szwecji most Högakustenbron zamiast
+      mostu na Olandię; Finlandia bez nazw lapońskich na tablicach.
