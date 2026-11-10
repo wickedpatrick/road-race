@@ -360,7 +360,13 @@ func _draw() -> void:
 		hint += Lang.t("hint_back")
 	hint += Lang.t("hint_sound")
 	if not Screen.touch:
-		_t(Vector2(0, 518), hint, 20, Color.WHITE, HORIZONTAL_ALIGNMENT_RIGHT, 936)
+		# a long hint (the destination step's ranking key, longer languages) gets smaller instead of running into the
+		# car's name on the left
+		var room := 936.0 - 24.0 - font.get_string_size(summary, HORIZONTAL_ALIGNMENT_LEFT, -1, 17).x - 20.0
+		var size := 20
+		while size > 14 and font.get_string_size(hint, HORIZONTAL_ALIGNMENT_LEFT, -1, size).x > room:
+			size -= 1
+		_t(Vector2(0, 518), hint, size, Color.WHITE, HORIZONTAL_ALIGNMENT_RIGHT, 936)
 	if loading:
 		draw_rect(Rect2(0, 0, 960, 540), Color(0.03, 0.05, 0.08, 0.82))
 		_t(Vector2(0, 250), Lang.t("get_ready"), 48, Color("ffd24a"), HORIZONTAL_ALIGNMENT_CENTER, 960)

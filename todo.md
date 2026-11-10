@@ -285,11 +285,12 @@ długości i zakrętów odcinka (np. z czasu bota), te same przy każdym uruchom
 - [x] Ruch uliczny w rankingach zostaje losowy (raz lepiej, raz gorzej): bez wspólnego seeda dla wszystkich graczy.
 - [x] Ekrany: wynik trasy z pozycją i najlepszym czasem, tabela rankingu trasy z mapy, ranking kraju.
 - [x] Zrobione: `src/logic/rankings.gd` (20 fałszywych kierowców na mapę z puli nicków, czasy z najlepszego przejazdu
-      bota najszybszym autem: `data/rankings/<kod>.json` z `tools/calibrate_rankings.sh`; 965 odcinków przejechanych,
-      109 z dopasowania czas legalny x mediana mapy), międzyczasy w `Race.splits`, wyniki w profilu (`rankings`),
+      bota najszybszym autem: `data/rankings/<kod>.json` z `tools/calibrate_rankings.sh`, wszystkie 1074 odcinki
+      przejechane, dwa ziarna ruchu), międzyczasy w `Race.splits`, wyniki w profilu (`rankings`),
       ekrany: panel na wynikach (R), `src/scenes/ranking.tscn` (z mapy: przycisk Ranking / R; C: ranking kraju).
-- [ ] Do sprawdzenia: dokończyć kalibrację odcinków z listy `fitted` (dk, se, fi, fr, no, it, ch, es, pt, bx w
-      części), np. `JOBS=12 tools/calibrate_rankings.sh 2 fr it es` w tle.
+- [x] Kalibracja dokończona 2026-11-11 (po limitach w tunelach). Po zmianach tras lub limitów puścić ponownie:
+      `JOBS=8 tools/calibrate_rankings.sh 2 <kody>` (najpierw `--import`, inaczej skrypt nie zna klasy Rankings
+      i nadpisuje pliki pustymi danymi).
 - [ ] Później (backend): identyfikator gracza i nick, format wyniku (kraj, odcinek, kierunek, auto, warunki, czas,
       wersja gry, seed), kolejka wysyłki, weryfikacja po stronie serwera (anty-cheat); fałszywi kierowcy znikają.
 
@@ -352,9 +353,9 @@ obrazków; błędy poprawione, testy i autopilot przechodzą. Zrzuty z gry prom�
 - [ ] Rysunki do ewentualnej poprawy (nie są błędne, ale słabsze): tur w Rakvere, zamek Turaida (mury nad
       wzgórzem), samolot Alcocka i Browna w Clifden (był wbity nosem w bagno), zamek w Örebro (okrągłe wieże),
       Joanna d'Arc w Orleanie (koń), Gros-Horloge w Rouen (łuk nad ulicą), fontanna w Perugii, brama Obertor w Chur.
-- [ ] Gra: przy wjeździe do tunelu wzgórze z portalem zasłania całe niebo (widać na Westerschelde pod wodą i na
-      Gotardzie); tunel pod wodą powinien mieć portal bez góry. Na Gotardzie znak 120, a w tunelu jest 80 (limit
-      tunelu w danych?). Wiadukt Millau stoi nad wodą zamiast nad doliną.
+- [x] Gra: wzgórze nad portalem tunelu nie zasłania już nieba; tunele pod wodą (`"under": "water"`) mają wjazd
+      w wykop; limit w tunelu (`limit`: Gotard, San Bernardino, Lærdal, Gudvanga 80, Westerschelde 100...); wiadukt
+      Millau nad doliną (`"over": "valley"`). Dolina Millau widoczna z drogi tylko jako jasny pas — do oceny.
 - [ ] Autopilot: limit czasu liczy podjazdy, ale nie zakręty; we Francji i Włoszech wymusiło to ruch 0.3 i usunięcie
       kilku miejscowości (fr: Châtellerault, Nemours, Sainte-Menehould, Verdun, Phalsbourg, Sélestat, Montbéliard;
       it: Milazzo, Barcellona Pozzo di Gotto, Santo Stefano di Camastra). Rozważyć doliczanie zakrętów i przywrócenie
