@@ -97,18 +97,18 @@ static func _flam_flamsbana() -> void:
 static func _moirana_havmannen() -> void:
 	var granite := Color("5c5c60")
 	_r(-10, 0, 10, 2.2, WATER)
+	# legs standing in the water, the ripple over them, body, arms and head
+	_r(-0.9, 2.2, -0.15, 5.2, granite)
+	_r(0.15, 2.2, 0.9, 5.2, granite)
 	_r(-10, 2.2, 10, 2.5, WATER_L)
-	# legs, body, arms and head
-	_r(-0.9, 0, -0.15, 5.2, granite)
-	_r(0.15, 0, 0.9, 5.2, granite)
 	_poly([-1.2, 5.2, 1.2, 5.2, 1.3, 8.6, -1.3, 8.6], granite)
 	_r(-1.75, 5.4, -1.3, 8.4, granite)
 	_r(1.3, 5.4, 1.75, 8.4, granite)
 	_r(-0.3, 8.6, 0.3, 9.0, granite)
 	_c(0, 9.6, 0.65, granite)
 
-## Saltstraumen: the tidal current racing through the narrow strait in whirlpools, under the high arched Saltstraumen
-## Bridge, with rocky shores on both sides.
+## Saltstraumen: the tidal current racing through the narrow strait in whirlpools, under the Saltstraumen Bridge (1978), a
+## cantilever box girder whose haunched underside reads as a high arch, with rocky shores on both sides.
 static func _bodo_saltstraumen() -> void:
 	_r(-40, 0, 40, 4, WATER)
 	_poly([-40, 4, -22, 4, -26, 10, -40, 12], ROCK)
@@ -118,7 +118,7 @@ static func _bodo_saltstraumen() -> void:
 		var pts := _arc(w[0], w[1], w[2], w[2] * 0.3, 0, TAU, 12)
 		for i in range(0, pts.size() - 2, 2):
 			_l(pts[i], pts[i + 1], pts[i + 2], pts[i + 3], WATER_L, 0.3)
-	# the arch and the deck
+	# the haunched underside and the deck
 	var arch := _arc(0, 4, 24, 19, PI, 0, 16)
 	for i in range(0, arch.size() - 2, 2):
 		_l(arch[i], arch[i + 1], arch[i + 2], arch[i + 3], Color("c8ccd0"), 1.4)

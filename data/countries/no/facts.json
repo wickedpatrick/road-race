@@ -3,7 +3,7 @@
 		"pl": "Stolica Norwegii u końca Oslofjordu, założona około 1040 roku; w ratuszu co roku wręcza się Pokojową Nagrodę Nobla",
 		"en": "The capital of Norway at the head of the Oslofjord, founded around 1040; the Nobel Peace Prize is awarded in its City Hall every year",
 		"cs": "Hlavní město Norska na konci Oslofjordu, založené kolem roku 1040; v jeho radnici se každý rok uděluje Nobelova cena míru",
-		"is": "Höfuðborg Noregs innst í Oslófirði, stofnuð um 1040; friðarverðlaun Nóbels eru afhent í ráðhúsi hennar ár hvert",
+		"is": "Höfuðborg Noregs innst í Óslóarfirði, stofnuð um 1040; friðarverðlaun Nóbels eru afhent í ráðhúsi hennar ár hvert",
 		"de": "Die Hauptstadt Norwegens am Ende des Oslofjords, um 1040 gegründet; im Rathaus wird jedes Jahr der Friedensnobelpreis verliehen"
 	},
 	"Bergen": {
@@ -52,7 +52,7 @@
 		"pl": "Portowe miasto rybackie na wyspach przy wejściu do fiordów; słynie z suszonego dorsza i secesyjnej zabudowy",
 		"en": "A fishing port on islands at the mouth of the fjords, known for its dried cod and its Art Nouveau streets",
 		"cs": "Rybářský přístav na ostrovech u vstupu do fjordů, známý sušenou treskou a secesní zástavbou",
-		"is": "Fiskihöfn á eyjum við mynni fjarðanna, þekkt fyrir skreið og jugendstílshús",
+		"is": "Fiskihöfn á eyjum við mynni fjarðanna, þekkt fyrir saltfisk og jugendstílshús",
 		"de": "Ein Fischereihafen auf Inseln an der Mündung der Fjorde, bekannt für Klippfisch und seine Jugendstilstraßen"
 	},
 	"Bodø": {
@@ -102,7 +102,7 @@
 		"en": "The largest town in Finnmark; thousands of rock carvings, several thousand years old, survive on the rocks by the fjord",
 		"cs": "Největší město Finnmarku; na skalách u fjordu se dochovaly tisíce skalních rytin starých tisíce let",
 		"is": "Stærsti bær Finnmerkur; á klöppunum við fjörðinn eru þúsundir bergristna sem eru þúsunda ára gamlar",
-		"de": "Die größte Stadt der Finnmark; auf den Felsen am Fjord sind Tausende Jahrtausende alte Felsritzungen erhalten"
+		"de": "Die größte Stadt der Finnmark; auf den Felsen am Fjord sind Tausende jahrtausendealte Felsritzungen erhalten"
 	},
 	"Hammerfest": {
 		"pl": "Jedno z najdalej na północ położonych miast świata; po spaleniu w 1944 roku zostało całkowicie odbudowane",
@@ -142,7 +142,7 @@
 	"Borgund": {
 		"pl": "Stoi tu klepkowy kościół z około 1180 roku, jeden z najlepiej zachowanych w Norwegii",
 		"en": "A stave church of around 1180 stands here, one of the best preserved in Norway",
-		"cs": "Stojí tu roubený sloupový kostel z doby kolem roku 1180, jeden z nejzachovalejších v Norsku",
+		"cs": "Stojí tu sloupový kostel z doby kolem roku 1180, jeden z nejzachovalejších v Norsku",
 		"is": "Hér stendur stafkirkja frá um 1180, ein sú best varðveitta í Noregi",
 		"de": "Hier steht eine Stabkirche von etwa 1180, eine der am besten erhaltenen Norwegens"
 	},

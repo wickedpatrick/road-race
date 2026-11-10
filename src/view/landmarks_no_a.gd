@@ -202,7 +202,7 @@ static func _drammen_spiralen() -> void:
 static func _lillehammer_lysgard() -> void:
 	_poly([-35, 0, 35, 0, 35, 6, -10, 30, -35, 46], Color("eef2f4"))
 	_poly([-35, 46, -10, 30, 35, 6, 35, 8, -10, 33, -35, 50], Color("2f5c34"))
-	for s in [[-33.0, 58.0, 0.0], [-20.0, 47.0, 1.0]]:
+	for s in [[-33.0, 50.5, 0.0], [-20.0, 44.0, 1.0]]:
 		var x0: float = s[0]
 		var y0: float = s[1]
 		var x1 := x0 + 26.0
