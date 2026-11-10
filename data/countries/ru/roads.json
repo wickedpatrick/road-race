@@ -344,7 +344,7 @@
 		"a": "ust_luga",
 		"b": "kaliningrad",
 		"km": 979,
-		"road": [[2, ""], [979, "27A-002"]],
+		"road": [[2, ""], [979, "27A-016"]],
 		"towns": [["Baltiysk", 933]],
 		"zones": [[2, "coast", "Luzhskaya guba"], [932, "coast", "Baltiyskoye more"], [979, "coast", "Sambiya"]],
 		"via": [[60, 27.6, 59.85], [250, 24, 59.75], [420, 21.6, 59.1], [650, 19.6, 57.4], [932, 19.9, 54.64]],
