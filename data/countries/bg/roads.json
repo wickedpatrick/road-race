@@ -256,7 +256,19 @@
 			[28, "coast", "Cherno more"], [50, "forest", "Kamchia"], [80, "foothills", "Emine"],
 			[128, "coast", "Cherno more"]
 		],
-		"via": [[36, 27.8, 42.99], [62, 27.88, 42.82], [90, 27.7, 42.68], [110, 27.64, 42.56]]
+		"via": [[36, 27.8, 42.99], [62, 27.88, 42.82], [90, 27.7, 42.68], [110, 27.64, 42.56]],
+		"bridge": {
+			"from_km": 1,
+			"to_km": 3.05,
+			"name": {
+				"pl": "Most Asparuchowa",
+				"en": "Asparuhov Bridge",
+				"cs": "Asparuchův most",
+				"is": "Asparuhov-brúin",
+				"de": "Asparuhov-Brücke"
+			},
+			"kind": "beam"
+		}
 	},
 	{
 		"a": "kazanlak",

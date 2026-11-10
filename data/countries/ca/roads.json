@@ -6,7 +6,19 @@
 		"road": "99",
 		"towns": [["West Vancouver", 15], ["Squamish", 66]],
 		"zones": [[70, "coast", "British Columbia"], [121, "mountains", "British Columbia"]],
-		"via": [[20, -123.27, 49.37], [66, -123.15, 49.7], [95, -123.05, 49.93]]
+		"via": [[20, -123.27, 49.37], [66, -123.15, 49.7], [95, -123.05, 49.93]],
+		"bridge": {
+			"from_km": 10.2,
+			"to_km": 12,
+			"name": {
+				"pl": "Most Lions Gate",
+				"en": "Lions Gate Bridge",
+				"cs": "Most Lions Gate",
+				"is": "Lions Gate-brúin",
+				"de": "Lions-Gate-Brücke"
+			},
+			"color": "#2b7a63"
+		}
 	},
 	{
 		"a": "whistler",
@@ -34,7 +46,19 @@
 		"via": [
 			[45, -122.66, 49.1], [70, -122.3, 49.05], [100, -121.95, 49.16], [150, -121.44, 49.38],
 			[195, -121.08, 49.6], [265, -120.79, 50.11]
-		]
+		],
+		"bridge": {
+			"from_km": 18,
+			"to_km": 20,
+			"name": {
+				"pl": "Most Port Mann",
+				"en": "Port Mann Bridge",
+				"cs": "Most Port Mann",
+				"is": "Port Mann-brúin",
+				"de": "Port-Mann-Brücke"
+			},
+			"kind": "stayed"
+		}
 	},
 	{
 		"a": "vancouver",
@@ -53,7 +77,19 @@
 		"via": [
 			[70, -122.3, 49.05], [100, -121.95, 49.16], [150, -121.44, 49.38], [195, -121.08, 49.6],
 			[265, -120.79, 50.11], [315, -120.13, 49.97], [365, -119.74, 49.77], [382, -119.58, 49.86]
-		]
+		],
+		"bridge": {
+			"from_km": 18,
+			"to_km": 20,
+			"name": {
+				"pl": "Most Port Mann",
+				"en": "Port Mann Bridge",
+				"cs": "Most Port Mann",
+				"is": "Port Mann-brúin",
+				"de": "Port-Mann-Brücke"
+			},
+			"kind": "stayed"
+		}
 	},
 	{
 		"a": "kamloops",
@@ -407,7 +443,19 @@
 		"via": [
 			[25, -79.6, 43.58], [40, -79.69, 43.45], [58, -79.8, 43.33], [70, -79.75, 43.24], [95, -79.56, 43.2],
 			[115, -79.24, 43.16]
-		]
+		],
+		"bridge": {
+			"from_km": 61.5,
+			"to_km": 64.1,
+			"name": {
+				"pl": "Burlington Skyway",
+				"en": "Burlington Bay James N. Allan Skyway",
+				"cs": "Burlington Skyway",
+				"is": "Burlington Skyway-brúin",
+				"de": "Burlington Skyway"
+			},
+			"kind": "beam"
+		}
 	},
 	{
 		"a": "toronto",
@@ -484,7 +532,18 @@
 			[10, -71.18, 46.8], [60, -70.55, 46.98], [120, -70.03, 47.37], [200, -69.53, 47.83], [290, -68.65, 47.55],
 			[315, -68.32, 47.37], [380, -67.74, 47.05], [420, -67.7, 46.75], [490, -67.57, 46.15],
 			[600, -66.64, 45.96], [650, -66.12, 45.83], [750, -65.17, 45.94]
-		]
+		],
+		"bridge": {
+			"from_km": 7,
+			"to_km": 8,
+			"name": {
+				"pl": "Most Pierre-Laporte",
+				"en": "Pierre Laporte Bridge",
+				"cs": "Most Pierre-Laporte",
+				"is": "Pierre Laporte-brúin",
+				"de": "Pierre-Laporte-Brücke"
+			}
+		}
 	},
 	{
 		"a": "moncton",
@@ -508,6 +567,18 @@
 			[25, "fields", "New Brunswick"], [98, "coast", "New Brunswick"], [111, "coast", "Prince Edward Island"],
 			[170, "fields", "Prince Edward Island"]
 		],
-		"via": [[25, -64.54, 46.22], [70, -64.09, 46.05], [98, -63.82, 46.16], [112, -63.7, 46.25], [135, -63.5, 46.24]]
+		"via": [[25, -64.54, 46.22], [70, -64.09, 46.05], [98, -63.82, 46.16], [112, -63.7, 46.25], [135, -63.5, 46.24]],
+		"bridge": {
+			"from_km": 99,
+			"to_km": 111.9,
+			"name": {
+				"pl": "Most Konfederacji",
+				"en": "Confederation Bridge",
+				"cs": "Most Konfederace",
+				"is": "Samveldisbrúin",
+				"de": "Confederation Bridge"
+			},
+			"kind": "beam"
+		}
 	}
 ]

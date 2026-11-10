@@ -132,7 +132,19 @@
 			[45, "coast", "Makarska rivijera"], [70, "lakes", "Delta Neretve"], [108, "coast", "Pelješac"],
 			[160, "coast", "Dubrovačko primorje"]
 		],
-		"via": [[45, 17.43, 43.05], [70, 17.6, 42.96], [90, 17.45, 42.88], [105, 17.7, 42.84], [120, 17.89, 42.79]]
+		"via": [[45, 17.43, 43.05], [70, 17.6, 42.96], [90, 17.45, 42.88], [105, 17.7, 42.84], [120, 17.89, 42.79]],
+		"bridge": {
+			"from_km": 72,
+			"to_km": 74.4,
+			"name": {
+				"pl": "Most Pelješac",
+				"en": "Pelješac Bridge",
+				"cs": "Pelješacký most",
+				"is": "Pelješac-brúin",
+				"de": "Pelješac-Brücke"
+			},
+			"kind": "stayed"
+		}
 	},
 	{
 		"a": "rijeka",

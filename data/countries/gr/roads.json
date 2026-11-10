@@ -251,6 +251,18 @@
 			[58, 20.88, 39.2], [74, 21, 39.15], [108, 21.17, 38.86], [140, 21.41, 38.62], [172, 21.55, 38.4],
 			[184, 21.77, 38.33], [188, 21.79, 38.3]
 		],
+		"bridge": {
+			"from_km": 184.6,
+			"to_km": 187.48,
+			"name": {
+				"pl": "Most Rio-Antirrio",
+				"en": "Rio-Antirrio Bridge (Charilaos Trikoupis Bridge)",
+				"cs": "Most Rio-Antirrio",
+				"is": "Rio-Antirrio-brúin",
+				"de": "Rio-Antirrio-Brücke"
+			},
+			"kind": "stayed"
+		},
 		"tunnels": [
 			{
 				"from_km": 172,

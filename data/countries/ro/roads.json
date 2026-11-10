@@ -27,7 +27,19 @@
 			[140, "fields", "Bărăgan"], [165, "lakes", "Balta Ialomiței"], [200, "fields", "Dobrogea"],
 			[215, "orchard", "Murfatlar"], [225, "coast", "Litoral"]
 		],
-		"via": [[60, 26.85, 44.43], [145, 27.83, 44.38], [165, 28.03, 44.34], [190, 28.27, 44.25]]
+		"via": [[60, 26.85, 44.43], [145, 27.83, 44.38], [165, 28.03, 44.34], [190, 28.27, 44.25]],
+		"bridge": {
+			"from_km": 162.8,
+			"to_km": 164.44,
+			"name": {
+				"pl": "Most Cernavoda",
+				"en": "Cernavodă Danube Bridge (A2)",
+				"cs": "Most Cernavodă",
+				"is": "Cernavodă-brúin",
+				"de": "Donaubrücke Cernavodă"
+			},
+			"kind": "beam"
+		}
 	},
 	{
 		"a": "ploiesti",
@@ -310,7 +322,18 @@
 		"road": [[25, "DN22B"], [120, "DN22"]],
 		"towns": [["Brăila", 25], ["Smârdan", 33], ["Măcin", 45], ["Luncavița", 70], ["Isaccea", 85]],
 		"zones": [[30, "fields", "Câmpia Brăilei"], [70, "upland", "Munții Măcinului"], [120, "lakes", "Delta Dunării"]],
-		"via": [[25, 27.96, 45.27], [45, 28.13, 45.24], [85, 28.46, 45.27]]
+		"via": [[25, 27.96, 45.27], [45, 28.13, 45.24], [85, 28.46, 45.27]],
+		"bridge": {
+			"from_km": 27.5,
+			"to_km": 29.47,
+			"name": {
+				"pl": "Most Braiła",
+				"en": "Brăila Bridge",
+				"cs": "Most Brăila",
+				"is": "Brăila-brúin",
+				"de": "Brăila-Brücke"
+			}
+		}
 	},
 	{
 		"a": "tulcea",

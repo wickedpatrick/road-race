@@ -242,7 +242,19 @@
 			[430, "foothills", "Maly Khingan"],
 			[720, "taiga", "Priamurye"]
 		],
-		"via": [[63, 128.47, 50.92], [289, 130.08, 49.42], [384, 131.05, 49], [539, 132.92, 48.79]]
+		"via": [[63, 128.47, 50.92], [289, 130.08, 49.42], [384, 131.05, 49], [539, 132.92, 48.79]],
+		"bridge": {
+			"from_km": 706,
+			"to_km": 709.9,
+			"name": {
+				"pl": "Most Chabarowski przez Amur",
+				"en": "Khabarovsk Bridge over the Amur",
+				"cs": "Chabarovský most přes Amur",
+				"is": "Khabarovsk-brúin yfir Amúr",
+				"de": "Chabarowsker Amurbrücke"
+			},
+			"kind": "beam"
+		}
 	},
 	{
 		"a": "khabarovsk",
