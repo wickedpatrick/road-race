@@ -1,0 +1,359 @@
+{
+	"Helsinki": {
+		"pl": "Stolica Finlandii od 1812 roku, założona w 1550 roku przez szwedzkiego króla Gustawa Wazę; morska twierdza Suomenlinna jest na liście UNESCO",
+		"en": "The capital of Finland since 1812, founded in 1550 by the Swedish king Gustav Vasa; the sea fortress of Suomenlinna is on UNESCO's list",
+		"cs": "Hlavní město Finska od roku 1812, založené roku 1550 švédským králem Gustavem Vasou; námořní pevnost Suomenlinna je na seznamu UNESCO",
+		"is": "Höfuðborg Finnlands frá 1812, stofnuð árið 1550 af Gústafi Vasa Svíakonungi; sjávarvirkið Suomenlinna er á heimsminjaskrá UNESCO",
+		"de": "Seit 1812 die Hauptstadt Finnlands, 1550 vom schwedischen König Gustav Wasa gegründet; die Seefestung Suomenlinna gehört zum UNESCO-Welterbe"
+	},
+	"Espoo": {
+		"pl": "Drugie co do wielkości miasto Finlandii; tu leżą kampus Uniwersytetu Aalto w Otaniemi i Park Narodowy Nuuksio z jeziorami i lasami",
+		"en": "Finland's second-largest city; the Aalto University campus in Otaniemi and the Nuuksio National Park, all lakes and forest, are here",
+		"cs": "Druhé největší město Finska; leží tu kampus Aaltovy univerzity v Otaniemi a národní park Nuuksio plný jezer a lesů",
+		"is": "Næststærsta borg Finnlands; hér eru háskólasvæði Aalto-háskólans í Otaniemi og Nuuksio-þjóðgarðurinn með vötnum og skógum",
+		"de": "Finnlands zweitgrößte Stadt; hier liegen der Campus der Aalto-Universität in Otaniemi und der Nationalpark Nuuksio mit Seen und Wäldern"
+	},
+	"Turku": {
+		"pl": "Najstarsze miasto Finlandii i jej stolica do 1812 roku; katedra konsekrowana w 1300 roku to narodowe sanktuarium kraju",
+		"en": "Finland's oldest city and its capital until 1812; the cathedral, consecrated in 1300, is the country's national shrine",
+		"cs": "Nejstarší město Finska a jeho hlavní město do roku 1812; katedrála vysvěcená roku 1300 je národní svatyní země",
+		"is": "Elsta borg Finnlands og höfuðborg þess til 1812; dómkirkjan, vígð árið 1300, er helgidómur þjóðarinnar",
+		"de": "Finnlands älteste Stadt und bis 1812 seine Hauptstadt; der 1300 geweihte Dom ist das Nationalheiligtum des Landes"
+	},
+	"Tampere": {
+		"pl": "Największe śródlądowe miasto krajów nordyckich, między dwoma jeziorami połączonymi bystrzami Tammerkoski; kolebka fińskiego przemysłu z ceglanymi fabrykami",
+		"en": "The largest inland city in the Nordic countries, between two lakes joined by the Tammerkoski rapids; the cradle of Finnish industry, with red-brick mills",
+		"cs": "Největší vnitrozemské město severských zemí mezi dvěma jezery spojenými peřejemi Tammerkoski; kolébka finského průmyslu s cihlovými továrnami",
+		"is": "Stærsta borg Norðurlanda fjarri sjó, milli tveggja vatna sem Tammerkoski-flúðirnar tengja; vagga finnsks iðnaðar með rauðum múrsteinsverksmiðjum",
+		"de": "Die größte Binnenstadt des Nordens, zwischen zwei Seen, die die Stromschnellen Tammerkoski verbinden; die Wiege der finnischen Industrie mit Backsteinfabriken"
+	},
+	"Oulu": {
+		"pl": "Największe miasto północnej Finlandii u ujścia rzeki Oulujoki; dawniej port handlu smołą, dziś miasto technologii i Europejska Stolica Kultury 2026",
+		"en": "The largest city in northern Finland, at the mouth of the Oulujoki; once a tar-trading port, now a technology city and European Capital of Culture 2026",
+		"cs": "Největší město severního Finska u ústí řeky Oulujoki; kdysi přístav obchodující s dehtem, dnes město technologií a Evropské hlavní město kultury 2026",
+		"is": "Stærsta borg Norður-Finnlands við ósa Oulujoki; áður hafnarborg tjöruverslunar, nú tækniborg og menningarborg Evrópu 2026",
+		"de": "Die größte Stadt Nordfinnlands an der Mündung des Oulujoki; einst Hafen des Teerhandels, heute Technologiestadt und Kulturhauptstadt Europas 2026"
+	},
+	"Jyväskylä": {
+		"pl": "Miasto uniwersyteckie wśród jezior, w którym dorastał architekt Alvar Aalto; stoi tu więcej jego budynków niż gdziekolwiek indziej",
+		"en": "A university city among lakes where the architect Alvar Aalto grew up; it has more of his buildings than any other city",
+		"cs": "Univerzitní město mezi jezery, kde vyrůstal architekt Alvar Aalto; stojí tu víc jeho staveb než kdekoli jinde",
+		"is": "Háskólaborg innan um vötn þar sem arkitektinn Alvar Aalto ólst upp; þar eru fleiri byggingar eftir hann en í nokkurri annarri borg",
+		"de": "Eine Universitätsstadt zwischen Seen, in der der Architekt Alvar Aalto aufwuchs; hier stehen mehr seiner Bauten als in jeder anderen Stadt"
+	},
+	"Kuopio": {
+		"pl": "Miasto nad jeziorem Kallavesi, znane z kalakukko: ryby i wieprzowiny zapiekanych w żytnim cieście",
+		"en": "A city on Lake Kallavesi, known for kalakukko: fish and pork baked inside a rye crust",
+		"cs": "Město u jezera Kallavesi, známé kalakukkem: rybami a vepřovým masem zapečenými v žitném těstě",
+		"is": "Borg við Kallavesi-vatn, þekkt fyrir kalakukko: fisk og svínakjöt bakað inni í rúgbrauðsskorpu",
+		"de": "Eine Stadt am Kallavesi-See, bekannt für Kalakukko: Fisch und Schweinefleisch, in einer Roggenkruste gebacken"
+	},
+	"Lahti": {
+		"pl": "Miasto sportów zimowych na grzbiecie Salpausselkä; siedmiokrotnie gościło mistrzostwa świata w narciarstwie klasycznym",
+		"en": "A winter sports city on the Salpausselkä ridge; it has hosted the Nordic World Ski Championships seven times",
+		"cs": "Město zimních sportů na hřbetu Salpausselkä; sedmkrát hostilo mistrovství světa v klasickém lyžování",
+		"is": "Vetraríþróttaborg á Salpausselkä-hryggnum; þar hefur heimsmeistaramótið í norrænum skíðagreinum verið haldið sjö sinnum",
+		"de": "Eine Wintersportstadt auf dem Höhenzug Salpausselkä; siebenmal war sie Gastgeber der Nordischen Skiweltmeisterschaften"
+	},
+	"Pori": {
+		"pl": "Portowe miasto nad rzeką Kokemäenjoki, gospodarz festiwalu Pori Jazz, odbywającego się co lipiec od 1966 roku",
+		"en": "A port town on the Kokemäenjoki, home of the Pori Jazz festival, held every July since 1966",
+		"cs": "Přístavní město na řece Kokemäenjoki, domov festivalu Pori Jazz, který se koná každý červenec od roku 1966",
+		"is": "Hafnarbær við Kokemäenjoki, heimili Pori Jazz-hátíðarinnar sem haldin hefur verið í júlí ár hvert síðan 1966",
+		"de": "Eine Hafenstadt am Kokemäenjoki, Heimat des Festivals Pori Jazz, das seit 1966 jeden Juli stattfindet"
+	},
+	"Joensuu": {
+		"pl": "Stolica Karelii Północnej u ujścia rzeki Pielisjoki, założona w 1848 roku; miasto uniwersyteckie i leśne",
+		"en": "The capital of North Karelia at the mouth of the Pielisjoki, founded in 1848; a university and forestry town",
+		"cs": "Hlavní město Severní Karélie u ústí řeky Pielisjoki, založené roku 1848; univerzitní a lesnické město",
+		"is": "Höfuðstaður Norður-Karelíu við ósa Pielisjoki, stofnaður 1848; háskóla- og skógræktarbær",
+		"de": "Die Hauptstadt Nordkareliens an der Mündung des Pielisjoki, gegründet 1848; eine Universitäts- und Forststadt"
+	},
+	"Lappeenranta": {
+		"pl": "Miasto na południowym brzegu Saimaa, największego jeziora Finlandii; w XVIII-wiecznej twierdzy stoi najstarsza cerkiew w kraju",
+		"en": "A city on the southern shore of Saimaa, Finland's largest lake; its 18th-century fortress holds the country's oldest Orthodox church",
+		"cs": "Město na jižním břehu Saimaa, největšího finského jezera; v pevnosti z 18. století stojí nejstarší pravoslavný kostel v zemi",
+		"is": "Borg á suðurströnd Saimaa, stærsta stöðuvatns Finnlands; í virkinu frá 18. öld stendur elsta rétttrúnaðarkirkja landsins",
+		"de": "Eine Stadt am Südufer des Saimaa, Finnlands größtem See; in der Festung aus dem 18. Jahrhundert steht die älteste orthodoxe Kirche des Landes"
+	},
+	"Hämeenlinna": {
+		"pl": "Miasto, w którym w 1865 roku urodził się kompozytor Jean Sibelius; nad jeziorem Vanajavesi stoi średniowieczny ceglany zamek",
+		"en": "The town where the composer Jean Sibelius was born in 1865; a medieval brick castle stands on Lake Vanajavesi",
+		"cs": "Město, kde se roku 1865 narodil skladatel Jean Sibelius; u jezera Vanajavesi stojí středověký cihlový hrad",
+		"is": "Bærinn þar sem tónskáldið Jean Sibelius fæddist árið 1865; við Vanajavesi-vatn stendur kastali úr múrsteini frá miðöldum",
+		"de": "Die Stadt, in der 1865 der Komponist Jean Sibelius geboren wurde; am Vanajavesi steht eine mittelalterliche Backsteinburg"
+	},
+	"Vaasa": {
+		"pl": "Dwujęzyczne miasto nad Zatoką Botnicką; pobliski archipelag Kvarken wynurza się z morza o około 8 mm rocznie i jest na liście UNESCO",
+		"en": "A bilingual city on the Gulf of Bothnia; the nearby Kvarken archipelago rises from the sea by about 8 mm a year and is on UNESCO's list",
+		"cs": "Dvojjazyčné město u Botnického zálivu; nedaleké souostroví Kvarken se zvedá z moře asi o 8 mm ročně a je na seznamu UNESCO",
+		"is": "Tvítyngd borg við Helsingjabotn; Kvarken-skerjagarðurinn í grenndinni rís úr sjó um 8 mm á ári og er á heimsminjaskrá UNESCO",
+		"de": "Eine zweisprachige Stadt am Bottnischen Meerbusen; der nahe Kvarken-Schärengarten hebt sich um etwa 8 mm im Jahr aus dem Meer und ist UNESCO-Welterbe"
+	},
+	"Seinäjoki": {
+		"pl": "Centrum Ostrobotni Południowej; Alvar Aalto zaprojektował tu całe centrum administracyjne z kościołem, ratuszem i biblioteką",
+		"en": "The centre of South Ostrobothnia; Alvar Aalto designed its whole civic centre, with a church, town hall and library",
+		"cs": "Středisko Jižní Pohjanmaa; Alvar Aalto tu navrhl celé správní centrum s kostelem, radnicí a knihovnou",
+		"is": "Miðstöð héraðsins Etelä-Pohjanmaa; Alvar Aalto hannaði þar allan stjórnsýslukjarnann með kirkju, ráðhúsi og bókasafni",
+		"de": "Das Zentrum Südösterbottens; Alvar Aalto entwarf hier das ganze Verwaltungszentrum mit Kirche, Rathaus und Bibliothek"
+	},
+	"Rovaniemi": {
+		"pl": "Stolica Laponii na kole podbiegunowym; spalona niemal doszczętnie w 1944 roku, odbudowana według planu Alvara Aalto z ulicami w kształcie rogów renifera",
+		"en": "The capital of Lapland on the Arctic Circle; almost entirely burnt in 1944 and rebuilt to Alvar Aalto's plan, its main streets shaped like reindeer antlers",
+		"cs": "Hlavní město Laponska na severním polárním kruhu; roku 1944 téměř celé vyhořelo a bylo obnoveno podle plánu Alvara Aalta s ulicemi ve tvaru sobího paroží",
+		"is": "Höfuðstaður Lapplands á heimskautsbaugnum; brann nær allur árið 1944 og var endurreistur eftir skipulagi Alvars Aalto með aðalgötur í laginu eins og hreindýrshorn",
+		"de": "Die Hauptstadt Lapplands am Polarkreis; 1944 fast ganz niedergebrannt und nach Alvar Aaltos Plan wieder aufgebaut, die Hauptstraßen wie ein Rentiergeweih"
+	},
+	"Kajaani": {
+		"pl": "Stolica Kainuu; Elias Lönnrot, twórca eposu Kalevala, pracował tu jako lekarz okręgowy",
+		"en": "The capital of Kainuu; Elias Lönnrot, who compiled the Kalevala epic, worked here as the district doctor",
+		"cs": "Hlavní město Kainuu; Elias Lönnrot, sestavitel eposu Kalevala, tu působil jako okresní lékař",
+		"is": "Höfuðstaður Kainuu; Elias Lönnrot, sem tók saman Kalevala-kvæðabálkinn, starfaði hér sem héraðslæknir",
+		"de": "Die Hauptstadt Kainuus; Elias Lönnrot, der das Epos Kalevala zusammenstellte, war hier Bezirksarzt"
+	},
+	"Kotka": {
+		"pl": "Portowe miasto na wyspach u ujścia rzeki Kymijoki, jeden z najważniejszych portów eksportowych Finlandii",
+		"en": "A port city on islands at the mouth of the Kymijoki, one of Finland's main export ports",
+		"cs": "Přístavní město na ostrovech u ústí řeky Kymijoki, jeden z hlavních vývozních přístavů Finska",
+		"is": "Hafnarborg á eyjum við ósa Kymijoki, ein helsta útflutningshöfn Finnlands",
+		"de": "Eine Hafenstadt auf Inseln an der Mündung des Kymijoki, einer der wichtigsten Exporthäfen Finnlands"
+	},
+	"Savonlinna": {
+		"pl": "Miasto na wyspach jeziora Saimaa; festiwal operowy na dziedzińcu zamku Olavinlinna odbył się po raz pierwszy w 1912 roku",
+		"en": "A town on islands in Lake Saimaa; the opera festival in the courtyard of Olavinlinna Castle was first held in 1912",
+		"cs": "Město na ostrovech jezera Saimaa; operní festival na nádvoří hradu Olavinlinna se poprvé konal roku 1912",
+		"is": "Bær á eyjum í Saimaa-vatni; óperuhátíðin í kastalagarði Olavinlinna var fyrst haldin árið 1912",
+		"de": "Eine Stadt auf Inseln im Saimaa-See; die Opernfestspiele im Hof der Burg Olavinlinna fanden erstmals 1912 statt"
+	},
+	"Kemi": {
+		"pl": "Portowe miasto przemysłu papierniczego u ujścia Kemijoki, najdłuższej rzeki Finlandii; co zimę buduje się tu śnieżny zamek",
+		"en": "A port and paper-mill town at the mouth of the Kemijoki, Finland's longest river; a snow castle is built here every winter",
+		"cs": "Přístavní město papírenského průmyslu u ústí Kemijoki, nejdelší finské řeky; každou zimu se tu staví sněhový hrad",
+		"is": "Hafnar- og pappírsiðnaðarbær við ósa Kemijoki, lengstu ár Finnlands; snjókastali er reistur hér á hverjum vetri",
+		"de": "Eine Hafen- und Papierstadt an der Mündung des Kemijoki, des längsten Flusses Finnlands; jeden Winter wird hier eine Schneeburg gebaut"
+	},
+	"Inari": {
+		"pl": "Wieś nad jeziorem Inari, ośrodek kultury Saamów z parlamentem Sajos i muzeum Siida; gmina Inari jest największa w Finlandii",
+		"en": "A village on Lake Inari, a centre of Sámi culture with the Sajos parliament building and the Siida museum; Inari is Finland's largest municipality",
+		"cs": "Vesnice u jezera Inari, středisko sámské kultury s budovou parlamentu Sajos a muzeem Siida; obec Inari je největší ve Finsku",
+		"is": "Þorp við Inari-vatn, miðstöð samískrar menningar með þinghúsinu Sajos og Siida-safninu; Inari er stærsta sveitarfélag Finnlands",
+		"de": "Ein Dorf am Inarisee, ein Zentrum der samischen Kultur mit dem Parlamentsgebäude Sajos und dem Siida-Museum; Inari ist Finnlands größte Gemeinde"
+	},
+	"Porvoo": {
+		"pl": "Drugie najstarsze miasto Finlandii z czerwonymi spichrzami nad rzeką; w 1809 roku obradował tu sejm w Porvoo",
+		"en": "Finland's second-oldest town, with red storehouses along its river; the Diet of Porvoo met here in 1809",
+		"cs": "Druhé nejstarší město Finska s červenými skladišti u řeky; roku 1809 tu zasedal sněm v Porvoo",
+		"is": "Næstelsti bær Finnlands með rauðum pakkhúsum við ána; Porvoo-þingið kom hér saman árið 1809",
+		"de": "Finnlands zweitälteste Stadt mit roten Speichern am Fluss; 1809 tagte hier der Landtag von Porvoo"
+	},
+	"Loviisa": {
+		"pl": "Założona w 1745 roku i nazwana na cześć szwedzkiej królowej Luizy Ulryki; zatoki strzeże morska twierdza Svartholm",
+		"en": "Founded in 1745 and named after the Swedish queen Louisa Ulrika; the sea fortress of Svartholm guards its bay",
+		"cs": "Založena roku 1745 a pojmenována po švédské královně Luise Ulrice; zátoku střeží námořní pevnost Svartholm",
+		"is": "Stofnaður árið 1745 og nefndur eftir Lovísu Ulriku Svíadrottningu; sjávarvirkið Svartholm gætir flóans",
+		"de": "1745 gegründet und nach der schwedischen Königin Luise Ulrike benannt; die Seefestung Svartholm bewacht die Bucht"
+	},
+	"Hamina": {
+		"pl": "Miasto o rzadkim okrągłym planie: ulice rozchodzą się promieniście od rynku w środku ośmiobocznej twierdzy",
+		"en": "A town with a rare round plan: its streets radiate from a square in the middle of an octagonal fortress",
+		"cs": "Město se vzácným kruhovým půdorysem: ulice se paprskovitě rozbíhají od náměstí uprostřed osmiboké pevnosti",
+		"is": "Bær með sjaldgæft hringlaga skipulag: göturnar liggja eins og geislar út frá torgi í miðju átthyrnds virkis",
+		"de": "Eine Stadt mit seltenem runden Grundriss: die Straßen laufen strahlenförmig von einem Platz in der Mitte einer achteckigen Festung aus"
+	},
+	"Imatra": {
+		"pl": "Bystrza Imatrankoski, dziś zamknięte przez elektrownię, w letnie wieczory znów spływają dla turystów",
+		"en": "The Imatrankoski rapids, now harnessed by a power station, are let loose for visitors on summer evenings",
+		"cs": "Peřeje Imatrankoski, dnes zkrocené elektrárnou, se v letních večerech znovu pouštějí pro návštěvníky",
+		"is": "Imatrankoski-flúðirnar, sem nú knýja virkjun, eru látnar renna fyrir ferðamenn á sumarkvöldum",
+		"de": "Die Stromschnellen Imatrankoski, heute von einem Kraftwerk gebändigt, werden an Sommerabenden für Besucher freigegeben"
+	},
+	"Punkaharju": {
+		"pl": "Wąski grzbiet polodowcowy porośnięty sosnami między jeziorami, jeden z krajobrazów narodowych Finlandii; jest tu muzeum lasu Lusto",
+		"en": "A narrow pine-covered glacial ridge between lakes, one of Finland's national landscapes; Lusto, the Finnish Forest Museum, is here",
+		"cs": "Úzký ledovcový hřbet porostlý borovicemi mezi jezery, jedna z národních krajin Finska; je tu lesnické muzeum Lusto",
+		"is": "Mjór jökulruðningshryggur vaxinn furu milli vatna, eitt af þjóðarlandslögum Finnlands; hér er Lusto, finnska skógasafnið",
+		"de": "Ein schmaler, kiefernbestandener Gletscherrücken zwischen Seen, eine der Nationallandschaften Finnlands; hier ist Lusto, das Finnische Forstmuseum"
+	},
+	"Kerimäki": {
+		"pl": "Stoi tu największy drewniany kościół świata, ukończony w 1847 roku, z miejscami dla około 3000 osób",
+		"en": "Home of the world's largest wooden church, completed in 1847, with seats for about 3,000 people",
+		"cs": "Stojí tu největší dřevěný kostel na světě, dokončený roku 1847, s místy asi pro 3000 lidí",
+		"is": "Hér stendur stærsta timburkirkja heims, fullgerð árið 1847, með sæti fyrir um 3000 manns",
+		"de": "Hier steht die größte Holzkirche der Welt, 1847 vollendet, mit Plätzen für etwa 3000 Menschen"
+	},
+	"Rauma": {
+		"pl": "Stare Rauma, dzielnica około 600 drewnianych domów, jest na liście UNESCO; miasto słynie też z koronek klockowych",
+		"en": "Old Rauma, a quarter of some 600 wooden buildings, is on UNESCO's list; the town is also known for its bobbin lace",
+		"cs": "Stará Rauma, čtvrť asi 600 dřevěných domů, je na seznamu UNESCO; město je známé i paličkovanou krajkou",
+		"is": "Gamla Rauma, hverfi um 600 timburhúsa, er á heimsminjaskrá UNESCO; bærinn er einnig þekktur fyrir knipplinga",
+		"de": "Alt-Rauma, ein Viertel aus rund 600 Holzhäusern, ist UNESCO-Welterbe; die Stadt ist auch für ihre Klöppelspitzen bekannt"
+	},
+	"Nokia": {
+		"pl": "Od tego miasta wzięła nazwę firma Nokia, która w XIX wieku prowadziła tu papiernię nad bystrzem Nokianvirta",
+		"en": "The Nokia company took its name from this town, where it ran a paper mill on the Nokianvirta rapids in the 19th century",
+		"cs": "Podle tohoto města dostala jméno firma Nokia, která tu v 19. století provozovala papírnu na peřejích Nokianvirta",
+		"is": "Fyrirtækið Nokia dregur nafn sitt af þessum bæ, þar sem það rak pappírsverksmiðju við Nokianvirta-flúðirnar á 19. öld",
+		"de": "Die Firma Nokia ist nach dieser Stadt benannt, wo sie im 19. Jahrhundert eine Papierfabrik an den Stromschnellen Nokianvirta betrieb"
+	},
+	"Sodankylä": {
+		"pl": "Co czerwiec odbywa się tu Festiwal Filmowy Słońca Północy, gdy słońce w ogóle nie zachodzi",
+		"en": "The Midnight Sun Film Festival is held here every June, when the sun does not set at all",
+		"cs": "Každý červen se tu koná filmový festival Půlnočního slunce, kdy slunce vůbec nezapadá",
+		"is": "Kvikmyndahátíð miðnætursólarinnar er haldin hér í júní ár hvert, þegar sólin sest alls ekki",
+		"de": "Jeden Juni findet hier das Mitternachtssonnen-Filmfestival statt, wenn die Sonne gar nicht untergeht"
+	},
+	"Vuotso": {
+		"pl": "Najdalej na południe wysunięta saamska wieś w Finlandii; w okolicy wypasa się renifery",
+		"en": "The southernmost Sámi village in Finland; reindeer are herded all around",
+		"cs": "Nejjižnější sámská vesnice ve Finsku; v okolí se pasou sobi",
+		"is": "Syðsta samíska þorpið í Finnlandi; hreindýr eru höfð á beit allt um kring",
+		"de": "Das südlichste samische Dorf Finnlands; ringsum werden Rentiere gehalten"
+	},
+	"Saariselkä": {
+		"pl": "Ośrodek wśród łagodnych wzgórz (tunturi) na skraju Parku Narodowego Urho Kekkonena, jednego z największych w Finlandii",
+		"en": "A resort among rounded fells at the edge of the Urho Kekkonen National Park, one of the largest in Finland",
+		"cs": "Středisko mezi oblými horami (tunturi) na okraji národního parku Urho Kekkonena, jednoho z největších ve Finsku",
+		"is": "Ferðamannastaður meðal ávalra fella við jaðar Urho Kekkonen-þjóðgarðsins, eins hins stærsta í Finnlandi",
+		"de": "Ein Ferienort zwischen sanften Fjells am Rand des Urho-Kekkonen-Nationalparks, eines der größten Finnlands"
+	},
+	"Ivalo": {
+		"pl": "Największa miejscowość gminy Inari, z najdalej na północ położonym lotniskiem Finlandii",
+		"en": "The largest village in the municipality of Inari, with Finland's northernmost airport",
+		"cs": "Největší sídlo obce Inari s nejsevernějším letištěm Finska",
+		"is": "Stærsta þorpið í Inari-sveitarfélaginu, með nyrsta flugvöll Finnlands",
+		"de": "Der größte Ort der Gemeinde Inari, mit dem nördlichsten Flughafen Finnlands"
+	},
+	"Äänekoski": {
+		"pl": "Działa tu biofabryka celulozy otwarta w 2017 roku, jeden z największych zakładów przetwarzania drewna na świecie",
+		"en": "A bioproduct mill opened here in 2017 is one of the largest wood-processing plants in the world",
+		"cs": "Stojí tu biorafinerie celulózy otevřená roku 2017, jeden z největších závodů na zpracování dřeva na světě",
+		"is": "Hér er lífefnaverksmiðja sem opnaði árið 2017, ein stærsta trjávinnslustöð í heimi",
+		"de": "Ein 2017 eröffnetes Bioproduktwerk hier ist eine der größten Holzverarbeitungsanlagen der Welt"
+	},
+	"Kärsämäki": {
+		"pl": "Kościół gontowy z 2004 roku zbudowano ręcznie metodami z XVIII wieku",
+		"en": "Its shingle church of 2004 was built by hand using 18th-century methods",
+		"cs": "Šindelový kostel z roku 2004 byl postaven ručně metodami z 18. století",
+		"is": "Kirkjan frá 2004, klædd viðarspæni, var smíðuð í höndunum með aðferðum frá 18. öld",
+		"de": "Die Schindelkirche von 2004 wurde von Hand nach Methoden des 18. Jahrhunderts gebaut"
+	},
+	"Keminmaa": {
+		"pl": "Kamienny kościół z XVI wieku należy do najstarszych w północnej Finlandii",
+		"en": "Its 16th-century stone church is one of the oldest in northern Finland",
+		"cs": "Kamenný kostel z 16. století patří k nejstarším v severním Finsku",
+		"is": "Steinkirkjan frá 16. öld er ein sú elsta í Norður-Finnlandi",
+		"de": "Die Steinkirche aus dem 16. Jahrhundert gehört zu den ältesten in Nordfinnland"
+	},
+	"Kokkola": {
+		"pl": "Miasto założone w 1620 roku; w dzielnicy Neristan zachowały się drewniane domy z XVIII i XIX wieku",
+		"en": "Founded in 1620; the Neristan quarter keeps its wooden houses of the 18th and 19th centuries",
+		"cs": "Město založené roku 1620; ve čtvrti Neristan se zachovaly dřevěné domy z 18. a 19. století",
+		"is": "Stofnaður árið 1620; í Neristan-hverfinu standa enn timburhús frá 18. og 19. öld",
+		"de": "1620 gegründet; im Viertel Neristan stehen noch Holzhäuser aus dem 18. und 19. Jahrhundert"
+	},
+	"Raahe": {
+		"pl": "Miasto założone w 1649 roku przez hrabiego Pera Brahe; drewniane stare miasto i huta stali",
+		"en": "Founded in 1649 by Count Per Brahe; an old wooden town and a steelworks",
+		"cs": "Město založené roku 1649 hrabětem Perem Brahem; dřevěné staré město a ocelárna",
+		"is": "Stofnaður árið 1649 af Per Brahe greifa; gamall timburbær og stálver",
+		"de": "1649 von Graf Per Brahe gegründet; eine hölzerne Altstadt und ein Stahlwerk"
+	},
+	"Kalajoki": {
+		"pl": "Znana z wydm i długich piaszczystych plaż nad Zatoką Botnicką",
+		"en": "Known for its sand dunes and long beaches on the Gulf of Bothnia",
+		"cs": "Známá písečnými dunami a dlouhými plážemi u Botnického zálivu",
+		"is": "Þekkt fyrir sandöldur og langar strendur við Helsingjabotn",
+		"de": "Bekannt für ihre Sanddünen und langen Strände am Bottnischen Meerbusen"
+	},
+	"Uusikaarlepyy": {
+		"pl": "Miasto w większości szwedzkojęzyczne; w pobliżu urodził się w 1818 roku pisarz Zachris Topelius",
+		"en": "A mostly Swedish-speaking town; the writer Zachris Topelius was born nearby in 1818",
+		"cs": "Převážně švédsky mluvící město; nedaleko se roku 1818 narodil spisovatel Zachris Topelius",
+		"is": "Bær þar sem flestir tala sænsku; rithöfundurinn Zachris Topelius fæddist í grenndinni árið 1818",
+		"de": "Eine überwiegend schwedischsprachige Stadt; in der Nähe wurde 1818 der Schriftsteller Zachris Topelius geboren"
+	},
+	"Närpiö": {
+		"pl": "Jedna z najbardziej szwedzkojęzycznych gmin Finlandii, znana z pomidorów ze szklarni i rzędów stajni kościelnych",
+		"en": "One of Finland's most Swedish-speaking municipalities, known for greenhouse tomatoes and its rows of church stables",
+		"cs": "Jedna z nejšvédštějších obcí Finska, známá rajčaty ze skleníků a řadami kostelních stájí",
+		"is": "Eitt þeirra sveitarfélaga Finnlands þar sem flestir tala sænsku, þekkt fyrir tómata úr gróðurhúsum og raðir kirkjuhesthúsa",
+		"de": "Eine der am stärksten schwedischsprachigen Gemeinden Finnlands, bekannt für Gewächshaustomaten und ihre Reihen von Kirchenställen"
+	},
+	"Hämeenkyrö": {
+		"pl": "Tu urodził się F. E. Sillanpää, jedyny fiński laureat literackiej Nagrody Nobla (1939)",
+		"en": "Birthplace of F. E. Sillanpää, Finland's only Nobel laureate in literature (1939)",
+		"cs": "Rodiště F. E. Sillanpää, jediného finského nositele Nobelovy ceny za literaturu (1939)",
+		"is": "Fæðingarstaður F. E. Sillanpää, eina Finnans sem hlotið hefur Nóbelsverðlaun í bókmenntum (1939)",
+		"de": "Geburtsort von F. E. Sillanpää, Finnlands einzigem Literaturnobelpreisträger (1939)"
+	},
+	"Järvenpää": {
+		"pl": "Nad jeziorem Tuusula stoi Ainola, dom Jeana Sibeliusa, w którym kompozytor mieszkał ponad pół wieku",
+		"en": "Ainola, Jean Sibelius's home by Lake Tuusula, where the composer lived for over half a century, is here",
+		"cs": "U jezera Tuusula stojí Ainola, dům Jeana Sibelia, kde skladatel žil přes půl století",
+		"is": "Hér við Tuusula-vatn er Ainola, heimili Jeans Sibelius, þar sem tónskáldið bjó í meira en hálfa öld",
+		"de": "Hier am Tuusulasee steht Ainola, das Haus von Jean Sibelius, in dem der Komponist über ein halbes Jahrhundert lebte"
+	},
+	"Hyvinkää": {
+		"pl": "Mieści się tu Fińskie Muzeum Kolejnictwa",
+		"en": "Home of the Finnish Railway Museum",
+		"cs": "Sídlí tu Finské železniční muzeum",
+		"is": "Hér er finnska járnbrautasafnið",
+		"de": "Hier ist das Finnische Eisenbahnmuseum"
+	},
+	"Riihimäki": {
+		"pl": "Miasto szkła z Fińskim Muzeum Szkła",
+		"en": "A glassmaking town with the Finnish Glass Museum",
+		"cs": "Sklářské město s Finským muzeem skla",
+		"is": "Glergerðarbær með finnska glersafninu",
+		"de": "Eine Glasstadt mit dem Finnischen Glasmuseum"
+	},
+	"Iisalmi": {
+		"pl": "Miasto nad jeziorami, gdzie od 1878 roku działa browar Olvi",
+		"en": "A lakeside town, home since 1878 of the Olvi brewery",
+		"cs": "Město u jezer, kde od roku 1878 vaří pivovar Olvi",
+		"is": "Bær við vötn þar sem Olvi-brugghúsið hefur starfað frá 1878",
+		"de": "Eine Stadt an Seen, seit 1878 Sitz der Brauerei Olvi"
+	},
+	"Lapinlahti": {
+		"pl": "Tu w 1861 roku urodził się pisarz Juhani Aho",
+		"en": "The writer Juhani Aho was born here in 1861",
+		"cs": "Roku 1861 se tu narodil spisovatel Juhani Aho",
+		"is": "Rithöfundurinn Juhani Aho fæddist hér árið 1861",
+		"de": "Hier wurde 1861 der Schriftsteller Juhani Aho geboren"
+	},
+	"Outokumpu": {
+		"pl": "Przez większość XX wieku wydobywano tu miedź; kopalnia jest dziś muzeum",
+		"en": "Copper was mined here for most of the 20th century; the old mine is now a museum",
+		"cs": "Po většinu 20. století se tu těžila měď; starý důl je dnes muzeem",
+		"is": "Kopar var unninn hér mestalla 20. öldina; gamla náman er nú safn",
+		"de": "Fast das ganze 20. Jahrhundert wurde hier Kupfer abgebaut; die alte Grube ist heute ein Museum"
+	},
+	"Liminka": {
+		"pl": "Zatoka Liminka to jeden z najważniejszych obszarów lęgowych ptaków wodnych w Finlandii",
+		"en": "Liminka Bay is one of the most important wetlands for birds in Finland",
+		"cs": "Zátoka Liminka patří k nejvýznamnějším ptačím mokřadům Finska",
+		"is": "Liminka-flói er eitt mikilvægasta votlendi fugla í Finnlandi",
+		"de": "Die Bucht von Liminka ist eines der wichtigsten Vogelfeuchtgebiete Finnlands"
+	},
+	"Kouvola": {
+		"pl": "Jeden z głównych węzłów kolejowych Finlandii, nad rzeką Kymijoki",
+		"en": "One of Finland's main railway junctions, on the Kymijoki",
+		"cs": "Jeden z hlavních železničních uzlů Finska, na řece Kymijoki",
+		"is": "Ein helsta járnbrautamiðstöð Finnlands, við Kymijoki",
+		"de": "Einer der wichtigsten Eisenbahnknoten Finnlands, am Kymijoki"
+	},
+	"Salo": {
+		"pl": "Miasto targowe nad rzeką Salonjoki; przez dziesięciolecia produkowano tu telefony komórkowe Nokii",
+		"en": "A market town on the Salo river; for decades Nokia mobile phones were made here",
+		"cs": "Trhové město na řece Salonjoki; po desetiletí se tu vyráběly mobilní telefony Nokia",
+		"is": "Kaupstaður við Salo-ána; áratugum saman voru Nokia-farsímar framleiddir hér",
+		"de": "Eine Marktstadt am Fluss Salo; jahrzehntelang wurden hier Nokia-Handys gebaut"
+	},
+	"Ähtäri": {
+		"pl": "Ogród zoologiczny w Ähtäri pokazuje zwierzęta północy, takie jak niedźwiedzie, rysie i rosomaki",
+		"en": "Ähtäri Zoo shows animals of the north such as bears, lynxes and wolverines",
+		"cs": "Zoo v Ähtäri chová severská zvířata, jako jsou medvědi, rysi a rosomáci",
+		"is": "Dýragarðurinn í Ähtäri sýnir dýr norðursins, svo sem birni, gaupur og jarfa",
+		"de": "Der Zoo von Ähtäri zeigt Tiere des Nordens wie Bären, Luchse und Vielfraße"
+	}
+}

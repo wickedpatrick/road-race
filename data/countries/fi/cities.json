@@ -1,0 +1,35 @@
+{
+	"helsinki": {"name": "Helsinki", "lat": 60.17, "lon": 24.94, "pop": 675, "region": "Uusimaa", "exonym": {"cs": "Helsinky"}},
+	"espoo": {"name": "Espoo", "lat": 60.21, "lon": 24.66, "pop": 320, "region": "Uusimaa"},
+	"tampere": {"name": "Tampere", "lat": 61.5, "lon": 23.76, "pop": 260, "region": "Pirkanmaa"},
+	"oulu": {"name": "Oulu", "lat": 65.01, "lon": 25.47, "pop": 216, "region": "Pohjois-Pohjanmaa"},
+	"turku": {"name": "Turku", "lat": 60.45, "lon": 22.27, "pop": 204, "region": "Varsinais-Suomi"},
+	"jyvaskyla": {"name": "Jyväskylä", "lat": 62.24, "lon": 25.75, "pop": 149, "region": "Keski-Suomi"},
+	"kuopio": {"name": "Kuopio", "lat": 62.89, "lon": 27.68, "pop": 125, "region": "Pohjois-Savo"},
+	"lahti": {"name": "Lahti", "lat": 60.98, "lon": 25.66, "pop": 121, "region": "Päijät-Häme"},
+	"pori": {"name": "Pori", "lat": 61.48, "lon": 21.8, "pop": 83, "region": "Satakunta"},
+	"joensuu": {"name": "Joensuu", "lat": 62.6, "lon": 29.76, "pop": 78, "region": "Pohjois-Karjala"},
+	"lappeenranta": {"name": "Lappeenranta", "lat": 61.06, "lon": 28.19, "pop": 73, "region": "Etelä-Karjala"},
+	"hameenlinna": {"name": "Hämeenlinna", "lat": 61, "lon": 24.46, "pop": 68, "region": "Kanta-Häme"},
+	"vaasa": {"name": "Vaasa", "lat": 63.1, "lon": 21.62, "pop": 68, "region": "Pohjanmaa"},
+	"seinajoki": {"name": "Seinäjoki", "lat": 62.79, "lon": 22.84, "pop": 66, "region": "Etelä-Pohjanmaa"},
+	"rovaniemi": {"name": "Rovaniemi", "lat": 66.5, "lon": 25.73, "pop": 65, "region": "Lappi"},
+	"kotka": {"name": "Kotka", "lat": 60.47, "lon": 26.95, "pop": 51, "region": "Kymenlaakso"},
+	"kajaani": {"name": "Kajaani", "lat": 64.23, "lon": 27.73, "pop": 36, "region": "Kainuu"},
+	"savonlinna": {"name": "Savonlinna", "lat": 61.87, "lon": 28.88, "pop": 31, "region": "Etelä-Savo"},
+	"kemi": {"name": "Kemi", "lat": 65.74, "lon": 24.56, "pop": 19, "region": "Lappi"},
+	"inari": {
+		"name": "Inari",
+		"lat": 68.91,
+		"lon": 27.03,
+		"pop": 1,
+		"region": "Lappi",
+		"note": {
+			"pl": "wieś nad jeziorem Inari, ośrodek kultury Saamów",
+			"en": "a village on Lake Inari, a centre of Sámi culture",
+			"cs": "vesnice u jezera Inari, středisko sámské kultury",
+			"is": "þorp við Inari-vatn, miðstöð samískrar menningar",
+			"de": "ein Dorf am Inarisee, ein Zentrum der samischen Kultur"
+		}
+	}
+}

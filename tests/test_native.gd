@@ -54,6 +54,19 @@ func run(t) -> void:
 	var rp := Pen.new()
 	Scenery.draw_item(rp, {"type": "region", "text": "Lamía", "w": 4.0, "h": 4.0, "lat": 10.0}, b, 12.0, pal, "summer", font)
 	t.check(rn.n > rp.n, "a region board with a native name has a second line")
+	# the name itself on top: {"under": ...} puts the other name below it (Helsinki over Helsingfors)
+	GameData.country().native["Lamía"] = {"under": "Lamia"}
+	t.check(Geo.native("Lamía") == "" and Geo.under("Lamía") == "Lamia", "an under name is no native spelling on top")
+	t.check(Geo.sign_lines("Lamía") == ["Lamía", "Lamia"] and Geo.sign_lines("Athína") == ["Αθήνα", "Athína"] and Geo.sign_lines("Sparti").is_empty(),
+		"sign lines: the name over its under name, the native spelling over the name, one line without either")
+	var un := Pen.new()
+	Scenery.draw_item(un, {"type": "town_sign", "text": "Lamía", "v": 0.3, "c": 1, "w": 4.0, "h": 4.0, "lat": 10.0}, b, 12.0, pal, "summer", font)
+	t.check(un.n == pen.n, "a sign with an under name has two lines of name too")
+	var bu := Pen.new()
+	Scenery.draw_item(bu, {"type": "board", "road": "A1", "blue": false, "lines": [["Lamía", 40], ["Lamía", 12]], "w": 4.0, "h": 4.0, "lat": 10.0}, b, 12.0, pal, "summer", font)
+	t.check(bu.n > bp.n, "a board row with an under name has a second line")
+	t.check(Scenery.sign_texts(Route.build("aa", "bb")).has("Lamia"), "the under names are warmed with the signs' texts")
+	GameData.country().native["Lamía"] = ""
 	GameData.current = "pl"
 	t.check(GameData.country("pl").native == {}, "a country without native.json has no native names")
 	t.check(Geo.native("Athína") == "", "nothing native in Poland")

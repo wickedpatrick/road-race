@@ -210,6 +210,12 @@
 			"name": {"pl": "Szwecja", "en": "Sweden", "cs": "Švédsko", "is": "Svíþjóð", "de": "Schweden"},
 			"neighbours": ["no", "fi", "dk"],
 			"favorite_neighbour": "no"
+		},
+		{
+			"code": "fi",
+			"name": {"pl": "Finlandia", "en": "Finland", "cs": "Finsko", "is": "Finnland", "de": "Finnland"},
+			"neighbours": ["se", "no", "ru", "ee"],
+			"favorite_neighbour": "ee"
 		}
 	]
 }
