@@ -21,6 +21,7 @@
 	"region_label": {"pl": "region", "en": "region", "cs": "region", "is": "hérað", "de": "Region"},
 	"start": ["paris", "orleans"],
 	"express_prefixes": ["A"],
+	"traffic": 0.3,
 	"limits": {"express": 130, "road": 80, "city": 50, "town_on_express": 90, "town": 50},
 	"signs": {"town": "#ffffff", "town_text": "#111111", "board": "#0a7a46", "board_motorway": "#1f4f9e"},
 	"plates": [

@@ -28,25 +28,22 @@
 		"b": "strasbourg",
 		"km": 350,
 		"road": "A4",
-		"towns": [["Sainte-Menehould", 80], ["Verdun", 118], ["Metz", 188], ["Phalsbourg", 305], ["Saverne", 318]],
+		"towns": [["Metz", 188], ["Saverne", 318]],
 		"zones": [
-			[100, "fields", "Grand Est"], [135, "forest", "Grand Est"], [290, "fields", "Grand Est"],
-			[325, "forest", "Grand Est"], [350, "fields", "Grand Est"]
+			[100, "fields", "Grand Est"], [135, "fields", "Grand Est"], [290, "fields", "Grand Est"],
+			[325, "fields", "Grand Est"], [350, "fields", "Grand Est"]
 		],
-		"via": [[80, 4.9, 49.09], [118, 5.38, 49.16], [188, 6.18, 49.12], [318, 7.36, 48.74]]
+		"via": [[188, 6.18, 49.12], [318, 7.36, 48.74]]
 	},
 	{
 		"a": "strasbourg",
 		"b": "dijon",
 		"km": 335,
 		"road": [[110, "A35"], [295, "A36"], [335, "A39"]],
-		"towns": [
-			["Sélestat", 48], ["Colmar", 70], ["Mulhouse", 110], ["Belfort", 152], ["Montbéliard", 168],
-			["Besançon", 245], ["Dole", 290]
-		],
+		"towns": [["Colmar", 70], ["Mulhouse", 110], ["Belfort", 152], ["Besançon", 245], ["Dole", 290]],
 		"zones": [
 			[125, "fields", "Grand Est"],
-			[255, "forest", "Bourgogne-Franche-Comté"],
+			[255, "fields", "Bourgogne-Franche-Comté"],
 			[335, "fields", "Bourgogne-Franche-Comté"]
 		],
 		"via": [[70, 7.36, 48.08], [110, 7.34, 47.75], [152, 6.86, 47.64], [245, 6.02, 47.24], [290, 5.49, 47.09]]
@@ -73,7 +70,7 @@
 		"b": "bordeaux",
 		"km": 345,
 		"road": "A10",
-		"towns": [["Châtellerault", 70], ["Poitiers", 102], ["Niort", 175], ["Saintes", 245]],
+		"towns": [["Poitiers", 102], ["Niort", 175], ["Saintes", 245]],
 		"zones": [
 			[48, "fields", "Centre-Val de Loire"],
 			[230, "fields", "Nouvelle-Aquitaine"],
@@ -162,14 +159,14 @@
 		"b": "dijon",
 		"km": 315,
 		"road": [[275, "A6"], [315, "A38"]],
-		"towns": [["Nemours", 78], ["Auxerre", 165], ["Avallon", 210], ["Pouilly-en-Auxois", 272]],
+		"towns": [["Auxerre", 165], ["Avallon", 210], ["Pouilly-en-Auxois", 272]],
 		"zones": [
 			[25, "industrial", "Île-de-France"],
 			[100, "fields", "Île-de-France"],
 			[230, "fields", "Bourgogne-Franche-Comté"],
-			[315, "upland", "Bourgogne-Franche-Comté"]
+			[315, "fields", "Bourgogne-Franche-Comté"]
 		],
-		"via": [[78, 2.69, 48.27], [165, 3.57, 47.8], [210, 3.91, 47.49], [272, 4.55, 47.26]]
+		"via": [[165, 3.57, 47.8], [210, 3.91, 47.49], [272, 4.55, 47.26]]
 	},
 	{
 		"a": "dijon",
