@@ -1086,7 +1086,7 @@ func _draw_night_sky() -> void:
 	_b.draw_circle(mc + Vector2(7, -4), 15.0, NIGHT_SKY_TOP) # a crescent
 
 const NIGHT_NEAR := 0.67 ## at night even the ground right by the car is this far in the dark (a third as bright as by day)
-const NIGHT_BEAM := 0.15 ## at night the player's headlights light the way up to this share of the way from the horizon to the car
+const NIGHT_BEAM := 0.075 ## at night the player's headlights light the way up to this share of the way from the horizon to the car
 const NIGHT_SKY_TOP := Color("05080f")
 
 ## A soft light: rings fading out from a bright core, never hazed (lights show through the dark).
@@ -1124,7 +1124,7 @@ func _lamp_light(b: Vector2, pm: float, it: Dictionary) -> void:
 	_glow(head, 0.6 * pm, Color(1.0, 0.85, 0.5), 0.8)
 
 ## The player's headlights at night, lit like a street lamp's pool: from each of the two lamps at the front of the car
-## a trapezoid of light straight ahead, narrow at the bonnet and wider NIGHT_BEAM of the way from the horizon
+## a trapezoid of light ahead, both meeting in the middle, narrow at the bonnet and wider NIGHT_BEAM of the way from the horizon
 ## (better lights closer to it), bright by the car and ever weaker further on, soft at its sides.
 func _draw_headlights(py: float, cs: float) -> void:
 	var y0 := py - 70.0 * cs # the bonnet's front, under the car drawn next
@@ -1132,15 +1132,15 @@ func _draw_headlights(py: float, cs: float) -> void:
 	var lean := race.steer_visual * 40.0 * cs # the beams swing a little with the steering
 	for sx in [-1.0, 1.0]:
 		var x0: float = W * 0.5 + sx * 70.0 * cs
-		var x1: float = x0 + sx * 45.0 * cs + lean
+		var x1: float = W * 0.5 + sx * 10.0 * cs + lean # the two beams meet ahead: the middle the brightest
 		for k in 3: # nested, the core brightest: soft edges
 			var w0 := (12.0 + 8.0 * k) * cs
-			var w1 := (35.0 + 25.0 * k) * cs
+			var w1 := (40.0 + 30.0 * k) * cs
 			for j in BEAM_STEPS: # slices along the beam, the light weaker the further it goes
 				var t0 := float(j) / BEAM_STEPS
 				var t1 := float(j + 1) / BEAM_STEPS
-				var c0 := Color(1.0, 0.95, 0.8, 0.2 * pow(1.0 - t0, 2.0))
-				var c1 := Color(1.0, 0.95, 0.8, 0.2 * pow(1.0 - t1, 2.0))
+				var c0 := Color(1.0, 0.95, 0.8, 0.2 * pow(1.0 - t0, 1.5))
+				var c1 := Color(1.0, 0.95, 0.8, 0.2 * pow(1.0 - t1, 1.5))
 				var p0 := Vector2(lerpf(x0, x1, t0), lerpf(y0, y1, t0))
 				var p1 := Vector2(lerpf(x0, x1, t1), lerpf(y0, y1, t1))
 				var h0 := lerpf(w0, w1, t0)
