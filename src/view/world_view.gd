@@ -22,7 +22,7 @@ var pal: Dictionary
 var season := "summer" ## the ground's season, from the weather
 var weather := "sun"
 var _fog_reach := 0.0 ## thick fog: the world fades to white within this share of the drawing distance
-var night := false ## the stage at night (Weather.night): dark beyond the headlights, lights on
+var night := false ## the stage at night (Weather.night): dark like a black thick fog beyond the headlights, lights on
 var light_reach := 1.0 ## the headlights' reach, times Weather.NIGHT_REACH (better lights: more)
 var items: Dictionary = {}
 var font: Font
@@ -236,8 +236,6 @@ func _build_grass() -> void:
 	_grass.resize(count * 2)
 	var zones: Array = race.stage.zones
 	var cols := zones.map(func(zn): return Weather.grass(weather, zn.biome, pal))
-	if night: # the landscapes' own grass, dark too
-		cols = cols.map(func(c): return [Weather.night_color(c[0]), Weather.night_color(c[1])])
 	var zi := 0
 	for k in count:
 		var z := k * SEG
@@ -261,11 +259,14 @@ func _fog(c: Color, n: int) -> Color:
 	var f := clampf((float(n) - N * 0.45) / (N * 0.55), 0.0, 1.0)
 	return c.lerp(pal.sky_bottom, maxf(f * 0.75, _thick_fog(n)))
 
-## Thick fog (Weather.fog_reach): 0 at the camera, almost white at the reach.
+## Thick fog (Weather.fog_reach): 0 at the camera, almost white at the reach (at night almost black).
 func _thick_fog(n: int) -> float:
 	if _fog_reach <= 0.0:
 		return 0.0
-	return smoothstep(0.0, 1.0, float(n) / (N * _fog_reach)) * 0.97
+	var k := clampf(float(n) / (N * _fog_reach), 0.0, 1.0)
+	if night: # the dark starts right before the car: most of the screen is the nearest stretch of the road
+		return sqrt(k) * 0.97
+	return smoothstep(0.0, 1.0, k) * 0.97
 
 ## Haze for objects at depth n: the same as the road, then fading out completely over the last stretch of the view,
 ## so trees, buildings and cars come out of the haze instead of popping in at the edge of the drawing distance.
@@ -285,7 +286,6 @@ func _draw() -> void:
 	_b.begin(self)
 	_draw_sky()
 	_draw_scene()
-	if night: _draw_headlights()
 	_draw_player()
 	_draw_particles()
 	if race.hit_flash > 0.0:
@@ -450,14 +450,14 @@ func _draw_scene() -> void:
 			_draw_segment(n, i)
 		elif _vis[n] == 2:
 			_draw_tunnel(n, i)
-		_b.fog = maxf(_item_fog(n), NIGHT_DIM if night else 0.0)
+		_b.fog = _item_fog(n)
 		_b.fog_color = pal.sky_bottom
 		var its = items.get(i)
 		if its != null:
 			for it in its:
 				if i < _sea_i or it.type == "ferry_ship":
 					_draw_item(it, n, cam_x, cam_y, cam_z)
-		_b.fog = maxf(maxf(_edge_fade(n), _thick_fog(n)), NIGHT_DIM * 0.8 if night else 0.0) # traffic matters: no haze, only the edge of the view (or thick fog, or the dark)
+		_b.fog = maxf(_edge_fade(n), _thick_fog(n)) # traffic matters: no haze, only the edge of the view (or thick fog, or the dark)
 		for ci in _buckets[n]:
 			if i < _sea_i or tcars[ci].z < _sea_z + Route.FERRY_STERN: # out at sea only the cars still on the ramp
 				_draw_traffic_car(tcars[ci], n, cam_x, cam_y, cam_z)
@@ -1059,9 +1059,6 @@ func _draw_player() -> void:
 	py += sin(race.z * 0.8) * 1.2 * race.speed_ratio()
 	_b.set_mirror(false) # steer_visual is already the way the player steers on screen
 	var cs := s * W * 0.5 * CAR_UNIT
-	if night: # the player's car in the dark too, only a little lit by the dashboard and the lamps
-		_b.fog = 0.35
-		_b.fog_color = pal.sky_bottom
 	CarPainter.draw(_b, race.car_id, Vector2(W * 0.5, py), cs, race.steer_visual, race.braking)
 	_b.fog = 0.0
 	if night: # the rear lights, brighter on the brake
@@ -1088,7 +1085,6 @@ func _draw_night_sky() -> void:
 	_b.draw_circle(mc + Vector2(7, -4), 15.0, NIGHT_SKY_TOP) # a crescent
 
 const NIGHT_SKY_TOP := Color("05080f")
-const NIGHT_DIM := 0.5 ## at night buildings, trees, signs and cars are this far in the dark even in the headlights
 
 ## A soft light: rings fading out from a bright core, never hazed (lights show through the dark).
 func _glow(at: Vector2, r: float, col: Color, a: float) -> void:
@@ -1123,24 +1119,6 @@ func _lamp_light(b: Vector2, pm: float, it: Dictionary) -> void:
 	_b.draw_circle(Vector2.ZERO, 5.0 * pm, Color(1.0, 0.82, 0.45, 0.13))
 	_b.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 	_glow(head, 0.6 * pm, Color(1.0, 0.85, 0.5), 0.8)
-
-## The player's headlights at night: a warm wedge on the road ahead, bright near the car and fading out at their
-## reach, following the road's bends.
-func _draw_headlights() -> void:
-	var reach := int(N * Weather.NIGHT_REACH * light_reach)
-	var lat := race.x * Track.ROAD_HALF_WIDTH
-	for n in mini(reach, N - 1):
-		if _vis[n] != 1: continue
-		var k0 := 1.0 - float(n) / reach
-		var k1 := 1.0 - float(n + 1) / reach
-		var w0 := Track.ROAD_HALF_WIDTH * _s0[n] * W * 0.5 * (0.55 + 0.35 * (1.0 - k0))
-		var w1 := Track.ROAD_HALF_WIDTH * _s1[n] * W * 0.5 * (0.55 + 0.35 * (1.0 - k1))
-		var x0 := _x0[n] + _s0[n] * lat * W * 0.5
-		var x1 := _x1[n] + _s1[n] * lat * W * 0.5
-		var c0 := Color(1.0, 0.93, 0.72, 0.3 * k0)
-		var c1 := Color(1.0, 0.93, 0.72, 0.3 * k1)
-		_b.draw_polygon(PackedVector2Array([Vector2(x0 - w0, _y0[n]), Vector2(x0 + w0, _y0[n]), Vector2(x1 + w1, _y1[n]), Vector2(x1 - w1, _y1[n])]),
-			PackedColorArray([c0, c0, c1, c1]))
 
 func _draw_particles() -> void:
 	var a := 1.0 - shelter
