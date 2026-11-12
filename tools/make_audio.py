@@ -453,34 +453,65 @@ def lose():
 # LH: the notes struck on each eighth.
 NOCTURNE_RH = [(0, 4, 79), (4, 1, 77), (5, 1, 79), (6, 3, 77), (9, 2, 75), (11, 1, 70), (12, 2, 79), (14, 1, 72), (15, 2, 84), (17, 1, 79), (18, 3, 82), (21, 2, 80), (23, 1, 79), (24, 3, 77), (27, 2, 79), (29, 1, 74), (30, 3, 75), (33, 3, 72), (36, 1, 70), (37, 1, 86), (38, 1, 84), (39, 0.5, 82), (39.5, 0.5, 80), (40, 0.5, 79), (40.5, 0.5, 80), (41, 0.5, 72), (41.5, 0.5, 74), (42, 3, 75), (47, 1, 70), (48, 3, 79), (51, 0.5, 77), (51.5, 0.5, 79), (52, 0.5, 77), (52.5, 0.5, 76), (53, 0.5, 77), (53.5, 0.5, 79), (54, 1, 77), (55, 2.5, 75), (57.5, 0.5, 77), (58, 0.5, 75), (58.5, 0.5, 74), (59, 0.5, 75), (59.5, 0.5, 77), (60, 0.5, 79), (60.5, 0.5, 71), (61, 0.5, 72), (61.5, 0.5, 73), (62, 0.5, 72), (62.5, 0.5, 77), (63, 0.5, 76), (63.5, 0.5, 80), (64, 0.5, 79), (64.5, 0.5, 85), (65, 0.5, 84), (65.5, 0.5, 79), (66, 3, 82), (69, 2, 80), (71, 1, 79), (72, 2.77, 77), (74.77, 0.11, 76), (74.89, 0.11, 77), (75, 1, 79), (76, 1, 79), (77, 1, 74), (78, 3, 75), (81, 3, 72), (84, 1, 70), (85, 1, 86), (86, 1, 84), (87, 0.5, 82), (87.5, 0.5, 80), (88, 0.5, 79), (88.5, 0.27, 80), (88.77, 0.22, 80), (89, 0.5, 72), (89.5, 0.5, 74), (90, 5, 75), (95, 1, 70)]
 NOCTURNE_LH = [(39,), (55, 63), (58, 63, 67), (51,), (56, 62), (59, 62, 68), (39,), (55, 63), (58, 63, 67), (38,), (55, 63), (58, 63, 67), (36,), (55, 64), (58, 64, 67), (48,), (55, 64), (60, 64, 70), (41,), (53, 61), (58, 61, 64), (41,), (53, 60), (56, 60, 65), (46,), (53, 62), (58, 62, 68), (47,), (55, 65), (62, 65, 67), (48,), (55, 63), (60, 63, 67), (45,), (54, 63), (60, 63, 66), (46,), (53, 63), (58, 63, 68), (34,), (53, 62), (58, 68), (39,), (55, 63), (58, 63, 67), (51,), (55, 63), (58, 63, 67), (51,), (55, 63), (58, 63, 67), (51,), (56, 62), (59, 62, 68), (51,), (55, 63), (58, 63, 67), (50,), (55, 63), (58, 63, 67), (48,), (55, 64), (58, 64, 67), (48,), (55, 64), (60, 64, 70), (41,), (53, 61), (58, 61, 64), (41,), (53, 60), (56, 60, 65), (46,), (53, 62), (58, 62, 68), (47,), (55, 65), (62, 65, 67), (48,), (55, 63), (60, 63, 67), (45,), (54, 63), (60, 63, 66), (46,), (53, 63), (58, 63, 68), (34,), (53, 62), (58, 68), (39,), (55, 63), (58, 63, 67), (51,), (55, 63), (58, 63, 67)]
-def piano(freq, dur, vol=1.0):
-    """A plain piano-like tone, no vibrato: decaying harmonics (the high ones faster) and a short release."""
-    rel = 0.25
-    n = int((dur + rel) * SR); out = [0.0] * n
-    ks = [k for k in range(1, 9) if freq * k < 7000]
-    amp = [1.0 / k ** 1.4 for k in ks]
-    dec = [(0.7 + 0.45 * k) * (freq / 440.0) ** 0.35 for k in ks]
-    w = [2 * math.pi * freq * k / SR for k in ks]
+_piano_cache = {}
+def piano(m, dur, vol=1.0):
+    """A struck piano string, no vibrato: partials stretched a little sharp (the string's stiffness), shaped by the
+    hammer striking at 1/7 of the string, each dying away in two stages (a quick fall right after the strike, then
+    the long soft ring, the high partials and the high notes faster), a short knock of the hammer, and the damper
+    stopping it within ~0.1 s once the key is let go. Cached: the left hand repeats its notes."""
+    key = (m, round(dur, 3), vol)
+    if key in _piano_cache: return _piano_cache[key]
+    freq = note(m); damp = 0.12
+    n = int((dur + damp * 4) * SR); out = [0.0] * n
+    hi = (freq / 261.6) ** 0.5
+    for k in range(1, 16):
+        fk = freq * k * math.sqrt(1 + 0.0004 * k * k)
+        if fk > 8000: break
+        a = abs(math.sin(math.pi * k / 7)) / k ** 0.8
+        d1 = (2.5 + 0.9 * k) * hi # the prompt fall
+        d2 = (0.25 + 0.12 * k) * hi # the aftersound
+        w = 2 * math.pi * fk / SR; ph = (k * 0.7) % 6.28
+        for i in range(n):
+            t = i / SR
+            out[i] += a * (0.6 * math.exp(-d1 * t) + 0.4 * math.exp(-d2 * t)) * math.sin(w * i + ph)
+    knock = noise(0.02, 0.15, 8.0, 0.25)
+    for i, v in enumerate(knock): out[i] += v
     for i in range(n):
         t = i / SR
-        v = sum(a * math.exp(-d * t) * math.sin(ww * i) for a, d, ww in zip(amp, dec, w))
-        e = min(1.0, t / 0.004) * (1.0 if t < dur else max(0.0, 1.0 - (t - dur) / rel))
-        out[i] = v * vol * e
+        e = min(1.0, t / 0.0015) * (1.0 if t < dur else math.exp(-(t - dur) / damp))
+        out[i] *= vol * e
+    _piano_cache[key] = out
     return out
-def nocturne(eighth=0.5):
-    """The nocturne's eight bars at eighth = 120 (Chopin's 132, a little slower), looped: what rings past the end
-    wraps onto the start."""
+def reverb(buf):
+    """A small room (Schroeder: four combs, two all-passes) over a looped buffer: run over it twice, the second
+    pass kept, so the tail of the end lands on the start."""
+    n = len(buf); src = buf + buf
+    wet = [0.0] * len(src)
+    for dl, g in ((1557, 0.80), (1617, 0.79), (1491, 0.81), (1422, 0.82)):
+        d = dl * SR // 44100; line = [0.0] * len(src)
+        for i in range(len(src)):
+            line[i] = src[i] + (g * line[i - d] if i >= d else 0.0)
+            wet[i] += line[i] * 0.25
+    for dl in (225, 556):
+        d = dl * SR // 44100; x = wet; y = [0.0] * len(x)
+        for i in range(len(x)):
+            y[i] = -0.5 * x[i] + (x[i - d] + 0.5 * y[i - d] if i >= d else 0.0)
+        wet = y
+    return [buf[i] + 0.22 * wet[n + i] for i in range(n)]
+def nocturne(eighth=0.6):
+    """The nocturne's eight bars at eighth = 100 (Chopin's 132, slower, as it is usually played), looped: what rings
+    past the end wraps onto the start."""
     n = int(96 * eighth * SR); out = [0.0] * n
     def put(start, snd):
         s = int(start * SR)
         for i, v in enumerate(snd): out[(s + i) % n] += v
     for e, d, m in NOCTURNE_RH:
-        put(e * eighth, piano(note(m), d * eighth * 1.05, 1.0))
+        put(e * eighth, piano(m, d * eighth, 1.0))
     for e, ch in enumerate(NOCTURNE_LH):
-        bass = len(ch) == 1 # the bass note rings through the group of three (the pedal), the chords for one eighth and a half
+        bass = len(ch) == 1 # the bass note held through the group of three (the pedal), the chords for one eighth and a half
         for m in ch:
-            put(e * eighth, piano(note(m), eighth * (3.0 if bass else 1.5), 0.55 if bass else 0.22))
-    write("nocturne", out, 0.7)
+            put(e * eighth, piano(m, eighth * (3.0 if bass else 1.5), 0.6 if bass else 0.25))
+    write("nocturne", reverb(out), 0.7)
 
 import sys
 only = sys.argv[1:] # names of the functions to run (e.g. nocturne), none: all
