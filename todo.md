@@ -384,6 +384,8 @@ obrazków; błędy poprawione, testy i autopilot przechodzą. Zrzuty z gry prom�
 - [ ] Prędkość maksymalna +5% (cena 1) albo +10% (cena 2).
 - [ ] Hamulce +10% (cena 1) albo +20% (cena 2).
 - [ ] Szybsze odblokowywanie aut: o 25% (cena 1) albo o 50% (cena 2).
+- [ ] Szansa na ucieczkę przed policją +50% (dziś `escape_chance` 0,2): cena 1.
+- [ ] Ucieczka możliwa już od 150 km/h zamiast od 180 (`escape_kmh`): cena 1.
 - [ ] Odblokowanie jednego kraju: cena 1. Wszystkich krajów: cena 3 (łączy się z sekcją 10).
 - [ ] Do ustalenia: czy ulepszenia działają w rankingach (dziś rankingi są wspólne dla aut i warunków), czym się
       płaci (prawdziwe pieniądze czy waluta w grze) i czy +10% zastępuje +5%, czy się sumuje.
