@@ -107,8 +107,8 @@ static func best(cc: String, k: String) -> float:
 	var st := road_stage(cc, r.a, r.b)
 	return legal_between(st, 0.0, st.length)
 
-## A map's 100 made-up drivers, the same on every run: [{nick, car}], in the order of their places. The ten best
-## drive one of the two fastest cars, the next ten one of the three, the rest any car.
+## A map's 100 made-up drivers, the same on every run: [{nick, car}], in the order of their places. The twenty
+## best drive one of the two fastest cars, the rest any car.
 static func roster(cc: String) -> Array:
 	var rng := RandomNumberGenerator.new()
 	rng.seed = ("roster/" + cc).hash()
@@ -121,7 +121,7 @@ static func roster(cc: String) -> Array:
 	var cars := CarStats.ids()
 	var out := []
 	for i in DRIVERS:
-		var fast := 2 if i < 10 else (3 if i < 20 else cars.size()) # the 10 best in the 2 fastest cars, the next 10 in the 3
+		var fast := 2 if i < 20 else cars.size() # the 20 best in the 2 fastest cars
 		var car: String = cars[cars.size() - 1 - rng.randi_range(0, fast - 1)]
 		out.append({"nick": pool[i], "car": car})
 	return out

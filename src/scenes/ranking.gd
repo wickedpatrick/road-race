@@ -46,7 +46,7 @@ func _build() -> void:
 		climbs.erase(_key()) # once
 		if from > me:
 			# Top Gear's pace: slow off the mark, quick through the middle, easing onto the new place
-			climb = {"from": float(from), "to": float(me), "t": -0.6, "dur": clampf(1.2 + 0.05 * (from - me), 1.5, 5.0)}
+			climb = {"from": float(from), "to": float(me), "t": -0.4, "dur": clampf(1.2 + 0.05 * (from - me), 1.5, 5.0) * 0.7}
 			_pf = from
 	view.climbed = _key() if not climb.is_empty() else "" # the table stays around the player after the climb
 	queue_redraw()
