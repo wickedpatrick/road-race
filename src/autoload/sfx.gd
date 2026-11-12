@@ -7,8 +7,9 @@ const ONESHOTS := ["hit", "beep", "go", "blip", "lowfuel", "refuel_done", "lose"
 ## The tunes of arriving in a country, taking turns: anthem_<code>, the first phrase of its anthem, and motif_<code>,
 ## the best-known bars of its classical (or folk) tune; a country whose anthem's music is still under copyright has
 ## a second tune, motif2_<code>, instead of the anthem (so has one without a reliable published score of its anthem).
-## Every country has two of them (test_arrival_audio.gd).
-const ARRIVAL_KINDS := ["anthem_", "motif_", "motif2_"]
+## A third, fanfare_<code>, is a festive classical phrase of the country (or a lively folk tune), where one was found.
+## Every country has two or three of them (test_arrival_audio.gd).
+const ARRIVAL_KINDS := ["anthem_", "motif_", "motif2_", "fanfare_"]
 const SILENT := -80.0
 const MUSIC_DB := -12.0 ## the menus' nocturne, quietly under the clicks
 const IDLE_FADE_FROM := 0.74 ## engine pitch where an idle loop starts handing over to the driving loop

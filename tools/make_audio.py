@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Synthesises every sound of the game into assets/audio/*.wav (22.05 kHz mono 16-bit). No dependencies."""
-import math, random, struct, wave, os
+import json, math, random, struct, wave, os
 
 SR = 22050
 OUT = os.path.join(os.path.dirname(__file__), "..", "assets", "audio")
@@ -447,6 +447,12 @@ def lose():
     for k, n in enumerate([67, 64, 62, 55]): place(out, k * 0.25, tone(note(n), 0.4, "tri", 0.8, 0.01, 0.2))
     write("lose", out, 0.6)
 
+def fanfares():  # the third arrival tune: a festive classical phrase (else a lively folk one) per country, in
+    # tools/fanfares.json ({code: {melody, q, chord, tail, piece, composer, source, note}}, from real scores; the
+    # countries without one keep their two tunes)
+    for code, f in json.load(open(os.path.join(os.path.dirname(__file__), "fanfares.json"))).items():
+        anthem(code, [(n, b) for n, b in f["melody"]], f["q"], f["chord"], f.get("tail", 0.8), "fanfare_")
+
 # ---- the menu's music: Chopin (d. 1849), Nocturne in E flat, op. 9 no. 2, the first eight bars (the theme and its
 # ornamented repeat, as played in the PKP Intercity trains), bar 8 ending like bar 4 so it loops back to bar 1.
 # The notes from mutopiaproject.org ChopinFF/O9/chopin_nocturne_op9_n2 (Mutopia-1590). RH: (eighth, eighths, MIDI);
@@ -521,6 +527,6 @@ def nocturne(eighth=0.6):
 
 import sys
 only = sys.argv[1:] # names of the functions to run (e.g. nocturne), none: all
-for f in (engine, engines, gravel, pump, hit, beep, go, blip, lowfuel, refuel_done, lose, radar, siren, anthems, motifs, nocturne):
+for f in (engine, engines, gravel, pump, hit, beep, go, blip, lowfuel, refuel_done, lose, radar, siren, anthems, motifs, fanfares, nocturne):
     if not only or f.__name__ in only: f()
 print("audio written to", os.path.abspath(OUT))

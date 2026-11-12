@@ -1,7 +1,8 @@
 extends RefCounted
 ## Every country, and every member of a map spanning several countries, has two arrival tunes: its anthem and its
-## classical (or folk) tune, or two tunes when its anthem is still under copyright; Sfx.arrival plays them by turns
-## and never names a sound it has not loaded (there is no generic fanfare to fall back on).
+## classical (or folk) tune, or two tunes when its anthem is still under copyright, and where one was found a third,
+## its fanfare (tools/fanfares.json); Sfx.arrival plays them by turns and never names a sound it has not loaded
+## (there is no generic fanfare to fall back on).
 const DIR := "res://assets/audio/"
 
 func run(t) -> void:
@@ -15,6 +16,9 @@ func run(t) -> void:
 		t.check(FileAccess.file_exists(DIR + "motif_" + code + ".wav"), "%s has its tune (motif_%s.wav)" % [code, code])
 		t.check(has_anthem != has_motif2, "%s has its anthem or, its anthem being under copyright, a second tune (not both)" % code)
 	t.check(not FileAccess.file_exists(DIR + "win.wav"), "no generic fanfare left")
+	var fanfares: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://tools/fanfares.json"))
+	for code in fanfares:
+		t.check(codes.has(code) and FileAccess.file_exists(DIR + "fanfare_" + code + ".wav"), "%s: its fanfare is made (fanfare_%s.wav)" % [code, code])
 
 	var sfx = load("res://src/autoload/sfx.gd").new()
 	sfx._ready()
