@@ -365,3 +365,8 @@ obrazków; błędy poprawione, testy i autopilot przechodzą. Zrzuty z gry prom�
 ## 16. Obfuskacja danych
 - [ ] Zaciemnić dane gry w buildzie (data/countries, data/rankings, rules.json), żeby nie dało się ich po prostu
       podejrzeć ani podmienić (np. czasy rankingów) w paczce webowej i desktopowej.
+
+## 17. Muzyka w menu
+- [ ] W menu gra w tle nokturn Chopina, ten puszczany w pociągach PKP Intercity (Pendolino). Najpierw ustalić,
+      który to dokładnie utwór. Sama kompozycja jest w domenie publicznej, ale nagranie Intercity już nie, więc
+      syntezujemy własną wersję (tools/make_audio.py, bez vibrato), spokojnie, w pętli, ciszej niż efekty.
