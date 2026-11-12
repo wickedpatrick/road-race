@@ -8,7 +8,7 @@ static var _r: Rect2
 
 static func draw(cv, code: String, r: Rect2) -> void:
 	var members := GameData.members(code)
-	if not members.is_empty(): # a map of several countries (the Southern Balkans): their flags side by side
+	if not members.is_empty() and not code in ["bx", "sb"]: # a map of several countries: their flags side by side
 		var w := r.size.x / members.size()
 		for i in members.size():
 			draw(cv, members[i], Rect2(r.position + Vector2(w * i, 0), Vector2(w, r.size.y)))
@@ -16,6 +16,8 @@ static func draw(cv, code: String, r: Rect2) -> void:
 	_cv = cv
 	_r = r
 	match code:
+		"bx": _bx()
+		"sb": _sb()
 		"pl": _h(["ffffff", "dc143c"])
 		"de": _h(["000000", "dd0000", "ffce00"])
 		"at": _h(["c8102e", "ffffff", "c8102e"])
@@ -190,6 +192,25 @@ static func _eagle(u: float, v: float, s: float, col: String) -> void:
 		0.12 * k, 0.02 * k, 0.07 * k, 0.12 * k, 0.1 * k, 0.24 * k, 0.03 * k, 0.17 * k, 0.0, 0.26 * k], col, true)
 	_shape(u, v, [0.04 * k, -0.15 * k, 0.07 * k, -0.27 * k, 0.11 * k, -0.27 * k, 0.09 * k, -0.18 * k], col)
 	_shape(u, v, [-0.04 * k, -0.15 * k, -0.07 * k, -0.27 * k, -0.11 * k, -0.27 * k, -0.09 * k, -0.18 * k], col)
+
+## Benelux (made up, no such flag): a windmill of the Low Countries on their flat land, the sails as an X.
+static func _bx() -> void:
+	_box(0, 0, 1, 1, "4a8fdc")
+	_box(0, 0.78, 1, 1, "4f9a3a")
+	_shape(0.5, 0.5, [-0.13, 0.32, -0.07, -0.1, 0.07, -0.1, 0.13, 0.32], "6b3e26") # the tower
+	_shape(0.5, 0.5, [-0.09, -0.1, 0.0, -0.2, 0.09, -0.1], "3b2418") # the cap
+	for d in [Vector2(1, 1), Vector2(1, -1), Vector2(-1, 1), Vector2(-1, -1)]: # the four sails
+		_band(0.5, 0.5 - 0.16, 0.5 + _u(d.x * 0.3), 0.5 - 0.16 + d.y * 0.3, 0.045, "ffffff")
+	_circle(0.5, 0.5 - 0.16, 0.04, "3b2418")
+
+## The Southern Balkans (made up): the mountains the four share under a rising sun, Lake Ohrid below.
+static func _sb() -> void:
+	_box(0, 0, 1, 1, "7cc0ec")
+	_circle(0.7, 0.32, 0.14, "ffd23a")
+	_poly([0, 0.78, 0.18, 0.36, 0.32, 0.56, 0.5, 0.26, 0.68, 0.56, 0.8, 0.42, 1, 0.7, 1, 0.82, 0, 0.82], "3c6e47")
+	_poly([0.18, 0.36, 0.23, 0.46, 0.13, 0.46], "ffffff")
+	_poly([0.5, 0.26, 0.56, 0.38, 0.44, 0.38], "ffffff")
+	_box(0, 0.8, 1, 1, "2a6fb0")
 
 static func _al() -> void:
 	_box(0, 0, 1, 1, "e41e20")

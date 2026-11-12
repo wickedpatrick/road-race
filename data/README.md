@@ -61,8 +61,8 @@ x `ratio` (the map's median best/legal). The 20 made-up drivers' times are drawn
 
 `countries`: `[{code, name, neighbours: [codes], favorite_neighbour}]`. Each `code` has a folder `countries/<code>/`.
 A map spanning several countries (the Southern Balkans, `sb`) lists them in `members` (`["me", "xk", "al", "mk"]`,
-codes of `world.json`): the country picker joins their shapes into one, labelled in their middle, and its flag is
-theirs side by side (`FlagPainter`, `GameData.members`). Such a map has `parts` in country.json, `country` on its
+codes of `world.json`): the country picker joins their shapes into one, labelled in their middle, with the map's
+own made-up emblem as its flag (`FlagPainter`: the Benelux lion, the Southern Balkans' mountains and sun). Such a map has `parts` in country.json, `country` on its
 cities and `borders` on its roads (below).
 
 ## `countries/<code>/country.json`

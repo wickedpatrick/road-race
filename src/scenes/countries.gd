@@ -93,6 +93,9 @@ func _wide(code: String) -> bool:
 		for v in pts: box = box.expand(v)
 	return box.size.x > 70.0
 
+## Flags moved off their country: a small island it would cover (Cyprus), out to sea, a line pointing back.
+const FLAG_OFF := {"cy": Vector2(-24, 2)}
+
 func label_pos(code: String) -> Vector2:
 	var l: Array = world.countries[code].label
 	return Vector2(l[0], l[1])
@@ -245,12 +248,13 @@ func _draw() -> void:
 	if play.has(hover): flag_order.append(hover)
 	for code in flag_order: # the flag in the middle of every country in the game, bigger under the cursor
 		var h := (18.0 if code == hover else 14.0) if _wide(code) else (14.0 if code == hover else 10.0)
-		var members := GameData.members(code)
-		var flags: Array = [code] if members.is_empty() else members
-		var cols := mini(flags.size(), 2) # several countries on one map: their flags two by two
+		var flags: Array = [code] # a map of several countries has its own emblem (FlagPainter)
+		var cols := 1
 		var rows := ceili(flags.size() / float(cols))
 		var cell := Vector2(h * 1.5 + 3.0, h + 3.0)
-		var top := label_pos(code) - Vector2(cell.x * cols - 3.0, cell.y * rows - 3.0) * 0.5
+		var at: Vector2 = label_pos(code) + FLAG_OFF.get(code, Vector2.ZERO)
+		if FLAG_OFF.has(code): draw_line(label_pos(code), at, Color(0, 0, 0, 0.6), 1.0) # moved off a small island
+		var top := at - Vector2(cell.x * cols - 3.0, cell.y * rows - 3.0) * 0.5
 		for i in flags.size():
 			var fl := Rect2(top + Vector2(cell.x * (i % cols), cell.y * (i / cols)), Vector2(h * 1.5, h))
 			draw_rect(fl.grow(1.0), Color(0, 0, 0, 0.55))
