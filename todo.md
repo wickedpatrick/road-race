@@ -378,3 +378,12 @@ obrazków; błędy poprawione, testy i autopilot przechodzą. Zrzuty z gry prom�
       syntezujemy własną wersję (tools/make_audio.py, bez vibrato), spokojnie, w pętli, ciszej niż efekty.
       Zrobione 2026-11-12: 8 taktów (Mutopia), fortepian z próbek Salamander Grand Piano (CC BY, README), w pętli
       w menu, albumie, rankingach i wyborze kraju.
+
+## 18. Ulepszenia aut i zakupy (ceny w jednostkach do ustalenia: 1, 2, 3)
+- [ ] Większy bak +10 l, cena 1: działa na wszystkie auta.
+- [ ] Prędkość maksymalna +5% (cena 1) albo +10% (cena 2).
+- [ ] Hamulce +10% (cena 1) albo +20% (cena 2).
+- [ ] Szybsze odblokowywanie aut: o 25% (cena 1) albo o 50% (cena 2).
+- [ ] Odblokowanie jednego kraju: cena 1. Wszystkich krajów: cena 3 (łączy się z sekcją 10).
+- [ ] Do ustalenia: czy ulepszenia działają w rankingach (dziś rankingi są wspólne dla aut i warunków), czym się
+      płaci (prawdziwe pieniądze czy waluta w grze) i czy +10% zastępuje +5%, czy się sumuje.
