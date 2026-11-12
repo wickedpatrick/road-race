@@ -94,7 +94,7 @@ static func grass(kind: String, biome: String, pal: Dictionary) -> Array:
 ## Night (a stage with "night": true): the dark closes in like a thick fog, only black instead of white, at the
 ## headlights' reach (NIGHT_REACH of the drawing distance; better lights reach further). Near the car the world keeps
 ## its colours; the lamps and the other cars' lights show through the dark.
-const NIGHT_REACH := 0.06
+const NIGHT_REACH := 0.03
 const NIGHT_SKY := [Color("03050c"), Color("020306")]
 
 ## A palette at night: the colours as by day, the sky black (its bottom is the dark the world fades into), no sun.
