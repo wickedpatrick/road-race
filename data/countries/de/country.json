@@ -19,7 +19,7 @@
 		"de": "Eine lehrreiche Reise über deutsche Autobahnen und Straßen"
 	},
 	"region_label": {"pl": "kraj związkowy", "en": "federal state", "cs": "spolková země", "is": "sambandsland", "de": "Bundesland"},
-	"start": ["munchen", "augsburg"],
+	"start": ["berlin", "magdeburg"],
 	"express_prefixes": ["A"],
 	"limits": {"express": 120, "road": 100, "city": 50, "town_on_express": 70, "town": 50, "unlimited_beyond_km": 15},
 	"signs": {

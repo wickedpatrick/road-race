@@ -19,7 +19,7 @@
 		"de": "Eine lehrreiche Reise vom Bosporus Richtung Ararat, durch Kappadokien und am Mittelmeer entlang"
 	},
 	"region_label": {"pl": "prowincja", "en": "province", "cs": "provincie", "is": "hérað", "de": "Provinz"},
-	"start": ["istanbul", "bursa"],
+	"start": ["ankara", "safranbolu"],
 	"express_prefixes": ["O"],
 	"traffic": 0.4,
 	"limits": {"express": 120, "road": 90, "city": 50, "town_on_express": 80, "town": 50},

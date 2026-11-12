@@ -70,8 +70,8 @@ cities and `borders` on its roads (below).
 - `code`, `name`, `language` (of the place names and every road sign), `drive` (`"right"` / `"left"`: on the left
   the world is drawn mirrored, signs and stations on the left shoulder), `units` (`"metric"` / `"imperial"`: the road
   signs and the interface (speedometer, distances, fuel use) in mph, miles and mpg), `region_label` (the word for a
-  region in the city card, e.g. "województwo"), `title` / `subtitle` (menu header), `start` (default first trip
-  `[from, to]`, neighbouring cities), `express_prefixes` (road numbers starting with these are motorways or
+  region in the city card, e.g. "województwo"), `title` / `subtitle` (menu header), `start` (the first trip in
+  the country, `[from, to]`: from its capital to a neighbouring city; there is no home city to pick), `express_prefixes` (road numbers starting with these are motorways or
   expressways: dual carriageways with the faster limit, e.g. `["A", "S"]` in Poland, `["D"]` in Czechia).
 - `limits` as posted on the signs (km/h, or mph with imperial `units`; the game converts to km/h): `express`
   (motorways, expressways), `road`, `city` (through a big city), `town_on_express`, `town`. Optional

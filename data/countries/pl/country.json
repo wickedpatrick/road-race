@@ -18,7 +18,7 @@
 		"de": "Eine lehrreiche Reise über polnische Straßen"
 	},
 	"region_label": {"pl": "województwo", "en": "province", "cs": "vojvodství", "is": "hérað", "de": "Woiwodschaft"},
-	"start": ["krakow", "rzeszow"],
+	"start": ["warszawa", "radom"],
 	"express_prefixes": ["A", "S"],
 	"limits": {"express": 140, "road": 90, "city": 70, "town_on_express": 70, "town": 50},
 	"signs": {"town": "#0f7a43", "town_text": "#ffffff", "board": "#0f7a43", "board_motorway": "#1d4f9e"},

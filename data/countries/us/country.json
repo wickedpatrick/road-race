@@ -32,10 +32,7 @@
 		"is": "fylki",
 		"de": "Bundesstaat"
 	},
-	"start": [
-		"new_york",
-		"philadelphia"
-	],
+	"start": ["washington", "philadelphia"],
 	"express_prefixes": [
 		"I-"
 	],

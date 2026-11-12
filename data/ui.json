@@ -1,11 +1,4 @@
 {
-	"title_home": {
-		"pl": "Skąd jesteś?",
-		"en": "Where are you from?",
-		"cs": "Odkud jsi?",
-		"is": "Hvaðan ertu?",
-		"de": "Woher kommst du?"
-	},
 	"title_car": {"pl": "Wybierz auto", "en": "Choose your car", "cs": "Vyber si auto", "is": "Veldu bíl", "de": "Wähle dein Auto"},
 	"title_dest": {
 		"pl": "Dokąd jedziesz?",
@@ -80,13 +73,6 @@
 	"bar_accel": {"pl": "Przyspieszenie", "en": "Acceleration", "cs": "Zrychlení", "is": "Hröðun", "de": "Beschleunigung"},
 	"bar_handling": {"pl": "Zwrotność", "en": "Handling", "cs": "Ovladatelnost", "is": "Stýring", "de": "Handling"},
 	"bar_economy": {"pl": "Oszczędność", "en": "Economy", "cs": "Úspornost", "is": "Sparneytni", "de": "Sparsamkeit"},
-	"pick_home": {
-		"pl": "Wybierz swoje miasto: stąd ruszysz w pierwszy rajd",
-		"en": "Pick your home city: your first trip starts here",
-		"cs": "Vyber své město: odtud vyrazíš na první jízdu",
-		"is": "Veldu heimabæinn þinn: þaðan hefst fyrsta ferðin",
-		"de": "Wähle deine Heimatstadt: Hier startet deine erste Fahrt"
-	},
 	"you_are_in": {"pl": "Jesteś w: %s", "en": "You are in: %s", "cs": "Jsi v: %s", "is": "Þú ert hér: %s", "de": "Du bist in: %s"},
 	"tap_city": {
 		"pl": "Dotknij miasta, aby je wybrać",

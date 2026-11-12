@@ -19,7 +19,7 @@
 		"de": "Eine lehrreiche Reise vom Pazifik bis zum Atlantik"
 	},
 	"region_label": {"pl": "prowincja", "en": "province", "cs": "provincie", "is": "fylki", "de": "Provinz"},
-	"start": ["toronto", "niagara_falls"],
+	"start": ["ottawa", "kingston"],
 	"express_prefixes": ["QEW", "A-", "400", "401", "416", "417"],
 	"traffic": 0.25,
 	"limits": {"express": 100, "road": 90, "city": 50, "town_on_express": 70, "town": 50},

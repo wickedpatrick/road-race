@@ -1,6 +1,6 @@
 extends Node2D
 ## Selection: car -> destination on the country map (each trip's weather shown on the card beside it) (tabs above the map, or C, switch the country). The race always starts where the last one ended;
-## the very first time the player first picks a home city on the map.
+## the very first one in each country from its capital (Session).
 ## Arrow keys / WASD move, Enter or Space confirms, Esc goes back; on the map cities can also be clicked.
 
 var font: Font
@@ -57,20 +57,20 @@ func _ready() -> void:
 	_set_steps()
 	start_city = Session.from_city
 	dest_city = Session.to_city
-	if Session.menu_at_map and Session.has_home():
+	if Session.menu_at_map:
 		step = steps.find("dest")
 	Session.menu_at_map = false
 	_enter_step()
 
 func _set_steps() -> void:
-	steps = ["car", "dest"] if Session.has_home() else ["home", "car", "dest"]
+	steps = ["car", "dest"]
 	step = 0
 
 func kind() -> String:
 	return steps[step]
 
 func _on_map() -> bool:
-	return kind() == "home" or kind() == "dest"
+	return kind() == "dest"
 
 func _new_map() -> void:
 	map = CountryMap.new(MAP_RECT, true)
@@ -158,10 +158,6 @@ func _unhandled_input(event: InputEvent) -> void:
 			"car":
 				if dir.x != 0.0:
 					sel[_sel_idx()] = (sel[_sel_idx()] + _count() + int(dir.x)) % _count()
-			"home":
-				start_city = map.step(start_city, dir)
-				hover = start_city
-				_follow = start_city
 			"dest":
 				_pick_dest(map.step(dest_city, dir, start_city, Route.neighbours(start_city)))
 				hover = dest_city
@@ -208,8 +204,6 @@ func _confirm() -> void:
 		"car":
 			if not Profile.is_unlocked(CarStats.ids()[sel[0]], Session.car_km()):
 				return # locked car
-		"home":
-			Session.set_home(start_city)
 		"dest":
 			if not legs.is_empty():
 				_start()
@@ -299,10 +293,7 @@ func _map_mouse(event: InputEventMouse) -> void:
 	if was_drag or not pressed_here or id == "":
 		return
 	Sfx.play("blip", -15.0)
-	if kind() == "home":
-		start_city = id
-		_confirm()
-	elif id == dest_city:
+	if id == dest_city:
 		_confirm()
 	elif Route.neighbours(start_city).has(id):
 		_pick_dest(id)
@@ -406,7 +397,7 @@ func _bar(pos: Vector2, label: String, v: float, w: float) -> void:
 
 ## Total kilometres and a bar towards the next car to unlock.
 func _unlock_progress(pos: Vector2) -> void:
-	var km := Session.total_km
+	var km := Session.km # this country's: its cars unlock one by one in every country
 	var n := Profile.unlocked_count(Session.car_km())
 	_t(pos + Vector2(0, 0), Lang.t("driven") % Units.dist_text(km), 16, Color("ffd24a"))
 	if n >= CarStats.ids().size():
@@ -476,17 +467,12 @@ func _draw_map() -> void:
 	bg.bg_color = Color("2b4763")
 	bg.set_corner_radius_all(16)
 	draw_style_box(bg, MAP_PANEL)
-	var dest := kind() == "dest"
 	var r := Rect2(488, 100, 456, 384)
 	_card(r, true)
 	var x := r.position.x + 20
 	var w := r.size.x - 40
 	_t(Vector2(x, 140), _step_title(), 26, Color.WHITE)
 	var id := hover if hover != "" else start_city
-	if not dest:
-		_city_info(id, Vector2(x, 186), w)
-		_t(Vector2(x, 460), Lang.t("pick_home"), 16, Color("c8d6e3"))
-		return
 	_t(Vector2(x, 176), Lang.t("you_are_in") % Geo.display_name(start_city), 18, Color("7fe0a0"))
 	if id != dest_city and id != start_city:
 		_city_info(id, Vector2(x, 214), w)

@@ -4,18 +4,20 @@ extends Node
 const SAVE_PATH := "user://profile.json"
 var save_path := SAVE_PATH ## the tests point it at a file of their own
 var car_id := "yaris"
-## The country being played; from_city, to_city, home_city and visited belong to it. The other countries' are kept
-## in `places` (code -> {home_city, from_city, to_city, visited}); kilometres and cars are shared.
+## The country being played; from_city, to_city, home_city, visited and km belong to it. The other countries' are kept
+## in `places` (code -> {home_city, from_city, to_city, visited, postcards, km}). Every country starts from its
+## capital (country.json `start`) and has its own kilometres, which unlock its cars one by one; total_km counts all.
 var country := "pl"
 var places := {}
 var from_city := "krakow"
 var to_city := "rzeszow"
-var total_km := 0.0
+var total_km := 0.0 ## driven in every country together
+var km := 0.0 ## driven in the country being played: they unlock its cars (Profile)
 var visited: Array = [] ## ids of the map cities the player has been to (the goal: all of them)
 var postcards := {} ## the current country's postcards (Postcards): city id -> {stamps, year}
 var album_back_to_map := false ## the album returns to the map (opened there) or to the car screen
 var quality := "high" ## "high": everything at full screen sharpness; "low": the race world is drawn at 960x540
-var home_city := "" ## picked on the first start; "" until then
+var home_city := "" ## where the country's first trip started: its capital
 var menu_at_map := false ## the menu opens at the destination map (coming back from a race)
 var last_result := {}
 ## the player's road rankings (Rankings): country -> road key -> {t, car, weather, date}, best times of won trips
@@ -42,7 +44,7 @@ func _ready() -> void:
 
 ## Kilometres the cars are unlocked by: the driven ones, or no limit in the cars' test mode.
 func car_km() -> float:
-	return 1.0e9 if cars_test else total_km
+	return 1.0e9 if cars_test else km
 
 func stage() -> Dictionary:
 	var st := Route.build(from_city, to_city)
@@ -77,10 +79,10 @@ func _read_test_flags() -> void:
 
 func load_profile() -> void:
 	var f := FileAccess.open(save_path, FileAccess.READ)
-	if f == null:
-		return
-	var d = JSON.parse_string(f.get_as_text())
-	if not d is Dictionary:
+	var d = JSON.parse_string(f.get_as_text()) if f != null else null
+	if not d is Dictionary: # a first start: from the capital
+		GameData.current = country
+		_apply_place({})
 		return
 	total_km = float(d.get("total_km", 0.0))
 	quality = "low" if d.get("quality", "high") == "low" else "high"
@@ -95,6 +97,8 @@ func load_profile() -> void:
 			"to_city": d.get("to_city", ""), "visited": d.get("visited", [])}}
 	Postcards.migrate_places(places) # profiles from before the postcards, every country played
 	var code: String = d.get("country", "pl")
+	if places.get(code) is Dictionary and not places.values().any(func(p): return p is Dictionary and p.has("km")):
+		places[code]["km"] = total_km # profiles from before each country's own kilometres: they were all driven here
 	country = code if GameData.country_codes().has(code) else "pl"
 	GameData.current = country
 	_apply_place(places.get(country, {}))
@@ -116,20 +120,25 @@ func save_profile() -> void:
 
 ## The current country's progress, as kept in `places`.
 func _place() -> Dictionary:
-	return {"home_city": home_city, "from_city": from_city, "to_city": to_city, "visited": visited, "postcards": postcards}
+	return {"home_city": home_city, "from_city": from_city, "to_city": to_city, "visited": visited, "postcards": postcards,
+		"km": km}
 
-## Takes a country's progress (checked against its map; a country never played starts at its default route).
+## Takes a country's progress (checked against its map; a country never played starts from its capital, on its
+## default first trip, with none of its cars but the first).
 func _apply_place(p: Dictionary) -> void:
 	var ids := Geo.cities()
 	var start: Array = GameData.country().start
-	home_city = p.get("home_city", "") if ids.has(p.get("home_city", "")) else ""
+	home_city = p.get("home_city", "") if ids.has(p.get("home_city", "")) else start[0]
+	km = float(p.get("km", 0.0))
 	from_city = p.get("from_city", "") if ids.has(p.get("from_city", "")) else start[0]
 	to_city = p.get("to_city", "") if ids.has(p.get("to_city", "")) else start[1]
 	visited = (p.get("visited", []) as Array).filter(func(id): return ids.has(id))
-	if visited.is_empty() and has_home():
+	if visited.is_empty():
 		visited = [home_city] if home_city == from_city else [home_city, from_city]
 	postcards = p.get("postcards", {}) if p.get("postcards") is Dictionary else {}
 	Postcards.migrate(postcards, visited, ids.keys())
+	if p.is_empty(): # a new country: the capital's postcard, as on arriving
+		Postcards.grant(postcards, [home_city], _year())
 
 ## Plays another country from now on: its map, rules and the player's progress there.
 func switch_country(code: String) -> void:
@@ -139,17 +148,9 @@ func switch_country(code: String) -> void:
 	country = code
 	GameData.current = code
 	_apply_place(places.get(code, {}))
+	if not Profile.is_unlocked(car_id, car_km()): # this country's cars are unlocked one by one again
+		car_id = CarStats.ids()[Profile.unlocked_count(car_km()) - 1]
 	save_profile()
-
-func has_home() -> bool:
-	return home_city != ""
-
-## First start: the home city is where the first race starts.
-func set_home(id: String) -> void:
-	home_city = id
-	from_city = id
-	if to_city == id: to_city = ""
-	visit([id])
 
 ## Marks cities as visited (each map city's postcard collected) and saves; returns the ones visited for the first time.
 func visit(ids: Array) -> Array:
@@ -182,12 +183,13 @@ func postcards_of(code: String) -> Dictionary:
 func _year() -> int:
 	return Time.get_date_dict_from_system().year
 
-## Adds driven kilometres; returns the ids of cars unlocked by them.
-func add_km(km: float) -> Array:
-	var before := Profile.unlocked_count(total_km)
-	total_km += km
+## Adds kilometres driven in the country; returns the ids of its cars unlocked by them.
+func add_km(driven: float) -> Array:
+	var before := Profile.unlocked_count(km)
+	total_km += driven
+	km += driven
 	save_profile()
-	return CarStats.ids().slice(before, Profile.unlocked_count(total_km))
+	return CarStats.ids().slice(before, Profile.unlocked_count(km))
 
 ## The road rankings after a trip: a won one (in time and fuel) saves each road's time (its split, scaled to the
 ## road's own stage) when it beats the player's best there; a lost one saves nothing. Returns Rankings.record's

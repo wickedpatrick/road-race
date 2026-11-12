@@ -19,7 +19,7 @@
 		"de": "Eine lehrreiche Reise vom Genfersee über die Alpen und durch den Gotthard bis nach Lugano"
 	},
 	"region_label": {"pl": "kanton", "en": "canton", "cs": "kanton", "is": "kantóna", "de": "Kanton"},
-	"start": ["zuerich", "winterthur"],
+	"start": ["bern", "thun"],
 	"express_prefixes": ["A"],
 	"limits": {"express": 120, "road": 80, "city": 50, "town_on_express": 80, "town": 50},
 	"signs": {"town": "#1d5bbf", "town_text": "#ffffff", "board": "#1d5bbf", "board_motorway": "#00843d"},
