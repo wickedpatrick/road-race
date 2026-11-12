@@ -361,3 +361,7 @@ obrazków; błędy poprawione, testy i autopilot przechodzą. Zrzuty z gry prom�
       it: Milazzo, Barcellona Pozzo di Gotto, Santo Stefano di Camastra). Rozważyć doliczanie zakrętów i przywrócenie
       tych miejscowości. Na Palermo – Mesyna range rover przy jednym ziarnie (13) nie wyprzedza i nie zdąża.
 - [ ] Szwajcaria i Belgia: język stacji i tablic regionu zależny od regionu, nie tylko od kraju (kawałek kodu).
+
+## 16. Obfuskacja danych
+- [ ] Zaciemnić dane gry w buildzie (data/countries, data/rankings, rules.json), żeby nie dało się ich po prostu
+      podejrzeć ani podmienić (np. czasy rankingów) w paczce webowej i desktopowej.
