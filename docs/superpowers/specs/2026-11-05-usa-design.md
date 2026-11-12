@@ -47,3 +47,8 @@ The user asked for the USA next, to be built within 45 minutes. Not all 50 state
 - A few long roads leave the autopilot only 0-5 s to spare (New York-Buffalo, San Francisco-Los Angeles, Kansas
   City-Denver, Nashville-Memphis, St. Louis-Nashville). Look at them if a child keeps running out of time there.
 - The facts and the postcards' non-Polish texts (cs, is, de) have not been checked by a native speaker.
+- Fuel in gallons in the USA, not litres. The tank on the HUD is now "%d / %d l" (`src/view/hud.gd`). The police fine
+  is "-%d l of fuel" (`fine` in `data/ui.json`, `FINE_FUEL` 10 l in `src/logic/race.gd`); in the USA the police
+  should take 2 gallons. Also check bumps and crashes (3 l each). Best done as a `Units.fuel_text` that follows a
+  country setting (`"gallon": "us"`). The UK stays in litres: British pumps sell litres and gallons live on only in
+  mpg, which the game already shows.
