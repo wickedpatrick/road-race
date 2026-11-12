@@ -6,6 +6,7 @@ const BUILDING_COLORS := [Color("d9b26b"), Color("e7dcc0"), Color("d98a6c"), Col
 const WALL_DARK := Color(0, 0, 0, 0.18)
 const SIGN_GREEN := Color("0f7a43")
 const SIGN_BLUE := Color("1d4f9e")
+static var night := false ## set by WorldView at night: some windows lit (drawn out of the dark, cv being its DrawBatch)
 static var flip := 1.0 ## -1 with left-hand traffic: the world is mirrored, so bend arrows and lamp arms turn round
 static var _sign_cols := {} ## country code -> {town, board, board_motorway} colours (the country's "signs")
 
@@ -1418,6 +1419,13 @@ static func _block(cv, it: Dictionary, b: Vector2, pm: float) -> void:
 	var fh := h / floors
 	for f in floors - 1:
 		cv.draw_rect(Rect2(b + Vector2(-w * 0.46, -h + (f + 0.3) * fh), Vector2(w * 0.92, fh * 0.35)), Color("4a5560") if (f + cols) % 2 == 0 else Color("56616c"))
+		if night: # a few lit windows along the band of a block of flats
+			var was: float = cv.fog
+			cv.fog *= 0.25
+			for c in cols:
+				if _lit(it, f, c):
+					cv.draw_rect(Rect2(b + Vector2(-w * 0.46 + w * 0.92 * (c + 0.2) / cols, -h + (f + 0.33) * fh), Vector2(w * 0.92 * 0.6 / cols, fh * 0.29)), LIT_WINDOW)
+			cv.fog = was
 
 static func _pine(cv, b: Vector2, h: float, pm: float, season: String) -> void:
 	var tw := maxf(1.0, 0.35 * pm)
@@ -1885,7 +1893,16 @@ static func _building(cv, it: Dictionary, b: Vector2, pm: float) -> void:
 	for f in range(1, floors):
 		for c in cols:
 			var wx := -w * 0.5 + w * (c + 0.5) / cols - 0.55 * pm
-			cv.draw_rect(Rect2(b + Vector2(wx, -h + f * fh * 1.0), Vector2(1.1 * pm, fh * 0.55)), Color("2b3a4a"))
+			var lit := night and _lit(it, f, c)
+			if lit: cv.fog *= 0.25
+			cv.draw_rect(Rect2(b + Vector2(wx, -h + f * fh * 1.0), Vector2(1.1 * pm, fh * 0.55)), LIT_WINDOW if lit else Color("2b3a4a"))
+			if lit: cv.fog *= 4.0
+
+const LIT_WINDOW := Color("ffd27a")
+
+## Whether a building's window is lit at night: about a third of them, the same every frame.
+static func _lit(it: Dictionary, f: int, c: int) -> bool:
+	return hash(Vector3i(int(it.get("z", 0.0) * 10.0), f, c)) % 3 == 0
 
 static func _tree(cv, it: Dictionary, b: Vector2, pm: float, pal: Dictionary, season: String) -> void:
 	var h: float = it.h * pm

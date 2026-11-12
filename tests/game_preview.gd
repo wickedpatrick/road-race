@@ -9,6 +9,7 @@ func _ready() -> void:
 	if OS.get_environment("RR_LANG") != "": GameData.set_language(OS.get_environment("RR_LANG")) # e.g. RR_LANG=is
 	if OS.get_environment("RR_TOUCH") == "1": Screen.touch = true
 	if OS.get_environment("RR_LOW") == "1": Session.quality = "low"
+	if OS.get_environment("RR_NIGHT") == "1": Session.night_test = true # at night
 	if OS.get_environment("RR_FERRY") != "": # the ferry fixture (tests/test_ferry.gd); RR_FERRY=left drives on the left
 		var fx: Dictionary = load("res://tests/test_ferry.gd").fixture()
 		if OS.get_environment("RR_FERRY") == "left": fx["drive"] = "left"

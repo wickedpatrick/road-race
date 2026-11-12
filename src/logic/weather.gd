@@ -91,6 +91,25 @@ static func grass(kind: String, biome: String, pal: Dictionary) -> Array:
 		return [Color(g[0]), Color(g[1])]
 	return [pal.grass_a, pal.grass_b]
 
+## Night (a stage with "night": true): the world in the dark, only what the headlights (NIGHT_REACH of the drawing
+## distance; better lights reach further), the lamps and the other cars' lights show.
+const NIGHT_REACH := 0.26
+const NIGHT_SKY := [Color("03050c"), Color("0c1426")]
+
+## A colour of the world at night: dark and a little blue.
+static func night_color(c: Color) -> Color:
+	return Color(c.darkened(0.5).lerp(Color("15203a"), 0.22), c.a)
+
+## A palette at night: every colour dark, the sky black-blue (the dark beyond the headlights is its bottom), no sun.
+static func night(pal: Dictionary) -> Dictionary:
+	var out := {}
+	for k in pal:
+		out[k] = night_color(pal[k]) if pal[k] is Color else pal[k]
+	out.sky_top = NIGHT_SKY[0]
+	out.sky_bottom = NIGHT_SKY[1]
+	out.sun = false
+	return out
+
 ## {"grass_a": "#rrggbb", ...} -> colours.
 static func _colors(d: Dictionary) -> Dictionary:
 	var out := {}

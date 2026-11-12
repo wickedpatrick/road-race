@@ -22,6 +22,8 @@ var pal: Dictionary
 var season := "summer" ## the ground's season, from the weather
 var weather := "sun"
 var _fog_reach := 0.0 ## thick fog: the world fades to white within this share of the drawing distance
+var night := false ## the stage at night (Weather.night): dark beyond the headlights, lights on
+var light_reach := 1.0 ## the headlights' reach, times Weather.NIGHT_REACH (better lights: more)
 var items: Dictionary = {}
 var font: Font
 var parallax := 0.0
@@ -79,6 +81,12 @@ func bind(p_race: Race, p_weather := "") -> void:
 	season = Weather.season(weather)
 	pal = Weather.palette(weather)
 	_fog_reach = Weather.fog_reach(weather)
+	night = race.stage.get("night", false)
+	Scenery.night = night
+	if night: # the dark closes in like a thick fog, at the headlights' reach
+		pal = Weather.night(pal)
+		var reach := Weather.NIGHT_REACH * light_reach
+		_fog_reach = minf(_fog_reach, reach) if _fog_reach > 0.0 else reach
 	items = race.scenery
 	_left = race.stage.get("left", false)
 	Scenery.flip = -1.0 if _left else 1.0
@@ -228,6 +236,8 @@ func _build_grass() -> void:
 	_grass.resize(count * 2)
 	var zones: Array = race.stage.zones
 	var cols := zones.map(func(zn): return Weather.grass(weather, zn.biome, pal))
+	if night: # the landscapes' own grass, dark too
+		cols = cols.map(func(c): return [Weather.night_color(c[0]), Weather.night_color(c[1])])
 	var zi := 0
 	for k in count:
 		var z := k * SEG
@@ -275,6 +285,7 @@ func _draw() -> void:
 	_b.begin(self)
 	_draw_sky()
 	_draw_scene()
+	if night: _draw_headlights()
 	_draw_player()
 	_draw_particles()
 	if race.hit_flash > 0.0:
@@ -286,6 +297,8 @@ func _draw_sky() -> void:
 	var bot: Color = pal.sky_bottom
 	_b.draw_polygon(PackedVector2Array([Vector2(-20, -20), Vector2(W + 20, -20), Vector2(W + 20, HORIZON + 4), Vector2(-20, HORIZON + 4)]),
 		PackedColorArray([top, top, bot, bot]))
+	if night:
+		_draw_night_sky()
 	if pal.sun:
 		var sc := Vector2(740.0 - parallax * 0.2, 120.0)
 		_b.draw_circle(sc, 70.0, Color(1, 0.95, 0.7, 0.25))
@@ -296,6 +309,7 @@ func _draw_sky() -> void:
 		var cx := fposmod(k * 230.0 + 60.0 - parallax * 0.5, W + 240.0) - 120.0
 		var cy := 70.0 + (k % 3) * 38.0
 		var cc := Color(1, 1, 1, 0.75) if season != "winter" else Color(0.95, 0.97, 1.0, 0.8)
+		if night: cc = Color(0.16, 0.19, 0.26, 0.6) # dark clouds against the stars
 		_b.draw_circle(Vector2(cx, cy), 26.0, cc)
 		_b.draw_circle(Vector2(cx + 28.0, cy + 6.0), 22.0, cc)
 		_b.draw_circle(Vector2(cx - 28.0, cy + 8.0), 20.0, cc)
@@ -436,14 +450,14 @@ func _draw_scene() -> void:
 			_draw_segment(n, i)
 		elif _vis[n] == 2:
 			_draw_tunnel(n, i)
-		_b.fog = _item_fog(n)
+		_b.fog = maxf(_item_fog(n), NIGHT_DIM if night else 0.0)
 		_b.fog_color = pal.sky_bottom
 		var its = items.get(i)
 		if its != null:
 			for it in its:
 				if i < _sea_i or it.type == "ferry_ship":
 					_draw_item(it, n, cam_x, cam_y, cam_z)
-		_b.fog = maxf(_edge_fade(n), _thick_fog(n)) # traffic matters: no haze, only the edge of the view (or thick fog)
+		_b.fog = maxf(maxf(_edge_fade(n), _thick_fog(n)), NIGHT_DIM * 0.8 if night else 0.0) # traffic matters: no haze, only the edge of the view (or thick fog, or the dark)
 		for ci in _buckets[n]:
 			if i < _sea_i or tcars[ci].z < _sea_z + Route.FERRY_STERN: # out at sea only the cars still on the ramp
 				_draw_traffic_car(tcars[ci], n, cam_x, cam_y, cam_z)
@@ -864,6 +878,8 @@ func _draw_item(it: Dictionary, n: int, cam_x: float, cam_y: float, cam_z: float
 	_b.set_mirror(false)
 	if it.has("closed"): it.lifted = _gate_up
 	Scenery.draw_item(_b, it, Vector2(W - b.x, b.y) if _left else b, pm, pal, season, font)
+	if night and it.type == "lamp":
+		_lamp_light(Vector2(W - b.x, b.y) if _left else b, pm, it)
 	_b.set_mirror(_left)
 
 ## Viaduct over the road: pillars past both edges (and in the median of a dual carriageway).
@@ -1032,6 +1048,8 @@ func _draw_traffic_car(c: Dictionary, n: int, cam_x: float, cam_y: float, cam_z:
 		return # the far carriageway runs in its own tube (and its own cutting)
 	_b.set_mirror(false)
 	CarPainter.draw_traffic(_b, c.kind, Vector2(W - px if _left else px, py), scale, CarPainter.TRAFFIC_COLORS[c.color_idx], c.get("dir", 1) < 0)
+	if night:
+		_car_lights(Vector2(W - px if _left else px, py), scale, c.get("dir", 1) < 0, c.kind)
 	_b.set_mirror(_left)
 
 func _draw_player() -> void:
@@ -1041,7 +1059,14 @@ func _draw_player() -> void:
 	py += sin(race.z * 0.8) * 1.2 * race.speed_ratio()
 	_b.set_mirror(false) # steer_visual is already the way the player steers on screen
 	var cs := s * W * 0.5 * CAR_UNIT
+	if night: # the player's car in the dark too, only a little lit by the dashboard and the lamps
+		_b.fog = 0.35
+		_b.fog_color = pal.sky_bottom
 	CarPainter.draw(_b, race.car_id, Vector2(W * 0.5, py), cs, race.steer_visual, race.braking)
+	_b.fog = 0.0
+	if night: # the rear lights, brighter on the brake
+		for sx in [-1.0, 1.0]:
+			_glow(Vector2(W * 0.5 + sx * 88.0 * cs, py - 44.0 * cs), 10.0 * cs, Color(1.0, 0.1, 0.08), 0.6 if race.braking else 0.3)
 	var st: Dictionary = CarPainter.SMOKE_STYLES.get(race.car_id, CarPainter.SMOKE_DEFAULT)
 	var col: Color = st.color
 	for p in puffs:
@@ -1049,6 +1074,73 @@ func _draw_player() -> void:
 		col.a = st.alpha * p.a * (1.0 - k) * minf(1.0, k * 8.0 + 0.3)
 		_b.draw_circle(Vector2(W * 0.5 + p.x * cs, py - p.y * cs), p.r * cs, col)
 	_b.set_mirror(_left)
+
+## Night: stars and a moon over the dark.
+func _draw_night_sky() -> void:
+	var r := RandomNumberGenerator.new()
+	r.seed = 11
+	for k in 90:
+		var p := Vector2(fposmod(r.randf() * (W + 200.0) - parallax * 0.15, W + 200.0) - 100.0, r.randf() * (HORIZON - 40.0))
+		_b.draw_circle(p, r.randf_range(0.6, 1.5), Color(1, 1, 1, r.randf_range(0.35, 0.9)))
+	var mc := Vector2(220.0 - parallax * 0.2, 90.0)
+	_b.draw_circle(mc, 40.0, Color(0.85, 0.9, 1.0, 0.08))
+	_b.draw_circle(mc, 18.0, Color("e9eef5"))
+	_b.draw_circle(mc + Vector2(7, -4), 15.0, NIGHT_SKY_TOP) # a crescent
+
+const NIGHT_SKY_TOP := Color("05080f")
+const NIGHT_DIM := 0.5 ## at night buildings, trees, signs and cars are this far in the dark even in the headlights
+
+## A soft light: rings fading out from a bright core, never hazed (lights show through the dark).
+func _glow(at: Vector2, r: float, col: Color, a: float) -> void:
+	var was := _b.fog
+	_b.fog = 0.0
+	r = maxf(r, 1.2)
+	for k in 4:
+		var f := 1.0 - k * 0.25
+		_b.draw_circle(at, r * (1.0 + k * 0.9), Color(col, a * f * f * 0.5))
+	_b.draw_circle(at, r * 0.45, Color(col.lightened(0.6), minf(1.0, a * 2.5)))
+	_b.fog = was
+
+## A car's lights at night: white headlights coming towards the player (with a pool of light on the road before
+## them), red rear lights going away, and the patrol car's blue flashes.
+func _car_lights(c: Vector2, s: float, front: bool, kind: String) -> void:
+	var y := c.y - 40.0 * s
+	for sx in [-1.0, 1.0]:
+		if front:
+			_glow(Vector2(c.x + sx * 88.0 * s, y), 22.0 * s, Color(1.0, 0.95, 0.8), 0.9)
+		else:
+			_glow(Vector2(c.x + sx * 92.0 * s, y), 18.0 * s, Color(1.0, 0.12, 0.08), 0.75)
+	if front:
+		_b.draw_circle(Vector2(c.x, c.y + 6.0 * s), 140.0 * s, Color(1.0, 0.95, 0.75, 0.08))
+	if kind == "police" and int(Time.get_ticks_msec() / 160) % 2 == 0:
+		_glow(Vector2(c.x, c.y - 112.0 * s), 40.0 * s, Color(0.2, 0.45, 1.0), 0.8)
+
+## A street lamp at night: its head glowing and a pool of warm light on the ground under it.
+func _lamp_light(b: Vector2, pm: float, it: Dictionary) -> void:
+	var h: float = it.get("h", 7.0) * pm
+	var head := b + Vector2(0.05 * pm * (1.0 if it.lat * Scenery.flip > 0 else -1.0), -h)
+	_b.draw_set_transform(b, 0.0, Vector2(1.0, 0.3))
+	_b.draw_circle(Vector2.ZERO, 5.0 * pm, Color(1.0, 0.82, 0.45, 0.13))
+	_b.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+	_glow(head, 0.6 * pm, Color(1.0, 0.85, 0.5), 0.8)
+
+## The player's headlights at night: a warm wedge on the road ahead, bright near the car and fading out at their
+## reach, following the road's bends.
+func _draw_headlights() -> void:
+	var reach := int(N * Weather.NIGHT_REACH * light_reach)
+	var lat := race.x * Track.ROAD_HALF_WIDTH
+	for n in mini(reach, N - 1):
+		if _vis[n] != 1: continue
+		var k0 := 1.0 - float(n) / reach
+		var k1 := 1.0 - float(n + 1) / reach
+		var w0 := Track.ROAD_HALF_WIDTH * _s0[n] * W * 0.5 * (0.55 + 0.35 * (1.0 - k0))
+		var w1 := Track.ROAD_HALF_WIDTH * _s1[n] * W * 0.5 * (0.55 + 0.35 * (1.0 - k1))
+		var x0 := _x0[n] + _s0[n] * lat * W * 0.5
+		var x1 := _x1[n] + _s1[n] * lat * W * 0.5
+		var c0 := Color(1.0, 0.93, 0.72, 0.3 * k0)
+		var c1 := Color(1.0, 0.93, 0.72, 0.3 * k1)
+		_b.draw_polygon(PackedVector2Array([Vector2(x0 - w0, _y0[n]), Vector2(x0 + w0, _y0[n]), Vector2(x1 + w1, _y1[n]), Vector2(x1 - w1, _y1[n])]),
+			PackedColorArray([c0, c0, c1, c1]))
 
 func _draw_particles() -> void:
 	var a := 1.0 - shelter

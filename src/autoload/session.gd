@@ -34,6 +34,8 @@ var sharp_amount := 0.0
 var police_test := false
 ## test mode for the weather: every trip in this weather. ?pogoda=snow in the browser, -- --pogoda=fog on the desktop.
 var weather_test := ""
+## test mode for the night: every trip at night (Weather.night). ?noc in the browser, -- --noc on the desktop.
+var night_test := false
 ## test mode for the cars: every car unlocked (the saved kilometres stay). ?auta in the browser, -- --auta on the desktop.
 var cars_test := false
 
@@ -56,6 +58,8 @@ func stage() -> Dictionary:
 		st["police_escape"] = 1.0
 	if weather_test != "":
 		st["weather"] = weather_test
+	if night_test:
+		st["night"] = true
 	return st
 
 func _read_test_flags() -> void:
@@ -72,6 +76,8 @@ func _read_test_flags() -> void:
 				sharp_amount = kv[1].to_float()
 		elif kv[0] == "policja":
 			police_test = true
+		elif kv[0] == "noc":
+			night_test = true
 		elif kv[0] == "auta":
 			cars_test = true
 		elif kv[0] == "pogoda" and kv.size() > 1 and Weather.KINDS.has(kv[1]):
