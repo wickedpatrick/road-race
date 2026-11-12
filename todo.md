@@ -291,6 +291,12 @@ długości i zakrętów odcinka (np. z czasu bota), te same przy każdym uruchom
 - [x] Kalibracja dokończona 2026-11-11 (po limitach w tunelach). Po zmianach tras lub limitów puścić ponownie:
       `JOBS=8 tools/calibrate_rankings.sh 2 <kody>` (najpierw `--import`, inaczej skrypt nie zna klasy Rankings
       i nadpisuje pliki pustymi danymi).
+- [x] 2026-11-12: 100 kierowców na odcinek. Kotwice (`Rankings.anchors`): 2. i 20. miejsce z przejazdów gracza
+      na trasach testowych (Szczecin - Bydgoszcz, Łódź - Warszawa, Kraków - Katowice; 2. = czas - 14/7/4 s, 20. =
+      czas), na innych drogach z dopasowania do przejazdu bota Rosso po pustej drodze („top”); 1. miejsce w połowie
+      między „top” a 2.; 70. = Clioris przepisowo; 90-100 = dawne 10-20; pomiędzy równo. Pierwsza dwudziestka tylko
+      w dwóch najszybszych autach. Kalibracja: `tools/calibrate_rankings.sh` (po `--import`). Awans jak w Top Gear:
+      po wygranej z lepszym miejscem wiersz gracza wjeżdża w tabelę od starego miejsca (101 za pierwszym razem).
 - [ ] Później (backend): identyfikator gracza i nick, format wyniku (kraj, odcinek, kierunek, auto, warunki, czas,
       wersja gry, seed), kolejka wysyłki, weryfikacja po stronie serwera (anty-cheat); fałszywi kierowcy znikają.
 
@@ -367,6 +373,8 @@ obrazków; błędy poprawione, testy i autopilot przechodzą. Zrzuty z gry prom�
       podejrzeć ani podmienić (np. czasy rankingów) w paczce webowej i desktopowej.
 
 ## 17. Muzyka w menu
-- [ ] W menu gra w tle Nokturn Es-dur op. 9 nr 2 Chopina, ten puszczany w pociągach PKP Intercity (Pendolino).
+- [x] W menu gra w tle Nokturn Es-dur op. 9 nr 2 Chopina, ten puszczany w pociągach PKP Intercity (Pendolino).
       Sama kompozycja jest w domenie publicznej, ale nagranie Intercity już nie, więc
       syntezujemy własną wersję (tools/make_audio.py, bez vibrato), spokojnie, w pętli, ciszej niż efekty.
+      Zrobione 2026-11-12: 8 taktów (Mutopia), fortepian z próbek Salamander Grand Piano (CC BY, README), w pętli
+      w menu, albumie, rankingach i wyborze kraju.
