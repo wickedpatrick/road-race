@@ -453,33 +453,39 @@ def lose():
 # LH: the notes struck on each eighth.
 NOCTURNE_RH = [(0, 4, 79), (4, 1, 77), (5, 1, 79), (6, 3, 77), (9, 2, 75), (11, 1, 70), (12, 2, 79), (14, 1, 72), (15, 2, 84), (17, 1, 79), (18, 3, 82), (21, 2, 80), (23, 1, 79), (24, 3, 77), (27, 2, 79), (29, 1, 74), (30, 3, 75), (33, 3, 72), (36, 1, 70), (37, 1, 86), (38, 1, 84), (39, 0.5, 82), (39.5, 0.5, 80), (40, 0.5, 79), (40.5, 0.5, 80), (41, 0.5, 72), (41.5, 0.5, 74), (42, 3, 75), (47, 1, 70), (48, 3, 79), (51, 0.5, 77), (51.5, 0.5, 79), (52, 0.5, 77), (52.5, 0.5, 76), (53, 0.5, 77), (53.5, 0.5, 79), (54, 1, 77), (55, 2.5, 75), (57.5, 0.5, 77), (58, 0.5, 75), (58.5, 0.5, 74), (59, 0.5, 75), (59.5, 0.5, 77), (60, 0.5, 79), (60.5, 0.5, 71), (61, 0.5, 72), (61.5, 0.5, 73), (62, 0.5, 72), (62.5, 0.5, 77), (63, 0.5, 76), (63.5, 0.5, 80), (64, 0.5, 79), (64.5, 0.5, 85), (65, 0.5, 84), (65.5, 0.5, 79), (66, 3, 82), (69, 2, 80), (71, 1, 79), (72, 2.77, 77), (74.77, 0.11, 76), (74.89, 0.11, 77), (75, 1, 79), (76, 1, 79), (77, 1, 74), (78, 3, 75), (81, 3, 72), (84, 1, 70), (85, 1, 86), (86, 1, 84), (87, 0.5, 82), (87.5, 0.5, 80), (88, 0.5, 79), (88.5, 0.27, 80), (88.77, 0.22, 80), (89, 0.5, 72), (89.5, 0.5, 74), (90, 5, 75), (95, 1, 70)]
 NOCTURNE_LH = [(39,), (55, 63), (58, 63, 67), (51,), (56, 62), (59, 62, 68), (39,), (55, 63), (58, 63, 67), (38,), (55, 63), (58, 63, 67), (36,), (55, 64), (58, 64, 67), (48,), (55, 64), (60, 64, 70), (41,), (53, 61), (58, 61, 64), (41,), (53, 60), (56, 60, 65), (46,), (53, 62), (58, 62, 68), (47,), (55, 65), (62, 65, 67), (48,), (55, 63), (60, 63, 67), (45,), (54, 63), (60, 63, 66), (46,), (53, 63), (58, 63, 68), (34,), (53, 62), (58, 68), (39,), (55, 63), (58, 63, 67), (51,), (55, 63), (58, 63, 67), (51,), (55, 63), (58, 63, 67), (51,), (56, 62), (59, 62, 68), (51,), (55, 63), (58, 63, 67), (50,), (55, 63), (58, 63, 67), (48,), (55, 64), (58, 64, 67), (48,), (55, 64), (60, 64, 70), (41,), (53, 61), (58, 61, 64), (41,), (53, 60), (56, 60, 65), (46,), (53, 62), (58, 62, 68), (47,), (55, 65), (62, 65, 67), (48,), (55, 63), (60, 63, 67), (45,), (54, 63), (60, 63, 66), (46,), (53, 63), (58, 63, 68), (34,), (53, 62), (58, 68), (39,), (55, 63), (58, 63, 67), (51,), (55, 63), (58, 63, 67)]
+# The piano: Salamander Grand Piano V3 (Alexander Holm, CC BY 3.0), the tonejs.github.io/audio/salamander mp3s of
+# every third semitone in tools/piano, decoded with macOS's afconvert.
+PIANO_NOTES = {"A": 9, "C": 0, "Ds": 3, "Fs": 6}
+_piano_samples = {}
+def _piano_load():
+    import subprocess, tempfile, glob
+    d = os.path.join(os.path.dirname(__file__), "piano")
+    with tempfile.TemporaryDirectory() as tmp:
+        for path in glob.glob(os.path.join(d, "*.mp3")):
+            name = os.path.basename(path)[:-4]
+            m = 12 * (int(name[-1]) + 1) + PIANO_NOTES[name[:-1]]
+            out = os.path.join(tmp, name + ".wav")
+            subprocess.run(["afconvert", "-f", "WAVE", "-d", "LEI16@%d" % SR, "-c", "1", path, out], check=True)
+            with wave.open(out) as w:
+                raw = w.readframes(w.getnframes())
+            x = [v / 32768.0 for v in struct.unpack("<%dh" % (len(raw) // 2), raw)]
+            start = next(i for i, v in enumerate(x) if abs(v) > 0.01) # the mp3's silence before the strike
+            _piano_samples[m] = x[max(0, start - 20):start + 8 * SR]
 _piano_cache = {}
 def piano(m, dur, vol=1.0):
-    """A struck piano string, no vibrato: partials stretched a little sharp (the string's stiffness), shaped by the
-    hammer striking at 1/7 of the string, each dying away in two stages (a quick fall right after the strike, then
-    the long soft ring, the high partials and the high notes faster), a short knock of the hammer, and the damper
-    stopping it within ~0.1 s once the key is let go. Cached: the left hand repeats its notes."""
+    """A piano note from the nearest sample, repitched (at most a semitone and a half), the damper stopping it
+    within ~0.1 s once the key is let go. Cached: the left hand repeats its notes."""
     key = (m, round(dur, 3), vol)
     if key in _piano_cache: return _piano_cache[key]
-    freq = note(m); damp = 0.12
-    n = int((dur + damp * 4) * SR); out = [0.0] * n
-    hi = (freq / 261.6) ** 0.5
-    for k in range(1, 16):
-        fk = freq * k * math.sqrt(1 + 0.0004 * k * k)
-        if fk > 8000: break
-        a = abs(math.sin(math.pi * k / 7)) / k ** 0.8
-        d1 = (2.5 + 0.9 * k) * hi # the prompt fall
-        d2 = (0.25 + 0.12 * k) * hi # the aftersound
-        w = 2 * math.pi * fk / SR; ph = (k * 0.7) % 6.28
-        for i in range(n):
-            t = i / SR
-            out[i] += a * (0.6 * math.exp(-d1 * t) + 0.4 * math.exp(-d2 * t)) * math.sin(w * i + ph)
-    knock = noise(0.02, 0.15, 8.0, 0.25)
-    for i, v in enumerate(knock): out[i] += v
+    if not _piano_samples: _piano_load()
+    base = min(_piano_samples, key=lambda s: abs(s - m))
+    src = _piano_samples[base]; step = 2 ** ((m - base) / 12); damp = 0.1
+    n = min(int((dur + damp * 5) * SR), int((len(src) - 2) / step)); out = [0.0] * n
     for i in range(n):
+        p = i * step; j = int(p); f = p - j
         t = i / SR
-        e = min(1.0, t / 0.0015) * (1.0 if t < dur else math.exp(-(t - dur) / damp))
-        out[i] *= vol * e
+        e = 1.0 if t < dur else math.exp(-(t - dur) / damp)
+        out[i] = (src[j] * (1 - f) + src[j + 1] * f) * vol * e
     _piano_cache[key] = out
     return out
 def reverb(buf):

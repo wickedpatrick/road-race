@@ -48,3 +48,7 @@ Kliknij dwukrotnie `graj.command` (otworzy grę w przeglądarce, najlepiej Chrom
 - Eksport: `/Applications/Godot.app/Contents/MacOS/Godot --headless --path . --export-release "Web" build/web/index.html`
 - Deploy na serwer: `tools/deploy.sh` (testy, eksport Web, rsync do `api@vps-e96b8579.vps.ovh.net:/home/labs/www/rajd-przez-polske`)
 - Spec i plan: `docs/superpowers/`
+
+## Podziękowania
+- Fortepian nokturnu w menu: Salamander Grand Piano V3, Alexander Holm, licencja CC BY 3.0 (próbki z
+  tonejs.github.io/audio/salamander w `tools/piano`). Nuty: Mutopia Project (Mutopia-1590, CC BY-SA 3.0).
