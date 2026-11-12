@@ -28,6 +28,13 @@ const LANG_BTN := Rect2(736, 124, 196, 36) ## car step: the game's language (L k
 const ALBUM_CAR_BTN := Rect2(28, 124, 196, 36) ## the postcard album (P key): on the car step
 const ALBUM_MAP_BTN := Rect2(796, 14, 148, 40) ## and on the map steps
 const RANKING_BTN := Rect2(764, 440, 168, 36) ## destination step: the rankings of the trip's roads (R key)
+## the rankings' calibration (police test mode, -- --policja, on the Polish map): a long, a middle and a short road
+## started straight from the buttons
+const TEST_TRIPS := [["szczecin", "bydgoszcz"], ["lodz", "warszawa"], ["krakow", "katowice"]]
+func _test_btn(i: int) -> Rect2:
+	return Rect2(464 + i * 108, 14, 100, 40)
+func _test_trips() -> bool:
+	return Session.police_test and kind() == "dest" and Session.country == "pl"
 var loading := false ## start chosen: the "get ready" card is shown while the race scene loads
 var t := 0.0
 
@@ -223,6 +230,13 @@ func _tap(p: Vector2) -> bool:
 	if kind() == "dest" and RANKING_BTN.has_point(p):
 		_open_ranking()
 		return true
+	if _test_trips():
+		for i in TEST_TRIPS.size():
+			if _test_btn(i).has_point(p):
+				start_city = TEST_TRIPS[i][0]
+				_pick_dest(TEST_TRIPS[i][1])
+				_start()
+				return true
 	if Screen.touch:
 		if NEXT_BTN.has_point(p):
 			Sfx.play("blip", -15.0)
@@ -343,6 +357,9 @@ func _draw() -> void:
 		Ui.button(self, font, _album_btn(), Lang.t("album_btn"), false, 16)
 	if kind() == "dest":
 		Ui.button(self, font, RANKING_BTN, Lang.t("ranking_btn"), false, 16)
+	if _test_trips():
+		for i in TEST_TRIPS.size():
+			Ui.button(self, font, _test_btn(i), "Test%d" % (i + 1), false, 16)
 	if Screen.touch:
 		if step > 0:
 			Ui.button(self, font, BACK_BTN, Lang.t("back"), false, 20)
