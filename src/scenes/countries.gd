@@ -2,8 +2,7 @@ extends Node2D
 ## Picking the country to play on a map of Europe (with a piece of Asia) and, small across the sea on the left,
 ## North America (data/world.json, made by tools/make_world.py). Countries in the game are green with their flag in
 ## the middle; the ones planned but not in the game yet are grey, striped and marked "coming soon"; any other land
-## has no borders at all. Names show in the header and in a tooltip by the cursor (or the tap). A legend in the
-## corner tells the two apart.
+## has no borders at all. Names show in the header and in a tooltip by the cursor (or the tap).
 ## Opened from the map in the menu (the country button, C); Esc goes back without a change.
 const SEA := Color("2c5d86")
 const LAND := Color("c4b893") ## land of countries not in the plan, without borders
@@ -14,7 +13,6 @@ const PLAYABLE_EDGE := Color("2f6b2a")
 const CURRENT := Color("ffd24a")
 const STRIPE := Color("969ca1")
 const STRIPE_GAP := 7.0 ## px between the "coming soon" stripes
-const LEGEND := Rect2(16, 404, 214, 70)
 const BACK_BTN := Rect2(24, 490, 148, 44)
 var font: Font
 var world: Dictionary
@@ -191,25 +189,6 @@ func _row(pos: Vector2, parts: Array, size: int, color: Color, draw := true) -> 
 		x += font.get_string_size(text, HORIZONTAL_ALIGNMENT_LEFT, -1, size).x + (8.0 if k < parts.size() - 1 else 0.0)
 	return x
 
-## Which colour means what: in the game, coming soon.
-func _legend() -> void:
-	draw_rect(LEGEND, Color(0.06, 0.09, 0.13, 0.8))
-	draw_rect(LEGEND, Color(1, 1, 1, 0.5), false, 1.0)
-	var r1 := Rect2(LEGEND.position + Vector2(12, 12), Vector2(30, 18))
-	draw_rect(r1, PLAYABLE)
-	draw_rect(r1, PLAYABLE_EDGE, false, 1.5)
-	draw_string(font, Vector2(r1.end.x + 10, r1.end.y - 3), Lang.t("legend_playable"), HORIZONTAL_ALIGNMENT_LEFT, -1, 16, Color.WHITE)
-	var r2 := Rect2(LEGEND.position + Vector2(12, 40), Vector2(30, 18))
-	draw_rect(r2, PLANNED)
-	for k in range(-2, 7):
-		var a := r2.position + Vector2(k * 7.0, r2.size.y)
-		var b := a + Vector2(r2.size.y, -r2.size.y)
-		var seg := Geometry2D.intersect_polyline_with_polygon(PackedVector2Array([a, b]), PackedVector2Array([r2.position, Vector2(r2.end.x, r2.position.y), r2.end, Vector2(r2.position.x, r2.end.y)]))
-		for sg in seg:
-			draw_line(sg[0], sg[sg.size() - 1], STRIPE, 1.0)
-	draw_rect(r2, PLANNED_EDGE, false, 1.0)
-	draw_string(font, Vector2(r2.end.x + 10, r2.end.y - 3), Lang.t("legend_soon"), HORIZONTAL_ALIGNMENT_LEFT, -1, 16, Color.WHITE)
-
 func _back() -> void:
 	Sfx.play("blip", -8.0)
 	Session.menu_at_map = true
@@ -269,7 +248,6 @@ func _draw() -> void:
 		draw_rect(box, Color(0.1, 0.12, 0.15, 0.85))
 		draw_rect(box, CURRENT, false, 1.5)
 		_row(pos, parts, 15, Color.WHITE)
-	_legend()
 	# header and footer
 	draw_rect(Rect2(0, 0, 960, 58), Color(0, 0, 0, 0.45))
 	draw_string(font, Vector2(24, 42), Lang.t("pick_country"), HORIZONTAL_ALIGNMENT_LEFT, -1, 32, Color.WHITE)

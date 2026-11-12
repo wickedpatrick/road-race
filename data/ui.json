@@ -464,8 +464,6 @@
 		"is": "Þetta land kemur bráðum!",
 		"de": "Dieses Land kommt bald!"
 	},
-	"legend_playable": {"pl": "W grze", "en": "In the game", "cs": "Ve hře", "is": "Í leiknum", "de": "Im Spiel"},
-	"legend_soon": {"pl": "Wkrótce", "en": "Coming soon", "cs": "Brzy", "is": "Kemur bráðum", "de": "Bald"},
 	"soon_tag": {"pl": "wkrótce!", "en": "coming soon!", "cs": "brzy!", "is": "kemur bráðum!", "de": "bald!"},
 	"change_country": {"pl": "Zmień kraj", "en": "Change country", "cs": "Změnit zemi", "is": "Skipta um land", "de": "Land wechseln"},
 	"ranking_btn": {"pl": "Ranking", "en": "Ranking", "cs": "Žebříček", "is": "Stigatafla", "de": "Rangliste"},
