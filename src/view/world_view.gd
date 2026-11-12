@@ -265,7 +265,7 @@ func _thick_fog(n: int) -> float:
 		return 0.0
 	var k := clampf(float(n) / (N * _fog_reach), 0.0, 1.0)
 	if night: # the dark starts right before the car: most of the screen is the nearest stretch of the road
-		return sqrt(k) * 0.97
+		return lerpf(NIGHT_NEAR, 1.0, sqrt(k)) * 0.97
 	return smoothstep(0.0, 1.0, k) * 0.97
 
 ## Haze for objects at depth n: the same as the road, then fading out completely over the last stretch of the view,
@@ -1084,6 +1084,7 @@ func _draw_night_sky() -> void:
 	_b.draw_circle(mc, 18.0, Color("e9eef5"))
 	_b.draw_circle(mc + Vector2(7, -4), 15.0, NIGHT_SKY_TOP) # a crescent
 
+const NIGHT_NEAR := 0.67 ## at night even the ground right by the car is this far in the dark (a third as bright as by day)
 const NIGHT_SKY_TOP := Color("05080f")
 
 ## A soft light: rings fading out from a bright core, never hazed (lights show through the dark).
