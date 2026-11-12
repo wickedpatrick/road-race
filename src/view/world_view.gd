@@ -265,11 +265,7 @@ func _thick_fog(n: int) -> float:
 		return 0.0
 	var k := clampf(float(n) / (N * _fog_reach), 0.0, 1.0)
 	if night: # the dark starts right before the car: most of the screen is the nearest stretch of the road
-		var dark := lerpf(NIGHT_NEAR, 1.0, sqrt(k)) * 0.97
-		# the player's lights: the ground up to NIGHT_LIT of the screen's height (better lights higher) as by day
-		var top := H * (1.0 - NIGHT_LIT * light_reach)
-		var y := _y0[n] if n < _y0.size() else HORIZON # the far ground beyond the last row: never lit
-		return dark * (1.0 - smoothstep(top, top + H * 0.12, y))
+		return lerpf(NIGHT_NEAR, 1.0, sqrt(k)) * 0.97
 	return smoothstep(0.0, 1.0, k) * 0.97
 
 ## Haze for objects at depth n: the same as the road, then fading out completely over the last stretch of the view,
@@ -1063,6 +1059,7 @@ func _draw_player() -> void:
 	py += sin(race.z * 0.8) * 1.2 * race.speed_ratio()
 	_b.set_mirror(false) # steer_visual is already the way the player steers on screen
 	var cs := s * W * 0.5 * CAR_UNIT
+	if night: _draw_headlights(py, cs)
 	CarPainter.draw(_b, race.car_id, Vector2(W * 0.5, py), cs, race.steer_visual, race.braking)
 	_b.fog = 0.0
 	if night: # the rear lights, brighter on the brake
@@ -1089,7 +1086,7 @@ func _draw_night_sky() -> void:
 	_b.draw_circle(mc + Vector2(7, -4), 15.0, NIGHT_SKY_TOP) # a crescent
 
 const NIGHT_NEAR := 0.67 ## at night even the ground right by the car is this far in the dark (a third as bright as by day)
-const NIGHT_LIT := 0.35 ## at night the player's lights light the ground up to this share of the screen's height
+const NIGHT_BEAM := 0.3 ## at night the player's headlights light the way up to this share of the way from the horizon to the car
 const NIGHT_SKY_TOP := Color("05080f")
 
 ## A soft light: rings fading out from a bright core, never hazed (lights show through the dark).
@@ -1125,6 +1122,24 @@ func _lamp_light(b: Vector2, pm: float, it: Dictionary) -> void:
 	_b.draw_circle(Vector2.ZERO, 5.0 * pm, Color(1.0, 0.82, 0.45, 0.13))
 	_b.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 	_glow(head, 0.6 * pm, Color(1.0, 0.85, 0.5), 0.8)
+
+## The player's headlights at night, lit like a street lamp's pool: from each of the two lamps at the front of the car
+## a trapezoid of light straight ahead, narrow at the bonnet and wider NIGHT_BEAM of the way from the horizon
+## (better lights closer to it), bright by the car and fading out, soft at its sides.
+func _draw_headlights(py: float, cs: float) -> void:
+	var y0 := py - 70.0 * cs # the bonnet's front, under the car drawn next
+	var y1 := HORIZON + (y0 - HORIZON) * NIGHT_BEAM / light_reach
+	var lean := race.steer_visual * 40.0 * cs # the beams swing a little with the steering
+	for sx in [-1.0, 1.0]:
+		var x0: float = W * 0.5 + sx * 70.0 * cs
+		var x1: float = x0 + sx * 90.0 * cs + lean
+		for k in 3: # nested, the core brightest: soft edges
+			var w0 := (14.0 + 10.0 * k) * cs
+			var w1 := (70.0 + 50.0 * k) * cs
+			var c0 := Color(1.0, 0.95, 0.8, 0.2)
+			var c1 := Color(1.0, 0.95, 0.8, 0.03)
+			_b.draw_polygon(PackedVector2Array([Vector2(x0 - w0, y0), Vector2(x0 + w0, y0), Vector2(x1 + w1, y1), Vector2(x1 - w1, y1)]),
+				PackedColorArray([c0, c0, c1, c1]))
 
 func _draw_particles() -> void:
 	var a := 1.0 - shelter
