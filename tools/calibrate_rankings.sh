@@ -1,16 +1,12 @@
 #!/bin/bash
-# Road rankings: the autopilot's best time on every direct road of every map (tools/calibrate_rankings.gd), one
-# headless Godot per map, JOBS at a time, written to data/rankings/<cc>.json as
-# {"car", "ratio", "roads": {key: seconds}, "fitted": [keys]}.
-# The fit: a road no run finished (or not run at all, see below) gets its legal time (Rankings.legal_between: the
-# limits at 95%, at most 135 km/h, 1.5 s per settlement) x "ratio", the median best/legal of the map's measured
-# roads, or of every measured road (FIT_RATIO, 1.036 over 573 roads of 28 maps: sd 4%, 0.97 .. 1.27) when a map
-# has none. Those roads are listed under "fitted".
-# Usage: tools/calibrate_rankings.sh [seeds] [cc ...]   (no codes: every map in data/countries/index.json)
-#   RR_CAL_DIR=dir keeps the logs there; COLLECT_ONLY=1 only rebuilds the files from the logs in RR_CAL_DIR (every
-#   <cc>*.log is read: a run cut short can be completed by a seeds=0 run, which prints the legal times only).
+# Road rankings' anchors: on every direct road of every map, the fastest car flat out on an empty road ("top", the
+# 1st place) and the weakest one keeping the limits ("slow", the 70th) (tools/calibrate_rankings.gd), one headless
+# Godot per map, JOBS at a time, merged into data/rankings/<cc>.json {"top": {key: s}, "slow": {key: s}, "roads":
+# {key: s}} ("roads", the earlier autopilot best, keeps the 90th..100th places). A road no run won gets its legal
+# time (Rankings.legal_between) x the median of the map's measured top/legal (slow/legal).
+# Usage: tools/calibrate_rankings.sh [cc ...]   (no codes: every map in data/countries/index.json)
+#   RR_CAL_DIR=dir keeps the logs there; COLLECT_ONLY=1 only rebuilds the files from the logs in RR_CAL_DIR.
 cd "$(dirname "$0")/.."
-SEEDS=${1:-1}; shift
 G=${GODOT:-$(ls /Applications/Godot*.app/Contents/MacOS/Godot 2>/dev/null | head -1)}
 [ -x "$G" ] || { echo "Godot not found (set GODOT=/path/to/Godot)"; exit 1; }
 JOBS=${JOBS:-10}
@@ -19,37 +15,32 @@ CODES="$*"
 T=${RR_CAL_DIR:-$(mktemp -d)}
 mkdir -p "$T" data/rankings
 echo "logs in $T"
-export G SEEDS T
+export G T
 if [ "$COLLECT_ONLY" != "1" ]; then
-  SUFFIX=$([ "$SEEDS" = "0" ] && echo ".legal" || echo "")
-  export SUFFIX
-  printf "%s\n" $CODES | xargs -P "$JOBS" -I{} sh -c '"$G" --headless --path . --script tools/calibrate_rankings.gd -- {} "$SEEDS" > "$T/{}$SUFFIX.log" 2>&1; echo "done {}"'
+  printf "%s\n" $CODES | xargs -P "$JOBS" -I{} sh -c '"$G" --headless --path . --script tools/calibrate_rankings.gd -- {} > "$T/{}.log" 2>&1; echo "done {}"'
 fi
 python3 - "$T" $CODES <<'PY'
 import glob, json, statistics, sys
-FIT_RATIO = 1.036
 t, codes = sys.argv[1], sys.argv[2:]
 for cc in codes:
-    best, legal = {}, {}
-    for path in glob.glob(f"{t}/{cc}.log") + glob.glob(f"{t}/{cc}.*.log"):
+    anchors, legal = {"top": {}, "slow": {}}, {}
+    for path in glob.glob(f"{t}/{cc}.log"):
         for l in open(path):
-            if l.startswith("BEST "):
-                _, _, k, b, lg = l.split()
+            if l.startswith("ANCHOR "):
+                _, _, k, top, slow, lg = l.split()
                 legal[k] = float(lg)
-                if float(b) > 0:
-                    best[k] = min(best.get(k, 1e9), float(b))
-    ratios = [best[k] / legal[k] for k in best]
-    ratio = statistics.median(ratios) if ratios else FIT_RATIO
-    roads, fitted = {}, []
-    for k in legal:
-        if k in best:
-            roads[k] = best[k]
-        else:
-            roads[k] = round(legal[k] * ratio, 1)
-            fitted.append(k)
-    out = {"car": "supercar", "ratio": round(ratio, 3), "roads": roads, "fitted": fitted}
-    with open(f"data/rankings/{cc}.json", "w") as f:
+                for name, v in (("top", top), ("slow", slow)):
+                    if float(v) > 0: anchors[name][k] = float(v)
+    if not legal:
+        print(f"{cc}: no runs"); continue
+    path = f"data/rankings/{cc}.json"
+    out = json.load(open(path))
+    for name, got in anchors.items():
+        ratios = [got[k] / legal[k] for k in got]
+        ratio = statistics.median(ratios) if ratios else 1.0
+        out[name] = {k: got[k] if k in got else round(legal[k] * ratio, 1) for k in legal}
+        print(f"{cc} {name}: {len(got)}/{len(legal)} measured, {name}/legal median {ratio:.3f}")
+    with open(path, "w") as f:
         json.dump(out, f, ensure_ascii=False, separators=(",", ":"))
         f.write("\n")
-    print(f"{cc}: {len(roads)} roads, {len(fitted)} fitted, best/legal median {ratio:.3f}")
 PY

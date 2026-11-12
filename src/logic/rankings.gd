@@ -1,13 +1,19 @@
 class_name Rankings
 extends RefCounted
 ## Offline road rankings (todo 11): one ranking per direct road between neighbouring cities of a map (A - B and
-## B - A share it), filled by 20 made-up drivers whose times come from the autopilot's best run on that road
-## (data/rankings/<cc>.json, made by tools/calibrate_rankings.sh). The player's best times live in the profile
+## B - A share it), filled by 100 made-up drivers whose times are spread between anchors measured on that road
+## (data/rankings/<cc>.json, made by tools/calibrate_rankings.sh; see fake()). The player's best times live in the profile
 ## (Session.rankings: cc -> road key -> {t, car, weather, date}); only won trips count, the penalties are already in
 ## the time. All cars and conditions share one ranking.
-const DRIVERS := 20
+const DRIVERS := 100
 const DIR := "res://data/rankings/"
-static var _best := {} ## cc -> {key: seconds}
+## The 2nd place from the 1st: seconds x [0] + [1], fitted (2026-11-12) to the best times driven by hand on the
+## Polish test roads in the fastest car (Szczecin - Bydgoszcz 93.4 - 14, Łódź - Warszawa 44.3 - 7, Kraków -
+## Katowice 37.7 - 4 s) against their 1st places (56.7, 28.0, 22.0).
+const SECOND := [1.364, 1.6]
+const SLOW_PLACE := 70 ## the place of the weakest car keeping every limit ("slow")
+const OLD_FROM := 90 ## the 90th..100th places: the 10th..20th of the earlier 20-driver rankings (from "roads")
+static var _data := {} ## cc -> data/rankings/<cc>.json
 
 ## The ranking's id for the road between two cities: the same both ways.
 static func key(a: String, b: String) -> String:
@@ -58,7 +64,7 @@ static func legal_between(stage: Dictionary, z0: float, z1: float) -> float:
 		if tw.z > z0 and tw.z < z1: t += 1.5
 	return t
 
-## Made-up gamer nicknames (no real people) in many languages and styles; each map draws its 20 drivers from them.
+## Made-up gamer nicknames (no real people) in many languages and styles; each map draws its 100 drivers from them.
 const NICKS := [
 	"TurboKasia", "Szybki_Bill", "Wiraż99", "PanKierownica", "DrogowyLis", "ŻółtaStrzała", "Mgła_Nocą", "Bezdroża",
 	"KrecikRally", "Pędziwiatr", "OponaZimowa", "Ostry_Zakręt", "rychlá_šipka", "Pepa_Řidič", "Kapota77",
@@ -79,14 +85,17 @@ const NICKS := [
 	"Neumático", "Rond_Point_Roi", "Pixel_Pilot", "Retro_Rally", "Clutch_Kick", "Mr_Overtake", "Miss_Apex",
 ]
 
-## The autopilot's best seconds per road on a map (data/rankings/<cc>.json "roads").
-static func bests(cc: String) -> Dictionary:
-	if not _best.has(cc):
+static func _file(cc: String) -> Dictionary:
+	if not _data.has(cc):
 		var path := DIR + cc + ".json"
-		_best[cc] = GameData.load_json(path).roads if FileAccess.file_exists(path) else {}
-	return _best[cc]
+		_data[cc] = GameData.load_json(path) if FileAccess.file_exists(path) else {}
+	return _data[cc]
 
-## The best possible time on a road: the stored autopilot best (or, missing, its legal time).
+## The autopilot's best seconds per road on a map, keeping the limits in traffic (data/rankings/<cc>.json "roads").
+static func bests(cc: String) -> Dictionary:
+	return _file(cc).get("roads", {})
+
+## The autopilot's best time on a road keeping the limits in traffic (or, missing, its legal time).
 static func best(cc: String, k: String) -> float:
 	var b: Dictionary = bests(cc)
 	if b.has(k):
@@ -95,8 +104,8 @@ static func best(cc: String, k: String) -> float:
 	var st := road_stage(cc, r.a, r.b)
 	return legal_between(st, 0.0, st.length)
 
-## A map's 20 made-up drivers, the same on every run: [{nick, car, level}], level 0 the best. The first five are the
-## very fast ones (their times close to the autopilot's best), the rest spread up to ~1.6x it.
+## A map's 100 made-up drivers, the same on every run: [{nick, car}], in the order of their places. The ten best
+## drive one of the two fastest cars, the rest any car.
 static func roster(cc: String) -> Array:
 	var rng := RandomNumberGenerator.new()
 	rng.seed = ("roster/" + cc).hash()
@@ -109,21 +118,45 @@ static func roster(cc: String) -> Array:
 	var cars := CarStats.ids()
 	var out := []
 	for i in DRIVERS:
-		var car: String = cars[cars.size() - 1 - rng.randi_range(0, 1)] if i < 5 else cars[rng.randi_range(0, cars.size() - 1)]
-		var level := 0.995 + 0.006 * i if i < 5 else 1.04 + 0.56 * pow((i - 5) / 14.0, 1.3)
-		out.append({"nick": pool[i], "car": car, "level": level})
+		var car: String = cars[cars.size() - 1 - rng.randi_range(0, 1)] if i < 10 else cars[rng.randi_range(0, cars.size() - 1)]
+		out.append({"nick": pool[i], "car": car})
 	return out
 
-## The made-up drivers' times on one road (same on every run): [{nick, car, t}], fastest first.
+## The anchor times of a road's places (1-based place -> seconds): the 1st the fastest car flat out on an empty
+## road ("top"), the 2nd from it by SECOND, the 70th the weakest car keeping the limits ("slow"), the 90th..100th
+## the 10th..20th of the earlier rankings (the autopilot's best in traffic x 1.15 .. 1.6). Missing anchors (a road
+## not calibrated yet) come from the legal time.
+static func anchors(cc: String, k: String) -> Dictionary:
+	var d := _file(cc)
+	var old := best(cc, k)
+	var top: float = float(d.get("top", {}).get(k, old * 0.3))
+	var out := {1: top, 2: top * SECOND[0] + SECOND[1]}
+	out[SLOW_PLACE] = maxf(float(d.get("slow", {}).get(k, old * 1.03)), out[2] + 1.0)
+	for i in range(9, 20): # the earlier rankings' levels of their 10th..20th
+		out[OLD_FROM + i - 9] = maxf(old * (1.04 + 0.56 * pow((i - 5) / 14.0, 1.3)), out[SLOW_PLACE] + 1.0 + (i - 9))
+	return out
+
+## The made-up drivers' times on one road (same on every run): [{nick, car, t}], fastest first. Between the
+## anchors the places go up evenly, each a little off its even step.
 static func fake(cc: String, k: String) -> Array:
 	var rng := RandomNumberGenerator.new()
 	rng.seed = ("%s/%s" % [cc, k]).hash()
-	var b := best(cc, k)
+	var at := anchors(cc, k)
+	var marks: Array = at.keys()
+	marks.sort()
 	var out := []
-	for d in roster(cc):
-		var spread := 0.008 if d.level < 1.03 else 0.04
-		var f: float = d.level + rng.randf_range(-spread, spread)
-		out.append({"nick": d.nick, "car": d.car, "t": snappedf(b * f, 0.1)})
+	var roster_ := roster(cc)
+	for i in DRIVERS:
+		var place := i + 1
+		var t: float = at.get(place, 0.0)
+		if not at.has(place):
+			var lo := 1
+			for m in marks:
+				if m < place: lo = m
+			var hi: int = marks[marks.find(lo) + 1]
+			var step: float = (at[hi] - at[lo]) / (hi - lo)
+			t = at[lo] + step * (place - lo) + rng.randf_range(-0.4, 0.4) * step
+		out.append({"nick": roster_[i].nick, "car": roster_[i].car, "t": snappedf(t, 0.1)})
 	out.sort_custom(func(p, q): return p.t < q.t)
 	return out
 
@@ -136,7 +169,17 @@ static func table(cc: String, k: String, mine: Dictionary) -> Array:
 		rows.sort_custom(func(p, q): return p.t < q.t or (p.t == q.t and p.has("me")))
 	return rows
 
-## Where a time would place on a road: 1 = first, among the 20 made-up drivers and the player.
+## The indexes of a table's rows shown in `lines` lines, -1 for a "..." line: the first ones, or, the player being
+## further down, the podium, "..." and the rows around the player (as many below as there are).
+static func shown(all: Array, lines: int) -> Array:
+	var me := all.find_custom(func(r): return r.get("me", false))
+	if me < lines:
+		return range(mini(all.size(), lines))
+	var window := lines - 4
+	var start := clampi(me - window / 2, 4, all.size() - window)
+	return [0, 1, 2, -1] + range(start, start + window)
+
+## Where a time would place on a road: 1 = first, among the 100 made-up drivers and the player.
 static func position(cc: String, k: String, t: float) -> int:
 	var n := 1
 	for row in fake(cc, k):

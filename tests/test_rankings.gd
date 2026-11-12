@@ -10,30 +10,37 @@ func run(t) -> void:
 	t.check(k == Rankings.key("rzeszow", "krakow"), "A - B and B - A share one ranking")
 	var f1 := Rankings.fake("pl", k)
 	var f2 := Rankings.fake("pl", k)
-	t.check(f1.size() == Rankings.DRIVERS and str(f1) == str(f2), "20 made-up drivers, the same every time")
+	t.check(f1.size() == Rankings.DRIVERS and str(f1) == str(f2), "100 made-up drivers, the same every time")
 	t.check(f1.all(func(r): return CarStats.has(r.car) and r.nick != ""), "every made-up driver has a nick and a car")
 	var sorted := true
 	for i in range(1, f1.size()): sorted = sorted and f1[i - 1].t <= f1[i].t
 	t.check(sorted and f1[-1].t > f1[0].t * 1.35, "fastest first, spread from very good to slow (%.1f .. %.1f)" % [f1[0].t, f1[-1].t])
-	# every road of every map has its calibrated best, and the podium is within a few % of it
+	# every road of every map has its anchors: the 1st place the empty road's flat-out run, the 70th the weakest car
+	# keeping the limits
 	var missing := []
 	var off := []
 	for c in GameData.countries():
 		var cc: String = c.code
-		var b := Rankings.bests(cc)
+		var data: Dictionary = GameData.load_json(Rankings.DIR + cc + ".json")
 		for rk in Rankings.keys(cc):
-			if not b.has(rk):
+			if not (data.get("top", {}).has(rk) and data.get("slow", {}).has(rk) and data.get("roads", {}).has(rk)):
 				missing.append(cc + ":" + rk)
 				continue
 			var fk := Rankings.fake(cc, rk)
-			for i in 3:
-				if absf(fk[i].t / float(b[rk]) - 1.0) > 0.035: off.append("%s:%s %.1f/%.1f" % [cc, rk, fk[i].t, b[rk]])
+			var at: Dictionary = Rankings.anchors(cc, rk)
+			if fk[0].t != snappedf(at[1], 0.1) or absf(fk[69].t / at[70] - 1.0) > 0.03 or fk[1].t <= fk[0].t:
+				off.append("%s:%s %.1f/%.1f %.1f/%.1f" % [cc, rk, fk[0].t, at[1], fk[69].t, at[70]])
 		var nicks := {}
 		for d in Rankings.roster(cc): nicks[d.nick] = true
 		if nicks.size() != Rankings.DRIVERS: off.append(cc + ": nicks repeat")
 	t.check(missing.is_empty(), "data/rankings covers every road of every map (%s)" % ", ".join(missing.slice(0, 5)))
-	t.check(off.is_empty(), "the top 3 within 3.5%% of the autopilot's best (%s)" % ", ".join(off.slice(0, 5)))
-	t.check(Rankings.position("pl", k, 1.0) == 1 and Rankings.position("pl", k, 1.0e6) == 21, "a position among 20 + the player")
+	t.check(off.is_empty(), "the 1st place on its anchor, the 70th near the slow one (%s)" % ", ".join(off.slice(0, 5)))
+	t.check(Rankings.position("pl", k, 1.0) == 1 and Rankings.position("pl", k, 1.0e6) == 101, "a position among 100 + the player")
+	# the table shows the podium and the rows around a player further down
+	var many := range(101).map(func(i): return {"me": i == 60})
+	var shown := Rankings.shown(many, 21)
+	t.check(shown.size() == 21 and shown.slice(0, 4) == [0, 1, 2, -1] and shown.has(60), "rows around the player (%s)" % str(shown))
+	t.check(Rankings.shown(range(101).map(func(i): return {"me": i == 5}), 21) == range(21), "a player near the top: the first rows")
 	# a trip over two roads: a split time at the city passed, each road's time for its own ranking
 	var st := Route.build("krakow", "zamosc")
 	st.weather = "sun"

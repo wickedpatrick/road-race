@@ -5,6 +5,7 @@ var cruise := 0.9
 var refuel_below := 0.55
 var obey_limits := true
 var limit_factor := 1.0 ## keeps to the limits times this (1.2: 20% over them)
+var corner_margin := 0.84 ## the share of the steering's top bend speed it takes sharp bends at (some kept for the lane)
 ## "legal": keeps to the limits (obey_limits); "dodge": flat out, but back to the limit while the radar detector
 ## beeps or the police are around; "flat": flat out always, and swerving to shake off the patrol car pulling it over
 var strategy := "legal"
@@ -97,7 +98,7 @@ func decide(r: Race) -> Dictionary:
 	for d in range(0, int(look_c), 10):
 		worst = maxf(worst, absf(r.track.segment_at(r.z + d).curve))
 	if worst > 0.0:
-		var safe := r.corner_speed(worst) * 0.84 # keep some steering for the lane
+		var safe := r.corner_speed(worst) * corner_margin
 		if r.speed > safe:
 			accel = false
 			brake = brake or r.speed > safe + 1.5
@@ -144,6 +145,28 @@ static func run_race(car: String, stage: Dictionary, seed_value: int, cruise_rat
 		r.step(1.0 / 60.0, b.decide(r))
 		guard += 1
 	return r
+
+## A run on an empty road (no traffic, no radars, no police) for the rankings' anchors (tools/calibrate_rankings.gd):
+## "flat" out in the fastest car taking the sharp bends at the steering's very limit and stopping for fuel, or
+## "legal" keeping the limits on a tank that never empties. The road's own time (Rankings.road_times), -1 if lost.
+static func run_clean(car: String, stage: Dictionary, strategy: String, free_fuel: bool, seed_value := 1) -> float:
+	stage.radars = []
+	var r := Race.new(car, stage, seed_value)
+	var b := Bot.new()
+	b.cruise = 1.0
+	b.strategy = strategy
+	b.corner_margin = 1.0 if strategy == "flat" else b.corner_margin
+	var guard := 0
+	while r.state == "running" and guard < 60 * 900:
+		for c in r.traffic.cars: c.active = false
+		r.speeding = 0.0
+		if free_fuel: r.fuel.level = r.fuel.capacity
+		r.step(1.0 / 60.0, b.decide(r))
+		guard += 1
+	if r.state != "won":
+		return -1.0
+	var cc := GameData.current
+	return Rankings.road_times(cc, stage, r.splits)[0].t
 
 ## The limit the autopilot keeps, km/h: none (its own cruise) on an Autobahn without one.
 static func _limit(stage: Dictionary, z: float) -> float:

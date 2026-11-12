@@ -1,10 +1,12 @@
 extends Node2D
-## The rankings (Rankings): one road's table (the 20 made-up drivers and the player, with car and time) or the
-## country's fastest driver (sums over every road). Session.ranking_view says which roads to page through and where
+## The rankings (Rankings): one road's table (the 100 made-up drivers and the player, with car and time) or the
+## country's fastest driver (sums over every road); LINES rows of it: the top ones, or the podium and the rows
+## around the player when the player is further down. Session.ranking_view says which roads to page through and where
 ## to go back. Arrows / the < > buttons: the previous or next road; C or the button: road <-> country; Esc, Enter or
 ## the back button: back to the map (or the trip's results).
 const PANEL := Rect2(120, 92, 720, 390)
 const ROW_H := 17.6
+const LINES := 21
 const PREV_BTN := Rect2(24, 490, 64, 44)
 const NEXT_BTN := Rect2(96, 490, 64, 44)
 const MODE_BTN := Rect2(624, 490, 160, 44)
@@ -66,10 +68,15 @@ func _draw() -> void:
 	var y := PANEL.position.y + 22
 	var all := Rankings.keys(Session.country).size()
 	var me_found := false
-	for i in rows.size():
+	var shown := Rankings.shown(rows, LINES)
+	for li in shown.size():
+		var i: int = shown[li]
+		var yy := y + li * ROW_H
+		if i < 0:
+			_t(Vector2(x + 44, yy), "...", 16, Color("c8d6e3"))
+			continue
 		var r: Dictionary = rows[i]
 		var me: bool = r.get("me", false)
-		var yy := y + i * ROW_H
 		if me:
 			me_found = true
 			draw_rect(Rect2(PANEL.position.x + 8, yy - 14, PANEL.size.x - 16, ROW_H), Color("ffd24a", 0.9))
