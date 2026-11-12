@@ -39,6 +39,7 @@ var loading := false ## start chosen: the "get ready" card is shown while the ra
 var t := 0.0
 
 func _ready() -> void:
+	Sfx.music(true)
 	font = ThemeDB.fallback_font
 	_map_clip = Control.new()
 	_map_clip.clip_contents = true

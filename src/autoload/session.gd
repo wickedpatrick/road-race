@@ -193,6 +193,8 @@ func add_km(km: float) -> Array:
 ## road's own stage) when it beats the player's best there; a lost one saves nothing. Returns Rankings.record's
 ## rows ([] for a lost trip).
 func record_trip(race: Race) -> Array:
+	if police_test and race.state == "won":
+		_log_calibration(race)
 	if race.state != "won" or sharp_test or police_test: # the test modes change the road: no ranking
 		return []
 	var times := Rankings.road_times(country, race.stage, race.splits)
@@ -200,6 +202,17 @@ func record_trip(race: Race) -> Array:
 	var rows := Rankings.record(rankings, country, times, race.car_id, race.weather, "%04d-%02d-%02d" % [d.year, d.month, d.day])
 	save_profile()
 	return rows
+
+## The rankings' calibration: in the police test mode every won trip's road times go to user://calibration.log
+## (a line per road: date, car, road key, seconds, the whole trip's seconds).
+func _log_calibration(race: Race) -> void:
+	var path := "user://calibration.log"
+	var f := FileAccess.open(path, FileAccess.READ_WRITE if FileAccess.file_exists(path) else FileAccess.WRITE)
+	if f == null:
+		return
+	f.seek_end()
+	for r in Rankings.road_times(country, race.stage, race.splits):
+		f.store_line("%s %s %s %s %.1f %.1f" % [Time.get_datetime_string_from_system(), race.car_id, country, r.key, r.t, race.elapsed])
 
 ## The player's best times on a map's roads (key -> {t, car, ...}), the current map's by default.
 func my_rankings(code := "") -> Dictionary:

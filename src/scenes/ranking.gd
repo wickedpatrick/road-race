@@ -14,6 +14,7 @@ var view := {}
 var rows: Array = []
 
 func _ready() -> void:
+	Sfx.music(true)
 	font = ThemeDB.fallback_font
 	view = Session.ranking_view
 	if (view.get("keys", []) as Array).is_empty():

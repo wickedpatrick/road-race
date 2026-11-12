@@ -30,6 +30,7 @@ var _ferry := {} ## the ferry the car is on (Race.ferry_started)
 var _sea_t := 0.0 ## seconds of waves on the ferry screen
 
 func _ready() -> void:
+	Sfx.music(false)
 	font = ThemeDB.fallback_font
 	race = Race.new(Session.car_id, Session.stage(), randi())
 	Sfx.set_engine(Session.car_id)

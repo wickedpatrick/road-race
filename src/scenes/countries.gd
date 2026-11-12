@@ -29,6 +29,7 @@ var soon := 0.0 ## seconds left of the "not in the game yet" note
 var t := 0.0
 
 func _ready() -> void:
+	Sfx.music(true)
 	font = ThemeDB.fallback_font
 	world = GameData.load_json(GameData.DIR + "world.json")
 	for code in world.countries:

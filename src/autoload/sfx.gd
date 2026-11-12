@@ -1,6 +1,6 @@
 extends Node
 ## All game audio: engine/gravel/pump loops and one-shot effects (no music but the anthems' first phrases and the
-## countries' tunes on arrival). X toggles mute.
+## countries' tunes on arrival, and Chopin's nocturne in the menus). X toggles mute.
 const DIR := "res://assets/audio/"
 const LOOPS := ["engine", "engine_idle", "gravel", "pump", "siren"] ## looped whole-file by their import settings
 const ONESHOTS := ["hit", "beep", "go", "blip", "lowfuel", "refuel_done", "lose", "radar"]
@@ -10,12 +10,14 @@ const ONESHOTS := ["hit", "beep", "go", "blip", "lowfuel", "refuel_done", "lose"
 ## Every country has two of them (test_arrival_audio.gd).
 const ARRIVAL_KINDS := ["anthem_", "motif_", "motif2_"]
 const SILENT := -80.0
+const MUSIC_DB := -12.0 ## the menus' nocturne, quietly under the clicks
 const IDLE_FADE_FROM := 0.74 ## engine pitch where an idle loop starts handing over to the driving loop
 const IDLE_FADE_SPAN := 0.18 ## ... and has handed over completely
 var muted := false
 var _engine_db := [0.0, 0.0] ## the car's engine level: [driving, idling] dB (EngineAudio.LEVELS)
 var _players := {}
 var _oneshot_pool: Array = []
+var _music: AudioStreamPlayer
 var _arrivals := 0 ## arrivals so far: the anthem and the tune take turns
 
 func _ready() -> void:
@@ -42,6 +44,10 @@ func _ready() -> void:
 		for kind in ARRIVAL_KINDS:
 			if ResourceLoader.exists(DIR + kind + code + ".wav"):
 				_players[kind + code] = load(DIR + kind + code + ".wav")
+	_music = AudioStreamPlayer.new()
+	if ResourceLoader.exists(DIR + "nocturne.wav"): _music.stream = load(DIR + "nocturne.wav") # looped by its import settings
+	_music.volume_db = MUSIC_DB
+	add_child(_music)
 	for i in 6:
 		var p := AudioStreamPlayer.new()
 		add_child(p)
@@ -111,6 +117,12 @@ func _set_one(name: String, db: float, pitch: float) -> void:
 	p.volume_db = db
 	p.pitch_scale = pitch
 	if not p.playing: p.play()
+
+## The menus' music (the menu, the album, the rankings, the country picker): goes on from where it is when already
+## playing, so moving between them does not restart it; off for the race and its results.
+func music(on: bool) -> void:
+	if on and not _music.playing and _music.stream != null: _music.play()
+	elif not on and _music.playing: _music.stop()
 
 func silence_all_loops() -> void:
 	for n in LOOPS:

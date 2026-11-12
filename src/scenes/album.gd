@@ -25,6 +25,7 @@ var _face := {} ## card key -> 0 (front) .. 1 (back), turning towards _back_key'
 var _back_key := "" ## the one card showing its back ("" none)
 
 func _ready() -> void:
+	Sfx.music(true)
 	font = ThemeDB.fallback_font
 	code = Session.country
 	_lay_out()

@@ -447,6 +447,43 @@ def lose():
     for k, n in enumerate([67, 64, 62, 55]): place(out, k * 0.25, tone(note(n), 0.4, "tri", 0.8, 0.01, 0.2))
     write("lose", out, 0.6)
 
-for f in (engine, engines, gravel, pump, hit, beep, go, blip, lowfuel, refuel_done, lose, radar, siren, anthems, motifs):
-    f()
+# ---- the menu's music: Chopin (d. 1849), Nocturne in E flat, op. 9 no. 2, the first eight bars (the theme and its
+# ornamented repeat, as played in the PKP Intercity trains), bar 8 ending like bar 4 so it loops back to bar 1.
+# The notes from mutopiaproject.org ChopinFF/O9/chopin_nocturne_op9_n2 (Mutopia-1590). RH: (eighth, eighths, MIDI);
+# LH: the notes struck on each eighth.
+NOCTURNE_RH = [(0, 4, 79), (4, 1, 77), (5, 1, 79), (6, 3, 77), (9, 2, 75), (11, 1, 70), (12, 2, 79), (14, 1, 72), (15, 2, 84), (17, 1, 79), (18, 3, 82), (21, 2, 80), (23, 1, 79), (24, 3, 77), (27, 2, 79), (29, 1, 74), (30, 3, 75), (33, 3, 72), (36, 1, 70), (37, 1, 86), (38, 1, 84), (39, 0.5, 82), (39.5, 0.5, 80), (40, 0.5, 79), (40.5, 0.5, 80), (41, 0.5, 72), (41.5, 0.5, 74), (42, 3, 75), (47, 1, 70), (48, 3, 79), (51, 0.5, 77), (51.5, 0.5, 79), (52, 0.5, 77), (52.5, 0.5, 76), (53, 0.5, 77), (53.5, 0.5, 79), (54, 1, 77), (55, 2.5, 75), (57.5, 0.5, 77), (58, 0.5, 75), (58.5, 0.5, 74), (59, 0.5, 75), (59.5, 0.5, 77), (60, 0.5, 79), (60.5, 0.5, 71), (61, 0.5, 72), (61.5, 0.5, 73), (62, 0.5, 72), (62.5, 0.5, 77), (63, 0.5, 76), (63.5, 0.5, 80), (64, 0.5, 79), (64.5, 0.5, 85), (65, 0.5, 84), (65.5, 0.5, 79), (66, 3, 82), (69, 2, 80), (71, 1, 79), (72, 2.77, 77), (74.77, 0.11, 76), (74.89, 0.11, 77), (75, 1, 79), (76, 1, 79), (77, 1, 74), (78, 3, 75), (81, 3, 72), (84, 1, 70), (85, 1, 86), (86, 1, 84), (87, 0.5, 82), (87.5, 0.5, 80), (88, 0.5, 79), (88.5, 0.27, 80), (88.77, 0.22, 80), (89, 0.5, 72), (89.5, 0.5, 74), (90, 5, 75), (95, 1, 70)]
+NOCTURNE_LH = [(39,), (55, 63), (58, 63, 67), (51,), (56, 62), (59, 62, 68), (39,), (55, 63), (58, 63, 67), (38,), (55, 63), (58, 63, 67), (36,), (55, 64), (58, 64, 67), (48,), (55, 64), (60, 64, 70), (41,), (53, 61), (58, 61, 64), (41,), (53, 60), (56, 60, 65), (46,), (53, 62), (58, 62, 68), (47,), (55, 65), (62, 65, 67), (48,), (55, 63), (60, 63, 67), (45,), (54, 63), (60, 63, 66), (46,), (53, 63), (58, 63, 68), (34,), (53, 62), (58, 68), (39,), (55, 63), (58, 63, 67), (51,), (55, 63), (58, 63, 67), (51,), (55, 63), (58, 63, 67), (51,), (56, 62), (59, 62, 68), (51,), (55, 63), (58, 63, 67), (50,), (55, 63), (58, 63, 67), (48,), (55, 64), (58, 64, 67), (48,), (55, 64), (60, 64, 70), (41,), (53, 61), (58, 61, 64), (41,), (53, 60), (56, 60, 65), (46,), (53, 62), (58, 62, 68), (47,), (55, 65), (62, 65, 67), (48,), (55, 63), (60, 63, 67), (45,), (54, 63), (60, 63, 66), (46,), (53, 63), (58, 63, 68), (34,), (53, 62), (58, 68), (39,), (55, 63), (58, 63, 67), (51,), (55, 63), (58, 63, 67)]
+def piano(freq, dur, vol=1.0):
+    """A plain piano-like tone, no vibrato: decaying harmonics (the high ones faster) and a short release."""
+    rel = 0.25
+    n = int((dur + rel) * SR); out = [0.0] * n
+    ks = [k for k in range(1, 9) if freq * k < 7000]
+    amp = [1.0 / k ** 1.4 for k in ks]
+    dec = [(0.7 + 0.45 * k) * (freq / 440.0) ** 0.35 for k in ks]
+    w = [2 * math.pi * freq * k / SR for k in ks]
+    for i in range(n):
+        t = i / SR
+        v = sum(a * math.exp(-d * t) * math.sin(ww * i) for a, d, ww in zip(amp, dec, w))
+        e = min(1.0, t / 0.004) * (1.0 if t < dur else max(0.0, 1.0 - (t - dur) / rel))
+        out[i] = v * vol * e
+    return out
+def nocturne(eighth=0.5):
+    """The nocturne's eight bars at eighth = 120 (Chopin's 132, a little slower), looped: what rings past the end
+    wraps onto the start."""
+    n = int(96 * eighth * SR); out = [0.0] * n
+    def put(start, snd):
+        s = int(start * SR)
+        for i, v in enumerate(snd): out[(s + i) % n] += v
+    for e, d, m in NOCTURNE_RH:
+        put(e * eighth, piano(note(m), d * eighth * 1.05, 1.0))
+    for e, ch in enumerate(NOCTURNE_LH):
+        bass = len(ch) == 1 # the bass note rings through the group of three (the pedal), the chords for one eighth and a half
+        for m in ch:
+            put(e * eighth, piano(note(m), eighth * (3.0 if bass else 1.5), 0.55 if bass else 0.22))
+    write("nocturne", out, 0.7)
+
+import sys
+only = sys.argv[1:] # names of the functions to run (e.g. nocturne), none: all
+for f in (engine, engines, gravel, pump, hit, beep, go, blip, lowfuel, refuel_done, lose, radar, siren, anthems, motifs, nocturne):
+    if not only or f.__name__ in only: f()
 print("audio written to", os.path.abspath(OUT))
