@@ -118,11 +118,23 @@ func _draw_rankings() -> void:
 		draw_string(font, Vector2(x, y + 20), line, HORIZONTAL_ALIGNMENT_LEFT, w, fs, Color("7fe0a0") if row.new_best else Color("c8d6e3"))
 	Ui.button(self, font, RANK_BTN, Lang.t("ranking_btn") + ("" if Screen.touch else " (R)"), false, 17)
 
-## The ranking tables of the roads just driven; they come back here.
-func _open_ranking() -> void:
+## The ranking tables of the roads just driven; they come back here. `climbing`: going on from here, the first
+## time, after a better place on a road: the tables open on it, the climb shown (Top Gear), and going back from
+## them goes on to the map.
+func _open_ranking(climbing := false) -> void:
 	Sfx.play("blip", -15.0)
-	Session.ranking_view = {"keys": _ranking_rows().map(func(x): return x.key), "i": 0, "country": false, "back": "results"}
+	var rows := _ranking_rows()
+	var climb := {}
+	for row in rows:
+		if row.pos < row.get("was", row.pos): climb[row.key] = row.was
+	var first := rows.find_custom(func(x): return climb.has(x.key)) if climbing else 0
+	r["climb_shown"] = true
+	Session.ranking_view = {"keys": rows.map(func(x): return x.key), "i": maxi(first, 0), "country": false,
+		"back": "continue" if climbing else "results", "climb": climb}
 	get_tree().change_scene_to_file("res://src/scenes/ranking.tscn")
+
+func _climbed() -> bool:
+	return _ranking_rows().any(func(x): return x.pos < x.get("was", x.pos))
 
 func _banner(y: float, h: float, text: String, col: Color) -> void:
 	draw_rect(Rect2(150, y, 660, h), col)
@@ -151,6 +163,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		if (tp != null and RANK_BTN.has_point(tp)) or (event is InputEventKey and event.keycode == KEY_R):
 			_open_ranking()
 			return
+	if _climbed() and not r.get("climb_shown", false):
+		_open_ranking(true)
+		return
 	# back to the map; after arriving, the destination is preselected as the new start
 	if r.get("state", "") == "won":
 		Session.from_city = Session.to_city

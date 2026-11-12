@@ -55,6 +55,12 @@ func run(t) -> void:
 	var store := {}
 	Rankings.record(store, "pl", [{"key": k, "from": "krakow", "to": "rzeszow", "t": 200.0}], "yaris", "rain", "2026-11-10")
 	var rows := Rankings.record(store, "pl", [{"key": k, "from": "rzeszow", "to": "krakow", "t": 190.0}], "octavia", "sun", "2026-11-10")
+	var fk0 := Rankings.fake("pl", k)
+	var climb_store := {}
+	Rankings.record(climb_store, "pl", [{"key": k, "from": "krakow", "to": "rzeszow", "t": fk0[49].t + 0.05}], "yaris", "sun", "2026-11-10")
+	var up := Rankings.record(climb_store, "pl", [{"key": k, "from": "krakow", "to": "rzeszow", "t": fk0[9].t + 0.05}], "yaris", "sun", "2026-11-10")
+	t.check(up[0].was == 51 and up[0].pos == 11, "the place before the trip comes with the new one (%d -> %d)" % [up[0].was, up[0].pos])
+	t.check(Rankings.record({}, "pl", [{"key": k, "from": "krakow", "to": "rzeszow", "t": 200.0}], "yaris", "sun", "2026-11-10")[0].was == Rankings.DRIVERS + 1, "a first time climbs from below the last place")
 	t.check(store.pl.size() == 1 and store.pl[k].t == 190.0 and store.pl[k].car == "octavia" and rows[0].new_best, "B - A improves the A - B entry")
 	Rankings.record(store, "pl", [{"key": k, "from": "krakow", "to": "rzeszow", "t": 250.0}], "yaris", "sun", "2026-11-10")
 	t.check(store.pl[k].t == 190.0, "a slower time keeps the best")

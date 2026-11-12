@@ -7,10 +7,13 @@ extends RefCounted
 ## the time. All cars and conditions share one ranking.
 const DRIVERS := 100
 const DIR := "res://data/rankings/"
-## The 2nd place from the 1st: seconds x [0] + [1], fitted (2026-11-12) to the best times driven by hand on the
-## Polish test roads in the fastest car (Szczecin - Bydgoszcz 93.4 - 14, Łódź - Warszawa 44.3 - 7, Kraków -
-## Katowice 37.7 - 4 s) against their 1st places (56.7, 28.0, 22.0).
+## The 2nd and the 20th places from the empty road's flat-out time ("top"): seconds x [0] + [1], fitted (2026-11-12)
+## to the times driven by hand on the Polish test roads in the fastest car (TEST_ROADS) against their "top"
+## (56.7, 28.0, 22.0 s); those roads take the hand-driven times themselves.
 const SECOND := [1.364, 1.6]
+const TWENTIETH := [1.639, 0.2]
+## The test roads: [the 2nd place (the best time driven, less 14 / 7 / 4 s), the 20th (the best time driven)].
+const TEST_ROADS := {"pl": {"bydgoszcz|szczecin": [79.4, 93.4], "lodz|warszawa": [37.3, 44.3], "katowice|krakow": [33.7, 37.7]}}
 const SLOW_PLACE := 70 ## the place of the weakest car keeping every limit ("slow")
 const OLD_FROM := 90 ## the 90th..100th places: the 10th..20th of the earlier 20-driver rankings (from "roads")
 static var _data := {} ## cc -> data/rankings/<cc>.json
@@ -105,7 +108,7 @@ static func best(cc: String, k: String) -> float:
 	return legal_between(st, 0.0, st.length)
 
 ## A map's 100 made-up drivers, the same on every run: [{nick, car}], in the order of their places. The ten best
-## drive one of the two fastest cars, the rest any car.
+## drive one of the two fastest cars, the next ten one of the three, the rest any car.
 static func roster(cc: String) -> Array:
 	var rng := RandomNumberGenerator.new()
 	rng.seed = ("roster/" + cc).hash()
@@ -118,20 +121,24 @@ static func roster(cc: String) -> Array:
 	var cars := CarStats.ids()
 	var out := []
 	for i in DRIVERS:
-		var car: String = cars[cars.size() - 1 - rng.randi_range(0, 1)] if i < 10 else cars[rng.randi_range(0, cars.size() - 1)]
+		var fast := 2 if i < 10 else (3 if i < 20 else cars.size()) # the 10 best in the 2 fastest cars, the next 10 in the 3
+		var car: String = cars[cars.size() - 1 - rng.randi_range(0, fast - 1)]
 		out.append({"nick": pool[i], "car": car})
 	return out
 
-## The anchor times of a road's places (1-based place -> seconds): the 1st the fastest car flat out on an empty
-## road ("top"), the 2nd from it by SECOND, the 70th the weakest car keeping the limits ("slow"), the 90th..100th
-## the 10th..20th of the earlier rankings (the autopilot's best in traffic x 1.15 .. 1.6). Missing anchors (a road
-## not calibrated yet) come from the legal time.
+## The anchor times of a road's places (1-based place -> seconds): the 2nd and the 20th from the empty road's
+## flat-out time ("top") by SECOND and TWENTIETH (or TEST_ROADS), the 1st halfway between "top" and the 2nd, the
+## 70th the weakest car keeping the limits ("slow"), the 90th..100th the 10th..20th of the earlier rankings (the
+## autopilot's best in traffic x 1.15 .. 1.6). Missing anchors (a road not calibrated yet) come from the legal time.
 static func anchors(cc: String, k: String) -> Dictionary:
 	var d := _file(cc)
 	var old := best(cc, k)
 	var top: float = float(d.get("top", {}).get(k, old * 0.3))
-	var out := {1: top, 2: top * SECOND[0] + SECOND[1]}
-	out[SLOW_PLACE] = maxf(float(d.get("slow", {}).get(k, old * 1.03)), out[2] + 1.0)
+	var hand: Array = TEST_ROADS.get(cc, {}).get(k, [top * SECOND[0] + SECOND[1], top * TWENTIETH[0] + TWENTIETH[1]])
+	var out := {2: hand[0]}
+	out[1] = (top + out[2]) * 0.5
+	out[20] = maxf(hand[1], out[2] + 1.0)
+	out[SLOW_PLACE] = maxf(float(d.get("slow", {}).get(k, old * 1.03)), out[20] + 1.0)
 	for i in range(9, 20): # the earlier rankings' levels of their 10th..20th
 		out[OLD_FROM + i - 9] = maxf(old * (1.04 + 0.56 * pow((i - 5) / 14.0, 1.3)), out[SLOW_PLACE] + 1.0 + (i - 9))
 	return out
@@ -235,7 +242,7 @@ static func road_times(cc: String, stage: Dictionary, splits: Array) -> Array:
 
 ## Saves a won trip's road times into the player's store (cc -> key -> {t, car, weather, date}), keeping the best
 ## per road. Returns for each road driven: {key, from, to, t, best (the player's best now), new_best, pos (of `t`),
-## top (the made-up leader's time)}.
+## was (the place of the best before, DRIVERS + 1 without one), top (the made-up leader's time)}.
 static func record(store: Dictionary, cc: String, times: Array, car: String, weather: String, date: String) -> Array:
 	if not store.get(cc) is Dictionary:
 		store[cc] = {}
@@ -243,9 +250,10 @@ static func record(store: Dictionary, cc: String, times: Array, car: String, wea
 	var out := []
 	for rt in times:
 		var old = mine.get(rt.key)
+		var was := position(cc, rt.key, float(old.t)) if old is Dictionary else DRIVERS + 1 # the place before this trip
 		var new_best: bool = not old is Dictionary or rt.t < float(old.t)
 		if new_best:
 			mine[rt.key] = {"t": rt.t, "car": car, "weather": weather, "date": date}
 		out.append({"key": rt.key, "from": rt.from, "to": rt.to, "t": rt.t, "best": float(mine[rt.key].t),
-			"new_best": new_best, "pos": position(cc, rt.key, rt.t), "top": fake(cc, rt.key)[0].t})
+			"new_best": new_best, "pos": position(cc, rt.key, rt.t), "was": was, "top": fake(cc, rt.key)[0].t})
 	return out
