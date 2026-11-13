@@ -27,9 +27,11 @@ var tip := "" ## the country named in the tooltip by the cursor (or the tap), ""
 var cursor := Vector2.ZERO ## where the tooltip stands
 var stripes := PackedVector2Array() ## segment pairs: diagonal stripes over the countries coming soon
 var soon := 0.0 ## seconds left of the "not in the game yet" note
-var offer := "" ## a locked country offered for sale (Enter buys, Esc cancels)
-const BUY_BTN := Rect2(330, 314, 140, 44)
-const CANCEL_BTN := Rect2(490, 314, 140, 44)
+var offer := "" ## a locked country offered for sale, or every country (arrows pick, Enter buys, Esc cancels)
+var offer_all := false ## the "every country" button picked instead of the one country
+const BUY_BTN := Rect2(250, 314, 130, 44)
+const ALL_BTN := Rect2(392, 314, 210, 44)
+const CANCEL_BTN := Rect2(614, 314, 100, 44)
 var t := 0.0
 
 func _ready() -> void:
@@ -123,11 +125,15 @@ func _unhandled_input(event: InputEvent) -> void:
 	var p = Ui.tap(event)
 	if offer != "":
 		if p != null:
-			if BUY_BTN.has_point(p): _buy_offer()
+			if BUY_BTN.has_point(p): _buy_offer(false)
+			elif ALL_BTN.has_point(p): _buy_offer(true)
 			elif CANCEL_BTN.has_point(p): offer = ""
 		elif event is InputEventKey and event.pressed and not event.echo:
-			if event.keycode in [KEY_ENTER, KEY_KP_ENTER, KEY_SPACE]: _buy_offer()
+			if event.keycode in [KEY_ENTER, KEY_KP_ENTER, KEY_SPACE]: _buy_offer(offer_all)
 			elif event.keycode in [KEY_ESCAPE, KEY_BACKSPACE]: offer = ""
+			elif event.keycode in [KEY_LEFT, KEY_RIGHT, KEY_A, KEY_D, KEY_TAB]:
+				offer_all = not offer_all
+				Sfx.play("blip", -12.0)
 		return
 	if p != null:
 		if BACK_BTN.has_point(p):
@@ -176,14 +182,16 @@ func _pick(code: String) -> void:
 	Sfx.play("blip", -8.0)
 	if not Session.is_country_open(code):
 		offer = code
+		offer_all = false
 		return
 	Session.switch_country(code)
 	_to_menu()
 
-func _buy_offer() -> void:
+## Buys the country offered, or every country; then plays the one offered.
+func _buy_offer(all: bool) -> void:
 	var code := offer
 	offer = ""
-	if Session.buy("country_one", code):
+	if Session.buy("countries_all") if all else Session.buy("country_one", code):
 		Sfx.play("refuel_done", -6.0)
 		Session.switch_country(code)
 		_to_menu()
@@ -312,8 +320,9 @@ func _draw() -> void:
 		var earn := _earned_by(offer)
 		if earn != "":
 			draw_multiline_string(font, Vector2(box.position.x + 20, 268), Lang.t("country_earn") % names.get(earn, earn), HORIZONTAL_ALIGNMENT_CENTER, box.size.x - 40, 15, 2, Color("c8d6e3"))
-		Ui.button(self, font, BUY_BTN, Lang.t("shop_buy"), true, 20)
-		Ui.button(self, font, CANCEL_BTN, Lang.t("back"), false, 20)
+		Ui.button(self, font, BUY_BTN, Lang.t("shop_buy"), not offer_all, 20)
+		Ui.button(self, font, ALL_BTN, Lang.t("country_all_btn") % Shop.price_text("countries_all"), offer_all, 17)
+		Ui.button(self, font, CANCEL_BTN, Lang.t("back"), false, 18)
 
 ## A small golden padlock with its bottom right corner at `at`.
 func _padlock(at: Vector2, size: float) -> void:

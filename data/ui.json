@@ -527,5 +527,6 @@
 	"p_country_one": {"pl": "Jeden kraj do wyboru", "en": "One country of your choice", "cs": "Jedna země dle výběru", "is": "Eitt land að eigin vali", "de": "Ein Land nach Wahl"},
 	"pd_country_one": {"pl": "Wybierz go na mapie krajów.", "en": "Pick it on the map of countries.", "cs": "Vyber ji na mapě zemí.", "is": "Veldu það á landakortinu.", "de": "Wähle es auf der Länderkarte."},
 	"p_countries_all": {"pl": "Wszystkie kraje", "en": "All countries", "cs": "Všechny země", "is": "Öll lönd", "de": "Alle Länder"},
-	"pd_countries_all": {"pl": "Graj w każdym kraju.", "en": "Play in every country.", "cs": "Hraj v každé zemi.", "is": "Spilaðu í öllum löndum.", "de": "Spiele in jedem Land."}
+	"pd_countries_all": {"pl": "Graj w każdym kraju.", "en": "Play in every country.", "cs": "Hraj v každé zemi.", "is": "Spilaðu í öllum löndum.", "de": "Spiele in jedem Land."},
+	"country_all_btn": {"pl": "Wszystkie kraje: %s", "en": "All countries: %s", "cs": "Všechny země: %s", "is": "Öll lönd: %s", "de": "Alle Länder: %s"}
 }
