@@ -16,17 +16,13 @@ var _world_sprite: Sprite2D
 var _perf_t := 0.0
 var _perf_n := 0
 var _toast := 0.0
-var _light_toast := 0.0 ## test: how long the headlights' power shows after H
-var _light_test := -1 ## test: which headlights H shows: car index * 2, + 1 upgraded
-var _light_name := ""
 
-## The headlights of a car (its lights and lights_white in the rules), upgraded or not.
+## The headlights of a car (its lights and lights_white in the rules), upgraded (the shop) or not.
 func _set_lights(id: String, upgraded: bool) -> void:
 	var car: Dictionary = CarStats.by_id(id)
 	var k: float = car.get("lights", 1.0) * (Shop.LIGHTS if upgraded else 1.0)
 	view.set_light_reach(k)
 	view.beam_color = WorldView.BEAM_WHITE if car.get("lights_white", false) else WorldView.BEAM_COLOR
-	_light_name = "%s%s: %d%%" % [car.name, " + ulepszenie" if upgraded else "", roundi(k * 100.0)]
 var countdown := COUNTDOWN
 var paused := false
 var end_timer := 0.0
@@ -107,7 +103,6 @@ func _set_quality(q: String) -> void:
 ## Watches the first seconds of driving: a device that cannot keep up gets the light graphics mode.
 func _process(dt: float) -> void:
 	_toast = maxf(0.0, _toast - dt)
-	_light_toast = maxf(0.0, _light_toast - dt)
 	if paused or countdown > 0.0 or race.state != "running" or Session.quality == "low" or _perf_n < 0:
 		return
 	_perf_t += dt
@@ -225,12 +220,6 @@ func _unhandled_input(event: InputEvent) -> void:
 		_set_paused(not paused)
 	elif paused and event is InputEventKey and event.pressed and event.keycode == KEY_M:
 		_back_to_map()
-	elif view.night and event is InputEventKey and event.pressed and not event.is_echo() and event.keycode == KEY_H:
-		# test: every car's headlights in turn, each as bought and then with the lights upgrade
-		var ids: Array = GameData.rules().car_ids
-		_light_test = (_light_test + 1) % (ids.size() * 2)
-		_set_lights(ids[_light_test / 2], _light_test % 2 == 1)
-		_light_toast = 2.0
 	elif event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		var p: Vector2 = event.position
 		if paused:
@@ -282,9 +271,6 @@ func _draw_overlay() -> void:
 		Ui.button(o, font, QUALITY_BTN, Lang.t("graphics") % Lang.t("gfx_low" if Session.quality == "low" else "gfx_high"), false, 18)
 		if not Screen.touch:
 			o.draw_string(font, Vector2(0, 470), Lang.t("pause_keys"), HORIZONTAL_ALIGNMENT_CENTER, 960, 22, Color("c8d6e3"))
-	elif _light_toast > 0.0:
-		o.draw_rect(Rect2(255, 214, 450, 40), Color(0, 0, 0, 0.55))
-		o.draw_string(font, Vector2(0, 241), "Światła %s" % _light_name, HORIZONTAL_ALIGNMENT_CENTER, 960, 18, Color.WHITE)
 	elif _toast > 0.0:
 		o.draw_rect(Rect2(230, 214, 500, 40), Color(0, 0, 0, 0.55))
 		o.draw_string(font, Vector2(0, 241), Lang.t("low_gfx_toast"), HORIZONTAL_ALIGNMENT_CENTER, 960, 18, Color.WHITE)
