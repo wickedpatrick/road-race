@@ -235,12 +235,12 @@ var _lit_far := PackedFloat32Array()
 var _lit_i := Vector2.ZERO ## the light's strength at the near (x) and far (y) edge
 var _lit_f := 0.0 ## the segment's darkness (the share of the dark in its colours)
 
-func _lit_begin(n: int) -> void:
+func _lit_begin(n: int, i: int) -> void:
 	_lit_on = false
 	if not night:
 		return
 	var reach := BEAM_REACH * light_reach
-	var dn := n * SEG - PLAYER_DZ # from the car
+	var dn := i * SEG - race.z # from the car, exactly: the light stays put as the segments run by
 	var df := dn + SEG
 	_lit_i = Vector2(_beam_strength(dn, reach), _beam_strength(df, reach))
 	_lit_f = _dark_k(n)
@@ -564,7 +564,7 @@ func _draw_segment(n: int, i: int) -> void:
 		_draw_sea(n, i)
 		return
 	var band := (i / 3) % 2
-	_lit_begin(n)
+	_lit_begin(n, i)
 	var y0 := _y0[n]
 	var y1 := _y1[n]
 	var x0 := _x0[n]
@@ -762,7 +762,7 @@ func _tfog(c: Color, n: int) -> Color:
 ## One tunnel segment: dark floor, the road, the walls and the vault with a row of lamps.
 func _draw_tunnel(n: int, i: int) -> void:
 	var band := (i / 3) % 2
-	_lit_begin(n)
+	_lit_begin(n, i)
 	var y0 := _y0[n]
 	var y1 := _y1[n]
 	var x0 := _x0[n]
@@ -1184,8 +1184,8 @@ func _glow(at: Vector2, r: float, col: Color, a: float) -> void:
 	_b.draw_circle(at, r * 0.45, Color(col.lightened(0.6), minf(1.0, a * 2.5)))
 	_b.fog = was
 
-## A car's lights at night: white headlights coming towards the player (with a pool of light on the road before
-## them), red rear lights going away, and the patrol car's blue flashes.
+## A car's lights at night: white headlights coming towards the player (only glowing, lighting nothing), red rear
+## lights going away, and the patrol car's blue flashes.
 func _car_lights(c: Vector2, s: float, front: bool, kind: String) -> void:
 	var y := c.y - 40.0 * s
 	for sx in [-1.0, 1.0]:
@@ -1193,8 +1193,6 @@ func _car_lights(c: Vector2, s: float, front: bool, kind: String) -> void:
 			_glow(Vector2(c.x + sx * 88.0 * s, y), clampf(100.0 * s, 4.0, 40.0), Color(1.0, 0.95, 0.8), 1.0) # ten times the light they had: dazzling
 		else:
 			_glow(Vector2(c.x + sx * 92.0 * s, y), 18.0 * s, Color(1.0, 0.12, 0.08), 0.75)
-	if front:
-		_b.draw_circle(Vector2(c.x, c.y + 6.0 * s), minf(400.0 * s, 200.0), Color(1.0, 0.95, 0.75, 0.55)) # capped: a car close by does not light the whole screen
 	if kind == "police" and int(Time.get_ticks_msec() / 160) % 2 == 0:
 		_glow(Vector2(c.x, c.y - 112.0 * s), 40.0 * s, Color(0.2, 0.45, 1.0), 0.8)
 
