@@ -91,7 +91,9 @@ cities and `borders` on its roads (below).
 - `weather`: how the country's roads get their weather (shown on the map, it sets the look and the grip):
   `default`, `landscape` (false: the default everywhere, e.g. snow in Iceland; true: from the road's longest
   landscape), `biomes` (landscape -> weather, over rules.json), `cities` (a city region -> weather for every road
-  from or to it, e.g. Scotland -> rain). A road can set its own `weather` in roads.json.
+  from or to it, e.g. Scotland -> rain), `snow` (false: never snow, e.g. Spain). A road can set its own `weather` in
+  roads.json. On top of that every country gets at least a tenth of its roads in rain and a tenth in fog, and two
+  of its night roads the hardest: rain at night and snow at night (`Weather.plan`).
 - `plates` (optional): road number plates as `[[prefix, plate colour, text colour], ...]`, the first matching
   prefix wins (e.g. blue M and green A roads in Great Britain); without it the Polish ones (red, yellow for DW).
 - `map`: the lat/lon box of the country map: `lon0`, `lon1`, `lat0`, `lat1`, and `lon_k` = cos(middle latitude),

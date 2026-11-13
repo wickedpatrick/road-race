@@ -44,6 +44,7 @@
 	},
 	"plates": [["A", "#1f4fa0", "#ffffff"], ["N", "#c8322b", "#ffffff"], ["B-", "#1f4fa0", "#ffffff"]],
 	"weather": {
+		"snow": false,
 		"default": "sun",
 		"landscape": true,
 		"biomes": {"mountains": "cloudy", "coast": "sun", "forest": "cloudy"},

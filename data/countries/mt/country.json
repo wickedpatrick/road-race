@@ -54,5 +54,5 @@
 		"autumn": {"stone": "#cfb37d", "wall": "#e0c998"},
 		"winter": {"stone": "#c9b07e", "wall": "#dcc699"}
 	},
-	"weather": {"default": "sun", "landscape": false}
+	"weather": {"snow": false, "default": "sun", "landscape": false}
 }

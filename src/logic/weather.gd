@@ -37,8 +37,50 @@ const SKY := {
 		"rumble_b": Color("c0564c"), "rut": Color("a2a9b1")},
 }
 
-## The weather on a road between two cities (a road from Geo.roads()).
+## The weather on a road between two cities (a road from Geo.roads()): its climate (climate()), then every country
+## gets at least a tenth of its roads in rain and a tenth in fog (fair roads turned, picked by their names' hash), and
+## its night roads (Route.night_roads) dry, but for the two hardest: one in rain at night and one in snow at night (no
+## snow where the country's weather says "snow": false: Spain, Portugal, Malta, Cyprus).
+const SHARE := 0.1
+static var _plan := {} ## country code -> {"a|b" road key: weather}
+
 static func for_road(road: Dictionary) -> String:
+	return plan().get("%s|%s" % [road.a, road.b], "sun")
+
+## The current country's roads' weather, worked out once.
+static func plan() -> Dictionary:
+	var code := GameData.current
+	if _plan.has(code):
+		return _plan[code]
+	var snow: bool = GameData.country().get("weather", {}).get("snow", true)
+	var out := {}
+	var order := [] ## road keys in a fixed, mixed order
+	for r in Geo.roads():
+		var key := "%s|%s" % [r.a, r.b]
+		var w := climate(r)
+		out[key] = "cloudy" if w == "snow" and not snow else w
+		order.append(key)
+	order.sort_custom(func(p, q): return p.hash() < q.hash() or (p.hash() == q.hash() and p < q))
+	var night := Route.night_roads()
+	var all_snow: bool = GameData.country().get("weather", {}).get("default", "") == "snow"
+	var hard := order.filter(func(k): return night.has(k))
+	for i in hard.size():
+		if i == 0: out[hard[i]] = "rain"
+		elif i == 1 and snow: out[hard[i]] = "snow"
+		elif out[hard[i]] in ["rain", "fog"] or (out[hard[i]] == "snow" and not all_snow): out[hard[i]] = "cloudy"
+	var want := maxi(1, roundi(order.size() * SHARE))
+	for kind in ["rain", "fog"]:
+		var n := order.filter(func(k): return out[k] == kind and not night.has(k)).size()
+		for k in order:
+			if n >= want: break
+			if not night.has(k) and out[k] in ["sun", "cloudy"]:
+				out[k] = kind
+				n += 1
+	_plan[code] = out
+	return out
+
+## A road's own weather from the country's rules (data/README.md), before plan() evens the kinds out.
+static func climate(road: Dictionary) -> String:
 	if KINDS.has(road.get("weather", "")):
 		return road.weather
 	var rules: Dictionary = GameData.country().get("weather", {})

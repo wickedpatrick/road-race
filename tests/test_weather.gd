@@ -13,6 +13,16 @@ func run(t) -> void:
 			if not Weather.KINDS.has(w): ok = false
 			kinds[w] = kinds.get(w, 0) + 1
 		t.check(ok, "%s: every road has a weather (%s)" % [code, kinds])
+		var n := Geo.roads().size()
+		var want := maxi(1, roundi(n * Weather.SHARE))
+		var night := Route.night_roads()
+		var by := func(w: String, at_night: bool) -> int:
+			return Geo.roads().filter(func(r): return Weather.for_road(r) == w and night.has("%s|%s" % [r.a, r.b]) == at_night).size()
+		t.check(by.call("rain", false) >= want and by.call("fog", false) >= want, "%s: a tenth of its roads in rain and in fog (%d, %d of %d)" % [code, by.call("rain", false), by.call("fog", false), n])
+		var snow_ok: bool = GameData.country().get("weather", {}).get("snow", true)
+		if night.size() >= 2:
+			t.check(by.call("rain", true) == 1 and (by.call("snow", true) >= 1) == snow_ok, "%s: the hardest roads, rain and snow at night" % code)
+		if not snow_ok: t.check(not kinds.has("snow"), "%s: never snow" % code)
 		if code == "pl": t.check(kinds.size() >= 4 and kinds.has("snow"), "Poland: the weather differs by region, snow in the mountains")
 		if code == "is": t.check(kinds.has("snow") and kinds.has("sun"), "Iceland: snow in the north, none in the south")
 		if code == "gb":

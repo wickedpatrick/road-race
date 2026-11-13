@@ -44,7 +44,7 @@
 		"region_sign": "ΠΕΡΙΟΧΗ"
 	},
 	"plates": [["A", "#00843d", "#ffffff"], ["", "#1d5bbf", "#ffffff"]],
-	"weather": {"default": "sun", "landscape": true, "biomes": {"coast": "sun", "mountains": "sun"}},
+	"weather": {"snow": false, "default": "sun", "landscape": true, "biomes": {"coast": "sun", "mountains": "sun"}},
 	"palette": {
 		"summer": {"tree": "#5f7341", "tree2": "#4e6136"},
 		"biomes": {

@@ -54,6 +54,7 @@
 		"region_sign": "DISTRITO DE"
 	},
 	"weather": {
+		"snow": false,
 		"default": "sun",
 		"landscape": true,
 		"biomes": {"mountains": "cloudy", "upland": "cloudy"},
