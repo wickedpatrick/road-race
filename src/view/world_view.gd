@@ -877,7 +877,11 @@ func _draw_item(it: Dictionary, n: int, cam_x: float, cam_y: float, cam_z: float
 	# left-hand traffic: drawn unmirrored at the mirrored point, so lettering and shapes stay the right way round
 	_b.set_mirror(false)
 	if it.has("closed"): it.lifted = _gate_up
+	var was := _b.fog
+	if night and LIT_SIGNS.has(it.type) and it.lat > 0.0 and n < N * SIGN_LIT * light_reach:
+		_b.fog *= 0.25 # a sign on the kerb side shines back in the headlights
 	Scenery.draw_item(_b, it, Vector2(W - b.x, b.y) if _left else b, pm, pal, season, font)
+	_b.fog = was
 	if night and it.type == "lamp":
 		_lamp_light(Vector2(W - b.x, b.y) if _left else b, pm, it)
 	_b.set_mirror(_left)
@@ -1123,7 +1127,7 @@ func _lamp_light(b: Vector2, pm: float, it: Dictionary) -> void:
 	_glow(head, 0.6 * pm, Color(1.0, 0.85, 0.5), 0.8)
 
 ## The player's headlights at night: a fan of warm light from the front of the car (BEAM_SHAPE, drawn after a
-## reference picture): spilling to both sides and running out in a point towards the horizon, brightest by the car
+## reference picture): spilling to both sides (further to the kerb side, onto the signs) and running out in a point towards the horizon, brightest by the car
 ## and fading out to its edges. Better lights reach further ahead.
 func _draw_headlights(py: float, cs: float) -> void:
 	var front := Vector2(W * 0.5, py - 90.0 * cs) # the front of the car
@@ -1132,21 +1136,27 @@ func _draw_headlights(py: float, cs: float) -> void:
 	var pts := PackedVector2Array()
 	var cols := PackedColorArray()
 	for p in BEAM_SHAPE:
-		var d := Vector2(p.x, p.y * (light_reach if p.y < 0.0 else 1.0)) * k
+		var d := Vector2(-p.x if _left else p.x, p.y * (light_reach if p.y < 0.0 else 1.0)) * k # left-hand traffic: the long beam on the left
 		pts.append(front + d + Vector2(lean * clampf(-d.y / (180.0 * k), 0.0, 1.0), 0.0))
 		cols.append(Color(BEAM_COLOR, p.z))
 	var mid := front + Vector2(lean * 0.3, -50.0 * k)
-	var core := Color(BEAM_COLOR, 0.6)
+	var core := Color(BEAM_COLOR, 0.75)
 	for i in pts.size(): # a fan from the bright middle: each edge point its own brightness
 		var j := (i + 1) % pts.size()
 		_b.draw_polygon(PackedVector2Array([mid, pts[i], pts[j]]), PackedColorArray([core, cols[i], cols[j]]))
 
 ## The headlights' outline (x, y from the front of the car, y up negative; z: the light's alpha there), clockwise
 ## from the car's left front corner.
-const BEAM_SHAPE := [Vector3(-86, 36, 0.4), Vector3(-139, 2, 0.12), Vector3(-161, -27, 0.05), Vector3(-189, -92, 0.0),
-	Vector3(-53, -147, 0.0), Vector3(-14, -183, 0.0), Vector3(10, -161, 0.0), Vector3(10, -132, 0.0),
-	Vector3(63, -108, 0.0), Vector3(180, -89, 0.0), Vector3(159, -36, 0.05), Vector3(136, 2, 0.12), Vector3(82, 40, 0.4)]
+const BEAM_SHAPE := [Vector3(-86, 36, 0.5), Vector3(-139, 2, 0.15), Vector3(-161, -32, 0.062),
+	Vector3(-189, -110, 0.0), Vector3(-53, -176, 0.0), Vector3(-14, -220, 0.0), Vector3(10, -193, 0.0),
+	Vector3(10, -158, 0.0), Vector3(88, -181, 0.0), Vector3(252, -150, 0.0), Vector3(223, -60, 0.062),
+	Vector3(190, 3, 0.15), Vector3(82, 40, 0.5)]
 const BEAM_COLOR := Color(1.0, 0.92, 0.66)
+## Road signs on the kerb side shine back in the headlights this share of the drawing distance ahead (better lights
+## further).
+const SIGN_LIT := 0.12
+const LIT_SIGNS := ["town_sign", "town_end", "limit", "board", "region", "border_board", "radar", "bend", "chevron",
+	"station_sign", "poi"]
 
 func _draw_particles() -> void:
 	var a := 1.0 - shelter
