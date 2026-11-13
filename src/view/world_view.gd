@@ -1086,7 +1086,7 @@ func _draw_night_sky() -> void:
 	_b.draw_circle(mc + Vector2(7, -4), 15.0, NIGHT_SKY_TOP) # a crescent
 
 const NIGHT_NEAR := 0.67 ## at night even the ground right by the car is this far in the dark (a third as bright as by day)
-const NIGHT_BEAM := 0.12 ## at night the player's headlights light the way up to this share of the way from the horizon to the car
+const NIGHT_BEAM := 0.15 ## at night the player's headlights light the way up to this share of the way from the horizon to the car
 const NIGHT_SKY_TOP := Color("05080f")
 
 ## A soft light: rings fading out from a bright core, never hazed (lights show through the dark).
@@ -1123,32 +1123,17 @@ func _lamp_light(b: Vector2, pm: float, it: Dictionary) -> void:
 	_b.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 	_glow(head, 0.6 * pm, Color(1.0, 0.85, 0.5), 0.8)
 
-## The player's headlights at night: a soft warm pool of light on the road ahead, widest by the bonnet, narrowing
-## and fading out NIGHT_BEAM of the way from the horizon (better lights closer to it), with no hard edge anywhere:
-## nested layers, each a little narrower and shorter, add up to a bright core.
+## The player's headlights at night: one trapezoid of warm light on the road from the front of the car, narrowing
+## towards NIGHT_BEAM of the way from the horizon (better lights closer to it), bright at the car and fading out.
 func _draw_headlights(py: float, cs: float) -> void:
-	var y0 := py + 10.0 * cs # by the car's wheels (its body is drawn over it), fading in from there
+	var y0 := py - 90.0 * cs # the front of the car
 	var y1 := HORIZON + (y0 - HORIZON) * NIGHT_BEAM / light_reach
-	var lean := race.steer_visual * 40.0 * cs # the light swings a little with the steering
-	for i in BEAM_LAYERS:
-		var k := float(i) / BEAM_LAYERS
-		var hw0 := 220.0 * cs * (1.0 - 0.8 * k)
-		var hw1 := 120.0 * cs * (1.0 - 0.8 * k)
-		var end := 1.0 - 0.45 * k # the inner layers shorter: a rounded far end
-		for j in BEAM_STEPS:
-			var t0 := float(j) / BEAM_STEPS * end
-			var t1 := float(j + 1) / BEAM_STEPS * end
-			var c0 := Color(BEAM_COLOR, 0.08 * smoothstep(0.0, 0.18, t0) * (1.0 - smoothstep(0.4 * end, end, t0)))
-			var c1 := Color(BEAM_COLOR, 0.08 * smoothstep(0.0, 0.18, t1) * (1.0 - smoothstep(0.4 * end, end, t1)))
-			var p0 := Vector2(W * 0.5 + lean * t0, lerpf(y0, y1, t0))
-			var p1 := Vector2(W * 0.5 + lean * t1, lerpf(y0, y1, t1))
-			var h0 := lerpf(hw0, hw1, t0)
-			var h1 := lerpf(hw0, hw1, t1)
-			_b.draw_polygon(PackedVector2Array([p0 - Vector2(h0, 0), p0 + Vector2(h0, 0), p1 + Vector2(h1, 0), p1 - Vector2(h1, 0)]),
-				PackedColorArray([c0, c0, c1, c1]))
+	var x1 := W * 0.5 + race.steer_visual * 40.0 * cs # the light swings a little with the steering
+	var near := Color(BEAM_COLOR, 0.42)
+	var far := Color(BEAM_COLOR, 0.0)
+	_b.draw_polygon(PackedVector2Array([Vector2(W * 0.5 - 170.0 * cs, y0), Vector2(W * 0.5 + 170.0 * cs, y0),
+		Vector2(x1 + 100.0 * cs, y1), Vector2(x1 - 100.0 * cs, y1)]), PackedColorArray([near, near, far, far]))
 
-const BEAM_LAYERS := 12
-const BEAM_STEPS := 12
 const BEAM_COLOR := Color(1.0, 0.92, 0.66)
 
 func _draw_particles() -> void:
