@@ -1086,7 +1086,6 @@ func _draw_night_sky() -> void:
 	_b.draw_circle(mc + Vector2(7, -4), 15.0, NIGHT_SKY_TOP) # a crescent
 
 const NIGHT_NEAR := 0.67 ## at night even the ground right by the car is this far in the dark (a third as bright as by day)
-const NIGHT_BEAM := 0.15 ## at night the player's headlights light the way up to this share of the way from the horizon to the car
 const NIGHT_SKY_TOP := Color("05080f")
 
 ## A soft light: rings fading out from a bright core, never hazed (lights show through the dark).
@@ -1123,17 +1122,30 @@ func _lamp_light(b: Vector2, pm: float, it: Dictionary) -> void:
 	_b.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 	_glow(head, 0.6 * pm, Color(1.0, 0.85, 0.5), 0.8)
 
-## The player's headlights at night: one trapezoid of warm light on the road from the front of the car, narrowing
-## towards NIGHT_BEAM of the way from the horizon (better lights closer to it), bright at the car and fading out.
+## The player's headlights at night: a fan of warm light from the front of the car (BEAM_SHAPE, drawn after a
+## reference picture): spilling to both sides and running out in a point towards the horizon, brightest by the car
+## and fading out to its edges. Better lights reach further ahead.
 func _draw_headlights(py: float, cs: float) -> void:
-	var y0 := py - 90.0 * cs # the front of the car
-	var y1 := HORIZON + (y0 - HORIZON) * NIGHT_BEAM / light_reach
-	var x1 := W * 0.5 + race.steer_visual * 40.0 * cs # the light swings a little with the steering
-	var near := Color(BEAM_COLOR, 0.42)
-	var far := Color(BEAM_COLOR, 0.0)
-	_b.draw_polygon(PackedVector2Array([Vector2(W * 0.5 - 170.0 * cs, y0), Vector2(W * 0.5 + 170.0 * cs, y0),
-		Vector2(x1 + 100.0 * cs, y1), Vector2(x1 - 100.0 * cs, y1)]), PackedColorArray([near, near, far, far]))
+	var front := Vector2(W * 0.5, py - 90.0 * cs) # the front of the car
+	var lean := race.steer_visual * 40.0 * cs # the light swings a little with the steering
+	var k := cs / 1.1 # BEAM_SHAPE is in pixels for the car seen at cs 1.1
+	var pts := PackedVector2Array()
+	var cols := PackedColorArray()
+	for p in BEAM_SHAPE:
+		var d := Vector2(p.x, p.y * (light_reach if p.y < 0.0 else 1.0)) * k
+		pts.append(front + d + Vector2(lean * clampf(-d.y / (180.0 * k), 0.0, 1.0), 0.0))
+		cols.append(Color(BEAM_COLOR, p.z))
+	var mid := front + Vector2(lean * 0.3, -50.0 * k)
+	var core := Color(BEAM_COLOR, 0.6)
+	for i in pts.size(): # a fan from the bright middle: each edge point its own brightness
+		var j := (i + 1) % pts.size()
+		_b.draw_polygon(PackedVector2Array([mid, pts[i], pts[j]]), PackedColorArray([core, cols[i], cols[j]]))
 
+## The headlights' outline (x, y from the front of the car, y up negative; z: the light's alpha there), clockwise
+## from the car's left front corner.
+const BEAM_SHAPE := [Vector3(-86, 36, 0.4), Vector3(-139, 2, 0.12), Vector3(-161, -27, 0.05), Vector3(-189, -92, 0.0),
+	Vector3(-53, -147, 0.0), Vector3(-14, -183, 0.0), Vector3(10, -161, 0.0), Vector3(10, -132, 0.0),
+	Vector3(63, -108, 0.0), Vector3(180, -89, 0.0), Vector3(159, -36, 0.05), Vector3(136, 2, 0.12), Vector3(82, 40, 0.4)]
 const BEAM_COLOR := Color(1.0, 0.92, 0.66)
 
 func _draw_particles() -> void:
