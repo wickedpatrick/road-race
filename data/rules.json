@@ -42,7 +42,7 @@
 			"handling": 1.05,
 			"body_color": "#2f4a63",
 			"halfwidth": 0.19,
-			"lights": 1.0,
+			"lights": 1.25,
 			"lights_white": true
 		},
 		{
@@ -57,7 +57,7 @@
 			"handling": 1.2,
 			"body_color": "#b9bec5",
 			"halfwidth": 0.18,
-			"lights": 1.0,
+			"lights": 1.25,
 			"lights_white": true
 		},
 		{
@@ -72,7 +72,7 @@
 			"handling": 1.15,
 			"body_color": "#2d4a3b",
 			"halfwidth": 0.2,
-			"lights": 1.1,
+			"lights": 1.4,
 			"lights_white": true
 		},
 		{
@@ -87,7 +87,7 @@
 			"handling": 1.32,
 			"body_color": "#d4561a",
 			"halfwidth": 0.2,
-			"lights": 1.1,
+			"lights": 1.4,
 			"lights_white": true
 		},
 		{
@@ -102,7 +102,7 @@
 			"handling": 1.45,
 			"body_color": "#c8161d",
 			"halfwidth": 0.21,
-			"lights": 1.2,
+			"lights": 1.45,
 			"lights_white": true
 		}
 	],

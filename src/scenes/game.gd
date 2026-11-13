@@ -17,7 +17,7 @@ var _perf_t := 0.0
 var _perf_n := 0
 var _toast := 0.0
 var _light_toast := 0.0 ## test: how long the headlights' power shows after H
-var _light_test := -1 ## test: which car's headlights H shows (the next car's upgraded ones after the last car)
+var _light_test := -1 ## test: which headlights H shows: car index * 2, + 1 upgraded
 var _light_name := ""
 const LIGHTS_UPGRADE := 3.4 ## the lights upgrade: this many times the car's own headlights
 
@@ -227,10 +227,10 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif paused and event is InputEventKey and event.pressed and event.keycode == KEY_M:
 		_back_to_map()
 	elif view.night and event is InputEventKey and event.pressed and not event.is_echo() and event.keycode == KEY_H:
-		# test: every car's headlights in turn, then every car's with the lights upgrade
+		# test: every car's headlights in turn, each as bought and then with the lights upgrade
 		var ids: Array = GameData.rules().car_ids
 		_light_test = (_light_test + 1) % (ids.size() * 2)
-		_set_lights(ids[_light_test % ids.size()], _light_test >= ids.size())
+		_set_lights(ids[_light_test / 2], _light_test % 2 == 1)
 		_light_toast = 2.0
 	elif event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		var p: Vector2 = event.position
