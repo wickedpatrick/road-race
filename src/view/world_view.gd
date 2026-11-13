@@ -251,9 +251,9 @@ func _lit_begin(n: int) -> void:
 	_lit_far = _beam_edges(df, lat, _x1[n], _s1[n] * W * 0.5)
 	_lit_on = true
 
-## The headlights' strength at d metres ahead of the car: full near it, fading out to nothing at the reach.
+## The headlights' strength at d metres ahead of the car: none under the bonnet, full just past it, fading out to nothing at the reach.
 func _beam_strength(d: float, reach: float) -> float:
-	return 1.0 - smoothstep(reach * 0.3, reach, d)
+	return smoothstep(2.5, 6.0, d) * (1.0 - smoothstep(reach * 0.3, reach, d)) # from the bonnet on
 
 ## The light's edges across the road d metres ahead, on screen (the road's middle at x, p pixels a metre): the beam
 ## widens ahead, more to the kerb side (the right; mirrored with the rest of the world in left-hand traffic) where
@@ -1190,21 +1190,18 @@ func _car_lights(c: Vector2, s: float, front: bool, kind: String) -> void:
 	var y := c.y - 40.0 * s
 	for sx in [-1.0, 1.0]:
 		if front:
-			_glow(Vector2(c.x + sx * 88.0 * s, y), clampf(50.0 * s, 3.0, 26.0), Color(1.0, 0.95, 0.8), 1.0) # five times the light they had: dazzling
+			_glow(Vector2(c.x + sx * 88.0 * s, y), clampf(100.0 * s, 4.0, 40.0), Color(1.0, 0.95, 0.8), 1.0) # ten times the light they had: dazzling
 		else:
 			_glow(Vector2(c.x + sx * 92.0 * s, y), 18.0 * s, Color(1.0, 0.12, 0.08), 0.75)
 	if front:
-		_b.draw_circle(Vector2(c.x, c.y + 6.0 * s), minf(300.0 * s, 140.0), Color(1.0, 0.95, 0.75, 0.3)) # capped: a car close by does not light the whole screen
+		_b.draw_circle(Vector2(c.x, c.y + 6.0 * s), minf(400.0 * s, 200.0), Color(1.0, 0.95, 0.75, 0.55)) # capped: a car close by does not light the whole screen
 	if kind == "police" and int(Time.get_ticks_msec() / 160) % 2 == 0:
 		_glow(Vector2(c.x, c.y - 112.0 * s), 40.0 * s, Color(0.2, 0.45, 1.0), 0.8)
 
-## A street lamp at night: its head glowing and a pool of warm light on the ground under it.
+## A street lamp at night: its head glowing.
 func _lamp_light(b: Vector2, pm: float, it: Dictionary) -> void:
 	var h: float = it.get("h", 7.0) * pm
 	var head := b + Vector2(0.05 * pm * (1.0 if it.lat * Scenery.flip > 0 else -1.0), -h)
-	_b.draw_set_transform(b, 0.0, Vector2(1.0, 0.3))
-	_b.draw_circle(Vector2.ZERO, 5.0 * pm, Color(1.0, 0.82, 0.45, 0.13))
-	_b.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 	_glow(head, 0.6 * pm, Color(1.0, 0.85, 0.5), 0.8)
 
 const BEAM_COLOR := Color(1.0, 0.92, 0.66)
