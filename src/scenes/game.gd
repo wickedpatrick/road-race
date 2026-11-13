@@ -19,12 +19,11 @@ var _toast := 0.0
 var _light_toast := 0.0 ## test: how long the headlights' power shows after H
 var _light_test := -1 ## test: which headlights H shows: car index * 2, + 1 upgraded
 var _light_name := ""
-const LIGHTS_UPGRADE := 3.4 ## the lights upgrade: this many times the car's own headlights
 
 ## The headlights of a car (its lights and lights_white in the rules), upgraded or not.
 func _set_lights(id: String, upgraded: bool) -> void:
 	var car: Dictionary = CarStats.by_id(id)
-	var k: float = car.get("lights", 1.0) * (LIGHTS_UPGRADE if upgraded else 1.0)
+	var k: float = car.get("lights", 1.0) * (Shop.LIGHTS if upgraded else 1.0)
 	view.set_light_reach(k)
 	view.beam_color = WorldView.BEAM_WHITE if car.get("lights_white", false) else WorldView.BEAM_COLOR
 	_light_name = "%s%s: %d%%" % [car.name, " + ulepszenie" if upgraded else "", roundi(k * 100.0)]
@@ -49,7 +48,7 @@ func _ready() -> void:
 	view = WorldView.new()
 	add_child(view)
 	view.bind(race)
-	_set_lights(Session.car_id, false)
+	_set_lights(Session.car_id, Session.bought.has("lights"))
 	_apply_quality()
 	race.collided.connect(func(_i): Sfx.play("hit", -2.0))
 	race.crashed.connect(func(): Sfx.play("hit", 0.0))

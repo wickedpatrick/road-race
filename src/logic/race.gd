@@ -113,8 +113,8 @@ var _cities := [] ## the stage's map cities, by z
 
 func _init(p_car_id: String, p_stage: Dictionary, seed_value: int) -> void:
 	car_id = p_car_id
-	stats = CarStats.by_id(car_id)
 	stage = p_stage
+	stats = Shop.tuned(CarStats.by_id(car_id), stage.get("bought", [])) # with the shop's upgrades
 	track = Track.build(stage, seed_value)
 	traffic = Traffic.build(stage, seed_value)
 	scenery = Scenery.build(stage, 1)
@@ -123,7 +123,8 @@ func _init(p_car_id: String, p_stage: Dictionary, seed_value: int) -> void:
 	gearbox = Gearbox.new(stats.max_speed)
 	fuel = Fuel.new(stats.tank, stats.burn, stats.max_speed)
 	time_left = stage.duration
-	police_rules = GameData.rules().police
+	police_rules = GameData.rules().police.duplicate()
+	police_rules.escape_kmh = stage.get("escape_kmh", police_rules.escape_kmh) # the shop's upgrade
 	side = -1.0 if stage.get("left", false) else 1.0
 	weather = stage.get("weather", "sun")
 	_grip_steer = Weather.grip(weather, "steer")

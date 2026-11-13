@@ -3,13 +3,16 @@ extends Node2D
 ## North America (data/world.json, made by tools/make_world.py). Countries in the game are green with their flag in
 ## the middle; the ones planned but not in the game yet are grey, striped and marked "coming soon"; any other land
 ## has no borders at all. Names show in the header and in a tooltip by the cursor (or the tap).
-## Opened from the map in the menu (the country button, C); Esc goes back without a change.
+## A country in the game but not open to the player yet (Session.is_country_open) is a darker green with a padlock
+## by its flag; picking it offers it for sale (Shop `country_one`), Enter buys it and plays it.
+## Opened from the map in the menu (the country button, C) or from the shop (to buy one); Esc goes back without a change.
 const SEA := Color("2c5d86")
 const LAND := Color("c4b893") ## land of countries not in the plan, without borders
 const PLANNED := Color("b4b9bd")
 const PLANNED_EDGE := Color("7d858c")
 const PLAYABLE := Color("8fd16a")
 const PLAYABLE_EDGE := Color("2f6b2a")
+const LOCKED := Color("7d8a74") ## in the game, not open yet: a greyish green
 const CURRENT := Color("ffd24a")
 const STRIPE := Color("969ca1")
 const STRIPE_GAP := 7.0 ## px between the "coming soon" stripes
@@ -24,6 +27,9 @@ var tip := "" ## the country named in the tooltip by the cursor (or the tap), ""
 var cursor := Vector2.ZERO ## where the tooltip stands
 var stripes := PackedVector2Array() ## segment pairs: diagonal stripes over the countries coming soon
 var soon := 0.0 ## seconds left of the "not in the game yet" note
+var offer := "" ## a locked country offered for sale (Enter buys, Esc cancels)
+const BUY_BTN := Rect2(330, 314, 140, 44)
+const CANCEL_BTN := Rect2(490, 314, 140, 44)
 var t := 0.0
 
 func _ready() -> void:
@@ -115,6 +121,14 @@ func _unhandled_input(event: InputEvent) -> void:
 		cursor = event.position
 		return
 	var p = Ui.tap(event)
+	if offer != "":
+		if p != null:
+			if BUY_BTN.has_point(p): _buy_offer()
+			elif CANCEL_BTN.has_point(p): offer = ""
+		elif event is InputEventKey and event.pressed and not event.echo:
+			if event.keycode in [KEY_ENTER, KEY_KP_ENTER, KEY_SPACE]: _buy_offer()
+			elif event.keycode in [KEY_ESCAPE, KEY_BACKSPACE]: offer = ""
+		return
 	if p != null:
 		if BACK_BTN.has_point(p):
 			_back()
@@ -160,7 +174,22 @@ func _pick(code: String) -> void:
 	if not playable().has(code):
 		return
 	Sfx.play("blip", -8.0)
+	if not Session.is_country_open(code):
+		offer = code
+		return
 	Session.switch_country(code)
+	_to_menu()
+
+func _buy_offer() -> void:
+	var code := offer
+	offer = ""
+	if Session.buy("country_one", code):
+		Sfx.play("refuel_done", -6.0)
+		Session.switch_country(code)
+		_to_menu()
+
+func _to_menu() -> void:
+	Session.countries_back = "menu"
 	Session.menu_at_map = true
 	get_tree().change_scene_to_file("res://src/scenes/menu.tscn")
 
@@ -191,8 +220,11 @@ func _row(pos: Vector2, parts: Array, size: int, color: Color, draw := true) -> 
 
 func _back() -> void:
 	Sfx.play("blip", -8.0)
-	Session.menu_at_map = true
-	get_tree().change_scene_to_file("res://src/scenes/menu.tscn")
+	if Session.countries_back == "shop":
+		Session.countries_back = "menu"
+		get_tree().change_scene_to_file("res://src/scenes/shop.tscn")
+		return
+	_to_menu()
 
 func _draw() -> void:
 	draw_rect(Rect2(0, 0, 960, 540), SEA)
@@ -201,7 +233,7 @@ func _draw() -> void:
 	var play := playable()
 	for code in polys:
 		var on: bool = play.has(code)
-		var fill := PLAYABLE if on else PLANNED
+		var fill := (PLAYABLE if Session.is_country_open(code) else LOCKED) if on else PLANNED
 		if code == hover: fill = fill.lightened(0.25)
 		elif code == hover_soon: fill = fill.lightened(0.15)
 		for pts in polys[code]:
@@ -238,6 +270,8 @@ func _draw() -> void:
 			var fl := Rect2(top + Vector2(cell.x * (i % cols), cell.y * (i / cols)), Vector2(h * 1.5, h))
 			draw_rect(fl.grow(1.0), Color(0, 0, 0, 0.55))
 			FlagPainter.draw(self, flags[i], fl)
+			if not Session.is_country_open(code): # a padlock on the flag's corner
+				_padlock(fl.end + Vector2(h * 0.55, 1), h * 0.6)
 	if tip != "": # the name by the cursor: "Poland", or "France · coming soon"
 		var parts := _parts(tip, names)
 		var w := _row(Vector2.ZERO, parts, 15, Color.WHITE, false)
@@ -263,3 +297,33 @@ func _draw() -> void:
 	Ui.button(self, font, BACK_BTN, Lang.t("back"), false, 20)
 	var hint := Lang.t("country_soon") if soon > 0.0 else ("" if Screen.touch else Lang.t("pick_country_hint"))
 	draw_string(font, Vector2(0, 518), hint, HORIZONTAL_ALIGNMENT_RIGHT, 936, 20, CURRENT if soon > 0.0 else Color.WHITE)
+	if offer != "": # a locked country for sale
+		draw_rect(Rect2(0, 0, 960, 540), Color(0, 0, 0, 0.45))
+		var box := Rect2(230, 160, 500, 216)
+		var sb := StyleBoxFlat.new()
+		sb.set_corner_radius_all(16)
+		sb.bg_color = Color(0.06, 0.09, 0.13, 0.95)
+		sb.border_color = CURRENT
+		sb.set_border_width_all(3)
+		draw_style_box(sb, box)
+		var name: String = names.get(offer, _name(offer))
+		FlagPainter.draw(self, offer, Rect2(Vector2(456, 176), Vector2(48, 32)))
+		draw_string(font, Vector2(box.position.x, 240), Lang.t("country_buy") % [name, Shop.price_text("country_one")], HORIZONTAL_ALIGNMENT_CENTER, box.size.x, 22, Color.WHITE)
+		var earn := _earned_by(offer)
+		if earn != "":
+			draw_multiline_string(font, Vector2(box.position.x + 20, 268), Lang.t("country_earn") % names.get(earn, earn), HORIZONTAL_ALIGNMENT_CENTER, box.size.x - 40, 15, 2, Color("c8d6e3"))
+		Ui.button(self, font, BUY_BTN, Lang.t("shop_buy"), true, 20)
+		Ui.button(self, font, CANCEL_BTN, Lang.t("back"), false, 20)
+
+## A small golden padlock with its bottom right corner at `at`.
+func _padlock(at: Vector2, size: float) -> void:
+	var body := Rect2(at - Vector2(size * 1.2, size), Vector2(size * 1.2, size))
+	draw_arc(body.position + Vector2(size * 0.6, 0), size * 0.42, PI, TAU, 10, Color("ffd24a"), maxf(1.5, size * 0.22))
+	draw_rect(body, Color("ffd24a"))
+	draw_circle(body.get_center(), maxf(1.0, size * 0.16), Color("2b2b2f"))
+
+## The open country whose completing earns `code` (Session.earned_for), "" with none.
+func _earned_by(code: String) -> String:
+	for c in Session.countries:
+		if Session.earned_for(c) == code: return c
+	return ""

@@ -104,6 +104,44 @@ static func find(from: String, to: String) -> Array:
 		c = prev[c][0]
 	return legs
 
+## Night: in every country the tenth of its roads with the least to see (towns, landmarks, tunnels, bridges and
+## ferries for each km) are driven at night (with whatever weather they have, rain and snow too). A trip is at night
+## when its longest road is (as its weather follows that road).
+const NIGHT_SHARE := 0.1
+static var _night := {} ## country code -> {"a|b" road key: true}
+
+static func night_for(legs: Array) -> bool:
+	var best: Dictionary = legs[0].road
+	for leg in legs:
+		if leg.road.km > best.km: best = leg.road
+	return night_roads().has(_road_key(best))
+
+static func _road_key(r: Dictionary) -> String:
+	return "%s|%s" % [r.a, r.b]
+
+## The current country's night roads, worked out once.
+static func night_roads() -> Dictionary:
+	var code := GameData.current
+	if _night.has(code):
+		return _night[code]
+	var scored := []
+	for r in Geo.roads():
+		scored.append([_sights(r) / maxf(float(r.km), 1.0), _road_key(r)])
+	scored.sort_custom(func(p, q): return p[0] < q[0] or (p[0] == q[0] and p[1] < q[1]))
+	var out := {}
+	for i in roundi(scored.size() * NIGHT_SHARE):
+		out[scored[i][1]] = true
+	_night[code] = out
+	return out
+
+## What there is to see on a road: its towns, twice each one with a landmark, three times each tunnel, bridge and ferry.
+static func _sights(r: Dictionary) -> float:
+	var n := 0.0
+	for tw in r.get("towns", []):
+		n += 1.0 + (2.0 if not Postcards.landmarks(GameData.current, tw[0]).is_empty() else 0.0)
+	n += 3.0 * (r.get("tunnels", []).size() + (1 if r.has("bridge") else 0) + (1 if r.has("ferry") else 0))
+	return n
+
 static func total_km(legs: Array) -> int:
 	var km := 0
 	for l in legs: km += int(l.road.km)
@@ -355,6 +393,7 @@ static func build(from: String, to: String, via: Array = []) -> Dictionary:
 	var stage := {
 		"name": "%s - %s" % [Geo.display_name(from), Geo.display_name(to)],
 		"from": from, "to": to, "path": path, "km": km, "m_per_km": mpk, "left": Geo.left_hand(), "weather": weather,
+		"night": night_for(legs),
 		"length": length, "duration": duration, "lanes": lanes,
 		"traffic_density": (1.0 if lanes == 3 else 0.8) * float(GameData.country().get("traffic", 1.0)),
 		"stations": stations, "finish_label": Geo.city(to).name, "finish_display": Geo.display_name(to),

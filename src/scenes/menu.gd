@@ -1,7 +1,8 @@
 extends Node2D
-## Selection: car -> destination on the country map (each trip's weather shown on the card beside it) (tabs above the map, or C, switch the country). The race always starts where the last one ended;
-## the very first one in each country from its capital (Session).
-## Arrow keys / WASD move, Enter or Space confirms, Esc goes back; on the map cities can also be clicked.
+## Selection: destination on the country map (each trip's weather shown on the card beside it; the country button,
+## or C, switches the country; the shop, K) -> the car, Enter starts with the one picked (the last one driven at
+## first). The race always starts where the last one ended; the very first one in each country from its capital
+## (Session). Arrow keys / WASD move, Enter or Space confirms, Esc goes back; on the map cities can also be clicked.
 
 var font: Font
 var steps: Array = []
@@ -28,6 +29,8 @@ const LANG_BTN := Rect2(736, 124, 196, 36) ## car step: the game's language (L k
 const ALBUM_CAR_BTN := Rect2(28, 124, 196, 36) ## the postcard album (P key): on the car step
 const ALBUM_MAP_BTN := Rect2(796, 14, 148, 40) ## and on the map steps
 const RANKING_BTN := Rect2(764, 440, 168, 36) ## destination step: the rankings of the trip's roads (R key)
+const SHOP_BTN := Rect2(16, 14, 148, 40) ## destination step: the shop (K key)
+var _earned := 0.0 ## seconds left of the note about a country just earned
 ## the rankings' calibration (police test mode, -- --policja, on the Polish map): a long, a middle and a short road
 ## started straight from the buttons
 const TEST_TRIPS := [["szczecin", "bydgoszcz"], ["lodz", "warszawa"], ["krakow", "katowice"]]
@@ -57,13 +60,16 @@ func _ready() -> void:
 	_set_steps()
 	start_city = Session.from_city
 	dest_city = Session.to_city
-	if Session.menu_at_map:
-		step = steps.find("dest")
+	if Session.menu_at_car: # back from the album opened on the car step
+		step = steps.find("car")
 	Session.menu_at_map = false
+	Session.menu_at_car = false
+	if Session.earned_country != "":
+		_earned = 5.0
 	_enter_step()
 
 func _set_steps() -> void:
-	steps = ["car", "dest"]
+	steps = ["dest", "car"]
 	step = 0
 
 func kind() -> String:
@@ -109,6 +115,9 @@ func _pick_dest(id: String) -> void:
 
 func _process(dt: float) -> void:
 	t += dt
+	if _earned > 0.0:
+		_earned = maxf(0.0, _earned - dt)
+		if _earned == 0.0: Session.earned_country = ""
 	_map_clip.visible = _on_map() and not loading
 	if _map_clip.visible:
 		if _follow != "" and not _dragging:
@@ -135,6 +144,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		return
 	if kind() == "dest" and event.keycode == KEY_R:
 		_open_ranking()
+		return
+	if kind() == "dest" and event.keycode == KEY_K:
+		_open_shop()
 		return
 	if kind() == "car" and event.keycode == KEY_L:
 		_next_language()
@@ -181,6 +193,11 @@ func _open_album() -> void:
 	Session.album_back_to_map = _on_map()
 	get_tree().change_scene_to_file("res://src/scenes/album.tscn")
 
+func _open_shop() -> void:
+	Sfx.play("blip", -15.0)
+	_keep_picks()
+	get_tree().change_scene_to_file("res://src/scenes/shop.tscn")
+
 ## The ranking tables (src/scenes/ranking.gd): the roads of the trip picked, or every road from the start city.
 func _open_ranking() -> void:
 	Sfx.play("blip", -15.0)
@@ -202,12 +219,12 @@ func _next_language() -> void:
 func _confirm() -> void:
 	match kind():
 		"car":
-			if not Profile.is_unlocked(CarStats.ids()[sel[0]], Session.car_km()):
-				return # locked car
-		"dest":
-			if not legs.is_empty():
+			if Profile.is_unlocked(CarStats.ids()[sel[0]], Session.car_km()): # a locked car does not go
 				_start()
 			return
+		"dest":
+			if legs.is_empty():
+				return
 	step += 1
 	_enter_step()
 
@@ -224,6 +241,9 @@ func _tap(p: Vector2) -> bool:
 		return true
 	if kind() == "dest" and RANKING_BTN.has_point(p):
 		_open_ranking()
+		return true
+	if kind() == "dest" and SHOP_BTN.has_point(p):
+		_open_shop()
 		return true
 	if _test_trips():
 		for i in TEST_TRIPS.size():
@@ -316,7 +336,10 @@ func _t(pos: Vector2, text: String, size: int, col: Color, align := HORIZONTAL_A
 	draw_string(font, pos, text, align, width, size, col)
 
 func _step_title() -> String:
-	return "%d / %d   %s" % [step + 1, steps.size(), Lang.t("title_" + kind())]
+	var title := "%d / %d   %s" % [step + 1, steps.size(), Lang.t("title_" + kind())]
+	if kind() == "car": # the trip picked
+		title += ":  %s – %s" % [Geo.display_name(start_city), Geo.display_name(dest_city)]
+	return title
 
 func _draw() -> void:
 	var pal := Weather.palette("sun")
@@ -332,14 +355,16 @@ func _draw() -> void:
 	_t(Vector2(0, 62), title, ts, Color(0, 0, 0, 0.25), HORIZONTAL_ALIGNMENT_CENTER, 964)
 	_t(Vector2(0, 60), title, ts, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, 960)
 	_t(Vector2(0, 92), cn.subtitle, 24, Color("1d2b38"), HORIZONTAL_ALIGNMENT_CENTER, 960)
-	if not _on_map():
-		_t(Vector2(0, 140), _step_title(), 28, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, 960)
+	if not _on_map(): # between the postcards and the language buttons
+		var st := _step_title()
+		var ss := 28
+		while ss > 16 and font.get_string_size(st, HORIZONTAL_ALIGNMENT_LEFT, -1, ss).x > 496.0:
+			ss -= 1
+		_t(Vector2(0, 140 + (28 - ss) * 0.35), st, ss, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, 960)
 	match kind():
 		"car": _draw_cars()
 		_: _draw_map()
 	var summary := ""
-	if kind() == "dest":
-		summary = CarStats.by_id(CarStats.ids()[sel[0]]).name
 	draw_rect(Rect2(0, 486, 960, 54), Color(0, 0, 0, 0.5))
 	_t(Vector2(24, 518), summary, 17 if _on_map() else 20, Color("ffd24a"))
 	if kind() == "car":
@@ -349,16 +374,17 @@ func _draw() -> void:
 		Ui.button(self, font, _album_btn(), Lang.t("album_btn"), false, 16)
 	if kind() == "dest":
 		Ui.button(self, font, RANKING_BTN, Lang.t("ranking_btn"), false, 16)
+		Ui.button(self, font, SHOP_BTN, Lang.t("shop_btn"), false, 18)
 	if _test_trips():
 		for i in TEST_TRIPS.size():
 			Ui.button(self, font, _test_btn(i), "Test%d" % (i + 1), false, 16)
 	if Screen.touch:
 		if step > 0:
 			Ui.button(self, font, BACK_BTN, Lang.t("back"), false, 20)
-		Ui.button(self, font, NEXT_BTN, Lang.t("start") if kind() == "dest" else Lang.t("next"), true, 22)
+		Ui.button(self, font, NEXT_BTN, Lang.t("start") if kind() == "car" else Lang.t("next"), true, 22)
 	var hint := Lang.t("hint_select")
 	if _on_map():
-		hint = Lang.t("hint_map") + Lang.t("hint_enter_start" if kind() == "dest" else "hint_enter_next") + (Lang.t("hint_country") if _countries() > 1 else "")
+		hint = Lang.t("hint_map") + Lang.t("hint_enter_next") + (Lang.t("hint_country") if _countries() > 1 else "") + Lang.t("hint_shop")
 	if kind() == "car":
 		hint = Lang.t("hint_car")
 	if kind() == "car" or kind() == "dest":
@@ -376,6 +402,10 @@ func _draw() -> void:
 		while size > 14 and font.get_string_size(hint, HORIZONTAL_ALIGNMENT_LEFT, -1, size).x > room:
 			size -= 1
 		_t(Vector2(0, 518), hint, size, Color.WHITE, HORIZONTAL_ALIGNMENT_RIGHT, 936)
+	if _earned > 0.0 and Session.earned_country != "": # a country completed: a neighbour opened
+		var msg := Lang.t("country_earned") % GameData.country(Session.earned_country).name
+		draw_rect(Rect2(180, 214, 600, 48), Color(0.03, 0.05, 0.08, 0.85))
+		_t(Vector2(0, 246), msg, 22, Color("ffd24a"), HORIZONTAL_ALIGNMENT_CENTER, 960)
 	if loading:
 		draw_rect(Rect2(0, 0, 960, 540), Color(0.03, 0.05, 0.08, 0.82))
 		_t(Vector2(0, 250), Lang.t("get_ready"), 48, Color("ffd24a"), HORIZONTAL_ALIGNMENT_CENTER, 960)
@@ -395,18 +425,17 @@ func _bar(pos: Vector2, label: String, v: float, w: float) -> void:
 	draw_rect(Rect2(pos + Vector2(0, 4), Vector2(w, 6)), Color(1, 1, 1, 0.2))
 	draw_rect(Rect2(pos + Vector2(0, 4), Vector2(w * clampf(v, 0.0, 1.0), 6)), Color("4cc3ff"))
 
-## Total kilometres and a bar towards the next car to unlock.
+## Total kilometres (every country's: a car once unlocked stays) and a bar towards the next car to unlock.
 func _unlock_progress(pos: Vector2) -> void:
-	var km := Session.km # this country's: its cars unlock one by one in every country
 	var n := Profile.unlocked_count(Session.car_km())
-	_t(pos + Vector2(0, 0), Lang.t("driven") % Units.dist_text(km), 16, Color("ffd24a"))
+	_t(pos + Vector2(0, 0), Lang.t("driven") % Units.dist_text(Session.total_km), 16, Color("ffd24a"))
 	if n >= CarStats.ids().size():
 		_t(pos + Vector2(0, 22), Lang.t("all_cars"), 14, Color.WHITE)
 		return
 	var next: Dictionary = CarStats.by_id(CarStats.ids()[n])
-	_t(pos + Vector2(0, 24), Lang.t("next_car") % [next.name, Units.dist_text(Profile.unlock_km(n) - km, true)], 14, Color.WHITE)
+	_t(pos + Vector2(0, 24), Lang.t("next_car") % [next.name, Units.dist_text(Session.km_to_car(n), true)], 14, Color.WHITE)
 	draw_rect(Rect2(pos + Vector2(190, -12), Vector2(160, 10)), Color(1, 1, 1, 0.2))
-	draw_rect(Rect2(pos + Vector2(190, -12), Vector2(160 * Profile.next_progress(km), 10)), Color("49d36b"))
+	draw_rect(Rect2(pos + Vector2(190, -12), Vector2(160 * Profile.next_progress(Session.car_km()), 10)), Color("49d36b"))
 
 ## The car cards share the menu's 904 px width, however many cars there are.
 func _car_card_w() -> float:
@@ -423,7 +452,7 @@ func _draw_cars() -> void:
 	var bw := w - 16.0 if w < 150.0 else w - 24.0
 	for i in n:
 		var id: String = CarStats.ids()[i]
-		var c := CarStats.by_id(id)
+		var c := Shop.tuned(CarStats.by_id(id), Session.bought) # as the shop's upgrades make it
 		var r := _card_rect(i)
 		var on: bool = sel[0] == i
 		var open := Profile.is_unlocked(id, Session.car_km())
@@ -445,7 +474,7 @@ func _draw_cars() -> void:
 			draw_rect(Rect2(lc + Vector2(-18, -6), Vector2(36, 28)), Color("ffd24a"))
 			draw_arc(lc + Vector2(0, -6), 12, PI, TAU, 16, Color("ffd24a"), 5.0)
 			draw_circle(lc + Vector2(0, 6), 4, Color("2b2b2f"))
-			_t(r.position + Vector2(0, 186), Lang.t("from_dist") % Units.dist_text(Profile.unlock_km(i)), 18, Color("ffd24a"), HORIZONTAL_ALIGNMENT_CENTER, w)
+			_t(r.position + Vector2(0, 186), Lang.t("from_dist") % Units.dist_text(Profile.unlock_km(i) * Shop.UNLOCK[Shop.level(Session.bought, "unlock")]), 18, Color("ffd24a"), HORIZONTAL_ALIGNMENT_CENTER, w)
 
 ## "116 KM  ⛽ 40 l" centred under the car's name: the power, then the tank behind a little yellow pump.
 func _power_and_tank(mid: Vector2, c: Dictionary) -> void:
@@ -477,14 +506,15 @@ func _draw_map() -> void:
 	if id != dest_city and id != start_city:
 		_city_info(id, Vector2(x, 214), w)
 		if Route.neighbours(start_city).has(id):
-			_weather_line(Weather.for_legs(Route.find(start_city, id)), x, 214 + 56, w)
+			var lg := Route.find(start_city, id)
+			_weather_line(Weather.for_legs(lg), x, 214 + 56, w, Route.night_for(lg))
 		_t(Vector2(x, 460), Lang.t("tap_city") if Screen.touch else Lang.t("click_city"), 16, Color("c8d6e3"))
 		return
 	if legs.is_empty():
 		return
 	var st := Route.build(start_city, dest_city)
 	_t(Vector2(x, 206), Lang.t("goal") % Geo.display_name(dest_city), 22, Color("ff9a86"))
-	_weather_line(st.weather, x, 206, w)
+	_weather_line(st.weather, x, 206, w, st.night)
 	var roads := []
 	for l in legs:
 		for rd in Route.leg_roads(l):
@@ -505,12 +535,17 @@ func _draw_map() -> void:
 	var reg_text := Lang.t("regions") % (", ".join(regions) + (Lang.t("and_more") if st.regions.size() > regions.size() else ""))
 	draw_multiline_string(font, Vector2(x, 386), reg_text, HORIZONTAL_ALIGNMENT_LEFT, w, 15, 3, Color("f1d9b5"))
 
-## The trip's weather, right of the destination's name: an icon and its name.
-func _weather_line(kind: String, x: float, y: float, w: float) -> void:
+## The trip's weather, right of the destination's name: an icon and its name (and a moon before them at night).
+func _weather_line(kind: String, x: float, y: float, w: float, night := false) -> void:
 	var wl := Weather.label(kind)
+	if night: wl = "%s · %s" % [Lang.t("night"), wl]
 	var ww := font.get_string_size(wl, HORIZONTAL_ALIGNMENT_LEFT, -1, 17).x
 	CountryMap.weather_icon(self, Vector2(x + w - ww - 18, y - 6), kind, 12.0)
-	_t(Vector2(x, y), wl, 17, Color.WHITE, HORIZONTAL_ALIGNMENT_RIGHT, w)
+	if night:
+		var mc := Vector2(x + w - ww - 42, y - 6)
+		draw_circle(mc, 8.0, Color("f1e6b8"))
+		draw_circle(mc + Vector2(4, -3), 7.0, Color(0.06, 0.09, 0.13))
+	_t(Vector2(x, y), wl, 17, Color("c9d6ff") if night else Color.WHITE, HORIZONTAL_ALIGNMENT_RIGHT, w)
 
 func _countries() -> int:
 	return GameData.countries().size()

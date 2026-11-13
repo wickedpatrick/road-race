@@ -1,16 +1,19 @@
 class_name Profile
 extends RefCounted
 ## Car unlocking: everyone starts with the first car; the next one unlocks after UNLOCK_FIRST_KM kilometres
-## (about Kraków - Zamość), and every following car needs 20% more kilometres than the one before.
+## (about Kraków - Zamość), and every following car needs 20% more kilometres than the one before, the last two
+## many times more (UNLOCK_STEP_X). The kilometres count in every country together and a car once unlocked stays
+## (Session.car_km).
 const UNLOCK_FIRST_KM := 325.0
 const UNLOCK_GROWTH := 1.2
+const UNLOCK_STEP_X := {5: 3.0, 6: 5.0} ## car number -> its step of kilometres from the car before, times this
 
 ## Total kilometres needed to unlock car number n (0 = the first car, always available).
 static func unlock_km(n: int) -> float:
 	var total := 0.0
 	var step := UNLOCK_FIRST_KM
 	for i in n:
-		total += step
+		total += step * UNLOCK_STEP_X.get(i + 1, 1.0)
 		step *= UNLOCK_GROWTH
 	return total
 

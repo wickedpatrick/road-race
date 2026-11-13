@@ -97,6 +97,7 @@ func _switch(step: int) -> void:
 func _back() -> void:
 	Sfx.play("blip", -8.0)
 	Session.menu_at_map = Session.album_back_to_map
+	Session.menu_at_car = not Session.album_back_to_map
 	get_tree().change_scene_to_file("res://src/scenes/menu.tscn")
 
 func _unhandled_input(event: InputEvent) -> void:

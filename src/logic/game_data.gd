@@ -39,6 +39,18 @@ static func members(code: String) -> Array:
 		if c.code == code: return c.get("members", [])
 	return []
 
+## The map a real country is played on: its own, or the one spanning it (Benelux for "nl"); "" when not in the game.
+static func map_of(code: String) -> String:
+	for c in countries():
+		if c.code == code or c.get("members", []).has(code): return c.code
+	return ""
+
+## The player's home country from the device (its locale's region, "pl_PL" -> pl), Poland when not in the game.
+static func home_country(locale: String) -> String:
+	var parts := locale.split("_")
+	var m := map_of(parts[1].substr(0, 2).to_lower()) if parts.size() > 1 else ""
+	return m if m != "" else "pl"
+
 ## Everything about one country (the current one by default): country.json plus "cities", "roads", "facts",
 ## "landmarks" and "native" (optional native.json) from the files next to it.
 static func country(code := "") -> Dictionary:

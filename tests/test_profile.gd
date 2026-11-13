@@ -8,3 +8,7 @@ func run(t) -> void:
 	t.check(is_equal_approx(Profile.unlock_km(2) - Profile.unlock_km(1), Profile.UNLOCK_FIRST_KM * 1.2), "each next car needs 20% more")
 	t.check(Profile.unlocked_count(1.0e6) == CarStats.ids().size(), "all cars eventually")
 	t.check(absf(Profile.next_progress(325.0 + 195.0) - 0.5) < 0.001, "progress bar towards the next car")
+	# the last two cars take many times longer: the 6th three times its step, the 7th five times
+	var step := func(n): return Profile.UNLOCK_FIRST_KM * pow(Profile.UNLOCK_GROWTH, n - 1)
+	t.check(is_equal_approx(Profile.unlock_km(5) - Profile.unlock_km(4), step.call(5) * 3.0), "the 6th car: three times its step")
+	t.check(is_equal_approx(Profile.unlock_km(6) - Profile.unlock_km(5), step.call(6) * 5.0), "the 7th car: five times its step")
