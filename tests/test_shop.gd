@@ -20,9 +20,7 @@ func run(t) -> void:
 	var s = load("res://src/autoload/session.gd").new()
 	s.total_km = 300.0
 	t.check(Profile.unlocked_count(s.car_km()) == 1, "300 km: one car")
-	s.bought = ["unlock_50"]
-	t.check(Profile.unlocked_count(s.car_km()) == 2 and is_equal_approx(s.km_to_car(2), Profile.unlock_km(2) * 0.5 - 300.0),
-		"half the kilometres with the 50% upgrade")
+	t.check(is_equal_approx(s.km_to_car(1), Profile.unlock_km(1) - 300.0), "the kilometres still to drive for the next car")
 	s.bought = ["cars_all"]
 	t.check(Profile.unlocked_count(s.car_km()) == CarStats.ids().size(), "every car bought")
 	s.free()

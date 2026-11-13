@@ -474,7 +474,7 @@ func _draw_cars() -> void:
 			draw_rect(Rect2(lc + Vector2(-18, -6), Vector2(36, 28)), Color("ffd24a"))
 			draw_arc(lc + Vector2(0, -6), 12, PI, TAU, 16, Color("ffd24a"), 5.0)
 			draw_circle(lc + Vector2(0, 6), 4, Color("2b2b2f"))
-			_t(r.position + Vector2(0, 186), Lang.t("from_dist") % Units.dist_text(Profile.unlock_km(i) * Shop.UNLOCK[Shop.level(Session.bought, "unlock")]), 18, Color("ffd24a"), HORIZONTAL_ALIGNMENT_CENTER, w)
+			_t(r.position + Vector2(0, 186), Lang.t("from_dist") % Units.dist_text(Profile.unlock_km(i)), 18, Color("ffd24a"), HORIZONTAL_ALIGNMENT_CENTER, w)
 
 ## "116 KM  ⛽ 40 l" centred under the car's name: the power, then the tank behind a little yellow pump.
 func _power_and_tank(mid: Vector2, c: Dictionary) -> void:

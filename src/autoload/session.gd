@@ -51,16 +51,16 @@ func _ready() -> void:
 	load_profile()
 	_read_test_flags()
 
-## Kilometres the cars are unlocked by: driven in every country (a car once unlocked stays), counting more with the
-## faster unlocking bought, no limit with every car bought or in the cars' test mode.
+## Kilometres the cars are unlocked by: driven in every country (a car once unlocked stays), no limit with every car
+## bought or in the cars' test mode.
 func car_km() -> float:
 	if cars_test or bought.has("cars_all"):
 		return 1.0e9
-	return total_km / Shop.UNLOCK[Shop.level(bought, "unlock")]
+	return total_km
 
 ## The real kilometres still to drive for car number n.
 func km_to_car(n: int) -> float:
-	return maxf(0.0, Profile.unlock_km(n) * Shop.UNLOCK[Shop.level(bought, "unlock")] - total_km)
+	return maxf(0.0, Profile.unlock_km(n) - total_km)
 
 ## Buys a product (Shop; a fake store: it always succeeds) and saves; `country_one` takes the country it is for.
 func buy(id: String, code := "") -> bool:

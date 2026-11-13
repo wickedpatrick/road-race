@@ -13,15 +13,12 @@ const PRODUCTS := [
 	{"id": "lights", "price": 1},
 	{"id": "police_chance", "price": 1},
 	{"id": "police_150", "price": 1},
-	{"id": "unlock_25", "price": 1, "group": "unlock", "level": 1},
-	{"id": "unlock_50", "price": 2, "group": "unlock", "level": 2},
 	{"id": "cars_all", "price": 2},
 	{"id": "country_one", "price": 1},
-	{"id": "countries_all", "price": 3},
+	{"id": "countries_all", "price": 10},
 ]
 const SPEED := [1.0, 1.05, 1.1] ## top speed by the "speed" level
 const BRAKES := [1.0, 1.1, 1.2]
-const UNLOCK := [1.0, 0.75, 0.5] ## the kilometres a car needs, by the "unlock" level
 const TANK_EXTRA := 10.0 ## litres
 const LIGHTS := 3.4 ## the headlights' reach, times the car's own
 const POLICE_ESCAPE := 0.5 ## added to the chance an officer can be shaken off (rules police.escape_chance)
