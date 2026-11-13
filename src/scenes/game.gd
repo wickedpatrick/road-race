@@ -17,7 +17,7 @@ var _perf_t := 0.0
 var _perf_n := 0
 var _toast := 0.0
 var _light_toast := 0.0 ## test: how long the headlights' power shows after H
-const LIGHT_TEST := [1.0, 1.3, 0.7]
+const LIGHT_TEST := [1.0, 3.4]
 var countdown := COUNTDOWN
 var paused := false
 var end_timer := 0.0
@@ -216,7 +216,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif paused and event is InputEventKey and event.pressed and event.keycode == KEY_M:
 		_back_to_map()
 	elif view.night and event is InputEventKey and event.pressed and not event.is_echo() and event.keycode == KEY_H:
-		# test: the headlights' power in turn as bought, 30% stronger, 30% weaker (the lights upgrade to come)
+		# test: the headlights as bought or 3.4 times stronger (the lights upgrade to come)
 		var k: float = LIGHT_TEST[(LIGHT_TEST.find(view.light_reach) + 1) % LIGHT_TEST.size()]
 		view.set_light_reach(k)
 		_light_toast = 2.0

@@ -1211,10 +1211,10 @@ func _lamp_light(b: Vector2, pm: float, it: Dictionary) -> void:
 	_glow(head, 0.6 * pm, Color(1.0, 0.85, 0.5), 0.8)
 
 const BEAM_COLOR := Color(1.0, 0.92, 0.66)
-const BEAM_REACH := 70.0 ## metres ahead the headlights light the ground (better lights further)
+const BEAM_REACH := 35.0 ## metres ahead the headlights light the ground (better lights further)
 ## Road signs on the kerb side shine back in the headlights this share of the drawing distance ahead (better lights
 ## further).
-const SIGN_LIT := 0.12
+const SIGN_LIT := 0.06
 const LIT_SIGNS := ["town_sign", "town_end", "limit", "board", "region", "border_board", "radar", "bend", "chevron",
 	"station_sign", "poi"]
 
