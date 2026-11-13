@@ -332,6 +332,7 @@ func draw(cv: CanvasItem, font: Font, legs: Array, start: String, dest: String, 
 			cv.draw_circle(leg_xy(leg, tw[1]), 2.0, Color("7a4d00"))
 	for leg in legs:
 		_route_arrow(cv, leg_path(leg), 0.55)
+	_road_icons(cv)
 	for id in Geo.cities():
 		var c := Geo.city(id)
 		var p := city_pos(id)
@@ -358,6 +359,32 @@ func draw(cv: CanvasItem, font: Font, legs: Array, start: String, dest: String, 
 		cv.draw_string(font, lp, label, HORIZONTAL_ALIGNMENT_LEFT, -1, size, Color("16222e", 0.4 if faded else 1.0))
 	_more_arrows(cv, t)
 	_legend(cv, font)
+
+## What a road is like, a small sign in its middle: night (a moon), rain, fog or snow, side by side when both;
+## nothing on a fair day.
+const ICON_KINDS := ["rain", "fog", "snow"]
+const ROAD_ICON := 5.5
+
+func _road_icons(cv: CanvasItem) -> void:
+	var night := Route.night_roads()
+	for r in Geo.roads():
+		var kinds := []
+		if night.has("%s|%s" % [r.a, r.b]): kinds.append("night")
+		var w := Weather.for_road(r)
+		if ICON_KINDS.has(w): kinds.append(w)
+		if kinds.is_empty(): continue
+		var mid := leg_xy({"road": r, "from": r.a, "to": r.b}, r.km * 0.5)
+		for i in kinds.size():
+			var c := mid + Vector2((i - (kinds.size() - 1) * 0.5) * (ROAD_ICON * 2.0 + 2.0), 0)
+			if kinds[i] == "night": night_icon(cv, c, ROAD_ICON)
+			else: weather_icon(cv, c, kinds[i], ROAD_ICON)
+
+## A crescent moon on a dark disc of radius s.
+static func night_icon(cv: CanvasItem, c: Vector2, s: float) -> void:
+	cv.draw_circle(c, s + 1.2, Color("16222e", 0.45))
+	cv.draw_circle(c, s, Color("1d2b4a"))
+	cv.draw_circle(c + Vector2(-0.8, 0.4) * s / 10.0, 5.4 * s / 10.0, Color("f1e6b8"))
+	cv.draw_circle(c + Vector2(1.8, -1.6) * s / 10.0, 4.8 * s / 10.0, Color("1d2b4a"))
 
 ## A weather sign on a white disc of radius s: sun, cloud, rain cloud, fog, leaf or snowflake.
 static func weather_icon(cv: CanvasItem, c: Vector2, kind: String, s: float, alpha := 1.0) -> void:
