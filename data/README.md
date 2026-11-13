@@ -21,7 +21,8 @@ Numbers: distances along a road in real kilometres from city `a`; populations in
 
 - `cars`: list from the weakest to the best. `id`, `name`, `hp` (for show), `max_speed` (m/s), `accel` / `brake`
   (m/s²), `tank` (l), `burn` (l/s at top speed), `handling`, `body_color` (`"#rrggbb"`), `halfwidth` (share of the
-  road half-width).
+  road half-width), `lights` (the headlights' power at night, 1 = the usual) and `lights_white` (white LED light
+  instead of the warm halogen one).
 - `biomes`: landscape by name. `curve` and `hill` shape the road; `wood`, `hills`, `mountains`, `sea`, `industry`
   (0..1) shape the horizon, optional `ice` (0..1) keeps snow caps on the far mountains all year (glaciers),
   `weather` is the usual weather there (`sun`, `cloudy`, `rain`, `fog`, `autumn`, `snow`; see `Weather`).

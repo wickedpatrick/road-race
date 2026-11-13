@@ -17,7 +17,17 @@ var _perf_t := 0.0
 var _perf_n := 0
 var _toast := 0.0
 var _light_toast := 0.0 ## test: how long the headlights' power shows after H
-const LIGHT_TEST := [1.0, 3.4]
+var _light_test := -1 ## test: which car's headlights H shows (the next car's upgraded ones after the last car)
+var _light_name := ""
+const LIGHTS_UPGRADE := 3.4 ## the lights upgrade: this many times the car's own headlights
+
+## The headlights of a car (its lights and lights_white in the rules), upgraded or not.
+func _set_lights(id: String, upgraded: bool) -> void:
+	var car: Dictionary = CarStats.by_id(id)
+	var k: float = car.get("lights", 1.0) * (LIGHTS_UPGRADE if upgraded else 1.0)
+	view.set_light_reach(k)
+	view.beam_color = WorldView.BEAM_WHITE if car.get("lights_white", false) else WorldView.BEAM_COLOR
+	_light_name = "%s%s: %d%%" % [car.name, " + ulepszenie" if upgraded else "", roundi(k * 100.0)]
 var countdown := COUNTDOWN
 var paused := false
 var end_timer := 0.0
@@ -39,6 +49,7 @@ func _ready() -> void:
 	view = WorldView.new()
 	add_child(view)
 	view.bind(race)
+	_set_lights(Session.car_id, false)
 	_apply_quality()
 	race.collided.connect(func(_i): Sfx.play("hit", -2.0))
 	race.crashed.connect(func(): Sfx.play("hit", 0.0))
@@ -216,9 +227,10 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif paused and event is InputEventKey and event.pressed and event.keycode == KEY_M:
 		_back_to_map()
 	elif view.night and event is InputEventKey and event.pressed and not event.is_echo() and event.keycode == KEY_H:
-		# test: the headlights as bought or 3.4 times stronger (the lights upgrade to come)
-		var k: float = LIGHT_TEST[(LIGHT_TEST.find(view.light_reach) + 1) % LIGHT_TEST.size()]
-		view.set_light_reach(k)
+		# test: every car's headlights in turn, then every car's with the lights upgrade
+		var ids: Array = GameData.rules().car_ids
+		_light_test = (_light_test + 1) % (ids.size() * 2)
+		_set_lights(ids[_light_test % ids.size()], _light_test >= ids.size())
 		_light_toast = 2.0
 	elif event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		var p: Vector2 = event.position
@@ -272,8 +284,8 @@ func _draw_overlay() -> void:
 		if not Screen.touch:
 			o.draw_string(font, Vector2(0, 470), Lang.t("pause_keys"), HORIZONTAL_ALIGNMENT_CENTER, 960, 22, Color("c8d6e3"))
 	elif _light_toast > 0.0:
-		o.draw_rect(Rect2(330, 214, 300, 40), Color(0, 0, 0, 0.55))
-		o.draw_string(font, Vector2(0, 241), "Światła: %d%%" % roundi(view.light_reach * 100.0), HORIZONTAL_ALIGNMENT_CENTER, 960, 18, Color.WHITE)
+		o.draw_rect(Rect2(255, 214, 450, 40), Color(0, 0, 0, 0.55))
+		o.draw_string(font, Vector2(0, 241), "Światła %s" % _light_name, HORIZONTAL_ALIGNMENT_CENTER, 960, 18, Color.WHITE)
 	elif _toast > 0.0:
 		o.draw_rect(Rect2(230, 214, 500, 40), Color(0, 0, 0, 0.55))
 		o.draw_string(font, Vector2(0, 241), Lang.t("low_gfx_toast"), HORIZONTAL_ALIGNMENT_CENTER, 960, 18, Color.WHITE)

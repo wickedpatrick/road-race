@@ -25,6 +25,7 @@ var _fog_reach := 0.0 ## thick fog: the world fades to white within this share o
 var night := false ## the stage at night (Weather.night): dark like a black thick fog beyond the headlights, lights on
 var light_reach := 1.0 ## the headlights' reach, times Weather.NIGHT_REACH (better lights: more)
 var _weather_fog := 0.0 ## the weather's own thick fog reach, before the dark
+var beam_color := BEAM_COLOR ## the headlights' light (the car's lights_white: BEAM_WHITE)
 
 ## The headlights' reach (1: as bought with the car; better lights more), the dark closing in at it.
 func set_light_reach(k: float) -> void:
@@ -301,7 +302,7 @@ func _lit_col(col: Color, x: float, e: PackedFloat32Array, strength: float) -> C
 	var sb: Color = pal.sky_bottom
 	var day := (col - sb * _lit_f) / (1.0 - _lit_f) # the colour before the dark took it (col = day.lerp(sb, _lit_f))
 	var f := _lit_f * (1.0 - l)
-	var warm := Color.WHITE.lerp(BEAM_COLOR, 0.4 * l)
+	var warm := Color.WHITE.lerp(beam_color, 0.4 * l)
 	var c := day * warm * (1.0 - f) + sb * f
 	return Color(clampf(c.r, 0.0, 1.0), clampf(c.g, 0.0, 1.0), clampf(c.b, 0.0, 1.0), col.a)
 
@@ -1210,7 +1211,8 @@ func _lamp_light(b: Vector2, pm: float, it: Dictionary) -> void:
 	var head := b + Vector2(0.05 * pm * (1.0 if it.lat * Scenery.flip > 0 else -1.0), -h)
 	_glow(head, 0.6 * pm, Color(1.0, 0.85, 0.5), 0.8)
 
-const BEAM_COLOR := Color(1.0, 0.92, 0.66)
+const BEAM_COLOR := Color(1.0, 0.92, 0.66) ## halogen
+const BEAM_WHITE := Color(0.93, 0.97, 1.0) ## LED: white, a touch cold
 const BEAM_REACH := 35.0 ## metres ahead the headlights light the ground (better lights further)
 ## Road signs on the kerb side shine back in the headlights this share of the drawing distance ahead (better lights
 ## further).

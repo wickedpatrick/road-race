@@ -11,7 +11,9 @@
 			"burn": 0.3,
 			"handling": 0.8,
 			"body_color": "#e9e9ec",
-			"halfwidth": 0.15
+			"halfwidth": 0.15,
+			"lights": 0.7,
+			"lights_white": false
 		},
 		{
 			"id": "octavia",
@@ -24,7 +26,9 @@
 			"burn": 0.28,
 			"handling": 0.95,
 			"body_color": "#2f5fa8",
-			"halfwidth": 0.17
+			"halfwidth": 0.17,
+			"lights": 0.8,
+			"lights_white": false
 		},
 		{
 			"id": "xc60",
@@ -37,7 +41,9 @@
 			"burn": 0.65,
 			"handling": 1.05,
 			"body_color": "#2f4a63",
-			"halfwidth": 0.19
+			"halfwidth": 0.19,
+			"lights": 1.0,
+			"lights_white": true
 		},
 		{
 			"id": "bmw530",
@@ -50,7 +56,9 @@
 			"burn": 0.65,
 			"handling": 1.2,
 			"body_color": "#b9bec5",
-			"halfwidth": 0.18
+			"halfwidth": 0.18,
+			"lights": 1.0,
+			"lights_white": true
 		},
 		{
 			"id": "rangerover",
@@ -63,7 +71,9 @@
 			"burn": 1.5,
 			"handling": 1.15,
 			"body_color": "#2d4a3b",
-			"halfwidth": 0.2
+			"halfwidth": 0.2,
+			"lights": 1.1,
+			"lights_white": true
 		},
 		{
 			"id": "gtcoupe",
@@ -76,7 +86,9 @@
 			"burn": 1.35,
 			"handling": 1.32,
 			"body_color": "#d4561a",
-			"halfwidth": 0.2
+			"halfwidth": 0.2,
+			"lights": 1.1,
+			"lights_white": true
 		},
 		{
 			"id": "supercar",
@@ -89,7 +101,9 @@
 			"burn": 1.6,
 			"handling": 1.45,
 			"body_color": "#c8161d",
-			"halfwidth": 0.21
+			"halfwidth": 0.21,
+			"lights": 1.2,
+			"lights_white": true
 		}
 	],
 	"biomes": {
