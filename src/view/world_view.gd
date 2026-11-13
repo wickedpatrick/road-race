@@ -1109,11 +1109,11 @@ func _car_lights(c: Vector2, s: float, front: bool, kind: String) -> void:
 	var y := c.y - 40.0 * s
 	for sx in [-1.0, 1.0]:
 		if front:
-			_glow(Vector2(c.x + sx * 88.0 * s, y), 22.0 * s, Color(1.0, 0.95, 0.8), 0.9)
+			_glow(Vector2(c.x + sx * 88.0 * s, y), clampf(50.0 * s, 3.0, 26.0), Color(1.0, 0.95, 0.8), 1.0) # five times the light they had: dazzling
 		else:
 			_glow(Vector2(c.x + sx * 92.0 * s, y), 18.0 * s, Color(1.0, 0.12, 0.08), 0.75)
 	if front:
-		_b.draw_circle(Vector2(c.x, c.y + 6.0 * s), 140.0 * s, Color(1.0, 0.95, 0.75, 0.08))
+		_b.draw_circle(Vector2(c.x, c.y + 6.0 * s), minf(300.0 * s, 140.0), Color(1.0, 0.95, 0.75, 0.3)) # capped: a car close by does not light the whole screen
 	if kind == "police" and int(Time.get_ticks_msec() / 160) % 2 == 0:
 		_glow(Vector2(c.x, c.y - 112.0 * s), 40.0 * s, Color(0.2, 0.45, 1.0), 0.8)
 
