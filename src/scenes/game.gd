@@ -16,6 +16,8 @@ var _world_sprite: Sprite2D
 var _perf_t := 0.0
 var _perf_n := 0
 var _toast := 0.0
+var _light_toast := 0.0 ## test: how long the headlights' power shows after H
+const LIGHT_TEST := [1.0, 1.3, 0.7]
 var countdown := COUNTDOWN
 var paused := false
 var end_timer := 0.0
@@ -95,6 +97,7 @@ func _set_quality(q: String) -> void:
 ## Watches the first seconds of driving: a device that cannot keep up gets the light graphics mode.
 func _process(dt: float) -> void:
 	_toast = maxf(0.0, _toast - dt)
+	_light_toast = maxf(0.0, _light_toast - dt)
 	if paused or countdown > 0.0 or race.state != "running" or Session.quality == "low" or _perf_n < 0:
 		return
 	_perf_t += dt
@@ -212,6 +215,11 @@ func _unhandled_input(event: InputEvent) -> void:
 		_set_paused(not paused)
 	elif paused and event is InputEventKey and event.pressed and event.keycode == KEY_M:
 		_back_to_map()
+	elif view.night and event is InputEventKey and event.pressed and not event.is_echo() and event.keycode == KEY_H:
+		# test: the headlights' power in turn as bought, 30% stronger, 30% weaker (the lights upgrade to come)
+		var k: float = LIGHT_TEST[(LIGHT_TEST.find(view.light_reach) + 1) % LIGHT_TEST.size()]
+		view.set_light_reach(k)
+		_light_toast = 2.0
 	elif event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		var p: Vector2 = event.position
 		if paused:
@@ -263,6 +271,9 @@ func _draw_overlay() -> void:
 		Ui.button(o, font, QUALITY_BTN, Lang.t("graphics") % Lang.t("gfx_low" if Session.quality == "low" else "gfx_high"), false, 18)
 		if not Screen.touch:
 			o.draw_string(font, Vector2(0, 470), Lang.t("pause_keys"), HORIZONTAL_ALIGNMENT_CENTER, 960, 22, Color("c8d6e3"))
+	elif _light_toast > 0.0:
+		o.draw_rect(Rect2(330, 214, 300, 40), Color(0, 0, 0, 0.55))
+		o.draw_string(font, Vector2(0, 241), "Światła: %d%%" % roundi(view.light_reach * 100.0), HORIZONTAL_ALIGNMENT_CENTER, 960, 18, Color.WHITE)
 	elif _toast > 0.0:
 		o.draw_rect(Rect2(230, 214, 500, 40), Color(0, 0, 0, 0.55))
 		o.draw_string(font, Vector2(0, 241), Lang.t("low_gfx_toast"), HORIZONTAL_ALIGNMENT_CENTER, 960, 18, Color.WHITE)

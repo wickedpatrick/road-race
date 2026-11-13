@@ -24,6 +24,14 @@ var weather := "sun"
 var _fog_reach := 0.0 ## thick fog: the world fades to white within this share of the drawing distance
 var night := false ## the stage at night (Weather.night): dark like a black thick fog beyond the headlights, lights on
 var light_reach := 1.0 ## the headlights' reach, times Weather.NIGHT_REACH (better lights: more)
+var _weather_fog := 0.0 ## the weather's own thick fog reach, before the dark
+
+## The headlights' reach (1: as bought with the car; better lights more), the dark closing in at it.
+func set_light_reach(k: float) -> void:
+	light_reach = k
+	if night:
+		var reach := Weather.NIGHT_REACH * k
+		_fog_reach = minf(_weather_fog, reach) if _weather_fog > 0.0 else reach
 var items: Dictionary = {}
 var font: Font
 var parallax := 0.0
@@ -83,10 +91,10 @@ func bind(p_race: Race, p_weather := "") -> void:
 	_fog_reach = Weather.fog_reach(weather)
 	night = race.stage.get("night", false)
 	Scenery.night = night
+	_weather_fog = _fog_reach
 	if night: # the dark closes in like a thick fog, at the headlights' reach
 		pal = Weather.night(pal)
-		var reach := Weather.NIGHT_REACH * light_reach
-		_fog_reach = minf(_fog_reach, reach) if _fog_reach > 0.0 else reach
+		set_light_reach(light_reach)
 	items = race.scenery
 	_left = race.stage.get("left", false)
 	Scenery.flip = -1.0 if _left else 1.0
@@ -1190,7 +1198,7 @@ func _car_lights(c: Vector2, s: float, front: bool, kind: String) -> void:
 	var y := c.y - 40.0 * s
 	for sx in [-1.0, 1.0]:
 		if front:
-			_glow(Vector2(c.x + sx * 88.0 * s, y), clampf(100.0 * s, 4.0, 40.0), Color(1.0, 0.95, 0.8), 1.0) # ten times the light they had: dazzling
+			_glow(Vector2(c.x + sx * 92.0 * s, y), 18.0 * s, Color(1.0, 0.95, 0.8), 0.75) # as the rear lights, only white
 		else:
 			_glow(Vector2(c.x + sx * 92.0 * s, y), 18.0 * s, Color(1.0, 0.12, 0.08), 0.75)
 	if kind == "police" and int(Time.get_ticks_msec() / 160) % 2 == 0:
