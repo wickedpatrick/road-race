@@ -220,7 +220,82 @@ func _horizon_target() -> Dictionary:
 	return {"hills": bd.hills, "mountains": bd.mountains, "sea": maxf(bd.sea, strait), "industry": bd.industry, "wood": bd.wood, "skyline": sky, "ice": bd.get("ice", 0.0)}
 
 func _quad(a: Vector2, b: Vector2, c: Vector2, d: Vector2, col: Color) -> void:
-	_b.fan(PackedVector2Array([a, b, c, d]), col)
+	if _lit_on and a.y == b.y and c.y == d.y and a.x <= b.x and d.x <= c.x:
+		_lit_quad(a, b, c, d, col)
+	else:
+		_b.fan(PackedVector2Array([a, b, c, d]), col)
+
+## Night: the player's headlights light the ground they reach (in the world, so the light follows the road's bends
+## and its perspective): the segment's colours brought back out of the dark there, warmer. Set per segment by
+## _lit_begin: the light's edges across the road at the segment's near and far edge (screen x: the outer and inner
+## soft edge on the left, then on the right), how strong it is at each, and how dark the segment is.
+var _lit_on := false
+var _lit_near := PackedFloat32Array()
+var _lit_far := PackedFloat32Array()
+var _lit_i := Vector2.ZERO ## the light's strength at the near (x) and far (y) edge
+var _lit_f := 0.0 ## the segment's darkness (the share of the dark in its colours)
+
+func _lit_begin(n: int) -> void:
+	_lit_on = false
+	if not night:
+		return
+	var reach := BEAM_REACH * light_reach
+	var dn := n * SEG - PLAYER_DZ # from the car
+	var df := dn + SEG
+	_lit_i = Vector2(_beam_strength(dn, reach), _beam_strength(df, reach))
+	_lit_f = _dark_k(n)
+	if _lit_i == Vector2.ZERO or _lit_f < 0.02:
+		return
+	var lat := race.x * Track.ROAD_HALF_WIDTH
+	_lit_near = _beam_edges(dn, lat, _x0[n], _s0[n] * W * 0.5)
+	_lit_far = _beam_edges(df, lat, _x1[n], _s1[n] * W * 0.5)
+	_lit_on = true
+
+## The headlights' strength at d metres ahead of the car: full near it, fading out to nothing at the reach.
+func _beam_strength(d: float, reach: float) -> float:
+	return 1.0 - smoothstep(reach * 0.3, reach, d)
+
+## The light's edges across the road d metres ahead, on screen (the road's middle at x, p pixels a metre): the beam
+## widens ahead, more to the kerb side (the right; mirrored with the rest of the world in left-hand traffic) where
+## it lights the signs.
+func _beam_edges(d: float, lat: float, x: float, p: float) -> PackedFloat32Array:
+	var ahead := maxf(d - 1.5, 0.0)
+	var l := minf(1.0 + 0.22 * ahead, 7.0)
+	var r := minf(1.0 + 0.4 * ahead, 11.0)
+	var soft := 1.0 + 0.3 * l
+	return PackedFloat32Array([x + (lat - l - soft) * p, x + (lat - l) * p, x + (lat + r) * p, x + (lat + r + soft * 1.4) * p])
+
+## A quad of the ground cut where the headlights' edges cross it, each piece's corners lit by how far into the beam
+## they are: the light soft at its edges.
+func _lit_quad(a: Vector2, b: Vector2, c: Vector2, d: Vector2, col: Color) -> void:
+	var cuts_n := [a.x]
+	var cuts_f := [d.x]
+	for k in 4:
+		cuts_n.append(clampf(_lit_near[k], a.x, b.x))
+		cuts_f.append(clampf(_lit_far[k], d.x, c.x))
+	cuts_n.append(b.x)
+	cuts_f.append(c.x)
+	for k in cuts_n.size() - 1:
+		if cuts_n[k + 1] - cuts_n[k] < 0.01 and cuts_f[k + 1] - cuts_f[k] < 0.01:
+			continue
+		_b.draw_polygon(PackedVector2Array([Vector2(cuts_n[k], a.y), Vector2(cuts_n[k + 1], a.y), Vector2(cuts_f[k + 1], d.y), Vector2(cuts_f[k], d.y)]),
+			PackedColorArray([_lit_col(col, cuts_n[k], _lit_near, _lit_i.x), _lit_col(col, cuts_n[k + 1], _lit_near, _lit_i.x),
+				_lit_col(col, cuts_f[k + 1], _lit_far, _lit_i.y), _lit_col(col, cuts_f[k], _lit_far, _lit_i.y)]))
+
+## A colour (already in the dark) lit by the headlights at screen x: out of the dark by the light there, warmer.
+func _lit_col(col: Color, x: float, e: PackedFloat32Array, strength: float) -> Color:
+	var inside := 0.0
+	if x > e[0] and x < e[3]:
+		inside = minf(smoothstep(e[0], e[1], x), 1.0 - smoothstep(e[2], e[3], x))
+	var l := strength * inside
+	if l <= 0.0:
+		return col
+	var sb: Color = pal.sky_bottom
+	var day := (col - sb * _lit_f) / (1.0 - _lit_f) # the colour before the dark took it (col = day.lerp(sb, _lit_f))
+	var f := _lit_f * (1.0 - l)
+	var warm := Color.WHITE.lerp(BEAM_COLOR, 0.4 * l)
+	var c := day * warm * (1.0 - f) + sb * f
+	return Color(clampf(c.r, 0.0, 1.0), clampf(c.g, 0.0, 1.0), clampf(c.b, 0.0, 1.0), col.a)
 
 func _seg(i: int) -> Dictionary:
 	return race.track.segments[clampi(i, 0, race.track.segments.size() - 1)]
@@ -256,8 +331,12 @@ func _build_grass() -> void:
 		_grass[k * 2 + 1] = b
 
 func _fog(c: Color, n: int) -> Color:
+	return c.lerp(pal.sky_bottom, _dark_k(n))
+
+## How far a colour at depth n fades into the haze (or the thick fog, or the dark).
+func _dark_k(n: int) -> float:
 	var f := clampf((float(n) - N * 0.45) / (N * 0.55), 0.0, 1.0)
-	return c.lerp(pal.sky_bottom, maxf(f * 0.75, _thick_fog(n)))
+	return maxf(f * 0.75, _thick_fog(n))
 
 ## Thick fog (Weather.fog_reach): 0 at the camera, almost white at the reach (at night almost black).
 func _thick_fog(n: int) -> float:
@@ -485,6 +564,7 @@ func _draw_segment(n: int, i: int) -> void:
 		_draw_sea(n, i)
 		return
 	var band := (i / 3) % 2
+	_lit_begin(n)
 	var y0 := _y0[n]
 	var y1 := _y1[n]
 	var x0 := _x0[n]
@@ -494,7 +574,7 @@ func _draw_segment(n: int, i: int) -> void:
 	var on_deck := i >= 0 and i < _brg.size() and _brg[i] != 0
 	var grass: Color = _fog(_sea_color((i / 2) % 2) if on_deck else _grass[clampi(i, 0, _grass.size() / 2 - 1) * 2 + band], n)
 	if not on_deck or _brg[i] != 2: # over a valley the floor far below shows beside the deck (_draw_valley)
-		_b.draw_rect(Rect2(-20, y1, W + 40, y0 - y1 + 1.0), grass)
+		_quad(Vector2(-20, y0 + 1.0), Vector2(W + 20, y0 + 1.0), Vector2(W + 20, y1), Vector2(-20, y1), grass)
 	# fields, lakes, canals, pavements beside the road
 	var gs: PackedFloat32Array = _ground[clampi(i, 0, _ground.size() - 1)]
 	if not gs.is_empty():
@@ -551,6 +631,7 @@ func _draw_segment(n: int, i: int) -> void:
 		var p1 := _s1[n] * W * 0.5
 		var e := Scenery.QUAY_EDGE + Track.left_shift(_dualf[clampi(i, 0, _dualf.size() - 1)])
 		_b.draw_rect(Rect2(x1 - e * p1, y1, (e + Scenery.QUAY_EDGE) * p1, maxf(1.0, 0.5 * p1)), _fog(Color("55585e"), n))
+	_lit_on = false
 
 ## The valley under a bridge over one (Scenery.over_valley), behind everything: its floor Scenery.VALLEY_DEPTH below
 ## the deck as bands of meadow, the river across it at mid-span, rocky slopes beyond the bridge's ends. The deck's
@@ -681,6 +762,7 @@ func _tfog(c: Color, n: int) -> Color:
 ## One tunnel segment: dark floor, the road, the walls and the vault with a row of lamps.
 func _draw_tunnel(n: int, i: int) -> void:
 	var band := (i / 3) % 2
+	_lit_begin(n)
 	var y0 := _y0[n]
 	var y1 := _y1[n]
 	var x0 := _x0[n]
@@ -1063,7 +1145,6 @@ func _draw_player() -> void:
 	py += sin(race.z * 0.8) * 1.2 * race.speed_ratio()
 	_b.set_mirror(false) # steer_visual is already the way the player steers on screen
 	var cs := s * W * 0.5 * CAR_UNIT
-	if night: _draw_headlights(py, cs)
 	CarPainter.draw(_b, race.car_id, Vector2(W * 0.5, py), cs, race.steer_visual, race.braking)
 	_b.fog = 0.0
 	if night: # the rear lights, brighter on the brake
@@ -1126,36 +1207,8 @@ func _lamp_light(b: Vector2, pm: float, it: Dictionary) -> void:
 	_b.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 	_glow(head, 0.6 * pm, Color(1.0, 0.85, 0.5), 0.8)
 
-## The player's headlights at night: a fan of warm light from the front of the car (BEAM_SHAPE, drawn after a
-## reference picture): spilling to both sides (further to the kerb side, onto the signs) and running out in a point towards the horizon, brightest by the car
-## and fading out to its edges. Better lights reach further ahead.
-func _draw_headlights(py: float, cs: float) -> void:
-	var front := Vector2(W * 0.5, py - 90.0 * cs) # the front of the car
-	var lean := race.steer_visual * 40.0 * cs # the light swings a little with the steering
-	var k := cs / 1.1 # BEAM_SHAPE is in pixels for the car seen at cs 1.1
-	var pts := PackedVector2Array()
-	for p in BEAM_SHAPE:
-		var d := Vector2(-p.x if _left else p.x, p.y * (light_reach if p.y < 0.0 else 1.0)) * k # left-hand traffic: the long beam on the left
-		pts.append(front + d + Vector2(lean * clampf(-d.y / (180.0 * k), 0.0, 1.0), 0.0))
-	var mid := front + Vector2(lean * 0.2, -30.0 * k)
-	var col := Color(BEAM_COLOR, BEAM_ALPHA)
-	for l in BEAM_LAYERS: # the outline again and again, ever smaller towards the car: even light, soft at its edges
-		var sc := 1.0 - 0.85 * float(l) / BEAM_LAYERS
-		var q := PackedVector2Array()
-		for p in pts:
-			q.append(mid + (p - mid) * sc)
-		for i in q.size(): # a fan from the middle, one colour: the outline need not be convex
-			_b.draw_polygon(PackedVector2Array([mid, q[i], q[(i + 1) % q.size()]]), PackedColorArray([col, col, col]))
-
-## The headlights' outline (x, y from the front of the car, y up negative), clockwise
-## from the car's left front corner.
-const BEAM_SHAPE := [Vector2(-86, 36), Vector2(-139, 2), Vector2(-161, -32),
-	Vector2(-189, -110), Vector2(-53, -176), Vector2(-14, -220), Vector2(10, -193),
-	Vector2(10, -158), Vector2(88, -181), Vector2(252, -150), Vector2(223, -60),
-	Vector2(190, 3), Vector2(82, 40)]
 const BEAM_COLOR := Color(1.0, 0.92, 0.66)
-const BEAM_LAYERS := 24
-const BEAM_ALPHA := 0.043 ## each layer's: about 0.65 where all of them overlap
+const BEAM_REACH := 70.0 ## metres ahead the headlights light the ground (better lights further)
 ## Road signs on the kerb side shine back in the headlights this share of the drawing distance ahead (better lights
 ## further).
 const SIGN_LIT := 0.12
