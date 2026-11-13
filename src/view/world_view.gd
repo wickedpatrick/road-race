@@ -1134,24 +1134,28 @@ func _draw_headlights(py: float, cs: float) -> void:
 	var lean := race.steer_visual * 40.0 * cs # the light swings a little with the steering
 	var k := cs / 1.1 # BEAM_SHAPE is in pixels for the car seen at cs 1.1
 	var pts := PackedVector2Array()
-	var cols := PackedColorArray()
 	for p in BEAM_SHAPE:
 		var d := Vector2(-p.x if _left else p.x, p.y * (light_reach if p.y < 0.0 else 1.0)) * k # left-hand traffic: the long beam on the left
 		pts.append(front + d + Vector2(lean * clampf(-d.y / (180.0 * k), 0.0, 1.0), 0.0))
-		cols.append(Color(BEAM_COLOR, p.z))
-	var mid := front + Vector2(lean * 0.3, -50.0 * k)
-	var core := Color(BEAM_COLOR, 0.75)
-	for i in pts.size(): # a fan from the bright middle: each edge point its own brightness
-		var j := (i + 1) % pts.size()
-		_b.draw_polygon(PackedVector2Array([mid, pts[i], pts[j]]), PackedColorArray([core, cols[i], cols[j]]))
+	var mid := front + Vector2(lean * 0.2, -30.0 * k)
+	var col := Color(BEAM_COLOR, BEAM_ALPHA)
+	for l in BEAM_LAYERS: # the outline again and again, ever smaller towards the car: even light, soft at its edges
+		var sc := 1.0 - 0.85 * float(l) / BEAM_LAYERS
+		var q := PackedVector2Array()
+		for p in pts:
+			q.append(mid + (p - mid) * sc)
+		for i in q.size(): # a fan from the middle, one colour: the outline need not be convex
+			_b.draw_polygon(PackedVector2Array([mid, q[i], q[(i + 1) % q.size()]]), PackedColorArray([col, col, col]))
 
-## The headlights' outline (x, y from the front of the car, y up negative; z: the light's alpha there), clockwise
+## The headlights' outline (x, y from the front of the car, y up negative), clockwise
 ## from the car's left front corner.
-const BEAM_SHAPE := [Vector3(-86, 36, 0.5), Vector3(-139, 2, 0.15), Vector3(-161, -32, 0.062),
-	Vector3(-189, -110, 0.0), Vector3(-53, -176, 0.0), Vector3(-14, -220, 0.0), Vector3(10, -193, 0.0),
-	Vector3(10, -158, 0.0), Vector3(88, -181, 0.0), Vector3(252, -150, 0.0), Vector3(223, -60, 0.062),
-	Vector3(190, 3, 0.15), Vector3(82, 40, 0.5)]
+const BEAM_SHAPE := [Vector2(-86, 36), Vector2(-139, 2), Vector2(-161, -32),
+	Vector2(-189, -110), Vector2(-53, -176), Vector2(-14, -220), Vector2(10, -193),
+	Vector2(10, -158), Vector2(88, -181), Vector2(252, -150), Vector2(223, -60),
+	Vector2(190, 3), Vector2(82, 40)]
 const BEAM_COLOR := Color(1.0, 0.92, 0.66)
+const BEAM_LAYERS := 24
+const BEAM_ALPHA := 0.043 ## each layer's: about 0.65 where all of them overlap
 ## Road signs on the kerb side shine back in the headlights this share of the drawing distance ahead (better lights
 ## further).
 const SIGN_LIT := 0.12
